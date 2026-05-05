@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "phoneNumber": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Test": {
+      "title": "Test",
+      "description": "Mock test definition",
+      "type": "object",
+      "properties": {
+        "testId": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "required": ["testId", "title", "type"]
+    },
+    "DailyAnalytics": {
+      "title": "DailyAnalytics",
+      "description": "Daily analytics data",
+      "type": "object",
+      "properties": {
+        "timeSpentSeconds": { "type": "number" }
+      },
+      "required": ["timeSpentSeconds"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User profile data"
+    },
+    "users/{userId}/settings/subjects": {
+      "schema": "User",
+      "description": "User subject settings"
+    },
+    "users/{userId}/notes/{noteId}": {
+      "schema": "Note",
+      "description": "User notes"
+    },
+    "tests/{testId}": {
+      "schema": "Test",
+      "description": "Test data"
+    },
+    "users/{userId}/analytics/{date}": {
+      "schema": "DailyAnalytics",
+      "description": "Daily time spent data per date"
+    }
+  }
+}
