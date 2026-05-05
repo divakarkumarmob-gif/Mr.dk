@@ -35,7 +35,7 @@ export default function VideoPlayer({ topic, onClose }: { topic: string; onClose
       {videos && (
         <div className="w-full max-w-2xl">
           {!selectedVideoId && (
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4 justify-center">
               {Object.entries(videos).map(([partName, videoId]: [string, string]) => (
                   <button
                   key={partName}

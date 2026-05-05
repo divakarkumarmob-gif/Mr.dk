@@ -12,7 +12,7 @@ async function startServer() {
   const PORT = 3000;
   
   app.use(express.json());
-  app.use(cors({ origin: process.env.FRONTEND_URL || "http://localhost:3000" }));
+  app.use(cors());
 
   // API route for video search
   app.get("/api/search", async (req, res) => {
