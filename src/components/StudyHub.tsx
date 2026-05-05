@@ -37,6 +37,10 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans">
           <HubSwitcher active="study" onNavigate={onNavigate} />
           
+          {selectedChapter && (
+            <VideoPlayer topic={selectedChapter} onClose={() => setSelectedChapter(null)} />
+          )}
+          
           <div className="space-y-3 mt-8 pb-20">
             {accordionItems.map(item => (
                 <div key={item} className="bg-[#161e38] rounded-2xl border border-white/5">
