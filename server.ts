@@ -3,6 +3,7 @@ import { createServer as createViteServer } from "vite";
 import path from "path";
 import { google } from "googleapis";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
@@ -11,13 +12,7 @@ async function startServer() {
   const PORT = 3000;
   
   app.use(express.json());
-
-  // YouTube API Setup
-  console.log("YOUTUBE_API_KEY loaded:", !!process.env.YOUTUBE_API_KEY);
-  const youtube = google.youtube({
-    version: "v3",
-    auth: process.env.YOUTUBE_API_KEY,
-  });
+  app.use(cors({ origin: process.env.FRONTEND_URL || "http://localhost:3000" }));
 
   // API route for video search
   app.get("/api/search", async (req, res) => {
@@ -25,6 +20,15 @@ async function startServer() {
     if (!q || typeof q !== "string") {
       return res.status(400).json({ error: "Missing search query" });
     }
+
+    if (!process.env.YOUTUBE_API_KEY) {
+      return res.status(500).json({ error: "YOUTUBE_API_KEY not configured" });
+    }
+
+    const youtube = google.youtube({
+      version: "v3",
+      auth: process.env.YOUTUBE_API_KEY,
+    });
 
     try {
       // 1. QUERY CONSTRUCTION
