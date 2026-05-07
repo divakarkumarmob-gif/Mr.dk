@@ -19,6 +19,15 @@ service cloud.firestore {
       match /analytics/{date} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
+
+      match /analytics_v2/{date} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    match /notifications/{notificationId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email == 'shashikumarmob@gmail.com' || request.auth.token.email == 'divakarkumarmob@gmail.com');
     }
 
     match /questions/{questionId} {

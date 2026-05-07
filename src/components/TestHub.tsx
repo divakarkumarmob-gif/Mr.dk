@@ -4,7 +4,6 @@ import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, C
 import { collection } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { QUESTIONS } from '../data/questions';
-import QuestionImporter from './QuestionImporter';
 
 
 export default function TestHub({ subjects, onNavigate }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests') => void }) {
@@ -187,7 +186,6 @@ export default function TestHub({ subjects, onNavigate }: { subjects: { name: st
         </div>
       )}
       
-      <QuestionImporter />
     </div>
   );
 }

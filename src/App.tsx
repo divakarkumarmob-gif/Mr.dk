@@ -6,7 +6,7 @@
 import React, {useState, useEffect} from 'react';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
-import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit} from 'firebase/firestore';                
+import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion} from 'firebase/firestore'; 
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
 import StudyHub from './components/StudyHub';
@@ -14,12 +14,59 @@ import HubSwitcher from './components/HubSwitcher';
 import VideoPlayer from './components/VideoPlayer';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
+import AdminPanel from './components/AdminPanel';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
 import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion } from 'motion/react';
+
+enum OperationType {
+  CREATE = 'create',
+  UPDATE = 'update',
+  DELETE = 'delete',
+  LIST = 'list',
+  GET = 'get',
+  WRITE = 'write',
+}
+
+interface FirestoreErrorInfo {
+  error: string;
+  operationType: OperationType;
+  path: string | null;
+  authInfo: {
+    userId?: string | null;
+    email?: string | null;
+    emailVerified?: boolean | null;
+    isAnonymous?: boolean | null;
+    tenantId?: string | null;
+    providerInfo?: {
+      providerId?: string | null;
+      email?: string | null;
+    }[];
+  }
+}
+function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
+  const errInfo: FirestoreErrorInfo = {
+    error: error instanceof Error ? error.message : String(error),
+    authInfo: {
+      userId: auth.currentUser?.uid,
+      email: auth.currentUser?.email,
+      emailVerified: auth.currentUser?.emailVerified,
+      isAnonymous: auth.currentUser?.isAnonymous,
+      tenantId: auth.currentUser?.tenantId,
+      providerInfo: auth.currentUser?.providerData?.map(provider => ({
+        providerId: provider.providerId,
+        email: provider.email,
+      })) || []
+    },
+    operationType,
+    path
+  }
+  console.error('Firestore Error: ', JSON.stringify(errInfo));
+  throw new Error(JSON.stringify(errInfo));
+}
 
 const getISTDateString = () => {
     const istOffset = 5.5 * 60 * 60 * 1000;
@@ -68,27 +115,78 @@ const getRandomChapters = () => {
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
+  const notificationRef = React.useRef<HTMLDivElement>(null);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
+
+  useEffect(() => {
+      function handleClickOutside(event: MouseEvent) {
+        if (notificationRef.current && !notificationRef.current.contains(event.target as Node)) {
+          setShowNotifications(false);
+        }
+      }
+      
+      if (showNotifications) {
+          document.addEventListener("mousedown", handleClickOutside);
+      } else {
+          document.removeEventListener("mousedown", handleClickOutside);
+      }
+      
+      return () => {
+          document.removeEventListener("mousedown", handleClickOutside);
+      };
+  }, [showNotifications]);
+
+  const markAsRead = async (id: string) => {
+    if (!user) return;
+    try {
+        await updateDoc(doc(db, 'notifications', id), {
+            readBy: arrayUnion(user.uid)
+        });
+    } catch (error) {
+        handleFirestoreError(error, OperationType.UPDATE, 'notifications/' + id);
+    }
+  };
+
+  useEffect(() => {
+    if (!user) return;
+    
+    const notifRef = collection(db, 'notifications');
+    const q = query(notifRef, orderBy('timestamp', 'desc'));
+    
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+        const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()} as any));
+        setNotifications(data);
+    }, (error) => {
+        handleFirestoreError(error, OperationType.GET, 'notifications');
+    });
+    
+    return () => unsubscribe();
+  }, [user]);
+
   const [loading, setLoading] = useState(true);
-  const [currentView, setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin'>('home');
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [subjects, setSubjects] = useState(getDailyChapters());
   const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
   const [showResetModal, setShowResetModal] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
+  const [statsLoaded, setStatsLoaded] = useState(false);
   const [stats, setStats] = useState({
           testsAttempted: 0,
           questionsSolved: 0,
           accuracy: 0,
           timeSpentSeconds: 0,
-          lectureTimeSeconds: 0
+          lectureTimeSeconds: 0,
+          date: getISTDateString()
   });
 
   const openAnalytics = async () => {
     if (!user) return;
     
     // Fetch last 7 days
-    const analyticsRef = collection(db, 'users', user.uid, 'analytics');
+    const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
     const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(7));
     const snapshot = await getDocs(q);
     
@@ -97,7 +195,7 @@ export default function App() {
         const total = d.timeSpentSeconds || 0;
         const lecture = d.lectureTimeSeconds || 0;
         return {
-            name: new Date(doc.id).toLocaleDateString('en-US', { weekday: 'short' }),
+            name: new Date(`${doc.id}T00:00:00`).toLocaleDateString('en-US', { weekday: 'short', timeZone: 'Asia/Kolkata' }),
             lectureMinutes: Math.floor(lecture / 60),
             otherMinutes: Math.floor((total - lecture) / 60)
         };
@@ -108,31 +206,27 @@ export default function App() {
   };
 
   useEffect(() => {
-    if (!user) return;
-    
-    const fetchStats = async () => {
-        const today = getISTDateString();
-        const docRef = doc(db, 'users', user.uid, 'analytics', today);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-            const data = docSnap.data();
-            setStats(prev => ({...prev, timeSpentSeconds: data.timeSpentSeconds, lectureTimeSeconds: data.lectureTimeSeconds || 0}));
-        } else {
-            setStats(prev => ({...prev, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
-        }
-    };
-    fetchStats();
-  }, [user]);
-
-  useEffect(() => {
+      if (!statsLoaded) return;
+      
       const interval = setInterval(async () => {
+          const today = getISTDateString();
+          
           setStats(prev => {
+              if (prev.date !== today) {
+                  // If date changed, reset for new day
+                  return {
+                      ...prev,
+                      date: today,
+                      timeSpentSeconds: 1,
+                      lectureTimeSeconds: activeVideo ? 1 : 0
+                  };
+              }
+
               const newSeconds = prev.timeSpentSeconds + 1;
               const newLectureSeconds = activeVideo ? prev.lectureTimeSeconds + 1 : prev.lectureTimeSeconds;
               
               if (user && newSeconds % 10 === 0) { // Update Firebase every 10 seconds
-                  const today = getISTDateString();
-                  setDoc(doc(db, 'users', user.uid, 'analytics', today), { 
+                  setDoc(doc(db, 'users', user.uid, 'analytics_v2', today), { 
                       timeSpentSeconds: newSeconds,
                       lectureTimeSeconds: newLectureSeconds
                   }, { merge: true });
@@ -142,7 +236,25 @@ export default function App() {
           });
       }, 1000);
       return () => clearInterval(interval);
-  }, [user, activeVideo]);
+  }, [user, activeVideo, statsLoaded]);
+
+  useEffect(() => {
+    if (!user) return;
+    
+    const fetchStats = async () => {
+        const today = getISTDateString();
+        const docRef = doc(db, 'users', user.uid, 'analytics_v2', today);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            setStats(prev => ({...prev, date: today, timeSpentSeconds: data.timeSpentSeconds, lectureTimeSeconds: data.lectureTimeSeconds || 0}));
+        } else {
+            setStats(prev => ({...prev, date: today, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
+        }
+        setStatsLoaded(true);
+    };
+    fetchStats();
+  }, [user]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -180,6 +292,23 @@ export default function App() {
     }, 30 * 60000); // Check every 30 minutes instead of every minute
     return () => { unsubscribe(); clearInterval(interval); };
   }, []);
+
+  useEffect(() => {
+    if (!user) return;
+    
+    const fetchNotifications = async () => {
+        const notifRef = collection(db, 'notifications');
+        const q = query(notifRef, limit(10));
+        try {
+            const snapshot = await getDocs(q);
+            const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()} as any));
+            setNotifications(data);
+        } catch (error) {
+            handleFirestoreError(error, OperationType.GET, 'notifications');
+        }
+    };
+    fetchNotifications();
+  }, [user]);
 
   const handleRandomize = async () => {
       if (!user) return;
@@ -246,6 +375,15 @@ export default function App() {
       return <EditProfile user={user} onNavigate={setCurrentView} />;
   }
 
+  if (currentView === 'admin') {
+      return (
+          <div className="min-h-screen bg-[#0a0f24] p-6 text-white">
+              <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
+              <AdminPanel />
+          </div>
+      );
+  }
+
   if (currentView === 'tests') {
       return (
         <div className="flex flex-col min-h-screen pb-20">
@@ -274,9 +412,58 @@ export default function App() {
            <h1 className="text-2xl font-bold flex items-center gap-2">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
            <p className="text-gray-400">Let's make today productive</p>
         </div>
-        <div className="relative">
-            <Bell className="h-6 w-6" />
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
+        <div className="relative" ref={notificationRef}>
+            <Bell className="h-6 w-6 cursor-pointer" onClick={() => setShowNotifications(!showNotifications)} />
+            {notifications.filter(n => !n.readBy?.includes(user?.uid)).length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+                    {notifications.filter(n => !n.readBy?.includes(user?.uid)).length}
+                </span>
+            )}
+            {showNotifications && (
+              <div className="absolute top-8 right-0 bg-[#020510] p-4 rounded-2xl shadow-xl w-64 z-[100] border border-blue-900/30">
+                  <h3 className="font-bold mb-2">Notifications</h3>
+                  {notifications.length === 0 ? (
+                      <p className="text-gray-400 text-sm">No notifications</p>
+                  ) : (
+                      <div className="space-y-4">
+                        {['Today', 'Yesterday'].map(group => {
+                            const groupNotifications = notifications.filter(n => {
+                                const date = n.timestamp?.toDate();
+                                const today = new Date();
+                                const yesterday = new Date(today);
+                                yesterday.setDate(yesterday.getDate() - 1);
+                                if (group === 'Today') return date?.toDateString() === today.toDateString();
+                                if (group === 'Yesterday') return date?.toDateString() === yesterday.toDateString();
+                                return false;
+                            });
+
+                            if (groupNotifications.length === 0) return null;
+
+                            return (
+                                <div key={group}>
+                                    <h4 className="text-xs text-gray-500 font-bold mb-1 uppercase">{group}</h4>
+                                    <div className="space-y-2">
+                                        {groupNotifications.map(n => (
+                                            <div key={n.id} className="text-sm p-2 bg-[#0a1025] border border-blue-900/50 rounded-lg">
+                                                <p>{n.message}</p>
+                                                <div className="flex justify-between items-center mt-1">
+                                                    <p className="text-gray-500 text-[10px]">
+                                                        {n.timestamp?.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                                                    </p>
+                                                    {!n.readBy?.includes(user.uid) && (
+                                                        <button onClick={() => markAsRead(n.id)} className="text-[10px] bg-blue-600/50 text-blue-200 px-2 py-0.5 rounded">Mark as Read</button>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                      </div>
+                  )}
+              </div>
+            )}
         </div>
       </div>
 

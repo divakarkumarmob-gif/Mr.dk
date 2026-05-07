@@ -1,11 +1,12 @@
-import React from 'react';
 import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit } from 'lucide-react';
 import { logOut } from '../lib/auth';
 import { User as FirebaseUser } from 'firebase/auth';
 
-export default function Profile({ user, onNavigate }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes') => void }) {
+export default function Profile({ user, onNavigate }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin') => void }) {
+    const isAdmin = user?.email === 'divakarkumarmob@gmail.com';
     return (
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
+            
             {/* Header */}
             <div className="bg-[#161e38] rounded-2xl p-6 border border-white/10 mb-8 flex flex-col items-center">
                 <div className="relative mb-4">
@@ -84,10 +85,12 @@ export default function Profile({ user, onNavigate }: { user: FirebaseUser | nul
             </div>
             
             <div className="space-y-4 mb-8">
-                <div className="flex items-center justify-between p-2">
-                    <div className="flex items-center gap-3"><Shield className="h-5 w-5 text-gray-400"/><span>Admin</span></div>
-                    <ChevronRight className="h-4 w-4 text-gray-500" />
-                </div>
+                {isAdmin && (
+                    <div onClick={() => onNavigate('admin')} className="flex items-center justify-between p-2 cursor-pointer">
+                        <div className="flex items-center gap-3"><Shield className="h-5 w-5 text-orange-500"/><span>Admin Panel</span></div>
+                        <ChevronRight className="h-4 w-4 text-gray-500" />
+                    </div>
+                )}
                 <div className="flex items-center justify-between p-2">
                     <a href="https://instagram.com/mr.divakar00" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3"><Mail className="h-5 w-5 text-gray-400"/><span>@mr.divakar00</span></a>
                     <ChevronRight className="h-4 w-4 text-gray-500" />

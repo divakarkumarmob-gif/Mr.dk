@@ -3,13 +3,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGri
 
 export default function TimeSpentChart({ data }: { data: { name: string, lectureMinutes: number, otherMinutes: number }[] }) {
     const totals = useMemo(() => {
-        let total = 0;
-        let lecture = 0;
-        data.forEach(d => {
-            total += (d.lectureMinutes + d.otherMinutes);
-            lecture += d.lectureMinutes;
-        });
-        return { total, lecture };
+        // We probably don't want a "Total of all 7 days" in a daily graph, 
+        // but let's just make it show the total for the displayed period as it's labeled
+        return { total: data.length }; 
     }, [data]);
 
     return (
@@ -33,9 +29,8 @@ export default function TimeSpentChart({ data }: { data: { name: string, lecture
                     <Bar dataKey="otherMinutes" name="App Usage" fill="#3b82f6" radius={[4, 4, 0, 0]} />
                 </BarChart>
             </ResponsiveContainer>
-            <div className="flex justify-between text-sm font-bold mt-4 px-2">
-                <p>Total Time: <span className="text-white">{totals.total} min</span></p>
-                <p>Study Time: <span className="text-green-500">{totals.lecture} min</span></p>
+            <div className="text-sm font-bold mt-4 px-2 text-center text-gray-400">
+                Data for last 7 days
             </div>
         </div>
     );
