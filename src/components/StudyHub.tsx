@@ -37,6 +37,9 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans">
           <HubSwitcher active="study" onNavigate={onNavigate} />
           
+          <div className="text-gray-400 text-sm mt-4 text-center">
+            {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </div>
           {selectedChapter && (
             <VideoPlayer topic={selectedChapter} onClose={() => setSelectedChapter(null)} />
           )}

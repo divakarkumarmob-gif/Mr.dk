@@ -14,6 +14,37 @@ async function startServer() {
   app.use(express.json());
   app.use(cors());
 
+  // API route for web search
+  app.post("/api/web-search", async (req, res) => {
+    const { query } = req.body;
+    if (!query) {
+      return res.status(400).json({ error: "Missing search query" });
+    }
+
+    if (!process.env.TAVILY_API_KEY) {
+      return res.status(500).json({ error: "TAVILY_API_KEY not configured" });
+    }
+
+    try {
+      const response = await fetch("https://api.tavily.com/search", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          api_key: process.env.TAVILY_API_KEY,
+          query: query,
+          search_depth: "basic",
+        }),
+      });
+      const data = await response.json();
+      res.json(data);
+    } catch (error) {
+      console.error("Tavily API Error:", error);
+      res.status(500).json({ error: "Failed to fetch search results" });
+    }
+  });
+
   // API route for video search
   app.get("/api/search", async (req, res) => {
     const { q } = req.query;

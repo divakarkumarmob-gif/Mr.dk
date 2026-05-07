@@ -7,6 +7,7 @@ import React, {useState, useEffect} from 'react';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit} from 'firebase/firestore';                
+import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
 import StudyHub from './components/StudyHub';
 import HubSwitcher from './components/HubSwitcher';
@@ -18,6 +19,7 @@ import Notes from './components/Notes';
 import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
+import { motion } from 'motion/react';
 
 const getISTDateString = () => {
     const istOffset = 5.5 * 60 * 60 * 1000;
@@ -115,6 +117,8 @@ export default function App() {
         if (docSnap.exists()) {
             const data = docSnap.data();
             setStats(prev => ({...prev, timeSpentSeconds: data.timeSpentSeconds, lectureTimeSeconds: data.lectureTimeSeconds || 0}));
+        } else {
+            setStats(prev => ({...prev, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
         }
     };
     fetchStats();
@@ -282,6 +286,9 @@ export default function App() {
       <div className="bg-[#161e38] rounded-2xl p-6 border border-white/10 mb-8 mt-6">
         <div className="flex justify-between items-center mb-6">
             <h2 className="font-bold text-lg">Performance Overview</h2>
+            <div className="text-orange-500 text-xs font-semibold">
+                {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+            </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
             <div>
@@ -356,6 +363,7 @@ export default function App() {
 
       <BottomNav currentView="home" onNavigate={setCurrentView} />
       
+      <FloatingAIAgent />
     </div>
   );
 }
