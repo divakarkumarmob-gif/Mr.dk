@@ -4,6 +4,7 @@
  */
 
 import React, {useState, useEffect} from 'react';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion} from 'firebase/firestore'; 
@@ -119,6 +120,24 @@ const getRandomChapters = () => {
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
+  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport'>('home');
+
+  const setCurrentView = (view: typeof currentView) => {
+    window.history.pushState({ view }, '', '/' + view);
+    _setCurrentView(view);
+  };
+
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+        if (event.state && event.state.view) {
+            _setCurrentView(event.state.view);
+        } else {
+            _setCurrentView('home');
+        }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const [showNotifications, setShowNotifications] = useState(false);
   const [showChat, setShowChat] = useState(false);
@@ -170,7 +189,6 @@ export default function App() {
   }, [user]);
 
   const [loading, setLoading] = useState(true);
-  const [currentView, setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport'>('home');
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [subjects, setSubjects] = useState(getDailyChapters());
   const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
