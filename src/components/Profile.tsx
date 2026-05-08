@@ -2,8 +2,8 @@ import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mai
 import { logOut } from '../lib/auth';
 import { User as FirebaseUser } from 'firebase/auth';
 
-export default function Profile({ user, onNavigate }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin') => void }) {
-    const isAdmin = user?.email === 'divakarkumarmob@gmail.com';
+export default function Profile({ user, onNavigate }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport') => void }) {
+    const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
     return (
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
             
@@ -95,7 +95,7 @@ export default function Profile({ user, onNavigate }: { user: FirebaseUser | nul
                     <a href="https://instagram.com/mr.divakar00" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3"><Mail className="h-5 w-5 text-gray-400"/><span>@mr.divakar00</span></a>
                     <ChevronRight className="h-4 w-4 text-gray-500" />
                 </div>
-                <div className="flex items-center justify-between p-2">
+                <div onClick={() => onNavigate('technicalSupport')} className="flex items-center justify-between p-2 cursor-pointer">
                     <div className="flex items-center gap-3"><HelpCircle className="h-5 w-5 text-gray-400"/><span>Technical Support</span></div>
                     <ChevronRight className="h-4 w-4 text-gray-500" />
                 </div>

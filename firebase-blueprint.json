@@ -31,6 +31,40 @@
         "timeSpentSeconds": { "type": "number" }
       },
       "required": ["timeSpentSeconds"]
+    },
+    "Chat": {
+      "title": "Chat",
+      "description": "Conversation between user and admin",
+      "type": "object",
+      "properties": {
+        "participants": { "type": "array" },
+        "lastMessage": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["participants"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Individual message in a chat",
+      "type": "object",
+      "properties": {
+        "senderId": { "type": "string" },
+        "text": { "type": "string" },
+        "mediaUrl": { "type": "string" },
+        "mediaType": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["senderId", "timestamp"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "App notification",
+      "type": "object",
+      "properties": {
+        "message": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["message", "timestamp"]
     }
   },
   "firestore": {
@@ -53,6 +87,18 @@
     "users/{userId}/analytics/{date}": {
       "schema": "DailyAnalytics",
       "description": "Daily time spent data per date"
+    },
+    "chats/{chatId}": {
+      "schema": "Chat",
+      "description": "Chat conversations"
+    },
+    "chats/{chatId}/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Individual messages"
+    },
+    "notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "Notifications"
     }
   }
 }

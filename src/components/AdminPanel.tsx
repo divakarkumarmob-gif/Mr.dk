@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { db, auth } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, doc, updateDoc, deleteDoc } from 'firebase/firestore';                
-import { MessageSquare as MessageSquareIcon, Upload as UploadIcon, FileUp, Trash2, Edit2 } from 'lucide-react';
+import { MessageSquare as MessageSquareIcon, Upload as UploadIcon, FileUp, Trash2, Edit2, Menu, X, Users } from 'lucide-react';
 import QuestionImporter from './QuestionImporter';
 import { motion } from 'motion/react';
+import ChatWindow from './ChatWindow';
 
 enum OperationType {
     CREATE = 'create',
@@ -58,7 +59,7 @@ interface Notification {
     readBy?: string[];
 }
 
-export default function AdminPanel() {
+export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport') => void }) {
     const [activeTab, setActiveTab] = useState<'message' | 'upload' | 'import'>('message');
     const [message, setMessage] = useState('');
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -66,14 +67,11 @@ export default function AdminPanel() {
 
     useEffect(() => {
         const q = query(collection(db, 'notifications'), orderBy('timestamp', 'desc'));
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-            const notifs: Notification[] = [];
-            snapshot.forEach((doc) => {
-                notifs.push({ id: doc.id, ...doc.data() } as Notification);
-            });
-            setNotifications(notifs);
+        const unsubscribeNotifs = onSnapshot(q, (snapshot) => {
+            setNotifications(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Notification)));
         }, (error) => handleFirestoreError(error, OperationType.LIST, 'notifications'));
-        return () => unsubscribe();
+        
+        return () => { unsubscribeNotifs(); };
     }, []);
 
     const sendMessage = async () => {
@@ -118,20 +116,27 @@ export default function AdminPanel() {
     };
 
     return (
-        <motion.div 
-            className="bg-[#161e38] rounded-xl border border-white/10 p-1 flex gap-0 min-h-[300px] text-white"
-            onPanEnd={(event, info) => {
-                if (info.offset.x < -20) setIsSidebarOpen(false);
-                else if (info.offset.x > 20) setIsSidebarOpen(true);
-            }}
-        >
+        <div className="bg-[#161e38] rounded-xl border border-white/10 p-1 flex gap-0 min-h-[300px] text-white relative">
             <motion.div 
-                className="border-r border-white/10 rounded-lg p-1 space-y-1 overflow-hidden bg-[#131e3d]"
+                className="border-r border-white/10 rounded-lg p-1 space-y-1 overflow-hidden bg-[#131e3d] z-10"
                 animate={{ width: isSidebarOpen ? '120px' : '40px' }}
+                onPanEnd={(event, info) => {
+                    if (info.offset.x < -20) setIsSidebarOpen(false);
+                    else if (info.offset.x > 20) setIsSidebarOpen(true);
+                }}
             >
+                <div className="p-2 mb-2 flex items-center justify-center">
+                    <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                        {isSidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                    </button>
+                </div>
                 <button onClick={() => setActiveTab('message')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2 ${activeTab === 'message' ? 'bg-white/10' : ''}`}>
                     <MessageSquareIcon className="h-4 w-4 flex-shrink-0" />
                     {isSidebarOpen && <span className="truncate">Message</span>}
+                </button>
+                <button onClick={() => onNavigate('adminChat')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2`}>
+                    <Users className="h-4 w-4 flex-shrink-0" />
+                    {isSidebarOpen && <span className="truncate">Chats</span>}
                 </button>
                 <button onClick={() => setActiveTab('import')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2 ${activeTab === 'import' ? 'bg-white/10' : ''}`}>
                     <FileUp className="h-4 w-4 flex-shrink-0" />
@@ -182,6 +187,6 @@ export default function AdminPanel() {
                     </div>
                 )}
             </div>
-        </motion.div>
+        </div>
     );
 }

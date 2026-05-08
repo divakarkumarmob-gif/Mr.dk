@@ -7,6 +7,7 @@ import React, {useState, useEffect} from 'react';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion} from 'firebase/firestore'; 
+import {updateUserPresence} from './services/chatService';
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
 import StudyHub from './components/StudyHub';
@@ -15,10 +16,13 @@ import VideoPlayer from './components/VideoPlayer';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
 import AdminPanel from './components/AdminPanel';
+import AdminChatPage from './components/AdminChatPage';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
+import UserChat from './components/UserChat';
+import SupportModal from './components/SupportModal';
 import TimeSpentChart from './components/TimeSpentChart';
-import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle } from 'lucide-react';
+import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion } from 'motion/react';
 
@@ -117,6 +121,7 @@ export default function App() {
   const [user, setUser] = useState<User | null>(null);
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const [showNotifications, setShowNotifications] = useState(false);
+  const [showChat, setShowChat] = useState(false);
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
 
   useEffect(() => {
@@ -165,7 +170,7 @@ export default function App() {
   }, [user]);
 
   const [loading, setLoading] = useState(true);
-  const [currentView, setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport'>('home');
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [subjects, setSubjects] = useState(getDailyChapters());
   const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
@@ -257,11 +262,30 @@ export default function App() {
   }, [user]);
 
   useEffect(() => {
+    if (!user) return;
+    
+    // Set online on load
+    updateUserPresence(user.uid, true);
+    
+    // Heartbeat to keep status 'online'
+    const interval = setInterval(() => {
+        updateUserPresence(user.uid, true);
+    }, 30000); // 30 seconds
+
+    return () => {
+        clearInterval(interval);
+        updateUserPresence(user.uid, false);
+    };
+  }, [user]);
+
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       setLoading(false);
       
       if (currentUser) {
+          updateUserPresence(currentUser.uid, true);
+          
           const docRef = doc(db, 'users', currentUser.uid, 'settings', 'subjects');
           const docSnap = await getDoc(docRef);
           
@@ -350,6 +374,41 @@ export default function App() {
       setShowResetModal(false);
   };
 
+  const [showSupportModal, setShowSupportModal] = useState(false);
+
+  useEffect(() => {
+    // 3-finger detection
+    const handleTouch = (e: TouchEvent) => {
+        if (e.touches.length === 3) {
+            setShowSupportModal(true);
+        }
+    };
+    window.addEventListener('touchstart', handleTouch);
+
+    // Shake detection
+    let lastX = 0, lastY = 0, lastZ = 0;
+    let lastTime = 0;
+    const handleMotion = (e: DeviceMotionEvent) => {
+        const acc = e.accelerationIncludingGravity;
+        if (!acc) return;
+        const curTime = Date.now();
+        if ((curTime - lastTime) > 100) {
+            const diff = Math.abs(acc.x! + acc.y! + acc.z! - lastX - lastY - lastZ);
+            if (diff > 30) { // Threshold for shake
+                setShowSupportModal(true);
+            }
+            lastX = acc.x!; lastY = acc.y!; lastZ = acc.z!;
+            lastTime = curTime;
+        }
+    };
+    window.addEventListener('devicemotion', handleMotion);
+
+    return () => {
+        window.removeEventListener('touchstart', handleTouch);
+        window.removeEventListener('devicemotion', handleMotion);
+    };
+  }, []);
+
   if (loading) {
     return <div className="flex items-center justify-center min-h-screen bg-[#0a0f24] text-white">Loading...</div>;
   }
@@ -379,10 +438,15 @@ export default function App() {
       return (
           <div className="min-h-screen bg-[#0a0f24] p-6 text-white">
               <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
-              <AdminPanel />
+              <AdminPanel onNavigate={setCurrentView} />
           </div>
       );
   }
+
+  if (currentView === 'adminChat') {
+      return <AdminChatPage onBack={() => setCurrentView('admin')} />;
+  }
+
 
   if (currentView === 'tests') {
       return (
@@ -398,6 +462,15 @@ export default function App() {
         <div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
             <div className="flex-grow"><Notes /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
+        </div>
+      );
+  }
+
+  if (currentView === 'technicalSupport') {
+      return (
+        <div className="min-h-screen bg-[#0f172a] text-white">
+            <button className="absolute top-4 left-4 z-10 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
+            <UserChat fullScreen={true} />
         </div>
       );
   }
@@ -551,11 +624,20 @@ export default function App() {
       <BottomNav currentView="home" onNavigate={setCurrentView} />
       
       <FloatingAIAgent />
+      
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      />
     </div>
   );
 }
 
-function BottomNav({ currentView, onNavigate }: { currentView: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes', onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes') => void }) {
+function BottomNav({ currentView, onNavigate }: { currentView: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport', onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport') => void }) {
     return (
         <div className="fixed bottom-0 left-0 w-full bg-[#0f172a] border-t border-white/10 p-2 flex justify-around">
             <div className={`flex flex-col items-center cursor-pointer ${currentView === 'home' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('home')}><Home className="h-6 w-6" /><span className="text-[10px]">Home</span></div>
