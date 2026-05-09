@@ -45,11 +45,17 @@ service cloud.firestore {
       }
     }
 
-    // Chat data - restricted to participants
+    // Chat data
     match /chats/{chatId} {
-      allow read: if isSignedIn() && (resource.data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
-      allow write: if isSignedIn() && (request.resource.data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
+      allow read, write: if isSignedIn();
       
+      // User-specific chat history
+      match /history/{docId} {
+        allow read, write: if isOwner(chatId);
+      }
+
+      // Shared chat data
+      // (Leaving shared chat data more restrictive)
       match /messages/{messageId} {
         allow read: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
         allow write: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);

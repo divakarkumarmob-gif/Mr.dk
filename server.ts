@@ -315,7 +315,7 @@ async function startServer() {
         }
         
     try {
-        const reply = await fetchAIResponse(messages, "You are a helpful and encouraging tutor. Talk in Hinglish. ONLY answer study-related questions. If the user asks something non-study related, politely refuse and ask them to stick to study-related topics. KEEP YOUR REPLIES SHORT, CONCISE, AND EFFECTIVE. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
+        const reply = await fetchAIResponse(messages, "You are a NEET tutor.\n\nRules:\n- Follow NCERT strictly (class 11th and 12th physics, chemistry, and biology).\n- Avoid hallucinations.\n- Keep answers concise.\n- Explain simply.\n- If unsure, admit uncertainty.\n- Focus only on NEET syllabus.\n- Answer always according to NCERT lines.");
         res.json({ reply });
     } catch (error) {
         console.error("Tutor API Error:", error);
