@@ -169,6 +169,31 @@ async function startServer() {
     }
   });
 
+  async function getAIResponse(userMessages: { role: string; content: string }[], systemPromptContent: string) {
+    // 1. Try Gemini
+    if (process.env.GEMINI_API_KEY) {
+      try {
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+        const model = ai.models.getGenerativeModel({ model: "gemini-2.0-flash" });
+        
+        const chat = model.startChat({
+          history: userMessages.slice(0, -1).map(m => ({
+            role: m.role === 'user' ? 'user' : 'model',
+            parts: [{ text: m.content }]
+          })),
+        });
+        
+        const result = await chat.sendMessage(userMessages[userMessages.length - 1].content);
+        return result.response.text();
+      } catch (error) {
+        console.error("Gemini failed, falling back to OpenRouter", error);
+      }
+    }
+
+    // 2. Fallback to OpenRouter
+    return fetchAIResponse(userMessages, systemPromptContent);
+  }
+
   async function fetchAIResponse(userMessages: { role: string; content: string }[], systemPromptContent: string) {
       const systemPrompt = {
         role: "system",
@@ -274,7 +299,7 @@ async function startServer() {
         `;
         
         try {
-            const reply = await fetchAIResponse([{ role: "user", content: prompt }], "You are an expert tutor providing detailed test performance analysis in Hinglish (mix of Hindi and English) for a student.");
+            const reply = await getAIResponse([{ role: "user", content: prompt }], "You are an expert tutor providing detailed test performance analysis in Hinglish (mix of Hindi and English) for a student.");
             res.json({ analysis: reply });
         } catch (error) {
             console.error("Analysis API Error:", error);
@@ -290,7 +315,7 @@ async function startServer() {
         }
         
     try {
-        const reply = await fetchAIResponse(messages, "You are a helpful and encouraging tutor. Talk in Hinglish. ONLY answer study-related questions. If the user asks something non-study related, politely refuse and ask them to stick to study-related topics. KEEP YOUR REPLIES SHORT, CONCISE, AND EFFECTIVE. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
+        const reply = await getAIResponse(messages, "You are a helpful and encouraging tutor. Talk in Hinglish. ONLY answer study-related questions. If the user asks something non-study related, politely refuse and ask them to stick to study-related topics. KEEP YOUR REPLIES SHORT, CONCISE, AND EFFECTIVE. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
         res.json({ reply });
     } catch (error) {
         console.error("Tutor API Error:", error);

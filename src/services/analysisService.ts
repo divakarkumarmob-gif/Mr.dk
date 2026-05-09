@@ -1,5 +1,5 @@
 export async function analyzeTestPerformance(questions: any[], answers: Record<string, string>) {
-    const backendUrl = "https://mrdk.onrender.com";
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
     const response = await fetch(`${backendUrl}/api/analysis`, {
         method: "POST",
         headers: {
