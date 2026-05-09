@@ -52,7 +52,7 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
     const [searchQuery, setSearchQuery] = useState('');
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans">
+        <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans flex flex-col">
           <HubSwitcher active="study" onNavigate={onNavigate} />
           {activeBattleChapter && (
               <BattleRoom chapter={activeBattleChapter} onFinish={(winner) => {
@@ -154,6 +154,11 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
                 </div>
             ))}
           </div>
+          <div className="text-center mt-auto py-4">
+             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500">
+                 Powered by DK
+             </span>
+           </div>
         </div>
     )
 }

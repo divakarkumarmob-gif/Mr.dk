@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { X, Send, Loader2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, Send, Loader2, Trash2 } from 'lucide-react';
+import { db, auth } from '../lib/firebase';
+import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -13,11 +15,33 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
 
+    useEffect(() => {
+        if (!auth.currentUser) return;
+        const chatRef = doc(db, 'chats', auth.currentUser.uid, 'history', 'default');
+        getDoc(chatRef).then(snap => {
+            if (snap.exists()) setMessages(snap.data().messages);
+        });
+    }, []);
+
+    const saveChat = async (msgs: Message[]) => {
+        if (!auth.currentUser) return;
+        const chatRef = doc(db, 'chats', auth.currentUser.uid, 'history', 'default');
+        await setDoc(chatRef, { messages: msgs });
+    };
+
+    const deleteChat = async () => {
+        if (!auth.currentUser) return;
+        const chatRef = doc(db, 'chats', auth.currentUser.uid, 'history', 'default');
+        await deleteDoc(chatRef);
+        setMessages([{ role: 'assistant', content: "Namaste! Main tumhara Neural Doubt Solver hoon. Study se related koi bhi sawal pucho!" }]);
+    };
+
     const handleSend = async () => {
         if (!input.trim()) return;
 
         const newMessages = [...messages, { role: 'user' as const, content: input }];
         setMessages(newMessages);
+        saveChat(newMessages); // Save user message
         setInput('');
         setLoading(true);
 
@@ -31,7 +55,9 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
 
             if (!response.ok) throw new Error('Failed to fetch');
             const data = await response.json();
-            setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
+            const updatedMessages = [...newMessages, { role: 'assistant' as const, content: data.reply }];
+            setMessages(updatedMessages);
+            saveChat(updatedMessages); // Save updated history
         } catch (error) {
             setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, error aa gaya. Study related pucho." }]);
         } finally {
@@ -44,7 +70,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
             <div className="flex justify-between items-center mb-4">
                 <button onClick={onClose}><X /></button>
                 <h2 className="font-bold">Neural Doubt Solver</h2>
-                <div />
+                <button onClick={deleteChat}><Trash2 className="text-red-500"/></button>
             </div>
 
             <div className="flex-grow overflow-y-auto space-y-4 mb-4">

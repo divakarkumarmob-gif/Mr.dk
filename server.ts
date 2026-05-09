@@ -299,7 +299,7 @@ async function startServer() {
         `;
         
         try {
-            const reply = await getAIResponse([{ role: "user", content: prompt }], "You are an expert tutor providing detailed test performance analysis in Hinglish (mix of Hindi and English) for a student.");
+            const reply = await fetchAIResponse([{ role: "user", content: prompt }], "You are an expert tutor providing detailed test performance analysis in Hinglish (mix of Hindi and English) for a student.");
             res.json({ analysis: reply });
         } catch (error) {
             console.error("Analysis API Error:", error);
@@ -315,7 +315,7 @@ async function startServer() {
         }
         
     try {
-        const reply = await getAIResponse(messages, "You are a helpful and encouraging tutor. Talk in Hinglish. ONLY answer study-related questions. If the user asks something non-study related, politely refuse and ask them to stick to study-related topics. KEEP YOUR REPLIES SHORT, CONCISE, AND EFFECTIVE. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
+        const reply = await fetchAIResponse(messages, "You are a helpful and encouraging tutor. Talk in Hinglish. ONLY answer study-related questions. If the user asks something non-study related, politely refuse and ask them to stick to study-related topics. KEEP YOUR REPLIES SHORT, CONCISE, AND EFFECTIVE. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
         res.json({ reply });
     } catch (error) {
         console.error("Tutor API Error:", error);
