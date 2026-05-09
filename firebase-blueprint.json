@@ -1,5 +1,38 @@
 {
   "entities": {
+    "TestResult": {
+      "title": "TestResult",
+      "description": "User test result data",
+      "type": "object",
+      "properties": {
+        "testName": { "type": "string" },
+        "difficulty": { "type": "string" },
+        "correct": { "type": "number" },
+        "incorrect": { "type": "number" },
+        "unattempted": { "type": "number" },
+        "total": { "type": "number" },
+        "score": { "type": "number" },
+        "marks": { "type": "number" },
+        "timeTakenSeconds": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "speed": { "type": "number" },
+        "attemptedRate": { "type": "number" },
+        "topicAnalysis": { "type": "array" },
+        "userId": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["testName", "correct", "total", "userId", "timestamp"]
+    },
+    "ChapterActivity": {
+        "title": "ChapterActivity",
+        "description": "Tracks active users in a chapter",
+        "type": "object",
+        "properties": {
+            "chapterId": { "type": "string" },
+            "totalActive": { "type": "number" }
+        },
+        "required": ["chapterId", "totalActive"]
+    },
     "User": {
       "title": "User",
       "description": "User profile",
@@ -65,6 +98,19 @@
         "timestamp": { "type": "string" }
       },
       "required": ["message", "timestamp"]
+    },
+    "Analysis": {
+      "title": "Analysis",
+      "description": "Student test performance analysis",
+      "type": "object",
+      "properties": {
+        "questions": { "type": "array" },
+        "answers": { "type": "object" },
+        "analysisContent": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["analysisContent", "timestamp", "userId"]
     }
   },
   "firestore": {
@@ -96,9 +142,25 @@
       "schema": "Message",
       "description": "Individual messages"
     },
+    "users/{userId}/results/{resultId}": {
+      "schema": "TestResult",
+      "description": "User test results"
+    },
+    "users/{userId}/analyses/{analysisId}": {
+      "schema": "Analysis",
+      "description": "User test analyses"
+    },
     "notifications/{notificationId}": {
       "schema": "Notification",
       "description": "Notifications"
+    },
+    "chapterActivity/{chapterId}": {
+      "schema": "ChapterActivity",
+      "description": "Active users count per chapter"
+    },
+    "queues/{chapterId}/waitingUsers/{userId}": {
+      "schema": "User",
+      "description": "Users waiting for a battle"
     }
   }
 }

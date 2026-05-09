@@ -2,7 +2,7 @@ import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mai
 import { logOut } from '../lib/auth';
 import { User as FirebaseUser } from 'firebase/auth';
 
-export default function Profile({ user, onNavigate }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport') => void }) {
+export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport') => void, onSolverClick: () => void }) {
     const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
     return (
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
@@ -27,7 +27,7 @@ export default function Profile({ user, onNavigate }: { user: FirebaseUser | nul
 
             {/* AI Intelligence */}
             <h3 className="text-gray-500 text-xs font-bold mb-4 uppercase">AI Intelligence</h3>
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-4 rounded-xl mb-6 flex justify-between items-center cursor-pointer">
+            <div onClick={onSolverClick} className="bg-gradient-to-r from-purple-600 to-indigo-600 p-4 rounded-xl mb-6 flex justify-between items-center cursor-pointer">
                 <div className="flex items-center gap-3">
                     <div className="bg-white/20 p-2 rounded-lg"><User className="h-6 w-6 text-white"/></div>
                     <div>

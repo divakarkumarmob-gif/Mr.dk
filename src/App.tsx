@@ -9,6 +9,7 @@ import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
+import AnalysisHistory from './components/AnalysisHistory';
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
 import StudyHub from './components/StudyHub';
@@ -21,6 +22,7 @@ import AdminChatPage from './components/AdminChatPage';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
 import UserChat from './components/UserChat';
+import NeuralSolver from './components/NeuralSolver';
 import SupportModal from './components/SupportModal';
 import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle } from 'lucide-react';
@@ -101,6 +103,14 @@ const getDayIndex = (resetDay?: number) => {
     return day;
 };
 
+const getNewUserChapters = () => {
+    return [
+        { name: 'PHYSICS', topic: PHYSICS_CHAPTERS[0], color: 'border-blue-500' },
+        { name: 'CHEMISTRY', topic: CHEMISTRY_CHAPTERS[0], color: 'border-orange-500' },
+        { name: 'BIOLOGY', topic: BIOLOGY_CHAPTERS[0], color: 'border-green-500' },
+    ];
+};
+
 const getDailyChapters = () => {
     const dayIdx = getDayIndex();
     return [
@@ -120,7 +130,7 @@ const getRandomChapters = () => {
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
-  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport'>('home');
+  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport' | 'analytics'>('home');
 
   const setCurrentView = (view: typeof currentView) => {
     window.history.pushState({ view }, '', '/' + view);
@@ -138,7 +148,14 @@ export default function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+  useEffect(() => {
+    if (mainContainerRef.current) {
+        mainContainerRef.current.scrollTop = 0;
+    }
+  }, [currentView]);
+
   const notificationRef = React.useRef<HTMLDivElement>(null);
+  const mainContainerRef = React.useRef<HTMLDivElement>(null);
   const [showNotifications, setShowNotifications] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
@@ -188,6 +205,7 @@ export default function App() {
     return () => unsubscribe();
   }, [user]);
 
+  const [isPYQRunning, setIsPYQRunning] = useState(false);
   const [loading, setLoading] = useState(true);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [subjects, setSubjects] = useState(getDailyChapters());
@@ -311,7 +329,15 @@ export default function App() {
               const data = docSnap.data();
               if (data.day === getDayIndex()) {
                   setSubjects(data.subjects);
+              } else {
+                  const newDaily = getDailyChapters();
+                  setSubjects(newDaily);
+                  await setDoc(docRef, { subjects: newDaily, day: getDayIndex() });
               }
+          } else {
+              const newSubjects = getNewUserChapters();
+              setSubjects(newSubjects);
+              await setDoc(docRef, { subjects: newSubjects, day: getDayIndex() });
           }
       }
     });                
@@ -393,6 +419,7 @@ export default function App() {
   };
 
   const [showSupportModal, setShowSupportModal] = useState(false);
+  const [showNeuralSolver, setShowNeuralSolver] = useState(false);
 
   useEffect(() => {
     // 3-finger detection
@@ -441,60 +468,134 @@ export default function App() {
 
   if (currentView === 'profile') {
       return (
-        <div className="flex flex-col min-h-screen pb-20">
-            <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} /></div>
+        <><div className="flex flex-col min-h-screen pb-20">
+            <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
         </div>
+        <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      />
+      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}</>
       );
   }
 
   if (currentView === 'editProfile') {
-      return <EditProfile user={user} onNavigate={setCurrentView} />;
+      return (<><EditProfile user={user} onNavigate={setCurrentView} />
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>);
   }
 
   if (currentView === 'admin') {
       return (
-          <div className="min-h-screen bg-[#0a0f24] p-6 text-white">
+          <><div className="min-h-screen bg-[#0a0f24] p-6 text-white">
               <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
               <AdminPanel onNavigate={setCurrentView} />
           </div>
+          <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>
       );
   }
 
   if (currentView === 'adminChat') {
-      return <AdminChatPage onBack={() => setCurrentView('admin')} />;
+      return (<><AdminChatPage onBack={() => setCurrentView('admin')} />
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>);
   }
 
 
   if (currentView === 'tests') {
       return (
-        <div className="flex flex-col min-h-screen pb-20">
-            <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} /></div>
-            <BottomNav currentView="tests" onNavigate={setCurrentView} />
+        <><div className="flex flex-col min-h-screen pb-20">
+            <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
+            {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
         </div>
+        <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>
       );
   }
 
   if (currentView === 'notes') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
+        <><div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
             <div className="flex-grow"><Notes /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
         </div>
+        <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>
       );
   }
 
-  if (currentView === 'technicalSupport') {
-      return (
-        <div className="min-h-screen bg-[#0f172a] text-white">
-            <button className="absolute top-4 left-4 z-10 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
-            <UserChat fullScreen={true} />
-        </div>
-      );
-  }
+   if (currentView === 'analytics') {
+       return (
+         <><div className="flex flex-col min-h-screen pb-20">
+             <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} /></div>
+             <BottomNav currentView="analytics" onNavigate={setCurrentView} />
+         </div>
+         <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>
+       );
+   }
+
+   if (currentView === 'technicalSupport') {
+       return (
+         <><div className="min-h-screen bg-[#0f172a] text-white">
+             <button className="absolute top-4 left-4 z-10 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
+             <UserChat fullScreen={true} />
+         </div>
+         <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      /></>
+       );
+   }
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white p-6 font-sans pb-24">
+    <div ref={mainContainerRef} className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
 
       {/* Header */}
@@ -655,12 +756,12 @@ export default function App() {
   );
 }
 
-function BottomNav({ currentView, onNavigate }: { currentView: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport', onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport') => void }) {
+function BottomNav({ currentView, onNavigate }: { currentView: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport' | 'analytics', onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport' | 'analytics') => void }) {
     return (
         <div className="fixed bottom-0 left-0 w-full bg-[#0f172a] border-t border-white/10 p-2 flex justify-around">
             <div className={`flex flex-col items-center cursor-pointer ${currentView === 'home' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('home')}><Home className="h-6 w-6" /><span className="text-[10px]">Home</span></div>
             <div className={`flex flex-col items-center cursor-pointer ${currentView === 'tests' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('tests')}><FileText className="h-6 w-6" /><span className="text-[10px]">Tests</span></div>
-            <div className="flex flex-col items-center text-gray-500"><BarChart2 className="h-6 w-6" /><span className="text-[10px]">Analytics</span></div>
+            <div className={`flex flex-col items-center cursor-pointer ${currentView === 'analytics' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('analytics')}><BarChart2 className="h-6 w-6" /><span className="text-[10px]">Analytics</span></div>
             <div className={`flex flex-col items-center cursor-pointer ${currentView === 'notes' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('notes')}><Book className="h-6 w-6" /><span className="text-[10px]">Notes</span></div>
             <div className={`flex flex-col items-center cursor-pointer ${currentView === 'profile' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('profile')}><UserIcon className="h-6 w-6" /><span className="text-[10px]">Profile</span></div>
         </div>

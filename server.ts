@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
@@ -17,6 +18,7 @@ dotenv.config();
 
 async function startServer() {
   const app = express();
+  app.set("trust proxy", 1);
   const PORT = 3000;
   
   app.use(express.json());
@@ -165,6 +167,127 @@ async function startServer() {
       res.status(500).json({ error: "Failed to fetch video" });
     }
   });
+
+  async function fetchAIResponse(userMessages: { role: string; content: string }[], systemPromptContent: string) {
+      const systemPrompt = {
+        role: "system",
+        content: systemPromptContent
+      };
+      const messagesWithSystem = [systemPrompt, ...userMessages];
+      
+      const models = ["openai/gpt-3.5-turbo", "inclusionai/ring-2.6-1t", "baidu/cobuddy-free"];
+      let lastError = null;
+      let reply = null;
+
+      for (const model of models) {
+        try {
+          console.log(`Trying model: ${model}`);
+          const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+              "Content-Type": "application/json",
+              "HTTP-Referer": process.env.APP_URL || "http://localhost:3000",
+              "X-Title": "My AI App"
+            },
+            body: JSON.stringify({
+              model: model,
+              messages: messagesWithSystem,
+            }),
+          });
+          
+          if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Model ${model} failed (${response.status}): ${errorText}`);
+          }
+
+          const data = await response.json();
+          console.log(`OpenRouter response from ${model}:`, data);
+          
+          reply = data.choices[0]?.message?.content || "No response";
+          break; // Success, exit loop
+        } catch (error) {
+          console.error(`Error with model ${model}:`, error);
+          lastError = error;
+        }
+      }
+      
+      if (reply === null) {
+        throw lastError;
+      }
+      return reply;
+    }
+
+    // API route for analysis
+    app.post("/api/analysis", async (req, res) => {
+        const { questions, answers } = req.body;
+        if (!questions || !answers) {
+          return res.status(400).json({ error: "Missing data" });
+        }
+    
+        const prompt = `
+            Analyze the following student test results carefully:
+            - Total Questions: ${questions.length}
+            - Correct: ${Object.values(answers).filter((a: any, idx: number) => a === questions[idx].correct_option).length}
+            - Incorrect: ${Object.values(answers).filter((a: any, idx: number) => a && a !== questions[idx].correct_option).length}
+            - Unattempted: ${questions.length - Object.keys(answers).length}
+            
+            Based on this, provide:
+            1. A comprehensive performance summary (in Hinglish).
+            2. Breakdown of strong and weak areas.
+            3. Strategic, personalized advice on how to improve scores.
+            
+            Student Answers and Questions for reference: ${JSON.stringify(questions)}, ${JSON.stringify(answers)}
+        `;
+        
+        try {
+            const reply = await fetchAIResponse([{ role: "user", content: prompt }], "You are an expert tutor providing detailed test performance analysis in Hinglish (mix of Hindi and English) for a student.");
+            res.json({ analysis: reply });
+        } catch (error) {
+            console.error("Analysis API Error:", error);
+            res.status(500).json({ error: "Failed to get analysis: " + (error instanceof Error ? error.message : String(error)) });
+        }
+    });
+
+    // API route for tutor
+    app.post("/api/tutor", async (req, res) => {
+        const { messages } = req.body;
+        if (!messages || !Array.isArray(messages)) {
+          return res.status(400).json({ error: "Missing messages" });
+        }
+        
+    try {
+        const reply = await fetchAIResponse(messages, "You are a helpful and encouraging tutor. Talk in Hinglish. ONLY answer study-related questions. If the user asks something non-study related, politely refuse and ask them to stick to study-related topics. KEEP YOUR REPLIES SHORT, CONCISE, AND EFFECTIVE. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
+        res.json({ reply });
+    } catch (error) {
+        console.error("Tutor API Error:", error);
+        res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
+    }
+  });
+
+  // API route for neural chat
+  app.post("/api/neural-chat", async (req, res) => {
+    const { messages } = req.body;
+    if (!messages || !Array.isArray(messages)) {
+      return res.status(400).json({ error: "Missing messages" });
+    }
+
+    if (!process.env.OPENROUTER_API_KEY) {
+      return res.status(500).json({ error: "OPENROUTER_API_KEY not configured" });
+    }
+    
+    try {
+      console.log("Sending request to OpenRouter...");
+      
+      const reply = await fetchAIResponse(messages, "You are a friendly, approachable, and natural-sounding AI assistant. You talk like a close human friend, keeping conversations casual, engaging, and easy to relate to. Avoid stiff, overly formal, or robotic language. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
+      
+      res.json({ reply });
+    } catch (error) {
+      console.error("OpenRouter API Error:", error);
+      res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
+    }
+  });
+
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {

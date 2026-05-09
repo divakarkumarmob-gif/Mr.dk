@@ -4,14 +4,19 @@ import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, C
 import { collection } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { QUESTIONS } from '../data/questions';
+import PYQTestRunner from './PYQTestRunner';
 
 
-export default function TestHub({ subjects, onNavigate }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests') => void }) {
+export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests') => void, setIsPYQRunning: (val: boolean) => void }) {
   const [activeTab, setActiveTab] = useState('All Tests');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState<'All' | 'Physics' | 'Chemistry' | 'Biology'>('All');
   const [showCustomOptions, setShowCustomOptions] = useState(false);
+  const [selectedYear, setSelectedYear] = useState('');
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
+  const [selectedSubForPYQ, setSelectedSubForPYQ] = useState('');
+  const [showPYQOptions, setShowPYQOptions] = useState(false);
+  const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
   const [questionCount, setQuestionCount] = useState(5);
 
   const mockTestType = subjects.map(s => s.topic).join(' + ');
@@ -59,10 +64,17 @@ export default function TestHub({ subjects, onNavigate }: { subjects: { name: st
 
   return (
     <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
-      <h1 className="text-2xl font-bold mb-6">Tests</h1>
-      
+      {pyqQuestions ? (
+            <PYQTestRunner questions={pyqQuestions} title={`${selectedYear} (${selectedSubForPYQ})`} onBack={() => {
+                setPyqQuestions(null);
+                setIsPYQRunning(false);
+            }} />
+      ) : (
+        <>
+            <h1 className="text-2xl font-bold mb-6">Tests</h1>
+            
 
-      <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4">
         <h2 className="font-bold text-lg">Popular Tests</h2>
         <button onClick={() => setIsFilterOpen(true)} className="flex items-center gap-2 text-xs text-blue-400 border border-blue-400/30 px-3 py-1 rounded-lg">
           <Filter className="h-3 w-3" /> {categoryFilter}
@@ -134,6 +146,23 @@ export default function TestHub({ subjects, onNavigate }: { subjects: { name: st
         <button className="text-blue-400 font-bold text-sm">Create Now &gt;</button>
       </motion.div>
       
+      {/* PYQ Test Card */}
+      <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="mt-4 bg-gradient-to-r from-orange-900/40 to-red-900/40 p-4 rounded-xl border border-orange-500/20 flex justify-between items-center cursor-pointer"
+          onClick={() => setShowPYQOptions(true)}
+      >
+          <div className="flex items-center gap-3">
+                  <BookOpen className="h-8 w-8 text-orange-400" />
+                  <div>
+                  <p className="font-bold">NEET PYQ Tests</p>
+                  <p className="text-xs text-gray-400">Previous Year Questions</p>
+                  </div>
+          </div>
+          <button className="text-orange-400 font-bold text-sm">Start PYQ &gt;</button>
+      </motion.div>
+
       {showCustomOptions && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => { setShowCustomOptions(false); setSelectedSubject(null); }}>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
@@ -184,6 +213,43 @@ export default function TestHub({ subjects, onNavigate }: { subjects: { name: st
                 )}
             </motion.div>
         </div>
+      )}
+
+      {showPYQOptions && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setShowPYQOptions(false)}>
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-gray-400" onClick={() => setShowPYQOptions(false)}><X className="h-5 w-5"/></button>
+                <h2 className="text-xl font-bold mb-6">Select PYQ</h2>
+                <div className="space-y-4">
+                    <select className="w-full p-4 rounded-xl bg-[#0a0f24] text-white" onChange={(e) => setSelectedYear(e.target.value)}>
+                        <option value="">Select Year</option>
+                        {['2021', '2022', '2023', '2024', '2025'].map(y => <option key={y} value={y}>{y}</option>)}
+                    </select>
+                    <select className="w-full p-4 rounded-xl bg-[#0a0f24] text-white" onChange={(e) => setSelectedSubForPYQ(e.target.value)}>
+                        <option value="">Select Subject</option>
+                        {['Biology', 'Chemistry', 'Physics'].map(s => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                    <button className="w-full bg-orange-600 py-3 rounded-xl font-bold hover:bg-orange-700 transition" onClick={async () => {
+                        if (!selectedYear || !selectedSubForPYQ) return alert("Please select Year and Subject");
+                        
+                        try {
+                            const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/${selectedYear}/NEET_${selectedYear}_${selectedSubForPYQ}.json`;
+                            const response = await fetch(url);
+                            if (!response.ok) throw new Error("Could not fetch test");
+                            const data = await response.json();
+                            setPyqQuestions(data.questions || []);
+                            setShowPYQOptions(false);
+                            setIsPYQRunning(true);
+                            // alert(`Fetched ${data.questions.length} questions!`);
+                        } catch (err) {
+                            alert("Error fetching test. Please check the URL.");
+                        }
+                    }}>Fetch PYQ</button>
+                </div>
+            </motion.div>
+        </div>
+      )}
+      </>
       )}
       
     </div>

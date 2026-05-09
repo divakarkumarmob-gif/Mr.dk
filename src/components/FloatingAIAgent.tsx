@@ -13,6 +13,8 @@ const FloatingAIAgent: React.FC = () => {
     const [status, setStatus] = useState("Tap to start recording");
     const [logs, setLogs] = useState<string[]>([]);
     const [showLogs, setShowLogs] = useState(false);
+    const [volume, setVolume] = useState(0);
+    const analyserRef = useRef<AnalyserNode | null>(null);
     const mediaRecorderRef = useRef<MediaRecorder | null>(null);
     const audioChunksRef = useRef<Blob[]>([]);
     const x = useMotionValue(0);
@@ -28,6 +30,29 @@ const FloatingAIAgent: React.FC = () => {
     const startRecording = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            
+            // Setup Volume Analyzer
+            const audioContext = new AudioContext();
+            const source = audioContext.createMediaStreamSource(stream);
+            const analyser = audioContext.createAnalyser();
+            source.connect(analyser);
+            analyser.fftSize = 256;
+            analyserRef.current = analyser;
+            
+            const updateVolume = () => {
+                if (analyserRef.current) {
+                    const dataArray = new Uint8Array(analyserRef.current.frequencyBinCount);
+                    analyserRef.current.getByteFrequencyData(dataArray);
+                    let sum = 0;
+                    for (let i = 0; i < dataArray.length; i++) {
+                        sum += dataArray[i];
+                    }
+                    setVolume(sum / dataArray.length);
+                    if (isRecording) requestAnimationFrame(updateVolume);
+                }
+            };
+            requestAnimationFrame(updateVolume);
+
             mediaRecorderRef.current = new MediaRecorder(stream);
             audioChunksRef.current = [];
             
@@ -39,6 +64,8 @@ const FloatingAIAgent: React.FC = () => {
                 const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
                 await processAudio(audioBlob);
                 stream.getTracks().forEach(track => track.stop());
+                analyserRef.current = null;
+                setVolume(0);
             };
             
             mediaRecorderRef.current.start();
@@ -98,15 +125,20 @@ const FloatingAIAgent: React.FC = () => {
         }
     };
     const handleDragEnd = (_: any, info: any) => {
+        // Reset if dragged down more than 50px
+        if (info.offset.y > 50) {
+            animate(x, 0, { type: "spring", stiffness: 300, damping: 30 });
+            animate(y, 0, { type: "spring", stiffness: 300, damping: 30 });
+            return;
+        }
+        
         const screenWidth = window.innerWidth;
-        const buttonWidth = 64; 
+        const buttonWidth = 56; // 14 pixels * 4
         const margin = 24;
+        const currentLeft = 24;
         
         // Determine whether to snap to left or right side
         const isLeft = (info.point.x + buttonWidth / 2) < screenWidth / 2;
-        
-        // Calculate target X position relative to initial fixed position
-        const currentLeft = 24;
         const targetXPos = isLeft ? currentLeft : (screenWidth - buttonWidth - margin);
         const targetXValue = targetXPos - currentLeft; 
         
@@ -118,16 +150,17 @@ const FloatingAIAgent: React.FC = () => {
             {/* Floating Button */}
             <motion.div
                 style={{ x, y }}
-                className="fixed bottom-20 left-6 w-16 h-16 rounded-full flex items-center justify-center p-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-lg cursor-grab z-50 overflow-hidden"
+                className="fixed bottom-16 left-6 w-14 h-14 rounded-full flex items-center justify-center p-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-lg cursor-grab z-50 overflow-hidden"
                 drag
                 dragMomentum={false}
+                dragConstraints={{ top: -500, bottom: 100, left: -24, right: 300 }}
                 onDragEnd={handleDragEnd}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9, cursor: "grabbing" }}
                 onClick={() => !isOpen && setIsOpen(true)}
             >
                 <div className="w-full h-full rounded-full bg-[#0a0f24] flex items-center justify-center">
-                    <Mic className="text-white w-8 h-8" />
+                    <Mic className="text-white w-6 h-6" />
                 </div>
                 {/* Rotating Border Animation */}
                 <motion.div
@@ -148,51 +181,60 @@ const FloatingAIAgent: React.FC = () => {
                         onClick={() => setIsOpen(false)}
                     >
                         <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            className="bg-[#0f172a] p-8 rounded-[40px] w-80 h-96 flex flex-col items-center justify-between border border-white/10"
-                            onClick={(e) => e.stopPropagation()}
+                             initial={{ scale: 0.9, opacity: 0 }}
+                             animate={{ scale: 1, opacity: 1 }}
+                             exit={{ scale: 0.9, opacity: 0 }}
+                             className="relative bg-[#0f172a] p-[2px] rounded-[32px] w-72 h-80 flex flex-col items-center justify-between"
+                             onClick={(e) => e.stopPropagation()}
                         >
-                            <h2 className="text-white text-xl font-medium tracking-wide">Live Conversation</h2>
-                            
-                            {/* Neural/Wave Animation */}
-                            <div className="relative w-32 h-32 flex items-center justify-center">
-                                <motion.div
-                                    className="absolute w-24 h-24 rounded-full bg-blue-500/20"
-                                    animate={{ scale: [1, 1.2, 1] }}
-                                    transition={{ duration: 2, repeat: Infinity }}
-                                />
-                                <motion.div
-                                    className="w-16 h-16 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 shadow-[0_0_30px_rgba(59,130,246,0.6)]"
-                                    animate={{ scale: isRecording ? [1, 1.1, 1] : 1 }}
-                                    transition={{ duration: 0.5, repeat: isRecording ? Infinity : 0 }}
-                                />
-                            </div>
-
-                            <p className="text-white/70 text-sm font-light text-center h-16 overflow-y-auto w-full px-4">
-                                {status}
-                            </p>
-
-                            {showLogs && (
-                                <div className="bg-black/80 text-green-400 text-xs p-2 rounded w-full h-32 overflow-y-auto mt-2 font-mono">
-                                    {logs.map((log, i) => <div key={i}>{log}</div>)}
+                            {/* Rotating RGB Border */}
+                            <motion.div
+                                className="absolute inset-0 rounded-[32px] bg-[conic-gradient(from_0deg,transparent_0_340deg,#3b82f6_350deg,#8b5cf6_360deg)] opacity-100"
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                style={{ opacity: 0.5 + volume / 100 }}
+                            />
+                            <div className="relative w-full h-full bg-[#0f172a] p-6 rounded-[30px] flex flex-col items-center justify-between border border-white/10">
+                                <h2 className="text-white text-lg font-medium tracking-wide">Live Conversation</h2>
+                                
+                                {/* Neural/Wave Animation */}
+                                <div className="relative w-32 h-32 flex items-center justify-center">
+                                    <motion.div
+                                        className="absolute w-24 h-24 rounded-full bg-blue-500/20"
+                                        animate={{ scale: [1, 1 + volume / 50, 1] }}
+                                        transition={{ duration: 0.5, repeat: Infinity }}
+                                    />
+                                    <motion.div
+                                        className="w-16 h-16 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 shadow-[0_0_30px_rgba(59,130,246,0.6)]"
+                                        animate={{ scale: isRecording ? [1, 1.1 + volume / 100, 1] : 1 }}
+                                        transition={{ duration: 0.2, repeat: isRecording ? Infinity : 0 }}
+                                    />
                                 </div>
-                            )}
 
-                            <div className="flex gap-4 w-full justify-center">
-                                <button
-                                    onClick={() => setShowLogs(!showLogs)}
-                                    className="text-white/50 text-xs underline"
-                                >
-                                    {showLogs ? "Hide Logs" : "Show Logs"}
-                                </button>
-                                <button 
-                                    onClick={isRecording ? stopRecording : startRecording}
-                                    className={`p-5 rounded-full text-white transition-all ${isRecording ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'}`}
-                                >
-                                    {isRecording ? <Square className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
-                                </button>
+                                <p className="text-white/70 text-sm font-light text-center h-16 overflow-y-auto w-full px-4">
+                                    {status}
+                                </p>
+
+                                {showLogs && (
+                                    <div className="bg-black/80 text-green-400 text-xs p-2 rounded w-full h-32 overflow-y-auto mt-2 font-mono">
+                                        {logs.map((log, i) => <div key={i}>{log}</div>)}
+                                    </div>
+                                )}
+
+                                <div className="flex gap-4 w-full justify-center">
+                                    <button
+                                        onClick={() => setShowLogs(!showLogs)}
+                                        className="text-white/50 text-xs underline"
+                                    >
+                                        {showLogs ? "Hide Logs" : "Show Logs"}
+                                    </button>
+                                    <button 
+                                        onClick={isRecording ? stopRecording : startRecording}
+                                        className={`p-5 rounded-full text-white transition-all ${isRecording ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'}`}
+                                    >
+                                        {isRecording ? <Square className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>

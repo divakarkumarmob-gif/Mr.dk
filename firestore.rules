@@ -2,9 +2,57 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function isSignedIn() { return request.auth != null; }
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+
+    match /notifications/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Public or shared data
+    match /questions/{questionId} {
+      allow read: if isSignedIn();
+      allow write: if false; // Only allow writes from admin or server, kept tight for now
+    }
+    
+    match /chapterActivity/{activityId} {
+      allow read: if isSignedIn();
+      allow write: if false; // Assuming read-only for now
+    }
+
+    // User-specific data
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+      
+      match /analyses/{analysisId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      match /results/{resultId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      match /notes/{noteId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      match /analytics_v2/{docId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Chat data - restricted to participants
+    match /chats/{chatId} {
+      allow read: if isSignedIn() && (resource.data.participants.hasAny([request.auth.uid]));
+      allow write: if isSignedIn() && (request.resource.data.participants.hasAny([request.auth.uid]));
+      
+      match /messages/{messageId} {
+        allow read: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]));
+        allow write: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]));
+      }
+    }
 
     match /{document=**} {
-      allow read, write: if isSignedIn();
+      allow read, write: if false;
     }
   }
 }

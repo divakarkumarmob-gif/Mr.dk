@@ -1,7 +1,10 @@
-import {useState} from 'react';
-import {ChevronDown, ChevronRight, Leaf, Atom, Beaker, Play} from 'lucide-react';
+import {useState, useEffect} from 'react';
+import {collection, onSnapshot} from 'firebase/firestore';                
+import {db} from '../lib/firebase';
+import {ChevronDown, Leaf, Atom, Beaker, Play} from 'lucide-react';
 import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
+import BattleRoom from './BattleRoom';
 
 const CHAPTER_DATA: any = {
     Physics: { 
@@ -27,15 +30,36 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
       { name: 'Chemistry', icon: Beaker, progress: 61, color: 'bg-orange-500' }
     ];
 
+    const [activeUsers, setActiveUsers] = useState<Record<string, number>>({});
+
+    useEffect(() => {
+        const q = collection(db, 'chapterActivity');
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            const data: Record<string, number> = {};
+            snapshot.docs.forEach(doc => {
+                data[doc.id] = doc.data().totalActive;
+            });
+            setActiveUsers(data);
+        });
+        return () => unsubscribe();
+    }, []);                
+
     const accordionItems = ["LECTURE LIBRARY", "CUSTOM PRACTICE", "NEURAL & AI TOOLS", "BATTLE & PRACTICE", "MEMORY VAULT"];
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
     const [activeSubject, setActiveSubject] = useState<string>('Physics');
     const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
+    const [activeBattleChapter, setActiveBattleChapter] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
 
     return (
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans">
           <HubSwitcher active="study" onNavigate={onNavigate} />
+          {activeBattleChapter && (
+              <BattleRoom chapter={activeBattleChapter} onFinish={(winner) => {
+                  alert(`Winner: ${winner}`);
+                  setActiveBattleChapter(null);
+              }} />
+          )}
           
           <div className="text-gray-400 text-sm mt-4 text-center">
             {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -91,6 +115,35 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
                                                 ))}
                                             </div>
                                         ))}
+                                    </div>
+                                </>
+                            ) : item === "BATTLE & PRACTICE" ? (
+                                <>
+                                    <div className="flex gap-2 mb-4 border-b border-white/10 pb-2">
+                                        {['Physics', 'Chemistry', 'Biology'].map(sub => (
+                                            <button 
+                                                key={sub}
+                                                className={`px-4 py-2 font-bold text-xs ${activeSubject === sub ? 'text-orange-500 border-b-2 border-orange-500' : 'text-gray-400'}`}
+                                                onClick={() => { setActiveSubject(sub); }}
+                                            >
+                                                {sub}
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <div className="max-h-60 overflow-y-auto space-y-4">
+                                        {Object.entries(CHAPTER_DATA[activeSubject])
+                                            .flatMap(([cls, chapters]: [string, any]) => 
+                                                chapters.map((c: string) => ({ chapter: c, active: activeUsers[c] || 0 }))
+                                            )
+                                            .sort((a, b) => b.active - a.active)
+                                            .map(({ chapter, active }) => (
+                                                <div key={chapter} className="p-3 bg-white/5 rounded-lg mb-2 text-xs flex items-center justify-between cursor-pointer hover:bg-orange-500/20"
+                                                     onClick={() => setActiveBattleChapter(chapter)}>
+                                                    <span>{chapter}</span>
+                                                    <span className="text-orange-500 font-bold">{active} Active</span>
+                                                </div>
+                                            ))
+                                        }
                                     </div>
                                 </>
                             ) : (
