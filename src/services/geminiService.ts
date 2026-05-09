@@ -5,7 +5,7 @@ export async function chatWithAI(messages: { role: string; content: string }[], 
     // as it currently only expects messages. 
     // If image support is needed, the backend endpoint will need to be updated.
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
+    const backendUrl = "https://mrdk.onrender.com";
     const response = await fetch(`${backendUrl}/api/tutor`, {
         method: "POST",
         headers: {
