@@ -599,7 +599,7 @@ export default function App() {
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
 
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-8 select-none">
         <div>
            <h1 className="text-2xl font-bold flex items-center gap-2">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
            <p className="text-gray-400">Let's make today productive</p>
@@ -662,7 +662,7 @@ export default function App() {
       <HubSwitcher active="home" onNavigate={setCurrentView} />
 
       {/* Performance Overview (Moved from StudyHub) */}
-      <div className="bg-[#161e38] rounded-2xl p-6 border border-white/10 mb-8 mt-6">
+      <div className="bg-[#161e38] rounded-2xl p-6 border border-white/10 mb-8 mt-6 select-none">
         <div className="flex justify-between items-center mb-6">
             <h2 className="font-bold text-lg">Performance Overview</h2>
             <div className="text-orange-500 text-xs font-semibold">
