@@ -4,19 +4,24 @@ service cloud.firestore {
     function isSignedIn() { return request.auth != null; }
     function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
 
-    match /notifications/{allPaths=**} {
-      allow read, write: if true;
+    match /notifications/{notificationId} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn();
+    }
+    match /notifications {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn();
     }
 
     // Public or shared data
     match /questions/{questionId} {
       allow read: if isSignedIn();
-      allow write: if false; // Only allow writes from admin or server, kept tight for now
+      allow write: if false; 
     }
     
     match /chapterActivity/{activityId} {
       allow read: if isSignedIn();
-      allow write: if false; // Assuming read-only for now
+      allow write: if false;
     }
 
     // User-specific data
@@ -42,12 +47,12 @@ service cloud.firestore {
 
     // Chat data - restricted to participants
     match /chats/{chatId} {
-      allow read: if isSignedIn() && (resource.data.participants.hasAny([request.auth.uid]));
-      allow write: if isSignedIn() && (request.resource.data.participants.hasAny([request.auth.uid]));
+      allow read: if isSignedIn() && (resource.data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
+      allow write: if isSignedIn() && (request.resource.data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
       
       match /messages/{messageId} {
-        allow read: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]));
-        allow write: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]));
+        allow read: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
+        allow write: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
       }
     }
 

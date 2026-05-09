@@ -1,6 +1,6 @@
 import express from "express";
 import { createServer as createViteServer } from "vite";
-import path from "path";
+import * as path from "path";
 import { google } from "googleapis";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
@@ -334,9 +334,12 @@ async function startServer() {
     // However, in this environment, I don't need to worry too much about prod serving, 
     // just make it robust enough.
     const distPath = path.resolve(process.cwd(), "dist");
+    console.log(`Serving static files from: ${distPath}`);
     app.use(express.static(distPath));
     app.get("*", (req, res) => {
-      res.sendFile(path.resolve(distPath, "index.html"));
+      const filePath = path.resolve(distPath, "index.html");
+      console.log(`Sending file: ${filePath}`);
+      res.sendFile(filePath);
     });
   }
 
