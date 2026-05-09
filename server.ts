@@ -330,16 +330,9 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    // Assuming 'dist' is the build directory. We need to handle this.
-    // However, in this environment, I don't need to worry too much about prod serving, 
-    // just make it robust enough.
-    const distPath = path.resolve(process.cwd(), "dist");
-    console.log(`Serving static files from: ${distPath}`);
-    app.use(express.static(distPath));
-    app.get("*", (req, res) => {
-      const filePath = path.resolve(distPath, "index.html");
-      console.log(`Sending file: ${filePath}`);
-      res.sendFile(filePath);
+    // Backend in production acts as a pure API server
+    app.get("/", (req, res) => {
+      res.json({ status: "ok", message: "API server is running" });
     });
   }
 
