@@ -22,7 +22,8 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
         setLoading(true);
 
         try {
-            const response = await fetch('/api/neural-chat', {
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
+            const response = await fetch(`${backendUrl}/api/neural-chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ messages: newMessages })

@@ -90,7 +90,8 @@ const FloatingAIAgent: React.FC = () => {
                 const base64Audio = (reader.result as string).split(',')[1];
                 
                 // Call /api/gemini proxy
-                const response = await fetch('/api/gemini', {
+                const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
+                const response = await fetch(`${backendUrl}/api/gemini`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
