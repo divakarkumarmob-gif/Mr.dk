@@ -424,7 +424,7 @@ export default function App() {
   useEffect(() => {
     // 3-finger detection
     const handleTouch = (e: TouchEvent) => {
-        if (e.touches.length === 3) {
+        if (e.touches.length === 2) {
             setShowSupportModal(true);
         }
     };

@@ -86,7 +86,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     };
 
     return (
-        <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
+        <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white select-none">
             <div className="flex justify-between items-center mb-4 bg-[#161e38] p-4 rounded-xl shadow-md text-white">
                 <button onClick={onClose}><X /></button>
                 <h2 className="font-bold">Neural Doubt Solver</h2>
