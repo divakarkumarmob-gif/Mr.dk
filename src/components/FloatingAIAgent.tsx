@@ -1,9 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate } from 'motion/react';
 import { Mic, Square } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
-
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const FloatingAIAgent: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -92,20 +89,23 @@ const FloatingAIAgent: React.FC = () => {
             reader.onloadend = async () => {
                 const base64Audio = (reader.result as string).split(',')[1];
                 
-                // Call Gemini
-                // Use a flash model as it's fast
-                const result = await ai.models.generateContent({
-                    model: "gemini-2.0-flash", // Use a suitable model
-                    contents: [{
-                        role: "user",
-                        parts: [
-                            { inlineData: { data: base64Audio, mimeType: "audio/webm" } },
-                            { text: "Transcribe the audio and then answer the query concisely as a helpful assistant." }
-                        ]
-                    }]
+                // Call /api/gemini proxy
+                const response = await fetch('/api/gemini', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        base64Audio: base64Audio,
+                        prompt: "Transcribe the audio and then answer the query concisely as a helpful assistant."
+                    })
                 });
+
+                if (!response.ok) {
+                    throw new Error(`Failed to call AI API: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                const aiResponse = data.text;
                 
-                const aiResponse = result.text;
                 setAiText(aiResponse);
                 
                 // Browser TTS

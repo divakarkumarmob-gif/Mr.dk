@@ -2,6 +2,7 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { google } from "googleapis";
+import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
@@ -217,6 +218,38 @@ async function startServer() {
       }
       return reply;
     }
+
+    // API route for gemini
+    app.post("/api/gemini", async (req, res) => {
+        const { base64Audio, prompt } = req.body;
+        if (!base64Audio || !prompt) {
+            return res.status(400).json({ error: "Missing data" });
+        }
+
+        if (!process.env.GEMINI_API_KEY) {
+            return res.status(500).json({ error: "GEMINI_API_KEY not configured" });
+        }
+
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+        
+        try {
+            const model = ai.models.getGenerativeModel({ model: "gemini-2.0-flash" });
+            const result = await model.generateContent({
+                contents: [{
+                    role: "user",
+                    parts: [
+                        { inlineData: { data: base64Audio, mimeType: "audio/webm" } },
+                        { text: prompt }
+                    ]
+                }]
+            });
+            
+            res.json({ text: result.text });
+        } catch (error) {
+            console.error("Gemini API Error:", error);
+            res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
+        }
+    });
 
     // API route for analysis
     app.post("/api/analysis", async (req, res) => {
