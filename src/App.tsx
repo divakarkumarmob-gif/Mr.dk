@@ -7,7 +7,7 @@ import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
-import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion} from 'firebase/firestore'; 
+import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import AnalysisHistory from './components/AnalysisHistory';
 import FloatingAIAgent from './components/FloatingAIAgent';
@@ -144,17 +144,6 @@ export default function App() {
   };
 
   useEffect(() => {
-    const handlePopState = (event: PopStateEvent) => {
-        if (event.state && event.state.view) {
-            _setCurrentView(event.state.view);
-        } else {
-            _setCurrentView('home');
-        }
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-  useEffect(() => {
     if (mainContainerRef.current) {
         mainContainerRef.current.scrollTop = 0;
     }
@@ -222,8 +211,85 @@ export default function App() {
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
+  const [showRandomPopup, setShowRandomPopup] = useState(false);
+  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
   const [displayedText, setDisplayedText] = useState("");
+  const [backPressCount, setBackPressCount] = useState(0);
+  const [showExitToast, setShowExitToast] = useState(false);
   
+  useEffect(() => {
+    // Initial mount logic
+    window.scrollTo(0, 0);
+    _setCurrentView('home');
+    localStorage.removeItem('resumeTestData');
+    
+    // Push initial state to trap the first back button press
+    window.history.pushState({ view: 'home' }, '', '/home');
+
+    const handleVisibilityChange = () => {
+        if (document.visibilityState === 'visible') {
+            _setCurrentView('home');
+            setActiveVideo(null);
+            setShowNotifications(false);
+            setShowAnalytics(false);
+            setShowResetModal(false);
+            setShowRandomPopup(false);
+            window.scrollTo(0, 0);
+        }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+        // Handle basic view navigation from history
+        if (e.state && e.state.view) {
+            _setCurrentView(e.state.view);
+            return;
+        }
+
+        // Complex back logic (overlays and exit trap)
+        if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
+            setActiveVideo(null);
+            setShowNotifications(false);
+            setShowAnalytics(false);
+            setShowResetModal(false);
+            setShowRandomPopup(false);
+            window.history.pushState({ view: currentView }, '', '/' + currentView); 
+            return;
+        }
+
+        if (currentView !== 'home') {
+            _setCurrentView('home');
+            window.scrollTo(0, 0);
+            window.history.pushState({ view: 'home' }, '', '/home');
+        } else {
+            setBackPressCount(prev => prev + 1);
+            setShowExitToast(true);
+            setTimeout(() => {
+                setShowExitToast(false);
+                setBackPressCount(0);
+            }, 2000);
+
+            if (backPressCount >= 1) {
+                window.history.back();
+            } else {
+                window.history.pushState({ view: 'home' }, '', '/home');
+            }
+        }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [currentView, activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, backPressCount]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentView]);
+
   useEffect(() => {
       if (user) {
           const updateLastSeen = async () => {
@@ -462,9 +528,6 @@ export default function App() {
     fetchNotifications();
   }, [user]);
 
-  const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
-  const [showRandomPopup, setShowRandomPopup] = useState(false);
-  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
 
   useEffect(() => {
     if (randomOverride) {
@@ -769,6 +832,12 @@ export default function App() {
 
     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-3 sm:p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
       <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl px-1 sm:px-0">
+      
+      {showExitToast && (
+          <div className="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-xs font-semibold z-[1000] shadow-2xl animate-bounce">
+              Press back again to exit
+          </div>
+      )}
 
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
 
@@ -835,29 +904,29 @@ export default function App() {
 
       <HubSwitcher active="home" onNavigate={setCurrentView} />
 
-      <div className="bg-[#161e38] rounded-2xl p-4 sm:p-6 border border-white/10 mb-6 mt-4 select-none">
-        <div className="flex justify-between items-center mb-4">
-            <h2 className="font-bold text-base sm:text-lg">Your Performance</h2>
+      <div className="bg-[#161e38] rounded-2xl p-3 sm:p-5 border border-white/10 mb-4 mt-2 select-none">
+        <div className="flex justify-between items-center mb-2.5">
+            <h2 className="font-bold text-sm sm:text-lg">Your Performance</h2>
             <div className="text-orange-500 text-[10px] sm:text-xs font-semibold">
                 {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
             </div>
         </div>
         <div className="grid grid-cols-2 gap-2 sm:gap-4">
-            <div className="bg-white/5 p-3 rounded-xl border border-white/5">
-                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Tests Attempted</p>
-                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            <div onClick={() => setCurrentView('analytics')} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Tests Attempted</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div className="bg-white/5 p-3 rounded-xl border border-white/5">
-                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Questions Solved</p>
-                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{stats.questionsSolved} <CheckCircle2 className="text-green-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Questions Solved</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.questionsSolved} <CheckCircle2 className="text-green-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div className="bg-white/5 p-3 rounded-xl border border-white/5">
-                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Accuracy</p>
-                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Accuracy</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div onClick={openAnalytics} className="cursor-pointer bg-white/5 p-3 rounded-xl border border-white/5">
-                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Time Spent</p>
-                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Time Spent</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
         </div>
       </div>
@@ -927,7 +996,7 @@ export default function App() {
         ))}
       </div>
 
-      <BottomNav currentView="home" onNavigate={setCurrentView} />
+      <BottomNav currentView={currentView as any} onNavigate={setCurrentView} />
       
       <FloatingAIAgent onNavigate={setCurrentView} />
       
