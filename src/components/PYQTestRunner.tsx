@@ -15,14 +15,21 @@ interface PYQTestRunnerProps {
     questions: Question[];
     onBack: () => void;
     title: string;
+    initialData?: {
+        answers: Record<string, string>;
+        marked: Record<string, boolean>;
+        currentIndex: number;
+        timeLeft: number;
+    };
 }
 
-export default function PYQTestRunner({ questions = [], onBack, title }: PYQTestRunnerProps) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [answers, setAnswers] = useState<Record<string, string>>({});
-    const [marked, setMarked] = useState<Record<string, boolean>>({});
+export default function PYQTestRunner({ questions = [], onBack, title, initialData }: PYQTestRunnerProps) {
+    const [currentIndex, setCurrentIndex] = useState(initialData?.currentIndex || 0);
+    const [answers, setAnswers] = useState<Record<string, string>>(initialData?.answers || {});
+    const [marked, setMarked] = useState<Record<string, boolean>>(initialData?.marked || {});
     const [showMenu, setShowMenu] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(questions.length * 60);
+    const [timeLeft, setTimeLeft] = useState(initialData?.timeLeft || questions.length * 60);
+    const [showQuitModal, setShowQuitModal] = useState(false);
 
     const onBackRef = useRef(onBack);
     useEffect(() => {
@@ -40,7 +47,18 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
                 return prev - 1;
             });
         }, 1000);
-        return () => clearInterval(timer);
+
+        window.history.pushState(null, '', window.location.href);
+        const handlePopState = () => {
+             setShowQuitModal(true);
+             window.history.pushState(null, '', window.location.href);
+        };
+        window.addEventListener('popstate', handlePopState);
+
+        return () => {
+            clearInterval(timer);
+            window.removeEventListener('popstate', handlePopState);
+        };
     }, []);
 
     const formatTime = (seconds: number) => {
@@ -59,6 +77,17 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
         const correct = questions.reduce((acc, q) => {
             return acc + (answers[q.id] === q.correct_option ? 1 : 0);
         }, 0);
+        
+        const incorrect = questions.reduce((acc, q) => {
+            if (answers[q.id] && answers[q.id] !== q.correct_option) {
+                return acc + 1;
+            }
+            return acc;
+        }, 0);
+        
+        const totalPossibleMarks = questions.length * 4;
+        const obtainedMarks = (correct * 4) - (incorrect * 5);
+        
         const attempted = Object.keys(answers).length;
         const total = questions.length;
         const timeTakenSeconds = (total * 60) - timeLeft;
@@ -67,11 +96,12 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
             await addDoc(collection(db, 'users', auth.currentUser.uid, 'results'), {
                 testName: title,
                 correct: correct,
-                incorrect: attempted - correct,
-                unattempted: total - attempted,
-                total: total,
-                score: Math.round((correct / total) * 100) || 0,
-                marks: correct || 0,
+                incorrect: incorrect,
+                unattempted: total - (correct + incorrect),
+                totalQuestions: total,
+                totalPossibleMarks: totalPossibleMarks,
+                obtainedMarks: obtainedMarks,
+                percentage: Math.round((obtainedMarks / totalPossibleMarks) * 100) || 0,
                 timeTakenSeconds: timeTakenSeconds || 0,
                 accuracy: attempted > 0 ? Math.round((correct / attempted) * 100) || 0 : 0,
                 speed: timeTakenSeconds > 0 ? Math.round((attempted / (timeTakenSeconds / 60))) || 0 : 0,
@@ -85,7 +115,18 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
             onBack();
         } catch (err) {
             console.error("Error saving test results: ", err);
-            alert("Error saving test results.");
+            // Enhanced error reporting
+            const firestoreErrorInfo = {
+                error: (err as Error).message,
+                operationType: 'create',
+                path: `users/${auth.currentUser.uid}/results`,
+                authInfo: {
+                    userId: auth.currentUser.uid,
+                    email: auth.currentUser.email,
+                }
+            };
+            console.error('Firestore Error Detailed:', JSON.stringify(firestoreErrorInfo));
+            alert("Error saving test results due to permissions, please try again or contact support.");
         }
     };
 
@@ -93,8 +134,36 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
     const totalTime = questions.length * 60;
     const progress = (timeLeft / totalTime) * 100;
 
+    const handleExitWithoutSaving = () => {
+        const resumeData = {
+            questions,
+            title,
+            answers,
+            marked,
+            currentIndex,
+            timeLeft,
+            timestamp: Date.now(),
+        };
+        localStorage.setItem('resumeTestData', JSON.stringify(resumeData));
+        onBack();
+    };
+
     return (
         <div className="fixed inset-0 bg-white text-gray-900 font-sans z-[100] flex flex-col">
+            {/* Quit Confirmation Modal */}
+            {showQuitModal && (
+                <div className="fixed inset-0 bg-black/50 z-[130] flex items-center justify-center p-6">
+                    <div className="bg-white p-6 rounded-2xl text-center w-full max-w-sm">
+                        <p className="mb-6 font-semibold">Are you sure you want to quit the test?</p>
+                        <div className="flex flex-col gap-2">
+                            <button onClick={handleTestSubmit} className="py-3 bg-blue-600 text-white rounded-xl font-bold">Yes, submit test</button>
+                            <button onClick={() => setShowQuitModal(false)} className="py-3 border border-gray-200 rounded-xl font-bold">No, back to test</button>
+                            <button onClick={handleExitWithoutSaving} className="py-3 text-red-600 font-bold">Exit without saving</button>
+                        </div>
+                    </div>
+                </div>
+            )}
+            
             {/* Confirmation Modal */}
             {showConfirmSubmit && (
                 <div className="fixed inset-0 bg-black/50 z-[120] flex items-center justify-center p-6">
@@ -109,7 +178,7 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
             )}
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                <button onClick={onBack} className="text-gray-900"><ChevronLeft /></button>
+                <button onClick={() => setShowQuitModal(true)} className="text-gray-900"><ChevronLeft /></button>
                 <div className="flex flex-col items-center">
                     <h1 className="font-bold text-sm text-gray-900">{title}</h1>
                     <div className="text-red-500 font-bold flex items-center gap-1 text-xs">
@@ -160,22 +229,25 @@ export default function PYQTestRunner({ questions = [], onBack, title }: PYQTest
             {/* Menu Drawer */}
             <AnimatePresence>
                 {showMenu && (
-                    <motion.div initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }} className="fixed inset-0 bg-white z-[110] p-6 flex flex-col">
-                        <div className="flex justify-between items-center mb-8">
-                            <h2 className="text-xl font-bold text-gray-900">Questions</h2>
-                            <button onClick={() => setShowMenu(false)}><X /></button>
-                        </div>
-                        <div className="flex-grow overflow-y-auto pb-24">
-                            <div className="grid grid-cols-5 gap-4">
-                                {questions.map((q, i) => (
-                                    <button key={q.id} onClick={() => { setCurrentIndex(i); setShowMenu(false); }} className={`w-12 h-12 rounded-lg flex items-center justify-center border font-semibold ${answers[q.id] ? 'bg-green-100 border-green-500 text-green-700' : marked[q.id] ? 'bg-blue-100 border-blue-500 text-blue-700' : 'bg-gray-50 border-gray-200 text-gray-600'}`}>
-                                        {i + 1}
-                                    </button>
-                                ))}
+                    <>
+                        <div className="fixed inset-0 bg-black/30 z-[105]" onClick={() => setShowMenu(false)} />
+                        <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} className="fixed top-0 right-0 h-full w-[80%] bg-white z-[110] p-6 flex flex-col shadow-2xl">
+                            <div className="flex justify-between items-center mb-8">
+                                <h2 className="text-xl font-bold text-gray-900">Questions</h2>
+                                <button onClick={() => setShowMenu(false)}><X /></button>
                             </div>
-                        </div>
-                        <button className="w-full bg-red-50 text-red-600 p-4 rounded-xl font-bold border border-red-200" onClick={() => setShowConfirmSubmit(true)}>Submit Test</button>
-                    </motion.div>
+                            <div className="flex-grow overflow-y-auto pb-24">
+                                <div className="grid grid-cols-5 gap-4">
+                                    {questions.map((q, i) => (
+                                        <button key={q.id} onClick={() => { setCurrentIndex(i); setShowMenu(false); }} className={`w-12 h-12 rounded-lg flex items-center justify-center border font-semibold ${answers[q.id] ? 'bg-green-100 border-green-500 text-green-700' : marked[q.id] ? 'bg-blue-100 border-blue-500 text-blue-700' : 'bg-gray-50 border-gray-200 text-gray-600'}`}>
+                                            {i + 1}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            <button className="w-full bg-red-50 text-red-600 p-4 rounded-xl font-bold border border-red-200" onClick={() => setShowConfirmSubmit(true)}>Submit Test</button>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </div>

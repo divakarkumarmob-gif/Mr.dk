@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { QUESTIONS } from '../data/questions';
+// import { QUESTIONS } from '../data/questions';
 
 export default function BattleRoom({ chapter, onFinish }: { chapter: string, onFinish: (winner: string) => void }) {
     const [questions, setQuestions] = useState<any[]>([]);
@@ -11,7 +11,8 @@ export default function BattleRoom({ chapter, onFinish }: { chapter: string, onF
 
     useEffect(() => {
         // ... (existing useEffect)
-        const allQuestions = [...QUESTIONS.Biology, ...QUESTIONS.Chemistry, ...QUESTIONS.Physics];
+        // const allQuestions = [...QUESTIONS.Biology, ...QUESTIONS.Chemistry, ...QUESTIONS.Physics];
+const allQuestions: any[] = []; // Replaced legacy QUESTIONS with empty array
         const selected = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
         setQuestions(selected);
 

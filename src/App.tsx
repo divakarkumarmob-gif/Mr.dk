@@ -13,6 +13,9 @@ import AnalysisHistory from './components/AnalysisHistory';
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
 import StudyHub from './components/StudyHub';
+import CustomPractice from './components/CustomPractice';
+import PracticeTest from './components/PracticeTest';
+import PYQTestRunner from './components/PYQTestRunner';
 import HubSwitcher from './components/HubSwitcher';
 import VideoPlayer from './components/VideoPlayer';
 import Profile from './components/Profile';
@@ -23,11 +26,13 @@ import TestHub from './components/TestHub';
 import Notes from './components/Notes';
 import UserChat from './components/UserChat';
 import NeuralSolver from './components/NeuralSolver';
+import LiveAIInterface from './components/LiveAIInterface';
 import SupportModal from './components/SupportModal';
 import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion } from 'motion/react';
+import { useReportProblemGesture } from './lib/useReportProblemGesture';
 
 enum OperationType {
   CREATE = 'create',
@@ -82,8 +87,8 @@ const getISTDateString = () => {
     return istTime.toISOString().split('T')[0];
 };
 
-// Function to calculate day index
-const getDayIndex = (resetDay?: number) => {
+// Function to calculate day index using resetDay marker stored in Firestore
+const getDayIndex = (resetDayMarker?: number) => {
     const istOffset = 5.5 * 60 * 60 * 1000;
     const now = new Date();
     const istTime = new Date(now.getTime() + istOffset);
@@ -91,13 +96,8 @@ const getDayIndex = (resetDay?: number) => {
     // If it's before 1AM, we are on the previous day.
     const day = Math.floor((istTime.getTime() - (1 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
     
-    if (resetDay !== undefined) {
-        return Math.max(0, day - resetDay);
-    }
-    
-    const savedResetDay = localStorage.getItem('resetDay');
-    if (savedResetDay) {
-        return Math.max(0, day - parseInt(savedResetDay));
+    if (resetDayMarker !== undefined) {
+        return Math.max(0, day - resetDayMarker);
     }
     
     return day;
@@ -129,10 +129,16 @@ const getRandomChapters = () => {
 };
 
 export default function App() {
+  useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport' | 'analytics'>('home');
+  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI'>('home');
+  const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
+  const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
   const setCurrentView = (view: typeof currentView) => {
+    if (view === 'liveAI' && currentView !== 'liveAI') {
+        setPreviousView(currentView);
+    }
     window.history.pushState({ view }, '', '/' + view);
     _setCurrentView(view);
   };
@@ -206,6 +212,7 @@ export default function App() {
   }, [user]);
 
   const [isPYQRunning, setIsPYQRunning] = useState(false);
+  const [resumingTest, setResumingTest] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [subjects, setSubjects] = useState(getDailyChapters());
@@ -214,6 +221,8 @@ export default function App() {
   const [showAnalytics, setShowAnalytics] = useState(false);
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
   const [stats, setStats] = useState({
           testsAttempted: 0,
           questionsSolved: 0,
@@ -245,6 +254,33 @@ export default function App() {
     setChartData(data.reverse());
     setShowAnalytics(true);
   };
+
+  useEffect(() => {
+    if (user) {
+        setCurrentView('home');
+    } else {
+        _setCurrentView('home');
+    }
+  }, [user]);
+
+  useEffect(() => {
+    if (!user) return;
+    setShowOnboarding(true);
+    
+    const text = "This is Ask AI, you can ask questions directly!";
+    let i = 0;
+    const typingInterval = setInterval(() => {
+        setDisplayedText(text.substring(0, i));
+        i++;
+        if (i > text.length) clearInterval(typingInterval);
+    }, 50);
+
+    const timer = setTimeout(() => setShowOnboarding(false), 6000);
+    return () => {
+        clearTimeout(timer);
+        clearInterval(typingInterval);
+    };
+  }, [user]);
 
   useEffect(() => {
       if (!statsLoaded) return;
@@ -378,36 +414,71 @@ export default function App() {
     fetchNotifications();
   }, [user]);
 
-  const handleRandomize = async () => {
+  const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
+  const [showRandomPopup, setShowRandomPopup] = useState(false);
+  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
+
+  useEffect(() => {
+    if (randomOverride) {
+        const interval = setInterval(() => {
+            if (Date.now() > randomOverride.expiryTime) {
+                setSubjects(randomOverride.originalSubjects);
+                setRandomOverride(null);
+                clearInterval(interval);
+            }
+        }, 60000); // Check every minute
+        return () => clearInterval(interval);
+    }
+  }, [randomOverride]);
+
+  const handleRandomRestore = () => {
+      if (randomOverride) {
+          setSubjects(randomOverride.originalSubjects);
+          setRandomOverride(null);
+      }
+      setShowRandomPopup(false);
+  };
+
+  const applyRandomChapter = () => {
+      if (!randomOverride) return;
+      setSubjects(randomOverride.pendingSubjects);
+      setShowRandomPopup(false);
+  };
+    
+  const handleRandomize = () => {
       if (!user) return;
-      setPreviousSubjects(subjects);
-      const newSubjects = getRandomChapters();
-      setSubjects(newSubjects);
       
-      const docRef = doc(db, 'users', user.uid, 'settings', 'subjects');
-      await setDoc(docRef, { subjects: newSubjects, day: getDayIndex() });
+      // If already randomized, don't overwrite the true original subjects
+      if (randomOverride) return;
+      
+      const originalSubjects = [...subjects];
+      const newSubjects = getRandomChapters();
+      
+      setRandomChapter(newSubjects[0]); 
+      
+      setRandomOverride({
+          originalSubjects: originalSubjects,
+          expiryTime: Date.now() + 2 * 60 * 60 * 1000,
+          pendingSubjects: newSubjects 
+      });
+      
+      setShowRandomPopup(true);
   };
 
   const handleReset = async () => {
       if (!user) return;
       setPreviousSubjects(subjects);
       
-      // Update reset day in Firestore? Or just set subjects back to daily? 
-      // The previous implementation used localStorage.setItem('resetDay', ...)
-      // I need to decide where to store resetDay. Let's store it in the same settings doc.
-      // But the getDayIndex uses the resetDay. So I need to update it in Firestore.
-      // Wait, getDayIndex() reads from local storage! 
-      // "const savedResetDay = localStorage.getItem('resetDay');"
-      // I should also move resetDay to Firestore.
-      
-      // Ignoring resetDay for now as it makes things complicated and user wanted to
-      // stop using local storage for stuff.
-      
-      const newDaily = getDailyChapters();
+      const newDaily = getNewUserChapters(); 
       setSubjects(newDaily);
       
       const docRef = doc(db, 'users', user.uid, 'settings', 'subjects');
-      await setDoc(docRef, { subjects: newDaily, day: getDayIndex() });
+      const istOffset = 5.5 * 60 * 60 * 1000;
+      const now = new Date();
+      const istTime = new Date(now.getTime() + istOffset);
+      const nowDay = Math.floor((istTime.getTime() - (1 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+
+      await setDoc(docRef, { subjects: newDaily, day: nowDay });
       setShowResetModal(false);
   };
 
@@ -418,41 +489,20 @@ export default function App() {
       setShowResetModal(false);
   };
 
+  useEffect(() => {
+    (window as any).setAsHomeScreen = (subject: string, chapter: string) => {
+        const colorMap: Record<string, string> = {
+            'Physics': 'border-blue-500',
+            'Chemistry': 'border-orange-500',
+            'Biology': 'border-green-500'
+        };
+        setSubjects((prev: any[]) => prev.map(s => s.name === subject.toUpperCase() ? { ...s, topic: chapter, color: colorMap[subject] || 'border-gray-500' } : s));
+    };
+    return () => { delete (window as any).setAsHomeScreen; };
+  }, []);
+
   const [showSupportModal, setShowSupportModal] = useState(false);
   const [showNeuralSolver, setShowNeuralSolver] = useState(false);
-
-  useEffect(() => {
-    // 3-finger detection
-    const handleTouch = (e: TouchEvent) => {
-        if (e.touches.length === 2) {
-            setShowSupportModal(true);
-        }
-    };
-    window.addEventListener('touchstart', handleTouch);
-
-    // Shake detection
-    let lastX = 0, lastY = 0, lastZ = 0;
-    let lastTime = 0;
-    const handleMotion = (e: DeviceMotionEvent) => {
-        const acc = e.accelerationIncludingGravity;
-        if (!acc) return;
-        const curTime = Date.now();
-        if ((curTime - lastTime) > 100) {
-            const diff = Math.abs(acc.x! + acc.y! + acc.z! - lastX - lastY - lastZ);
-            if (diff > 30) { // Threshold for shake
-                setShowSupportModal(true);
-            }
-            lastX = acc.x!; lastY = acc.y!; lastZ = acc.z!;
-            lastTime = curTime;
-        }
-    };
-    window.addEventListener('devicemotion', handleMotion);
-
-    return () => {
-        window.removeEventListener('touchstart', handleTouch);
-        window.removeEventListener('devicemotion', handleMotion);
-    };
-  }, []);
 
   if (loading) {
     return <div className="flex items-center justify-center min-h-screen bg-[#0a0f24] text-white">Loading...</div>;
@@ -462,8 +512,45 @@ export default function App() {
     return <Login />;
   }
 
+  if (currentView === 'liveAI') {
+      return <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />;
+  }
+
   if (currentView === 'study') {
-      return <StudyHub subjects={subjects} onNavigate={setCurrentView} />;
+      return <StudyHub subjects={subjects} setResumingTest={setResumingTest} setCurrentView={setCurrentView} onNavigate={(view) => {
+          if (view === 'customPractice') {
+              setCurrentView('customPractice');
+          } else {
+              setCurrentView(view);
+          }
+      }} />;
+  }
+
+  if (currentView === 'customPractice') {
+      return <CustomPractice onBack={() => setCurrentView('study')} onStart={(chapters) => {
+          setPracticeChapters(chapters);
+          setCurrentView('practiceTest');
+      }} />;
+  }
+
+  if (currentView === 'practiceTest') {
+      if (resumingTest) {
+          return <PYQTestRunner 
+              questions={resumingTest.questions}
+              title={resumingTest.title}
+              initialData={{
+                  answers: resumingTest.answers,
+                  marked: resumingTest.marked,
+                  currentIndex: resumingTest.currentIndex,
+                  timeLeft: resumingTest.timeLeft
+              }}
+              onBack={() => {
+                  setResumingTest(null);
+                  setCurrentView('study');
+              }}
+          />;
+      }
+      return <PracticeTest chapters={practiceChapters} onBack={() => setCurrentView('customPractice')} />;
   }
 
   if (currentView === 'profile') {
@@ -595,7 +682,41 @@ export default function App() {
    }
 
   return (
-    <div ref={mainContainerRef} className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
+    <>
+      {showOnboarding && (
+          <div 
+            onClick={() => setShowOnboarding(false)}
+            className="fixed inset-0 z-[1000] flex flex-col items-center justify-center p-6 bg-black/60 backdrop-blur-sm cursor-pointer"
+          >
+            <motion.div 
+                className="flex items-center gap-4"
+            >
+                    <div
+                        className="w-14 h-14 rounded-full relative z-50 flex-shrink-0"
+                    >
+                        <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,orange,blue,green)] animate-spin"></div>
+                        <div className="absolute inset-[2px] rounded-full bg-[#0a0f24] flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-white">
+                                <path d="M7 10v4M10 8v8M13 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                <path d="M17 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" />
+                            </svg>
+                        </div>
+                    </div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.5 }}
+                    className="bg-[#161e38] p-4 rounded-2xl border border-blue-500 shadow-2xl"
+                >
+                    <p className="font-bold text-lg">{displayedText}</p>
+                </motion.div>
+            </motion.div>
+            <p className="text-white mt-32 text-sm text-center opacity-70 animate-pulse">Tap anywhere to start</p>
+          </div>
+      )}
+
+    <div ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
+
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
 
       {/* Header */}
@@ -713,6 +834,19 @@ export default function App() {
           </div>
       </div>
       
+      {showRandomPopup && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
+            <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm text-center">
+                <h2 className="text-xl font-bold mb-4">Random Chapter Picked!</h2>
+                <p className="text-gray-300">"{randomChapter?.topic}" will be for 2 hours.</p>
+                <div className="flex flex-col gap-2 mt-6">
+                  <button onClick={applyRandomChapter} className="w-full bg-blue-600 py-2 rounded-lg font-bold">Got it</button>
+                  <button onClick={handleRandomRestore} className="w-full bg-gray-700 py-2 rounded-lg font-bold">Restore Original</button>
+                </div>
+            </div>
+        </div>
+      )}
+      
       {showResetModal && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
             <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm">
@@ -742,7 +876,7 @@ export default function App() {
 
       <BottomNav currentView="home" onNavigate={setCurrentView} />
       
-      <FloatingAIAgent />
+      <FloatingAIAgent onNavigate={setCurrentView} />
       
       <SupportModal 
         isOpen={showSupportModal} 
@@ -753,6 +887,7 @@ export default function App() {
         }}
       />
     </div>
+    </>
   );
 }
 

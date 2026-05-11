@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate } from 'motion/react';
 import { Mic, Square } from 'lucide-react';
 
-const FloatingAIAgent: React.FC = () => {
+const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void}> = ({ onNavigate }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState(false);
@@ -16,6 +16,7 @@ const FloatingAIAgent: React.FC = () => {
     const audioChunksRef = useRef<Blob[]>([]);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
+    const scale = useMotionValue(1);
 
     const addLog = (msg: string) => {
         console.log(msg);
@@ -150,25 +151,31 @@ const FloatingAIAgent: React.FC = () => {
         <>
             {/* Floating Button */}
             <motion.div
-                style={{ x, y }}
-                className="fixed bottom-16 left-6 w-14 h-14 rounded-full flex items-center justify-center p-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-lg cursor-grab z-50 overflow-hidden"
+                style={{ x, y, scale }}
+                className="fixed bottom-16 left-6 w-14 h-14 rounded-full shadow-lg cursor-grab z-[2000]"
                 drag
                 dragMomentum={false}
                 dragConstraints={{ top: -500, bottom: 100, left: -24, right: 300 }}
                 onDragEnd={handleDragEnd}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9, cursor: "grabbing" }}
-                onClick={() => !isOpen && setIsOpen(true)}
+                onClick={() => {
+                   const screenWidth = window.innerWidth;
+                   const targetX = (screenWidth / 2) - 52; 
+                   const midX = screenWidth / 6;
+                   const midY = -130;
+                   const targetY = -65;
+                   
+                   animate(x, [0, midX, targetX], { duration: 0.4, ease: "easeInOut" });
+                   animate(y, [0, midY, targetY], { duration: 0.4, ease: "easeInOut" });
+                   animate(scale, 1.45, { duration: 0.4, ease: "easeInOut" });
+                   setTimeout(() => onNavigate('liveAI'), 400);
+                }}
             >
-                <div className="w-full h-full rounded-full bg-[#0a0f24] flex items-center justify-center">
+                <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,orange,blue,green)] animate-spin"></div>
+                <div className="absolute inset-[2px] rounded-full bg-[#0a0f24] flex items-center justify-center">
                     <Mic className="text-white w-6 h-6" />
                 </div>
-                {/* Rotating Border Animation */}
-                <motion.div
-                    className="absolute inset-0 rounded-full bg-gradient-conic from-blue-500 via-purple-500 to-pink-500 opacity-70"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                />
             </motion.div>
 
             {/* Modal */}

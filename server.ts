@@ -174,17 +174,17 @@ async function startServer() {
     if (process.env.GEMINI_API_KEY) {
       try {
         const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-        const model = ai.models.getGenerativeModel({ model: "gemini-2.0-flash" });
+        const chat = ai.chats.create({ model: "gemini-1.5-flash" });
         
-        const chat = model.startChat({
-          history: userMessages.slice(0, -1).map(m => ({
-            role: m.role === 'user' ? 'user' : 'model',
-            parts: [{ text: m.content }]
-          })),
-        });
+        // Populate history
+        for (const m of userMessages.slice(0, -1)) {
+            await chat.sendMessage({ 
+                message: m.content, 
+            });
+        }
         
-        const result = await chat.sendMessage(userMessages[userMessages.length - 1].content);
-        return result.response.text();
+        const result = await chat.sendMessage({ message: userMessages[userMessages.length - 1].content });
+        return result.text;
       } catch (error) {
         console.error("Gemini failed, falling back to OpenRouter", error);
       }
@@ -258,8 +258,8 @@ async function startServer() {
         const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
         
         try {
-            const model = ai.models.getGenerativeModel({ model: "gemini-2.0-flash" });
-            const result = await model.generateContent({
+            const result = await ai.models.generateContent({
+                model: "gemini-1.5-flash",
                 contents: [{
                     role: "user",
                     parts: [

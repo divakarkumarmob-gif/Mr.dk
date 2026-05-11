@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {collection, onSnapshot} from 'firebase/firestore';                
 import {db} from '../lib/firebase';
 import {ChevronDown, Leaf, Atom, Beaker, Play} from 'lucide-react';
@@ -21,7 +21,21 @@ const CHAPTER_DATA: any = {
     }
 };
 
-export default function StudyHub({ subjects, onNavigate }: { subjects: any[], onNavigate: (view: 'home' | 'study') => void }) {
+export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void }) {
+    const [savedTest, setSavedTest] = useState<any>(null);
+
+    useEffect(() => {
+        const data = localStorage.getItem('resumeTestData');
+        if (data) {
+            const parsed = JSON.parse(data);
+            if (Date.now() - parsed.timestamp < 20 * 60 * 1000) {
+                setSavedTest(parsed);
+            } else {
+                localStorage.removeItem('resumeTestData');
+            }
+        }
+    }, []);                
+
     // Mock data for user progress
     const stats = { tests: 0, questions: 0, accuracy: '0%', time: '0m' };
     const subjectProgress = [
@@ -31,6 +45,8 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
     ];
 
     const [activeUsers, setActiveUsers] = useState<Record<string, number>>({});
+    const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+    const [pendingChapter, setPendingChapter] = useState<{subject: string, chapter: string} | null>(null);
 
     useEffect(() => {
         const q = collection(db, 'chapterActivity');
@@ -44,7 +60,7 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
         return () => unsubscribe();
     }, []);                
 
-    const accordionItems = ["LECTURE LIBRARY", "CUSTOM PRACTICE", "NEURAL & AI TOOLS", "BATTLE & PRACTICE", "MEMORY VAULT"];
+    const accordionItems = ["LECTURE LIBRARY", "CUSTOM PRACTICE", "BATTLE & PRACTICE", "MEMORY VAULT"];
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
     const [activeSubject, setActiveSubject] = useState<string>('Physics');
     const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
@@ -54,6 +70,23 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
     return (
         <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans flex flex-col">
           <HubSwitcher active="study" onNavigate={onNavigate} />
+          
+          {savedTest && (
+            <div className="bg-orange-900/30 p-4 rounded-xl border border-orange-500/50 mb-6 flex justify-between items-center">
+                <div>
+                    <h3 className="font-bold">Resume Test</h3>
+                    <p className="text-xs text-orange-200">{savedTest.title}</p>
+                </div>
+                <button 
+                  onClick={() => {
+                        setResumingTest(savedTest);
+                        setCurrentView('practiceTest');
+                  }}
+                  className="bg-orange-600 px-4 py-2 rounded-lg text-sm font-bold"
+                >Resume</button>
+            </div>
+          )}
+
           {activeBattleChapter && (
               <BattleRoom chapter={activeBattleChapter} onFinish={(winner) => {
                   alert(`Winner: ${winner}`);
@@ -73,7 +106,13 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
                 <div key={item} className="bg-[#161e38] rounded-2xl border border-white/5">
                     <button 
                         className="w-full p-6 flex justify-between items-center font-bold text-sm tracking-wider"
-                        onClick={() => setExpandedItem(expandedItem === item ? null : item)}
+                        onClick={() => {
+                            if (item === "CUSTOM PRACTICE") {
+                                onNavigate('customPractice');
+                            } else {
+                                setExpandedItem(expandedItem === item ? null : item);
+                            }
+                        }}
                     >
                         {item}
                         <ChevronDown className={`h-5 w-5 text-gray-400 transition-transform ${expandedItem === item ? 'rotate-180' : ''}`} />
@@ -107,17 +146,31 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
                                                 {chapters
                                                     .filter((c: string) => c.toLowerCase().includes(searchQuery.toLowerCase()))
                                                     .map((chapter: string) => (
-                                                        <div key={chapter} className="p-3 bg-white/5 rounded-lg mb-2 text-xs cursor-pointer hover:bg-orange-500/20 flex items-center justify-between"
-                                                             onClick={() => setSelectedChapter(chapter)}>
+                                                        <div 
+                                                            key={chapter} 
+                                                            className="p-3 bg-white/5 rounded-lg mb-2 text-xs cursor-pointer hover:bg-orange-500/20 flex items-center justify-between group relative"
+                                                            onClick={() => {
+                                                                setSelectedChapter(chapter);
+                                                            }}
+                                                            onTouchStart={() => {
+                                                                longPressTimer.current = setTimeout(() => {
+                                                                    setPendingChapter({subject: activeSubject, chapter});
+                                                                }, 800);
+                                                            }}
+                                                            onTouchEnd={() => {
+                                                                if (longPressTimer.current) clearTimeout(longPressTimer.current);
+                                                            }}
+                                                            onContextMenu={(e) => e.preventDefault()}
+                                                        >
                                                             {chapter}
                                                             <Play className="h-4 w-4 text-orange-500" />
+                                                            <div className="absolute hidden group-hover:block bg-black p-2 rounded text-[10px] whitespace-nowrap">Hold to set as home</div>
                                                         </div>
                                                 ))}
                                             </div>
                                         ))}
                                     </div>
-                                </>
-                            ) : item === "BATTLE & PRACTICE" ? (
+                                </>) : item === "BATTLE & PRACTICE" ? (
                                 <>
                                     <div className="flex gap-2 mb-4 border-b border-white/10 pb-2">
                                         {['Physics', 'Chemistry', 'Biology'].map(sub => (
@@ -154,6 +207,21 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
                 </div>
             ))}
           </div>
+            {pendingChapter && (
+                <div className="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-6">
+                    <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm text-center">
+                        <h2 className="text-xl font-bold mb-4">Set as Home?</h2>
+                        <p className="text-gray-300">Set "{pendingChapter.chapter}" as current subject?</p>
+                        <div className="flex gap-2 mt-6">
+                            <button onClick={() => setPendingChapter(null)} className="flex-1 bg-gray-700 py-2 rounded-lg font-bold">No</button>
+                            <button onClick={() => {
+                                (window as any).setAsHomeScreen?.(pendingChapter.subject, pendingChapter.chapter);
+                                setPendingChapter(null);
+                            }} className="flex-1 bg-blue-600 py-2 rounded-lg font-bold">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            )}
           <div className="text-center mt-auto py-4">
              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500">
                  Powered by DK
@@ -161,4 +229,6 @@ export default function StudyHub({ subjects, onNavigate }: { subjects: any[], on
            </div>
         </div>
     )
+
+ 
 }

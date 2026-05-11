@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X } from 'lucide-react';
 import { collection } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
-import { QUESTIONS } from '../data/questions';
+// import { QUESTIONS } from '../data/questions';
 import PYQTestRunner from './PYQTestRunner';
 
 
@@ -130,6 +130,8 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
         ))}
       </div>
 
+{/* Create Custom Test functionality removed as it relied on legacy data */}
+      {/* 
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -145,6 +147,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
         </div>
         <button className="text-blue-400 font-bold text-sm">Create Now &gt;</button>
       </motion.div>
+      */}
       
       {/* PYQ Test Card */}
       <motion.div 
@@ -200,11 +203,13 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                         <button 
                             className="w-full bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-700 transition"
                             onClick={() => {
+                                {/* 
                                 const subjectQuestions = (QUESTIONS as any)[selectedSubject as string] || [];
                                 const testQuestions = subjectQuestions.slice(0, questionCount);
                                 alert(`Starting test with ${testQuestions.length} questions for ${selectedSubject}!`);
                                 setShowCustomOptions(false);
                                 setSelectedSubject(null);
+                                */}
                             }}
                         >
                             Start Test
