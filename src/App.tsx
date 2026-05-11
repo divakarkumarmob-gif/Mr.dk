@@ -29,7 +29,7 @@ import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
 import SupportModal from './components/SupportModal';
 import TimeSpentChart from './components/TimeSpentChart';
-import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle } from 'lucide-react';
+import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion } from 'motion/react';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
@@ -349,23 +349,38 @@ export default function App() {
   const openAnalytics = async () => {
     if (!user) return;
     
-    // Fetch last 7 days
+    // Fetch analytics data
     const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
-    const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(7));
+    const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
     const snapshot = await getDocs(q);
     
-    const data = snapshot.docs.map(doc => {
-        const d = doc.data();
+    const dbDataMap: Record<string, any> = {};
+    snapshot.docs.forEach(doc => {
+        dbDataMap[doc.id] = doc.data();
+    });
+
+    const last7Days = [];
+    const now = new Date();
+    // Use IST adjustment for consistent date calculation
+    const istOffset = 5.5 * 60 * 60 * 1000;
+    
+    for (let i = 6; i >= 0; i--) {
+        const date = new Date(now.getTime() + istOffset);
+        date.setDate(date.getDate() - i);
+        const dateStr = date.toISOString().split('T')[0];
+        
+        const d = dbDataMap[dateStr] || { timeSpentSeconds: 0, lectureTimeSeconds: 0 };
         const total = d.timeSpentSeconds || 0;
         const lecture = d.lectureTimeSeconds || 0;
-        return {
-            name: new Date(`${doc.id}T00:00:00`).toLocaleDateString('en-US', { weekday: 'short', timeZone: 'Asia/Kolkata' }),
+        
+        last7Days.push({
+            name: date.toLocaleDateString('en-US', { weekday: 'short' }),
             lectureMinutes: Math.floor(lecture / 60),
-            otherMinutes: Math.floor((total - lecture) / 60)
-        };
-    });
+            otherMinutes: Math.floor(Math.max(0, total - lecture) / 60)
+        });
+    }
     
-    setChartData(data.reverse());
+    setChartData(last7Days);
     setShowAnalytics(true);
   };
 
@@ -924,7 +939,7 @@ export default function App() {
                 <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Accuracy</p>
                 <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
+             <div onClick={openAnalytics} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
                 <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Time Spent</p>
                 <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
@@ -932,14 +947,20 @@ export default function App() {
       </div>
       
       {showAnalytics && (
-        <div className="fixed inset-0 bg-black/60 z-[1000] flex items-center justify-center p-4 sm:p-6">
-            <div className="bg-[#161e38] p-4 sm:p-6 rounded-2xl border border-white/10 w-full max-w-lg">
-               <div className="flex justify-between items-center mb-4">
-                   <h2 className="text-lg sm:text-xl font-bold">7 Days Time Spent</h2>
-                   <button onClick={() => setShowAnalytics(false)} className="text-gray-400 text-sm">Close</button>
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000] flex items-center justify-center p-4">
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-[#161e38] p-5 sm:p-7 rounded-3xl border border-white/10 w-full max-w-lg shadow-2xl relative">
+               <button onClick={() => setShowAnalytics(false)} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full hover:bg-white/10 transition-colors">
+                   <X className="h-4 w-4" />
+               </button>
+               <div className="mb-6">
+                   <h2 className="text-xl font-bold flex items-center gap-2">
+                       <Clock className="text-purple-400 h-5 w-5" />
+                       Activity Analytics
+                   </h2>
+                   <p className="text-xs text-gray-400 mt-1">Visualization of your preparation time across the week</p>
                </div>
                <TimeSpentChart data={chartData} />
-            </div>
+            </motion.div>
         </div>
       )}
 
