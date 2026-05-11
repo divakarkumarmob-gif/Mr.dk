@@ -62,18 +62,22 @@ const allQuestions: any[] = []; // Replaced legacy QUESTIONS with empty array
     if (questions.length === 0) return <div>Loading...</div>;
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-6">
-            <div className="flex justify-between items-center mb-6">
-                <div>Time: {Math.floor(timeLeft / 60)}:{timeLeft % 60}</div>
-                <div>You: {score} | Bot: {botScore}</div>
-            </div>
-            <div className="bg-[#161e38] p-6 rounded-2xl">
-                <p className="mb-4">{questions[currentIndex].text}</p>
-                {questions[currentIndex].options.map((opt: string) => (
-                    <button key={opt} onClick={() => handleAnswer(opt)} className="block w-full p-3 bg-white/10 rounded-xl mb-2 hover:bg-orange-500/30">
-                        {opt}
-                    </button>
-                ))}
+        <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6">
+            <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
+                <div className="flex justify-between items-center mb-6">
+                    <div className="text-sm font-bold opacity-70">Time: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</div>
+                    <div className="text-sm font-bold"><span className="text-blue-500">You: {score}</span> | <span className="text-red-500">Bot: {botScore}</span></div>
+                </div>
+                <div className="bg-[#161e38] p-4 sm:p-6 rounded-2xl border border-white/10">
+                    <p className="mb-6 font-bold text-base sm:text-lg">{questions[currentIndex].text}</p>
+                    <div className="space-y-3">
+                        {questions[currentIndex].options.map((opt: string) => (
+                            <button key={opt} onClick={() => handleAnswer(opt)} className="block w-full p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-orange-500/30 transition-colors text-left text-sm sm:text-base">
+                                {opt}
+                            </button>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

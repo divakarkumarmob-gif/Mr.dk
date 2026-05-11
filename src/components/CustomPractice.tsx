@@ -47,7 +47,7 @@ const CHAPTER_DATA = {
     }
 };
 
-export default function CustomPractice({ onBack, onStart }: { onBack: () => void, onStart: (chapters: {name: string, subject: string, numQuestions: number}[]) => void }) {
+export default function CustomPractice({ onBack, onStart }: { onBack: () => void, onStart: (chapters: {name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]) => void }) {
     const [activeSubject, setActiveSubject] = useState<'Physics' | 'Chemistry' | 'Biology'>('Physics');
     const [activeClass, setActiveClass] = useState<'Class 11' | 'Class 12'>('Class 11');
     const [searchQuery, setSearchQuery] = useState('');
@@ -70,8 +70,9 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-6 pb-24">
-            <div className="flex items-center gap-4 mb-6">
+        <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 pb-24">
+            <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
+                <div className="flex items-center gap-4 mb-6">
                 <button onClick={onBack} className="bg-white/10 p-2 rounded-full"><ArrowLeft /></button>
                 <h1 className="text-xl font-bold">Custom Practice</h1>
             </div>
@@ -139,6 +140,7 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
                     onClick={() => onStart(selectedChapters.map(c => ({...c, difficulty})))}>
                 {selectedChapters.length > 0 ? `Start Practice (${selectedChapters.reduce((acc, c) => acc + c.numQuestions, 0)} Total Questions)` : 'Select Chapters'}
             </button>
+          </div>
         </div>
     );
 }

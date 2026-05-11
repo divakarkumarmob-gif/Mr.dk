@@ -68,8 +68,9 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
     const [searchQuery, setSearchQuery] = useState('');
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans flex flex-col">
-          <HubSwitcher active="study" onNavigate={onNavigate} />
+        <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans flex flex-col">
+          <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
+            <HubSwitcher active="study" onNavigate={onNavigate} />
           
           {savedTest && (
             <div className="bg-orange-900/30 p-4 rounded-xl border border-orange-500/50 mb-6 flex justify-between items-center">
@@ -118,7 +119,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                         <ChevronDown className={`h-5 w-5 text-gray-400 transition-transform ${expandedItem === item ? 'rotate-180' : ''}`} />
                     </button>
                     {expandedItem === item && (
-                        <div className="p-6 pt-0 text-white text-sm">
+                        <div className="p-4 sm:p-6 pt-0 text-white text-sm">
                             {item === "LECTURE LIBRARY" ? (
                                 <>
                                     <input
@@ -227,6 +228,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                  Powered by DK
              </span>
            </div>
+          </div>
         </div>
     )
 

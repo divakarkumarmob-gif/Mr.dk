@@ -5,9 +5,9 @@ import { User as FirebaseUser } from 'firebase/auth';
 export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport') => void, onSolverClick: () => void }) {
     const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24">
-            
-            {/* Header */}
+        <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans pb-24">
+            <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
+                {/* Header */}
             <div className="bg-[#161e38] rounded-2xl p-6 border border-white/10 mb-8 flex flex-col items-center">
                 <div className="relative mb-4">
                     <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center overflow-hidden">
@@ -104,6 +104,7 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
             <button onClick={logOut} className="w-full bg-[#1e293b] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2">
                 <LogOut className="h-5 w-5" /> END SESSION
             </button>
+          </div>
         </div>
     );
 }

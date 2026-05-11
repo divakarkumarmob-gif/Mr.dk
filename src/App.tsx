@@ -223,6 +223,24 @@ export default function App() {
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
+  
+  useEffect(() => {
+      if (user) {
+          const updateLastSeen = async () => {
+              try {
+                  await updateDoc(doc(db, 'users', user.uid), {
+                      lastSeen: serverTimestamp()
+                  });
+              } catch (e) {
+                  console.error("Error updating lastSeen", e);
+              }
+          };
+          updateLastSeen();
+          const interval = setInterval(updateLastSeen, 2 * 60 * 1000); // 2 mins
+          return () => clearInterval(interval);
+      }
+  }, [user]);
+
   const [stats, setStats] = useState({
           testsAttempted: 0,
           questionsSolved: 0,
@@ -740,33 +758,34 @@ export default function App() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
-                    className="bg-[#161e38] p-4 rounded-2xl border border-blue-500 shadow-2xl"
+                    className="bg-[#161e38]/90 p-4 rounded-2xl border border-blue-500 shadow-2xl backdrop-blur-md"
                 >
-                    <p className="font-bold text-lg">{displayedText}</p>
+                    <p className="font-bold text-base sm:text-lg text-white drop-shadow-md">{displayedText}</p>
                 </motion.div>
             </motion.div>
-            <p className="text-white mt-32 text-sm text-center opacity-70 animate-pulse">Tap anywhere to start</p>
+            <p className="text-white mt-12 text-sm text-center font-medium animate-pulse">Tap anywhere to start</p>
           </div>
       )}
 
-    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-3 sm:p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
+      <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl px-1 sm:px-0">
 
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
 
       {/* Header */}
-      <div className="flex justify-between items-center mb-8 select-none">
-        <div>
-           <h1 className="text-2xl font-bold flex items-center gap-2">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
-           <p className="text-gray-400">Let's make today productive</p>
+      <div className="flex justify-between items-center mb-6 select-none">
+        <div className="flex-1 min-w-0">
+           <h1 className="text-lg sm:text-2xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
+           <p className="text-gray-400 text-[10px] sm:text-sm">Let's make today productive</p>
         </div>
         <div className="relative" ref={notificationRef}>
             <Bell className="h-6 w-6 cursor-pointer" onClick={() => setShowNotifications(!showNotifications)} />
-            {notifications.filter(n => !n.readBy?.includes(user?.uid)).length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
-                    {notifications.filter(n => !n.readBy?.includes(user?.uid)).length}
-                </span>
-            )}
-            {showNotifications && (
+             {notifications.some(n => !n.readBy?.includes(user?.uid)) ? (
+                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+                     {notifications.filter(n => !n.readBy?.includes(user?.uid)).length}
+                 </span>
+             ) : null}
+            {showNotifications ? (
               <div className="absolute top-8 right-0 bg-[#020510] p-4 rounded-2xl shadow-xl w-64 z-[100] border border-blue-900/30">
                   <h3 className="font-bold mb-2">Notifications</h3>
                   {notifications.length === 0 ? (
@@ -795,60 +814,59 @@ export default function App() {
                                                 <p>{n.message}</p>
                                                 <div className="flex justify-between items-center mt-1">
                                                     <p className="text-gray-500 text-[10px]">
-                                                        {n.timestamp?.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
-                                                    </p>
-                                                    {!n.readBy?.includes(user.uid) && (
-                                                        <button onClick={() => markAsRead(n.id)} className="text-[10px] bg-blue-600/50 text-blue-200 px-2 py-0.5 rounded">Mark as Read</button>
-                                                    )}
-                                                </div>
+                                                    {n.timestamp?.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                                                </p>
+                                                {!n.readBy?.includes(user?.uid) && (
+                                                    <button onClick={() => markAsRead(n.id)} className="text-[10px] bg-blue-600/50 text-blue-200 px-2 py-0.5 rounded">Mark as Read</button>
+                                                )}
                                             </div>
-                                        ))}
-                                    </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            );
-                        })}
-                      </div>
-                  )}
-              </div>
-            )}
-        </div>
+                            </div>
+                        );
+                    })}
+                  </div>
+              )}
+          </div>
+        ) : null}
       </div>
+    </div>
 
       <HubSwitcher active="home" onNavigate={setCurrentView} />
 
-      {/* Performance Overview (Moved from StudyHub) */}
-      <div className="bg-[#161e38] rounded-2xl p-6 border border-white/10 mb-8 mt-6 select-none">
-        <div className="flex justify-between items-center mb-6">
-            <h2 className="font-bold text-lg">Performance Overview</h2>
-            <div className="text-orange-500 text-xs font-semibold">
+      <div className="bg-[#161e38] rounded-2xl p-4 sm:p-6 border border-white/10 mb-6 mt-4 select-none">
+        <div className="flex justify-between items-center mb-4">
+            <h2 className="font-bold text-base sm:text-lg">Your Performance</h2>
+            <div className="text-orange-500 text-[10px] sm:text-xs font-semibold">
                 {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
             </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-            <div>
-                <p className="text-gray-400 text-xs">Tests Attempted</p>
-                <h3 className="font-bold text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-5 w-5"/></h3>
+        <div className="grid grid-cols-2 gap-2 sm:gap-4">
+            <div className="bg-white/5 p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Tests Attempted</p>
+                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div>
-                <p className="text-gray-400 text-xs">Questions Solved</p>
-                <h3 className="font-bold text-2xl flex items-center gap-2">{stats.questionsSolved} <CheckCircle2 className="text-green-500 h-5 w-5"/></h3>
+             <div className="bg-white/5 p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Questions Solved</p>
+                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{stats.questionsSolved} <CheckCircle2 className="text-green-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div>
-                <p className="text-gray-400 text-xs">Accuracy</p>
-                <h3 className="font-bold text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-5 w-5"/></h3>
+             <div className="bg-white/5 p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Accuracy</p>
+                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-             <div onClick={openAnalytics} className="cursor-pointer">
-                <p className="text-gray-400 text-xs">Time Spent</p>
-                <h3 className="font-bold text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-5 w-5"/></h3>
+             <div onClick={openAnalytics} className="cursor-pointer bg-white/5 p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[10px] sm:text-xs mb-1">Time Spent</p>
+                <h3 className="font-bold text-lg sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
         </div>
       </div>
       
       {showAnalytics && (
-        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
-            <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-lg">
+        <div className="fixed inset-0 bg-black/60 z-[1000] flex items-center justify-center p-4 sm:p-6">
+            <div className="bg-[#161e38] p-4 sm:p-6 rounded-2xl border border-white/10 w-full max-w-lg">
                <div className="flex justify-between items-center mb-4">
-                   <h2 className="text-xl font-bold">7 Days Time Spent</h2>
+                   <h2 className="text-lg sm:text-xl font-bold">7 Days Time Spent</h2>
                    <button onClick={() => setShowAnalytics(false)} className="text-gray-400 text-sm">Close</button>
                </div>
                <TimeSpentChart data={chartData} />
@@ -858,8 +876,8 @@ export default function App() {
 
 
       {/* Continue Learning */}
-      <div className="flex justify-between items-center mb-4 mt-8">
-          <h2 className="font-bold text-xl">Continue Learning</h2>
+      <div className="flex justify-between items-center mb-4 mt-6">
+          <h2 className="font-bold text-lg sm:text-xl">Continue Learning</h2>
           <div className="flex items-center gap-2">
             <button onClick={() => setShowResetModal(true)} className="text-xs bg-red-900/50 text-red-300 px-3 py-1 rounded-full">Reset</button>
             <button onClick={handleRandomize} className="text-xs bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-1">
@@ -893,16 +911,17 @@ export default function App() {
             </div>
         </div>
       )}
-      <div className="space-y-4 mb-16">
+      <div className="space-y-4 mb-20 scroll-mt-20">
         {subjects.map((sub, idx) => (
-            <div key={idx} className={`bg-[#161e38] border-l-4 ${sub.color} rounded-lg p-4 flex justify-between items-center`}>
-                <div>
-                  <p className="text-[10px] font-bold text-gray-400">{sub.name}</p>
-                  <p className="font-bold text-lg">{sub.topic}</p>
+            <div key={idx} className={`bg-[#161e38] border-l-4 ${sub.color} rounded-xl p-2.5 sm:p-4 flex justify-between items-center group shadow-md`}>
+                <div className="flex-1 min-w-0 mr-3">
+                  <p className="text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-wider truncate mb-0.5">{sub.name}</p>
+                  <p className="font-bold text-xs sm:text-base truncate">{sub.topic}</p>
                 </div>
-                <div className="flex gap-2">
-                    <button className="bg-white/10 p-2 rounded-full" onClick={() => setActiveVideo(sub.topic)}><Play className="h-4 w-4 text-white" /></button>
-                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-sm" onClick={() => setActiveVideo(sub.topic)}>START</button>
+                <div className="flex gap-2 flex-shrink-0">
+                    <button className="bg-white/10 p-1.5 rounded-full sm:hidden" onClick={() => setActiveVideo(sub.topic)}><Play className="h-4 w-4 text-white" /></button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm hidden sm:block" onClick={() => setActiveVideo(sub.topic)}>START</button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-3 py-1.5 rounded-lg text-xs sm:hidden" onClick={() => setActiveVideo(sub.topic)}>START</button>
                 </div>
             </div>
         ))}
@@ -920,6 +939,7 @@ export default function App() {
             setCurrentView('technicalSupport');
         }}
       />
+      </div>
     </motion.div>
     </>
   );
@@ -927,12 +947,14 @@ export default function App() {
 
 function BottomNav({ currentView, onNavigate }: { currentView: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport' | 'analytics', onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport' | 'analytics') => void }) {
     return (
-        <div className="fixed bottom-0 left-0 w-full bg-[#0f172a] border-t border-white/10 p-2 flex justify-around">
-            <div className={`flex flex-col items-center cursor-pointer ${currentView === 'home' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('home')}><Home className="h-6 w-6" /><span className="text-[10px]">Home</span></div>
-            <div className={`flex flex-col items-center cursor-pointer ${currentView === 'tests' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('tests')}><FileText className="h-6 w-6" /><span className="text-[10px]">Tests</span></div>
-            <div className={`flex flex-col items-center cursor-pointer ${currentView === 'analytics' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('analytics')}><BarChart2 className="h-6 w-6" /><span className="text-[10px]">Analytics</span></div>
-            <div className={`flex flex-col items-center cursor-pointer ${currentView === 'notes' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('notes')}><Book className="h-6 w-6" /><span className="text-[10px]">Notes</span></div>
-            <div className={`flex flex-col items-center cursor-pointer ${currentView === 'profile' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('profile')}><UserIcon className="h-6 w-6" /><span className="text-[10px]">Profile</span></div>
+        <div className="fixed bottom-0 left-0 w-full bg-[#0f172a] border-t border-white/10 p-2 z-[999]">
+            <div className="max-w-md mx-auto flex justify-around">
+                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'home' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('home')}><Home className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Home</span></div>
+                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'tests' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('tests')}><FileText className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Tests</span></div>
+                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'analytics' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('analytics')}><BarChart2 className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Analytics</span></div>
+                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'notes' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('notes')}><Book className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Notes</span></div>
+                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'profile' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('profile')}><UserIcon className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Profile</span></div>
+            </div>
         </div>
     )
 }

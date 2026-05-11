@@ -34,26 +34,26 @@ export default function HubSwitcher({ active, onNavigate }: HubSwitcherProps) {
     >
       <button 
         onClick={() => onNavigate('home')}
-        className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-full border transition-all duration-300 ${
+        className={`flex-1 flex items-center justify-center gap-2 py-2 sm:py-3 rounded-full border transition-all duration-300 ${
           active === 'home' 
             ? 'bg-[#161e38] border-orange-500 text-white' 
             : 'bg-[#161e38]/50 border-transparent text-gray-500'
         }`}
       >
-        <Box className="h-5 w-5" />
-        <span className="font-semibold text-sm">MAIN HUB</span>
+        <Box className="h-4 w-4 sm:h-5 sm:w-5" />
+        <span className="font-semibold text-xs sm:text-sm">MAIN HUB</span>
       </button>
 
       <button 
         onClick={() => onNavigate('study')}
-        className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-full border transition-all duration-300 ${
+        className={`flex-1 flex items-center justify-center gap-2 py-2 sm:py-3 rounded-full border transition-all duration-300 ${
           active === 'study' 
             ? 'bg-[#161e38] border-orange-500 text-white' 
             : 'bg-[#161e38]/50 border-transparent text-gray-500'
         }`}
       >
-        <Brain className="h-5 w-5" />
-        <span className="font-semibold text-sm">STUDY HUB</span>
+        <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
+        <span className="font-semibold text-xs sm:text-sm">STUDY HUB</span>
       </button>
     </div>
   );
