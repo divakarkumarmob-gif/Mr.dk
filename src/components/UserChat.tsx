@@ -31,7 +31,9 @@ export default function UserChat({ fullScreen }: { fullScreen?: boolean }) {
   }, [chatId]);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   }, [messages]);
 
   const handleSend = async (mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio') => {

@@ -232,6 +232,36 @@ export default function App() {
           date: getISTDateString()
   });
 
+  useEffect(() => {
+      if (!user) return;
+      
+      const resultsRef = collection(db, 'users', user.uid, 'results');
+      const unsubscribe = onSnapshot(resultsRef, (snapshot) => {
+          let totalTests = snapshot.size;
+          let totalQuestions = 0;
+          let totalAttempted = 0;
+          let totalCorrect = 0;
+          
+          snapshot.docs.forEach(doc => {
+              const data = doc.data();
+              totalQuestions += (data.totalQuestions || 0);
+              totalCorrect += (data.correct || 0);
+              totalAttempted += (data.correct || 0) + (data.incorrect || 0);
+          });
+          
+          const accuracy = totalAttempted > 0 ? (totalCorrect / totalAttempted) * 100 : 0;
+          
+          setStats(prev => ({
+              ...prev,
+              testsAttempted: totalTests,
+              questionsSolved: totalCorrect,
+              accuracy: Math.round(accuracy)
+          }));
+      });
+      
+      return () => unsubscribe();
+  }, [user]);
+
   const openAnalytics = async () => {
     if (!user) return;
     
@@ -517,13 +547,17 @@ export default function App() {
   }
 
   if (currentView === 'study') {
-      return <StudyHub subjects={subjects} setResumingTest={setResumingTest} setCurrentView={setCurrentView} onNavigate={(view) => {
-          if (view === 'customPractice') {
-              setCurrentView('customPractice');
-          } else {
-              setCurrentView(view);
-          }
-      }} />;
+      return (
+        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
+            <StudyHub subjects={subjects} setResumingTest={setResumingTest} setCurrentView={setCurrentView} onNavigate={(view) => {
+              if (view === 'customPractice') {
+                  setCurrentView('customPractice');
+              } else {
+                  setCurrentView(view);
+              }
+            }} />
+        </motion.div>
+      );
   }
 
   if (currentView === 'customPractice') {
@@ -715,7 +749,7 @@ export default function App() {
           </div>
       )}
 
-    <div ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
 
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
 
@@ -886,7 +920,7 @@ export default function App() {
             setCurrentView('technicalSupport');
         }}
       />
-    </div>
+    </motion.div>
     </>
   );
 }

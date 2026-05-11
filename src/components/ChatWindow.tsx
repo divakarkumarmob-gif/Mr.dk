@@ -25,7 +25,9 @@ export default function ChatWindow({ chatId, userId, isAdmin }: { chatId: string
   }, [chatId]);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   }, [messages]);
 
   const handleSend = async (mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio') => {
