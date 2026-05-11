@@ -60,10 +60,11 @@ interface Notification {
 }
 
 export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport') => void }) {
-    const [activeTab, setActiveTab] = useState<'message' | 'upload' | 'import'>('message');
+    const [activeTab, setActiveTab] = useState<'message' | 'upload' | 'import' | 'users'>('message');
     const [message, setMessage] = useState('');
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [notifications, setNotifications] = useState<Notification[]>([]);
+    const [userStats, setUserStats] = useState({ total: 0, online: 0 });
 
     useEffect(() => {
         const q = query(collection(db, 'notifications'), orderBy('timestamp', 'desc'));
@@ -71,7 +72,20 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             setNotifications(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Notification)));
         }, (error) => handleFirestoreError(error, OperationType.LIST, 'notifications'));
         
-        return () => { unsubscribeNotifs(); };
+        const unsubscribeUsers = onSnapshot(collection(db, 'users'), (snapshot) => {
+            let total = snapshot.size;
+            let online = 0;
+            const now = Date.now();
+            snapshot.docs.forEach(doc => {
+                const data = doc.data();
+                if (data.lastSeen && now - data.lastSeen.toMillis() < 5 * 60 * 1000) {
+                    online++;
+                }
+            });
+            setUserStats({ total, online });
+        });
+        
+        return () => { unsubscribeNotifs(); unsubscribeUsers(); };
     }, []);
 
     const sendMessage = async () => {
@@ -142,12 +156,31 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                     <FileUp className="h-4 w-4 flex-shrink-0" />
                     {isSidebarOpen && <span className="truncate">Import</span>}
                 </button>
+                <button onClick={() => setActiveTab('users')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2 ${activeTab === 'users' ? 'bg-white/10' : ''}`}>
+                    <Users className="h-4 w-4 flex-shrink-0" />
+                    {isSidebarOpen && <span className="truncate">Users</span>}
+                </button>
                 <button onClick={() => setActiveTab('upload')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2 ${activeTab === 'upload' ? 'bg-white/10' : ''}`}>
                     <UploadIcon className="h-4 w-4 flex-shrink-0" />
                     {isSidebarOpen && <span className="truncate">Upload</span>}
                 </button>
             </motion.div>
             <div className="flex-1 p-4" onClick={() => setIsSidebarOpen(false)}>
+                {activeTab === 'users' && (
+                    <div className="space-y-4">
+                        <h3 className="font-bold">User Statistics</h3>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-white/5 p-4 rounded-lg">
+                                <p className="text-gray-400 text-sm">Total Login Users</p>
+                                <p className="text-2xl font-bold">{userStats.total}</p>
+                            </div>
+                            <div className="bg-white/5 p-4 rounded-lg">
+                                <p className="text-gray-400 text-sm">Currently Online</p>
+                                <p className="text-2xl font-bold text-green-400">{userStats.online}</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
                 {activeTab === 'import' && (
                     <QuestionImporter />
                 )}
