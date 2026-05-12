@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db, auth } from '../lib/firebase';
-import { collection, query, where, getDocs, orderBy, addDoc } from 'firebase/firestore';
+import { collection, query, getDocs, orderBy } from 'firebase/firestore';
 import TestResultDetail from './TestResultDetail';
 
 export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any) => void }) {
@@ -12,7 +12,14 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
             if (!auth.currentUser) return;
             const q = query(collection(db, 'users', auth.currentUser.uid, 'results'), orderBy('timestamp', 'desc'));
             const querySnapshot = await getDocs(q);
-            const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const data = querySnapshot.docs.map(doc => {
+                const d = doc.data();
+                return {
+                    id: doc.id,
+                    ...d,
+                    timestamp: d.timestamp?.toDate ? d.timestamp.toDate() : new Date(d.timestamp),
+                };
+            });
             setResults(data);
         };
         fetchResults();
@@ -32,7 +39,7 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
                             <span className="font-semibold text-white">{result.testName}</span>
                             {result.timestamp && (
                                 <span className="text-gray-400 text-xs">
-                                    {new Date(result.timestamp).toLocaleDateString()}
+                                    {result.timestamp.toLocaleDateString()}
                                 </span>
                             )}
                         </div>

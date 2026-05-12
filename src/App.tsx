@@ -245,28 +245,23 @@ export default function App() {
 
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
-        // Handle basic view navigation from history
+        // Handle normal back navigation first
         if (e.state && e.state.view) {
-            _setCurrentView(e.state.view);
-            return;
+             _setCurrentView(e.state.view);
         }
 
-        // Complex back logic (overlays and exit trap)
+        // If we have active overlays, close them
         if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
             setActiveVideo(null);
             setShowNotifications(false);
             setShowAnalytics(false);
             setShowResetModal(false);
             setShowRandomPopup(false);
-            window.history.pushState({ view: currentView }, '', '/' + currentView); 
             return;
         }
 
-        if (currentView !== 'home') {
-            _setCurrentView('home');
-            window.scrollTo(0, 0);
-            window.history.pushState({ view: 'home' }, '', '/home');
-        } else {
+        // Home exit-trap logic only if we are currently at home
+        if (currentView === 'home') {
             setBackPressCount(prev => prev + 1);
             setShowExitToast(true);
             setTimeout(() => {
@@ -275,8 +270,10 @@ export default function App() {
             }, 2000);
 
             if (backPressCount >= 1) {
+                // Really exit
                 window.history.back();
             } else {
+                // Re-trap
                 window.history.pushState({ view: 'home' }, '', '/home');
             }
         }
