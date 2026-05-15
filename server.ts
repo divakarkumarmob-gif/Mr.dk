@@ -173,7 +173,7 @@ async function startServer() {
     // 1. Try Gemini
     if (process.env.GEMINI_API_KEY) {
       try {
-        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+        const ai = new GoogleGenAI();
         const chat = ai.chats.create({ model: "gemini-1.5-flash" });
         
         // Populate history
@@ -251,11 +251,13 @@ async function startServer() {
             return res.status(400).json({ error: "Missing data" });
         }
 
-        if (!process.env.GEMINI_API_KEY) {
-            return res.status(500).json({ error: "GEMINI_API_KEY not configured" });
+        if ((!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY.trim() === '') && 
+            (!process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY.trim() === '')) {
+            return res.status(500).json({ error: "Gemini API key not configured" });
         }
 
-        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+        // Initialize SDK without key to let it pick up environment auth
+        const ai = new GoogleGenAI();
         
         try {
             const result = await ai.models.generateContent({
@@ -269,7 +271,7 @@ async function startServer() {
                 }]
             });
             
-            res.json({ text: result.text });
+            res.json({ text: result.text() });
         } catch (error) {
             console.error("Gemini API Error:", error);
             res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
@@ -330,18 +332,29 @@ async function startServer() {
       return res.status(400).json({ error: "Missing messages" });
     }
 
-    if (!process.env.OPENROUTER_API_KEY) {
-      return res.status(500).json({ error: "OPENROUTER_API_KEY not configured" });
+    if ((!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY.trim() === '') && 
+        (!process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY.trim() === '')) {
+      return res.status(500).json({ error: "Gemini API key not configured" });
     }
     
     try {
-      console.log("Sending request to OpenRouter...");
+      console.log("Sending request to Gemini with Search Grounding...");
+      // Initialize SDK without key to let it pick up environment auth
+      const ai = new GoogleGenAI();
       
-      const reply = await fetchAIResponse(messages, "You are a friendly, approachable, and natural-sounding AI assistant. You talk like a close human friend, keeping conversations casual, engaging, and easy to relate to. Avoid stiff, overly formal, or robotic language. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.");
+      const result = await ai.models.generateContent({
+        model: "gemini-1.5-flash",
+        systemInstruction: "You are a friendly, approachable, and natural-sounding AI assistant. You talk like a close human friend, keeping conversations casual, engaging, and easy to relate to. Avoid stiff, overly formal, or robotic language. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.",
+        contents: messages.map(m => ({
+            role: m.role === 'assistant' ? 'model' : 'user',
+            parts: [{ text: m.content }]
+        })),
+        tools: [{ googleSearch: {} }] // Add search grounding
+      });
       
-      res.json({ reply });
+      res.json({ reply: result.text() });
     } catch (error) {
-      console.error("OpenRouter API Error:", error);
+      console.error("Gemini API Error:", error);
       res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
     }
   });

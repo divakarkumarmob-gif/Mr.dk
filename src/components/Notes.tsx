@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Plus, Camera, FileUp, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { auth, db, storage } from '../lib/firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';                
@@ -84,19 +85,30 @@ export default function Notes() {
   };
 
   return (
-    <div className="p-6">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-6">
       <h1 className="text-2xl font-bold mb-6 text-slate-100">Important Notes</h1>
       
       <button 
         onClick={() => setIsOpen(true)}
-        className="w-full bg-[#1e293b] border-2 border-dashed border-slate-700 rounded-2xl p-6 flex items-center justify-center gap-3 text-slate-400 hover:text-slate-200"
+        className="w-full bg-[#1e293b] border-2 border-dashed border-slate-700 rounded-2xl p-6 flex items-center justify-center gap-3 text-slate-400 hover:text-slate-200 transition-all hover:bg-[#253247]"
       >
         <Plus className="h-6 w-6" /> Add Important Note
       </button>
 
+      <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
-          <div className="bg-[#1e293b] p-6 rounded-2xl border border-slate-700 w-full max-w-sm text-slate-100">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6"
+        >
+          <motion.div 
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="bg-[#1e293b] p-6 rounded-2xl border border-slate-700 w-full max-w-sm text-slate-100 shadow-2xl"
+          >
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">New Note</h2>
               <button onClick={() => setIsOpen(false)}><X className="h-6 w-6" /></button>
@@ -127,13 +139,14 @@ export default function Notes() {
             <button 
               onClick={handleUpload}
               disabled={uploading || !file || !name}
-              className="w-full bg-blue-600 py-3 rounded-xl font-bold disabled:opacity-50 text-white"
+              className="w-full bg-blue-600 py-3 rounded-xl font-bold disabled:opacity-50 text-white hover:bg-blue-700 transition"
             >
               {uploading ? 'Uploading...' : 'Upload'}
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
-    </div>
+      </AnimatePresence>
+    </motion.div>
   );
 }

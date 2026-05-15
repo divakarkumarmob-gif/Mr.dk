@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowLeft, Search } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const CHAPTER_DATA = {
     Physics: {
@@ -59,6 +60,16 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
         count: number;
     }>({ open: false, chapter: null, count: 10 });
 
+    const allChapters = Object.entries(CHAPTER_DATA).flatMap(([subject, classes]) =>
+        Object.entries(classes).flatMap(([className, chapters]) =>
+            chapters.map(chapter => ({ name: chapter, subject, className }))
+        )
+    );
+
+    const filteredSuggestions = searchQuery
+        ? allChapters.filter(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()))
+        : [];
+
     const chapters = CHAPTER_DATA[activeSubject][activeClass].filter((c: string) => c.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const handleSelectChapter = (chapter: string, subject: string) => {
@@ -70,7 +81,11 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 pb-24">
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 pb-24"
+        >
             <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
                 <div className="flex items-center gap-4 mb-6">
                 <button onClick={onBack} className="bg-white/10 p-2 rounded-full"><ArrowLeft /></button>
@@ -110,11 +125,28 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
             </div>
 
             <div className="space-y-3">
-                {chapters.map(chapter => (
-                    <div key={chapter} className="bg-[#161e38] p-4 rounded-xl flex items-center justify-between" onClick={() => handleSelectChapter(chapter, activeSubject)}>
-                        <span className={selectedChapters.some(c => c.name === chapter) ? 'text-blue-400 font-bold' : ''}>{chapter}</span>
-                        <input type="checkbox" className="h-5 w-5" checked={selectedChapters.some(c => c.name === chapter)} readOnly />
-                    </div>
+                {(searchQuery ? filteredSuggestions : chapters.map(c => ({name: c, subject: activeSubject, className: activeClass}))).map((chapter, index) => (
+                    <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                        key={`${chapter.name}-${chapter.subject}-${chapter.className}`} 
+                        className="bg-[#161e38] p-4 rounded-xl flex items-center justify-between hover:bg-[#1f2a4a] transition-colors cursor-pointer" 
+                        onClick={() => {
+                            if (searchQuery) {
+                                setActiveSubject(chapter.subject as any);
+                                setActiveClass(chapter.className as any);
+                                setSearchQuery('');
+                            }
+                            handleSelectChapter(chapter.name, chapter.subject);
+                        }}
+                    >
+                        <div>
+                            <span className={selectedChapters.some(c => c.name === chapter.name) ? 'text-blue-400 font-bold' : ''}>{chapter.name}</span>
+                            {searchQuery && <p className="text-xs text-gray-400">{chapter.subject} - {chapter.className}</p>}
+                        </div>
+                        <input type="checkbox" className="h-5 w-5 accent-blue-600" checked={selectedChapters.some(c => c.name === chapter.name)} readOnly />
+                    </motion.div>
                 ))}
             </div>
 
@@ -141,6 +173,6 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
                 {selectedChapters.length > 0 ? `Start Practice (${selectedChapters.reduce((acc, c) => acc + c.numQuestions, 0)} Total Questions)` : 'Select Chapters'}
             </button>
           </div>
-        </div>
+        </motion.div>
     );
 }

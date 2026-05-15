@@ -175,14 +175,14 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className="bg-[#161e38] p-4 rounded-xl border border-white/5 flex items-center justify-between"
+            className="bg-[#161e38] p-4 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
           >
-            <div className="flex items-center gap-4">
-                <div className={`${test.bg} ${test.color} p-3 rounded-full`}>
+            <div className="flex items-center gap-4 w-full">
+                <div className={`${test.bg} ${test.color} p-3 rounded-full flex-shrink-0`}>
                     <test.icon className="h-6 w-6" />
                 </div>
-                <div>
-                   <h3 className="font-bold">{test.name}</h3>
+                <div className="w-full">
+                   <h3 className="font-bold text-sm sm:text-base">{test.name}</h3>
                    <p className="text-xs text-gray-400 mt-0.5">
                      <span className="bg-white/10 text-white px-2 py-0.5 rounded-full font-bold">{test.type}</span>
                    </p>
@@ -193,8 +193,8 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 </div>
             </div>
             
-            <div className="text-right">
-                <button className="bg-blue-600 text-white text-xs px-4 py-2 rounded-lg flex items-center gap-1 font-bold">
+            <div className="text-right w-full sm:w-auto">
+                <button className="bg-blue-600 text-white text-xs px-4 py-2 rounded-lg flex items-center justify-center gap-1 font-bold w-full sm:w-auto">
                     <PlayCircle className="h-4 w-4" /> Start Test
                 </button>
             </div>
