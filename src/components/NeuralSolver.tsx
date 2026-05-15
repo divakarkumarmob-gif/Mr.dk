@@ -14,11 +14,15 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     const [messages, setMessages] = useState<Message[]>([welcomeMessage]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
+    const messagesEndRef = React.useRef<HTMLDivElement>(null);
     const [selectedMessageIndex, setSelectedMessageIndex] = useState<number | null>(null);
 
     useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages]);
+
+    useEffect(() => {
         console.log("Chat loading for user:", auth.currentUser?.uid);
-        if (!auth.currentUser) return;
         const chatRef = doc(db, 'chats', auth.currentUser.uid, 'history', 'default');
         getDoc(chatRef).then(snap => {
             let msgs = [welcomeMessage];
@@ -104,6 +108,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
                         </div>
                     </div>
                 ))}
+                <div ref={messagesEndRef} />
                 {loading && <div className="self-start p-3"><Loader2 className="animate-spin text-blue-500" /></div>}
             </div>
 

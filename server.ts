@@ -355,9 +355,10 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    // Backend in production acts as a pure API server
-    app.get("/", (req, res) => {
-      res.json({ status: "ok", message: "API server is running" });
+    const distPath = path.resolve(process.cwd(), 'dist');
+    app.use(express.static(distPath));
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(distPath, 'index.html'));
     });
   }
 
