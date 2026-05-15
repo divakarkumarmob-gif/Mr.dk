@@ -18,7 +18,9 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     const [selectedMessageIndex, setSelectedMessageIndex] = useState<number | null>(null);
 
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+            messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
     }, [messages]);
 
     useEffect(() => {
