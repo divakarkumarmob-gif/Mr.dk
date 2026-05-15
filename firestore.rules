@@ -14,6 +14,15 @@ service cloud.firestore {
       allow write: if isSignedIn();
     }
 
+    match /tests/{testId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+    match /tests {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
     // Public or shared data
     match /questions/{questionId} {
       allow read: if isSignedIn();

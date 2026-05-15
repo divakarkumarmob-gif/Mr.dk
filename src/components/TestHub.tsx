@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X } from 'lucide-react';
-import { collection, query, where, getDocs, orderBy, limit } from 'firebase/firestore';
+import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X, Info } from 'lucide-react';
+import { collection, query, where, getDocs, orderBy, limit, onSnapshot } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 // import { QUESTIONS } from '../data/questions';
 import PYQTestRunner from './PYQTestRunner';
@@ -9,19 +9,46 @@ import TestResultDetail from './TestResultDetail';
 
 
 export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests') => void, setIsPYQRunning: (val: boolean) => void }) {
-  const [activeTab, setActiveTab] = useState('All Tests');
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [categoryFilter, setCategoryFilter] = useState<'All' | 'Physics' | 'Chemistry' | 'Biology'>('All');
-  const [showCustomOptions, setShowCustomOptions] = useState(false);
+  const [activeTab, setActiveTab] = useState<'Upcoming' | 'Current' | 'Missed'>('Current');
+  const [tests, setTests] = useState<any[]>([]);
+  //...
+  useEffect(() => {
+    const q = query(collection(db, 'tests'));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+        setTests(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    });
+    return unsubscribe;
+  }, []);
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedSubForPYQ, setSelectedSubForPYQ] = useState('');
   const [showPYQOptions, setShowPYQOptions] = useState(false);
   const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
+  const [showCustomOptions, setShowCustomOptions] = useState(false);
+  const [selectedScheduledTestForChapters, setSelectedScheduledTestForChapters] = useState<any>(null);
   const [questionCount, setQuestionCount] = useState(5);
   const [recentTests, setRecentTests] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [timer, setTimer] = useState(35);
   const [selectedResult, setSelectedResult] = useState<any>(null);
   const [pressTimer, setPressTimer] = useState<any>(null);
+
+  useEffect(() => {
+      let interval: any;
+      if (loading) {
+          setTimer(35);
+          interval = setInterval(() => {
+              setTimer((prev) => {
+                  if (prev <= 1) {
+                      clearInterval(interval);
+                      return 0;
+                  }
+                  return prev - 1;
+              });
+          }, 1000);
+      }
+      return () => clearInterval(interval);
+  }, [loading]);
 
   useEffect(() => {
     if (!auth.currentUser) return;
@@ -71,42 +98,42 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       { id: 1, name: 'Full Length Mock Test', type: mockTestType, time: '3h', questions: 180, marks: 720, status: 'not-attempted', icon: ClipboardList, color: 'text-purple-400', bg: 'bg-purple-500/20' },
   ];
 
-  const dailyTests = subjects.map((sub, idx) => ({
-    id: 100 + idx,
-    name: `${sub.name} Daily Test`,
-    type: sub.topic,
-    time: '60m', 
-    questions: 30, 
-    marks: 120, 
-    status: 'not-attempted', 
-    icon: sub.name === 'PHYSICS' ? Atom : sub.name === 'CHEMISTRY' ? FlaskConical : Dna,
-    color: sub.name === 'PHYSICS' ? 'text-blue-400' : sub.name === 'CHEMISTRY' ? 'text-green-400' : 'text-orange-400',
-    bg: sub.name === 'PHYSICS' ? 'bg-blue-500/20' : sub.name === 'CHEMISTRY' ? 'bg-green-500/20' : 'bg-orange-500/20'
-  }));
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const dailyTests = subjects.map((sub, idx) => {
+    const date = new Date(today);
+    date.setDate(today.getDate() + (idx % 3 - 1)); 
+    
+    return {
+      id: 100 + idx,
+      name: `${sub.name} Daily Test`,
+      type: sub.topic,
+      time: '60m', 
+      questions: 30, 
+      marks: 120, 
+      status: 'not-attempted', 
+      scheduledDate: date,
+      icon: sub.name === 'PHYSICS' ? Atom : sub.name === 'CHEMISTRY' ? FlaskConical : Dna,
+      color: sub.name === 'PHYSICS' ? 'text-blue-400' : sub.name === 'CHEMISTRY' ? 'text-green-400' : 'text-orange-400',
+      bg: sub.name === 'PHYSICS' ? 'bg-blue-500/20' : sub.name === 'CHEMISTRY' ? 'bg-green-500/20' : 'bg-orange-500/20'
+    };
+  });
 
   const activeTopicNames = subjects.map(s => s.topic.split(':')[0].trim());
 
   const allTests = [...staticTests, ...dailyTests].filter(test => {
     if (test.name.toLowerCase().includes('mock')) return true; 
-
-    // Only show tests for subjects shown on home screen
     return activeTopicNames.includes(test.type);
   });
 
-  const filteredTests = allTests.filter(test => {
-    let matchesTab = true;
-    if (activeTab === 'Mock Tests') matchesTab = test.name.includes('Mock');
-    else if (activeTab === 'Chapter Tests') matchesTab = !test.name.includes('Mock');
-
-    let matchesCategory = true;
-    if (categoryFilter !== 'All') matchesCategory = test.name.includes(categoryFilter);
-
-    return matchesTab && matchesCategory;
-  }).sort((a, b) => {
-    const isTopicMatch = (t: typeof a) => subjects.some(sub => t.type.includes(sub.topic.split(':')[0].trim()));
-    if (isTopicMatch(a) && !isTopicMatch(b)) return -1;
-    if (!isTopicMatch(a) && isTopicMatch(b)) return 1;
-    return 0;
+  const filteredTests = tests.filter(test => {
+    const testDate = test.targetDate.toDate ? test.targetDate.toDate() : new Date(test.targetDate); 
+    testDate.setHours(0,0,0,0);
+    if (activeTab === 'Upcoming') return testDate > today;
+    if (activeTab === 'Current') return testDate.getTime() === today.getTime();
+    if (activeTab === 'Missed') return (testDate < today && test.status === 'not-attempted');
+    return true;
   });
 
   return (
@@ -146,31 +173,26 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
             
 
-            <div className="flex justify-between items-center mb-4">
-        <h2 className="font-bold text-lg">Popular Tests</h2>
-        <button onClick={() => setIsFilterOpen(true)} className="flex items-center gap-2 text-xs text-blue-400 border border-blue-400/30 px-3 py-1 rounded-lg">
-          <Filter className="h-3 w-3" /> {categoryFilter}
-        </button>
-      </div>
+            <div className="flex bg-[#161e38] p-1 rounded-xl mb-6">
+                {(['Upcoming', 'Current', 'Missed'] as const).map(tab => (
+                    <button 
+                        key={tab}
+                        onClick={() => setActiveTab(tab)}
+                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === tab ? 'bg-blue-600' : 'bg-transparent text-gray-400'}`}
+                    >
+                        {tab}
+                    </button>
+                ))}
+            </div>
 
-      {isFilterOpen && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-end" onClick={() => setIsFilterOpen(false)}>
-            <motion.div initial={{ y: '100%' }} animate={{ y: 0 }} className="w-full bg-[#161e38] rounded-t-3xl p-6 pb-12" onClick={e => e.stopPropagation()}>
-                <h2 className="text-xl font-bold mb-6">Filter Tests</h2>
-                <div className="space-y-3">
-                    {['All', 'Physics', 'Chemistry', 'Biology'].map(cat => (
-                        <button key={cat} onClick={() => { setCategoryFilter(cat as any); setIsFilterOpen(false); }} className={`w-full p-4 rounded-xl text-left font-bold ${categoryFilter === cat ? 'bg-blue-600' : 'bg-[#0a0f24]'}`}>
-                            {cat}
-                        </button>
-                    ))}
-                </div>
-            </motion.div>
-        </div>
-      )}
+      {/* Filter dialog removed as per new tab design */}
 
       <div className="space-y-4">
-        {filteredTests.map((test, idx) => (
-          <motion.div 
+        {filteredTests.map((test, idx) => {
+          const testDate = test.targetDate.toDate ? test.targetDate.toDate() : new Date(test.targetDate);                
+          testDate.setHours(0,0,0,0);
+          return (
+            <motion.div 
             key={test.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -178,13 +200,26 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             className="bg-[#161e38] p-4 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
           >
             <div className="flex items-center gap-4 w-full">
-                <div className={`${test.bg} ${test.color} p-3 rounded-full flex-shrink-0`}>
-                    <test.icon className="h-6 w-6" />
+                <div className={`${test.bg || 'bg-blue-500/20'} ${test.color || 'text-blue-400'} p-3 rounded-full flex-shrink-0`}>
+                    {test.icon ? <test.icon className="h-6 w-6" /> : <ClipboardList className="h-6 w-6" />}
                 </div>
                 <div className="w-full">
-                   <h3 className="font-bold text-sm sm:text-base">{test.name}</h3>
+                   <h3 className="font-bold text-sm sm:text-base flex items-center gap-2">
+                     {test.name}
+                     {test.chapters && (
+                       <Info className="h-4 w-4 text-blue-400 cursor-pointer" onClick={() => setSelectedScheduledTestForChapters(test)} />
+                     )}
+                   </h3>
                    <p className="text-xs text-gray-400 mt-0.5">
-                     <span className="bg-white/10 text-white px-2 py-0.5 rounded-full font-bold">{test.type}</span>
+                     {test.type && <span className="bg-white/10 text-white px-2 py-0.5 rounded-full font-bold">{test.type}</span>}
+                     {test.chapters && (
+                       <button 
+                         onClick={() => setSelectedScheduledTestForChapters(test)}
+                         className="text-blue-400 text-xs font-bold underline ml-2"
+                       >
+                         See Syllabus
+                       </button>
+                     )}
                    </p>
                    <div className="flex gap-3 text-[10px] text-gray-500 mt-1">
                       <span className="flex items-center gap-1"><Clock className="h-3 w-3"/>{test.time}</span>
@@ -194,12 +229,78 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             </div>
             
             <div className="text-right w-full sm:w-auto">
-                <button className="bg-blue-600 text-white text-xs px-4 py-2 rounded-lg flex items-center justify-center gap-1 font-bold w-full sm:w-auto">
-                    <PlayCircle className="h-4 w-4" /> Start Test
+                <button 
+                  className={`${testDate.getTime() <= Date.now() ? 'bg-blue-600' : 'bg-gray-600'} text-white text-xs px-4 py-2 rounded-lg flex items-center justify-center gap-1 font-bold w-full sm:w-auto`}
+                        onClick={async () => {
+                            if (testDate.getTime() <= Date.now()) {
+                                try {
+                                    setLoading(true);
+                                    let allQuestions: any[] = [];
+                                    
+                                    for(const chapter of (test.chapters || [])) {
+                                        const encodedSubject = encodeURIComponent(chapter.subject.toLocaleLowerCase());
+                                        const encodedChapterDir = encodeURIComponent(chapter.name.toLocaleLowerCase());
+                                        let chunkNumber = 1;
+
+                                        while (true) {
+                                            let formattedName = chapter.name.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_');
+                                            if (formattedName === "cell_the_unit_of_life") {
+                                                formattedName = "cell_unit_of_life";
+                                            }
+                                            
+                                            // Trying the class-11 repo structure used in PracticeTest
+                                            const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodedChapterDir}/${formattedName}_chunk${chunkNumber}.json`;
+                                            
+                                            const res = await fetch(url);
+                                            if (!res.ok) break;
+                                            const data = await res.json();
+                                            
+                                            if (data.questions && Array.isArray(data.questions)) {
+                                                const qWithSub = data.questions.map((q: any) => ({...q, subject: chapter.subject}));
+                                                allQuestions = [...allQuestions, ...qWithSub];
+                                            } else {
+                                                break;
+                                            }
+                                            chunkNumber++;
+                                        }
+                                    }
+                                    
+                                    // Limit questions per subject based on admin configuration
+                                    const subjectLimits = test.subjectConfig || {};
+                                    let finalQuestions: any[] = [];
+                                    for (const [subject, config] of Object.entries(subjectLimits)) {
+                                        const subQuestions = allQuestions.filter(q => q.subject === subject);
+                                        // Shuffle
+                                        const shuffled = subQuestions.sort(() => 0.5 - Math.random());
+                                        finalQuestions = [...finalQuestions, ...shuffled.slice(0, (config as any).questions)];
+                                    }
+                                    
+                                    // await new Promise(r => setTimeout(r, 15000)); // 15-second delay
+                                    // Timer is now managed by useEffect
+                                    await new Promise(r => setTimeout(r, 35000));
+                                    setLoading(false);
+                                    if (finalQuestions.length === 0) {
+                                        alert("No data found");
+                                    } else {
+                                        setPyqQuestions(finalQuestions);
+                                        setIsPYQRunning(true);
+                                    }
+                                } catch(e) {
+                                    setLoading(false);
+                                    console.error("Error fetching test questions:", e);
+                                    alert("No data found");
+                                }
+                            } else {
+                                alert('Test is upcoming!');
+                            }
+                        }}
+
+                >
+                    {testDate.getTime() <= Date.now() ? <><PlayCircle className="h-4 w-4" /> Start Test</> : 'Upcoming'}
                 </button>
             </div>
           </motion.div>
-        ))}
+        )})}
       </div>
 
 {/* Create Custom Test functionality removed as it relied on legacy data */}
@@ -238,6 +339,23 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
           <button className="text-orange-400 font-bold text-sm">Start PYQ &gt;</button>
       </motion.div>
 
+      /* Chapter Popup */
+      {selectedScheduledTestForChapters && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setSelectedScheduledTestForChapters(null)}>
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-sm bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-gray-400" onClick={() => setSelectedScheduledTestForChapters(null)}><X className="h-5 w-5"/></button>
+                <h2 className="text-xl font-bold mb-4">Chapters in {selectedScheduledTestForChapters.name}</h2>
+                <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {selectedScheduledTestForChapters.chapters?.map((c: any, i: number) => (
+                        <div key={i} className="p-3 rounded-lg bg-[#0a0f24] text-sm">
+                            <span className="text-blue-400 font-bold">{c.subject}</span>: {c.name}
+                        </div>
+                    ))}
+                </div>
+            </motion.div>
+        </div>
+      )}
+      
       {showCustomOptions && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => { setShowCustomOptions(false); setSelectedSubject(null); }}>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
@@ -325,6 +443,13 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 </div>
             </motion.div>
         </div>
+      )}
+      {loading && (
+          <div className="fixed inset-0 bg-[#0a0f24] z-[200] flex flex-col items-center justify-center">
+              <div className="w-16 h-16 border-4 border-t-blue-600 border-white/20 rounded-full animate-spin mb-4"></div>
+              <h2 className="text-xl font-bold">Starting Test...</h2>
+              <p className="text-lg text-gray-400 mt-2">{timer}s</p>
+          </div>
       )}
       </>
       )}

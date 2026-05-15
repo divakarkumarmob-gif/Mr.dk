@@ -1,10 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { db, auth } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, doc, updateDoc, deleteDoc } from 'firebase/firestore';                
-import { MessageSquare as MessageSquareIcon, Upload as UploadIcon, FileUp, Trash2, Edit2, Menu, X, Users } from 'lucide-react';
+import { MessageSquare as MessageSquareIcon, Upload as UploadIcon, FileUp, Trash2, Edit2, Menu, X, Users, ClipboardList } from 'lucide-react';
 import QuestionImporter from './QuestionImporter';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import ChatWindow from './ChatWindow';
+
+// Import CHAPTER_DATA
+const CHAPTER_DATA = {
+    Physics: {
+        'Class 11': ['Physical World', 'Units and Measurements', 'Motion in a Straight Line', 'Motion in a Plane', 'Laws of Motion', 'Work, Energy and Power', 'Systems of Particles and Rotational Motion', 'Gravitation', 'Mechanical Properties of Solids', 'Mechanical Properties of Fluids', 'Thermal Properties of Matter', 'Thermodynamics', 'Kinetic Theory', 'Oscillations', 'Waves'],
+        'Class 12': ['Electric Charges and Fields', 'Electrostatic Potential and Capacitance', 'Current Electricity', 'Moving Charges and Magnetism', 'Magnetism and Matter', 'Electromagnetic Induction', 'Alternating Current', 'Electromagnetic Waves', 'Ray Optics and Optical Instruments', 'Wave Optics', 'Dual Nature of Radiation and Matter', 'Atoms', 'Nuclei', 'Semiconductor Electronics']
+    },
+    Chemistry: {
+        'Class 11': ['Some Basic Concepts of Chemistry', 'Structure of Atom', 'Classification of Elements and Periodicity in Properties', 'Chemical Bonding and Molecular Structure', 'Thermodynamics', 'Equilibrium', 'Redox Reactions', 'Organic Chemistry: Some Basic Principles and Techniques', 'Hydrocarbons'],
+        'Class 12': ['Solutions', 'Electrochemistry', 'Chemical Kinetics', 'd-and f-Block Elements', 'Coordination Compounds', 'Haloalkanes and Haloarenes', 'Alcohols, Phenols and Ethers', 'Aldehydes, Ketones and Carboxylic Acids', 'Amines', 'Biomolecules']
+    },
+    Biology: {
+        'Class 11': ['The Living World', 'Biological Classification', 'Plant Kingdom', 'Animal Kingdom', 'Morphology of Flowering Plants', 'Anatomy of Flowering Plants', 'Structural Organisation in Animals', 'Cell: The Unit of Life', 'Biomolecules', 'Cell Cycle and Cell Division', 'Photosynthesis in Higher Plants', 'Respiration in Plants', 'Plant Growth and Development', 'Breathing and Exchange of Gases', 'Body Fluids and Circulation', 'Excretory Products and their Elimination', 'Locomotion and Movement', 'Neural Control and Coordination', 'Chemical Coordination and Integration'],
+        'Class 12': ['Sexual Reproduction in Flowering Plants', 'Human Reproduction', 'Reproductive Health', 'Principles of Inheritance and Variation', 'Molecular Basis of Inheritance', 'Evolution', 'Human Health and Disease', 'Microbes in Human Welfare', 'Biotechnology: Principles and Processes', 'Biotechnology and its Applications', 'Organisms and Populations', 'Ecosystem', 'Biodiversity and Conservation']
+    }
+};
 
 enum OperationType {
     CREATE = 'create',
@@ -60,11 +76,22 @@ interface Notification {
 }
 
 export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport') => void }) {
-    const [activeTab, setActiveTab] = useState<'message' | 'upload' | 'import' | 'users'>('message');
+    const [activeTab, setActiveTab] = useState<'message' | 'upload' | 'import' | 'users' | 'schedule'>('message');
     const [message, setMessage] = useState('');
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [notifications, setNotifications] = useState<Notification[]>([]);
     const [userStats, setUserStats] = useState({ total: 0, online: 0 });
+    
+    // New Schedule state
+    const [testName, setTestName] = useState('');
+    const [testDate, setTestDate] = useState('');
+    const [selectedChapters, setSelectedChapters] = useState<{name: string, subject: string}[]>([]);
+    const [showChapterPopup, setShowChapterPopup] = useState(false);
+    const [subjectConfig, setSubjectConfig] = useState<{[key: string]: {questions: number, time: number}}>({                
+        Physics: {questions: 10, time: 10},
+        Chemistry: {questions: 10, time: 10},
+        Biology: {questions: 10, time: 10}
+    });
 
     useEffect(() => {
         const q = query(collection(db, 'notifications'), orderBy('timestamp', 'desc'));
@@ -129,6 +156,32 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
         }
     };
 
+    const scheduleTest = async () => {
+        if (!testName || !testDate || selectedChapters.length === 0) return alert("Fill all fields and select chapters");
+        const date = new Date(testDate);
+        try {
+            await addDoc(collection(db, 'tests'), {
+                name: testName,
+                chapters: selectedChapters,
+                subjectConfig,
+                targetDate: date,
+                status: 'upcoming'
+            });
+            await addDoc(collection(db, 'notifications'), {
+                message: `You have an upcoming test by admin: ${testName} on ${date.toDateString()}`,
+                timestamp: serverTimestamp(),
+                readBy: []
+            });
+            alert("Test scheduled!");
+            setTestName('');
+            setTestDate('');
+            setSelectedChapters([]);
+        } catch(e) {
+            console.error(e);
+            alert("Failed to schedule test");
+        }
+    };
+
     return (
         <div className="bg-[#161e38] rounded-xl border border-white/10 p-1 flex gap-0 min-h-[300px] text-white relative">
             <motion.div 
@@ -163,6 +216,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                 <button onClick={() => setActiveTab('upload')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2 ${activeTab === 'upload' ? 'bg-white/10' : ''}`}>
                     <UploadIcon className="h-4 w-4 flex-shrink-0" />
                     {isSidebarOpen && <span className="truncate">Upload</span>}
+                </button>
+                <button onClick={() => setActiveTab('schedule')} className={`w-full p-2 rounded-lg flex items-center justify-start gap-2 ${activeTab === 'schedule' ? 'bg-white/10' : ''}`}>
+                    <ClipboardList className="h-4 w-4 flex-shrink-0" />
+                    {isSidebarOpen && <span className="truncate">Schedule</span>}
                 </button>
             </motion.div>
             <div className="flex-1 p-4" onClick={() => setIsSidebarOpen(false)}>
@@ -219,7 +276,76 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                         </div>
                     </div>
                 )}
+                {activeTab === 'schedule' && (
+                    <div className="space-y-4">
+                        <h3 className="font-bold text-lg text-white">Schedule New Test</h3>
+                        <input type="text" placeholder="Test Name" value={testName} onChange={e => setTestName(e.target.value)} className="w-full bg-white/5 p-2 rounded-lg border border-white/10" />
+                        <button onClick={() => setShowChapterPopup(true)} className="w-full bg-white/5 p-2 rounded-lg border border-white/10 text-left">
+                            {selectedChapters.length > 0 ? `${selectedChapters.length} chapters selected` : 'Select Chapters'}
+                        </button>
+                        
+                        {Object.keys(subjectConfig).map(sub => (
+                            <div key={sub} className="bg-white/5 p-3 rounded-lg border border-white/10">
+                                <p className="font-bold mb-2">{sub}</p>
+                                <div className="flex gap-4">
+                                    <label className="text-xs">Questions: {subjectConfig[sub].questions}</label>
+                                    <input type="range" min="5" max={sub === 'Biology' ? 100 : 50} step="5" value={subjectConfig[sub].questions} onChange={e => {
+                                        const q = parseInt(e.target.value);
+                                        setSubjectConfig({...subjectConfig, [sub]: {...subjectConfig[sub], questions: q, time: q}});
+                                    }}/>
+                                </div>
+                            </div>
+                        ))}
+                        <input type="date" value={testDate} onChange={e => setTestDate(e.target.value)} className="w-full bg-white/5 p-2 rounded-lg border border-white/10" />
+                        <input type="time" onChange={e => {
+                            const [hours, minutes] = e.target.value.split(':');
+                            const date = new Date(testDate);
+                            date.setHours(parseInt(hours), parseInt(minutes));
+                            setTestDate(date.toString());
+                        }} className="w-full bg-white/5 p-2 rounded-lg border border-white/10" />
+                        <button onClick={scheduleTest} className="w-full bg-blue-600 p-2 rounded-lg font-bold">Schedule Test</button>
+                    </div>
+                )}
             </div>
+            
+            <AnimatePresence>
+                {showChapterPopup && (
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/80 z-50 flex p-6" onClick={() => setShowChapterPopup(false)}>
+                        <motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }} className="bg-[#1e293b] p-6 rounded-2xl w-full max-w-sm m-auto max-h-[80vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+                            <h2 className="text-xl font-bold mb-4">Select Chapters</h2>
+                            {Object.entries(CHAPTER_DATA).map(([subject, classes]) => (
+                                <div key={subject} className="mb-4">
+                                    <h3 className="font-bold text-blue-400 flex justify-between">
+                                      {subject}
+                                      <button className="text-xs text-white bg-blue-600 px-2 rounded-full" onClick={() => {
+                                        const all = Object.values(classes).flat();
+                                        const missing = all.filter(c => !selectedChapters.some(s => s.name === c));
+                                        if (missing.length > 0) setSelectedChapters(prev => [...prev, ...missing.map(name => ({name, subject}))]);
+                                        else setSelectedChapters(prev => prev.filter(s => s.subject !== subject));
+                                      }}>Toggle All</button>
+                                    </h3>
+                                    {Object.entries(classes).map(([className, chapters]) => (
+                                        <div key={className}>
+                                            <p className="text-sm text-gray-400">{className}</p>
+                                            {chapters.map(c => (
+                                                <div key={c} className="flex items-center gap-2 p-2 hover:bg-white/5 rounded" onClick={() => {
+                                                    const exists = selectedChapters.some(s => s.name === c);
+                                                    if (exists) setSelectedChapters(prev => prev.filter(s => s.name !== c));
+                                                    else setSelectedChapters(prev => [...prev, { name: c, subject }]);
+                                                }}>
+                                                    <input type="checkbox" checked={selectedChapters.some(s => s.name === c)} readOnly />
+                                                    <span className="text-sm">{c}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                            <button onClick={() => setShowChapterPopup(false)} className="w-full bg-blue-600 p-3 rounded-xl font-bold mt-4">OK</button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

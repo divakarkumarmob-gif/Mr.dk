@@ -2,6 +2,7 @@ import {useState, useEffect, useRef} from 'react';
 import {collection, onSnapshot, query, orderBy, getDocs, where} from 'firebase/firestore';                
 import {db, auth} from '../lib/firebase';
 import {ChevronDown, Leaf, Atom, Beaker, Play} from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
 import BattleRoom from './BattleRoom';
@@ -112,7 +113,11 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
     const [searchQuery, setSearchQuery] = useState('');
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans flex flex-col">
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans flex flex-col"
+        >
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
             <HubSwitcher active="study" onNavigate={onNavigate} />
           
@@ -174,7 +179,12 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
           
           <div className="space-y-3 mt-8 pb-20">
             {accordionItems.map(item => (
-                <div key={item} className="bg-[#161e38] rounded-2xl border border-white/5">
+                <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    key={item} 
+                    className="bg-[#161e38] rounded-2xl border border-white/5"
+                >
                     <button 
                         className="w-full p-6 flex justify-between items-center font-bold text-sm tracking-wider"
                         onClick={() => {
@@ -275,7 +285,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                             )}
                         </div>
                     )}
-                </div>
+                </motion.div>
             ))}
           </div>
             {pendingChapter && (
@@ -299,7 +309,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
              </span>
            </div>
           </div>
-        </div>
+        </motion.div>
     )
 
  
