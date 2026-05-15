@@ -219,6 +219,7 @@ export default function App() {
   const streamRef = React.useRef<MediaStream | null>(null);
   const faceLandmarkerRef = React.useRef<any>(null);
   const lastFrameTimeRef = React.useRef(Date.now());
+  const audioRef = React.useRef<HTMLAudioElement | null>(null);
   const wakeLockRef = React.useRef<any>(null);
 
   useEffect(() => {
@@ -246,6 +247,13 @@ export default function App() {
 	  }
 	  prevFocusModeRef.current = isFocusMode;
   }, [isFocusMode]);
+  
+  useEffect(() => {
+    if (isLooking && audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+    }
+  }, [isLooking]);
 
   useEffect(() => {
     sensitivityRef.current = distractionSensitivity;
@@ -354,12 +362,14 @@ export default function App() {
           distractionCounter.current++;
           if (distractionCounter.current >= sensitivityRef.current) {
              setIsLooking(false);
-             const now = Date.now();
-             if (!videoRef.current || !videoRef.current.dataset.lastAlert || now - parseInt(videoRef.current.dataset.lastAlert) > 5000) {
-                 if (videoRef.current) videoRef.current.dataset.lastAlert = now.toString();
-                 const audio = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');
-                 audio.play().catch(e => console.log('Audio playback failed', e));
-             }
+                     const now = Date.now();
+                     if (!videoRef.current || !videoRef.current.dataset.lastAlert || now - parseInt(videoRef.current.dataset.lastAlert) > 5000) {
+                         if (videoRef.current) videoRef.current.dataset.lastAlert = now.toString();
+                         if (!audioRef.current) {
+                             audioRef.current = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');
+                         }
+                         audioRef.current.play().catch(e => console.log('Audio playback failed', e));
+                     }
           }
       }
       
