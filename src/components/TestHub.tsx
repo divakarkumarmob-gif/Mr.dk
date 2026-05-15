@@ -205,7 +205,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 </div>
                 <div className="w-full">
                    <h3 className="font-bold text-sm sm:text-base flex items-center gap-2">
-                     {test.name}
+                     {typeof test.name === 'string' ? test.name : (console.log('Invalid test name:', test.name), String(test.name))}
                      {test.chapters && (
                        <Info className="h-4 w-4 text-blue-400 cursor-pointer" onClick={() => setSelectedScheduledTestForChapters(test)} />
                      )}

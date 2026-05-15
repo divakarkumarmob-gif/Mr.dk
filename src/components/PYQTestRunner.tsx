@@ -71,6 +71,25 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
     const isLastQuestion = currentIndex === questions.length - 1;
     const [showConfirmSubmit, setShowConfirmSubmit] = useState(false);
 
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [submissionTimer, setSubmissionTimer] = useState(120);
+
+    useEffect(() => {
+        let interval: any;
+        if (isSubmitted && submissionTimer > 0) {
+            interval = setInterval(() => {
+                setSubmissionTimer((prev) => prev - 1);
+            }, 1000);
+        }
+        return () => clearInterval(interval);
+    }, [isSubmitted, submissionTimer]);
+
+    const formatSubmissionTime = (seconds: number) => {
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    };
+
     const handleTestSubmit = async () => {
         if (!auth.currentUser) return alert("User not logged in");
 
@@ -112,7 +131,7 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
                 questions: questions, // ADDED: Save questions to enable detailed review
                 timestamp: new Date().toISOString()
             });
-            onBack();
+            setIsSubmitted(true);
         } catch (err) {
             console.error("Error saving test results: ", err);
             // Enhanced error reporting
@@ -147,6 +166,23 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
         localStorage.setItem('resumeTestData', JSON.stringify(resumeData));
         onBack();
     };
+
+    if (isSubmitted) {
+        return (
+            <div className="fixed inset-0 bg-[#0a0f24] z-[100] flex flex-col items-center justify-center text-white p-6 text-center">
+                <h2 className="text-3xl font-bold mb-4">Test Submitted!</h2>
+                {submissionTimer > 0 ? (
+                    <>
+                        <p className="text-xl mb-2">Analyzing results...</p>
+                        <div className="text-6xl font-bold text-blue-400 mb-8">{formatSubmissionTime(submissionTimer)}</div>
+                        <p className="text-gray-400">Please wait while we process your performance.</p>
+                    </>
+                ) : (
+                    <button onClick={onBack} className="bg-blue-600 text-white text-xl px-8 py-4 rounded-xl font-bold">See Results</button>
+                )}
+            </div>
+        );
+    }
 
     return (
         <div className="fixed inset-0 bg-white text-gray-900 font-sans z-[100] flex flex-col">
