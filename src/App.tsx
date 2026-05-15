@@ -203,6 +203,99 @@ export default function App() {
 
   const [isPYQRunning, setIsPYQRunning] = useState(false);
   const [resumingTest, setResumingTest] = useState<any>(null);
+  
+  // Focus Mode Global State
+  const [isFocusMode, setIsFocusMode] = useState(false);
+  const [isLooking, setIsLooking] = useState(true);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+  const streamRef = React.useRef<MediaStream | null>(null);
+  const faceLandmarkerRef = React.useRef<any>(null);
+
+  useEffect(() => {
+      async function setupFaceLandmarker() {
+          const { FaceLandmarker, FilesetResolver } = await import('@mediapipe/tasks-vision');
+          const vision = await FilesetResolver.forVisionTasks(
+              "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/wasm"
+          );
+          faceLandmarkerRef.current = await FaceLandmarker.createFromOptions(vision, {
+              baseOptions: {
+                  modelAssetPath: `https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task`
+              },
+              runningMode: "VIDEO",
+              numFaces: 1
+          });
+      }
+      setupFaceLandmarker();
+  }, []);
+
+  useEffect(() => {
+      async function setupCamera() {
+          if (isFocusMode) {
+              try {
+                  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                  streamRef.current = stream;
+                  if (videoRef.current) {
+                      videoRef.current.srcObject = stream;
+                      await videoRef.current.play();
+                  }
+              } catch (err) {
+                  console.error("Camera error:", err);
+                  alert("Could not access camera for Focus Mode.");
+                  setIsFocusMode(false);
+              }
+          } else {
+              // Stop camera
+              if (streamRef.current) {
+                  streamRef.current.getTracks().forEach(track => track.stop());
+                  streamRef.current = null;
+              }
+          }
+      }
+      setupCamera();
+      
+      // Cleanup on unmount
+      return () => {
+         if (streamRef.current) {
+             streamRef.current.getTracks().forEach(track => track.stop());
+         }
+      }
+  }, [isFocusMode]);
+
+  const startDetectionLoop = async () => {
+      if (!isFocusMode || !videoRef.current) return;
+      
+      if (!faceLandmarkerRef.current) {
+          requestAnimationFrame(startDetectionLoop);
+          return;
+      }
+      
+      const startTimeMs = performance.now();
+      const results = faceLandmarkerRef.current.detectForVideo(videoRef.current, startTimeMs);
+      
+      if (results.faceLandmarks && results.faceLandmarks.length > 0) {
+          const landmarks = results.faceLandmarks[0];
+          // Real Gaze Detection Logic:
+          // Nose bridge is around landmark 1, 4, 5
+          // If the nose is roughly centered in the frame (x approx 0.5), user is looking at screen.
+          const noseX = landmarks[1].x;
+          const looking = noseX > 0.3 && noseX < 0.7;                
+          
+          setIsLooking(looking);
+          if (!looking) {
+              const now = Date.now();
+              if (!videoRef.current.dataset.lastAlert || now - parseInt(videoRef.current.dataset.lastAlert) > 5000) {
+                  videoRef.current.dataset.lastAlert = now.toString();
+                  const audio = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');
+                  audio.play().catch(e => console.log('Audio playback failed', e));                
+              }
+          }
+      } else {
+          setIsLooking(false);
+      }
+      
+      requestAnimationFrame(startDetectionLoop);
+  };
+
   const [loading, setLoading] = useState(true);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [subjects, setSubjects] = useState(getDailyChapters());
@@ -643,7 +736,16 @@ export default function App() {
   if (currentView === 'study') {
       return (
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
-            <StudyHub subjects={subjects} setResumingTest={setResumingTest} setCurrentView={setCurrentView} onNavigate={(view) => {
+            <StudyHub 
+                subjects={subjects} 
+                setResumingTest={setResumingTest} 
+                setCurrentView={setCurrentView} 
+                isFocusMode={isFocusMode}
+                setIsFocusMode={setIsFocusMode}
+                videoRef={videoRef}
+                isLooking={isLooking}
+                startDetectionLoop={startDetectionLoop}
+                onNavigate={(view) => {
               if (view === 'customPractice') {
                   setCurrentView('customPractice');
               } else {

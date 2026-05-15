@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
 import {collection, onSnapshot, query, orderBy, getDocs, where} from 'firebase/firestore';                
 import {db, auth} from '../lib/firebase';
-import {ChevronDown, Leaf, Atom, Beaker, Play} from 'lucide-react';
+import {ChevronDown, Leaf, Atom, Beaker, Play, Eye, EyeOff, AlertTriangle} from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
@@ -23,46 +23,13 @@ const CHAPTER_DATA: any = {
     }
 };
 
-export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void }) {
+export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView, isFocusMode, setIsFocusMode, videoRef, isLooking, startDetectionLoop }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void, isFocusMode: boolean, setIsFocusMode: (val: boolean) => void, videoRef: React.RefObject<HTMLVideoElement>, isLooking: boolean, startDetectionLoop: () => void }) {
     const [savedTest, setSavedTest] = useState<any>(null);
     const [recentTests, setRecentTests] = useState<any[]>([]);
     const [selectedResult, setSelectedResult] = useState<any>(null);
     const [pressTimer, setPressTimer] = useState<any>(null);
 
-    useEffect(() => {
-        const data = localStorage.getItem('resumeTestData');
-        if (data) {
-            const parsed = JSON.parse(data);
-            if (Date.now() - parsed.timestamp < 20 * 60 * 1000) {
-                setSavedTest(parsed);
-            } else {
-                localStorage.removeItem('resumeTestData');
-            }
-        }
-        
-        if (!auth.currentUser) return;
-        const fetchRecentTests = async () => {
-            const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
-            const querySnapshot = await getDocs(q);
-            const tests = querySnapshot.docs.map(doc => {
-                const data = doc.data();
-                return {
-                    id: doc.id,
-                    ...data,
-                    timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
-                };
-            });
-            const now = Date.now();
-            setRecentTests(tests.filter(t => {
-                const hideUntil = localStorage.getItem('hide-' + t.id);
-                if (hideUntil) {
-                    if (now > parseInt(hideUntil)) return false;
-                }
-                return true;
-            }));
-        };
-        fetchRecentTests();
-    }, []);                
+    // Focus Mode - removed local state in favor of global state in App.tsx
 
     const handleSeeResults = (test: any) => {
         setSelectedResult(test);
@@ -119,7 +86,9 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
             className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans flex flex-col"
         >
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
-            <HubSwitcher active="study" onNavigate={onNavigate} />
+            <div className="flex justify-between items-center mb-4">
+                <HubSwitcher active="study" onNavigate={onNavigate} />
+            </div>
           
           {selectedResult && (
             <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
@@ -161,6 +130,35 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                   className="bg-orange-600 px-4 py-2 rounded-lg text-sm font-bold"
                 >Resume</button>
             </div>
+          )}
+
+          <div className="bg-[#161e38] rounded-2xl border border-white/5 p-6 mb-6">
+              <div className="flex justify-between items-center">
+                <h3 className="font-bold text-lg">Focus Mode</h3>
+                <button 
+                  onClick={() => setIsFocusMode(!isFocusMode)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm ${isFocusMode ? 'bg-red-900/50 text-red-500' : 'bg-white/10 text-white'}`}
+                >
+                    {isFocusMode ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                    {isFocusMode ? "ON" : "OFF"}
+                </button>
+              </div>
+          </div>
+
+          {isFocusMode && (
+              <motion.div 
+                  drag
+                  dragMomentum={false}
+                  className="fixed top-20 right-4 z-[2000] w-48 bg-black/80 rounded-2xl p-2 border border-white/10 shadow-2xl cursor-move"
+              >
+                  <video ref={videoRef} className="w-full rounded-xl scale-x-[-1]" muted playsInline autoPlay onLoadedMetadata={startDetectionLoop} />
+                  {!isLooking && (
+                      <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-red-900/80 rounded-xl">
+                          <AlertTriangle className="h-8 w-8 text-white mb-2" />
+                          <span className="text-white font-bold">Look here!</span>
+                      </div>
+                  )}
+              </motion.div>
           )}
 
           {activeBattleChapter && (
