@@ -90,10 +90,9 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
             <div className="flex justify-between items-center mb-4 bg-[#161e38] p-4 rounded-xl shadow-md text-white">
                 <button onClick={onClose}><X /></button>
                 <h2 className="font-bold">Neural Doubt Solver</h2>
-                <div />
             </div>
 
-            <div className="flex-grow overflow-y-auto space-y-4 mb-4 p-2" onClick={() => setSelectedMessageIndex(null)}>
+            <div className="flex-grow overflow-y-auto space-y-4 p-2" onClick={() => setSelectedMessageIndex(null)}>
                 {messages.map((m, i) => (
                     <div key={i} className={`flex flex-col gap-1 ${m.role === 'user' ? 'items-end' : 'items-start'}`}>
                         {selectedMessageIndex === i && i !== 0 && (
@@ -105,7 +104,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
                         </div>
                     </div>
                 ))}
-                {loading && <div className="self-start bg-[#161e38] p-3 rounded-2xl rounded-tl-none shadow-sm"><Loader2 className="animate-spin text-gray-500" /></div>}
+                {loading && <div className="self-start p-3"><Loader2 className="animate-spin text-blue-500" /></div>}
             </div>
 
             <div className="flex gap-2 bg-[#161e38] p-3 rounded-full shadow-md">

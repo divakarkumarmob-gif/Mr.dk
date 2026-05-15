@@ -245,11 +245,6 @@ export default function App() {
 
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
-        // Handle normal back navigation first
-        if (e.state && e.state.view) {
-             _setCurrentView(e.state.view);
-        }
-
         // If we have active overlays, close them
         if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
             setActiveVideo(null);
@@ -276,7 +271,12 @@ export default function App() {
                 // Re-trap
                 window.history.pushState({ view: 'home' }, '', '/home');
             }
+            return;
         }
+
+        // Otherwise navigate back
+        const poppedView = e.state?.view || 'home';
+        _setCurrentView(poppedView);
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -694,20 +694,13 @@ export default function App() {
             setCurrentView('technicalSupport');
         }}
       />
-      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}</>
+      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
+      </>
       );
   }
 
   if (currentView === 'editProfile') {
-      return (<><EditProfile user={user} onNavigate={setCurrentView} />
-      <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>);
+      return <EditProfile user={user} onNavigate={setCurrentView} />;
   }
 
   if (currentView === 'admin') {
@@ -728,15 +721,7 @@ export default function App() {
   }
 
   if (currentView === 'adminChat') {
-      return (<><AdminChatPage onBack={() => setCurrentView('admin')} />
-      <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>);
+      return <AdminChatPage onBack={() => setCurrentView('admin')} />;
   }
 
 
@@ -810,7 +795,17 @@ export default function App() {
 
   return (
     <>
+      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      />
       {showOnboarding && (
+
           <div 
             onClick={() => setShowOnboarding(false)}
             className="fixed inset-0 z-[1000] flex flex-col items-center justify-center p-6 bg-black/60 backdrop-blur-sm cursor-pointer"

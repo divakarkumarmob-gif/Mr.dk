@@ -15,7 +15,10 @@ export default function PracticeTest({ chapters, onBack }: { chapters: {name: st
             
             while (true) {
                 let url = "";
-                const formattedName = chapter.name.toLocaleLowerCase().replace(/ /g, '_');
+                let formattedName = chapter.name.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_');
+                if (formattedName === "cell_the_unit_of_life") {
+                    formattedName = "cell_unit_of_life";
+                }
                 url = `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodedChapterDir}/${formattedName}_chunk${chunkNumber}.json`;
                 console.log("Fetching URL:", url);
 
