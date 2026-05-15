@@ -23,7 +23,7 @@ const CHAPTER_DATA: any = {
     }
 };
 
-export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView, isFocusMode, setIsFocusMode, videoRef, isLooking, startDetectionLoop }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void, isFocusMode: boolean, setIsFocusMode: (val: boolean) => void, videoRef: React.RefObject<HTMLVideoElement>, isLooking: boolean, startDetectionLoop: () => void }) {
+export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView, isFocusMode, setIsFocusMode, setShowSummary, distractionSensitivity, setDistractionSensitivity, focusedTime, distractedTime, videoRef, isLooking, startDetectionLoop }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void, isFocusMode: boolean, setIsFocusMode: (val: boolean) => void, setShowSummary: (val: boolean) => void, distractionSensitivity: number, setDistractionSensitivity: (val: number) => void, focusedTime: number, distractedTime: number, videoRef: React.RefObject<HTMLVideoElement>, isLooking: boolean, startDetectionLoop: () => void }) {
     const [savedTest, setSavedTest] = useState<any>(null);
     const [recentTests, setRecentTests] = useState<any[]>([]);
     const [selectedResult, setSelectedResult] = useState<any>(null);
@@ -143,6 +143,32 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                     {isFocusMode ? "ON" : "OFF"}
                 </button>
               </div>
+              
+               {isFocusMode && (
+                <div className="mt-4">
+                  <div className="flex justify-between text-xs text-white/60 mb-2">
+                    <span>Focused: {Math.floor(focusedTime / 1000)}s</span>
+                    <span>Distracted: {Math.floor(distractedTime / 1000)}s</span>
+                  </div>
+                  <label className="text-xs text-white/60 mb-1 block">Sensitivity: {Math.round(distractionSensitivity / 10)}s threshold</label>
+                  <input 
+                    type="range" 
+                    min="10" 
+                    max="100" 
+                    value={distractionSensitivity} 
+                    onChange={(e) => setDistractionSensitivity(parseInt(e.target.value))}
+                    className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-red-500"
+                  />
+                  {(focusedTime > 0 || distractedTime > 0) && (
+                    <button
+                        onClick={() => setShowSummary(true)}
+                        className="mt-4 w-full bg-blue-600/20 text-blue-400 py-2 rounded-lg font-bold text-sm hover:bg-blue-600/30 transition"
+                    >
+                        View Last Session
+                    </button>
+                  )}
+                </div>
+              )}
           </div>
 
           {isFocusMode && (

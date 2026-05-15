@@ -173,7 +173,7 @@ async function startServer() {
     // 1. Try Gemini
     if (process.env.GEMINI_API_KEY) {
       try {
-        const ai = new GoogleGenAI();
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
         const chat = ai.chats.create({ model: "gemini-1.5-flash" });
         
         // Populate history
@@ -257,7 +257,7 @@ async function startServer() {
         }
 
         // Initialize SDK without key to let it pick up environment auth
-        const ai = new GoogleGenAI();
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
         
         try {
             const result = await ai.models.generateContent({
@@ -271,7 +271,7 @@ async function startServer() {
                 }]
             });
             
-            res.json({ text: result.text() });
+            res.json({ text: result.text });
         } catch (error) {
             console.error("Gemini API Error:", error);
             res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
@@ -340,19 +340,21 @@ async function startServer() {
     try {
       console.log("Sending request to Gemini with Search Grounding...");
       // Initialize SDK without key to let it pick up environment auth
-      const ai = new GoogleGenAI();
+      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
       
       const result = await ai.models.generateContent({
         model: "gemini-1.5-flash",
-        systemInstruction: "You are a friendly, approachable, and natural-sounding AI assistant. You talk like a close human friend, keeping conversations casual, engaging, and easy to relate to. Avoid stiff, overly formal, or robotic language. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.",
+        config: {
+          systemInstruction: "You are a friendly, approachable, and natural-sounding AI assistant. You talk like a close human friend, keeping conversations casual, engaging, and easy to relate to. Avoid stiff, overly formal, or robotic language. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum.",
+          tools: [{ googleSearch: {} }],
+        },
         contents: messages.map(m => ({
             role: m.role === 'assistant' ? 'model' : 'user',
             parts: [{ text: m.content }]
-        })),
-        tools: [{ googleSearch: {} }] // Add search grounding
+        }))
       });
       
-      res.json({ reply: result.text() });
+      res.json({ reply: result.text });
     } catch (error) {
       console.error("Gemini API Error:", error);
       res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });

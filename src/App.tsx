@@ -33,6 +33,8 @@ import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion } from 'motion/react';
+import FocusSessionSummary from './components/FocusSessionSummary';
+import DistractionOverlay from './components/DistractionOverlay';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
 
 enum OperationType {
@@ -206,10 +208,48 @@ export default function App() {
   
   // Focus Mode Global State
   const [isFocusMode, setIsFocusMode] = useState(false);
+  const [showSummary, setShowSummary] = useState(false);
   const [isLooking, setIsLooking] = useState(true);
+  const [distractionSensitivity, setDistractionSensitivity] = useState(30); // Default 30 (~3 seconds)
+  const [focusedTime, setFocusedTime] = useState(0);
+  const [distractedTime, setDistractedTime] = useState(0);
+  const prevFocusModeRef = React.useRef(false);
+  const sensitivityRef = React.useRef(distractionSensitivity);
   const videoRef = React.useRef<HTMLVideoElement>(null);
   const streamRef = React.useRef<MediaStream | null>(null);
   const faceLandmarkerRef = React.useRef<any>(null);
+  const lastFrameTimeRef = React.useRef(Date.now());
+  const wakeLockRef = React.useRef<any>(null);
+
+  useEffect(() => {
+      async function requestWakeLock() {
+          if (isFocusMode && 'wakeLock' in navigator) {
+              try {
+                  wakeLockRef.current = await (navigator as any).wakeLock.request('screen');
+              } catch (err) {
+                  console.error('Wake lock error:', err);
+              }
+          } else if (wakeLockRef.current) {
+              await wakeLockRef.current.release();
+              wakeLockRef.current = null;
+          }
+      }
+      requestWakeLock();
+      return () => {
+          if (wakeLockRef.current) wakeLockRef.current.release();
+      };
+  }, [isFocusMode]);
+
+  useEffect(() => {
+	  if (prevFocusModeRef.current === true && isFocusMode === false) {
+		  setShowSummary(true);
+	  }
+	  prevFocusModeRef.current = isFocusMode;
+  }, [isFocusMode]);
+
+  useEffect(() => {
+    sensitivityRef.current = distractionSensitivity;
+  }, [distractionSensitivity]);
 
   useEffect(() => {
       async function setupFaceLandmarker() {
@@ -222,7 +262,8 @@ export default function App() {
                   modelAssetPath: `https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task`
               },
               runningMode: "VIDEO",
-              numFaces: 1
+              numFaces: 1,
+              outputFaceBlendshapes: true
           });
       }
       setupFaceLandmarker();
@@ -261,6 +302,8 @@ export default function App() {
       }
   }, [isFocusMode]);
 
+  const distractionCounter = React.useRef(0);
+
   const startDetectionLoop = async () => {
       if (!isFocusMode || !videoRef.current) return;
       
@@ -274,23 +317,50 @@ export default function App() {
       
       if (results.faceLandmarks && results.faceLandmarks.length > 0) {
           const landmarks = results.faceLandmarks[0];
-          // Real Gaze Detection Logic:
-          // Nose bridge is around landmark 1, 4, 5
-          // If the nose is roughly centered in the frame (x approx 0.5), user is looking at screen.
           const noseX = landmarks[1].x;
-          const looking = noseX > 0.3 && noseX < 0.7;                
+          const noseY = landmarks[1].y;
           
-          setIsLooking(looking);
-          if (!looking) {
-              const now = Date.now();
-              if (!videoRef.current.dataset.lastAlert || now - parseInt(videoRef.current.dataset.lastAlert) > 5000) {
-                  videoRef.current.dataset.lastAlert = now.toString();
-                  const audio = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');
-                  audio.play().catch(e => console.log('Audio playback failed', e));                
+          let eyesClosed = false;
+          if (results.faceBlendshapes && results.faceBlendshapes.length > 0) {
+              const blendshapes = results.faceBlendshapes[0].categories;
+              const leftBlink = blendshapes.find(b => b.categoryName === 'eyeBlinkLeft')?.score || 0;
+              const rightBlink = blendshapes.find(b => b.categoryName === 'eyeBlinkRight')?.score || 0;
+              if (leftBlink > 0.6 && rightBlink > 0.6) {
+                  eyesClosed = true;
+              }
+          }
+          
+          const isLookingHorizontal = noseX > 0.15 && noseX < 0.85; 
+          const isLookingVertical = noseY > 0.1 && noseY < 0.9;   
+          
+          const isNowLooking = isLookingHorizontal && isLookingVertical && !eyesClosed;
+          
+          if (isNowLooking) {
+              distractionCounter.current = 0;
+              setIsLooking(true);
+          } else {
+              distractionCounter.current++;
+              if (distractionCounter.current >= sensitivityRef.current) {
+                  setIsLooking(false);
+                  const now = Date.now();
+                  if (!videoRef.current.dataset.lastAlert || now - parseInt(videoRef.current.dataset.lastAlert) > 5000) {
+                      videoRef.current.dataset.lastAlert = now.toString();
+                      const audio = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');
+                      audio.play().catch(e => console.log('Audio playback failed', e));
+                  }
               }
           }
       } else {
-          setIsLooking(false);
+          distractionCounter.current++;
+          if (distractionCounter.current >= sensitivityRef.current) {
+             setIsLooking(false);
+             const now = Date.now();
+             if (!videoRef.current || !videoRef.current.dataset.lastAlert || now - parseInt(videoRef.current.dataset.lastAlert) > 5000) {
+                 if (videoRef.current) videoRef.current.dataset.lastAlert = now.toString();
+                 const audio = new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg');
+                 audio.play().catch(e => console.log('Audio playback failed', e));
+             }
+          }
       }
       
       requestAnimationFrame(startDetectionLoop);
@@ -742,6 +812,11 @@ export default function App() {
                 setCurrentView={setCurrentView} 
                 isFocusMode={isFocusMode}
                 setIsFocusMode={setIsFocusMode}
+                setShowSummary={setShowSummary}
+                distractionSensitivity={distractionSensitivity}
+                setDistractionSensitivity={setDistractionSensitivity}
+                focusedTime={focusedTime}
+                distractedTime={distractedTime}
                 videoRef={videoRef}
                 isLooking={isLooking}
                 startDetectionLoop={startDetectionLoop}
@@ -1122,6 +1197,15 @@ export default function App() {
             setCurrentView('technicalSupport');
         }}
       />
+      {isFocusMode && <DistractionOverlay isLooking={isLooking} />}
+      
+      {showSummary && (
+          <FocusSessionSummary 
+              focusedTime={focusedTime}
+              distractedTime={distractedTime}
+              onClose={() => setShowSummary(false)}
+          />
+      )}
       </div>
     </motion.div>
     </>
