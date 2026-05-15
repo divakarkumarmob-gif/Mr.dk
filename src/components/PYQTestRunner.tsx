@@ -86,7 +86,7 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
         }, 0);
         
         const totalPossibleMarks = questions.length * 4;
-        const obtainedMarks = (correct * 4) - (incorrect * 5);
+        const obtainedMarks = (correct * 4) - (incorrect * 1);
         
         const attempted = Object.keys(answers).length;
         const total = questions.length;

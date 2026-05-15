@@ -71,13 +71,10 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         <span className="text-xs text-gray-400">Score</span>
                     </div>
                 </div>
-                <div className='text-sm space-y-1'>
-                    <div className="font-bold text-xl">{result.correct || 0} <span className='text-gray-400 font-normal'>/ {result.totalQuestions || 0}</span></div>
-                    <div className="text-sm text-gray-300">Correct Answers</div>
-                    <div className="font-bold text-lg pt-2">+{result.obtainedMarks || 0} <span className='font-normal text-gray-400'>Marks Obtained</span></div>
-                    {result.timeTakenSeconds !== undefined && (
-                        <div className="text-xs text-blue-400 pt-1">Time Taken: {Math.floor(result.timeTakenSeconds / 60)}:{String(result.timeTakenSeconds % 60).padStart(2, '0')}</div>
-                    )}
+                <div className='flex flex-col items-center'>
+                    <div className="font-bold text-4xl">{result.obtainedMarks || 0}</div>
+                    <div className='w-full h-0.5 bg-gray-600 my-1'></div>
+                    <div className="font-bold text-4xl text-gray-400">{result.totalPossibleMarks || (result.totalQuestions * 4)}</div>
                 </div>
             </div>
 

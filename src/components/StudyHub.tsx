@@ -1,10 +1,11 @@
 import {useState, useEffect, useRef} from 'react';
-import {collection, onSnapshot} from 'firebase/firestore';                
-import {db} from '../lib/firebase';
+import {collection, onSnapshot, query, orderBy, getDocs, where} from 'firebase/firestore';                
+import {db, auth} from '../lib/firebase';
 import {ChevronDown, Leaf, Atom, Beaker, Play} from 'lucide-react';
 import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
 import BattleRoom from './BattleRoom';
+import TestResultDetail from './TestResultDetail';
 
 const CHAPTER_DATA: any = {
     Physics: { 
@@ -23,6 +24,9 @@ const CHAPTER_DATA: any = {
 
 export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void }) {
     const [savedTest, setSavedTest] = useState<any>(null);
+    const [recentTests, setRecentTests] = useState<any[]>([]);
+    const [selectedResult, setSelectedResult] = useState<any>(null);
+    const [pressTimer, setPressTimer] = useState<any>(null);
 
     useEffect(() => {
         const data = localStorage.getItem('resumeTestData');
@@ -34,7 +38,47 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                 localStorage.removeItem('resumeTestData');
             }
         }
+        
+        if (!auth.currentUser) return;
+        const fetchRecentTests = async () => {
+            const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
+            const querySnapshot = await getDocs(q);
+            const tests = querySnapshot.docs.map(doc => {
+                const data = doc.data();
+                return {
+                    id: doc.id,
+                    ...data,
+                    timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
+                };
+            });
+            const now = Date.now();
+            setRecentTests(tests.filter(t => {
+                const hideUntil = localStorage.getItem('hide-' + t.id);
+                if (hideUntil) {
+                    if (now > parseInt(hideUntil)) return false;
+                }
+                return true;
+            }));
+        };
+        fetchRecentTests();
     }, []);                
+
+    const handleSeeResults = (test: any) => {
+        setSelectedResult(test);
+        if (!localStorage.getItem('hide-' + test.id)) {
+            localStorage.setItem('hide-' + test.id, (Date.now() + 10 * 60 * 1000).toString());
+        }
+    }
+
+    const removeTest = (testId: string) => {
+        localStorage.setItem('hide-' + testId, '0');
+        setRecentTests(prev => prev.filter(t => t.id !== testId));
+    }
+
+    const handleTouchStart = (testId: string) => {
+        setPressTimer(setTimeout(() => removeTest(testId), 500));
+    };
+    const handleTouchEnd = () => clearTimeout(pressTimer);
 
     // Mock data for user progress
     const stats = { tests: 0, questions: 0, accuracy: '0%', time: '0m' };
@@ -71,6 +115,32 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans flex flex-col">
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
             <HubSwitcher active="study" onNavigate={onNavigate} />
+          
+          {selectedResult && (
+            <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
+                <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
+            </div>
+          )}
+          
+          {recentTests.length > 0 && (
+                <div className="mb-6">
+                    <h2 className="font-bold mb-4 text-orange-400">Recently Completed</h2>
+                    {recentTests.map(test => (
+                        <div key={test.id} 
+                            className="bg-orange-900/30 p-4 rounded-xl border border-orange-500/50 flex justify-between items-center mb-2"
+                            onTouchStart={() => handleTouchStart(test.id)}
+                            onTouchEnd={handleTouchEnd}
+                            onMouseDown={() => handleTouchStart(test.id)}
+                            onMouseUp={handleTouchEnd}
+                        >
+                             <div>
+                                <h3 className="font-bold">{test.testName}</h3>
+                             </div>
+                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 px-4 py-2 rounded-lg text-sm font-bold">See Results</button>
+                        </div>
+                    ))}
+                </div>
+            )}
           
           {savedTest && (
             <div className="bg-orange-900/30 p-4 rounded-xl border border-orange-500/50 mb-6 flex justify-between items-center">

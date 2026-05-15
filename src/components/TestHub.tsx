@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X } from 'lucide-react';
-import { collection } from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy, limit } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 // import { QUESTIONS } from '../data/questions';
 import PYQTestRunner from './PYQTestRunner';
+import TestResultDetail from './TestResultDetail';
 
 
 export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests') => void, setIsPYQRunning: (val: boolean) => void }) {
@@ -18,6 +19,52 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [showPYQOptions, setShowPYQOptions] = useState(false);
   const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
   const [questionCount, setQuestionCount] = useState(5);
+  const [recentTests, setRecentTests] = useState<any[]>([]);
+  const [selectedResult, setSelectedResult] = useState<any>(null);
+  const [pressTimer, setPressTimer] = useState<any>(null);
+
+  useEffect(() => {
+    if (!auth.currentUser) return;
+    const fetchRecentTests = async () => {
+        const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
+        const querySnapshot = await getDocs(q);
+        const tests = querySnapshot.docs.map(doc => {
+            const data = doc.data();
+            return {
+                id: doc.id,
+                ...data,
+                timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
+            };
+        });
+        
+        const now = Date.now();
+        setRecentTests(tests.filter(t => {
+            const hideUntil = localStorage.getItem('hide-' + t.id);
+            if (hideUntil) {
+                if (now > parseInt(hideUntil)) return false;
+            }
+            return true;
+        }));
+    };
+    fetchRecentTests();
+  }, []);
+
+  const handleSeeResults = (test: any) => {
+      setSelectedResult(test);
+      if (!localStorage.getItem('hide-' + test.id)) {
+          localStorage.setItem('hide-' + test.id, (Date.now() + 10 * 60 * 1000).toString());
+      }
+  }
+
+  const removeTest = (testId: string) => {
+      localStorage.setItem('hide-' + testId, '0');
+      setRecentTests(prev => prev.filter(t => t.id !== testId));
+  }
+
+  const handleTouchStart = (testId: string) => {
+      setPressTimer(setTimeout(() => removeTest(testId), 500));
+  };
+  const handleTouchEnd = () => clearTimeout(pressTimer);
 
   const mockTestType = subjects.map(s => s.topic).join(' + ');
   const staticTests = [
@@ -72,6 +119,31 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       ) : (
         <>
             <h1 className="text-2xl font-bold mb-6">Tests</h1>
+            
+            {selectedResult && (
+                <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
+                    <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
+                </div>
+            )}
+
+            {recentTests.length > 0 && (
+                <div className="mb-8">
+                    <h2 className="font-bold text-lg mb-4 text-orange-400">Recently Completed</h2>
+                    {recentTests.map(test => (
+                        <div key={test.id} 
+                            className="bg-gradient-to-r from-orange-900/40 to-red-900/40 p-4 rounded-xl border border-orange-500/20 flex justify-between items-center mb-2"
+                            onTouchStart={() => handleTouchStart(test.id)}
+                            onTouchEnd={handleTouchEnd}
+                            onMouseDown={() => handleTouchStart(test.id)}
+                            onMouseUp={handleTouchEnd}
+                        >
+                            <span className="font-bold">{test.testName}</span>
+                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-xs px-4 py-2 rounded-lg font-bold">See Results</button>
+                        </div>
+                    ))}
+                </div>
+            )}
+
             
 
             <div className="flex justify-between items-center mb-4">
