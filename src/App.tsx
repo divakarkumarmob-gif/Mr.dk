@@ -24,6 +24,7 @@ import AdminPanel from './components/AdminPanel';
 import AdminChatPage from './components/AdminChatPage';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
+import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
@@ -682,20 +683,19 @@ export default function App() {
 
   if (currentView === 'profile') {
       return (
-        <><div className="flex flex-col min-h-screen pb-20">
+        <div className="flex flex-col min-h-screen pb-20">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
+            <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
+            {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
         </div>
-        <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      />
-      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
-      </>
       );
   }
 
@@ -727,52 +727,51 @@ export default function App() {
 
   if (currentView === 'tests') {
       return (
-        <><div className="flex flex-col min-h-screen pb-20">
+        <div className="flex flex-col min-h-screen pb-20">
             <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
+            <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
         </div>
-        <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>
       );
   }
 
   if (currentView === 'notes') {
       return (
-        <><div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
+        <div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
             <div className="flex-grow"><Notes /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
+            <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
         </div>
-        <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>
       );
   }
 
    if (currentView === 'analytics') {
        return (
-         <><div className="flex flex-col min-h-screen pb-20">
+         <div className="flex flex-col min-h-screen">
              <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} /></div>
-             <BottomNav currentView="analytics" onNavigate={setCurrentView} />
+             <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
          </div>
-         <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>
        );
    }
 
@@ -1027,16 +1026,3 @@ export default function App() {
   );
 }
 
-function BottomNav({ currentView, onNavigate }: { currentView: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport' | 'analytics', onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'technicalSupport' | 'analytics') => void }) {
-    return (
-        <div className="fixed bottom-0 left-0 w-full bg-[#0f172a] border-t border-white/10 p-2 z-[999]">
-            <div className="max-w-md mx-auto flex justify-around">
-                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'home' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('home')}><Home className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Home</span></div>
-                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'tests' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('tests')}><FileText className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Tests</span></div>
-                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'analytics' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('analytics')}><BarChart2 className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Analytics</span></div>
-                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'notes' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('notes')}><Book className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Notes</span></div>
-                <div className={`flex flex-col items-center cursor-pointer ${currentView === 'profile' ? 'text-orange-500' : 'text-gray-500'}`} onClick={() => onNavigate('profile')}><UserIcon className="h-5 w-5 sm:h-6 sm:w-6" /><span className="text-[10px]">Profile</span></div>
-            </div>
-        </div>
-    )
-}

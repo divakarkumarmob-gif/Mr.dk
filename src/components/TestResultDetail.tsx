@@ -25,7 +25,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
 
     const scoreData = [
         { name: 'Correct', value: result.correct || 0 },
-        { name: 'Remaining', value: (result.total || 0) - (result.correct || 0) }
+        { name: 'Remaining', value: (result.totalQuestions || 0) - (result.correct || 0) }
     ];
     const COLORS = ['#3b82f6', '#1e293b'];
 
@@ -53,7 +53,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                 <StatCard label="Correct" value={result.correct || 0} color="text-green-500" onClick={() => handleStatClick('correct')} />
                 <StatCard label="Incorrect" value={result.incorrect || 0} color="text-red-500" onClick={() => handleStatClick('incorrect')} />
                 <StatCard label="Unattempted" value={result.unattempted || 0} color="text-blue-500" onClick={() => handleStatClick('unattempted')} />
-                <StatCard label="Total" value={result.total || 0} color="text-yellow-500" onClick={() => handleStatClick('all')} />
+                <StatCard label="Total" value={result.totalQuestions || 0} color="text-yellow-500" onClick={() => handleStatClick('all')} />
             </div>
 
             {/* Main Score Chart */}
@@ -67,14 +67,14 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         </PieChart>
                     </ResponsiveContainer>
                     <div className="absolute inset-0 flex flex-col justify-center items-center">
-                        <span className="text-2xl font-bold">{result.score || 0}%</span>
+                        <span className="text-2xl font-bold">{result.percentage || 0}%</span>
                         <span className="text-xs text-gray-400">Score</span>
                     </div>
                 </div>
                 <div className='text-sm space-y-1'>
-                    <div className="font-bold text-xl">{result.correct || 0} <span className='text-gray-400 font-normal'>/ {result.total || 0}</span></div>
+                    <div className="font-bold text-xl">{result.correct || 0} <span className='text-gray-400 font-normal'>/ {result.totalQuestions || 0}</span></div>
                     <div className="text-sm text-gray-300">Correct Answers</div>
-                    <div className="font-bold text-lg pt-2">+{result.marks || 0} <span className='font-normal text-gray-400'>Marks Obtained</span></div>
+                    <div className="font-bold text-lg pt-2">+{result.obtainedMarks || 0} <span className='font-normal text-gray-400'>Marks Obtained</span></div>
                     {result.timeTakenSeconds !== undefined && (
                         <div className="text-xs text-blue-400 pt-1">Time Taken: {Math.floor(result.timeTakenSeconds / 60)}:{String(result.timeTakenSeconds % 60).padStart(2, '0')}</div>
                     )}

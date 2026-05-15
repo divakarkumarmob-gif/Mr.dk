@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db, auth } from '../lib/firebase';
 import { collection, query, getDocs, orderBy } from 'firebase/firestore';
+import BottomNav from './BottomNav';
 import TestResultDetail from './TestResultDetail';
 
 export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any) => void }) {
@@ -30,26 +31,29 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
     }
 
     return (
-        <div className="p-6">
-            <h1 className="text-2xl font-bold mb-6 text-white">Test History</h1>
-            <div className="space-y-4">
-                {results.map(result => (
-                    <div key={result.id} className="bg-[#161e38] p-4 rounded-xl flex justify-between items-center">
-                        <div className="flex flex-col text-left">
-                            <span className="font-semibold text-white">{result.testName}</span>
-                            {result.timestamp && (
-                                <span className="text-gray-400 text-xs">
-                                    {result.timestamp.toLocaleDateString()}
-                                </span>
-                            )}
+        <div className="flex flex-col min-h-screen pb-20">
+            <div className="p-6 flex-grow">
+                <h1 className="text-2xl font-bold mb-6 text-white">Test History</h1>
+                <div className="space-y-4">
+                    {results.map(result => (
+                        <div key={result.id} className="bg-[#161e38] p-4 rounded-xl flex justify-between items-center">
+                            <div className="flex flex-col text-left">
+                                <span className="font-semibold text-white">{result.testName}</span>
+                                {result.timestamp && (
+                                    <span className="text-gray-400 text-xs">
+                                        {result.timestamp.toLocaleDateString()}
+                                    </span>
+                                )}
+                            </div>
+                            <button 
+                                onClick={() => setSelectedResult(result)}
+                                className="bg-blue-600 px-4 py-2 rounded-lg text-sm font-bold"
+                            >See Result</button>
                         </div>
-                        <button 
-                            onClick={() => setSelectedResult(result)}
-                            className="bg-blue-600 px-4 py-2 rounded-lg text-sm font-bold"
-                        >See Result</button>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
+            <BottomNav currentView="analytics" onNavigate={onNavigate} />
         </div>
     );
 }
