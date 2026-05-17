@@ -20,8 +20,8 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
                 </div>
                 <h2 className="text-xl font-bold">{user?.displayName || 'Aspirant'}</h2>
                 <p className="text-gray-400 text-sm mb-6">{user?.email}</p>
-                <button onClick={() => onNavigate('editProfile')} className="bg-orange-500 flex items-center gap-2 px-6 py-2 rounded-full font-bold text-sm">
-                    <Edit className="h-4 w-4" /> EDIT PROFILE
+                <button onClick={() => onNavigate('editProfile')} className="bg-orange-500 flex items-center gap-1.5 px-4 py-1 rounded-full font-bold text-xs">
+                    <Edit className="h-3 w-3" /> EDIT PROFILE
                 </button>
             </div>
 
@@ -101,8 +101,8 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
                 </div>
             </div>
 
-            <button onClick={logOut} className="w-full bg-[#1e293b] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2">
-                <LogOut className="h-5 w-5" /> END SESSION
+            <button onClick={logOut} className="w-full bg-[#1e293b] text-white py-2 rounded-lg font-bold flex items-center justify-center gap-1.5 text-xs">
+                <LogOut className="h-4 w-4" /> END SESSION
             </button>
           </div>
         </div>

@@ -145,7 +145,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             }} />
       ) : (
         <>
-            <h1 className="text-2xl font-bold mb-6">Tests</h1>
+            <h1 className="text-xl font-bold mb-3">Tests</h1>
             
             {selectedResult && (
                 <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
@@ -154,18 +154,18 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             )}
 
             {recentTests.length > 0 && (
-                <div className="mb-8">
-                    <h2 className="font-bold text-lg mb-4 text-orange-400">Recently Completed</h2>
+                <div className="mb-4">
+                    <h2 className="font-bold text-sm mb-2 text-orange-400">Recently Completed</h2>
                     {recentTests.map(test => (
                         <div key={test.id} 
-                            className="bg-gradient-to-r from-orange-900/40 to-red-900/40 p-4 rounded-xl border border-orange-500/20 flex justify-between items-center mb-2"
+                            className="bg-gradient-to-r from-orange-900/40 to-red-900/40 p-3 rounded-lg border border-orange-500/20 flex justify-between items-center mb-1.5"
                             onTouchStart={() => handleTouchStart(test.id)}
                             onTouchEnd={handleTouchEnd}
                             onMouseDown={() => handleTouchStart(test.id)}
                             onMouseUp={handleTouchEnd}
                         >
-                            <span className="font-bold">{test.testName}</span>
-                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-xs px-3 py-1 rounded-lg font-bold">See Results</button>
+                            <span className="font-bold text-sm">{test.testName}</span>
+                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-[10px] px-2 py-1 rounded-lg font-bold">See Results</button>
                         </div>
                     ))}
                 </div>
@@ -173,12 +173,12 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
             
 
-            <div className="flex bg-[#161e38] p-1 rounded-xl mb-6">
+            <div className="flex bg-[#161e38] p-0.5 rounded-lg mb-3">
                 {(['Upcoming', 'Current', 'Missed'] as const).map(tab => (
                     <button 
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === tab ? 'bg-blue-600' : 'bg-transparent text-gray-400'}`}
+                        className={`flex-1 py-1 rounded-lg font-bold text-xs ${activeTab === tab ? 'bg-blue-600' : 'bg-transparent text-gray-400'}`}
                     >
                         {tab}
                     </button>
@@ -186,76 +186,76 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             </div>
 
             {/* Daily Tests from Subjects */}
-            <h2 className="font-bold text-lg mb-4 text-orange-400">Daily Study Plan</h2>
-            <div className="space-y-2 mb-4">
+            <h2 className="font-bold text-sm mb-2 text-orange-400">Daily Study Plan</h2>
+            <div className="space-y-1.5 mb-3">
                 {dailyTests.map((test, idx) => (
                     <motion.div 
                         key={test.id}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
-                        className="bg-[#161e38] p-3 rounded-lg border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2"
+                        className="bg-[#161e38] p-2.5 rounded-lg border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-1.5"
                     >
                         <div className="flex items-center gap-2 w-full">
-                            <div className={`${test.bg} ${test.color} p-2 rounded-full flex-shrink-0`}>
-                                <test.icon className="h-5 w-5" />
+                            <div className={`${test.bg} ${test.color} p-1.5 rounded-full flex-shrink-0`}>
+                                <test.icon className="h-4 w-4" />
                             </div>
                             <div className="w-full">
-                                <h3 className="font-bold text-xs sm:text-sm">{test.name}</h3>
-                                <p className="text-[10px] text-gray-400 mt-0.5">{test.type}</p>
+                                <h3 className="font-bold text-xs sm:text-xs">{test.name}</h3>
+                                <p className="text-[9px] text-gray-400 mt-0.5">{test.type}</p>
                             </div>
                         </div>
-                        <button className="bg-blue-600 text-white text-xs px-3 py-1 rounded-lg font-bold w-full sm:w-auto">Start</button>
+                        <button className="bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded-lg font-bold w-full sm:w-auto">Start</button>
                     </motion.div>
                 ))}
             </div>
 
       {/* Filter dialog removed as per new tab design */}
 
-      <div className="space-y-4">
+      <div className="space-y-2">
         {filteredTests.map((test, idx) => {
           const testDate = test.targetDate.toDate ? test.targetDate.toDate() : new Date(test.targetDate);                
           testDate.setHours(0,0,0,0);
           return (
             <motion.div 
             key={test.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className="bg-[#161e38] p-4 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
+            className="bg-[#161e38] p-3 rounded-lg border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2"
           >
-            <div className="flex items-center gap-4 w-full">
-                <div className={`${test.bg || 'bg-blue-500/20'} ${test.color || 'text-blue-400'} p-3 rounded-full flex-shrink-0`}>
-                    {test.icon ? <test.icon className="h-6 w-6" /> : <ClipboardList className="h-6 w-6" />}
+            <div className="flex items-center gap-3 w-full">
+                <div className={`${test.bg || 'bg-blue-500/20'} ${test.color || 'text-blue-400'} p-2 rounded-full flex-shrink-0`}>
+                    {test.icon ? <test.icon className="h-5 w-5" /> : <ClipboardList className="h-5 w-5" />}
                 </div>
                 <div className="w-full">
-                   <h3 className="font-bold text-sm sm:text-base flex items-center gap-2">
+                   <h3 className="font-bold text-xs sm:text-sm flex items-center gap-1.5">
                      {typeof test.name === 'string' ? test.name : (console.log('Invalid test name:', test.name), String(test.name))}
                      {test.chapters && (
-                       <Info className="h-4 w-4 text-blue-400 cursor-pointer" onClick={() => setSelectedScheduledTestForChapters(test)} />
+                       <Info className="h-3 w-3 text-blue-400 cursor-pointer" onClick={() => setSelectedScheduledTestForChapters(test)} />
                      )}
                    </h3>
-                   <p className="text-xs text-gray-400 mt-0.5">
-                     {test.type && <span className="bg-white/10 text-white px-2 py-0.5 rounded-full font-bold">{test.type}</span>}
+                   <p className="text-[9px] text-gray-400 mt-0.5">
+                     {test.type && <span className="bg-white/10 text-white px-1.5 py-0.5 rounded-full font-bold">{test.type}</span>}
                      {test.chapters && (
                        <button 
                          onClick={() => setSelectedScheduledTestForChapters(test)}
-                         className="text-blue-400 text-xs font-bold underline ml-2"
+                         className="text-blue-400 text-[9px] font-bold underline ml-1.5"
                        >
                          See Syllabus
                        </button>
                      )}
                    </p>
-                   <div className="flex gap-3 text-[10px] text-gray-500 mt-1">
-                      <span className="flex items-center gap-1"><Clock className="h-3 w-3"/>{test.time}</span>
-                      <span className="flex items-center gap-1"><ListOrdered className="h-3 w-3"/>{test.questions} Questions</span>
+                   <div className="flex gap-2 text-[9px] text-gray-500 mt-0.5">
+                      <span className="flex items-center gap-0.5"><Clock className="h-2.5 w-2.5"/>{test.time}</span>
+                      <span className="flex items-center gap-0.5"><ListOrdered className="h-2.5 w-2.5"/>{test.questions} Questions</span>
                    </div>
                 </div>
             </div>
             
             <div className="text-right w-full sm:w-auto">
                 <button 
-                  className={`${testDate.getTime() <= Date.now() ? 'bg-blue-600' : 'bg-gray-600'} text-white text-xs px-3 py-1 rounded-lg flex items-center justify-center gap-1 font-bold w-full sm:w-auto`}
+                  className={`${testDate.getTime() <= Date.now() ? 'bg-blue-600' : 'bg-gray-600'} text-white text-[10px] px-2 py-1 rounded-lg flex items-center justify-center gap-0.5 font-bold w-full sm:w-auto`}
                         onClick={async () => {
                             if (testDate.getTime() <= Date.now()) {
                                 try {
@@ -321,7 +321,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                         }}
 
                 >
-                    {testDate.getTime() <= Date.now() ? <><PlayCircle className="h-4 w-4" /> Start Test</> : 'Upcoming'}
+                    {testDate.getTime() <= Date.now() ? <><PlayCircle className="h-3 w-3" /> Start Test</> : 'Upcoming'}
                 </button>
             </div>
           </motion.div>
