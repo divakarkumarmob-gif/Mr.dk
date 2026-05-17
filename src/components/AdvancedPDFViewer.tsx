@@ -1,43 +1,21 @@
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
-// Configure the worker
-pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+// Configure the worker to use the CDN
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: string, title: string, onClose: () => void }) {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-    
-    // Scale architecture for flicker-free zooming
-    const [renderScale, setRenderScale] = useState(0.73);
-    const [visualScale, setVisualScale] = useState(1);
-    const [zoomLevel, setZoomLevel] = useState(0.73);
+    const [scale, setScale] = useState(0.73);
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
     }
-
-    // Debounced scale update to prevent flickering
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setRenderScale(zoomLevel);
-            setVisualScale(1);
-        }, 300);
-        return () => clearTimeout(handler);
-    }, [zoomLevel]);
-
-    const handleZoomIn = () => {
-        setZoomLevel(s => Math.min(s + 0.05, 3));
-    };
-
-    const handleZoomOut = () => {
-        setZoomLevel(s => Math.max(s - 0.05, 0.3));
-    };
-
+    
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 bg-white z-[600] flex flex-col">
             {/* Toolbar */}
@@ -49,15 +27,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             </div>
             
             {/* PDF Viewport */}
-            <div className="flex-grow overflow-auto bg-gray-600 p-2 touch-none">
+            <div className="flex-grow overflow-auto bg-gray-600 p-2">
                 <div
                     className="flex justify-center"
-                    style={{
-                        transform: `scale(${visualScale})`,
-                        transformOrigin: 'center top',
-                        willChange: 'transform',
-                        transition: 'transform 0.1s ease-out'
-                    }}
                 >
                     <Document
                         file={pdfUrl}
@@ -65,9 +37,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                     >
                         <Page 
                             pageNumber={currentPage} 
-                            scale={renderScale}
-                            renderMode="canvas"
-                            devicePixelRatio={window.devicePixelRatio}
+                            scale={scale}
                             renderTextLayer={false}
                             renderAnnotationLayer={false}
                         />
@@ -78,7 +48,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             {/* Pagination & Zoom */}
             <div className="flex items-center justify-between p-1.5 bg-gray-900 text-white border-t border-gray-700">
                 {/* Zoom Out - Left */}
-                <button onClick={handleZoomOut} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
+                <button onClick={() => setScale(s => Math.max(s - 0.05, 0.3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
                     <ZoomOut className="h-6 w-6" />
                 </button>
 
@@ -93,7 +63,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                     </button>
                     <div className="flex flex-col items-center">
                         <span className="text-sm font-bold w-16 text-center">{currentPage} / {numPages}</span>
-                        <span className="text-xs font-mono text-gray-400 bg-gray-950 px-1 rounded">{Math.round(zoomLevel * 100)}%</span>
+                        <span className="text-xs font-mono text-gray-400 bg-gray-950 px-1 rounded">{Math.round(scale * 100)}%</span>
                     </div>
                     <button 
                         disabled={currentPage >= (numPages || 1)} 
@@ -105,7 +75,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                 </div>
 
                 {/* Zoom In - Right */}
-                <button onClick={handleZoomIn} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
+                <button onClick={() => setScale(s => Math.min(s + 0.05, 3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
                     <ZoomIn className="h-6 w-6" />
                 </button>
             </div>
