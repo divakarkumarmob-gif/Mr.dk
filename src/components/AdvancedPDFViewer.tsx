@@ -24,18 +24,18 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                 <div className="flex gap-2 shrink-0 items-center">
                     <span className="text-xs font-mono text-gray-400 bg-gray-950 px-2 py-1 rounded">{Math.round(scale * 100)}%</span>
                     <button onClick={() => setScale(s => Math.min(s + 0.2, 3))} className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full"><ZoomIn className="h-5 w-5" /></button>
-                    <button onClick={() => setScale(s => Math.max(s - 0.2, 0.5))} className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full"><ZoomOut className="h-5 w-5" /></button>
+                    <button onClick={() => setScale(s => Math.max(s - 0.2, 0.3))} className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full"><ZoomOut className="h-5 w-5" /></button>
                     <button onClick={() => window.open(pdfUrl, '_blank')} className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full"><Download className="h-5 w-5" /></button>
                     <button onClick={onClose} className="p-2 bg-red-900 hover:bg-red-800 rounded-full transition"><X className="h-5 w-5" /></button>
                 </div>
             </div>
             
             {/* PDF Viewport */}
-            <div className="flex-grow overflow-auto bg-gray-600 flex flex-col items-center justify-center p-2">
+            <div className="flex-grow overflow-auto bg-gray-600 p-2">
                 <Document
                     file={pdfUrl}
                     onLoadSuccess={onDocumentLoadSuccess}
-                    className="flex flex-col items-center"
+                    className="flex justify-center"
                 >
                     <Page 
                         pageNumber={currentPage} 
