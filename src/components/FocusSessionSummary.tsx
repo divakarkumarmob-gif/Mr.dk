@@ -21,8 +21,12 @@ export default function FocusSessionSummary({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 className="fixed inset-0 z-[3000] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+                onClick={onClose}
             >
-                <div className="bg-zinc-900 border border-white/10 rounded-3xl p-8 w-full max-w-md shadow-2xl">
+                <div 
+                    className="bg-zinc-900 border border-white/10 rounded-3xl p-8 w-full max-w-md shadow-2xl"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-white">Session Summary</h2>
                         <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition">

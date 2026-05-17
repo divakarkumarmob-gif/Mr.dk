@@ -173,7 +173,7 @@ async function startServer() {
     // 1. Try Gemini
     if (process.env.GEMINI_API_KEY) {
       try {
-        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+        const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
         const chat = ai.chats.create({ model: "gemini-1.5-flash" });
         
         // Populate history
@@ -257,8 +257,7 @@ async function startServer() {
         }
 
         // Initialize SDK without key to let it pick up environment auth
-        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-        
+        const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
         try {
             const result = await ai.models.generateContent({
                 model: "gemini-1.5-flash",
@@ -338,9 +337,8 @@ async function startServer() {
     }
     
     try {
-      console.log("Sending request to Gemini with Search Grounding...");
       // Initialize SDK without key to let it pick up environment auth
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
       
       const result = await ai.models.generateContent({
         model: "gemini-1.5-flash",

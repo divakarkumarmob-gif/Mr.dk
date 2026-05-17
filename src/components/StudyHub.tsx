@@ -90,6 +90,17 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                 <HubSwitcher active="study" onNavigate={onNavigate} />
             </div>
           
+          <div className="bg-[#161e38] rounded-2xl border border-white/5 p-6 mb-6 flex justify-between items-center">
+              <button onClick={() => setShowSummary(true)} className="font-bold text-sm tracking-widest text-orange-400">FOCUS MODE</button>
+              <button 
+                onClick={() => setIsFocusMode(!isFocusMode)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm ${isFocusMode ? 'bg-red-900/50 text-red-500' : 'bg-white/10 text-white'}`}
+              >
+                  {isFocusMode ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  {isFocusMode ? "ON" : "OFF"}
+              </button>
+          </div>
+          
           {selectedResult && (
             <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
                 <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
@@ -131,21 +142,9 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                 >Resume</button>
             </div>
           )}
-
-          <div className="bg-[#161e38] rounded-2xl border border-white/5 p-6 mb-6">
-              <div className="flex justify-between items-center">
-                <h3 className="font-bold text-lg">Focus Mode</h3>
-                <button 
-                  onClick={() => setIsFocusMode(!isFocusMode)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm ${isFocusMode ? 'bg-red-900/50 text-red-500' : 'bg-white/10 text-white'}`}
-                >
-                    {isFocusMode ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                    {isFocusMode ? "ON" : "OFF"}
-                </button>
-              </div>
-              
-               {isFocusMode && (
-                <div className="mt-4">
+          
+          {isFocusMode && (
+                <div className="bg-[#161e38] rounded-2xl border border-white/5 p-4 mb-4">
                   <div className="flex justify-between text-xs text-white/60 mb-2">
                     <span>Focused: {Math.floor(focusedTime / 1000)}s</span>
                     <span>Distracted: {Math.floor(distractedTime / 1000)}s</span>
@@ -169,7 +168,6 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                   )}
                 </div>
               )}
-          </div>
 
           {isFocusMode && (
               <motion.div 

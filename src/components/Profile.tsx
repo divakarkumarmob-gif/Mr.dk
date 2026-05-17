@@ -2,7 +2,7 @@ import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mai
 import { logOut } from '../lib/auth';
 import { User as FirebaseUser } from 'firebase/auth';
 
-export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport') => void, onSolverClick: () => void }) {
+export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary') => void, onSolverClick: () => void }) {
     const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
     return (
         <div className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans pb-24">
@@ -76,7 +76,7 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
 
             {/* Support Network */}
             <h3 className="text-gray-500 text-xs font-bold mb-4 uppercase">Support Network</h3>
-            <div className="bg-orange-500 p-4 rounded-xl mb-4 flex justify-between items-center cursor-pointer">
+            <div onClick={() => onNavigate('notesLibrary')} className="bg-orange-500 p-4 rounded-xl mb-4 flex justify-between items-center cursor-pointer">
                  <div className="flex items-center gap-3">
                     <Download className="h-6 w-6 text-white"/>
                     <p className="font-bold">Download Notes</p>

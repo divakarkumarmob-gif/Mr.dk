@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Plus, Camera, FileUp, X } from 'lucide-react';
+import { Plus, Camera, FileUp, X, BookOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { auth, db, storage } from '../lib/firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
@@ -32,7 +32,7 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
   throw new Error(JSON.stringify(errInfo));
 }
 
-export default function Notes() {
+export default function Notes({ onNavigate }: { onNavigate: (view: any) => void }) {
   const [isOpen, setIsOpen] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [name, setName] = useState('');
@@ -93,6 +93,16 @@ export default function Notes() {
         className="w-full bg-[#1e293b] border-2 border-dashed border-slate-700 rounded-2xl p-6 flex items-center justify-center gap-3 text-slate-400 hover:text-slate-200 transition-all hover:bg-[#253247]"
       >
         <Plus className="h-6 w-6" /> Add Important Note
+      </button>
+
+      <button 
+        onClick={() => onNavigate('NCERT11thHub')}
+        className="w-full bg-blue-900/50 border border-blue-700 rounded-2xl p-6 flex items-center justify-between text-blue-100 hover:bg-blue-800 transition-all mt-4"
+      >
+        <div className="flex items-center gap-3">
+          <BookOpen className="h-6 w-6" />
+          <span className="font-bold text-lg">NCERT 11th</span>
+        </div>
       </button>
 
       <AnimatePresence>

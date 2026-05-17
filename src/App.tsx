@@ -19,11 +19,13 @@ import PYQTestRunner from './components/PYQTestRunner';
 import HubSwitcher from './components/HubSwitcher';
 import VideoPlayer from './components/VideoPlayer';
 import Profile from './components/Profile';
+import NotesLibrary from './components/NotesLibrary';
 import EditProfile from './components/EditProfile';
 import AdminPanel from './components/AdminPanel';
 import AdminChatPage from './components/AdminChatPage';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
+import NCERT11thHub from './components/NCERT11thHub';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NeuralSolver from './components/NeuralSolver';
@@ -134,7 +136,7 @@ const getRandomChapters = () => {
 export default function App() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI'>('home');
+  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'notesLibrary' | 'NCERT11thHub' |'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI'>('home');
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
@@ -209,6 +211,18 @@ export default function App() {
   // Focus Mode Global State
   const [isFocusMode, setIsFocusMode] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
+  const showSummaryRef = React.useRef(showSummary);
+  
+  useEffect(() => {
+	  showSummaryRef.current = showSummary;
+  }, [showSummary]);
+
+  
+  React.useEffect(() => {
+      (window as any).triggerSummary = () => setShowSummary(true);
+      return () => { delete (window as any).triggerSummary; };
+  }, []);
+
   const [isLooking, setIsLooking] = useState(true);
   const [distractionSensitivity, setDistractionSensitivity] = useState(30); // Default 30 (~3 seconds)
   const [focusedTime, setFocusedTime] = useState(0);
@@ -312,8 +326,16 @@ export default function App() {
 
   const distractionCounter = React.useRef(0);
 
+  const frameCounter = React.useRef(0);
   const startDetectionLoop = async () => {
       if (!isFocusMode || !videoRef.current) return;
+      
+      // Reduce detection frequency to save battery (process every 5th frame)
+      frameCounter.current = (frameCounter.current + 1) % 5;
+      if (frameCounter.current !== 0) {
+          requestAnimationFrame(startDetectionLoop);
+          return;
+      }
       
       if (!faceLandmarkerRef.current) {
           requestAnimationFrame(startDetectionLoop);
@@ -868,7 +890,7 @@ export default function App() {
       return <PracticeTest chapters={practiceChapters} onBack={() => setCurrentView('customPractice')} />;
   }
 
-  if (currentView === 'profile') {
+   if (currentView === 'profile') {
       return (
         <div className="flex flex-col min-h-screen pb-20">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
@@ -884,6 +906,10 @@ export default function App() {
             {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
         </div>
       );
+  }
+  
+  if (currentView === 'notesLibrary') {
+      return <NotesLibrary onBack={() => setCurrentView('profile')} />;
   }
 
   if (currentView === 'editProfile') {
@@ -929,10 +955,14 @@ export default function App() {
       );
   }
 
+  if (currentView === 'NCERT11thHub') {
+      return <NCERT11thHub onBack={() => { setCurrentView(previousView || 'notes'); }} />;
+  }
+
   if (currentView === 'notes') {
       return (
         <div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
-            <div className="flex-grow"><Notes /></div>
+            <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
                 isOpen={showSupportModal} 
