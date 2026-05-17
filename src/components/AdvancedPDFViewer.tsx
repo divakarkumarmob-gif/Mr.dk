@@ -29,7 +29,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             {/* PDF Viewport */}
             <div className="flex-grow overflow-auto bg-gray-600 p-2">
                 <div
-                    className="flex justify-center"
+                    className="flex justify-center min-w-max"
                 >
                     <Document
                         file={pdfUrl}
