@@ -165,7 +165,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                             onMouseUp={handleTouchEnd}
                         >
                             <span className="font-bold">{test.testName}</span>
-                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-xs px-4 py-2 rounded-lg font-bold">See Results</button>
+                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-xs px-3 py-1 rounded-lg font-bold">See Results</button>
                         </div>
                     ))}
                 </div>
@@ -205,7 +205,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                 <p className="text-xs text-gray-400 mt-0.5">{test.type}</p>
                             </div>
                         </div>
-                        <button className="bg-blue-600 text-white text-xs px-4 py-2 rounded-lg font-bold w-full sm:w-auto">Start</button>
+                        <button className="bg-blue-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold w-full sm:w-auto">Start</button>
                     </motion.div>
                 ))}
             </div>
@@ -255,7 +255,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             
             <div className="text-right w-full sm:w-auto">
                 <button 
-                  className={`${testDate.getTime() <= Date.now() ? 'bg-blue-600' : 'bg-gray-600'} text-white text-xs px-4 py-2 rounded-lg flex items-center justify-center gap-1 font-bold w-full sm:w-auto`}
+                  className={`${testDate.getTime() <= Date.now() ? 'bg-blue-600' : 'bg-gray-600'} text-white text-xs px-3 py-1 rounded-lg flex items-center justify-center gap-1 font-bold w-full sm:w-auto`}
                         onClick={async () => {
                             if (testDate.getTime() <= Date.now()) {
                                 try {
