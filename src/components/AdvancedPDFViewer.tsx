@@ -11,6 +11,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [scale, setScale] = useState(0.73);
+    const [transformScale, setTransformScale] = useState(0.73);
     const initialPinchDistanceRef = useRef<number | null>(null);
     const initialScaleRef = useRef<number>(scale);
 
@@ -37,12 +38,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             const currentDistance = getDistance(e.touches);
             const delta = (currentDistance - initialPinchDistanceRef.current) / 800; // Adjusted for better sensitivity
             const newScale = Math.max(0.3, Math.min(3, initialScaleRef.current + delta));
-            setScale(newScale);
+            setTransformScale(newScale);
         }
     };
 
     const handleTouchEnd = () => {
-        initialPinchDistanceRef.current = null;
+        if (initialPinchDistanceRef.current !== null) {
+            setScale(transformScale);
+            initialPinchDistanceRef.current = null;
+        }
     };
 
     return (
@@ -62,6 +66,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                     className="flex justify-center"
+                    style={{ transform: `scale(${transformScale})` }}
                 >
                     <Document
                         file={pdfUrl}
@@ -80,7 +85,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             {/* Pagination & Zoom */}
             <div className="flex items-center justify-between p-1.5 bg-gray-900 text-white border-t border-gray-700">
                 {/* Zoom Out - Left */}
-                <button onClick={() => setScale(s => Math.max(s - 0.05, 0.3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
+                <button onClick={() => { const newScale = Math.max(scale - 0.05, 0.3); setScale(newScale); setTransformScale(newScale); }} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
                     <ZoomOut className="h-6 w-6" />
                 </button>
 
@@ -95,7 +100,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                     </button>
                     <div className="flex flex-col items-center">
                         <span className="text-sm font-bold w-16 text-center">{currentPage} / {numPages}</span>
-                        <span className="text-xs font-mono text-gray-400 bg-gray-950 px-1 rounded">{Math.round(scale * 100)}%</span>
+                        <span className="text-xs font-mono text-gray-400 bg-gray-950 px-1 rounded">{Math.round(transformScale * 100)}%</span>
                     </div>
                     <button 
                         disabled={currentPage >= (numPages || 1)} 
@@ -107,7 +112,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                 </div>
 
                 {/* Zoom In - Right */}
-                <button onClick={() => setScale(s => Math.min(s + 0.05, 3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
+                <button onClick={() => { const newScale = Math.min(scale + 0.05, 3); setScale(newScale); setTransformScale(newScale); }} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
                     <ZoomIn className="h-6 w-6" />
                 </button>
             </div>
