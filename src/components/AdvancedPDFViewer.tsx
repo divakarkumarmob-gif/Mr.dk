@@ -57,7 +57,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             
             {/* PDF Viewport */}
             <div 
-                className="flex-grow overflow-auto bg-gray-600 p-2"
+                className="flex-grow overflow-auto bg-gray-600 p-2 touch-none"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
