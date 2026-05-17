@@ -90,18 +90,18 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
       
       <button 
         onClick={() => setIsOpen(true)}
-        className="w-full bg-[#1e293b] border-2 border-dashed border-slate-700 rounded-2xl p-6 flex items-center justify-center gap-3 text-slate-400 hover:text-slate-200 transition-all hover:bg-[#253247]"
+        className="w-full bg-[#1e293b] border border-dashed border-slate-700 rounded-lg p-2 flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200 transition-all hover:bg-[#253247] text-xs font-bold"
       >
-        <Plus className="h-6 w-6" /> Add Important Note
+        <Plus className="h-4 w-4" /> Add Note
       </button>
 
       <button 
         onClick={() => onNavigate('NCERT11thHub')}
-        className="w-full bg-blue-900/50 border border-blue-700 rounded-2xl p-6 flex items-center justify-between text-blue-100 hover:bg-blue-800 transition-all mt-4"
+        className="w-full bg-blue-900/50 border border-blue-700 rounded-lg p-2.5 flex items-center justify-between text-blue-100 hover:bg-blue-800 transition-all mt-2"
       >
-        <div className="flex items-center gap-3">
-          <BookOpen className="h-6 w-6" />
-          <span className="font-bold text-lg">NCERT 11th</span>
+        <div className="flex items-center gap-2">
+          <BookOpen className="h-4 w-4" />
+          <span className="font-bold text-sm">NCERT 11th</span>
         </div>
       </button>
 
@@ -124,23 +124,23 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
               <button onClick={() => setIsOpen(false)}><X className="h-6 w-6" /></button>
             </div>
 
-            <div className="flex gap-4 mb-4">
-              <label htmlFor="camera-input" className="flex-1 bg-slate-800 p-4 rounded-xl flex flex-col items-center gap-2 cursor-pointer hover:bg-slate-700">
-                <Camera className="h-6 w-6" /> Take Photo
+            <div className="flex gap-2 mb-3">
+              <label htmlFor="camera-input" className="flex-1 bg-slate-800 p-2 rounded-lg flex flex-col items-center gap-1 cursor-pointer hover:bg-slate-700 text-xs">
+                <Camera className="h-4 w-4" /> Photo
               </label>
-              <input id="camera-input" type="file" accept="image/*" capture="environment" onChange={handleFileChange} />
+              <input id="camera-input" type="file" accept="image/*" capture="environment" className="hidden" onChange={handleFileChange} />
               
-              <label htmlFor="file-input" className="flex-1 bg-slate-800 p-4 rounded-xl flex flex-col items-center gap-2 cursor-pointer hover:bg-slate-700">
-                <FileUp className="h-6 w-6" /> Select File
+              <label htmlFor="file-input" className="flex-1 bg-slate-800 p-2 rounded-lg flex flex-col items-center gap-1 cursor-pointer hover:bg-slate-700 text-xs">
+                <FileUp className="h-4 w-4" /> File
               </label>
-              <input id="file-input" type="file" accept="image/*" onChange={handleFileChange} />
+              <input id="file-input" type="file" accept="image/*" className="hidden" onChange={handleFileChange} />
             </div>
 
             {file && (
               <input 
                 type="text" 
                 placeholder="Enter note name" 
-                className="w-full p-3 rounded-lg bg-slate-900 border border-slate-700 mb-4 text-slate-100 placeholder:text-slate-500"
+                className="w-full p-2 rounded-md bg-slate-900 border border-slate-700 mb-3 text-slate-100 placeholder:text-slate-500 text-xs"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -149,7 +149,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
             <button 
               onClick={handleUpload}
               disabled={uploading || !file || !name}
-              className="w-full bg-blue-600 py-3 rounded-xl font-bold disabled:opacity-50 text-white hover:bg-blue-700 transition"
+              className="w-full bg-blue-600 py-2 rounded-lg font-bold disabled:opacity-50 text-white hover:bg-blue-700 transition text-xs"
             >
               {uploading ? 'Uploading...' : 'Upload'}
             </button>
