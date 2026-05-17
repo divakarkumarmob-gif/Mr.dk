@@ -187,25 +187,25 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
             {/* Daily Tests from Subjects */}
             <h2 className="font-bold text-lg mb-4 text-orange-400">Daily Study Plan</h2>
-            <div className="space-y-4 mb-6">
+            <div className="space-y-2 mb-4">
                 {dailyTests.map((test, idx) => (
                     <motion.div 
                         key={test.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
-                        className="bg-[#161e38] p-4 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
+                        className="bg-[#161e38] p-3 rounded-lg border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2"
                     >
-                        <div className="flex items-center gap-4 w-full">
-                            <div className={`${test.bg} ${test.color} p-3 rounded-full flex-shrink-0`}>
-                                <test.icon className="h-6 w-6" />
+                        <div className="flex items-center gap-2 w-full">
+                            <div className={`${test.bg} ${test.color} p-2 rounded-full flex-shrink-0`}>
+                                <test.icon className="h-5 w-5" />
                             </div>
                             <div className="w-full">
-                                <h3 className="font-bold text-sm sm:text-base">{test.name}</h3>
-                                <p className="text-xs text-gray-400 mt-0.5">{test.type}</p>
+                                <h3 className="font-bold text-xs sm:text-sm">{test.name}</h3>
+                                <p className="text-[10px] text-gray-400 mt-0.5">{test.type}</p>
                             </div>
                         </div>
-                        <button className="bg-blue-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold w-full sm:w-auto">Start</button>
+                        <button className="bg-blue-600 text-white text-xs px-3 py-1 rounded-lg font-bold w-full sm:w-auto">Start</button>
                     </motion.div>
                 ))}
             </div>

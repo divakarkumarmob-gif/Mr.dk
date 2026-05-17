@@ -83,91 +83,96 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen bg-[#0a0f24] text-white p-4 sm:p-6 font-sans flex flex-col"
+            className="min-h-screen bg-[#0a0f24] text-white p-3 sm:p-4 font-sans flex flex-col"
         >
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-2">
                 <HubSwitcher active="study" onNavigate={onNavigate} />
             </div>
           
-          <div className="bg-[#161e38] rounded-2xl border border-white/5 p-6 mb-6 flex justify-between items-center">
-              <button onClick={() => setShowSummary(true)} className="font-bold text-sm tracking-widest text-orange-400">FOCUS MODE</button>
+          <div className="bg-[#161e38] rounded-xl border border-white/5 p-3 mb-4 flex justify-between items-center">
+              <button onClick={() => setShowSummary(true)} className="font-bold text-xs tracking-widest text-orange-400">FOCUS MODE</button>
               <button 
                 onClick={() => setIsFocusMode(!isFocusMode)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm ${isFocusMode ? 'bg-red-900/50 text-red-500' : 'bg-white/10 text-white'}`}
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-bold text-xs ${isFocusMode ? 'bg-red-900/50 text-red-500' : 'bg-white/10 text-white'}`}
               >
-                  {isFocusMode ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  {isFocusMode ? <EyeOff className="h-3 w-3" /> : <Eye className="h-3 w-3" />}
                   {isFocusMode ? "ON" : "OFF"}
               </button>
           </div>
           
           {selectedResult && (
-            <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 flex flex-col text-white">
+            <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-2 flex flex-col text-white">
                 <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
             </div>
-          )}
+          )
+        }
           
           {recentTests.length > 0 && (
-                <div className="mb-6">
-                    <h2 className="font-bold mb-4 text-orange-400">Recently Completed</h2>
+                <div className="mb-4">
+                    <h2 className="font-bold mb-2 text-xs text-orange-400 uppercase">Recently Completed</h2>
                     {recentTests.map(test => (
                         <div key={test.id} 
-                            className="bg-orange-900/30 p-4 rounded-xl border border-orange-500/50 flex justify-between items-center mb-2"
+                            className="bg-orange-900/30 p-3 rounded-lg border border-orange-500/50 flex justify-between items-center mb-1.5"
                             onTouchStart={() => handleTouchStart(test.id)}
                             onTouchEnd={handleTouchEnd}
                             onMouseDown={() => handleTouchStart(test.id)}
                             onMouseUp={handleTouchEnd}
                         >
                              <div>
-                                <h3 className="font-bold">{test.testName}</h3>
+                                <h3 className="font-bold text-sm">{test.testName}</h3>
                              </div>
-                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 px-4 py-2 rounded-lg text-sm font-bold">See Results</button>
+                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 px-3 py-1 rounded-lg text-xs font-bold">See Results</button>
                         </div>
                     ))}
                 </div>
-            )}
+            )
+        }
           
           {savedTest && (
-            <div className="bg-orange-900/30 p-4 rounded-xl border border-orange-500/50 mb-6 flex justify-between items-center">
+            <div className="bg-orange-900/30 p-3 rounded-lg border border-orange-500/50 mb-4 flex justify-between items-center">
                 <div>
-                    <h3 className="font-bold">Resume Test</h3>
-                    <p className="text-xs text-orange-200">{savedTest.title}</p>
+                    <h3 className="font-bold text-sm">Resume Test</h3>
+                    <p className="text-[10px] text-orange-200">{savedTest.title}</p>
                 </div>
                 <button 
                   onClick={() => {
                         setResumingTest(savedTest);
                         setCurrentView('practiceTest');
                   }}
-                  className="bg-orange-600 px-4 py-2 rounded-lg text-sm font-bold"
+                  className="bg-orange-600 px-3 py-1 rounded-lg text-xs font-bold"
                 >Resume</button>
             </div>
-          )}
+          )
+        }
           
           {isFocusMode && (
-                <div className="bg-[#161e38] rounded-2xl border border-white/5 p-4 mb-4">
-                  <div className="flex justify-between text-xs text-white/60 mb-2">
+                <div className="bg-[#161e38] rounded-xl border border-white/5 p-3 mb-3">
+                  <div className="flex justify-between text-[10px] text-white/60 mb-1">
                     <span>Focused: {Math.floor(focusedTime / 1000)}s</span>
                     <span>Distracted: {Math.floor(distractedTime / 1000)}s</span>
                   </div>
-                  <label className="text-xs text-white/60 mb-1 block">Sensitivity: {Math.round(distractionSensitivity / 10)}s threshold</label>
+                  <label className="text-[10px] text-white/60 mb-0.5 block">Sensitivity: {Math.round(distractionSensitivity / 10)}s threshold</label>
                   <input 
                     type="range" 
                     min="10" 
                     max="100" 
                     value={distractionSensitivity} 
                     onChange={(e) => setDistractionSensitivity(parseInt(e.target.value))}
-                    className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-red-500"
+                    className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer accent-red-500"
                   />
                   {(focusedTime > 0 || distractedTime > 0) && (
                     <button
                         onClick={() => setShowSummary(true)}
-                        className="mt-4 w-full bg-blue-600/20 text-blue-400 py-2 rounded-lg font-bold text-sm hover:bg-blue-600/30 transition"
+                        className="mt-2 w-full bg-blue-600/20 text-blue-400 py-1.5 rounded-lg font-bold text-xs hover:bg-blue-600/30 transition"
                     >
                         View Last Session
                     </button>
-                  )}
+                  )
+                }
                 </div>
-              )}
+              )
+        }
 
           {isFocusMode && (
               <motion.div 
