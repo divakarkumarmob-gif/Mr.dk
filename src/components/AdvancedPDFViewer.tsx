@@ -35,8 +35,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
         if (e.touches.length === 2 && initialPinchDistanceRef.current !== null) {
             e.preventDefault();
             const currentDistance = getDistance(e.touches);
-            const distanceRatio = currentDistance / initialPinchDistanceRef.current;
-            const newScale = Math.max(0.3, Math.min(3, initialScaleRef.current * distanceRatio));
+            const delta = (currentDistance - initialPinchDistanceRef.current) / 800; // Adjusted for better sensitivity
+            const newScale = Math.max(0.3, Math.min(3, initialScaleRef.current + delta));
             setScale(newScale);
         }
     };
