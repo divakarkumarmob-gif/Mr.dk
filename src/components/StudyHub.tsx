@@ -213,7 +213,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                     className="bg-[#161e38] rounded-2xl border border-white/5"
                 >
                     <button 
-                        className="w-full p-6 flex justify-between items-center font-bold text-sm tracking-wider"
+                        className="w-full p-4 flex justify-between items-center font-bold text-xs tracking-wider"
                         onClick={() => {
                             if (item === "CUSTOM PRACTICE") {
                                 onNavigate('customPractice');
@@ -223,20 +223,20 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                         }}
                     >
                         {item}
-                        <ChevronDown className={`h-5 w-5 text-gray-400 transition-transform ${expandedItem === item ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${expandedItem === item ? 'rotate-180' : ''}`} />
                     </button>
                     {expandedItem === item && (
-                        <div className="p-4 sm:p-6 pt-0 text-white text-sm">
+                        <div className="p-3 pt-0 text-white text-xs">
                             {item === "LECTURE LIBRARY" ? (
                                 <>
                                     <input
                                         type="text"
-                                        placeholder="Search chapters..."
-                                        className="w-full p-3 bg-white/5 rounded-lg mb-4 text-xs"
+                                        placeholder="Search..."
+                                        className="w-full p-2 bg-white/5 rounded-md mb-2 text-[10px]"
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                     />
-                                    <div className="flex gap-2 mb-4 border-b border-white/10 pb-2">
+                                    <div className="flex gap-1 mb-2 border-b border-white/10 pb-1">
                                         {['Physics', 'Chemistry', 'Biology'].map(sub => (
                                             <button 
                                                 key={sub}

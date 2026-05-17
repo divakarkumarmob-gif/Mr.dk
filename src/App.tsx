@@ -1053,8 +1053,8 @@ export default function App() {
           </div>
       )}
 
-    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-3 sm:p-6 font-sans pb-24 ${showOnboarding ? 'blur-sm' : ''}`}>
-      <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl px-1 sm:px-0">
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-2 sm:p-4 font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}>
+      <div className="max-w-full mx-auto w-full px-1 sm:px-2">
       
       {showExitToast && (
           <div className="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-xs font-semibold z-[1000] shadow-2xl animate-bounce">
