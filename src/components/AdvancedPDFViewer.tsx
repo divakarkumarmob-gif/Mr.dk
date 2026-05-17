@@ -48,7 +48,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             {/* Pagination & Zoom */}
             <div className="flex items-center justify-between p-1.5 bg-gray-900 text-white border-t border-gray-700">
                 {/* Zoom Out - Left */}
-                <button onClick={() => setScale(s => Math.max(s - 0.05, 0.3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
+                <button onClick={() => setScale(s => Math.max(s - 0.2, 0.3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
                     <ZoomOut className="h-6 w-6" />
                 </button>
 
@@ -75,7 +75,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                 </div>
 
                 {/* Zoom In - Right */}
-                <button onClick={() => setScale(s => Math.min(s + 0.05, 3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
+                <button onClick={() => setScale(s => Math.min(s + 0.2, 3))} className="p-3 hover:bg-gray-800 rounded-lg flex items-center justify-center">
                     <ZoomIn className="h-6 w-6" />
                 </button>
             </div>
