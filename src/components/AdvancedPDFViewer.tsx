@@ -1,5 +1,5 @@
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -11,39 +11,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [scale, setScale] = useState(0.73);
-    const initialPinchDistanceRef = useRef<number | null>(null);
-    const initialScaleRef = useRef<number>(scale);
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
     }
-
-    const getDistance = (touches: React.TouchList) => {
-        const dx = touches[0].clientX - touches[1].clientX;
-        const dy = touches[0].clientY - touches[1].clientY;
-        return Math.sqrt(dx * dx + dy * dy);
-    };
-
-    const handleTouchStart = (e: React.TouchEvent) => {
-        if (e.touches.length === 2) {
-            initialPinchDistanceRef.current = getDistance(e.touches);
-            initialScaleRef.current = scale;
-        }
-    };
-
-    const handleTouchMove = (e: React.TouchEvent) => {
-        if (e.touches.length === 2 && initialPinchDistanceRef.current !== null) {
-            e.preventDefault();
-            const currentDistance = getDistance(e.touches);
-            const delta = (currentDistance - initialPinchDistanceRef.current) / 800; // Adjusted for better sensitivity
-            const newScale = Math.max(0.3, Math.min(3, initialScaleRef.current + delta));
-            setScale(newScale);
-        }
-    };
-
-    const handleTouchEnd = () => {
-        initialPinchDistanceRef.current = null;
-    };
 
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 bg-white z-[600] flex flex-col">
@@ -58,9 +29,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             {/* PDF Viewport */}
             <div className="flex-grow overflow-auto bg-gray-600 p-2">
                 <div
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
                     className="flex justify-center"
                 >
                     <Document
