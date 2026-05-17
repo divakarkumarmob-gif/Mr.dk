@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@$
 export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: string, title: string, onClose: () => void }) {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const [scale, setScale] = useState(0.8);
+    const [scale, setScale] = useState(0.7);
     const [showUI, setShowUI] = useState(true);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
