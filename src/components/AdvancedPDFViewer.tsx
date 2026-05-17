@@ -56,24 +56,25 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
             </div>
             
             {/* PDF Viewport */}
-            <div 
-                className="flex-grow overflow-auto bg-gray-600 p-2 touch-none"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-            >
-                <Document
-                    file={pdfUrl}
-                    onLoadSuccess={onDocumentLoadSuccess}
+            <div className="flex-grow overflow-auto bg-gray-600 p-2">
+                <div
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                     className="flex justify-center"
                 >
-                    <Page 
-                        pageNumber={currentPage} 
-                        scale={scale}
-                        renderTextLayer={false}
-                        renderAnnotationLayer={false}
-                    />
-                </Document>
+                    <Document
+                        file={pdfUrl}
+                        onLoadSuccess={onDocumentLoadSuccess}
+                    >
+                        <Page 
+                            pageNumber={currentPage} 
+                            scale={scale}
+                            renderTextLayer={false}
+                            renderAnnotationLayer={false}
+                        />
+                    </Document>
+                </div>
             </div>
 
             {/* Pagination & Zoom */}
