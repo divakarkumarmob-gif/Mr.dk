@@ -105,7 +105,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     const removeImage = () => setSelectedImage(null);
 
     const startVoiceTyping = () => {
-        const recognition = new (window.webkitSpeechRecognition || window.SpeechRecognition)();
+        const recognition = new ((window as any).webkitSpeechRecognition || (window as any).SpeechRecognition)();
         recognition.lang = 'en-IN'; // Changed to en-IN for Hinglish support
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript;

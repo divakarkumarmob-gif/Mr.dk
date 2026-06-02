@@ -1207,9 +1207,6 @@ export default function App() {
             </button>
           </div>
       </div>
-      <div className="mb-4">
-        <AiSearch />
-      </div>      
       {showRandomPopup && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
             <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm text-center">
@@ -1249,6 +1246,10 @@ export default function App() {
                 </div>
             </div>
         ))}
+      </div>
+
+      <div className="mb-4">
+        <AiSearch />
       </div>
 
       <BottomNav currentView={currentView as any} onNavigate={setCurrentView} />
