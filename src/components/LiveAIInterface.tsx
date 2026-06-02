@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Mic, Keyboard, X, Send, Square } from 'lucide-react';
+import { Mic, Keyboard, X, Send, Square, Camera, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface LiveAIInterfaceProps {
@@ -74,6 +74,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 if (!response.ok) throw new Error(`API error: ${response.statusText}`);
                 const data = await response.json();
                 const aiResponse = data.text;
+                
                 setMessages(prev => [...prev, {role: 'user', content: "[Audio Input processed]"}]);
                 setMessages(prev => [...prev, {role: 'ai', content: aiResponse}]);
                 
@@ -88,15 +89,63 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         }
     };
 
-    const handleSendMessage = (text: string) => {
-        if (!text.trim()) return;
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setSelectedImage(reader.result as string);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    const removeImage = () => setSelectedImage(null);
+
+    const startVoiceTyping = () => {
+        const recognition = new (window.webkitSpeechRecognition || window.SpeechRecognition)();
+        recognition.lang = 'en-IN'; // Changed to en-IN for Hinglish support
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            setInput(prev => prev + " " + transcript);
+        };
+        recognition.start();
+    };
+
+    const handleSparklesClick = () => {
+        if (!input.trim() && !selectedImage) {
+            setIsTypingMode(false);
+            startRecording();
+        } else {
+            handleSendMessage(input);
+        }
+    };
+
+    const handleSendMessage = async (text: string) => {
+        if (!text.trim() && !selectedImage) return;
         
-        setMessages(prev => [...prev, {role: 'user', content: text}]);
+        setMessages(prev => [...prev, {role: 'user', content: selectedImage ? "[Image Input]" : text}]);
         setInput("");
+        const imageToSend = selectedImage;
+        setSelectedImage(null);
         
-        setTimeout(() => {
-            setMessages(prev => [...prev, {role: 'ai', content: `That's an interesting question about "${text}". Let me help you understand it better...`}]);
-        }, 1000);
+        try {
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
+            const response = await fetch(`${backendUrl}/api/gemini`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    prompt: text,
+                    base64Image: imageToSend
+                })
+            });
+            const data = await response.json();
+            setMessages(prev => [...prev, {role: 'ai', content: data.text}]);
+        } catch (e) {
+            setMessages(prev => [...prev, {role: 'ai', content: "Sorry, I'm having trouble connecting to AI."}]);
+        }
     };
 
     return (
@@ -160,18 +209,35 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                         <div className="w-12"></div> {/* Spacer */}
                     </>
                 ) : (
-                    <div className="flex w-full items-center gap-2 bg-white/10 rounded-full p-2">
+                <div className="flex flex-col w-full gap-2">
+                    {selectedImage && (
+                        <div className="relative w-16 h-16 ml-4">
+                            <img src={selectedImage} alt="preview" className="w-full h-full object-cover rounded-lg" />
+                            <button onClick={removeImage} className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1"><X className="h-3 w-3"/></button>
+                        </div>
+                    )}
+                    <div className="flex w-full items-center gap-2 bg-[#161e38] rounded-full p-2 pl-5">
                         <input 
                             value={input} 
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && handleSendMessage(input)}
-                            className="flex-grow bg-transparent p-2 outline-none"
-                            placeholder="Type a question..."
+                            className="flex-grow bg-transparent p-2 outline-none text-white placeholder-gray-400"
+                            placeholder="Ask anything"
                         />
-                        <button onClick={() => handleSendMessage(input)} className="p-2 bg-blue-600 rounded-full">
-                            <Send className="h-5 w-5" />
+                        <button className="p-2 text-white hover:text-blue-400" onClick={startVoiceTyping}>
+                            <Mic className="h-5 w-5" />
+                        </button>
+                        <button className="p-2 text-white hover:text-blue-400">
+                             <input type="file" className="hidden" accept="image/*" id="file-upload" onChange={handleImageChange} />
+                             <label htmlFor="file-upload" className="cursor-pointer">
+                                <Camera className="h-5 w-5" />
+                             </label>
+                        </button>
+                        <button onClick={handleSparklesClick} className={`p-4 rounded-full transition-colors ${input.trim() || selectedImage ? 'bg-blue-600' : 'bg-[#0a0f24]'}`}>
+                            {input.trim() || selectedImage ? <Send className="h-5 w-5" /> : <Sparkles className="h-5 w-5" />}
                         </button>
                     </div>
+                </div>
                 )}
             </div>
         </div>

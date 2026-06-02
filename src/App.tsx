@@ -9,6 +9,7 @@ import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
+import AiSearch from './components/AiSearch';
 import AnalysisHistory from './components/AnalysisHistory';
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
@@ -28,6 +29,8 @@ import Notes from './components/Notes';
 import NCERT11thHub from './components/NCERT11thHub';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
+import { LogViewer } from './components/LogViewer';
+import { FloatingLog } from './components/FloatingLog';
 import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
 import SupportModal from './components/SupportModal';
@@ -242,7 +245,7 @@ export default function App() {
               try {
                   wakeLockRef.current = await (navigator as any).wakeLock.request('screen');
               } catch (err) {
-                  console.error('Wake lock error:', err);
+                  console.warn('Wake lock error:', err);
               }
           } else if (wakeLockRef.current) {
               await wakeLockRef.current.release();
@@ -624,11 +627,16 @@ export default function App() {
               const newSeconds = prev.timeSpentSeconds + 1;
               const newLectureSeconds = activeVideo ? prev.lectureTimeSeconds + 1 : prev.lectureTimeSeconds;
               
-              if (user && newSeconds % 10 === 0) { // Update Firebase every 10 seconds
+              if (user && newSeconds % 60 === 0) { // Update Firebase every 60 seconds
+                  console.log("Attempting to save analytics to Firestore for user:", user.uid);
                   setDoc(doc(db, 'users', user.uid, 'analytics_v2', today), { 
                       timeSpentSeconds: newSeconds,
                       lectureTimeSeconds: newLectureSeconds
-                  }, { merge: true });
+                  }, { merge: true }).then(() => {
+                      console.log("Analytics saved successfully");
+                  }).catch((err) => {
+                      console.error("Failed to save analytics:", err);
+                  });
               }
               
               return {...prev, timeSpentSeconds: newSeconds, lectureTimeSeconds: newLectureSeconds};
@@ -640,15 +648,27 @@ export default function App() {
   useEffect(() => {
     if (!user) return;
     
-    const fetchStats = async () => {
+    const fetchStats = async (retries = 3) => {
+        console.log("Checking stats for user", user?.uid);
         const today = getISTDateString();
-        const docRef = doc(db, 'users', user.uid, 'analytics_v2', today);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-            const data = docSnap.data();
-            setStats(prev => ({...prev, date: today, timeSpentSeconds: data.timeSpentSeconds, lectureTimeSeconds: data.lectureTimeSeconds || 0}));
-        } else {
-            setStats(prev => ({...prev, date: today, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
+        const docRef = doc(db, 'users', user!.uid, 'analytics_v2', today);
+        try {
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                console.log("Stats document found", data);
+                setStats(prev => ({...prev, date: today, timeSpentSeconds: data.timeSpentSeconds, lectureTimeSeconds: data.lectureTimeSeconds || 0}));
+            } else {
+                console.log("No stats document found for today");
+                setStats(prev => ({...prev, date: today, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
+            }
+        } catch (e) {
+            console.error("Error fetching stats:", e);
+            if (retries > 0) {
+                console.log(`Retrying fetchStats, retries left: ${retries}`);
+                setTimeout(() => fetchStats(retries - 1), 5000);
+                return; // Do not call setStatsLoaded(true) yet
+            }
         }
         setStatsLoaded(true);
     };
@@ -680,22 +700,26 @@ export default function App() {
       if (currentUser) {
           updateUserPresence(currentUser.uid, true);
           
-          const docRef = doc(db, 'users', currentUser.uid, 'settings', 'subjects');
-          const docSnap = await getDoc(docRef);
-          
-          if (docSnap.exists()) {
-              const data = docSnap.data();
-              if (data.day === getDayIndex()) {
-                  setSubjects(data.subjects);
+          try { 
+              const docRef = doc(db, 'users', currentUser.uid, 'settings', 'subjects');
+              const docSnap = await getDoc(docRef);
+              
+              if (docSnap.exists()) {
+                  const data = docSnap.data();
+                  if (data.day === getDayIndex()) {
+                      setSubjects(data.subjects);
+                  } else {
+                      const newDaily = getDailyChapters();
+                      setSubjects(newDaily);
+                      await setDoc(docRef, { subjects: newDaily, day: getDayIndex() });
+                  }
               } else {
-                  const newDaily = getDailyChapters();
-                  setSubjects(newDaily);
-                  await setDoc(docRef, { subjects: newDaily, day: getDayIndex() });
+                  const newSubjects = getNewUserChapters();
+                  setSubjects(newSubjects);
+                  await setDoc(docRef, { subjects: newSubjects, day: getDayIndex() });
               }
-          } else {
-              const newSubjects = getNewUserChapters();
-              setSubjects(newSubjects);
-              await setDoc(docRef, { subjects: newSubjects, day: getDayIndex() });
+          } catch (e) {
+              console.warn('Firestore fetch failed (possibly offline):', e);
           }
       }
     });                
@@ -824,7 +848,7 @@ export default function App() {
   const [showNeuralSolver, setShowNeuralSolver] = useState(false);
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-screen bg-[#0a0f24] text-white">Loading...</div>;
+    return <div className="flex items-center justify-center min-h-screen bg-slate-50 text-slate-900">Loading...</div>;
   }
 
   if (!user) {
@@ -1011,7 +1035,9 @@ export default function App() {
 
   return (
     <>
+      <FloatingLog />
       {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
+      <LogViewer />
       <SupportModal 
         isOpen={showSupportModal} 
         onClose={() => setShowSupportModal(false)}
@@ -1066,6 +1092,7 @@ export default function App() {
 
       {/* Header */}
       <div className="flex justify-between items-center mb-6 select-none">
+        
         <div className="flex-1 min-w-0">
            <h1 className="text-lg sm:text-2xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
            <p className="text-gray-400 text-[10px] sm:text-sm">Let's make today productive</p>
@@ -1134,7 +1161,7 @@ export default function App() {
                 {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
             </div>
         </div>
-        <div className="grid grid-cols-2 gap-2 sm:gap-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
             <div onClick={() => setCurrentView('analytics')} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
                 <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Tests Attempted</p>
                 <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
@@ -1183,7 +1210,9 @@ export default function App() {
             </button>
           </div>
       </div>
-      
+      <div className="mb-4">
+        <AiSearch />
+      </div>      
       {showRandomPopup && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
             <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm text-center">

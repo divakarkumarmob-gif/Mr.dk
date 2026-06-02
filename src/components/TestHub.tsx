@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X, Info } from 'lucide-react';
-import { collection, query, where, getDocs, orderBy, limit, onSnapshot } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
+import { collection, query, where, getDocs, orderBy, limit, onSnapshot } from 'firebase/firestore';
 // import { QUESTIONS } from '../data/questions';
 import PYQTestRunner from './PYQTestRunner';
 import TestResultDetail from './TestResultDetail';
@@ -53,25 +53,30 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   useEffect(() => {
     if (!auth.currentUser) return;
     const fetchRecentTests = async () => {
-        const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
-        const querySnapshot = await getDocs(q);
-        const tests = querySnapshot.docs.map(doc => {
-            const data = doc.data();
-            return {
-                id: doc.id,
-                ...data,
-                timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
-            };
-        });
-        
-        const now = Date.now();
-        setRecentTests(tests.filter(t => {
-            const hideUntil = localStorage.getItem('hide-' + t.id);
-            if (hideUntil) {
-                if (now > parseInt(hideUntil)) return false;
-            }
-            return true;
-        }));
+        try {
+            const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
+            const querySnapshot = await getDocs(q);
+            const tests = querySnapshot.docs.map(doc => {
+                const data = doc.data();
+                return {
+                    id: doc.id,
+                    ...data,
+                    timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
+                };
+            });
+            
+            const now = Date.now();
+            setRecentTests(tests.filter(t => {
+                const hideUntil = localStorage.getItem('hide-' + t.id);
+                if (hideUntil) {
+                    if (now > parseInt(hideUntil)) return false;
+                }
+                return true;
+            }));
+        } catch (e: any) {
+            console.error("Error fetching recent tests:", e);
+             // Handle gracefully
+        }
     };
     fetchRecentTests();
   }, []);
@@ -205,7 +210,9 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                 <p className="text-[8px] text-gray-400 mt-0">{test.type}</p>
                             </div>
                         </div>
-                        <button className="bg-blue-600 text-white text-[9px] px-1.5 py-0 rounded-md font-bold w-auto">Start</button>
+                        <div className="flex items-center gap-1.5 ">
+                            <button className="bg-blue-600 text-white text-[9px] px-1.5 py-0 rounded-md font-bold w-auto">Start</button>
+                        </div>
                     </motion.div>
                 ))}
             </div>

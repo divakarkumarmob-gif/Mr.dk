@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { X, Send, Loader2, Trash2 } from 'lucide-react';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
@@ -24,25 +26,29 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     }, [messages]);
 
     useEffect(() => {
-        console.log("Chat loading for user:", auth.currentUser?.uid);
-        const chatRef = doc(db, 'chats', auth.currentUser.uid, 'history', 'default');
-        getDoc(chatRef).then(snap => {
-            let msgs = [welcomeMessage];
-            if (snap.exists()) {
-                const loadedMessages = snap.data().messages;
-                if (loadedMessages.length > 0 && loadedMessages[0].content !== welcomeMessage.content) {
-                    msgs = [welcomeMessage, ...loadedMessages];
-                } else if (loadedMessages.length > 0) {
-                    msgs = loadedMessages;
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if (!user) return;
+            console.log("Chat loading for user:", user.uid);
+            const chatRef = doc(db, 'chats', user.uid, 'history', 'default');
+            getDoc(chatRef).then(snap => {
+                let msgs = [welcomeMessage];
+                if (snap.exists()) {
+                    const loadedMessages = snap.data().messages;
+                    if (loadedMessages.length > 0 && loadedMessages[0].content !== welcomeMessage.content) {
+                        msgs = [welcomeMessage, ...loadedMessages];
+                    } else if (loadedMessages.length > 0) {
+                        msgs = loadedMessages;
+                    }
                 }
-            }
-            setMessages(msgs);
-            if (snap.exists() && msgs.length > (snap.data().messages?.length || 0)) {
-                saveChat(msgs);
-            }
-        }).catch(error => {
-            handleFirestoreError(error, OperationType.GET, 'chats/history/default');
+                setMessages(msgs);
+                if (snap.exists() && msgs.length > (snap.data().messages?.length || 0)) {
+                    saveChat(msgs);
+                }
+            }).catch(error => {
+                handleFirestoreError(error, OperationType.GET, 'chats/history/default');
+            });
         });
+        return unsubscribe;
     }, []);
 
     const saveChat = async (msgs: Message[]) => {
@@ -106,7 +112,14 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
                         )}
                         <div onClick={(e) => { e.stopPropagation(); setSelectedMessageIndex(i); }} 
                              className={`p-3 px-4 rounded-2xl max-w-[80%] shadow-sm ${m.role === 'user' ? 'bg-blue-600 rounded-tr-none' : 'bg-[#161e38] rounded-tl-none'}`}>
-                            {m.content}
+                            <ReactMarkdown
+                                rehypePlugins={[rehypeRaw]}
+                                components={{
+                                    u: ({node, ...props}) => <u className="text-red-500 font-bold" {...props} />
+                                }}
+                            >
+                                {m.content}
+                            </ReactMarkdown>
                         </div>
                     </div>
                 ))}

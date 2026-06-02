@@ -112,6 +112,7 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
         const timeTakenSeconds = (total * 60) - timeLeft;
 
         try {
+            console.log("Attempting to submit test, auth.currentUser.uid:", auth.currentUser.uid);
             await addDoc(collection(db, 'users', auth.currentUser.uid, 'results'), {
                 testName: title,
                 correct: correct,
@@ -131,9 +132,10 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
                 questions: questions, // ADDED: Save questions to enable detailed review
                 timestamp: new Date().toISOString()
             });
+            console.log("Test submitted successfully");
             setIsSubmitted(true);
         } catch (err) {
-            console.error("Error saving test results: ", err);
+            console.error("Critical error in handleTestSubmit:", err);
             // Enhanced error reporting
             const firestoreErrorInfo = {
                 error: (err as Error).message,
@@ -145,7 +147,7 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
                 }
             };
             console.error('Firestore Error Detailed:', JSON.stringify(firestoreErrorInfo));
-            alert("Error saving test results due to permissions, please try again or contact support.");
+            alert("Error saving test results: " + (err as Error).message);
         }
     };
 

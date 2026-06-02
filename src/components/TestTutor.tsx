@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send, Paperclip, Loader2 } from 'lucide-react';
 import { chatWithAI } from '../services/geminiService';
@@ -43,9 +45,16 @@ export default function TestTutor({ result, onClose }: TestTutorProps) {
 
             <div className="flex-grow overflow-y-auto space-y-4 mb-4">
                 {messages.map((m, i) => (
-                    <div key={i} className={`p-4 rounded-xl ${m.role === 'user' ? 'bg-blue-600 self-end' : 'bg-[#161e38] self-start'}`}>
-                        {m.content}
-                    </div>
+                        <div key={i} className={`p-4 rounded-xl ${m.role === 'user' ? 'bg-blue-600 self-end' : 'bg-[#161e38] self-start'}`}>
+                            <ReactMarkdown
+                                rehypePlugins={[rehypeRaw]}
+                                components={{
+                                    u: ({node, ...props}) => <u className="text-red-500 font-bold" {...props} />
+                                }}
+                            >
+                                {m.content}
+                            </ReactMarkdown>
+                        </div>
                 ))}
                 {loading && <Loader2 className="animate-spin text-blue-500" />}
             </div>

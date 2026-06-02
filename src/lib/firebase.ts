@@ -1,24 +1,31 @@
 import {initializeApp} from 'firebase/app';
 import {getAuth} from 'firebase/auth';
-import {getFirestore, enableIndexedDbPersistence} from 'firebase/firestore';
+import {initializeFirestore} from 'firebase/firestore';
 import {getStorage} from 'firebase/storage';
 import firebaseConfig from '../../firebase-applet-config.json';
 
+console.log("Firebase config loaded:", firebaseConfig);
+console.log("Firebase SDK Version: 12.12.1");
+
 const config = {
   ...firebaseConfig,
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || firebaseConfig.apiKey,
 };
+console.log("Final config being used (API key redacted):", { ...config, apiKey: "***" });
+
 const app = initializeApp(config);
-export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
-enableIndexedDbPersistence(db).catch((err) => {
-  if (err.code == 'failed-precondition') {
-    console.warn('Multiple tabs open, persistence failed.');
-  } else if (err.code == 'unimplemented') {
-    console.warn('Browser does not support persistence.');
-  }
-});
+console.log("Firebase app initialized. name:", app.name, "options:", { ...app.options, apiKey: "***" });
+
+const dbId = firebaseConfig.firestoreDatabaseId;
+console.log("Attempting to initialize Firestore with DB ID:", dbId);
+export const db = initializeFirestore(app, {}, dbId);
+console.log("Firestore successfully initialized with DB ID:", dbId);
+
 export const auth = getAuth();
+console.log("Auth initialized.");
+
 export const storage = getStorage(app, firebaseConfig.storageBucket);
+console.log("Storage initialized.");
 
 export enum OperationType {
   CREATE = 'create',
@@ -46,6 +53,8 @@ interface FirestoreErrorInfo {
 export function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
   const errInfo: FirestoreErrorInfo = {
     error: error instanceof Error ? error.message : String(error),
+    // @ts-ignore
+    code: error?.code, // Try to capture Firebase error code
     authInfo: {
       userId: auth.currentUser?.uid,
       // email and provider email removed for security
@@ -59,6 +68,6 @@ export function handleFirestoreError(error: unknown, operationType: OperationTyp
     operationType,
     path
   }
-  console.error('Firestore Error: ', JSON.stringify(errInfo));
+  console.error('Firestore Error Detailed:', JSON.stringify(errInfo));
   throw new Error(JSON.stringify(errInfo));
 }

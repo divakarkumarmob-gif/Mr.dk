@@ -2,6 +2,10 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import { globalLogger } from './lib/globalLogger';
+
+// Ensure globalLogger is initialized
+console.log("Logger initialized", globalLogger);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
