@@ -29,8 +29,7 @@ import Notes from './components/Notes';
 import NCERT11thHub from './components/NCERT11thHub';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
-import { LogViewer } from './components/LogViewer';
-import { FloatingLog } from './components/FloatingLog';
+
 import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
 import SupportModal from './components/SupportModal';
@@ -1035,9 +1034,7 @@ export default function App() {
 
   return (
     <>
-      <FloatingLog />
       {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
-      <LogViewer />
       <SupportModal 
         isOpen={showSupportModal} 
         onClose={() => setShowSupportModal(false)}
