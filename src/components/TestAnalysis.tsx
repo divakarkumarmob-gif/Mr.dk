@@ -26,7 +26,7 @@ export default function TestAnalysis({ result, onClose }: TestAnalysisProps) {
     }
 
     return (
-        <div className="fixed inset-0 bg-[#0a0f24] z-[120] flex flex-col p-6 text-white overflow-y-auto">
+        <div className="fixed inset-0 bg-background z-[120] flex flex-col p-6 text-foreground overflow-y-auto">
             <div className="flex justify-between items-center mb-6">
                 <button onClick={onClose}><X /></button>
                 <h2 className="font-bold text-xl">Test Analysis</h2>
@@ -40,7 +40,7 @@ export default function TestAnalysis({ result, onClose }: TestAnalysisProps) {
                 </div>
             ) : (
                 <div className="space-y-6">
-                    <div className="bg-[#161e38] p-6 rounded-3xl">
+                    <div className="bg-card p-6 rounded-3xl">
                         <h3 className="font-bold mb-3 flex items-center gap-2"><BookOpen/> Detailed Insights</h3>
                         <div className="prose prose-invert text-sm whitespace-pre-line">{analysis}</div>
                     </div>

@@ -36,7 +36,7 @@ export default function TestTutor({ result, onClose }: TestTutorProps) {
     };
 
     return (
-        <div className="fixed inset-0 bg-[#0a0f24] z-[120] flex flex-col p-4 text-white">
+        <div className="fixed inset-0 bg-background z-[120] flex flex-col p-4 text-foreground">
             <div className="flex justify-between items-center mb-4">
                 <button onClick={onClose}><X /></button>
                 <h2 className="font-bold">Test Tutor</h2>
@@ -45,7 +45,7 @@ export default function TestTutor({ result, onClose }: TestTutorProps) {
 
             <div className="flex-grow overflow-y-auto space-y-4 mb-4">
                 {messages.map((m, i) => (
-                        <div key={i} className={`p-4 rounded-xl ${m.role === 'user' ? 'bg-blue-600 self-end' : 'bg-[#161e38] self-start'}`}>
+                        <div key={i} className={`p-4 rounded-xl ${m.role === 'user' ? 'bg-primary text-primary-foreground self-end' : 'bg-card text-card-foreground self-start border border-border'}`}>
                             <ReactMarkdown
                                 rehypePlugins={[rehypeRaw]}
                                 components={{
@@ -60,8 +60,8 @@ export default function TestTutor({ result, onClose }: TestTutorProps) {
             </div>
 
             <div className="flex gap-2">
-                <input value={text} onChange={e => setText(e.target.value)} className="flex-1 bg-[#161e38] p-3 rounded-xl" placeholder="Kuch pucho..." />
-                <button onClick={handleSend} className="bg-blue-600 p-3 rounded-xl"><Send /></button>
+                <input value={text} onChange={e => setText(e.target.value)} className="flex-1 bg-card text-card-foreground p-3 rounded-xl border border-border" placeholder="Kuch pucho..." />
+                <button onClick={handleSend} className="bg-primary text-primary-foreground p-3 rounded-xl"><Send /></button>
             </div>
         </div>
     );

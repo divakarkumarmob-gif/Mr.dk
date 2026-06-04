@@ -29,6 +29,8 @@ import Notes from './components/Notes';
 import NCERT11thHub from './components/NCERT11thHub';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
+import NotificationPage from './components/NotificationPage';
+import { ThemeProvider } from './lib/theme';
 
 import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
@@ -159,8 +161,10 @@ export default function App() {
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const mainContainerRef = React.useRef<HTMLDivElement>(null);
   const [showNotifications, setShowNotifications] = useState(false);
+  const [isNotificationView, setIsNotificationView] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
+  const [neetNotifications, setNeetNotifications] = useState<{ updates: string[]; timestamp: any }[]>([]);
 
   useEffect(() => {
       function handleClickOutside(event: MouseEvent) {
@@ -194,6 +198,7 @@ export default function App() {
   useEffect(() => {
     if (!user) return;
     
+    // Personal Notifications
     const notifRef = collection(db, 'notifications');
     const q = query(notifRef, orderBy('timestamp', 'desc'));
     
@@ -202,10 +207,24 @@ export default function App() {
         setNotifications(data);
     }, (error) => {
         handleFirestoreError(error, OperationType.GET, 'notifications');
+    });                
+
+    // NEET website notifications
+    const neetRef = collection(db, 'neet_notifications');
+    const qNeet = query(neetRef, orderBy('timestamp', 'desc'), limit(5));
+    
+    const unsubscribeNeet = onSnapshot(qNeet, (snapshot) => {
+        const data = snapshot.docs.map(doc => doc.data() as any);
+        setNeetNotifications(data);
+    }, (error) => {
+        console.error("Error fetching NEET notifications:", error);
     });
     
-    return () => unsubscribe();
+    return () => { unsubscribe(); unsubscribeNeet(); };
   }, [user]);
+
+  // Update render logic in notifications popup
+  // Find where showNotifications popup is defined (around line 1104)
 
   const [isPYQRunning, setIsPYQRunning] = useState(false);
   const [resumingTest, setResumingTest] = useState<any>(null);
@@ -858,6 +877,10 @@ export default function App() {
       return <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />;
   }
 
+  if (isNotificationView) {
+      return <NotificationPage onBack={() => setIsNotificationView(false)} />;
+  }
+
   if (currentView === 'study') {
       return (
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
@@ -941,7 +964,7 @@ export default function App() {
 
   if (currentView === 'admin') {
       return (
-          <><div className="min-h-screen bg-[#0a0f24] p-6 text-white">
+          <><div className="min-h-screen bg-background p-6 text-foreground">
               <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
               <AdminPanel onNavigate={setCurrentView} />
           </div>
@@ -984,7 +1007,7 @@ export default function App() {
 
   if (currentView === 'notes') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 bg-[#0f172a]">
+        <div className="flex flex-col min-h-screen pb-20 bg-background">
             <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1017,7 +1040,7 @@ export default function App() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <><div className="min-h-screen bg-[#0f172a] text-white">
+         <><div className="min-h-screen bg-background text-foreground">
              <button className="absolute top-4 left-4 z-10 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
              <UserChat fullScreen={true} />
          </div>
@@ -1067,7 +1090,7 @@ export default function App() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
-                    className="bg-[#161e38]/90 p-4 rounded-2xl border border-blue-500 shadow-2xl backdrop-blur-md"
+                    className="bg-card/90 p-4 rounded-2xl border border-blue-500 shadow-2xl backdrop-blur-md"
                 >
                     <p className="font-bold text-base sm:text-lg text-white drop-shadow-md">{displayedText}</p>
                 </motion.div>
@@ -1076,7 +1099,7 @@ export default function App() {
           </div>
       )}
 
-    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-[#0a0f24] text-white p-2 sm:p-4 font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}>
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-background text-foreground p-2 sm:p-4 font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}>
       <div className="max-w-full mx-auto w-full px-1 sm:px-2">
       
       {showExitToast && (
@@ -1095,15 +1118,30 @@ export default function App() {
            <p className="text-gray-400 text-[10px] sm:text-sm">Let's make today productive</p>
         </div>
         <div className="relative" ref={notificationRef}>
-            <Bell className="h-6 w-6 cursor-pointer" onClick={() => setShowNotifications(!showNotifications)} />
+            <Bell className="h-6 w-6 cursor-pointer" onClick={() => { setShowNotifications(false); setIsNotificationView(true); }} />
              {notifications.some(n => !n.readBy?.includes(user?.uid)) ? (
-                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
-                     {notifications.filter(n => !n.readBy?.includes(user?.uid)).length}
-                 </span>
+                 <span className="absolute top-0 right-0 bg-red-500 rounded-full w-2.5 h-2.5 border-2 border-[#0a0f24]"></span>
              ) : null}
             {showNotifications ? (
-              <div className="absolute top-8 right-0 bg-[#020510] p-4 rounded-2xl shadow-xl w-64 z-[100] border border-blue-900/30">
+              <div className="absolute top-8 right-0 bg-card p-4 rounded-2xl shadow-xl w-64 z-[100] border border-border max-h-96 overflow-y-auto">
                   <h3 className="font-bold mb-2">Notifications</h3>
+                  
+                  {neetNotifications.length > 0 && (
+                      <div className="mb-4">
+                          <h4 className="text-xs text-blue-400 font-bold mb-1 uppercase">NEET Updates</h4>
+                          {neetNotifications.map((neet, idx) => (
+                              <div key={idx} className="text-xs p-2 bg-[#0a1025] border border-blue-900/50 rounded-lg mb-2">
+                                  {neet.updates.map((update, uIdx) => (
+                                      <p key={uIdx} className="mb-1">{update}</p>
+                                  ))}
+                                  <p className="text-gray-500 text-[10px]">
+                                      {neet.timestamp?.toDate().toLocaleString()}
+                                  </p>
+                              </div>
+                          ))}
+                      </div>
+                  )}
+
                   {notifications.length === 0 ? (
                       <p className="text-gray-400 text-sm">No notifications</p>
                   ) : (
@@ -1151,7 +1189,7 @@ export default function App() {
 
       <HubSwitcher active="home" onNavigate={setCurrentView} />
 
-      <div className="bg-[#161e38] rounded-2xl p-3 sm:p-5 border border-white/10 mb-4 mt-2 select-none">
+      <div className="bg-card rounded-2xl p-3 sm:p-5 border border-border mb-4 mt-2 select-none">
         <div className="flex justify-between items-center mb-2.5">
             <h2 className="font-bold text-sm sm:text-lg">Your Performance</h2>
             <div className="text-orange-500 text-[10px] sm:text-xs font-semibold">
@@ -1180,7 +1218,7 @@ export default function App() {
       
       {showAnalytics && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000] flex items-center justify-center p-4">
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-[#161e38] p-5 sm:p-7 rounded-3xl border border-white/10 w-full max-w-lg shadow-2xl relative">
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-card p-5 sm:p-7 rounded-3xl border border-border w-full max-w-lg shadow-2xl relative">
                <button onClick={() => setShowAnalytics(false)} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full hover:bg-white/10 transition-colors">
                    <X className="h-4 w-4" />
                </button>
@@ -1209,7 +1247,7 @@ export default function App() {
       </div>
       {showRandomPopup && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
-            <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm text-center">
+            <div className="bg-card p-6 rounded-2xl border border-border w-full max-w-sm text-center">
                 <h2 className="text-xl font-bold mb-4">Random Chapter Picked!</h2>
                 <p className="text-gray-300">"{randomChapter?.topic}" will be for 2 hours.</p>
                 <div className="flex flex-col gap-2 mt-6">
@@ -1222,7 +1260,7 @@ export default function App() {
       
       {showResetModal && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
-            <div className="bg-[#161e38] p-6 rounded-2xl border border-white/10 w-full max-w-sm">
+            <div className="bg-card p-6 rounded-2xl border border-border w-full max-w-sm">
                 <h2 className="text-xl font-bold mb-4">Are you sure you want to restart?</h2>
                 <div className="flex gap-3 mt-6">
                     <button onClick={handleReset} className="flex-1 bg-red-600 py-2 rounded-lg font-bold">Yes</button>
@@ -1234,7 +1272,7 @@ export default function App() {
       )}
       <div className="space-y-4 mb-20 scroll-mt-20">
         {subjects.map((sub, idx) => (
-            <div key={idx} className={`bg-[#161e38] border-l-4 ${sub.color} rounded-xl p-2.5 sm:p-4 flex justify-between items-center group shadow-md`}>
+            <div key={idx} className={`bg-card border-l-4 ${sub.color} rounded-xl p-2.5 sm:p-4 flex justify-between items-center group shadow-md`}>
                 <div className="flex-1 min-w-0 mr-3">
                   <p className="text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-wider truncate mb-0.5">{sub.name}</p>
                   <p className="font-bold text-xs sm:text-base truncate">{sub.topic}</p>

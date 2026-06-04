@@ -178,7 +178,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
             
 
-            <div className="flex bg-[#161e38] p-0.5 rounded-md mb-2">
+            <div className="flex bg-card p-0.5 rounded-md mb-2">
                 {(['Upcoming', 'Current', 'Missed'] as const).map(tab => (
                     <button 
                         key={tab}
@@ -199,7 +199,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                         initial={{ opacity: 0, y: 5 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
-                        className="bg-[#161e38] p-2 rounded-md border border-white/5 flex flex-row items-center justify-between gap-1"
+                        className="bg-card p-2 rounded-md border border-border flex flex-row items-center justify-between gap-1"
                     >
                         <div className="flex items-center gap-1.5 w-full">
                             <div className={`${test.bg} ${test.color} p-1 rounded-full flex-shrink-0`}>
@@ -229,7 +229,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className="bg-[#161e38] p-2 rounded-md border border-white/5 flex flex-row items-center justify-between gap-1"
+            className="bg-card p-2 rounded-md border border-border flex flex-row items-center justify-between gap-1"
           >
             <div className="flex items-center gap-2 w-full">
                 <div className={`${test.bg || 'bg-blue-500/20'} ${test.color || 'text-blue-400'} p-1.5 rounded-full flex-shrink-0`}>
@@ -374,12 +374,12 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       /* Chapter Popup */
       {selectedScheduledTestForChapters && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setSelectedScheduledTestForChapters(null)}>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-sm bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
-                <button className="absolute top-4 right-4 text-gray-400" onClick={() => setSelectedScheduledTestForChapters(null)}><X className="h-5 w-5"/></button>
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-sm bg-card rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-muted-foreground" onClick={() => setSelectedScheduledTestForChapters(null)}><X className="h-5 w-5"/></button>
                 <h2 className="text-xl font-bold mb-4">Chapters in {selectedScheduledTestForChapters.name}</h2>
                 <div className="space-y-2 max-h-60 overflow-y-auto">
                     {selectedScheduledTestForChapters.chapters?.map((c: any, i: number) => (
-                        <div key={i} className="p-3 rounded-lg bg-[#0a0f24] text-sm">
+                        <div key={i} className="p-3 rounded-lg bg-card text-sm">
                             <span className="text-blue-400 font-bold">{c.subject}</span>: {c.name}
                         </div>
                     ))}
@@ -390,15 +390,15 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       
       {showCustomOptions && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => { setShowCustomOptions(false); setSelectedSubject(null); }}>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
-                <button className="absolute top-4 right-4 text-gray-400" onClick={() => { setShowCustomOptions(false); setSelectedSubject(null); }}><X className="h-5 w-5"/></button>
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-card rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-muted-foreground" onClick={() => { setShowCustomOptions(false); setSelectedSubject(null); }}><X className="h-5 w-5"/></button>
                 
                 {!selectedSubject ? (
                     <>
                         <h2 className="text-xl font-bold mb-6">Select Subject</h2>
                         <div className="space-y-3">
                             {['Physics', 'Chemistry', 'Biology'].map(cat => (
-                                <div key={cat} className="flex justify-between items-center p-4 rounded-xl bg-[#0a0f24] border border-white/5 cursor-pointer hover:border-blue-500/50 transition" onClick={() => setSelectedSubject(cat)}>
+                                <div key={cat} className="flex justify-between items-center p-4 rounded-xl bg-card border border-border cursor-pointer hover:border-blue-500/50 transition" onClick={() => setSelectedSubject(cat)}>
                                     <span className="font-bold">{cat}</span>
                                 </div>
                             ))}
@@ -444,15 +444,15 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
       {showPYQOptions && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setShowPYQOptions(false)}>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-[#161e38] rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
-                <button className="absolute top-4 right-4 text-gray-400" onClick={() => setShowPYQOptions(false)}><X className="h-5 w-5"/></button>
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-card rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-muted-foreground" onClick={() => setShowPYQOptions(false)}><X className="h-5 w-5"/></button>
                 <h2 className="text-xl font-bold mb-6">Select PYQ</h2>
                 <div className="space-y-4">
-                    <select className="w-full p-4 rounded-xl bg-[#0a0f24] text-white" onChange={(e) => setSelectedYear(e.target.value)}>
+                    <select className="w-full p-4 rounded-xl bg-muted text-foreground" onChange={(e) => setSelectedYear(e.target.value)}>
                         <option value="">Select Year</option>
                         {['2021', '2022', '2023', '2024', '2025'].map(y => <option key={y} value={y}>{y}</option>)}
                     </select>
-                    <select className="w-full p-4 rounded-xl bg-[#0a0f24] text-white" onChange={(e) => setSelectedSubForPYQ(e.target.value)}>
+                    <select className="w-full p-4 rounded-xl bg-muted text-foreground" onChange={(e) => setSelectedSubForPYQ(e.target.value)}>
                         <option value="">Select Subject</option>
                         {['Biology', 'Chemistry', 'Physics'].map(s => <option key={s} value={s}>{s}</option>)}
                     </select>
@@ -477,10 +477,10 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
         </div>
       )}
       {loading && (
-          <div className="fixed inset-0 bg-[#0a0f24] z-[200] flex flex-col items-center justify-center">
-              <div className="w-16 h-16 border-4 border-t-blue-600 border-white/20 rounded-full animate-spin mb-4"></div>
+          <div className="fixed inset-0 bg-background z-[200] flex flex-col items-center justify-center text-foreground">
+              <div className="w-16 h-16 border-4 border-t-blue-600 border-muted rounded-full animate-spin mb-4"></div>
               <h2 className="text-xl font-bold">Starting Test...</h2>
-              <p className="text-lg text-gray-400 mt-2">{timer}s</p>
+              <p className="text-lg text-muted-foreground mt-2">{timer}s</p>
           </div>
       )}
       </>

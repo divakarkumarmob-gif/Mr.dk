@@ -37,20 +37,20 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
     }
 
     return (
-        <div className="flex flex-col min-h-screen pb-20 bg-[#0a0f24]">
+        <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground">
             <div className="p-6 flex-grow">
-                <h1 className="text-2xl font-bold mb-6 text-white">Test History</h1>
+                <h1 className="text-2xl font-bold mb-6">Test History</h1>
 
-                <div className="flex gap-2 mb-6 bg-[#161e38] p-1 rounded-xl">
+                <div className="flex gap-2 mb-6 bg-card p-1 rounded-xl">
                     <button
                         onClick={() => setActiveTab('current')}
-                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === 'current' ? 'bg-blue-600 text-white' : 'text-gray-400'}`}
+                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === 'current' ? 'bg-blue-600 text-white' : 'text-muted-foreground'}`}
                     >
                         Current (Latest 3)
                     </button>
                     <button
                         onClick={() => setActiveTab('past')}
-                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === 'past' ? 'bg-blue-600 text-white' : 'text-gray-400'}`}
+                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === 'past' ? 'bg-blue-600 text-white' : 'text-muted-foreground'}`}
                     >
                         Past
                     </button>
@@ -58,14 +58,14 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
 
                 <div className="space-y-4">
                     {displayedResults.length === 0 ? (
-                        <p className="text-gray-400 text-center mt-10">No tests found in this category.</p>
+                        <p className="text-muted-foreground text-center mt-10">No tests found in this category.</p>
                     ) : (
                         displayedResults.map(result => (
-                            <div key={result.id} className="bg-[#161e38] p-4 rounded-xl flex justify-between items-center text-white">
+                            <div key={result.id} className="bg-card p-4 rounded-xl flex justify-between items-center">
                                 <div className="flex flex-col text-left">
                                     <span className="font-semibold">{result.testName}</span>
                                     {result.timestamp && (
-                                        <span className="text-gray-400 text-xs">
+                                        <span className="text-muted-foreground text-xs">
                                             {result.timestamp.toLocaleDateString()}
                                         </span>
                                     )}

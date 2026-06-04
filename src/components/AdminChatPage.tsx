@@ -24,8 +24,8 @@ export default function AdminChatPage({ onBack }: { onBack: () => void }) {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] p-6 text-white">
-            <button className="mb-4 text-sm text-gray-400" onClick={onBack}>⬅️ Back to Admin</button>
+        <div className="min-h-screen bg-background p-6 text-foreground">
+            <button className="mb-4 text-sm text-muted-foreground" onClick={onBack}>⬅️ Back to Admin</button>
             <h1 className="text-2xl font-bold mb-4">Chat Manager</h1>
             <div className="flex gap-4 h-[70vh]">
                 <ChatList chats={chats} selectedChat={selectedChat} setSelectedChat={setSelectedChat} chatNames={chatNames} />
@@ -33,7 +33,7 @@ export default function AdminChatPage({ onBack }: { onBack: () => void }) {
                     {selectedChat ? (
                         <ChatWindow chatId={selectedChat} userId={auth.currentUser?.uid || ''} isAdmin={true} />
                     ) : (
-                        <div className="h-full flex items-center justify-center text-gray-500 bg-[#161e38] rounded-lg border border-white/10">
+                        <div className="h-full flex items-center justify-center text-muted-foreground bg-card rounded-lg border border-border">
                             Select a chat to view messages
                         </div>
                     )}

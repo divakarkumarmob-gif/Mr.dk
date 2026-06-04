@@ -47,7 +47,7 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
         <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="min-h-screen bg-[#0a0f24] text-white p-6 pb-24"
+            className="min-h-screen bg-background text-foreground p-6 pb-24"
         >
          <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
                 <div className="flex items-center gap-3 mb-4">
@@ -60,34 +60,34 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                     <input
                         type="text"
                         placeholder="Search chapters..."
-                        className="w-full bg-[#161e38] p-2 pl-9 rounded-lg outline-none text-sm"
+                        className="w-full bg-card p-2 pl-9 rounded-lg outline-none text-sm"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
                 </div>
 
-                <div className="flex bg-[#161e38] p-0.5 rounded-lg mb-4">
+                <div className="flex bg-card p-0.5 rounded-lg mb-4">
                     {(['Physics', 'Chemistry', 'Biology'] as const).map(sub => (
-                        <button key={sub} className={`flex-1 py-1 text-xs font-bold rounded-lg ${activeSubject === sub ? 'bg-blue-600' : ''}`} onClick={() => setActiveSubject(sub)}>{sub}</button>
+                        <button key={sub} className={`flex-1 py-1 text-xs font-bold rounded-lg ${activeSubject === sub ? 'bg-primary text-primary-foreground' : 'text-muted-foreground'}`} onClick={() => setActiveSubject(sub)}>{sub}</button>
                     ))}
                 </div>
 
-                <div className="flex bg-[#161e38] p-0.5 rounded-lg mb-4">
+                <div className="flex bg-card p-0.5 rounded-lg mb-4">
                     {(['Class 11', 'Class 12'] as const).map(cls => (
-                        <button key={cls} className={`flex-1 py-1 text-xs font-bold rounded-lg ${activeClass === cls ? 'bg-blue-600' : ''}`} onClick={() => setActiveClass(cls)}>{cls}</button>
+                        <button key={cls} className={`flex-1 py-1 text-xs font-bold rounded-lg ${activeClass === cls ? 'bg-primary text-primary-foreground' : 'text-muted-foreground'}`} onClick={() => setActiveClass(cls)}>{cls}</button>
                     ))}
                 </div>
 
                 <div className="space-y-2">
                     {chapters.map((chapter, idx) => (
-                        <div key={idx} className="bg-[#161e38] p-3 rounded-lg flex items-center justify-between cursor-pointer hover:bg-[#1f2a4a] transition-all">
+                        <div key={idx} className="bg-card p-3 rounded-lg flex items-center justify-between cursor-pointer hover:bg-muted transition-all">
                              <div className="flex items-center gap-2">
                                  <BookOpen className="text-orange-500 h-5 w-5"/>
-                                 <span className="font-bold text-sm">{chapter} ({activeClass} {activeSubject})</span>
+                                 <span className="font-bold text-sm text-foreground">{chapter} ({activeClass} {activeSubject})</span>
                              </div>
                              <div className="flex items-center gap-2">
-                                <Eye onClick={() => setSelectedChapter(chapter)} className="text-gray-400 h-4 w-4 hover:text-white" />
-                                <Download className="text-gray-400 h-4 w-4 hover:text-white" />
+                                <Eye onClick={() => setSelectedChapter(chapter)} className="text-muted-foreground h-4 w-4 hover:text-foreground" />
+                                <Download className="text-muted-foreground h-4 w-4 hover:text-foreground" />
                              </div>
                          </div>
                     ))}

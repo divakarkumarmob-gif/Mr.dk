@@ -4,10 +4,16 @@ import * as path from "path";
 import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
-import { openai } from "./src/lib/openrouter";
+import { ai } from "./src/lib/gemini";
 import { performSearch } from "./src/services/searchService";
+import admin from 'firebase-admin';
+import { getFirestore } from 'firebase-admin/firestore';
+import firebaseConfig from './firebase-applet-config.json' assert { type: 'json' };
 
-
+// Initialize Firebase Admin
+admin.initializeApp({
+    projectId: firebaseConfig.projectId,
+});
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -15,6 +21,7 @@ const limiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
 });
+
 
 const logs: string[] = [];
 
@@ -39,11 +46,11 @@ async function startServer() {
       return res.status(400).json({ error: "Missing prompt" });
     }
     try {
-            const completion = await openai.chat.completions.create({
-            model: "openai/gpt-3.5-turbo",
-            messages: [{ role: "user", content: prompt }],
-        });
-        res.json({ text: completion.choices[0].message.content });
+            const completion = await ai.models.generateContent({
+                model: "gemini-3.5-flash",
+                contents: prompt
+            });
+            res.json({ text: completion.text });
     } catch (error) {
         console.error("Ask API Error:", error);
         res.status(500).json({ error: "Failed to get AI response" });
@@ -57,29 +64,26 @@ async function startServer() {
           return res.status(400).json({ error: "Missing prompt" });
       }
 
-      
       try {
-          const contents: any[] = [];
+          const parts: any[] = [];
           if (base64Audio) {
-              contents.push({ inlineData: { data: base64Audio, mimeType: "audio/webm" } });
+              parts.push({ inlineData: { data: base64Audio, mimeType: "audio/webm" } });
           }
           if (base64Image) {
-              contents.push({ inlineData: { data: base64Image.split(',')[1], mimeType: "image/jpeg" } });
+              const base64Data = base64Image.includes(',') ? base64Image.split(',')[1] : base64Image;
+              parts.push({ inlineData: { data: base64Data, mimeType: "image/jpeg" } });
           }
-          contents.push({ text: prompt });
+          parts.push({ text: prompt });
 
-          const completion = await openai.chat.completions.create({
-              model: "openai/gpt-3.5-turbo",
-              messages: [{
-                  role: "user",
-                  content: prompt
-              }]
+          const completion = await ai.models.generateContent({
+              model: "gemini-3.5-flash",
+              contents: { parts }
           });
           
-          res.json({ text: completion.choices[0].message.content });
+          res.json({ text: completion.text });
       } catch (error) {
-          console.error("OpenAI API Error:", error);
-          res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
+          console.error("Gemini API Error:", error);
+          res.status(500).json({ error: "Failed to get AI response" });
       }
   });                
 
@@ -107,14 +111,14 @@ async function startServer() {
         `;
         
         try {
-            const completion = await openai.chat.completions.create({
-              model: "openai/gpt-3.5-turbo",
-              messages: [{ role: "user", content: prompt }]
+            const completion = await ai.models.generateContent({
+              model: "gemini-3.5-flash",
+              contents: prompt
             });
-            res.json({ analysis: completion.choices[0].message.content });
+            res.json({ analysis: completion.text });
         } catch (error) {
             console.error("Analysis API Error:", error);
-            res.status(500).json({ error: "Failed to get analysis: " + (error instanceof Error ? error.message : String(error)) });
+            res.status(500).json({ error: "Failed to get analysis" });
         }
     });
 
@@ -128,33 +132,14 @@ async function startServer() {
         const lastMessage = messages[messages.length - 1].content;
         
         try {
-            // 1. Identify the chapter
-            const chapterCompletion = await openai.chat.completions.create({
-                model: "openai/gpt-3.5-turbo",
-                messages: [
-                    { role: "system", content: "You are a chapter classifier. Given a question, identify the most relevant chapter from a NEET biology/physics/chemistry syllabus. Answer ONLY the chapter name. If unsure, reply 'General'." },
-                    { role: "user", content: lastMessage }
-                ]
+            const completion = await ai.models.generateContent({
+              model: "gemini-3.5-flash",
+              contents: `You are a NEET tutor. Answer according to NCERT. Explain simply, be concise. ${lastMessage}`
             });
-            
-            const chapter = chapterCompletion.choices[0].message.content || "General";
-            console.log(`Detected chapter: ${chapter}`);
-
-            // 2. Answer based on the chapter
-            const completion = await openai.chat.completions.create({
-              model: "openai/gpt-3.5-turbo",
-              messages: [{ 
-                  role: "system", 
-                  content: `You are a NEET tutor.\n\nYou are answering a question related to: ${chapter}.\n\nRules:\n- Follow NCERT strictly (class 11th and 12th physics, chemistry, and biology).\n- Answer strictly according to NCERT lines for the detected chapter.\n- Avoid hallucinations.\n- Keep answers concise.\n- Explain simply.\n- If unsure, admit uncertainty.\n- Focus only on NEET syllabus.\n- Use numbered lists (1-, 2-, 3-) for any steps or structured information.\n- Wrap any important NEET-related information in <u></u> tags.\n- Always append a note at the end of every answer: 'Source: NCERT'.` 
-              }, ...messages.map(m => ({
-                  role: (m.role === 'assistant' ? 'assistant' : 'user') as ('assistant' | 'user'),
-                  content: m.content
-              }))]
-            });
-            res.json({ reply: completion.choices[0].message.content });
+            res.json({ reply: completion.text });
         } catch (error) {
-            console.error("OpenAI API Error:", error);
-            res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
+            console.error("Tutor API Error:", error);
+            res.status(500).json({ error: "Failed to get AI response" });
         }
     });
 
@@ -168,40 +153,13 @@ async function startServer() {
     const lastMessage = messages[messages.length - 1].content;
     
     try {
-        // 1. Identify the chapter
-        const chapterCompletion = await openai.chat.completions.create({
-            model: "openai/gpt-3.5-turbo",
-            messages: [
-                { role: "system", content: "You are a chapter classifier. Given a question, identify the most relevant chapter from a NEET biology/physics/chemistry syllabus. Answer ONLY the chapter name. If unsure, reply 'General'." },
-                { role: "user", content: lastMessage }
-            ]
-        });
-        
-        const chapter = chapterCompletion.choices[0].message.content || "General";
-        console.log(`Detected chapter for neural-chat: ${chapter}`);
-
         // 2. Answer based on the chapter
-        const completion = await openai.chat.completions.create({
-            model: "openai/gpt-3.5-turbo",
-            messages: [
-                { role: "system", content: `You are a friendly, approachable, and natural-sounding AI assistant. You talk like a close human friend, keeping conversations casual, engaging, and easy to relate to. Avoid stiff, overly formal, or robotic language. When asked academic or educational questions, ensure your answers are accurate and adhere to the NCERT curriculum. 
-                
-                You are currently helping the user with a question related to: ${chapter}.
-                
-                Rules:
-                - Follow NCERT strictly.
-                - Answer according to NCERT lines for the detected chapter.
-                - Use numbered lists (1-, 2-, 3-) for any steps or structured information.
-                - Wrap any important NEET-related information in <u></u> tags (these will be highlighted).
-                - Always append a note at the end of every answer: 'Source: NCERT'.` },
-                ...messages.map(m => ({
-                    role: (m.role === 'assistant' ? 'assistant' : 'user') as ('assistant' | 'user'),
-                    content: m.content
-                }))
-            ]
+        const completion = await ai.models.generateContent({
+            model: "gemini-3.5-flash",
+            contents: `You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`
         });
-      
-      res.json({ reply: completion.choices[0].message.content });
+
+      res.json({ reply: completion.text });
     } catch (error) {
       console.error("OpenAI API Error:", error);
       res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
@@ -221,104 +179,81 @@ async function startServer() {
     res.setHeader('Connection', 'keep-alive');
 
     try {
+        // 1. If image, find query
         let finalPrompt = prompt;
-        // 1. If image, generate/refine search query
         if (base64Image && (!prompt || prompt.length < 5)) {
-            const queryCompletion = await openai.chat.completions.create({
-                model: "gpt-4o",
-                messages: [
-                    { role: "user", content: [
-                        { type: "text", text: "Analyze this image and provide a concise search query (max 10 words) for identifying the problem or object inside." },
-                        { type: "image_url", image_url: { url: base64Image } }
-                    ]}
-                ]
-            });
-            finalPrompt = queryCompletion.choices[0].message.content || prompt || "Analyze this image.";
+            try {
+                const completion = await ai.models.generateContent({
+                    model: "gemini-3.5-flash",
+                    contents: {
+                        parts: [
+                            { text: "What is in the image? Give a 5 word search query." },
+                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                        ]
+                    }
+                });
+                finalPrompt = completion.text || "Search for this image";
+            } catch (imgErr) {
+                console.error("Image analysis failed:", imgErr);
+                finalPrompt = "Search for this image";
+            }
             res.write(`data: ${JSON.stringify({ query: finalPrompt })}\n\n`);
         }
 
         let searchResults: any[] = [];
-        if (finalPrompt) {
+        const isDirectImageQuestion = base64Image && prompt && prompt.length >= 5;
+        
+        if (!isDirectImageQuestion && finalPrompt) {
             searchResults = await performSearch(finalPrompt);
             res.write(`data: ${JSON.stringify({ sources: searchResults })}\n\n`);
         }
         
-        // Prepare messages
-        const messages: any[] = [];
-        if (base64Image) {
-            messages.push({ 
-                role: "user" as const, 
-                content: [
-                    { type: "text", text: finalPrompt },
-                    { type: "image_url", image_url: { url: base64Image } }
-                ]
-            });
-        } else {
-            messages.push({ role: "user" as const, content: finalPrompt || "" });
-        }
-        
-        // Prepend system prompt
-        const context = JSON.stringify(searchResults.slice(0, 1).map(s => ({ title: s.title, url: s.url, content: s.content })));                
-        const systemPrompt = `You are a research assistant. Answer concisely based *only* on the provided search results and/or image.
-        Use [0] for citations. If not found, say so.                
-        CRITICAL: Output equations in plain text (e.g., T1, T2, a / b, * for multiply). NO LaTeX commands.                
-        Search Context: ${context}`;
-        
-        messages.unshift({ role: "system" as const, content: systemPrompt });
-
-        // Sanitization helper
-        const sanitizeChunk = (text: string): string => {
+        const sanitizeText = (text: string): string => {
             return text
-                // LaTeX block starters
                 .replace(/\\\[|\\\]|\\\(|\\\)/g, '')
                 .replace(/\$/g, '')
-                // Fractions
                 .replace(/\\frac\s*\{([^}]+)\}\s*\{([^}]+)\}/g, '($1 / $2)')
-                // Multiplication
                 .replace(/\\times/g, ' × ')
+                .replace(/\\dot\s*\{([^}]+)\}/g, ' · ')
                 .replace(/\\cdot/g, ' · ')
-                // Units/Text
                 .replace(/\\text\s*\{([^}]+)\}/g, '$1')
-                // Subscripts
                 .replace(/_([a-zA-Z0-9])/g, '$1')
-                // Powers (simple)
                 .replace(/\^2/g, '²')
-                // Basic Greek letters and symbols
                 .replace(/\\theta/g, 'θ')
                 .replace(/\\alpha/g, 'α')
                 .replace(/\\beta/g, 'β')
                 .replace(/\\gamma/g, 'γ')
                 .replace(/\\pi/g, 'π')
                 .replace(/\\Delta/g, 'Δ')
-                .replace(/\\le/g, '≤')
-                .replace(/\\ge/g, '≥')
-                .replace(/\\neq/g, '≠')
-                .replace(/\\approx/g, '≈')
-                // Functions
-                .replace(/\\sin/g, 'sin')
-                .replace(/\\cos/g, 'cos')
-                .replace(/\\tan/g, 'tan')
-                // Other LaTeX tags - remove
                 .replace(/\\[a-zA-Z]+/g, '')
-                // Remaining braces
                 .replace(/[\{\}]/g, '');
         };
-        
-        // Use streaming completion
-        const stream = await openai.chat.completions.create({
-            model: "gpt-4o", // Use a vision capable model
-            messages: messages,
-            stream: true,
-            max_tokens: 500,
-        });
 
-        for await (const chunk of stream) {
-            const rawContent = chunk.choices[0]?.delta?.content || "";
-            if (rawContent) {
-                const content = sanitizeChunk(rawContent);
-                res.write(`data: ${JSON.stringify({ content })}\n\n`);
+        // Return result using Gemini
+        if (isDirectImageQuestion || searchResults.length > 0) {
+            let contents: any;
+            if (isDirectImageQuestion) {
+                 contents = { parts: [{ text: finalPrompt }, { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }] };
+            } else {
+                 const context = searchResults.slice(0, 3).map(s => `Title: ${s.title}\nContent: ${s.content}`).join('\n\n');
+                 contents = `Summarize the following search results to answer the query: "${finalPrompt}" concisely and clearly in plain text. Do not use LaTeX. Only provide the summary.\n\nContext:\n${context}`;
             }
+
+            const stream = await ai.models.generateContentStream({
+                model: "gemini-3.5-flash",
+                contents: contents
+            });
+
+            for await (const chunk of stream) {
+                const text = chunk.text || "";
+                if (text) {
+                    res.write(`data: ${JSON.stringify({ content: sanitizeText(text) })}\n\n`);
+                }
+            }
+        } else {
+            res.write(`data: ${JSON.stringify({ content: "No results found." })}\n\n`);
         }
+        
         res.write('data: [DONE]\n\n');
         res.end();
     } catch (error) {

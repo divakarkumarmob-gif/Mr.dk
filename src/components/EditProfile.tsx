@@ -89,7 +89,7 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0f24] text-white p-6 font-sans">
+        <div className="min-h-screen bg-background text-foreground p-6 font-sans">
             {errorMessage && (
                 <div className="fixed top-4 left-6 right-6 bg-red-600 text-white p-4 rounded-xl z-50 shadow-lg text-center font-bold">
                     {errorMessage}
@@ -97,7 +97,7 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
             )}
             {showPhotoModal && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-6 z-50">
-                    <div className="bg-[#161e38] p-6 rounded-2xl w-full max-w-sm">
+                    <div className="bg-card p-6 rounded-2xl w-full max-w-sm">
                         <h3 className="font-bold text-lg mb-4">Change Photo</h3>
                         <button onClick={() => fileInputRef.current?.click()} className="w-full text-left p-3 mb-2 hover:bg-white/10 rounded">Import Photo</button>
                         {user?.photoURL && (
@@ -137,7 +137,7 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
                          <User className="text-blue-500" />
                          <div>
                             <p className="text-gray-400 text-xs text-left">Full Name</p>
-                            <input value={name} onChange={e => setName(e.target.value)} className="bg-transparent text-white font-bold w-full" />
+                            <input value={name} onChange={e => setName(e.target.value)} className="bg-transparent text-foreground font-bold w-full" />
                          </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
                          <Mail className="text-blue-500" />
                          <div>
                             <p className="text-gray-400 text-xs text-left">Email</p>
-                            <input value={email} onChange={e => setEmail(e.target.value)} className="bg-transparent text-white font-bold w-full" />
+                            <input value={email} onChange={e => setEmail(e.target.value)} className="bg-transparent text-foreground font-bold w-full" />
                          </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
                          <Phone className="text-blue-500" />
                          <div>
                             <p className="text-gray-400 text-xs text-left">Phone Number</p>
-                            <input value={phone} onChange={e => setPhone(e.target.value)} className="bg-transparent text-white font-bold w-full" placeholder="+91..." />
+                            <input value={phone} onChange={e => setPhone(e.target.value)} className="bg-transparent text-foreground font-bold w-full" placeholder="+91..." />
                          </div>
                     </div>
                 </div>

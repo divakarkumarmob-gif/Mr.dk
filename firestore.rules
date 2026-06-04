@@ -14,6 +14,13 @@ service cloud.firestore {
       allow write: if isSignedIn();
     }
 
+    match /neet_notifications/{notificationId} {
+      allow read, write: if true;
+    }
+    match /neet_notifications {
+      allow read, write: if true;
+    }
+
     match /tests/{testId} {
       allow read: if isSignedIn();
       allow write: if isAdmin();
