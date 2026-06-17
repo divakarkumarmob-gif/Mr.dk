@@ -256,7 +256,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                                                     .map((chapter: string) => (
                                                         <div 
                                                             key={chapter} 
-                                                            className="p-3 bg-white/5 rounded-lg mb-2 text-xs cursor-pointer hover:bg-orange-500/20 flex items-center justify-between group relative"
+                                                            className="p-3 bg-white/5 rounded-lg mb-2 text-xs text-white cursor-pointer hover:bg-orange-500/20 flex items-center justify-between group relative"
                                                             onClick={() => {
                                                                 setSelectedChapter(chapter);
                                                             }}

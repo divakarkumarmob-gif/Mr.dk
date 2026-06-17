@@ -10,6 +10,8 @@ interface NotificationPageProps {
 export default function NotificationPage({ onBack }: NotificationPageProps) {
     const [activeTab, setActiveTab] = useState<'General' | 'NTA'>('General');
     const [adminNotifications, setAdminNotifications] = useState<any[]>([]);
+    const [neetNotices, setNeetNotices] = useState<{publicNotices: {text: string, url: string}[], candidateActivity: {text: string, url: string}[]}>({ publicNotices: [], candidateActivity: [] });
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         // Fetch Admin Notifications (limit 5)
@@ -28,6 +30,21 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                 }
             });
         });
+
+        // Fetch NTA Notices
+        const fetchNeetNotices = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch('/api/neet-notices');
+                const data = await response.json();
+                setNeetNotices(data);
+            } catch (error) {
+                console.error("Error fetching NTA notices:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchNeetNotices();
 
         return () => { unsubscribe(); };
     }, []);
@@ -63,12 +80,23 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                 ))}
                 
                 {activeTab === 'NTA' && (
-                    <div className="p-4 bg-card rounded-xl border border-border">
-                        <h3 className="text-gray-400 text-sm font-semibold mb-2">Latest Update</h3>
-                        <a href="https://neet.nta.nic.in/" target="_blank" rel="noopener noreferrer"
-                           className="block text-blue-300 hover:text-white transition-colors">
-                           Visit Official NTA NEET Portal
-                        </a>
+                    <div className="space-y-4">
+                        {loading ? <p className="text-gray-400">Loading notices...</p> : (
+                            <>
+                                <div className="p-4 bg-card rounded-xl border border-border">
+                                    <h3 className="font-bold mb-3">Public Notices</h3>
+                                    <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
+                                        {neetNotices.publicNotices.map((notice, i) => <li key={i}><a href={notice.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{notice.text}</a></li>)}
+                                    </ul>
+                                </div>
+                                <div className="p-4 bg-card rounded-xl border border-border">
+                                    <h3 className="font-bold mb-3">Candidate Activity</h3>
+                                    <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
+                                        {neetNotices.candidateActivity.map((activity, i) => <li key={i}><a href={activity.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{activity.text}</a></li>)}
+                                    </ul>
+                                </div>
+                            </>
+                        )}
                     </div>
                 )}
             </div>

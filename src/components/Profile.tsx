@@ -1,11 +1,9 @@
-import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit, Crown, Moon, Sun } from 'lucide-react';
+import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit, Crown } from 'lucide-react';
 import { logOut } from '../lib/auth';
 import { User as FirebaseUser } from 'firebase/auth';
-import { useTheme } from '../lib/theme';
 
 export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary') => void, onSolverClick: () => void }) {
     const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
-    const { isDarkMode, toggleTheme } = useTheme();
     
     return (
         <div className="min-h-screen bg-background text-foreground p-2 font-sans pb-16">
@@ -72,20 +70,6 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
                     </div>
                 </div>
                 <ChevronRight className="h-4 w-4 opacity-50" />
-            </div>
-
-            {/* System Preference */}
-            <h3 className="text-muted-foreground text-[10px] font-bold mb-1.5 uppercase">System Preference</h3>
-            <div onClick={toggleTheme} className="bg-card text-card-foreground border border-border p-2 rounded-lg mb-3 flex justify-between items-center cursor-pointer">
-                 <div className="flex items-center gap-1.5">
-                    <div className="bg-muted p-1 rounded-md">
-                        {isDarkMode ? <Moon className="h-4 w-4 text-muted-foreground"/> : <Sun className="h-4 w-4 text-muted-foreground"/>}
-                    </div>
-                    <p className="font-bold text-xs">{isDarkMode ? 'Dark Mode' : 'Light Mode'}</p>
-                </div>
-                <div className={`w-8 h-5 rounded-full relative ${isDarkMode ? 'bg-primary' : 'bg-muted'}`}>
-                    <div className={`absolute ${isDarkMode ? 'right-0.5' : 'left-0.5'} top-0.5 bg-primary-foreground w-4 h-4 rounded-full`}></div>
-                </div>
             </div>
 
             {/* Support Network */}

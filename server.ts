@@ -9,6 +9,7 @@ import { performSearch } from "./src/services/searchService";
 import admin from 'firebase-admin';
 import { getFirestore } from 'firebase-admin/firestore';
 import firebaseConfig from './firebase-applet-config.json' assert { type: 'json' };
+import * as cheerio from 'cheerio';
 
 // Initialize Firebase Admin
 admin.initializeApp({
@@ -47,13 +48,68 @@ async function startServer() {
     }
     try {
             const completion = await ai.models.generateContent({
-                model: "gemini-3.5-flash",
+                model: "gemini-1.5-flash",
                 contents: prompt
             });
             res.json({ text: completion.text });
     } catch (error) {
-        console.error("Ask API Error:", error);
-        res.status(500).json({ error: "Failed to get AI response" });
+        console.error("Ask API Error:", error, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        res.status(500).json({ error: "Failed to get AI response", details: error instanceof Error ? error.message : String(error) });
+    }
+  });
+
+  app.get("/api/neet-notices", async (req, res) => {
+    try {
+        const response = await fetch("https://neet.nta.nic.in/");
+        const html = await response.text();
+        const $ = cheerio.load(html);
+        
+        const publicNotices: string[] = [];
+        const candidateActivity: string[] = [];
+        
+        // Find the sections based on visual headings
+        const sections = {
+            'Public Notices': [] as {text: string, url: string}[],
+            'Candidate Activity': [] as {text: string, url: string}[]
+        };
+
+        // Try to find elements that look like headings
+        $('h1, h2, h3, h4, .heading').each((i, el) => {
+            const headingText = $(el).text().trim();
+            if (headingText.includes('Public Notices')) {
+                // Assuming the list follows the heading
+                const list = $(el).nextAll('ul').first().find('li');
+                list.each((j, li) => {
+                    const link = $(li).find('a');
+                    const text = link.text().trim() || $(li).text().trim();
+                    let url = link.attr('href');
+                    if (url && !url.startsWith('http')) {
+                        url = 'https://neet.nta.nic.in' + url;
+                    }
+                    if (text) sections['Public Notices'].push({ text, url: url || '#' });
+                });
+            }
+            if (headingText.includes('Candidate Activity')) {
+                const list = $(el).nextAll('ul').first().find('li');
+                list.each((j, li) => {
+                    const link = $(li).find('a');
+                    const text = link.text().trim() || $(li).text().trim();
+                    let url = link.attr('href');
+                    if (url && !url.startsWith('http')) {
+                        url = 'https://neet.nta.nic.in' + url;
+                    }
+                    if (text) sections['Candidate Activity'].push({ text, url: url || '#' });
+                });
+            }
+        });
+        
+        res.json({ 
+            publicNotices: sections['Public Notices'].slice(0, 5), 
+            candidateActivity: sections['Candidate Activity'].slice(0, 5) 
+        });
+    } catch (error) {
+        console.error("NEET Notices Error:", error);
+        res.status(500).json({ error: "Failed to fetch notices" });
     }
   });
 
@@ -76,7 +132,7 @@ async function startServer() {
           parts.push({ text: prompt });
 
           const completion = await ai.models.generateContent({
-              model: "gemini-3.5-flash",
+              model: "gemini-1.5-flash",
               contents: { parts }
           });
           
@@ -112,7 +168,7 @@ async function startServer() {
         
         try {
             const completion = await ai.models.generateContent({
-              model: "gemini-3.5-flash",
+              model: "gemini-1.5-flash",
               contents: prompt
             });
             res.json({ analysis: completion.text });
@@ -133,7 +189,7 @@ async function startServer() {
         
         try {
             const completion = await ai.models.generateContent({
-              model: "gemini-3.5-flash",
+              model: "gemini-1.5-flash",
               contents: `You are a NEET tutor. Answer according to NCERT. Explain simply, be concise. ${lastMessage}`
             });
             res.json({ reply: completion.text });
@@ -155,7 +211,7 @@ async function startServer() {
     try {
         // 2. Answer based on the chapter
         const completion = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
+            model: "gemini-1.5-flash",
             contents: `You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`
         });
 
@@ -184,7 +240,7 @@ async function startServer() {
         if (base64Image && (!prompt || prompt.length < 5)) {
             try {
                 const completion = await ai.models.generateContent({
-                    model: "gemini-3.5-flash",
+                    model: "gemini-1.5-flash",
                     contents: {
                         parts: [
                             { text: "What is in the image? Give a 5 word search query." },
@@ -240,7 +296,7 @@ async function startServer() {
             }
 
             const stream = await ai.models.generateContentStream({
-                model: "gemini-3.5-flash",
+                model: "gemini-1.5-flash",
                 contents: contents
             });
 

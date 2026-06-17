@@ -10,6 +10,7 @@ import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import AiSearch from './components/AiSearch';
+
 import AnalysisHistory from './components/AnalysisHistory';
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
@@ -30,7 +31,6 @@ import NCERT11thHub from './components/NCERT11thHub';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NotificationPage from './components/NotificationPage';
-import { ThemeProvider } from './lib/theme';
 
 import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
@@ -680,12 +680,12 @@ export default function App() {
                 console.log("No stats document found for today");
                 setStats(prev => ({...prev, date: today, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
             }
-        } catch (e) {
+        } catch (e: any) {
             console.error("Error fetching stats:", e);
-            if (retries > 0) {
-                console.log(`Retrying fetchStats, retries left: ${retries}`);
-                setTimeout(() => fetchStats(retries - 1), 5000);
-                return; // Do not call setStatsLoaded(true) yet
+            if (e.message?.includes('offline') && retries > 0) {
+                 console.log(`Retrying fetchStats after offline error, retries left: ${retries}`);
+                 setTimeout(() => fetchStats(retries - 1), 5000);
+                 return;
             }
         }
         setStatsLoaded(true);
@@ -1100,7 +1100,8 @@ export default function App() {
       )}
 
     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-background text-foreground p-2 sm:p-4 font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}>
-      <div className="max-w-full mx-auto w-full px-1 sm:px-2">
+      
+      <div className="relative z-10 max-w-full mx-auto w-full px-1 sm:px-2">
       
       {showExitToast && (
           <div className="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-xs font-semibold z-[1000] shadow-2xl animate-bounce">
@@ -1270,17 +1271,17 @@ export default function App() {
             </div>
         </div>
       )}
-      <div className="space-y-4 mb-20 scroll-mt-20">
+      <div className="space-y-3 mb-5 scroll-mt-20">
         {subjects.map((sub, idx) => (
-            <div key={idx} className={`bg-card border-l-4 ${sub.color} rounded-xl p-2.5 sm:p-4 flex justify-between items-center group shadow-md`}>
+            <div key={idx} className={`bg-card/80 backdrop-blur-sm border-l-4 ${sub.color} rounded-xl p-4 sm:p-6 flex justify-between items-center group shadow-md`}>
                 <div className="flex-1 min-w-0 mr-3">
-                  <p className="text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-wider truncate mb-0.5">{sub.name}</p>
-                  <p className="font-bold text-xs sm:text-base truncate">{sub.topic}</p>
+                  <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-wider truncate mb-1">{sub.name}</p>
+                  <p className="font-bold text-sm sm:text-lg truncate">{sub.topic}</p>
                 </div>
-                <div className="flex gap-2 flex-shrink-0">
-                    <button className="bg-white/10 p-1.5 rounded-full sm:hidden" onClick={() => setActiveVideo(sub.topic)}><Play className="h-4 w-4 text-white" /></button>
-                    <button className="bg-white text-[#0a0f24] font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm hidden sm:block" onClick={() => setActiveVideo(sub.topic)}>START</button>
-                    <button className="bg-white text-[#0a0f24] font-bold px-3 py-1.5 rounded-lg text-xs sm:hidden" onClick={() => setActiveVideo(sub.topic)}>START</button>
+                <div className="flex gap-3 flex-shrink-0">
+                    <button className="bg-white/10 p-2 rounded-full sm:hidden" onClick={() => setActiveVideo(sub.topic)}><Play className="h-5 w-5 text-white" /></button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm hidden sm:block hover:bg-gray-200 transition" onClick={() => setActiveVideo(sub.topic)}>START</button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs sm:hidden hover:bg-gray-200 transition" onClick={() => setActiveVideo(sub.topic)}>START</button>
                 </div>
             </div>
         ))}
