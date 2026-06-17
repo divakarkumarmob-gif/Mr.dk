@@ -434,6 +434,7 @@ export default function App() {
   const [displayedText, setDisplayedText] = useState("");
   const [backPressCount, setBackPressCount] = useState(0);
   const [showExitToast, setShowExitToast] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   
   useEffect(() => {
     // Initial mount logic
@@ -1288,12 +1289,12 @@ export default function App() {
       </div>
 
       <div className="mb-4">
-        <AiSearch />
+        <AiSearch onFocus={() => setIsTyping(true)} />
       </div>
 
       <BottomNav currentView={currentView as any} onNavigate={setCurrentView} />
       
-      <FloatingAIAgent onNavigate={setCurrentView} />
+      <FloatingAIAgent onNavigate={setCurrentView} isTyping={isTyping} />
       
       <SupportModal 
         isOpen={showSupportModal} 

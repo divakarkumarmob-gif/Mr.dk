@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate } from 'motion/react';
 import { Mic, Square } from 'lucide-react';
 
-const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void}> = ({ onNavigate }) => {
+const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping: boolean}> = ({ onNavigate, isTyping }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState(false);
@@ -17,6 +17,13 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void}> = ({ onN
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const scale = useMotionValue(1);
+
+    useEffect(() => {
+        if (isTyping) {
+            animate(x, 0, { type: "spring", stiffness: 300, damping: 30 });
+            animate(y, -550, { type: "spring", stiffness: 300, damping: 30 });
+        }
+    }, [isTyping, x, y]);
 
     const addLog = (msg: string) => {
         console.log(msg);

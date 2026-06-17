@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Search, Loader2, History, Camera } from 'lucide-react';
 import { motion } from 'motion/react';
 
-export default function AiSearch() {
+export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
   const [prompt, setPrompt] = useState('');
   const [result, setResult] = useState('');
   const [sources, setSources] = useState<any[]>([]);
@@ -144,6 +144,7 @@ export default function AiSearch() {
             <input 
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
+                onFocus={onFocus}
                 placeholder="Ask NEET concepts, questions..."
                 className="flex-1 p-2 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-400"
             />
