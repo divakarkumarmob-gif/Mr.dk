@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from './firebase';
 
 const googleProvider = new GoogleAuthProvider();
@@ -17,6 +17,24 @@ export const signInWithEmail = async (email: string, password: string) => {
         return await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
         console.error('Email Sign-In error:', error);
+        throw error;
+    }
+};
+
+export const signUpWithEmail = async (email: string, password: string) => {
+    try {
+        return await createUserWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+        console.error('Email Sign-Up error:', error);
+        throw error;
+    }
+};
+
+export const resetPassword = async (email: string) => {
+    try {
+        return await sendPasswordResetEmail(auth, email);
+    } catch (error) {
+        console.error('Reset Password error:', error);
         throw error;
     }
 };

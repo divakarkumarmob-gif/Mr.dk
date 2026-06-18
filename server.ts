@@ -4,16 +4,27 @@ import * as path from "path";
 import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
-import { ai } from "./src/lib/gemini";
 import { performSearch } from "./src/services/searchService";
 import admin from 'firebase-admin';
 import { getFirestore } from 'firebase-admin/firestore';
 import firebaseConfig from './firebase-applet-config.json' assert { type: 'json' };
 import * as cheerio from 'cheerio';
+import { OpenRouter } from "@openrouter/sdk";
+import nodemailer from 'nodemailer';
 
 // Initialize Firebase Admin
-admin.initializeApp({
+const app = admin.initializeApp({
     projectId: firebaseConfig.projectId,
+});
+
+const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || '587'),
+    secure: false, // true for 465, false for other ports
+    auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+    },
 });
 
 const limiter = rateLimit({
@@ -28,6 +39,50 @@ const logs: string[] = [];
 
 dotenv.config();
 
+const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
+
+function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
+        if (typeof prompt === 'string') return prompt;
+        if (prompt && (prompt as any).parts) {
+            const parts = (prompt as any).parts.map((p: any) => {
+                if (p.text) return { type: "text", text: p.text };
+                if (p.inlineData) return { type: "image_url", image_url: { url: `data:${p.inlineData.mimeType};base64,${p.inlineData.data}` } };
+                return { type: "text", text: typeof p === 'string' ? p : JSON.stringify(p) };
+            });
+            // If only one text part, return it as string
+            if (parts.length === 1 && parts[0].type === "text") return parts[0].text;
+            return parts;
+        }
+        return typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
+}
+
+async function callAI(prompt: string | any[]): Promise<string> {
+        if (!openrouter) throw new Error("OpenRouter API key not configured");
+        
+        const content = formatOpenRouterPrompt(prompt);
+        console.log("DEBUG: Calling OpenRouter with content type:", typeof content, "content:", JSON.stringify(content));
+        const completion = await openrouter.chat.send({
+            model: "openai/gpt-4o",
+            messages: [{ role: "user", content: content as any }]
+        });
+        return completion.choices[0]?.message.content || "";
+}
+
+async function callAIStream(prompt: string | any[], res: express.Response): Promise<void> {
+        if (!openrouter) throw new Error("OpenRouter API key not configured");
+        
+        const content = formatOpenRouterPrompt(prompt);
+        console.log("DEBUG: Streaming OpenRouter with content type:", typeof content, "content:", JSON.stringify(content));
+        const stream = await openrouter.chat.send({
+            model: "openai/gpt-4o",
+            messages: [{ role: "user", content: content as any }],
+            stream: true
+        });
+        for await (const chunk of stream) {
+            res.write(chunk.choices[0]?.delta?.content || "");
+        }
+}
+
 async function startServer() {
   const app = express();
   app.set("trust proxy", 1);
@@ -41,20 +96,70 @@ async function startServer() {
       res.json({ logs });
   });
   
-  app.post("/api/ask", async (req, res) => {
-    const { prompt } = req.body;
-    if (!prompt) {
-      return res.status(400).json({ error: "Missing prompt" });
+  app.post("/api/send-otp", async (req, res) => {
+    const { identifier } = req.body;
+    if (!identifier) {
+        return res.status(400).json({ error: "Missing identifier" });
     }
+    
+    // Generate 4-digit OTP
+    const otp = Math.floor(1000 + Math.random() * 9000).toString();
+    
+    // Store in Firestore
     try {
-            const completion = await ai.models.generateContent({
-                model: "gemini-1.5-flash",
-                contents: prompt
-            });
-            res.json({ text: completion.text });
+        const db = getFirestore();
+        await db.collection('otps').doc(identifier).set({
+            otp,
+            createdAt: admin.firestore.FieldValue.serverTimestamp()
+        });
+        
+        // Send actual email
+        await transporter.sendMail({
+            from: process.env.SMTP_USER,
+            to: identifier,
+            subject: "Your OTP for NeetMaster",
+            text: `Your OTP is ${otp}. It expires in 5 minutes.`,
+        });
+        
+        console.log(`[REAL] Sending OTP ${otp} to ${identifier}`);
+        
+        res.json({ success: true });
     } catch (error) {
-        console.error("Ask API Error:", error, JSON.stringify(error, Object.getOwnPropertyNames(error)));
-        res.status(500).json({ error: "Failed to get AI response", details: error instanceof Error ? error.message : String(error) });
+        console.error("OTP generation error:", error);
+        res.status(500).json({ error: "Failed to generate OTP" });
+    }
+  });
+
+  app.post("/api/verify-otp", async (req, res) => {
+    const { identifier, otp } = req.body;
+    if (!identifier || !otp) {
+        return res.status(400).json({ error: "Missing identifier or OTP" });
+    }
+    
+    try {
+        const db = getFirestore();
+        const doc = await db.collection('otps').doc(identifier).get();
+        if (!doc.exists) {
+            return res.status(400).json({ error: "OTP not found or expired" });
+        }
+        
+        const data = doc.data();
+        if (data?.otp !== otp) {
+            return res.status(400).json({ error: "Invalid OTP" });
+        }
+        
+        // Check expiration (e.g., 5 mins)
+        if (Date.now() - data.createdAt.toMillis() > 5 * 60 * 1000) {
+            return res.status(400).json({ error: "OTP expired" });
+        }
+        
+        // Clean up
+        await db.collection('otps').doc(identifier).delete();
+        
+        res.json({ success: true });
+    } catch (error) {
+        console.error("OTP verification error:", error);
+        res.status(500).json({ error: "Failed to verify OTP" });
     }
   });
 
@@ -131,12 +236,9 @@ async function startServer() {
           }
           parts.push({ text: prompt });
 
-          const completion = await ai.models.generateContent({
-              model: "gemini-1.5-flash",
-              contents: { parts }
-          });
+          const text = await callAI({ parts });
           
-          res.json({ text: completion.text });
+          res.json({ text });
       } catch (error) {
           console.error("Gemini API Error:", error);
           res.status(500).json({ error: "Failed to get AI response" });
@@ -167,11 +269,8 @@ async function startServer() {
         `;
         
         try {
-            const completion = await ai.models.generateContent({
-              model: "gemini-1.5-flash",
-              contents: prompt
-            });
-            res.json({ analysis: completion.text });
+            const analysis = await callAI(prompt);
+            res.json({ analysis });
         } catch (error) {
             console.error("Analysis API Error:", error);
             res.status(500).json({ error: "Failed to get analysis" });
@@ -188,11 +287,8 @@ async function startServer() {
         const lastMessage = messages[messages.length - 1].content;
         
         try {
-            const completion = await ai.models.generateContent({
-              model: "gemini-1.5-flash",
-              contents: `You are a NEET tutor. Answer according to NCERT. Explain simply, be concise. ${lastMessage}`
-            });
-            res.json({ reply: completion.text });
+            const reply = await callAI(`You are a NEET tutor. Answer according to NCERT. Explain simply, be concise. ${lastMessage}`);
+            res.json({ reply });
         } catch (error) {
             console.error("Tutor API Error:", error);
             res.status(500).json({ error: "Failed to get AI response" });
@@ -210,12 +306,9 @@ async function startServer() {
     
     try {
         // 2. Answer based on the chapter
-        const completion = await ai.models.generateContent({
-            model: "gemini-1.5-flash",
-            contents: `You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`
-        });
+        const reply = await callAI(`You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`);
 
-      res.json({ reply: completion.text });
+      res.json({ reply });
     } catch (error) {
       console.error("OpenAI API Error:", error);
       res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
@@ -239,16 +332,13 @@ async function startServer() {
         let finalPrompt = prompt;
         if (base64Image && (!prompt || prompt.length < 5)) {
             try {
-                const completion = await ai.models.generateContent({
-                    model: "gemini-1.5-flash",
-                    contents: {
-                        parts: [
-                            { text: "What is in the image? Give a 5 word search query." },
-                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                        ]
-                    }
+                // Use callAI for consistency to have fallback
+                finalPrompt = await callAI({
+                    parts: [
+                        { text: "What is in the image? Give a 5 word search query." },
+                        { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                    ]
                 });
-                finalPrompt = completion.text || "Search for this image";
             } catch (imgErr) {
                 console.error("Image analysis failed:", imgErr);
                 finalPrompt = "Search for this image";
@@ -285,7 +375,7 @@ async function startServer() {
                 .replace(/[\{\}]/g, '');
         };
 
-        // Return result using Gemini
+        // Return result using AI with fallback
         if (isDirectImageQuestion || searchResults.length > 0) {
             let contents: any;
             if (isDirectImageQuestion) {
@@ -295,16 +385,31 @@ async function startServer() {
                  contents = `Summarize the following search results to answer the query: "${finalPrompt}" concisely and clearly in plain text. Do not use LaTeX. Only provide the summary.\n\nContext:\n${context}`;
             }
 
-            const stream = await ai.models.generateContentStream({
-                model: "gemini-1.5-flash",
-                contents: contents
-            });
-
-            for await (const chunk of stream) {
-                const text = chunk.text || "";
-                if (text) {
-                    res.write(`data: ${JSON.stringify({ content: sanitizeText(text) })}\n\n`);
+            let streamed = false;
+            if (openrouter) {
+                try {
+                    const content = formatOpenRouterPrompt(contents);
+                    console.log("Sending to OpenRouter:", JSON.stringify(content, null, 2));
+                    if (!content) throw new Error("Content is empty");
+                    const stream = await openrouter.chat.send({
+                        model: "openai/gpt-4o",
+                        messages: [{ role: "user", content: content as any }],
+                        stream: true
+                    });
+                    for await (const chunk of stream) {
+                       const text = chunk.choices[0]?.delta?.content || "";
+                        if (text) {
+                            res.write(`data: ${JSON.stringify({ content: sanitizeText(text) })}\n\n`);
+                            streamed = true;
+                        }
+                    }
+                } catch (e) {
+                     console.error("OpenRouter stream failed, falling back to Gemini", e);
                 }
+            } 
+            
+            if (!streamed) {
+                 throw new Error("No AI response available");
             }
         } else {
             res.write(`data: ${JSON.stringify({ content: "No results found." })}\n\n`);

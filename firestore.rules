@@ -30,6 +30,11 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // Temporary fix
+    match /otps/{otpId} {
+        allow read, write: if true;
+    }
+    
     // Public or shared data
     match /questions/{questionId} {
       allow read: if isSignedIn();

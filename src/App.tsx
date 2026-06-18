@@ -1041,18 +1041,10 @@ export default function App() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <><div className="min-h-screen bg-background text-foreground">
+         <div className="min-h-screen bg-background text-foreground">
              <button className="absolute top-4 left-4 z-10 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
              <UserChat fullScreen={true} />
          </div>
-         <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>
        );
    }
 
