@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import {signInWithGoogle, signInWithEmail, signUpWithEmail, resetPassword} from '@/lib/auth';
 import {Mail, Lock, Eye, EyeOff, HelpCircle} from 'lucide-react';
 import EarthGraphics from './EarthGraphics';
+import Pressable from './Pressable';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -142,14 +143,14 @@ export default function Login() {
                 <div className="relative">
                     <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
                     <input className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type={showPassword ? "text" : "password"} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <button className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
+                    <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
                         {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
-                    </button>
+                    </Pressable>
                 </div>
                 <div className="text-right">
-                    <button onClick={handleForgotPassword} className="text-sm text-purple-700 font-semibold">Forgot Password?</button>
+                    <Pressable onClick={handleForgotPassword} className="text-sm text-purple-700 font-semibold">Forgot Password?</Pressable>
                 </div>
-                <button className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleEmailAction}>Login</button>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleEmailAction}>Login</Pressable>
                 </>
             )}
 
@@ -159,7 +160,7 @@ export default function Login() {
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
                     <input className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type="text" placeholder="Email or Phone Number" value={identifier} onChange={(e) => setIdentifier(e.target.value)} />
                 </div>
-                <button className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleNext}>Next</button>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleNext}>Next</Pressable>
                 </>
             )}
 
@@ -168,7 +169,7 @@ export default function Login() {
                 <div className="relative">
                     <input className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type="text" placeholder="Enter 4-digit OTP" value={otp} onChange={(e) => setOtp(e.target.value)} />
                 </div>
-                <button className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleVerifyOtp}>Verify</button>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleVerifyOtp}>Verify</Pressable>
                 </>
             )}
 
@@ -177,11 +178,11 @@ export default function Login() {
                 <div className="relative">
                     <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
                     <input className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type={showPassword ? "text" : "password"} placeholder="Create Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <button className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
+                    <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
                         {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
-                    </button>
+                    </Pressable>
                 </div>
-                <button className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleCreatePassword}>Create</button>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleCreatePassword}>Create</Pressable>
                 </>
             )}
             
@@ -191,10 +192,10 @@ export default function Login() {
                 <hr className="flex-1 border-gray-300" />
             </div>
 
-            <button className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900" onClick={handleGoogleLogin}>Continue with Google</button>
+            <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900" onClick={handleGoogleLogin}>Continue with Google</Pressable>
             
             <div className="text-center text-gray-700">
-                {isSignUp ? 'Already have an account?' : 'Don\'t have an account?'} <button onClick={() => { setIsSignUp(!isSignUp); setSignUpStep('INPUT'); }} className="text-purple-700 font-semibold">{isSignUp ? 'Login' : 'Sign Up'}</button>
+                {isSignUp ? 'Already have an account?' : 'Don\'t have an account?'} <Pressable onClick={() => { setIsSignUp(!isSignUp); setSignUpStep('INPUT'); }} className="text-purple-700 font-semibold">{isSignUp ? 'Login' : 'Sign Up'}</Pressable>
             </div>
           </div>
         </div>

@@ -7,6 +7,8 @@ import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
 import BattleRoom from './BattleRoom';
 import TestResultDetail from './TestResultDetail';
+import Flashcards from './Flashcards';
+import StudyDashboard from './StudyDashboard';
 
 const CHAPTER_DATA: any = {
     Physics: { 
@@ -72,8 +74,10 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         return () => unsubscribe();
     }, []);                
 
-    const accordionItems = ["LECTURE LIBRARY", "CUSTOM PRACTICE", "BATTLE & PRACTICE", "MEMORY VAULT"];
+    const accordionItems = ["LECTURE LIBRARY", "CUSTOM PRACTICE", "BATTLE & PRACTICE", "MEMORY VAULT", "FLASHCARDS", "STUDY PROGRESS"];
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
+    const [showFlashcards, setShowFlashcards] = useState(false);
+    const [showStudyDashboard, setShowStudyDashboard] = useState(false);
     const [activeSubject, setActiveSubject] = useState<string>('Physics');
     const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
     const [activeBattleChapter, setActiveBattleChapter] = useState<string | null>(null);
@@ -85,6 +89,8 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
             animate={{ opacity: 1 }}
             className="min-h-screen bg-[#0a0f24] text-white p-3 sm:p-4 font-sans flex flex-col"
         >
+          {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
+          {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
             <div className="flex justify-between items-center mb-2">
                 <HubSwitcher active="study" onNavigate={onNavigate} />
@@ -217,6 +223,10 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                         onClick={() => {
                             if (item === "CUSTOM PRACTICE") {
                                 onNavigate('customPractice');
+                            } else if (item === 'FLASHCARDS') {
+                                setShowFlashcards(true);
+                            } else if (item === 'STUDY PROGRESS') {
+                                setShowStudyDashboard(true);
                             } else {
                                 setExpandedItem(expandedItem === item ? null : item);
                             }

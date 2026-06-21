@@ -3,9 +3,16 @@ import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { globalLogger } from './lib/globalLogger';
+import { Capacitor } from '@capacitor/core';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 // Ensure globalLogger is initialized
 console.log("Logger initialized", globalLogger);
+
+// Initialize Status Bar
+if (Capacitor.isNativePlatform()) {
+  StatusBar.setStyle({ style: Style.Dark });
+}
 
 document.documentElement.classList.add('dark');
 

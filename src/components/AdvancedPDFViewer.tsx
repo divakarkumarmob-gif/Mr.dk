@@ -11,9 +11,16 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [scale, setScale] = useState(0.73);
+    const [error, setError] = useState<string | null>(null);
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
+        setError(null);
+    }
+    
+    function onDocumentLoadError(error: Error) {
+        console.error("PDF load error:", error);
+        setError("Failed to load PDF. Please try again later.");
     }
     
     return (
@@ -31,17 +38,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose }: { pdfUrl: 
                 <div
                     className="flex justify-center min-w-max"
                 >
-                    <Document
-                        file={pdfUrl}
-                        onLoadSuccess={onDocumentLoadSuccess}
-                    >
-                        <Page 
-                            pageNumber={currentPage} 
-                            scale={scale}
-                            renderTextLayer={false}
-                            renderAnnotationLayer={false}
-                        />
-                    </Document>
+                    {error ? (
+                        <div className="p-10 text-white font-bold">{error}</div>
+                    ) : (
+                        <Document
+                            file={pdfUrl}
+                            onLoadSuccess={onDocumentLoadSuccess}
+                            onLoadError={onDocumentLoadError}
+                        >
+                            <Page 
+                                pageNumber={currentPage} 
+                                scale={scale}
+                                renderTextLayer={false}
+                                renderAnnotationLayer={false}
+                            />
+                        </Document>
+                    )}
                 </div>
             </div>
 

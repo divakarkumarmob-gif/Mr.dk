@@ -12,6 +12,20 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
     const [adminNotifications, setAdminNotifications] = useState<any[]>([]);
     const [neetNotices, setNeetNotices] = useState<{publicNotices: {text: string, url: string}[], candidateActivity: {text: string, url: string}[]}>({ publicNotices: [], candidateActivity: [] });
     const [loading, setLoading] = useState(false);
+    const longPressTimer = React.useRef<NodeJS.Timeout | null>(null);
+
+    const handleNtaPressStart = () => {
+        longPressTimer.current = setTimeout(() => {
+            window.open('https://neet.nta.nic.in/', '_blank');
+        }, 2000);
+    };
+
+    const handleNtaPressEnd = () => {
+        if (longPressTimer.current) {
+            clearTimeout(longPressTimer.current);
+            longPressTimer.current = null;
+        }
+    };
 
     useEffect(() => {
         // Fetch Admin Notifications (limit 5)
@@ -66,6 +80,11 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                 <button 
                     className={`flex-1 py-2 text-sm font-semibold rounded-md ${activeTab === 'NTA' ? 'bg-blue-600' : 'text-gray-400'}`}
                     onClick={() => setActiveTab('NTA')}
+                    onMouseDown={handleNtaPressStart}
+                    onMouseUp={handleNtaPressEnd}
+                    onMouseLeave={handleNtaPressEnd}
+                    onTouchStart={handleNtaPressStart}
+                    onTouchEnd={handleNtaPressEnd}
                 >
                     NTA
                 </button>
@@ -95,6 +114,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                                         {neetNotices.candidateActivity.map((activity, i) => <li key={i}><a href={activity.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{activity.text}</a></li>)}
                                     </ul>
                                 </div>
+                                <p className="text-center text-xs text-gray-500 mt-4">long press on nta to visit website</p>
                             </>
                         )}
                     </div>

@@ -70,6 +70,18 @@ service cloud.firestore {
       match /analytics_v2/{docId} {
         allow read, write: if isOwner(userId);
       }
+      
+      match /flashcards/{chapterId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // Simplified rules
+      
+    }
+
+    match /ai-study-plan-chats/{chatId} {
+        allow read, write: if isSignedIn() && resource.data.userId == request.auth.uid;
+        allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
     }
 
     // Chat data

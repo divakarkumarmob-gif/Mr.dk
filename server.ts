@@ -5,16 +5,28 @@ import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { performSearch } from "./src/services/searchService";
+import { GoogleGenAI } from "@google/genai";
 import admin from 'firebase-admin';
 import { getFirestore } from 'firebase-admin/firestore';
 import firebaseConfig from './firebase-applet-config.json' assert { type: 'json' };
 import * as cheerio from 'cheerio';
 import { OpenRouter } from "@openrouter/sdk";
 import nodemailer from 'nodemailer';
+import Razorpay from 'razorpay';
+import crypto from 'crypto';
 
 // Initialize Firebase Admin
 const app = admin.initializeApp({
     projectId: firebaseConfig.projectId,
+});
+
+const ai = new GoogleGenAI({
+    apiKey: process.env.GEMINI_API_KEY,
+    httpOptions: {
+        headers: {
+            'User-Agent': 'aistudio-build',
+        }
+    }
 });
 
 const transporter = nodemailer.createTransport({
@@ -40,13 +52,24 @@ const logs: string[] = [];
 dotenv.config();
 
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
+const razorpay = new Razorpay({
+        key_id: 'rzp_test_T3UJc0yCensXWD',
+        key_secret: 'W5a7EKvfdCGGV9tsIvC5Iqzp',
+    });
 
 function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
         if (typeof prompt === 'string') return prompt;
         if (prompt && (prompt as any).parts) {
             const parts = (prompt as any).parts.map((p: any) => {
                 if (p.text) return { type: "text", text: p.text };
-                if (p.inlineData) return { type: "image_url", image_url: { url: `data:${p.inlineData.mimeType};base64,${p.inlineData.data}` } };
+                if (p.inlineData) {
+                    if (p.inlineData.mimeType.startsWith('image/')) {
+                        return { type: "image_url", image_url: { url: `data:${p.inlineData.mimeType};base64,${p.inlineData.data}` } };
+                    }
+                    if (p.inlineData.mimeType.startsWith('audio/')) {
+                        return { type: "text", text: `[Audio attached, mimeType: ${p.inlineData.mimeType}]` };
+                    }
+                }
                 return { type: "text", text: typeof p === 'string' ? p : JSON.stringify(p) };
             });
             // If only one text part, return it as string
@@ -165,12 +188,20 @@ async function startServer() {
 
   app.get("/api/neet-notices", async (req, res) => {
     try {
-        const response = await fetch("https://neet.nta.nic.in/");
+        const response = await fetch("https://neet.nta.nic.in/", {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
+        });
+        if (!response.ok) {
+            console.error(`NEET Notices Fetch Failed: ${response.status} ${response.statusText}`);
+            throw new Error(`Failed to fetch: ${response.status}`);
+        }
         const html = await response.text();
         const $ = cheerio.load(html);
         
-        const publicNotices: string[] = [];
-        const candidateActivity: string[] = [];
+        const publicNotices: {text: string, url: string}[] = [];
+        const candidateActivity: {text: string, url: string}[] = [];
         
         // Find the sections based on visual headings
         const sections = {
@@ -179,11 +210,30 @@ async function startServer() {
         };
 
         // Try to find elements that look like headings
-        $('h1, h2, h3, h4, .heading').each((i, el) => {
+        const heading = $('h2, h3, .heading, strong').filter((_, el) => {
+            const text = $(el).text().trim();
+            return text.includes('Public Notices') || text.includes('Candidate Activity');
+        });
+
+        // Debugging logs to help identify structure issues
+        console.log(`Found ${heading.length} potential headings`);
+
+        heading.each((i, el) => {
             const headingText = $(el).text().trim();
+            
+            // Find the list container associated with this heading
+            // Often it's a sibling, or a following element
+            let container = $(el).parent().find('ul');
+            if (container.length === 0) {
+                container = $(el).nextAll('ul');
+            }
+            if (container.length === 0) {
+                container = $(el).nextAll().find('ul');
+            }
+
+            const list = container.first().find('li');
+            
             if (headingText.includes('Public Notices')) {
-                // Assuming the list follows the heading
-                const list = $(el).nextAll('ul').first().find('li');
                 list.each((j, li) => {
                     const link = $(li).find('a');
                     const text = link.text().trim() || $(li).text().trim();
@@ -195,7 +245,6 @@ async function startServer() {
                 });
             }
             if (headingText.includes('Candidate Activity')) {
-                const list = $(el).nextAll('ul').first().find('li');
                 list.each((j, li) => {
                     const link = $(li).find('a');
                     const text = link.text().trim() || $(li).text().trim();
@@ -208,6 +257,8 @@ async function startServer() {
             }
         });
         
+        console.log(`Extracted: ${sections['Public Notices'].length} Public Notices, ${sections['Candidate Activity'].length} Candidate Activity`);
+        
         res.json({ 
             publicNotices: sections['Public Notices'].slice(0, 5), 
             candidateActivity: sections['Candidate Activity'].slice(0, 5) 
@@ -218,32 +269,97 @@ async function startServer() {
     }
   });
 
-  // API route for gemini
-  app.post("/api/gemini", async (req, res) => {
-      const { base64Audio, base64Image, prompt } = req.body;                
-      if (!prompt) {
-          return res.status(400).json({ error: "Missing prompt" });
+  // API route for note analysis
+  app.post("/api/ask-note", async (req, res) => {
+      const { noteContent, question } = req.body;
+      if (!noteContent || !question) {
+          return res.status(400).json({ error: "Missing data" });
       }
 
       try {
-          const parts: any[] = [];
-          if (base64Audio) {
-              parts.push({ inlineData: { data: base64Audio, mimeType: "audio/webm" } });
-          }
-          if (base64Image) {
-              const base64Data = base64Image.includes(',') ? base64Image.split(',')[1] : base64Image;
-              parts.push({ inlineData: { data: base64Data, mimeType: "image/jpeg" } });
-          }
-          parts.push({ text: prompt });
+          const prompt = `Use the following note content to answer the question. Be concise.\n\nNote:\n${noteContent}\n\nQuestion: ${question}`;
+          const reply = await callAI(prompt);
+          res.json({ reply });
+      } catch (error) {
+          console.error("Note AI Error:", error);
+          res.status(500).json({ error: "Failed to get AI response" });
+      }
+  });
 
-          const text = await callAI({ parts });
+  app.post("/api/create-order", async (req, res) => {
+    if (!razorpay) return res.status(500).json({ error: "Razorpay not configured" });
+    const { amount } = req.body;
+    try {
+        const order = await razorpay.orders.create({
+            amount: amount * 100, // amount in paise
+            currency: "INR",
+            receipt: "receipt_order_" + Date.now(),
+        });
+        res.json(order);
+    } catch (error) {
+        console.error("Razorpay Error:", error);
+        res.status(500).json({ error: "Failed to create order" });
+    }
+  });                
+
+  app.post("/api/verify-payment", async (req, res) => {
+    if (!razorpay) return res.status(500).json({ error: "Razorpay not configured" });
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+    
+    // Verify
+    const hmac = crypto.createHmac('sha256', process.env.RAZORPAY_KEY_SECRET!);
+    hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
+    const generated_signature = hmac.digest('hex');
+    
+    if (generated_signature === razorpay_signature) {
+        // Success - You could mark payment as successful in db here
+        res.json({ success: true });
+    } else {
+        res.status(400).json({ error: "Invalid signature" });
+    }
+  });                
+  
+  // API route for gemini
+  app.post("/api/gemini", async (req, res) => {
+      const { messages, base64Audio } = req.body;
+      
+      try {
+          const contents: any[] = [];
           
-          res.json({ text });
+          if (messages && Array.isArray(messages)) {
+              // Convert chat history to Gemini expected format
+              messages.forEach((m: any) => {
+                  contents.push({ text: `${m.role === 'user' ? 'User' : 'AI'}: ${m.content}` });
+              });
+          }
+          
+          if (base64Audio) {
+              contents.push({ inlineData: { data: base64Audio, mimeType: "audio/webm" } });
+          }
+
+          const response = await ai.models.generateContent({
+            model: "gemini-3.5-flash",
+            contents: { 
+                parts: [
+                    { text: `You are an expert NEET Study Planner. 
+Analyze the user's input.
+1. If the input is a casual greeting or off-topic, respond with a very brief, friendly sentence.
+2. If the input is about studies, act as a planner. Respond in strict Markdown.
+- Keep response extremely short.
+- Use bullet points.
+- NO fluff, NO pleasantries, NO conversational fillers.
+Direct, actionable, minimal.` },
+                    ...contents
+                ] 
+            },
+          });
+          
+          res.json({ text: response.text });
       } catch (error) {
           console.error("Gemini API Error:", error);
           res.status(500).json({ error: "Failed to get AI response" });
       }
-  });                
+  }); 
 
 
     // API route for analysis

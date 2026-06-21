@@ -28,6 +28,8 @@ import AdminChatPage from './components/AdminChatPage';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
 import NCERT11thHub from './components/NCERT11thHub';
+import MindHackPage from './components/MindHackPage';
+import AIStudyPlanPage from './components/AIStudyPlanPage';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NotificationPage from './components/NotificationPage';
@@ -140,7 +142,7 @@ const getRandomChapters = () => {
 export default function App() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'notesLibrary' | 'NCERT11thHub' |'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI'>('home');
+  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'notesLibrary' | 'NCERT11thHub' |'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI' | 'mindHack' | 'aiStudyPlan'>('home');
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
@@ -296,18 +298,22 @@ export default function App() {
 
   useEffect(() => {
       async function setupFaceLandmarker() {
-          const { FaceLandmarker, FilesetResolver } = await import('@mediapipe/tasks-vision');
-          const vision = await FilesetResolver.forVisionTasks(
-              "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/wasm"
-          );
-          faceLandmarkerRef.current = await FaceLandmarker.createFromOptions(vision, {
-              baseOptions: {
-                  modelAssetPath: `https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task`
-              },
-              runningMode: "VIDEO",
-              numFaces: 1,
-              outputFaceBlendshapes: true
-          });
+          try {
+              const { FaceLandmarker, FilesetResolver } = await import('@mediapipe/tasks-vision');
+              const vision = await FilesetResolver.forVisionTasks(
+                  "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/wasm"
+              );
+              faceLandmarkerRef.current = await FaceLandmarker.createFromOptions(vision, {
+                  baseOptions: {
+                      modelAssetPath: `https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task`
+                  },
+                  runningMode: "VIDEO",
+                  numFaces: 1,
+                  outputFaceBlendshapes: true
+              });
+          } catch (e) {
+              console.error("FaceLandmarker setup failed", e);
+          }
       }
       setupFaceLandmarker();
   }, []);
@@ -878,6 +884,14 @@ export default function App() {
       return <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />;
   }
 
+  if (currentView === 'mindHack') {
+      return <MindHackPage onBack={() => setCurrentView('profile')} />;
+  }
+
+  if (currentView === 'aiStudyPlan') {
+      return <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />;
+  }
+
   if (isNotificationView) {
       return <NotificationPage onBack={() => setIsNotificationView(false)} />;
   }
@@ -937,7 +951,8 @@ export default function App() {
       return <PracticeTest chapters={practiceChapters} onBack={() => setCurrentView('customPractice')} />;
   }
 
-   if (currentView === 'profile') {
+  
+  if (currentView === 'profile') {
       return (
         <div className="flex flex-col min-h-screen pb-20">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>

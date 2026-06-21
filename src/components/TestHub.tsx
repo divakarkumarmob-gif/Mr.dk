@@ -178,6 +178,18 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
             
 
+            {/* Weakness Highlights */}
+            {recentTests.filter(t => (t.score || 0) < 50).length > 0 && (
+                <div className="mb-4 bg-red-900/20 p-3 rounded-xl border border-red-500/30">
+                    <h2 className="font-bold text-xs mb-2 text-red-400 flex items-center gap-2"><AlertTriangle className="h-3 w-3" /> Focus on these:</h2>
+                    <div className="flex gap-2 flex-wrap">
+                        {Array.from(new Set(recentTests.filter(t => (t.score || 0) < 50).map(t => t.testName))).slice(0, 3).map(chapter => (
+                            <span key={chapter} className="bg-red-500/20 text-red-200 text-[10px] px-2 py-1 rounded-full font-bold">{chapter}</span>
+                        ))}
+                    </div>
+                </div>
+            )}
+            
             <div className="flex bg-card p-0.5 rounded-md mb-2">
                 {(['Upcoming', 'Current', 'Missed'] as const).map(tab => (
                     <button 

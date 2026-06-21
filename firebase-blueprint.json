@@ -111,6 +111,17 @@
         "userId": { "type": "string" }
       },
       "required": ["analysisContent", "timestamp", "userId"]
+    },
+    "FlashcardMastery": {
+      "title": "FlashcardMastery",
+      "description": "Tracks mastered flashcards for a user and chapter",
+      "type": "object",
+      "properties": {
+        "masteredQuestionIds": { "type": "array" },
+        "userId": { "type": "string" },
+        "chapterName": { "type": "string" }
+      },
+      "required": ["masteredQuestionIds", "userId", "chapterName"]
     }
   },
   "firestore": {
@@ -161,6 +172,10 @@
     "queues/{chapterId}/waitingUsers/{userId}": {
       "schema": "User",
       "description": "Users waiting for a battle"
+    },
+    "users/{userId}/flashcards/{chapterId}": {
+      "schema": "FlashcardMastery",
+      "description": "User mastered flashcards"
     }
   }
 }
