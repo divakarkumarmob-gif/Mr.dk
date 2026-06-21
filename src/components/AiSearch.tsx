@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Search, Loader2, History, Camera } from 'lucide-react';
+import { Search, Loader2, History, Camera, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
@@ -12,6 +12,7 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
   const [history, setHistory] = useState<{prompt: string, result: string, timestamp: number}[]>([]);
   const [showHistory, setShowHistory] = useState(false);
   const [base64Image, setBase64Image] = useState<string | null>(null);
+  const [viewingImage, setViewingImage] = useState<string | null>(null);
   const historyRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -134,20 +135,15 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
 
         {base64Image && (
             <div className="relative inline-block mt-2 mb-2">
-                <img src={base64Image} alt="Selected" className="h-16 w-16 object-cover rounded-md" />
+                <button onClick={() => setViewingImage(base64Image)} className="cursor-pointer">
+                    <img src={base64Image} alt="Selected" className="h-16 w-16 object-cover rounded-md" />
+                </button>
                 <button onClick={() => setBase64Image(null)} className="absolute -top-2 -right-2 bg-red-500 rounded-full p-0.5 text-white">
                     <span className="text-xs font-bold px-1">x</span>
                 </button>
             </div>
             )}
             <div className="flex gap-2">
-            <input 
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
-                onFocus={onFocus}
-                placeholder="Ask NEET concepts, questions..."
-                className="flex-1 p-2 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-400"
-            />
             <input type="file" ref={fileInputRef} accept="image/*" className="hidden" onChange={async (e) => {
                 if (e.target.files && e.target.files[0]) {
                    const reader = new FileReader();
@@ -155,13 +151,38 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
                    reader.readAsDataURL(e.target.files[0]);
                 }
             }} />
-            <button onClick={() => fileInputRef.current?.click()} className={`p-2 rounded-md ${base64Image ? 'text-blue-500' : 'text-gray-400'} hover:text-white`}>
-                <Camera className="h-5 w-5" />
-            </button>
-            <button onClick={handleSearch} disabled={loading} className="bg-blue-600 text-white p-2 rounded-md">
-                {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Search className="h-5 w-5" />}
-            </button>
+            <div className="flex gap-2">
+                <button onClick={() => fileInputRef.current?.click()} className={`p-2 rounded-md ${base64Image ? 'text-blue-500' : 'text-gray-400'} hover:text-white`}>
+                    <Camera className="h-5 w-5" />
+                </button>
+                <button onClick={handleSearch} disabled={loading} className="bg-blue-600 text-white p-2 rounded-md">
+                    {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Search className="h-5 w-5" />}
+                </button>
+            </div>
+            <input 
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        handleSearch();
+                    }
+                }}
+                onFocus={onFocus}
+                placeholder="Ask NEET concepts, questions..."
+                className="flex-1 p-2 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-400"
+            />
         </div>
+        {viewingImage && (
+            <div className="fixed inset-0 z-[1001] flex items-center justify-center bg-black/80 p-4" onClick={() => setViewingImage(null)}>
+                <div className="relative max-w-full max-h-full">
+                    <img src={viewingImage} alt="Preview" className="max-w-full max-h-[80vh] rounded-lg" />
+                    <button onClick={() => setViewingImage(null)} className="absolute -top-10 -right-2 text-white hover:text-gray-300">
+                        <X className="h-8 w-8" />
+                    </button>
+                </div>
+            </div>
+        )}
         {sources.length > 0 && (
           <div className="mt-4 text-xs text-blue-300">
             <button onClick={() => setShowSources(!showSources)} className="font-bold underline hover:text-blue-200">
