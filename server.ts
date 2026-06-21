@@ -421,12 +421,14 @@ Direct, actionable, minimal.` },
     const lastMessage = messages[messages.length - 1].content;
     
     try {
-        // 2. Answer based on the chapter
-        const reply = await callAI(`You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`);
+        const response = await ai.models.generateContent({
+            model: "gemini-3.5-flash",
+            contents: `You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`
+        });
 
-      res.json({ reply });
+        res.json({ reply: response.text });
     } catch (error) {
-      console.error("OpenAI API Error:", error);
+      console.error("Gemini API Error (Neural):", error);
       res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
     }
   });
@@ -448,13 +450,17 @@ Direct, actionable, minimal.` },
         let finalPrompt = prompt;
         if (base64Image && (!prompt || prompt.length < 5)) {
             try {
-                // Use callAI for consistency to have fallback
-                finalPrompt = await callAI({
-                    parts: [
-                        { text: "What is in the image? Give a 5 word search query." },
-                        { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                    ]
+                // Use Gemini for image analysis
+                const response = await ai.models.generateContent({
+                    model: "gemini-3.5-flash",
+                    contents: {
+                        parts: [
+                            { text: "What is in the image? Give a 5 word search query." },
+                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                        ]
+                    }
                 });
+                finalPrompt = response.text || "Search for this image";
             } catch (imgErr) {
                 console.error("Image analysis failed:", imgErr);
                 finalPrompt = "Search for this image";
@@ -491,7 +497,7 @@ Direct, actionable, minimal.` },
                 .replace(/[\{\}]/g, '');
         };
 
-        // Return result using AI with fallback
+        // Return result using AI
         if (isDirectImageQuestion || searchResults.length > 0) {
             let contents: any;
             if (isDirectImageQuestion) {
@@ -502,27 +508,22 @@ Direct, actionable, minimal.` },
             }
 
             let streamed = false;
-            if (openrouter) {
-                try {
-                    const content = formatOpenRouterPrompt(contents);
-                    console.log("Sending to OpenRouter:", JSON.stringify(content, null, 2));
-                    if (!content) throw new Error("Content is empty");
-                    const stream = await openrouter.chat.send({
-                        model: "openai/gpt-4o",
-                        messages: [{ role: "user", content: content as any }],
-                        stream: true
-                    });
-                    for await (const chunk of stream) {
-                       const text = chunk.choices[0]?.delta?.content || "";
-                        if (text) {
-                            res.write(`data: ${JSON.stringify({ content: sanitizeText(text) })}\n\n`);
-                            streamed = true;
-                        }
+            try {
+                // Stream with Gemini
+                const stream = await ai.models.generateContentStream({
+                    model: "gemini-3.5-flash",
+                    contents: contents
+                });
+                
+                for await (const chunk of stream) {
+                    if (chunk.text) {
+                        res.write(`data: ${JSON.stringify({ content: sanitizeText(chunk.text) })}\n\n`);
+                        streamed = true;
                     }
-                } catch (e) {
-                     console.error("OpenRouter stream failed, falling back to Gemini", e);
                 }
-            } 
+            } catch (e) {
+                console.error("Gemini stream failed", e);
+            }
             
             if (!streamed) {
                  throw new Error("No AI response available");
