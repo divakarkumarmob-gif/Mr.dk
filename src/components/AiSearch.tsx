@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { Search, Loader2, History, Camera, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -201,7 +203,7 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
         )}
         {result && (
             <div className="mt-4 p-3 bg-[#0a0f24] border border-white/10 rounded text-sm text-gray-200">
-                <ReactMarkdown>{result}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{result}</ReactMarkdown>
             </div>
         )}
         </div>

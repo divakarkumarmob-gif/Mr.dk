@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { Mic, Keyboard, X, Send, Square, Camera, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
+import { stripLatexForTTS } from '../lib/utils';
 
 interface LiveAIInterfaceProps {
     onClose: () => void;
@@ -78,7 +82,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 setMessages(prev => [...prev, {role: 'user', content: "[Audio Input processed]"}]);
                 setMessages(prev => [...prev, {role: 'ai', content: aiResponse}]);
                 
-                const utterThis = new SpeechSynthesisUtterance(aiResponse);
+                const cleanedResponse = stripLatexForTTS(aiResponse);
+                const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
                 utterThis.onstart = () => setIsSpeaking(true);
                 utterThis.onend = () => setIsSpeaking(false);
                 utterThis.lang = "hi-IN";
@@ -160,7 +165,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             <div className="flex-grow overflow-y-auto mb-6 space-y-4">
                 {messages.map((m, i) => (
                     <div key={i} className={`p-4 rounded-2xl max-w-[80%] ${m.role === 'user' ? 'bg-blue-600 ml-auto' : 'bg-white/10'}`}>
-                        {m.content}
+                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.content}</ReactMarkdown>
                     </div>
                 ))}
                 <div ref={messagesEndRef} />

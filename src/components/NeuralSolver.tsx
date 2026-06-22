@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import { X, Send, Loader2, Trash2 } from 'lucide-react';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
@@ -113,7 +115,8 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
                         <div onClick={(e) => { e.stopPropagation(); setSelectedMessageIndex(i); }} 
                              className={`p-3 px-4 rounded-2xl max-w-[80%] shadow-sm ${m.role === 'user' ? 'bg-blue-600 rounded-tr-none' : 'bg-[#161e38] rounded-tl-none'}`}>
                             <ReactMarkdown
-                                rehypePlugins={[rehypeRaw]}
+                                remarkPlugins={[remarkMath]}
+                                rehypePlugins={[rehypeRaw, rehypeKatex]}
                                 components={{
                                     u: ({node, ...props}) => <u className="text-red-500 font-bold" {...props} />
                                 }}

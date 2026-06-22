@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate } from 'motion/react';
 import { Mic, Square } from 'lucide-react';
+import { stripLatexForTTS } from '../lib/utils';
 
 const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping: boolean}> = ({ onNavigate, isTyping }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -119,7 +120,8 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                 
                 // Browser TTS
                 setStatus("Speaking...");
-                const utterThis = new SpeechSynthesisUtterance(aiResponse);
+                const cleanedResponse = stripLatexForTTS(aiResponse);
+                const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
                 utterThis.onstart = () => setIsSpeaking(true);
                 utterThis.onend = () => {
                     setIsSpeaking(false);
