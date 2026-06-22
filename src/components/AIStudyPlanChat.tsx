@@ -175,7 +175,7 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
                 <div ref={messagesEndRef} />
             </div>
             
-            <div className="w-full flex justify-between items-center px-4 gap-4">
+            <div className="w-full flex justify-center items-center gap-4">
                 {!isTypingMode ? (
                     <div className="flex flex-col items-center w-full">
                         <button 
@@ -199,7 +199,7 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
                         <button onClick={() => setIsTypingMode(true)} className="mt-4 text-blue-300 underline">Switch to typing</button>
                     </div>
                 ) : (
-                <div className="flex w-full items-center gap-2 bg-[#1e293b] rounded-full p-2 pl-5">
+                <div className="w-full flex items-center gap-2 bg-[#1e293b] rounded-full p-2 pl-5">
                     <input 
                         value={input} 
                         onChange={(e) => setInput(e.target.value)}
