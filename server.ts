@@ -14,6 +14,7 @@ import { OpenRouter } from "@openrouter/sdk";
 import nodemailer from 'nodemailer';
 import Razorpay from 'razorpay';
 import crypto from 'crypto';
+import textToSpeech from '@google-cloud/text-to-speech';
 
 // Initialize Firebase Admin
 const app = admin.initializeApp({
@@ -538,6 +539,76 @@ Direct, actionable, minimal.` },
         console.error("Streaming Search Error:", error);
         res.write(`data: ${JSON.stringify({ error: "Streaming failed" })}\n\n`);
         res.end();
+    }
+  });
+
+  app.get("/api/proxy-pdf", async (req, res) => {
+    const { url } = req.query;
+    if (!url || typeof url !== 'string') {
+      return res.status(400).json({ error: "URL is required" });
+    }
+
+    if (!url.startsWith('https://ncert.nic.in/')) {
+      return res.status(403).json({ error: "Forbidden URL" });
+    }
+
+    const fetchWithRetry = async (targetUrl: string, retries = 3): Promise<Response> => {
+      for (let i = 0; i < retries; i++) {
+        try {
+          const response = await fetch(targetUrl, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+              'Referer': 'https://ncert.nic.in/textbook.php',
+              'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+            }
+          });
+          if (response.ok) return response;
+          if (response.status === 404) throw new Error("Not Found");
+        } catch (err) {
+          if (i === retries - 1) throw err;
+          await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1))); // Exponential backoff
+        }
+      }
+      throw new Error("Failed after retries");
+    };
+
+    try {
+      const response = await fetchWithRetry(url);
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      res.set('Content-Type', 'application/pdf');
+      res.set('Access-Control-Allow-Origin', '*');
+      res.set('Cache-Control', 'public, max-age=3600');
+      res.send(buffer);
+    } catch (error) {
+      console.error("PDF Proxy Error:", error);
+      res.status(500).json({ error: "Failed to fetch PDF from NCERT" });
+    }
+  });
+
+  app.post("/api/tts", async (req, res) => {
+    try {
+      const { text } = req.body;
+      if (!text) {
+        return res.status(400).json({ error: "Text is required" });
+      }
+      
+      console.log("TTS Request received for text length:", text.length);
+      
+      const client = new textToSpeech.TextToSpeechClient();
+      const request = {
+        input: { text: text },
+        voice: { languageCode: 'hi-IN', name: 'hi-IN-Wavenet-A', ssmlGender: 'FEMALE' as const },
+        audioConfig: { audioEncoding: 'MP3' as const },
+      };
+
+      const [response] = await client.synthesizeSpeech(request);
+      res.set('Content-Type', 'audio/mpeg');
+      res.send(response.audioContent);
+    } catch (error) {
+      console.error("TTS Error (Full):", error);
+      res.status(500).json({ error: "TTS failed" });
     }
   });
 

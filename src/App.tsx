@@ -27,9 +27,8 @@ import AdminPanel from './components/AdminPanel';
 import AdminChatPage from './components/AdminChatPage';
 import TestHub from './components/TestHub';
 import Notes from './components/Notes';
-import NCERT11thHub from './components/NCERT11thHub';
-import MindHackPage from './components/MindHackPage';
 import AIStudyPlanPage from './components/AIStudyPlanPage';
+import NCERTHub from './components/NCERTHub';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NotificationPage from './components/NotificationPage';
@@ -142,7 +141,7 @@ const getRandomChapters = () => {
 export default function App() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'notesLibrary' | 'NCERT11thHub' |'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI' | 'mindHack' | 'aiStudyPlan'>('home');
+  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'notesLibrary' | 'NCERT11thHub' | 'ncertHub' |'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI' | 'mindHack' | 'aiStudyPlan'>('home');
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
@@ -1017,8 +1016,8 @@ export default function App() {
       );
   }
 
-  if (currentView === 'NCERT11thHub') {
-      return <NCERT11thHub onBack={() => { setCurrentView(previousView || 'notes'); }} />;
+  if (currentView === 'ncertHub') {
+      return <NCERTHub onBack={() => setCurrentView('notes')} />;
   }
 
   if (currentView === 'notes') {

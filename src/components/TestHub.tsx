@@ -383,7 +383,6 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
           <button className="text-orange-400 font-bold text-sm">Start PYQ &gt;</button>
       </motion.div>
 
-      /* Chapter Popup */
       {selectedScheduledTestForChapters && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setSelectedScheduledTestForChapters(null)}>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-sm bg-card rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>

@@ -4,7 +4,7 @@ import { User as FirebaseUser } from 'firebase/auth';
 import { motion } from 'motion/react';
 import Pressable from './Pressable';
 
-export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan') => void, onSolverClick: () => void }) {
+export default function Profile({ user, onNavigate, onSolverClick }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub') => void, onSolverClick: () => void }) {
     const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
     return (
         <div className="min-h-screen bg-background text-foreground p-2 font-sans pb-16">
@@ -68,18 +68,6 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
                 </Pressable>
             </motion.div>
 
-            <h3 className="text-muted-foreground text-[10px] font-bold mb-1.5 uppercase">Memory & Backup</h3>
-            <div className="bg-green-600 text-white p-2 rounded-lg mb-1.5 flex justify-between items-center cursor-pointer">
-                 <div className="flex items-center gap-1.5">
-                    <div className="bg-white/20 p-1 rounded-md"><Download className="h-4 w-4"/></div>
-                    <div>
-                        <p className="font-bold text-xs">NCERT & Modules</p>
-                        <p className="text-[9px] opacity-70">Access uploaded library PDFs</p>
-                    </div>
-                </div>
-                <ChevronRight className="h-4 w-4 opacity-50" />
-            </div>
-            
             <div className="bg-blue-600 text-white p-2 rounded-lg mb-3 flex justify-between items-center cursor-pointer">
                  <div className="flex items-center gap-1.5">
                     <div className="bg-white/20 p-1 rounded-md"><Shield className="h-4 w-4"/></div>

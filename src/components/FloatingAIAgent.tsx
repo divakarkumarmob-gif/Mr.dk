@@ -118,17 +118,41 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                 
                 setAiText(aiResponse);
                 
-                // Browser TTS
+                // Browser TTS -> Server TTS
                 setStatus("Speaking...");
                 const cleanedResponse = stripLatexForTTS(aiResponse);
-                const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
-                utterThis.onstart = () => setIsSpeaking(true);
-                utterThis.onend = () => {
-                    setIsSpeaking(false);
-                    setStatus("Done");
-                };
-                utterThis.lang = "hi-IN";
-                window.speechSynthesis.speak(utterThis);
+                
+                try {
+                    const ttsResponse = await fetch('/api/tts', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ text: cleanedResponse })
+                    });
+
+                    if (ttsResponse.ok) {
+                        const audioBlob = await ttsResponse.blob();
+                        const audio = new Audio(URL.createObjectURL(audioBlob));
+                        audio.onplay = () => setIsSpeaking(true);
+                        audio.onended = () => {
+                            setIsSpeaking(false);
+                            setStatus("Done");
+                        };
+                        audio.play();
+                    } else {
+                        throw new Error("Server TTS failed");
+                    }
+                } catch (ttsErr) {
+                    console.error("Server TTS error, falling back:", ttsErr);
+                    // Fallback to robotic browser TTS
+                    const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
+                    utterThis.onstart = () => setIsSpeaking(true);
+                    utterThis.onend = () => {
+                        setIsSpeaking(false);
+                        setStatus("Done");
+                    };
+                    utterThis.lang = "hi-IN";
+                    window.speechSynthesis.speak(utterThis);
+                }
             };
         } catch (e) {
             addLog(`Error processing audio: ${e}`);

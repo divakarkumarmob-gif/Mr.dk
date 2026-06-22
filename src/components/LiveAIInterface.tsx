@@ -83,11 +83,32 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 setMessages(prev => [...prev, {role: 'ai', content: aiResponse}]);
                 
                 const cleanedResponse = stripLatexForTTS(aiResponse);
-                const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
-                utterThis.onstart = () => setIsSpeaking(true);
-                utterThis.onend = () => setIsSpeaking(false);
-                utterThis.lang = "hi-IN";
-                window.speechSynthesis.speak(utterThis);
+                
+                try {
+                    const ttsResponse = await fetch('/api/tts', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ text: cleanedResponse })
+                    });
+
+                    if (ttsResponse.ok) {
+                        const audioBlob = await ttsResponse.blob();
+                        const audio = new Audio(URL.createObjectURL(audioBlob));
+                        audio.onplay = () => setIsSpeaking(true);
+                        audio.onended = () => setIsSpeaking(false);
+                        audio.play();
+                    } else {
+                        throw new Error("Server TTS failed");
+                    }
+                } catch (ttsErr) {
+                    console.error("Server TTS error, falling back:", ttsErr);
+                    // Fallback to robotic browser TTS
+                    const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
+                    utterThis.onstart = () => setIsSpeaking(true);
+                    utterThis.onend = () => setIsSpeaking(false);
+                    utterThis.lang = "hi-IN";
+                    window.speechSynthesis.speak(utterThis);
+                }
             };
         } catch (e) {
             console.error(e);

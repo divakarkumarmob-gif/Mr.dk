@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
-import { Plus, Camera, FileUp, X, BookOpen } from 'lucide-react';
+import { Plus, Camera, FileUp, X, BookOpen, Download, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { auth, db, storage } from '../lib/firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';                
 import imageCompression from 'browser-image-compression';
+import Pressable from './Pressable';
 
 enum OperationType {
   CREATE = 'create',
@@ -90,20 +91,21 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
       
       <button 
         onClick={() => setIsOpen(true)}
-        className="w-full bg-[#1e293b] border border-dashed border-slate-700 rounded-lg p-2 flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200 transition-all hover:bg-[#253247] text-xs font-bold"
+        className="w-full bg-[#1e293b] border border-dashed border-slate-700 rounded-lg p-2 flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200 transition-all hover:bg-[#253247] text-xs font-bold mb-3"
       >
         <Plus className="h-4 w-4" /> Add Note
       </button>
 
-      <button 
-        onClick={() => onNavigate('NCERT11thHub')}
-        className="w-full bg-blue-900/50 border border-blue-700 rounded-lg p-2.5 flex items-center justify-between text-blue-100 hover:bg-blue-800 transition-all mt-2"
-      >
-        <div className="flex items-center gap-2">
-          <BookOpen className="h-4 w-4" />
-          <span className="font-bold text-sm">NCERT 11th</span>
-        </div>
-      </button>
+      <Pressable onClick={() => onNavigate('ncertHub')} className="bg-green-600 text-white p-2 rounded-lg mb-1.5 flex justify-between items-center cursor-pointer shadow-lg active:scale-95 transition-transform">
+           <div className="flex items-center gap-1.5">
+              <div className="bg-white/20 p-1 rounded-md"><Download className="h-4 w-4"/></div>
+              <div>
+                  <p className="font-bold text-xs">NCERT & Modules</p>
+                  <p className="text-[9px] opacity-70">Read offline or online PDF</p>
+              </div>
+          </div>
+          <ChevronRight className="h-4 w-4 opacity-50" />
+      </Pressable>
 
       <AnimatePresence>
       {isOpen && (
