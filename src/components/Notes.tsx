@@ -98,9 +98,9 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
 
       <Pressable onClick={() => onNavigate('ncertHub')} className="bg-green-600 text-white p-2 rounded-lg mb-1.5 flex justify-between items-center cursor-pointer shadow-lg active:scale-95 transition-transform">
            <div className="flex items-center gap-1.5">
-              <div className="bg-white/20 p-1 rounded-md"><Download className="h-4 w-4"/></div>
+              <div className="bg-white/20 p-1 rounded-md"><BookOpen className="h-4 w-4"/></div>
               <div>
-                  <p className="font-bold text-xs">NCERT & Modules</p>
+                  <p className="font-bold text-xs">NCERT 📚</p>
                   <p className="text-[9px] opacity-70">Read offline or online PDF</p>
               </div>
           </div>
