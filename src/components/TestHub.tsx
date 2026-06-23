@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X, Info } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, FileText, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X, Info, AlertTriangle, Tag, Loader2 } from 'lucide-react';
 import { db, auth } from '../lib/firebase';
 import { collection, query, where, getDocs, orderBy, limit, onSnapshot } from 'firebase/firestore';
 // import { QUESTIONS } from '../data/questions';
 import PYQTestRunner from './PYQTestRunner';
 import TestResultDetail from './TestResultDetail';
+import AdvancedPDFViewer from './AdvancedPDFViewer';
+import { generateNEETPdf } from '../lib/pdfUtils';
 
 
-export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests') => void, setIsPYQRunning: (val: boolean) => void }) {
+export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: any, params?: any) => void, setIsPYQRunning: (val: boolean) => void }) {
   const [activeTab, setActiveTab] = useState<'Upcoming' | 'Current' | 'Missed'>('Current');
   const [tests, setTests] = useState<any[]>([]);
   //...
@@ -24,11 +26,14 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [selectedSubForPYQ, setSelectedSubForPYQ] = useState('');
   const [showPYQOptions, setShowPYQOptions] = useState(false);
   const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
+  const [currentPaperUrl, setCurrentPaperUrl] = useState<string | undefined>(undefined);
   const [showCustomOptions, setShowCustomOptions] = useState(false);
   const [selectedScheduledTestForChapters, setSelectedScheduledTestForChapters] = useState<any>(null);
   const [questionCount, setQuestionCount] = useState(5);
   const [recentTests, setRecentTests] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+  const [activePdf, setActivePdf] = useState<{ url: string, title: string } | null>(null);
   const [timer, setTimer] = useState(35);
   const [selectedResult, setSelectedResult] = useState<any>(null);
   const [pressTimer, setPressTimer] = useState<any>(null);
@@ -144,10 +149,16 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   return (
     <div className="min-h-screen bg-[#0a0f24] text-white p-3 font-sans pb-20">
       {pyqQuestions ? (
-            <PYQTestRunner questions={pyqQuestions} title={`${selectedYear} (${selectedSubForPYQ})`} onBack={() => {
-                setPyqQuestions(null);
-                setIsPYQRunning(false);
-            }} />
+            <PYQTestRunner 
+                questions={pyqQuestions} 
+                title={`${selectedYear} (${selectedSubForPYQ})`} 
+                paperUrl={currentPaperUrl}
+                onBack={() => {
+                    setPyqQuestions(null);
+                    setCurrentPaperUrl(undefined);
+                    setIsPYQRunning(false);
+                }} 
+            />
       ) : (
         <>
             <h1 className="text-lg font-bold mb-2">Tests</h1>
@@ -377,7 +388,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                   <BookOpen className="h-8 w-8 text-orange-400" />
                   <div>
                   <p className="font-bold">NEET PYQ Tests</p>
-                  <p className="text-xs text-gray-400">Previous Year Questions</p>
+                  <p className="text-xs text-gray-400">Interactive Previous Year Questions</p>
                   </div>
           </div>
           <button className="text-orange-400 font-bold text-sm">Start PYQ &gt;</button>
@@ -467,22 +478,83 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                         <option value="">Select Subject</option>
                         {['Biology', 'Chemistry', 'Physics'].map(s => <option key={s} value={s}>{s}</option>)}
                     </select>
-                    <button className="w-full bg-orange-600 py-3 rounded-xl font-bold hover:bg-orange-700 transition" onClick={async () => {
-                        if (!selectedYear || !selectedSubForPYQ) return alert("Please select Year and Subject");
+                    <div className="flex gap-3">
+                        <button className="flex-1 bg-orange-600 py-3 rounded-xl font-bold hover:bg-orange-700 transition" onClick={async () => {
+                            if (!selectedYear || !selectedSubForPYQ) return alert("Please select Year and Subject");
+                            
+                            try {
+                                const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/${selectedYear}/NEET_${selectedYear}_${selectedSubForPYQ}.json`;
+                                const response = await fetch(url);
+                                if (!response.ok) throw new Error("Could not fetch test");
+                                const data = await response.json();
+                                
+                                // Map to GitHub hosted PDF for faster access
+                                const paperMapping: Record<string, string> = {
+                                    '2024': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2024/NEET_2024.pdf',
+                                    '2023': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2023/NEET_2023.pdf',
+                                    '2022': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2022/NEET_2022.pdf',
+                                    '2021': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2021/NEET_2021.pdf',
+                                    '2020': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2020/NEET_2020.pdf'
+                                };
+                                
+                                setCurrentPaperUrl(paperMapping[selectedYear]);
+                                setPyqQuestions(data.questions || []);
+                                setShowPYQOptions(false);
+                                setIsPYQRunning(true);
+                            } catch (err) {
+                                alert("Error fetching test questions. Try View PDF for the full paper.");
+                            }
+                        }}>Fetch Test</button>
                         
-                        try {
-                            const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/${selectedYear}/NEET_${selectedYear}_${selectedSubForPYQ}.json`;
-                            const response = await fetch(url);
-                            if (!response.ok) throw new Error("Could not fetch test");
-                            const data = await response.json();
-                            setPyqQuestions(data.questions || []);
-                            setShowPYQOptions(false);
-                            setIsPYQRunning(true);
-                            // alert(`Fetched ${data.questions.length} questions!`);
-                        } catch (err) {
-                            alert("Error fetching test. Please check the URL.");
-                        }
-                    }}>Fetch PYQ</button>
+                        <button 
+                            className="flex-1 bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center gap-2 disabled:opacity-50" 
+                            disabled={isGeneratingPdf}
+                            onClick={async () => {
+                                if (!selectedYear || !selectedSubForPYQ) return alert("Please select Year and Subject to generate PDF");
+                                
+                                setIsGeneratingPdf(true);
+                                console.log(`[PDF] Requesting PDF for ${selectedYear} - ${selectedSubForPYQ}`);
+                                try {
+                                    const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/${selectedYear}/NEET_${selectedYear}_${selectedSubForPYQ}.json`;
+                                    console.log(`[PDF] Fetching JSON from: ${url}`);
+                                    const response = await fetch(url);
+                                    
+                                    if (!response.ok) {
+                                        console.error(`[PDF] Fetch failed with status: ${response.status}`);
+                                        throw new Error(`Could not fetch test data (${response.status})`);
+                                    }
+                                    
+                                    const data = await response.json();
+                                    console.log(`[PDF] Successfully fetched JSON. Questions: ${data.questions?.length}`);
+                                    
+                                    if (!data.questions || data.questions.length === 0) {
+                                        throw new Error("No questions found in this paper JSON.");
+                                    }
+
+                                    const pdfUrl = generateNEETPdf({
+                                        exam: 'NEET',
+                                        year: selectedYear,
+                                        subject: selectedSubForPYQ,
+                                        questions: data.questions
+                                    }, true); 
+                                    
+                                    console.log(`[PDF] Generated Blob URL: ${pdfUrl}`);
+                                    
+                                    setActivePdf({
+                                        url: pdfUrl,
+                                        title: `NEET ${selectedYear} - ${selectedSubForPYQ}`
+                                    });
+                                } catch (err) {
+                                    console.error("[PDF] Error:", err);
+                                    alert("Error generating PDF: " + (err as Error).message);
+                                } finally {
+                                    setIsGeneratingPdf(false);
+                                }
+                            }}
+                        >
+                            {isGeneratingPdf ? <Loader2 className="w-4 h-4 animate-spin" /> : 'View PDF 📄'}
+                        </button>
+                    </div>
                 </div>
             </motion.div>
         </div>
@@ -497,6 +569,13 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       </>
       )}
       
+      {activePdf && (
+           <AdvancedPDFViewer 
+               pdfUrl={activePdf.url} 
+               title={activePdf.title} 
+               onClose={() => setActivePdf(null)} 
+           />
+      )}
     </div>
   );
 }

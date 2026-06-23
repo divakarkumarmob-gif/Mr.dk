@@ -96,16 +96,44 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
         <Plus className="h-4 w-4" /> Add Note
       </button>
 
-      <Pressable onClick={() => onNavigate('ncertHub')} className="bg-green-600 text-white p-2 rounded-lg mb-1.5 flex justify-between items-center cursor-pointer shadow-lg active:scale-95 transition-transform">
-           <div className="flex items-center gap-1.5">
-              <div className="bg-white/20 p-1 rounded-md"><BookOpen className="h-4 w-4"/></div>
-              <div>
-                  <p className="font-bold text-xs">NCERT 📚</p>
-                  <p className="text-[9px] opacity-70">Read offline or online PDF</p>
-              </div>
+      <div className="grid grid-cols-2 gap-3 mb-6">
+        <Pressable 
+          onClick={() => onNavigate('ncertHub')} 
+          className="bg-green-600 text-white p-3 rounded-2xl flex flex-col items-start gap-2 cursor-pointer shadow-lg active:scale-95 transition-transform"
+        >
+          <div className="bg-white/20 p-2 rounded-xl"><BookOpen className="h-5 w-5 text-white"/></div>
+          <div>
+            <p className="font-bold text-sm">NCERT 📚</p>
+            <p className="text-[10px] opacity-80 leading-tight">Digital Textbooks Hub</p>
           </div>
-          <ChevronRight className="h-4 w-4 opacity-50" />
-      </Pressable>
+        </Pressable>
+
+        <Pressable 
+          onClick={() => onNavigate('ntaQuestionsHub')} 
+          className="bg-blue-600 text-white p-3 rounded-2xl flex flex-col items-start gap-2 cursor-pointer shadow-lg active:scale-95 transition-transform"
+        >
+          <div className="bg-white/20 p-2 rounded-xl"><FileUp className="h-5 w-5 text-white"/></div>
+          <div>
+            <p className="font-bold text-sm">Question Bank 📚</p>
+            <p className="text-[10px] opacity-80 leading-tight">Official NTA PDFs Hub</p>
+          </div>
+        </Pressable>
+
+        <Pressable 
+          onClick={() => onNavigate('oldPyqHistory')} 
+          className="bg-slate-800 text-white p-3 rounded-2xl flex flex-col items-start gap-2 cursor-pointer shadow-lg active:scale-95 transition-transform border border-white/10 hover:border-orange-500/50"
+        >
+          <div className="bg-orange-600 p-2 rounded-xl"><Download className="h-4 w-4 text-white"/></div>
+          <div>
+            <p className="font-bold text-sm">Legacy PYQs 📜</p>
+            <p className="text-[10px] opacity-80 leading-tight">Official GitHub Archive</p>
+          </div>
+          <div className="mt-auto pt-1 flex items-center gap-1">
+             <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></div>
+             <span className="text-[9px] text-gray-400 font-medium">Auto-Synced (GitHub)</span>
+          </div>
+        </Pressable>
+      </div>
 
       <AnimatePresence>
       {isOpen && (

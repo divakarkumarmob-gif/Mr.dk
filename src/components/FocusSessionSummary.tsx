@@ -65,7 +65,7 @@ export default function FocusSessionSummary({
                         <div className="text-zinc-400">Focus Efficiency</div>
                     </div>
                     
-                    <FocusAnalytics />
+                    <FocusAnalytics data={[]} />
                 </div>
             </motion.div>
         </AnimatePresence>

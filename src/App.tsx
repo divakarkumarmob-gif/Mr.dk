@@ -29,9 +29,12 @@ import TestHub from './components/TestHub';
 import Notes from './components/Notes';
 import AIStudyPlanPage from './components/AIStudyPlanPage';
 import NCERTHub from './components/NCERTHub';
+import NTAQuestionsHub from './components/NTAQuestionsHub';
+import OldPYQHistory from './components/OldPYQHistory';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NotificationPage from './components/NotificationPage';
+import MindHackPage from './components/MindHackPage';
 
 import NeuralSolver from './components/NeuralSolver';
 import LiveAIInterface from './components/LiveAIInterface';
@@ -141,15 +144,41 @@ const getRandomChapters = () => {
 export default function App() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const [currentView, _setCurrentView] = useState<'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'notesLibrary' | 'NCERT11thHub' | 'ncertHub' |'admin' | 'adminChat' | 'technicalSupport' | 'analytics' | 'customPractice' | 'practiceTest' | 'liveAI' | 'mindHack' | 'aiStudyPlan'>('home');
+  const getInitialView = () => {
+    const params = new URLSearchParams(window.location.search);
+    const viewParam = params.get('view');
+    const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan'];
+    if (viewParam && validViews.includes(viewParam)) {
+        return viewParam;
+    }
+    const path = window.location.pathname.replace('/', '');
+    if (path && validViews.includes(path)) return path;
+    return 'home';
+  };
+
+  const [currentView, _setCurrentView] = useState<any>(getInitialView());
+  const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
-  const setCurrentView = (view: typeof currentView) => {
+  const setCurrentView = (view: typeof currentView, params?: Record<string, string>) => {
     if (view === 'liveAI' && currentView !== 'liveAI') {
         setPreviousView(currentView);
     }
-    window.history.pushState({ view }, '', '/' + view);
+    
+    const searchParams = new URLSearchParams();
+    if (view !== 'home') {
+        searchParams.set('view', view);
+    }
+    if (params) {
+        Object.entries(params).forEach(([k, v]) => searchParams.set(k, v));
+    }
+    
+    const queryString = searchParams.toString();
+    const newUrl = queryString ? `/?${queryString}` : '/';
+    
+    window.history.pushState({ view, params }, '', newUrl);
+    setUrlParams(searchParams);
     _setCurrentView(view);
   };
 
@@ -444,11 +473,13 @@ export default function App() {
   useEffect(() => {
     // Initial mount logic
     window.scrollTo(0, 0);
-    _setCurrentView('home');
+    // Removed hardcoded _setCurrentView('home') to preserve getInitialView()
     localStorage.removeItem('resumeTestData');
     
-    // Push initial state to trap the first back button press
-    window.history.pushState({ view: 'home' }, '', '/home');
+    // Initial history state if not set
+    if (!window.history.state) {
+        window.history.replaceState({ view: currentView }, '', window.location.pathname + window.location.search);
+    }
 
     const handleVisibilityChange = () => {
         if (document.visibilityState === 'visible') {
@@ -1018,6 +1049,15 @@ export default function App() {
 
   if (currentView === 'ncertHub') {
       return <NCERTHub onBack={() => setCurrentView('notes')} />;
+  }
+
+  if (currentView === 'ntaQuestionsHub') {
+      const paperId = urlParams.get('paper');
+      return <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />;
+  }
+
+  if (currentView === 'oldPyqHistory') {
+      return <OldPYQHistory onBack={() => setCurrentView('notes')} />;
   }
 
   if (currentView === 'notes') {

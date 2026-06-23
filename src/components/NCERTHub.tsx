@@ -280,11 +280,11 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                             return (
                                 <div key={chNum} className="bg-[#161e38] border border-white/5 p-3 rounded-2xl flex items-center justify-between gap-3">
                                     <div className="flex items-center gap-3 min-w-0 overflow-hidden">
-                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 font-extrabold text-xs">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 font-extrabold text-[10px]">
                                             {chNum}
                                         </div>
-                                        <span className="font-medium text-xs sm:text-sm truncate leading-tight text-gray-200">
-                                            {chName}
+                                        <span className="font-bold text-[11px] sm:text-xs truncate leading-tight text-gray-200">
+                                            {chNum}. {chName}
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-1.5 flex-shrink-0">

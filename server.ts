@@ -1,6 +1,7 @@
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import * as path from "path";
+import https from "https";
 import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
@@ -81,30 +82,31 @@ function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
 }
 
 async function callAI(prompt: string | any[]): Promise<string> {
-        if (!openrouter) throw new Error("OpenRouter API key not configured");
-        
-        const content = formatOpenRouterPrompt(prompt);
-        console.log("DEBUG: Calling OpenRouter with content type:", typeof content, "content:", JSON.stringify(content));
-        const completion = await openrouter.chat.send({
-            model: "openai/gpt-4o",
-            messages: [{ role: "user", content: content as any }]
+    try {
+        const response = await ai.models.generateContent({
+            model: "gemini-3.5-flash",
+            contents: Array.isArray(prompt) ? { parts: prompt } : prompt
         });
-        return completion.choices[0]?.message.content || "";
+        return response.text || "";
+    } catch (error) {
+        console.error("Gemini AI Error:", error);
+        return "Internal AI Error";
+    }
 }
 
 async function callAIStream(prompt: string | any[], res: express.Response): Promise<void> {
-        if (!openrouter) throw new Error("OpenRouter API key not configured");
-        
-        const content = formatOpenRouterPrompt(prompt);
-        console.log("DEBUG: Streaming OpenRouter with content type:", typeof content, "content:", JSON.stringify(content));
-        const stream = await openrouter.chat.send({
-            model: "openai/gpt-4o",
-            messages: [{ role: "user", content: content as any }],
-            stream: true
+    try {
+        const stream = await ai.models.generateContentStream({
+            model: "gemini-3.5-flash",
+            contents: Array.isArray(prompt) ? { parts: prompt } : prompt
         });
         for await (const chunk of stream) {
-            res.write(chunk.choices[0]?.delta?.content || "");
+            res.write(chunk.text || "");
         }
+    } catch (error) {
+        console.error("Gemini AI Streaming Error:", error);
+        res.write("Internal AI Error during streaming");
+    }
 }
 
 async function startServer() {
@@ -544,47 +546,153 @@ Direct, actionable, minimal.` },
 
   app.get("/api/proxy-pdf", async (req, res) => {
     const { url } = req.query;
-    if (!url || typeof url !== 'string') {
-      return res.status(400).json({ error: "URL is required" });
-    }
+    if (typeof url !== 'string') return res.status(400).json({ error: "URL required" });
 
-    if (!url.startsWith('https://ncert.nic.in/')) {
-      return res.status(403).json({ error: "Forbidden URL" });
-    }
+    const maxRetries = 2;
+    let attempt = 0;
 
-    const fetchWithRetry = async (targetUrl: string, retries = 3): Promise<Response> => {
-      for (let i = 0; i < retries; i++) {
-        try {
-          const response = await fetch(targetUrl, {
-            headers: {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-              'Referer': 'https://ncert.nic.in/textbook.php',
-              'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    const fetchWithRedirects = (targetUrl: string, depth = 0): Promise<{buffer: Buffer, status: number, contentType: string}> => {
+        if (depth > 5) return Promise.reject(new Error("Too many redirects"));
+
+        return new Promise((resolve, reject) => {
+            let urlObj: URL;
+            try {
+                urlObj = new URL(targetUrl);
+            } catch (e) {
+                return reject(new Error("Invalid URL: " + targetUrl));
             }
-          });
-          if (response.ok) return response;
-          if (response.status === 404) throw new Error("Not Found");
-        } catch (err) {
-          if (i === retries - 1) throw err;
-          await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1))); // Exponential backoff
-        }
-      }
-      throw new Error("Failed after retries");
+
+            const isNta = targetUrl.includes('nta.ac.in') || targetUrl.includes('nta.nic.in');
+            const isNcert = targetUrl.includes('ncert.nic.in');
+            const isGithub = targetUrl.includes('raw.githubusercontent.com');
+            
+            const options: https.RequestOptions = {
+                method: 'GET',
+                timeout: 35000,
+                rejectUnauthorized: false,
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+                    'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+                }
+            };
+
+            if (isNta) {
+                options.headers!['Referer'] = 'https://www.nta.ac.in/Downloads';
+                options.headers!['Origin'] = 'https://www.nta.ac.in';
+            } else if (isNcert) {
+                options.headers!['Referer'] = 'https://ncert.nic.in/textbook.php';
+                options.headers!['Origin'] = 'https://ncert.nic.in';
+            } else if (isGithub) {
+                options.headers!['Accept'] = '*/*';
+            }
+
+            const request = https.get(targetUrl, options, (response) => {
+                if (response.statusCode && [301, 302, 303, 307, 308].includes(response.statusCode)) {
+                    const location = response.headers.location;
+                    if (location) {
+                        const nextUrl = location.startsWith('http') ? location : `${urlObj.protocol}//${urlObj.hostname}${location.startsWith('/') ? '' : '/'}${location}`;
+                        console.log(`NTA Proxy: Redirecting to ${nextUrl}`);
+                        return resolve(fetchWithRedirects(nextUrl, depth + 1));
+                    }
+                }
+
+                if (response.statusCode !== 200) {
+                    console.error(`NTA Proxy: Server returned status ${response.statusCode} for ${targetUrl}`);
+                    return resolve({ buffer: Buffer.alloc(0), status: response.statusCode || 500, contentType: response.headers['content-type'] || '' });
+                }
+
+                const chunks: Buffer[] = [];
+                response.on('data', (chunk) => chunks.push(chunk));
+                response.on('end', () => {
+                    resolve({ 
+                        buffer: Buffer.concat(chunks), 
+                        status: 200, 
+                        contentType: response.headers['content-type'] || 'application/pdf' 
+                    });
+                });
+            });
+
+            request.on('error', (err) => {
+                console.error(`NTA Proxy Request Error (${targetUrl}):`, err.message);
+                reject(err);
+            });
+            
+            request.on('timeout', () => {
+                request.destroy();
+                reject(new Error('Timeout'));
+            });
+        });
     };
 
-    try {
-      const response = await fetchWithRetry(url);
-      const arrayBuffer = await response.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
+    while (attempt <= maxRetries) {
+      try {
+        let currentUrl = url;
+        
+        // Strategy: If first attempt fails (404), maybe try alternative NTA domain pattern
+        if (attempt === 1 && url.includes('www.nta.ac.in/Download/QuestionPaper')) {
+            currentUrl = url.replace('www.nta.ac.in/Download/QuestionPaper', 'accad.nta.nic.in/QuestionPaper');
+        }
 
-      res.set('Content-Type', 'application/pdf');
-      res.set('Access-Control-Allow-Origin', '*');
-      res.set('Cache-Control', 'public, max-age=3600');
-      res.send(buffer);
-    } catch (error) {
-      console.error("PDF Proxy Error:", error);
-      res.status(500).json({ error: "Failed to fetch PDF from NCERT" });
+        const result = await fetchWithRedirects(currentUrl);
+
+        if (result.status === 200) {
+          // Verify PDF Magic Number
+          const isPdf = result.buffer.length > 4 && result.buffer.slice(0, 4).toString() === '%PDF';
+          
+          if (!isPdf) {
+              const preview = result.buffer.slice(0, 100).toString();
+              console.warn(`NTA Proxy: Received non-PDF data from ${currentUrl}. Content: ${preview}`);
+              
+              if (preview.toLowerCase().includes('<html') || preview.toLowerCase().includes('<!doctype')) {
+                  // If we got HTML, it's likely a block page or error page
+                  if (attempt < maxRetries) {
+                      attempt++;
+                      await new Promise(r => setTimeout(r, 1200 * attempt));
+                      continue;
+                  }
+                  return res.status(403).json({ 
+                      error: "NTA Blocked Request", 
+                      message: "Official server is blocking our connection. Please use the Direct Link for now." 
+                  });
+              }
+          }
+
+          res.set({
+            'Content-Type': 'application/pdf',
+            'Access-Control-Allow-Origin': '*',
+            'Cache-Control': 'public, max-age=3600',
+            'Content-Disposition': 'inline',
+            'Content-Length': result.buffer.length.toString()
+          });
+          return res.send(result.buffer);
+        }
+        
+        if (result.status === 404 || result.status === 403) {
+            if (attempt < maxRetries) {
+                attempt++;
+                await new Promise(r => setTimeout(r, 1000));
+                continue;
+            }
+        }
+      } catch (error: any) {
+        console.error(`NTA Proxy Attempt ${attempt} failed for ${url}:`, error.message);
+        if (attempt === maxRetries) {
+          const isTimeout = error.message === 'Timeout';
+          return res.status(isTimeout ? 504 : 502).json({ 
+            error: "Connectivity Issue", 
+            details: isTimeout ? "The NTA official server took too long." : "Could not reach official NTA server."
+          });
+        }
+      }
+      
+      attempt++;
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
+
+    res.status(503).json({ 
+      error: "Official Server Busy", 
+      message: "The official NTA server is currently unreachable. Please try again in 5 minutes." 
+    });
   });
 
   app.post("/api/tts", async (req, res) => {

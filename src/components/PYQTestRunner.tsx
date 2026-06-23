@@ -3,6 +3,8 @@ import { db, auth } from '../lib/firebase';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Menu, X, Hourglass } from 'lucide-react';
+import AdvancedPDFViewer from './AdvancedPDFViewer';
+import { generateNEETPdf } from '../lib/pdfUtils';
 interface Question {
     id: string;
     question: string;
@@ -15,6 +17,7 @@ interface PYQTestRunnerProps {
     questions: Question[];
     onBack: () => void;
     title: string;
+    paperUrl?: string; // Added to allow viewing original PDF
     initialData?: {
         answers: Record<string, string>;
         marked: Record<string, boolean>;
@@ -23,11 +26,13 @@ interface PYQTestRunnerProps {
     };
 }
 
-export default function PYQTestRunner({ questions = [], onBack, title, initialData }: PYQTestRunnerProps) {
+export default function PYQTestRunner(props: PYQTestRunnerProps) {
+    const { questions = [], onBack, title, paperUrl, initialData } = props;
     const [currentIndex, setCurrentIndex] = useState(initialData?.currentIndex || 0);
     const [answers, setAnswers] = useState<Record<string, string>>(initialData?.answers || {});
     const [marked, setMarked] = useState<Record<string, boolean>>(initialData?.marked || {});
     const [showMenu, setShowMenu] = useState(false);
+    const [activePdf, setActivePdf] = useState<{ url: string, title: string } | null>(null);
     const [timeLeft, setTimeLeft] = useState(initialData?.timeLeft || questions.length * 60);
     const [showQuitModal, setShowQuitModal] = useState(false);
 
@@ -241,7 +246,28 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
                     </button>
                 </div>
                 <div className="bg-white p-6 rounded-2xl mb-6 border border-gray-100 shadow-sm">
-                    <p className="text-lg font-medium text-gray-900">{question?.question}</p>
+                    {/* Improved Match the Following Layout Detection */}
+                    {question?.question.toLowerCase().includes('list i') && question?.question.toLowerCase().includes('list ii') ? (
+                        <div className="space-y-4">
+                            <p className="text-lg font-bold text-gray-900 mb-4">{question.question.split('List I')[0].trim() || 'Match the following:'}</p>
+                            <div className="grid grid-cols-2 gap-6 p-4 bg-gray-50 rounded-xl border border-gray-200">
+                                <div className="space-y-2">
+                                    <h4 className="text-xs font-bold text-blue-600 uppercase tracking-wider">List I</h4>
+                                    <div className="text-sm whitespace-pre-wrap leading-relaxed">
+                                        {question.question.split('List I')[1]?.split('List II')[0]?.trim()}
+                                    </div>
+                                </div>
+                                <div className="space-y-2 border-l border-gray-200 pl-6">
+                                    <h4 className="text-xs font-bold text-green-600 uppercase tracking-wider">List II</h4>
+                                    <div className="text-sm whitespace-pre-wrap leading-relaxed">
+                                        {question.question.split('List II')[1]?.trim()}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <p className="text-lg font-medium text-gray-900">{question?.question}</p>
+                    )}
                 </div>
                 <div className="space-y-4">
                     {Object.entries(question?.options || {}).map(([key, value]) => (
@@ -275,6 +301,41 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
                                 <button onClick={() => setShowMenu(false)}><X /></button>
                             </div>
                             <div className="flex-grow overflow-y-auto pb-24">
+                                {questions && questions.length > 0 && (
+                                    <div className="mb-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                                        <p className="text-xs text-gray-500 mb-2 font-semibold">NEED THE FULL PAPER?</p>
+                                        <button 
+                                            onClick={() => {
+                                                console.log(`[PDF] Generating paper PDF from runner: ${title}`);
+                                                const parts = title.split(' (');
+                                                const year = parts[0];
+                                                const subject = parts[1]?.replace(')', '') || '';
+                                                
+                                                try {
+                                                    const pdfUrl = generateNEETPdf({
+                                                        exam: 'NEET',
+                                                        year: year,
+                                                        subject: subject,
+                                                        questions: questions
+                                                    }, true);
+                                                    
+                                                    console.log(`[PDF] Generated Blob URL: ${pdfUrl}`);
+                                                    
+                                                    setActivePdf({
+                                                        url: pdfUrl,
+                                                        title: `Paper: ${title}`
+                                                    });
+                                                } catch (err) {
+                                                    console.error("[PDF] Generation failed in runner:", err);
+                                                    alert("Failed to generate PDF. Check console for details.");
+                                                }
+                                            }}
+                                            className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-colors"
+                                        >
+                                            Generate Paper PDF 📄
+                                        </button>
+                                    </div>
+                                )}
                                 <div className="grid grid-cols-5 gap-4">
                                     {questions.map((q, i) => (
                                         <button key={q.id} onClick={() => { setCurrentIndex(i); setShowMenu(false); }} className={`w-12 h-12 rounded-lg flex items-center justify-center border font-semibold ${answers[q.id] ? 'bg-green-100 border-green-500 text-green-700' : marked[q.id] ? 'bg-blue-100 border-blue-500 text-blue-700' : 'bg-gray-50 border-gray-200 text-gray-600'}`}>
@@ -288,6 +349,14 @@ export default function PYQTestRunner({ questions = [], onBack, title, initialDa
                     </>
                 )}
             </AnimatePresence>
+
+            {activePdf && (
+                <AdvancedPDFViewer 
+                    pdfUrl={activePdf.url} 
+                    title={activePdf.title} 
+                    onClose={() => setActivePdf(null)} 
+                />
+            )}
         </div>
     );
 }
