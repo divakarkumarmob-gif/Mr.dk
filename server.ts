@@ -333,6 +333,40 @@ async function startServer() {
     }
   });                
   
+  // API route for extracting questions from text
+  app.post("/api/extract-questions", async (req, res) => {
+      const { text, subject } = req.body;
+      if (!text) {
+          return res.status(400).json({ error: "Missing text" });
+      }
+
+      try {
+          const prompt = `
+            Extract multiple-choice questions from the following text and return them as a JSON array.
+            Each object should have:
+            - question: The question text
+            - options: Array of 4 strings
+            - correct_option: The index (0-3) of the correct answer
+            - explanation: A brief explanation (NCERT based)
+            - subject: "${subject || 'Biology'}"
+            
+            Return ONLY the raw JSON array. DO NOT include any markdown formatting, backticks, or other text.
+            
+            Text:
+            ${text.slice(0, 5000)} // Limiting size for Gemini flash
+          `;
+          
+          const reply = await callAI(prompt);
+          // Try to clean the reply in case AI adds markdown
+          const cleanedReply = reply.trim().replace(/^```json/, '').replace(/```$/, '').trim();
+          const questions = JSON.parse(cleanedReply);
+          res.json({ questions });
+      } catch (error) {
+          console.error("Extraction API Error:", error);
+          res.status(500).json({ error: "Failed to extract questions" });
+      }
+  });
+
   // API route for gemini
   app.post("/api/gemini", async (req, res) => {
       const { messages, base64Audio } = req.body;

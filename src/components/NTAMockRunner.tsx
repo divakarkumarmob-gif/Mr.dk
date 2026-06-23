@@ -155,19 +155,58 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
     const subjects = ['All', ...Array.from(new Set(questions.map(q => q.subject)))];
     const filteredQuestions = activeSubject === 'All' ? questions : questions.filter(q => q.subject === activeSubject);
 
+    const [submissionTimer, setSubmissionTimer] = useState(120);
+    useEffect(() => {
+        let interval: any;
+        if (isSubmitted && submissionTimer > 0) {
+            interval = setInterval(() => {
+                setSubmissionTimer((prev) => prev - 1);
+            }, 1000);
+        }
+        return () => clearInterval(interval);
+    }, [isSubmitted, submissionTimer]);
+
+    const formatSubmissionTime = (seconds: number) => {
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    };
+
     if (isSubmitted) {
         return (
-            <div className="fixed inset-0 bg-[#f4f7f9] z-[200] flex flex-col items-center justify-center p-6 bg-white overflow-hidden">
-                <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white p-10 rounded-3xl shadow-2xl text-center max-w-md w-full">
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle2 className="w-10 h-10 text-green-600" />
-                    </div>
-                    <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Test Submitted!</h2>
-                    <p className="text-gray-500 mb-8">Your results have been securely recorded in the system. Accurate analysis is ready.</p>
-                    <button onClick={onBack} className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition-all shadow-lg shadow-blue-200">
-                        View Detailed Analysis
-                    </button>
-                </motion.div>
+            <div className="fixed inset-0 bg-[#f4f7f9] z-[200] flex flex-col items-center justify-center p-6 overflow-hidden">
+                <AnimatePresence mode="wait">
+                    <motion.div 
+                        key="nta-submission"
+                        initial={{ scale: 0.9, opacity: 0 }} 
+                        animate={{ scale: 1, opacity: 1 }} 
+                        className="bg-white p-10 rounded-3xl shadow-2xl text-center max-w-md w-full"
+                    >
+                        <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <CheckCircle2 className="w-10 h-10 text-green-600" />
+                        </div>
+                        <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Test Submitted!</h2>
+                        
+                        {submissionTimer > 0 ? (
+                            <>
+                                <p className="text-gray-500 mb-2">Generating detailed NTA analysis...</p>
+                                <div className="text-5xl font-mono font-bold text-blue-600 mb-8">{formatSubmissionTime(submissionTimer)}</div>
+                                <button onClick={() => onBack()} className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-bold transition-all hover:bg-gray-200">
+                                    Back to Home
+                                </button>
+                            </>
+                        ) : (
+                            <div className="space-y-4">
+                                <button onClick={() => onBack()} className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition-all shadow-lg shadow-blue-200">
+                                    View Detailed Analysis
+                                </button>
+                                <button onClick={() => onBack()} className="w-full text-gray-500 font-medium py-2">
+                                    Back to Dashboard
+                                </button>
+                            </div>
+                        )}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         );
     }
@@ -229,7 +268,7 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {Object.entries(currentQuestion?.options || {}).map(([key, value]) => (
+                                {Object.entries(currentQuestion?.options || {}).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => (
                                     <button 
                                         key={key}
                                         onClick={() => setAnswers(prev => ({ ...prev, [currentQuestion.id]: key }))}

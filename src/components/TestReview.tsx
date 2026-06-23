@@ -46,12 +46,13 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
                 <div className="w-10" />
             </div>
 
-            <div className="flex-grow overflow-y-auto">
-                <div className="p-6 bg-[#161e38] rounded-2xl mb-6 border border-white/5">
-                    <p className="text-lg font-medium text-gray-100">{question.question}</p>
+            <div className="flex-grow overflow-y-auto px-1 pb-40">
+                <div className="p-6 bg-[#161e38] rounded-2xl mb-6 border border-white/5 shadow-inner">
+                    <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-4 tracking-tight">Question Details</p>
+                    <p className="text-lg font-medium text-gray-100 leading-relaxed">{question.question}</p>
                 </div>
                 <div className="space-y-4">
-                    {Object.entries(question.options).map(([key, value]) => {
+                    {Object.entries(question.options).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => {
                         const isCorrect = key === question.correct_option;
                         const isSelected = answers[question.id] === key;
                         const isWrong = isSelected && !isCorrect;
@@ -77,22 +78,22 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
                 </div>
             </div>
 
-            <div className="p-4 border-t border-white/10 flex justify-between items-center bg-[#0a0f24]">
+            <div className="fixed bottom-0 left-0 right-0 p-6 pb-12 border-t border-white/10 flex justify-between items-center bg-[#0a0f24]/90 backdrop-blur-xl z-[130]">
                 <button 
                     disabled={currentIndex === 0} 
                     onClick={() => setCurrentIndex(prev => prev - 1)} 
-                    className="px-6 py-2.5 bg-[#161e38] text-white rounded-xl disabled:opacity-30 border border-white/5 active:scale-95 transition-all"
+                    className="px-6 py-4 bg-white/5 text-white rounded-2xl disabled:opacity-20 border border-white/10 active:scale-90 transition-all font-bold min-w-[110px]"
                 >
-                    Prev
+                    Previous
                 </button>
                 <div className="flex flex-col items-center">
-                    <span className="text-xs text-gray-500 uppercase tracking-wider mb-1">Progress</span>
-                    <span className="font-mono font-bold text-blue-400">{currentIndex + 1} / {filteredQuestions.length}</span>
+                    <span className="text-[10px] text-gray-500 uppercase tracking-widest font-black mb-1 text-center">Position</span>
+                    <span className="font-mono font-bold text-blue-400 text-xl">{currentIndex + 1} / {filteredQuestions.length}</span>
                 </div>
                 <button 
                     disabled={currentIndex === filteredQuestions.length - 1} 
                     onClick={() => setCurrentIndex(prev => prev + 1)} 
-                    className="px-6 py-2.5 bg-blue-600 text-white rounded-xl disabled:opacity-30 active:scale-95 transition-all shadow-lg shadow-blue-600/20"
+                    className="px-6 py-4 bg-blue-600 text-white rounded-2xl disabled:opacity-20 active:scale-90 transition-all shadow-2xl shadow-blue-600/40 font-bold min-w-[110px]"
                 >
                     Next
                 </button>

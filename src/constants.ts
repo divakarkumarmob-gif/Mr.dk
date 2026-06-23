@@ -8,7 +8,7 @@ export const CHAPTER_PLAYLISTS: { [key: string]: string } = {
 export const CHAPTER_DATA = {
     Physics: {
         'Class 11': [
-            'Physical World', 'Units and Measurements', 'Motion in a Straight Line', 'Motion in a Plane',
+            'Physical World', 'Units and Measurements', 'Motion in a Straight Line', 'Motion in a Plane', 'Circular Motion',
             'Laws of Motion', 'Work, Energy and Power', 'Systems of Particles and Rotational Motion', 'Gravitation',
             'Mechanical Properties of Solids', 'Mechanical Properties of Fluids', 'Thermal Properties of Matter',
             'Thermodynamics', 'Kinetic Theory', 'Oscillations', 'Waves'

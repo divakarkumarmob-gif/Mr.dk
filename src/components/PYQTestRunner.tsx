@@ -2,7 +2,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, ChevronRight, Menu, X, Hourglass } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Menu, X, Hourglass, CheckCircle2 } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { generateNEETPdf } from '../lib/pdfUtils';
 interface Question {
@@ -177,16 +177,44 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
     if (isSubmitted) {
         return (
             <div className="fixed inset-0 bg-[#0a0f24] z-[100] flex flex-col items-center justify-center text-white p-6 text-center">
-                <h2 className="text-3xl font-bold mb-4">Test Submitted!</h2>
-                {submissionTimer > 0 ? (
-                    <>
-                        <p className="text-xl mb-2">Analyzing results...</p>
-                        <div className="text-6xl font-bold text-blue-400 mb-8">{formatSubmissionTime(submissionTimer)}</div>
-                        <p className="text-gray-400">Please wait while we process your performance.</p>
-                    </>
-                ) : (
-                    <button onClick={onBack} className="bg-blue-600 text-white text-xl px-8 py-4 rounded-xl font-bold">See Results</button>
-                )}
+                <AnimatePresence mode="wait">
+                    <motion.div 
+                        key="submission-screen"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="max-w-sm w-full"
+                    >
+                        <div className="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-blue-500/30">
+                            <CheckCircle2 className="w-10 h-10 text-blue-400" />
+                        </div>
+                        <h2 className="text-3xl font-bold mb-4">Test Submitted!</h2>
+                        {submissionTimer > 0 ? (
+                            <>
+                                <p className="text-xl mb-2 opacity-80">Analyzing results...</p>
+                                <div className="text-6xl font-bold text-blue-400 mb-8 font-mono">{formatSubmissionTime(submissionTimer)}</div>
+                                <p className="text-gray-400 text-sm mb-10">Please wait while our AI engine processes your behavioral performance and generates detailed insights.</p>
+                                
+                                <button 
+                                    onClick={() => onBack()} 
+                                    className="w-full bg-white/5 border border-white/10 text-white py-4 rounded-2xl font-bold transition-all hover:bg-white/10 active:scale-95"
+                                >
+                                    Go to Home
+                                </button>
+                                <p className="mt-4 text-[10px] text-gray-500 uppercase tracking-widest font-bold">Analysis will be available in History</p>
+                            </>
+                        ) : (
+                            <div className="space-y-4">
+                                <button onClick={() => onBack()} className="w-full bg-blue-600 text-white text-xl py-5 rounded-2xl font-bold shadow-xl shadow-blue-600/20 active:scale-95 transition-all">See Results</button>
+                                <button 
+                                    onClick={() => onBack()} 
+                                    className="w-full bg-white/5 border border-white/10 text-white py-4 rounded-xl font-medium transition-all hover:bg-white/10 opacity-60"
+                                >
+                                    Back to Dashboard
+                                </button>
+                            </div>
+                        )}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         );
     }
@@ -270,7 +298,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                     )}
                 </div>
                 <div className="space-y-4">
-                    {Object.entries(question?.options || {}).map(([key, value]) => (
+                    {Object.entries(question?.options || {}).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => (
                         <button 
                             key={key}
                             onClick={() => question && setAnswers(prev => ({ ...prev, [question.id]: key }))}

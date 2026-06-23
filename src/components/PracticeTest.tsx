@@ -7,52 +7,85 @@ export default function PracticeTest({ chapters, onBack }: { chapters: {name: st
 
     useEffect(() => {
         const fetchQuestionsForChapter = async (chapter: {name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}) => {
-            const encodedSubject = encodeURIComponent(chapter.subject.toLocaleLowerCase());
-            const encodedChapterDir = encodeURIComponent(chapter.name.toLocaleLowerCase());
+            const encodedSubject = chapter.subject.toLocaleLowerCase();
+            const chapterName = chapter.name;
             
             let allChunks: any[] = [];
             let chunkNumber = 1;
             
-            while (true) {
-                let url = "";
-                let formattedName = chapter.name.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_');
-                if (formattedName === "cell_the_unit_of_life") {
-                    formattedName = "cell_unit_of_life";
-                }
-                url = `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodedChapterDir}/${formattedName}_chunk${chunkNumber}.json`;
-                console.log("Fetching URL:", url);
+            while (chunkNumber <= 10) {
+                let successfulFetch = false;
+                
+                // Try multiple name variations
+                const nameVariations = [
+                    chapterName,
+                    chapterName.replace(/ & /g, ' and '),
+                    chapterName.replace(/ and /g, ' & '),
+                    chapterName.toLocaleLowerCase()
+                ];
 
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) break;
-                    const data = await response.json();
-                    
-                    if (data.questions && Array.isArray(data.questions)) {
-                        allChunks.push(data.questions);
-                    } else {
-                        break;
+                for (const variant of nameVariations) {
+                    const patterns = [
+                        `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${encodeURIComponent(variant)}%20(${chunkNumber}).json`,
+                        `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${variant.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_')}_chunk${chunkNumber}.json`
+                    ];
+
+                    for (const url of patterns) {
+                        try {
+                            const response = await fetch(url);
+                            if (response.ok) {
+                                const data = await response.json();
+                                if (data) {
+                                    const questionsArray = Array.isArray(data) ? data : data.questions;
+                                    if (questionsArray && Array.isArray(questionsArray)) {
+                                        allChunks.push(questionsArray);
+                                        successfulFetch = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            // Silently continue to next pattern
+                        }
                     }
-                    chunkNumber++;
-                } catch (e) {
-                    break;
+                    if (successfulFetch) break;
                 }
+
+                if (!successfulFetch) break;
+                chunkNumber++;
             }
             
             let allQuestions: any[] = [];
-            if (chapter.difficulty === 'Hard') {
-                // Only chunks 3 and onwards (filter index >= 2)
+            if (chapter.difficulty === 'Hard' && allChunks.length >= 3) {
                 allQuestions = allChunks.filter((_, index) => index >= 2).flat();
             } else {
                 allQuestions = allChunks.flat();
             }
                 
-            return allQuestions.sort(() => Math.random() - 0.5).slice(0, chapter.numQuestions).map((q: any, i: number) => ({
-                id: `${chapter.name}_${i}`,
-                question: q.question,
-                options: q.options,
-                correct_option: q.correct_option,
-                explanation: q.explanation
-            }));
+            return allQuestions.sort(() => Math.random() - 0.5).slice(0, chapter.numQuestions).map((q: any, i: number) => {
+                let transformedOptions = q.options;
+                if (Array.isArray(q.options)) {
+                    transformedOptions = {
+                        A: q.options[0] || "",
+                        B: q.options[1] || "",
+                        C: q.options[2] || "",
+                        D: q.options[3] || ""
+                    };
+                }
+
+                let transformedCorrect = q.correct_option;
+                if (typeof q.correct_option === 'number') {
+                    transformedCorrect = ['A', 'B', 'C', 'D'][q.correct_option] || 'A';
+                }
+
+                return {
+                    id: `${chapter.name}_${i}_${Math.random().toString(36).substr(2, 9)}`,
+                    question: q.question,
+                    options: transformedOptions,
+                    correct_option: transformedCorrect,
+                    explanation: q.explanation || "No explanation provided."
+                };
+            });
         };
 
 

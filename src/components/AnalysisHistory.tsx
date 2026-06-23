@@ -19,7 +19,7 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
                 return {
                     id: doc.id,
                     ...d,
-                    timestamp: d.timestamp?.toDate ? d.timestamp.toDate() : new Date(d.timestamp),
+                    timestamp: d.timestamp?.toDate ? d.timestamp.toDate() : (d.timestamp ? new Date(d.timestamp) : new Date()),
                 };
             });
             setResults(data);
@@ -31,6 +31,26 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
     const pastResults = results.slice(3);
 
     const displayedResults = activeTab === 'current' ? currentResults : pastResults;
+
+    const [now, setNow] = useState(Date.now());
+
+    useEffect(() => {
+        const interval = setInterval(() => setNow(Date.now()), 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const isAnalysisReady = (timestamp: Date) => {
+        const elapsed = now - timestamp.getTime();
+        return elapsed >= 120000;
+    };
+
+    const getRemainingTime = (timestamp: Date) => {
+        const elapsed = now - timestamp.getTime();
+        const remaining = Math.max(0, 120000 - elapsed);
+        const mins = Math.floor(remaining / 60000);
+        const secs = Math.floor((remaining % 60000) / 1000);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    };
 
     if (selectedResult) {
         return <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />;
@@ -70,10 +90,23 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
                                         </span>
                                     )}
                                 </div>
-                                <button 
-                                    onClick={() => setSelectedResult(result)}
-                                    className="bg-blue-600 px-4 py-2 rounded-lg text-sm font-bold"
-                                >See Result</button>
+                                <div className="flex items-center gap-3">
+                                    {isAnalysisReady(result.timestamp) ? (
+                                        <button 
+                                            onClick={() => setSelectedResult(result)}
+                                            className="bg-blue-600 px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all"
+                                        >
+                                            See Result
+                                        </button>
+                                    ) : (
+                                        <div className="flex flex-col items-end">
+                                            <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Analyzing...</span>
+                                            <div className="bg-blue-600/10 text-blue-400 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border border-blue-400/20">
+                                                {getRemainingTime(result.timestamp)}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         ))
                     )}
