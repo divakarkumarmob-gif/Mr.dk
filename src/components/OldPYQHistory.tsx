@@ -97,7 +97,7 @@ export default function OldPYQHistory({ onBack }: Props) {
             <div className="grid grid-cols-1 gap-3">
                 {filteredPapers.map((paper, idx) => (
                     <motion.div 
-                    key={paper.year}
+                    key={`${paper.year}-${paper.title}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.05 }}
