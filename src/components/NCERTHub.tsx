@@ -192,12 +192,51 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         await refreshDownloads();
     };
 
+    const handlePop = () => {
+        // Handle popstate for sub-views
+        const state = window.history.state;
+        if (viewerUrl && !state?.isPdfOpen) {
+            if (viewerUrl.url.startsWith('blob:')) {
+                URL.revokeObjectURL(viewerUrl.url);
+            }
+            setViewerUrl(null);
+            return;
+        }
+        if (selectedBook && !state?.isBookOpen) {
+            setSelectedBook(null);
+            return;
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [selectedBook, viewerUrl]);
+
+    const handleSelectBook = (book: Book) => {
+        setSelectedBook(book);
+        window.history.pushState({ ...window.history.state, isBookOpen: true }, '', window.location.href);
+    };
+
+    const handleOpenPdf = (bookCode: string, chNum: number, title: string) => {
+        handleView(bookCode, chNum, title);
+        window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
+    };
+
+    const handleChapterBack = () => {
+        window.history.back();
+    };
+
+    const handlePdfClose = () => {
+        window.history.back();
+    };
+
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-[#0a0f24] text-white p-4 pb-20 font-sans">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
-                    <Pressable onClick={selectedBook ? () => setSelectedBook(null) : onBack} className="p-2 bg-white/5 rounded-full">
+                    <Pressable onClick={selectedBook ? handleChapterBack : onBack} className="p-2 bg-white/5 rounded-full">
                         <ArrowLeft className="w-5 h-5" />
                     </Pressable>
                     <div>
@@ -252,7 +291,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                                 <motion.div 
                                     key={book.id}
                                     whileTap={{ scale: 0.98 }}
-                                    onClick={() => setSelectedBook(book)}
+                                    onClick={() => handleSelectBook(book)}
                                     className="bg-[#161e38] border border-white/5 p-4 rounded-2xl flex items-center gap-4 cursor-pointer hover:border-blue-500/50 transition-all"
                                 >
                                     <div className={`w-12 h-16 rounded-lg flex items-center justify-center text-white font-bold text-xl ${
@@ -307,7 +346,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                                             </button>
                                         )}
                                         <Pressable 
-                                            onClick={() => handleView(selectedBook.code, chNum, `${chNum}. ${chName}`)}
+                                            onClick={() => handleOpenPdf(selectedBook.code, chNum, `${chNum}. ${chName}`)}
                                             className="bg-blue-600 px-3 py-1.5 rounded-lg text-[10px] font-bold flex items-center gap-1 active:scale-95 transition-transform"
                                         >
                                             <Eye className="w-3 h-3" /> VIEW
@@ -324,12 +363,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                 <AdvancedPDFViewer 
                     pdfUrl={viewerUrl.url}
                     title={viewerUrl.title}
-                    onClose={() => {
-                        if (viewerUrl.url.startsWith('blob:')) {
-                            URL.revokeObjectURL(viewerUrl.url);
-                        }
-                        setViewerUrl(null);
-                    }}
+                    onClose={handlePdfClose}
                 />
             )}
         </motion.div>

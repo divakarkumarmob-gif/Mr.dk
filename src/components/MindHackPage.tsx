@@ -1,10 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { mindHackPages } from '../data/mindHackData';
 
 export default function MindHackPage({ onBack }: { onBack: () => void }) {
     const [currentPage, setCurrentPage] = useState(0);
+
+    const handlePop = () => {
+        const state = window.history.state;
+        if (state && typeof state.mindHackPage === 'number') {
+            setCurrentPage(state.mindHackPage);
+        } else if (currentPage > 0) {
+            setCurrentPage(0);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [currentPage]);
+
+    const handleNext = () => {
+        const next = currentPage + 1;
+        setCurrentPage(next);
+        window.history.pushState({ ...window.history.state, mindHackPage: next }, '', window.location.href);
+    };
+
+    const handlePrev = () => {
+        window.history.back();
+    };
 
     return (
         <motion.div
@@ -24,7 +48,7 @@ export default function MindHackPage({ onBack }: { onBack: () => void }) {
             <div className="absolute top-4 right-4 flex gap-2">
                 {currentPage > 0 && (
                     <button 
-                        onClick={() => setCurrentPage(currentPage - 1)} 
+                        onClick={handlePrev} 
                         className="flex items-center gap-2 text-sm font-bold bg-[#d4b97f]/50 p-2 rounded-full"
                     >
                         <ArrowLeft className="h-5 w-5" /> Prev
@@ -32,7 +56,7 @@ export default function MindHackPage({ onBack }: { onBack: () => void }) {
                 )}
                 {currentPage < mindHackPages.length - 1 && (
                     <button 
-                        onClick={() => setCurrentPage(currentPage + 1)} 
+                        onClick={handleNext} 
                         className="flex items-center gap-2 text-sm font-bold bg-[#d4b97f]/50 p-2 rounded-full"
                     >
                         Next <ArrowRight className="h-5 w-5" />

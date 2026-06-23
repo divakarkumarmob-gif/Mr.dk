@@ -11,16 +11,48 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
     const [showAnalysis, setShowAnalysis] = useState(false);
     const [showTutor, setShowTutor] = useState(false);
 
+    const handlePop = () => {
+        const state = window.history.state;
+        if (showReview && !state?.isReviewOpen) {
+            setShowReview(false);
+        } else if (showAnalysis && !state?.isAnalysisOpen) {
+            setShowAnalysis(false);
+        } else if (showTutor && !state?.isTutorOpen) {
+            setShowTutor(false);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [showReview, showAnalysis, showTutor]);
+
+    const handleOpenReview = (type: 'correct' | 'incorrect' | 'unattempted' | 'all') => {
+        setFilterType(type);
+        setShowReview(true);
+        window.history.pushState({ ...window.history.state, isReviewOpen: true }, '', window.location.href);
+    };
+
+    const handleOpenAnalysis = () => {
+        setShowAnalysis(true);
+        window.history.pushState({ ...window.history.state, isAnalysisOpen: true }, '', window.location.href);
+    };
+
+    const handleOpenTutor = () => {
+        setShowTutor(true);
+        window.history.pushState({ ...window.history.state, isTutorOpen: true }, '', window.location.href);
+    };
+
     if (showReview) {
-        return <TestReview questions={result.questions || []} answers={result.answers || {}} filterType={filterType} onClose={() => setShowReview(false)} />;
+        return <TestReview questions={result.questions || []} answers={result.answers || {}} filterType={filterType} onClose={() => window.history.back()} />;
     }
 
     if (showAnalysis) {
-        return <TestAnalysis result={result} onClose={() => setShowAnalysis(false)} />;
+        return <TestAnalysis result={result} onClose={() => window.history.back()} />;
     }
 
     if (showTutor) {
-        return <TestTutor result={result} onClose={() => setShowTutor(false)} />;
+        return <TestTutor result={result} onClose={() => window.history.back()} />;
     }
 
     const scoreData = [
@@ -30,8 +62,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
     const COLORS = ['#3b82f6', '#1e293b'];
 
     const handleStatClick = (type: 'correct' | 'incorrect' | 'unattempted' | 'all') => {
-        setFilterType(type);
-        setShowReview(true);
+        handleOpenReview(type);
     };
 
     return (
@@ -105,8 +136,8 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
             )}
 
             <div className="flex gap-4 mt-8">
-                <button onClick={() => setShowAnalysis(true)} className="flex-1 bg-blue-600 py-4 rounded-2xl font-bold text-lg">Detailed Analysis</button>
-                <button onClick={() => setShowTutor(true)} className="flex-1 bg-purple-600 py-4 rounded-2xl font-bold text-lg">Ask Tutor</button>
+                <button onClick={handleOpenAnalysis} className="flex-1 bg-blue-600 py-4 rounded-2xl font-bold text-lg">Detailed Analysis</button>
+                <button onClick={handleOpenTutor} className="flex-1 bg-purple-600 py-4 rounded-2xl font-bold text-lg">Ask Tutor</button>
             </div>
         </div>
     );

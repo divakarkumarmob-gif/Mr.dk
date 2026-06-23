@@ -94,6 +94,16 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     });
 
     useEffect(() => {
+        const handlePop = () => {
+            if (showChapterPopup && !window.history.state?.isChapterPopupOpen) {
+                setShowChapterPopup(false);
+            }
+        };
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [showChapterPopup]);
+
+    useEffect(() => {
         const q = query(collection(db, 'notifications'), orderBy('timestamp', 'desc'));
         const unsubscribeNotifs = onSnapshot(q, (snapshot) => {
             setNotifications(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Notification)));
@@ -280,7 +290,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                     <div className="space-y-4">
                         <h3 className="font-bold text-lg text-white">Schedule New Test</h3>
                         <input type="text" placeholder="Test Name" value={testName} onChange={e => setTestName(e.target.value)} className="w-full bg-white/5 p-2 rounded-lg border border-white/10" />
-                        <button onClick={() => setShowChapterPopup(true)} className="w-full bg-white/5 p-2 rounded-lg border border-white/10 text-left">
+                        <button onClick={() => { setShowChapterPopup(true); window.history.pushState({ ...window.history.state, isChapterPopupOpen: true }, '', window.location.href); }} className="w-full bg-white/5 p-2 rounded-lg border border-white/10 text-left">
                             {selectedChapters.length > 0 ? `${selectedChapters.length} chapters selected` : 'Select Chapters'}
                         </button>
                         

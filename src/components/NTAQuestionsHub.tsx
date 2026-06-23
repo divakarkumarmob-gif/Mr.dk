@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, FileText, Search, ExternalLink, BookOpen, Clock, Tag, Loader2, FileUp, Info, Share2, Check } from 'lucide-react';
 import Pressable from './Pressable';
@@ -61,13 +61,33 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
         const targetUrl = (useMirror && paper.mirrorUrl) ? paper.mirrorUrl : paper.url;
         const proxyUrl = `/api/proxy-pdf?url=${encodeURIComponent(targetUrl)}`;
         setViewerUrl({ url: proxyUrl, title: paper.title, originalUrl: targetUrl });
+        window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
     };
 
     const handleShare = (paper: NTAPaper) => {
-        const url = `${window.location.origin}/?view=ntaQuestionsHub&paper=${paper.id}`;
+        const url = `${window.location.origin}${window.location.pathname}?view=ntaQuestionsHub&paperId=${paper.id}`;
         navigator.clipboard.writeText(url);
         setCopiedId(paper.id);
         setTimeout(() => setCopiedId(null), 2000);
+    };
+
+    const handlePop = () => {
+        if (viewerUrl && !window.history.state?.isPdfOpen) {
+            setViewerUrl(null);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [viewerUrl]);
+
+    const handleViewerClose = () => {
+        window.history.back();
+    };
+
+    const handleBack = () => {
+        onBack();
     };
 
     React.useEffect(() => {
@@ -84,7 +104,7 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
-                    <Pressable onClick={onBack} className="p-2 bg-white/5 rounded-full">
+                    <Pressable onClick={handleBack} className="p-2 bg-white/5 rounded-full">
                         <ArrowLeft className="w-5 h-5" />
                     </Pressable>
                     <div>
@@ -148,7 +168,7 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
                             <div className="flex items-center gap-4">
                                 <div className={`w-12 h-12 rounded-xl flex flex-col items-center justify-center font-bold text-[10px] sm:text-xs ${
                                     paper.category === 'Main' ? 'bg-orange-600/20 text-orange-400' : 'bg-blue-600/20 text-blue-400'
-                                }`}>
+                                }}`}>
                                     <FileUp className="w-5 h-5 mb-0.5" />
                                     {paper.year}
                                 </div>
@@ -213,7 +233,7 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
                 <AdvancedPDFViewer 
                     pdfUrl={viewerUrl.url}
                     title={viewerUrl.title}
-                    onClose={() => setViewerUrl(null)}
+                    onClose={handleViewerClose}
                     originalUrl={viewerUrl.originalUrl}
                 />
             )}

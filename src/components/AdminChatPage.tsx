@@ -10,6 +10,26 @@ export default function AdminChatPage({ onBack }: { onBack: () => void }) {
     const [chatNames, setChatNames] = useState<Record<string, string>>({});
 
     useEffect(() => {
+        const handlePop = () => {
+            const state = window.history.state;
+            if (selectedChat && !state?.chatId) {
+                setSelectedChat(null);
+            }
+        };
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [selectedChat]);
+
+    const handleSelectChat = (id: string | null) => {
+        if (id) {
+            window.history.pushState({ ...window.history.state, chatId: id }, '', window.location.href);
+        } else if (selectedChat) {
+            window.history.back();
+        }
+        setSelectedChat(id);
+    };
+
+    useEffect(() => {
         const unsubscribe = subscribeToSupportChats((chatData) => {
             console.log('DEBUG: AdminChatPage received chats:', chatData);
             setChats(chatData);
@@ -28,7 +48,7 @@ export default function AdminChatPage({ onBack }: { onBack: () => void }) {
             <button className="mb-4 text-sm text-muted-foreground" onClick={onBack}>⬅️ Back to Admin</button>
             <h1 className="text-2xl font-bold mb-4">Chat Manager</h1>
             <div className="flex gap-4 h-[70vh]">
-                <ChatList chats={chats} selectedChat={selectedChat} setSelectedChat={setSelectedChat} chatNames={chatNames} />
+                <ChatList chats={chats} selectedChat={selectedChat} setSelectedChat={handleSelectChat} chatNames={chatNames} />
                 <div className="flex-1">
                     {selectedChat ? (
                         <ChatWindow chatId={selectedChat} userId={auth.currentUser?.uid || ''} isAdmin={true} />

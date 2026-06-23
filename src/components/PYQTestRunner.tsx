@@ -53,10 +53,30 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
             });
         }, 1000);
 
-        window.history.pushState(null, '', window.location.href);
-        const handlePopState = () => {
+        // Initial push to trap back button
+        window.history.pushState({ ...window.history.state, inTest: true }, '', window.location.href);
+        
+        const handlePopState = (event: PopStateEvent) => {
+             const state = event.state;
+             
+             // If we were in a sub-view (PDF or Menu), we just let the pop happen (state changes)
+             // and our effects will handle closing them if we push specific states for them.
+             // But for now, we just check if we are still active.
+             
+             if (activePdf) {
+                 setActivePdf(null);
+                 window.history.pushState({ ...window.history.state, inTest: true }, '', window.location.href);
+                 return;
+             }
+             if (showMenu) {
+                 setShowMenu(false);
+                 window.history.pushState({ ...window.history.state, inTest: true }, '', window.location.href);
+                 return;
+             }
+
              setShowQuitModal(true);
-             window.history.pushState(null, '', window.location.href);
+             // Re-push to keep trapping
+             window.history.pushState({ ...window.history.state, inTest: true }, '', window.location.href);
         };
         window.addEventListener('popstate', handlePopState);
 
@@ -64,7 +84,17 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
             clearInterval(timer);
             window.removeEventListener('popstate', handlePopState);
         };
-    }, []);
+    }, [activePdf, showMenu]);
+
+    const handleOpenPdf = (url: string, title: string) => {
+        setActivePdf({ url, title });
+        // We don't necessarily need to push here because handlePopState intercepts EVERYTHING
+        // and we check if activePdf is open.
+    };
+
+    const handleMenuOpen = () => {
+        setShowMenu(true);
+    };
 
     const formatTime = (seconds: number) => {
         const mins = Math.floor(seconds / 60);

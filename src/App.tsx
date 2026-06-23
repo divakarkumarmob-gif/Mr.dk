@@ -142,8 +142,11 @@ const getRandomChapters = () => {
 };
 
 export default function App() {
-  useReportProblemGesture(() => setShowSupportModal(true));
+  const [showSupportModal, setShowSupportModal] = useState(false);
+  const [showNeuralSolver, setShowNeuralSolver] = useState(false);
   const [user, setUser] = useState<User | null>(null);
+  
+  useReportProblemGesture(() => setShowSupportModal(true));
   const getInitialView = () => {
     const params = new URLSearchParams(window.location.search);
     const viewParam = params.get('view');
@@ -167,9 +170,70 @@ export default function App() {
         urlParams.forEach((v, k) => params[k] = v);
         window.history.replaceState({ view, params }, '', window.location.href);
     }
+  }, []);
 
+  // Use refs for latest state values in popstate listener to avoid dependency cycles
+  const stateRef = useRef({ 
+    activeVideo, 
+    showNotifications, 
+    showAnalytics, 
+    showResetModal, 
+    showRandomPopup, 
+    backPressCount, 
+    currentView,
+    isNotificationView
+  });
+  
+  useEffect(() => {
+    stateRef.current = { 
+        activeVideo, 
+        showNotifications, 
+        showAnalytics, 
+        showResetModal, 
+        showRandomPopup, 
+        backPressCount, 
+        currentView,
+        isNotificationView
+    };
+  }, [activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, backPressCount, currentView, isNotificationView]);
+
+  useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
         const state = event.state;
+        const { activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, currentView, backPressCount, isNotificationView } = stateRef.current;
+
+        // 1. If we have active overlays, close them and stay on page
+        if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup || isNotificationView) {
+            setActiveVideo(null);
+            setShowNotifications(false);
+            setShowAnalytics(false);
+            setShowResetModal(false);
+            setShowRandomPopup(false);
+            setIsNotificationView(false);
+            // Re-push current state to effectively "cancel" the back action visually while closing overlay
+            window.history.pushState(state, '', window.location.href);
+            return;
+        }
+
+        // 2. Home exit-trap logic
+        if (currentView === 'home' && (!state || state.view === 'home')) {
+            setBackPressCount(prev => {
+                const newCount = prev + 1;
+                if (newCount >= 2) {
+                    // Let it exit (rare in browser, but good for completeness)
+                    window.history.back();
+                } else {
+                    setShowExitToast(true);
+                    setTimeout(() => setShowExitToast(false), 2000);
+                    // Re-trap
+                    window.history.pushState({ view: 'home' }, '', '/');
+                }
+                return newCount % 2;
+            });
+            return;
+        }
+
+        // 3. Normal navigation
         if (state && state.view) {
             _setCurrentView(state.view);
             if (state.params) {
@@ -182,6 +246,7 @@ export default function App() {
             setUrlParams(searchParams);
         }
     };
+
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
@@ -524,46 +589,6 @@ export default function App() {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
-
-  useEffect(() => {
-    const handlePopState = (e: PopStateEvent) => {
-        // If we have active overlays, close them
-        if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
-            setActiveVideo(null);
-            setShowNotifications(false);
-            setShowAnalytics(false);
-            setShowResetModal(false);
-            setShowRandomPopup(false);
-            return;
-        }
-
-        // Home exit-trap logic only if we are currently at home
-        if (currentView === 'home') {
-            setBackPressCount(prev => prev + 1);
-            setShowExitToast(true);
-            setTimeout(() => {
-                setShowExitToast(false);
-                setBackPressCount(0);
-            }, 2000);
-
-            if (backPressCount >= 1) {
-                // Really exit
-                window.history.back();
-            } else {
-                // Re-trap
-                window.history.pushState({ view: 'home' }, '', '/home');
-            }
-            return;
-        }
-
-        // Otherwise navigate back
-        const poppedView = e.state?.view || 'home';
-        _setCurrentView(poppedView);
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, [currentView, activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, backPressCount]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -927,8 +952,7 @@ export default function App() {
     return () => { delete (window as any).setAsHomeScreen; };
   }, []);
 
-  const [showSupportModal, setShowSupportModal] = useState(false);
-  const [showNeuralSolver, setShowNeuralSolver] = useState(false);
+// These states were moved to the top
 
   if (loading) {
     return <div className="flex items-center justify-center min-h-screen bg-slate-50 text-slate-900">Loading...</div>;

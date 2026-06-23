@@ -52,9 +52,10 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
-    if (selectedResult) {
-        return <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />;
-    }
+    const handleSeeResult = (result: any) => {
+        setSelectedResult(result);
+        window.history.pushState({ view: 'analytics', isResultOpen: true }, '', window.location.href);
+    };
 
     useEffect(() => {
         const handlePop = () => {
@@ -66,10 +67,9 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
         return () => window.removeEventListener('popstate', handlePop);
     }, [selectedResult]);
 
-    const handleSeeResult = (result: any) => {
-        setSelectedResult(result);
-        window.history.pushState({ view: 'analytics', isResultOpen: true }, '', window.location.href);
-    };
+    if (selectedResult) {
+        return <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />;
+    }
 
     return (
         <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground">
