@@ -83,9 +83,20 @@ function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
 
 async function callAI(prompt: string | any[]): Promise<string> {
     try {
+        const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. Current Time: ${new Date().toISOString()}`;
+        
+        let contentParts: any[] = [];
+        if (typeof prompt === 'string') {
+            contentParts = [{ text: systemInstruction }, { text: prompt }];
+        } else if (Array.isArray(prompt)) {
+            contentParts = [{ text: systemInstruction }, ...prompt];
+        } else {
+            contentParts = [{ text: systemInstruction }, prompt];
+        }
+
         const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
-            contents: Array.isArray(prompt) ? { parts: prompt } : prompt
+            model: "gemini-1.5-flash", 
+            contents: { parts: contentParts }
         });
         return response.text || "";
     } catch (error) {
@@ -341,17 +352,16 @@ async function startServer() {
           }
 
           const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
+            model: "gemini-1.5-flash",
             contents: { 
                 parts: [
-                    { text: `You are an expert NEET Study Planner. 
-Analyze the user's input.
-1. If the input is a casual greeting or off-topic, respond with a very brief, friendly sentence.
-2. If the input is about studies, act as a planner. Respond in strict Markdown.
-- Keep response extremely short.
-- Use bullet points.
-- NO fluff, NO pleasantries, NO conversational fillers.
-Direct, actionable, minimal.` },
+                    { text: `Strict Instruction: You are an expert NEET AI Assistant. 
+Respond with extreme brevity and 100% accuracy. 
+- If asked a simple question (like 2+2), respond with ONLY the answer (e.g., 4).
+- No fluff, no "Certainly!", no "I am here to help".
+- Use simple words.
+- If it's a greeting, just say "Hello".
+- Direct, actionable, minimal.` },
                     ...contents
                 ] 
             },
@@ -406,7 +416,7 @@ Direct, actionable, minimal.` },
         const lastMessage = messages[messages.length - 1].content;
         
         try {
-            const reply = await callAI(`You are a NEET tutor. Answer according to NCERT. Explain simply, be concise. ${lastMessage}`);
+            const reply = await callAI(`You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${lastMessage}`);
             res.json({ reply });
         } catch (error) {
             console.error("Tutor API Error:", error);
@@ -425,8 +435,13 @@ Direct, actionable, minimal.` },
     
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
-            contents: `You are a friendly NEET tutor. Answer accurately according to NCERT. ${lastMessage}`
+            model: "gemini-1.5-flash",
+            contents: { 
+                parts: [
+                    { text: "Strict Instruction: Be extremely brief, accurate, and simple. No fluff." },
+                    { text: lastMessage }
+                ]
+            }
         });
 
         res.json({ reply: response.text });
@@ -504,17 +519,25 @@ Direct, actionable, minimal.` },
         if (isDirectImageQuestion || searchResults.length > 0) {
             let contents: any;
             if (isDirectImageQuestion) {
-                 contents = { parts: [{ text: finalPrompt }, { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }] };
+                 contents = { 
+                    parts: [
+                        { text: "Strict Instruction: Identify what is in the image and answer the user's question with extreme brevity and accuracy. No fluff." },
+                        { text: finalPrompt || "Describe this" }, 
+                        { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                    ] 
+                 };
             } else {
                  const context = searchResults.slice(0, 3).map(s => `Title: ${s.title}\nContent: ${s.content}`).join('\n\n');
-                 contents = `Summarize the following search results to answer the query: "${finalPrompt}" concisely and clearly in plain text. Do not use LaTeX. Only provide the summary.\n\nContext:\n${context}`;
+                 contents = {
+                    parts: [{ text: `Strict Instruction: Summarize the following search results to answer the query: "${finalPrompt}" with extreme brevity and 100% accuracy. Use plain simple text. No LaTeX. No pleasantries.\n\nContext:\n${context}` }]
+                 };
             }
 
             let streamed = false;
             try {
                 // Stream with Gemini
                 const stream = await ai.models.generateContentStream({
-                    model: "gemini-3.5-flash",
+                    model: "gemini-1.5-flash",
                     contents: contents
                 });
                 

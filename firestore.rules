@@ -3,15 +3,20 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function isSignedIn() { return request.auth != null; }
     function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
-    function isAdmin() { return isSignedIn() && request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']; }
+    function isAdmin() { 
+      return isSignedIn() && (
+        request.auth.uid == 'b6BsG4T4z5ZfhSsybus6pcakEdB2' ||
+        request.auth.token.email == 'divakarkumarmob@gmail.com' || 
+        request.auth.token.email == 'shashikumarmob@gmail.com' ||
+        request.auth.token.email == 'admin@neet.com'
+      );
+    }
 
     match /notifications/{notificationId} {
-      allow read: if isSignedIn();
-      allow write: if isSignedIn();
+      allow read, write: if isSignedIn();
     }
     match /notifications {
-      allow read: if isSignedIn();
-      allow write: if isSignedIn();
+      allow read, write: if isSignedIn();
     }
 
     match /neet_notifications/{notificationId} {
@@ -30,76 +35,50 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
-    // Temporary fix
     match /otps/{otpId} {
         allow read, write: if true;
     }
     
-    // Public or shared data
     match /questions/{questionId} {
       allow read: if isSignedIn();
-      allow write: if false; 
+      allow write: if isAdmin(); 
     }
     
     match /chapterActivity/{activityId} {
       allow read: if isSignedIn();
-      allow write: if false;
+      allow write: if isAdmin();
     }
 
-    // User-specific data
     match /users/{userId} {
       allow read: if isOwner(userId) || isAdmin();
-      allow write: if isOwner(userId);
+      allow write: if isOwner(userId) || isAdmin();
       
-      match /settings/{settingId} {
-        allow read, write: if isOwner(userId);
+      match /{allSubcollections=**} {
+        allow read, write: if isOwner(userId) || isAdmin();
       }
-      
-      match /analyses/{analysisId} {
-        allow read, write: if isOwner(userId);
-      }
-      
-      match /results/{resultId} {
-        allow read, write: if isOwner(userId);
-      }
-      
-      match /notes/{noteId} {
-        allow read, write: if isOwner(userId);
-      }
-      
-      match /analytics_v2/{docId} {
-        allow read, write: if isOwner(userId);
-      }
-      
-      match /flashcards/{chapterId} {
-        allow read, write: if isOwner(userId);
-      }
-      
-      // Simplified rules
-      
     }
 
-    match /ai-study-plan-chats/{chatId} {
-        allow read, write: if isSignedIn() && resource.data.userId == request.auth.uid;
-        allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+    // Simplified users collection rule
+    match /users {
+      allow read: if isAdmin();
     }
 
     // Chat data
     match /chats/{chatId} {
-      allow read, write: if isOwner(chatId);
+      allow read: if isSignedIn() && (isAdmin() || chatId == request.auth.uid || resource.data.get('participants', []).hasAny([request.auth.uid]));
+      allow create: if isSignedIn() && (request.resource.data.get('participants', []).hasAny([request.auth.uid]));
+      allow update: if isSignedIn() && (isAdmin() || resource.data.get('participants', []).hasAny([request.auth.uid]));
+      allow delete: if isAdmin();
       
-      // User-specific chat history
-      match /history/{docId} {
-        allow read, write: if isOwner(chatId);
-      }
-
-      // Shared chat data
-      // (Leaving shared chat data more restrictive)
-      match /messages/{messageId} {
-        allow read: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
-        allow write: if isSignedIn() && (get(/databases/$(database)/documents/chats/$(chatId)).data.participants.hasAny([request.auth.uid]) || request.auth.token.email in ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com']);
+      match /{allSubcollections=**} {
+        allow read, write: if isAdmin() || isOwner(chatId) || (get(/databases/$(database)/documents/chats/$(chatId)).data.get('participants', []).hasAny([request.auth.uid]));
       }
     }
+
+    match /chats {
+      allow read: if isAdmin();
+    }
+
 
     match /{document=**} {
       allow read, write: if false;

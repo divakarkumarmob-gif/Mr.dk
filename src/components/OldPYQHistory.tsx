@@ -75,10 +75,6 @@ export default function OldPYQHistory({ onBack }: Props) {
                     <h1 className="text-xl font-bold">NEET Legacy PYQs</h1>
                     <div className="flex items-center gap-2">
                         <span className="text-xs text-gray-400">Previous Year Papers (2005 - 2025)</span>
-                        <div className="flex items-center gap-1 bg-green-500/10 px-2 py-0.5 rounded-full border border-green-500/20">
-                            <div className="h-1 w-1 rounded-full bg-green-500"></div>
-                            <span className="text-[9px] text-green-400 font-bold uppercase tracking-wider">GitHub Cloud Synced</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -131,6 +127,7 @@ export default function OldPYQHistory({ onBack }: Props) {
                     title={activeResource.title} 
                     onClose={() => setActiveResource(null)}
                     originalUrl={activeResource.url}
+                    initialScale={0.6}
                 />
             )}
         </div>

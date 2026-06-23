@@ -7,10 +7,10 @@ import { motion, AnimatePresence } from 'motion/react';
 // Configure the worker to use the CDN - Using MJS for modern compatibility with PDF.js 5.x
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string }) {
+export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 0.6 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const [scale, setScale] = useState(0.85);
+    const [scale, setScale] = useState(initialScale);
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [useNativeViewer, setUseNativeViewer] = useState(false);
@@ -81,23 +81,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl 
                     </button>
                     <div className="flex flex-col min-w-0">
                         <h2 className="text-sm font-bold text-white truncate leading-tight">{title}</h2>
-                        <span className="text-[10px] text-gray-500 font-medium truncate uppercase tracking-wider">
-                            {useNativeViewer ? 'Browser View' : 'HD Cloud Viewer'}
-                        </span>
                     </div>
                 </div>
 
                 <div className="flex items-center gap-2">
-                    {/* View Switcher Toggle */}
-                    <button 
-                        onClick={() => setUseNativeViewer(!useNativeViewer)}
-                        className={`p-2 rounded-xl transition flex items-center gap-2 ${useNativeViewer ? 'bg-blue-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'}`}
-                        title="Toggle Viewer Mode"
-                    >
-                        <Maximize2 className="h-4 w-4" />
-                        <span className="text-[10px] font-bold hidden sm:inline">{useNativeViewer ? 'Classic Mode' : 'Switch Mode'}</span>
-                    </button>
-
                     <button 
                         onClick={handleDownload}
                         className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-xl transition"
@@ -145,11 +132,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl 
                                 title={title}
                                 onLoad={() => setIsLoading(false)}
                             />
-                            {/* Warning Indicator */}
-                            <div className="absolute top-4 right-4 bg-yellow-500/90 text-black px-3 py-1.5 rounded-full text-[10px] font-bold shadow-lg flex items-center gap-2 animate-pulse">
-                                <AlertTriangle className="w-3.5 h-3.5" />
-                                Browser Mode Active
-                            </div>
                         </motion.div>
                     ) : (
                         <motion.div 

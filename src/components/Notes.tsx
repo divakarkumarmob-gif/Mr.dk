@@ -126,11 +126,6 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
           <div className="bg-orange-600 p-2 rounded-xl"><Download className="h-4 w-4 text-white"/></div>
           <div>
             <p className="font-bold text-sm">Legacy PYQs 📜</p>
-            <p className="text-[10px] opacity-80 leading-tight">Official GitHub Archive</p>
-          </div>
-          <div className="mt-auto pt-1 flex items-center gap-1">
-             <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></div>
-             <span className="text-[9px] text-gray-400 font-medium">Auto-Synced (GitHub)</span>
           </div>
         </Pressable>
       </div>
