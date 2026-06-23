@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
 import {collection, onSnapshot, query, orderBy, getDocs, where} from 'firebase/firestore';                
 import {db, auth} from '../lib/firebase';
-import {ChevronDown, Leaf, Atom, Beaker, Play, Eye, EyeOff, AlertTriangle} from 'lucide-react';
+import {ChevronDown, Leaf, Atom, Beaker, Play, Eye, EyeOff, AlertTriangle, Clock, Loader2} from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
@@ -30,15 +30,62 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
     const [recentTests, setRecentTests] = useState<any[]>([]);
     const [selectedResult, setSelectedResult] = useState<any>(null);
     const [pressTimer, setPressTimer] = useState<any>(null);
+    const [now, setNow] = useState(Date.now());
+
+    useEffect(() => {
+        const interval = setInterval(() => setNow(Date.now()), 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (!auth.currentUser) return;
+        const fetchRecentTests = async () => {
+            try {
+                const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
+                const querySnapshot = await getDocs(q);
+                const tests = querySnapshot.docs.map(doc => {
+                    const data = doc.data();
+                    return {
+                        id: doc.id,
+                        ...data,
+                        timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
+                    };
+                });
+                
+                const currentNow = Date.now();
+                setRecentTests(tests.filter(t => {
+                    const hideUntil = localStorage.getItem('hide-' + t.id);
+                    if (hideUntil) {
+                        if (currentNow > parseInt(hideUntil)) return false;
+                    }
+                    return true;
+                }));
+            } catch (e: any) {
+                console.error("Error fetching recent tests in StudyHub:", e);
+            }
+        };
+        fetchRecentTests();
+    }, []);
 
     // Focus Mode - removed local state in favor of global state in App.tsx
 
     const handleSeeResults = (test: any) => {
         setSelectedResult(test);
+        window.history.pushState({ view: 'study', isResultOpen: true }, '', window.location.href);
         if (!localStorage.getItem('hide-' + test.id)) {
             localStorage.setItem('hide-' + test.id, (Date.now() + 10 * 60 * 1000).toString());
         }
     }
+
+    useEffect(() => {
+        const handlePop = () => {
+            if (selectedResult && !window.history.state?.isResultOpen) {
+                setSelectedResult(null);
+            }
+        };
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [selectedResult]);
 
     const removeTest = (testId: string) => {
         localStorage.setItem('hide-' + testId, '0');
@@ -109,7 +156,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
           
           {selectedResult && (
             <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-2 flex flex-col text-white">
-                <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
+                <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />
             </div>
           )
         }
@@ -117,7 +164,15 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
           {recentTests.length > 0 && (
                 <div className="mb-4">
                     <h2 className="font-bold mb-2 text-xs text-orange-400 uppercase">Recently Completed</h2>
-                    {recentTests.map(test => (
+                    {recentTests.map(test => {
+                        const elapsed = now - test.timestamp.getTime();
+                        const isReady = elapsed >= 120000;
+                        const remaining = Math.max(0, 120000 - elapsed);
+                        const mins = Math.floor(remaining / 60000);
+                        const secs = Math.floor((remaining % 60000) / 1000);
+                        const timeStr = `${mins}:${secs.toString().padStart(2, '0')}`;
+
+                        return (
                         <div key={test.id} 
                             className="bg-orange-900/30 p-3 rounded-lg border border-orange-500/50 flex justify-between items-center mb-1.5"
                             onTouchStart={() => handleTouchStart(test.id)}
@@ -125,12 +180,23 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                             onMouseDown={() => handleTouchStart(test.id)}
                             onMouseUp={handleTouchEnd}
                         >
-                             <div>
+                             <div className="flex flex-col">
                                 <h3 className="font-bold text-sm">{test.testName}</h3>
+                                {!isReady && (
+                                    <span className="text-[10px] text-orange-300 animate-pulse font-mono flex items-center gap-1">
+                                        <Clock className="w-3 h-3" /> Analyzing... {timeStr}
+                                    </span>
+                                )}
                              </div>
-                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 px-3 py-1 rounded-lg text-xs font-bold">See Results</button>
+                            {isReady ? (
+                                <button onClick={() => handleSeeResults(test)} className="bg-orange-600 px-3 py-1 rounded-lg text-xs font-bold">See Results</button>
+                            ) : (
+                                <div className="bg-white/10 text-white/40 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-2">
+                                    <Loader2 className="w-3 h-3 animate-spin" /> Processing
+                                </div>
+                            )}
                         </div>
-                    ))}
+                    );})}
                 </div>
             )
         }

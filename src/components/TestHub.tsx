@@ -37,6 +37,12 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [timer, setTimer] = useState(35);
   const [selectedResult, setSelectedResult] = useState<any>(null);
   const [pressTimer, setPressTimer] = useState<any>(null);
+  const [now, setNow] = useState(Date.now());
+
+  useEffect(() => {
+	const interval = setInterval(() => setNow(Date.now()), 1000);
+	return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
       let interval: any;
@@ -88,10 +94,21 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
   const handleSeeResults = (test: any) => {
       setSelectedResult(test);
+      window.history.pushState({ view: 'tests', isResultOpen: true }, '', window.location.href);
       if (!localStorage.getItem('hide-' + test.id)) {
           localStorage.setItem('hide-' + test.id, (Date.now() + 10 * 60 * 1000).toString());
       }
   }
+
+  useEffect(() => {
+    const handlePop = () => {
+        if (selectedResult && !window.history.state?.isResultOpen) {
+            setSelectedResult(null);
+        }
+    };
+    window.addEventListener('popstate', handlePop);
+    return () => window.removeEventListener('popstate', handlePop);
+  }, [selectedResult]);
 
   const removeTest = (testId: string) => {
       localStorage.setItem('hide-' + testId, '0');
@@ -165,14 +182,22 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             
             {selectedResult && (
                 <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-2 flex flex-col text-white">
-                    <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
+                    <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />
                 </div>
             )}
 
             {recentTests.length > 0 && (
                 <div className="mb-3">
                     <h2 className="font-bold text-xs mb-1.5 text-orange-400">Recently Completed</h2>
-                    {recentTests.map(test => (
+                    {recentTests.map(test => {
+                        const elapsed = now - test.timestamp.getTime();
+                        const isReady = elapsed >= 120000;
+                        const remaining = Math.max(0, 120000 - elapsed);
+                        const mins = Math.floor(remaining / 60000);
+                        const secs = Math.floor((remaining % 60000) / 1000);
+                        const timeStr = `${mins}:${secs.toString().padStart(2, '0')}`;
+
+                        return (
                         <div key={test.id} 
                             className="bg-gradient-to-r from-orange-900/40 to-red-900/40 p-2 rounded-md border border-orange-500/20 flex justify-between items-center mb-1"
                             onTouchStart={() => handleTouchStart(test.id)}
@@ -180,10 +205,23 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                             onMouseDown={() => handleTouchStart(test.id)}
                             onMouseUp={handleTouchEnd}
                         >
-                            <span className="font-bold text-xs">{test.testName}</span>
-                            <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold">See Results</button>
+                            <div className="flex flex-col">
+                                <span className="font-bold text-xs">{test.testName}</span>
+                                {!isReady && (
+                                    <span className="text-[8px] text-orange-300 animate-pulse font-mono flex items-center gap-1">
+                                        <Clock className="w-2 h-2" /> Analyzing... {timeStr}
+                                    </span>
+                                )}
+                            </div>
+                            {isReady ? (
+                                <button onClick={() => handleSeeResults(test)} className="bg-orange-600 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold">See Results</button>
+                            ) : (
+                                <div className="bg-white/10 text-white/40 text-[9px] px-1.5 py-0.5 rounded-md font-bold flex items-center gap-1">
+                                    <Loader2 className="w-2 h-2 animate-spin" /> Processing
+                                </div>
+                            )}
                         </div>
-                    ))}
+                    );})}
                 </div>
             )}
 

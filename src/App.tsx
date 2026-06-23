@@ -158,6 +158,34 @@ export default function App() {
 
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
+
+  useEffect(() => {
+    // Initial state replacement to ensure first view is in history
+    if (!window.history.state) {
+        const view = currentView;
+        const params: Record<string, string> = {};
+        urlParams.forEach((v, k) => params[k] = v);
+        window.history.replaceState({ view, params }, '', window.location.href);
+    }
+
+    const handlePopState = (event: PopStateEvent) => {
+        const state = event.state;
+        if (state && state.view) {
+            _setCurrentView(state.view);
+            if (state.params) {
+                setUrlParams(new URLSearchParams(state.params));
+            }
+        } else {
+            const searchParams = new URLSearchParams(window.location.search);
+            const view = searchParams.get('view') || 'home';
+            _setCurrentView(view);
+            setUrlParams(searchParams);
+        }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);

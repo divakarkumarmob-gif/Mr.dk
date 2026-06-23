@@ -53,8 +53,23 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
     };
 
     if (selectedResult) {
-        return <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />;
+        return <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />;
     }
+
+    useEffect(() => {
+        const handlePop = () => {
+            if (selectedResult && !window.history.state?.isResultOpen) {
+                setSelectedResult(null);
+            }
+        };
+        window.addEventListener('popstate', handlePop);
+        return () => window.removeEventListener('popstate', handlePop);
+    }, [selectedResult]);
+
+    const handleSeeResult = (result: any) => {
+        setSelectedResult(result);
+        window.history.pushState({ view: 'analytics', isResultOpen: true }, '', window.location.href);
+    };
 
     return (
         <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground">
@@ -93,7 +108,7 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
                                 <div className="flex items-center gap-3">
                                     {isAnalysisReady(result.timestamp) ? (
                                         <button 
-                                            onClick={() => setSelectedResult(result)}
+                                            onClick={() => handleSeeResult(result)}
                                             className="bg-blue-600 px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all"
                                         >
                                             See Result
