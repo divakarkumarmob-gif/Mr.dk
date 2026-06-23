@@ -44,6 +44,25 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl 
         }
     }
 
+    const handleDownload = async () => {
+        try {
+            const response = await fetch(pdfUrl);
+            const blob = await response.blob();
+            const blobUrl = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+        } catch (err) {
+            console.error("Download failed:", err);
+            // Fallback: open in new tab if blob fetch fails
+            window.open(originalUrl || pdfUrl, '_blank');
+        }
+    };
+
     return (
         <motion.div 
             initial={{ opacity: 0 }} 
@@ -80,10 +99,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl 
                     </button>
 
                     <button 
-                        onClick={() => window.open(pdfUrl, '_blank')}
+                        onClick={handleDownload}
                         className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-xl transition"
+                        title="Download PDF"
                     >
-                        <ExternalLink className="h-5 w-5" />
+                        <Download className="h-5 w-5" />
                     </button>
 
                     <button 
@@ -229,8 +249,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl 
                         </div>
 
                         <button 
-                            onClick={() => window.open(pdfUrl, '_blank')}
+                            onClick={handleDownload}
                             className="p-3.5 bg-blue-600 rounded-2xl text-white shadow-xl shadow-blue-500/20 active:scale-95"
+                            title="Download PDF"
                         >
                             <Download className="h-6 w-6" />
                         </button>
