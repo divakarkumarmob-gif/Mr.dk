@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
@@ -142,21 +142,8 @@ const getRandomChapters = () => {
 };
 
 export default function App() {
-  const [showSupportModal, setShowSupportModal] = useState(false);
-  const [showNeuralSolver, setShowNeuralSolver] = useState(false);
+  useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [activeVideo, setActiveVideo] = useState<string | null>(null);
-  const [showNotifications, setShowNotifications] = useState(false);
-  const [isNotificationView, setIsNotificationView] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
-  const [showResetModal, setShowResetModal] = useState(false);
-  const [showRandomPopup, setShowRandomPopup] = useState(false);
-  const [backPressCount, setBackPressCount] = useState(0);
-  const [subjects, setSubjects] = useState(getDailyChapters());
-  const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
-  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
-  const [displayedText, setDisplayedText] = useState("");
   const getInitialView = () => {
     const params = new URLSearchParams(window.location.search);
     const viewParam = params.get('view');
@@ -180,83 +167,39 @@ export default function App() {
         urlParams.forEach((v, k) => params[k] = v);
         window.history.replaceState({ view, params }, '', window.location.href);
     }
-  }, []);
 
-  // Use refs for latest state values in popstate listener to avoid dependency cycles
-  const stateRef = useRef({ 
-    activeVideo, 
-    showNotifications, 
-    showAnalytics, 
-    showResetModal, 
-    showRandomPopup, 
-    backPressCount, 
-    currentView,
-    isNotificationView
-  });
-  
-  useEffect(() => {
-    stateRef.current = { 
-        activeVideo, 
-        showNotifications, 
-        showAnalytics, 
-        showResetModal, 
-        showRandomPopup, 
-        backPressCount, 
-        currentView,
-        isNotificationView
-    };
-  }, [activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, backPressCount, currentView, isNotificationView]);
-
-  useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
         const state = event.state;
-        const { activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, currentView, backPressCount, isNotificationView } = stateRef.current;
-
-        // 1. If we have active overlays, close them and stay on page
-        if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup || isNotificationView) {
-            setActiveVideo(null);
-            setShowNotifications(false);
-            setShowAnalytics(false);
-            setShowResetModal(false);
-            setShowRandomPopup(false);
-            setIsNotificationView(false);
-            // Re-push current state to effectively "cancel" the back action visually while closing overlay
-            window.history.pushState(state, '', window.location.href);
-            return;
-        }
-
-        // 2. Home exit-trap logic
-        if (currentView === 'home' && (!state || state.view === 'home')) {
-            setBackPressCount(prev => {
-                const newCount = prev + 1;
-                if (newCount >= 2) {
-                    // Let it exit (rare in browser, but good for completeness)
-                    window.history.back();
-                } else {
-                    setShowExitToast(true);
-                    setTimeout(() => setShowExitToast(false), 2000);
-                    // Re-trap
-                    window.history.pushState({ view: 'home' }, '', '/');
+        
+        // Close overlays if they are not in the current state
+        if (state) {
+            setIsNotificationView(!!state.isNotificationView);
+            setShowAnalytics(!!state.showAnalytics);
+            setShowNeuralSolver(!!state.showNeuralSolver);
+            setActiveVideo(state.activeVideo || null);
+            setShowResetModal(!!state.showResetModal);
+            setShowRandomPopup(!!state.showRandomPopup);
+            if (state.view) {
+                _setCurrentView(state.view);
+                if (state.params) {
+                    setUrlParams(new URLSearchParams(state.params));
                 }
-                return newCount % 2;
-            });
-            return;
-        }
-
-        // 3. Normal navigation
-        if (state && state.view) {
-            _setCurrentView(state.view);
-            if (state.params) {
-                setUrlParams(new URLSearchParams(state.params));
             }
         } else {
             const searchParams = new URLSearchParams(window.location.search);
             const view = searchParams.get('view') || 'home';
             _setCurrentView(view);
             setUrlParams(searchParams);
+            
+            // Close all overlays on default state
+            setIsNotificationView(false);
+            setShowAnalytics(false);
+            setShowNeuralSolver(false);
+            setActiveVideo(null);
+            setShowResetModal(false);
+            setShowRandomPopup(false);
         }
     };
-
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
@@ -293,6 +236,8 @@ export default function App() {
 
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const mainContainerRef = React.useRef<HTMLDivElement>(null);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [isNotificationView, setIsNotificationView] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
   const [neetNotifications, setNeetNotifications] = useState<{ updates: string[]; timestamp: any }[]>([]);
@@ -554,10 +499,20 @@ export default function App() {
       requestAnimationFrame(startDetectionLoop);
   };
 
+  const [loading, setLoading] = useState(true);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [subjects, setSubjects] = useState(getDailyChapters());
+  const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
+  const [showResetModal, setShowResetModal] = useState(false);
+  const [showAnalytics, setShowAnalytics] = useState(false);
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
+  const [showRandomPopup, setShowRandomPopup] = useState(false);
+  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
+  const [displayedText, setDisplayedText] = useState("");
+  const [backPressCount, setBackPressCount] = useState(0);
   const [showExitToast, setShowExitToast] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   
@@ -587,6 +542,46 @@ export default function App() {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
+
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+        // If we have active overlays, close them
+        if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
+            setActiveVideo(null);
+            setShowNotifications(false);
+            setShowAnalytics(false);
+            setShowResetModal(false);
+            setShowRandomPopup(false);
+            return;
+        }
+
+        // Home exit-trap logic only if we are currently at home
+        if (currentView === 'home') {
+            setBackPressCount(prev => prev + 1);
+            setShowExitToast(true);
+            setTimeout(() => {
+                setShowExitToast(false);
+                setBackPressCount(0);
+            }, 2000);
+
+            if (backPressCount >= 1) {
+                // Really exit
+                window.history.back();
+            } else {
+                // Re-trap
+                window.history.pushState({ view: 'home' }, '', '/home');
+            }
+            return;
+        }
+
+        // Otherwise navigate back
+        const poppedView = e.state?.view || 'home';
+        _setCurrentView(poppedView);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [currentView, activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, backPressCount]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -651,6 +646,9 @@ export default function App() {
   const openAnalytics = async () => {
     if (!user) return;
     
+    // Push state to history for back navigation
+    window.history.pushState({ ...window.history.state, showAnalytics: true }, '', window.location.href);
+    
     // Fetch analytics data
     const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
     const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
@@ -684,6 +682,32 @@ export default function App() {
     
     setChartData(last7Days);
     setShowAnalytics(true);
+  };
+
+  const handleOpenNotifications = () => {
+      setShowNotifications(false);
+      setIsNotificationView(true);
+      window.history.pushState({ ...window.history.state, isNotificationView: true }, '', window.location.href);
+  };
+
+  const handleOpenRandomPopup = () => {
+      setShowRandomPopup(true);
+      window.history.pushState({ ...window.history.state, showRandomPopup: true }, '', window.location.href);
+  };
+
+  const handleOpenResetModal = () => {
+      setShowResetModal(true);
+      window.history.pushState({ ...window.history.state, showResetModal: true }, '', window.location.href);
+  };
+
+  const handleOpenNeuralSolver = () => {
+      setShowNeuralSolver(true);
+      window.history.pushState({ ...window.history.state, showNeuralSolver: true }, '', window.location.href);
+  };
+
+  const handleOpenVideo = (topic: string) => {
+      setActiveVideo(topic);
+      window.history.pushState({ ...window.history.state, activeVideo: topic }, '', window.location.href);
   };
 
   useEffect(() => {
@@ -950,7 +974,8 @@ export default function App() {
     return () => { delete (window as any).setAsHomeScreen; };
   }, []);
 
-// These states were moved to the top
+  const [showSupportModal, setShowSupportModal] = useState(false);
+  const [showNeuralSolver, setShowNeuralSolver] = useState(false);
 
   if (loading) {
     return <div className="flex items-center justify-center min-h-screen bg-slate-50 text-slate-900">Loading...</div>;
@@ -1154,7 +1179,7 @@ export default function App() {
 
   return (
     <>
-      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
+      {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
       <SupportModal 
         isOpen={showSupportModal} 
         onClose={() => setShowSupportModal(false)}
@@ -1206,7 +1231,7 @@ export default function App() {
           </div>
       )}
 
-      {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
+      {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => window.history.back()} />}
 
       {/* Header */}
       <div className="flex justify-between items-center mb-6 select-none">
@@ -1216,7 +1241,7 @@ export default function App() {
            <p className="text-gray-400 text-[10px] sm:text-sm">Let's make today productive</p>
         </div>
         <div className="relative" ref={notificationRef}>
-            <Bell className="h-6 w-6 cursor-pointer" onClick={() => { setShowNotifications(false); setIsNotificationView(true); }} />
+            <Bell className="h-6 w-6 cursor-pointer" onClick={handleOpenNotifications} />
              {notifications.some(n => !n.readBy?.includes(user?.uid)) ? (
                  <span className="absolute top-0 right-0 bg-red-500 rounded-full w-2.5 h-2.5 border-2 border-[#0a0f24]"></span>
              ) : null}
@@ -1337,8 +1362,8 @@ export default function App() {
       <div className="flex justify-between items-center mb-4 mt-6">
           <h2 className="font-bold text-lg sm:text-xl">Continue Learning</h2>
           <div className="flex items-center gap-2">
-            <button onClick={() => setShowResetModal(true)} className="text-xs bg-red-900/50 text-red-300 px-3 py-1 rounded-full">Reset</button>
-            <button onClick={handleRandomize} className="text-xs bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-1">
+            <button onClick={handleOpenResetModal} className="text-xs bg-red-900/50 text-red-300 px-3 py-1 rounded-full">Reset</button>
+            <button onClick={handleOpenRandomPopup} className="text-xs bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-1">
                 <Shuffle className="h-3 w-3" /> Random
             </button>
           </div>
@@ -1350,7 +1375,7 @@ export default function App() {
                 <p className="text-gray-300">"{randomChapter?.topic}" will be for 2 hours.</p>
                 <div className="flex flex-col gap-2 mt-6">
                   <button onClick={applyRandomChapter} className="w-full bg-blue-600 py-2 rounded-lg font-bold">Got it</button>
-                  <button onClick={handleRandomRestore} className="w-full bg-gray-700 py-2 rounded-lg font-bold">Restore Original</button>
+                  <button onClick={() => window.history.back()} className="w-full bg-gray-700 py-2 rounded-lg font-bold">Restore Original</button>
                 </div>
             </div>
         </div>
@@ -1362,7 +1387,7 @@ export default function App() {
                 <h2 className="text-xl font-bold mb-4">Are you sure you want to restart?</h2>
                 <div className="flex gap-3 mt-6">
                     <button onClick={handleReset} className="flex-1 bg-red-600 py-2 rounded-lg font-bold">Yes</button>
-                    <button onClick={() => setShowResetModal(false)} className="flex-1 bg-white/10 py-2 rounded-lg font-bold">No</button>
+                    <button onClick={() => window.history.back()} className="flex-1 bg-white/10 py-2 rounded-lg font-bold">No</button>
                     <button onClick={handleRestore} className="flex-1 bg-blue-600 py-2 rounded-lg font-bold">Restore</button>
                 </div>
             </div>
@@ -1376,9 +1401,9 @@ export default function App() {
                   <p className="font-bold text-sm sm:text-lg truncate">{sub.topic}</p>
                 </div>
                 <div className="flex gap-3 flex-shrink-0">
-                    <button className="bg-white/10 p-2 rounded-full sm:hidden" onClick={() => setActiveVideo(sub.topic)}><Play className="h-5 w-5 text-white" /></button>
-                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm hidden sm:block hover:bg-gray-200 transition" onClick={() => setActiveVideo(sub.topic)}>START</button>
-                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs sm:hidden hover:bg-gray-200 transition" onClick={() => setActiveVideo(sub.topic)}>START</button>
+                    <button className="bg-white/10 p-2 rounded-full sm:hidden" onClick={() => handleOpenVideo(sub.topic)}><Play className="h-5 w-5 text-white" /></button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm hidden sm:block hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs sm:hidden hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
                 </div>
             </div>
         ))}

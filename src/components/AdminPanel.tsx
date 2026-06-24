@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db, auth, handleFirestoreError, OperationType } from '../lib/firebase';
+import { db, auth } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, doc, updateDoc, deleteDoc } from 'firebase/firestore';                
 import { MessageSquare as MessageSquareIcon, Upload as UploadIcon, FileUp, Trash2, Edit2, Menu, X, Users, ClipboardList } from 'lucide-react';
 import QuestionImporter from './QuestionImporter';
@@ -22,6 +22,52 @@ const CHAPTER_DATA = {
     }
 };
 
+enum OperationType {
+    CREATE = 'create',
+    UPDATE = 'update',
+    DELETE = 'delete',
+    LIST = 'list',
+    GET = 'get',
+    WRITE = 'write',
+}
+
+interface FirestoreErrorInfo {
+    error: string;
+    operationType: OperationType;
+    path: string | null;
+    authInfo: {
+        userId?: string | null;
+        email?: string | null;
+        emailVerified?: boolean | null;
+        isAnonymous?: boolean | null;
+        tenantId?: string | null;
+        providerInfo?: {
+            providerId?: string | null;
+            email?: string | null;
+        }[];
+    }
+}
+function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
+    const errInfo: FirestoreErrorInfo = {
+        error: error instanceof Error ? error.message : String(error),
+        authInfo: {
+            userId: auth.currentUser?.uid,
+            email: auth.currentUser?.email,
+            emailVerified: auth.currentUser?.emailVerified,
+            isAnonymous: auth.currentUser?.isAnonymous,
+            tenantId: auth.currentUser?.tenantId,
+            providerInfo: auth.currentUser?.providerData?.map(provider => ({
+                providerId: provider.providerId,
+                email: provider.email,
+            })) || []
+        },
+        operationType,
+        path
+    }
+    console.error('Firestore Error: ', JSON.stringify(errInfo));
+    throw new Error(JSON.stringify(errInfo));
+}
+
 interface Notification {
     id: string;
     message: string;
@@ -35,29 +81,33 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [notifications, setNotifications] = useState<Notification[]>([]);
     const [userStats, setUserStats] = useState({ total: 0, online: 0 });
-    const [editingId, setEditingId] = useState<string | null>(null);
-    const [editMessage, setEditMessage] = useState('');
     
     // New Schedule state
     const [testName, setTestName] = useState('');
     const [testDate, setTestDate] = useState('');
     const [selectedChapters, setSelectedChapters] = useState<{name: string, subject: string}[]>([]);
     const [showChapterPopup, setShowChapterPopup] = useState(false);
-    const [subjectConfig, setSubjectConfig] = useState<{[key: string]: {questions: number, time: number}}>({                
-        Physics: {questions: 10, time: 10},
-        Chemistry: {questions: 10, time: 10},
-        Biology: {questions: 10, time: 10}
-    });
-
+    
     useEffect(() => {
         const handlePop = () => {
-            if (showChapterPopup && !window.history.state?.isChapterPopupOpen) {
+            const state = window.history.state;
+            if (showChapterPopup && !state?.isChapterPopupOpen) {
                 setShowChapterPopup(false);
             }
         };
         window.addEventListener('popstate', handlePop);
         return () => window.removeEventListener('popstate', handlePop);
     }, [showChapterPopup]);
+
+    const handleOpenChapters = () => {
+        setShowChapterPopup(true);
+        window.history.pushState({ ...window.history.state, isChapterPopupOpen: true }, '', window.location.href);
+    };
+    const [subjectConfig, setSubjectConfig] = useState<{[key: string]: {questions: number, time: number}}>({                
+        Physics: {questions: 10, time: 10},
+        Chemistry: {questions: 10, time: 10},
+        Biology: {questions: 10, time: 10}
+    });
 
     useEffect(() => {
         const q = query(collection(db, 'notifications'), orderBy('timestamp', 'desc'));
@@ -94,6 +144,9 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             handleFirestoreError(error, OperationType.WRITE, 'notifications');
         }
     };
+
+    const [editingId, setEditingId] = useState<string | null>(null);
+    const [editMessage, setEditMessage] = useState('');
 
     const deleteNotification = async (id: string) => {
         try {
@@ -243,7 +296,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                     <div className="space-y-4">
                         <h3 className="font-bold text-lg text-white">Schedule New Test</h3>
                         <input type="text" placeholder="Test Name" value={testName} onChange={e => setTestName(e.target.value)} className="w-full bg-white/5 p-2 rounded-lg border border-white/10" />
-                        <button onClick={() => { setShowChapterPopup(true); window.history.pushState({ ...window.history.state, isChapterPopupOpen: true }, '', window.location.href); }} className="w-full bg-white/5 p-2 rounded-lg border border-white/10 text-left">
+                        <button onClick={handleOpenChapters} className="w-full bg-white/5 p-2 rounded-lg border border-white/10 text-left">
                             {selectedChapters.length > 0 ? `${selectedChapters.length} chapters selected` : 'Select Chapters'}
                         </button>
                         

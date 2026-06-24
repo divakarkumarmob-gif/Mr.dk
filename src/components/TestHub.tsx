@@ -34,7 +34,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [loading, setLoading] = useState(false);
   const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
   const [activePdf, setActivePdf] = useState<{ url: string, title: string } | null>(null);
-  const [timer, setTimer] = useState(120);
+  const [timer, setTimer] = useState(35);
   const [selectedResult, setSelectedResult] = useState<any>(null);
   const [pressTimer, setPressTimer] = useState<any>(null);
   const [now, setNow] = useState(Date.now());
@@ -47,7 +47,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   useEffect(() => {
       let interval: any;
       if (loading) {
-          setTimer(120);
+          setTimer(35);
           interval = setInterval(() => {
               setTimer((prev) => {
                   if (prev <= 1) {
@@ -63,31 +63,34 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
   useEffect(() => {
     if (!auth.currentUser) return;
-    const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-        const tests = querySnapshot.docs.map(doc => {
-            const data = doc.data();
-            return {
-                id: doc.id,
-                ...data,
-                timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
-            };
-        });
-        
-        const currentNow = Date.now();
-        setRecentTests(tests.filter(t => {
-            const hideUntil = localStorage.getItem('hide-' + t.id);
-            if (hideUntil) {
-                if (currentNow > parseInt(hideUntil)) return false;
-            }
-            return true;
-        }));
-    }, (error) => {
-        console.error("Error fetching recent tests:", error);
-    });
-    
-    return () => unsubscribe();
-  }, [auth.currentUser]);
+    const fetchRecentTests = async () => {
+        try {
+            const q = query(collection(db, 'users', auth.currentUser!.uid, 'results'), orderBy('timestamp', 'desc'));
+            const querySnapshot = await getDocs(q);
+            const tests = querySnapshot.docs.map(doc => {
+                const data = doc.data();
+                return {
+                    id: doc.id,
+                    ...data,
+                    timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
+                };
+            });
+            
+            const now = Date.now();
+            setRecentTests(tests.filter(t => {
+                const hideUntil = localStorage.getItem('hide-' + t.id);
+                if (hideUntil) {
+                    if (now > parseInt(hideUntil)) return false;
+                }
+                return true;
+            }));
+        } catch (e: any) {
+            console.error("Error fetching recent tests:", e);
+             // Handle gracefully
+        }
+    };
+    fetchRecentTests();
+  }, []);
 
   const handleSeeResults = (test: any) => {
       setSelectedResult(test);
@@ -367,7 +370,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                     
                                     // await new Promise(r => setTimeout(r, 15000)); // 15-second delay
                                     // Timer is now managed by useEffect
-                                    await new Promise(r => setTimeout(r, 120000));
+                                    await new Promise(r => setTimeout(r, 35000));
                                     setLoading(false);
                                     if (finalQuestions.length === 0) {
                                         alert("No data found");
