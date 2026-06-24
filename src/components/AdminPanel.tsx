@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db, auth } from '../lib/firebase';
+import { db, auth, handleFirestoreError, OperationType } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, doc, updateDoc, deleteDoc } from 'firebase/firestore';                
 import { MessageSquare as MessageSquareIcon, Upload as UploadIcon, FileUp, Trash2, Edit2, Menu, X, Users, ClipboardList } from 'lucide-react';
 import QuestionImporter from './QuestionImporter';
@@ -22,52 +22,6 @@ const CHAPTER_DATA = {
     }
 };
 
-enum OperationType {
-    CREATE = 'create',
-    UPDATE = 'update',
-    DELETE = 'delete',
-    LIST = 'list',
-    GET = 'get',
-    WRITE = 'write',
-}
-
-interface FirestoreErrorInfo {
-    error: string;
-    operationType: OperationType;
-    path: string | null;
-    authInfo: {
-        userId?: string | null;
-        email?: string | null;
-        emailVerified?: boolean | null;
-        isAnonymous?: boolean | null;
-        tenantId?: string | null;
-        providerInfo?: {
-            providerId?: string | null;
-            email?: string | null;
-        }[];
-    }
-}
-function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
-    const errInfo: FirestoreErrorInfo = {
-        error: error instanceof Error ? error.message : String(error),
-        authInfo: {
-            userId: auth.currentUser?.uid,
-            email: auth.currentUser?.email,
-            emailVerified: auth.currentUser?.emailVerified,
-            isAnonymous: auth.currentUser?.isAnonymous,
-            tenantId: auth.currentUser?.tenantId,
-            providerInfo: auth.currentUser?.providerData?.map(provider => ({
-                providerId: provider.providerId,
-                email: provider.email,
-            })) || []
-        },
-        operationType,
-        path
-    }
-    console.error('Firestore Error: ', JSON.stringify(errInfo));
-    throw new Error(JSON.stringify(errInfo));
-}
-
 interface Notification {
     id: string;
     message: string;
@@ -81,6 +35,8 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [notifications, setNotifications] = useState<Notification[]>([]);
     const [userStats, setUserStats] = useState({ total: 0, online: 0 });
+    const [editingId, setEditingId] = useState<string | null>(null);
+    const [editMessage, setEditMessage] = useState('');
     
     // New Schedule state
     const [testName, setTestName] = useState('');
@@ -138,9 +94,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             handleFirestoreError(error, OperationType.WRITE, 'notifications');
         }
     };
-
-    const [editingId, setEditingId] = useState<string | null>(null);
-    const [editMessage, setEditMessage] = useState('');
 
     const deleteNotification = async (id: string) => {
         try {

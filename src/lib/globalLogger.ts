@@ -14,7 +14,13 @@ class GlobalLogger {
     const originalWarn = console.warn;
 
     const addLog = (type: LogEntry['type'], ...args: any[]) => {
-      const message = args.map(a => (typeof a === 'object' ? JSON.stringify(a) : String(a))).join(' ');
+      const message = args.map(a => {
+        try {
+          return typeof a === 'object' ? JSON.stringify(a) : String(a);
+        } catch (e) {
+          return '[Circular or Non-Serializable Object]';
+        }
+      }).join(' ');
       
       // Prevent infinite loop if logging an error occurring during render or effect
       if (message.includes('update a component')) return;

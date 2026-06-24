@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import {auth, db} from './lib/firebase';
@@ -145,8 +145,18 @@ export default function App() {
   const [showSupportModal, setShowSupportModal] = useState(false);
   const [showNeuralSolver, setShowNeuralSolver] = useState(false);
   const [user, setUser] = useState<User | null>(null);
-  
-  useReportProblemGesture(() => setShowSupportModal(true));
+  const [loading, setLoading] = useState(true);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [isNotificationView, setIsNotificationView] = useState(false);
+  const [showAnalytics, setShowAnalytics] = useState(false);
+  const [showResetModal, setShowResetModal] = useState(false);
+  const [showRandomPopup, setShowRandomPopup] = useState(false);
+  const [backPressCount, setBackPressCount] = useState(0);
+  const [subjects, setSubjects] = useState(getDailyChapters());
+  const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
+  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
+  const [displayedText, setDisplayedText] = useState("");
   const getInitialView = () => {
     const params = new URLSearchParams(window.location.search);
     const viewParam = params.get('view');
@@ -283,8 +293,6 @@ export default function App() {
 
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const mainContainerRef = React.useRef<HTMLDivElement>(null);
-  const [showNotifications, setShowNotifications] = useState(false);
-  const [isNotificationView, setIsNotificationView] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
   const [neetNotifications, setNeetNotifications] = useState<{ updates: string[]; timestamp: any }[]>([]);
@@ -546,20 +554,10 @@ export default function App() {
       requestAnimationFrame(startDetectionLoop);
   };
 
-  const [loading, setLoading] = useState(true);
-  const [activeVideo, setActiveVideo] = useState<string | null>(null);
-  const [subjects, setSubjects] = useState(getDailyChapters());
-  const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
-  const [showResetModal, setShowResetModal] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
-  const [showRandomPopup, setShowRandomPopup] = useState(false);
-  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
-  const [displayedText, setDisplayedText] = useState("");
-  const [backPressCount, setBackPressCount] = useState(0);
   const [showExitToast, setShowExitToast] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   
