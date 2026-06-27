@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import ReactPlayer from 'react-player';
 import { CHAPTER_PLAYLISTS, PHYSICS_VIDEOS, CHEMISTRY_VIDEOS } from '../constants';
+import { X, Play, Maximize2, Volume2, Settings } from 'lucide-react';
 
-export default function VideoPlayer({ topic, onClose }: { topic: string; onClose: () => void }) {
-  const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
-  const [playTriggered, setPlayTriggered] = useState(false);
+const Player = ReactPlayer as any;
+
+export default function VideoPlayer({ topic, onClose, directUrl }: { topic: string; onClose: () => void; directUrl?: string }) {
+  const [selectedVideoId, setSelectedVideoId] = useState<string | null>(directUrl || null);
+  const [playTriggered, setPlayTriggered] = useState(!!directUrl);
 
   const playlistId = CHAPTER_PLAYLISTS[topic.toLowerCase()];                
   const physicsVideos = Object.entries(PHYSICS_VIDEOS).find(([key, _]) => {
@@ -26,72 +30,126 @@ export default function VideoPlayer({ topic, onClose }: { topic: string; onClose
     setPlayTriggered(false);
   }, [topic]);
 
-  return (
-    <div className="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4">
-      <button className="text-white font-bold text-sm bg-gray-800 px-4 py-1 rounded-md hover:bg-gray-700 transition mb-4" onClick={onClose}>Close</button>
-      <h2 className="text-2xl font-bold text-white mb-6 tracking-wide">{topic}</h2>
-      
-      {/* CASE 1: Specific Videos (Highest Priority) */}
-      {videos && (
-        <div className="w-full max-w-2xl">
-          {!selectedVideoId && (
-              <div className="flex flex-wrap gap-2 mb-4 justify-center">
-              {Object.entries(videos).map(([partName, videoId]: [string, string]) => (
-                  <button
-                  key={partName}
-                  onClick={() => { setSelectedVideoId(videoId); setPlayTriggered(false); }}
-                  className="px-4 py-2 rounded-full bg-gray-700 text-white hover:bg-orange-600 transition truncate text-sm"
-                  >
-                  {partName}
-                  </button>
-              ))}
-              </div>
-          )}
-          {selectedVideoId && (
-              <div className="relative aspect-video bg-black flex items-center justify-center">
-                  <iframe
-                  title={topic}
-                  width="100%"
-                  height="100%"
-                  src={playTriggered ? `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1` : undefined}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                  />
-              
-              {!playTriggered && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/70">
-                  <button 
-                      onClick={() => setPlayTriggered(true)}
-                      className="bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-orange-600 transition"
-                  >
-                      Play
-                  </button>
-                  </div>
-              )}
-              </div>
-          )}
-        </div>
-      )}
+  const isUrl = (str: string) => str.startsWith('http');
 
-      {/* CASE 2: Playlist Fallback */}
-      {!videos && playlistId && (
-        <div className="w-full max-w-2xl aspect-video bg-black flex items-center justify-center">
-            <iframe
-              title={`${topic} Playlist`}
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/videoseries?list=${playlistId}&modestbranding=1&rel=0`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
+  return (
+    <div className="fixed inset-0 bg-black/98 z-[200] flex flex-col items-center justify-center p-4 backdrop-blur-sm">
+      <div className="w-full max-w-4xl flex flex-col h-full max-h-[90vh]">
+        <div className="flex justify-between items-center mb-6">
+            <div>
+                <h2 className="text-xl font-bold text-white tracking-tight">{topic}</h2>
+                <p className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Lecture Series • NEET Mastery</p>
+            </div>
+            <button 
+                className="bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-all active:scale-95" 
+                onClick={onClose}
+            >
+                <X className="h-5 w-5" />
+            </button>
         </div>
-      )}
-      
-      {!videos && !playlistId && (
-          <p className="text-gray-400">No video data available for this chapter.</p>
-      )}
+        
+        <div className="flex-1 flex flex-col items-center justify-center min-h-0">
+            {/* VIDEO STAGE */}
+            <div className="w-full relative aspect-video bg-[#0d1117] rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                {selectedVideoId ? (
+                    <div className="w-full h-full">
+                        {isUrl(selectedVideoId) ? (
+                            <Player
+                                url={selectedVideoId}
+                                width="100%"
+                                height="100%"
+                                controls
+                                playing={playTriggered}
+                                onStart={() => setPlayTriggered(true)}
+                                config={{
+                                    file: {
+                                        attributes: {
+                                            controlsList: 'nodownload'
+                                        }
+                                    }
+                                }}
+                            />
+                        ) : (
+                            <iframe
+                                title={topic}
+                                width="100%"
+                                height="100%"
+                                src={playTriggered ? `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1&modestbranding=1&rel=0` : undefined}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="w-full h-full"
+                            />
+                        )}
+                        
+                        {!playTriggered && !isUrl(selectedVideoId) && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-[2px] transition-all">
+                                <button 
+                                    onClick={() => setPlayTriggered(true)}
+                                    className="bg-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95"
+                                >
+                                    <Play className="h-8 w-8 fill-current ml-1" />
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                ) : playlistId ? (
+                    <iframe
+                      title={`${topic} Playlist`}
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/videoseries?list=${playlistId}&modestbranding=1&rel=0`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                ) : (
+                    <div className="flex flex-col items-center justify-center h-full p-8 text-center">
+                         <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-4">
+                             <Play className="h-8 w-8 text-white/20" />
+                         </div>
+                         <p className="text-gray-400 font-medium">Select a lecture part to start learning</p>
+                    </div>
+                )}
+            </div>
+
+            {/* CONTROLS / SELECTION */}
+            {videos && (
+                <div className="w-full mt-8 overflow-x-auto pb-4 custom-scrollbar">
+                    <div className="flex gap-3 min-w-max px-2">
+                        {Object.entries(videos).map(([partName, videoId]: [string, string]) => (
+                            <button
+                                key={partName}
+                                onClick={() => { setSelectedVideoId(videoId); setPlayTriggered(true); }}
+                                className={`px-6 py-3 rounded-xl font-bold text-xs transition-all flex items-center gap-3 ${
+                                    selectedVideoId === videoId 
+                                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20' 
+                                    : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                                }`}
+                            >
+                                <div className={`w-6 h-6 rounded-full flex items-center justify-center ${selectedVideoId === videoId ? 'bg-white/20' : 'bg-white/5'}`}>
+                                    <Play className={`h-3 w-3 ${selectedVideoId === videoId ? 'fill-current' : ''}`} />
+                                </div>
+                                {partName.toUpperCase()}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
+            
+            {!videos && !playlistId && (
+                <div className="mt-8 bg-red-500/10 border border-red-500/20 p-4 rounded-xl flex items-center gap-3">
+                    <X className="text-red-500 h-5 w-5" />
+                    <p className="text-red-400 text-sm font-medium">No video data available for this chapter.</p>
+                </div>
+            )}
+        </div>
+        
+        <div className="mt-auto py-6 border-t border-white/5 flex justify-between items-center text-[10px] text-gray-500 font-mono tracking-widest uppercase">
+            <span>Server: NEET-CDN-NODE-01</span>
+            <span className="text-orange-500/50">Secure Stream Active</span>
+            <span>Quality: 1080p Auto</span>
+        </div>
+      </div>
     </div>
   );
 }

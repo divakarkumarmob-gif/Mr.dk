@@ -16,6 +16,8 @@ import nodemailer from 'nodemailer';
 import Razorpay from 'razorpay';
 import crypto from 'crypto';
 import textToSpeech from '@google-cloud/text-to-speech';
+import { S3Client, ListObjectsV2Command, GetObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 // Initialize Firebase Admin
 const app = admin.initializeApp({
@@ -128,6 +130,82 @@ async function startServer() {
   app.use(express.json({ limit: '10mb' }));
   app.use(cors({ origin: "https://neetmaster.vercel.app" }));
   app.use("/api/", limiter);
+
+  let s3Client: S3Client | null = null;
+  function getS3Client() {
+      if (!s3Client) {
+          const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+          const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+          const region = process.env.AWS_REGION || "ap-south-1";
+
+          if (!accessKeyId || !secretAccessKey) {
+              throw new Error("AWS credentials are not configured in system environment variables.");
+          }
+
+          s3Client = new S3Client({
+              region,
+              credentials: {
+                  accessKeyId,
+                  secretAccessKey
+              }
+          });
+      }
+      return s3Client;
+  }
+
+  app.post("/api/private-videos", async (req, res) => {
+    try {
+        const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
+        const s3 = getS3Client();
+
+        const listCommand = new ListObjectsV2Command({
+            Bucket: bucketName,
+        });
+
+        const listResponse = await s3.send(listCommand);
+        const videoFiles = listResponse.Contents || [];
+        
+        const videos = await Promise.all(
+            videoFiles
+                .filter(item => {
+                    const key = item.Key || "";
+                    return key.toLowerCase().endsWith(".mp4") || 
+                           key.toLowerCase().endsWith(".mkv") || 
+                           key.toLowerCase().endsWith(".mov") || 
+                           key.toLowerCase().endsWith(".webm");
+                })
+                .map(async (item) => {
+                    const key = item.Key || "";
+                    const getObjectCommand = new GetObjectCommand({
+                        Bucket: bucketName,
+                        Key: key,
+                    });
+                    
+                    const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
+                    
+                    let title = key.split("/").pop() || key;
+                    title = title.replace(/\.[^/.]+$/, ""); // Remove extension
+                    title = title.replace(/[_-]/g, " "); // Replace punctuation with space
+                    
+                    return {
+                        key,
+                        url: signedUrl,
+                        size: item.Size,
+                        lastModified: item.LastModified?.toISOString(),
+                        title: title.toUpperCase(),
+                    };
+                })
+        );
+
+        res.json({ success: true, videos });
+    } catch (error: any) {
+        console.error("AWS S3 Fetch Error:", error);
+        res.status(500).json({ 
+            success: false, 
+            error: error.message || "Failed to load private videos from AWS S3." 
+        });
+    }
+  });
 
   app.get("/api/logs", (req, res) => {
       res.json({ logs });

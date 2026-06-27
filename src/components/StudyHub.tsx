@@ -9,6 +9,7 @@ import BattleRoom from './BattleRoom';
 import TestResultDetail from './TestResultDetail';
 import Flashcards from './Flashcards';
 import StudyDashboard from './StudyDashboard';
+import PrivateVideos from './PrivateVideos';
 
 const CHAPTER_DATA: any = {
     Physics: { 
@@ -121,10 +122,11 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         return () => unsubscribe();
     }, []);                
 
-    const accordionItems = ["LECTURE LIBRARY", "CUSTOM PRACTICE", "BATTLE & PRACTICE", "MEMORY VAULT", "FLASHCARDS", "STUDY PROGRESS"];
+    const accordionItems = ["LECTURE LIBRARY", "PRIVATE VIDEOS", "CUSTOM PRACTICE", "BATTLE & PRACTICE", "MEMORY VAULT", "FLASHCARDS", "STUDY PROGRESS"];
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
     const [showFlashcards, setShowFlashcards] = useState(false);
     const [showStudyDashboard, setShowStudyDashboard] = useState(false);
+    const [showPrivateVideos, setShowPrivateVideos] = useState(false);
     const [activeSubject, setActiveSubject] = useState<string>('Physics');
     const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
     const [activeBattleChapter, setActiveBattleChapter] = useState<string | null>(null);
@@ -136,8 +138,11 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
             animate={{ opacity: 1 }}
             className="min-h-screen bg-[#0a0f24] text-white p-3 sm:p-4 font-sans flex flex-col"
         >
-          {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
-          {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
+          <AnimatePresence>
+            {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
+            {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
+            {showPrivateVideos && <PrivateVideos onClose={() => setShowPrivateVideos(false)} />}
+          </AnimatePresence>
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
             <div className="flex justify-between items-center mb-2">
                 <HubSwitcher active="study" onNavigate={onNavigate} />
@@ -293,6 +298,8 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                                 setShowFlashcards(true);
                             } else if (item === 'STUDY PROGRESS') {
                                 setShowStudyDashboard(true);
+                            } else if (item === 'PRIVATE VIDEOS') {
+                                setShowPrivateVideos(true);
                             } else {
                                 setExpandedItem(expandedItem === item ? null : item);
                             }
