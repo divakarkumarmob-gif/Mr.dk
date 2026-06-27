@@ -42,6 +42,9 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   // Gesture Tracking Refs
   const dragStartRef = useRef<{ y: number; val: number; side: 'left' | 'right' } | null>(null);
   const lastTapRef = useRef<{ time: number; x: number } | null>(null);
+  const singleTapTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const playPauseFeedbackTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [playPauseFeedback, setPlayPauseFeedback] = useState<'play' | 'pause' | null>(null);
 
   // Format seconds to mm:ss or hh:mm:ss
   const formatTime = (secs: number) => {
@@ -78,11 +81,23 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   // Handle Play/Pause
   const togglePlay = () => {
     if (!videoRef.current) return;
+
+    if (playPauseFeedbackTimeoutRef.current) {
+      clearTimeout(playPauseFeedbackTimeoutRef.current);
+    }
+
     if (isPlaying) {
       videoRef.current.pause();
+      setPlayPauseFeedback('pause');
     } else {
       videoRef.current.play().catch(err => console.log('Autoplay blocked:', err));
+      setPlayPauseFeedback('play');
     }
+
+    playPauseFeedbackTimeoutRef.current = setTimeout(() => {
+      setPlayPauseFeedback(null);
+    }, 500);
+
     triggerControlsActivity();
   };
 
@@ -202,10 +217,16 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     const clickX = clientX - rect.left;
     const isLeft = clickX < rect.width / 2;
 
-    // Detect Double click / double tap
     const now = Date.now();
     const doubleTapDelay = 300;
+
     if (lastTapRef.current && (now - lastTapRef.current.time) < doubleTapDelay) {
+      // It's a double tap! Cancel the scheduled single tap action
+      if (singleTapTimeoutRef.current) {
+        clearTimeout(singleTapTimeoutRef.current);
+        singleTapTimeoutRef.current = null;
+      }
+
       // Double Tap Action
       if (isLeft) {
         skip(-10);
@@ -215,7 +236,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       lastTapRef.current = null;
       return;
     }
-    
+
     lastTapRef.current = { time: now, x: clientX };
 
     // Register drag coordinates for Slider gestures
@@ -224,16 +245,37 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       val: isLeft ? brightness : volume,
       side: isLeft ? 'left' : 'right'
     };
+
+    // Schedule the single tap action with a slight delay
+    // This allows us to cancel it if a second tap comes for a double tap
+    singleTapTimeoutRef.current = setTimeout(() => {
+      // Toggle controls overlay visibility
+      setShowControls((prev) => !prev);
+      
+      // Toggle Play/Pause
+      togglePlay();
+
+      singleTapTimeoutRef.current = null;
+    }, 250);
   };
 
   const handlePointerMove = (clientY: number) => {
     if (!dragStartRef.current) return;
+
+    // If we have moved, it is a slide/drag gesture, not a single tap! Cancel scheduled single tap
+    const deltaY = Math.abs(dragStartRef.current.y - clientY);
+    if (deltaY > 5) {
+      if (singleTapTimeoutRef.current) {
+        clearTimeout(singleTapTimeoutRef.current);
+        singleTapTimeoutRef.current = null;
+      }
+    }
+
     const rect = containerRef.current?.getBoundingClientRect();
     if (!rect) return;
 
     // Slide delta normalized by player height
-    const deltaY = dragStartRef.current.y - clientY;
-    const change = deltaY / (rect.height * 0.7); // scale rate
+    const change = (dragStartRef.current.y - clientY) / (rect.height * 0.7); // scale rate
     const newVal = Math.max(0, Math.min(1, dragStartRef.current.val + change));
 
     if (dragStartRef.current.side === 'left') {
@@ -247,7 +289,6 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       setGestureFeedback({ type: 'volume', value: newVal });
     }
   };
-
   const handlePointerUp = () => {
     dragStartRef.current = null;
     // Hide feedback after short delay
@@ -259,7 +300,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   return (
     <div 
       ref={containerRef}
-      className="relative aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl select-none group border border-white/5 touch-none"
+      className="relative aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl select-none group border border-white/15 hover:border-orange-500/25 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none"
       onPointerDown={(e) => {
         // Only handle left clicks for mouse
         if (e.pointerType === 'mouse' && e.button !== 0) return;
@@ -273,6 +314,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       }}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
+      onPointerCancel={handlePointerUp}
     >
       {/* Actual HTML5 Video Tag with inline brightness CSS modifier */}
       <video
@@ -344,6 +386,25 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
             <span className="text-[10px] font-mono text-white font-bold w-6 text-right">
               {Math.round(gestureFeedback.value * 100)}%
             </span>
+          </motion.div>
+        )}
+
+        {/* Center Play/Pause Indicator Feedback */}
+        {playPauseFeedback && (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+            className="absolute inset-0 flex items-center justify-center pointer-events-none z-30"
+          >
+            <div className="bg-black/60 rounded-full p-6 backdrop-blur-sm border border-white/10 shadow-lg flex items-center justify-center">
+              {playPauseFeedback === 'play' ? (
+                <Play className="h-10 w-10 text-orange-500 fill-orange-500 animate-pulse" />
+              ) : (
+                <Pause className="h-10 w-10 text-orange-500 fill-orange-500 animate-pulse" />
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -470,27 +531,72 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                   {/* Play & Pause toggle button */}
                   <button 
                     onClick={togglePlay}
-                    className="p-2.5 bg-white/10 hover:bg-white/20 active:bg-white/30 rounded-xl text-white transition active:scale-95 flex items-center justify-center h-10 w-10 border border-white/10"
+                    className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition active:scale-95"
                   >
                     {isPlaying ? (
-                      <Pause className="h-5 w-5 fill-white" />
+                      <Pause className="h-4.5 w-4.5 fill-white" />
                     ) : (
-                      <Play className="h-5 w-5 fill-white" />
+                      <Play className="h-4.5 w-4.5 fill-white" />
                     )}
                   </button>
+
+                  {/* 10 Seconds Backward Jump */}
+                  <button 
+                    onClick={() => skip(-10)}
+                    className="text-gray-300 hover:text-white transition p-1"
+                    title="Rewind 10s"
+                  >
+                    <RotateCcw className="h-4.5 w-4.5" />
+                  </button>
+
+                  {/* 10 Seconds Forward Jump */}
+                  <button 
+                    onClick={() => skip(10)}
+                    className="text-gray-300 hover:text-white transition p-1"
+                    title="Forward 10s"
+                  >
+                    <RotateCw className="h-4.5 w-4.5" />
+                  </button>
+
+                  {/* Volume Slider & Icon Indicator */}
+                  <div className="flex items-center gap-2 group/vol">
+                    <button 
+                      onClick={toggleMute}
+                      className="text-gray-300 hover:text-white transition"
+                    >
+                      {isMuted || volume === 0 ? (
+                        <VolumeX className="h-4.5 w-4.5" />
+                      ) : (
+                        <Volume2 className="h-4.5 w-4.5" />
+                      )}
+                    </button>
+                    <input 
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.05"
+                      value={isMuted ? 0 : volume}
+                      onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
+                      className="w-16 accent-orange-500 h-1 bg-white/20 rounded-full cursor-pointer opacity-80 group-hover/vol:opacity-100 transition"
+                    />
+                  </div>
                 </div>
 
-                {/* Fullscreen controls */}
+                {/* Brightness Indicator & Fullscreen controls */}
                 <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5 text-orange-400">
+                    <Sun className="h-4 w-4" />
+                    <span className="text-[10px] font-mono font-bold">{Math.round(brightness * 100)}%</span>
+                  </div>
+
                   <button 
                     onClick={toggleFullscreen}
-                    className="p-2 h-10 w-10 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white rounded-xl border border-orange-400/30 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-orange-950/20"
-                    title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+                    className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition active:scale-95"
                   >
                     {isFullscreen ? (
-                      <Minimize className="h-5 w-5 text-white" />
+                      <Minimize className="h-4.5 w-4.5" />
                     ) : (
-                      <Maximize className="h-5 w-5 text-white" />
+                      <Maximize className="h-4.5 w-4.5" />
                     )}
                   </button>
                 </div>
