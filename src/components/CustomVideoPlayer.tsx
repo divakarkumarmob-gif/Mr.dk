@@ -249,11 +249,22 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     // Schedule the single tap action with a slight delay
     // This allows us to cancel it if a second tap comes for a double tap
     singleTapTimeoutRef.current = setTimeout(() => {
-      // Toggle controls overlay visibility
-      setShowControls((prev) => !prev);
-      
-      // Toggle Play/Pause
-      togglePlay();
+      const clickX = clientX - rect.left;
+      const clickY = clientY - rect.top;
+
+      // Center is defined as middle 40% horizontally (30% to 70%) and middle 60% vertically (20% to 80%)
+      const isCenter = clickX > rect.width * 0.3 && clickX * 1.0 < rect.width * 0.7 && 
+                       clickY > rect.height * 0.2 && clickY * 1.0 < rect.height * 0.8;
+
+      if (isCenter) {
+        // Toggle Play/Pause on center tap
+        togglePlay();
+        // Keep or force controls shown so they can see progress
+        setShowControls(true);
+      } else {
+        // Edge/Side tap: Toggle controls overlay visibility
+        setShowControls((prev) => !prev);
+      }
 
       singleTapTimeoutRef.current = null;
     }, 250);
@@ -398,11 +409,11 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
             transition={{ duration: 0.2 }}
             className="absolute inset-0 flex items-center justify-center pointer-events-none z-30"
           >
-            <div className="bg-black/60 rounded-full p-6 backdrop-blur-sm border border-white/10 shadow-lg flex items-center justify-center">
+            <div className="bg-black/60 rounded-full p-3 backdrop-blur-sm border border-white/10 shadow-lg flex items-center justify-center">
               {playPauseFeedback === 'play' ? (
-                <Play className="h-10 w-10 text-orange-500 fill-orange-500 animate-pulse" />
+                <Play className="h-5 w-5 text-orange-500 fill-orange-500 animate-pulse" />
               ) : (
-                <Pause className="h-10 w-10 text-orange-500 fill-orange-500 animate-pulse" />
+                <Pause className="h-5 w-5 text-orange-500 fill-orange-500 animate-pulse" />
               )}
             </div>
           </motion.div>
@@ -527,76 +538,32 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
 
               {/* Action Toolbar Row */}
               <div className="flex justify-between items-center px-1">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center">
                   {/* Play & Pause toggle button */}
                   <button 
                     onClick={togglePlay}
-                    className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition active:scale-95"
+                    className="p-2.5 bg-white/10 hover:bg-white/20 active:bg-white/30 rounded-xl text-white transition active:scale-95 flex items-center justify-center h-11 w-11 border border-white/10"
+                    title={isPlaying ? "Pause" : "Play"}
                   >
                     {isPlaying ? (
-                      <Pause className="h-4.5 w-4.5 fill-white" />
+                      <Pause className="h-5.5 w-5.5 fill-white" />
                     ) : (
-                      <Play className="h-4.5 w-4.5 fill-white" />
+                      <Play className="h-5.5 w-5.5 fill-white" />
                     )}
                   </button>
-
-                  {/* 10 Seconds Backward Jump */}
-                  <button 
-                    onClick={() => skip(-10)}
-                    className="text-gray-300 hover:text-white transition p-1"
-                    title="Rewind 10s"
-                  >
-                    <RotateCcw className="h-4.5 w-4.5" />
-                  </button>
-
-                  {/* 10 Seconds Forward Jump */}
-                  <button 
-                    onClick={() => skip(10)}
-                    className="text-gray-300 hover:text-white transition p-1"
-                    title="Forward 10s"
-                  >
-                    <RotateCw className="h-4.5 w-4.5" />
-                  </button>
-
-                  {/* Volume Slider & Icon Indicator */}
-                  <div className="flex items-center gap-2 group/vol">
-                    <button 
-                      onClick={toggleMute}
-                      className="text-gray-300 hover:text-white transition"
-                    >
-                      {isMuted || volume === 0 ? (
-                        <VolumeX className="h-4.5 w-4.5" />
-                      ) : (
-                        <Volume2 className="h-4.5 w-4.5" />
-                      )}
-                    </button>
-                    <input 
-                      type="range"
-                      min="0"
-                      max="1"
-                      step="0.05"
-                      value={isMuted ? 0 : volume}
-                      onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
-                      className="w-16 accent-orange-500 h-1 bg-white/20 rounded-full cursor-pointer opacity-80 group-hover/vol:opacity-100 transition"
-                    />
-                  </div>
                 </div>
 
-                {/* Brightness Indicator & Fullscreen controls */}
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5 text-orange-400">
-                    <Sun className="h-4 w-4" />
-                    <span className="text-[10px] font-mono font-bold">{Math.round(brightness * 100)}%</span>
-                  </div>
-
+                {/* Fullscreen controls */}
+                <div className="flex items-center">
                   <button 
                     onClick={toggleFullscreen}
-                    className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition active:scale-95"
+                    className="p-2.5 h-11 w-11 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white rounded-xl border border-orange-400/30 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-orange-950/20"
+                    title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
                   >
                     {isFullscreen ? (
-                      <Minimize className="h-4.5 w-4.5" />
+                      <Minimize className="h-5.5 w-5.5 text-white" />
                     ) : (
-                      <Maximize className="h-4.5 w-4.5" />
+                      <Maximize className="h-5.5 w-5.5 text-white" />
                     )}
                   </button>
                 </div>
