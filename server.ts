@@ -165,39 +165,117 @@ async function startServer() {
         const listResponse = await s3.send(listCommand);
         const videoFiles = listResponse.Contents || [];
         
-        const videos = await Promise.all(
-            videoFiles
-                .filter(item => {
-                    const key = item.Key || "";
-                    return key.toLowerCase().endsWith(".mp4") || 
-                           key.toLowerCase().endsWith(".mkv") || 
-                           key.toLowerCase().endsWith(".mov") || 
-                           key.toLowerCase().endsWith(".webm");
-                })
-                .map(async (item) => {
-                    const key = item.Key || "";
-                    const getObjectCommand = new GetObjectCommand({
-                        Bucket: bucketName,
-                        Key: key,
-                    });
-                    
-                    const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
-                    
-                    let title = key.split("/").pop() || key;
-                    title = title.replace(/\.[^/.]+$/, ""); // Remove extension
-                    title = title.replace(/[_-]/g, " "); // Replace punctuation with space
-                    
-                    return {
-                        key,
-                        url: signedUrl,
-                        size: item.Size,
-                        lastModified: item.LastModified?.toISOString(),
-                        title: title.toUpperCase(),
-                    };
-                })
+        // Filter out root files and non-video files
+        const filteredFiles = videoFiles.filter(item => {
+            const key = item.Key || "";
+            if (!key.includes("/")) return false; // Ignore files in root
+            
+            const lowerKey = key.toLowerCase();
+            return lowerKey.endsWith(".mp4") || 
+                   lowerKey.endsWith(".mkv") || 
+                   lowerKey.endsWith(".mov") || 
+                   lowerKey.endsWith(".webm");
+        });
+
+        const videosWithUrl = await Promise.all(
+            filteredFiles.map(async (item) => {
+                const key = item.Key || "";
+                const getObjectCommand = new GetObjectCommand({
+                    Bucket: bucketName,
+                    Key: key,
+                });
+                
+                const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
+                
+                const parts = key.split("/");
+                const subjectRaw = parts[0];
+                const chapterRaw = parts.length > 2 ? parts[1] : "General";
+                const filenameRaw = parts[parts.length - 1];
+                
+                // Format Subject Name
+                let subject = subjectRaw.replace(/[_-]/g, " ");
+                subject = subject.replace(/\b\w/g, c => c.toUpperCase());
+                
+                // Format Chapter Name
+                let chapter = chapterRaw.replace(/[_-]/g, " ");
+                chapter = chapter.replace(/\b\w/g, c => c.toUpperCase());
+                
+                // Format Lecture Title
+                let title = filenameRaw.replace(/\.[^/.]+$/, ""); // Remove extension
+                title = title.replace(/[_-]/g, " ");
+                title = title.replace(/([a-zA-Z]+)(\d+)/g, "$1 $2");
+                title = title.replace(/(\d+)([a-zA-Z]+)/g, "$1 $2");
+                title = title.replace(/\b\w/g, c => c.toUpperCase());
+                
+                return {
+                    key,
+                    url: signedUrl,
+                    size: item.Size,
+                    lastModified: item.LastModified?.toISOString(),
+                    title,
+                    subject,
+                    chapter
+                };
+            })
         );
 
-        res.json({ success: true, videos });
+        // Group by Subject and Chapter
+        interface VideoItem {
+            key: string;
+            url: string;
+            size?: number;
+            lastModified?: string;
+            title: string;
+        }
+        
+        interface ChapterGroup {
+            name: string;
+            videos: VideoItem[];
+        }
+        
+        interface SubjectGroup {
+            name: string;
+            chapters: ChapterGroup[];
+        }
+
+        const subjectMap = new Map<string, Map<string, VideoItem[]>>();
+
+        for (const vid of videosWithUrl) {
+            if (!subjectMap.has(vid.subject)) {
+                subjectMap.set(vid.subject, new Map<string, VideoItem[]>());
+            }
+            const chapterMap = subjectMap.get(vid.subject)!;
+            if (!chapterMap.has(vid.chapter)) {
+                chapterMap.set(vid.chapter, []);
+            }
+            chapterMap.get(vid.chapter)!.push({
+                key: vid.key,
+                url: vid.url,
+                size: vid.size,
+                lastModified: vid.lastModified,
+                title: vid.title
+            });
+        }
+
+        const subjects: SubjectGroup[] = [];
+        for (const [subjName, chapMap] of subjectMap.entries()) {
+            const chapters: ChapterGroup[] = [];
+            for (const [chapName, vids] of chapMap.entries()) {
+                vids.sort((a, b) => a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }));
+                chapters.push({
+                    name: chapName,
+                    videos: vids
+                });
+            }
+            chapters.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+            subjects.push({
+                name: subjName,
+                chapters
+            });
+        }
+        subjects.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+
+        res.json({ success: true, subjects });
     } catch (error: any) {
         console.error("AWS S3 Fetch Error:", error);
         res.status(500).json({ 
