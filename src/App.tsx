@@ -170,6 +170,9 @@ export default function App() {
 
     const handlePopState = (event: PopStateEvent) => {
         const state = event.state;
+        if (state && state.privateVideoView) {
+            return;
+        }
         
         // Close overlays if they are not in the current state
         if (state) {
@@ -545,6 +548,10 @@ export default function App() {
 
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
+        if (e.state && e.state.privateVideoView) {
+            return;
+        }
+
         // If we have active overlays, close them
         if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
             setActiveVideo(null);
