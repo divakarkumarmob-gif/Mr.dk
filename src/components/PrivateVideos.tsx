@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   X, Play, Loader2, Lock, AlertCircle, RefreshCw, KeyRound, 
@@ -34,6 +34,66 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
+
+  const currentIndexRef = useRef(0);
+  const isClosingRef = useRef(false);
+
+  useEffect(() => {
+    // Push the initial 'list' state
+    window.history.pushState({ privateVideoView: 'list', index: 0 }, '');
+    currentIndexRef.current = 0;
+
+    const handlePopState = (event: PopStateEvent) => {
+      if (isClosingRef.current) return;
+
+      const state = event.state;
+      if (state && typeof state.index === 'number' && state.privateVideoView) {
+        currentIndexRef.current = state.index;
+        const view = state.privateVideoView as 'list' | 'chapter' | 'player';
+        setCurrentView(view);
+        if (view === 'list') {
+          setSelectedChapter(null);
+          setSelectedSubject(null);
+          setActiveVideo(null);
+        } else if (view === 'chapter') {
+          setActiveVideo(null);
+        }
+      } else {
+        // No state or we backed out of our initial 'list' view
+        onClose();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [onClose]);
+
+  const navigateToChapter = (subj: Subject, chap: Chapter) => {
+    const nextIndex = currentIndexRef.current + 1;
+    window.history.pushState({ privateVideoView: 'chapter', index: nextIndex }, '');
+    currentIndexRef.current = nextIndex;
+    setSelectedSubject(subj);
+    setSelectedChapter(chap);
+    setCurrentView('chapter');
+  };
+
+  const navigateToPlayer = (video: VideoItem) => {
+    const nextIndex = currentIndexRef.current + 1;
+    window.history.pushState({ privateVideoView: 'player', index: nextIndex }, '');
+    currentIndexRef.current = nextIndex;
+    setActiveVideo(video);
+    setCurrentView('player');
+  };
+
+  const handleClose = () => {
+    isClosingRef.current = true;
+    if (currentIndexRef.current >= 0) {
+      window.history.go(-(currentIndexRef.current + 1));
+    }
+    onClose();
+  };
 
   const fetchVideos = async () => {
     setLoading(true);
@@ -80,14 +140,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
           {currentView !== 'list' ? (
             <button 
               onClick={() => {
-                if (currentView === 'player') {
-                  setCurrentView('chapter');
-                  setActiveVideo(null);
-                } else if (currentView === 'chapter') {
-                  setCurrentView('list');
-                  setSelectedChapter(null);
-                  setSelectedSubject(null);
-                }
+                window.history.back();
               }}
               className="p-2 -ml-1 bg-white/5 hover:bg-white/10 active:bg-white/15 rounded-xl transition flex items-center justify-center border border-white/5 mr-1"
             >
@@ -109,7 +162,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
         </div>
         
         <button 
-          onClick={onClose} 
+          onClick={handleClose} 
           className="p-2 bg-white/5 hover:bg-white/10 active:bg-white/20 rounded-xl transition border border-white/5"
         >
           <X className="h-5 w-5 text-gray-300" />
@@ -193,7 +246,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                     <div className="flex items-center gap-2 px-1">
                       <BookOpen className="h-4 w-4 text-orange-400" />
                       <span className="text-xs font-extrabold uppercase tracking-wider text-orange-400">
-                        {subject.name} ({getTotalSubjectVideos(subject)} Lectures)
+                        {subject.name} Chapters
                       </span>
                     </div>
 
@@ -202,9 +255,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                         <div 
                           key={chapter.name}
                           onClick={() => {
-                            setSelectedSubject(subject);
-                            setSelectedChapter(chapter);
-                            setCurrentView('chapter');
+                            navigateToChapter(subject, chapter);
                           }}
                           className="bg-[#0e142e] border border-white/5 hover:border-orange-500/20 rounded-2xl p-3.5 transition-all active:scale-[0.98] cursor-pointer flex items-center justify-between"
                         >
@@ -261,8 +312,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                       <div
                         key={vid.key}
                         onClick={() => {
-                          setActiveVideo(vid);
-                          setCurrentView('player');
+                          navigateToPlayer(vid);
                         }}
                         className="bg-[#0e142e] border border-white/5 hover:border-orange-500/25 rounded-2xl p-3.5 flex items-center justify-between gap-3 active:scale-[0.98] transition-all cursor-pointer"
                       >
@@ -272,9 +322,6 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                           </div>
                           <div className="min-w-0">
                             <h4 className="text-xs font-bold text-gray-100 truncate">{vid.title}</h4>
-                            <p className="text-[9px] font-mono text-gray-500 mt-0.5 truncate">
-                              {vid.key.split('/').pop()}
-                            </p>
                           </div>
                         </div>
 
@@ -354,9 +401,6 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                               <h4 className={`text-xs font-bold truncate ${isCurrent ? 'text-orange-400' : 'text-gray-200'}`}>
                                 {vid.title}
                               </h4>
-                              <p className="text-[9px] font-mono text-gray-500 mt-0.5 truncate">
-                                {vid.key.split('/').pop()}
-                              </p>
                             </div>
                           </div>
 
