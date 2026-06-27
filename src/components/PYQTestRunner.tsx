@@ -168,6 +168,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                 timestamp: new Date().toISOString()
             });
             console.log("Test submitted successfully");
+            localStorage.removeItem('resumeTestData');
             setIsSubmitted(true);
         } catch (err) {
             console.error("Critical error in handleTestSubmit:", err);

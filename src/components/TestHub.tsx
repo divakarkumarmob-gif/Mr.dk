@@ -29,6 +29,34 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [currentPaperUrl, setCurrentPaperUrl] = useState<string | undefined>(undefined);
   const [showCustomOptions, setShowCustomOptions] = useState(false);
   const [testTitle, setTestTitle] = useState('');
+  const [resumeTestData, setResumeTestData] = useState<any | null>(null);
+  const [initialTestData, setInitialTestData] = useState<any | null>(null);
+
+  useEffect(() => {
+    const data = localStorage.getItem('resumeTestData');
+    if (data) {
+      try {
+        setResumeTestData(JSON.parse(data));
+      } catch (e) {
+        console.error("Failed to parse resumeTestData:", e);
+      }
+    }
+  }, []);
+
+  const handleResumeTest = () => {
+    if (resumeTestData) {
+      setPyqQuestions(resumeTestData.questions);
+      setTestTitle(resumeTestData.title);
+      setInitialTestData({
+        answers: resumeTestData.answers || {},
+        marked: resumeTestData.marked || {},
+        currentIndex: resumeTestData.currentIndex || 0,
+        timeLeft: resumeTestData.timeLeft || (resumeTestData.questions?.length * 60)
+      });
+      setIsPYQRunning(true);
+    }
+  };
+
   const [selectedScheduledTestForChapters, setSelectedScheduledTestForChapters] = useState<any>(null);
   const [questionCount, setQuestionCount] = useState(5);
   const [recentTests, setRecentTests] = useState<any[]>([]);
@@ -172,16 +200,77 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 questions={pyqQuestions} 
                 title={testTitle || `${selectedYear} (${selectedSubForPYQ})`} 
                 paperUrl={currentPaperUrl}
+                initialData={initialTestData}
                 onBack={() => {
                     setPyqQuestions(null);
                     setCurrentPaperUrl(undefined);
                     setIsPYQRunning(false);
                     setTestTitle('');
+                    setInitialTestData(null);
+                    
+                    // Refresh resume data
+                    const data = localStorage.getItem('resumeTestData');
+                    if (data) {
+                      try {
+                        setResumeTestData(JSON.parse(data));
+                      } catch (e) {
+                        setResumeTestData(null);
+                      }
+                    } else {
+                      setResumeTestData(null);
+                    }
                 }} 
             />
       ) : (
         <>
             <h1 className="text-lg font-bold mb-2">Tests</h1>
+
+            {resumeTestData && (
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="mb-3 bg-gradient-to-r from-blue-950/80 to-indigo-950/80 p-2.5 rounded-md border border-blue-500/40 flex flex-row items-center justify-between gap-2 shadow-lg shadow-blue-500/5"
+                >
+                    <div className="flex items-center gap-2 w-full">
+                        <div className="bg-blue-500/20 text-blue-400 p-1.5 rounded-full flex-shrink-0 animate-pulse">
+                            <Clock className="h-3.5 w-3.5" />
+                        </div>
+                        <div className="w-full">
+                            <h3 className="font-bold text-xs flex items-center gap-1.5 text-blue-300">
+                                Active Test (Paused)
+                            </h3>
+                            <h2 className="font-extrabold text-sm text-white leading-tight">
+                                {resumeTestData.title}
+                            </h2>
+                            <p className="text-[9px] text-gray-400 mt-0.5 flex items-center gap-2">
+                                <span>Questions: <strong className="text-gray-300">{Object.keys(resumeTestData.answers || {}).length} / {resumeTestData.questions?.length || 0}</strong></span>
+                                <span>•</span>
+                                <span>Time left: <strong className="text-red-400 font-mono">{Math.floor(resumeTestData.timeLeft / 60)}m</strong></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                        <button 
+                            onClick={handleResumeTest}
+                            className="bg-blue-600 hover:bg-blue-500 active:scale-95 text-white text-[10px] px-2.5 py-1 rounded-md font-extrabold flex items-center gap-0.5 whitespace-nowrap shadow-md shadow-blue-600/20 transition-all"
+                        >
+                            <PlayCircle className="h-3 w-3" /> Resume
+                        </button>
+                        <button 
+                            onClick={() => {
+                                if (confirm("Are you sure you want to discard this paused test? All progress will be lost.")) {
+                                    localStorage.removeItem('resumeTestData');
+                                    setResumeTestData(null);
+                                }
+                            }}
+                            className="text-gray-500 hover:text-red-400 p-1 rounded-md transition-colors"
+                            title="Discard test"
+                        >
+                            <X className="h-4 w-4" />
+                        </button>
+                    </div>
+                </motion.div>
+            )}
             
             {selectedResult && (
                 <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-2 flex flex-col text-white">
@@ -363,7 +452,6 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                             .sort(() => 0.5 - Math.random())
                                             .slice(0, 30);
 
-                                        await new Promise(r => setTimeout(r, 35000));
                                         setLoading(false);
 
                                         if (finalQuestions.length === 0) {

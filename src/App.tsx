@@ -522,8 +522,6 @@ export default function App() {
   useEffect(() => {
     // Initial mount logic
     window.scrollTo(0, 0);
-    // Removed hardcoded _setCurrentView('home') to preserve getInitialView()
-    localStorage.removeItem('resumeTestData');
     
     // Initial history state if not set
     if (!window.history.state) {
