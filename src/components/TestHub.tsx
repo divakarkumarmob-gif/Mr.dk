@@ -28,6 +28,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
   const [currentPaperUrl, setCurrentPaperUrl] = useState<string | undefined>(undefined);
   const [showCustomOptions, setShowCustomOptions] = useState(false);
+  const [testTitle, setTestTitle] = useState('');
   const [selectedScheduledTestForChapters, setSelectedScheduledTestForChapters] = useState<any>(null);
   const [questionCount, setQuestionCount] = useState(5);
   const [recentTests, setRecentTests] = useState<any[]>([]);
@@ -135,6 +136,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
     return {
       id: 100 + idx,
       name: `${sub.name} Daily Test`,
+      subject: sub.name,
       type: sub.topic,
       time: '60m', 
       questions: 30, 
@@ -168,12 +170,13 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       {pyqQuestions ? (
             <PYQTestRunner 
                 questions={pyqQuestions} 
-                title={`${selectedYear} (${selectedSubForPYQ})`} 
+                title={testTitle || `${selectedYear} (${selectedSubForPYQ})`} 
                 paperUrl={currentPaperUrl}
                 onBack={() => {
                     setPyqQuestions(null);
                     setCurrentPaperUrl(undefined);
                     setIsPYQRunning(false);
+                    setTestTitle('');
                 }} 
             />
       ) : (
@@ -272,7 +275,114 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                             </div>
                         </div>
                         <div className="flex items-center gap-1.5 ">
-                            <button className="bg-blue-600 text-white text-[9px] px-1.5 py-0 rounded-md font-bold w-auto">Start</button>
+                            <button 
+                                onClick={async () => {
+                                    try {
+                                        setLoading(true);
+                                        let allQuestions: any[] = [];
+                                        const encodedSubject = encodeURIComponent(test.subject.toLocaleLowerCase());
+                                        const chapterName = test.type;
+                                        const encodedChapterDir = encodeURIComponent(chapterName.toLocaleLowerCase());
+                                        
+                                        let chunkNumber = 1;
+                                        while (chunkNumber <= 10) {
+                                            let successfulFetch = false;
+                                            
+                                            const nameVariations = [
+                                                chapterName,
+                                                chapterName.replace(/ & /g, ' and '),
+                                                chapterName.replace(/ and /g, ' & '),
+                                                chapterName.toLocaleLowerCase()
+                                            ];
+
+                                            const urlsToTry: string[] = [];
+                                            for (const variant of nameVariations) {
+                                                urlsToTry.push(
+                                                    `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${encodeURIComponent(variant)}%20(${chunkNumber}).json`,
+                                                    `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${variant.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_')}_chunk${chunkNumber}.json`
+                                                );
+                                            }
+
+                                            let formattedName = chapterName.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_');
+                                            if (formattedName === "cell_the_unit_of_life") {
+                                                formattedName = "cell_unit_of_life";
+                                            }
+                                            urlsToTry.push(
+                                                `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodedChapterDir}/${formattedName}_chunk${chunkNumber}.json`
+                                            );
+
+                                            for (const url of urlsToTry) {
+                                                try {
+                                                    const response = await fetch(url);
+                                                    if (response.ok) {
+                                                        const data = await response.json();
+                                                        if (data) {
+                                                            const questionsArray = Array.isArray(data) ? data : data.questions;
+                                                            if (questionsArray && Array.isArray(questionsArray)) {
+                                                                allQuestions = [...allQuestions, ...questionsArray];
+                                                                successfulFetch = true;
+                                                                break;
+                                                            }
+                                                        }
+                                                    }
+                                                } catch (e) {
+                                                    // Silently ignore
+                                                }
+                                            }
+
+                                            if (!successfulFetch) break;
+                                            chunkNumber++;
+                                        }
+
+                                        let normalizedQuestions = allQuestions.map((q: any, i: number) => {
+                                            let transformedOptions = q.options;
+                                            if (Array.isArray(q.options)) {
+                                                transformedOptions = {
+                                                    A: q.options[0] || "",
+                                                    B: q.options[1] || "",
+                                                    C: q.options[2] || "",
+                                                    D: q.options[3] || ""
+                                                };
+                                            }
+
+                                            let transformedCorrect = q.correct_option;
+                                            if (typeof q.correct_option === 'number') {
+                                                transformedCorrect = ['A', 'B', 'C', 'D'][q.correct_option] || 'A';
+                                            }
+
+                                            return {
+                                                id: `${chapterName}_${i}_${Math.random().toString(36).substr(2, 9)}`,
+                                                question: q.question,
+                                                options: transformedOptions,
+                                                correct_option: transformedCorrect,
+                                                explanation: q.explanation || "No explanation provided."
+                                            };
+                                        });
+
+                                        const finalQuestions = normalizedQuestions
+                                            .sort(() => 0.5 - Math.random())
+                                            .slice(0, 30);
+
+                                        await new Promise(r => setTimeout(r, 35000));
+                                        setLoading(false);
+
+                                        if (finalQuestions.length === 0) {
+                                            alert("No questions found for this chapter. Please try again or check your connection.");
+                                        } else {
+                                            setTestTitle(test.name);
+                                            setPyqQuestions(finalQuestions);
+                                            setIsPYQRunning(true);
+                                        }
+                                    } catch (e) {
+                                        setLoading(false);
+                                        console.error("Error starting daily test:", e);
+                                        alert("Failed to start daily test. Please check your internet connection.");
+                                    }
+                                }}
+                                className="bg-blue-600 text-white text-[9px] px-1.5 py-0 rounded-md font-bold w-auto"
+                            >
+                                Start
+                            </button>
                         </div>
                     </motion.div>
                 ))}
@@ -375,6 +485,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                     if (finalQuestions.length === 0) {
                                         alert("No data found");
                                     } else {
+                                        setTestTitle(test.name);
                                         setPyqQuestions(finalQuestions);
                                         setIsPYQRunning(true);
                                     }
@@ -536,6 +647,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                 };
                                 
                                 setCurrentPaperUrl(paperMapping[selectedYear]);
+                                setTestTitle(`${selectedYear} (${selectedSubForPYQ})`);
                                 setPyqQuestions(data.questions || []);
                                 setShowPYQOptions(false);
                                 setIsPYQRunning(true);
