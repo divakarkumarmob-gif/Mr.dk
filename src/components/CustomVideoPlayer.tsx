@@ -259,26 +259,20 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   return (
     <div 
       ref={containerRef}
-      className="relative aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl select-none group border border-white/5"
-      onMouseMove={triggerControlsActivity}
-      onTouchStart={triggerControlsActivity}
-      onMouseDown={(e) => handlePointerDown(e.clientX, e.clientY, e.target as HTMLElement)}
-      onMouseMoveCapture={(e) => {
-        if (dragStartRef.current) handlePointerMove(e.clientY);
+      className="relative aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl select-none group border border-white/5 touch-none"
+      onPointerDown={(e) => {
+        // Only handle left clicks for mouse
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        handlePointerDown(e.clientX, e.clientY, e.target as HTMLElement);
       }}
-      onMouseUp={handlePointerUp}
-      onMouseLeave={handlePointerUp}
-      onTouchStartCapture={(e) => {
-        if (e.touches.length === 1) {
-          handlePointerDown(e.touches[0].clientX, e.touches[0].clientY, e.target as HTMLElement);
+      onPointerMove={(e) => {
+        triggerControlsActivity();
+        if (dragStartRef.current) {
+          handlePointerMove(e.clientY);
         }
       }}
-      onTouchMoveCapture={(e) => {
-        if (dragStartRef.current && e.touches.length === 1) {
-          handlePointerMove(e.touches[0].clientY);
-        }
-      }}
-      onTouchEnd={handlePointerUp}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
     >
       {/* Actual HTML5 Video Tag with inline brightness CSS modifier */}
       <video
@@ -476,72 +470,27 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                   {/* Play & Pause toggle button */}
                   <button 
                     onClick={togglePlay}
-                    className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition active:scale-95"
+                    className="p-2.5 bg-white/10 hover:bg-white/20 active:bg-white/30 rounded-xl text-white transition active:scale-95 flex items-center justify-center h-10 w-10 border border-white/10"
                   >
                     {isPlaying ? (
-                      <Pause className="h-4.5 w-4.5 fill-white" />
+                      <Pause className="h-5 w-5 fill-white" />
                     ) : (
-                      <Play className="h-4.5 w-4.5 fill-white" />
+                      <Play className="h-5 w-5 fill-white" />
                     )}
                   </button>
-
-                  {/* 10 Seconds Backward Jump */}
-                  <button 
-                    onClick={() => skip(-10)}
-                    className="text-gray-300 hover:text-white transition p-1"
-                    title="Rewind 10s"
-                  >
-                    <RotateCcw className="h-4.5 w-4.5" />
-                  </button>
-
-                  {/* 10 Seconds Forward Jump */}
-                  <button 
-                    onClick={() => skip(10)}
-                    className="text-gray-300 hover:text-white transition p-1"
-                    title="Forward 10s"
-                  >
-                    <RotateCw className="h-4.5 w-4.5" />
-                  </button>
-
-                  {/* Volume Slider & Icon Indicator */}
-                  <div className="flex items-center gap-2 group/vol">
-                    <button 
-                      onClick={toggleMute}
-                      className="text-gray-300 hover:text-white transition"
-                    >
-                      {isMuted || volume === 0 ? (
-                        <VolumeX className="h-4.5 w-4.5" />
-                      ) : (
-                        <Volume2 className="h-4.5 w-4.5" />
-                      )}
-                    </button>
-                    <input 
-                      type="range"
-                      min="0"
-                      max="1"
-                      step="0.05"
-                      value={isMuted ? 0 : volume}
-                      onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
-                      className="w-16 accent-orange-500 h-1 bg-white/20 rounded-full cursor-pointer opacity-80 group-hover/vol:opacity-100 transition"
-                    />
-                  </div>
                 </div>
 
-                {/* Brightness Indicator & Fullscreen controls */}
+                {/* Fullscreen controls */}
                 <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5 text-orange-400">
-                    <Sun className="h-4 w-4" />
-                    <span className="text-[10px] font-mono font-bold">{Math.round(brightness * 100)}%</span>
-                  </div>
-
                   <button 
                     onClick={toggleFullscreen}
-                    className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition active:scale-95"
+                    className="p-2 h-10 w-10 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white rounded-xl border border-orange-400/30 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-orange-950/20"
+                    title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
                   >
                     {isFullscreen ? (
-                      <Minimize className="h-4.5 w-4.5" />
+                      <Minimize className="h-5 w-5 text-white" />
                     ) : (
-                      <Maximize className="h-4.5 w-4.5" />
+                      <Maximize className="h-5 w-5 text-white" />
                     )}
                   </button>
                 </div>
