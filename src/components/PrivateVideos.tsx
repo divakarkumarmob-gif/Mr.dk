@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   X, Play, Loader2, Lock, AlertCircle, RefreshCw, KeyRound, 
-  Film, ChevronDown, ChevronRight, Folder, FolderOpen, BookOpen
+  Film, ChevronRight, BookOpen, ArrowLeft, FolderOpen, Tv
 } from 'lucide-react';
 import CustomVideoPlayer from './CustomVideoPlayer';
 
@@ -28,12 +28,12 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
   const [loading, setLoading] = useState(false);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
-  const [activeVideoTitle, setActiveVideoTitle] = useState<string | null>(null);
 
-  // Expanded levels trackers
-  const [expandedSubjects, setExpandedSubjects] = useState<Record<string, boolean>>({});
-  const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
+  // Dynamic Navigation states
+  const [currentView, setCurrentView] = useState<'list' | 'chapter' | 'player'>('list');
+  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+  const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
+  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
 
   const fetchVideos = async () => {
     setLoading(true);
@@ -50,11 +50,6 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
         throw new Error(data.error || 'Failed to fetch videos from AWS S3');
       }
       setSubjects(data.subjects || []);
-      
-      // Auto-expand the first subject if available
-      if (data.subjects && data.subjects.length > 0) {
-        setExpandedSubjects({ [data.subjects[0].name]: true });
-      }
     } catch (err: any) {
       console.error('Fetch private videos failed:', err);
       setError(err.message || 'Failed to connect to AWS S3. Please make sure S3 credentials are set in secrets.');
@@ -67,21 +62,6 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     fetchVideos();
   }, []);
 
-  const toggleSubject = (subjName: string) => {
-    setExpandedSubjects(prev => ({
-      ...prev,
-      [subjName]: !prev[subjName]
-    }));
-  };
-
-  const toggleChapter = (subjName: string, chapName: string) => {
-    const key = `${subjName}::${chapName}`;
-    setExpandedChapters(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
-  };
-
   // Helper to count total videos in a Subject
   const getTotalSubjectVideos = (subj: Subject) => {
     return subj.chapters.reduce((total, chap) => total + chap.videos.length, 0);
@@ -92,53 +72,53 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      className="fixed inset-0 bg-[#0a0f24] z-[1000] flex flex-col p-4 sm:p-6"
+      className="fixed inset-0 bg-[#060a17] z-[1000] flex flex-col p-4 sm:p-6 text-white font-sans overflow-hidden"
     >
-      {/* Header */}
-      <div className="flex justify-between items-center mb-5 shrink-0">
+      {/* Dynamic Header */}
+      <div className="flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4">
         <div className="flex items-center gap-2.5">
-          <div className="h-9 w-9 bg-orange-500/10 rounded-xl flex items-center justify-center border border-orange-500/20">
-            <Lock className="h-5 w-5 text-orange-400" />
-          </div>
+          {currentView !== 'list' ? (
+            <button 
+              onClick={() => {
+                if (currentView === 'player') {
+                  setCurrentView('chapter');
+                  setActiveVideo(null);
+                } else if (currentView === 'chapter') {
+                  setCurrentView('list');
+                  setSelectedChapter(null);
+                  setSelectedSubject(null);
+                }
+              }}
+              className="p-2 -ml-1 bg-white/5 hover:bg-white/10 active:bg-white/15 rounded-xl transition flex items-center justify-center border border-white/5 mr-1"
+            >
+              <ArrowLeft className="h-5 w-5 text-gray-200" />
+            </button>
+          ) : (
+            <div className="h-9 w-9 bg-orange-500/10 rounded-xl flex items-center justify-center border border-orange-500/20">
+              <Lock className="h-5 w-5 text-orange-400" />
+            </div>
+          )}
           <div>
-            <h2 className="text-lg font-bold text-white tracking-wide uppercase">Private Lecture Hub</h2>
-            <p className="text-[10px] text-gray-400">AWS S3 Secured Subject Browser</p>
+            <h2 className="text-sm font-extrabold text-white tracking-wide uppercase">
+              {currentView === 'list' && "Private Lecture Hub"}
+              {currentView === 'chapter' && "Chapter Details"}
+              {currentView === 'player' && "Playing Lecture"}
+            </h2>
+            <p className="text-[10px] text-gray-400 font-semibold tracking-wider">AWS SECURED DIRECTORY STREAM</p>
           </div>
         </div>
+        
         <button 
           onClick={onClose} 
-          className="p-2 bg-white/5 hover:bg-white/10 active:bg-white/20 rounded-full transition"
+          className="p-2 bg-white/5 hover:bg-white/10 active:bg-white/20 rounded-xl transition border border-white/5"
         >
           <X className="h-5 w-5 text-gray-300" />
         </button>
       </div>
 
-      {/* Main Area */}
-      <div className="flex-1 overflow-y-auto space-y-4 pr-1 flex flex-col">
-        {/* Active Player Row */}
-        {activeVideoUrl && (
-          <div className="bg-[#121933] border border-white/5 rounded-2xl overflow-hidden shadow-2xl p-3 shrink-0">
-            <div className="flex justify-between items-center mb-2 px-1">
-              <span className="text-xs font-semibold text-orange-400 flex items-center gap-1">
-                <Film className="h-3 w-3 animate-pulse" /> Playing: {activeVideoTitle}
-              </span>
-              <button 
-                onClick={() => { setActiveVideoUrl(null); setActiveVideoTitle(null); }}
-                className="text-[10px] text-gray-400 hover:text-white underline font-medium"
-              >
-                Close Player
-              </button>
-            </div>
-            <div className="w-full">
-              <CustomVideoPlayer 
-                src={activeVideoUrl} 
-                title={activeVideoTitle || 'Lecture Stream'} 
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Dynamic S3 Loading / Errors / Groups */}
+      {/* Main Container */}
+      <div className="flex-1 overflow-y-auto space-y-4 pb-4">
+        {/* Connection states or views */}
         {error ? (
           <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-5 space-y-4">
             <div className="flex items-start gap-3">
@@ -166,30 +146,28 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
               </ul>
             </div>
 
-            <div className="flex gap-2.5">
-              <button 
-                onClick={fetchVideos}
-                className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 active:bg-white/20 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-1.5"
-              >
-                <RefreshCw className="h-3.5 w-3.5" /> Retry Connection
-              </button>
-            </div>
+            <button 
+              onClick={fetchVideos}
+              className="w-full bg-white/5 hover:bg-white/10 border border-white/10 active:bg-white/20 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-1.5"
+            >
+              <RefreshCw className="h-3.5 w-3.5" /> Retry Connection
+            </button>
           </div>
         ) : loading ? (
-          <div className="flex-1 flex flex-col items-center justify-center py-20">
-            <Loader2 className="h-9 w-9 animate-spin text-orange-500 mb-3" />
-            <p className="text-sm font-semibold text-gray-300">Connecting to S3 bucket...</p>
-            <p className="text-[11px] text-gray-500 mt-1 font-medium">Reading lecture structures & files</p>
+          <div className="h-64 flex flex-col items-center justify-center">
+            <Loader2 className="h-8 w-8 animate-spin text-orange-500 mb-3" />
+            <p className="text-xs font-semibold text-gray-300">Connecting to S3 bucket...</p>
+            <p className="text-[10px] text-gray-500 mt-1 font-medium">Reading lecture structures & files</p>
           </div>
         ) : subjects.length === 0 ? (
-          <div className="bg-[#121933] border border-white/5 rounded-2xl p-8 text-center space-y-3 my-auto">
-            <div className="h-11 w-11 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto">
+          <div className="bg-[#0c1124] border border-white/5 rounded-2xl p-6 text-center space-y-3">
+            <div className="h-10 w-10 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto">
               <Film className="h-5 w-5 text-orange-400" />
             </div>
             <div>
-              <h3 className="font-bold text-sm text-white">No Lecture Directories Found</h3>
-              <p className="text-xs text-gray-400 mt-1 max-w-xs mx-auto leading-relaxed">
-                We successfully connected to your S3 bucket, but could not find any subject folders or video files formatted as <span className="text-orange-400 font-mono">subject/chapter/lecture.mp4</span>.
+              <h3 className="font-bold text-xs text-white">No Lecture Directories Found</h3>
+              <p className="text-[11px] text-gray-400 mt-1 max-w-xs mx-auto leading-relaxed">
+                Connected successfully, but could not find any subject folders or video files formatted as <span className="text-orange-400 font-mono">subject/chapter/lecture.mp4</span>.
               </p>
             </div>
             <button 
@@ -200,182 +178,211 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
             </button>
           </div>
         ) : (
-          <div className="space-y-3 flex-1">
-            {/* Subjects Header / Stats Info */}
-            <div className="flex justify-between items-center bg-[#121933]/40 border border-white/5 px-4 py-2.5 rounded-xl shrink-0">
-              <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                STRUCTURED SUBJECT DIRECTORIES
-              </span>
-              <span className="text-[10px] font-bold text-orange-400 bg-orange-500/10 border border-orange-500/15 px-2.5 py-0.5 rounded-full">
-                {subjects.length} {subjects.length === 1 ? 'Subject' : 'Subjects'} Available
-              </span>
-            </div>
+          <AnimatePresence mode="wait">
+            {/* VIEW 1: SUBJECT & CHAPTER BROWSER */}
+            {currentView === 'list' && (
+              <motion.div
+                key="list-view"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 10 }}
+                className="space-y-4"
+              >
+                {subjects.map((subject) => (
+                  <div key={subject.name} className="space-y-2">
+                    <div className="flex items-center gap-2 px-1">
+                      <BookOpen className="h-4 w-4 text-orange-400" />
+                      <span className="text-xs font-extrabold uppercase tracking-wider text-orange-400">
+                        {subject.name} ({getTotalSubjectVideos(subject)} Lectures)
+                      </span>
+                    </div>
 
-            {/* Hierarchical Tree Container */}
-            <div className="space-y-3 pb-8">
-              {subjects.map((subject) => {
-                const isSubjExpanded = !!expandedSubjects[subject.name];
-                const totalVids = getTotalSubjectVideos(subject);
-                
-                return (
-                  <div key={subject.name} className="bg-[#121933]/50 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300">
-                    {/* Level 1: Subject Header */}
-                    <button
-                      onClick={() => toggleSubject(subject.name)}
-                      className="w-full flex items-center justify-between p-4 hover:bg-[#121933]/80 transition select-none text-left"
-                    >
-                      <div className="flex items-center gap-3.5 min-w-0">
-                        <div className="h-10 w-10 bg-orange-500/10 rounded-xl flex items-center justify-center border border-orange-500/15 shrink-0">
-                          <BookOpen className="h-5 w-5 text-orange-400" />
-                        </div>
-                        <div className="min-w-0">
-                          <h3 className="font-bold text-base text-white tracking-wide truncate">
-                            {subject.name}
-                          </h3>
-                          <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">
-                            {subject.chapters.length} {subject.chapters.length === 1 ? 'Chapter' : 'Chapters'} • {totalVids} {totalVids === 1 ? 'Video' : 'Videos'}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        {isSubjExpanded ? (
-                          <ChevronDown className="h-5 w-5 text-orange-400 shrink-0" />
-                        ) : (
-                          <ChevronRight className="h-5 w-5 text-gray-500 shrink-0" />
-                        )}
-                      </div>
-                    </button>
-
-                    {/* Level 2: Chapters under Subject */}
-                    <AnimatePresence initial={false}>
-                      {isSubjExpanded && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25, ease: 'easeInOut' }}
-                          className="border-t border-white/5 bg-[#0e142e]/60 divide-y divide-white/[0.02]"
+                    <div className="grid grid-cols-1 gap-2.5">
+                      {subject.chapters.map((chapter) => (
+                        <div 
+                          key={chapter.name}
+                          onClick={() => {
+                            setSelectedSubject(subject);
+                            setSelectedChapter(chapter);
+                            setCurrentView('chapter');
+                          }}
+                          className="bg-[#0e142e] border border-white/5 hover:border-orange-500/20 rounded-2xl p-3.5 transition-all active:scale-[0.98] cursor-pointer flex items-center justify-between"
                         >
-                          {subject.chapters.map((chapter) => {
-                            const chapKey = `${subject.name}::${chapter.name}`;
-                            const isChapExpanded = !!expandedChapters[chapKey];
-                            
-                            return (
-                              <div key={chapter.name} className="overflow-hidden">
-                                {/* Chapter Row Trigger */}
-                                <button
-                                  onClick={() => toggleChapter(subject.name, chapter.name)}
-                                  className="w-full flex items-center justify-between py-3.5 px-6 hover:bg-white/[0.02] transition text-left select-none"
-                                >
-                                  <div className="flex items-center gap-3 min-w-0">
-                                    <div className="shrink-0">
-                                      {isChapExpanded ? (
-                                        <FolderOpen className="h-4.5 w-4.5 text-blue-400 fill-blue-400/10" />
-                                      ) : (
-                                        <Folder className="h-4.5 w-4.5 text-gray-400 fill-gray-400/10" />
-                                      )}
-                                    </div>
-                                    <div className="min-w-0">
-                                      <h4 className="font-bold text-sm text-gray-200 truncate">
-                                        {chapter.name}
-                                      </h4>
-                                      <p className="text-[9px] text-gray-500 font-semibold uppercase tracking-wider mt-0.5">
-                                        {chapter.videos.length} {chapter.videos.length === 1 ? 'Lecture Video' : 'Lecture Videos'}
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div>
-                                    {isChapExpanded ? (
-                                      <ChevronDown className="h-4 w-4 text-blue-400" />
-                                    ) : (
-                                      <ChevronRight className="h-4 w-4 text-gray-600" />
-                                    )}
-                                  </div>
-                                </button>
-
-                                {/* Level 3: Videos/Lectures inside Chapter */}
-                                <AnimatePresence initial={false}>
-                                  {isChapExpanded && (
-                                    <motion.div
-                                      initial={{ height: 0, opacity: 0 }}
-                                      animate={{ height: 'auto', opacity: 1 }}
-                                      exit={{ height: 0, opacity: 0 }}
-                                      transition={{ duration: 0.2, ease: 'easeInOut' }}
-                                      className="bg-black/20 pl-10 pr-4 py-1.5 space-y-1.5 border-l-2 border-dashed border-blue-500/20 ml-8 my-1"
-                                    >
-                                      {chapter.videos.map((vid) => {
-                                        const isPlayingThis = activeVideoUrl === vid.url;
-                                        
-                                        return (
-                                          <div
-                                            key={vid.key}
-                                            onClick={() => {
-                                              setActiveVideoUrl(vid.url);
-                                              setActiveVideoTitle(vid.title);
-                                            }}
-                                            className={`group flex items-center justify-between p-2.5 rounded-xl border transition cursor-pointer ${
-                                              isPlayingThis 
-                                                ? 'bg-orange-500/10 border-orange-500/30' 
-                                                : 'bg-white/[0.01] border-white/[0.03] hover:bg-white/[0.04] hover:border-white/10'
-                                            }`}
-                                          >
-                                            <div className="flex items-center gap-3 min-w-0">
-                                              <div className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 border transition ${
-                                                isPlayingThis
-                                                  ? 'bg-orange-500/20 border-orange-500/30 text-orange-400'
-                                                  : 'bg-white/5 border-white/5 text-gray-400 group-hover:text-orange-400 group-hover:bg-orange-500/10 group-hover:border-orange-500/20'
-                                              }`}>
-                                                <Play className={`h-3.5 w-3.5 ${isPlayingThis ? 'fill-orange-400 text-orange-400' : ''}`} />
-                                              </div>
-                                              <div className="min-w-0">
-                                                <h5 className={`text-xs font-bold truncate transition ${
-                                                  isPlayingThis ? 'text-orange-400' : 'text-gray-300 group-hover:text-orange-400'
-                                                }`}>
-                                                  {vid.title}
-                                                </h5>
-                                                <p className="text-[9px] font-mono text-gray-500 mt-0.5 truncate">
-                                                  {vid.key.split('/').pop()}
-                                                </p>
-                                              </div>
-                                            </div>
-                                            
-                                            <button
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                setActiveVideoUrl(vid.url);
-                                                setActiveVideoTitle(vid.title);
-                                              }}
-                                              className={`text-[9px] font-bold uppercase tracking-wider px-2.5 py-1.5 rounded-lg shrink-0 transition select-none ${
-                                                isPlayingThis
-                                                  ? 'bg-orange-600 text-white'
-                                                  : 'bg-white/5 hover:bg-orange-600 text-gray-400 hover:text-white border border-white/5 hover:border-orange-600'
-                                              }`}
-                                            >
-                                              {isPlayingThis ? 'Playing' : 'Stream'}
-                                            </button>
-                                          </div>
-                                        );
-                                      })}
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
-                              </div>
-                            );
-                          })}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                              <FolderOpen className="h-5 w-5 text-blue-400" />
+                            </div>
+                            <div className="min-w-0">
+                              <h4 className="text-sm font-bold text-gray-100 truncate">{chapter.name}</h4>
+                              <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mt-0.5">
+                                {chapter.videos.length} {chapter.videos.length === 1 ? 'Lecture' : 'Lectures'} available
+                              </p>
+                            </div>
+                          </div>
+                          <ChevronRight className="h-5 w-5 text-gray-500" />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                ))}
+              </motion.div>
+            )}
+
+            {/* VIEW 2: CHAPTER PAGE (Big Heading, Lectures Listed Below) */}
+            {currentView === 'chapter' && selectedChapter && (
+              <motion.div
+                key="chapter-view"
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                className="space-y-4"
+              >
+                {/* BIG CHAPTER HEADING */}
+                <div className="bg-gradient-to-br from-[#12193a] to-[#0d122b] border border-white/5 rounded-2xl p-5 shadow-xl">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2.5 py-1 rounded-full">
+                    {selectedSubject?.name || "SUBJECT"}
+                  </span>
+                  <h1 className="text-2xl font-black text-white tracking-tight mt-3 mb-1.5 leading-tight">
+                    {selectedChapter.name}
+                  </h1>
+                  <p className="text-xs text-gray-400 font-semibold">
+                    Select a lecture from the list below to begin streaming instantly.
+                  </p>
+                </div>
+
+                {/* LECTURES LIST */}
+                <div className="space-y-2">
+                  <h3 className="text-[10px] font-extrabold tracking-widest text-gray-500 uppercase px-1">
+                    LECTURES IN THIS CHAPTER ({selectedChapter.videos.length})
+                  </h3>
+                  
+                  <div className="space-y-2">
+                    {selectedChapter.videos.map((vid, idx) => (
+                      <div
+                        key={vid.key}
+                        onClick={() => {
+                          setActiveVideo(vid);
+                          setCurrentView('player');
+                        }}
+                        className="bg-[#0e142e] border border-white/5 hover:border-orange-500/25 rounded-2xl p-3.5 flex items-center justify-between gap-3 active:scale-[0.98] transition-all cursor-pointer"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="h-10 w-10 rounded-xl bg-orange-500/10 border border-orange-500/15 flex items-center justify-center shrink-0 text-orange-400 font-mono text-sm font-extrabold">
+                            {idx + 1}
+                          </div>
+                          <div className="min-w-0">
+                            <h4 className="text-xs font-bold text-gray-100 truncate">{vid.title}</h4>
+                            <p className="text-[9px] font-mono text-gray-500 mt-0.5 truncate">
+                              {vid.key.split('/').pop()}
+                            </p>
+                          </div>
+                        </div>
+
+                        <button
+                          className="px-3 py-1.5 bg-orange-500/10 text-orange-400 hover:bg-orange-600 hover:text-white rounded-xl text-[10px] font-extrabold uppercase tracking-wider transition border border-orange-500/10 shrink-0"
+                        >
+                          Stream
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* VIEW 3: LECTURE PLAYER PAGE (Video Player Top, Lectures Listed Below) */}
+            {currentView === 'player' && selectedChapter && activeVideo && (
+              <motion.div
+                key="player-view"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="space-y-4"
+              >
+                {/* VIDEO PLAYER ON TOP */}
+                <div className="bg-[#0c1124] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+                  <CustomVideoPlayer 
+                    src={activeVideo.url} 
+                    title={activeVideo.title} 
+                  />
+                </div>
+
+                {/* CURRENT PLAYING TITLE AND INFO */}
+                <div className="px-1">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 mb-1">
+                    <Tv className="h-4 w-4 animate-pulse text-orange-500" />
+                    <span>NOW STREAMING LECTURE</span>
+                  </div>
+                  <h2 className="text-lg font-black text-white leading-snug">{activeVideo.title}</h2>
+                  <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">
+                    {selectedSubject?.name} • {selectedChapter.name}
+                  </p>
+                </div>
+
+                {/* LECTURES LIST BELOW */}
+                <div className="space-y-2 pt-2 border-t border-white/5">
+                  <h3 className="text-[10px] font-extrabold tracking-widest text-gray-500 uppercase px-1">
+                    PLAYLIST ({selectedChapter.videos.length} LECTURES)
+                  </h3>
+
+                  <div className="space-y-2 max-h-[280px] overflow-y-auto pr-1">
+                    {selectedChapter.videos.map((vid, idx) => {
+                      const isCurrent = vid.key === activeVideo.key;
+                      return (
+                        <div
+                          key={vid.key}
+                          onClick={() => {
+                            if (!isCurrent) {
+                              setActiveVideo(vid);
+                            }
+                          }}
+                          className={`p-3 rounded-2xl flex items-center justify-between gap-3 transition-all cursor-pointer border ${
+                            isCurrent 
+                              ? 'bg-orange-500/10 border-orange-500/30 shadow-[0_4px_20px_rgba(249,115,22,0.1)]' 
+                              : 'bg-[#0e142e] border-white/5 hover:border-orange-500/10 active:scale-[0.98]'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 font-mono text-xs font-extrabold border ${
+                              isCurrent 
+                                ? 'bg-orange-500/20 border-orange-500/30 text-orange-400' 
+                                : 'bg-white/5 border-white/5 text-gray-400'
+                            }`}>
+                              {isCurrent ? <Play className="h-3.5 w-3.5 fill-orange-400 text-orange-400" /> : idx + 1}
+                            </div>
+                            <div className="min-w-0">
+                              <h4 className={`text-xs font-bold truncate ${isCurrent ? 'text-orange-400' : 'text-gray-200'}`}>
+                                {vid.title}
+                              </h4>
+                              <p className="text-[9px] font-mono text-gray-500 mt-0.5 truncate">
+                                {vid.key.split('/').pop()}
+                              </p>
+                            </div>
+                          </div>
+
+                          {isCurrent ? (
+                            <span className="text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-400 rounded-lg">
+                              Playing
+                            </span>
+                          ) : (
+                            <span className="text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-white/5 text-gray-400 rounded-lg">
+                              Select
+                            </span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         )}
       </div>
 
       {/* Footer */}
-      <div className="pt-4 border-t border-white/5 text-center mt-auto shrink-0">
-        <span className="font-bold text-[10px] tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500 uppercase">
+      <div className="pt-3 border-t border-white/5 text-center mt-auto shrink-0">
+        <span className="font-extrabold text-[9px] tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500 uppercase">
           Powered by AWS Secured Engine
         </span>
       </div>
