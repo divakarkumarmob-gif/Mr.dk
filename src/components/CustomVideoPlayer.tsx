@@ -23,7 +23,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   const [isMuted, setIsMuted] = useState(false);
   const [brightness, setBrightness] = useState(1.0); // 0.15 to 1.0 range
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
-  const [selectedQuality, setSelectedQuality] = useState('Original (S3 Stream)');
+  const [selectedQuality, setSelectedQuality] = useState('Auto');
   const [isLoading, setIsLoading] = useState(true);
 
   // UI / Overlay States
@@ -340,6 +340,8 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
         className="w-full h-full object-contain pointer-events-none transition-all duration-75"
         style={{ filter: `brightness(${brightness})` }}
         autoPlay
+        preload="auto"
+        playsInline
       />
 
       {/* Playback Loading Spinner */}
@@ -464,7 +466,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                           className="w-full flex justify-between items-center py-1.5 px-2.5 hover:bg-white/10 rounded-lg text-left text-gray-200"
                         >
                           <span>Video Quality</span>
-                          <span className="text-[10px] text-blue-400 font-semibold truncate max-w-[60px]">{selectedQuality === 'Original (S3 Stream)' ? 'Original' : selectedQuality}</span>
+                          <span className="text-[10px] text-blue-400 font-semibold truncate max-w-[60px]">{selectedQuality}</span>
                         </button>
                       </div>
                     )}
@@ -494,7 +496,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                           <span className="font-bold text-[10px] text-gray-400">SELECT QUALITY</span>
                           <button onClick={() => setActiveMenu('main')} className="text-[10px] text-orange-400 hover:underline">Back</button>
                         </div>
-                        {['Original (S3 Stream)', '1080p HD', '720p', '480p'].map((q) => (
+                        {['Auto', '1080p HD', '720p', '480p'].map((q) => (
                           <button 
                             key={q}
                             onClick={() => {

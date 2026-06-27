@@ -207,10 +207,50 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
             </button>
           </div>
         ) : loading ? (
-          <div className="h-64 flex flex-col items-center justify-center">
-            <Loader2 className="h-8 w-8 animate-spin text-orange-500 mb-3" />
-            <p className="text-xs font-semibold text-gray-300">Connecting to S3 bucket...</p>
-            <p className="text-[10px] text-gray-500 mt-1 font-medium">Reading lecture structures & files</p>
+          <div className="space-y-6 animate-pulse">
+            {/* Subject 1 skeleton */}
+            <div className="space-y-2.5">
+              <div className="flex items-center gap-2 px-1">
+                <div className="h-4 w-4 bg-gray-800/80 rounded-md shrink-0 animate-pulse" />
+                <div className="h-3 w-32 bg-gray-800/80 rounded animate-pulse" />
+              </div>
+              <div className="grid grid-cols-1 gap-2.5">
+                {[1, 2].map((i) => (
+                  <div key={i} className="bg-[#0e142e]/60 border border-white/5 rounded-2xl p-3.5 flex items-center justify-between">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="h-10 w-10 rounded-xl bg-gray-800/70 flex items-center justify-center shrink-0 animate-pulse" />
+                      <div className="space-y-2">
+                        <div className="h-3.5 w-36 bg-gray-800/70 rounded animate-pulse" />
+                        <div className="h-2.5 w-24 bg-gray-800/40 rounded animate-pulse" />
+                      </div>
+                    </div>
+                    <div className="h-4 w-4 bg-gray-800/60 rounded-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Subject 2 skeleton */}
+            <div className="space-y-2.5">
+              <div className="flex items-center gap-2 px-1">
+                <div className="h-4 w-4 bg-gray-800/80 rounded-md shrink-0 animate-pulse" />
+                <div className="h-3 w-40 bg-gray-800/80 rounded animate-pulse" />
+              </div>
+              <div className="grid grid-cols-1 gap-2.5">
+                {[1, 2].map((i) => (
+                  <div key={i} className="bg-[#0e142e]/60 border border-white/5 rounded-2xl p-3.5 flex items-center justify-between">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="h-10 w-10 rounded-xl bg-gray-800/70 flex items-center justify-center shrink-0 animate-pulse" />
+                      <div className="space-y-2">
+                        <div className="h-3.5 w-44 bg-gray-800/70 rounded animate-pulse" />
+                        <div className="h-2.5 w-28 bg-gray-800/40 rounded animate-pulse" />
+                      </div>
+                    </div>
+                    <div className="h-4 w-4 bg-gray-800/60 rounded-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         ) : subjects.length === 0 ? (
           <div className="bg-[#0c1124] border border-white/5 rounded-2xl p-6 text-center space-y-3">
