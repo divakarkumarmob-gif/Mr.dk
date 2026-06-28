@@ -126,20 +126,52 @@ export const sendMessage = async (chatId: string, senderId: string, text: string
 };
 
 export const uploadMedia = async (file: File, path: string) => {
+    const convertToBase64 = (f: File): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(f);
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = error => reject(error);
+        });
+    };
+
     try {
         let fileToUpload = file;
         if (file.type.startsWith('image/')) {
             const options = {
-                maxSizeMB: 1,
-                maxWidthOrHeight: 1024,
-                useWebWorker: true,
+                maxSizeMB: 0.15,
+                maxWidthOrHeight: 800,
+                useWebWorker: false,
             };
             fileToUpload = await imageCompression(file, options);
+        } else if (file.size > 600 * 1024) {
+            throw new Error(`Media file is too large. Max allowed size is 600KB.`);
         }
         
         const storageRef = ref(storage, path);
-        const snapshot = await uploadBytes(storageRef, fileToUpload);
-        return getDownloadURL(snapshot.ref);
+        
+        try {
+            // Attempt standard Cloud Storage upload with 2.5s timeout
+            const url = await new Promise<string>(async (resolve, reject) => {
+                const timeoutId = setTimeout(() => {
+                    reject(new Error('Firebase Storage timeout.'));
+                }, 2500);
+
+                try {
+                    const snapshot = await uploadBytes(storageRef, fileToUpload);
+                    const downloadURL = await getDownloadURL(snapshot.ref);
+                    clearTimeout(timeoutId);
+                    resolve(downloadURL);
+                } catch (err) {
+                    clearTimeout(timeoutId);
+                    reject(err);
+                }
+            });
+            return url;
+        } catch (storageErr) {
+            console.warn('Storage chat media upload bypassed or timed out, using secure Base64 local format:', storageErr);
+            return await convertToBase64(fileToUpload);
+        }
     } catch (error) {
         console.error('Error uploading media:', error);
         throw error;

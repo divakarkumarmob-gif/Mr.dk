@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { auth, db, storage } from '../lib/firebase';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc, onSnapshot, query, orderBy, deleteDoc, doc } from 'firebase/firestore';
 import imageCompression from 'browser-image-compression';
 import Pressable from './Pressable';
@@ -59,6 +59,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
   const [isUploading, setIsUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadingName, setUploadingName] = useState('');
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
   // Realtime load notes from Firestore (Scoped strictly to Current User for private access)
   useEffect(() => {
@@ -149,6 +150,15 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
     setSelectedFiles(prev => prev.filter(f => f.id !== id));
   };
 
+  const convertToBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = error => reject(error);
+    });
+  };
+
   // Multi-upload Process to Firebase Storage and Firestore
   const handleMultiUpload = async () => {
     if (!name.trim()) {
@@ -165,6 +175,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
     }
 
     setWarningMessage('');
+    setUploadError(null);
     setIsPopup2Open(false);
     setIsUploading(true);
     setUploadProgress(0);
@@ -180,10 +191,17 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
         // Compress image to save bandwidth and storage limit
         if (sf.type === 'image') {
           try {
-            const options = { maxSizeMB: 0.8, maxWidthOrHeight: 1200, useWebWorker: true };
+            // Disable Web Worker to ensure seamless operation in sandboxed iframes
+            // Compress heavily (max 150KB) so Base64 backup fits comfortably in Firestore's 1MB limit
+            const options = { maxSizeMB: 0.15, maxWidthOrHeight: 800, useWebWorker: false };
             fileToUpload = await imageCompression(sf.file, options);
           } catch (compressErr) {
             console.error('Image compression failed, using original:', compressErr);
+          }
+        } else if (sf.type === 'pdf') {
+          // If PDF is larger than 600KB, warn the user to protect Firestore document bounds
+          if (sf.file.size > 600 * 1024) {
+            throw new Error(`PDF file "${sf.file.name}" is too large (${Math.round(sf.file.size / 1024)}KB). Please upload a smaller PDF (max 600KB) for secure local persistence.`);
           }
         }
 
@@ -192,9 +210,51 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
         const storagePath = `users/${auth.currentUser.uid}/notes/${Date.now()}_${uniqueId}_${fileNameClean}`;
         const storageRef = ref(storage, storagePath);
 
-        // Upload to Firebase Storage
-        await uploadBytes(storageRef, fileToUpload);
-        const downloadUrl = await getDownloadURL(storageRef);
+        let downloadUrl = '';
+
+        try {
+          // Attempt Firebase Storage Upload with a 2.5-second timeout fallback
+          const uploadTask = uploadBytesResumable(storageRef, fileToUpload);
+
+          downloadUrl = await new Promise<string>((resolve, reject) => {
+            const timeoutId = setTimeout(() => {
+              uploadTask.cancel();
+              reject(new Error('Firebase Storage timeout. Falling back to secure local document database...'));
+            }, 2500);
+
+            uploadTask.on(
+              'state_changed',
+              (snapshot) => {
+                const fileProgress = snapshot.totalBytes > 0 
+                  ? (snapshot.bytesTransferred / snapshot.totalBytes) 
+                  : 0;
+                // Calculate global progress across all selected files
+                const baseProgress = (i / selectedFiles.length) * 100;
+                const fileWeight = 100 / selectedFiles.length;
+                const currentProgress = Math.round(baseProgress + (fileProgress * fileWeight));
+                setUploadProgress(currentProgress);
+              },
+              (error) => {
+                clearTimeout(timeoutId);
+                reject(error);
+              },
+              async () => {
+                clearTimeout(timeoutId);
+                try {
+                  const url = await getDownloadURL(uploadTask.snapshot.ref);
+                  resolve(url);
+                } catch (urlErr) {
+                  reject(urlErr);
+                }
+              }
+            );
+          });
+          console.log('Successfully uploaded file via standard Storage Bucket.');
+        } catch (storageErr) {
+          console.warn('Storage upload bypassed or timed out, falling back to secure local document database (Base64 format):', storageErr);
+          // Convert file directly to Base64 to bypass all storage bucket / CORS / provisioning blocks
+          downloadUrl = await convertToBase64(fileToUpload);
+        }
 
         uploadedFiles.push({
           url: downloadUrl,
@@ -202,7 +262,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
           type: sf.type
         });
 
-        // Set live progress ratio
+        // Set live progress ratio for the completed file
         setUploadProgress(Math.round(((i + 1) / selectedFiles.length) * 100));
       }
 
@@ -216,12 +276,16 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
         createdAt: new Date(),
       });
 
-      // Clear state variables
+      // Clear state variables on success
       clearSelectedFiles();
       setName('');
     } catch (err) {
       console.error('Upload Failed:', err);
-      alert('Upload failed: ' + (err instanceof Error ? err.message : String(err)));
+      const errMsg = err instanceof Error ? err.message : String(err);
+      setUploadError(errMsg);
+      try {
+        alert('Upload failed: ' + errMsg);
+      } catch (e) {}
     } finally {
       setIsUploading(false);
       setUploadProgress(0);
@@ -360,6 +424,17 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
               </div>
             )}
 
+            {/* Live Error Banner */}
+            {uploadError && (
+              <div id="upload-error-banner" className="mb-4 bg-red-500/10 border border-red-500/30 rounded-xl p-3 shadow-md flex items-start gap-2.5">
+                <AlertTriangle className="h-4 w-4 text-red-400 flex-shrink-0 mt-0.5 animate-bounce" />
+                <div className="text-xs">
+                  <p className="font-bold text-red-400">Upload Failed</p>
+                  <p className="text-slate-300 mt-1 font-mono break-all">{uploadError}</p>
+                </div>
+              </div>
+            )}
+
             {/* Private Gallery list */}
             <h2 className="text-sm font-bold text-slate-400 mb-3 flex items-center gap-2">
               <BookOpen className="h-4 w-4" /> My Documents ({uploadedNotes.length})
@@ -478,6 +553,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                           </div>
                           <a 
                             href={file.url} 
+                            download={file.name}
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold"
@@ -486,11 +562,19 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                           </a>
                         </div>
                         <div className="w-full h-[380px] bg-slate-950 relative">
-                          <iframe 
-                            src={`https://docs.google.com/viewer?url=${encodeURIComponent(file.url)}&embedded=true`}
-                            className="w-full h-full rounded-b-2xl border-none"
-                            title={file.name}
-                          />
+                          {file.url.startsWith('data:') ? (
+                            <iframe 
+                              src={file.url}
+                              className="w-full h-full rounded-b-2xl border-none"
+                              title={file.name}
+                            />
+                          ) : (
+                            <iframe 
+                              src={`https://docs.google.com/viewer?url=${encodeURIComponent(file.url)}&embedded=true`}
+                              className="w-full h-full rounded-b-2xl border-none"
+                              title={file.name}
+                            />
+                          )}
                         </div>
                       </div>
                     );
@@ -528,6 +612,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                         </div>
                         <a 
                           href={selectedNote.url} 
+                          download={selectedNote.name}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold"
@@ -536,11 +621,19 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                         </a>
                       </div>
                       <div className="w-full h-[380px] bg-slate-950 relative">
-                        <iframe 
-                          src={`https://docs.google.com/viewer?url=${encodeURIComponent(selectedNote.url)}&embedded=true`}
-                          className="w-full h-full rounded-b-2xl border-none"
-                          title={selectedNote.name}
-                        />
+                        {selectedNote.url.startsWith('data:') ? (
+                          <iframe 
+                            src={selectedNote.url}
+                            className="w-full h-full rounded-b-2xl border-none"
+                            title={selectedNote.name}
+                          />
+                        ) : (
+                          <iframe 
+                            src={`https://docs.google.com/viewer?url=${encodeURIComponent(selectedNote.url)}&embedded=true`}
+                            className="w-full h-full rounded-b-2xl border-none"
+                            title={selectedNote.name}
+                          />
+                        )}
                       </div>
                     </div>
                   ) : (

@@ -19,14 +19,51 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
         setTimeout(() => setErrorMessage(null), 2000);
     };
 
+    const convertToBase64 = (file: File): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = error => reject(error);
+        });
+    };
+
     const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
         if (!user || !event.target.files || event.target.files.length === 0) return;
         const file = event.target.files[0];
         const storageRef = ref(storage, `users/${user.uid}/profile.jpg`);
         
+        let downloadURL = '';
         try {
-            await uploadBytes(storageRef, file);
-            const downloadURL = await getDownloadURL(storageRef);
+            // Attempt standard upload with a 2.5s timeout
+            downloadURL = await new Promise<string>(async (resolve, reject) => {
+                const timeoutId = setTimeout(() => {
+                    reject(new Error('Firebase Storage timeout.'));
+                }, 2500);
+
+                try {
+                    await uploadBytes(storageRef, file);
+                    const url = await getDownloadURL(storageRef);
+                    clearTimeout(timeoutId);
+                    resolve(url);
+                } catch (err) {
+                    clearTimeout(timeoutId);
+                    reject(err);
+                }
+            });
+        } catch (error) {
+            console.warn('Storage avatar upload bypassed or timed out, falling back to local secure Base64:', error);
+            try {
+                // Read as base64
+                downloadURL = await convertToBase64(file);
+            } catch (convErr) {
+                console.error('Base64 conversion failed:', convErr);
+                showError('Failed to process image');
+                return;
+            }
+        }
+
+        try {
             await updateProfile(user, { photoURL: downloadURL });
             await updateDoc(doc(db, 'users', user.uid), { photoURL: downloadURL });
             setShowPhotoModal(false);
