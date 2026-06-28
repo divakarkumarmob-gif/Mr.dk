@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile, signInAnonymously } from 'firebase/auth';
 import { auth } from './firebase';
 
 const googleProvider = new GoogleAuthProvider();
@@ -34,6 +34,19 @@ export const signUpWithEmail = async (email: string, password: string, displayNa
     }
 };
 
+export const signInAsGuest = async (displayName: string) => {
+    try {
+        const userCredential = await signInAnonymously(auth);
+        if (displayName && userCredential.user) {
+            await updateProfile(userCredential.user, { displayName });
+        }
+        return userCredential;
+    } catch (error) {
+        console.error('Anonymous Sign-In error:', error);
+        throw error;
+    }
+};
+
 export const resetPassword = async (email: string) => {
     try {
         return await sendPasswordResetEmail(auth, email);
@@ -45,6 +58,7 @@ export const resetPassword = async (email: string) => {
 
 export const logOut = async () => {
     try {
+        localStorage.removeItem('guest_user');
         return await signOut(auth);
     } catch (error) {
         console.error('Logout error:', error);

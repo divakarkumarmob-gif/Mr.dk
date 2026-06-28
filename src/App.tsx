@@ -277,6 +277,25 @@ export default function App() {
   useEffect(() => {
     if (!user) return;
     
+    if (user.uid.startsWith('local_guest_')) {
+      setNotifications([
+        {
+          id: 'welcome_guest',
+          message: `👋 Welcome ${user.displayName || 'Guest'} to NeetMaster! You are currently using the Guest Account. Your progress is saved locally.`,
+          readBy: [],
+          timestamp: { toDate: () => new Date() } as any
+        }
+      ]);
+      setNeetNotifications([
+        {
+          title: "NEET UG Exam Practice Mode",
+          message: "You can view daily goals, watch lectures, and practice physics, chemistry, and biology chapters immediately.",
+          timestamp: { toDate: () => new Date() } as any
+        }
+      ]);
+      return;
+    }
+    
     // Personal Notifications
     const notifRef = collection(db, 'notifications');
     const q = query(notifRef, orderBy('timestamp', 'desc'));
@@ -620,6 +639,17 @@ export default function App() {
 
   useEffect(() => {
       if (!user) return;
+      if (user.uid.startsWith('local_guest_')) {
+          const localStats = localStorage.getItem(`stats_${user.uid}`);
+          if (localStats) {
+              try {
+                  setStats(JSON.parse(localStats));
+              } catch (e) {
+                  console.error("Failed to parse local stats", e);
+              }
+          }
+          return;
+      }
       
       const resultsRef = collection(db, 'users', user.uid, 'results');
       const unsubscribe = onSnapshot(resultsRef, (snapshot) => {
@@ -762,16 +792,24 @@ export default function App() {
               const newSeconds = prev.timeSpentSeconds + 1;
               const newLectureSeconds = activeVideo ? prev.lectureTimeSeconds + 1 : prev.lectureTimeSeconds;
               
-              if (user && newSeconds % 60 === 0) { // Update Firebase every 60 seconds
-                  console.log("Attempting to save analytics to Firestore for user:", user.uid);
-                  setDoc(doc(db, 'users', user.uid, 'analytics_v2', today), { 
-                      timeSpentSeconds: newSeconds,
-                      lectureTimeSeconds: newLectureSeconds
-                  }, { merge: true }).then(() => {
-                      console.log("Analytics saved successfully");
-                  }).catch((err) => {
-                      console.error("Failed to save analytics:", err);
-                  });
+              if (user && newSeconds % 60 === 0) { // Update Firebase or localStorage every 60 seconds
+                  if (user.uid.startsWith('local_guest_')) {
+                      localStorage.setItem(`stats_${user.uid}`, JSON.stringify({
+                          ...prev,
+                          timeSpentSeconds: newSeconds,
+                          lectureTimeSeconds: newLectureSeconds
+                      }));
+                  } else {
+                      console.log("Attempting to save analytics to Firestore for user:", user.uid);
+                      setDoc(doc(db, 'users', user.uid, 'analytics_v2', today), { 
+                          timeSpentSeconds: newSeconds,
+                          lectureTimeSeconds: newLectureSeconds
+                      }, { merge: true }).then(() => {
+                          console.log("Analytics saved successfully");
+                      }).catch((err) => {
+                          console.error("Failed to save analytics:", err);
+                      });
+                  }
               }
               
               return {...prev, timeSpentSeconds: newSeconds, lectureTimeSeconds: newLectureSeconds};
@@ -784,6 +822,22 @@ export default function App() {
     if (!user) return;
     
     const fetchStats = async (retries = 3) => {
+        if (user.uid.startsWith('local_guest_')) {
+            const localStats = localStorage.getItem(`stats_${user.uid}`);
+            if (localStats) {
+                try {
+                    setStats(JSON.parse(localStats));
+                } catch (e) {
+                    console.error("Failed to parse local stats", e);
+                }
+            } else {
+                const today = getISTDateString();
+                setStats(prev => ({...prev, date: today, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
+            }
+            setStatsLoaded(true);
+            return;
+        }
+
         console.log("Checking stats for user", user?.uid);
         const today = getISTDateString();
         const docRef = doc(db, 'users', user!.uid, 'analytics_v2', today);
@@ -812,6 +866,7 @@ export default function App() {
 
   useEffect(() => {
     if (!user) return;
+    if (user.uid.startsWith('local_guest_')) return;
     
     // Set online on load
     updateUserPresence(user.uid, true);
@@ -828,7 +883,36 @@ export default function App() {
   }, [user]);
 
   useEffect(() => {
+    // Check for local guest user fallback first
+    const cachedGuest = localStorage.getItem('guest_user');
+    if (cachedGuest) {
+      try {
+        const parsedGuest = JSON.parse(cachedGuest);
+        setUser(parsedGuest);
+        setLoading(false);
+        
+        // Initialize guest subjects
+        const localSubjs = localStorage.getItem(`subjects_${parsedGuest.uid}`);
+        if (localSubjs) {
+          setSubjects(JSON.parse(localSubjs));
+        } else {
+          const newSubjects = getNewUserChapters();
+          setSubjects(newSubjects);
+          localStorage.setItem(`subjects_${parsedGuest.uid}`, JSON.stringify(newSubjects));
+        }
+        return; // Skip normal onAuthStateChanged
+      } catch (e) {
+        console.error("Error loading cached guest:", e);
+      }
+    }
+
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      // If there's a local guest, don't let Firebase auth override it with null
+      if (localStorage.getItem('guest_user')) {
+        setLoading(false);
+        return;
+      }
+
       setUser(currentUser);
       setLoading(false);
       
@@ -861,6 +945,17 @@ export default function App() {
     
     // Check for day change
     const interval = setInterval(async () => {
+        if (localStorage.getItem('guest_user')) {
+            const cachedGuest = JSON.parse(localStorage.getItem('guest_user') || '{}');
+            const localSubjs = localStorage.getItem(`subjects_${cachedGuest.uid}`);
+            if (localSubjs) {
+                // Keep local subjects synchronized or loaded
+                const parsed = JSON.parse(localSubjs);
+                setSubjects(parsed);
+            }
+            return;
+        }
+
         if (!auth.currentUser) return;
 
         const docRef = doc(db, 'users', auth.currentUser.uid, 'settings', 'subjects');

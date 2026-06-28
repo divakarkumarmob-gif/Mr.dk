@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {signInWithGoogle, signInWithEmail, signUpWithEmail, resetPassword} from '@/lib/auth';
+import {signInWithGoogle, signInWithEmail, signUpWithEmail, resetPassword, signInAsGuest} from '@/lib/auth';
 import {Mail, Lock, Eye, EyeOff, HelpCircle, User, Smartphone, KeyRound, ArrowLeft} from 'lucide-react';
 import EarthGraphics from './EarthGraphics';
 import Pressable from './Pressable';
@@ -16,6 +16,10 @@ export default function Login() {
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  const [isGuestMode, setIsGuestMode] = useState(false);
+  const [guestName, setGuestName] = useState('');
+  const [isLoggingInGuest, setIsLoggingInGuest] = useState(false);
 
   useEffect(() => {
     if (errorMessage) {
@@ -37,6 +41,36 @@ export default function Login() {
 
   const showSuccess = (message: string) => {
     setSuccessMessage(message);
+  };
+
+  const handleGuestSubmit = async () => {
+    if (!guestName.trim()) {
+      showError('Please enter your name to log in as guest.');
+      return;
+    }
+    setIsLoggingInGuest(true);
+    try {
+      showSuccess(`Welcome ${guestName.trim()}! Accessing app as guest...`);
+      await signInAsGuest(guestName.trim());
+    } catch (error: any) {
+      console.warn("Firebase Anonymous Sign-In failed, attempting local fallback:", error);
+      // Fallback: Create a mock local guest user and save it to localStorage
+      const mockUid = 'local_guest_' + Math.random().toString(36).substring(2, 11);
+      const mockUser = {
+        uid: mockUid,
+        displayName: guestName.trim(),
+        email: 'guest@neetmaster.com',
+        isAnonymous: true,
+        emailVerified: false,
+      };
+      localStorage.setItem('guest_user', JSON.stringify(mockUser));
+      
+      // Trigger instant boot
+      window.dispatchEvent(new Event('storage'));
+      window.location.reload();
+    } finally {
+      setIsLoggingInGuest(false);
+    }
   };
 
   const getFirebaseEmail = (ident: string) => {
@@ -206,16 +240,21 @@ export default function Login() {
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
           <div className="px-0 pt-0 pb-6 flex items-center justify-between">
             <h2 className="text-xl font-bold text-gray-900">
-                {isSignUp ? (
+                {isGuestMode ? 'Continue as Guest' : isSignUp ? (
                   signUpStep === 'IDENTIFIER' ? 'Sign Up' :
                   signUpStep === 'OTP' ? 'Enter OTP Verification' : 'Complete Profile'
                 ) : 'Login to your account'}
             </h2>
-            {isSignUp && signUpStep !== 'IDENTIFIER' && (
+            {(isGuestMode || (isSignUp && signUpStep !== 'IDENTIFIER')) && (
               <button 
                 onClick={() => {
-                  if (signUpStep === 'OTP') setSignUpStep('IDENTIFIER');
-                  else if (signUpStep === 'PROFILE') setSignUpStep('OTP');
+                  if (isGuestMode) {
+                    setIsGuestMode(false);
+                  } else if (signUpStep === 'OTP') {
+                    setSignUpStep('IDENTIFIER');
+                  } else if (signUpStep === 'PROFILE') {
+                    setSignUpStep('OTP');
+                  }
                 }}
                 className="text-xs text-gray-500 hover:text-purple-700 flex items-center gap-1 font-semibold"
               >
@@ -224,9 +263,38 @@ export default function Login() {
             )}
           </div>
           <div className="px-0 space-y-4">
+
+            {/* Guest Login Form */}
+            {isGuestMode && (
+              <div className="space-y-4">
+                <p className="text-sm text-gray-600">
+                  Enter your name to start practicing and master the NEET exam right away.
+                </p>
+                <div className="relative">
+                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <input 
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                    type="text" 
+                    placeholder="Enter Your Name" 
+                    value={guestName} 
+                    onChange={(e) => setGuestName(e.target.value)} 
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleGuestSubmit();
+                    }}
+                  />
+                </div>
+                <Pressable 
+                  className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center flex items-center justify-center" 
+                  onClick={handleGuestSubmit}
+                  disabled={isLoggingInGuest}
+                >
+                  {isLoggingInGuest ? 'Connecting...' : 'Start Learning as Guest'}
+                </Pressable>
+              </div>
+            )}
             
             {/* Login View */}
-            {!isSignUp && (
+            {!isSignUp && !isGuestMode && (
               <>
                 <div className="relative">
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
@@ -261,7 +329,7 @@ export default function Login() {
             )}
 
             {/* SignUp - Step 1: Identifier Input */}
-            {isSignUp && signUpStep === 'IDENTIFIER' && (
+            {isSignUp && !isGuestMode && signUpStep === 'IDENTIFIER' && (
               <>
                 <div className="relative">
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
@@ -280,7 +348,7 @@ export default function Login() {
             )}
 
             {/* SignUp - Step 2: OTP Input */}
-            {isSignUp && signUpStep === 'OTP' && (
+            {isSignUp && !isGuestMode && signUpStep === 'OTP' && (
               <>
                 <p className="text-xs text-gray-500 mb-2">
                   We have generated a 4-digit OTP for <span className="font-semibold text-gray-800">{identifier}</span>.
@@ -325,7 +393,7 @@ export default function Login() {
             )}
 
             {/* SignUp - Step 3: Name & Password Setup */}
-            {isSignUp && signUpStep === 'PROFILE' && (
+            {isSignUp && !isGuestMode && signUpStep === 'PROFILE' && (
               <>
                 <p className="text-xs text-gray-500 mb-2">
                   OTP Verified! Tell us who you are to set up your dashboard.
@@ -359,30 +427,40 @@ export default function Login() {
               </>
             )}
             
-            <div className="flex items-center gap-2 py-2">
-                <hr className="flex-1 border-gray-300" />
-                <span className="text-gray-600 text-xs">or</span>
-                <hr className="flex-1 border-gray-300" />
-            </div>
+            {!isGuestMode && (
+              <>
+                <div className="flex items-center gap-2 py-2">
+                    <hr className="flex-1 border-gray-300" />
+                    <span className="text-gray-600 text-xs">or</span>
+                    <hr className="flex-1 border-gray-300" />
+                </div>
 
-            <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900 text-center" onClick={handleGoogleLogin}>
-              Continue with Google
-            </Pressable>
-            
-            <div className="text-center text-gray-700 pt-2 text-sm">
-                {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
-                <Pressable 
-                  onClick={() => { 
-                    setIsSignUp(!isSignUp); 
-                    setSignUpStep('IDENTIFIER'); 
-                    setTestOtp(null);
-                    setOtp('');
-                  }} 
-                  className="text-purple-700 font-semibold hover:underline"
-                >
-                  {isSignUp ? 'Login' : 'Sign Up'}
-                </Pressable>
-            </div>
+                <div className="flex flex-col gap-2">
+                  <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900 text-center" onClick={handleGoogleLogin}>
+                    Continue with Google
+                  </Pressable>
+                  
+                  <Pressable className="w-full bg-gray-950 hover:bg-black text-white py-2 rounded-md font-semibold text-center flex items-center justify-center gap-2" onClick={() => setIsGuestMode(true)}>
+                    <User className="h-4 w-4" /> Continue as Guest
+                  </Pressable>
+                </div>
+                
+                <div className="text-center text-gray-700 pt-2 text-sm">
+                    {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
+                    <Pressable 
+                      onClick={() => { 
+                        setIsSignUp(!isSignUp); 
+                        setSignUpStep('IDENTIFIER'); 
+                        setTestOtp(null);
+                        setOtp('');
+                      }} 
+                      className="text-purple-700 font-semibold hover:underline"
+                    >
+                      {isSignUp ? 'Login' : 'Sign Up'}
+                    </Pressable>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
