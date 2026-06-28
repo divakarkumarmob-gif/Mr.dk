@@ -1,0 +1,2 @@
+# Treat jar files as binary to prevent git line-ending normalization corruption
+*.jar binary
