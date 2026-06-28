@@ -1,101 +1,174 @@
 import {useState, useEffect} from 'react';
 import {signInWithGoogle, signInWithEmail, signUpWithEmail, resetPassword} from '@/lib/auth';
-import {Mail, Lock, Eye, EyeOff, HelpCircle} from 'lucide-react';
+import {Mail, Lock, Eye, EyeOff, HelpCircle, User, Smartphone, KeyRound, ArrowLeft} from 'lucide-react';
 import EarthGraphics from './EarthGraphics';
 import Pressable from './Pressable';
 
 export default function Login() {
-  const [email, setEmail] = useState('');
+  const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [otp, setOtp] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
+  const [signUpStep, setSignUpStep] = useState<'IDENTIFIER' | 'OTP' | 'PROFILE'>('IDENTIFIER');
+  const [testOtp, setTestOtp] = useState<string | null>(null);
+
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (errorMessage) {
-      const timer = setTimeout(() => setErrorMessage(null), 2000);
+      const timer = setTimeout(() => setErrorMessage(null), 3000);
       return () => clearTimeout(timer);
     }
   }, [errorMessage]);
 
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => setSuccessMessage(null), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+
   const showError = (message: string) => {
     setErrorMessage(message);
   };
-  
-  // New state for multi-step signup
-  const [signUpStep, setSignUpStep] = useState<'INPUT' | 'OTP' | 'PASSWORD'>('INPUT');
-  const [identifier, setIdentifier] = useState('');
-  const [otp, setOtp] = useState('');
 
-  const handleNext = async () => {
-      try {
-          const response = await fetch('/api/send-otp', {
-              method: 'POST',
-              headers: {'Content-Type': 'application/json'},
-              body: JSON.stringify({ identifier })
-          });
-          if (!response.ok) throw new Error('Failed to send OTP');
-          setSignUpStep('OTP');
-      } catch (error) {
-          showError('Failed to send OTP');
-      }
+  const showSuccess = (message: string) => {
+    setSuccessMessage(message);
   };
 
-  const handleVerifyOtp = async () => {
+  const getFirebaseEmail = (ident: string) => {
+    const clean = ident.trim();
+    if (clean.includes('@')) {
+      return clean;
+    }
+    return `${clean}@neetmaster.com`;
+  };
+
+  const handleSendOtp = async () => {
+    if (!identifier.trim()) {
+      showError('Please enter your Email or Mobile Number.');
+      return;
+    }
+    
+    const cleanIdent = identifier.trim();
+    const isEmail = cleanIdent.includes('@');
+    const isPhone = /^\d{10,15}$/.test(cleanIdent.replace(/[+\-\s]/g, ''));
+    
+    if (!isEmail && !isPhone) {
+      showError('Please enter a valid Gmail address or 10-digit Mobile Number.');
+      return;
+    }
+
     try {
-        const response = await fetch('/api/verify-otp', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ identifier, otp })
-        });
-        if (!response.ok) throw new Error('Invalid OTP');
-        setSignUpStep('PASSWORD');
-    } catch (error) {
-        showError('Invalid OTP.');
+      const response = await fetch('/api/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ identifier: cleanIdent })
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send OTP');
+      }
+
+      if (data.testOtp) {
+        setTestOtp(data.testOtp);
+        showSuccess(`OTP generated! [Dev Mode] Testing Code: ${data.testOtp}`);
+      } else {
+        showSuccess(`OTP sent successfully to ${cleanIdent}!`);
+      }
+      setSignUpStep('OTP');
+    } catch (error: any) {
+      showError(error.message || 'Failed to send OTP.');
     }
   };
 
-  const handleCreatePassword = async () => {
-      const isEmail = identifier.includes('@');
-      if (!isEmail) {
-          showError("Currently only email registration is supported.");
-          return;
-      }
-      try {
-        await signUpWithEmail(identifier, password);
-        alert('Account created successfully!');
-        setSignUpStep('INPUT');
-        setIsSignUp(false);
-      } catch (error: any) {
-        showError(error.message || 'Sign-up failed!');
-      }
-  };
-  
-  const handleEmailAction = async () => {
+  const handleVerifyOtp = async () => {
+    if (!otp.trim()) {
+      showError('Please enter the 4-digit OTP.');
+      return;
+    }
     try {
-      await signInWithEmail(email, password);
+      const response = await fetch('/api/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ identifier: identifier.trim(), otp: otp.trim() })
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || 'Invalid OTP');
+      }
+      showSuccess('OTP verified successfully!');
+      setSignUpStep('PROFILE');
     } catch (error: any) {
-        if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
-            showError('Invalid email or password.');
-        } else if (error.code === 'auth/wrong-password') {
-            showError('Wrong password.');
-        } else {
-            showError('Login failed!');
-        }
+      showError(error.message || 'Invalid OTP code. Please try again.');
+    }
+  };
+
+  const handleCompleteSignUp = async () => {
+    if (!name.trim()) {
+      showError('Please enter your Name.');
+      return;
+    }
+    if (!password.trim() || password.length < 6) {
+      showError('Password must be at least 6 characters.');
+      return;
+    }
+    try {
+      const fbEmail = getFirebaseEmail(identifier);
+      await signUpWithEmail(fbEmail, password, name.trim());
+      showSuccess(`Welcome ${name.trim()}! Account created successfully.`);
+    } catch (error: any) {
+      if (error.code === 'auth/email-already-in-use') {
+        showError('This Email or Mobile Number is already registered.');
+      } else if (error.code === 'auth/weak-password') {
+        showError('Password is too weak.');
+      } else {
+        showError(error.message || 'Registration failed.');
+      }
+    }
+  };
+
+  const handleLogin = async () => {
+    if (!identifier.trim() || !password.trim()) {
+      showError('Please enter both Email/Mobile and Password.');
+      return;
+    }
+    try {
+      const fbEmail = getFirebaseEmail(identifier);
+      await signInWithEmail(fbEmail, password);
+    } catch (error: any) {
+      if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
+        showError('Invalid Email/Mobile or password.');
+      } else if (error.code === 'auth/wrong-password') {
+        showError('Wrong password.');
+      } else {
+        showError(error.message || 'Login failed!');
+      }
     }
   };
 
   const handleForgotPassword = async () => {
-      if (!email) {
-          showError('Please enter your email first.');
-          return;
+    if (!identifier.trim()) {
+      showError('Please enter your Email address first.');
+      return;
+    }
+    if (!identifier.trim().includes('@')) {
+      showError('Please enter your Email address (forgot password is not supported for mobile numbers directly).');
+      return;
+    }
+    try {
+      await resetPassword(identifier.trim());
+      showSuccess('Password reset email sent successfully!');
+    } catch (error: any) {
+      if (error.code === 'auth/user-not-found') {
+        showError('No account found with this email.');
+      } else {
+        showError(error.message || 'Failed to send reset email.');
       }
-      try {
-          await resetPassword(email);
-          alert('Password reset email sent!');
-      } catch (error: any) {
-          showError(error.message || 'Failed to send reset email.');
-      }
+    }
   };
 
   const handleGoogleLogin = async () => {
@@ -113,6 +186,11 @@ export default function Login() {
               {errorMessage}
           </div>
       )}
+      {successMessage && (
+          <div className="fixed top-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-[1001]">
+              {successMessage}
+          </div>
+      )}
       <div className="w-full max-w-4xl flex items-center justify-between mb-8">
         <div>
            <h1 className="text-3xl font-bold text-gray-900">Welcome to NeetMaster</h1>
@@ -126,23 +204,49 @@ export default function Login() {
         <EarthGraphics />
 
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="px-0 pt-0 pb-6">
+          <div className="px-0 pt-0 pb-6 flex items-center justify-between">
             <h2 className="text-xl font-bold text-gray-900">
-                {isSignUp ? (signUpStep === 'INPUT' ? 'Sign Up' : signUpStep === 'OTP' ? 'Enter OTP' : 'Create Password') : 'Login to your account'}
+                {isSignUp ? (
+                  signUpStep === 'IDENTIFIER' ? 'Sign Up' :
+                  signUpStep === 'OTP' ? 'Enter OTP Verification' : 'Complete Profile'
+                ) : 'Login to your account'}
             </h2>
+            {isSignUp && signUpStep !== 'IDENTIFIER' && (
+              <button 
+                onClick={() => {
+                  if (signUpStep === 'OTP') setSignUpStep('IDENTIFIER');
+                  else if (signUpStep === 'PROFILE') setSignUpStep('OTP');
+                }}
+                className="text-xs text-gray-500 hover:text-purple-700 flex items-center gap-1 font-semibold"
+              >
+                <ArrowLeft className="h-3 w-3" /> Back
+              </button>
+            )}
           </div>
           <div className="px-0 space-y-4">
             
-            {/* Conditional Rendering Steps */}
+            {/* Login View */}
             {!isSignUp && (
-                <>
+              <>
                 <div className="relative">
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input 
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                      type="text" 
+                      placeholder="Email or Mobile Number" 
+                      value={identifier} 
+                      onChange={(e) => setIdentifier(e.target.value)} 
+                    />
                 </div>
                 <div className="relative">
                     <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type={showPassword ? "text" : "password"} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input 
+                      className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                      type={showPassword ? "text" : "password"} 
+                      placeholder="Password" 
+                      value={password} 
+                      onChange={(e) => setPassword(e.target.value)} 
+                    />
                     <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
                         {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
                     </Pressable>
@@ -150,52 +254,134 @@ export default function Login() {
                 <div className="text-right">
                     <Pressable onClick={handleForgotPassword} className="text-sm text-purple-700 font-semibold">Forgot Password?</Pressable>
                 </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleEmailAction}>Login</Pressable>
-                </>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleLogin}>
+                  Login
+                </Pressable>
+              </>
             )}
 
-            {isSignUp && signUpStep === 'INPUT' && (
-                <>
+            {/* SignUp - Step 1: Identifier Input */}
+            {isSignUp && signUpStep === 'IDENTIFIER' && (
+              <>
                 <div className="relative">
                     <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type="text" placeholder="Email or Phone Number" value={identifier} onChange={(e) => setIdentifier(e.target.value)} />
+                    <input 
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                      type="text" 
+                      placeholder="Email or 10-digit Mobile Number" 
+                      value={identifier} 
+                      onChange={(e) => setIdentifier(e.target.value)} 
+                    />
                 </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleNext}>Next</Pressable>
-                </>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleSendOtp}>
+                  Send OTP
+                </Pressable>
+              </>
             )}
 
+            {/* SignUp - Step 2: OTP Input */}
             {isSignUp && signUpStep === 'OTP' && (
-                <>
+              <>
+                <p className="text-xs text-gray-500 mb-2">
+                  We have generated a 4-digit OTP for <span className="font-semibold text-gray-800">{identifier}</span>.
+                </p>
+                {testOtp && (
+                  <div className="bg-purple-50 border border-purple-200 text-purple-800 text-xs rounded-md p-3 mb-2 font-mono flex items-center justify-between">
+                    <span>🔑 [Dev Mode] Your OTP Code is: <strong>{testOtp}</strong></span>
+                    <button 
+                      onClick={() => {
+                        setOtp(testOtp);
+                        showSuccess("Testing OTP filled!");
+                      }} 
+                      className="text-[10px] bg-purple-600 hover:bg-purple-700 text-white px-2 py-0.5 rounded font-sans font-bold"
+                    >
+                      Auto-Fill
+                    </button>
+                  </div>
+                )}
                 <div className="relative">
-                    <input className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type="text" placeholder="Enter 4-digit OTP" value={otp} onChange={(e) => setOtp(e.target.value)} />
+                    <KeyRound className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                    <input 
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-950 placeholder-gray-500 font-mono text-center tracking-widest text-lg font-bold" 
+                      type="text" 
+                      maxLength={4}
+                      placeholder="Enter 4-digit OTP" 
+                      value={otp} 
+                      onChange={(e) => setOtp(e.target.value)} 
+                    />
                 </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleVerifyOtp}>Verify</Pressable>
-                </>
+                <div className="flex gap-2 justify-between">
+                  <button onClick={handleSendOtp} className="text-xs text-purple-700 font-semibold hover:underline">
+                    Resend OTP
+                  </button>
+                  <button onClick={() => setSignUpStep('IDENTIFIER')} className="text-xs text-gray-500 font-semibold hover:underline">
+                    Change Email/Mobile
+                  </button>
+                </div>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleVerifyOtp}>
+                  Verify & Next
+                </Pressable>
+              </>
             )}
 
-            {isSignUp && signUpStep === 'PASSWORD' && (
-                <>
+            {/* SignUp - Step 3: Name & Password Setup */}
+            {isSignUp && signUpStep === 'PROFILE' && (
+              <>
+                <p className="text-xs text-gray-500 mb-2">
+                  OTP Verified! Tell us who you are to set up your dashboard.
+                </p>
+                <div className="relative">
+                    <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                    <input 
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                      type="text" 
+                      placeholder="Your Full Name" 
+                      value={name} 
+                      onChange={(e) => setName(e.target.value)} 
+                    />
+                </div>
                 <div className="relative">
                     <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" type={showPassword ? "text" : "password"} placeholder="Create Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input 
+                      className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                      type={showPassword ? "text" : "password"} 
+                      placeholder="Choose Password (min 6 chars)" 
+                      value={password} 
+                      onChange={(e) => setPassword(e.target.value)} 
+                    />
                     <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
                         {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
                     </Pressable>
                 </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold" onClick={handleCreatePassword}>Create</Pressable>
-                </>
+                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleCompleteSignUp}>
+                  Complete Sign Up
+                </Pressable>
+              </>
             )}
             
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 py-2">
                 <hr className="flex-1 border-gray-300" />
-                <span className="text-gray-600">or</span>
+                <span className="text-gray-600 text-xs">or</span>
                 <hr className="flex-1 border-gray-300" />
             </div>
 
-            <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900" onClick={handleGoogleLogin}>Continue with Google</Pressable>
+            <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900 text-center" onClick={handleGoogleLogin}>
+              Continue with Google
+            </Pressable>
             
-            <div className="text-center text-gray-700">
-                {isSignUp ? 'Already have an account?' : 'Don\'t have an account?'} <Pressable onClick={() => { setIsSignUp(!isSignUp); setSignUpStep('INPUT'); }} className="text-purple-700 font-semibold">{isSignUp ? 'Login' : 'Sign Up'}</Pressable>
+            <div className="text-center text-gray-700 pt-2 text-sm">
+                {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
+                <Pressable 
+                  onClick={() => { 
+                    setIsSignUp(!isSignUp); 
+                    setSignUpStep('IDENTIFIER'); 
+                    setTestOtp(null);
+                    setOtp('');
+                  }} 
+                  className="text-purple-700 font-semibold hover:underline"
+                >
+                  {isSignUp ? 'Login' : 'Sign Up'}
+                </Pressable>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile } from 'firebase/auth';
 import { auth } from './firebase';
 
 const googleProvider = new GoogleAuthProvider();
@@ -21,9 +21,13 @@ export const signInWithEmail = async (email: string, password: string) => {
     }
 };
 
-export const signUpWithEmail = async (email: string, password: string) => {
+export const signUpWithEmail = async (email: string, password: string, displayName?: string) => {
     try {
-        return await createUserWithEmailAndPassword(auth, email, password);
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        if (displayName && userCredential.user) {
+            await updateProfile(userCredential.user, { displayName });
+        }
+        return userCredential;
     } catch (error) {
         console.error('Email Sign-Up error:', error);
         throw error;

@@ -18,6 +18,14 @@ export default defineConfig(({mode}) => {
     optimizeDeps: {
       exclude: ['motion']
     },
+    build: {
+      sourcemap: false,
+      minify: 'esbuild',
+      cssMinify: true,
+      rollupOptions: {
+        maxParallelFileOps: 2,
+      },
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
