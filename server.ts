@@ -3,6 +3,10 @@ import { createServer as createViteServer } from "vite";
 import * as path from "path";
 import https from "https";
 import dotenv from "dotenv";
+
+// Load environment variables immediately before any other initialization
+dotenv.config();
+
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { performSearch } from "./src/services/searchService";
@@ -34,14 +38,15 @@ const ai = new GoogleGenAI({
 });
 
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: false, // true for 465, false for other ports
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '465'),
+    secure: (process.env.SMTP_PORT === '465' || !process.env.SMTP_PORT), // True for 465, false for 587
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
     },
-});
+    family: 4, // Force IPv4 to prevent IPv6 ENETUNREACH errors on deployment platforms like Render
+} as any);
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -52,8 +57,6 @@ const limiter = rateLimit({
 
 
 const logs: string[] = [];
-
-dotenv.config();
 
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
 const razorpay = new Razorpay({
