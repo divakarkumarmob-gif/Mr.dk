@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate } from 'motion/react';
 import { Mic, Square } from 'lucide-react';
 import { stripLatexForTTS } from '../lib/utils';
+import { getApiUrl } from '@/utils/api';
 
 const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping: boolean}> = ({ onNavigate, isTyping }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -99,8 +100,7 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                 const base64Audio = (reader.result as string).split(',')[1];
                 
                 // Call /api/gemini proxy
-                const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-                const response = await fetch(`${backendUrl}/api/gemini`, {
+                const response = await fetch(getApiUrl('/api/gemini'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -123,7 +123,7 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                 const cleanedResponse = stripLatexForTTS(aiResponse);
                 
                 try {
-                    const ttsResponse = await fetch('/api/tts', {
+                    const ttsResponse = await fetch(getApiUrl('/api/tts'), {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ text: cleanedResponse })

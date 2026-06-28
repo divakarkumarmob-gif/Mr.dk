@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft } from 'lucide-react';
 import { collection, query, orderBy, limit, onSnapshot, doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
+import { getApiUrl } from '@/utils/api';
 
 interface NotificationPageProps {
     onBack: () => void;
@@ -49,7 +50,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
         const fetchNeetNotices = async () => {
             setLoading(true);
             try {
-                const response = await fetch('/api/neet-notices');
+                const response = await fetch(getApiUrl('/api/neet-notices'));
                 const data = await response.json();
                 setNeetNotices(data);
             } catch (error) {

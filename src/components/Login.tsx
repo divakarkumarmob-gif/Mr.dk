@@ -3,6 +3,7 @@ import {signInWithGoogle, signInWithEmail, signUpWithEmail, resetPassword, signI
 import {Mail, Lock, Eye, EyeOff, HelpCircle, User, Smartphone, KeyRound, ArrowLeft} from 'lucide-react';
 import EarthGraphics from './EarthGraphics';
 import Pressable from './Pressable';
+import { getApiUrl } from '@/utils/api';
 
 export default function Login() {
   const [identifier, setIdentifier] = useState('');
@@ -97,7 +98,7 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch('/api/send-otp', {
+      const response = await fetch(getApiUrl('/api/send-otp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ identifier: cleanIdent })
@@ -125,7 +126,7 @@ export default function Login() {
       return;
     }
     try {
-      const response = await fetch('/api/verify-otp', {
+      const response = await fetch(getApiUrl('/api/verify-otp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ identifier: identifier.trim(), otp: otp.trim() })

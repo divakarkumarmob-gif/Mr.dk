@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, FileText, Search, ExternalLink, BookOpen, Clock, Tag, Loader2, FileUp, Info, Share2, Check } from 'lucide-react';
 import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
+import { getApiUrl } from '@/utils/api';
 
 interface NTAPaper {
     id: string;
@@ -59,7 +60,7 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
 
     const handleOpenPaper = (paper: NTAPaper) => {
         const targetUrl = (useMirror && paper.mirrorUrl) ? paper.mirrorUrl : paper.url;
-        const proxyUrl = `/api/proxy-pdf?url=${encodeURIComponent(targetUrl)}`;
+        const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(targetUrl)}`);
         setViewerUrl({ url: proxyUrl, title: paper.title, originalUrl: targetUrl });
         window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
     };

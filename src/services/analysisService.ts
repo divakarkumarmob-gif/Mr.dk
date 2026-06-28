@@ -1,6 +1,7 @@
+import { getApiUrl } from '@/utils/api';
+
 export async function analyzeTestPerformance(questions: any[], answers: Record<string, string>) {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-    const response = await fetch(`${backendUrl}/api/analysis`, {
+    const response = await fetch(getApiUrl('/api/analysis'), {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

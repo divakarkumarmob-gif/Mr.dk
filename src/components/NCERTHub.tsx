@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, BookOpen, Download, Eye, Search, CheckCircle2, Loader2, Trash2 } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import Pressable from './Pressable';
+import { getApiUrl } from '@/utils/api';
 
 // Simple IndexedDB wrapper for PDF storage
 const dbName = 'NCERT_OFFLINE_DB';
@@ -161,7 +162,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
             setViewerUrl({ url, title });
         } else {
             const ncertUrl = getChapterUrl(bookCode, chNum);
-            const proxyUrl = `/api/proxy-pdf?url=${encodeURIComponent(ncertUrl)}`;
+            const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(ncertUrl)}`);
             setViewerUrl({ url: proxyUrl, title });
         }
     };
@@ -173,7 +174,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         setDownloadingId(id);
         try {
             const ncertUrl = getChapterUrl(bookCode, chNum);
-            const proxyUrl = `/api/proxy-pdf?url=${encodeURIComponent(ncertUrl)}`;
+            const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(ncertUrl)}`);
             const response = await fetch(proxyUrl);
             if (!response.ok) throw new Error("Download failed");
             const blob = await response.blob();

@@ -1,3 +1,5 @@
+import { getApiUrl } from '@/utils/api';
+
 export async function chatWithAI(messages: { role: string; content: string }[], newMessage: string, imageData?: string) {
     const updatedMessages = [...messages, { role: 'user', content: newMessage }];
     
@@ -5,8 +7,7 @@ export async function chatWithAI(messages: { role: string; content: string }[], 
     // as it currently only expects messages. 
     // If image support is needed, the backend endpoint will need to be updated.
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-    const response = await fetch(`${backendUrl}/api/tutor`, {
+    const response = await fetch(getApiUrl('/api/tutor'), {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -5,6 +5,7 @@ import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from 
 import { db, auth } from '../lib/firebase';
 import ReactMarkdown from 'react-markdown';
 import ThinkingIndicator from './ThinkingIndicator';
+import { getApiUrl } from '@/utils/api';
 
 interface AIStudyPlanChatProps {
     onClose: () => void;
@@ -70,8 +71,7 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
         setIsAILoading(true);
         
         try {
-            const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-            const response = await fetch(`${backendUrl}/api/gemini`, {
+            const response = await fetch(getApiUrl('/api/gemini'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -124,8 +124,7 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
                 const base64Audio = (reader.result as string).split(',')[1];
                 await saveMessage('user', '[Audio Input]');
 
-                const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-                const response = await fetch(`${backendUrl}/api/gemini`, {
+                const response = await fetch(getApiUrl('/api/gemini'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 

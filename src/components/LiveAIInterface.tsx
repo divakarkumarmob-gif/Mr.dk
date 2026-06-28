@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import { Mic, Keyboard, X, Send, Square, Camera, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { stripLatexForTTS } from '../lib/utils';
+import { getApiUrl } from '@/utils/api';
 
 interface LiveAIInterfaceProps {
     onClose: () => void;
@@ -68,8 +69,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             reader.readAsDataURL(audioBlob);
             reader.onloadend = async () => {
                 const base64Audio = (reader.result as string).split(',')[1];
-                const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-                const response = await fetch(`${backendUrl}/api/gemini`, {
+                const response = await fetch(getApiUrl('/api/gemini'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ base64Audio: base64Audio, prompt: "Transcribe and answer concisely." })
@@ -85,7 +85,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 const cleanedResponse = stripLatexForTTS(aiResponse);
                 
                 try {
-                    const ttsResponse = await fetch('/api/tts', {
+                    const ttsResponse = await fetch(getApiUrl('/api/tts'), {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ text: cleanedResponse })
@@ -158,8 +158,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         setSelectedImage(null);
         
         try {
-            const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-            const response = await fetch(`${backendUrl}/api/gemini`, {
+            const response = await fetch(getApiUrl('/api/gemini'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 

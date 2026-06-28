@@ -6,6 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import { X, Send, Loader2, Trash2 } from 'lucide-react';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
+import { getApiUrl } from '@/utils/api';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -80,8 +81,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
         setLoading(true);
 
         try {
-            const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
-            const response = await fetch(`${backendUrl}/api/neural-chat`, {
+            const response = await fetch(getApiUrl('/api/neural-chat'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ messages: newMessages })

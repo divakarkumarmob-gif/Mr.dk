@@ -5,6 +5,7 @@ import {
   Film, ChevronRight, BookOpen, ArrowLeft, FolderOpen, Tv
 } from 'lucide-react';
 import CustomVideoPlayer from './CustomVideoPlayer';
+import { getApiUrl } from '@/utils/api';
 
 interface VideoItem {
   key: string;
@@ -99,7 +100,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('/api/private-videos', {
+      const response = await fetch(getApiUrl('/api/private-videos'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
