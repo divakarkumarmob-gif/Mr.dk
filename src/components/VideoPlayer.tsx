@@ -9,6 +9,26 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   const [selectedVideoId, setSelectedVideoId] = useState<string | null>(directUrl || null);
   const [playTriggered, setPlayTriggered] = useState(!!directUrl);
 
+  // Sync selectedVideoId with history state
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+        if (e.state && e.state.selectedVideoId !== undefined) {
+            setSelectedVideoId(e.state.selectedVideoId);
+        } else if (selectedVideoId) {
+            setSelectedVideoId(null);
+            setPlayTriggered(false);
+        }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [selectedVideoId]);
+
+  const selectVideo = (videoId: string) => {
+    setSelectedVideoId(videoId);
+    setPlayTriggered(true);
+    window.history.pushState({ ...window.history.state, selectedVideoId: videoId }, '', window.location.href);
+  };
+
   const playlistId = CHAPTER_PLAYLISTS[topic.toLowerCase()];                
   const physicsVideos = Object.entries(PHYSICS_VIDEOS).find(([key, _]) => {
     const normalizedKey = key.toLowerCase().trim();
@@ -24,18 +44,20 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   
   const videos = physicsVideos || chemistryVideos;
 
-  // Reset selection if topic changes
+  // Reset selection if topic changes (but not if it was already selected)
   useEffect(() => {
-    setSelectedVideoId(null);
-    setPlayTriggered(false);
+    if (!directUrl && !selectedVideoId) {
+        setSelectedVideoId(null);
+        setPlayTriggered(false);
+    }
   }, [topic]);
 
   const isUrl = (str: string) => str.startsWith('http');
 
   return (
-    <div className="fixed inset-0 bg-black/98 z-[200] flex flex-col items-center justify-center p-4 backdrop-blur-sm">
-      <div className="w-full max-w-4xl flex flex-col h-full max-h-[90vh]">
-        <div className="flex justify-between items-center mb-6">
+    <div className="fixed inset-0 bg-black/98 z-[200] flex flex-col items-center justify-center sm:p-4 landscape:p-0 backdrop-blur-sm overflow-hidden">
+      <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh]'}`}>
+        <div className={`flex justify-between items-center mb-6 px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
             <div>
                 <h2 className="text-xl font-bold text-white tracking-tight">{topic}</h2>
                 <p className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Lecture Series • NEET Mastery</p>
@@ -48,9 +70,9 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
             </button>
         </div>
         
-        <div className="flex-1 flex flex-col items-center justify-center min-h-0">
+        <div className={`flex-1 flex flex-col items-center justify-center min-h-0 ${selectedVideoId ? 'landscape:w-screen landscape:h-screen' : ''}`}>
             {/* VIDEO STAGE */}
-            <div className="w-full relative aspect-video bg-[#0d1117] rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+            <div className={`w-full relative bg-[#0d1117] overflow-hidden border border-white/5 shadow-2xl group ${selectedVideoId ? 'aspect-video landscape:aspect-auto landscape:w-full landscape:h-full landscape:border-0 landscape:rounded-0 rounded-2xl' : 'aspect-video rounded-2xl'}`}>
                 {selectedVideoId ? (
                     <div className="w-full h-full">
                         {isUrl(selectedVideoId) ? (
@@ -114,12 +136,12 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
 
             {/* CONTROLS / SELECTION */}
             {videos && (
-                <div className="w-full mt-8 overflow-x-auto pb-4 custom-scrollbar">
+                <div className={`w-full mt-8 overflow-x-auto pb-4 custom-scrollbar ${selectedVideoId ? 'landscape:hidden' : ''}`}>
                     <div className="flex gap-3 min-w-max px-2">
                         {Object.entries(videos).map(([partName, videoId]: [string, string]) => (
                             <button
                                 key={partName}
-                                onClick={() => { setSelectedVideoId(videoId); setPlayTriggered(true); }}
+                                onClick={() => selectVideo(videoId)}
                                 className={`px-6 py-3 rounded-xl font-bold text-xs transition-all flex items-center gap-3 ${
                                     selectedVideoId === videoId 
                                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20' 
@@ -144,7 +166,7 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
             )}
         </div>
         
-        <div className="mt-auto py-6 border-t border-white/5 flex justify-between items-center text-[10px] text-gray-500 font-mono tracking-widest uppercase">
+        <div className={`mt-auto py-6 border-t border-white/5 flex justify-between items-center text-[10px] text-gray-500 font-mono tracking-widest uppercase px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
             <span>Server: NEET-CDN-NODE-01</span>
             <span className="text-orange-500/50">Secure Stream Active</span>
             <span>Quality: 1080p Auto</span>

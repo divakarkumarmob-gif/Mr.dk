@@ -598,12 +598,17 @@ export default function App() {
         }
 
         // If we have active overlays, close them
-        if (activeVideo || showNotifications || showAnalytics || showResetModal || showRandomPopup) {
-            setActiveVideo(null);
+        // But for activeVideo, only close if we are not returning to a state that still has activeVideo
+        if (showNotifications || showAnalytics || showResetModal || showRandomPopup) {
             setShowNotifications(false);
             setShowAnalytics(false);
             setShowResetModal(false);
             setShowRandomPopup(false);
+            return;
+        }
+
+        if (activeVideo && !e.state?.activeVideo) {
+            setActiveVideo(null);
             return;
         }
 
@@ -1366,7 +1371,7 @@ export default function App() {
        return (
          <div className="min-h-screen bg-background text-foreground">
              <button className="absolute top-4 left-4 z-10 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
-             <UserChat fullScreen={true} />
+             <UserChat fullScreen={true} user={user} />
          </div>
        );
    }

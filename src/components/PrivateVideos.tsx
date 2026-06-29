@@ -172,10 +172,10 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      className="fixed inset-0 bg-[#060a17] z-[1000] flex flex-col p-4 sm:p-6 text-white font-sans overflow-hidden"
+      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden ${currentView === 'player' ? 'p-0 sm:p-6' : 'p-4 sm:p-6'}`}
     >
       {/* Dynamic Header */}
-      <div className="flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4">
+      <div className={`flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4 ${currentView === 'player' ? 'landscape:hidden px-4 sm:px-0' : 'px-0'}`}>
         <div className="flex items-center gap-2.5">
           {currentView !== 'list' ? (
             <button 
@@ -268,50 +268,28 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
             )}
           </div>
         ) : loading ? (
-          <div className="space-y-6 animate-pulse">
-            {/* Subject 1 skeleton */}
-            <div className="space-y-2.5">
-              <div className="flex items-center gap-2 px-1">
-                <div className="h-4 w-4 bg-gray-800/80 rounded-md shrink-0 animate-pulse" />
-                <div className="h-3 w-32 bg-gray-800/80 rounded animate-pulse" />
-              </div>
-              <div className="grid grid-cols-1 gap-2.5">
-                {[1, 2].map((i) => (
-                  <div key={i} className="bg-[#0e142e]/60 border border-white/5 rounded-2xl p-3.5 flex items-center justify-between">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="h-10 w-10 rounded-xl bg-gray-800/70 flex items-center justify-center shrink-0 animate-pulse" />
-                      <div className="space-y-2">
-                        <div className="h-3.5 w-36 bg-gray-800/70 rounded animate-pulse" />
-                        <div className="h-2.5 w-24 bg-gray-800/40 rounded animate-pulse" />
+          <div className="space-y-6">
+            {[1, 2].map((group) => (
+              <div key={group} className="space-y-3">
+                <div className="flex items-center gap-2 px-1">
+                  <div className="h-4 w-4 bg-orange-500/20 rounded animate-pulse" />
+                  <div className="h-3 w-32 bg-white/5 rounded animate-pulse" />
+                </div>
+                <div className="grid grid-cols-1 gap-3">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="bg-[#0e142e]/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between animate-pulse">
+                      <div className="flex items-center gap-3 w-full">
+                        <div className="h-10 w-10 rounded-xl bg-white/5 shrink-0" />
+                        <div className="space-y-2 w-full">
+                          <div className="h-3.5 w-3/4 bg-white/10 rounded" />
+                          <div className="h-2.5 w-1/2 bg-white/5 rounded" />
+                        </div>
                       </div>
                     </div>
-                    <div className="h-4 w-4 bg-gray-800/60 rounded-full" />
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Subject 2 skeleton */}
-            <div className="space-y-2.5">
-              <div className="flex items-center gap-2 px-1">
-                <div className="h-4 w-4 bg-gray-800/80 rounded-md shrink-0 animate-pulse" />
-                <div className="h-3 w-40 bg-gray-800/80 rounded animate-pulse" />
-              </div>
-              <div className="grid grid-cols-1 gap-2.5">
-                {[1, 2].map((i) => (
-                  <div key={i} className="bg-[#0e142e]/60 border border-white/5 rounded-2xl p-3.5 flex items-center justify-between">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="h-10 w-10 rounded-xl bg-gray-800/70 flex items-center justify-center shrink-0 animate-pulse" />
-                      <div className="space-y-2">
-                        <div className="h-3.5 w-44 bg-gray-800/70 rounded animate-pulse" />
-                        <div className="h-2.5 w-28 bg-gray-800/40 rounded animate-pulse" />
-                      </div>
-                    </div>
-                    <div className="h-4 w-4 bg-gray-800/60 rounded-full" />
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         ) : subjects.length === 0 ? (
           <div className="bg-[#0c1124] border border-white/5 rounded-2xl p-6 text-center space-y-3">
@@ -445,10 +423,10 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="space-y-4"
+                className="space-y-4 landscape:space-y-0 h-full"
               >
                 {/* VIDEO PLAYER ON TOP */}
-                <div className="bg-[#0c1124] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="bg-[#0c1124] border border-white/10 sm:rounded-2xl overflow-hidden shadow-2xl landscape:h-screen landscape:w-screen landscape:border-0 landscape:rounded-none">
                   <CustomVideoPlayer 
                     src={activeVideo.url} 
                     title={activeVideo.title} 
@@ -456,7 +434,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                 </div>
 
                 {/* CURRENT PLAYING TITLE AND INFO */}
-                <div className="px-1">
+                <div className="px-4 sm:px-1 landscape:hidden">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 mb-1">
                     <Tv className="h-4 w-4 animate-pulse text-orange-500" />
                     <span>NOW STREAMING LECTURE</span>
@@ -468,7 +446,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                 </div>
 
                 {/* LECTURES LIST BELOW */}
-                <div className="space-y-2 pt-2 border-t border-white/5">
+                <div className="space-y-2 pt-2 border-t border-white/5 px-4 sm:px-1 landscape:hidden">
                   <h3 className="text-[10px] font-extrabold tracking-widest text-gray-500 uppercase px-1">
                     PLAYLIST ({selectedChapter.videos.length} LECTURES)
                   </h3>
@@ -526,7 +504,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       </div>
 
       {/* Footer */}
-      <div className="pt-3 border-t border-white/5 text-center mt-auto shrink-0">
+      <div className={`pt-3 border-t border-white/5 text-center mt-auto shrink-0 ${currentView === 'player' ? 'landscape:hidden pb-4' : ''}`}>
         <span className="font-extrabold text-[9px] tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500 uppercase">
           Powered by AWS Secured Engine
         </span>

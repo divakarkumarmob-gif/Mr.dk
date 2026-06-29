@@ -7,7 +7,7 @@ import { Message } from '../types';
 import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 
-export default function UserChat({ fullScreen }: { fullScreen?: boolean }) {
+export default function UserChat({ fullScreen, user }: { fullScreen?: boolean, user: any }) {
   const [chatId, setChatId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
@@ -15,11 +15,11 @@ export default function UserChat({ fullScreen }: { fullScreen?: boolean }) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!auth.currentUser) return;
-    const userId = auth.currentUser.uid;
+    if (!user) return;
+    const userId = user.uid;
     
     initializeChat(userId).then(setChatId).catch(console.error);
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     if (!chatId) return;
@@ -39,12 +39,12 @@ export default function UserChat({ fullScreen }: { fullScreen?: boolean }) {
   }, [messages]);
 
   const handleSend = async (mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio') => {
-    if ((!text.trim() && !mediaUrl) || !chatId || !auth.currentUser) return;
+    if ((!text.trim() && !mediaUrl) || !chatId || !user) return;
 
     // Optimistic Update
     const optimisticMessage: Message = {
         id: Date.now().toString(),
-        senderId: auth.currentUser.uid,
+        senderId: user.uid,
         text: text,
         timestamp: Timestamp.now(),
         mediaUrl,
@@ -55,7 +55,7 @@ export default function UserChat({ fullScreen }: { fullScreen?: boolean }) {
     setText(''); 
 
     try {
-        await sendMessage(chatId, auth.currentUser.uid, text, mediaUrl, mediaType);
+        await sendMessage(chatId, user.uid, text, mediaUrl, mediaType);
     } catch (e) {
         // Handle send failure: Remove optimistic message
         setMessages(prev => prev.filter(m => m.id !== optimisticMessage.id));
