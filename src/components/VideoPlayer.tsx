@@ -19,38 +19,25 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
         ScreenOrientation.lock({ orientation: 'landscape' }).catch(() => {});
       } else {
         StatusBar.show().catch(() => {});
-        ScreenOrientation.unlock().catch(() => {});
+        ScreenOrientation.lock({ orientation: 'portrait' }).catch(() => {});
       }
     }
-  }, [selectedVideoId]);
-
-  // sync selectedVideoId with history state
-  useEffect(() => {
-    if (selectedVideoId) {
-      document.body.classList.add('video-fullscreen');
-    } else {
-      document.body.classList.remove('video-fullscreen');
-    }
-    return () => document.body.classList.remove('video-fullscreen');
   }, [selectedVideoId]);
 
   // Sync selectedVideoId with history state
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
-        if (selectedVideoId) {
-            setSelectedVideoId(null);
-            setPlayTriggered(false);
-        } else {
-            onClose();
-        }
+      // If we are currently in fullscreen video, exit it
+      if (selectedVideoId) {
+        setSelectedVideoId(null);
+        setPlayTriggered(false);
+      } else {
+        // Otherwise close the player
+        onClose();
+      }
     };
-    window.addEventListener('popstate', handlePopState);
     
-    // Push an initial state if opening
-    if (window.history.state?.view !== 'video-player') {
-        window.history.pushState({ view: 'video-player' }, '', '');
-    }
-
+    window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, [selectedVideoId, onClose]);
 

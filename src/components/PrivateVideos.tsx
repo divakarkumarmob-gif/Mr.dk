@@ -208,10 +208,10 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden ${currentView === 'player' ? 'landscape:p-0 p-4 sm:p-6' : 'p-4 sm:p-6'} pt-[env(safe-area-inset-top,0px)]`}
+      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden pt-[env(safe-area-inset-top,20px)]`}
     >
       {/* Dynamic Header */}
-      <div className={`flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4 ${currentView === 'player' ? 'landscape:hidden px-4 sm:px-0' : 'px-0'}`}>
+      <div className={`flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4 px-4`}>
         <div className="flex items-center gap-2.5">
           {currentView !== 'list' ? (
             <button 

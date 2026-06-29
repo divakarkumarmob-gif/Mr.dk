@@ -210,9 +210,9 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     } else {
       document.exitFullscreen().then(() => {
         setIsFullscreen(false);
-        // Unlock orientation
+        // Unlock orientation or lock to portrait
         if (Capacitor.isNativePlatform()) {
-          ScreenOrientation.unlock().catch(() => {});
+          ScreenOrientation.lock({ orientation: 'portrait' }).catch(() => {});
         } else {
           if (window.screen.orientation && window.screen.orientation.unlock) {
             window.screen.orientation.unlock();
