@@ -5,19 +5,24 @@ import imageCompression from 'browser-image-compression';
 import { Message } from '../types';
 
 export const initializeChat = async (userId: string) => {
+    console.log(`[Chat] Initializing chat for user: ${userId}`);
     const chatRef = doc(db, 'chats', userId);
     try {
         const docSnap = await getDoc(chatRef);
         if (!docSnap.exists()) {
+            console.log(`[Chat] Creating new support chat for: ${userId}`);
             await setDoc(chatRef, { 
                 participants: [userId, 'admin'], 
                 isSupportChat: true, 
                 lastMessage: '', 
                 updatedAt: serverTimestamp() 
             });
+        } else {
+            console.log(`[Chat] Chat already exists for: ${userId}`);
         }
         return userId;
     } catch (error) {
+        console.error(`[Chat] Initialize error for ${userId}:`, error);
         handleFirestoreError(error, OperationType.WRITE, `chats/${userId}`);
         throw error;
     }
@@ -108,6 +113,7 @@ export const updateUserPresence = async (userId: string, isOnline: boolean) => {
 };
 
 export const sendMessage = async (chatId: string, senderId: string, text: string, mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio') => {
+  console.log(`[Chat] Sending message to ${chatId} from ${senderId}`);
   const messageData = {
     senderId,
     text,
@@ -115,12 +121,17 @@ export const sendMessage = async (chatId: string, senderId: string, text: string
     ...(mediaUrl && { mediaUrl, mediaType }),
   };
   try {
-      await addDoc(collection(db, `chats/${chatId}/messages`), messageData);
+      const messagesCol = collection(db, `chats/${chatId}/messages`);
+      await addDoc(messagesCol, messageData);
+      console.log(`[Chat] Message added to subcollection`);
+      
       await updateDoc(doc(db, 'chats', chatId), {
         lastMessage: text || 'Media message',
         updatedAt: serverTimestamp(),
       });
+      console.log(`[Chat] Parent chat doc updated`);
   } catch (error) {
+      console.error(`[Chat] Send message error:`, error);
       handleFirestoreError(error, OperationType.WRITE, `chats/${chatId}/messages`);
   }
 };

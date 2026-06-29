@@ -131,7 +131,26 @@ async function startServer() {
   const PORT = 3000;
   
   app.use(express.json({ limit: '10mb' }));
-  app.use(cors({ origin: "https://neetmaster.vercel.app" }));
+  
+  // Permissive CORS for mobile app (Capacitor) and AI Studio preview
+  app.use(cors({
+    origin: (origin, callback) => {
+      // Allow all origins for now to unblock mobile app users
+      // In production, you'd want to be more specific, but for a student project APK this is necessary
+      callback(null, true);
+    },
+    credentials: true
+  }));
+
+  // Request Logging Middleware
+  app.use((req, res, next) => {
+    const log = `${new Date().toISOString()} - ${req.method} ${req.url} - Origin: ${req.headers.origin || 'No Origin'}`;
+    console.log(log);
+    logs.push(log);
+    if (logs.length > 100) logs.shift();
+    next();
+  });
+
   app.use("/api/", limiter);
 
   let s3Client: S3Client | null = null;

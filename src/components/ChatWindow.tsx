@@ -68,11 +68,11 @@ export default function ChatWindow({ chatId, userId, isAdmin }: { chatId: string
         })}
         <div ref={messagesEndRef} />
       </div>
-      <div className="p-4 bg-gray-800 flex items-center gap-2">
+      <div className="p-3 sm:p-4 bg-gray-800 flex items-center gap-2">
         <input type="file" ref={fileInputRef} onChange={handleFileChange} className="hidden" accept="image/*,video/*,audio/*" />
-        <button onClick={() => fileInputRef.current?.click()}><Paperclip size={20} /></button>
-        <input value={text} onChange={e => setText(e.target.value)} className="flex-1 bg-gray-700 p-2 rounded" placeholder="Type a message..." />
-        <button onClick={() => handleSend()}><Send size={20} /></button>
+        <button onClick={() => fileInputRef.current?.click()} className="shrink-0"><Paperclip size={20} /></button>
+        <input value={text} onChange={e => setText(e.target.value)} className="flex-1 min-w-0 bg-gray-700 p-2 rounded text-sm" placeholder="Type a message..." />
+        <button onClick={() => handleSend()} className="shrink-0"><Send size={20} /></button>
       </div>
     </div>
   );

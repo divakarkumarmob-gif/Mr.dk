@@ -36,7 +36,20 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
         setLoading(true);
         setNtaError(null);
         try {
-            const response = await fetch(getApiUrl('/api/neet-notices'));
+            const url = getApiUrl('/api/neet-notices');
+            const response = await fetch(url);
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Server returned ${response.status}: ${errorText.slice(0, 100)}`);
+            }
+
+            const contentType = response.headers.get('content-type');
+            if (contentType && !contentType.includes('application/json')) {
+                const text = await response.text();
+                throw new Error(`Expected JSON but got ${contentType}. Possible routing error: ${text.slice(0, 50)}...`);
+            }
+
             const data = await response.json();
             if (data.error) {
                 setNtaError(data.error);
@@ -45,7 +58,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
             }
         } catch (error: any) {
             console.error("Error fetching NTA notices:", error);
-            setNtaError(error.message);
+            setNtaError(error.message || "Failed to connect to notice server");
         } finally {
             setLoading(false);
         }

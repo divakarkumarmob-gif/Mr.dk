@@ -36,7 +36,15 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     setIsChecking(true);
     setConnectionStatus('idle');
     try {
-      const response = await fetch(getApiUrl('/api/s3/health'));
+      const url = getApiUrl('/api/s3/health');
+      const response = await fetch(url);
+      
+      const contentType = response.headers.get('content-type');
+      if (contentType && !contentType.includes('application/json')) {
+        const text = await response.text();
+        throw new Error(`Expected JSON but got ${contentType}. Possible routing error: ${text.slice(0, 50)}...`);
+      }
+
       const data = await response.json();
       if (data.success) {
         setConnectionStatus('success');
@@ -45,6 +53,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
         setError(data.error || 'Connection failed');
       }
     } catch (err: any) {
+      console.error('AWS Health check failed:', err);
       setConnectionStatus('error');
       setError(err.message);
     } finally {
@@ -122,12 +131,20 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(getApiUrl('/api/private-videos'), {
+      const url = getApiUrl('/api/private-videos');
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         }
       });
+
+      const contentType = response.headers.get('content-type');
+      if (contentType && !contentType.includes('application/json')) {
+        const text = await response.text();
+        throw new Error(`Expected JSON but got ${contentType}. Possible routing error: ${text.slice(0, 50)}...`);
+      }
+
       const data = await response.json();
       if (!response.ok) {
         throw new Error(data.error || 'Failed to fetch videos from AWS S3');

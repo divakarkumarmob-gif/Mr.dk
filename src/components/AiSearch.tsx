@@ -146,7 +146,7 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
                 </button>
             </div>
             )}
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center w-full">
             <input type="file" ref={fileInputRef} accept="image/*" className="hidden" onChange={async (e) => {
                 if (e.target.files && e.target.files[0]) {
                    const reader = new FileReader();
@@ -154,7 +154,7 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
                    reader.readAsDataURL(e.target.files[0]);
                 }
             }} />
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-shrink-0">
                 <button onClick={() => fileInputRef.current?.click()} className={`p-2 rounded-md ${base64Image ? 'text-blue-500' : 'text-gray-400'} hover:text-white`}>
                     <Camera className="h-5 w-5" />
                 </button>
@@ -173,7 +173,7 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
                 }}
                 onFocus={onFocus}
                 placeholder="Ask NEET concepts, questions..."
-                className="flex-1 p-2 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-400"
+                className="flex-1 min-w-0 p-2 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-400 text-sm"
             />
         </div>
         {viewingImage && (

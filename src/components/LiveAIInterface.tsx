@@ -241,24 +241,24 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                             <button onClick={removeImage} className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1"><X className="h-3 w-3"/></button>
                         </div>
                     )}
-                    <div className="flex w-full items-center gap-2 bg-[#161e38] rounded-full p-2 pl-5">
+                    <div className="flex w-full items-center gap-1 sm:gap-2 bg-[#161e38] rounded-full p-1.5 sm:p-2 pl-3 sm:pl-5">
                         <input 
                             value={input} 
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && handleSendMessage(input)}
-                            className="flex-grow bg-transparent p-2 outline-none text-white placeholder-gray-400"
+                            className="flex-grow min-w-0 bg-transparent p-1 sm:p-2 outline-none text-white placeholder-gray-400 text-sm"
                             placeholder="Ask anything"
                         />
-                        <button className="p-2 text-white hover:text-blue-400" onClick={startVoiceTyping}>
+                        <button className="p-1.5 sm:p-2 text-white/70 hover:text-blue-400 shrink-0" onClick={startVoiceTyping}>
                             <Mic className="h-5 w-5" />
                         </button>
-                        <button className="p-2 text-white hover:text-blue-400">
+                        <button className="p-1.5 sm:p-2 text-white/70 hover:text-blue-400 shrink-0">
                              <input type="file" className="hidden" accept="image/*" id="file-upload" onChange={handleImageChange} />
                              <label htmlFor="file-upload" className="cursor-pointer">
                                 <Camera className="h-5 w-5" />
                              </label>
                         </button>
-                        <button onClick={handleSparklesClick} className={`p-4 rounded-full transition-colors ${input.trim() || selectedImage ? 'bg-blue-600' : 'bg-[#0a0f24]'}`}>
+                        <button onClick={handleSparklesClick} className={`p-3 sm:p-4 rounded-full transition-colors shrink-0 ${input.trim() || selectedImage ? 'bg-blue-600 shadow-lg shadow-blue-500/20' : 'bg-[#0a0f24]'}`}>
                             {input.trim() || selectedImage ? <Send className="h-5 w-5" /> : <Sparkles className="h-5 w-5" />}
                         </button>
                     </div>
