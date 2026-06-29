@@ -158,7 +158,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                                     <h3 className="font-bold mb-3">Public Notices</h3>
                                     <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
                                         {neetNotices.publicNotices.length > 0 ? (
-                                            neetNotices.publicNotices.map((notice, i) => <li key={i}><a href={notice.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{notice.text}</a></li>)
+                                            neetNotices.publicNotices.map((notice, i) => <li key={i}><a href={notice.url} target="_blank" rel="noopener noreferrer" className="hover:underline break-words">{notice.text}</a></li>)
                                         ) : (
                                             <p className="text-xs text-gray-500 italic">No recent notices found</p>
                                         )}
@@ -168,7 +168,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                                     <h3 className="font-bold mb-3">Candidate Activity</h3>
                                     <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
                                         {neetNotices.candidateActivity.length > 0 ? (
-                                            neetNotices.candidateActivity.map((activity, i) => <li key={i}><a href={activity.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{activity.text}</a></li>)
+                                            neetNotices.candidateActivity.map((activity, i) => <li key={i}><a href={activity.url} target="_blank" rel="noopener noreferrer" className="hover:underline break-words">{activity.text}</a></li>)
                                         ) : (
                                             <p className="text-xs text-gray-500 italic">No recent activity found</p>
                                         )}

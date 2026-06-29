@@ -1594,8 +1594,7 @@ export default function App() {
                   <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-wider truncate mb-1">{sub.name}</p>
                   <p className="font-bold text-sm sm:text-lg truncate">{sub.topic}</p>
                 </div>
-                <div className="flex gap-3 flex-shrink-0">
-                    <button className="bg-white/10 p-2 rounded-full sm:hidden" onClick={() => handleOpenVideo(sub.topic)}><Play className="h-5 w-5 text-white" /></button>
+                <div className="flex gap-2 sm:gap-3 flex-shrink-0">
                     <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm hidden sm:block hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
                     <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs sm:hidden hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
                 </div>

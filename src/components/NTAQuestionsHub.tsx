@@ -186,29 +186,31 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
                                 </div>
                             </div>
                             
-                            <div className="flex gap-2">
+                            <div className="flex gap-1.5 sm:gap-2 flex-wrap sm:flex-nowrap">
                                 <button 
                                     onClick={() => handleOpenPaper(paper)}
-                                    className="flex-1 bg-blue-600 hover:bg-blue-700 py-3 rounded-xl text-xs font-bold transition-all shadow-lg shadow-blue-500/20"
+                                    className="flex-1 bg-blue-600 hover:bg-blue-700 py-2.5 sm:py-3 rounded-xl text-[10px] sm:text-xs font-bold transition-all shadow-lg shadow-blue-500/20"
                                 >
-                                    View Question Paper (PDF)
+                                    View Question Paper
                                 </button>
-                                <button 
-                                    onClick={() => handleShare(paper)}
-                                    className="px-4 bg-white/5 hover:bg-gray-700 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all"
-                                    title="Copy Deep Link"
-                                >
-                                    {copiedId === paper.id ? <Check className="w-4 h-4 text-green-500" /> : <Share2 className="w-4 h-4" />}
-                                </button>
-                                <a 
-                                    href={paper.url}
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="px-4 bg-white/5 hover:bg-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all"
-                                    title="Open direct file source"
-                                >
-                                    <ExternalLink className="w-4 h-4" />
-                                </a>
+                                <div className="flex gap-1.5 sm:gap-2">
+                                    <button 
+                                        onClick={() => handleShare(paper)}
+                                        className="w-10 sm:w-auto px-0 sm:px-4 bg-white/5 hover:bg-gray-700 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all"
+                                        title="Copy Deep Link"
+                                    >
+                                        {copiedId === paper.id ? <Check className="w-4 h-4 text-green-500" /> : <Share2 className="w-4 h-4" />}
+                                    </button>
+                                    <a 
+                                        href={paper.url}
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-10 sm:w-auto px-0 sm:px-4 bg-white/5 hover:bg-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all"
+                                        title="Open direct file source"
+                                    >
+                                        <ExternalLink className="w-4 h-4" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     )) : (

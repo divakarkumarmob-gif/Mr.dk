@@ -242,14 +242,14 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                 {activeTab === 'users' && (
                     <div className="space-y-4">
                         <h3 className="font-bold">User Statistics</h3>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-white/5 p-4 rounded-lg">
-                                <p className="text-gray-400 text-sm">Total Login Users</p>
-                                <p className="text-2xl font-bold">{userStats.total}</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            <div className="bg-white/5 p-3 sm:p-4 rounded-lg">
+                                <p className="text-gray-400 text-[10px] sm:text-sm uppercase tracking-wider">Total Users</p>
+                                <p className="text-xl sm:text-2xl font-bold">{userStats.total}</p>
                             </div>
-                            <div className="bg-white/5 p-4 rounded-lg">
-                                <p className="text-gray-400 text-sm">Currently Online</p>
-                                <p className="text-2xl font-bold text-green-400">{userStats.online}</p>
+                            <div className="bg-white/5 p-3 sm:p-4 rounded-lg">
+                                <p className="text-gray-400 text-[10px] sm:text-sm uppercase tracking-wider">Online Now</p>
+                                <p className="text-xl sm:text-2xl font-bold text-green-400">{userStats.online}</p>
                             </div>
                         </div>
                     </div>

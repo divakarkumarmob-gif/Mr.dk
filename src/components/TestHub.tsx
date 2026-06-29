@@ -354,13 +354,13 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                         transition={{ delay: idx * 0.1 }}
                         className="bg-card p-2 rounded-md border border-border flex flex-row items-center justify-between gap-1"
                     >
-                        <div className="flex items-center gap-1.5 w-full">
+                        <div className="flex items-center gap-1.5 min-w-0">
                             <div className={`${test.bg} ${test.color} p-1 rounded-full flex-shrink-0`}>
                                 <test.icon className="h-3 w-3" />
                             </div>
-                            <div className="w-full">
-                                <h3 className="font-bold text-[10px]">{test.name}</h3>
-                                <p className="text-[8px] text-gray-400 mt-0">{test.type}</p>
+                            <div className="min-w-0">
+                                <h3 className="font-bold text-[10px] truncate">{test.name}</h3>
+                                <p className="text-[8px] text-gray-400 mt-0 truncate">{test.type}</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-1.5 ">
@@ -490,18 +490,18 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             transition={{ delay: idx * 0.1 }}
             className="bg-card p-2 rounded-md border border-border flex flex-row items-center justify-between gap-1"
           >
-            <div className="flex items-center gap-2 w-full">
+            <div className="flex items-center gap-2 min-w-0">
                 <div className={`${test.bg || 'bg-blue-500/20'} ${test.color || 'text-blue-400'} p-1.5 rounded-full flex-shrink-0`}>
                     {test.icon ? <test.icon className="h-3.5 w-3.5" /> : <ClipboardList className="h-3.5 w-3.5" />}
                 </div>
-                <div className="w-full">
-                   <h3 className="font-bold text-[10px] sm:text-xs flex items-center gap-1">
+                <div className="min-w-0">
+                   <h3 className="font-bold text-[10px] sm:text-xs flex items-center gap-1 truncate">
                      {typeof test.name === 'string' ? test.name : (console.log('Invalid test name:', test.name), String(test.name))}
                      {test.chapters && (
-                       <Info className="h-2.5 w-2.5 text-blue-400 cursor-pointer" onClick={() => setSelectedScheduledTestForChapters(test)} />
+                       <Info className="h-2.5 w-2.5 text-blue-400 cursor-pointer shrink-0" onClick={() => setSelectedScheduledTestForChapters(test)} />
                      )}
                    </h3>
-                   <p className="text-[8px] text-gray-400 mt-0">
+                   <p className="text-[8px] text-gray-400 mt-0 truncate">
                      {test.type && <span className="bg-white/10 text-white px-1 py-0 rounded-full font-bold">{test.type}</span>}
                      {test.chapters && (
                        <button 
