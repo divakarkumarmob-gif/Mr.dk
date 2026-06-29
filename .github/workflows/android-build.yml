@@ -56,7 +56,7 @@ jobs:
       - name: Show Android Signing Report (Fingerprints)
         run: |
           cd android
-          ./gradlew signingReport
+          ./gradlew signingReport -Dorg.gradle.project.android.debug.keystore=$HOME/.config/.android/debug.keystore
 
       - name: Build Debug APK (For Manual Testing)
         run: |

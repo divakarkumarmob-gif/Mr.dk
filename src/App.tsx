@@ -7,6 +7,8 @@ import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import { App as CapacitorApp } from '@capacitor/app';
+import { StatusBar } from '@capacitor/status-bar';
+import { Capacitor } from '@capacitor/core';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
@@ -159,6 +161,12 @@ export default function App() {
 
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
+
+  useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      StatusBar.hide().catch(err => console.error('StatusBar hide error:', err));
+    }
+  }, []);
 
   useEffect(() => {
     // Initial state replacement to ensure first view is in history
