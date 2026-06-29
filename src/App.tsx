@@ -1205,7 +1205,7 @@ export default function App() {
   }
 
   if (isNotificationView) {
-      return <NotificationPage onBack={() => setIsNotificationView(false)} />;
+      return <NotificationPage onBack={() => window.history.back()} />;
   }
 
   if (currentView === 'study') {
@@ -1277,7 +1277,7 @@ export default function App() {
                     setCurrentView('technicalSupport');
                 }}
             />
-            {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
+            {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
         </div>
       );
   }
@@ -1428,6 +1428,8 @@ export default function App() {
           </div>
       )}
 
+    {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => window.history.back()} />}
+
     <motion.div 
       initial={{ opacity: 0, x: -20 }} 
       animate={{ opacity: 1, x: 0 }} 
@@ -1443,8 +1445,6 @@ export default function App() {
               Press back again to exit
           </div>
       )}
-
-      {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => window.history.back()} />}
 
       {/* Header */}
       <div className="flex justify-between items-center mb-3 select-none">
@@ -1555,7 +1555,7 @@ export default function App() {
       {showAnalytics && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000] flex items-center justify-center p-4">
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-card p-5 sm:p-7 rounded-3xl border border-border w-full max-w-lg shadow-2xl relative">
-               <button onClick={() => setShowAnalytics(false)} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full hover:bg-white/10 transition-colors">
+               <button onClick={() => window.history.back()} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full hover:bg-white/10 transition-colors">
                    <X className="h-4 w-4" />
                </button>
                <div className="mb-6">

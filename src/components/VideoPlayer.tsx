@@ -72,24 +72,35 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   return (
     <div className="fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden">
       <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh] p-4'}`}>
-        <div className={`flex justify-between items-center mb-3 px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
-            <div className="landscape:hidden">
+        <div className={`flex justify-between items-center mb-3 px-4 ${selectedVideoId ? 'hidden' : ''}`}>
+            <div>
                 <h2 className="text-lg font-bold text-white tracking-tight">{topic}</h2>
                 <p className="text-gray-500 text-[8px] uppercase tracking-widest mt-0.5">Lecture Series • NEET Mastery</p>
             </div>
             <button 
-                className="bg-white/10 hover:bg-white/20 text-white p-1.5 rounded-full transition-all active:scale-95 landscape:hidden" 
+                className="bg-white/10 hover:bg-white/20 text-white p-1.5 rounded-full transition-all active:scale-95" 
                 onClick={onClose}
             >
                 <X className="h-4 w-4" />
             </button>
         </div>
         
-        <div className={`flex-1 flex flex-col items-center justify-center min-h-0 ${selectedVideoId ? 'landscape:fixed landscape:inset-0 landscape:z-[300] landscape:bg-black' : ''}`}>
+        <div className={`flex-1 flex flex-col items-center justify-center min-h-0 ${selectedVideoId ? 'fixed inset-0 z-[300] bg-black' : ''}`}>
             {/* VIDEO STAGE */}
-            <div className={`w-full relative bg-[#0d1117] overflow-hidden border-white/5 shadow-2xl group ${selectedVideoId ? 'landscape:aspect-auto landscape:w-full landscape:h-full landscape:border-0 landscape:rounded-none rounded-2xl aspect-video' : 'aspect-video rounded-2xl border'}`}>
+            <div className={`w-full relative bg-[#0d1117] overflow-hidden border-white/5 shadow-2xl group ${selectedVideoId ? 'aspect-auto w-full h-full border-0 rounded-none' : 'aspect-video rounded-2xl border'}`}>
                 {selectedVideoId ? (
-                    <div className="w-full h-full">
+                    <div className="w-full h-full relative">
+                        {/* Floating Close Button for Fullscreen/Playing Mode */}
+                        <button 
+                            className="absolute top-4 right-4 z-[400] bg-black/40 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-all active:scale-90 opacity-0 group-hover:opacity-100"
+                            onClick={() => {
+                                setSelectedVideoId(null);
+                                setPlayTriggered(false);
+                            }}
+                        >
+                            <X className="h-5 w-5" />
+                        </button>
+
                         {isUrl(selectedVideoId) ? (
                             <Player
                                 url={selectedVideoId}
