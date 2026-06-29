@@ -173,10 +173,18 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     if (!document.fullscreenElement) {
       containerRef.current.requestFullscreen().then(() => {
         setIsFullscreen(true);
+        // Force landscape orientation if supported
+        if (window.screen.orientation && (window.screen.orientation as any).lock) {
+          (window.screen.orientation as any).lock('landscape').catch((err: any) => console.log('Orientation lock error:', err));
+        }
       }).catch(err => console.error(err));
     } else {
       document.exitFullscreen().then(() => {
         setIsFullscreen(false);
+        // Unlock orientation
+        if (window.screen.orientation && window.screen.orientation.unlock) {
+          window.screen.orientation.unlock();
+        }
       });
     }
     triggerControlsActivity();
@@ -269,11 +277,17 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       if (isCenter) {
         // Toggle Play/Pause on center tap
         togglePlay();
-        // Keep or force controls shown so they can see progress
+        // Force controls shown so they can see progress
         setShowControls(true);
       } else {
         // Edge/Side tap: Toggle controls overlay visibility
-        setShowControls((prev) => !prev);
+        if (showControls) {
+          setShowControls(false);
+          if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+        } else {
+          setShowControls(true);
+          triggerControlsActivity();
+        }
       }
 
       singleTapTimeoutRef.current = null;
@@ -371,16 +385,6 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
            </div>
            
            <div className="mt-8 space-y-3 w-64">
-              <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                 <motion.div 
-                   animate={{ x: ['-100%', '100%'] }}
-                   transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                   className="h-full w-1/2 bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"
-                 />
-              </div>
-              <div className="flex justify-center gap-1.5">
-                 <span className="text-[10px] font-bold text-orange-500/80 tracking-widest uppercase animate-pulse">Initializing Secured Stream</span>
-              </div>
            </div>
            
            {/* Floating particle skeletons */}

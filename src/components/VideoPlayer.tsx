@@ -194,7 +194,6 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
         
         <div className={`mt-auto py-6 border-t border-white/5 flex justify-between items-center text-[10px] text-gray-500 font-mono tracking-widest uppercase px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
             <span>Server: NEET-CDN-NODE-01</span>
-            <span className="text-orange-500/50">Secure Stream Active</span>
             <span>Quality: 1080p Auto</span>
         </div>
       </div>
