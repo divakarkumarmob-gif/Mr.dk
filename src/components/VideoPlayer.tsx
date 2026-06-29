@@ -17,6 +17,16 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
     }
   }, []);
 
+  // sync selectedVideoId with history state
+  useEffect(() => {
+    if (selectedVideoId) {
+      document.body.classList.add('video-fullscreen');
+    } else {
+      document.body.classList.remove('video-fullscreen');
+    }
+    return () => document.body.classList.remove('video-fullscreen');
+  }, [selectedVideoId]);
+
   // Sync selectedVideoId with history state
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
@@ -133,7 +143,7 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
                             <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-[2px] transition-all">
                                 <button 
                                     onClick={() => setPlayTriggered(true)}
-                                    className="bg-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95"
+                                    className="bg-white/20 text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95 border border-white/20 backdrop-blur-md"
                                 >
                                     <Play className="h-8 w-8 fill-current ml-1" />
                                 </button>
@@ -170,7 +180,7 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
                                 onClick={() => selectVideo(videoId)}
                                 className={`px-6 py-3 rounded-xl font-bold text-xs transition-all flex items-center gap-3 ${
                                     selectedVideoId === videoId 
-                                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20' 
+                                    ? 'bg-white/20 text-white shadow-lg shadow-white/10 border border-white/20' 
                                     : 'bg-white/5 text-gray-400 hover:bg-white/10'
                                 }`}
                             >

@@ -60,6 +60,16 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
+  // Manage body class for padding removal
+  useEffect(() => {
+    if (isFullscreen) {
+      document.body.classList.add('video-fullscreen');
+    } else {
+      document.body.classList.remove('video-fullscreen');
+    }
+    return () => document.body.classList.remove('video-fullscreen');
+  }, [isFullscreen]);
+
   // Autohide controls logic
   const triggerControlsActivity = () => {
     setShowControls(true);
@@ -174,9 +184,17 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       containerRef.current.requestFullscreen().then(() => {
         setIsFullscreen(true);
         // Force landscape orientation if supported
-        if (window.screen.orientation && (window.screen.orientation as any).lock) {
-          (window.screen.orientation as any).lock('landscape').catch((err: any) => console.log('Orientation lock error:', err));
-        }
+        setTimeout(() => {
+          if (window.screen.orientation && (window.screen.orientation as any).lock) {
+            (window.screen.orientation as any).lock('landscape').catch((err: any) => {
+              console.log('Orientation lock error:', err);
+              // Fallback for some browsers
+              if (screen.orientation && (screen.orientation as any).lock) {
+                (screen.orientation as any).lock('landscape-primary').catch(() => {});
+              }
+            });
+          }
+        }, 100);
       }).catch(err => console.error(err));
     } else {
       document.exitFullscreen().then(() => {
@@ -277,8 +295,9 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       if (isCenter) {
         // Toggle Play/Pause on center tap
         togglePlay();
-        // Force controls shown so they can see progress
+        // Force controls shown and stay for 3 seconds
         setShowControls(true);
+        triggerControlsActivity();
       } else {
         // Edge/Side tap: Toggle controls overlay visibility
         if (showControls) {
@@ -371,20 +390,20 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
            {/* Pulsing Core */}
            <div className="relative w-24 h-24 flex items-center justify-center">
               <motion.div 
-                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+                animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-orange-500/20 rounded-full blur-2xl"
+                className="absolute inset-0 bg-white/10 rounded-full blur-2xl"
               />
               <motion.div 
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/40"
+                className="relative z-10 w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-lg"
               >
-                <Loader2 className="h-8 w-8 text-white animate-spin" />
+                <Loader2 className="h-8 w-8 text-white/50 animate-spin" />
               </motion.div>
            </div>
            
-           <div className="mt-8 space-y-3 w-64">
+           <div className="mt-8">
            </div>
            
            {/* Floating particle skeletons */}
@@ -393,11 +412,11 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                key={i}
                initial={{ opacity: 0, x: Math.random() * 200 - 100, y: Math.random() * 200 - 100 }}
                animate={{ 
-                 opacity: [0, 0.2, 0],
+                 opacity: [0, 0.1, 0],
                  y: [Math.random() * 100, Math.random() * -100]
                }}
                transition={{ duration: 3 + Math.random() * 2, repeat: Infinity, delay: i * 0.5 }}
-               className="absolute w-1 h-1 bg-orange-500 rounded-full"
+               className="absolute w-1 h-1 bg-white/20 rounded-full"
              />
            ))}
         </div>
