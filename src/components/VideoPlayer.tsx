@@ -77,9 +77,9 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
             </button>
         </div>
         
-        <div className={`flex-1 flex flex-col items-center justify-center min-h-0 ${selectedVideoId ? 'landscape:w-screen landscape:h-screen' : ''}`}>
+        <div className={`flex-1 flex flex-col items-center justify-center min-h-0 ${selectedVideoId ? 'landscape:fixed landscape:inset-0 landscape:z-[300] landscape:bg-black' : ''}`}>
             {/* VIDEO STAGE */}
-            <div className={`w-full relative bg-[#0d1117] overflow-hidden border-white/5 shadow-2xl group ${selectedVideoId ? 'landscape:aspect-auto landscape:w-screen landscape:h-screen landscape:border-0 landscape:rounded-none rounded-2xl aspect-video' : 'aspect-video rounded-2xl border'}`}>
+            <div className={`w-full relative bg-[#0d1117] overflow-hidden border-white/5 shadow-2xl group ${selectedVideoId ? 'landscape:aspect-auto landscape:w-full landscape:h-full landscape:border-0 landscape:rounded-none rounded-2xl aspect-video' : 'aspect-video rounded-2xl border'}`}>
                 {selectedVideoId ? (
                     <div className="w-full h-full">
                         {isUrl(selectedVideoId) ? (

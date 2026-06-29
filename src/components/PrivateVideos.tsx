@@ -113,10 +113,15 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
   const navigateToPlayer = (video: VideoItem) => {
     const nextIndex = currentIndexRef.current + 1;
+    // We push a state for the player
     window.history.pushState({ privateVideoView: 'player', index: nextIndex }, '');
     currentIndexRef.current = nextIndex;
     setActiveVideo(video);
     setCurrentView('player');
+  };
+
+  const handleBack = () => {
+    window.history.back();
   };
 
   const handleClose = () => {
@@ -169,10 +174,10 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
   return (
     <motion.div 
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden ${currentView === 'player' ? 'p-0 sm:p-6' : 'p-4 sm:p-6'}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden ${currentView === 'player' ? 'landscape:p-0 p-4 sm:p-6' : 'p-4 sm:p-6'}`}
     >
       {/* Dynamic Header */}
       <div className={`flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4 ${currentView === 'player' ? 'landscape:hidden px-4 sm:px-0' : 'px-0'}`}>
