@@ -156,6 +156,26 @@ async function startServer() {
       return s3Client;
   }
 
+  app.get("/api/s3/health", async (req, res) => {
+    try {
+        const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
+        const s3 = getS3Client();
+        const command = new ListObjectsV2Command({
+            Bucket: bucketName,
+            MaxKeys: 1
+        });
+        await s3.send(command);
+        res.json({ success: true, message: "Successfully connected to AWS S3" });
+    } catch (error: any) {
+        console.error("AWS S3 Health Check Error:", error);
+        res.status(500).json({ 
+            success: false, 
+            error: error.message,
+            tip: "Check if AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and AWS_REGION are correctly set in secrets."
+        });
+    }
+  });
+
   app.post("/api/private-videos", async (req, res) => {
     try {
         const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
@@ -168,10 +188,12 @@ async function startServer() {
         const listResponse = await s3.send(listCommand);
         const videoFiles = listResponse.Contents || [];
         
-        // Filter out root files and non-video files
+        console.log(`AWS S3: Found ${videoFiles.length} files in bucket ${bucketName}`);
+
+        // Filter out non-video files
         const filteredFiles = videoFiles.filter(item => {
             const key = item.Key || "";
-            if (!key.includes("/")) return false; // Ignore files in root
+            if (key.endsWith("/")) return false; // Ignore directories
             
             const lowerKey = key.toLowerCase();
             return lowerKey.endsWith(".mp4") || 
@@ -179,6 +201,8 @@ async function startServer() {
                    lowerKey.endsWith(".mov") || 
                    lowerKey.endsWith(".webm");
         });
+
+        console.log(`AWS S3: Found ${filteredFiles.length} video files after filtering`);
 
         const videosWithUrl = await Promise.all(
             filteredFiles.map(async (item) => {
@@ -191,16 +215,30 @@ async function startServer() {
                 const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
                 
                 const parts = key.split("/");
-                const subjectRaw = parts[0];
-                const chapterRaw = parts.length > 2 ? parts[1] : "General";
-                const filenameRaw = parts[parts.length - 1];
+                let subject = "General";
+                let chapter = "Misc";
+                let filenameRaw = key;
+
+                if (parts.length >= 3) {
+                    subject = parts[0];
+                    chapter = parts[1];
+                    filenameRaw = parts[parts.length - 1];
+                } else if (parts.length === 2) {
+                    subject = parts[0];
+                    chapter = "General";
+                    filenameRaw = parts[1];
+                } else {
+                    subject = "General";
+                    chapter = "Misc";
+                    filenameRaw = key;
+                }
                 
                 // Format Subject Name
-                let subject = subjectRaw.replace(/[_-]/g, " ");
+                subject = subject.replace(/[_-]/g, " ");
                 subject = subject.replace(/\b\w/g, c => c.toUpperCase());
                 
                 // Format Chapter Name
-                let chapter = chapterRaw.replace(/[_-]/g, " ");
+                chapter = chapter.replace(/[_-]/g, " ");
                 chapter = chapter.replace(/\b\w/g, c => c.toUpperCase());
                 
                 // Format Lecture Title

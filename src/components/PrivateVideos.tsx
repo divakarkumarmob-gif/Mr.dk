@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   X, Play, Loader2, Lock, AlertCircle, RefreshCw, KeyRound, 
-  Film, ChevronRight, BookOpen, ArrowLeft, FolderOpen, Tv
+  Film, ChevronRight, BookOpen, ArrowLeft, FolderOpen, Tv, CheckCircle2
 } from 'lucide-react';
 import CustomVideoPlayer from './CustomVideoPlayer';
 import { getApiUrl } from '@/utils/api';
@@ -29,6 +29,28 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
   const [loading, setLoading] = useState(false);
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [isChecking, setIsChecking] = useState(false);
+  const [connectionStatus, setConnectionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const checkConnection = async () => {
+    setIsChecking(true);
+    setConnectionStatus('idle');
+    try {
+      const response = await fetch('/api/s3/health');
+      const data = await response.json();
+      if (data.success) {
+        setConnectionStatus('success');
+      } else {
+        setConnectionStatus('error');
+        setError(data.error || 'Connection failed');
+      }
+    } catch (err: any) {
+      setConnectionStatus('error');
+      setError(err.message);
+    } finally {
+      setIsChecking(false);
+    }
+  };
 
   // Dynamic Navigation states
   const [currentView, setCurrentView] = useState<'list' | 'chapter' | 'player'>('list');
@@ -200,12 +222,28 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
               </ul>
             </div>
 
-            <button 
-              onClick={fetchVideos}
-              className="w-full bg-white/5 hover:bg-white/10 border border-white/10 active:bg-white/20 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-1.5"
-            >
-              <RefreshCw className="h-3.5 w-3.5" /> Retry Connection
-            </button>
+            <div className="flex gap-2">
+              <button 
+                onClick={fetchVideos}
+                disabled={loading}
+                className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 active:bg-white/20 text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-1.5 disabled:opacity-50"
+              >
+                <RefreshCw className={`h-3.5 w-3.5 ${loading ? 'animate-spin' : ''}`} /> {loading ? 'Loading...' : 'Retry Connection'}
+              </button>
+              <button 
+                onClick={checkConnection}
+                disabled={isChecking}
+                className={`flex-1 ${connectionStatus === 'success' ? 'bg-green-500/20 text-green-400 border-green-500/30' : connectionStatus === 'error' ? 'bg-red-500/20 text-red-400 border-red-500/30' : 'bg-orange-500/10 text-orange-400 border-orange-500/20'} border text-[10px] font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-1.5 disabled:opacity-50`}
+              >
+                {isChecking ? <RefreshCw className="h-3 w-3 animate-spin" /> : connectionStatus === 'success' ? <CheckCircle2 className="h-3 w-3" /> : connectionStatus === 'error' ? <AlertCircle className="h-3 w-3" /> : <Play className="h-3 w-3" />}
+                {isChecking ? 'Checking...' : connectionStatus === 'success' ? 'Connected!' : connectionStatus === 'error' ? 'Failed' : 'Check Status'}
+              </button>
+            </div>
+            {connectionStatus === 'error' && error && (
+                <div className="p-2 bg-red-500/5 rounded-lg border border-red-500/10 text-[9px] text-red-400 font-mono break-all">
+                    Error: {error}
+                </div>
+            )}
           </div>
         ) : loading ? (
           <div className="space-y-6 animate-pulse">

@@ -45,6 +45,18 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }
 
     const handleDownload = async () => {
+        // If we are on Capacitor, open the actual PDF URL in the system browser
+        // so that the native Android Download Manager downloads it to local storage!
+        if ((window as any).Capacitor) {
+            const downloadUrl = originalUrl || pdfUrl;
+            if (downloadUrl.startsWith('blob:')) {
+                alert("This document is already saved locally inside your app's secure offline database!");
+                return;
+            }
+            window.open(downloadUrl, '_system');
+            return;
+        }
+
         try {
             const response = await fetch(pdfUrl);
             const blob = await response.blob();

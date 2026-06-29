@@ -99,6 +99,32 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
     setSelectedFiles([]);
   };
 
+  const handleDownloadFile = (url: string, filename: string) => {
+    if ((window as any).Capacitor) {
+      if (url.startsWith('data:')) {
+        const w = window.open();
+        if (w) {
+          w.document.write(`<iframe src="${url}" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>`);
+        } else {
+          alert("Please allow popups to view this document.");
+        }
+        return;
+      }
+      window.open(url, '_system');
+      return;
+    }
+
+    // Standard web download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Select file in Popup 1
   const handlePopup1FileSelect = (e: React.ChangeEvent<HTMLInputElement>, fileType: 'image' | 'pdf') => {
     const files = e.target.files;
@@ -551,15 +577,12 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                             <FileText className="h-5 w-5 text-rose-500 flex-shrink-0" />
                             <span className="text-xs font-bold text-slate-200 truncate">{file.name}</span>
                           </div>
-                          <a 
-                            href={file.url} 
-                            download={file.name}
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold"
+                          <button 
+                            onClick={() => handleDownloadFile(file.url, file.name)}
+                            className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold cursor-pointer"
                           >
                             <Download className="h-3 w-3" /> Get
-                          </a>
+                          </button>
                         </div>
                         <div className="w-full h-[380px] bg-slate-950 relative">
                           {file.url.startsWith('data:') ? (
@@ -610,15 +633,12 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                           <FileText className="h-5 w-5 text-rose-500 flex-shrink-0" />
                           <span className="text-xs font-bold text-slate-200 truncate">{selectedNote.name}</span>
                         </div>
-                        <a 
-                          href={selectedNote.url} 
-                          download={selectedNote.name}
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold"
+                        <button 
+                          onClick={() => handleDownloadFile(selectedNote.url!, selectedNote.name)}
+                          className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold cursor-pointer"
                         >
                           <Download className="h-3 w-3" /> Get
-                        </a>
+                        </button>
                       </div>
                       <div className="w-full h-[380px] bg-slate-950 relative">
                         {selectedNote.url.startsWith('data:') ? (

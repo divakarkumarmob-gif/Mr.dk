@@ -6,6 +6,7 @@
 import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
+import { App as CapacitorApp } from '@capacitor/app';
 import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
@@ -204,7 +205,32 @@ export default function App() {
         }
     };
     window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+
+    // Capacitor Back Button Handling
+    const backButtonListener = CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+        // If we have an overlay open, close it first
+        if (showNeuralSolver) { setShowNeuralSolver(false); window.history.back(); return; }
+        if (showSupportModal) { setShowSupportModal(false); return; }
+        if (activeVideo) { setActiveVideo(null); window.history.back(); return; }
+        if (isNotificationView) { setIsNotificationView(false); window.history.back(); return; }
+        
+        if (currentView !== 'home') {
+            window.history.back();
+        } else {
+            // On home screen, if we can go back in browser history, do it
+            // otherwise exit the app
+            if (canGoBack) {
+                window.history.back();
+            } else {
+                CapacitorApp.exitApp();
+            }
+        }
+    });
+
+    return () => {
+        window.removeEventListener('popstate', handlePopState);
+        backButtonListener.then(l => l.remove());
+    };
   }, []);
 
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
@@ -288,8 +314,10 @@ export default function App() {
       ]);
       setNeetNotifications([
         {
-          title: "NEET UG Exam Practice Mode",
-          message: "You can view daily goals, watch lectures, and practice physics, chemistry, and biology chapters immediately.",
+          updates: [
+            "NEET UG Exam Practice Mode",
+            "You can view daily goals, watch lectures, and practice physics, chemistry, and biology chapters immediately."
+          ],
           timestamp: { toDate: () => new Date() } as any
         }
       ]);

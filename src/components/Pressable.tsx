@@ -7,10 +7,12 @@ interface PressableProps {
   onClick?: () => void;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
-export default function Pressable({ children, onClick, className, type = 'button' }: PressableProps) {
+export default function Pressable({ children, onClick, className, type = 'button', disabled }: PressableProps) {
   const handlePress = async () => {
+    if (disabled) return;
     await Haptics.impact({ style: ImpactStyle.Light });
     if (onClick) onClick();
   };
@@ -18,9 +20,10 @@ export default function Pressable({ children, onClick, className, type = 'button
   return (
     <motion.button
       type={type}
-      whileTap={{ scale: 0.98 }}
+      whileTap={disabled ? undefined : { scale: 0.98 }}
       onClick={handlePress}
-      className={`transition-colors duration-150 ${className}`}
+      disabled={disabled}
+      className={`transition-colors duration-150 ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
     >
       {children}
     </motion.button>

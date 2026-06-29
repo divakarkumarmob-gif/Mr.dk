@@ -16,6 +16,7 @@
     "@aws-sdk/s3-request-presigner": "^3.1075.0",
     "@base-ui/react": "^1.4.1",
     "@capacitor/android": "^8.4.0",
+    "@capacitor/app": "^8.1.0",
     "@capacitor/cli": "^8.4.0",
     "@capacitor/core": "^8.4.0",
     "@capacitor/haptics": "^8.0.2",
