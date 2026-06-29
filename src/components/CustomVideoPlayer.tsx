@@ -311,7 +311,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   return (
     <div 
       ref={containerRef}
-      className="relative aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl select-none group border border-white/15 hover:border-orange-500/25 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none"
+      className={`relative w-full bg-black select-none group transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none flex items-center justify-center overflow-hidden ${isFullscreen ? 'fixed inset-0 z-[2000]' : 'aspect-video rounded-xl border border-white/15 hover:border-orange-500/25 shadow-2xl'} landscape:fixed landscape:inset-0 landscape:z-[2000] landscape:rounded-none landscape:border-0`}
       onPointerDown={(e) => {
         // Only handle left clicks for mouse
         if (e.pointerType === 'mouse' && e.button !== 0) return;
@@ -327,6 +327,54 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       onPointerLeave={handlePointerUp}
       onPointerCancel={handlePointerUp}
     >
+      {/* Pulse Loading Skeleton for Blank state */}
+      {!src || isLoading ? (
+        <div className="absolute inset-0 bg-[#0a0f1e] flex flex-col items-center justify-center overflow-hidden">
+           {/* Pulsing Core */}
+           <div className="relative w-24 h-24 flex items-center justify-center">
+              <motion.div 
+                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0 bg-orange-500/20 rounded-full blur-2xl"
+              />
+              <motion.div 
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-10 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/40"
+              >
+                <Loader2 className="h-8 w-8 text-white animate-spin" />
+              </motion.div>
+           </div>
+           
+           <div className="mt-8 space-y-3 w-64">
+              <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                 <motion.div 
+                   animate={{ x: ['-100%', '100%'] }}
+                   transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                   className="h-full w-1/2 bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"
+                 />
+              </div>
+              <div className="flex justify-center gap-1.5">
+                 <span className="text-[10px] font-bold text-orange-500/80 tracking-widest uppercase animate-pulse">Initializing Secured Stream</span>
+              </div>
+           </div>
+           
+           {/* Floating particle skeletons */}
+           {[1, 2, 3, 4, 5].map((i) => (
+             <motion.div
+               key={i}
+               initial={{ opacity: 0, x: Math.random() * 200 - 100, y: Math.random() * 200 - 100 }}
+               animate={{ 
+                 opacity: [0, 0.2, 0],
+                 y: [Math.random() * 100, Math.random() * -100]
+               }}
+               transition={{ duration: 3 + Math.random() * 2, repeat: Infinity, delay: i * 0.5 }}
+               className="absolute w-1 h-1 bg-orange-500 rounded-full"
+             />
+           ))}
+        </div>
+      ) : null}
+
       {/* Actual HTML5 Video Tag with inline brightness CSS modifier */}
       <video
         ref={videoRef}
@@ -337,19 +385,12 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
         onLoadedMetadata={onLoadedMetadata}
         onWaiting={onWaiting}
         onPlaying={onPlaying}
-        className="w-full h-full object-contain pointer-events-none transition-all duration-75"
+        className={`w-full h-full object-contain pointer-events-none transition-all duration-75 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         style={{ filter: `brightness(${brightness})` }}
         autoPlay
         preload="auto"
         playsInline
       />
-
-      {/* Playback Loading Spinner */}
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40 pointer-events-none">
-          <Loader2 className="h-10 w-10 animate-spin text-orange-500" />
-        </div>
-      )}
 
       {/* --- GESTURE FEEDBACK ANIMATION WINDOWS --- */}
       <AnimatePresence>

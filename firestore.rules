@@ -65,13 +65,17 @@ service cloud.firestore {
 
     // Chat data
     match /chats/{chatId} {
-      allow read: if isSignedIn() && (isAdmin() || chatId == request.auth.uid || resource.data.get('participants', []).hasAny([request.auth.uid]));
-      allow create: if isSignedIn() && (request.resource.data.get('participants', []).hasAny([request.auth.uid]));
-      allow update: if isSignedIn() && (isAdmin() || resource.data.get('participants', []).hasAny([request.auth.uid]));
+      function canAccessChat() {
+        return isSignedIn() && (isAdmin() || chatId == request.auth.uid || (resource != null && resource.data.get('participants', []).hasAny([request.auth.uid])));
+      }
+      
+      allow read: if canAccessChat();
+      allow create: if isSignedIn() && (chatId == request.auth.uid || request.resource.data.get('participants', []).hasAny([request.auth.uid]));
+      allow update: if canAccessChat();
       allow delete: if isAdmin();
       
       match /{allSubcollections=**} {
-        allow read, write: if isAdmin() || isOwner(chatId) || (get(/databases/$(database)/documents/chats/$(chatId)).data.get('participants', []).hasAny([request.auth.uid]));
+        allow read, write: if canAccessChat();
       }
     }
 

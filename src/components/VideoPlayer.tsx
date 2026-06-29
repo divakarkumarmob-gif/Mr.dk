@@ -12,21 +12,28 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   // Sync selectedVideoId with history state
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
-        if (e.state && e.state.selectedVideoId !== undefined) {
-            setSelectedVideoId(e.state.selectedVideoId);
-        } else if (selectedVideoId) {
+        if (selectedVideoId) {
             setSelectedVideoId(null);
             setPlayTriggered(false);
+        } else {
+            onClose();
         }
     };
     window.addEventListener('popstate', handlePopState);
+    
+    // Push an initial state if opening
+    if (window.history.state?.view !== 'video-player') {
+        window.history.pushState({ view: 'video-player' }, '', '');
+    }
+
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [selectedVideoId]);
+  }, [selectedVideoId, onClose]);
 
   const selectVideo = (videoId: string) => {
     setSelectedVideoId(videoId);
     setPlayTriggered(true);
-    window.history.pushState({ ...window.history.state, selectedVideoId: videoId }, '', window.location.href);
+    // Push a state when a sub-video is selected so back button works
+    window.history.pushState({ view: 'video-playing', videoId }, '', '');
   };
 
   const playlistId = CHAPTER_PLAYLISTS[topic.toLowerCase()];                
@@ -55,8 +62,8 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   const isUrl = (str: string) => str.startsWith('http');
 
   return (
-    <div className="fixed inset-0 bg-black/98 z-[200] flex flex-col items-center justify-center sm:p-4 landscape:p-0 backdrop-blur-sm overflow-hidden">
-      <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh]'}`}>
+    <div className="fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden">
+      <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh] p-4'}`}>
         <div className={`flex justify-between items-center mb-6 px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
             <div>
                 <h2 className="text-xl font-bold text-white tracking-tight">{topic}</h2>
@@ -72,7 +79,7 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
         
         <div className={`flex-1 flex flex-col items-center justify-center min-h-0 ${selectedVideoId ? 'landscape:w-screen landscape:h-screen' : ''}`}>
             {/* VIDEO STAGE */}
-            <div className={`w-full relative bg-[#0d1117] overflow-hidden border border-white/5 shadow-2xl group ${selectedVideoId ? 'aspect-video landscape:aspect-auto landscape:w-full landscape:h-full landscape:border-0 landscape:rounded-0 rounded-2xl' : 'aspect-video rounded-2xl'}`}>
+            <div className={`w-full relative bg-[#0d1117] overflow-hidden border-white/5 shadow-2xl group ${selectedVideoId ? 'landscape:aspect-auto landscape:w-screen landscape:h-screen landscape:border-0 landscape:rounded-none rounded-2xl aspect-video' : 'aspect-video rounded-2xl border'}`}>
                 {selectedVideoId ? (
                     <div className="w-full h-full">
                         {isUrl(selectedVideoId) ? (
