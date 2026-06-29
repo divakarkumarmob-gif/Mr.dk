@@ -36,7 +36,7 @@ export default function MindHackPage({ onBack }: { onBack: () => void }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="min-h-screen bg-[#f4e4bc] text-[#2c1d0d] p-6 pt-16 font-serif relative"
+            className="min-h-screen bg-[#f4e4bc] text-[#2c1d0d] pt-16 font-serif relative"
         >
             <button 
                 onClick={onBack} 

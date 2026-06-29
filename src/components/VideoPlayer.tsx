@@ -19,25 +19,38 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
         ScreenOrientation.lock({ orientation: 'landscape' }).catch(() => {});
       } else {
         StatusBar.show().catch(() => {});
-        ScreenOrientation.lock({ orientation: 'portrait' }).catch(() => {});
+        ScreenOrientation.unlock().catch(() => {});
       }
     }
+  }, [selectedVideoId]);
+
+  // sync selectedVideoId with history state
+  useEffect(() => {
+    if (selectedVideoId) {
+      document.body.classList.add('video-fullscreen');
+    } else {
+      document.body.classList.remove('video-fullscreen');
+    }
+    return () => document.body.classList.remove('video-fullscreen');
   }, [selectedVideoId]);
 
   // Sync selectedVideoId with history state
   useEffect(() => {
     const handlePopState = (e: PopStateEvent) => {
-      // If we are currently in fullscreen video, exit it
-      if (selectedVideoId) {
-        setSelectedVideoId(null);
-        setPlayTriggered(false);
-      } else {
-        // Otherwise close the player
-        onClose();
-      }
+        if (selectedVideoId) {
+            setSelectedVideoId(null);
+            setPlayTriggered(false);
+        } else {
+            onClose();
+        }
     };
-    
     window.addEventListener('popstate', handlePopState);
+    
+    // Push an initial state if opening
+    if (window.history.state?.view !== 'video-player') {
+        window.history.pushState({ view: 'video-player' }, '', '');
+    }
+
     return () => window.removeEventListener('popstate', handlePopState);
   }, [selectedVideoId, onClose]);
 
@@ -74,8 +87,8 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   const isUrl = (str: string) => str.startsWith('http');
 
   return (
-    <div className={`fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden ${!selectedVideoId ? 'pt-[env(safe-area-inset-top,0px)]' : ''}`}>
-      <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh] p-4'}`}>
+    <div className={`fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center overflow-hidden ${selectedVideoId ? 'pt-[max(env(safe-area-inset-top,0px),12px)] landscape:p-0' : 'backdrop-blur-sm pt-[max(env(safe-area-inset-top,0px),16px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)] pb-[max(env(safe-area-inset-bottom,0px),16px)]'}`}>
+      <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen landscape:fixed landscape:inset-0 landscape:z-[300] !p-0' : 'max-h-[90vh]'}`}>
         <div className={`flex justify-between items-center mb-3 px-4 ${selectedVideoId ? 'hidden' : ''}`}>
             <div>
                 <h2 className="text-lg font-bold text-white tracking-tight">{topic}</h2>

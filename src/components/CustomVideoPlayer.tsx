@@ -210,9 +210,9 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     } else {
       document.exitFullscreen().then(() => {
         setIsFullscreen(false);
-        // Unlock orientation or lock to portrait
+        // Unlock orientation
         if (Capacitor.isNativePlatform()) {
-          ScreenOrientation.lock({ orientation: 'portrait' }).catch(() => {});
+          ScreenOrientation.unlock().catch(() => {});
         } else {
           if (window.screen.orientation && window.screen.orientation.unlock) {
             window.screen.orientation.unlock();
@@ -529,10 +529,10 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-between p-3.5"
+            className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-between p-3.5 landscape:p-6 landscape:px-[env(safe-area-inset-left,24px)] landscape:pr-[env(safe-area-inset-right,24px)]"
           >
             {/* Top Bar: Title & Configuration Setting Gear */}
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-start pt-[env(safe-area-inset-top,0px)]">
               <div className="flex flex-col max-w-[70%]">
                 <span className="text-white font-bold text-sm tracking-wide truncate">{title}</span>
                 <span className="text-gray-400 text-[10px] uppercase font-bold tracking-widest mt-0.5">LECTURE PLAYER</span>

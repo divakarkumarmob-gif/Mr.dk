@@ -233,7 +233,8 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
     };
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-[#0a0f24] text-white p-4 pb-20 font-sans">
+        <>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-[#0a0f24] text-white pb-20 font-sans">
             <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
@@ -360,13 +361,14 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                 )}
             </div>
 
-            {viewerUrl && (
-                <AdvancedPDFViewer 
-                    pdfUrl={viewerUrl.url}
-                    title={viewerUrl.title}
-                    onClose={handlePdfClose}
-                />
-            )}
         </motion.div>
+        {viewerUrl && (
+            <AdvancedPDFViewer 
+                pdfUrl={viewerUrl.url}
+                title={viewerUrl.title}
+                onClose={handlePdfClose}
+            />
+        )}
+        </>
     );
 }

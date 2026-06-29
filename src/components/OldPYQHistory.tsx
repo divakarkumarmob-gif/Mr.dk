@@ -64,7 +64,7 @@ export default function OldPYQHistory({ onBack }: Props) {
     };
 
     return (
-        <div className="min-h-screen bg-[#05070A] text-white p-4 pb-24">
+        <div className="min-h-screen bg-[#05070A] text-white pb-24">
             <div className="flex items-center gap-3 mb-6">
                 <button 
                     onClick={onBack}

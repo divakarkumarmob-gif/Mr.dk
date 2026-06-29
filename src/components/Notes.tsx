@@ -346,7 +346,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0 }}
-            className="p-6"
+            className="w-full"
           >
             <h1 className="text-2xl font-bold mb-6 text-slate-100 flex items-center gap-2">
               <BookOpen className="text-orange-500 h-6 w-6" /> Important Notes
@@ -405,7 +405,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
             initial={{ opacity: 0, x: 30 }} 
             animate={{ opacity: 1, x: 0 }} 
             exit={{ opacity: 0, x: -30 }}
-            className="p-5"
+            className="w-full"
           >
             {/* Header with back navigation */}
             <div className="flex items-center gap-3 mb-5">
@@ -545,7 +545,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
             initial={{ opacity: 0, scale: 0.98 }} 
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0.98 }}
-            className="p-5"
+            className="w-full"
           >
             <div className="flex items-center gap-3 mb-5 border-b border-slate-800 pb-3">
               <button 

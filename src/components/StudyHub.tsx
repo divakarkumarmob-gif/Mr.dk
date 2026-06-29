@@ -26,7 +26,7 @@ const CHAPTER_DATA: any = {
     }
 };
 
-export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView, isFocusMode, setIsFocusMode, setShowSummary, distractionSensitivity, setDistractionSensitivity, focusedTime, distractedTime, videoRef, isLooking, startDetectionLoop }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void, isFocusMode: boolean, setIsFocusMode: (val: boolean) => void, setShowSummary: (val: boolean) => void, distractionSensitivity: number, setDistractionSensitivity: (val: number) => void, focusedTime: number, distractedTime: number, videoRef: React.RefObject<HTMLVideoElement>, isLooking: boolean, startDetectionLoop: () => void }) {
+export default function StudyHub({ subjects, onNavigate, setResumingTest, setCurrentView, isFocusMode, setIsFocusMode, setShowSummary, distractionSensitivity, setDistractionSensitivity, focusedTime, distractedTime, videoRef, isLooking, startDetectionLoop, setShowFlashcards, setShowStudyDashboard, setShowPrivateVideos }: { subjects: any[], onNavigate: (view: any) => void, setResumingTest: (data: any) => void, setCurrentView: (view: any) => void, isFocusMode: boolean, setIsFocusMode: (val: boolean) => void, setShowSummary: (val: boolean) => void, distractionSensitivity: number, setDistractionSensitivity: (val: number) => void, focusedTime: number, distractedTime: number, videoRef: React.RefObject<HTMLVideoElement>, isLooking: boolean, startDetectionLoop: () => void, setShowFlashcards: (val: boolean) => void, setShowStudyDashboard: (val: boolean) => void, setShowPrivateVideos: (val: boolean) => void }) {
     const [savedTest, setSavedTest] = useState<any>(null);
     const [recentTests, setRecentTests] = useState<any[]>([]);
     const [selectedResult, setSelectedResult] = useState<any>(null);
@@ -124,9 +124,6 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
 
     const accordionItems = ["LECTURE LIBRARY", "PRIVATE VIDEOS", "CUSTOM PRACTICE", "BATTLE & PRACTICE", "MEMORY VAULT", "FLASHCARDS", "STUDY PROGRESS"];
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
-    const [showFlashcards, setShowFlashcards] = useState(false);
-    const [showStudyDashboard, setShowStudyDashboard] = useState(false);
-    const [showPrivateVideos, setShowPrivateVideos] = useState(false);
     const [activeSubject, setActiveSubject] = useState<string>('Physics');
     const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
     const [activeBattleChapter, setActiveBattleChapter] = useState<string | null>(null);
@@ -136,13 +133,8 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen bg-[#0a0f24] text-white p-3 sm:p-4 font-sans flex flex-col"
+            className="min-h-screen bg-[#0a0f24] text-white font-sans flex flex-col"
         >
-          <AnimatePresence>
-            {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
-            {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
-            {showPrivateVideos && <PrivateVideos onClose={() => setShowPrivateVideos(false)} />}
-          </AnimatePresence>
           <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl w-full flex flex-col h-full">
             <div className="flex justify-between items-center mb-2">
                 <HubSwitcher active="study" onNavigate={onNavigate} />

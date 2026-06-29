@@ -102,7 +102,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
     }, [fetchNeetNotices, checkNtaStatus]);
 
     return (
-        <div className="min-h-screen bg-background text-foreground p-4">
+        <div className="min-h-screen bg-background text-foreground">
             <button className="flex items-center gap-2 mb-6 text-sm text-gray-400" onClick={onBack}>
                 <ChevronLeft className="w-5 h-5" /> Back
             </button>

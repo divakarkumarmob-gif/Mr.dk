@@ -131,7 +131,11 @@
   }
 
   body.video-fullscreen {
-    padding-top: 0 !important;
+    padding: 0 !important;
+  }
+  
+  body.video-fullscreen .min-h-screen {
+    padding: 0 !important;
   }
   html {
     @apply font-sans;

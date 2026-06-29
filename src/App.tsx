@@ -34,6 +34,9 @@ import AIStudyPlanPage from './components/AIStudyPlanPage';
 import NCERTHub from './components/NCERTHub';
 import NTAQuestionsHub from './components/NTAQuestionsHub';
 import OldPYQHistory from './components/OldPYQHistory';
+import Flashcards from './components/Flashcards';
+import StudyDashboard from './components/StudyDashboard';
+import PrivateVideos from './components/PrivateVideos';
 import BottomNav from './components/BottomNav';
 import UserChat from './components/UserChat';
 import NotificationPage from './components/NotificationPage';
@@ -45,7 +48,7 @@ import SupportModal from './components/SupportModal';
 import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import FocusSessionSummary from './components/FocusSessionSummary';
 import DistractionOverlay from './components/DistractionOverlay';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
@@ -563,6 +566,9 @@ export default function App() {
   const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
   const [showResetModal, setShowResetModal] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
+  const [showFlashcards, setShowFlashcards] = useState(false);
+  const [showStudyDashboard, setShowStudyDashboard] = useState(false);
+  const [showPrivateVideos, setShowPrivateVideos] = useState(false);
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
@@ -1197,20 +1203,43 @@ export default function App() {
   }
 
   if (currentView === 'mindHack') {
-      return <MindHackPage onBack={() => setCurrentView('profile')} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-[#f4e4bc] pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <MindHackPage onBack={() => setCurrentView('profile')} />
+        </div>
+      );
   }
 
   if (currentView === 'aiStudyPlan') {
-      return <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-[#f0f4f8] pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
+        </div>
+      );
   }
 
   if (isNotificationView) {
-      return <NotificationPage onBack={() => window.history.back()} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <NotificationPage onBack={() => window.history.back()} />
+        </div>
+      );
   }
 
   if (currentView === 'study') {
       return (
-        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
+        <>
+        <AnimatePresence mode="wait">
+           {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
+           {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
+           {showPrivateVideos && <PrivateVideos onClose={() => setShowPrivateVideos(false)} />}
+        </AnimatePresence>
+        <motion.div 
+            initial={{ opacity: 0, x: 20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.3 }}
+            className="pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]"
+        >
             <StudyHub 
                 subjects={subjects} 
                 setResumingTest={setResumingTest} 
@@ -1225,6 +1254,9 @@ export default function App() {
                 videoRef={videoRef}
                 isLooking={isLooking}
                 startDetectionLoop={startDetectionLoop}
+                setShowFlashcards={setShowFlashcards}
+                setShowStudyDashboard={setShowStudyDashboard}
+                setShowPrivateVideos={setShowPrivateVideos}
                 onNavigate={(view) => {
               if (view === 'customPractice') {
                   setCurrentView('customPractice');
@@ -1233,6 +1265,7 @@ export default function App() {
               }
             }} />
         </motion.div>
+        </>
       );
   }
 
@@ -1266,7 +1299,7 @@ export default function App() {
   
   if (currentView === 'profile') {
       return (
-        <div className="flex flex-col min-h-screen pb-20">
+        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1283,27 +1316,35 @@ export default function App() {
   }
   
   if (currentView === 'notesLibrary') {
-      return <NotesLibrary onBack={() => setCurrentView('profile')} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <NotesLibrary onBack={() => setCurrentView('profile')} />
+        </div>
+      );
   }
 
   if (currentView === 'editProfile') {
-      return <EditProfile user={user} onNavigate={setCurrentView} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <EditProfile user={user} onNavigate={setCurrentView} />
+        </div>
+      );
   }
 
   if (currentView === 'admin') {
       return (
-          <><div className="min-h-screen bg-background p-6 text-foreground">
+          <div className="min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)] text-foreground">
               <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
               <AdminPanel onNavigate={setCurrentView} />
+              <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+              />
           </div>
-          <SupportModal 
-        isOpen={showSupportModal} 
-        onClose={() => setShowSupportModal(false)}
-        onConfirm={() => {
-            setShowSupportModal(false);
-            setCurrentView('technicalSupport');
-        }}
-      /></>
       );
   }
 
@@ -1314,7 +1355,7 @@ export default function App() {
 
   if (currentView === 'tests') {
       return (
-        <div className="flex flex-col min-h-screen pb-20">
+        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
             <SupportModal 
@@ -1330,21 +1371,33 @@ export default function App() {
   }
 
   if (currentView === 'ncertHub') {
-      return <NCERTHub onBack={() => setCurrentView('notes')} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <NCERTHub onBack={() => setCurrentView('notes')} />
+        </div>
+      );
   }
 
   if (currentView === 'ntaQuestionsHub') {
       const paperId = urlParams.get('paper');
-      return <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
+        </div>
+      );
   }
 
   if (currentView === 'oldPyqHistory') {
-      return <OldPYQHistory onBack={() => setCurrentView('notes')} />;
+      return (
+        <div className="flex flex-col min-h-screen bg-[#05070A] pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+            <OldPYQHistory onBack={() => setCurrentView('notes')} />
+        </div>
+      );
   }
 
   if (currentView === 'notes') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 bg-background">
+        <div className="flex flex-col min-h-screen pb-20 bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1361,7 +1414,7 @@ export default function App() {
 
    if (currentView === 'analytics') {
        return (
-         <div className="flex flex-col min-h-screen">
+         <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
              <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} /></div>
              <SupportModal 
                 isOpen={showSupportModal} 
@@ -1435,7 +1488,7 @@ export default function App() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`min-h-screen bg-background text-foreground ${Capacitor.isNativePlatform() ? 'p-0 pt-[env(safe-area-inset-top,0px)]' : 'p-2 sm:p-4'} font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}
+      className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]`}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full px-1 sm:px-2">

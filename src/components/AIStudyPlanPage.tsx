@@ -8,7 +8,7 @@ export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => 
     const [showChat, setShowChat] = useState(false);
 
     return (
-        <div className="min-h-screen bg-[#f0f4f8] text-[#1e293b] p-6 pt-16 font-sans relative">
+        <div className="min-h-screen bg-[#f0f4f8] text-[#1e293b] pt-16 font-sans relative">
             <button 
                 onClick={onBack} 
                 className="absolute top-4 left-4 flex items-center gap-2 text-sm font-bold bg-white/50 p-2 rounded-full shadow-sm"
