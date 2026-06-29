@@ -208,7 +208,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden ${currentView === 'player' ? 'landscape:p-0 p-4 sm:p-6' : 'p-4 sm:p-6'}`}
+      className={`fixed inset-0 bg-[#060a17] z-[1000] flex flex-col text-white font-sans overflow-hidden ${currentView === 'player' ? 'landscape:p-0 p-4 sm:p-6' : 'p-4 sm:p-6'} pt-[env(safe-area-inset-top,0px)]`}
     >
       {/* Dynamic Header */}
       <div className={`flex justify-between items-center pb-3 border-b border-white/5 shrink-0 mb-4 ${currentView === 'player' ? 'landscape:hidden px-4 sm:px-0' : 'px-0'}`}>
@@ -233,7 +233,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
               {currentView === 'chapter' && "Chapter Details"}
               {currentView === 'player' && "Playing Lecture"}
             </h2>
-            <p className="text-[10px] text-gray-400 font-semibold tracking-wider">AWS SECURED DIRECTORY STREAM</p>
+            <p className="text-[10px] text-gray-400 font-semibold tracking-wider uppercase">Lecture Directory Stream</p>
           </div>
         </div>
         
@@ -541,8 +541,8 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
       {/* Footer */}
       <div className={`pt-3 border-t border-white/5 text-center mt-auto shrink-0 ${currentView === 'player' ? 'landscape:hidden pb-4' : ''}`}>
-        <span className="font-extrabold text-[9px] tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500 uppercase">
-          Powered by AWS Secured Engine
+        <span className="font-extrabold text-[9px] tracking-widest text-white/20 uppercase">
+          Lecture Hub Infrastructure
         </span>
       </div>
     </motion.div>

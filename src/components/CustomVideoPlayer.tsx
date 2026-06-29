@@ -4,6 +4,9 @@ import {
   Play, Pause, Volume2, VolumeX, Maximize, Minimize, 
   Settings, Sun, RotateCcw, RotateCw, Loader2, Check 
 } from 'lucide-react';
+import { ScreenOrientation } from '@capacitor/screen-orientation';
+import { Capacitor } from '@capacitor/core';
+import { StatusBar } from '@capacitor/status-bar';
 
 interface CustomVideoPlayerProps {
   src: string;
@@ -60,14 +63,25 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // Manage body class for padding removal
+  // Manage body class and status bar for padding removal
   useEffect(() => {
     if (isFullscreen) {
       document.body.classList.add('video-fullscreen');
+      if (Capacitor.isNativePlatform()) {
+        StatusBar.hide().catch(() => {});
+      }
     } else {
       document.body.classList.remove('video-fullscreen');
+      if (Capacitor.isNativePlatform()) {
+        StatusBar.show().catch(() => {});
+      }
     }
-    return () => document.body.classList.remove('video-fullscreen');
+    return () => {
+      document.body.classList.remove('video-fullscreen');
+      if (Capacitor.isNativePlatform()) {
+        StatusBar.show().catch(() => {});
+      }
+    };
   }, [isFullscreen]);
 
   // Autohide controls logic
@@ -183,25 +197,26 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     if (!document.fullscreenElement) {
       containerRef.current.requestFullscreen().then(() => {
         setIsFullscreen(true);
-        // Force landscape orientation if supported
-        setTimeout(() => {
+        // Force landscape orientation via Capacitor
+        if (Capacitor.isNativePlatform()) {
+          ScreenOrientation.lock({ orientation: 'landscape' }).catch(() => {});
+        } else {
+          // Fallback for web
           if (window.screen.orientation && (window.screen.orientation as any).lock) {
-            (window.screen.orientation as any).lock('landscape').catch((err: any) => {
-              console.log('Orientation lock error:', err);
-              // Fallback for some browsers
-              if (screen.orientation && (screen.orientation as any).lock) {
-                (screen.orientation as any).lock('landscape-primary').catch(() => {});
-              }
-            });
+            (window.screen.orientation as any).lock('landscape').catch(() => {});
           }
-        }, 100);
+        }
       }).catch(err => console.error(err));
     } else {
       document.exitFullscreen().then(() => {
         setIsFullscreen(false);
         // Unlock orientation
-        if (window.screen.orientation && window.screen.orientation.unlock) {
-          window.screen.orientation.unlock();
+        if (Capacitor.isNativePlatform()) {
+          ScreenOrientation.unlock().catch(() => {});
+        } else {
+          if (window.screen.orientation && window.screen.orientation.unlock) {
+            window.screen.orientation.unlock();
+          }
         }
       });
     }
@@ -368,7 +383,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   return (
     <div 
       ref={containerRef}
-      className={`relative w-full bg-black select-none group transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none flex items-center justify-center overflow-hidden ${isFullscreen ? 'fixed inset-0 z-[2000]' : 'aspect-video rounded-xl border border-white/15 hover:border-orange-500/25 shadow-2xl'} landscape:fixed landscape:inset-0 landscape:z-[2000] landscape:rounded-none landscape:border-0`}
+      className={`relative w-full bg-black select-none group transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none flex items-center justify-center overflow-hidden ${isFullscreen ? 'fixed inset-0 z-[2000]' : 'aspect-video rounded-xl border border-white/15 hover:border-white/25 shadow-2xl'} landscape:fixed landscape:inset-0 landscape:z-[2000] landscape:rounded-none landscape:border-0`}
       onPointerDown={(e) => {
         // Only handle left clicks for mouse
         if (e.pointerType === 'mouse' && e.button !== 0) return;
@@ -401,9 +416,6 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
               >
                 <Loader2 className="h-8 w-8 text-white/50 animate-spin" />
               </motion.div>
-           </div>
-           
-           <div className="mt-8">
            </div>
            
            {/* Floating particle skeletons */}
@@ -474,13 +486,13 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
             className="absolute top-10 left-1/2 -translate-x-1/2 bg-black/75 backdrop-blur border border-white/10 px-4 py-2 rounded-2xl flex items-center gap-2.5 pointer-events-none"
           >
             {gestureFeedback.type === 'brightness' ? (
-              <Sun className="h-4.5 w-4.5 text-orange-400" />
+              <Sun className="h-4.5 w-4.5 text-white" />
             ) : (
               <Volume2 className="h-4.5 w-4.5 text-blue-400" />
             )}
             <div className="w-20 bg-white/20 h-1.5 rounded-full overflow-hidden">
               <div 
-                className={`h-full ${gestureFeedback.type === 'brightness' ? 'bg-orange-500' : 'bg-blue-500'}`} 
+                className={`h-full ${gestureFeedback.type === 'brightness' ? 'bg-white' : 'bg-blue-500'}`} 
                 style={{ width: `${gestureFeedback.value * 100}%` }}
               />
             </div>
@@ -501,9 +513,9 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
           >
             <div className="bg-black/60 rounded-full p-3 backdrop-blur-sm border border-white/10 shadow-lg flex items-center justify-center">
               {playPauseFeedback === 'play' ? (
-                <Play className="h-5 w-5 text-orange-500 fill-orange-500 animate-pulse" />
+                <Play className="h-5 w-5 text-white fill-white animate-pulse" />
               ) : (
-                <Pause className="h-5 w-5 text-orange-500 fill-orange-500 animate-pulse" />
+                <Pause className="h-5 w-5 text-white fill-white animate-pulse" />
               )}
             </div>
           </motion.div>
@@ -547,7 +559,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                           className="w-full flex justify-between items-center py-1.5 px-2.5 hover:bg-white/10 rounded-lg text-left text-gray-200"
                         >
                           <span>Playback Speed</span>
-                          <span className="text-[10px] text-orange-400 font-semibold">{playbackSpeed}x</span>
+                          <span className="text-[10px] text-white font-semibold">{playbackSpeed}x</span>
                         </button>
                         <button 
                           onClick={() => setActiveMenu('quality')}
@@ -563,7 +575,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                       <div>
                         <div className="border-b border-white/5 pb-1 mb-1 px-1.5 flex items-center justify-between">
                           <span className="font-bold text-[10px] text-gray-400">SELECT SPEED</span>
-                          <button onClick={() => setActiveMenu('main')} className="text-[10px] text-orange-400 hover:underline">Back</button>
+                          <button onClick={() => setActiveMenu('main')} className="text-[10px] text-white hover:underline">Back</button>
                         </div>
                         {[0.5, 1.0, 1.25, 1.5, 2.0].map((s) => (
                           <button 
@@ -572,7 +584,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                             className="w-full flex items-center justify-between py-1.5 px-2 hover:bg-white/10 rounded-lg text-left text-gray-200"
                           >
                             <span>{s === 1.0 ? 'Normal' : `${s}x`}</span>
-                            {playbackSpeed === s && <Check className="h-3 w-3 text-orange-400" />}
+                            {playbackSpeed === s && <Check className="h-3 w-3 text-white" />}
                           </button>
                         ))}
                       </div>
@@ -582,7 +594,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                       <div>
                         <div className="border-b border-white/5 pb-1 mb-1 px-1.5 flex items-center justify-between">
                           <span className="font-bold text-[10px] text-gray-400">SELECT QUALITY</span>
-                          <button onClick={() => setActiveMenu('main')} className="text-[10px] text-orange-400 hover:underline">Back</button>
+                          <button onClick={() => setActiveMenu('main')} className="text-[10px] text-white hover:underline">Back</button>
                         </div>
                         {['Auto', '1080p HD', '720p', '480p'].map((q) => (
                           <button 
@@ -594,7 +606,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                             className="w-full flex items-center justify-between py-1.5 px-2 hover:bg-white/10 rounded-lg text-left text-gray-200"
                           >
                             <span>{q}</span>
-                            {selectedQuality === q && <Check className="h-3 w-3 text-orange-400" />}
+                            {selectedQuality === q && <Check className="h-3 w-3 text-white" />}
                           </button>
                         ))}
                       </div>
@@ -618,7 +630,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                   max={duration || 100}
                   value={currentTime}
                   onChange={handleSeek}
-                  className="flex-1 accent-orange-500 h-1.5 bg-white/25 rounded-lg cursor-pointer transition-all duration-150"
+                  className="flex-1 accent-white h-1.5 bg-white/25 rounded-lg cursor-pointer transition-all duration-150"
                 />
 
                 <span className="text-[10px] font-mono font-medium text-gray-300">
@@ -647,7 +659,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                 <div className="flex items-center">
                   <button 
                     onClick={toggleFullscreen}
-                    className="p-2.5 h-11 w-11 bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white rounded-xl border border-orange-400/30 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-orange-950/20"
+                    className="p-2.5 h-11 w-11 bg-white/10 hover:bg-white/20 active:bg-white/30 text-white rounded-xl border border-white/10 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-black/20"
                     title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
                   >
                     {isFullscreen ? (

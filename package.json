@@ -21,6 +21,7 @@
     "@capacitor/cli": "^8.4.0",
     "@capacitor/core": "^8.4.0",
     "@capacitor/haptics": "^8.0.2",
+    "@capacitor/screen-orientation": "^8.0.1",
     "@capacitor/status-bar": "^8.0.2",
     "@fontsource-variable/geist": "^5.2.8",
     "@google-cloud/text-to-speech": "^6.4.1",

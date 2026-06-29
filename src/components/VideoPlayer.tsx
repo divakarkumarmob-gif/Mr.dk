@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import { StatusBar } from '@capacitor/status-bar';
 import { Capacitor } from '@capacitor/core';
+import { ScreenOrientation } from '@capacitor/screen-orientation';
 import { CHAPTER_PLAYLISTS, PHYSICS_VIDEOS, CHEMISTRY_VIDEOS } from '../constants';
 import { X, Play, Maximize2, Volume2, Settings } from 'lucide-react';
 
@@ -13,9 +14,15 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
 
   useEffect(() => {
     if (Capacitor.isNativePlatform()) {
-      StatusBar.hide().catch(err => console.warn('StatusBar hide error:', err));
+      if (selectedVideoId) {
+        StatusBar.hide().catch(() => {});
+        ScreenOrientation.lock({ orientation: 'landscape' }).catch(() => {});
+      } else {
+        StatusBar.show().catch(() => {});
+        ScreenOrientation.unlock().catch(() => {});
+      }
     }
-  }, []);
+  }, [selectedVideoId]);
 
   // sync selectedVideoId with history state
   useEffect(() => {
@@ -80,7 +87,7 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   const isUrl = (str: string) => str.startsWith('http');
 
   return (
-    <div className="fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden">
+    <div className={`fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden ${!selectedVideoId ? 'pt-[env(safe-area-inset-top,0px)]' : ''}`}>
       <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh] p-4'}`}>
         <div className={`flex justify-between items-center mb-3 px-4 ${selectedVideoId ? 'hidden' : ''}`}>
             <div>

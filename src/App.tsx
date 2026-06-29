@@ -1407,7 +1407,7 @@ export default function App() {
                     <div
                         className="w-14 h-14 rounded-full relative z-50 flex-shrink-0"
                     >
-                        <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,orange,blue,green)] animate-spin"></div>
+                        <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,white,blue,gray)] animate-spin"></div>
                         <div className="absolute inset-[2px] rounded-full bg-[#0a0f24] flex items-center justify-center">
                             <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-white">
                                 <path d="M7 10v4M10 8v8M13 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -1435,7 +1435,7 @@ export default function App() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`min-h-screen bg-background text-foreground ${Capacitor.isNativePlatform() ? 'p-0' : 'p-2 sm:p-4'} font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}
+      className={`min-h-screen bg-background text-foreground ${Capacitor.isNativePlatform() ? 'p-0 pt-[env(safe-area-inset-top,0px)]' : 'p-2 sm:p-4'} font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full px-1 sm:px-2">
