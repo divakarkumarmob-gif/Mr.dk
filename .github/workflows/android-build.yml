@@ -46,6 +46,11 @@ jobs:
       - name: Grant Execute Permission to Gradlew
         run: chmod +x android/gradlew
 
+      - name: Show Android Signing Report (Fingerprints)
+        run: |
+          cd android
+          ./gradlew signingReport
+
       - name: Build Debug APK (For Manual Testing)
         run: |
           cd android

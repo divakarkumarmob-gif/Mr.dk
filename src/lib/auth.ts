@@ -1,11 +1,19 @@
-import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile, signInAnonymously } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile, signInAnonymously, signInWithCredential } from 'firebase/auth';
 import { auth } from './firebase';
+import { Capacitor } from '@capacitor/core';
+import { FirebaseAuthentication } from '@capacitor-firebase/authentication';
 
 const googleProvider = new GoogleAuthProvider();
 
 export const signInWithGoogle = async () => {
     try {
-        await signInWithPopup(auth, googleProvider);
+        if (Capacitor.isNativePlatform()) {
+            const result = await FirebaseAuthentication.signInWithGoogle();
+            const credential = GoogleAuthProvider.credential(result.credential?.idToken);
+            return await signInWithCredential(auth, credential);
+        } else {
+            await signInWithPopup(auth, googleProvider);
+        }
     } catch (error) {
         console.error('Google Sign-In error:', error);
         throw error;
@@ -59,6 +67,9 @@ export const resetPassword = async (email: string) => {
 export const logOut = async () => {
     try {
         localStorage.removeItem('guest_user');
+        if (Capacitor.isNativePlatform()) {
+            await FirebaseAuthentication.signOut();
+        }
         return await signOut(auth);
     } catch (error) {
         console.error('Logout error:', error);
