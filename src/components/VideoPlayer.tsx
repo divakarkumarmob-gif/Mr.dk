@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
+import { StatusBar } from '@capacitor/status-bar';
+import { Capacitor } from '@capacitor/core';
 import { CHAPTER_PLAYLISTS, PHYSICS_VIDEOS, CHEMISTRY_VIDEOS } from '../constants';
 import { X, Play, Maximize2, Volume2, Settings } from 'lucide-react';
 
@@ -8,6 +10,12 @@ const Player = ReactPlayer as any;
 export default function VideoPlayer({ topic, onClose, directUrl }: { topic: string; onClose: () => void; directUrl?: string }) {
   const [selectedVideoId, setSelectedVideoId] = useState<string | null>(directUrl || null);
   const [playTriggered, setPlayTriggered] = useState(!!directUrl);
+
+  useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      StatusBar.hide().catch(err => console.warn('StatusBar hide error:', err));
+    }
+  }, []);
 
   // Sync selectedVideoId with history state
   useEffect(() => {

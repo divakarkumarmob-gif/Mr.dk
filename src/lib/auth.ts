@@ -9,13 +9,17 @@ export const signInWithGoogle = async () => {
     try {
         if (Capacitor.isNativePlatform()) {
             const result = await FirebaseAuthentication.signInWithGoogle();
-            const credential = GoogleAuthProvider.credential(result.credential?.idToken);
+            if (!result.credential?.idToken) {
+                throw new Error('No ID Token returned from Google Sign-In');
+            }
+            const credential = GoogleAuthProvider.credential(result.credential.idToken);
             return await signInWithCredential(auth, credential);
         } else {
             await signInWithPopup(auth, googleProvider);
         }
     } catch (error) {
-        console.error('Google Sign-In error:', error);
+        console.error('Google Sign-In error details:', JSON.stringify(error));
+        alert('Google Sign-In failed. Please check the logs.');
         throw error;
     }
 };

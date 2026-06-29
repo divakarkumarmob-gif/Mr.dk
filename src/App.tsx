@@ -1428,7 +1428,13 @@ export default function App() {
           </div>
       )}
 
-    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }} ref={mainContainerRef} className={`min-h-screen bg-background text-foreground p-2 sm:p-4 font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}>
+    <motion.div 
+      initial={{ opacity: 0, x: -20 }} 
+      animate={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.3 }} 
+      ref={mainContainerRef} 
+      className={`min-h-screen bg-background text-foreground ${Capacitor.isNativePlatform() ? 'p-0' : 'p-2 sm:p-4'} font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}
+    >
       
       <div className="relative z-10 max-w-full mx-auto w-full px-1 sm:px-2">
       
