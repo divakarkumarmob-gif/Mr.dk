@@ -176,6 +176,33 @@ async function startServer() {
     }
   });
 
+  app.get("/api/nta/health", async (req, res) => {
+    try {
+        console.log("NTA Health Check: Attempting to connect to neet.nta.nic.in...");
+        const response = await fetch("https://neet.nta.nic.in/", {
+            headers: { 'User-Agent': 'Mozilla/5.0' },
+            timeout: 5000
+        } as any);
+        
+        if (response.ok) {
+            res.json({ success: true, message: "Successfully connected to NTA website" });
+        } else {
+            res.status(response.status).json({ 
+                success: false, 
+                message: `NTA website returned status ${response.status}`,
+                status: response.status
+            });
+        }
+    } catch (error: any) {
+        console.error("NTA Health Check Error:", error);
+        res.status(500).json({ 
+            success: false, 
+            error: error.message,
+            tip: "This might be due to NTA blocking the server's IP or a temporary network issue on the host."
+        });
+    }
+  });
+
   app.post("/api/private-videos", async (req, res) => {
     try {
         const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
@@ -417,17 +444,21 @@ async function startServer() {
   });
   
   app.get("/api/neet-notices", async (req, res) => {
+    console.log("NEET Notices Request: Scraping neet.nta.nic.in...");
     try {
         const response = await fetch("https://neet.nta.nic.in/", {
             headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
             }
         });
         if (!response.ok) {
             console.error(`NEET Notices Fetch Failed: ${response.status} ${response.statusText}`);
-            throw new Error(`Failed to fetch: ${response.status}`);
+            throw new Error(`NTA Server returned ${response.status}`);
         }
         const html = await response.text();
+        console.log(`NEET Notices: Successfully fetched HTML (${html.length} bytes)`);
         const $ = cheerio.load(html);
         
         const publicNotices: {text: string, url: string}[] = [];

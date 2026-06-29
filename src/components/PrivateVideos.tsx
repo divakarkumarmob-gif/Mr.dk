@@ -36,7 +36,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     setIsChecking(true);
     setConnectionStatus('idle');
     try {
-      const response = await fetch('/api/s3/health');
+      const response = await fetch(getApiUrl('/api/s3/health'));
       const data = await response.json();
       if (data.success) {
         setConnectionStatus('success');
@@ -239,6 +239,11 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                 {isChecking ? 'Checking...' : connectionStatus === 'success' ? 'Connected!' : connectionStatus === 'error' ? 'Failed' : 'Check Status'}
               </button>
             </div>
+            
+            <div className="p-2 bg-white/5 rounded-lg border border-white/10 text-[8px] text-gray-500 font-mono break-all text-center">
+                API Base: <span className="text-gray-400">{getApiUrl('/')}</span>
+            </div>
+
             {connectionStatus === 'error' && error && (
                 <div className="p-2 bg-red-500/5 rounded-lg border border-red-500/10 text-[9px] text-red-400 font-mono break-all">
                     Error: {error}

@@ -1106,7 +1106,73 @@ export default function App() {
   const [showNeuralSolver, setShowNeuralSolver] = useState(false);
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-screen bg-slate-50 text-slate-900">Loading...</div>;
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen bg-[#0a0f24] text-white overflow-hidden">
+            <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ 
+                    duration: 0.8,
+                    ease: [0.16, 1, 0.3, 1]
+                }}
+                className="relative"
+            >
+                {/* Rotating background ring */}
+                <div className="w-24 h-24 rounded-full border-4 border-blue-500/10 border-t-blue-500 animate-[spin_1.5s_linear_infinite]" />
+                
+                {/* Inner Icon Container */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                        animate={{ 
+                            scale: [1, 1.1, 1],
+                            rotate: [0, 5, -5, 0]
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10 text-blue-500">
+                            <path d="M7 10v4M10 8v8M13 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M17 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" />
+                        </svg>
+                    </motion.div>
+                </div>
+
+                {/* Subtle outer pulse */}
+                <div className="absolute -inset-4 rounded-full bg-blue-500/5 animate-pulse" />
+            </motion.div>
+
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-center"
+            >
+                <h1 className="mt-8 text-2xl font-bold tracking-[0.1em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                    NeetMaster
+                </h1>
+                <p className="mt-2 text-blue-500/40 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse">
+                    Initializing Workspace
+                </p>
+            </motion.div>
+
+            {/* Progress Bar background */}
+            <div className="absolute bottom-12 w-32 h-[2px] bg-white/5 rounded-full overflow-hidden">
+                <motion.div 
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '100%' }}
+                    transition={{ 
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                    className="w-1/2 h-full bg-blue-500/40 shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+                />
+            </div>
+        </div>
+    );
   }
 
   if (!user) {
