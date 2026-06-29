@@ -64,16 +64,16 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   return (
     <div className="fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden">
       <div className={`w-full max-w-4xl flex flex-col h-full ${selectedVideoId ? 'landscape:max-w-none landscape:h-screen' : 'max-h-[90vh] p-4'}`}>
-        <div className={`flex justify-between items-center mb-6 px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
-            <div>
-                <h2 className="text-xl font-bold text-white tracking-tight">{topic}</h2>
-                <p className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Lecture Series • NEET Mastery</p>
+        <div className={`flex justify-between items-center mb-3 px-4 ${selectedVideoId ? 'landscape:hidden' : ''}`}>
+            <div className="landscape:hidden">
+                <h2 className="text-lg font-bold text-white tracking-tight">{topic}</h2>
+                <p className="text-gray-500 text-[8px] uppercase tracking-widest mt-0.5">Lecture Series • NEET Mastery</p>
             </div>
             <button 
-                className="bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-all active:scale-95" 
+                className="bg-white/10 hover:bg-white/20 text-white p-1.5 rounded-full transition-all active:scale-95 landscape:hidden" 
                 onClick={onClose}
             >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
             </button>
         </div>
         

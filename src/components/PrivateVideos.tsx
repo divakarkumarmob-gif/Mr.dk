@@ -83,6 +83,25 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
         currentIndexRef.current = state.index;
         const view = state.privateVideoView as 'list' | 'chapter' | 'player';
         setCurrentView(view);
+        
+        // Recover selected subject and chapter from state if possible
+        if (state.subjectName && subjects.length > 0) {
+           const subj = subjects.find(s => s.name === state.subjectName);
+           if (subj) {
+             setSelectedSubject(subj);
+             if (state.chapterName) {
+               const chap = subj.chapters.find(c => c.name === state.chapterName);
+               if (chap) {
+                 setSelectedChapter(chap);
+                 if (state.videoKey) {
+                    const vid = chap.videos.find(v => v.key === state.videoKey);
+                    if (vid) setActiveVideo(vid);
+                 }
+               }
+             }
+           }
+        }
+
         if (view === 'list') {
           setSelectedChapter(null);
           setSelectedSubject(null);
@@ -104,7 +123,13 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
   const navigateToChapter = (subj: Subject, chap: Chapter) => {
     const nextIndex = currentIndexRef.current + 1;
-    window.history.pushState({ privateVideoView: 'chapter', index: nextIndex }, '');
+    // Store subject and chapter names in state so we can recover them on back
+    window.history.pushState({ 
+      privateVideoView: 'chapter', 
+      index: nextIndex,
+      subjectName: subj.name,
+      chapterName: chap.name
+    }, '');
     currentIndexRef.current = nextIndex;
     setSelectedSubject(subj);
     setSelectedChapter(chap);
@@ -114,7 +139,13 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
   const navigateToPlayer = (video: VideoItem) => {
     const nextIndex = currentIndexRef.current + 1;
     // We push a state for the player
-    window.history.pushState({ privateVideoView: 'player', index: nextIndex }, '');
+    window.history.pushState({ 
+      privateVideoView: 'player', 
+      index: nextIndex,
+      videoKey: video.key,
+      subjectName: selectedSubject?.name,
+      chapterName: selectedChapter?.name
+    }, '');
     currentIndexRef.current = nextIndex;
     setActiveVideo(video);
     setCurrentView('player');

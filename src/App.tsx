@@ -1433,11 +1433,11 @@ export default function App() {
       {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => window.history.back()} />}
 
       {/* Header */}
-      <div className="flex justify-between items-center mb-6 select-none">
+      <div className="flex justify-between items-center mb-3 select-none">
         
         <div className="flex-1 min-w-0">
-           <h1 className="text-lg sm:text-2xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
-           <p className="text-gray-400 text-[10px] sm:text-sm">Let's make today productive</p>
+           <h1 className="text-lg sm:text-xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
+           <p className="text-gray-400 text-[9px] sm:text-[11px]">Let's make today productive</p>
         </div>
         <div className="relative" ref={notificationRef}>
             <Bell className="h-6 w-6 cursor-pointer" onClick={handleOpenNotifications} />
@@ -1511,7 +1511,7 @@ export default function App() {
 
       <HubSwitcher active="home" onNavigate={setCurrentView} />
 
-      <div className="bg-card rounded-2xl p-3 sm:p-5 border border-border mb-4 mt-2 select-none">
+      <div className="bg-card rounded-2xl p-3 sm:p-5 border border-border mb-4 mt-0 select-none">
         <div className="flex justify-between items-center mb-2.5">
             <h2 className="font-bold text-sm sm:text-lg">Your Performance</h2>
             <div className="text-orange-500 text-[10px] sm:text-xs font-semibold">

@@ -30,7 +30,7 @@ export default function HubSwitcher({ active, onNavigate }: HubSwitcherProps) {
 
   return (
     <div 
-      className={`sticky top-0 z-50 flex gap-2 w-full mb-6 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-24'}`}
+      className={`sticky top-0 z-50 flex gap-2 w-full mb-2 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-24'}`}
     >
       <button 
         onClick={() => onNavigate('home')}

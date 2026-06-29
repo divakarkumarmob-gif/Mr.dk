@@ -41,6 +41,8 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
 
   // Gesture Tracking Refs
   const dragStartRef = useRef<{ y: number; val: number; side: 'left' | 'right' } | null>(null);
+  const [isDragMode, setIsDragMode] = useState(false);
+  const dragHoldTimerRef = useRef<NodeJS.Timeout | null>(null);
   const lastTapRef = useRef<{ time: number; x: number } | null>(null);
   const singleTapTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const playPauseFeedbackTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -246,6 +248,14 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       side: isLeft ? 'left' : 'right'
     };
 
+    // Start a hold timer for drag mode (Brightness/Volume)
+    if (dragHoldTimerRef.current) clearTimeout(dragHoldTimerRef.current);
+    dragHoldTimerRef.current = setTimeout(() => {
+      if (dragStartRef.current) {
+        setIsDragMode(true);
+      }
+    }, 400); // 400ms hold to activate drag mode
+
     // Schedule the single tap action with a slight delay
     // This allows us to cancel it if a second tap comes for a double tap
     singleTapTimeoutRef.current = setTimeout(() => {
@@ -273,13 +283,22 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   const handlePointerMove = (clientY: number) => {
     if (!dragStartRef.current) return;
 
-    // If we have moved, it is a slide/drag gesture, not a single tap! Cancel scheduled single tap
-    const deltaY = Math.abs(dragStartRef.current.y - clientY);
-    if (deltaY > 5) {
-      if (singleTapTimeoutRef.current) {
-        clearTimeout(singleTapTimeoutRef.current);
-        singleTapTimeoutRef.current = null;
+    // If we have moved, it might be a single tap intent that's now a drag.
+    // If they haven't held long enough, don't allow drag mode.
+    if (!isDragMode) {
+      // If they move too much before hold, cancel everything
+      const deltaY = Math.abs(dragStartRef.current.y - clientY);
+      if (deltaY > 10) {
+        if (dragHoldTimerRef.current) {
+          clearTimeout(dragHoldTimerRef.current);
+          dragHoldTimerRef.current = null;
+        }
+        if (singleTapTimeoutRef.current) {
+          clearTimeout(singleTapTimeoutRef.current);
+          singleTapTimeoutRef.current = null;
+        }
       }
+      return;
     }
 
     const rect = containerRef.current?.getBoundingClientRect();
@@ -301,7 +320,12 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     }
   };
   const handlePointerUp = () => {
+    if (dragHoldTimerRef.current) {
+      clearTimeout(dragHoldTimerRef.current);
+      dragHoldTimerRef.current = null;
+    }
     dragStartRef.current = null;
+    setIsDragMode(false);
     // Hide feedback after short delay
     setTimeout(() => {
       setGestureFeedback(null);
