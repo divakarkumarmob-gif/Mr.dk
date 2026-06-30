@@ -174,7 +174,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     };
 
     return (
-        <div className="fixed inset-0 z-[1000] bg-gradient-to-b from-[#1a1a40] to-[#0a0f24] text-white flex flex-col pt-[max(env(safe-area-inset-top,0px),24px)] px-6 pb-12">
+        <div className="fixed inset-0 z-[1000] bg-gradient-to-b from-[#1a1a40] to-[#0a0f24] text-white flex flex-col pt-[max(env(safe-area-inset-top,0px),8px)] px-6 pb-12">
             <div className="w-full flex justify-between items-center mb-6">
                 <h1 className="text-xl font-bold">NeetMaster AI</h1>
                 <button onClick={onClose} className="text-gray-400">

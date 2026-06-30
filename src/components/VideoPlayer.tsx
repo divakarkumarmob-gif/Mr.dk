@@ -19,10 +19,28 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
         ScreenOrientation.lock({ orientation: 'landscape' }).catch(() => {});
       } else {
         StatusBar.show().catch(() => {});
-        ScreenOrientation.unlock().catch(() => {});
+        ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        }).catch(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        });
       }
     }
   }, [selectedVideoId]);
+
+  // Cleanup for component unmount
+  useEffect(() => {
+    return () => {
+      if (Capacitor.isNativePlatform()) {
+        StatusBar.show().catch(() => {});
+        ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        }).catch(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        });
+      }
+    };
+  }, []);
 
   // sync selectedVideoId with history state
   useEffect(() => {

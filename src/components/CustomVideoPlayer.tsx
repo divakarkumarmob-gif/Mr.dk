@@ -212,7 +212,11 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
         setIsFullscreen(false);
         // Unlock orientation
         if (Capacitor.isNativePlatform()) {
-          ScreenOrientation.unlock().catch(() => {});
+          ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
+            ScreenOrientation.unlock().catch(() => {});
+          }).catch(() => {
+            ScreenOrientation.unlock().catch(() => {});
+          });
         } else {
           if (window.screen.orientation && window.screen.orientation.unlock) {
             window.screen.orientation.unlock();
@@ -222,6 +226,19 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     }
     triggerControlsActivity();
   };
+
+  // Add cleanup for orientation when component unmounts
+  useEffect(() => {
+    return () => {
+      if (Capacitor.isNativePlatform()) {
+        ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        }).catch(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        });
+      }
+    };
+  }, []);
 
   // Detect exit fullscreen via escape key / browser controls
   useEffect(() => {

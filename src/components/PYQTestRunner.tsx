@@ -279,7 +279,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                 </div>
             )}
             {/* Header */}
-            <div className="flex items-center justify-between p-4 pt-[max(env(safe-area-inset-top,0px),24px)] border-b border-gray-100 bg-white sticky top-0 z-10">
+            <div className="flex items-center justify-between p-4 pt-[max(env(safe-area-inset-top,0px),8px)] border-b border-gray-100 bg-white sticky top-0 z-10">
                 <button onClick={() => setShowQuitModal(true)} className="text-gray-900"><ChevronLeft /></button>
                 <div className="flex flex-col items-center">
                     <h1 className="font-bold text-sm text-gray-900">{title}</h1>
