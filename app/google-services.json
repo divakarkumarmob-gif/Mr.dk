@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "900766773228",
+    "project_id": "gen-lang-client-0147825816",
+    "storage_bucket": "gen-lang-client-0147825816.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900766773228:android:e96175c06e4cd1d0115ac9",
+        "android_client_info": {
+          "package_name": "com.neetmaster.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900766773228-p2iuone8ag7d2eijn92qh2a77scopfi1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neetmaster.app",
+            "certificate_hash": "0000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "client_id": "900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWrNiX7eOtIGUnkO93kSnRv3iZngwHZks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: KEYSTORE_FILE
 
     steps:
       - name: Checkout Source Code
@@ -46,37 +47,42 @@ jobs:
       - name: Grant Execute Permission to Gradlew
         run: chmod +x android/gradlew
 
-      - name: Generate Debug Keystore
-        run: |
-          mkdir -p ~/.config/.android
-          if [ ! -f ~/.config/.android/debug.keystore ]; then
-            keytool -genkey -v -keystore ~/.config/.android/debug.keystore -storepass android -alias AndroidDebugKey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
-          fi
-
-      - name: Show Android Signing Report (Fingerprints)
+      - name: Build Release APK & AAB
         run: |
           cd android
-          ./gradlew signingReport -Dorg.gradle.project.android.debug.keystore=$HOME/.config/.android/debug.keystore
-
-      - name: Build Debug APK (For Manual Testing)
-        run: |
-          cd android
-          ./gradlew assembleDebug
-
-      - name: Build Unsigned Release AAB (For Play Store Upload)
-        run: |
-          cd android
+          ./gradlew assembleRelease
           ./gradlew bundleRelease
 
-      - name: Upload Debug APK Artifact
+      - name: Sign APK
+        uses: r0adkll/sign-android-release@v1
+        id: sign_apk
+        with:
+          releaseDirectory: android/app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.KEYSTORE_FILE }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Sign AAB
+        uses: r0adkll/sign-android-release@v1
+        id: sign_aab
+        with:
+          releaseDirectory: android/app/build/outputs/bundle/release
+          signingKeyBase64: ${{ secrets.KEYSTORE_FILE }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Upload Signed APK
         uses: actions/upload-artifact@v4
         with:
-          name: debug-apk
-          path: android/app/build/outputs/apk/debug/*.apk
+          name: signed-release-apk
+          path: ${{ steps.sign_apk.outputs.signedReleaseFile }}
           retention-days: 14
 
-      - name: Upload Unsigned Release AAB Artifact
+      - name: Upload Signed AAB
         uses: actions/upload-artifact@v4
         with:
-          name: unsigned-release-aab
-          path: android/app/build/outputs/bundle/release/*.aab
+          name: signed-release-aab
+          path: ${{ steps.sign_aab.outputs.signedReleaseFile }}
+          retention-days: 14

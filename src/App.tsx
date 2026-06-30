@@ -1204,7 +1204,7 @@ export default function App() {
 
   if (currentView === 'mindHack') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#f4e4bc] pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-[#f4e4bc] pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <MindHackPage onBack={() => setCurrentView('profile')} />
         </div>
       );
@@ -1212,7 +1212,7 @@ export default function App() {
 
   if (currentView === 'aiStudyPlan') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#f0f4f8] pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-[#f0f4f8] pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
         </div>
       );
@@ -1238,7 +1238,7 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.3 }}
-            className="pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]"
+            className="pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]"
         >
             <StudyHub 
                 subjects={subjects} 
@@ -1299,7 +1299,7 @@ export default function App() {
   
   if (currentView === 'profile') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen pb-20 pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1317,7 +1317,7 @@ export default function App() {
   
   if (currentView === 'notesLibrary') {
       return (
-        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-background pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <NotesLibrary onBack={() => setCurrentView('profile')} />
         </div>
       );
@@ -1325,7 +1325,7 @@ export default function App() {
 
   if (currentView === 'editProfile') {
       return (
-        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-background pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <EditProfile user={user} onNavigate={setCurrentView} />
         </div>
       );
@@ -1333,7 +1333,7 @@ export default function App() {
 
   if (currentView === 'admin') {
       return (
-          <div className="min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)] text-foreground">
+          <div className="min-h-screen bg-background pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)] text-foreground">
               <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
               <AdminPanel onNavigate={setCurrentView} />
               <SupportModal 
@@ -1355,7 +1355,7 @@ export default function App() {
 
   if (currentView === 'tests') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen pb-20 pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
             <SupportModal 
@@ -1372,7 +1372,7 @@ export default function App() {
 
   if (currentView === 'ncertHub') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[max(env(safe-area-inset-top,0px),40px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <NCERTHub onBack={() => setCurrentView('notes')} />
         </div>
       );
@@ -1381,7 +1381,7 @@ export default function App() {
   if (currentView === 'ntaQuestionsHub') {
       const paperId = urlParams.get('paper');
       return (
-        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[max(env(safe-area-inset-top,0px),40px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
         </div>
       );
@@ -1389,7 +1389,7 @@ export default function App() {
 
   if (currentView === 'oldPyqHistory') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#05070A] pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen bg-[#05070A] pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <OldPYQHistory onBack={() => setCurrentView('notes')} />
         </div>
       );
@@ -1397,7 +1397,7 @@ export default function App() {
 
   if (currentView === 'notes') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="flex flex-col min-h-screen pb-20 bg-background pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1414,7 +1414,7 @@ export default function App() {
 
    if (currentView === 'analytics') {
        return (
-         <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+         <div className="flex flex-col min-h-screen bg-background pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
              <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} /></div>
              <SupportModal 
                 isOpen={showSupportModal} 
@@ -1430,7 +1430,7 @@ export default function App() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <div className="min-h-screen bg-background text-foreground pt-[max(env(safe-area-inset-top,0px),8px)]">
+         <div className="min-h-screen bg-background text-foreground pt-[calc(env(safe-area-inset-top,0px)+4px)]">
              <button className="absolute top-[max(env(safe-area-inset-top,0px),12px)] left-4 z-[1100] text-sm text-gray-400 bg-black/50 px-2 py-1 rounded-md" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
              <UserChat fullScreen={true} user={user} />
          </div>
@@ -1488,7 +1488,7 @@ export default function App() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),8px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]`}
+      className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''} pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]`}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full px-1 sm:px-2">
