@@ -87,7 +87,7 @@ export default function AnalysisHistory({ onNavigate, user }: { onNavigate: (vie
     }
 
     return (
-        <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground px-3">
+        <div className="flex flex-col h-screen bg-background text-foreground px-3 overflow-y-auto pb-44">
             <div className="flex-grow">
                 <h1 className="text-2xl font-bold mb-6">Test History</h1>
 

@@ -1630,7 +1630,7 @@ export default function App() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),12px)] px-3`}
+      className={`h-screen bg-background text-foreground font-sans pb-44 overflow-y-auto ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),12px)] px-3`}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full">

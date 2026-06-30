@@ -234,7 +234,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
 
     return (
         <>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-[#0a0f24] text-white pb-20 font-sans">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-screen bg-[#0a0f24] text-white pb-40 font-sans overflow-y-auto">
             <div className="max-w-full mx-auto px-3">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">

@@ -194,7 +194,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   });
 
   return (
-    <div className="min-h-screen bg-[#0a0f24] text-white font-sans pb-20 px-3">
+    <div className="h-screen bg-[#0a0f24] text-white font-sans pb-44 px-3 overflow-y-auto">
       {pyqQuestions ? (
             <PYQTestRunner 
                 questions={pyqQuestions} 
@@ -273,8 +273,10 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             )}
             
             {selectedResult && (
-                <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-2 flex flex-col text-white">
-                    <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />
+                <div className="fixed inset-0 bg-[#0a0f24] z-[100] flex flex-col text-white overflow-y-auto">
+                    <div className="p-2 min-h-full">
+                        <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />
+                    </div>
                 </div>
             )}
 
