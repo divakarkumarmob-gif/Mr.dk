@@ -18,12 +18,23 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Rendering error in MindHack component:", error, errorInfo);
+    console.error("Uncaught error:", error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
-      return <div className="p-4 text-red-500">Error loading Mind Hack modal.</div>;
+      return (
+        <div className="flex flex-col items-center justify-center p-8 text-center bg-card rounded-2xl border border-destructive/20 m-4">
+          <h2 className="text-xl font-bold text-destructive mb-2">Something went wrong</h2>
+          <p className="text-muted-foreground mb-4">We encountered an error while rendering this page. Please try going back.</p>
+          <button 
+            onClick={() => this.setState({ hasError: false })}
+            className="px-4 py-2 bg-blue-600 rounded-lg font-bold"
+          >
+            Try Again
+          </button>
+        </div>
+      );
     }
 
     return this.props.children;

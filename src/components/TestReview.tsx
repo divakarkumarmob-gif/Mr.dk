@@ -49,10 +49,10 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
             <div className="flex-grow overflow-y-auto px-1 pb-40">
                 <div className="p-6 bg-[#161e38] rounded-2xl mb-6 border border-white/5 shadow-inner">
                     <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-4 tracking-tight">Question Details</p>
-                    <p className="text-lg font-medium text-gray-100 leading-relaxed">{question.question}</p>
+                    <p className="text-lg font-medium text-gray-100 leading-relaxed">{question?.question || 'Question text not found.'}</p>
                 </div>
                 <div className="space-y-4">
-                    {Object.entries(question.options).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => {
+                    {question?.options && Object.entries(question.options).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => {
                         const isCorrect = key === question.correct_option;
                         const isSelected = answers[question.id] === key;
                         const isWrong = isSelected && !isCorrect;
@@ -74,7 +74,7 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
                         <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                         Explanation
                     </p>
-                    <p className="text-gray-300 leading-relaxed">{question.explanation}</p>
+                    <p className="text-gray-300 leading-relaxed">{question?.explanation || 'No explanation available.'}</p>
                 </div>
             </div>
 

@@ -15,14 +15,15 @@ export default function TestAnalysis({ result, onClose }: TestAnalysisProps) {
     const [showReview, setShowReview] = useState(false);
 
     useEffect(() => {
-        analyzeTestPerformance(result.questions || [], result.answers || {})
+        if (!result) return;
+        analyzeTestPerformance(result?.questions || [], result?.answers || {})
             .then(setAnalysis)
             .catch(() => setAnalysis("Analysis currently unavailable."))
             .finally(() => setLoading(false));
     }, [result]);
 
     if (showReview) {
-        return <TestReview questions={result.questions || []} answers={result.answers || {}} filterType="incorrect" onClose={() => setShowReview(false)} />;
+        return <TestReview questions={result?.questions || []} answers={result?.answers || {}} filterType="incorrect" onClose={() => setShowReview(false)} />;
     }
 
     return (

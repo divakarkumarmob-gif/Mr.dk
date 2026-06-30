@@ -3,6 +3,7 @@ import { db, auth } from '../lib/firebase';
 import { collection, query, getDocs, orderBy } from 'firebase/firestore';
 import BottomNav from './BottomNav';
 import TestResultDetail from './TestResultDetail';
+import ErrorBoundary from './ErrorBoundary';
 
 export default function AnalysisHistory({ onNavigate, user }: { onNavigate: (view: any) => void, user: any }) {
     const [results, setResults] = useState<any[]>([]);
@@ -69,24 +70,21 @@ export default function AnalysisHistory({ onNavigate, user }: { onNavigate: (vie
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
-    if (selectedResult) {
-        return <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />;
-    }
-
-    useEffect(() => {
-        const handlePop = () => {
-            if (selectedResult && !window.history.state?.isResultOpen) {
-                setSelectedResult(null);
-            }
-        };
-        window.addEventListener('popstate', handlePop);
-        return () => window.removeEventListener('popstate', handlePop);
-    }, [selectedResult]);
-
     const handleSeeResult = (result: any) => {
         setSelectedResult(result);
-        window.history.pushState({ view: 'analytics', isResultOpen: true }, '', window.location.href);
     };
+
+    const handleBackFromResult = () => {
+        setSelectedResult(null);
+    };
+
+    if (selectedResult) {
+        return (
+            <ErrorBoundary>
+                <TestResultDetail result={selectedResult} onBack={handleBackFromResult} />
+            </ErrorBoundary>
+        );
+    }
 
     return (
         <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground px-3">
@@ -116,7 +114,7 @@ export default function AnalysisHistory({ onNavigate, user }: { onNavigate: (vie
                             <div key={result.id} className="bg-card p-4 rounded-xl flex justify-between items-center">
                                 <div className="flex flex-col text-left">
                                     <span className="font-semibold">{result.testName}</span>
-                                    {result.timestamp && (
+                                    {result.timestamp && !isNaN(result.timestamp.getTime()) && (
                                         <span className="text-muted-foreground text-xs">
                                             {result.timestamp.toLocaleDateString()}
                                         </span>
