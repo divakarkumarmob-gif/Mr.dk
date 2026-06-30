@@ -71,9 +71,14 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
   const isClosingRef = useRef(false);
 
   useEffect(() => {
-    // Push the initial 'list' state only if not already there
+    // Ensure the initial state for PrivateVideos list is present
     if (window.history.state?.privateVideoView !== 'list') {
-      window.history.pushState({ privateVideoView: 'list', index: 0, showPrivateVideos: true }, '');
+      window.history.replaceState({ 
+        ...window.history.state, 
+        privateVideoView: 'list', 
+        index: 0,
+        showPrivateVideos: true 
+      }, '');
     }
     currentIndexRef.current = 0;
 
@@ -81,13 +86,22 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       if (isClosingRef.current) return;
 
       const state = event.state;
-      if (state && typeof state.index === 'number' && state.privateVideoView) {
-        currentIndexRef.current = state.index;
+      // If showPrivateVideos is no longer true, we've backed out of the overlay
+      if (!state || !state.showPrivateVideos) {
+        onClose();
+        return;
+      }
+
+      if (state.privateVideoView) {
+        currentIndexRef.current = state.index || 0;
         const view = state.privateVideoView as 'list' | 'chapter' | 'player';
         setCurrentView(view);
         
-        // Recover selected subject and chapter from state if possible
-        if (state.subjectName && subjects.length > 0) {
+        if (view === 'list') {
+          setActiveVideo(null);
+          setSelectedChapter(null);
+          setSelectedSubject(null);
+        } else if (state.subjectName && subjects.length > 0) {
            const subj = subjects.find(s => s.name === state.subjectName);
            if (subj) {
              setSelectedSubject(subj);
@@ -98,22 +112,16 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                  if (state.videoKey) {
                     const vid = chap.videos.find(v => v.key === state.videoKey);
                     if (vid) setActiveVideo(vid);
+                 } else {
+                    setActiveVideo(null);
                  }
                }
+             } else {
+               setSelectedChapter(null);
+               setActiveVideo(null);
              }
            }
         }
-
-        if (view === 'list') {
-          setSelectedChapter(null);
-          setSelectedSubject(null);
-          setActiveVideo(null);
-        } else if (view === 'chapter') {
-          setActiveVideo(null);
-        }
-      } else {
-        // No state or we backed out of our initial 'list' view
-        onClose();
       }
     };
 

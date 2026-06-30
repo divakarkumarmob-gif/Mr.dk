@@ -606,6 +606,12 @@ export default function App() {
   const [showFlashcards, setShowFlashcards] = useState(false);
   const [showStudyDashboard, setShowStudyDashboard] = useState(false);
   const [showPrivateVideos, setShowPrivateVideos] = useState(false);
+  const togglePrivateVideos = (show: boolean) => {
+    if (show) {
+      window.history.pushState({ ...window.history.state, showPrivateVideos: true }, '');
+    }
+    setShowPrivateVideos(show);
+  };
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
@@ -1269,7 +1275,13 @@ export default function App() {
         <AnimatePresence mode="wait">
            {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
            {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
-           {showPrivateVideos && <PrivateVideos onClose={() => setShowPrivateVideos(false)} />}
+           {showPrivateVideos && <PrivateVideos onClose={() => {
+               // If we are closing manually (not via popstate), we might need to go back
+               if (window.history.state?.showPrivateVideos) {
+                   window.history.back();
+               }
+               setShowPrivateVideos(false);
+           }} />}
         </AnimatePresence>
         <motion.div 
             initial={{ opacity: 0, x: 20 }} 
@@ -1293,7 +1305,7 @@ export default function App() {
                 startDetectionLoop={startDetectionLoop}
                 setShowFlashcards={setShowFlashcards}
                 setShowStudyDashboard={setShowStudyDashboard}
-                setShowPrivateVideos={setShowPrivateVideos}
+                setShowPrivateVideos={togglePrivateVideos}
                 onNavigate={(view) => {
               if (view === 'customPractice') {
                   setCurrentView('customPractice');
