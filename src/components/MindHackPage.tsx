@@ -36,16 +36,16 @@ export default function MindHackPage({ onBack }: { onBack: () => void }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="min-h-screen bg-[#f4e4bc] text-[#2c1d0d] font-serif relative"
+            className="min-h-screen bg-[#f4e4bc] text-[#2c1d0d] font-serif relative p-4 pt-[max(env(safe-area-inset-top,0px),64px)]"
         >
             <button 
                 onClick={onBack} 
-                className="absolute top-4 left-4 flex items-center gap-2 text-sm font-bold bg-[#d4b97f]/50 p-2 rounded-full"
+                className="absolute top-[max(env(safe-area-inset-top,0px),16px)] left-4 flex items-center gap-2 text-sm font-bold bg-[#d4b97f]/50 p-2 rounded-full z-10"
             >
                 <ArrowLeft className="h-5 w-5" /> Back
             </button>
             
-            <div className="absolute top-4 right-4 flex gap-2">
+            <div className="absolute top-[max(env(safe-area-inset-top,0px),16px)] right-4 flex gap-2 z-10">
                 {currentPage > 0 && (
                     <button 
                         onClick={handlePrev} 

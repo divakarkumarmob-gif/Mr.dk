@@ -170,9 +170,18 @@ export default function App() {
     if (Capacitor.isNativePlatform()) {
       const lightViews = ['mindHack', 'aiStudyPlan'];
       const isLight = lightViews.includes(currentView);
+      
+      // User specifically requested white font (Style.Light) for contrast
+      // We use Light (white icons) for most views, and Dark (dark icons) for light views
       StatusBar.setStyle({ style: isLight ? Style.Dark : Style.Light }).catch(() => {});
-      // Ensure status bar is transparent when overlaying
-      StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#0a0f24' }).catch(() => {});
+      
+      // Set to transparent to allow app background to show through in overlay mode
+      StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#00000000' }).catch(() => {});
+      
+      // Ensure it overlays the webview for the modern look requested
+      StatusBar.setOverlaysWebView({ overlay: true }).catch(() => {});
+      
+      // Always show to prevent disappearing on scroll
       StatusBar.show().catch(() => {});
     }
   }, [currentView]);
