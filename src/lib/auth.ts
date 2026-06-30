@@ -9,6 +9,10 @@ export const signInWithGoogle = async () => {
     try {
         if (Capacitor.isNativePlatform()) {
             console.log('Initiating Native Google Sign-In...');
+            const webClientId = '900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com';
+            console.log('Using Web Client ID:', webClientId);
+            
+            // For Capacitor Firebase Auth, it's often better to specify the clientId if it fails
             const result = await FirebaseAuthentication.signInWithGoogle();
             console.log('Native Google Sign-In result:', JSON.stringify(result));
             
