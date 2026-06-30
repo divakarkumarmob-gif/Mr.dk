@@ -10,8 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: KEYSTORE_FILE
-
+    
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
@@ -36,14 +35,15 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '21'
+          cache: 'gradle'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          build-tools: 34.0.0
+          build-tools: 35.0.0
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Fix Corrupt Gradle Wrapper Jar
         run: |
@@ -52,42 +52,34 @@ jobs:
       - name: Grant Execute Permission to Gradlew
         run: chmod +x android/gradlew
 
-      - name: Build Release APK & AAB
+      - name: Build and Sign Release APK & AAB
+        env:
+          KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
+          # Decode the keystore from Base64 secret
+          echo "$KEYSTORE_FILE" | base64 --decode > android/app/release.keystore
+          
+          # Build and sign using Gradle properties
           cd android
-          ./gradlew assembleRelease
-          ./gradlew bundleRelease
-
-      - name: Sign APK
-        uses: r0adkll/sign-android-release@v1
-        id: sign_apk
-        with:
-          releaseDirectory: android/app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.KEYSTORE_FILE }}
-          alias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
-
-      - name: Sign AAB
-        uses: r0adkll/sign-android-release@v1
-        id: sign_aab
-        with:
-          releaseDirectory: android/app/build/outputs/bundle/release
-          signingKeyBase64: ${{ secrets.KEYSTORE_FILE }}
-          alias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
+          ./gradlew assembleRelease bundleRelease \
+            -PRELEASE_STORE_FILE=release.keystore \
+            -PRELEASE_STORE_PASSWORD="$KEYSTORE_PASSWORD" \
+            -PRELEASE_KEY_ALIAS="$KEY_ALIAS" \
+            -PRELEASE_KEY_PASSWORD="$KEY_PASSWORD"
 
       - name: Upload Signed APK
         uses: actions/upload-artifact@v4
         with:
           name: signed-release-apk
-          path: ${{ steps.sign_apk.outputs.signedReleaseFile }}
+          path: android/app/build/outputs/apk/release/app-release.apk
           retention-days: 14
 
       - name: Upload Signed AAB
         uses: actions/upload-artifact@v4
         with:
           name: signed-release-aab
-          path: ${{ steps.sign_aab.outputs.signedReleaseFile }}
+          path: android/app/build/outputs/bundle/release/app-release.aab
           retention-days: 14
