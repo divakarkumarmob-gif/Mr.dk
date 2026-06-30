@@ -8,18 +8,34 @@ const googleProvider = new GoogleAuthProvider();
 export const signInWithGoogle = async () => {
     try {
         if (Capacitor.isNativePlatform()) {
+            console.log('Initiating Native Google Sign-In...');
             const result = await FirebaseAuthentication.signInWithGoogle();
+            console.log('Native Google Sign-In result:', JSON.stringify(result));
+            
             if (!result.credential?.idToken) {
-                throw new Error('No ID Token returned from Google Sign-In');
+                console.error('Missing ID Token in result');
+                throw new Error('No ID Token returned from Google Sign-In. Check SHA-1/SHA-256 in Firebase Console.');
             }
+            
+            console.log('Creating Firebase credential with ID Token...');
             const credential = GoogleAuthProvider.credential(result.credential.idToken);
-            return await signInWithCredential(auth, credential);
+            const userCredential = await signInWithCredential(auth, credential);
+            console.log('Firebase Sign-In successful for native platform');
+            return userCredential;
         } else {
-            await signInWithPopup(auth, googleProvider);
+            console.log('Initiating Web Google Sign-In (Popup)...');
+            return await signInWithPopup(auth, googleProvider);
         }
-    } catch (error) {
-        console.error('Google Sign-In error details:', JSON.stringify(error));
-        alert('Google Sign-In failed. Please check the logs.');
+    } catch (error: any) {
+        console.error('Google Sign-In comprehensive error:', error);
+        const errorMessage = error?.message || (typeof error === 'string' ? error : 'Unknown error');
+        console.error('Stringified error:', JSON.stringify(error));
+        
+        // Detailed error for native debugging
+        if (Capacitor.isNativePlatform()) {
+            alert(`Google Login Error: ${errorMessage}\n\nMake sure SHA-1 and SHA-256 are added to Firebase Console.`);
+        }
+        
         throw error;
     }
 };
