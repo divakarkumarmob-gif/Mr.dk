@@ -336,7 +336,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
   };
 
   return (
-    <div id="notes-root" className="min-h-screen text-slate-100 pb-24 px-0">
+    <div id="notes-root" className="min-h-screen text-slate-100 pb-24 px-3">
       <AnimatePresence mode="wait">
         
         {/* VIEW 1: Main View (Important Notes Dashboard) */}

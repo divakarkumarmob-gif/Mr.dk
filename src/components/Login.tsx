@@ -215,7 +215,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 px-0 pb-8 flex flex-col items-center">
+    <div className="min-h-screen bg-gray-50 px-3 pb-8 flex flex-col items-center pt-[max(env(safe-area-inset-top,0px),12px)]">
       {errorMessage && (
           <div className="fixed top-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-[1001]">
               {errorMessage}

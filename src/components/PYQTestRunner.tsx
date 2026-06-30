@@ -251,7 +251,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
     }
 
     return (
-        <div className="fixed inset-0 bg-white text-gray-900 font-sans z-[100] flex flex-col">
+        <div className="fixed inset-0 bg-white text-gray-900 font-sans z-[100] flex flex-col pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
             {/* Quit Confirmation Modal */}
             {showQuitModal && (
                 <div className="fixed inset-0 bg-black/50 z-[130] flex items-center justify-center p-6">
