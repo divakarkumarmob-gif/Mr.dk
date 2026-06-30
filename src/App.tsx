@@ -168,11 +168,12 @@ export default function App() {
   // Handle status bar style based on current view
   useEffect(() => {
     if (Capacitor.isNativePlatform()) {
-      const darkViews = ['liveAI', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory'];
-      const isDark = darkViews.includes(currentView);
-      StatusBar.setStyle({ style: isDark ? Style.Light : Style.Dark }).catch(() => {});
-      // Ensure status bar is transparent or matches background for better contrast
-      StatusBar.setBackgroundColor({ color: isDark ? '#0a0f24' : '#ffffff' }).catch(() => {});
+      const lightViews = ['mindHack', 'aiStudyPlan'];
+      const isLight = lightViews.includes(currentView);
+      StatusBar.setStyle({ style: isLight ? Style.Dark : Style.Light }).catch(() => {});
+      // Ensure status bar is transparent when overlaying
+      StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#0a0f24' }).catch(() => {});
+      StatusBar.show().catch(() => {});
     }
   }, [currentView]);
 
@@ -1502,7 +1503,7 @@ export default function App() {
       className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),12px)] px-3`}
     >
       
-      <div className="relative z-10 max-w-full mx-auto w-full px-0">
+      <div className="relative z-10 max-w-full mx-auto w-full">
       
       {showExitToast && (
           <div className="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-xs font-semibold z-[1000] shadow-2xl animate-bounce">

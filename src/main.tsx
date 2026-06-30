@@ -11,7 +11,7 @@ console.log("Logger initialized", globalLogger);
 
 // Initialize Status Bar
 if (Capacitor.isNativePlatform()) {
-  StatusBar.setStyle({ style: Style.Dark }).catch(() => {});
+  StatusBar.setStyle({ style: Style.Light }).catch(() => {});
   StatusBar.show().catch(() => {}); // Ensure it's visible by default
 }
 
