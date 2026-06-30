@@ -40,16 +40,16 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          build-tools: 35.0.0
-
-      - name: Fix Corrupt Gradle Wrapper Jar
-        run: |
-          curl -Lo android/gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle/v8.14.3/gradle/wrapper/gradle-wrapper.jar
+          build-tools: 34.0.0
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           wrapper-validation-enabled: false
+
+      - name: Fix Corrupt Gradle Wrapper Jar
+        run: |
+          curl -Lo android/gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle/v8.14.3/gradle/wrapper/gradle-wrapper.jar
 
       - name: Grant Execute Permission to Gradlew
         run: chmod +x android/gradlew
@@ -57,20 +57,23 @@ jobs:
       - name: Build and Sign Release APK & AAB
         env:
           KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          RELEASE_STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           # Decode the keystore from Base64 secret
-          echo "$KEYSTORE_FILE" | base64 --decode > android/app/release.keystore
+          # Use printf and base64 -di for maximum robustness
+          printf "%s" "$KEYSTORE_FILE" | base64 -di > android/app/release.keystore
           
-          # Build and sign using Gradle properties
+          # Check if file was created and is not empty
+          if [ ! -s android/app/release.keystore ]; then
+            echo "Error: Keystore file is empty or decoding failed"
+            exit 1
+          fi
+          
+          # Build and sign using environment variables
           cd android
-          ./gradlew assembleRelease bundleRelease \
-            -PRELEASE_STORE_FILE=release.keystore \
-            -PRELEASE_STORE_PASSWORD="$KEYSTORE_PASSWORD" \
-            -PRELEASE_KEY_ALIAS="$KEY_ALIAS" \
-            -PRELEASE_KEY_PASSWORD="$KEY_PASSWORD"
+          ./gradlew assembleRelease bundleRelease
 
       - name: Upload Signed APK
         uses: actions/upload-artifact@v4
