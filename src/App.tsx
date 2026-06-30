@@ -181,27 +181,17 @@ export default function App() {
       const lightViews = ['mindHack', 'aiStudyPlan'];
       const isLight = lightViews.includes(currentView);
       
-      // User requested white font (Style.Light) for contrast on dark backgrounds
-      // We use Light (white icons) for most views, and Dark (dark icons) for light views
-      StatusBar.setStyle({ style: isLight ? Style.Dark : Style.Light }).catch(() => {});
+      // Style.Dark gives white text (for dark background)
+      // Style.Light gives black text (for light background)
+      StatusBar.setStyle({ style: isLight ? Style.Light : Style.Dark }).catch(() => {});
       
-      // Use solid color instead of transparent if contrast is an issue, 
-      // but the user wants it to look good. Let's try matching exactly.
+      // Use solid color instead of transparent if contrast is an issue
       StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#0a0f24' }).catch(() => {});
       
-      // Ensure it overlays the webview for the modern look
-      StatusBar.setOverlaysWebView({ overlay: true }).catch(() => {});
-      
-      // Always show to prevent disappearing
+      // Ensure it overlays the webview
       StatusBar.show().catch(() => {});
     }
   }, [currentView]);
-
-  useEffect(() => {
-    if (Capacitor.isNativePlatform()) {
-      StatusBar.show().catch(err => console.error('StatusBar show error:', err));
-    }
-  }, []);
 
   useEffect(() => {
     // Initial state replacement to ensure first view is in history
