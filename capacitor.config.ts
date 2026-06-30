@@ -13,7 +13,7 @@ const config: CapacitorConfig = {
       webClientId: "900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com",
     },
     StatusBar: {
-      overlaysWebView: true,
+      overlaysWebView: false,
     },
   },
 };
