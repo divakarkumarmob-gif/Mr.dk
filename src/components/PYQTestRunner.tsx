@@ -28,6 +28,19 @@ interface PYQTestRunnerProps {
 
 export default function PYQTestRunner(props: PYQTestRunnerProps) {
     const { questions = [], onBack, title, paperUrl, initialData } = props;
+    const [user, setUser] = useState<any>(auth.currentUser);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(u => {
+            if (u) setUser(u);
+            else {
+                const cachedGuest = localStorage.getItem('guest_user');
+                if (cachedGuest) setUser(JSON.parse(cachedGuest));
+            }
+        });
+        return () => unsubscribe();
+    }, []);
+
     const [currentIndex, setCurrentIndex] = useState(initialData?.currentIndex || 0);
     const [answers, setAnswers] = useState<Record<string, string>>(initialData?.answers || {});
     const [marked, setMarked] = useState<Record<string, boolean>>(initialData?.marked || {});
@@ -126,7 +139,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
     };
 
     const handleTestSubmit = async () => {
-        if (!auth.currentUser) return alert("User not logged in");
+        if (!user) return alert("User not identified");
 
         const correct = questions.reduce((acc, q) => {
             return acc + (answers[q.id] === q.correct_option ? 1 : 0);
@@ -146,27 +159,51 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
         const total = questions.length;
         const timeTakenSeconds = (total * 60) - timeLeft;
 
+        const resultData = {
+            testName: title,
+            correct: correct,
+            incorrect: incorrect,
+            unattempted: total - (correct + incorrect),
+            totalQuestions: total,
+            totalPossibleMarks: totalPossibleMarks,
+            obtainedMarks: obtainedMarks,
+            percentage: Math.round((obtainedMarks / totalPossibleMarks) * 100) || 0,
+            timeTakenSeconds: timeTakenSeconds || 0,
+            accuracy: attempted > 0 ? Math.round((correct / attempted) * 100) || 0 : 0,
+            speed: timeTakenSeconds > 0 ? Math.round((attempted / (timeTakenSeconds / 60))) || 0 : 0,
+            attemptedRate: total > 0 ? Math.round((attempted / total) * 100) || 0 : 0,
+            difficulty: 'Moderate',
+            topicAnalysis: [], 
+            answers: answers,
+            questions: questions,
+            timestamp: new Date().toISOString()
+        };
+
         try {
-            console.log("Attempting to submit test, auth.currentUser.uid:", auth.currentUser.uid);
-            await addDoc(collection(db, 'users', auth.currentUser.uid, 'results'), {
-                testName: title,
-                correct: correct,
-                incorrect: incorrect,
-                unattempted: total - (correct + incorrect),
-                totalQuestions: total,
-                totalPossibleMarks: totalPossibleMarks,
-                obtainedMarks: obtainedMarks,
-                percentage: Math.round((obtainedMarks / totalPossibleMarks) * 100) || 0,
-                timeTakenSeconds: timeTakenSeconds || 0,
-                accuracy: attempted > 0 ? Math.round((correct / attempted) * 100) || 0 : 0,
-                speed: timeTakenSeconds > 0 ? Math.round((attempted / (timeTakenSeconds / 60))) || 0 : 0,
-                attemptedRate: total > 0 ? Math.round((attempted / total) * 100) || 0 : 0,
-                difficulty: 'Moderate',
-                topicAnalysis: [], // PYQ data doesn't have topics
-                answers: answers,
-                questions: questions, // ADDED: Save questions to enable detailed review
-                timestamp: new Date().toISOString()
-            });
+            if (user.uid.startsWith('local_guest_')) {
+                const localResults = localStorage.getItem(`results_${user.uid}`);
+                const resultsArray = localResults ? JSON.parse(localResults) : [];
+                resultsArray.push({ ...resultData, id: 'local_' + Date.now() });
+                localStorage.setItem(`results_${user.uid}`, JSON.stringify(resultsArray));
+                
+                // Also update guest stats
+                const localStats = localStorage.getItem(`stats_${user.uid}`);
+                const stats = localStats ? JSON.parse(localStats) : {
+                    testsAttempted: 0,
+                    questionsSolved: 0,
+                    accuracy: 0,
+                    timeSpentSeconds: 0,
+                    lectureTimeSeconds: 0,
+                    date: new Date().toISOString().split('T')[0]
+                };
+                stats.testsAttempted += 1;
+                stats.questionsSolved += correct;
+                stats.accuracy = Math.round((stats.accuracy * (stats.testsAttempted - 1) + resultData.accuracy) / stats.testsAttempted);
+                localStorage.setItem(`stats_${user.uid}`, JSON.stringify(stats));
+            } else {
+                console.log("Attempting to submit test, user.uid:", user.uid);
+                await addDoc(collection(db, 'users', user.uid, 'results'), resultData);
+            }
             console.log("Test submitted successfully");
             localStorage.removeItem('resumeTestData');
             setIsSubmitted(true);

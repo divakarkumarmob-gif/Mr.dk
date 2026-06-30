@@ -12,7 +12,7 @@ interface TestTutorProps {
 
 export default function TestTutor({ result, onClose }: TestTutorProps) {
     const [messages, setMessages] = useState<{ role: 'user' | 'model'; content: string }[]>([
-        { role: 'model', content: `Namaste! I've analyzed your test performance. Aapne ${result.score}% score kiya hai. Let's discuss your performance or any doubts you have!` }
+        { role: 'model', content: `Namaste! I've analyzed your test performance. Aapne ${result.percentage || result.score || 0}% score kiya hai. Let's discuss your performance or any doubts you have!` }
     ]);
     const [text, setText] = useState('');
     const [loading, setLoading] = useState(false);

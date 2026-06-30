@@ -23,6 +23,19 @@ interface NTAMockRunnerProps {
 type QuestionStatus = 'NOT_VISITED' | 'NOT_ANSWERED' | 'ANSWERED' | 'MARKED' | 'MARKED_ANSWERED';
 
 export default function NTAMockRunner({ questions = [], onBack, title }: NTAMockRunnerProps) {
+    const [user, setUser] = useState<any>(auth.currentUser);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(u => {
+            if (u) setUser(u);
+            else {
+                const cachedGuest = localStorage.getItem('guest_user');
+                if (cachedGuest) setUser(JSON.parse(cachedGuest));
+            }
+        });
+        return () => unsubscribe();
+    }, []);
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [status, setStatus] = useState<Record<string, QuestionStatus>>({});
@@ -104,7 +117,7 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
     };
 
     const handleSubmit = async () => {
-        if (!auth.currentUser) return;
+        if (!user) return;
 
         const totalQuestions = questions.length;
         const results = {
@@ -113,7 +126,7 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
             incorrect: 0,
             unattempted: 0,
             totalQuestions: totalQuestions,
-            userId: auth.currentUser.uid,
+            userId: user.uid,
             timestamp: new Date().toISOString(),
             answers: answers,
             questions: questions,
@@ -132,18 +145,42 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
         const totalPossibleMarks = totalQuestions * 4;
         const timeTakenSeconds = (totalQuestions * 60) - timeLeft;
 
+        const resultData = {
+            ...results,
+            obtainedMarks,
+            totalPossibleMarks,
+            percentage: Math.round((obtainedMarks / totalPossibleMarks) * 100) || 0,
+            timeTakenSeconds,
+            accuracy: (results.correct + results.incorrect) > 0 ? Math.round((results.correct / (results.correct + results.incorrect)) * 100) : 0,
+            speed: Math.min(100, Math.round(((results.correct + results.incorrect) / (timeTakenSeconds / 60)) * 20)), // Arbitrary scaling for UI
+            attemptedRate: Math.round(((results.correct + results.incorrect) / totalQuestions) * 100),
+            difficulty: 'NTA Official',
+        };
+
         try {
-            await addDoc(collection(db, 'users', auth.currentUser.uid, 'results'), {
-                ...results,
-                obtainedMarks,
-                totalPossibleMarks,
-                percentage: Math.round((obtainedMarks / totalPossibleMarks) * 100) || 0,
-                timeTakenSeconds,
-                accuracy: (results.correct + results.incorrect) > 0 ? Math.round((results.correct / (results.correct + results.incorrect)) * 100) : 0,
-                speed: Math.min(100, Math.round(((results.correct + results.incorrect) / (timeTakenSeconds / 60)) * 20)), // Arbitrary scaling for UI
-                attemptedRate: Math.round(((results.correct + results.incorrect) / totalQuestions) * 100),
-                difficulty: 'NTA Official',
-            });
+            if (user.uid.startsWith('local_guest_')) {
+                const localResults = localStorage.getItem(`results_${user.uid}`);
+                const resultsArray = localResults ? JSON.parse(localResults) : [];
+                resultsArray.push({ ...resultData, id: 'local_' + Date.now() });
+                localStorage.setItem(`results_${user.uid}`, JSON.stringify(resultsArray));
+
+                // Also update guest stats
+                const localStats = localStorage.getItem(`stats_${user.uid}`);
+                const stats = localStats ? JSON.parse(localStats) : {
+                    testsAttempted: 0,
+                    questionsSolved: 0,
+                    accuracy: 0,
+                    timeSpentSeconds: 0,
+                    lectureTimeSeconds: 0,
+                    date: new Date().toISOString().split('T')[0]
+                };
+                stats.testsAttempted += 1;
+                stats.questionsSolved += results.correct;
+                stats.accuracy = Math.round((stats.accuracy * (stats.testsAttempted - 1) + resultData.accuracy) / stats.testsAttempted);
+                localStorage.setItem(`stats_${user.uid}`, JSON.stringify(stats));
+            } else {
+                await addDoc(collection(db, 'users', user.uid, 'results'), resultData);
+            }
             setIsSubmitted(true);
         } catch (err) {
             console.error("Error submitting NTA test:", err);

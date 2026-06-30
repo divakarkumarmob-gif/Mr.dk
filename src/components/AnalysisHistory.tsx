@@ -4,15 +4,32 @@ import { collection, query, getDocs, orderBy } from 'firebase/firestore';
 import BottomNav from './BottomNav';
 import TestResultDetail from './TestResultDetail';
 
-export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any) => void }) {
+export default function AnalysisHistory({ onNavigate, user }: { onNavigate: (view: any) => void, user: any }) {
     const [results, setResults] = useState<any[]>([]);
     const [selectedResult, setSelectedResult] = useState<any | null>(null);
     const [activeTab, setActiveTab] = useState<'current' | 'past'>('current');
 
     useEffect(() => {
         const fetchResults = async () => {
-            if (!auth.currentUser) return;
-            const q = query(collection(db, 'users', auth.currentUser.uid, 'results'), orderBy('timestamp', 'desc'));
+            if (!user) return;
+            
+            if (user.uid.startsWith('local_guest_')) {
+                const localResults = localStorage.getItem(`results_${user.uid}`);
+                if (localResults) {
+                    try {
+                        const data = JSON.parse(localResults).map((d: any) => ({
+                            ...d,
+                            timestamp: new Date(d.timestamp)
+                        })).sort((a: any, b: any) => b.timestamp.getTime() - a.timestamp.getTime());
+                        setResults(data);
+                    } catch (e) {
+                        console.error("Failed to parse local results", e);
+                    }
+                }
+                return;
+            }
+
+            const q = query(collection(db, 'users', user.uid, 'results'), orderBy('timestamp', 'desc'));
             const querySnapshot = await getDocs(q);
             const data = querySnapshot.docs.map(doc => {
                 const d = doc.data();
@@ -25,7 +42,7 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
             setResults(data);
         };
         fetchResults();
-    }, []);
+    }, [user]);
 
     const currentResults = results.slice(0, 3);
     const pastResults = results.slice(3);
@@ -41,12 +58,12 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
 
     const isAnalysisReady = (timestamp: Date) => {
         const elapsed = now - timestamp.getTime();
-        return elapsed >= 120000;
+        return elapsed >= 5000;
     };
 
     const getRemainingTime = (timestamp: Date) => {
         const elapsed = now - timestamp.getTime();
-        const remaining = Math.max(0, 120000 - elapsed);
+        const remaining = Math.max(0, 5000 - elapsed);
         const mins = Math.floor(remaining / 60000);
         const secs = Math.floor((remaining % 60000) / 1000);
         return `${mins}:${secs.toString().padStart(2, '0')}`;

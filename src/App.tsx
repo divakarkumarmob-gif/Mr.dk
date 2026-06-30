@@ -167,6 +167,22 @@ export default function App() {
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
   const urlParamsRef = React.useRef(urlParams);
 
+  // Refs for tracking overlay states in the backButton listener
+  const showNeuralSolverRef = React.useRef(false);
+  const showSupportModalRef = React.useRef(false);
+  const showPrivateVideosRef = React.useRef(false);
+  const activeVideoRef = React.useRef<string | null>(null);
+  const isNotificationViewRef = React.useRef(false);
+  const showFlashcardsRef = React.useRef(false);
+  const showStudyDashboardRef = React.useRef(false);
+  const showResetModalRef = React.useRef(false);
+  const showAnalyticsRef = React.useRef(false);
+  const showRandomPopupRef = React.useRef(false);
+  const showOnboardingRef = React.useRef(false);
+  const showSummaryRef = React.useRef(false);
+  const showNotificationsRef = React.useRef(false);
+  const showChatRef = React.useRef(false);
+
   useEffect(() => {
     currentViewRef.current = currentView;
   }, [currentView]);
@@ -217,6 +233,11 @@ export default function App() {
             setShowResetModal(!!state.showResetModal);
             setShowRandomPopup(!!state.showRandomPopup);
             setShowPrivateVideos(!!state.showPrivateVideos);
+            setShowFlashcards(!!state.showFlashcards);
+            setShowStudyDashboard(!!state.showStudyDashboard);
+            setShowSummary(!!state.showSummary);
+            setShowNotifications(!!state.showNotifications);
+            setShowChat(!!state.showChat);
             if (state.view) {
                 _setCurrentView(state.view);
                 if (state.params) {
@@ -237,6 +258,11 @@ export default function App() {
             setShowResetModal(false);
             setShowRandomPopup(false);
             setShowPrivateVideos(false);
+            setShowFlashcards(false);
+            setShowStudyDashboard(false);
+            setShowSummary(false);
+            setShowNotifications(false);
+            setShowChat(false);
         }
     };
     window.addEventListener('popstate', handlePopState);
@@ -245,23 +271,30 @@ export default function App() {
     const backButtonListener = CapacitorApp.addListener('backButton', ({ canGoBack }) => {
         const currentView = currentViewRef.current;
         
-        // If we have an overlay open, close it first
-        if (showNeuralSolver) { setShowNeuralSolver(false); window.history.back(); return; }
-        if (showSupportModal) { setShowSupportModal(false); return; }
-        if (showPrivateVideos) { window.history.back(); return; }
-        if (activeVideo) { window.history.back(); return; }
-        if (isNotificationView) { setIsNotificationView(false); window.history.back(); return; }
+        // Priority order for closing overlays
+        if (showNeuralSolverRef.current) { window.history.back(); return; }
+        if (showSupportModalRef.current) { setShowSupportModal(false); return; }
+        if (activeVideoRef.current) { window.history.back(); return; }
+        if (showNotificationsRef.current) { setShowNotifications(false); return; }
+        if (showChatRef.current) { setShowChat(false); return; }
+        if (showPrivateVideosRef.current) { window.history.back(); return; }
+        if (showFlashcardsRef.current) { setShowFlashcards(false); return; }
+        if (showStudyDashboardRef.current) { setShowStudyDashboard(false); return; }
+        if (isNotificationViewRef.current) { window.history.back(); return; }
+        if (showAnalyticsRef.current) { window.history.back(); return; }
+        if (showResetModalRef.current) { window.history.back(); return; }
+        if (showRandomPopupRef.current) { window.history.back(); return; }
+        if (showSummaryRef.current) { setShowSummary(false); return; }
         
         if (currentView === 'study') {
-            setCurrentViewRef.current('home');
+            setCurrentView('home');
             return;
         }
 
         if (currentView !== 'home') {
             window.history.back();
         } else {
-            // On home screen, if we can go back in browser history, do it
-            // otherwise exit the app
+            // On home screen, exit app if double-pressed or logic dictates
             if (canGoBack) {
                 window.history.back();
             } else {
@@ -313,9 +346,23 @@ export default function App() {
 
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const mainContainerRef = React.useRef<HTMLDivElement>(null);
-  const [showNotifications, setShowNotifications] = useState(false);
-  const [isNotificationView, setIsNotificationView] = useState(false);
-  const [showChat, setShowChat] = useState(false);
+  const [isNotificationView, _setIsNotificationView] = useState(false);
+  const setIsNotificationView = (v: boolean) => {
+    _setIsNotificationView(v);
+    isNotificationViewRef.current = v;
+  };
+  const [showNotifications, _setShowNotifications] = useState(false);
+  const setShowNotifications = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showNotifications: true }, '');
+    _setShowNotifications(v);
+    showNotificationsRef.current = v;
+  };
+  const [showChat, _setShowChat] = useState(false);
+  const setShowChat = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showChat: true }, '');
+    _setShowChat(v);
+    showChatRef.current = v;
+  };
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
   const [neetNotifications, setNeetNotifications] = useState<{ updates: string[]; timestamp: any }[]>([]);
 
@@ -405,13 +452,6 @@ export default function App() {
   
   // Focus Mode Global State
   const [isFocusMode, setIsFocusMode] = useState(false);
-  const [showSummary, setShowSummary] = useState(false);
-  const showSummaryRef = React.useRef(showSummary);
-  
-  useEffect(() => {
-	  showSummaryRef.current = showSummary;
-  }, [showSummary]);
-
   
   React.useEffect(() => {
       (window as any).triggerSummary = () => setShowSummary(true);
@@ -598,14 +638,42 @@ export default function App() {
   };
 
   const [loading, setLoading] = useState(true);
-  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [activeVideo, _setActiveVideo] = useState<string | null>(null);
+  const setActiveVideo = (v: string | null) => {
+    _setActiveVideo(v);
+    activeVideoRef.current = v;
+  };
   const [subjects, setSubjects] = useState(getDailyChapters());
   const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
-  const [showResetModal, setShowResetModal] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
-  const [showFlashcards, setShowFlashcards] = useState(false);
-  const [showStudyDashboard, setShowStudyDashboard] = useState(false);
-  const [showPrivateVideos, setShowPrivateVideos] = useState(false);
+  const [showResetModal, _setShowResetModal] = useState(false);
+  const setShowResetModal = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showResetModal: true }, '');
+    _setShowResetModal(v);
+    showResetModalRef.current = v;
+  };
+  const [showAnalytics, _setShowAnalytics] = useState(false);
+  const setShowAnalytics = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showAnalytics: true }, '');
+    _setShowAnalytics(v);
+    showAnalyticsRef.current = v;
+  };
+  const [showFlashcards, _setShowFlashcards] = useState(false);
+  const setShowFlashcards = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showFlashcards: true }, '');
+    _setShowFlashcards(v);
+    showFlashcardsRef.current = v;
+  };
+  const [showStudyDashboard, _setShowStudyDashboard] = useState(false);
+  const setShowStudyDashboard = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showStudyDashboard: true }, '');
+    _setShowStudyDashboard(v);
+    showStudyDashboardRef.current = v;
+  };
+  const [showPrivateVideos, _setShowPrivateVideos] = useState(false);
+  const setShowPrivateVideos = (v: boolean) => {
+    _setShowPrivateVideos(v);
+    showPrivateVideosRef.current = v;
+  };
   const togglePrivateVideos = (show: boolean) => {
     if (show) {
       window.history.pushState({ ...window.history.state, showPrivateVideos: true }, '');
@@ -614,9 +682,34 @@ export default function App() {
   };
   const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
   const [statsLoaded, setStatsLoaded] = useState(false);
-  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showOnboarding, _setShowOnboarding] = useState(false);
+  const setShowOnboarding = (v: boolean) => {
+    _setShowOnboarding(v);
+    showOnboardingRef.current = v;
+  };
   const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
-  const [showRandomPopup, setShowRandomPopup] = useState(false);
+  const [showRandomPopup, _setShowRandomPopup] = useState(false);
+  const setShowRandomPopup = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showRandomPopup: true }, '');
+    _setShowRandomPopup(v);
+    showRandomPopupRef.current = v;
+  };
+  const [showSupportModal, _setShowSupportModal] = useState(false);
+  const setShowSupportModal = (v: boolean) => {
+    _setShowSupportModal(v);
+    showSupportModalRef.current = v;
+  };
+  const [showNeuralSolver, _setShowNeuralSolver] = useState(false);
+  const setShowNeuralSolver = (v: boolean) => {
+    _setShowNeuralSolver(v);
+    showNeuralSolverRef.current = v;
+  };
+  const [showSummary, _setShowSummary] = useState(false);
+  const setShowSummary = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showSummary: true }, '');
+    _setShowSummary(v);
+    showSummaryRef.current = v;
+  };
   const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
   const [displayedText, setDisplayedText] = useState("");
   const [backPressCount, setBackPressCount] = useState(0);
@@ -626,11 +719,6 @@ export default function App() {
   useEffect(() => {
     // Initial mount logic
     window.scrollTo(0, 0);
-    
-    // Initial history state if not set
-    if (!window.history.state) {
-        window.history.replaceState({ view: currentView }, '', window.location.pathname + window.location.search);
-    }
 
     const handleVisibilityChange = () => {
         if (document.visibilityState === 'visible') {
@@ -774,15 +862,23 @@ export default function App() {
     // Push state to history for back navigation
     window.history.pushState({ ...window.history.state, showAnalytics: true }, '', window.location.href);
     
-    // Fetch analytics data
-    const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
-    const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
-    const snapshot = await getDocs(q);
-    
-    const dbDataMap: Record<string, any> = {};
-    snapshot.docs.forEach(doc => {
-        dbDataMap[doc.id] = doc.data();
-    });
+    let dbDataMap: Record<string, any> = {};
+
+    if (user.uid.startsWith('local_guest_')) {
+        // For guests, we only have the current day's stats in the stats object for now
+        // But let's check if we have multiple days saved (not currently implemented but good for future)
+        const today = getISTDateString();
+        dbDataMap[today] = stats;
+    } else {
+        // Fetch analytics data from Firestore
+        const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
+        const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
+        const snapshot = await getDocs(q);
+        
+        snapshot.docs.forEach(doc => {
+            dbDataMap[doc.id] = doc.data();
+        });
+    }
 
     const last7Days = [];
     const now = new Date();
@@ -1164,9 +1260,6 @@ export default function App() {
     return () => { delete (window as any).setAsHomeScreen; };
   }, []);
 
-  const [showSupportModal, setShowSupportModal] = useState(false);
-  const [showNeuralSolver, setShowNeuralSolver] = useState(false);
-
   if (loading) {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-[#0a0f24] text-white overflow-hidden">
@@ -1461,21 +1554,21 @@ export default function App() {
       );
   }
 
-   if (currentView === 'analytics') {
-       return (
-         <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
-             <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} /></div>
-             <SupportModal 
-                isOpen={showSupportModal} 
-                onClose={() => setShowSupportModal(false)}
-                onConfirm={() => {
-                    setShowSupportModal(false);
-                    setCurrentView('technicalSupport');
-                }}
-            />
-         </div>
-       );
-   }
+    if (currentView === 'analytics') {
+        return (
+          <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+              <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} user={user} /></div>
+              <SupportModal 
+                 isOpen={showSupportModal} 
+                 onClose={() => setShowSupportModal(false)}
+                 onConfirm={() => {
+                     setShowSupportModal(false);
+                     setCurrentView('technicalSupport');
+                 }}
+             />
+          </div>
+        );
+    }
 
    if (currentView === 'technicalSupport') {
        return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Share } from 'lucide-react';
+import { ArrowLeft, Share2 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import TestReview from './TestReview';
 import TestAnalysis from './TestAnalysis';
@@ -70,27 +70,27 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
             <header className="flex justify-between items-center mb-6">
                 <button onClick={onBack} className="p-2 bg-[#161e38] rounded-full"><ArrowLeft /></button>
                 <h1 className="text-xl font-bold">Analysis</h1>
-                <Share />
+                <Share2 />
             </header>
 
             {/* Difficulty Badge */}
             <div className="flex justify-between items-center mb-6">
                 <h2 className="font-semibold text-gray-400">Difficulty</h2>
-                <span className="bg-[#1e293b] px-4 py-1.5 rounded-lg text-sm text-blue-400 font-bold">{result.difficulty || 'N/A'}</span>
+                <span className="bg-[#1e293b] px-4 py-1.5 rounded-lg text-sm text-blue-400 font-bold">{result?.difficulty || 'N/A'}</span>
             </div>
 
             {/* Stats Grid */}
             <div className="grid grid-cols-4 gap-2 mb-6">
-                <StatCard label="Correct" value={result.correct || 0} color="text-green-500" onClick={() => handleStatClick('correct')} />
-                <StatCard label="Incorrect" value={result.incorrect || 0} color="text-red-500" onClick={() => handleStatClick('incorrect')} />
-                <StatCard label="Unattempted" value={result.unattempted || 0} color="text-blue-500" onClick={() => handleStatClick('unattempted')} />
-                <StatCard label="Total" value={result.totalQuestions || 0} color="text-yellow-500" onClick={() => handleStatClick('all')} />
+                <StatCard label="Correct" value={result?.correct || 0} color="text-green-500" onClick={() => handleStatClick('correct')} />
+                <StatCard label="Incorrect" value={result?.incorrect || 0} color="text-red-500" onClick={() => handleStatClick('incorrect')} />
+                <StatCard label="Unattempted" value={result?.unattempted || 0} color="text-blue-500" onClick={() => handleStatClick('unattempted')} />
+                <StatCard label="Total" value={result?.totalQuestions || 0} color="text-yellow-500" onClick={() => handleStatClick('all')} />
             </div>
 
             {/* Main Score Chart */}
             <div className="bg-[#161e38] p-6 rounded-3xl mb-6 flex justify-around items-center">
                 <div className="w-32 h-32 relative">
-                    <ResponsiveContainer>
+                    <ResponsiveContainer width="100%" height="100%">
                         <PieChart>
                             <Pie data={scoreData} innerRadius={40} outerRadius={50} dataKey="value" startAngle={90} endAngle={-270}>
                                 {scoreData.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]} />)}
@@ -98,27 +98,27 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         </PieChart>
                     </ResponsiveContainer>
                     <div className="absolute inset-0 flex flex-col justify-center items-center">
-                        <span className="text-2xl font-bold">{result.percentage || 0}%</span>
+                        <span className="text-2xl font-bold">{result?.percentage || 0}%</span>
                         <span className="text-xs text-gray-400">Score</span>
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <div className="font-bold text-4xl">{result.obtainedMarks || 0}</div>
+                    <div className="font-bold text-4xl">{result?.obtainedMarks || 0}</div>
                     <div className='w-full h-0.5 bg-gray-600 my-1'></div>
-                    <div className="font-bold text-4xl text-gray-400">{result.totalPossibleMarks || (result.totalQuestions * 4)}</div>
+                    <div className="font-bold text-4xl text-gray-400">{result?.totalPossibleMarks || ((result?.totalQuestions || 0) * 4)}</div>
                 </div>
             </div>
 
             {/* Performance */}
             <h2 className="font-bold mb-4">Performance</h2>
             <div className="bg-[#161e38] p-6 rounded-3xl space-y-4 mb-6">
-                <PerformanceBar label="Accuracy" value={result.accuracy || 0} />
-                <PerformanceBar label="Speed" value={result.speed || 0} />
-                <PerformanceBar label="Attempted" value={result.attemptedRate || 0} />
+                <PerformanceBar label="Accuracy" value={result?.accuracy || 0} />
+                <PerformanceBar label="Speed" value={result?.speed || 0} />
+                <PerformanceBar label="Attempted" value={result?.attemptedRate || 0} />
             </div>
 
             {/* Topic Analysis */}
-            {result.topicAnalysis && result.topicAnalysis.length > 0 && (
+            {result?.topicAnalysis && result.topicAnalysis.length > 0 && (
                 <>
                     <div className='flex justify-between items-center mb-4'>
                         <h2 className="font-bold">Topic Analysis</h2>

@@ -12,15 +12,40 @@ export default function Login() {
   const [otp, setOtp] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
-  const [signUpStep, setSignUpStep] = useState<'IDENTIFIER' | 'OTP' | 'PROFILE'>('IDENTIFIER');
+  const [signUpStep, _setSignUpStep] = useState<'IDENTIFIER' | 'OTP' | 'PROFILE'>('IDENTIFIER');
+  const setSignUpStep = (v: 'IDENTIFIER' | 'OTP' | 'PROFILE') => {
+    if (isSignUp) {
+      window.history.pushState({ ...window.history.state, signUp: true, signUpStep: v }, '');
+    }
+    _setSignUpStep(v);
+  };
   const [testOtp, setTestOtp] = useState<string | null>(null);
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  const [isGuestMode, setIsGuestMode] = useState(false);
+  const [isGuestMode, _setIsGuestMode] = useState(false);
+  const setIsGuestMode = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, loginSubView: 'guest' }, '');
+    _setIsGuestMode(v);
+  };
   const [guestName, setGuestName] = useState('');
   const [isLoggingInGuest, setIsLoggingInGuest] = useState(false);
+
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (isGuestMode && !e.state?.loginSubView) {
+        _setIsGuestMode(false);
+      } else if (isSignUp && !e.state?.signUp) {
+        setIsSignUp(false);
+        setSignUpStep('IDENTIFIER');
+      } else if (isSignUp && e.state?.signUpStep && e.state.signUpStep !== signUpStep) {
+        setSignUpStep(e.state.signUpStep);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [isGuestMode, isSignUp, signUpStep]);
 
   useEffect(() => {
     if (errorMessage) {
@@ -450,7 +475,13 @@ export default function Login() {
                     {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
                     <Pressable 
                       onClick={() => { 
-                        setIsSignUp(!isSignUp); 
+                        const newSignUp = !isSignUp;
+                        if (newSignUp) {
+                          window.history.pushState({ ...window.history.state, signUp: true, signUpStep: 'IDENTIFIER' }, '');
+                        } else {
+                          window.history.back();
+                        }
+                        setIsSignUp(newSignUp); 
                         setSignUpStep('IDENTIFIER'); 
                         setTestOtp(null);
                         setOtp('');
