@@ -147,30 +147,25 @@ const getRandomChapters = () => {
     ];
 };
 
+const getInitialView = () => {
+  const params = new URLSearchParams(window.location.search);
+  const viewParam = params.get('view');
+  const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan'];
+  if (viewParam && validViews.includes(viewParam)) {
+      return viewParam;
+  }
+  const path = window.location.pathname.replace('/', '');
+  if (path && validViews.includes(path)) return path;
+  return 'home';
+};
+
 export default function App() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
-  const getInitialView = () => {
-    const params = new URLSearchParams(window.location.search);
-    const viewParam = params.get('view');
-    const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan'];
-    if (viewParam && validViews.includes(viewParam)) {
-        return viewParam;
-    }
-    const path = window.location.pathname.replace('/', '');
-    if (path && validViews.includes(path)) return path;
-    return 'home';
-  };
-
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
 
-  useEffect(() => {
-    if (Capacitor.isNativePlatform()) {
-      StatusBar.show().catch(err => console.error('StatusBar show error:', err));
-    }
-  }, []);
-
+  // Handle status bar style based on current view
   useEffect(() => {
     if (Capacitor.isNativePlatform()) {
       const darkViews = ['liveAI', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory'];
@@ -180,6 +175,12 @@ export default function App() {
       StatusBar.setBackgroundColor({ color: isDark ? '#0a0f24' : '#ffffff' }).catch(() => {});
     }
   }, [currentView]);
+
+  useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      StatusBar.show().catch(err => console.error('StatusBar show error:', err));
+    }
+  }, []);
 
   useEffect(() => {
     // Initial state replacement to ensure first view is in history
