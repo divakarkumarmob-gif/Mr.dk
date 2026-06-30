@@ -7,6 +7,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:900766773228:android:473a965c06d5f287115ac9",
+        "android_client_info": {
+          "package_name": "com.mr.dk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900766773228-bv3q64l435u3m9a6mqvsnfg96o0k7ck0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mr.dk",
+            "certificate_hash": "da6738d072f39e76693af36ae832183cd69cfb70"
+          }
+        },
+        {
+          "client_id": "900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWrNiX7eOtIGUnkO93kSnRv3iZngwHZks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:900766773228:android:e96175c06e4cd1d0115ac9",
         "android_client_info": {
           "package_name": "com.neetmaster.app"

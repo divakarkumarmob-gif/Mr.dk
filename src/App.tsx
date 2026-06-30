@@ -172,6 +172,16 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      const darkViews = ['liveAI', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory'];
+      const isDark = darkViews.includes(currentView);
+      StatusBar.setStyle({ style: isDark ? Style.Light : Style.Dark }).catch(() => {});
+      // Ensure status bar is transparent or matches background for better contrast
+      StatusBar.setBackgroundColor({ color: isDark ? '#0a0f24' : '#ffffff' }).catch(() => {});
+    }
+  }, [currentView]);
+
+  useEffect(() => {
     // Initial state replacement to ensure first view is in history
     if (!window.history.state) {
         const view = currentView;
@@ -1197,18 +1207,6 @@ export default function App() {
   if (!user) {
     return <Login />;
   }
-
-  // Handle status bar style based on current view
-  useEffect(() => {
-    if (Capacitor.isNativePlatform()) {
-      const darkViews = ['liveAI', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory'];
-      if (darkViews.includes(currentView)) {
-        StatusBar.setStyle({ style: Style.Light }).catch(() => {});
-      } else {
-        StatusBar.setStyle({ style: Style.Dark }).catch(() => {});
-      }
-    }
-  }, [currentView]);
 
   if (currentView === 'liveAI') {
       return <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />;
