@@ -163,7 +163,17 @@ export default function App() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
+  const currentViewRef = React.useRef(currentView);
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
+  const urlParamsRef = React.useRef(urlParams);
+
+  useEffect(() => {
+    currentViewRef.current = currentView;
+  }, [currentView]);
+
+  useEffect(() => {
+    urlParamsRef.current = urlParams;
+  }, [urlParams]);
 
   // Handle status bar style based on current view
   useEffect(() => {
@@ -171,17 +181,18 @@ export default function App() {
       const lightViews = ['mindHack', 'aiStudyPlan'];
       const isLight = lightViews.includes(currentView);
       
-      // User specifically requested white font (Style.Light) for contrast
+      // User requested white font (Style.Light) for contrast on dark backgrounds
       // We use Light (white icons) for most views, and Dark (dark icons) for light views
       StatusBar.setStyle({ style: isLight ? Style.Dark : Style.Light }).catch(() => {});
       
-      // Set to transparent to allow app background to show through in overlay mode
-      StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#00000000' }).catch(() => {});
+      // Use solid color instead of transparent if contrast is an issue, 
+      // but the user wants it to look good. Let's try matching exactly.
+      StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#0a0f24' }).catch(() => {});
       
-      // Ensure it overlays the webview for the modern look requested
+      // Ensure it overlays the webview for the modern look
       StatusBar.setOverlaysWebView({ overlay: true }).catch(() => {});
       
-      // Always show to prevent disappearing on scroll
+      // Always show to prevent disappearing
       StatusBar.show().catch(() => {});
     }
   }, [currentView]);
@@ -240,12 +251,19 @@ export default function App() {
 
     // Capacitor Back Button Handling
     const backButtonListener = CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+        const currentView = currentViewRef.current;
+        
         // If we have an overlay open, close it first
         if (showNeuralSolver) { setShowNeuralSolver(false); window.history.back(); return; }
         if (showSupportModal) { setShowSupportModal(false); return; }
         if (activeVideo) { setActiveVideo(null); window.history.back(); return; }
         if (isNotificationView) { setIsNotificationView(false); window.history.back(); return; }
         
+        if (currentView === 'study') {
+            setCurrentViewRef.current('home');
+            return;
+        }
+
         if (currentView !== 'home') {
             window.history.back();
         } else {
@@ -269,8 +287,8 @@ export default function App() {
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
   const setCurrentView = (view: typeof currentView, params?: Record<string, string>) => {
-    if (view === 'liveAI' && currentView !== 'liveAI') {
-        setPreviousView(currentView);
+    if (view === 'liveAI' && currentViewRef.current !== 'liveAI') {
+        setPreviousView(currentViewRef.current);
     }
     
     const searchParams = new URLSearchParams();
@@ -288,6 +306,11 @@ export default function App() {
     setUrlParams(searchParams);
     _setCurrentView(view);
   };
+
+  const setCurrentViewRef = React.useRef(setCurrentView);
+  useEffect(() => {
+    setCurrentViewRef.current = setCurrentView;
+  }, [setCurrentView]);
 
   useEffect(() => {
     if (mainContainerRef.current) {
