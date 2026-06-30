@@ -1215,7 +1215,7 @@ export default function App() {
 
   if (currentView === 'mindHack') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#f4e4bc] pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-[#f4e4bc]">
             <MindHackPage onBack={() => setCurrentView('profile')} />
         </div>
       );
@@ -1223,7 +1223,7 @@ export default function App() {
 
   if (currentView === 'aiStudyPlan') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#f0f4f8] pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-[#f0f4f8]">
             <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
         </div>
       );
@@ -1231,7 +1231,7 @@ export default function App() {
 
   if (isNotificationView) {
       return (
-        <div className="flex flex-col min-h-screen bg-background pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <NotificationPage onBack={() => window.history.back()} />
         </div>
       );
@@ -1249,7 +1249,7 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.3 }}
-            className="pt-[env(safe-area-inset-top,0px)]"
+            className=""
         >
             <StudyHub 
                 subjects={subjects} 
@@ -1310,7 +1310,7 @@ export default function App() {
   
   if (currentView === 'profile') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen pb-20">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1328,7 +1328,7 @@ export default function App() {
   
   if (currentView === 'notesLibrary') {
       return (
-        <div className="flex flex-col min-h-screen bg-background pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <NotesLibrary onBack={() => setCurrentView('profile')} />
         </div>
       );
@@ -1336,7 +1336,7 @@ export default function App() {
 
   if (currentView === 'editProfile') {
       return (
-        <div className="flex flex-col min-h-screen bg-background pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <EditProfile user={user} onNavigate={setCurrentView} />
         </div>
       );
@@ -1344,7 +1344,7 @@ export default function App() {
 
   if (currentView === 'admin') {
       return (
-          <div className="min-h-screen bg-background pt-[env(safe-area-inset-top,0px)] text-foreground">
+          <div className="min-h-screen bg-background text-foreground">
               <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
               <AdminPanel onNavigate={setCurrentView} />
               <SupportModal 
@@ -1366,7 +1366,7 @@ export default function App() {
 
   if (currentView === 'tests') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen pb-20">
             <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
             <SupportModal 
@@ -1383,7 +1383,7 @@ export default function App() {
 
   if (currentView === 'ncertHub') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-[#0a0f24]">
             <NCERTHub onBack={() => setCurrentView('notes')} />
         </div>
       );
@@ -1392,7 +1392,7 @@ export default function App() {
   if (currentView === 'ntaQuestionsHub') {
       const paperId = urlParams.get('paper');
       return (
-        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-[#0a0f24]">
             <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
         </div>
       );
@@ -1400,7 +1400,7 @@ export default function App() {
 
   if (currentView === 'oldPyqHistory') {
       return (
-        <div className="flex flex-col min-h-screen bg-[#05070A] pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen bg-[#05070A]">
             <OldPYQHistory onBack={() => setCurrentView('notes')} />
         </div>
       );
@@ -1408,7 +1408,7 @@ export default function App() {
 
   if (currentView === 'notes') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 bg-background pt-[env(safe-area-inset-top,0px)]">
+        <div className="flex flex-col min-h-screen pb-20 bg-background">
             <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1425,7 +1425,7 @@ export default function App() {
 
    if (currentView === 'analytics') {
        return (
-         <div className="flex flex-col min-h-screen bg-background pt-[env(safe-area-inset-top,0px)]">
+         <div className="flex flex-col min-h-screen bg-background">
              <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} /></div>
              <SupportModal 
                 isOpen={showSupportModal} 
@@ -1441,8 +1441,8 @@ export default function App() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <div className="min-h-screen bg-background text-foreground pt-[env(safe-area-inset-top,0px)]">
-             <button className="absolute top-[max(env(safe-area-inset-top,0px),12px)] left-4 z-[1100] text-sm text-gray-400 bg-black/50 px-2 py-1 rounded-md" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
+         <div className="min-h-screen bg-background text-foreground">
+             <button className="absolute top-4 left-4 z-[1100] text-sm text-gray-400 bg-black/50 px-2 py-1 rounded-md" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
              <UserChat fullScreen={true} user={user} />
          </div>
        );
@@ -1499,7 +1499,7 @@ export default function App() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''} pt-[env(safe-area-inset-top,0px)]`}
+      className={`min-h-screen bg-background text-foreground font-sans pb-16 ${showOnboarding ? 'blur-sm' : ''}`}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full px-0">
