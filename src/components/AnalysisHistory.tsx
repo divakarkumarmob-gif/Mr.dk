@@ -72,7 +72,7 @@ export default function AnalysisHistory({ onNavigate }: { onNavigate: (view: any
     };
 
     return (
-        <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground">
+        <div className="flex flex-col min-h-screen pb-20 bg-background text-foreground px-0">
             <div className="flex-grow">
                 <h1 className="text-2xl font-bold mb-6">Test History</h1>
 

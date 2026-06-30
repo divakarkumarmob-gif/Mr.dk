@@ -279,7 +279,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                 </div>
             )}
             {/* Header */}
-            <div className="flex items-center justify-between p-4 pt-[env(safe-area-inset-top,0px)] border-b border-gray-100 bg-white sticky top-0 z-10">
+            <div className="flex items-center justify-between px-2 py-4 pt-[env(safe-area-inset-top,0px)] border-b border-gray-100 bg-white sticky top-0 z-10">
                 <button onClick={() => setShowQuitModal(true)} className="text-gray-900"><ChevronLeft /></button>
                 <div className="flex flex-col items-center">
                     <h1 className="font-bold text-sm text-gray-900">{title}</h1>
@@ -294,7 +294,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
             </div>
 
             {/* Question Area */}
-            <div className="flex-grow p-4 overflow-y-auto">
+            <div className="flex-grow px-0 py-4 overflow-y-auto">
                 <div className="flex justify-between items-center mb-4">
                     <span className="text-sm font-semibold text-gray-600">Question {currentIndex + 1} / {questions.length}</span>
                     <button 
