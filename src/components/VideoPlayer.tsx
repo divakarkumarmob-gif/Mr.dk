@@ -66,17 +66,17 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
     
     // Push an initial state if opening
     if (window.history.state?.view !== 'video-player') {
-        window.history.pushState({ view: 'video-player' }, '', '');
+        window.history.pushState({ view: 'video-player', activeVideo: topic }, '', '');
     }
 
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [selectedVideoId, onClose]);
+  }, [selectedVideoId, onClose, topic]);
 
   const selectVideo = (videoId: string) => {
     setSelectedVideoId(videoId);
     setPlayTriggered(true);
     // Push a state when a sub-video is selected so back button works
-    window.history.pushState({ view: 'video-playing', videoId }, '', '');
+    window.history.pushState({ view: 'video-playing', videoId, activeVideo: topic }, '', '');
   };
 
   const playlistId = CHAPTER_PLAYLISTS[topic.toLowerCase()];                

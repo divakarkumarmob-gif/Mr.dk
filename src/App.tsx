@@ -216,6 +216,7 @@ export default function App() {
             setActiveVideo(state.activeVideo || null);
             setShowResetModal(!!state.showResetModal);
             setShowRandomPopup(!!state.showRandomPopup);
+            setShowPrivateVideos(!!state.showPrivateVideos);
             if (state.view) {
                 _setCurrentView(state.view);
                 if (state.params) {
@@ -235,6 +236,7 @@ export default function App() {
             setActiveVideo(null);
             setShowResetModal(false);
             setShowRandomPopup(false);
+            setShowPrivateVideos(false);
         }
     };
     window.addEventListener('popstate', handlePopState);
@@ -246,7 +248,8 @@ export default function App() {
         // If we have an overlay open, close it first
         if (showNeuralSolver) { setShowNeuralSolver(false); window.history.back(); return; }
         if (showSupportModal) { setShowSupportModal(false); return; }
-        if (activeVideo) { setActiveVideo(null); window.history.back(); return; }
+        if (showPrivateVideos) { window.history.back(); return; }
+        if (activeVideo) { window.history.back(); return; }
         if (isNotificationView) { setIsNotificationView(false); window.history.back(); return; }
         
         if (currentView === 'study') {

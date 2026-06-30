@@ -71,8 +71,10 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
   const isClosingRef = useRef(false);
 
   useEffect(() => {
-    // Push the initial 'list' state
-    window.history.pushState({ privateVideoView: 'list', index: 0 }, '');
+    // Push the initial 'list' state only if not already there
+    if (window.history.state?.privateVideoView !== 'list') {
+      window.history.pushState({ privateVideoView: 'list', index: 0, showPrivateVideos: true }, '');
+    }
     currentIndexRef.current = 0;
 
     const handlePopState = (event: PopStateEvent) => {
@@ -119,7 +121,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, [onClose]);
+  }, [onClose, subjects]);
 
   const navigateToChapter = (subj: Subject, chap: Chapter) => {
     const nextIndex = currentIndexRef.current + 1;
@@ -128,7 +130,8 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       privateVideoView: 'chapter', 
       index: nextIndex,
       subjectName: subj.name,
-      chapterName: chap.name
+      chapterName: chap.name,
+      showPrivateVideos: true
     }, '');
     currentIndexRef.current = nextIndex;
     setSelectedSubject(subj);
@@ -144,7 +147,8 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
       index: nextIndex,
       videoKey: video.key,
       subjectName: selectedSubject?.name,
-      chapterName: selectedChapter?.name
+      chapterName: selectedChapter?.name,
+      showPrivateVideos: true
     }, '');
     currentIndexRef.current = nextIndex;
     setActiveVideo(video);

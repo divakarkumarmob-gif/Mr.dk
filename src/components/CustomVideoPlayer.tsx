@@ -231,8 +231,12 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   useEffect(() => {
     return () => {
       if (Capacitor.isNativePlatform()) {
-        // Unlock orientation so it follows sensor
-        ScreenOrientation.unlock().catch(() => {});
+        // Force portrait first then unlock
+        ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        }).catch(() => {
+          ScreenOrientation.unlock().catch(() => {});
+        });
       }
     };
   }, []);
