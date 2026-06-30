@@ -26,7 +26,7 @@ export default function Profile({ user, onNavigate, onSolverClick }: { user: Fir
     ];
 
     return (
-        <div className="min-h-screen bg-background text-foreground font-sans pb-16 pt-[calc(env(safe-area-inset-top,0px)+4px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
+        <div className="min-h-screen bg-background text-foreground font-sans pb-16 pt-[env(safe-area-inset-top,0px)] px-[max(env(safe-area-inset-left,0px),16px)] pr-[max(env(safe-area-inset-right,0px),16px)]">
             <div className="max-w-full mx-auto w-full">
                 {/* Header */}
             <div className="bg-card text-card-foreground rounded-lg p-2 border border-border mb-2 flex flex-col items-center">
