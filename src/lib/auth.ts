@@ -89,7 +89,7 @@ export const resetPassword = async (email: string) => {
 };
 
 import { storageService } from './storageService';
-...
+
 export const logOut = async () => {
     try {
         await storageService.removeItem('guest_user');
@@ -98,7 +98,7 @@ export const logOut = async () => {
         }
         return await signOut(auth);
     } catch (error) {
-...        console.error('Logout error:', error);
+        console.error('Logout error:', error);
         throw error;
     }
 };

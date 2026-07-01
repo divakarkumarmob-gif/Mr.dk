@@ -84,13 +84,13 @@ export default function StudyDashboard({ onClose }: { onClose: () => void }) {
             <div className="bg-white/5 p-6 rounded-xl border border-white/10 w-full mb-8">
                 <h3 className="text-sm font-bold text-gray-300 mb-6">Recent Notes</h3>
                 <div className="space-y-2">
-                    {getRecentlyViewed().slice(0, 3).map((chapter: string, idx: number) => (
+                    {recentlyViewed.slice(0, 3).map((chapter: string, idx: number) => (
                         <div key={idx} className="flex items-center gap-2 p-2 rounded-lg bg-white/5 text-xs text-white">
                             <BookOpen className="h-4 w-4 text-blue-400" />
                             {chapter}
                         </div>
                     ))}
-                    {getRecentlyViewed().length === 0 && <p className="text-gray-500 text-xs">No recent notes.</p>}
+                    {recentlyViewed.length === 0 && <p className="text-gray-500 text-xs">No recent notes.</p>}
                 </div>
             </div>
 

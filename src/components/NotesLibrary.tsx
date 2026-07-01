@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowLeft, BookOpen, Download, Search, X, Eye, CheckCircle, Trash2, Heart, Clock } from 'lucide-react';
 import { CHAPTER_DATA } from '../constants';
 import { saveNoteOffline, getNoteOffline, isNoteDownloaded, clearOfflineNotes, toggleFavorite, isFavorite, addRecentlyViewed, getRecentlyViewed } from '../lib/offlineStorage';
+import { storageService } from '../lib/storageService';
 
 function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () => void }) {
     const pdfUrl = `https://raw.githubusercontent.com/divakarkumarmob-gif/shortnotes/main/${chapterName.toLowerCase().replace(/ /g, '_')}/${chapterName.toLowerCase().replace(/ /g, '_')}.pdf`;
@@ -54,15 +55,26 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
     const [, setDownloadedUpdate] = useState(false);
+    const [favorites, setFavorites] = useState<string[]>([]);
+    const [downloaded, setDownloaded] = useState<string[]>([]);
+    const [recentlyViewed, setRecentlyViewed] = useState<string[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const favs = await storageService.getItem<string[]>('favorites') || [];
+            setFavorites(favs);
+            const history = await getRecentlyViewed();
+            setRecentlyViewed(history);
+            // This is a bit inefficient, but for now just to make it work
+            // Ideally we'd scan the storage for downloaded notes
+        })();
+    }, [selectedChapter]);
 
     const chapters = CHAPTER_DATA[activeSubject][activeClass].filter((c: string) => c.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    return (
-        <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="min-h-screen bg-background text-foreground p-6 pb-24"
-        >
+    const checkDownloaded = async (chapter: string) => {
+        return await isNoteDownloaded(chapter);
+    }
          <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
                 <div className="flex items-center justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
