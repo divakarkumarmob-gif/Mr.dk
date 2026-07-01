@@ -1832,7 +1832,7 @@ export default function App() {
 
       <BottomNav currentView={currentView as any} onNavigate={setCurrentView} />
       
-      <LazyWrapper component={FloatingAIAgent} onNavigate={setCurrentView} isTyping={isTyping} />
+      <FloatingAIAgent onNavigate={setCurrentView} isTyping={isTyping} />
       
       <SupportModal 
         isOpen={showSupportModal} 
