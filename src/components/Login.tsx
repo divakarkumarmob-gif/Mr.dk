@@ -239,6 +239,17 @@ export default function Login() {
     }
   };
 
+  const [permissionRequested, setPermissionRequested] = useState(false);
+
+  const requestPermissions = async () => {
+      try {
+          await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+          setPermissionRequested(true);
+      } catch (e) {
+          alert("Camera and microphone permissions are required to use this application.");
+      }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 px-3 pb-8 flex flex-col items-center pt-[max(env(safe-area-inset-top,0px),12px)]">
       {errorMessage && (
@@ -264,236 +275,248 @@ export default function Login() {
         <EarthGraphics />
 
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="px-0 pt-0 pb-6 flex items-center justify-between">
-            <h2 className="text-xl font-bold text-gray-900">
-                {isGuestMode ? 'Continue as Guest' : isSignUp ? (
-                  signUpStep === 'IDENTIFIER' ? 'Sign Up' :
-                  signUpStep === 'OTP' ? 'Enter OTP Verification' : 'Complete Profile'
-                ) : 'Login to your account'}
-            </h2>
-            {(isGuestMode || (isSignUp && signUpStep !== 'IDENTIFIER')) && (
-              <button 
-                onClick={() => {
-                  if (isGuestMode) {
-                    setIsGuestMode(false);
-                  } else if (signUpStep === 'OTP') {
-                    setSignUpStep('IDENTIFIER');
-                  } else if (signUpStep === 'PROFILE') {
-                    setSignUpStep('OTP');
-                  }
-                }}
-                className="text-xs text-gray-500 hover:text-purple-700 flex items-center gap-1 font-semibold"
-              >
-                <ArrowLeft className="h-3 w-3" /> Back
-              </button>
-            )}
-          </div>
-          <div className="px-0 space-y-4">
-
-            {/* Guest Login Form */}
-            {isGuestMode && (
-              <div className="space-y-4">
-                <p className="text-sm text-gray-600">
-                  Enter your name to start practicing and master the NEET exam right away.
-                </p>
-                <div className="relative">
-                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                  <input 
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
-                    type="text" 
-                    placeholder="Enter Your Name" 
-                    value={guestName} 
-                    onChange={(e) => setGuestName(e.target.value)} 
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') handleGuestSubmit();
+          {!permissionRequested ? (
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold text-gray-900">Permissions Required</h2>
+              <p className="text-sm text-gray-600">To provide the best learning experience, NeetMaster needs access to your camera and microphone for interactive features.</p>
+              <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={requestPermissions}>
+                Grant Permissions
+              </Pressable>
+            </div>
+          ) : (
+            <>
+              <div className="px-0 pt-0 pb-6 flex items-center justify-between">
+                <h2 className="text-xl font-bold text-gray-900">
+                    {isGuestMode ? 'Continue as Guest' : isSignUp ? (
+                      signUpStep === 'IDENTIFIER' ? 'Sign Up' :
+                      signUpStep === 'OTP' ? 'Enter OTP Verification' : 'Complete Profile'
+                    ) : 'Login to your account'}
+                </h2>
+                {(isGuestMode || (isSignUp && signUpStep !== 'IDENTIFIER')) && (
+                  <button 
+                    onClick={() => {
+                      if (isGuestMode) {
+                        setIsGuestMode(false);
+                      } else if (signUpStep === 'OTP') {
+                        setSignUpStep('IDENTIFIER');
+                      } else if (signUpStep === 'PROFILE') {
+                        setSignUpStep('OTP');
+                      }
                     }}
-                  />
-                </div>
-                <Pressable 
-                  className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center flex items-center justify-center" 
-                  onClick={handleGuestSubmit}
-                  disabled={isLoggingInGuest}
-                >
-                  {isLoggingInGuest ? 'Connecting...' : 'Start Learning as Guest'}
-                </Pressable>
+                    className="text-xs text-gray-500 hover:text-purple-700 flex items-center gap-1 font-semibold"
+                  >
+                    <ArrowLeft className="h-3 w-3" /> Back
+                  </button>
+                )}
               </div>
-            )}
-            
-            {/* Login View */}
-            {!isSignUp && !isGuestMode && (
-              <>
-                <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input 
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
-                      type="text" 
-                      placeholder="Email or Mobile Number" 
-                      value={identifier} 
-                      onChange={(e) => setIdentifier(e.target.value)} 
-                    />
-                </div>
-                <div className="relative">
-                    <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input 
-                      className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
-                      type={showPassword ? "text" : "password"} 
-                      placeholder="Password" 
-                      value={password} 
-                      onChange={(e) => setPassword(e.target.value)} 
-                    />
-                    <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
-                        {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
-                    </Pressable>
-                </div>
-                <div className="text-right">
-                    <Pressable onClick={handleForgotPassword} className="text-sm text-purple-700 font-semibold">Forgot Password?</Pressable>
-                </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleLogin}>
-                  Login
-                </Pressable>
-              </>
-            )}
-
-            {/* SignUp - Step 1: Identifier Input */}
-            {isSignUp && !isGuestMode && signUpStep === 'IDENTIFIER' && (
-              <>
-                <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input 
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
-                      type="text" 
-                      placeholder="Email or 10-digit Mobile Number" 
-                      value={identifier} 
-                      onChange={(e) => setIdentifier(e.target.value)} 
-                    />
-                </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleSendOtp}>
-                  Send OTP
-                </Pressable>
-              </>
-            )}
-
-            {/* SignUp - Step 2: OTP Input */}
-            {isSignUp && !isGuestMode && signUpStep === 'OTP' && (
-              <>
-                <p className="text-xs text-gray-500 mb-2">
-                  We have generated a 4-digit OTP for <span className="font-semibold text-gray-800">{identifier}</span>.
-                </p>
-                {testOtp && (
-                  <div className="bg-purple-50 border border-purple-200 text-purple-800 text-xs rounded-md p-3 mb-2 font-mono flex items-center justify-between">
-                    <span>🔑 [Dev Mode] Your OTP Code is: <strong>{testOtp}</strong></span>
-                    <button 
-                      onClick={() => {
-                        setOtp(testOtp);
-                        showSuccess("Testing OTP filled!");
-                      }} 
-                      className="text-[10px] bg-purple-600 hover:bg-purple-700 text-white px-2 py-0.5 rounded font-sans font-bold"
+              <div className="px-0 space-y-4">
+    
+                {/* Guest Login Form */}
+                {isGuestMode && (
+                  <div className="space-y-4">
+                    <p className="text-sm text-gray-600">
+                      Enter your name to start practicing and master the NEET exam right away.
+                    </p>
+                    <div className="relative">
+                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                      <input 
+                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                        type="text" 
+                        placeholder="Enter Your Name" 
+                        value={guestName} 
+                        onChange={(e) => setGuestName(e.target.value)} 
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') handleGuestSubmit();
+                        }}
+                      />
+                    </div>
+                    <Pressable 
+                      className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center flex items-center justify-center" 
+                      onClick={handleGuestSubmit}
+                      disabled={isLoggingInGuest}
                     >
-                      Auto-Fill
-                    </button>
+                      {isLoggingInGuest ? 'Connecting...' : 'Start Learning as Guest'}
+                    </Pressable>
                   </div>
                 )}
-                <div className="relative">
-                    <KeyRound className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input 
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-950 placeholder-gray-500 font-mono text-center tracking-widest text-lg font-bold" 
-                      type="text" 
-                      maxLength={4}
-                      placeholder="Enter 4-digit OTP" 
-                      value={otp} 
-                      onChange={(e) => setOtp(e.target.value)} 
-                    />
-                </div>
-                <div className="flex gap-2 justify-between">
-                  <button onClick={handleSendOtp} className="text-xs text-purple-700 font-semibold hover:underline">
-                    Resend OTP
-                  </button>
-                  <button onClick={() => setSignUpStep('IDENTIFIER')} className="text-xs text-gray-500 font-semibold hover:underline">
-                    Change Email/Mobile
-                  </button>
-                </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleVerifyOtp}>
-                  Verify & Next
-                </Pressable>
-              </>
-            )}
-
-            {/* SignUp - Step 3: Name & Password Setup */}
-            {isSignUp && !isGuestMode && signUpStep === 'PROFILE' && (
-              <>
-                <p className="text-xs text-gray-500 mb-2">
-                  OTP Verified! Tell us who you are to set up your dashboard.
-                </p>
-                <div className="relative">
-                    <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input 
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
-                      type="text" 
-                      placeholder="Your Full Name" 
-                      value={name} 
-                      onChange={(e) => setName(e.target.value)} 
-                    />
-                </div>
-                <div className="relative">
-                    <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
-                    <input 
-                      className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
-                      type={showPassword ? "text" : "password"} 
-                      placeholder="Choose Password (min 6 chars)" 
-                      value={password} 
-                      onChange={(e) => setPassword(e.target.value)} 
-                    />
-                    <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
-                        {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
-                    </Pressable>
-                </div>
-                <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleCompleteSignUp}>
-                  Complete Sign Up
-                </Pressable>
-              </>
-            )}
-            
-            {!isGuestMode && (
-              <>
-                <div className="flex items-center gap-2 py-2">
-                    <hr className="flex-1 border-gray-300" />
-                    <span className="text-gray-600 text-xs">or</span>
-                    <hr className="flex-1 border-gray-300" />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900 text-center" onClick={handleGoogleLogin}>
-                    Continue with Google
-                  </Pressable>
-                  
-                  <Pressable className="w-full bg-gray-950 hover:bg-black text-white py-2 rounded-md font-semibold text-center flex items-center justify-center gap-2" onClick={() => setIsGuestMode(true)}>
-                    <User className="h-4 w-4" /> Continue as Guest
-                  </Pressable>
-                </div>
                 
-                <div className="text-center text-gray-700 pt-2 text-sm">
-                    {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
-                    <Pressable 
-                      onClick={() => { 
-                        const newSignUp = !isSignUp;
-                        if (newSignUp) {
-                          window.history.pushState({ ...window.history.state, signUp: true, signUpStep: 'IDENTIFIER' }, '');
-                        } else {
-                          window.history.back();
-                        }
-                        setIsSignUp(newSignUp); 
-                        setSignUpStep('IDENTIFIER'); 
-                        setTestOtp(null);
-                        setOtp('');
-                      }} 
-                      className="text-purple-700 font-semibold hover:underline"
-                    >
-                      {isSignUp ? 'Login' : 'Sign Up'}
+                {/* Login View */}
+                {!isSignUp && !isGuestMode && (
+                  <>
+                    <div className="relative">
+                        <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                        <input 
+                          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                          type="text" 
+                          placeholder="Email or Mobile Number" 
+                          value={identifier} 
+                          onChange={(e) => setIdentifier(e.target.value)} 
+                        />
+                    </div>
+                    <div className="relative">
+                        <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                        <input 
+                          className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                          type={showPassword ? "text" : "password"} 
+                          placeholder="Password" 
+                          value={password} 
+                          onChange={(e) => setPassword(e.target.value)} 
+                        />
+                        <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
+                            {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
+                        </Pressable>
+                    </div>
+                    <div className="text-right">
+                        <Pressable onClick={handleForgotPassword} className="text-sm text-purple-700 font-semibold">Forgot Password?</Pressable>
+                    </div>
+                    <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleLogin}>
+                      Login
                     </Pressable>
-                </div>
-              </>
-            )}
-          </div>
+                  </>
+                )}
+    
+                {/* SignUp - Step 1: Identifier Input */}
+                {isSignUp && !isGuestMode && signUpStep === 'IDENTIFIER' && (
+                  <>
+                    <div className="relative">
+                        <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                        <input 
+                          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                          type="text" 
+                          placeholder="Email or 10-digit Mobile Number" 
+                          value={identifier} 
+                          onChange={(e) => setIdentifier(e.target.value)} 
+                        />
+                    </div>
+                    <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleSendOtp}>
+                      Send OTP
+                    </Pressable>
+                  </>
+                )}
+    
+                {/* SignUp - Step 2: OTP Input */}
+                {isSignUp && !isGuestMode && signUpStep === 'OTP' && (
+                  <>
+                    <p className="text-xs text-gray-500 mb-2">
+                      We have generated a 4-digit OTP for <span className="font-semibold text-gray-800">{identifier}</span>.
+                    </p>
+                    {testOtp && (
+                      <div className="bg-purple-50 border border-purple-200 text-purple-800 text-xs rounded-md p-3 mb-2 font-mono flex items-center justify-between">
+                        <span>🔑 [Dev Mode] Your OTP Code is: <strong>{testOtp}</strong></span>
+                        <button 
+                          onClick={() => {
+                            setOtp(testOtp);
+                            showSuccess("Testing OTP filled!");
+                          }} 
+                          className="text-[10px] bg-purple-600 hover:bg-purple-700 text-white px-2 py-0.5 rounded font-sans font-bold"
+                        >
+                          Auto-Fill
+                        </button>
+                      </div>
+                    )}
+                    <div className="relative">
+                        <KeyRound className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                        <input 
+                          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-950 placeholder-gray-500 font-mono text-center tracking-widest text-lg font-bold" 
+                          type="text" 
+                          maxLength={4}
+                          placeholder="Enter 4-digit OTP" 
+                          value={otp} 
+                          onChange={(e) => setOtp(e.target.value)} 
+                        />
+                    </div>
+                    <div className="flex gap-2 justify-between">
+                      <button onClick={handleSendOtp} className="text-xs text-purple-700 font-semibold hover:underline">
+                        Resend OTP
+                      </button>
+                      <button onClick={() => setSignUpStep('IDENTIFIER')} className="text-xs text-gray-500 font-semibold hover:underline">
+                        Change Email/Mobile
+                      </button>
+                    </div>
+                    <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleVerifyOtp}>
+                      Verify & Next
+                    </Pressable>
+                  </>
+                )}
+    
+                {/* SignUp - Step 3: Name & Password Setup */}
+                {isSignUp && !isGuestMode && signUpStep === 'PROFILE' && (
+                  <>
+                    <p className="text-xs text-gray-500 mb-2">
+                      OTP Verified! Tell us who you are to set up your dashboard.
+                    </p>
+                    <div className="relative">
+                        <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                        <input 
+                          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                          type="text" 
+                          placeholder="Your Full Name" 
+                          value={name} 
+                          onChange={(e) => setName(e.target.value)} 
+                        />
+                    </div>
+                    <div className="relative">
+                        <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                        <input 
+                          className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500" 
+                          type={showPassword ? "text" : "password"} 
+                          placeholder="Choose Password (min 6 chars)" 
+                          value={password} 
+                          onChange={(e) => setPassword(e.target.value)} 
+                        />
+                        <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
+                            {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
+                        </Pressable>
+                    </div>
+                    <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={handleCompleteSignUp}>
+                      Complete Sign Up
+                    </Pressable>
+                  </>
+                )}
+                
+                {!isGuestMode && (
+                  <>
+                    <div className="flex items-center gap-2 py-2">
+                        <hr className="flex-1 border-gray-300" />
+                        <span className="text-gray-600 text-xs">or</span>
+                        <hr className="flex-1 border-gray-300" />
+                    </div>
+    
+                    <div className="flex flex-col gap-2">
+                      <Pressable className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900 text-center" onClick={handleGoogleLogin}>
+                        Continue with Google
+                      </Pressable>
+                      
+                      <Pressable className="w-full bg-gray-950 hover:bg-black text-white py-2 rounded-md font-semibold text-center flex items-center justify-center gap-2" onClick={() => setIsGuestMode(true)}>
+                        <User className="h-4 w-4" /> Continue as Guest
+                      </Pressable>
+                    </div>
+                    
+                    <div className="text-center text-gray-700 pt-2 text-sm">
+                        {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
+                        <Pressable 
+                          onClick={() => { 
+                            const newSignUp = !isSignUp;
+                            if (newSignUp) {
+                              window.history.pushState({ ...window.history.state, signUp: true, signUpStep: 'IDENTIFIER' }, '');
+                            } else {
+                              window.history.back();
+                            }
+                            setIsSignUp(newSignUp); 
+                            setSignUpStep('IDENTIFIER'); 
+                            setTestOtp(null);
+                            setOtp('');
+                          }} 
+                          className="text-purple-700 font-semibold hover:underline"
+                        >
+                          {isSignUp ? 'Login' : 'Sign Up'}
+                        </Pressable>
+                    </div>
+                  </>
+                )}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
