@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, {useState, useEffect, Suspense} from 'react';
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import { App as CapacitorApp } from '@capacitor/app';
@@ -13,45 +13,39 @@ import {auth, db} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import AiSearch from './components/AiSearch';
-import Loading from './components/Loading';
 
-const LazyWrapper = ({ component: Component, ...props }: any) => (
-  <Suspense fallback={<Loading />}>
-    <Component {...props} />
-  </Suspense>
-);
+import AnalysisHistory from './components/AnalysisHistory';
+import FloatingAIAgent from './components/FloatingAIAgent';
+import Login from './components/Login';
+import StudyHub from './components/StudyHub';
+import CustomPractice from './components/CustomPractice';
+import PracticeTest from './components/PracticeTest';
+import PYQTestRunner from './components/PYQTestRunner';
+import HubSwitcher from './components/HubSwitcher';
+import VideoPlayer from './components/VideoPlayer';
+import Profile from './components/Profile';
+import NotesLibrary from './components/NotesLibrary';
+import EditProfile from './components/EditProfile';
+import AdminPanel from './components/AdminPanel';
+import AdminChatPage from './components/AdminChatPage';
+import TestHub from './components/TestHub';
+import Notes from './components/Notes';
+import AIStudyPlanPage from './components/AIStudyPlanPage';
+import NCERTHub from './components/NCERTHub';
+import NTAQuestionsHub from './components/NTAQuestionsHub';
+import OldPYQHistory from './components/OldPYQHistory';
+import Flashcards from './components/Flashcards';
+import StudyDashboard from './components/StudyDashboard';
+import PrivateVideos from './components/PrivateVideos';
+import BottomNav from './components/BottomNav';
+import UserChat from './components/UserChat';
+import NotificationPage from './components/NotificationPage';
+import MindHackPage from './components/MindHackPage';
 
-const AnalysisHistory = React.lazy(() => import('./components/AnalysisHistory'));
-const Login = React.lazy(() => import('./components/Login'));
-const StudyHub = React.lazy(() => import('./components/StudyHub'));
-const CustomPractice = React.lazy(() => import('./components/CustomPractice'));
-const PracticeTest = React.lazy(() => import('./components/PracticeTest'));
-const PYQTestRunner = React.lazy(() => import('./components/PYQTestRunner'));
-const HubSwitcher = React.lazy(() => import('./components/HubSwitcher'));
-const VideoPlayer = React.lazy(() => import('./components/VideoPlayer'));
-const Profile = React.lazy(() => import('./components/Profile'));
-const NotesLibrary = React.lazy(() => import('./components/NotesLibrary'));
-const EditProfile = React.lazy(() => import('./components/EditProfile'));
-const AdminPanel = React.lazy(() => import('./components/AdminPanel'));
-const AdminChatPage = React.lazy(() => import('./components/AdminChatPage'));
-const TestHub = React.lazy(() => import('./components/TestHub'));
-const Notes = React.lazy(() => import('./components/Notes'));
-const AIStudyPlanPage = React.lazy(() => import('./components/AIStudyPlanPage'));
-const NCERTHub = React.lazy(() => import('./components/NCERTHub'));
-const NTAQuestionsHub = React.lazy(() => import('./components/NTAQuestionsHub'));
-const OldPYQHistory = React.lazy(() => import('./components/OldPYQHistory'));
-const Flashcards = React.lazy(() => import('./components/Flashcards'));
-const StudyDashboard = React.lazy(() => import('./components/StudyDashboard'));
-const PrivateVideos = React.lazy(() => import('./components/PrivateVideos'));
-const BottomNav = React.lazy(() => import('./components/BottomNav'));
-const UserChat = React.lazy(() => import('./components/UserChat'));
-const NotificationPage = React.lazy(() => import('./components/NotificationPage'));
-const MindHackPage = React.lazy(() => import('./components/MindHackPage'));
-
-const NeuralSolver = React.lazy(() => import('./components/NeuralSolver'));
-const LiveAIInterface = React.lazy(() => import('./components/LiveAIInterface'));
-const SupportModal = React.lazy(() => import('./components/SupportModal'));
-const TimeSpentChart = React.lazy(() => import('./components/TimeSpentChart'));
+import NeuralSolver from './components/NeuralSolver';
+import LiveAIInterface from './components/LiveAIInterface';
+import SupportModal from './components/SupportModal';
+import TimeSpentChart from './components/TimeSpentChart';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X } from 'lucide-react';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion, AnimatePresence } from 'motion/react';
@@ -1341,7 +1335,7 @@ export default function App() {
   }
 
   if (!user) {
-    return <LazyWrapper component={Login} />;
+    return <Login />;
   }
 
   if (currentView === 'liveAI') {
@@ -1452,7 +1446,7 @@ export default function App() {
   if (currentView === 'profile') {
       return (
         <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
-            <div className="flex-grow"><LazyWrapper component={Profile} user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
+            <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
             <SupportModal 
                 isOpen={showSupportModal} 
@@ -1508,7 +1502,7 @@ export default function App() {
   if (currentView === 'tests') {
       return (
         <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
-            <div className="flex-grow"><LazyWrapper component={TestHub} subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
+            <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
             <SupportModal 
                 isOpen={showSupportModal} 
@@ -1550,7 +1544,7 @@ export default function App() {
   if (currentView === 'notes') {
       return (
         <div className="flex flex-col min-h-screen pb-20 bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
-            <div className="flex-grow"><LazyWrapper component={Notes} onNavigate={setCurrentView} /></div>
+            <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
                 isOpen={showSupportModal} 
