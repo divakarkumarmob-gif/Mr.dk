@@ -954,50 +954,6 @@ export default function App() {
       return () => unsubscribe();
   }, [user]);
 
-  const openAnalytics = async () => {
-    if (!user) return;
-    
-    let dbDataMap: Record<string, any> = {};
-
-    if (user.uid.startsWith('local_guest_')) {
-        const today = getISTDateString();
-        dbDataMap[today] = stats;
-    } else {
-        // Fetch analytics data from Firestore
-        const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
-        const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
-        const snapshot = await getDocs(q);
-        
-        snapshot.docs.forEach(doc => {
-            dbDataMap[doc.id] = doc.data();
-        });
-    }
-
-    const last7Days = [];
-    const now = new Date();
-    // Use IST adjustment for consistent date calculation
-    const istOffset = 5.5 * 60 * 60 * 1000;
-    
-    for (let i = 6; i >= 0; i--) {
-        const date = new Date(now.getTime() + istOffset);
-        date.setDate(date.getDate() - i);
-        const dateStr = date.toISOString().split('T')[0];
-        
-        const d = dbDataMap[dateStr] || { timeSpentSeconds: 0, lectureTimeSeconds: 0 };
-        const total = d.timeSpentSeconds || 0;
-        const lecture = d.lectureTimeSeconds || 0;
-        
-        last7Days.push({
-            name: date.toLocaleDateString('en-US', { weekday: 'short' }),
-            lectureMinutes: Math.floor(lecture / 60),
-            otherMinutes: Math.floor(Math.max(0, total - lecture) / 60)
-        });
-    }
-    
-    setChartData(last7Days);
-    setShowAnalytics(true);
-  };
-
 
   const handleOpenNotifications = () => {
       setShowNotifications(false);
