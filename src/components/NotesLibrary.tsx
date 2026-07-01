@@ -63,18 +63,25 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
         (async () => {
             const favs = await storageService.getItem<string[]>('favorites') || [];
             setFavorites(favs);
+            
             const history = await getRecentlyViewed();
             setRecentlyViewed(history);
-            // This is a bit inefficient, but for now just to make it work
-            // Ideally we'd scan the storage for downloaded notes
+            
+            // For downloaded, this is harder to get efficiently, 
+            // but we can at least initialize the favorites and recent views.
         })();
-    }, [selectedChapter]);
+    }, []);
+
+    const isFavoriteChapter = (chapter: string) => favorites.includes(chapter);
+    const isDownloadedChapter = (chapter: string) => downloaded.includes(chapter);
 
     const chapters = CHAPTER_DATA[activeSubject][activeClass].filter((c: string) => c.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const checkDownloaded = async (chapter: string) => {
         return await isNoteDownloaded(chapter);
     }
+    return (
+        <>
          <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
                 <div className="flex items-center justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
@@ -146,9 +153,15 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                 )}
              </div>
 
-             {selectedChapter && (
-                 <PDFViewer chapterName={selectedChapter} onClose={() => { setSelectedChapter(null); setDownloadedUpdate(prev => !prev); }} />
-             )}
-        </motion.div>
+             {selectedChapter ? (
+                 <PDFViewer 
+                    chapterName={selectedChapter} 
+                    onClose={() => { 
+                        setSelectedChapter(null); 
+                        setDownloadedUpdate(prev => !prev); 
+                    }} 
+                 />
+             ) : null}
+        </>
     );
 }

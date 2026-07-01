@@ -13,6 +13,14 @@ export default function StudyDashboard({ onClose }: { onClose: () => void }) {
         { label: 'Mastered Flashcards', value: '0', icon: Target, color: 'text-orange-400' },
     ]);
     const [focusData, setFocusData] = useState<{ day: string; focus: number }[]>([]);
+    const [recentlyViewed, setRecentlyViewed] = useState<string[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const history = await getRecentlyViewed();
+            setRecentlyViewed(history);
+        })();
+    }, []);
 
     useEffect(() => {
         if (auth.currentUser) {
