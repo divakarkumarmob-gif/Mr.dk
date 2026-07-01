@@ -54,13 +54,14 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                 });
                 
                 const currentNow = Date.now();
-                setRecentTests(tests.filter(t => {
+                const filteredTests = tests.filter(t => {
                     const hideUntil = localStorage.getItem('hide-' + t.id);
                     if (hideUntil) {
                         if (currentNow > parseInt(hideUntil)) return false;
                     }
                     return true;
-                }));
+                });
+                setRecentTests(filteredTests.slice(0, 3));
             } catch (e: any) {
                 console.error("Error fetching recent tests in StudyHub:", e);
             }
@@ -74,7 +75,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         setSelectedResult(test);
         window.history.pushState({ view: 'study', isResultOpen: true }, '', window.location.href);
         if (!localStorage.getItem('hide-' + test.id)) {
-            localStorage.setItem('hide-' + test.id, (Date.now() + 10 * 60 * 1000).toString());
+            localStorage.setItem('hide-' + test.id, (Date.now() + 7 * 60 * 1000).toString());
         }
     }
 
@@ -158,10 +159,20 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
           )
         }
           
-          {recentTests.length > 0 && (
+          {recentTests.filter(test => {
+                const hideUntil = localStorage.getItem('hide-' + test.id);
+                if (hideUntil && now > parseInt(hideUntil)) return false;
+                return true;
+            }).length > 0 && (
                 <div className="mb-4">
                     <h2 className="font-bold mb-2 text-xs text-orange-400 uppercase">Recently Completed</h2>
-                    {recentTests.map(test => {
+                    {recentTests
+                      .filter(test => {
+                          const hideUntil = localStorage.getItem('hide-' + test.id);
+                          if (hideUntil && now > parseInt(hideUntil)) return false;
+                          return true;
+                      })
+                      .map(test => {
                         const elapsed = now - test.timestamp.getTime();
                         const isReady = elapsed >= 120000;
                         const remaining = Math.max(0, 120000 - elapsed);

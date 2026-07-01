@@ -106,13 +106,14 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             });
             
             const now = Date.now();
-            setRecentTests(tests.filter(t => {
+            const filteredTests = tests.filter(t => {
                 const hideUntil = localStorage.getItem('hide-' + t.id);
                 if (hideUntil) {
                     if (now > parseInt(hideUntil)) return false;
                 }
                 return true;
-            }));
+            });
+            setRecentTests(filteredTests.slice(0, 3));
         } catch (e: any) {
             console.error("Error fetching recent tests:", e);
              // Handle gracefully
@@ -125,7 +126,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       setSelectedResult(test);
       window.history.pushState({ view: 'tests', isResultOpen: true }, '', window.location.href);
       if (!localStorage.getItem('hide-' + test.id)) {
-          localStorage.setItem('hide-' + test.id, (Date.now() + 10 * 60 * 1000).toString());
+          localStorage.setItem('hide-' + test.id, (Date.now() + 7 * 60 * 1000).toString());
       }
   }
 
@@ -280,10 +281,20 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 </div>
             )}
 
-            {recentTests.length > 0 && (
+            {recentTests.filter(test => {
+                const hideUntil = localStorage.getItem('hide-' + test.id);
+                if (hideUntil && now > parseInt(hideUntil)) return false;
+                return true;
+            }).length > 0 && (
                 <div className="mb-3">
                     <h2 className="font-bold text-xs mb-1.5 text-orange-400">Recently Completed</h2>
-                    {recentTests.map(test => {
+                    {recentTests
+                      .filter(test => {
+                          const hideUntil = localStorage.getItem('hide-' + test.id);
+                          if (hideUntil && now > parseInt(hideUntil)) return false;
+                          return true;
+                      })
+                      .map(test => {
                         const elapsed = now - test.timestamp.getTime();
                         const isReady = elapsed >= 120000;
                         const remaining = Math.max(0, 120000 - elapsed);
