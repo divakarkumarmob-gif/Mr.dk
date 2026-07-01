@@ -185,7 +185,7 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
             {/* Floating Button */}
             <motion.div
                 style={{ x, y, scale }}
-                className="fixed bottom-16 left-6 w-14 h-14 rounded-full shadow-lg cursor-grab z-[2000]"
+                className="fixed bottom-16 right-6 w-14 h-14 rounded-full shadow-lg cursor-grab z-[2000]"
                 drag
                 dragMomentum={false}
                 dragConstraints={{ top: -500, bottom: 100, left: -24, right: 300 }}

@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { auth } from '../lib/firebase';
 import { Timestamp } from 'firebase/firestore';
 import { initializeChat, sendMessage, uploadMedia, subscribeToMessages } from '../services/chatService';
-import { User } from 'lucide-react';
+import { User, ChevronLeft } from 'lucide-react';
 import { Message } from '../types';
 import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 
-export default function UserChat({ fullScreen, user }: { fullScreen?: boolean, user: any }) {
+export default function UserChat({ fullScreen, user, onBack }: { fullScreen?: boolean, user: any, onBack?: () => void }) {
   const [chatId, setChatId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
@@ -78,8 +78,15 @@ export default function UserChat({ fullScreen, user }: { fullScreen?: boolean, u
 
   return (
     <div className={`flex flex-col ${fullScreen ? 'h-screen' : 'h-[500px]'} bg-[#0c1317] border border-white/10 rounded-xl overflow-hidden shadow-2xl`}>
-      <div className="bg-[#1f2c34] p-3 text-white font-bold flex items-center justify-end gap-2">
-        <User size={20} /> Support Chat
+      <div className="bg-[#1f2c34] p-3 text-white font-bold flex items-center justify-between gap-2">
+        {onBack && (
+            <button onClick={onBack} className="p-1 hover:bg-white/10 rounded-full">
+                <ChevronLeft size={20} />
+            </button>
+        )}
+        <div className="flex items-center gap-2">
+            <User size={20} /> Support Chat
+        </div>
       </div>
       <MessageList messages={messages} messagesEndRef={messagesEndRef} isLoading={loading} />
       <MessageInput text={text} setText={setText} handleSend={handleSend} handleFileChange={handleFileChange} />

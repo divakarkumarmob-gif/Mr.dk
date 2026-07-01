@@ -134,9 +134,9 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen bg-[#0a0f24] text-white font-sans flex flex-col"
+            className="bg-[#0a0f24] text-white font-sans"
         >
-          <div className="max-w-full mx-auto w-full flex flex-col h-full">
+          <div className="max-w-full mx-auto w-full">
             <div className="flex justify-between items-center mb-2">
                 <HubSwitcher active="study" onNavigate={onNavigate} />
             </div>
