@@ -28,8 +28,12 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const togglePYQOptions = (v: boolean) => {
       if (v) {
           window.history.pushState({ ...window.history.state, showPYQOptions: true }, '', window.location.href);
+          setShowPYQOptions(true);
+      } else {
+          if (showPYQOptions) {
+             window.history.back();
+          }
       }
-      setShowPYQOptions(v);
   };
   const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
   const [currentPaperUrl, setCurrentPaperUrl] = useState<string | undefined>(undefined);
