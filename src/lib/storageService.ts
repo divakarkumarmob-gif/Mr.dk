@@ -38,8 +38,11 @@ export const storageService = {
       const decryptedString = decryptedBytes.toString(CryptoJS.enc.Utf8);
       
       return JSON.parse(decryptedString) as T;
-    } catch (e) {
-      console.error('Failed to retrieve data', e);
+    } catch (e: any) {
+      // Ignore "Item with given key does not exist" errors
+      if (e?.message !== 'Item with given key does not exist') {
+        console.error('Failed to retrieve data', e);
+      }
       return null;
     }
   },
