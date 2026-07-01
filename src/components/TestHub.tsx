@@ -25,6 +25,12 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedSubForPYQ, setSelectedSubForPYQ] = useState('');
   const [showPYQOptions, setShowPYQOptions] = useState(false);
+  const togglePYQOptions = (v: boolean) => {
+      if (v) {
+          window.history.pushState({ ...window.history.state, showPYQOptions: true }, '', window.location.href);
+      }
+      setShowPYQOptions(v);
+  };
   const [pyqQuestions, setPyqQuestions] = useState<any[] | null>(null);
   const [currentPaperUrl, setCurrentPaperUrl] = useState<string | undefined>(undefined);
   const [showCustomOptions, setShowCustomOptions] = useState(false);
@@ -135,10 +141,13 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
         if (selectedResult && !window.history.state?.isResultOpen) {
             setSelectedResult(null);
         }
+        if (showPYQOptions && !window.history.state?.showPYQOptions) {
+            setShowPYQOptions(false);
+        }
     };
     window.addEventListener('popstate', handlePop);
     return () => window.removeEventListener('popstate', handlePop);
-  }, [selectedResult]);
+  }, [selectedResult, showPYQOptions]);
 
   const removeTest = (testId: string) => {
       localStorage.setItem('hide-' + testId, '0');
@@ -715,9 +724,9 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       )}
 
       {showPYQOptions && (
-        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setShowPYQOptions(false)}>
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => togglePYQOptions(false)}>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="w-full max-w-md bg-card rounded-2xl p-6 relative" onClick={e => e.stopPropagation()}>
-                <button className="absolute top-4 right-4 text-muted-foreground" onClick={() => setShowPYQOptions(false)}><X className="h-5 w-5"/></button>
+                <button className="absolute top-4 right-4 text-muted-foreground" onClick={() => togglePYQOptions(false)}><X className="h-5 w-5"/></button>
                 <h2 className="text-xl font-bold mb-6">Select PYQ</h2>
                 <div className="space-y-4">
                     <select className="w-full p-4 rounded-xl bg-muted text-foreground" onChange={(e) => setSelectedYear(e.target.value)}>
