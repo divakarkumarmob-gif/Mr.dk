@@ -88,15 +88,17 @@ export const resetPassword = async (email: string) => {
     }
 };
 
+import { storageService } from './storageService';
+...
 export const logOut = async () => {
     try {
-        localStorage.removeItem('guest_user');
+        await storageService.removeItem('guest_user');
         if (Capacitor.isNativePlatform()) {
             await FirebaseAuthentication.signOut();
         }
         return await signOut(auth);
     } catch (error) {
-        console.error('Logout error:', error);
+...        console.error('Logout error:', error);
         throw error;
     }
 };

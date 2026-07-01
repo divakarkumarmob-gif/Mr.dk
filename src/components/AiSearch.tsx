@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import { Search, Loader2, History, Camera, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import { getApiUrl } from '@/utils/api';
+import { storageService } from '../lib/storageService';
 
 export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
   const [prompt, setPrompt] = useState('');
@@ -20,10 +21,12 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const saved = localStorage.getItem('searchHistory');
-    if (saved) {
-      setHistory(JSON.parse(saved));
-    }
+    (async () => {
+        const saved = await storageService.getItem<{prompt: string, result: string, timestamp: number}[]>('searchHistory');
+        if (saved) {
+          setHistory(saved);
+        }
+    })();
   }, []);
 
   useEffect(() => {
@@ -38,11 +41,11 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
     };
   }, [historyRef]);
 
-  const saveToHistory = (p: string, r: string) => {
+  const saveToHistory = async (p: string, r: string) => {
     const newItem = { prompt: p, result: r, timestamp: Date.now() };
     const newHistory = [newItem, ...history.filter(item => item.prompt !== p)].slice(0, 5);
     setHistory(newHistory);
-    localStorage.setItem('searchHistory', JSON.stringify(newHistory));
+    await storageService.setItem('searchHistory', newHistory);
   };
 
   const handleSearch = async () => {

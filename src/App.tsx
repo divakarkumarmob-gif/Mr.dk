@@ -18,6 +18,7 @@ import AnalysisHistory from './components/AnalysisHistory';
 import FloatingAIAgent from './components/FloatingAIAgent';
 import Login from './components/Login';
 import StudyHub from './components/StudyHub';
+import { storageService } from './lib/storageService';
 import CustomPractice from './components/CustomPractice';
 import PracticeTest from './components/PracticeTest';
 import PYQTestRunner from './components/PYQTestRunner';

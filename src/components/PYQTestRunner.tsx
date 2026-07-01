@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Menu, X, Hourglass, CheckCircle2 } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { generateNEETPdf } from '../lib/pdfUtils';
+import { storageService } from '../lib/storageService';
 interface Question {
     id: string;
     question: string;
@@ -31,11 +32,11 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
     const [user, setUser] = useState<any>(auth.currentUser);
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(u => {
+        const unsubscribe = auth.onAuthStateChanged(async (u) => {
             if (u) setUser(u);
             else {
-                const cachedGuest = localStorage.getItem('guest_user');
-                if (cachedGuest) setUser(JSON.parse(cachedGuest));
+                const cachedGuest = await storageService.getItem<any>('guest_user');
+                if (cachedGuest) setUser(cachedGuest);
             }
         });
         return () => unsubscribe();
