@@ -17,53 +17,26 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
     const [filterType, setFilterType] = useState<'all' | 'correct' | 'incorrect' | 'unattempted'>('all');
     const [showAnalysis, setShowAnalysis] = useState(false);
     const [showTutor, setShowTutor] = useState(false);
-    
-    const visibilityRef = React.useRef({ showReview, showAnalysis, showTutor });
-    
-    useEffect(() => {
-        visibilityRef.current = { showReview, showAnalysis, showTutor };
-    }, [showReview, showAnalysis, showTutor]);
-
-    useEffect(() => {
-        const handlePop = () => {
-            if (visibilityRef.current.showReview) setShowReview(false);
-            if (visibilityRef.current.showAnalysis) setShowAnalysis(false);
-            if (visibilityRef.current.showTutor) setShowTutor(false);
-        };
-        window.addEventListener('popstate', handlePop);
-        return () => window.removeEventListener('popstate', handlePop);
-    }, []);
 
     const handleOpenReview = (type: 'correct' | 'incorrect' | 'unattempted' | 'all') => {
         setFilterType(type);
         setShowReview(true);
-        window.history.pushState({ showReview: true }, '');
     };
 
     const handleStatClick = (type: 'correct' | 'incorrect' | 'unattempted' | 'all') => {
         handleOpenReview(type);
     };
 
-    const toggleAnalysis = (show: boolean) => {
-        if (show) window.history.pushState({ showAnalysis: true }, '');
-        setShowAnalysis(show);
-    };
-    
-    const toggleTutor = (show: boolean) => {
-        if (show) window.history.pushState({ showTutor: true }, '');
-        setShowTutor(show);
-    };
-
     if (showReview) {
-        return <TestReview questions={result?.questions || []} answers={result?.answers || {}} filterType={filterType} onClose={() => { setShowReview(false); window.history.back(); }} />;
+        return <TestReview questions={result?.questions || []} answers={result?.answers || {}} filterType={filterType} onClose={() => setShowReview(false)} />;
     }
 
     if (showAnalysis) {
-        return <TestAnalysis result={result} onClose={() => { toggleAnalysis(false); window.history.back(); }} />;
+        return <TestAnalysis result={result} onClose={() => setShowAnalysis(false)} />;
     }
 
     if (showTutor) {
-        return <TestTutor result={result} onClose={() => { toggleTutor(false); window.history.back(); }} />;
+        return <TestTutor result={result} onClose={() => setShowTutor(false)} />;
     }
 
     // Safely parse numeric values
@@ -164,13 +137,13 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
             {/* Action Buttons */}
             <div className="flex gap-4">
                 <button 
-                    onClick={() => toggleAnalysis(true)}
+                    onClick={() => setShowAnalysis(true)}
                     className="flex-1 bg-blue-600 py-4 rounded-2xl font-bold active:scale-95 transition-all shadow-xl shadow-blue-600/20"
                 >
                     Deep Analysis
                 </button>
                 <button 
-                    onClick={() => toggleTutor(true)}
+                    onClick={() => setShowTutor(true)}
                     className="flex-1 bg-purple-600 py-4 rounded-2xl font-bold active:scale-95 transition-all"
                 >
                     Ask AI Tutor
