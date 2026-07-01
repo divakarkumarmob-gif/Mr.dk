@@ -182,118 +182,7 @@ export default function App() {
   const showSummaryRef = React.useRef(false);
   const showNotificationsRef = React.useRef(false);
   const showChatRef = React.useRef(false);
-  const lastBackPressedRef = React.useRef(0);
-
-  const [loading, setLoading] = useState(true);
-  const [subjects, setSubjects] = useState(getDailyChapters());
-  const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
-  const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
-  const [statsLoaded, setStatsLoaded] = useState(false);
-  const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
-  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
-  const [displayedText, setDisplayedText] = useState("");
-  const [backPressCount, setBackPressCount] = useState(0);
-  const [showExitToast, setShowExitToast] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
-  const [isPYQRunning, setIsPYQRunning] = useState(false);
-
-  const [showOnboarding, _setShowOnboarding] = useState(false);
-  const setShowOnboarding = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showOnboarding: true }, '');
-    _setShowOnboarding(v);
-    showOnboardingRef.current = v;
-  };
-
-  const [showSupportModal, _setShowSupportModal] = useState(false);
-  const setShowSupportModal = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showSupportModal: true }, '');
-    _setShowSupportModal(v);
-    showSupportModalRef.current = v;
-  };
-
-  const [showAnalytics, _setShowAnalytics] = useState(false);
-  const setShowAnalytics = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showAnalytics: true }, '');
-    _setShowAnalytics(v);
-    showAnalyticsRef.current = v;
-  };
-
-  const [showNeuralSolver, _setShowNeuralSolver] = useState(false);
-  const setShowNeuralSolver = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showNeuralSolver: true }, '');
-    _setShowNeuralSolver(v);
-    showNeuralSolverRef.current = v;
-  };
-
-  const [showResetModal, _setShowResetModal] = useState(false);
-  const setShowResetModal = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showResetModal: true }, '');
-    _setShowResetModal(v);
-    showResetModalRef.current = v;
-  };
-
-  const [showRandomPopup, _setShowRandomPopup] = useState(false);
-  const setShowRandomPopup = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showRandomPopup: true }, '');
-    _setShowRandomPopup(v);
-    showRandomPopupRef.current = v;
-  };
-
-  const [showPrivateVideos, _setShowPrivateVideos] = useState(false);
-  const setShowPrivateVideos = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showPrivateVideos: true }, '');
-    _setShowPrivateVideos(v);
-    showPrivateVideosRef.current = v;
-  };
-
-  const [showFlashcards, _setShowFlashcards] = useState(false);
-  const setShowFlashcards = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showFlashcards: true }, '');
-    _setShowFlashcards(v);
-    showFlashcardsRef.current = v;
-  };
-
-  const [showStudyDashboard, _setShowStudyDashboard] = useState(false);
-  const setShowStudyDashboard = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showStudyDashboard: true }, '');
-    _setShowStudyDashboard(v);
-    showStudyDashboardRef.current = v;
-  };
-
-  const [showSummary, _setShowSummary] = useState(false);
-  const setShowSummary = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showSummary: true }, '');
-    _setShowSummary(v);
-    showSummaryRef.current = v;
-  };
-
-  const [activeVideo, _setActiveVideo] = useState<string | null>(null);
-  const setActiveVideo = (v: string | null) => {
-    if (v) window.history.pushState({ ...window.history.state, activeVideo: v }, '');
-    _setActiveVideo(v);
-    activeVideoRef.current = v;
-  };
-
-  const [isNotificationView, _setIsNotificationView] = useState(false);
-  const setIsNotificationView = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, isNotificationView: true }, '');
-    _setIsNotificationView(v);
-    isNotificationViewRef.current = v;
-  };
-
-  const [showNotifications, _setShowNotifications] = useState(false);
-  const setShowNotifications = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showNotifications: true }, '');
-    _setShowNotifications(v);
-    showNotificationsRef.current = v;
-  };
-
-  const [showChat, _setShowChat] = useState(false);
-  const setShowChat = (v: boolean) => {
-    if (v) window.history.pushState({ ...window.history.state, showChat: true }, '');
-    _setShowChat(v);
-    showChatRef.current = v;
-  };
+  const lastBackPressedRef = React.useRef<number>(0);
 
   useEffect(() => {
     currentViewRef.current = currentView;
@@ -338,42 +227,18 @@ export default function App() {
         
         // Close overlays if they are not in the current state
         if (state) {
-            _setIsNotificationView(!!state.isNotificationView);
-            isNotificationViewRef.current = !!state.isNotificationView;
-            
-            _setShowAnalytics(!!state.showAnalytics);
-            showAnalyticsRef.current = !!state.showAnalytics;
-            
-            _setShowNeuralSolver(!!state.showNeuralSolver);
-            showNeuralSolverRef.current = !!state.showNeuralSolver;
-            
-            _setActiveVideo(state.activeVideo || null);
-            activeVideoRef.current = state.activeVideo || null;
-            
-            _setShowResetModal(!!state.showResetModal);
-            showResetModalRef.current = !!state.showResetModal;
-            
-            _setShowRandomPopup(!!state.showRandomPopup);
-            showRandomPopupRef.current = !!state.showRandomPopup;
-            
-            _setShowPrivateVideos(!!state.showPrivateVideos);
-            showPrivateVideosRef.current = !!state.showPrivateVideos;
-            
-            _setShowFlashcards(!!state.showFlashcards);
-            showFlashcardsRef.current = !!state.showFlashcards;
-            
-            _setShowStudyDashboard(!!state.showStudyDashboard);
-            showStudyDashboardRef.current = !!state.showStudyDashboard;
-            
-            _setShowSummary(!!state.showSummary);
-            showSummaryRef.current = !!state.showSummary;
-            
-            _setShowNotifications(!!state.showNotifications);
-            showNotificationsRef.current = !!state.showNotifications;
-            
-            _setShowChat(!!state.showChat);
-            showChatRef.current = !!state.showChat;
-            
+            setIsNotificationView(!!state.isNotificationView);
+            setShowAnalytics(!!state.showAnalytics);
+            setShowNeuralSolver(!!state.showNeuralSolver);
+            setActiveVideo(state.activeVideo || null);
+            setShowResetModal(!!state.showResetModal);
+            setShowRandomPopup(!!state.showRandomPopup);
+            setShowPrivateVideos(!!state.showPrivateVideos);
+            setShowFlashcards(!!state.showFlashcards);
+            setShowStudyDashboard(!!state.showStudyDashboard);
+            setShowSummary(!!state.showSummary);
+            setShowNotifications(!!state.showNotifications);
+            setShowChat(!!state.showChat);
             if (state.view) {
                 _setCurrentView(state.view);
                 if (state.params) {
@@ -387,75 +252,50 @@ export default function App() {
             setUrlParams(searchParams);
             
             // Close all overlays on default state
-            _setIsNotificationView(false);
-            isNotificationViewRef.current = false;
-            
-            _setShowAnalytics(false);
-            showAnalyticsRef.current = false;
-            
-            _setShowNeuralSolver(false);
-            showNeuralSolverRef.current = false;
-            
-            _setActiveVideo(null);
-            activeVideoRef.current = null;
-            
-            _setShowResetModal(false);
-            showResetModalRef.current = false;
-            
-            _setShowRandomPopup(false);
-            showRandomPopupRef.current = false;
-            
-            _setShowPrivateVideos(false);
-            showPrivateVideosRef.current = false;
-            
-            _setShowFlashcards(false);
-            showFlashcardsRef.current = false;
-            
-            _setShowStudyDashboard(false);
-            showStudyDashboardRef.current = false;
-            
-            _setShowSummary(false);
-            showSummaryRef.current = false;
-            
-            _setShowNotifications(false);
-            showNotificationsRef.current = false;
-            
-            _setShowChat(false);
-            showChatRef.current = false;
+            setIsNotificationView(false);
+            setShowAnalytics(false);
+            setShowNeuralSolver(false);
+            setActiveVideo(null);
+            setShowResetModal(false);
+            setShowRandomPopup(false);
+            setShowPrivateVideos(false);
+            setShowFlashcards(false);
+            setShowStudyDashboard(false);
+            setShowSummary(false);
+            setShowNotifications(false);
+            setShowChat(false);
         }
     };
     window.addEventListener('popstate', handlePopState);
 
     // Capacitor Back Button Handling
-    const backButtonListener = CapacitorApp.addListener('backButton', async () => {
-        const state = window.history.state;
+    const backButtonListener = CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+        const currentView = currentViewRef.current;
         
-        // If an overlay is active (tracked in history state), just go back
-        if (
-            state?.showNotifications || 
-            state?.showChat || 
-            state?.showAnalytics || 
-            state?.showNeuralSolver || 
-            state?.showResetModal || 
-            state?.showRandomPopup || 
-            state?.showPrivateVideos || 
-            state?.showFlashcards || 
-            state?.showStudyDashboard || 
-            state?.showSummary ||
-            state?.activeVideo ||
-            state?.isNotificationView
-        ) {
-            window.history.back();
+        // Priority order for closing overlays
+        if (showNeuralSolverRef.current) { window.history.back(); return; }
+        if (showSupportModalRef.current) { setShowSupportModal(false); return; }
+        if (activeVideoRef.current) { window.history.back(); return; }
+        if (showNotificationsRef.current) { setShowNotifications(false); return; }
+        if (showChatRef.current) { setShowChat(false); return; }
+        if (showPrivateVideosRef.current) { window.history.back(); return; }
+        if (showFlashcardsRef.current) { setShowFlashcards(false); return; }
+        if (showStudyDashboardRef.current) { setShowStudyDashboard(false); return; }
+        if (isNotificationViewRef.current) { window.history.back(); return; }
+        if (showAnalyticsRef.current) { window.history.back(); return; }
+        if (showResetModalRef.current) { window.history.back(); return; }
+        if (showRandomPopupRef.current) { window.history.back(); return; }
+        if (showSummaryRef.current) { setShowSummary(false); return; }
+        
+        if (currentView === 'study') {
+            setCurrentView('home');
             return;
         }
 
-        const currentView = currentViewRef.current;
-        
-        // If we are on a sub-view, go back in history
         if (currentView !== 'home') {
             window.history.back();
         } else {
-            // Double press to exit on Home
+            // On home screen, prevent going back to previous history
             const now = Date.now();
             if (now - lastBackPressedRef.current < 2000) {
                 CapacitorApp.exitApp();
@@ -492,13 +332,6 @@ export default function App() {
     const queryString = searchParams.toString();
     const newUrl = queryString ? `/?${queryString}` : '/';
     
-    // If we are navigating to the same view, we might want to replace instead of push
-    // but the requirement says "Preserve navigation history correctly"
-    // Usually, clicking a bottom nav tab should NOT push if it's the same tab.
-    if (currentViewRef.current === view && !params) {
-        return;
-    }
-
     window.history.pushState({ view, params }, '', newUrl);
     setUrlParams(searchParams);
     _setCurrentView(view);
@@ -517,60 +350,22 @@ export default function App() {
 
   const notificationRef = React.useRef<HTMLDivElement>(null);
   const mainContainerRef = React.useRef<HTMLDivElement>(null);
-  const openAnalytics = async () => {
-    if (!user) return;
-    
-    let dbDataMap: Record<string, any> = {};
-
-    if (user.uid.startsWith('local_guest_')) {
-        const today = getISTDateString();
-        dbDataMap[today] = stats;
-    } else {
-        // Fetch analytics data from Firestore
-        const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
-        const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
-        const snapshot = await getDocs(q);
-        
-        snapshot.docs.forEach(doc => {
-            dbDataMap[doc.id] = doc.data();
-        });
-    }
-
-    const last7Days = [];
-    const now = new Date();
-    // Use IST adjustment for consistent date calculation
-    const istOffset = 5.5 * 60 * 60 * 1000;
-    
-    for (let i = 6; i >= 0; i--) {
-        const date = new Date(now.getTime() + istOffset);
-        date.setDate(date.getDate() - i);
-        const dateStr = date.toISOString().split('T')[0];
-        
-        const d = dbDataMap[dateStr] || { timeSpentSeconds: 0, lectureTimeSeconds: 0 };
-        const total = d.timeSpentSeconds || 0;
-        const lecture = d.lectureTimeSeconds || 0;
-        
-        last7Days.push({
-            name: date.toLocaleDateString('en-US', { weekday: 'short' }),
-            lectureMinutes: Math.floor(lecture / 60),
-            otherMinutes: Math.floor(Math.max(0, total - lecture) / 60)
-        });
-    }
-    
-    setChartData(last7Days);
-    setShowAnalytics(true);
+  const [isNotificationView, _setIsNotificationView] = useState(false);
+  const setIsNotificationView = (v: boolean) => {
+    _setIsNotificationView(v);
+    isNotificationViewRef.current = v;
   };
-
-  const handleOpenResetModal = () => {
-    setShowResetModal(true);
+  const [showNotifications, _setShowNotifications] = useState(false);
+  const setShowNotifications = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showNotifications: true }, '');
+    _setShowNotifications(v);
+    showNotificationsRef.current = v;
   };
-
-  const handleOpenRandomPopup = () => {
-    setShowRandomPopup(true);
-  };
-
-  const togglePrivateVideos = (v: boolean) => {
-    setShowPrivateVideos(v);
+  const [showChat, _setShowChat] = useState(false);
+  const setShowChat = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showChat: true }, '');
+    _setShowChat(v);
+    showChatRef.current = v;
   };
   const [notifications, setNotifications] = useState<{ id: string; message: string; readBy: string[]; timestamp: any }[]>([]);
   const [neetNotifications, setNeetNotifications] = useState<{ updates: string[]; timestamp: any }[]>([]);
@@ -656,24 +451,56 @@ export default function App() {
   // Update render logic in notifications popup
   // Find where showNotifications popup is defined (around line 1104)
 
+  const [isPYQRunning, setIsPYQRunning] = useState(false);
   const [resumingTest, setResumingTest] = useState<any>(null);
   
   // Focus Mode Global State
   const [isFocusMode, setIsFocusMode] = useState(false);
+  
+  React.useEffect(() => {
+      (window as any).triggerSummary = () => setShowSummary(true);
+      return () => { delete (window as any).triggerSummary; };
+  }, []);
+
   const [isLooking, setIsLooking] = useState(true);
   const [distractionSensitivity, setDistractionSensitivity] = useState(30); // Default 30 (~3 seconds)
   const [focusedTime, setFocusedTime] = useState(0);
   const [distractedTime, setDistractedTime] = useState(0);
-  
+  const prevFocusModeRef = React.useRef(false);
+  const sensitivityRef = React.useRef(distractionSensitivity);
   const videoRef = React.useRef<HTMLVideoElement>(null);
   const streamRef = React.useRef<MediaStream | null>(null);
   const faceLandmarkerRef = React.useRef<any>(null);
+  const lastFrameTimeRef = React.useRef(Date.now());
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
   const wakeLockRef = React.useRef<any>(null);
-  const sensitivityRef = React.useRef(distractionSensitivity);
-  const lastFrameTimeRef = React.useRef(Date.now());
-  const prevFocusModeRef = React.useRef(false);
 
+  useEffect(() => {
+      async function requestWakeLock() {
+          if (isFocusMode && 'wakeLock' in navigator) {
+              try {
+                  wakeLockRef.current = await (navigator as any).wakeLock.request('screen');
+              } catch (err) {
+                  console.warn('Wake lock error:', err);
+              }
+          } else if (wakeLockRef.current) {
+              await wakeLockRef.current.release();
+              wakeLockRef.current = null;
+          }
+      }
+      requestWakeLock();
+      return () => {
+          if (wakeLockRef.current) wakeLockRef.current.release();
+      };
+  }, [isFocusMode]);
+
+  useEffect(() => {
+	  if (prevFocusModeRef.current === true && isFocusMode === false) {
+		  setShowSummary(true);
+	  }
+	  prevFocusModeRef.current = isFocusMode;
+  }, [isFocusMode]);
+  
   useEffect(() => {
     if (isLooking && audioRef.current) {
         audioRef.current.pause();
@@ -814,6 +641,85 @@ export default function App() {
       requestAnimationFrame(startDetectionLoop);
   };
 
+  const [loading, setLoading] = useState(true);
+  const [activeVideo, _setActiveVideo] = useState<string | null>(null);
+  const setActiveVideo = (v: string | null) => {
+    _setActiveVideo(v);
+    activeVideoRef.current = v;
+  };
+  const [subjects, setSubjects] = useState(getDailyChapters());
+  const [previousSubjects, setPreviousSubjects] = useState<typeof subjects | null>(null);
+  const [showResetModal, _setShowResetModal] = useState(false);
+  const setShowResetModal = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showResetModal: true }, '');
+    _setShowResetModal(v);
+    showResetModalRef.current = v;
+  };
+  const [showAnalytics, _setShowAnalytics] = useState(false);
+  const setShowAnalytics = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showAnalytics: true }, '');
+    _setShowAnalytics(v);
+    showAnalyticsRef.current = v;
+  };
+  const [showFlashcards, _setShowFlashcards] = useState(false);
+  const setShowFlashcards = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showFlashcards: true }, '');
+    _setShowFlashcards(v);
+    showFlashcardsRef.current = v;
+  };
+  const [showStudyDashboard, _setShowStudyDashboard] = useState(false);
+  const setShowStudyDashboard = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showStudyDashboard: true }, '');
+    _setShowStudyDashboard(v);
+    showStudyDashboardRef.current = v;
+  };
+  const [showPrivateVideos, _setShowPrivateVideos] = useState(false);
+  const setShowPrivateVideos = (v: boolean) => {
+    _setShowPrivateVideos(v);
+    showPrivateVideosRef.current = v;
+  };
+  const togglePrivateVideos = (show: boolean) => {
+    if (show) {
+      window.history.pushState({ ...window.history.state, showPrivateVideos: true }, '');
+    }
+    setShowPrivateVideos(show);
+  };
+  const [chartData, setChartData] = useState<{ name: string, lectureMinutes: number, otherMinutes: number }[]>([]);
+  const [statsLoaded, setStatsLoaded] = useState(false);
+  const [showOnboarding, _setShowOnboarding] = useState(false);
+  const setShowOnboarding = (v: boolean) => {
+    _setShowOnboarding(v);
+    showOnboardingRef.current = v;
+  };
+  const [randomOverride, setRandomOverride] = useState<{ originalSubjects: typeof subjects, expiryTime: number, pendingSubjects: typeof subjects } | null>(null);
+  const [showRandomPopup, _setShowRandomPopup] = useState(false);
+  const setShowRandomPopup = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showRandomPopup: true }, '');
+    _setShowRandomPopup(v);
+    showRandomPopupRef.current = v;
+  };
+  const [showSupportModal, _setShowSupportModal] = useState(false);
+  const setShowSupportModal = (v: boolean) => {
+    _setShowSupportModal(v);
+    showSupportModalRef.current = v;
+  };
+  const [showNeuralSolver, _setShowNeuralSolver] = useState(false);
+  const setShowNeuralSolver = (v: boolean) => {
+    _setShowNeuralSolver(v);
+    showNeuralSolverRef.current = v;
+  };
+  const [showSummary, _setShowSummary] = useState(false);
+  const setShowSummary = (v: boolean) => {
+    if (v) window.history.pushState({ ...window.history.state, showSummary: true }, '');
+    _setShowSummary(v);
+    showSummaryRef.current = v;
+  };
+  const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
+  const [displayedText, setDisplayedText] = useState("");
+  const [backPressCount, setBackPressCount] = useState(0);
+  const [showExitToast, setShowExitToast] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+  
   useEffect(() => {
     // Initial mount logic
     window.scrollTo(0, 0);
@@ -954,18 +860,81 @@ export default function App() {
       return () => unsubscribe();
   }, [user]);
 
+  const openAnalytics = async () => {
+    if (!user) return;
+    
+    // Push state to history for back navigation
+    window.history.pushState({ ...window.history.state, showAnalytics: true }, '', window.location.href);
+    
+    let dbDataMap: Record<string, any> = {};
+
+    if (user.uid.startsWith('local_guest_')) {
+        // For guests, we only have the current day's stats in the stats object for now
+        // But let's check if we have multiple days saved (not currently implemented but good for future)
+        const today = getISTDateString();
+        dbDataMap[today] = stats;
+    } else {
+        // Fetch analytics data from Firestore
+        const analyticsRef = collection(db, 'users', user.uid, 'analytics_v2');
+        const q = query(analyticsRef, orderBy('__name__', 'desc'), limit(15));
+        const snapshot = await getDocs(q);
+        
+        snapshot.docs.forEach(doc => {
+            dbDataMap[doc.id] = doc.data();
+        });
+    }
+
+    const last7Days = [];
+    const now = new Date();
+    // Use IST adjustment for consistent date calculation
+    const istOffset = 5.5 * 60 * 60 * 1000;
+    
+    for (let i = 6; i >= 0; i--) {
+        const date = new Date(now.getTime() + istOffset);
+        date.setDate(date.getDate() - i);
+        const dateStr = date.toISOString().split('T')[0];
+        
+        const d = dbDataMap[dateStr] || { timeSpentSeconds: 0, lectureTimeSeconds: 0 };
+        const total = d.timeSpentSeconds || 0;
+        const lecture = d.lectureTimeSeconds || 0;
+        
+        last7Days.push({
+            name: date.toLocaleDateString('en-US', { weekday: 'short' }),
+            lectureMinutes: Math.floor(lecture / 60),
+            otherMinutes: Math.floor(Math.max(0, total - lecture) / 60)
+        });
+    }
+    
+    setChartData(last7Days);
+    setShowAnalytics(true);
+  };
 
   const handleOpenNotifications = () => {
       setShowNotifications(false);
       setIsNotificationView(true);
+      window.history.pushState({ ...window.history.state, isNotificationView: true }, '', window.location.href);
+  };
+
+  const handleOpenRandomPopup = () => {
+      setShowRandomPopup(true);
+      window.history.pushState({ ...window.history.state, showRandomPopup: true }, '', window.location.href);
+  };
+
+  const handleOpenResetModal = () => {
+      setShowResetModal(true);
+      window.history.pushState({ ...window.history.state, showResetModal: true }, '', window.location.href);
   };
 
   const handleOpenNeuralSolver = () => {
       setShowNeuralSolver(true);
+      window.history.pushState({ ...window.history.state, showNeuralSolver: true }, '', window.location.href);
   };
 
-  // Remove handleOpenVideo as setActiveVideo handles it
-  
+  const handleOpenVideo = (topic: string) => {
+      setActiveVideo(topic);
+      window.history.pushState({ ...window.history.state, activeVideo: topic }, '', window.location.href);
+  };
+
   useEffect(() => {
     if (user) {
         setCurrentView('home');
@@ -1307,7 +1276,10 @@ export default function App() {
                 }}
                 className="relative"
             >
+                {/* Rotating background ring */}
                 <div className="w-24 h-24 rounded-full border-4 border-blue-500/10 border-t-blue-500 animate-[spin_1.5s_linear_infinite]" />
+                
+                {/* Inner Icon Container */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
                         animate={{ 
@@ -1326,6 +1298,8 @@ export default function App() {
                         </svg>
                     </motion.div>
                 </div>
+
+                {/* Subtle outer pulse */}
                 <div className="absolute -inset-4 rounded-full bg-blue-500/5 animate-pulse" />
             </motion.div>
 
@@ -1343,6 +1317,7 @@ export default function App() {
                 </p>
             </motion.div>
 
+            {/* Progress Bar background */}
             <div className="absolute bottom-12 w-32 h-[2px] bg-white/5 rounded-full overflow-hidden">
                 <motion.div 
                     initial={{ x: '-100%' }}
@@ -1363,14 +1338,254 @@ export default function App() {
     return <Login />;
   }
 
-  // Helper to determine if we should show the main bottom nav and layout
-  const isMainTab = ['home', 'study', 'tests', 'notes', 'profile'].includes(currentView);
-  const isSubPage = ['analytics', 'customPractice', 'practiceTest', 'editProfile', 'notesLibrary', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'aiStudyPlan', 'mindHack'].includes(currentView);
+  if (currentView === 'liveAI') {
+      return <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />;
+  }
+
+  if (currentView === 'mindHack') {
+      return (
+        <div className="flex flex-col min-h-screen bg-[#f4e4bc] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <MindHackPage onBack={() => setCurrentView('profile')} />
+        </div>
+      );
+  }
+
+  if (currentView === 'aiStudyPlan') {
+      return (
+        <div className="flex flex-col min-h-screen bg-[#f0f4f8] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
+        </div>
+      );
+  }
+
+  if (isNotificationView) {
+      return (
+        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <NotificationPage onBack={() => window.history.back()} />
+        </div>
+      );
+  }
+
+  if (currentView === 'study') {
+      return (
+        <>
+        <AnimatePresence mode="wait">
+           {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
+           {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
+           {showPrivateVideos && <PrivateVideos onClose={() => {
+               // If we are closing manually (not via popstate), we might need to go back
+               if (window.history.state?.showPrivateVideos) {
+                   window.history.back();
+               }
+               setShowPrivateVideos(false);
+           }} />}
+        </AnimatePresence>
+        <motion.div 
+            initial={{ opacity: 0, x: 20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.3 }}
+            className="pt-[max(env(safe-area-inset-top,0px),12px)] px-3"
+        >
+            <StudyHub 
+                subjects={subjects} 
+                setResumingTest={setResumingTest} 
+                setCurrentView={setCurrentView} 
+                isFocusMode={isFocusMode}
+                setIsFocusMode={setIsFocusMode}
+                setShowSummary={setShowSummary}
+                distractionSensitivity={distractionSensitivity}
+                setDistractionSensitivity={setDistractionSensitivity}
+                focusedTime={focusedTime}
+                distractedTime={distractedTime}
+                videoRef={videoRef}
+                isLooking={isLooking}
+                startDetectionLoop={startDetectionLoop}
+                setShowFlashcards={setShowFlashcards}
+                setShowStudyDashboard={setShowStudyDashboard}
+                setShowPrivateVideos={togglePrivateVideos}
+                onNavigate={(view) => {
+              if (view === 'customPractice') {
+                  setCurrentView('customPractice');
+              } else {
+                  setCurrentView(view);
+              }
+            }} />
+        </motion.div>
+        </>
+      );
+  }
+
+  if (currentView === 'customPractice') {
+      return <CustomPractice onBack={() => setCurrentView('study')} onStart={(chapters) => {
+          setPracticeChapters(chapters);
+          setCurrentView('practiceTest');
+      }} />;
+  }
+
+  if (currentView === 'practiceTest') {
+      if (resumingTest) {
+          return <PYQTestRunner 
+              questions={resumingTest.questions}
+              title={resumingTest.title}
+              initialData={{
+                  answers: resumingTest.answers,
+                  marked: resumingTest.marked,
+                  currentIndex: resumingTest.currentIndex,
+                  timeLeft: resumingTest.timeLeft
+              }}
+              onBack={() => {
+                  setResumingTest(null);
+                  setCurrentView('study');
+              }}
+          />;
+      }
+      return <PracticeTest chapters={practiceChapters} onBack={() => setCurrentView('customPractice')} />;
+  }
+
+  
+  if (currentView === 'profile') {
+      return (
+        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} /></div>
+            <BottomNav currentView="profile" onNavigate={setCurrentView} />
+            <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
+            {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
+        </div>
+      );
+  }
+  
+  if (currentView === 'notesLibrary') {
+      return (
+        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <NotesLibrary onBack={() => setCurrentView('profile')} />
+        </div>
+      );
+  }
+
+  if (currentView === 'editProfile') {
+      return (
+        <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <EditProfile user={user} onNavigate={setCurrentView} />
+        </div>
+      );
+  }
+
+  if (currentView === 'admin') {
+      return (
+          <div className="min-h-screen bg-background text-foreground pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+              <button className="mb-4 text-sm text-gray-400" onClick={() => setCurrentView('profile')}>Back to Profile</button>
+              <AdminPanel onNavigate={setCurrentView} />
+              <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+              />
+          </div>
+      );
+  }
+
+  if (currentView === 'adminChat') {
+      return <AdminChatPage onBack={() => setCurrentView('admin')} />;
+  }
+
+
+  if (currentView === 'tests') {
+      return (
+        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
+            {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
+            <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
+        </div>
+      );
+  }
+
+  if (currentView === 'ncertHub') {
+      return (
+        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <NCERTHub onBack={() => setCurrentView('notes')} />
+        </div>
+      );
+  }
+
+  if (currentView === 'ntaQuestionsHub') {
+      const paperId = urlParams.get('paper');
+      return (
+        <div className="flex flex-col min-h-screen bg-[#0a0f24] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
+        </div>
+      );
+  }
+
+  if (currentView === 'oldPyqHistory') {
+      return (
+        <div className="flex flex-col min-h-screen bg-[#05070A] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <OldPYQHistory onBack={() => setCurrentView('notes')} />
+        </div>
+      );
+  }
+
+  if (currentView === 'notes') {
+      return (
+        <div className="flex flex-col min-h-screen pb-20 bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+            <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
+            <BottomNav currentView="notes" onNavigate={setCurrentView} />
+            <SupportModal 
+                isOpen={showSupportModal} 
+                onClose={() => setShowSupportModal(false)}
+                onConfirm={() => {
+                    setShowSupportModal(false);
+                    setCurrentView('technicalSupport');
+                }}
+            />
+        </div>
+      );
+  }
+
+    if (currentView === 'analytics') {
+        return (
+          <div className="flex flex-col min-h-screen bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+              <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} user={user} /></div>
+              <SupportModal 
+                 isOpen={showSupportModal} 
+                 onClose={() => setShowSupportModal(false)}
+                 onConfirm={() => {
+                     setShowSupportModal(false);
+                     setCurrentView('technicalSupport');
+                 }}
+             />
+          </div>
+        );
+    }
+
+   if (currentView === 'technicalSupport') {
+       return (
+         <div className="min-h-screen bg-background text-foreground pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+             <button className="absolute top-[max(env(safe-area-inset-top,0px),12px)] left-4 z-[1100] text-sm text-gray-400 bg-black/50 px-2 py-1 rounded-md" onClick={() => setCurrentView('profile')}>⬅️ Back</button>
+             <UserChat fullScreen={true} user={user} />
+         </div>
+       );
+   }
 
   return (
     <>
-      {/* Global Overlays */}
-      {showNeuralSolver && <NeuralSolver onClose={() => setShowNeuralSolver(false)} />}
+      {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
       <SupportModal 
         isOpen={showSupportModal} 
         onClose={() => setShowSupportModal(false)}
@@ -1380,20 +1595,25 @@ export default function App() {
         }}
       />
       {showOnboarding && (
+
           <div 
             onClick={() => setShowOnboarding(false)}
             className="fixed inset-0 z-[1000] flex flex-col items-center justify-center p-6 bg-black/60 backdrop-blur-sm cursor-pointer"
           >
-            <motion.div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full relative z-50 flex-shrink-0">
-                    <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,white,blue,gray)] animate-spin"></div>
-                    <div className="absolute inset-[2px] rounded-full bg-[#0a0f24] flex items-center justify-center">
-                        <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-white">
-                            <path d="M7 10v4M10 8v8M13 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                            <path d="M17 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" />
-                        </svg>
+            <motion.div 
+                className="flex items-center gap-4"
+            >
+                    <div
+                        className="w-14 h-14 rounded-full relative z-50 flex-shrink-0"
+                    >
+                        <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,white,blue,gray)] animate-spin"></div>
+                        <div className="absolute inset-[2px] rounded-full bg-[#0a0f24] flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-white">
+                                <path d="M7 10v4M10 8v8M13 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                <path d="M17 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -1407,208 +1627,161 @@ export default function App() {
           </div>
       )}
 
-      {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => setActiveVideo(null)} />}
+    {activeVideo && <VideoPlayer topic={activeVideo} onClose={() => window.history.back()} />}
+
+    <motion.div 
+      initial={{ opacity: 0, x: -20 }} 
+      animate={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.3 }} 
+      ref={mainContainerRef} 
+      className={`h-screen bg-background text-foreground font-sans pb-44 overflow-y-auto ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),12px)] px-3`}
+    >
       
-      {showSummary && (
-          <FocusSessionSummary 
-              focusedTime={focusedTime}
-              distractedTime={distractedTime}
-              onClose={() => setShowSummary(false)}
-          />
+      <div className="relative z-10 max-w-full mx-auto w-full">
+      
+      {showExitToast && (
+          <div className="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-xs font-semibold z-[1000] shadow-2xl animate-bounce">
+              Press back again to exit
+          </div>
       )}
 
-      {/* Main App Container */}
-      <motion.div 
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: 1 }} 
-        className={`h-screen bg-background text-foreground font-sans overflow-hidden flex flex-col ${showOnboarding ? 'blur-sm' : ''}`}
-      >
-        <div 
-            ref={mainContainerRef}
-            className="flex-grow overflow-y-auto pt-[max(env(safe-area-inset-top,0px),12px)] px-3 pb-24"
-        >
-            <div className="relative z-10 max-w-full mx-auto w-full">
-                {/* Home View (Main Layout items included) */}
-                <div style={{ display: currentView === 'home' ? 'block' : 'none' }}>
-                    <div className="flex justify-between items-center mb-3 select-none">
-                        <div className="flex-1 min-w-0">
-                           <h1 className="text-lg sm:text-xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
-                           <p className="text-gray-400 text-[9px] sm:text-[11px]">Let's make today productive</p>
-                        </div>
-                        <div className="relative" ref={notificationRef}>
-                            <Bell className="h-6 w-6 cursor-pointer" onClick={() => setShowNotifications(true)} />
-                             {notifications.some(n => !n.readBy?.includes(user?.uid)) ? (
-                                 <span className="absolute top-0 right-0 bg-red-500 rounded-full w-2.5 h-2.5 border-2 border-[#0a0f24]"></span>
-                             ) : null}
-                            {showNotifications && (
-                                <div className="absolute top-8 right-0 bg-card p-4 rounded-2xl shadow-xl w-64 z-[100] border border-border max-h-96 overflow-y-auto">
-                                    <h3 className="font-bold mb-2">Notifications</h3>
-                                    {/* ... notifications content ... */}
-                                    {notifications.length === 0 && neetNotifications.length === 0 ? (
-                                        <p className="text-gray-400 text-sm">No notifications</p>
-                                    ) : (
-                                        <div className="space-y-4">
-                                            {/* Render notifications here (reusing existing logic) */}
-                                            {notifications.map(n => (
-                                                <div key={n.id} className="text-sm p-2 bg-[#0a1025] border border-blue-900/50 rounded-lg">
-                                                    <p>{n.message}</p>
-                                                </div>
-                                            ))}
+      {/* Header */}
+      <div className="flex justify-between items-center mb-3 select-none">
+        
+        <div className="flex-1 min-w-0">
+           <h1 className="text-lg sm:text-xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h1>
+           <p className="text-gray-400 text-[9px] sm:text-[11px]">Let's make today productive</p>
+        </div>
+        <div className="relative" ref={notificationRef}>
+            <Bell className="h-6 w-6 cursor-pointer" onClick={handleOpenNotifications} />
+             {notifications.some(n => !n.readBy?.includes(user?.uid)) ? (
+                 <span className="absolute top-0 right-0 bg-red-500 rounded-full w-2.5 h-2.5 border-2 border-[#0a0f24]"></span>
+             ) : null}
+            {showNotifications ? (
+              <div className="absolute top-8 right-0 bg-card p-4 rounded-2xl shadow-xl w-64 z-[100] border border-border max-h-96 overflow-y-auto">
+                  <h3 className="font-bold mb-2">Notifications</h3>
+                  
+                  {neetNotifications.length > 0 && (
+                      <div className="mb-4">
+                          <h4 className="text-xs text-blue-400 font-bold mb-1 uppercase">NEET Updates</h4>
+                          {neetNotifications.map((neet, idx) => (
+                              <div key={idx} className="text-xs p-2 bg-[#0a1025] border border-blue-900/50 rounded-lg mb-2">
+                                  {neet.updates.map((update, uIdx) => (
+                                      <p key={uIdx} className="mb-1">{update}</p>
+                                  ))}
+                                  <p className="text-gray-500 text-[10px]">
+                                      {neet.timestamp?.toDate().toLocaleString()}
+                                  </p>
+                              </div>
+                          ))}
+                      </div>
+                  )}
+
+                  {notifications.length === 0 ? (
+                      <p className="text-gray-400 text-sm">No notifications</p>
+                  ) : (
+                      <div className="space-y-4">
+                        {['Today', 'Yesterday'].map(group => {
+                            const groupNotifications = notifications.filter(n => {
+                                const date = n.timestamp?.toDate();
+                                const today = new Date();
+                                const yesterday = new Date(today);
+                                yesterday.setDate(yesterday.getDate() - 1);
+                                if (group === 'Today') return date?.toDateString() === today.toDateString();
+                                if (group === 'Yesterday') return date?.toDateString() === yesterday.toDateString();
+                                return false;
+                            });
+
+                            if (groupNotifications.length === 0) return null;
+
+                            return (
+                                <div key={group}>
+                                    <h4 className="text-xs text-gray-500 font-bold mb-1 uppercase">{group}</h4>
+                                    <div className="space-y-2">
+                                        {groupNotifications.map(n => (
+                                            <div key={n.id} className="text-sm p-2 bg-[#0a1025] border border-blue-900/50 rounded-lg">
+                                                <p>{n.message}</p>
+                                                <div className="flex justify-between items-center mt-1">
+                                                    <p className="text-gray-500 text-[10px]">
+                                                    {n.timestamp?.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                                                </p>
+                                                {!n.readBy?.includes(user?.uid) && (
+                                                    <button onClick={() => markAsRead(n.id)} className="text-[10px] bg-blue-600/50 text-blue-200 px-2 py-0.5 rounded">Mark as Read</button>
+                                                )}
+                                            </div>
                                         </div>
-                                    )}
+                                    ))}
                                 </div>
-                            )}
-                        </div>
-                    </div>
-
-                    <HubSwitcher active="home" onNavigate={setCurrentView} />
-
-                    <div className="bg-card rounded-2xl p-3 sm:p-5 border border-border mb-4 mt-0 select-none">
-                        <div className="flex justify-between items-center mb-2.5">
-                            <h2 className="font-bold text-sm sm:text-lg">Your Performance</h2>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                            <div onClick={() => setCurrentView('analytics')} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer">
-                                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Tests Attempted</p>
-                                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
                             </div>
-                            <div onClick={openAnalytics} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer">
-                                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Time Spent</p>
-                                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
-                            </div>
-                            {/* ... more performance items ... */}
-                        </div>
-                    </div>
+                        );
+                    })}
+                  </div>
+              )}
+          </div>
+        ) : null}
+      </div>
+    </div>
 
-                    <div className="flex justify-between items-center mb-4 mt-6">
-                        <h2 className="font-bold text-lg sm:text-xl">Continue Learning</h2>
-                        <div className="flex items-center gap-2">
-                            <button onClick={handleOpenResetModal} className="text-xs bg-red-900/50 text-red-300 px-3 py-1 rounded-full">Reset</button>
-                            <button onClick={handleOpenRandomPopup} className="text-xs bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-1">
-                                <Shuffle className="h-3 w-3" /> Random
-                            </button>
-                        </div>
-                    </div>
+      <HubSwitcher active="home" onNavigate={setCurrentView} />
 
-                    <div className="space-y-3 mb-5 scroll-mt-20">
-                        {subjects.map((sub, idx) => (
-                            <div key={idx} className={`bg-card/80 backdrop-blur-sm border-l-4 ${sub.color} rounded-xl p-4 sm:p-6 flex justify-between items-center group shadow-md`}>
-                                <div className="flex-1 min-w-0 mr-3">
-                                  <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-wider truncate mb-1">{sub.name}</p>
-                                  <p className="font-bold text-sm sm:text-lg truncate">{sub.topic}</p>
-                                </div>
-                                <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs" onClick={() => setActiveVideo(sub.topic)}>START</button>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="mb-4">
-                        <AiSearch onFocus={() => setIsTyping(true)} />
-                    </div>
-                </div>
-
-                {/* Tab: Study */}
-                <div style={{ display: currentView === 'study' ? 'block' : 'none' }}>
-                    <AnimatePresence mode="wait">
-                       {showFlashcards && <Flashcards onClose={() => setShowFlashcards(false)} />}
-                       {showStudyDashboard && <StudyDashboard onClose={() => setShowStudyDashboard(false)} />}
-                       {showPrivateVideos && <PrivateVideos onClose={() => setShowPrivateVideos(false)} />}
-                    </AnimatePresence>
-                    <StudyHub 
-                        subjects={subjects} 
-                        setResumingTest={setResumingTest} 
-                        setCurrentView={setCurrentView} 
-                        isFocusMode={isFocusMode}
-                        setIsFocusMode={setIsFocusMode}
-                        setShowSummary={setShowSummary}
-                        distractionSensitivity={distractionSensitivity}
-                        setDistractionSensitivity={setDistractionSensitivity}
-                        focusedTime={focusedTime}
-                        distractedTime={distractedTime}
-                        videoRef={videoRef}
-                        isLooking={isLooking}
-                        startDetectionLoop={startDetectionLoop}
-                        setShowFlashcards={setShowFlashcards}
-                        setShowStudyDashboard={setShowStudyDashboard}
-                        setShowPrivateVideos={togglePrivateVideos}
-                        onNavigate={setCurrentView} 
-                    />
-                </div>
-
-                {/* Tab: Tests */}
-                <div style={{ display: currentView === 'tests' ? 'block' : 'none' }}>
-                    <TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} />
-                </div>
-
-                {/* Tab: Notes */}
-                <div style={{ display: currentView === 'notes' ? 'block' : 'none' }}>
-                    <Notes onNavigate={setCurrentView} />
-                </div>
-
-                {/* Tab: Profile */}
-                <div style={{ display: currentView === 'profile' ? 'block' : 'none' }}>
-                    <Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} />
-                </div>
-
-                {/* Other Views (rendered only when active to avoid excessive mounting) */}
-                {currentView === 'analytics' && <AnalysisHistory onNavigate={setCurrentView} user={user} />}
-                {currentView === 'customPractice' && <CustomPractice onBack={() => window.history.back()} onStart={(chapters) => { setPracticeChapters(chapters); setCurrentView('practiceTest'); }} />}
-                {currentView === 'practiceTest' && (
-                    resumingTest ? (
-                        <PYQTestRunner 
-                            questions={resumingTest.questions} 
-                            title={resumingTest.title}
-                            initialData={{ answers: resumingTest.answers, marked: resumingTest.marked, currentIndex: resumingTest.currentIndex, timeLeft: resumingTest.timeLeft }}
-                            onBack={() => { setResumingTest(null); window.history.back(); }}
-                        />
-                    ) : (
-                        <PracticeTest chapters={practiceChapters} onBack={() => window.history.back()} />
-                    )
-                )}
-                {currentView === 'editProfile' && <EditProfile user={user} onNavigate={setCurrentView} />}
-                {currentView === 'notesLibrary' && <NotesLibrary onBack={() => window.history.back()} />}
-                {currentView === 'ncertHub' && <NCERTHub onBack={() => window.history.back()} />}
-                {currentView === 'ntaQuestionsHub' && <NTAQuestionsHub onBack={() => window.history.back()} autoOpenPaperId={urlParams.get('paper') || undefined} />}
-                {currentView === 'oldPyqHistory' && <OldPYQHistory onBack={() => window.history.back()} />}
-                {currentView === 'admin' && <AdminPanel onNavigate={setCurrentView} />}
-                {currentView === 'adminChat' && <AdminChatPage onBack={() => window.history.back()} />}
-                {currentView === 'technicalSupport' && <UserChat fullScreen={true} user={user} onBack={() => window.history.back()} />}
-                {currentView === 'aiStudyPlan' && <AIStudyPlanPage onBack={() => window.history.back()} onNavigate={setCurrentView} />}
-                {currentView === 'mindHack' && <MindHackPage onBack={() => window.history.back()} />}
-                {currentView === 'liveAI' && <LiveAIInterface onClose={() => window.history.back()} />}
-                {isNotificationView && <NotificationPage onBack={() => window.history.back()} />}
+      <div className="bg-card rounded-2xl p-3 sm:p-5 border border-border mb-4 mt-0 select-none">
+        <div className="flex justify-between items-center mb-2.5">
+            <h2 className="font-bold text-sm sm:text-lg">Your Performance</h2>
+            <div className="text-orange-500 text-[10px] sm:text-xs font-semibold">
+                {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
             </div>
         </div>
-
-        {/* Global UI Elements */}
-        {showExitToast && (
-            <div className="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-xs font-semibold z-[1000] shadow-2xl">
-                Press back again to exit
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            <div onClick={() => setCurrentView('analytics')} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Tests Attempted</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
             </div>
-        )}
-
-        {(isMainTab || isSubPage) && !isPYQRunning && (
-            <BottomNav currentView={currentView as any} onNavigate={setCurrentView} />
-        )}
-        
-        <FloatingAIAgent onNavigate={setCurrentView} isTyping={isTyping} />
-        {isFocusMode && <DistractionOverlay isLooking={isLooking} />}
-      </motion.div>
-
-      {/* Overlay Modals that are not part of the main layout flow */}
+             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Questions Solved</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.questionsSolved} <CheckCircle2 className="text-green-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            </div>
+             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Accuracy</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            </div>
+             <div onClick={openAnalytics} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
+                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Time Spent</p>
+                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            </div>
+        </div>
+      </div>
+      
       {showAnalytics && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000] flex items-center justify-center p-4">
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-card p-5 sm:p-7 rounded-3xl border border-border w-full max-w-lg shadow-2xl relative">
-               <button onClick={() => window.history.back()} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full">
+               <button onClick={() => window.history.back()} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full hover:bg-white/10 transition-colors">
                    <X className="h-4 w-4" />
                </button>
+               <div className="mb-6">
+                   <h2 className="text-xl font-bold flex items-center gap-2">
+                       <Clock className="text-purple-400 h-5 w-5" />
+                       Activity Analytics
+                   </h2>
+                   <p className="text-xs text-gray-400 mt-1">Visualization of your preparation time across the week</p>
+               </div>
                <TimeSpentChart data={chartData} />
             </motion.div>
         </div>
       )}
-      
+
+
+      {/* Continue Learning */}
+      <div className="flex justify-between items-center mb-4 mt-6">
+          <h2 className="font-bold text-lg sm:text-xl">Continue Learning</h2>
+          <div className="flex items-center gap-2">
+            <button onClick={handleOpenResetModal} className="text-xs bg-red-900/50 text-red-300 px-3 py-1 rounded-full">Reset</button>
+            <button onClick={handleOpenRandomPopup} className="text-xs bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-1">
+                <Shuffle className="h-3 w-3" /> Random
+            </button>
+          </div>
+      </div>
       {showRandomPopup && (
-        <div className="fixed inset-0 bg-black/60 z-[1000] flex items-center justify-center p-6">
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
             <div className="bg-card p-6 rounded-2xl border border-border w-full max-w-sm text-center">
                 <h2 className="text-xl font-bold mb-4">Random Chapter Picked!</h2>
                 <p className="text-gray-300">"{randomChapter?.topic}" will be for 2 hours.</p>
@@ -1621,7 +1794,7 @@ export default function App() {
       )}
       
       {showResetModal && (
-        <div className="fixed inset-0 bg-black/60 z-[1000] flex items-center justify-center p-6">
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
             <div className="bg-card p-6 rounded-2xl border border-border w-full max-w-sm">
                 <h2 className="text-xl font-bold mb-4">Are you sure you want to restart?</h2>
                 <div className="flex gap-3 mt-6">
@@ -1632,6 +1805,48 @@ export default function App() {
             </div>
         </div>
       )}
+      <div className="space-y-3 mb-5 scroll-mt-20">
+        {subjects.map((sub, idx) => (
+            <div key={idx} className={`bg-card/80 backdrop-blur-sm border-l-4 ${sub.color} rounded-xl p-4 sm:p-6 flex justify-between items-center group shadow-md`}>
+                <div className="flex-1 min-w-0 mr-3">
+                  <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-wider truncate mb-1">{sub.name}</p>
+                  <p className="font-bold text-sm sm:text-lg truncate">{sub.topic}</p>
+                </div>
+                <div className="flex gap-2 sm:gap-3 flex-shrink-0">
+                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm hidden sm:block hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
+                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs sm:hidden hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
+                </div>
+            </div>
+        ))}
+      </div>
+
+      <div className="mb-4">
+        <AiSearch onFocus={() => setIsTyping(true)} />
+      </div>
+
+      <BottomNav currentView={currentView as any} onNavigate={setCurrentView} />
+      
+      <FloatingAIAgent onNavigate={setCurrentView} isTyping={isTyping} />
+      
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)}
+        onConfirm={() => {
+            setShowSupportModal(false);
+            setCurrentView('technicalSupport');
+        }}
+      />
+      {isFocusMode && <DistractionOverlay isLooking={isLooking} />}
+      
+      {showSummary && (
+          <FocusSessionSummary 
+              focusedTime={focusedTime}
+              distractedTime={distractedTime}
+              onClose={() => setShowSummary(false)}
+          />
+      )}
+      </div>
+    </motion.div>
     </>
   );
 }

@@ -195,7 +195,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   });
 
   return (
-    <div className="bg-[#0a0f24] text-white font-sans px-1">
+    <div className="h-screen bg-[#0a0f24] text-white font-sans pb-44 px-3 overflow-y-auto">
       {pyqQuestions ? (
             <PYQTestRunner 
                 questions={pyqQuestions} 
