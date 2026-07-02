@@ -10,15 +10,17 @@ function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () 
     const [localUrl, setLocalUrl] = useState<string | null>(null);
 
     useEffect(() => {
-        const localData = getNoteOffline(chapterName);
-        if (localData) {
-            setLocalUrl(localData);
-        }
+        (async () => {
+            const localData = await getNoteOffline(chapterName);
+            if (localData) {
+                setLocalUrl(localData);
+            }
+        })();
     }, [chapterName]);
 
     const handleDownload = async () => {
         await saveNoteOffline(chapterName, pdfUrl);
-        setLocalUrl(getNoteOffline(chapterName));
+        setLocalUrl(await getNoteOffline(chapterName));
     }
 
     return (
@@ -137,13 +139,13 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                     ))}
                 </div>
                 
-                {getRecentlyViewed().length > 0 && (
+                {recentlyViewed.length > 0 && (
                     <div className="mt-8">
                         <h3 className="text-sm font-bold text-muted-foreground mb-3 flex items-center gap-2">
                              <Clock className="h-4 w-4" /> Recently Viewed
                         </h3>
                         <div className="space-y-2">
-                             {getRecentlyViewed().map((chapter: string, idx: number) => (
+                             {recentlyViewed.map((chapter: string, idx: number) => (
                                  <div key={idx} className="bg-card/50 p-2 rounded-lg text-xs font-semibold cursor-pointer hover:bg-muted" onClick={() => { addRecentlyViewed(chapter); setSelectedChapter(chapter); }}>
                                      {chapter}
                                  </div>

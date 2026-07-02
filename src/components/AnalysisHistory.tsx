@@ -70,12 +70,23 @@ export default function AnalysisHistory({ onNavigate, user }: { onNavigate: (vie
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
+    useEffect(() => {
+        const handlePopState = (event: PopStateEvent) => {
+            if (event.state && event.state.resultDetailOpen) {
+                setSelectedResult(null);
+            }
+        };
+        window.addEventListener('popstate', handlePopState);
+        return () => window.removeEventListener('popstate', handlePopState);
+    }, []);
+
     const handleSeeResult = (result: any) => {
+        window.history.pushState({ resultDetailOpen: true }, '', window.location.href);
         setSelectedResult(result);
     };
 
     const handleBackFromResult = () => {
-        setSelectedResult(null);
+        window.history.back();
     };
 
     if (selectedResult) {
