@@ -206,7 +206,8 @@ export default function App() {
       // Use solid color instead of transparent if contrast is an issue
       StatusBar.setBackgroundColor({ color: isLight ? '#f4e4bc' : '#0a0f24' }).catch(() => {});
       
-      // Ensure it overlays the webview
+      // Ensure it does not overlay the webview so content stays below
+      StatusBar.setOverlaysWebView({ overlay: false }).catch(() => {});
       StatusBar.show().catch(() => {});
     }
   }, [currentView]);
@@ -1385,7 +1386,7 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.3 }}
-            className="pt-[max(env(safe-area-inset-top,0px),12px)] px-3"
+            className="pt-0 px-0"
         >
             <StudyHub 
                 subjects={subjects} 
