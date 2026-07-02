@@ -1502,7 +1502,7 @@ export default function App() {
 
   if (currentView === 'tests') {
       return (
-        <div className="flex flex-col min-h-screen pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <div className="flex flex-col min-h-screen">
             <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
             <SupportModal 
