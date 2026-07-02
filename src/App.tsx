@@ -1386,7 +1386,7 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.3 }}
-            className="pt-0 px-0"
+            className="pt-[env(safe-area-inset-top,24px)] px-0"
         >
             <StudyHub 
                 subjects={subjects} 

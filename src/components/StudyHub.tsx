@@ -134,7 +134,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen bg-[#0a0f24] text-white font-sans flex flex-col pt-4"
+            className="min-h-screen bg-[#0a0f24] text-white font-sans flex flex-col"
         >
           <div className="w-full flex flex-col h-full px-4">
             <div className="flex justify-between items-center mb-2">
