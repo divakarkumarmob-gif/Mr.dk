@@ -239,17 +239,6 @@ export default function Login() {
     }
   };
 
-  const [permissionRequested, setPermissionRequested] = useState(false);
-
-  const requestPermissions = async () => {
-      try {
-          await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-          setPermissionRequested(true);
-      } catch (e) {
-          alert("Camera and microphone permissions are required to use this application.");
-      }
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 px-3 pb-8 flex flex-col items-center pt-[max(env(safe-area-inset-top,0px),12px)]">
       {errorMessage && (
@@ -275,16 +264,6 @@ export default function Login() {
         <EarthGraphics />
 
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          {!permissionRequested ? (
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-gray-900">Permissions Required</h2>
-              <p className="text-sm text-gray-600">To provide the best learning experience, NeetMaster needs access to your camera and microphone for interactive features.</p>
-              <Pressable className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center" onClick={requestPermissions}>
-                Grant Permissions
-              </Pressable>
-            </div>
-          ) : (
-            <>
               <div className="px-0 pt-0 pb-6 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-gray-900">
                     {isGuestMode ? 'Continue as Guest' : isSignUp ? (
@@ -515,8 +494,6 @@ export default function Login() {
                   </>
                 )}
               </div>
-            </>
-          )}
         </div>
       </div>
     </div>
