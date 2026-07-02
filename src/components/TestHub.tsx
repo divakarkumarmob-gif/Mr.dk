@@ -195,8 +195,9 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   });
 
   return (
-    <div className="h-screen bg-[#0a0f24] text-white font-sans pb-44 px-3 overflow-y-auto">
+    <div className="h-screen bg-[#0a0f24] text-white font-sans pb-44 w-full overflow-y-auto">
       {pyqQuestions ? (
+      <div className="px-3">
             <PYQTestRunner 
                 questions={pyqQuestions} 
                 title={testTitle || `${selectedYear} (${selectedSubForPYQ})`} 
@@ -222,8 +223,9 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                     }
                 }} 
             />
+      </div>
       ) : (
-        <>
+        <div className="px-3">
             <h1 className="text-lg font-bold mb-2">Tests</h1>
 
             {resumeTestData && (
@@ -817,7 +819,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
               <p className="text-lg text-muted-foreground mt-2">{timer}s</p>
           </div>
       )}
-      </>
+      </div>
       )}
       
       {activePdf && (
