@@ -4,7 +4,7 @@
  */
 
 import React, {useState, useEffect, lazy, Suspense} from 'react';
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { LocalNotifications } from '@capacitor/local-notifications';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import { getToken } from 'firebase/messaging';
@@ -28,9 +28,11 @@ import Footer from './components/Footer';
 import BottomNav from './components/BottomNav';
 import PageLayout from './components/PageLayout';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
+import { useAuth } from './contexts/AuthContext';
 
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const AiSearch = lazy(() => import('./components/AiSearch'));
 const WeakTopics = lazy(() => import('./components/WeakTopics'));
@@ -225,6 +227,44 @@ function ContactRoute() {
   );
 }
 
+function NotesLibraryRoute() {
+  const navigate = useNavigate();
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <PageLayout background="bg-background">
+        <NotesLibrary onBack={() => navigate('/profile')} />
+      </PageLayout>
+    </Suspense>
+  );
+}
+
+function EditProfileRoute() {
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const handleNavigate = (view: 'home' | 'study' | 'profile' | 'editProfile') => {
+    navigate(view === 'home' ? '/' : `/${view}`);
+  };
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <PageLayout background="bg-background">
+        <EditProfile user={user} onNavigate={handleNavigate} />
+      </PageLayout>
+    </Suspense>
+  );
+}
+
+function SchoolSearchRoute() {
+  const navigate = useNavigate();
+  const handleNavigate = (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub' | 'schoolSearch') => {
+    navigate(view === 'home' ? '/' : `/${view}`);
+  };
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <SchoolSearch onNavigate={handleNavigate} />
+    </Suspense>
+  );
+}
+
 /**
  * App
  * ---
@@ -246,6 +286,9 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyRoute />} />
         <Route path="/terms-of-service" element={<TermsRoute />} />
         <Route path="/contact" element={<ContactRoute />} />
+        <Route path="/notes-library" element={<ProtectedRoute><NotesLibraryRoute /></ProtectedRoute>} />
+        <Route path="/edit-profile" element={<ProtectedRoute><EditProfileRoute /></ProtectedRoute>} />
+        <Route path="/school-search" element={<ProtectedRoute><SchoolSearchRoute /></ProtectedRoute>} />
         <Route path="*" element={<AppInner />} />
       </Routes>
     </BrowserRouter>
@@ -254,12 +297,21 @@ export default function App() {
 
 function AppInner() {
   useReportProblemGesture(() => setShowSupportModal(true));
+  const { _setAuthUser, _setAuthLoading } = useAuth();
   const [user, setUser] = useState<User | null>(null);
   const [showLoginFromLanding, setShowLoginFromLanding] = useState(false);
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
   const currentViewRef = React.useRef(currentView);
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
   const urlParamsRef = React.useRef(urlParams);
+
+  // Keep AuthContext in sync so routes mounted outside AppInner (e.g. the
+  // top-level /about, /notes-library routes in App()) can read the
+  // current user via useAuth() without prop-drilling. AppInner remains
+  // the single source of truth for auth state; this just mirrors it.
+  useEffect(() => {
+    _setAuthUser(user);
+  }, [user, _setAuthUser]);
 
   // Refs for tracking overlay states in the backButton listener
   const showNeuralSolverRef = React.useRef(false);
@@ -784,6 +836,13 @@ function AppInner() {
   };
 
   const [loading, setLoading] = useState(true);
+
+  // See the `user` sync effect near the top of this component for why
+  // this exists (keeps AuthContext mirrored for routes outside AppInner).
+  useEffect(() => {
+    _setAuthLoading(loading);
+  }, [loading, _setAuthLoading]);
+
   const [activeVideo, _setActiveVideo] = useState<string | null>(null);
   const setActiveVideo = (v: string | null) => {
     _setActiveVideo(v);
@@ -1758,25 +1817,9 @@ function AppInner() {
       );
   }
 
-  if (currentView === 'schoolSearch') {
-      return <SchoolSearch onNavigate={setCurrentView} />;
-  }
-  
-  if (currentView === 'notesLibrary') {
-      return (
-        <PageLayout background="bg-background">
-            <NotesLibrary onBack={() => setCurrentView('profile')} />
-        </PageLayout>
-      );
-  }
-
-  if (currentView === 'editProfile') {
-      return (
-        <PageLayout background="bg-background">
-            <EditProfile user={user} onNavigate={setCurrentView} />
-        </PageLayout>
-      );
-  }
+  // Note: 'schoolSearch', 'notesLibrary', and 'editProfile' are now
+  // handled by real routes (/school-search, /notes-library, /edit-profile)
+  // in the top-level App() router wrapper above.
 
   if (currentView === 'admin') {
       return (

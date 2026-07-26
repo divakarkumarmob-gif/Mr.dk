@@ -7,6 +7,7 @@ import { globalLogger } from './lib/globalLogger';
 import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { App as CapacitorApp } from '@capacitor/app';
+import { AuthProvider } from './contexts/AuthContext';
 
 // Ensure globalLogger is initialized
 console.log("Logger initialized", globalLogger);
@@ -45,7 +46,9 @@ document.documentElement.classList.add('dark');
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HelmetProvider>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </HelmetProvider>
   </StrictMode>,
 );
