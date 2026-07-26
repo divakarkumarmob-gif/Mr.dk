@@ -27,6 +27,16 @@ export const cachePdf = async (url: string, filename: string) => {
 
 export const getCachedPdf = async (filename: string) => {
     try {
+        // Filesystem.getUri() only constructs a path - it does NOT verify
+        // the file exists. Without an explicit existence check here, this
+        // returned a URI even for files that were never actually saved,
+        // and the viewer would try to load that empty/non-existent file
+        // instead of fetching from the network - showing up as
+        // "Unexpected server response (0)" / "View Blocked".
+        await Filesystem.stat({
+            directory: Directory.Data,
+            path: `pdfs/${filename}`
+        });
         const result = await Filesystem.getUri({
             directory: Directory.Data,
             path: `pdfs/${filename}`
