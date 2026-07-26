@@ -52,7 +52,7 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                 </div>
                 <h2 className="text-base font-bold">{user?.displayName || 'Aspirant'}</h2>
                 <p className="text-muted-foreground text-[10px] mb-2">{user?.email}</p>
-                <Pressable onClick={() => onNavigate('editProfile')} className="bg-primary text-primary-foreground flex items-center gap-0.5 px-1.5 py-0 rounded-full font-bold text-[8px]">
+                <Pressable onClick={() => navigate('/edit-profile')} className="bg-primary text-primary-foreground flex items-center gap-0.5 px-1.5 py-0 rounded-full font-bold text-[8px]">
                     <Edit className="h-2 w-2" /> EDIT PROFILE
                 </Pressable>
             </div>
@@ -202,7 +202,7 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
 
             {/* Support Network */}
             <h3 className="text-muted-foreground text-[10px] font-bold mb-1.5 uppercase">Support Network</h3>
-            <Pressable onClick={() => onNavigate('notesLibrary')} className="w-full text-left bg-orange-500 text-white p-2 rounded-lg mb-2 flex justify-between items-center">
+            <Pressable onClick={() => navigate('/notes-library')} className="w-full text-left bg-orange-500 text-white p-2 rounded-lg mb-2 flex justify-between items-center">
                  <div className="flex items-center gap-1.5">
                     <Download className="h-4 w-4"/>
                     <p className="font-bold text-xs">Download Notes</p>
@@ -221,7 +221,7 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                     <a href="https://instagram.com/mr.divakar00" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs"><Mail className="h-4 w-4"/><span>@mr.divakar00</span></a>
                     <ChevronRight className="h-3 w-3" />
                 </div>
-                <Pressable onClick={() => onNavigate('schoolSearch')} className="w-full text-left flex items-center justify-between p-1">
+                <Pressable onClick={() => navigate('/school-search')} className="w-full text-left flex items-center justify-between p-1">
                     <div className="flex items-center gap-1.5 text-xs"><Search className="h-4 w-4"/><span>Search School</span></div>
                     <ChevronRight className="h-3 w-3" />
                 </Pressable>
