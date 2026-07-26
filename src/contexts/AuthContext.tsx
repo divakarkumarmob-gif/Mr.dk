@@ -34,7 +34,15 @@ const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  // Default to false (not true): this context only reflects whatever
+  // AppInner reports. If a route is opened directly without AppInner ever
+  // mounting (e.g. a deep link straight to /edit-profile before AppInner's
+  // wildcard route matches), defaulting to `true` here would leave
+  // ProtectedRoute showing "Loading..." forever, since only AppInner's
+  // effect calls _setAuthLoading. AppInner still sets this to true itself
+  // as soon as it mounts and starts its Firebase check, so the normal
+  // "logged in user refreshing the page" case is unaffected.
+  const [loading, setLoading] = useState(false);
 
   return (
     <AuthContext.Provider
