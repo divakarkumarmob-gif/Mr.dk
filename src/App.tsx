@@ -29,6 +29,7 @@ import BottomNav from './components/BottomNav';
 import PageLayout from './components/PageLayout';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
 import { useAuth } from './contexts/AuthContext';
+import { useRouteBackButton } from './lib/useRouteBackButton';
 
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -193,6 +194,7 @@ function StaticPageFallback() {
 
 function AboutRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   return (
     <Suspense fallback={<StaticPageFallback />}>
       <AboutFAQPage onBack={() => navigate('/')} />
@@ -202,6 +204,7 @@ function AboutRoute() {
 
 function PrivacyRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   return (
     <Suspense fallback={<StaticPageFallback />}>
       <PrivacyPolicy onBack={() => navigate('/')} />
@@ -211,6 +214,7 @@ function PrivacyRoute() {
 
 function TermsRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   return (
     <Suspense fallback={<StaticPageFallback />}>
       <TermsOfService onBack={() => navigate('/')} />
@@ -220,6 +224,7 @@ function TermsRoute() {
 
 function ContactRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   return (
     <Suspense fallback={<StaticPageFallback />}>
       <ContactPage onBack={() => navigate('/')} />
@@ -229,6 +234,7 @@ function ContactRoute() {
 
 function NotesLibraryRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   return (
     <Suspense fallback={<StaticPageFallback />}>
       <PageLayout background="bg-background">
@@ -240,6 +246,7 @@ function NotesLibraryRoute() {
 
 function EditProfileRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   const { user } = useAuth();
   const handleNavigate = (view: 'home' | 'study' | 'profile' | 'editProfile') => {
     navigate(view === 'home' ? '/' : `/${view}`);
@@ -255,6 +262,7 @@ function EditProfileRoute() {
 
 function SchoolSearchRoute() {
   const navigate = useNavigate();
+  useRouteBackButton();
   const handleNavigate = (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub' | 'schoolSearch') => {
     navigate(view === 'home' ? '/' : `/${view}`);
   };
