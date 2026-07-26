@@ -306,6 +306,7 @@ export default function App() {
 function AppInner() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const { _setAuthUser, _setAuthLoading } = useAuth();
+  const routerNavigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
   const [showLoginFromLanding, setShowLoginFromLanding] = useState(false);
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
@@ -498,7 +499,13 @@ function AppInner() {
     const queryString = searchParams.toString();
     const newUrl = queryString ? `/?${queryString}` : '/';
     
-    window.history.pushState({ view, params }, '', newUrl);
+    // Use React Router's navigate() instead of raw window.history.pushState
+    // so this shares the same history stack as the newer route-based pages
+    // (/about, /edit-profile, etc). Mixing manual pushState calls with
+    // React Router's own history tracking was causing the hardware back
+    // button to jump to the wrong place (usually straight to home) because
+    // the two systems disagreed about what the "previous" entry was.
+    routerNavigate(newUrl);
     setUrlParams(searchParams);
     _setCurrentView(view);
   };
