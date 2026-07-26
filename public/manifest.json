@@ -1,0 +1,16 @@
+{
+  "name": "NeetMaster",
+  "short_name": "NeetMaster",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f24",
+  "theme_color": "#0a0f24",
+  "gcm_sender_id": "900766773228",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

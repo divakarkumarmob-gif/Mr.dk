@@ -1,0 +1,805 @@
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, ExternalLink, Loader2, Maximize2, Search } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { getCachedPdf, cachePdf } from '../lib/pdfCache';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { db, auth } from '../lib/firebase';
+import { openExternalLink } from '../utils/browser';
+import { Capacitor } from '@capacitor/core';
+import { SafeArea } from '@capacitor-community/safe-area';
+import { keepAwake, allowSleep } from '../utils/keepAwake';
+// Bundle the pdf.js worker locally instead of fetching it from a CDN at
+// runtime. Loading pdf.worker.min.mjs from unpkg.com works fine in a regular
+// browser, but inside the Capacitor Android WebView that cross-origin script
+// load is unreliable (silently fails / times out), which means the worker
+// never initializes and PDFs never start rendering — this is what shows up
+// to the user as the viewer being "blocked". Importing with `?url` makes
+// Vite copy the worker file into dist/assets and gives us a same-origin URL
+// that ships inside the APK, so no network/CDN access is needed at all.
+import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+
+pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+
+function getTouchCenter(touches: TouchList) {
+    return {
+        x: (touches[0].clientX + touches[1].clientX) / 2,
+        y: (touches[0].clientY + touches[1].clientY) / 2,
+    };
+}
+
+function getTouchDistance(touches: TouchList) {
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 0.6 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
+    const [activePdfUrl, setActivePdfUrl] = useState(pdfUrl);
+    const [numPages, setNumPages] = useState<number | null>(null);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    // committedScale = the scale react-pdf actually renders the canvas at.
+    // Only changes after a gesture ends or a button is pressed.
+    const [committedScale, setCommittedScale] = useState(initialScale);
+
+    const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [progress, setProgress] = useState(0);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState<number[]>([]);
+    const [isSearching, setIsSearching] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
+
+    // Immersive reading mode: single tap on the page toggles the toolbar,
+    // search bar, and bottom controls together with the device status bar —
+    // same pattern as Google PDF Viewer / Kindle / YouTube fullscreen.
+    const [showControls, setShowControls] = useState(true);
+
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) return;
+        if (showControls) {
+            SafeArea.showSystemBars().catch(() => {});
+        } else {
+            SafeArea.hideSystemBars().catch(() => {});
+            setShowSearch(false);
+        }
+    }, [showControls]);
+
+    // Always restore the status bar when leaving the PDF viewer entirely.
+    useEffect(() => {
+        return () => {
+            if (Capacitor.isNativePlatform()) {
+                SafeArea.showSystemBars().catch(() => {});
+            }
+        };
+    }, []);
+
+    // Two-layer canvas system, like production PDF viewers:
+    // - "front" layer shows whatever is currently confirmed-rendered and visible.
+    // - "back" layer silently renders the next scale in the background.
+    // When back finishes rendering, we crossfade back->front and swap roles.
+    // This means the user NEVER sees a blank canvas, regardless of timing.
+    const [frontScale, setFrontScale] = useState(initialScale);
+    const frontScaleRef = useRef(initialScale);
+    const [backScale, setBackScale] = useState<number | null>(null);
+    const [backReady, setBackReady] = useState(false);
+    // Bumped on every new zoom request. Any in-flight back-layer render whose
+    // generation no longer matches the latest one is stale and must NOT be
+    // promoted to front — this is what prevents flashing during rapid,
+    // successive pinch adjustments where multiple back renders overlap.
+    const zoomGenerationRef = useRef(0);
+
+    const pdfDocRef = useRef<any>(null);
+    const wrapRef = useRef<HTMLDivElement>(null); // pan/zoom transform target (visual only)
+    const stageRef = useRef<HTMLDivElement>(null);
+
+    // Live visual transform (CSS only, never triggers React re-render)
+    const liveTransform = useRef({ scale: 1, x: 0, y: 0 });
+    const committedScaleRef = useRef(committedScale);
+
+    // Gesture bookkeeping — supports pinch+pan simultaneously with 2 fingers,
+    // and pan with 1 finger.
+    const gestureState = useRef<{
+        active: boolean;
+        touchCount: number;
+        startDistance: number;
+        startScale: number;
+        startX: number;
+        startY: number;
+        startCenterX: number;
+        startCenterY: number;
+        lastCenterX: number;
+        lastCenterY: number;
+        lastSingleX: number;
+        lastSingleY: number;
+        // Tap detection: recorded at touch-start, compared at touch-end.
+        tapStartX: number;
+        tapStartY: number;
+        tapStartTime: number;
+        moved: boolean;
+    }>({
+        active: false,
+        touchCount: 0,
+        startDistance: 0,
+        startScale: 1,
+        startX: 0,
+        startY: 0,
+        startCenterX: 0,
+        startCenterY: 0,
+        lastCenterX: 0,
+        lastCenterY: 0,
+        lastSingleX: 0,
+        lastSingleY: 0,
+        tapStartX: 0,
+        tapStartY: 0,
+        tapStartTime: 0,
+        moved: false,
+    });
+
+    const zoomDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const promoteTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(() => {
+        committedScaleRef.current = committedScale;
+    }, [committedScale]);
+
+    useEffect(() => {
+        frontScaleRef.current = frontScale;
+    }, [frontScale]);
+
+    const applyTransform = useCallback(() => {
+        if (wrapRef.current) {
+            const { scale, x, y } = liveTransform.current;
+            wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
+        }
+    }, []);
+
+    const resetLiveTransform = useCallback((onlyScale = false) => {
+        if (onlyScale) {
+            liveTransform.current = { ...liveTransform.current, scale: 1 };
+        } else {
+            liveTransform.current = { scale: 1, x: 0, y: 0 };
+        }
+        applyTransform();
+    }, [applyTransform]);
+
+    useEffect(() => {
+        setIsLoading(true);
+        setError(null);
+        setNumPages(null);
+        setCurrentPage(1);
+        setCommittedScale(initialScale);
+        setFrontScale(initialScale);
+        setBackScale(null);
+        setBackReady(false);
+        resetLiveTransform();
+
+        const loadContent = async () => {
+            let urlToLoad = pdfUrl;
+            if (Capacitor.isNativePlatform()) {
+                const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+                const cachedUri = await getCachedPdf(filename);
+                if (cachedUri) {
+                    urlToLoad = cachedUri;
+                }
+            }
+            setActivePdfUrl(urlToLoad);
+        };
+        loadContent();
+
+        const loadProgress = async () => {
+            if (auth.currentUser && pdfUrl) {
+                const encodedUrl = btoa(encodeURIComponent(pdfUrl)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
+                const docRef = doc(db, 'user_reading_progress', `${auth.currentUser.uid}_${encodedUrl}`);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    setCurrentPage(docSnap.data().page);
+                }
+            }
+        };
+        loadProgress();
+
+        return () => {
+            allowSleep();
+            if (zoomDebounceRef.current) clearTimeout(zoomDebounceRef.current);
+            if (promoteTimeoutRef.current) clearTimeout(promoteTimeoutRef.current);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pdfUrl]);
+
+    useEffect(() => {
+        keepAwake();
+        return () => {
+            allowSleep();
+        };
+    }, []);
+
+    useEffect(() => {
+        const saveProgress = async () => {
+            if (auth.currentUser && numPages && pdfUrl) {
+                const encodedUrl = btoa(encodeURIComponent(pdfUrl)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
+                const docRef = doc(db, 'user_reading_progress', `${auth.currentUser.uid}_${encodedUrl}`);
+                await setDoc(docRef, { page: currentPage, lastUpdated: new Date() }, { merge: true });
+            }
+        };
+        saveProgress();
+    }, [currentPage, pdfUrl, numPages]);
+
+    function onDocumentLoadSuccess(pdf: any) {
+        setNumPages(pdf.numPages);
+        pdfDocRef.current = pdf;
+        setError(null);
+        setIsLoading(false);
+
+        // Auto-fit: measure the first page's native width, then compute a scale
+        // so it exactly fills the available stage width (minus tiny padding).
+        // This replaces the old fixed `initialScale` guess, so text is never
+        // cut off on narrow screens nor left with huge empty margins on wide
+        // ones.
+        pdf.getPage(1).then((page: any) => {
+            const viewport = page.getViewport({ scale: 1 });
+            const stageWidth = stageRef.current?.clientWidth ?? 400;
+            // Leave a very small margin (8px total) instead of the old large padding.
+            const fitScale = Math.min(Math.max((stageWidth - 8) / viewport.width, 0.25), 3);
+            setCommittedScale(fitScale);
+            setFrontScale(fitScale);
+            frontScaleRef.current = fitScale;
+            committedScaleRef.current = fitScale;
+        }).catch(() => {
+            // If measurement fails for any reason, silently keep the existing
+            // initialScale fallback — never block rendering on this.
+        });
+    }
+
+    function onDocumentLoadError(err: Error) {
+        console.error("PDF load error:", err);
+        setError("Failed to load PDF. The file might be protected or the server is unresponsive.");
+        setIsLoading(false);
+    }
+
+    const handleDownload = async () => {
+        const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+        
+        if (Capacitor.isNativePlatform()) {
+            const cached = await cachePdf(pdfUrl, filename);
+            if (cached) {
+                alert("Saved for offline use in app. You can reopen it here anytime, even without internet — it won't appear in your phone's Downloads folder.");
+                return;
+            }
+        }
+
+        try {
+            const response = await fetch(pdfUrl);
+            const blob = await response.blob();
+            const blobUrl = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+        } catch (err) {
+            console.error("Download failed:", err);
+            openExternalLink(pdfUrl);
+        }
+    };
+
+    const performSearch = async (query: string) => {
+        if (!pdfDocRef.current || !query) return;
+        setIsSearching(true);
+        const results: number[] = [];
+        for (let i = 1; i <= pdfDocRef.current.numPages; i++) {
+            const page = await pdfDocRef.current.getPage(i);
+            const textContent = await page.getTextContent();
+            const text = textContent.items.map((item: any) => item.str).join(' ');
+            if (text.toLowerCase().includes(query.toLowerCase())) {
+                results.push(i);
+            }
+        }
+        setSearchResults(results);
+        setIsSearching(false);
+    };
+
+    // Kicks off a background render at the new scale via the "back" layer.
+    // The "front" layer (currently visible canvas) stays exactly as-is —
+    // still scaled via the live CSS transform — until the back layer reports
+    // it has actually painted, at which point we crossfade and promote it.
+    const requestZoom = useCallback((finalScale: number) => {
+        const clamped = Math.min(Math.max(finalScale, 0.25), 3);
+        // If this new target is actually the same as what's already showing
+        // up front, there's nothing to do — avoids pointless back-layer churn.
+        if (Math.abs(clamped - frontScaleRef.current) < 0.001) {
+            setBackScale(null);
+            setBackReady(false);
+            return;
+        }
+        zoomGenerationRef.current += 1;
+        setCommittedScale(clamped);
+        setBackScale(clamped);
+        setBackReady(false);
+    }, []);
+
+    // Debounced commit used during continuous pinch — avoids spamming re-renders
+    // on every touchmove frame; only fires ~150ms after gesture activity pauses
+    // or immediately on gesture end.
+    const scheduleZoomCommit = useCallback((finalScale: number, immediate = false) => {
+        if (zoomDebounceRef.current) {
+            clearTimeout(zoomDebounceRef.current);
+            zoomDebounceRef.current = null;
+        }
+        if (immediate) {
+            requestZoom(finalScale);
+        } else {
+            zoomDebounceRef.current = setTimeout(() => {
+                requestZoom(finalScale);
+            }, 120);
+        }
+    }, [requestZoom]);
+
+    // ---- Native touch handlers ----
+    // 2 fingers: pinch (zoom) AND pan (move) simultaneously, tracked from the
+    //            midpoint between the two touches.
+    // 1 finger:  pan only.
+
+    const handleTouchStart = useCallback((e: React.TouchEvent) => {
+        const touches = e.touches;
+        const state = gestureState.current;
+
+        if (wrapRef.current) {
+            wrapRef.current.style.transition = 'none';
+        }
+
+        if (touches.length >= 2) {
+            const center = getTouchCenter(touches as any);
+            state.active = true;
+            state.touchCount = 2;
+            state.startDistance = getTouchDistance(touches as any);
+            state.startScale = liveTransform.current.scale;
+            state.startX = liveTransform.current.x;
+            state.startY = liveTransform.current.y;
+            state.startCenterX = center.x;
+            state.startCenterY = center.y;
+            state.lastCenterX = center.x;
+            state.lastCenterY = center.y;
+            state.moved = true; // two-finger gestures are never a "tap"
+        } else if (touches.length === 1) {
+            state.active = true;
+            state.touchCount = 1;
+            state.lastSingleX = touches[0].clientX;
+            state.lastSingleY = touches[0].clientY;
+            state.tapStartX = touches[0].clientX;
+            state.tapStartY = touches[0].clientY;
+            state.tapStartTime = Date.now();
+            state.moved = false;
+        }
+    }, []);
+
+    const handleTouchMove = useCallback((e: React.TouchEvent) => {
+        const touches = e.touches;
+        const state = gestureState.current;
+        if (!state.active) return;
+
+        if (touches.length >= 2 && state.touchCount === 2) {
+            e.preventDefault();
+            const currentDistance = getTouchDistance(touches as any);
+            const center = getTouchCenter(touches as any);
+
+            const rawScale = state.startScale * (currentDistance / state.startDistance);
+            const minLive = 0.25 / committedScaleRef.current;
+            const maxLive = 3 / committedScaleRef.current;
+            const clampedLiveScale = Math.min(Math.max(rawScale, minLive), maxLive);
+
+            // Pan delta = how much the pinch midpoint has moved since gesture start,
+            // so two fingers can zoom AND drag the page around at the same time.
+            const panDx = center.x - state.startCenterX;
+            const panDy = center.y - state.startCenterY;
+
+            // Apply scale centered around the pinch center, not the element's top-left
+            const p_orig_x = (center.x - state.startX) / state.startScale;
+            const p_orig_y = (center.y - state.startY) / state.startScale;
+            
+            liveTransform.current = {
+                scale: clampedLiveScale,
+                x: center.x - p_orig_x * clampedLiveScale,
+                y: center.y - p_orig_y * clampedLiveScale,
+            };
+            applyTransform();
+
+            // DO NOT schedule zoom commit during move to avoid flashing.
+        } else if (touches.length === 1 && state.touchCount === 1) {
+            e.preventDefault();
+            const dx = touches[0].clientX - state.lastSingleX;
+            const dy = touches[0].clientY - state.lastSingleY;
+            state.lastSingleX = touches[0].clientX;
+            state.lastSingleY = touches[0].clientY;
+
+            // Tap-vs-drag: once total movement from the tap start exceeds a
+            // small threshold, this is a drag/pan, not a tap.
+            const totalDx = touches[0].clientX - state.tapStartX;
+            const totalDy = touches[0].clientY - state.tapStartY;
+            if (Math.hypot(totalDx, totalDy) > 10) {
+                state.moved = true;
+            }
+
+            liveTransform.current = {
+                ...liveTransform.current,
+                x: liveTransform.current.x + dx,
+                y: liveTransform.current.y + dy,
+            };
+            applyTransform();
+        }
+    }, [applyTransform, scheduleZoomCommit]);
+
+    const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+        const state = gestureState.current;
+        const remaining = e.touches.length;
+
+        if (wrapRef.current) {
+            wrapRef.current.style.transition = '';
+        }
+
+        // Tap detection: single finger, didn't move past the threshold,
+        // and released quickly — toggle immersive reading mode.
+        if (state.touchCount === 1 && remaining === 0 && !state.moved) {
+            const elapsed = Date.now() - state.tapStartTime;
+            if (elapsed < 300) {
+                setShowControls(prev => !prev);
+            }
+        }
+
+        if (state.touchCount === 2 && remaining < 2) {
+            const finalLiveScale = liveTransform.current.scale;
+            const newCommittedScale = committedScaleRef.current * finalLiveScale;
+            scheduleZoomCommit(newCommittedScale, true);
+
+            if (remaining === 1) {
+                state.touchCount = 1;
+                state.lastSingleX = e.touches[0].clientX;
+                state.lastSingleY = e.touches[0].clientY;
+            } else {
+                state.active = false;
+                state.touchCount = 0;
+            }
+        } else if (state.touchCount === 1 && remaining === 0) {
+            state.active = false;
+            state.touchCount = 0;
+        }
+    }, [scheduleZoomCommit]);
+
+    // Discrete zoom via +/- buttons — same background-render + crossfade strategy.
+    const zoomButton = useCallback((direction: 1 | -1) => {
+        const step = 0.2 * direction;
+        const current = committedScaleRef.current;
+        const target = Math.min(Math.max(current + step, 0.25), 3);
+        requestZoom(target);
+    }, [requestZoom]);
+
+    const goToPage = useCallback((updater: (p: number) => number) => {
+        liveTransform.current = { scale: 1, x: 0, y: 0 };
+        applyTransform();
+        setBackScale(null);
+        setBackReady(false);
+        setCurrentPage(updater);
+    }, [applyTransform]);
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-[#05070A] z-[999] flex flex-col font-sans pt-[env(safe-area-inset-top,12px)]"
+        >
+            {/* Superior Toolbar */}
+            <AnimatePresence>
+                {showControls && (
+                    <motion.div
+                        initial={{ y: -60, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -60, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-b border-white/5 shadow-2xl relative z-50"
+                    >
+                        <div className="flex items-center gap-3 overflow-hidden flex-grow mr-2">
+                            <button
+                                onClick={onClose}
+                                className="p-2.5 bg-white/5 hover:bg-white/10 rounded-full transition active:scale-90"
+                            >
+                                <ChevronLeft className="h-6 w-6 text-gray-300" />
+                            </button>
+                            <div className="flex flex-col min-w-0">
+                                <h2 className="text-sm font-bold text-white truncate leading-tight">{title}</h2>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={handleDownload}
+                                className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-xl transition"
+                                title={Capacitor.isNativePlatform() ? "Save for offline" : "Download PDF"}
+                            >
+                                <Download className="h-5 w-5" />
+                            </button>
+
+                            <button
+                                onClick={() => setShowSearch(!showSearch)}
+                                className={`p-2.5 ${showSearch ? 'bg-blue-600/20' : 'bg-white/5'} hover:bg-white/10 text-gray-300 rounded-xl transition`}
+                                title="Search PDF"
+                            >
+                                <Search className="h-5 w-5" />
+                            </button>
+
+                            <button
+                                onClick={onClose}
+                                className="p-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-xl transition"
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {showSearch && showControls && (
+                <div className="p-3 bg-[#0F172A] border-b border-white/5 z-50 flex items-center gap-2">
+                    <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search..."
+                        className="flex-grow bg-white/5 text-white p-2 rounded-xl text-sm"
+                    />
+                    <button
+                        onClick={() => performSearch(searchQuery)}
+                        className="p-2 bg-blue-600 rounded-xl text-white"
+                    >
+                        {isSearching ? <Loader2 className="animate-spin h-4 w-4" /> : <Search className="h-4 w-4" />}
+                    </button>
+                    {searchResults.length > 0 && (
+                        <div className="flex items-center gap-1 text-xs text-gray-400 overflow-x-auto">
+                            {searchResults.map((page) => (
+                                <button key={page} onClick={() => { setCurrentPage(page); setShowSearch(false); }} className="hover:text-blue-500 px-2">
+                                    {page}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {/* Viewer Stage */}
+            <div
+                ref={stageRef}
+                className="flex-grow relative overflow-hidden bg-slate-950 flex flex-col items-center justify-center"
+                style={{ touchAction: 'none' }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                onTouchCancel={handleTouchEnd}
+            >
+                {isLoading && (
+                    <motion.div
+                        key="loading"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="absolute inset-0 z-40 bg-slate-950 flex flex-col items-center justify-center p-8 text-center"
+                    >
+                        <Loader2 className="w-12 h-12 text-blue-500 animate-spin mb-4" />
+                        <h3 className="text-white font-bold text-lg">Initializing High-Definition Preview</h3>
+                        <p className="text-xs text-gray-400 mt-2 max-w-xs">Connecting to secure document server. This may take a few seconds...</p>
+                    </motion.div>
+                )}
+
+                <div className="w-full h-full overflow-hidden p-1 flex flex-col items-center justify-center">
+                    {error ? (
+                        <div className="max-w-sm text-center p-12 bg-gray-900/50 rounded-[40px] border border-white/5 backdrop-blur-xl mt-12">
+                            <div className="w-24 h-24 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <AlertTriangle className="text-red-400 w-12 h-12" />
+                            </div>
+                            <h3 className="text-white font-bold text-xl mb-4">View Blocked</h3>
+                            <p className="text-sm text-gray-400 mb-10 leading-relaxed">The source server is preventing embedded display. Try our fallback browser mode.</p>
+                            <div className="grid gap-3">
+                                <button
+                                    onClick={() => openExternalLink(pdfUrl)}
+                                    className="w-full bg-white/5 hover:bg-white/10 py-4 rounded-2xl text-sm font-bold text-gray-300 transition active:scale-95"
+                                >
+                                    Open in External Browser
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <Document
+                            file={activePdfUrl}
+                            onLoadSuccess={onDocumentLoadSuccess}
+                            onLoadError={onDocumentLoadError}
+                            onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
+                            className="flex flex-col items-center"
+                        >
+                            <div
+                                ref={wrapRef}
+                                style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0' }}
+                            >
+                                {/* FRONT layer: always visible, this is what the user sees while
+                                    a new scale renders in the background. */}
+                                <div style={{ 
+                                    opacity: backReady ? 0 : 1, 
+                                    position: 'relative',
+                                    zIndex: 1
+                                }}>
+                                    <Page
+                                        pageNumber={currentPage}
+                                        scale={frontScale}
+                                        renderTextLayer={false}
+                                        renderAnnotationLayer={false}
+                                        className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
+                                        loading={null}
+                                        onRenderSuccess={() => {
+                                            // Fires whenever the FRONT layer finishes painting —
+                                            // including the resync render we trigger after promoting
+                                            // the back layer (see backLayer's onRenderSuccess below).
+                                            // Only in that specific case (front is hidden AND a back
+                                            // layer is still mounted AND it matches the resynced
+                                            // scale) do we finally drop the back layer — this
+                                            // guarantees the back layer is never removed before the
+                                            // front layer underneath it has something painted to show.
+                                            if (
+                                                backReady &&
+                                                backScale !== null &&
+                                                Math.abs(frontScaleRef.current - backScale) < 0.001
+                                            ) {
+                                                setBackScale(null);
+                                                setBackReady(false);
+                                                // Only NOW is it safe to reset the wrapper's live CSS
+                                                // transform to identity. Resetting it earlier (e.g. as
+                                                // soon as the back layer was promoted) would snap the
+                                                // back layer — which was still the fully-visible layer,
+                                                // still relying on that same transform to show the
+                                                // pinch/zoom position — back to scale(1)/(0,0) BEFORE
+                                                // the front layer had taken over, causing a visible
+                                                // "jump to top-left corner" flash. Now that front has
+                                                // its own freshly-painted canvas at the correct scale
+                                                // and back is gone, resetting to identity is invisible.
+                                                liveTransform.current = { scale: 1, x: 0, y: 0 };
+                                                applyTransform();
+                                            }
+                                        }}
+                                    />
+                                </div>
+ 
+                                {/* BACK layer: rendered far off-screen (not just opacity:0) so the
+                                    browser's paint of the fresh <canvas> that react-pdf creates
+                                    happens completely off the visible viewport. */}
+                                {backScale !== null && (
+                                    <div
+                                        style={{
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            opacity: backReady ? 1 : 0,
+                                            pointerEvents: 'none',
+                                            zIndex: 2
+                                        }}
+                                    >
+                                        <Page
+                                            pageNumber={currentPage}
+                                            scale={backScale}
+                                            renderTextLayer={false}
+                                            renderAnnotationLayer={false}
+                                            className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
+                                            loading={null}
+                                            onRenderSuccess={() => {
+                                                const myGeneration = zoomGenerationRef.current;
+                                                requestAnimationFrame(() => {
+                                                    requestAnimationFrame(() => {
+                                                        requestAnimationFrame(() => {
+                                                            if (zoomGenerationRef.current !== myGeneration) return;
+                                                            // Back layer has now actually painted at the new
+                                                            // scale. Crossfade to it — it becomes the visible
+                                                            // layer. We do NOT touch frontScale/backScale yet:
+                                                            // changing frontScale here would force the (now
+                                                            // hidden) front <Page> to re-render at the new
+                                                            // scale immediately, clearing its canvas, and if we
+                                                            // also flip it back to visible in the same tick
+                                                            // (via backReady/backScale) that blank canvas would
+                                                            // flash on screen. Instead we let the crossfade
+                                                            // settle first, then quietly resync the front layer
+                                                            // while it's still hidden (opacity 0) behind the
+                                                            // (still-visible) back layer.
+                                                            setBackReady(true);
+
+                                                            if (promoteTimeoutRef.current) {
+                                                                clearTimeout(promoteTimeoutRef.current);
+                                                            }
+                                                            promoteTimeoutRef.current = setTimeout(() => {
+                                                                if (zoomGenerationRef.current !== myGeneration) return;
+
+                                                                // At this point the back layer has been the
+                                                                // fully-opaque, fully-painted visible layer for
+                                                                // one full render pass. Now it's safe to resync
+                                                                // the (hidden, opacity 0) front layer to the new
+                                                                // scale — its repaint is invisible since back is
+                                                                // still what's shown. We deliberately do NOT touch
+                                                                // liveTransform/applyTransform here: the back layer
+                                                                // is still relying on the current CSS transform to
+                                                                // display correctly, and resetting it now would
+                                                                // snap it to scale(1)/(0,0) before front has taken
+                                                                // over — causing a visible "jump to top-left
+                                                                // corner" flash. That reset now happens only in
+                                                                // front's own onRenderSuccess, once the handoff is
+                                                                // actually complete (see above).
+                                                                setFrontScale(backScale);
+                                                            }, 220);
+                                                        });
+                                                    });
+                                                });
+                                            }}
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                        </Document>
+                    )}
+                </div>
+            </div>
+
+            {/* Smart Control Bar */}
+            <AnimatePresence>
+                {!error && numPages && !isLoading && showControls && (
+                    <motion.div
+                        initial={{ y: 100 }}
+                        animate={{ y: 0 }}
+                        exit={{ y: 100 }}
+                        className="px-4 py-2 bg-[#0F172A] border-t border-white/5 safe-bottom z-50 flex items-center justify-between"
+                    >
+                        <div className="flex items-center gap-1 bg-white/5 rounded-2xl p-1">
+                            <button
+                                onClick={() => zoomButton(-1)}
+                                className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400"
+                            >
+                                <ZoomOut className="h-6 w-6" />
+                            </button>
+                            <span className="text-[10px] font-mono text-gray-500 w-12 text-center">{Math.round(committedScale * 100)}%</span>
+                            <button
+                                onClick={() => zoomButton(1)}
+                                className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400"
+                            >
+                                <ZoomIn className="h-6 w-6" />
+                            </button>
+                        </div>
+
+                        <div className="flex items-center gap-3 bg-white/5 rounded-2xl p-1 px-2">
+                            <button
+                                disabled={currentPage <= 1}
+                                onClick={() => goToPage(p => Math.max(p - 1, 1))}
+                                className="p-3 text-blue-500 hover:bg-white/10 rounded-xl disabled:opacity-20 transition"
+                            >
+                                <ChevronLeft className="h-6 w-6" />
+                            </button>
+                            <div className="text-center px-2">
+                                <p className="text-xs font-bold text-white leading-none">{currentPage} / {numPages}</p>
+                                <p className="text-[9px] text-gray-500 font-medium uppercase tracking-widest mt-1">Page</p>
+                            </div>
+                            <button
+                                disabled={currentPage >= (numPages || 1)}
+                                onClick={() => goToPage(p => Math.min(p + 1, numPages || 1))}
+                                className="p-3 text-blue-500 hover:bg-white/10 rounded-xl disabled:opacity-20 transition"
+                            >
+                                <ChevronRight className="h-6 w-6" />
+                            </button>
+                        </div>
+
+                        <button
+                            onClick={handleDownload}
+                            className="p-3.5 bg-blue-600 rounded-2xl text-white shadow-xl shadow-blue-500/20 active:scale-95"
+                            title={Capacitor.isNativePlatform() ? "Save for offline" : "Download PDF"}
+                        >
+                            <Download className="h-6 w-6" />
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.div>
+    );
+}

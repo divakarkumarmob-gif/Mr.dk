@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /login
+Disallow: /admin
+Allow: /
+
+Sitemap: https://neetmaster.online/sitemap.xml

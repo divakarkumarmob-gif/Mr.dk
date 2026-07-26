@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NeetMaster</string>
+    <string name="title_activity_main">NeetMaster</string>
+    <string name="package_name">com.neetmaster.app</string>
+    <string name="custom_url_scheme">com.neetmaster.app</string>
+    <string name="default_web_client_id">900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com</string>
+    <string name="shortcut_short_label">AI Live</string>
+    <string name="shortcut_long_label">Open AI Live Interface</string>
+</resources>

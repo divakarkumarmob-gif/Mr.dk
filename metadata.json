@@ -1,0 +1,6 @@
+{
+  "name": "NeetMaster",
+  "description": "An interactive NEET preparation application featuring mock tests, study materials, and subject-wise learning paths.",
+  "requestFramePermissions": ["screen-wake-lock", "microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

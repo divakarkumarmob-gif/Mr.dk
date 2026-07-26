@@ -1,0 +1,262 @@
+import { db, storage, handleFirestoreError, OperationType, auth } from '../lib/firebase';
+import { collection, addDoc, serverTimestamp, doc, updateDoc, getDoc, setDoc, query, orderBy, onSnapshot, where } from 'firebase/firestore';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import imageCompression from 'browser-image-compression';
+import { Message } from '../types';
+
+export const initializeChat = async (userId: string) => {
+    console.log(`[Chat] Initializing chat for user: ${userId}`);
+    const chatRef = doc(db, 'chats', userId);
+    try {
+        const docSnap = await getDoc(chatRef);
+        if (!docSnap.exists()) {
+            console.log(`[Chat] Creating new support chat for: ${userId}`);
+            await setDoc(chatRef, { 
+                participants: [userId, 'admin'], 
+                isSupportChat: true, 
+                lastMessage: '', 
+                updatedAt: serverTimestamp(),
+                lastInteraction: Date.now(),
+                summaryGenerated: false,
+                sessionActive: true
+            });
+        } else {
+            console.log(`[Chat] Chat already exists for: ${userId}`);
+            await updateLastInteraction(userId); // Ensure it's active
+        }
+        return userId;
+    } catch (error) {
+        console.error(`[Chat] Initialize error for ${userId}:`, error);
+        handleFirestoreError(error, OperationType.WRITE, `chats/${userId}`);
+        throw error;
+    }
+};
+
+export const getUserName = async (userId: string) => {
+    try {
+        const userDoc = await getDoc(doc(db, 'users', userId));
+        if (!userDoc.exists()) return 'Unknown User';
+        const data = userDoc.data();
+        return data.displayName || data.username || (data.email ? data.email.split('@')[0] : null) || 'User';
+    } catch (error) {
+        handleFirestoreError(error, OperationType.GET, `users/${userId}`);
+        return 'Unknown User';
+    }
+};
+
+export const getUserPhone = async (userId: string): Promise<string | null> => {
+    try {
+        const userDoc = await getDoc(doc(db, 'users', userId));
+        if (!userDoc.exists()) return null;
+        const data = userDoc.data();
+        return data.phone || data.phoneNumber || null;
+    } catch (error) {
+        handleFirestoreError(error, OperationType.GET, `users/${userId}`);
+        return null;
+    }
+};
+
+export const subscribeToMessages = (chatId: string, callback: (messages: Message[]) => void) => {
+    const q = query(collection(db, `chats/${chatId}/messages`), orderBy('timestamp', 'asc'));
+    return onSnapshot(q, (snapshot) => {
+        callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Message)));
+    }, (error) => {
+        handleFirestoreError(error, OperationType.LIST, `chats/${chatId}/messages`);
+    });
+};
+
+export const subscribeToChats = (callback: (chats: any[]) => void) => {
+    if (!auth.currentUser) {
+        throw new Error('User not logged in');
+    }
+    
+    const adminEmails = ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com'];
+    const isAdmin = adminEmails.includes(auth.currentUser.email || '');
+    
+    console.log('DEBUG: currentUser email:', auth.currentUser.email, 'isAdmin:', isAdmin);
+    
+    let q;
+    if (isAdmin) {
+        q = query(
+            collection(db, 'chats'), 
+            where('isSupportChat', '==', true),
+            orderBy('updatedAt', 'desc')
+        );
+    } else {
+        q = query(
+            collection(db, 'chats'), 
+            where('participants', 'array-contains', auth.currentUser.uid),
+            orderBy('updatedAt', 'desc')
+        );
+    }
+    return onSnapshot(q, (snapshot) => {
+        callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    }, (error) => {
+        handleFirestoreError(error, OperationType.LIST, 'chats');
+    });
+};
+
+export const subscribeToSupportChats = (callback: (chats: any[]) => void) => {
+    if (!auth.currentUser) return () => {};
+    
+    const adminEmails = ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com'];
+    const isAdmin = adminEmails.includes(auth.currentUser.email || '');
+    
+    let q;
+    if (isAdmin) {
+        q = query(collection(db, 'chats'), orderBy('updatedAt', 'desc'));
+    } else {
+        q = query(
+            collection(db, 'chats'), 
+            where('isSupportChat', '==', true), 
+            orderBy('updatedAt', 'desc')
+        );
+    }
+    return onSnapshot(q, (snapshot) => {
+        callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    }, (error) => {
+        handleFirestoreError(error, OperationType.LIST, 'chats');
+    });
+};
+
+export const updateUserPresence = async (userId: string, isOnline: boolean) => {
+    try {
+        await setDoc(doc(db, 'users', userId), {
+            online: isOnline,
+            lastSeen: serverTimestamp(),
+        }, { merge: true });
+    } catch (error) {
+        handleFirestoreError(error, OperationType.WRITE, `users/${userId}`);
+    }
+};
+
+export const subscribeToUserPresence = (userId: string, callback: (presence: { online: boolean; lastSeen: any }) => void) => {
+    if (!userId) return () => {};
+    return onSnapshot(doc(db, 'users', userId), (snap) => {
+        if (!snap.exists()) {
+            callback({ online: false, lastSeen: null });
+            return;
+        }
+        const data = snap.data();
+        callback({ online: !!data.online, lastSeen: data.lastSeen || null });
+    }, (error) => {
+        console.error('[Presence] Subscription error:', error);
+    });
+};
+
+export const updateLastInteraction = async (chatId: string) => {
+    try {
+        await updateDoc(doc(db, 'chats', chatId), {
+            lastInteraction: Date.now(),
+            summaryGenerated: false,
+            sessionActive: true
+        });
+    } catch (error) {
+        console.error(`[Chat] Update interaction error:`, error);
+        handleFirestoreError(error, OperationType.WRITE, `chats/${chatId}`);
+    }
+};
+
+export const starMessage = async (chatId: string, messageId: string, starred: boolean) => {
+    const messageRef = doc(db, 'chats', chatId, 'messages', messageId);
+    await updateDoc(messageRef, { starred });
+};
+
+export const sendMessage = async (chatId: string, senderId: string, text: string, mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio', replyTo?: { text: string; senderId: string } | null) => {
+  console.log(`[Chat] Sending message to ${chatId} from ${senderId}`);
+  const messageData = {
+    senderId,
+    text,
+    timestamp: serverTimestamp(),
+    ...(mediaUrl && { mediaUrl, mediaType }),
+    ...(replyTo && { replyTo }),
+  };
+  try {
+      const messagesCol = collection(db, `chats/${chatId}/messages`);
+      await addDoc(messagesCol, messageData);
+      console.log(`[Chat] Message added to subcollection`);
+      
+      await updateDoc(doc(db, 'chats', chatId), {
+        lastMessage: text || 'Media message',
+        updatedAt: serverTimestamp(),
+      });
+      await updateLastInteraction(chatId);
+      console.log(`[Chat] Parent chat doc updated`);
+  } catch (error) {
+      console.error(`[Chat] Send message error:`, error);
+      handleFirestoreError(error, OperationType.WRITE, `chats/${chatId}/messages`);
+  }
+};
+
+export const saveAIMessage = async (userId: string, messageData: any) => {
+    try {
+        const aiChatId = `${userId}_ai`;
+        const messagesCol = collection(db, `chats/${aiChatId}/messages`);
+        await addDoc(messagesCol, {
+            ...messageData,
+            timestamp: serverTimestamp(),
+        });
+    } catch (error) {
+        console.error(`[Chat] Error saving AI message:`, error);
+        handleFirestoreError(error, OperationType.WRITE, `chats/${userId}_ai/messages`);
+    }
+};
+
+export const uploadMedia = async (file: File, path: string) => {
+    const convertToBase64 = (f: File): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(f);
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = error => reject(error);
+        });
+    };
+
+    try {
+        let fileToUpload = file;
+        if (file.type.startsWith('image/')) {
+            try {
+                const options = {
+                    maxSizeMB: 0.15,
+                    maxWidthOrHeight: 800,
+                    useWebWorker: false,
+                };
+                fileToUpload = await imageCompression(file, options);
+            } catch (compErr) {
+                console.error('[ChatService] Image compression failed, trying original:', compErr);
+                // Continue with original file if compression fails
+            }
+        } else if (file.size > 600 * 1024) {
+            throw new Error(`Media file is too large. Max allowed size is 600KB.`);
+        }
+        
+        console.log('[ChatService] Attempting to upload to:', path);
+        const storageRef = ref(storage, path);
+        
+        try {
+            // Attempt standard Cloud Storage upload with 2.5s timeout
+            const url = await new Promise<string>(async (resolve, reject) => {
+                const timeoutId = setTimeout(() => {
+                    reject(new Error('Firebase Storage timeout.'));
+                }, 2500);
+
+                try {
+                    const snapshot = await uploadBytes(storageRef, fileToUpload);
+                    const downloadURL = await getDownloadURL(snapshot.ref);
+                    clearTimeout(timeoutId);
+                    resolve(downloadURL);
+                } catch (err) {
+                    clearTimeout(timeoutId);
+                    reject(err);
+                }
+            });
+            return url;
+        } catch (storageErr) {
+            console.warn('[ChatService] Storage upload failed, attempting Base64 fallback:', storageErr);
+            return await convertToBase64(fileToUpload);
+        }
+    } catch (error) {
+        console.error('[ChatService] Error uploading media:', error);
+        throw error;
+    }
+};
