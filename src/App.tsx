@@ -26,6 +26,7 @@ import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './consta
 import { motion, AnimatePresence } from 'motion/react';
 import Footer from './components/Footer';
 import BottomNav from './components/BottomNav';
+import PageLayout from './components/PageLayout';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
 
 import Login from './components/Login';
@@ -1571,33 +1572,33 @@ export default function App() {
 
   if (currentView === 'liveAI') {
       return (
-        <div className="flex flex-col min-h-dvh bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-background">
             <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'mindHack') {
       return (
-        <div className="flex flex-col min-h-dvh bg-[#f4e4bc] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-[#f4e4bc]">
             <MindHackPage onBack={() => setCurrentView('profile')} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'aiStudyPlan') {
       return (
-        <div className="flex flex-col min-h-dvh bg-[#f0f4f8] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-[#f0f4f8]">
             <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (isNotificationView) {
       return (
-        <div className="flex flex-col min-h-dvh bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-background">
             <NotificationPage onBack={() => window.history.back()} />
-        </div>
+        </PageLayout>
       );
   }
 
@@ -1631,7 +1632,8 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.3 }}
-            className="pt-[max(env(safe-area-inset-top,0px),24px)] px-0"
+            className="px-0"
+            style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}
         >
             <StudyHub 
                 subjects={subjects} 
@@ -1692,7 +1694,7 @@ export default function App() {
   
   if (currentView === 'profile') {
       return (
-        <div className="flex flex-col min-h-dvh pb-20 pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout paddingBottomExtra="pb-20">
             <div className="flex-grow"><Profile user={user} onNavigate={setCurrentView} onSolverClick={() => setShowNeuralSolver(true)} onLogout={() => setUser(null)} /></div>
             <BottomNav currentView="profile" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1704,7 +1706,7 @@ export default function App() {
                 }}
             />
             {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
-        </div>
+        </PageLayout>
       );
   }
 
@@ -1714,23 +1716,23 @@ export default function App() {
   
   if (currentView === 'notesLibrary') {
       return (
-        <div className="flex flex-col min-h-dvh bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-background">
             <NotesLibrary onBack={() => setCurrentView('profile')} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'editProfile') {
       return (
-        <div className="flex flex-col min-h-dvh bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-background">
             <EditProfile user={user} onNavigate={setCurrentView} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'admin') {
       return (
-          <div className="min-h-dvh bg-[#0f172a] text-foreground pt-[max(env(safe-area-inset-top,0px),12px)] px-1.5 sm:px-3">
+          <PageLayout background="bg-[#0f172a]" textColor="text-foreground" paddingX="px-1.5 sm:px-3">
               <AdminPanel onNavigate={setCurrentView} />
               <SupportModal 
                 isOpen={showSupportModal} 
@@ -1745,7 +1747,7 @@ export default function App() {
                     setCurrentView('technicalSupport');
                 }}
               />
-          </div>
+          </PageLayout>
       );
   }
 
@@ -1778,32 +1780,32 @@ export default function App() {
 
   if (currentView === 'ncertHub') {
       return (
-        <div className="flex flex-col min-h-dvh bg-gradient-to-br from-black to-[#0a0e1a] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]">
             <NCERTHub onBack={() => setCurrentView('notes')} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'ntaQuestionsHub') {
       const paperId = urlParams.get('paper');
       return (
-        <div className="flex flex-col min-h-dvh bg-gradient-to-br from-black to-[#0a0e1a] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]">
             <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'oldPyqHistory') {
       return (
-        <div className="flex flex-col min-h-dvh bg-[#05070A] pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-[#05070A]">
             <OldPYQHistory onBack={() => setCurrentView('notes')} />
-        </div>
+        </PageLayout>
       );
   }
 
   if (currentView === 'notes') {
       return (
-        <div className="flex flex-col min-h-dvh pb-20 bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <PageLayout background="bg-background" paddingBottomExtra="pb-20">
             <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
@@ -1814,13 +1816,13 @@ export default function App() {
                     setCurrentView('technicalSupport');
                 }}
             />
-        </div>
+        </PageLayout>
       );
   }
 
     if (currentView === 'analytics') {
         return (
-          <div className="flex flex-col min-h-dvh bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+          <PageLayout background="bg-background">
               <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} user={user} onResultSelect={setSelectedAnalysisResult} /></div>
               <SupportModal 
                  isOpen={showSupportModal} 
@@ -1830,7 +1832,7 @@ export default function App() {
                      setCurrentView('technicalSupport');
                  }}
              />
-          </div>
+          </PageLayout>
         );
     }
 
@@ -1840,9 +1842,9 @@ export default function App() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <div className="min-h-dvh bg-[#0b141a] text-foreground pt-[max(env(safe-area-inset-top,0px),12px)]">
+         <PageLayout background="bg-[#0b141a]" textColor="text-foreground" paddingX="">
              <UserChat fullScreen={true} user={user} initialScreenshot={pendingSupportData?.screenshot} initialText={pendingSupportData?.text} />
-         </div>
+         </PageLayout>
        );
    }
 
@@ -1914,7 +1916,8 @@ export default function App() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`h-dvh bg-background text-foreground font-sans pb-44 overflow-y-auto ${showOnboarding ? 'blur-sm' : ''} pt-[max(env(safe-area-inset-top,0px),12px)] px-3`}
+      className={`h-dvh bg-background text-foreground font-sans pb-44 overflow-y-auto px-3 ${showOnboarding ? 'blur-sm' : ''}`}
+      style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full">
