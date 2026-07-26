@@ -135,6 +135,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
     const [downloadingId, setDownloadingId] = useState<string | null>(null);
     const [s3Files, setS3Files] = useState<{key: string, url: string, name: string}[]>([]);
     const [isLoadingS3, setIsLoadingS3] = useState(false);
+    const [ncertDebug, setNcertDebug] = useState<string>('');
 
     useEffect(() => {
         refreshDownloads();
@@ -171,11 +172,6 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         (book.title.toLowerCase().includes(searchQuery.toLowerCase()) || searchQuery === '')
     );
 
-    const getChapterUrl = (bookCode: string, chNum: number) => {
-        const fixedChNum = chNum.toString().padStart(2, '0');
-        return `https://ncert.nic.in/textbook/pdf/${bookCode}${fixedChNum}.pdf`;
-    };
-
     const handleView = async (bookCode: string, chNum: number, title: string) => {
         const id = `${bookCode}_ch${chNum}`;
         const offlineBlob = await getPDF(id);
@@ -187,9 +183,12 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
             console.log("Fetching online PDF for:", id);
             // Refresh S3 list to ensure we have fresh URLs
             setIsLoadingS3(true);
+            const listUrl = getApiUrl(`/api/ncert-list?bucket=class-11th&prefix=${selectedSubject.toLowerCase()}`);
+            setNcertDebug(`fetching list url=${listUrl}`);
             try {
                 const subjectFolder = selectedSubject.toLowerCase();
                 const res = await fetch(getApiUrl(`/api/ncert-list?bucket=class-11th&prefix=${subjectFolder}`));
+                setNcertDebug(`list status=${res.status}`);
                 const data = await res.json();
                 console.log("NCERT list fetch result:", data);
                 if (data.success) {
@@ -200,25 +199,24 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                     if (s3Match) {
                         console.log("Using S3 match:", s3Match);
                         // Always route through our backend proxy, even on web.
-                        // Direct S3/NCERT URLs can send X-Frame-Options / CORS
-                        // headers that block the browser from embedding or
-                        // fetching them directly (react-pdf sees this as a
-                        // load error / "blocked" view).
+                        // Direct S3 URLs can send CORS headers that block the
+                        // browser from embedding/fetching them directly
+                        // (react-pdf sees this as a load error / "blocked" view).
                         const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(s3Match.url)}`);
+                        setNcertDebug(`OK: matched "${s3Match.name}" -> proxy=${proxyUrl}`);
                         setViewerUrl({ url: proxyUrl, title });
                     } else {
-                        console.log("No S3 match, falling back to NCERT direct URL.");
-                        const ncertUrl = getChapterUrl(bookCode, chNum);
-                        const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(ncertUrl)}`);
-                        setViewerUrl({ url: proxyUrl, title });
+                        console.error("No matching file found on S3 for:", title);
+                        setNcertDebug(`NO MATCH: searchTitle="${searchTitle}" among ${data.files.length} S3 files: [${data.files.map((f:any)=>f.name).join(', ')}]`);
+                        alert("This chapter's PDF is not available on S3 yet.");
                     }
+                } else {
+                    setNcertDebug(`list success=false: ${JSON.stringify(data)}`);
                 }
-            } catch (e) {
+            } catch (e: any) {
                 console.error("Failed to fetch S3 files", e);
-                // Fallback to proxy
-                const ncertUrl = getChapterUrl(bookCode, chNum);
-                const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(ncertUrl)}`);
-                setViewerUrl({ url: proxyUrl, title });
+                setNcertDebug(`ERROR: ${e?.message || String(e)}`);
+                alert("Failed to load PDF. Please check your connection and try again.");
             } finally {
                 setIsLoadingS3(false);
             }
@@ -231,14 +229,17 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         
         setDownloadingId(id);
         try {
-            // Try S3 first
+            // S3 only - no NCERT.nic.in fallback
             const searchTitle = title.split('.').slice(1).join('.').trim().toLowerCase().replace(/ /g, '-');
             const s3Match = s3Files.find(f => f.name?.toLowerCase().includes(searchTitle));
             
-            const fileUrl = s3Match ? s3Match.url : getChapterUrl(bookCode, chNum);
-            const proxyUrl = s3Match ? fileUrl : getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(fileUrl)}`);
+            if (!s3Match) {
+                alert("This chapter's PDF is not available on S3 yet.");
+                setDownloadingId(null);
+                return;
+            }
             
-            const response = await fetch(proxyUrl);
+            const response = await fetch(s3Match.url);
             if (!response.ok) throw new Error("Download failed");
             const blob = await response.blob();
             await savePDF(id, blob);
@@ -309,6 +310,13 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                         <p className="text-xs text-gray-400">{selectedBook ? `${selectedBook.subject} • Class ${selectedBook.class}` : 'Physics, Chemistry, Biology'}</p>
                     </div>
                 </div>
+
+                {/* Temporary visible debug banner - shows NCERT fetch/proxy status directly on screen */}
+                {ncertDebug ? (
+                    <div className="mb-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-xl text-[10px] text-yellow-300 break-all">
+                        DEBUG: {ncertDebug}
+                    </div>
+                ) : null}
 
                 {!selectedBook ? (
                     <>
