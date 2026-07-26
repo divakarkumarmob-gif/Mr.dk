@@ -185,7 +185,74 @@ const getInitialView = () => {
   return 'home';
 };
 
+function StaticPageFallback() {
+  return <div className="fixed inset-0 bg-[#0a0e1a] text-white flex items-center justify-center">Loading...</div>;
+}
+
+function AboutRoute() {
+  const navigate = useNavigate();
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <AboutFAQPage onBack={() => navigate('/')} />
+    </Suspense>
+  );
+}
+
+function PrivacyRoute() {
+  const navigate = useNavigate();
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <PrivacyPolicy onBack={() => navigate('/')} />
+    </Suspense>
+  );
+}
+
+function TermsRoute() {
+  const navigate = useNavigate();
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <TermsOfService onBack={() => navigate('/')} />
+    </Suspense>
+  );
+}
+
+function ContactRoute() {
+  const navigate = useNavigate();
+  return (
+    <Suspense fallback={<StaticPageFallback />}>
+      <ContactPage onBack={() => navigate('/')} />
+    </Suspense>
+  );
+}
+
+/**
+ * App
+ * ---
+ * Thin wrapper that gives four static/legal pages real routes (their own
+ * URL, proper browser/Android back-button behavior) while every other
+ * screen continues to work exactly as before through AppInner's
+ * currentView state. This is intentionally incremental: only these four
+ * pages were converted so the rest of the app's behavior is untouched.
+ *
+ * Old query-param links like /?view=privacy-policy or /?view=about used
+ * by getInitialView() still work as a fallback (AppInner still reads
+ * them), but Footer/Profile now link to the real paths below.
+ */
 export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/about" element={<AboutRoute />} />
+        <Route path="/privacy-policy" element={<PrivacyRoute />} />
+        <Route path="/terms-of-service" element={<TermsRoute />} />
+        <Route path="/contact" element={<ContactRoute />} />
+        <Route path="*" element={<AppInner />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+function AppInner() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const [user, setUser] = useState<User | null>(null);
   const [showLoginFromLanding, setShowLoginFromLanding] = useState(false);
@@ -1534,29 +1601,10 @@ export default function App() {
     );
   }
 
-  if (currentView === 'about') {
-      return (
-          <Suspense fallback={<div className="fixed inset-0 bg-[#0a0e1a] text-white flex items-center justify-center">Loading...</div>}>
-              <AboutFAQPage onBack={() => setCurrentView('home')} />
-          </Suspense>
-      );
-  }
-
-  if (currentView === 'privacy' || currentView === 'privacy-policy') {
-      return (
-          <Suspense fallback={<div className="fixed inset-0 bg-[#0a0e1a] text-white flex items-center justify-center">Loading...</div>}>
-              <PrivacyPolicy onBack={() => setCurrentView('home')} />
-          </Suspense>
-      );
-  }
-
-  if (currentView === 'terms' || currentView === 'terms-of-service') {
-      return (
-          <Suspense fallback={<div className="fixed inset-0 bg-[#0a0e1a] text-white flex items-center justify-center">Loading...</div>}>
-              <TermsOfService onBack={() => setCurrentView('home')} />
-          </Suspense>
-      );
-  }
+  // Note: 'about', 'privacy'/'privacy-policy', and 'terms'/'terms-of-service'
+  // are now handled by real routes (/about, /privacy-policy,
+  // /terms-of-service) in the top-level App() router wrapper above,
+  // so those currentView blocks were removed from here.
 
   if (!user && currentView === 'home' && !showLoginFromLanding) {
       return (
@@ -1848,14 +1896,9 @@ export default function App() {
        );
    }
 
+   // Note: 'contact' is now handled by the real /contact route in the
+   // top-level App() router wrapper above.
 
-   if (currentView === 'contact') {
-       return (
-           <Suspense fallback={<div className="fixed inset-0 bg-[#0a0e1a] text-white flex items-center justify-center">Loading...</div>}>
-               <ContactPage onBack={() => setCurrentView('home')} />
-           </Suspense>
-       );
-   }
    if (showProfileOnboarding) {
        return <Onboarding onComplete={handleOnboardingComplete} />;
    }
