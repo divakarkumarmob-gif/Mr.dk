@@ -172,6 +172,30 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         (book.title.toLowerCase().includes(searchQuery.toLowerCase()) || searchQuery === '')
     );
 
+    // Robust S3 filename matcher: chapter titles rarely match S3 filenames
+    // character-for-character (e.g. "measurements" vs "MEASUREMENT.pdf"),
+    // so first try matching by the leading chapter number S3 files are
+    // named with ("1-...", "2-...", etc.), then fall back to comparing
+    // individual significant words so small wording/plural differences
+    // don't cause a false "not found".
+    const findS3Match = (files: {key: string, url: string, name: string}[], chNum: number, title: string) => {
+        const chapterPrefix = `${chNum}-`;
+        const byNumber = files.find(f => f.name?.toLowerCase().startsWith(chapterPrefix.toLowerCase()));
+        if (byNumber) return byNumber;
+
+        const titleWords = title.split('.').slice(1).join('.').trim().toLowerCase()
+            .replace(/[^a-z0-9\s]/g, ' ')
+            .split(/\s+/)
+            .filter(w => w.length > 3); // skip short filler words
+
+        if (titleWords.length === 0) return undefined;
+
+        return files.find(f => {
+            const fname = f.name?.toLowerCase().replace(/[^a-z0-9\s]/g, ' ') || '';
+            return titleWords.every(w => fname.includes(w) || fname.includes(w.replace(/s$/, '')));
+        });
+    };
+
     const handleView = async (bookCode: string, chNum: number, title: string) => {
         const id = `${bookCode}_ch${chNum}`;
         const offlineBlob = await getPDF(id);
@@ -194,8 +218,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                 if (data.success) {
                     setS3Files(data.files);
                     
-                    const searchTitle = title.split('.').slice(1).join('.').trim().toLowerCase().replace(/ /g, '-');
-                    const s3Match = data.files.find((f: any) => f.name?.toLowerCase().includes(searchTitle));
+                    const s3Match = findS3Match(data.files, chNum, title);
                     if (s3Match) {
                         console.log("Using S3 match:", s3Match);
                         // Always route through our backend proxy, even on web.
@@ -207,7 +230,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                         setViewerUrl({ url: proxyUrl, title });
                     } else {
                         console.error("No matching file found on S3 for:", title);
-                        setNcertDebug(`NO MATCH: searchTitle="${searchTitle}" among ${data.files.length} S3 files: [${data.files.map((f:any)=>f.name).join(', ')}]`);
+                        setNcertDebug(`NO MATCH: chNum=${chNum} title="${title}" among ${data.files.length} S3 files: [${data.files.map((f:any)=>f.name).join(', ')}]`);
                         alert("This chapter's PDF is not available on S3 yet.");
                     }
                 } else {
@@ -230,8 +253,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         setDownloadingId(id);
         try {
             // S3 only - no NCERT.nic.in fallback
-            const searchTitle = title.split('.').slice(1).join('.').trim().toLowerCase().replace(/ /g, '-');
-            const s3Match = s3Files.find(f => f.name?.toLowerCase().includes(searchTitle));
+            const s3Match = findS3Match(s3Files, chNum, title);
             
             if (!s3Match) {
                 alert("This chapter's PDF is not available on S3 yet.");
