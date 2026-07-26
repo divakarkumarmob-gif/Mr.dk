@@ -254,7 +254,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     function onDocumentLoadError(err: Error) {
         console.error("PDF load error:", err);
-        setError("Failed to load PDF. The file might be protected or the server is unresponsive.");
+        setError(`Failed to load PDF: ${err?.message || String(err)} | URL: ${activePdfUrl}`);
         setIsLoading(false);
     }
 
@@ -599,7 +599,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 <AlertTriangle className="text-red-400 w-12 h-12" />
                             </div>
                             <h3 className="text-white font-bold text-xl mb-4">View Blocked</h3>
-                            <p className="text-sm text-gray-400 mb-10 leading-relaxed">The source server is preventing embedded display. Try our fallback browser mode.</p>
+                            <p className="text-[10px] text-yellow-300 mb-6 leading-relaxed break-all bg-black/30 p-3 rounded-xl">{error}</p>
                             <div className="grid gap-3">
                                 <button
                                     onClick={() => openExternalLink(pdfUrl)}
