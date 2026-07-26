@@ -7,7 +7,7 @@ export function getApiUrl(path: string): string {
     return cleanPath;
   } else {
     // APK / Native Platform / Mobile Environment
-    const backendBase = import.meta.env.VITE_BACKEND_URL || "https://ais-dev-grroz2fukjc4b4szeneyqk-889714482537.asia-southeast1.run.app";
+    const backendBase = import.meta.env.VITE_BACKEND_URL || "https://mrdk.onrender.com";
     
     console.log(`[API Routing] Routing: ${path} -> ${backendBase}${cleanPath}`);
     
