@@ -3,12 +3,14 @@ import { logOut } from '../lib/auth';
 import { clearGuestData } from '../lib/clearGuestData';
 import { User as FirebaseUser } from 'firebase/auth';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Pressable from './Pressable';
 
 export default function Profile({ user, onNavigate, onSolverClick, onLogout }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub' | 'schoolSearch' | 'about') => void, onSolverClick: () => void, onLogout: () => void }) {
     const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
     const [showPremium, setShowPremium] = useState(false);
+    const navigate = useNavigate();
 
     const FreeFeatures = [
         "Basic Study Hub Access",
@@ -223,7 +225,7 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                     <div className="flex items-center gap-1.5 text-xs"><Search className="h-4 w-4"/><span>Search School</span></div>
                     <ChevronRight className="h-3 w-3" />
                 </Pressable>
-                <Pressable onClick={() => onNavigate('about')} className="w-full text-left flex items-center justify-between p-1">
+                <Pressable onClick={() => navigate('/about')} className="w-full text-left flex items-center justify-between p-1">
                     <div className="flex items-center gap-1.5 text-xs"><HelpCircle className="h-4 w-4"/><span>About NeetMaster & FAQ</span></div>
                     <ChevronRight className="h-3 w-3" />
                 </Pressable>
