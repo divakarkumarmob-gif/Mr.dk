@@ -146,7 +146,8 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             await saveAIReply(reply || "Sorry, I couldn't come up with an answer for that.");
         } catch (e) {
             console.error('[ChatHistoryModal] AI text reply failed:', e);
-            await saveAIReply("Sorry, I'm having trouble responding right now. Please try again.");
+            const detail = e instanceof Error ? e.message : String(e);
+            await saveAIReply(`Sorry, I ran into an error: ${detail}`);
         }
     };
 
@@ -156,7 +157,8 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             await saveAIReply(reply || "Sorry, I couldn't read that image.");
         } catch (e) {
             console.error('[ChatHistoryModal] AI image reply failed:', e);
-            await saveAIReply("Sorry, I couldn't process that image. Please try again.");
+            const detail = e instanceof Error ? e.message : String(e);
+            await saveAIReply(`Sorry, I ran into an error processing that image: ${detail}`);
         }
     };
 
@@ -166,7 +168,8 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             await saveAIReply(reply || "Sorry, I couldn't understand that voice message.");
         } catch (e) {
             console.error('[ChatHistoryModal] AI voice reply failed:', e);
-            await saveAIReply("Sorry, I couldn't process that voice message. Please try again.");
+            const detail = e instanceof Error ? e.message : String(e);
+            await saveAIReply(`Sorry, I ran into an error processing that voice message: ${detail}`);
         }
     };
 
@@ -317,7 +320,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         try {
             let html2canvasFn;
             try {
-                html2canvasFn = (await import('html2canvas')).default;
+                html2canvasFn = (await import('html2canvas-pro')).default;
             } catch (importErr) {
                 throw new Error('Screenshot tool not installed — run npm install and rebuild.');
             }
