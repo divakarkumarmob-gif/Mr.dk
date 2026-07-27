@@ -1698,7 +1698,7 @@ function AppInner() {
 
   if (currentView === 'mindHack') {
       return (
-        <PageLayout background="bg-[#f4e4bc]">
+        <PageLayout background="bg-[#f4e4bc]" minTopPadding={0}>
             <MindHackPage onBack={() => setCurrentView('profile')} />
         </PageLayout>
       );
@@ -1706,7 +1706,7 @@ function AppInner() {
 
   if (currentView === 'aiStudyPlan') {
       return (
-        <PageLayout background="bg-[#f0f4f8]">
+        <PageLayout background="bg-[#f0f4f8]" minTopPadding={0}>
             <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
         </PageLayout>
       );
@@ -1882,7 +1882,7 @@ function AppInner() {
 
   if (currentView === 'ncertHub') {
       return (
-        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]" paddingX="px-0">
+        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]" paddingX="px-0" minTopPadding={0}>
             <NCERTHub onBack={() => setCurrentView('notes')} />
         </PageLayout>
       );
@@ -1891,7 +1891,7 @@ function AppInner() {
   if (currentView === 'ntaQuestionsHub') {
       const paperId = urlParams.get('paper');
       return (
-        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]">
+        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]" paddingX="px-0" minTopPadding={0}>
             <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
         </PageLayout>
       );
