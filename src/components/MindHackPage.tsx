@@ -36,16 +36,16 @@ export default function MindHackPage({ onBack }: { onBack: () => void }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="min-h-dvh bg-[#f4e4bc] text-[#2c1d0d] font-serif relative p-4 pt-[max(env(safe-area-inset-top,0px),64px)]"
+            className="min-h-dvh bg-[#f4e4bc] text-[#2c1d0d] font-serif relative p-4 pt-[max(env(safe-area-inset-top,0px),5px)]"
         >
             <button 
                 onClick={onBack} 
-                className="absolute top-[max(env(safe-area-inset-top,0px),16px)] left-4 flex items-center gap-2 text-sm font-bold bg-[#d4b97f]/50 p-2 rounded-full z-10"
+                className="absolute top-[max(env(safe-area-inset-top,0px),5px)] left-4 flex items-center gap-2 text-sm font-bold bg-[#d4b97f]/50 p-2 rounded-full z-10"
             >
                 <ArrowLeft className="h-5 w-5" /> Back
             </button>
             
-            <div className="absolute top-[max(env(safe-area-inset-top,0px),16px)] right-4 flex gap-2 z-10">
+            <div className="absolute top-[max(env(safe-area-inset-top,0px),5px)] right-4 flex gap-2 z-10">
                 {currentPage > 0 && (
                     <button 
                         onClick={handlePrev} 
@@ -64,7 +64,7 @@ export default function MindHackPage({ onBack }: { onBack: () => void }) {
                 )}
             </div>
 
-            <h2 className="text-2xl font-bold mb-6 text-center border-b-2 border-[#d4b97f] pb-4">🧠 दिमागी हैक्स (Mind Hacks) {currentPage + 1} / {mindHackPages.length}</h2>
+            <h2 className="text-2xl font-bold mb-6 mt-12 text-center border-b-2 border-[#d4b97f] pb-4">🧠 दिमागी हैक्स (Mind Hacks) {currentPage + 1} / {mindHackPages.length}</h2>
             
             <AnimatePresence mode="wait">
                 <motion.div

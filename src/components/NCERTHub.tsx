@@ -321,7 +321,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
     return (
         <>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex-1 min-h-0 w-full bg-[#0a0f24] text-white font-sans overflow-y-auto">
-            <div className="pt-[max(env(safe-area-inset-top),16px)] pl-[max(env(safe-area-inset-left),16px)] pb-40 max-w-full mx-auto px-3">
+            <div className="pt-[max(env(safe-area-inset-top),5px)] pl-[max(env(safe-area-inset-left),16px)] pb-40 max-w-full mx-auto px-3">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
                     <Pressable onClick={selectedBook ? handleChapterBack : onBack} className="p-2 bg-white/5 rounded-full">

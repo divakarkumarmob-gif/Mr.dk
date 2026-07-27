@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 
 export default function AboutFAQPage({ onBack }: { onBack: () => void }) {
     return (
-        <div className="min-h-dvh bg-background text-foreground pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
+        <div className="min-h-dvh bg-background text-foreground pt-[max(env(safe-area-inset-top,0px),5px)] px-3">
             <button className="flex items-center gap-2 text-sm text-gray-400 mb-6" onClick={onBack}>
                 <X className="h-5 w-5" /> Back
             </button>

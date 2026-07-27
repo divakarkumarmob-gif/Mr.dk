@@ -103,7 +103,7 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
     return (
         <>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-dvh w-dvw bg-[#0a0f24] text-white font-sans">
-            <div className="pt-[max(env(safe-area-inset-top),16px)] pl-[max(env(safe-area-inset-left),16px)] pb-20 max-w-full mx-auto px-3">
+            <div className="pt-[max(env(safe-area-inset-top),5px)] pl-[max(env(safe-area-inset-left),16px)] pb-20 max-w-full mx-auto px-3">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
                     <Pressable onClick={handleBack} className="p-2 bg-white/5 rounded-full">

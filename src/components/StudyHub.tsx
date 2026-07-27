@@ -149,7 +149,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="min-h-dvh bg-gradient-to-br from-black to-[#0a0e1a] text-white font-sans flex flex-col"
-            style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
+            style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 5px)' }}
         >
           <div className="w-full flex flex-col h-full px-4">
             <div className="text-gray-400 text-sm mb-2 text-center">

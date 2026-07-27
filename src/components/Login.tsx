@@ -711,7 +711,7 @@ export default function Login() {
   const identifierIsValid = !!identifierKind;
 
   return (
-    <div className="min-h-dvh bg-gray-50 px-3 pb-8 flex flex-col items-center pt-[max(env(safe-area-inset-top,0px),12px)]">
+    <div className="min-h-dvh bg-gray-50 px-3 pb-8 flex flex-col items-center pt-[max(env(safe-area-inset-top,0px),5px)]">
       {/* Invisible reCAPTCHA anchor for web Phone Auth. Native platforms don't use this. */}
       <div id="recaptcha-container" />
       {errorMessage && (

@@ -50,7 +50,7 @@ export default function PageLayout({
   textColor = '',
   paddingX = 'px-3',
   paddingBottomExtra = '',
-  minTopPadding = 12,
+  minTopPadding = 5,
   className = '',
   scrollable = false,
 }: PageLayoutProps) {

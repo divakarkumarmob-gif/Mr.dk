@@ -210,7 +210,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   });
 
   return (
-    <div className="h-dvh bg-[#0a0f24] text-white font-sans pb-44 w-full overflow-y-auto" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+    <div className="h-dvh bg-[#0a0f24] text-white font-sans pb-44 w-full overflow-y-auto" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 5px)' }}>
       {pyqQuestions ? (
       <div className="px-3">
             <PYQTestRunner 
