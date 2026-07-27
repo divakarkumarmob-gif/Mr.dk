@@ -134,7 +134,13 @@ async function callAI(prompt: string | any[]): Promise<string> {
         return response.text || "";
     } catch (error) {
         console.error("Gemini AI Error:", error);
-        return "Internal AI Error";
+        // Re-throw instead of returning a fake "Internal AI Error" string —
+        // returning a string here made every caller treat a failure as if
+        // it were a real AI reply (200 OK, chat shows "Internal AI Error"
+        // as if the model said it), which hid the actual cause (rate
+        // limit, bad model name, invalid key, etc) from both the network
+        // response and server logs beyond this one console.error line.
+        throw error;
     }
 }
 
@@ -1100,7 +1106,7 @@ Respond with extreme brevity and 100% accuracy.
             res.json({ reply });
         } catch (error) {
             console.error("Tutor Voice API Error:", error);
-            res.status(500).json({ error: "Failed to get AI response" });
+            res.status(500).json({ error: "Failed to get AI response", detail: error instanceof Error ? error.message : String(error) });
         }
     });
 
@@ -1131,7 +1137,7 @@ Respond with extreme brevity and 100% accuracy.
             res.json({ reply });
         } catch (error) {
             console.error("Tutor API Error:", error);
-            res.status(500).json({ error: "Failed to get AI response" });
+            res.status(500).json({ error: "Failed to get AI response", detail: error instanceof Error ? error.message : String(error) });
         }
     });
 
