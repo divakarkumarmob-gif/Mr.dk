@@ -4,6 +4,37 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import imageCompression from 'browser-image-compression';
 import { Message } from '../types';
 
+// Firestore security rules for chats/{chatId}/messages require the parent
+// chats/{chatId} doc to already exist with a participants array containing
+// the current user — otherwise every read/write to the subcollection is
+// silently denied (the error only surfaces once the write's catch handler
+// calls handleFirestoreError, and even then, callers that don't await/log
+// it never see anything). initializeChat() creates that parent doc for
+// support chats, but the "{uid}_ai" personal AI chat used by the live
+// voice interface and the WhatsApp-style chat history never went through
+// initializeChat, so its parent doc frequently doesn't exist — silently
+// blocking every message in that chat. This helper is called from
+// sendMessage/saveAIMessage so any chat gets its parent doc created
+// on-demand the first time something is written to it.
+const ensureChatDocExists = async (chatId: string, userId: string) => {
+    try {
+        const chatRef = doc(db, 'chats', chatId);
+        const snap = await getDoc(chatRef);
+        if (!snap.exists()) {
+            await setDoc(chatRef, {
+                participants: [userId],
+                isSupportChat: false,
+                lastMessage: '',
+                updatedAt: serverTimestamp(),
+            });
+        }
+    } catch (error) {
+        // Don't block the actual message send on this — if it fails here,
+        // the subsequent addDoc will fail too and surface its own error.
+        console.error(`[Chat] Failed to ensure parent doc for ${chatId}:`, error);
+    }
+};
+
 export const initializeChat = async (userId: string) => {
     console.log(`[Chat] Initializing chat for user: ${userId}`);
     const chatRef = doc(db, 'chats', userId);
@@ -164,6 +195,9 @@ export const starMessage = async (chatId: string, messageId: string, starred: bo
 
 export const sendMessage = async (chatId: string, senderId: string, text: string, mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio', replyTo?: { text: string; senderId: string } | null) => {
   console.log(`[Chat] Sending message to ${chatId} from ${senderId}`);
+  if (auth.currentUser) {
+      await ensureChatDocExists(chatId, auth.currentUser.uid);
+  }
   const messageData = {
     senderId,
     text,
@@ -191,6 +225,7 @@ export const sendMessage = async (chatId: string, senderId: string, text: string
 export const saveAIMessage = async (userId: string, messageData: any) => {
     try {
         const aiChatId = `${userId}_ai`;
+        await ensureChatDocExists(aiChatId, userId);
         const messagesCol = collection(db, `chats/${aiChatId}/messages`);
         await addDoc(messagesCol, {
             ...messageData,
