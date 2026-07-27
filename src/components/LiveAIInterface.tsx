@@ -689,8 +689,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             
             <p className="text-gray-400 mb-10 text-center -mt-2">I'm your AI study companion for NEET.</p>
 
-            <div className={`relative flex items-center justify-center gap-6 transition-all ${selectedImages.length > 0 ? 'mb-2 scale-75 -mt-2' : 'mb-8 -mt-4'}`}>
-                <div className="flex flex-col gap-4">
+            <div className={`relative flex items-center justify-center gap-4 transition-all ${selectedImages.length > 0 ? 'mb-2 scale-75 -mt-2' : 'mb-8 -mt-4'}`}>
+                <div className="flex flex-col gap-3">
                     <motion.div 
                         className="flex flex-col items-center gap-1"
                         whileHover={{ scale: 1.1, rotate: 5 }}
@@ -698,8 +698,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     >
-                        <div className="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center border border-blue-500/30">
-                            <span className="text-xl">⚛️</span>
+                        <div className="w-9 h-9 rounded-full bg-blue-900/50 flex items-center justify-center border border-blue-500/30">
+                            <span className="text-base">⚛️</span>
                         </div>
                         <span className="text-xs text-gray-400">Physics</span>
                     </motion.div>
@@ -710,14 +710,14 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                         animate={{ y: [0, -6, 0] }}
                         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                     >
-                        <div className="w-12 h-12 rounded-full bg-purple-900/50 flex items-center justify-center border border-purple-500/30">
-                            <span className="text-xl">🧪</span>
+                        <div className="w-9 h-9 rounded-full bg-purple-900/50 flex items-center justify-center border border-purple-500/30">
+                            <span className="text-base">🧪</span>
                         </div>
                         <span className="text-xs text-gray-400">Chemistry</span>
                     </motion.div>
                 </div>
                 <div className="flex flex-col items-center">
-                    <AgentFace status={status} volume={isAiSpeaking.current ? volume : 0} size={160} colorIndex={0} />
+                    <AgentFace status={status} volume={isAiSpeaking.current ? volume : 0} size={110} colorIndex={0} />
                     {status === "Speaking..." && (
                         <button
                             onClick={handleInterrupt}
@@ -734,8 +734,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     animate={{ y: [0, -12, 0] }}
                     transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    <div className="w-12 h-12 rounded-full bg-green-900/50 flex items-center justify-center border border-green-500/30">
-                        <span className="text-xl">🌿</span>
+                    <div className="w-9 h-9 rounded-full bg-green-900/50 flex items-center justify-center border border-green-500/30">
+                        <span className="text-base">🌿</span>
                     </div>
                     <span className="text-xs text-gray-400">Biology</span>
                 </motion.div>
@@ -779,25 +779,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     </div>
                 )}
             </div>
-
-            {!isRecording && selectedImages.length === 0 && (
-                <div className="grid grid-cols-2 gap-4 w-full mb-12">
-                    <div className="bg-white/5 p-4 rounded-2xl flex items-center gap-4 border border-white/10">
-                        <div className="p-2 bg-blue-900/50 rounded-lg"><Sparkles className="h-6 w-6 text-blue-400" /></div>
-                        <div>
-                            <p className="font-semibold text-sm">Study Smarter</p>
-                            <p className="text-xs text-gray-400">Get concept clarity faster</p>
-                        </div>
-                    </div>
-                    <div className="bg-white/5 p-4 rounded-2xl flex items-center gap-4 border border-white/10">
-                         <div className="p-2 bg-purple-900/50 rounded-lg"><Sparkles className="h-6 w-6 text-purple-400" /></div>
-                        <div>
-                            <p className="font-semibold text-sm">Score Higher</p>
-                            <p className="text-xs text-gray-400">Practice, analyze & improve</p>
-                        </div>
-                    </div>
-                </div>
-            )}
 
             <div className="w-full flex flex-col items-center px-4 mt-auto flex-shrink-0">
                 <AnimatePresence>
