@@ -12,7 +12,8 @@ export async function chatWithAI(messages: { role: string; content: string }[], 
     });
 
     if (!response.ok) {
-        throw new Error("Failed to get tutor response");
+        const errBody = await response.json().catch(() => null);
+        throw new Error(errBody?.detail || errBody?.error || "Failed to get tutor response");
     }
 
     const data = await response.json();
@@ -31,7 +32,8 @@ export async function chatWithAIVoice(base64Audio: string, mimeType: string) {
     });
 
     if (!response.ok) {
-        throw new Error("Failed to get tutor voice response");
+        const errBody = await response.json().catch(() => null);
+        throw new Error(errBody?.detail || errBody?.error || "Failed to get tutor voice response");
     }
 
     const data = await response.json();
