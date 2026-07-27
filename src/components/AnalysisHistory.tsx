@@ -88,7 +88,7 @@ export default function AnalysisHistory({ onNavigate, user, onResultSelect }: { 
     };
 
     return (
-        <div className="flex flex-col h-dvh bg-background text-foreground px-3 overflow-y-auto pb-44">
+        <div className="flex flex-col h-full flex-1 min-h-0 bg-background text-foreground px-3 overflow-y-auto pb-44">
             <div className="flex-grow">
                 <h1 className="text-2xl font-bold mb-6">Test History</h1>
 

@@ -5,7 +5,7 @@ import CustomVideoPlayer from './CustomVideoPlayer';
 
 export default function PrivateVideosPlayer({ activeVideo, selectedSubject, selectedChapter, onBack, onNavigate }: { activeVideo: any, selectedSubject: any, selectedChapter: any, onBack: () => void, onNavigate: (vid: any) => void }) {
   return (
-    <div className="min-h-dvh bg-[#060a17] text-white flex flex-col">
+    <div className="min-h-dvh bg-[#060a17] text-white flex flex-col safe-pt">
       <div className="p-4 border-b border-white/5 flex items-center gap-3">
         <button onClick={onBack} className="p-2 bg-white/5 hover:bg-white/10 rounded-xl"><ArrowLeft className="h-5 w-5" /></button>
         <h2 className="text-sm font-bold truncate">{activeVideo.title}</h2>

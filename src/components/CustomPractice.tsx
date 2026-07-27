@@ -40,6 +40,7 @@ export default function CustomPractice({ onBack, onStart }: { onBack: () => void
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="min-h-dvh bg-[#0a0f24] text-white p-4 sm:p-6 pb-24"
+            style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 16px)' }}
         >
             <div className="max-w-md mx-auto sm:max-w-2xl lg:max-w-4xl">
                 <div className="flex items-center gap-4 mb-6">
