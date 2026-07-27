@@ -3,6 +3,7 @@ import { X, Keyboard, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings
 import { motion, AnimatePresence } from 'motion/react';
 import AgentFace from './AgentFace';
 import HomeScreenShortcutPrompt from './HomeScreenShortcutPrompt';
+import ChatHistoryModal from './ChatHistoryModal';
 import { auth } from '../lib/firebase';
 import { saveAIMessage, subscribeToMessages, uploadMedia } from '../services/chatService';
 import { Message } from '../types';
@@ -79,11 +80,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const captionBoxRef = useRef<HTMLDivElement>(null);
     const userScrolledUpRef = useRef(false);
-    // WhatsApp-style chat history sheet: same auto-scroll-to-latest pattern
-    // as the caption box, with its own "user scrolled up to re-read" flag
-    // so opening old messages doesn't get yanked back to the bottom.
-    const chatHistoryBoxRef = useRef<HTMLDivElement>(null);
-    const chatHistoryUserScrolledUpRef = useRef(false);
     // True once the *first* text chunk of the current AI turn has arrived.
     // Lets us reset captionText the instant a fresh answer starts, instead
     // of relying only on turnComplete (which can race with the next turn's
@@ -136,19 +132,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             box.scrollTop = box.scrollHeight;
         }
     }, [captionText]);
-
-    // Same auto-scroll-to-latest behavior for the WhatsApp-style chat
-    // history sheet: jumps to the newest message on new messages or when
-    // the sheet is first opened, but not while the user has scrolled up
-    // to read older messages.
-    useEffect(() => {
-        if (!showChatHistory) return;
-        const box = chatHistoryBoxRef.current;
-        if (!box) return;
-        if (!chatHistoryUserScrolledUpRef.current) {
-            box.scrollTop = box.scrollHeight;
-        }
-    }, [messages, showChatHistory]);
 
     // Prefetch the memory summary the moment this screen is open (before
     // the user has even tapped the mic), so session init never has to wait
@@ -710,9 +693,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     <button onClick={() => setShowCaptions(!showCaptions)} className={`${showCaptions ? 'text-green-500' : 'text-white'}`}>
                         <Captions className="h-6 w-6" />
                     </button>
-                    <button onClick={() => setShowChatHistory(true)} className="text-white">
-                        <MessageSquare className="h-6 w-6" />
-                    </button>
                     <button onClick={() => setShowSettings(true)} className="text-white">
                         <Settings className="h-6 w-6" />
                     </button>
@@ -722,9 +702,9 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 </div>
             </div>
             
-            <h2 className="text-2xl font-bold mb-2 -mt-4">Hello, Future Doctor! 👋</h2>
+            <h2 className="text-lg font-bold mb-1 -mt-4">Hello, Future Doctor! 👋</h2>
             
-            <p className="text-gray-400 mb-10 text-center -mt-2">I'm your AI study companion for NEET.</p>
+            <p className="text-gray-400 mb-8 text-center text-sm -mt-1">I'm your AI study companion for NEET.</p>
 
             <div className={`relative flex items-center justify-center gap-4 transition-all ${selectedImages.length > 0 ? 'mb-2 scale-75 -mt-2' : 'mb-8 -mt-4'}`}>
                 <div className="flex flex-col gap-3">
@@ -785,7 +765,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 <h3 className={`font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 transition-all ${selectedImages.length > 0 ? 'text-lg mb-0' : 'text-2xl mb-2'}`}>{status}</h3>
             )}
             {selectedImages.length === 0 && (
-                <p className="text-gray-400 mb-6 text-center">Ask me anything about NEET</p>
+                <p className="text-gray-400 mb-3 text-center text-sm -mt-1">Ask me anything about NEET</p>
             )}
             <div className="flex-1 min-h-0 overflow-hidden w-full mb-2 flex flex-col gap-2">
                 {showCaptions && (
@@ -855,14 +835,37 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                         <input type="file" ref={fileInputRef} multiple accept="image/*" className="hidden" onChange={handleFileChange} />
                         
                         <div className="flex flex-col items-center">
-                            <button 
-                                onClick={handleToggleRecording}
-                                className={`w-20 h-20 rounded-full flex items-center justify-center ${isRecording ? 'bg-red-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'}`}
-                            >
-                                <Mic className="h-8 w-8 text-white" />
-                            </button>
-                            <span className="mt-2 text-sm text-gray-400">{isRecording ? status : "Tap to talk"}</span>
+                            <div className="relative w-20 h-20 flex items-center justify-center">
+                                {isRecording && (
+                                    <>
+                                        <motion.span
+                                            className="absolute inset-0 rounded-full bg-red-500/40"
+                                            animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
+                                            transition={{ duration: 1.4, repeat: Infinity, ease: "easeOut" }}
+                                        />
+                                        <motion.span
+                                            className="absolute inset-0 rounded-full bg-red-500/30"
+                                            animate={{ scale: [1, 1.35, 1], opacity: [0.7, 0, 0.7] }}
+                                            transition={{ duration: 1.4, repeat: Infinity, ease: "easeOut", delay: 0.3 }}
+                                        />
+                                    </>
+                                )}
+                                <motion.button
+                                    onClick={handleToggleRecording}
+                                    animate={isRecording ? { scale: [1, 1.06, 1] } : { scale: 1 }}
+                                    transition={isRecording ? { duration: 1.2, repeat: Infinity, ease: "easeInOut" } : {}}
+                                    whileTap={{ scale: 0.9 }}
+                                    className={`relative w-20 h-20 rounded-full flex items-center justify-center ${isRecording ? 'bg-red-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'}`}
+                                >
+                                    <Mic className="h-8 w-8 text-white" />
+                                </motion.button>
+                            </div>
+                            <span className="mt-2 text-xs text-gray-400">{isRecording ? status : "Tap to talk"}</span>
                         </div>
+
+                        <button onClick={() => setShowChatHistory(true)} className="p-4 bg-white/10 rounded-full text-white">
+                            <MessageSquare className="h-6 w-6" />
+                        </button>
                     </div>
                     <div className="w-12"></div>
                 </div>
@@ -897,55 +900,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 </div>
             )}
             {showChatHistory && (
-                <div
-                    className="fixed inset-0 z-[1100] bg-[#0b141a] flex flex-col pt-[max(env(safe-area-inset-top,0px),12px)] pb-[max(env(safe-area-inset-bottom,0px),12px)]"
-                    onClick={e => e.stopPropagation()}
-                >
-                    {/* Header */}
-                    <div className="w-full flex items-center gap-3 px-4 pb-3 border-b border-white/10 flex-shrink-0">
-                        <button onClick={() => setShowChatHistory(false)} className="text-white p-1 -ml-1">
-                            <X className="h-6 w-6" />
-                        </button>
-                        <h2 className="text-lg font-bold text-white">Chat History</h2>
-                    </div>
-
-                    {/* Messages */}
-                    <div
-                        ref={chatHistoryBoxRef}
-                        onScroll={() => {
-                            const box = chatHistoryBoxRef.current;
-                            if (!box) return;
-                            const distanceFromBottom = box.scrollHeight - box.scrollTop - box.clientHeight;
-                            chatHistoryUserScrolledUpRef.current = distanceFromBottom > 40;
-                        }}
-                        className="flex-1 min-h-0 overflow-y-auto px-3 py-4 flex flex-col gap-2"
-                        style={{
-                            backgroundImage: 'radial-gradient(circle at 25px 25px, rgba(255,255,255,0.03) 2px, transparent 0), radial-gradient(circle at 75px 75px, rgba(255,255,255,0.03) 2px, transparent 0)',
-                            backgroundSize: '100px 100px',
-                        }}
-                    >
-                        {messages.length === 0 ? (
-                            <p className="text-gray-500 text-sm text-center mt-8">No messages yet — ask something to get started.</p>
-                        ) : (
-                            messages.map((msg, index) => {
-                                const isUser = msg.senderId === auth.currentUser?.uid;
-                                if (!msg.text) return null;
-                                return (
-                                    <div
-                                        key={msg.id || index}
-                                        className={`max-w-[80%] px-3 py-2 rounded-lg text-sm leading-snug whitespace-pre-wrap break-words ${
-                                            isUser
-                                                ? 'self-end bg-[#005c4b] text-white rounded-br-sm'
-                                                : 'self-start bg-[#1f2c34] text-white rounded-bl-sm'
-                                        }`}
-                                    >
-                                        {msg.text}
-                                    </div>
-                                );
-                            })
-                        )}
-                    </div>
-                </div>
+                <ChatHistoryModal onClose={() => setShowChatHistory(false)} />
             )}
             {showShortcutPrompt && <HomeScreenShortcutPrompt onClose={() => setShowShortcutPrompt(false)} />}
             {showSettings && (
