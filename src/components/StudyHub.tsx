@@ -151,6 +151,9 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
             className="min-h-dvh bg-gradient-to-br from-black to-[#0a0e1a] text-white font-sans flex flex-col safe-pt"
         >
           <div className="w-full flex flex-col h-full px-4">
+            <div className="text-gray-400 text-sm mb-2 text-center">
+              {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+            </div>
             <div className="flex justify-between items-center mb-2">
                 <HubSwitcher active="study" onNavigate={onNavigate} />
             </div>
@@ -290,9 +293,6 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
               }} />
           )}
           
-          <div className="text-gray-400 text-sm mt-4 text-center">
-            {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-          </div>
           {/* {selectedChapter && (
             <VideoPlayer topic={selectedChapter} onClose={() => setSelectedChapter(null)} />
           )} */}
