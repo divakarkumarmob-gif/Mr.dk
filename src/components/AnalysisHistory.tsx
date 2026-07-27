@@ -125,7 +125,7 @@ export default function AnalysisHistory({ onNavigate, user, onResultSelect }: { 
                                     {isAnalysisReady(result.timestamp) ? (
                                         <button 
                                             onClick={() => handleSeeResult(result)}
-                                            className="bg-blue-600 px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all"
+                                            className="bg-blue-600 px-5 py-1.5 rounded-lg text-sm font-bold active:scale-95 transition-all"
                                         >
                                             See Result
                                         </button>

@@ -148,7 +148,8 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-dvh bg-gradient-to-br from-black to-[#0a0e1a] text-white font-sans flex flex-col safe-pt"
+            className="min-h-dvh bg-gradient-to-br from-black to-[#0a0e1a] text-white font-sans flex flex-col"
+            style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
         >
           <div className="w-full flex flex-col h-full px-4">
             <div className="text-gray-400 text-sm mb-2 text-center">
@@ -297,7 +298,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
             <VideoPlayer topic={selectedChapter} onClose={() => setSelectedChapter(null)} />
           )} */}
           
-          <div className="space-y-3 mt-8 pb-20">
+          <div className="space-y-3 mt-3 pb-20">
             {accordionItems.map(item => (
                 <motion.div 
                     initial={{ opacity: 0, y: 10 }}
