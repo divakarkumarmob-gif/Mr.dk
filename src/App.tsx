@@ -1882,7 +1882,7 @@ function AppInner() {
 
   if (currentView === 'ncertHub') {
       return (
-        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]">
+        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]" paddingX="px-0">
             <NCERTHub onBack={() => setCurrentView('notes')} />
         </PageLayout>
       );
@@ -1944,7 +1944,7 @@ function AppInner() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <PageLayout background="bg-[#0b141a]" textColor="text-foreground" paddingX="">
+         <PageLayout background="bg-[#0b141a]" textColor="text-foreground" paddingX="" className="!h-dvh overflow-hidden">
              <UserChat fullScreen={true} user={user} initialScreenshot={pendingSupportData?.screenshot} initialText={pendingSupportData?.text} />
          </PageLayout>
        );
