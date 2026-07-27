@@ -1083,8 +1083,29 @@ Respond with extreme brevity and 100% accuracy.
     });
 
     // API route for tutor
+    // Voice message in WhatsApp-style chat: send audio straight to Gemini
+    // (no separate STT step) — it transcribes and answers as the NEET
+    // tutor in one call. mimeType matches whatever MediaRecorder produced
+    // on the client (webm/opus in browsers, m4a/aac on some native builds).
+    app.post("/api/tutor-voice", async (req, res) => {
+        const { base64Audio, mimeType } = req.body;
+        if (!base64Audio) {
+            return res.status(400).json({ error: "Missing base64Audio" });
+        }
+        try {
+            const reply = await callAI([
+                { text: "You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this as a voice message — listen to it and answer their question." },
+                { inlineData: { data: base64Audio.includes(',') ? base64Audio.split(',')[1] : base64Audio, mimeType: mimeType || "audio/webm" } }
+            ]);
+            res.json({ reply });
+        } catch (error) {
+            console.error("Tutor Voice API Error:", error);
+            res.status(500).json({ error: "Failed to get AI response" });
+        }
+    });
+
     app.post("/api/tutor", async (req, res) => {
-        const { messages } = req.body;
+        const { messages, base64Image } = req.body;
         if (!messages || !Array.isArray(messages) || messages.length === 0) {
           return res.status(400).json({ error: "Missing messages" });
         }
@@ -1092,7 +1113,21 @@ Respond with extreme brevity and 100% accuracy.
         const lastMessage = messages[messages.length - 1].content;
         
         try {
-            const reply = await callAI(`You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${lastMessage}`);
+            let reply: string;
+            if (base64Image) {
+                const imgResponse = await ai.models.generateContent({
+                    model: "gemini-3.5-flash",
+                    contents: {
+                        parts: [
+                            { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
+                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                        ]
+                    }
+                });
+                reply = imgResponse.text || "Sorry, I couldn't read that image.";
+            } else {
+                reply = await callAI(`You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${lastMessage}`);
+            }
             res.json({ reply });
         } catch (error) {
             console.error("Tutor API Error:", error);
