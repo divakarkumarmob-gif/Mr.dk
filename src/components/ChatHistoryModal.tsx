@@ -5,7 +5,7 @@ import {
     CheckCircle, XCircle, Play, Pause, Trash2
 } from 'lucide-react';
 import { auth, db, storage } from '../lib/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { Message } from '../types';
 import { subscribeToMessages, sendMessage, uploadMedia } from '../services/chatService';
@@ -42,6 +42,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     const [showUploadProgress, setShowUploadProgress] = useState(false);
     const [uploadPercent, setUploadPercent] = useState(0);
     const [uploadFailed, setUploadFailed] = useState(false);
+    const [uploadErrorDetail, setUploadErrorDetail] = useState('');
     const [isCapturing, setIsCapturing] = useState(false);
 
     const chatBoxRef = useRef<HTMLDivElement>(null);
@@ -50,6 +51,37 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     const messagesCaptureRef = useRef<HTMLDivElement>(null);
 
     const aiChatId = auth.currentUser ? `${auth.currentUser.uid}_ai` : null;
+
+    // The security rules for chats/{chatId}/messages require the parent
+    // chats/{chatId} doc to already exist with a participants array
+    // containing this user — otherwise every read/write to the
+    // subcollection is silently denied. Nothing else in the app ever
+    // creates this parent doc for the "{uid}_ai" chat (only the messages
+    // subcollection gets written to directly), so without this, the whole
+    // chat silently fails: your message and every AI reply attempt get
+    // rejected by Firestore before this popup or console ever sees a
+    // useful error.
+    useEffect(() => {
+        if (!aiChatId || !auth.currentUser) return;
+        const uid = auth.currentUser.uid;
+        const ensureParentChatDoc = async () => {
+            try {
+                const chatDocRef = doc(db, 'chats', aiChatId);
+                const snap = await getDoc(chatDocRef);
+                if (!snap.exists()) {
+                    await setDoc(chatDocRef, {
+                        participants: [uid],
+                        isSupportChat: false,
+                        lastMessage: '',
+                        updatedAt: serverTimestamp(),
+                    });
+                }
+            } catch (e) {
+                console.error('[ChatHistoryModal] Failed to ensure parent chat doc:', e);
+            }
+        };
+        ensureParentChatDoc();
+    }, [aiChatId]);
 
     useEffect(() => {
         if (!aiChatId) return;
@@ -89,12 +121,23 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         if (!aiChatId || !auth.currentUser) return;
         const reply = replyTarget ? { text: replyTarget.text, senderId: replyTarget.senderId } : null;
         setReplyTarget(null);
-        await sendMessage(aiChatId, auth.currentUser.uid, text, mediaUrl, mediaType, reply);
+        try {
+            await sendMessage(aiChatId, auth.currentUser.uid, text, mediaUrl, mediaType, reply);
+        } catch (e) {
+            console.error('[ChatHistoryModal] Failed to save user message:', e);
+            showToast('Message failed to send. Please try again.');
+            throw e; // Stop the AI-reply request that would otherwise follow.
+        }
     };
 
     const saveAIReply = async (text: string) => {
         if (!aiChatId) return;
-        await sendMessage(aiChatId, 'ai', text);
+        try {
+            await sendMessage(aiChatId, 'ai', text);
+        } catch (e) {
+            console.error('[ChatHistoryModal] Failed to save AI reply:', e);
+            showToast('AI reply failed to save. Please try again.');
+        }
     };
 
     const requestAIReplyForText = async (text: string) => {
@@ -268,14 +311,20 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         setShowUploadProgress(true);
         setUploadPercent(0);
         setUploadFailed(false);
+        setUploadErrorDetail('');
         setIsCapturing(true);
 
         try {
-            const html2canvas = (await import('html2canvas')).default;
+            let html2canvasFn;
+            try {
+                html2canvasFn = (await import('html2canvas')).default;
+            } catch (importErr) {
+                throw new Error('Screenshot tool not installed — run npm install and rebuild.');
+            }
             const target = messagesCaptureRef.current;
             if (!target) throw new Error('Nothing to capture');
 
-            const canvas = await html2canvas(target, {
+            const canvas = await html2canvasFn(target, {
                 backgroundColor: '#0b141a',
                 useCORS: true,
                 scale: 2,
@@ -323,6 +372,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             console.error('[ChatHistoryModal] Screenshot save failed:', e);
             setIsCapturing(false);
             setUploadFailed(true);
+            setUploadErrorDetail(e instanceof Error ? e.message : String(e));
         }
     };
 
@@ -550,7 +600,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
                                 />
                             </div>
                             {uploadFailed ? (
-                                <p className="text-red-400 text-xs mt-2">Failed</p>
+                                <p className="text-red-400 text-xs mt-2">{uploadErrorDetail || 'Failed'}</p>
                             ) : (
                                 <p className="text-gray-400 text-xs mt-2 text-right">{isCapturing ? '' : `${uploadPercent}%`}</p>
                             )}
