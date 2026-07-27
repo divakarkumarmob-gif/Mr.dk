@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Keyboard, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings, ChevronDown, Captions } from 'lucide-react';
+import { X, Keyboard, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings, ChevronDown, Captions, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import AgentFace from './AgentFace';
 import HomeScreenShortcutPrompt from './HomeScreenShortcutPrompt';
@@ -75,9 +75,20 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     const [thinkingLevel, setThinkingLevel] = useState(() => localStorage.getItem('thinkingLevel') || 'high');
     const [showCaptions, setShowCaptions] = useState(true);
     const [captionText, setCaptionText] = useState('');
+    const [showChatHistory, setShowChatHistory] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const captionBoxRef = useRef<HTMLDivElement>(null);
     const userScrolledUpRef = useRef(false);
+    // WhatsApp-style chat history sheet: same auto-scroll-to-latest pattern
+    // as the caption box, with its own "user scrolled up to re-read" flag
+    // so opening old messages doesn't get yanked back to the bottom.
+    const chatHistoryBoxRef = useRef<HTMLDivElement>(null);
+    const chatHistoryUserScrolledUpRef = useRef(false);
+    // True once the *first* text chunk of the current AI turn has arrived.
+    // Lets us reset captionText the instant a fresh answer starts, instead
+    // of relying only on turnComplete (which can race with the next turn's
+    // first chunk and cause old + new captions to visually run together).
+    const captionTurnStartedRef = useRef(false);
     const [messages, setMessages] = useState<Message[]>([]);
     // Prefetched as soon as this screen opens (see effect below), so that
     // by the time the user taps the mic, session init can send the
@@ -125,6 +136,19 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             box.scrollTop = box.scrollHeight;
         }
     }, [captionText]);
+
+    // Same auto-scroll-to-latest behavior for the WhatsApp-style chat
+    // history sheet: jumps to the newest message on new messages or when
+    // the sheet is first opened, but not while the user has scrolled up
+    // to read older messages.
+    useEffect(() => {
+        if (!showChatHistory) return;
+        const box = chatHistoryBoxRef.current;
+        if (!box) return;
+        if (!chatHistoryUserScrolledUpRef.current) {
+            box.scrollTop = box.scrollHeight;
+        }
+    }, [messages, showChatHistory]);
 
     // Prefetch the memory summary the moment this screen is open (before
     // the user has even tapped the mic), so session init never has to wait
@@ -542,7 +566,16 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 }
             } else if (msg.text) {
                 console.log("Caption received:", msg.text);
-                setCaptionText(prev => prev + msg.text);
+                if (!captionTurnStartedRef.current) {
+                    // First chunk of a brand-new turn — replace, don't
+                    // append, so the previous answer's leftover caption
+                    // (if turnComplete hasn't landed/rendered yet) can never
+                    // get glued to the front of this one.
+                    captionTurnStartedRef.current = true;
+                    setCaptionText(msg.text);
+                } else {
+                    setCaptionText(prev => prev + msg.text);
+                }
             } else if (msg.turnComplete) {
                 // Reliable end-of-turn signal from the server (Gemini's
                 // serverContent.turnComplete) — this is the correct moment
@@ -552,6 +585,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 // mid-turn (brief gap between audio chunks) without the turn
                 // actually ending; clearing there was wiping captions
                 // mid-sentence even though the AI was still talking.
+                captionTurnStartedRef.current = false;
                 setCaptionText('');
             } else if (msg.type === 'init_ack') {
                 isInitializedRef.current = true;
@@ -675,6 +709,9 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 <div className="flex items-center gap-4">
                     <button onClick={() => setShowCaptions(!showCaptions)} className={`${showCaptions ? 'text-green-500' : 'text-white'}`}>
                         <Captions className="h-6 w-6" />
+                    </button>
+                    <button onClick={() => setShowChatHistory(true)} className="text-white">
+                        <MessageSquare className="h-6 w-6" />
                     </button>
                     <button onClick={() => setShowSettings(true)} className="text-white">
                         <Settings className="h-6 w-6" />
@@ -856,6 +893,57 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                             {!isEditing && <button onClick={() => setIsEditing(true)} className="p-2 bg-blue-600 rounded-full"><span className="text-white">✏️</span></button>}
                             {isEditing && <button onClick={handleSubmitEdit} className="p-2 bg-green-600 rounded-full text-white">Submit</button>}
                         </div>
+                    </div>
+                </div>
+            )}
+            {showChatHistory && (
+                <div
+                    className="fixed inset-0 z-[1100] bg-[#0b141a] flex flex-col pt-[max(env(safe-area-inset-top,0px),12px)] pb-[max(env(safe-area-inset-bottom,0px),12px)]"
+                    onClick={e => e.stopPropagation()}
+                >
+                    {/* Header */}
+                    <div className="w-full flex items-center gap-3 px-4 pb-3 border-b border-white/10 flex-shrink-0">
+                        <button onClick={() => setShowChatHistory(false)} className="text-white p-1 -ml-1">
+                            <X className="h-6 w-6" />
+                        </button>
+                        <h2 className="text-lg font-bold text-white">Chat History</h2>
+                    </div>
+
+                    {/* Messages */}
+                    <div
+                        ref={chatHistoryBoxRef}
+                        onScroll={() => {
+                            const box = chatHistoryBoxRef.current;
+                            if (!box) return;
+                            const distanceFromBottom = box.scrollHeight - box.scrollTop - box.clientHeight;
+                            chatHistoryUserScrolledUpRef.current = distanceFromBottom > 40;
+                        }}
+                        className="flex-1 min-h-0 overflow-y-auto px-3 py-4 flex flex-col gap-2"
+                        style={{
+                            backgroundImage: 'radial-gradient(circle at 25px 25px, rgba(255,255,255,0.03) 2px, transparent 0), radial-gradient(circle at 75px 75px, rgba(255,255,255,0.03) 2px, transparent 0)',
+                            backgroundSize: '100px 100px',
+                        }}
+                    >
+                        {messages.length === 0 ? (
+                            <p className="text-gray-500 text-sm text-center mt-8">No messages yet — ask something to get started.</p>
+                        ) : (
+                            messages.map((msg, index) => {
+                                const isUser = msg.senderId === auth.currentUser?.uid;
+                                if (!msg.text) return null;
+                                return (
+                                    <div
+                                        key={msg.id || index}
+                                        className={`max-w-[80%] px-3 py-2 rounded-lg text-sm leading-snug whitespace-pre-wrap break-words ${
+                                            isUser
+                                                ? 'self-end bg-[#005c4b] text-white rounded-br-sm'
+                                                : 'self-start bg-[#1f2c34] text-white rounded-bl-sm'
+                                        }`}
+                                    >
+                                        {msg.text}
+                                    </div>
+                                );
+                            })
+                        )}
                     </div>
                 </div>
             )}
