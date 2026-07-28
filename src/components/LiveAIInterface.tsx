@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Keyboard, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings, ChevronDown, Captions, MessageSquare } from 'lucide-react';
+import { X, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings, ChevronDown, Captions, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import AgentFace from './AgentFace';
 import HomeScreenShortcutPrompt from './HomeScreenShortcutPrompt';
@@ -827,7 +827,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 </AnimatePresence>
                 
                 <div className="w-full flex justify-between items-center mb-2">
-                    <button className="p-3 bg-white/5 rounded-full"><Keyboard className="h-6 w-6 text-gray-400" /></button>
+                    <div className="w-12"></div>
                     <div className="flex items-center gap-4">
                         <button onClick={handlePlusClick} className="p-4 bg-white/10 rounded-full">
                             <Plus className="h-6 w-6 text-gray-200" />

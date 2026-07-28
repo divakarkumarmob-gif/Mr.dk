@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { auth, db, storage } from '../lib/firebase';
 import { collection, addDoc, doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { Message } from '../types';
 import { subscribeToMessages, sendMessage, uploadMedia } from '../services/chatService';
 import { chatWithAI, chatWithAIVoice } from '../services/geminiService';
@@ -110,6 +110,15 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         userScrolledUpRef.current = distanceFromBottom > 40;
     };
 
+    // Called right when the user sends their own message — like WhatsApp,
+    // sending a message always snaps you to the bottom even if you had
+    // scrolled up to read older messages.
+    const scrollToBottomOnOwnSend = () => {
+        userScrolledUpRef.current = false;
+        const box = chatBoxRef.current;
+        if (box) box.scrollTop = box.scrollHeight;
+    };
+
     // ---------- AI reply helpers ----------
 
     const getRecentTextHistory = useCallback(() => {
@@ -126,6 +135,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         if (!aiChatId || !auth.currentUser) return;
         const reply = replyTarget ? { text: replyTarget.text, senderId: replyTarget.senderId } : null;
         setReplyTarget(null);
+        scrollToBottomOnOwnSend();
         try {
             await sendMessage(aiChatId, auth.currentUser.uid, text, mediaUrl, mediaType, reply);
         } catch (e) {
@@ -400,27 +410,20 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             const fileName = `Chat History ${new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} ${new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}.png`;
             const storagePath = `users/${auth.currentUser.uid}/notes/${Date.now()}_chat_screenshot.png`;
             const storageRef = ref(storage, storagePath);
-            const uploadTask = uploadBytesResumable(storageRef, blob);
 
-            await withTimeout(
-                new Promise<void>((resolve, reject) => {
-                    uploadTask.on(
-                        'state_changed',
-                        (snapshot) => {
-                            const pct = snapshot.totalBytes > 0
-                                ? Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-                                : 0;
-                            setUploadPercent(pct);
-                        },
-                        (error) => reject(error),
-                        () => resolve()
-                    );
-                }).catch((err) => { uploadTask.cancel(); throw err; }),
+            // uploadBytesResumable (chunked/session upload) was hanging
+            // indefinitely in this environment. uploadBytes (single-shot)
+            // is the same method chatService.ts already uses successfully
+            // for chat image sends, so it's the proven-working path here.
+            // It doesn't report real progress, so uploadPercent is left
+            // alone — the popup shows an honest indeterminate spinner
+            // instead of a fabricated number.
+            const snapshot = await withTimeout(
+                uploadBytes(storageRef, blob),
                 30000,
                 'Upload'
-            ).catch((err) => { uploadTask.cancel(); throw err; });
-
-            const downloadUrl = await getDownloadURL(uploadTask.snapshot.ref);
+            );
+            const downloadUrl = await getDownloadURL(snapshot.ref);
 
             const notesRef = collection(db, 'users', auth.currentUser.uid, 'notes');
             await addDoc(notesRef, {
@@ -681,18 +684,29 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
                                     {isCapturing ? 'Capturing chat…' : uploadFailed ? 'Upload failed' : uploadPercent >= 100 ? 'Saved to Notes' : 'Uploading to Notes…'}
                                 </p>
                             </div>
-                            <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                                <motion.div
-                                    className={`h-full ${uploadFailed ? 'bg-red-500' : 'bg-green-500'}`}
-                                    animate={{ width: `${uploadFailed ? 100 : uploadPercent}%` }}
-                                    transition={{ ease: 'easeOut', duration: 0.2 }}
-                                />
+                            <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden relative">
+                                {uploadFailed || uploadPercent >= 100 ? (
+                                    <motion.div
+                                        className={`h-full ${uploadFailed ? 'bg-red-500' : 'bg-green-500'}`}
+                                        animate={{ width: `${uploadFailed ? 100 : uploadPercent}%` }}
+                                        transition={{ ease: 'easeOut', duration: 0.2 }}
+                                    />
+                                ) : (
+                                    // No real progress is available from a single-shot
+                                    // upload — an honest indeterminate sliding bar
+                                    // instead of a number that would just be a guess.
+                                    <motion.div
+                                        className="h-full w-1/3 bg-green-500 rounded-full absolute"
+                                        animate={{ left: ['-33%', '100%'] }}
+                                        transition={{ duration: 1.1, repeat: Infinity, ease: 'easeInOut' }}
+                                    />
+                                )}
                             </div>
                             {uploadFailed ? (
                                 <p className="text-red-400 text-xs mt-2">{uploadErrorDetail || 'Failed'}</p>
-                            ) : (
-                                <p className="text-gray-400 text-xs mt-2 text-right">{isCapturing ? '' : `${uploadPercent}%`}</p>
-                            )}
+                            ) : uploadPercent >= 100 ? (
+                                <p className="text-gray-400 text-xs mt-2 text-right">100%</p>
+                            ) : null}
                         </motion.div>
                     </div>
                 )}
@@ -763,14 +777,19 @@ function ChatBubble({
                     onTouchStart={(e) => handlePointerDown(e.touches[0].clientX)}
                     onTouchMove={(e) => handlePointerMove(e.touches[0].clientX)}
                     onTouchEnd={handlePointerUp}
-                    className={`max-w-[55%] rounded-lg overflow-hidden ${isUser ? 'self-end ml-auto' : 'self-start'}`}
+                    className={`max-w-[65%] rounded-lg overflow-hidden ${isUser ? 'self-end ml-auto bg-[#005c4b]' : 'self-start bg-[#1f2c34]'}`}
                 >
                     <img
                         src={msg.mediaUrl}
                         alt="sent"
                         onClick={() => onExpandImage(msg.mediaUrl!)}
-                        className="w-full h-auto max-h-52 object-cover cursor-pointer"
+                        className="w-full h-auto max-h-52 object-cover cursor-pointer block"
                     />
+                    {msg.text && (
+                        <div className="px-3 py-2 text-sm text-white whitespace-pre-wrap break-words">
+                            <FormattedText text={msg.text} />
+                        </div>
+                    )}
                 </motion.div>
             </div>
         );
@@ -808,7 +827,7 @@ function ChatBubble({
                     <p className="text-gray-300 truncate text-xs">{msg.replyTo.text || 'Media'}</p>
                 </div>
             )}
-            {msg.text}
+            {msg.text && <FormattedText text={msg.text} />}
         </motion.div>
     );
 }
@@ -863,5 +882,53 @@ function VoiceBubble({
             <div className="flex-1 h-1 bg-white/20 rounded-full" />
             <Mic className="h-4 w-4 text-gray-300 flex-shrink-0" />
         </motion.div>
+    );
+}
+
+// ---------- Lightweight markdown-lite renderer ----------
+
+// The AI is instructed not to use markdown, but as a safety net this turns
+// any **bold**, #/##/### headings, and "- "/"* " bullet lines it still
+// slips in into real formatting instead of showing literal asterisks and
+// hashes (which is what a plain whitespace-pre-wrap text node would do).
+function FormattedText({ text }: { text: string }) {
+    const renderInline = (line: string, keyPrefix: string) => {
+        // Split on **bold** segments, keep everything else as plain text.
+        const parts = line.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+        return parts.map((part, i) => {
+            if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+                return <strong key={`${keyPrefix}-${i}`} className="font-semibold">{part.slice(2, -2)}</strong>;
+            }
+            return <React.Fragment key={`${keyPrefix}-${i}`}>{part}</React.Fragment>;
+        });
+    };
+
+    const lines = text.split('\n');
+
+    return (
+        <>
+            {lines.map((rawLine, idx) => {
+                const headingMatch = rawLine.match(/^(#{1,6})\s+(.*)$/);
+                if (headingMatch) {
+                    return (
+                        <p key={idx} className="font-semibold mt-1.5 first:mt-0">
+                            {renderInline(headingMatch[2], `h${idx}`)}
+                        </p>
+                    );
+                }
+                const bulletMatch = rawLine.match(/^\s*[-*]\s+(.*)$/);
+                if (bulletMatch) {
+                    return (
+                        <p key={idx} className="pl-3 -indent-3">
+                            • {renderInline(bulletMatch[1], `b${idx}`)}
+                        </p>
+                    );
+                }
+                if (rawLine.trim() === '') {
+                    return <br key={idx} />;
+                }
+                return <p key={idx}>{renderInline(rawLine, `l${idx}`)}</p>;
+            })}
+        </>
     );
 }
