@@ -109,6 +109,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         startY: number;
         startCenterX: number;
         startCenterY: number;
+        // The pinch-center's position in *unscaled content space*, captured
+        // once when the gesture begins. This is the point that must stay
+        // pinned under the fingers for the whole gesture — it must NOT be
+        // recomputed from the live/moving center on every touchmove, or the
+        // anchor drifts every frame and the page visibly slides around.
+        startOrigX: number;
+        startOrigY: number;
         lastCenterX: number;
         lastCenterY: number;
         lastSingleX: number;
@@ -127,6 +134,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         startY: 0,
         startCenterX: 0,
         startCenterY: 0,
+        startOrigX: 0,
+        startOrigY: 0,
         lastCenterX: 0,
         lastCenterY: 0,
         lastSingleX: 0,
@@ -361,6 +370,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.startY = liveTransform.current.y;
             state.startCenterX = center.x;
             state.startCenterY = center.y;
+            // Fixed anchor in unscaled content space — computed once, here,
+            // from the start center. Used for the whole gesture so the
+            // zoom stays pinned under the fingers instead of drifting.
+            state.startOrigX = (center.x - state.startX) / state.startScale;
+            state.startOrigY = (center.y - state.startY) / state.startScale;
             state.lastCenterX = center.x;
             state.lastCenterY = center.y;
             state.moved = true; // two-finger gestures are never a "tap"
@@ -391,19 +405,19 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const maxLive = 3 / committedScaleRef.current;
             const clampedLiveScale = Math.min(Math.max(rawScale, minLive), maxLive);
 
-            // Pan delta = how much the pinch midpoint has moved since gesture start,
-            // so two fingers can zoom AND drag the page around at the same time.
-            const panDx = center.x - state.startCenterX;
-            const panDy = center.y - state.startCenterY;
-
-            // Apply scale centered around the pinch center, not the element's top-left
-            const p_orig_x = (center.x - state.startX) / state.startScale;
-            const p_orig_y = (center.y - state.startY) / state.startScale;
-            
+            // Use the anchor captured once at gesture start (state.startOrigX/Y),
+            // not one recomputed from the live center every frame — that was
+            // the bug: recomputing it here made the anchor drift on every
+            // touchmove, which is what made the page appear to slide/move
+            // during a pinch instead of zooming cleanly in place.
+            // Re-anchoring against the CURRENT center still gives correct
+            // simultaneous pan (the page follows the fingers), because the
+            // anchor's content-space position is fixed while its target
+            // screen position (center.x/y) tracks the fingers each frame.
             liveTransform.current = {
                 scale: clampedLiveScale,
-                x: center.x - p_orig_x * clampedLiveScale,
-                y: center.y - p_orig_y * clampedLiveScale,
+                x: center.x - state.startOrigX * clampedLiveScale,
+                y: center.y - state.startOrigY * clampedLiveScale,
             };
             applyTransform();
 
