@@ -16,7 +16,7 @@ import {
     CheckCircle2,
     MessageCircle
 } from 'lucide-react';
-import QuestionImporter from './QuestionImporter';
+import S3Uploader from './S3Uploader';
 import { motion, AnimatePresence } from 'motion/react';
 import { getApiUrl } from '../utils/api';
 import { showToast } from '../utils/toast';
@@ -486,7 +486,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                 )}
 
                 {activeTab === 'import' && (
-                    <QuestionImporter />
+                    <S3Uploader />
                 )}
 
                 {activeTab === 'upload' && (
