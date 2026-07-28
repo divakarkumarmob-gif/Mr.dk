@@ -492,6 +492,68 @@ async function startServer() {
     }
   });
 
+  // ---------- Notification file attachments (photo/PDF) ----------
+  // Dedicated bucket for files attached to bell notifications, separate from
+  // the general S3 file-manager (Import tab). Falls back to a sane default
+  // name if NOTIFICATIONS_S3_BUCKET isn't set in env.
+  const NOTIFICATIONS_BUCKET = process.env.NOTIFICATIONS_S3_BUCKET || "neetmaster-notifications";
+
+  app.post("/api/notifications/upload", s3Upload.array("files", 20), async (req, res) => {
+    const files = (req.files as Express.Multer.File[] | undefined) || [];
+    try {
+      if (files.length === 0) {
+        return res.status(400).json({ success: false, error: "No files provided" });
+      }
+      const s3 = getS3Client();
+      const results = await Promise.all(files.map(async (file) => {
+        const safeName = file.originalname.replace(/[^a-zA-Z0-9._-]/g, "_");
+        const key = `notif/${Date.now()}-${Math.random().toString(36).slice(2, 8)}-${safeName}`;
+        try {
+          await s3.send(new PutObjectCommand({
+            Bucket: NOTIFICATIONS_BUCKET,
+            Key: key,
+            Body: file.buffer,
+            ContentType: file.mimetype,
+          }));
+          return {
+            name: file.originalname,
+            key,
+            size: file.size,
+            fileType: file.mimetype.startsWith("image/") ? "image" : "pdf",
+            success: true,
+          };
+        } catch (err: any) {
+          console.error(`Notification upload error for ${file.originalname}:`, err);
+          return { name: file.originalname, key, success: false, error: err.message };
+        }
+      }));
+
+      const allSucceeded = results.every(r => r.success);
+      res.status(allSucceeded ? 200 : 207).json({ success: allSucceeded, results });
+    } catch (error: any) {
+      console.error("Notification Upload Error:", error);
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
+
+  // Fresh presigned GET url for a notification attachment. Generated on-demand
+  // (not stored) so it never goes stale — call this right before download/open.
+  app.get("/api/notifications/file-url", async (req, res) => {
+    try {
+      const { key } = req.query;
+      if (!key || typeof key !== "string") {
+        return res.status(400).json({ success: false, error: "key required" });
+      }
+      const s3 = getS3Client();
+      const command = new GetObjectCommand({ Bucket: NOTIFICATIONS_BUCKET, Key: key });
+      const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
+      res.json({ success: true, url });
+    } catch (error: any) {
+      console.error("Notification file-url Error:", error);
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
+
   app.get("/api/s3/health", async (req, res) => {
     try {
         const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
