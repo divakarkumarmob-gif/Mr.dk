@@ -147,7 +147,11 @@ async function withGeminiRetry<T>(fn: () => Promise<T>, maxAttempts: number = 3)
 // still down after retries, fall through this chain of lighter models —
 // each one draws from a separate quota bucket, so most of the time the
 // user still gets an answer instead of an error.
-const FALLBACK_MODELS = ["gemini-2.5-flash-lite", "gemini-3.1-flash-lite"];
+// NOTE: plain "gemini-2.5-flash-lite" is NOT used here — Google has quietly
+// blocked it for newer projects/keys ("no longer available to new users",
+// 404 NOT_FOUND) even though it's still listed as current in the docs. Only
+// version-pinned, verified-working models are used in this chain.
+const FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash"];
 
 async function generateWithFallback(primaryModel: string, contents: any): Promise<{ text: string }> {
     try {
@@ -165,8 +169,12 @@ async function generateWithFallback(primaryModel: string, contents: any): Promis
             } catch (fallbackError: any) {
                 lastError = fallbackError;
                 const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
-                const fbIsCapacityIssue = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429;
-                if (!fbIsCapacityIssue) throw fallbackError;
+                // NOT_FOUND (404) means this model ID isn't usable on this
+                // project at all — also worth skipping to the next model,
+                // not just capacity errors, so one dead model ID can't
+                // break the whole chain.
+                const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
+                if (!fbShouldSkip) throw fallbackError;
                 // otherwise, try the next model in the chain
             }
         }
