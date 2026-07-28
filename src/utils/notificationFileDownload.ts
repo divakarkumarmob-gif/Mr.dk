@@ -27,11 +27,27 @@ async function setCachedUri(fileKey: string, uri: string): Promise<void> {
 }
 
 /**
+ * Fetches just the signed view URL for a notification attachment, without
+ * downloading it to disk or handing it off to an external app. Used to
+ * render the file (image/PDF) inside the app's own in-app viewer.
+ */
+export async function getNotificationFileViewUrl(fileKey: string): Promise<string> {
+  const urlRes = await fetch(getApiUrl(`/api/notifications/file-url?key=${encodeURIComponent(fileKey)}`));
+  const urlData = await urlRes.json();
+  if (!urlData.success || !urlData.url) throw new Error(urlData.error || 'Could not get file link');
+  return urlData.url as string;
+}
+
+/**
  * Downloads a notification attachment (photo/PDF stored on S3) into the
  * device's public Downloads folder (visible in Files/Downloads apps) and
  * opens it with the default viewer. If it was already downloaded before,
  * skips the download entirely and just re-opens the saved file.
  * On web, it just opens the file in a new tab.
+ *
+ * NOTE: This is now used only for the explicit "Save to device" action.
+ * For normal viewing, use `getNotificationFileViewUrl` + the in-app viewer
+ * (see NotificationFileViewer.tsx) so the user never has to leave the app.
  */
 export async function downloadAndOpenNotificationFile(fileKey: string, fileName: string): Promise<void> {
   const safeName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
