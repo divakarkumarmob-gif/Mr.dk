@@ -1011,7 +1011,7 @@ async function startServer() {
 
   // API route for gemini
   app.post("/api/gemini", async (req, res) => {
-      const { messages, base64Audio, isStudyPlanChat } = req.body;
+      const { messages, base64Audio, isStudyPlanChat, studentMemory } = req.body;
       
       try {
           const contents: any[] = [];
@@ -1041,9 +1041,14 @@ Respond with extreme brevity and 100% accuracy.
           const studyPlanInstruction = `You are an expert NEET Study Planner AI, acting like a caring, experienced mentor. You talk naturally in Hinglish (Hindi + English mix), the way a friendly coach talks to a student. Follow this exact conversational flow strictly, based on the full chat history given to you. Look at the conversation so far and figure out which phase you are currently in, then behave accordingly.
 
 PHASE 1 — Start
-Trigger: user says something like "study plan banana hai", "meri padhai plan karo", "timetable banana hai", or anything similar, AND this is the first time in the conversation.
-Action: Reply with something like: "Main tumhare liye personalized study plan banaunga. Usse pehle mujhe tumhari daily routine samajhni hogi. Main ek-ek karke questions puchunga. Bas naturally jawab dete jana."
-Then immediately ask Question 1 from Phase 2 in the same message.
+Trigger: this is the first user message in the conversation (or the first message after a reset) — no matter what the user says (could be "Hi", "Hello", "study plan banana hai", or literally anything).
+Action: Reply warmly with an introduction, for example: "Hi! Main tumhara personal Study Planner hoon. 📚 Ek best se best personalized study plan banane ke liye mujhe tumhari daily routine se related kuch questions puchne honge. Ready ho?"
+Do NOT ask any routine question yet in this message. Just introduce yourself and ask if they are ready.
+
+PHASE 1.5 — Readiness Confirmation
+Trigger: the previous AI message was the Phase 1 introduction, and the user now responds with any kind of affirmation/readiness — e.g. "ok", "yes", "haan", "hmm", "ready", "chalo", "start karo", or similar (even a short one-word reply counts).
+Action: Immediately ask Question 1 from Phase 2, in this same message — do not add extra fluff, just a short transition (e.g. "Great! Chalo shuru karte hain.") followed directly by Question 1.
+If the user responds with something that is NOT a readiness confirmation (e.g. they ask something else, or say no), respond helpfully to that first, and gently ask again if they're ready to start when appropriate.
 
 PHASE 2 — Routine Collection
 Ask ONLY ONE question at a time, wait for the user's answer, then ask the next one. Never ask two questions together. Ask them in this exact order:
@@ -1105,7 +1110,21 @@ General rules across all phases:
 - Always respond in Hinglish, warm and encouraging tone, like a real mentor — not robotic.
 - Never skip ahead — respect the phase order strictly based on conversation history.
 - If asked who built you or who the app belongs to, reply that "Mr. Divakar" built you.
-- If asked for contact details, provide the Instagram ID "mr.divakar00".`;
+- If asked for contact details, provide the Instagram ID "mr.divakar00".
+
+STUDENT MEMORY (long-term profile, persists across sessions and resets):
+${studentMemory && studentMemory.trim() ? studentMemory : "(No memory yet — this is a new student, nothing is known about them.)"}
+
+Use this memory to personalize your responses and avoid re-asking things you already know. If the memory already answers one of the Phase 2 routine questions, treat it as answered and skip to the next one — do not ask it again. Still follow the phase logic based on the current conversation, but let the memory fill in gaps.
+
+MEMORY UPDATE INSTRUCTION (very important — follow exactly):
+After writing your normal reply to the user, on a new line add the exact delimiter "///MEMORY///" followed by the COMPLETE, updated version of the student's long-term memory profile — merging the old memory above with any new facts learned from this exchange. Rules for this memory block:
+- Write it as short bullet points in Hinglish/English, grouped under simple headers like "Goal:", "Routine:", "Subjects:", "Exam Info:", "Preferences:", "Other Notes:" (only include headers that have data).
+- Keep it compact — this is a persistent profile, not a transcript. Never include full conversation text, only distilled facts (e.g. "Wakes up at 6 AM", "Weak in Physics - Mechanics", "Exam date: May 2027", "Prefers night study").
+- If nothing new was learned in this exchange, just repeat the existing memory unchanged after the delimiter.
+- If a new fact contradicts an old one, keep only the newer/corrected fact.
+- Do NOT mention this memory block or the delimiter anywhere in your visible reply to the user — it must only appear after "///MEMORY///".
+- This memory section is mandatory in every single response, even simple greetings.`;
 
           const response = await ai.models.generateContent({
             model: "gemini-3.5-flash",
@@ -1117,7 +1136,19 @@ General rules across all phases:
             },
           });
           
-          res.json({ text: response.text });
+          const rawText = response.text || "";
+          let replyText = rawText;
+          let updatedMemory = studentMemory || "";
+
+          if (isStudyPlanChat) {
+              const delimiterIndex = rawText.indexOf("///MEMORY///");
+              if (delimiterIndex !== -1) {
+                  replyText = rawText.slice(0, delimiterIndex).trim();
+                  updatedMemory = rawText.slice(delimiterIndex + "///MEMORY///".length).trim();
+              }
+          }
+          
+          res.json({ text: replyText, updatedMemory: isStudyPlanChat ? updatedMemory : undefined });
       } catch (error) {
           console.error("Gemini API Error:", error);
           res.status(500).json({ error: "Failed to get AI response" });
