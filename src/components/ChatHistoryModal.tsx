@@ -26,9 +26,14 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputText, setInputText] = useState('');
     const [isSending, setIsSending] = useState(false);
+    const [isAiTyping, setIsAiTyping] = useState(false);
     const [replyTarget, setReplyTarget] = useState<{ text: string; senderId: string; mediaType?: string } | null>(null);
     const [expandedImage, setExpandedImage] = useState<string | null>(null);
     const [showAttachMenu, setShowAttachMenu] = useState(false);
+    // Photo picked but not yet sent — shown as a small preview above the
+    // input bar (WhatsApp-style) so the user can add a caption or back out
+    // via the X before it actually goes anywhere.
+    const [pendingImage, setPendingImage] = useState<{ file: File; previewUrl: string } | null>(null);
 
     // Voice recording
     const [isRecording, setIsRecording] = useState(false);
@@ -96,7 +101,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         if (!userScrolledUpRef.current) {
             box.scrollTop = box.scrollHeight;
         }
-    }, [messages]);
+    }, [messages, isAiTyping]);
 
     const handleScroll = () => {
         const box = chatBoxRef.current;
@@ -110,7 +115,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     const getRecentTextHistory = useCallback(() => {
         return messages
             .filter(m => m.text)
-            .slice(-12)
+            .slice(-8)
             .map(m => ({
                 role: m.senderId === auth.currentUser?.uid ? 'user' : 'assistant',
                 content: m.text,
@@ -141,6 +146,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     };
 
     const requestAIReplyForText = async (text: string) => {
+        setIsAiTyping(true);
         try {
             const reply = await chatWithAI(getRecentTextHistory(), text);
             await saveAIReply(reply || "Sorry, I couldn't come up with an answer for that.");
@@ -148,10 +154,13 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             console.error('[ChatHistoryModal] AI text reply failed:', e);
             const detail = e instanceof Error ? e.message : String(e);
             await saveAIReply(`Sorry, I ran into an error: ${detail}`);
+        } finally {
+            setIsAiTyping(false);
         }
     };
 
     const requestAIReplyForImage = async (text: string, base64Image: string) => {
+        setIsAiTyping(true);
         try {
             const reply = await chatWithAI(getRecentTextHistory(), text || '(Image sent)', base64Image);
             await saveAIReply(reply || "Sorry, I couldn't read that image.");
@@ -159,10 +168,13 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             console.error('[ChatHistoryModal] AI image reply failed:', e);
             const detail = e instanceof Error ? e.message : String(e);
             await saveAIReply(`Sorry, I ran into an error processing that image: ${detail}`);
+        } finally {
+            setIsAiTyping(false);
         }
     };
 
     const requestAIReplyForVoice = async (base64Audio: string, mimeType: string) => {
+        setIsAiTyping(true);
         try {
             const reply = await chatWithAIVoice(base64Audio, mimeType);
             await saveAIReply(reply || "Sorry, I couldn't understand that voice message.");
@@ -170,6 +182,8 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             console.error('[ChatHistoryModal] AI voice reply failed:', e);
             const detail = e instanceof Error ? e.message : String(e);
             await saveAIReply(`Sorry, I ran into an error processing that voice message: ${detail}`);
+        } finally {
+            setIsAiTyping(false);
         }
     };
 
@@ -177,7 +191,16 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
 
     const handleSendText = async () => {
         const text = inputText.trim();
-        if (!text || isSending || !aiChatId) return;
+        if (isSending || !aiChatId) return;
+
+        if (pendingImage) {
+            if (isSending) return;
+            setInputText('');
+            await sendPendingImage(text);
+            return;
+        }
+
+        if (!text) return;
         setInputText('');
         setIsSending(true);
         try {
@@ -190,13 +213,31 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
 
     // ---------- Image send ----------
 
-    const handleImageChosen = async (file: File) => {
-        if (!aiChatId || !auth.currentUser) return;
+    // Picking a file only stages it as a preview — nothing is sent until
+    // the user hits send (with or without a caption typed alongside it).
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
         setShowAttachMenu(false);
+        if (file) {
+            const previewUrl = URL.createObjectURL(file);
+            setPendingImage({ file, previewUrl });
+        }
+        e.target.value = '';
+    };
+
+    const cancelPendingImage = () => {
+        if (pendingImage) URL.revokeObjectURL(pendingImage.previewUrl);
+        setPendingImage(null);
+    };
+
+    const sendPendingImage = async (caption: string) => {
+        if (!aiChatId || !auth.currentUser || !pendingImage) return;
+        const { file, previewUrl } = pendingImage;
+        setPendingImage(null);
         setIsSending(true);
         try {
             const mediaUrl = await uploadMedia(file, `chats/${auth.currentUser.uid}/images/${Date.now()}_${file.name}`);
-            await saveUserMessage('', mediaUrl, 'image');
+            await saveUserMessage(caption, mediaUrl, 'image');
 
             const base64: string = await new Promise((resolve, reject) => {
                 const reader = new FileReader();
@@ -204,19 +245,15 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
                 reader.onerror = reject;
                 reader.readAsDataURL(file);
             });
-            await requestAIReplyForImage('', base64);
+            await requestAIReplyForImage(caption, base64);
         } catch (e) {
             console.error('[ChatHistoryModal] Image send failed:', e);
-            showToast('Failed to send image. Please try again.');
+            const detail = e instanceof Error ? e.message : String(e);
+            showToast(`Failed to send image: ${detail}`);
         } finally {
+            URL.revokeObjectURL(previewUrl);
             setIsSending(false);
         }
-    };
-
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (file) handleImageChosen(file);
-        e.target.value = '';
     };
 
     // ---------- Voice recording ----------
@@ -309,6 +346,20 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         setShowSaveConfirm(true);
     };
 
+    // Wrap a promise so it can never hang the popup forever — if capture or
+    // upload genuinely stalls (large canvas in a WebView, dropped network
+    // mid-upload), this turns it into a visible failure instead of an
+    // infinite spinner stuck at 0%.
+    const withTimeout = <T,>(promise: Promise<T>, ms: number, label: string): Promise<T> => {
+        return new Promise((resolve, reject) => {
+            const timer = setTimeout(() => reject(new Error(`${label} timed out after ${Math.round(ms / 1000)}s`)), ms);
+            promise.then(
+                (val) => { clearTimeout(timer); resolve(val); },
+                (err) => { clearTimeout(timer); reject(err); }
+            );
+        });
+    };
+
     const performScreenshotAndUpload = async () => {
         setShowSaveConfirm(false);
         setShowUploadProgress(true);
@@ -327,14 +378,21 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             const target = messagesCaptureRef.current;
             if (!target) throw new Error('Nothing to capture');
 
-            const canvas = await html2canvasFn(target, {
-                backgroundColor: '#0b141a',
-                useCORS: true,
-                scale: 2,
-            });
+            // scale: 1 instead of 2 — a long chat history at 2x device
+            // pixel ratio can produce a canvas large enough to stall
+            // (sometimes indefinitely) in mobile WebViews.
+            const canvas = await withTimeout(
+                html2canvasFn(target, { backgroundColor: '#0b141a', useCORS: true, scale: 1 }),
+                20000,
+                'Capturing chat'
+            );
             setIsCapturing(false);
 
-            const blob: Blob | null = await new Promise((resolve) => canvas.toBlob(resolve, 'image/png', 0.95));
+            const blob: Blob | null = await withTimeout(
+                new Promise((resolve) => canvas.toBlob(resolve, 'image/png', 0.92)),
+                10000,
+                'Generating image'
+            );
             if (!blob) throw new Error('Failed to generate image');
 
             if (!auth.currentUser) throw new Error('Not signed in');
@@ -344,19 +402,23 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             const storageRef = ref(storage, storagePath);
             const uploadTask = uploadBytesResumable(storageRef, blob);
 
-            await new Promise<void>((resolve, reject) => {
-                uploadTask.on(
-                    'state_changed',
-                    (snapshot) => {
-                        const pct = snapshot.totalBytes > 0
-                            ? Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-                            : 0;
-                        setUploadPercent(pct);
-                    },
-                    (error) => reject(error),
-                    () => resolve()
-                );
-            });
+            await withTimeout(
+                new Promise<void>((resolve, reject) => {
+                    uploadTask.on(
+                        'state_changed',
+                        (snapshot) => {
+                            const pct = snapshot.totalBytes > 0
+                                ? Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+                                : 0;
+                            setUploadPercent(pct);
+                        },
+                        (error) => reject(error),
+                        () => resolve()
+                    );
+                }).catch((err) => { uploadTask.cancel(); throw err; }),
+                30000,
+                'Upload'
+            ).catch((err) => { uploadTask.cancel(); throw err; });
 
             const downloadUrl = await getDownloadURL(uploadTask.snapshot.ref);
 
@@ -425,7 +487,31 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
                         ))
                     )}
                 </div>
+                {isAiTyping && (
+                    <div className="flex mt-2">
+                        <div className="bg-[#1f2c34] rounded-lg rounded-bl-sm px-3 py-2.5 flex items-center gap-1 w-fit">
+                            <motion.span className="w-1.5 h-1.5 rounded-full bg-gray-400" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 1, repeat: Infinity, delay: 0 }} />
+                            <motion.span className="w-1.5 h-1.5 rounded-full bg-gray-400" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 1, repeat: Infinity, delay: 0.2 }} />
+                            <motion.span className="w-1.5 h-1.5 rounded-full bg-gray-400" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 1, repeat: Infinity, delay: 0.4 }} />
+                        </div>
+                    </div>
+                )}
             </div>
+
+            {/* Pending image preview (staged, not yet sent) */}
+            {pendingImage && (
+                <div className="flex-shrink-0 px-3 pt-2 bg-[#0b141a]">
+                    <div className="relative inline-block">
+                        <img src={pendingImage.previewUrl} alt="preview" className="h-20 w-20 object-cover rounded-lg" />
+                        <button
+                            onClick={cancelPendingImage}
+                            className="absolute -top-2 -right-2 bg-gray-800 border border-white/20 rounded-full p-1 text-white"
+                        >
+                            <X className="h-3.5 w-3.5" />
+                        </button>
+                    </div>
+                </div>
+            )}
 
             {/* Reply preview bar */}
             {replyTarget && (
@@ -501,7 +587,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
                     </div>
                 )}
 
-                {inputText.trim() ? (
+                {(inputText.trim() || pendingImage) ? (
                     <button
                         onClick={handleSendText}
                         disabled={isSending}
