@@ -57,9 +57,11 @@ export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => 
                             <BookOpen className="h-12 w-12 text-[#d4b97f] mx-auto mb-4" />
                             <h2 className="text-2xl font-bold mb-4 text-center text-[#2c1d0d]">How it Works</h2>
                             <ol className="text-sm leading-relaxed text-[#2c1d0d] space-y-4 list-decimal pl-5">
-                                <li><strong>Share your day:</strong> Tell our AI about your daily routine, study hours, and commitments via live chat.</li>
-                                <li><strong>Get personalized:</strong> Answer a few quick questions about your subjects and learning style.</li>
-                                <li><strong>Get your plan:</strong> Receive a customized, optimized daily study schedule tailored specifically for you!</li>
+                                <li><strong>Bolo kya karna hai:</strong> Bas "Study Plan Banao" ya "Timetable Banao" bol do — AI samajh jayega.</li>
+                                <li><strong>Routine batao:</strong> AI ek-ek karke tumhari daily routine (wake up time, school/coaching, sleep, etc.) puchega. Bas naturally jawab dete jana.</li>
+                                <li><strong>Extra info share karo:</strong> Weak subjects, exam date, backlog, ya koi bhi cheez jo AI ko pata honi chahiye, bata sakte ho.</li>
+                                <li><strong>Plan mangwao:</strong> Jab ready ho, "Study Plan Banao" bol do — AI tumhari poori routine ke hisaab se ek detailed, personalized schedule bana dega.</li>
+                                <li><strong>Modify karo:</strong> Plan pasand nahi aaya? Bata do, AI usko turant adjust kar dega.</li>
                             </ol>
                             <button 
                                 onClick={() => setShowPopup(false)}
