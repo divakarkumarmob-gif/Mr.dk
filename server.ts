@@ -142,11 +142,12 @@ async function withGeminiRetry<T>(fn: () => Promise<T>, maxAttempts: number = 3)
 }
 
 // On the free tier, gemini-3.5-flash's quota/capacity is the one that runs
-// out fastest and hits 503 most often. gemini-3.1-flash-lite draws from a
-// separate quota bucket and is Google's own recommended lighter fallback,
-// so if the primary model is still down after retries, try this one before
-// giving up — most of the time the user gets an answer instead of an error.
-const FALLBACK_MODEL = "gemini-3.1-flash-lite";
+// out fastest and hits 429/503 most often (its free-tier daily request cap
+// is much lower than the older Flash-Lite models). If the primary model is
+// still down after retries, fall through this chain of lighter models —
+// each one draws from a separate quota bucket, so most of the time the
+// user still gets an answer instead of an error.
+const FALLBACK_MODELS = ["gemini-2.5-flash-lite", "gemini-3.1-flash-lite"];
 
 async function generateWithFallback(primaryModel: string, contents: any): Promise<{ text: string }> {
     try {
@@ -155,8 +156,21 @@ async function generateWithFallback(primaryModel: string, contents: any): Promis
         const status = error?.status || error?.error?.status || error?.code;
         const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
         if (!isCapacityIssue) throw error;
-        console.warn(`Primary model ${primaryModel} still unavailable after retries, falling back to ${FALLBACK_MODEL}`);
-        return await withGeminiRetry(() => ai.models.generateContent({ model: FALLBACK_MODEL, contents }), 2);
+
+        let lastError: any = error;
+        for (const fallbackModel of FALLBACK_MODELS) {
+            try {
+                console.warn(`Model ${primaryModel} still unavailable after retries, falling back to ${fallbackModel}`);
+                return await withGeminiRetry(() => ai.models.generateContent({ model: fallbackModel, contents }), 2);
+            } catch (fallbackError: any) {
+                lastError = fallbackError;
+                const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
+                const fbIsCapacityIssue = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429;
+                if (!fbIsCapacityIssue) throw fallbackError;
+                // otherwise, try the next model in the chain
+            }
+        }
+        throw lastError;
     }
 }
 
@@ -1017,8 +1031,13 @@ async function startServer() {
           const contents: any[] = [];
           
           if (messages && Array.isArray(messages)) {
-              // Convert chat history to Gemini expected format
-              messages.forEach((m: any) => {
+              // For the study planner, the persistent studentMemory summary already
+              // carries the important long-term facts, so we only need the recent
+              // turns for immediate conversational context — not the entire raw
+              // history. This keeps each request small and avoids burning through
+              // the free-tier token/request quota on long-running chats.
+              const recentMessages = isStudyPlanChat ? messages.slice(-12) : messages;
+              recentMessages.forEach((m: any) => {
                   contents.push({ text: `${m.role === 'user' ? 'User' : 'AI'}: ${m.content}` });
               });
           }
@@ -1126,15 +1145,12 @@ After writing your normal reply to the user, on a new line add the exact delimit
 - Do NOT mention this memory block or the delimiter anywhere in your visible reply to the user — it must only appear after "///MEMORY///".
 - This memory section is mandatory in every single response, even simple greetings.`;
 
-          const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
-            contents: { 
+          const response = await generateWithFallback("gemini-3.5-flash", { 
                 parts: [
                     { text: isStudyPlanChat ? studyPlanInstruction : baseInstruction },
                     ...contents
                 ] 
-            },
-          });
+            });
           
           const rawText = response.text || "";
           let replyText = rawText;
@@ -1159,9 +1175,14 @@ After writing your normal reply to the user, on a new line add the exact delimit
           }
           
           res.json({ text: replyText, updatedMemory: isStudyPlanChat ? updatedMemory : undefined });
-      } catch (error) {
+      } catch (error: any) {
           console.error("Gemini API Error:", error);
-          res.status(500).json({ error: "Failed to get AI response" });
+          const status = error?.status || error?.error?.status || error?.code;
+          const isQuotaOrCapacity = status === 'RESOURCE_EXHAUSTED' || status === 429 || status === 'UNAVAILABLE' || status === 503;
+          const userMessage = isQuotaOrCapacity
+              ? "AI abhi thoda busy hai (demand zyada hai). Thodi der (ek-do minute) baad phir se try karo. 🙏"
+              : "Failed to get AI response";
+          res.status(isQuotaOrCapacity ? 429 : 500).json({ error: userMessage });
       }
   }); 
 
