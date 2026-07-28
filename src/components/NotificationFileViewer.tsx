@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, Download, Loader2, AlertCircle } from 'lucide-react';
 import { getNotificationFileViewUrl, downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
+import AdvancedPDFViewer from './AdvancedPDFViewer';
 
 interface NotificationFileViewerProps {
     file: {
@@ -12,94 +13,17 @@ interface NotificationFileViewerProps {
 }
 
 /**
- * Renders every page of a PDF onto stacked <canvas> elements using pdfjs-dist.
- * This does NOT rely on the device/WebView's native PDF support, so it looks
- * and behaves the same on every Android version and on web.
- */
-function PdfCanvasViewer({ url }: { url: string }) {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [error, setError] = useState<string | null>(null);
-    const [numPages, setNumPages] = useState<number | null>(null);
-
-    useEffect(() => {
-        let cancelled = false;
-        const renderTasks: any[] = [];
-
-        (async () => {
-            try {
-                const pdfjsLib = await import('pdfjs-dist');
-                // Vite-friendly worker bundling: resolves to a hashed URL at build time.
-                const workerUrl = (await import('pdfjs-dist/build/pdf.worker.mjs?url')).default;
-                pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
-
-                const loadingTask = pdfjsLib.getDocument(url);
-                const pdf = await loadingTask.promise;
-                if (cancelled) return;
-                setNumPages(pdf.numPages);
-
-                const container = containerRef.current;
-                if (!container) return;
-                container.innerHTML = '';
-
-                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-                    if (cancelled) return;
-                    const page = await pdf.getPage(pageNum);
-                    const containerWidth = container.clientWidth || 360;
-                    const baseViewport = page.getViewport({ scale: 1 });
-                    const scale = containerWidth / baseViewport.width;
-                    const viewport = page.getViewport({ scale });
-
-                    const canvas = document.createElement('canvas');
-                    canvas.className = 'block mx-auto mb-3 shadow-lg';
-                    canvas.width = viewport.width;
-                    canvas.height = viewport.height;
-                    const ctx = canvas.getContext('2d');
-                    if (!ctx) continue;
-                    container.appendChild(canvas);
-
-                    const renderTask = page.render({ canvasContext: ctx, viewport, canvas });
-                    renderTasks.push(renderTask);
-                    await renderTask.promise;
-                }
-            } catch (err: any) {
-                console.error('[PdfCanvasViewer] Failed to render PDF:', err);
-                if (!cancelled) setError(err.message || 'Failed to render PDF');
-            }
-        })();
-
-        return () => {
-            cancelled = true;
-            renderTasks.forEach((t) => { try { t.cancel(); } catch { /* ignore */ } });
-        };
-    }, [url]);
-
-    if (error) {
-        return (
-            <div className="text-center px-6">
-                <AlertCircle className="w-8 h-8 text-red-500/60 mx-auto mb-3" />
-                <p className="text-sm text-red-400">{error}</p>
-            </div>
-        );
-    }
-
-    return (
-        <div className="w-full h-full overflow-auto py-3 px-2">
-            {numPages === null && (
-                <div className="flex items-center justify-center py-10">
-                    <Loader2 className="w-8 h-8 text-white/50 animate-spin" />
-                </div>
-            )}
-            <div ref={containerRef} className="w-full max-w-2xl mx-auto" />
-        </div>
-    );
-}
-
-/**
  * Full-screen in-app viewer for notification attachments (image or PDF).
  * Opens directly inside the app — no external browser / gallery / PDF app
- * needed. Images use a plain <img>; PDFs are rendered page-by-page with
- * pdfjs-dist so behavior is identical across every device. A "Save" button
- * is still offered for anyone who explicitly wants a local copy.
+ * needed.
+ *
+ * - Images: rendered with a plain <img>, inside a header/content layout that
+ *   respects the device's safe-area (status bar) inset via `.safe-pt`, so
+ *   the header no longer sits underneath the status bar.
+ * - PDFs: delegated entirely to AdvancedPDFViewer, the app's existing
+ *   production PDF viewer (DPR-correct two-layer rendering, pinch-to-zoom,
+ *   pan, page navigation) — no quality loss and proper zoom, instead of a
+ *   basic one-off canvas renderer.
  */
 export default function NotificationFileViewer({ file, onClose }: NotificationFileViewerProps) {
     const [url, setUrl] = useState<string | null>(null);
@@ -119,11 +43,36 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
         return () => { cancelled = true; };
     }, [file.key]);
 
+    // PDFs get their own full viewer (header, zoom controls, save button
+    // included) — just hand off to it once we have the signed URL.
+    if (file.fileType === 'pdf') {
+        if (error) {
+            return (
+                <div className="fixed inset-0 z-50 bg-black flex items-center justify-center safe-pt safe-bottom">
+                    <div className="text-center px-6">
+                        <AlertCircle className="w-8 h-8 text-red-500/60 mx-auto mb-3" />
+                        <p className="text-sm text-red-400">{error}</p>
+                        <button onClick={onClose} className="mt-4 px-4 py-2 bg-white/10 rounded-md text-white text-sm">Close</button>
+                    </div>
+                </div>
+            );
+        }
+        if (!url) {
+            return (
+                <div className="fixed inset-0 z-50 bg-black flex items-center justify-center safe-pt safe-bottom">
+                    <Loader2 className="w-8 h-8 text-white/50 animate-spin" />
+                </div>
+            );
+        }
+        return <AdvancedPDFViewer pdfUrl={url} title={file.name} onClose={onClose} />;
+    }
+
+    // Image viewer
     const handleSave = async () => {
         if (saving) return;
         setSaving(true);
         try {
-            await downloadAndOpenNotificationFile(file.key, file.name);
+            await downloadAndOpenNotificationFile(file.key, file.name, 'image');
         } finally {
             setSaving(false);
         }
@@ -131,8 +80,8 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
 
     return (
         <div className="fixed inset-0 z-50 bg-black flex flex-col">
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 bg-black/90 border-b border-white/10 flex-shrink-0">
+            {/* Header — safe-pt keeps this clear of the status bar */}
+            <div className="flex items-center justify-between px-4 py-3 bg-black/90 border-b border-white/10 flex-shrink-0 safe-pt">
                 <span className="text-sm text-white truncate flex-1 pr-3">{file.name}</span>
                 <div className="flex items-center gap-2 flex-shrink-0">
                     <button
@@ -150,7 +99,7 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
             </div>
 
             {/* Content */}
-            <div className="flex-1 overflow-auto flex items-center justify-center">
+            <div className="flex-1 overflow-auto flex items-center justify-center safe-bottom">
                 {error ? (
                     <div className="text-center px-6">
                         <AlertCircle className="w-8 h-8 text-red-500/60 mx-auto mb-3" />
@@ -158,14 +107,12 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
                     </div>
                 ) : !url ? (
                     <Loader2 className="w-8 h-8 text-white/50 animate-spin" />
-                ) : file.fileType === 'image' ? (
+                ) : (
                     <img
                         src={url}
                         alt={file.name}
                         className="max-w-full max-h-full object-contain"
                     />
-                ) : (
-                    <PdfCanvasViewer url={url} />
                 )}
             </div>
         </div>
