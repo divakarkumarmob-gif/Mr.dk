@@ -1147,6 +1147,16 @@ After writing your normal reply to the user, on a new line add the exact delimit
                   updatedMemory = rawText.slice(delimiterIndex + "///MEMORY///".length).trim();
               }
           }
+
+          // Safety net: never send an empty reply to the user, even if the
+          // model mis-formatted the memory delimiter or returned something unexpected.
+          if (!replyText || !replyText.trim()) {
+              replyText = rawText.trim() || "Sorry, kuch gadbad ho gayi. Ek baar phir se try karo.";
+          }
+
+          if (!rawText.trim()) {
+              console.error("Gemini returned empty response.text for /api/gemini", { isStudyPlanChat });
+          }
           
           res.json({ text: replyText, updatedMemory: isStudyPlanChat ? updatedMemory : undefined });
       } catch (error) {
