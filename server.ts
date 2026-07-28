@@ -114,6 +114,52 @@ function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
         return typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
 }
 
+// Gemini's generateContent occasionally returns 503 UNAVAILABLE ("This
+// model is currently experiencing high demand") or 429 RESOURCE_EXHAUSTED
+// — both are transient, Google-side capacity issues, not bugs in this app
+// (the request itself is fine; retrying the same request moments later
+// typically succeeds). This wraps any generateContent-style call with a
+// short retry-with-backoff so a brief demand spike doesn't surface as a
+// user-facing error.
+async function withGeminiRetry<T>(fn: () => Promise<T>, maxAttempts: number = 3): Promise<T> {
+    let lastError: any;
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        try {
+            return await fn();
+        } catch (error: any) {
+            lastError = error;
+            const status = error?.status || error?.error?.status || error?.code;
+            const isTransient = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
+            if (!isTransient || attempt === maxAttempts) {
+                throw error;
+            }
+            const delayMs = 800 * attempt; // 800ms, 1600ms, ...
+            console.warn(`Gemini transient error (attempt ${attempt}/${maxAttempts}), retrying in ${delayMs}ms:`, status);
+            await new Promise(resolve => setTimeout(resolve, delayMs));
+        }
+    }
+    throw lastError;
+}
+
+// On the free tier, gemini-3.5-flash's quota/capacity is the one that runs
+// out fastest and hits 503 most often. gemini-3.1-flash-lite draws from a
+// separate quota bucket and is Google's own recommended lighter fallback,
+// so if the primary model is still down after retries, try this one before
+// giving up — most of the time the user gets an answer instead of an error.
+const FALLBACK_MODEL = "gemini-3.1-flash-lite";
+
+async function generateWithFallback(primaryModel: string, contents: any): Promise<{ text: string }> {
+    try {
+        return await withGeminiRetry(() => ai.models.generateContent({ model: primaryModel, contents }));
+    } catch (error: any) {
+        const status = error?.status || error?.error?.status || error?.code;
+        const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
+        if (!isCapacityIssue) throw error;
+        console.warn(`Primary model ${primaryModel} still unavailable after retries, falling back to ${FALLBACK_MODEL}`);
+        return await withGeminiRetry(() => ai.models.generateContent({ model: FALLBACK_MODEL, contents }), 2);
+    }
+}
+
 async function callAI(prompt: string | any[]): Promise<string> {
     try {
         const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. Current Time: ${new Date().toISOString()}`;
@@ -127,10 +173,7 @@ async function callAI(prompt: string | any[]): Promise<string> {
             contentParts = [{ text: systemInstruction }, prompt];
         }
 
-        const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash", 
-            contents: { parts: contentParts }
-        });
+        const response = await generateWithFallback("gemini-3.5-flash", { parts: contentParts });
         return response.text || "";
     } catch (error) {
         console.error("Gemini AI Error:", error);
@@ -1121,14 +1164,11 @@ Respond with extreme brevity and 100% accuracy.
         try {
             let reply: string;
             if (base64Image) {
-                const imgResponse = await ai.models.generateContent({
-                    model: "gemini-3.5-flash",
-                    contents: {
-                        parts: [
-                            { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
-                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                        ]
-                    }
+                const imgResponse = await generateWithFallback("gemini-3.5-flash", {
+                    parts: [
+                        { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
+                        { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                    ]
                 });
                 reply = imgResponse.text || "Sorry, I couldn't read that image.";
             } else {
@@ -1151,14 +1191,11 @@ Respond with extreme brevity and 100% accuracy.
     const lastMessage = messages[messages.length - 1].content;
     
     try {
-        const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
-            contents: { 
-                parts: [
-                    { text: "Strict Instruction: Be extremely brief, accurate, and simple. No fluff." },
-                    { text: lastMessage }
-                ]
-            }
+        const response = await generateWithFallback("gemini-3.5-flash", {
+            parts: [
+                { text: "Strict Instruction: Be extremely brief, accurate, and simple. No fluff." },
+                { text: lastMessage }
+            ]
         });
 
         res.json({ reply: response.text });
