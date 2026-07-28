@@ -183,9 +183,18 @@ async function generateWithFallback(primaryModel: string, contents: any): Promis
     }
 }
 
+// Shared formatting rule for every chat-facing AI prompt. The client
+// renders the message as plain text (it does render **bold** as actual
+// bold and turns "- "/"* " lines into bullets as a safety net), but the
+// model should not lean on markdown noise — no #, no stray * for
+// emphasis, no LaTeX/backslash math notation. Math should read the way a
+// person would write it by hand: x², √16, 3/4, not x^2, sqrt(16), or
+// \frac{3}{4}.
+const PLAIN_FORMAT_RULE = "Formatting rules: Do not use markdown symbols like #, *, _, or backticks. Only use **bold** for an occasional short heading/key term, nothing else. For lists, put each item on its own line starting with a dash and a space, nothing fancier. For math, write it the way a person would write it by hand — use ², ³, √, ×, ÷, and plain fractions like 3/4, never LaTeX or ^ or sqrt().";
+
 async function callAI(prompt: string | any[]): Promise<string> {
     try {
-        const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. Current Time: ${new Date().toISOString()}`;
+        const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. ${PLAIN_FORMAT_RULE} Current Time: ${new Date().toISOString()}`;
         
         let contentParts: any[] = [];
         if (typeof prompt === 'string') {
@@ -1476,7 +1485,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
             if (base64Image) {
                 const imgResponse = await generateWithFallback("gemini-3.5-flash", {
                     parts: [
-                        { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
+                        { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE} The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
                         { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
                     ]
                 });
@@ -1503,7 +1512,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     try {
         const response = await generateWithFallback("gemini-3.5-flash", {
             parts: [
-                { text: "Strict Instruction: Be extremely brief, accurate, and simple. No fluff." },
+                { text: `Strict Instruction: Be extremely brief, accurate, and simple. No fluff. ${PLAIN_FORMAT_RULE}` },
                 { text: lastMessage }
             ]
         });
