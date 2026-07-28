@@ -11,6 +11,9 @@ import {
   History,
   Trash2,
   Loader2,
+  RotateCcw,
+  StopCircle,
+  AlertTriangle,
 } from 'lucide-react';
 
 // ---------- Types ----------
@@ -27,15 +30,29 @@ interface S3File {
   lastModified?: string;
 }
 
-type UploadStatus = 'pending' | 'uploading' | 'success' | 'failed';
+type UploadStatus = 'uploading' | 'success' | 'failed' | 'cancelled';
 
+interface UploadItem {
+  id: string;
+  file: File | null; // kept for retry; cleared once finished to save memory
+  name: string;
+  bucket: string;
+  prefix: string;
+  status: UploadStatus;
+  progress: number; // 0-100
+  error?: string;
+  timestamp: number;
+  xhr?: XMLHttpRequest | null;
+}
+
+// What's persisted to localStorage (no File object, no live xhr handle)
 interface HistoryItem {
   id: string;
   name: string;
   bucket: string;
   prefix: string;
   status: UploadStatus;
-  progress: number; // 0-100
+  progress: number;
   error?: string;
   timestamp: number;
 }
@@ -73,7 +90,7 @@ function formatSize(bytes: number): string {
   return `${val.toFixed(val < 10 && i > 0 ? 1 : 0)} ${units[i]}`;
 }
 
-// Circular progress ring shown next to each history/uploading item.
+// Circular progress ring shown next to each in-flight/history item.
 function ProgressRing({ status, progress }: { status: UploadStatus; progress: number }) {
   const size = 36;
   const stroke = 3;
@@ -89,7 +106,7 @@ function ProgressRing({ status, progress }: { status: UploadStatus; progress: nu
     );
   }
 
-  if (status === 'failed') {
+  if (status === 'failed' || status === 'cancelled') {
     return (
       <div className="w-9 h-9 rounded-full bg-red-500/20 border border-red-500 flex items-center justify-center flex-shrink-0">
         <X className="w-4 h-4 text-red-400" />
@@ -143,14 +160,20 @@ export default function S3Uploader() {
   const [pendingFiles, setPendingFiles] = useState<File[]>([]);
   const [showPopup, setShowPopup] = useState(false);
 
+  // Duplicate-name confirmation state (shown after "Next" if any chosen file
+  // already exists at the destination).
+  const [duplicateNames, setDuplicateNames] = useState<string[]>([]);
+  const [checkingDuplicates, setCheckingDuplicates] = useState(false);
+  const [pendingUploadFiles, setPendingUploadFiles] = useState<File[] | null>(null);
+
   // Active upload + history state
-  const [activeUploads, setActiveUploads] = useState<HistoryItem[]>([]);
+  const [activeUploads, setActiveUploads] = useState<UploadItem[]>([]);
   const [history, setHistory] = useState<HistoryItem[]>([]);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
-  // Mirror of activeUploads so callbacks (xhr handlers) always see the latest state
+  // Mirror of activeUploads so xhr callbacks always see the latest state
   // without needing to be recreated on every render.
-  const activeUploadsRef = useRef<HistoryItem[]>([]);
+  const activeUploadsRef = useRef<UploadItem[]>([]);
 
   useEffect(() => {
     setHistory(loadHistory());
@@ -257,31 +280,83 @@ export default function S3Uploader() {
     setPendingFiles([]);
   };
 
-  const handleStartUpload = () => {
+  // "Next" was clicked in the selection popup: check each chosen file against
+  // the current folder for existing files with the same name before uploading.
+  const handleNext = async () => {
     if (!selectedBucket || pendingFiles.length === 0) return;
-    const filesToUpload = pendingFiles;
-    setShowPopup(false);
-    setPendingFiles([]);
+    const filesToCheck = pendingFiles;
+    setCheckingDuplicates(true);
 
-    filesToUpload.forEach(file => uploadOneFile(file, selectedBucket, currentPrefix));
+    try {
+      const existsChecks = await Promise.all(
+        filesToCheck.map(async (file) => {
+          const key = `${currentPrefix}${file.name}`;
+          try {
+            const res = await fetch(
+              getApiUrl(`/api/s3/exists?bucket=${encodeURIComponent(selectedBucket)}&key=${encodeURIComponent(key)}`)
+            );
+            const data = await res.json();
+            return { name: file.name, exists: !!data.exists };
+          } catch {
+            // If the check itself fails, don't block the upload on it.
+            return { name: file.name, exists: false };
+          }
+        })
+      );
+
+      const dupes = existsChecks.filter(c => c.exists).map(c => c.name);
+
+      setShowPopup(false);
+      if (dupes.length > 0) {
+        setDuplicateNames(dupes);
+        setPendingUploadFiles(filesToCheck);
+      } else {
+        setPendingFiles([]);
+        filesToCheck.forEach(file => uploadOneFile(file, selectedBucket, currentPrefix, false));
+      }
+    } finally {
+      setCheckingDuplicates(false);
+    }
   };
 
-  const uploadOneFile = (file: File, bucket: string, prefix: string) => {
-    const id = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-    const item: HistoryItem = {
+  // User confirmed they want to overwrite the duplicate-named files.
+  const handleConfirmOverwrite = () => {
+    if (!selectedBucket || !pendingUploadFiles) return;
+    const filesToUpload = pendingUploadFiles;
+    setDuplicateNames([]);
+    setPendingUploadFiles(null);
+    setPendingFiles([]);
+    filesToUpload.forEach(file => {
+      const isDupe = duplicateNames.includes(file.name);
+      uploadOneFile(file, selectedBucket, currentPrefix, isDupe);
+    });
+  };
+
+  const handleCancelDuplicatePrompt = () => {
+    setDuplicateNames([]);
+    setPendingUploadFiles(null);
+    setPendingFiles([]);
+  };
+
+  const uploadOneFile = (file: File, bucket: string, prefix: string, overwrite: boolean, existingId?: string) => {
+    const id = existingId || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    const item: UploadItem = {
       id,
+      file,
       name: file.name,
       bucket,
       prefix,
       status: 'uploading',
       progress: 0,
       timestamp: Date.now(),
+      xhr: null,
     };
-    setActiveUploads(prev => [item, ...prev]);
+    setActiveUploads(prev => [item, ...prev.filter(u => u.id !== id)]);
 
     const formData = new FormData();
     formData.append('bucket', bucket);
     formData.append('prefix', prefix);
+    if (overwrite) formData.append('overwrite', 'true');
     formData.append('files', file);
 
     const xhr = new XMLHttpRequest();
@@ -312,39 +387,77 @@ export default function S3Uploader() {
         success = xhr.status >= 200 && xhr.status < 300;
       }
 
-      finalizeUpload(id, success, errorMsg);
+      finalizeUpload(id, success ? 'success' : 'failed', errorMsg);
     };
 
     xhr.onerror = () => {
-      finalizeUpload(id, false, 'Network error during upload');
+      finalizeUpload(id, 'failed', 'Network error during upload');
     };
 
+    xhr.onabort = () => {
+      finalizeUpload(id, 'cancelled', 'Cancelled');
+    };
+
+    // Track the live xhr so the Cancel button can abort it.
+    setActiveUploads(prev => prev.map(u => (u.id === id ? { ...u, xhr } : u)));
     xhr.send(formData);
   };
 
-  const finalizeUpload = (id: string, success: boolean, error?: string) => {
+  // Files kept in memory (not localStorage) so "Retry" can re-send them
+  // without asking the user to re-pick the file. Lost on page refresh,
+  // in which case Retry will prompt to re-select the file instead.
+  const retryFilesRef = useRef<Record<string, File>>({});
+
+  const finalizeUpload = (id: string, status: UploadStatus, error?: string) => {
     const finished = activeUploadsRef.current.find(u => u.id === id);
     setActiveUploads(prev => prev.filter(u => u.id !== id));
     setHistory(prev => {
       const base: HistoryItem = finished
-        ? { ...finished }
-        : { id, name: 'Unknown file', bucket: selectedBucket || '', prefix: currentPrefix, status: 'pending', progress: 0, timestamp: Date.now() };
+        ? { id: finished.id, name: finished.name, bucket: finished.bucket, prefix: finished.prefix, status: finished.status, progress: finished.progress, timestamp: finished.timestamp }
+        : { id, name: 'Unknown file', bucket: selectedBucket || '', prefix: currentPrefix, status: 'failed', progress: 0, timestamp: Date.now() };
       const entry: HistoryItem = {
         ...base,
-        status: success ? 'success' : 'failed',
-        progress: 100,
+        status,
+        progress: status === 'success' ? 100 : base.progress,
         error,
         timestamp: Date.now(),
       };
-      const next = [entry, ...prev];
+      const next = [entry, ...prev.filter(h => h.id !== id)];
       saveHistory(next);
       return next;
     });
+    // Keep the File reference around briefly for retry-from-history support.
+    if (finished?.file) {
+      retryFilesRef.current[id] = finished.file;
+    }
+  };
+
+  const handleCancelUpload = (id: string) => {
+    const item = activeUploadsRef.current.find(u => u.id === id);
+    if (item?.xhr) {
+      item.xhr.abort();
+    }
+  };
+
+  const handleRetry = (item: HistoryItem) => {
+    const file = retryFilesRef.current[item.id];
+    if (!file) {
+      setBrowseError('Original file is no longer available in memory. Please re-select and upload it again.');
+      return;
+    }
+    // Remove the old failed entry from history and re-upload with a fresh id.
+    setHistory(prev => {
+      const next = prev.filter(h => h.id !== item.id);
+      saveHistory(next);
+      return next;
+    });
+    uploadOneFile(file, item.bucket, item.prefix, true);
   };
 
   const handleClearHistory = () => {
     setHistory([]);
     saveHistory([]);
+    retryFilesRef.current = {};
   };
 
   return (
@@ -501,10 +614,59 @@ export default function S3Uploader() {
             </div>
             <div className="p-4 border-t border-white/10">
               <button
-                onClick={handleStartUpload}
-                className="w-full bg-blue-600 hover:bg-blue-700 font-bold py-3 rounded-xl transition-all"
+                onClick={handleNext}
+                disabled={checkingDuplicates}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2"
               >
-                Next
+                {checkingDuplicates ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" /> Checking...
+                  </>
+                ) : (
+                  'Next'
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Duplicate-name warning popup */}
+      {duplicateNames.length > 0 && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-[#161e38] border border-yellow-500/30 rounded-xl w-full max-w-md max-h-[80vh] flex flex-col">
+            <div className="flex items-center justify-between p-4 border-b border-white/10">
+              <h4 className="font-bold text-sm flex items-center gap-2 text-yellow-400">
+                <AlertTriangle className="w-4 h-4" /> Duplicate file name{duplicateNames.length > 1 ? 's' : ''}
+              </h4>
+              <button onClick={handleCancelDuplicatePrompt} className="text-gray-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-4">
+              <p className="text-xs text-gray-400 mb-3">
+                A file with the same name already exists in this folder. Uploading will overwrite it:
+              </p>
+              <div className="flex flex-col gap-2">
+                {duplicateNames.map(name => (
+                  <div key={name} className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg px-3 py-2 text-sm text-yellow-200 truncate">
+                    {name}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="p-4 border-t border-white/10 flex gap-2">
+              <button
+                onClick={handleCancelDuplicatePrompt}
+                className="flex-1 bg-white/5 border border-white/10 hover:bg-white/10 font-bold py-3 rounded-xl transition-all"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleConfirmOverwrite}
+                className="flex-1 bg-yellow-600 hover:bg-yellow-700 font-bold py-3 rounded-xl transition-all"
+              >
+                Overwrite & Upload
               </button>
             </div>
           </div>
@@ -531,7 +693,16 @@ export default function S3Uploader() {
             {activeUploads.map(item => (
               <div key={item.id} className="flex items-center justify-between gap-3 bg-[#0a0f24] p-2.5 rounded-lg border border-white/5">
                 <span className="text-sm truncate">{item.name}</span>
-                <ProgressRing status={item.status} progress={item.progress} />
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <button
+                    onClick={() => handleCancelUpload(item.id)}
+                    title="Cancel upload"
+                    className="text-gray-500 hover:text-red-400"
+                  >
+                    <StopCircle className="w-4 h-4" />
+                  </button>
+                  <ProgressRing status={item.status} progress={item.progress} />
+                </div>
               </div>
             ))}
             {history.map(item => (
@@ -540,7 +711,18 @@ export default function S3Uploader() {
                   <p className="text-sm truncate">{item.name}</p>
                   {item.error && <p className="text-[10px] text-red-400 truncate">{item.error}</p>}
                 </div>
-                <ProgressRing status={item.status} progress={item.progress} />
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  {(item.status === 'failed' || item.status === 'cancelled') && (
+                    <button
+                      onClick={() => handleRetry(item)}
+                      title="Retry upload"
+                      className="text-gray-500 hover:text-blue-400"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                    </button>
+                  )}
+                  <ProgressRing status={item.status} progress={item.progress} />
+                </div>
               </div>
             ))}
           </div>
