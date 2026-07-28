@@ -836,7 +836,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                         
                         <div className="flex flex-col items-center">
                             <div className="relative w-20 h-20 flex items-center justify-center">
-                                {isRecording && (
+                                {isRecording && status !== "Speaking..." && (
                                     <>
                                         <motion.span
                                             className="absolute inset-0 rounded-full bg-red-500/40"
@@ -852,8 +852,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                                 )}
                                 <motion.button
                                     onClick={handleToggleRecording}
-                                    animate={isRecording ? { scale: [1, 1.06, 1] } : { scale: 1 }}
-                                    transition={isRecording ? { duration: 1.2, repeat: Infinity, ease: "easeInOut" } : {}}
+                                    animate={isRecording && status !== "Speaking..." ? { scale: [1, 1.06, 1] } : { scale: 1 }}
+                                    transition={isRecording && status !== "Speaking..." ? { duration: 1.2, repeat: Infinity, ease: "easeInOut" } : {}}
                                     whileTap={{ scale: 0.9 }}
                                     className={`relative w-20 h-20 rounded-full flex items-center justify-center ${isRecording ? 'bg-red-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'}`}
                                 >
