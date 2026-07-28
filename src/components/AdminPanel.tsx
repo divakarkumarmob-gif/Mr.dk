@@ -17,6 +17,7 @@ import {
     MessageCircle
 } from 'lucide-react';
 import S3Uploader from './S3Uploader';
+import NotificationUploader from './NotificationUploader';
 import { motion, AnimatePresence } from 'motion/react';
 import { getApiUrl } from '../utils/api';
 import { showToast } from '../utils/toast';
@@ -491,19 +492,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
 
                 {activeTab === 'upload' && (
                     <div className="w-full max-w-4xl mx-auto">
-                        <div className="flex flex-col items-center justify-center text-center bg-white/[0.03] border border-white/10 rounded-2xl py-14 px-6">
-                            <UploadIcon className="h-10 w-10 text-gray-500 mb-3" />
-                            <h3 className="font-bold text-base mb-1">Upload tools moved</h3>
-                            <p className="text-sm text-gray-400 max-w-sm">
-                                Question upload and import tools now live under the <span className="text-orange-400 font-semibold">Import</span> tab.
-                            </p>
-                            <button
-                                onClick={() => setActiveTab('import')}
-                                className="mt-5 bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-xl font-bold text-sm transition-colors"
-                            >
-                                Go to Import
-                            </button>
-                        </div>
+                        <NotificationUploader />
                     </div>
                 )}
 

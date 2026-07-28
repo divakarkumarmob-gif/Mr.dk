@@ -1,9 +1,53 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ChevronLeft, AlertCircle } from 'lucide-react';
+import { ChevronLeft, AlertCircle, FileText, Image as ImageIcon, Download, Loader2 } from 'lucide-react';
 import { collection, query, orderBy, limit, onSnapshot, doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { getApiUrl } from '@/utils/api';
 import { openExternalLink } from '../utils/browser';
+import { downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
+
+interface NotificationFile {
+    key: string;
+    name: string;
+    fileType: 'image' | 'pdf';
+    size: number;
+}
+
+function formatFileSize(bytes: number): string {
+    if (!bytes) return '';
+    const units = ['B', 'KB', 'MB', 'GB'];
+    let i = 0;
+    let val = bytes;
+    while (val >= 1024 && i < units.length - 1) { val /= 1024; i++; }
+    return `${val.toFixed(val < 10 && i > 0 ? 1 : 0)} ${units[i]}`;
+}
+
+function NotificationAttachment({ file }: { file: NotificationFile }) {
+    const [busy, setBusy] = useState(false);
+    const handlePress = async () => {
+        if (busy) return;
+        setBusy(true);
+        try {
+            await downloadAndOpenNotificationFile(file.key, file.name);
+        } finally {
+            setBusy(false);
+        }
+    };
+    return (
+        <button
+            onClick={handlePress}
+            disabled={busy}
+            className="w-full flex items-center gap-3 bg-black/20 hover:bg-black/30 border border-white/10 rounded-lg px-3 py-2.5 mt-2 text-left transition-colors disabled:opacity-60"
+        >
+            {file.fileType === 'image' ? <ImageIcon className="w-5 h-5 text-blue-400 flex-shrink-0" /> : <FileText className="w-5 h-5 text-red-400 flex-shrink-0" />}
+            <span className="min-w-0 flex-1">
+                <span className="block text-sm truncate">{file.name}</span>
+                {file.size ? <span className="block text-[11px] text-gray-500">{formatFileSize(file.size)}</span> : null}
+            </span>
+            {busy ? <Loader2 className="w-4 h-4 animate-spin flex-shrink-0" /> : <Download className="w-4 h-4 text-gray-400 flex-shrink-0" />}
+        </button>
+    );
+}
 
 interface NotificationPageProps {
     onBack: () => void;
@@ -132,7 +176,11 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
             <div className="space-y-4">
                 {activeTab === 'General' && adminNotifications.map((notif: any) => (
                     <div key={notif.id} className="p-4 bg-card rounded-xl border border-border">
-                        <p className="text-sm">{notif.message}</p>
+                        {notif.title && <p className="text-sm font-bold mb-1">{notif.title}</p>}
+                        {notif.message && <p className="text-sm">{notif.message}</p>}
+                        {Array.isArray(notif.files) && notif.files.map((file: NotificationFile) => (
+                            <NotificationAttachment key={file.key} file={file} />
+                        ))}
                         <p className="text-xs text-gray-500 mt-2">{notif.timestamp?.toDate().toLocaleString()}</p>
                     </div>
                 ))}
