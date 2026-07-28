@@ -22,7 +22,7 @@ import nodemailer from 'nodemailer';
 import Razorpay from 'razorpay';
 import crypto from 'crypto';
 import textToSpeech from '@google-cloud/text-to-speech';
-import { S3Client, ListObjectsV2Command, GetObjectCommand, ListBucketsCommand, PutObjectCommand } from "@aws-sdk/client-s3";
+import { S3Client, ListObjectsV2Command, GetObjectCommand, ListBucketsCommand, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import multer from "multer";
 
@@ -390,10 +390,34 @@ async function startServer() {
   });
 
   // Upload one or more files (photo, video, pdf, etc.) directly to an S3 bucket/prefix.
+  // Check if a given key already exists in the bucket (used for the duplicate-file warning).
+  app.get("/api/s3/exists", async (req, res) => {
+    try {
+      const { bucket, key } = req.query;
+      if (!bucket || typeof bucket !== 'string' || !key || typeof key !== 'string') {
+        return res.status(400).json({ success: false, error: "Bucket and key required" });
+      }
+      const s3 = getS3Client();
+      try {
+        await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }));
+        res.json({ success: true, exists: true });
+      } catch (err: any) {
+        if (err.name === 'NotFound' || err.$metadata?.httpStatusCode === 404) {
+          res.json({ success: true, exists: false });
+        } else {
+          throw err;
+        }
+      }
+    } catch (error: any) {
+      console.error("AWS S3 Exists Check Error:", error);
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
+
   app.post("/api/s3/upload", s3Upload.array("files", 20), async (req, res) => {
     const files = (req.files as Express.Multer.File[] | undefined) || [];
     try {
-      const { bucket, prefix } = req.body;
+      const { bucket, prefix, overwrite } = req.body;
       if (!bucket || typeof bucket !== 'string') {
         return res.status(400).json({ success: false, error: "Bucket required" });
       }
@@ -404,11 +428,40 @@ async function startServer() {
       const normalizedPrefix = prefix && prefix.length > 0
         ? (prefix.endsWith('/') ? prefix : prefix + '/')
         : '';
+      // overwrite can arrive as a JSON string (per-file map) or a boolean-ish string for "allow all"
+      let overwriteMap: Record<string, boolean> | null = null;
+      let overwriteAll = false;
+      if (typeof overwrite === 'string') {
+        if (overwrite === 'true') {
+          overwriteAll = true;
+        } else {
+          try {
+            overwriteMap = JSON.parse(overwrite);
+          } catch {
+            overwriteMap = null;
+          }
+        }
+      }
 
       const s3 = getS3Client();
       const results = await Promise.all(files.map(async (file) => {
         const key = `${normalizedPrefix}${file.originalname}`;
+        const allowOverwrite = overwriteAll || (overwriteMap ? !!overwriteMap[file.originalname] : false);
+
         try {
+          if (!allowOverwrite) {
+            try {
+              await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }));
+              // Object exists and overwrite wasn't confirmed -> reject this file.
+              return { name: file.originalname, key, success: false, duplicate: true, error: "A file with this name already exists." };
+            } catch (headErr: any) {
+              if (!(headErr.name === 'NotFound' || headErr.$metadata?.httpStatusCode === 404)) {
+                throw headErr;
+              }
+              // NotFound -> safe to proceed with upload.
+            }
+          }
+
           await s3.send(new PutObjectCommand({
             Bucket: bucket,
             Key: key,
