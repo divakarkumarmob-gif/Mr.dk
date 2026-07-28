@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ChevronLeft, AlertCircle, FileText, Image as ImageIcon, Download, Loader2 } from 'lucide-react';
+import { ChevronLeft, AlertCircle, FileText, Image as ImageIcon, Download } from 'lucide-react';
 import { collection, query, orderBy, limit, onSnapshot, doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { getApiUrl } from '@/utils/api';
 import { openExternalLink } from '../utils/browser';
-import { downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
+import NotificationFileViewer from './NotificationFileViewer';
 
 interface NotificationFile {
     key: string;
@@ -22,29 +22,18 @@ function formatFileSize(bytes: number): string {
     return `${val.toFixed(val < 10 && i > 0 ? 1 : 0)} ${units[i]}`;
 }
 
-function NotificationAttachment({ file }: { file: NotificationFile }) {
-    const [busy, setBusy] = useState(false);
-    const handlePress = async () => {
-        if (busy) return;
-        setBusy(true);
-        try {
-            await downloadAndOpenNotificationFile(file.key, file.name);
-        } finally {
-            setBusy(false);
-        }
-    };
+function NotificationAttachment({ file, onOpen }: { file: NotificationFile; onOpen: (file: NotificationFile) => void }) {
     return (
         <button
-            onClick={handlePress}
-            disabled={busy}
-            className="w-full flex items-center gap-3 bg-black/20 hover:bg-black/30 border border-white/10 rounded-lg px-3 py-2.5 mt-2 text-left transition-colors disabled:opacity-60"
+            onClick={() => onOpen(file)}
+            className="w-full flex items-center gap-3 bg-black/20 hover:bg-black/30 border border-white/10 rounded-lg px-3 py-2.5 mt-2 text-left transition-colors"
         >
             {file.fileType === 'image' ? <ImageIcon className="w-5 h-5 text-blue-400 flex-shrink-0" /> : <FileText className="w-5 h-5 text-red-400 flex-shrink-0" />}
             <span className="min-w-0 flex-1">
                 <span className="block text-sm truncate">{file.name}</span>
                 {file.size ? <span className="block text-[11px] text-gray-500">{formatFileSize(file.size)}</span> : null}
             </span>
-            {busy ? <Loader2 className="w-4 h-4 animate-spin flex-shrink-0" /> : <Download className="w-4 h-4 text-gray-400 flex-shrink-0" />}
+            <Download className="w-4 h-4 text-gray-400 flex-shrink-0" />
         </button>
     );
 }
@@ -55,6 +44,7 @@ interface NotificationPageProps {
 
 export default function NotificationPage({ onBack }: NotificationPageProps) {
     const [activeTab, setActiveTab] = useState<'General' | 'NTA'>('General');
+    const [viewingFile, setViewingFile] = useState<NotificationFile | null>(null);
     const [adminNotifications, setAdminNotifications] = useState<any[]>([]);
     const [neetNotices, setNeetNotices] = useState<{publicNotices: {text: string, url: string}[], candidateActivity: {text: string, url: string}[]}>({ publicNotices: [], candidateActivity: [] });
     const [loading, setLoading] = useState(false);
@@ -179,7 +169,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                         {notif.title && <p className="text-sm font-bold mb-1">{notif.title}</p>}
                         {notif.message && <p className="text-sm">{notif.message}</p>}
                         {Array.isArray(notif.files) && notif.files.map((file: NotificationFile) => (
-                            <NotificationAttachment key={file.key} file={file} />
+                            <NotificationAttachment key={file.key} file={file} onOpen={setViewingFile} />
                         ))}
                         <p className="text-xs text-gray-500 mt-2">{notif.timestamp?.toDate().toLocaleString()}</p>
                     </div>
@@ -242,6 +232,10 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                     </div>
                 )}
             </div>
+
+            {viewingFile && (
+                <NotificationFileViewer file={viewingFile} onClose={() => setViewingFile(null)} />
+            )}
         </div>
     );
 }
