@@ -693,7 +693,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                             left: 0,
                                             opacity: backReady ? 1 : 0,
                                             pointerEvents: 'none',
-                                            zIndex: 2
+                                            zIndex: 2,
+                                            // The parent wrapRef's live pinch transform (translate+scale)
+                                            // is calibrated for the FRONT layer's native render scale
+                                            // (frontScale), not the back layer's. The back layer's canvas
+                                            // is already rendered at its own final target scale
+                                            // (backScale), so applying that same parent transform to it
+                                            // unmodified double-scales/mis-positions it — this was the
+                                            // exact cause of the visible "jump" on crossfade. Countering
+                                            // it here with a ratio scale, anchored at the same (0,0)
+                                            // top-left origin both layers share, makes the back layer's
+                                            // canvas exactly overlay the front layer's current on-screen
+                                            // footprint (just sharper), regardless of whatever live
+                                            // scale/translate the parent currently has — so nothing
+                                            // visibly moves when the crossfade happens.
+                                            transform: `scale(${frontScale / backScale})`,
+                                            transformOrigin: '0 0'
                                         }}
                                     >
                                         <Page
