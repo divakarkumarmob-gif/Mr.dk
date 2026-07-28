@@ -19,6 +19,7 @@ interface Message {
 
 const RESET_MARKER = '__CHAT_RESET__';
 const MEMORY_DOC_PATH = (uid: string) => doc(db, `users/${uid}/ai-study-plan-memory/profile`);
+const LOCAL_GREETING: Message = { role: 'ai', content: "Hi! 👋 Kuch bhi likh ke shuru karo." };
 
 export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
     const [messages, setMessages] = useState<Message[]>([]);
@@ -41,7 +42,7 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
             });
             // Initial prompt if empty
             if (msgs.length === 0) {
-                setMessages([{ role: 'ai', content: "Hi! 👋 Kuch bhi likh ke shuru karo." }]);
+                setMessages([LOCAL_GREETING]);
             } else {
                 setMessages(msgs);
             }
@@ -81,15 +82,17 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
     };
 
     // Returns only the messages that should be sent to the AI as context —
-    // i.e. everything after the most recent reset marker (or all messages if never reset).
+    // i.e. everything after the most recent reset marker (or all messages if never reset),
+    // excluding the local-only placeholder greeting (which was never saved to Firestore).
     const getContextMessages = (allMessages: Message[]) => {
+        const realMessages = allMessages.filter(m => m !== LOCAL_GREETING);
         let lastResetIndex = -1;
-        allMessages.forEach((m, i) => {
+        realMessages.forEach((m, i) => {
             if (m.role === 'system' && m.content === RESET_MARKER) {
                 lastResetIndex = i;
             }
         });
-        return allMessages
+        return realMessages
             .slice(lastResetIndex + 1)
             .filter(m => m.role !== 'system');
     };
@@ -126,13 +129,24 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
                     studentMemory
                 })
             });
+
+            if (!response.ok) {
+                throw new Error(`Server error (${response.status})`);
+            }
+
             const data = await response.json();
+
+            if (!data.text || !data.text.trim()) {
+                throw new Error("Empty response from AI");
+            }
+
             await saveMessage('ai', data.text);
             if (data.updatedMemory) {
                 await saveMemory(data.updatedMemory);
             }
         } catch (e) {
             console.error(e);
+            await saveMessage('ai', "⚠️ Kuch gadbad ho gayi, reply nahi mila. Please dobara try karo.");
         } finally {
             setIsAILoading(false);
         }
