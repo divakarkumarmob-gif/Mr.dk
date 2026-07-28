@@ -131,7 +131,12 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
             });
 
             if (!response.ok) {
-                throw new Error(`Server error (${response.status})`);
+                let serverMessage = "";
+                try {
+                    const errData = await response.json();
+                    serverMessage = errData?.error || "";
+                } catch { /* response wasn't JSON, ignore */ }
+                throw new Error(serverMessage || `Server error (${response.status})`);
             }
 
             const data = await response.json();
@@ -144,9 +149,12 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
             if (data.updatedMemory) {
                 await saveMemory(data.updatedMemory);
             }
-        } catch (e) {
+        } catch (e: any) {
             console.error(e);
-            await saveMessage('ai', "⚠️ Kuch gadbad ho gayi, reply nahi mila. Please dobara try karo.");
+            const fallbackMessage = e?.message && e.message !== "Empty response from AI"
+                ? e.message
+                : "⚠️ Kuch gadbad ho gayi, reply nahi mila. Please dobara try karo.";
+            await saveMessage('ai', fallbackMessage);
         } finally {
             setIsAILoading(false);
         }
