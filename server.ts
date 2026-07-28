@@ -22,8 +22,9 @@ import nodemailer from 'nodemailer';
 import Razorpay from 'razorpay';
 import crypto from 'crypto';
 import textToSpeech from '@google-cloud/text-to-speech';
-import { S3Client, ListObjectsV2Command, GetObjectCommand } from "@aws-sdk/client-s3";
+import { S3Client, ListObjectsV2Command, GetObjectCommand, ListBucketsCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import multer from "multer";
 
 // Initialize Firebase Admin
 console.log("Initializing Firebase Admin...");
@@ -313,6 +314,121 @@ async function startServer() {
       }
       return s3Client;
   }
+
+  // Multer setup: keep uploaded files in memory, then stream to S3.
+  // 500MB per file cap, up to 20 files per request.
+  const s3Upload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 500 * 1024 * 1024, files: 20 },
+  });
+
+  // List all S3 buckets available to these AWS credentials.
+  // Falls back to the single .env-configured bucket if ListBuckets isn't permitted.
+  app.get("/api/s3/buckets", async (req, res) => {
+    try {
+      const s3 = getS3Client();
+      const result = await s3.send(new ListBucketsCommand({}));
+      const buckets = (result.Buckets || [])
+        .map(b => b.Name)
+        .filter((name): name is string => !!name);
+
+      if (buckets.length === 0) {
+        const fallback = process.env.S3_BUCKET || "neetmaster-videos-01";
+        return res.json({ success: true, buckets: [fallback] });
+      }
+      res.json({ success: true, buckets });
+    } catch (error: any) {
+      console.error("AWS S3 List Buckets Error:", error);
+      // No ListBuckets permission (or other error) -> fall back to the configured bucket.
+      const fallback = process.env.S3_BUCKET || "neetmaster-videos-01";
+      res.json({ success: true, buckets: [fallback], fallback: true, error: error.message });
+    }
+  });
+
+  // Browse a bucket one folder level at a time (like a file explorer).
+  // Returns subfolders (CommonPrefixes) and files at the given prefix.
+  app.get("/api/s3/browse", async (req, res) => {
+    try {
+      const { bucket, prefix } = req.query;
+      if (!bucket || typeof bucket !== 'string') {
+        return res.status(400).json({ success: false, error: "Bucket required" });
+      }
+      const normalizedPrefix = prefix && typeof prefix === 'string' && prefix.length > 0
+        ? (prefix.endsWith('/') ? prefix : prefix + '/')
+        : '';
+
+      const s3 = getS3Client();
+      const command = new ListObjectsV2Command({
+        Bucket: bucket,
+        Prefix: normalizedPrefix,
+        Delimiter: '/',
+      });
+      const result = await s3.send(command);
+
+      const folders = (result.CommonPrefixes || [])
+        .map(p => p.Prefix)
+        .filter((p): p is string => !!p)
+        .map(p => ({
+          name: p.replace(normalizedPrefix, '').replace(/\/$/, ''),
+          prefix: p,
+        }));
+
+      const files = (result.Contents || [])
+        .filter(item => item.Key && item.Key !== normalizedPrefix)
+        .map(item => ({
+          key: item.Key!,
+          name: item.Key!.replace(normalizedPrefix, ''),
+          size: item.Size || 0,
+          lastModified: item.LastModified,
+        }));
+
+      res.json({ success: true, bucket, prefix: normalizedPrefix, folders, files });
+    } catch (error: any) {
+      console.error("AWS S3 Browse Error:", error);
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
+
+  // Upload one or more files (photo, video, pdf, etc.) directly to an S3 bucket/prefix.
+  app.post("/api/s3/upload", s3Upload.array("files", 20), async (req, res) => {
+    const files = (req.files as Express.Multer.File[] | undefined) || [];
+    try {
+      const { bucket, prefix } = req.body;
+      if (!bucket || typeof bucket !== 'string') {
+        return res.status(400).json({ success: false, error: "Bucket required" });
+      }
+      if (files.length === 0) {
+        return res.status(400).json({ success: false, error: "No files provided" });
+      }
+
+      const normalizedPrefix = prefix && prefix.length > 0
+        ? (prefix.endsWith('/') ? prefix : prefix + '/')
+        : '';
+
+      const s3 = getS3Client();
+      const results = await Promise.all(files.map(async (file) => {
+        const key = `${normalizedPrefix}${file.originalname}`;
+        try {
+          await s3.send(new PutObjectCommand({
+            Bucket: bucket,
+            Key: key,
+            Body: file.buffer,
+            ContentType: file.mimetype,
+          }));
+          return { name: file.originalname, key, success: true };
+        } catch (err: any) {
+          console.error(`S3 Upload Error for ${file.originalname}:`, err);
+          return { name: file.originalname, key, success: false, error: err.message };
+        }
+      }));
+
+      const allSucceeded = results.every(r => r.success);
+      res.status(allSucceeded ? 200 : 207).json({ success: allSucceeded, results });
+    } catch (error: any) {
+      console.error("AWS S3 Upload Error:", error);
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
 
   app.get("/api/s3/health", async (req, res) => {
     try {
