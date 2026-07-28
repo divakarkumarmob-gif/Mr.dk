@@ -39,7 +39,7 @@ export async function downloadAndOpenNotificationFile(fileKey: string, fileName:
       directory: Directory.Cache,
     });
 
-    const { FileOpener } = await import('@capawesome/capacitor-file-opener');
+    const { FileOpener } = await import('@capawesome-team/capacitor-file-opener');
     await FileOpener.openFile({ path: writeResult.uri });
   } catch (error) {
     console.error('[downloadAndOpenNotificationFile] Failed:', error);
