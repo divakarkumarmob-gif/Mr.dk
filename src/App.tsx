@@ -126,6 +126,12 @@ interface FirestoreErrorInfo {
     }[];
   }
 }
+// IMPORTANT: this must never throw. It's called from onSnapshot's error
+// callback (a listener, not a normal try/catch-able call site) — throwing
+// there becomes an uncaught exception that crashes the entire JS runtime
+// for every connected client whose listener hits this path at the same
+// moment (e.g. right after a fresh install, or the instant an admin
+// message/notification write trips a Firestore rule). We only log now.
 function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
   const errInfo: FirestoreErrorInfo = {
     error: error instanceof Error ? error.message : String(error),
@@ -144,7 +150,6 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
     path
   }
   console.error('Firestore Error: ', JSON.stringify(errInfo));
-  throw new Error(JSON.stringify(errInfo));
 }
 
 const getISTDateString = () => {
