@@ -35,6 +35,24 @@ import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
 import ProtectedRoute from './components/ProtectedRoute';
 
+// Firestore serverTimestamp() fields are `null` locally until the server
+// confirms the write — which is exactly the moment right after someone
+// sends a message/notification, when the onSnapshot listener fires first
+// with the pending (unconfirmed) doc. `n.timestamp?.toDate()` only guards
+// against `timestamp` itself being missing, not against `.toDate` being
+// absent on a null/plain-object/string timestamp — calling toDate() on
+// that throws and crashes every connected client's listener at once.
+const safeToDate = (ts: any): Date | undefined => {
+  try {
+    if (!ts) return undefined;
+    if (typeof ts.toDate === 'function') return ts.toDate();
+    if (ts instanceof Date) return ts;
+    return undefined;
+  } catch {
+    return undefined;
+  }
+};
+
 const AiSearch = lazy(() => import('./components/AiSearch'));
 const WeakTopics = lazy(() => import('./components/WeakTopics'));
 const AnalysisHistory = lazy(() => import('./components/AnalysisHistory'));
@@ -1054,32 +1072,52 @@ function AppInner() {
             // Add listener for received notifications
             PushNotifications.addListener('pushNotificationReceived', (notification) => {
               console.log('Push notification received: ', notification);
-              // Handle foreground notification: show local notification
-              LocalNotifications.schedule({
-                notifications: [
-                  {
-                    title: notification.title || 'New Message',
-                    body: notification.body || 'You have a new notification',
-                    id: Math.floor(Math.random() * 100000),
-                    schedule: { at: new Date(Date.now() + 1000) },
-                    sound: 'default',
-                    attachments: [],
-                    actionTypeId: "",
-                    extra: notification.data
+              try {
+                // Handle foreground notification: show local notification.
+                // Only pass plain string/number fields into `extra` — the
+                // native bridge needs this to be safely serializable, and
+                // an unguarded schedule() call here can throw and crash
+                // the whole JS context (this listener fires again on every
+                // relaunch as long as the bad push is still being handled,
+                // which is what produced the "keeps crashing until storage
+                // is cleared" loop).
+                const safeExtra: Record<string, string> = {};
+                if (notification.data) {
+                  for (const [k, v] of Object.entries(notification.data)) {
+                    if (typeof v === 'string' || typeof v === 'number') {
+                      safeExtra[k] = String(v);
+                    }
                   }
-                ]
-              });
+                }
 
-              // Confirm actual receipt — mirrors the ack sent from
-              // MyFirebaseMessagingService for background/killed delivery.
-              const notificationId = notification.data?.notificationId;
-              const ackToken = notification.data?.token;
-              if (notificationId && ackToken) {
-                fetch(getApiUrl('/api/ack-delivery'), {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ notificationId, token: ackToken }),
-                }).catch(err => console.warn('ack-delivery failed', err));
+                LocalNotifications.schedule({
+                  notifications: [
+                    {
+                      title: notification.title || 'New Message',
+                      body: notification.body || 'You have a new notification',
+                      id: Math.floor(Math.random() * 100000),
+                      schedule: { at: new Date(Date.now() + 1000) },
+                      sound: 'default',
+                      attachments: [],
+                      actionTypeId: "",
+                      extra: safeExtra
+                    }
+                  ]
+                }).catch(err => console.error('LocalNotifications.schedule failed:', err));
+
+                // Confirm actual receipt — mirrors the ack sent from
+                // MyFirebaseMessagingService for background/killed delivery.
+                const notificationId = notification.data?.notificationId;
+                const ackToken = notification.data?.token;
+                if (notificationId && ackToken) {
+                  fetch(getApiUrl('/api/ack-delivery'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ notificationId, token: ackToken }),
+                  }).catch(err => console.warn('ack-delivery failed', err));
+                }
+              } catch (e) {
+                console.error('Error handling pushNotificationReceived:', e);
               }
             });
             
@@ -1418,6 +1456,9 @@ function AppInner() {
         return; // Skip normal onAuthStateChanged
       } catch (e) {
         console.error("Error loading cached guest:", e);
+        // Don't let a corrupted guest_user value keep crashing every
+        // launch — clear it so the app can fall back to normal auth.
+        localStorage.removeItem('guest_user');
       }
     }
 
@@ -1486,12 +1527,23 @@ function AppInner() {
     // Check for day change
     const interval = setInterval(async () => {
         if (localStorage.getItem('guest_user')) {
-            const cachedGuest = JSON.parse(localStorage.getItem('guest_user') || '{}');
-            const localSubjs = localStorage.getItem(`subjects_${cachedGuest.uid}`);
-            if (localSubjs) {
-                // Keep local subjects synchronized or loaded
-                const parsed = JSON.parse(localSubjs);
-                setSubjects(parsed);
+            try {
+                const cachedGuest = JSON.parse(localStorage.getItem('guest_user') || '{}');
+                const localSubjs = localStorage.getItem(`subjects_${cachedGuest.uid}`);
+                if (localSubjs) {
+                    // Keep local subjects synchronized or loaded
+                    const parsed = JSON.parse(localSubjs);
+                    setSubjects(parsed);
+                }
+            } catch (e) {
+                // Corrupted cache shouldn't crash the app on every tick —
+                // clear the bad keys so the app can recover without the
+                // user having to manually clear storage.
+                console.error("Corrupted guest_user/subjects cache, clearing:", e);
+                localStorage.removeItem('guest_user');
+                Object.keys(localStorage)
+                    .filter(k => k.startsWith('subjects_'))
+                    .forEach(k => localStorage.removeItem(k));
             }
             return;
         }
@@ -2064,7 +2116,7 @@ function AppInner() {
                                       <p key={uIdx} className="mb-1">{update}</p>
                                   ))}
                                   <p className="text-gray-500 text-[10px]">
-                                      {neet.timestamp?.toDate().toLocaleString()}
+                                      {safeToDate(neet.timestamp)?.toLocaleString() || ''}
                                   </p>
                               </div>
                           ))}
@@ -2077,7 +2129,7 @@ function AppInner() {
                       <div className="space-y-4">
                         {['Today', 'Yesterday'].map(group => {
                             const groupNotifications = notifications.filter(n => {
-                                const date = n.timestamp?.toDate();
+                                const date = safeToDate(n.timestamp);
                                 const today = new Date();
                                 const yesterday = new Date(today);
                                 yesterday.setDate(yesterday.getDate() - 1);
@@ -2097,7 +2149,7 @@ function AppInner() {
                                                 <p>{n.message}</p>
                                                 <div className="flex justify-between items-center mt-1">
                                                     <p className="text-gray-500 text-[10px]">
-                                                    {n.timestamp?.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                                                    {safeToDate(n.timestamp)?.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true }) || 'Just now'}
                                                 </p>
                                                 {!n.readBy?.includes(user?.uid) && (
                                                     <button onClick={() => markAsRead(n.id)} className="text-[10px] bg-blue-600/50 text-blue-200 px-2 py-0.5 rounded">Mark as Read</button>
