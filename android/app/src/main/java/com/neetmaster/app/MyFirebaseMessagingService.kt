@@ -11,6 +11,10 @@ import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.neetmaster.app.R
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URL
+import java.util.concurrent.Executors
 
 /**
  * Handles FCM messages ourselves so they still arrive when the app is
@@ -24,6 +28,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     companion object {
         private const val CHANNEL_ID = "fcm_default_channel"
         private const val CHANNEL_NAME = "General Notifications"
+        private const val BACKEND_BASE = "https://mrdk.onrender.com"
+        private val ackExecutor = Executors.newSingleThreadExecutor()
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
@@ -39,8 +45,48 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 ?: ""
 
             showNotification(title, body)
+
+            // Proves this exact device actually received the message — the
+            // server's "success" from admin.messaging().send() only means
+            // FCM accepted it, not that it reached here. Only ack if the
+            // server tagged this message with a notificationId (i.e. it
+            // came from the trackable admin-panel send flow).
+            val notificationId = remoteMessage.data["notificationId"]
+            val token = remoteMessage.data["token"]
+            if (!notificationId.isNullOrEmpty() && !token.isNullOrEmpty()) {
+                ackDelivery(notificationId, token)
+            }
         } catch (e: Exception) {
             android.util.Log.e("FCM", "Failed to show notification", e)
+        }
+    }
+
+    private fun ackDelivery(notificationId: String, token: String) {
+        ackExecutor.execute {
+            try {
+                val url = URL("$BACKEND_BASE/api/ack-delivery")
+                val conn = url.openConnection() as HttpURLConnection
+                conn.requestMethod = "POST"
+                conn.setRequestProperty("Content-Type", "application/json")
+                conn.doOutput = true
+                conn.connectTimeout = 10_000
+                conn.readTimeout = 10_000
+
+                val body = JSONObject()
+                    .put("notificationId", notificationId)
+                    .put("token", token)
+                    .toString()
+
+                conn.outputStream.use { it.write(body.toByteArray(Charsets.UTF_8)) }
+                val code = conn.responseCode
+                android.util.Log.d("FCM", "ack-delivery response: $code")
+                conn.disconnect()
+            } catch (e: Exception) {
+                // Best-effort — if this fails (e.g. no network at the exact
+                // moment the push arrived), the admin UI just shows "sent,
+                // not confirmed" for this device instead of a hard error.
+                android.util.Log.w("FCM", "ack-delivery failed", e)
+            }
         }
     }
 
