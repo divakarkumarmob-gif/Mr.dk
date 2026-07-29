@@ -1069,6 +1069,18 @@ function AppInner() {
                   }
                 ]
               });
+
+              // Confirm actual receipt — mirrors the ack sent from
+              // MyFirebaseMessagingService for background/killed delivery.
+              const notificationId = notification.data?.notificationId;
+              const ackToken = notification.data?.token;
+              if (notificationId && ackToken) {
+                fetch(getApiUrl('/api/ack-delivery'), {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ notificationId, token: ackToken }),
+                }).catch(err => console.warn('ack-delivery failed', err));
+              }
             });
             
             // Add listener for action performed
