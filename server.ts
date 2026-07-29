@@ -1123,7 +1123,7 @@ async function startServer() {
   });                
   
   app.post("/api/send-notification", async (req, res) => {
-    const { title, message } = req.body;
+    const { title, message, notificationId } = req.body;
     if (!title || !message) {
       return res.status(400).json({ error: "Title and message required" });
     }
@@ -1134,12 +1134,16 @@ async function startServer() {
       const usersSnapshot = await db.collection('users').get();
       const tokens: string[] = [];
       const tokenRefs: FirebaseFirestore.DocumentReference[] = [];
+      const tokenOwner: { uid: string; username: string }[] = [];
 
       for (const userDoc of usersSnapshot.docs) {
         const tokensSnapshot = await userDoc.ref.collection('fcmTokens').get();
+        const userData = userDoc.data();
+        const username = userData.username || userData.displayName || userData.email || userDoc.id;
         tokensSnapshot.docs.forEach(tokenDoc => {
           tokens.push(tokenDoc.id);
           tokenRefs.push(tokenDoc.ref);
+          tokenOwner.push({ uid: userDoc.id, username });
         });
       }
 
@@ -1154,9 +1158,14 @@ async function startServer() {
         // Data-only payload: Android OS won't auto-handle this, so our own
         // FirebaseMessagingService.onMessageReceived() runs even when the
         // app is backgrounded or killed, and we show the notification ourselves.
+        // notificationId + token are echoed back so the receiving device can
+        // POST /api/ack-delivery and prove it actually got the message —
+        // a "success" from admin.messaging().send() below only means FCM
+        // accepted the message, not that it reached the device.
         data: {
           title,
           body: message,
+          ...(notificationId ? { notificationId, token } : {}),
         },
         android: {
           priority: 'high' as const,
@@ -1175,6 +1184,28 @@ async function startServer() {
         console.error('[FCM] Sample failure reason:', firstFailure.reason?.message || firstFailure.reason);
       }
       console.log(`[FCM] Result: ${successCount} success, ${failureCount} failed`);
+
+      // Persist per-user delivery records so the admin UI can show exactly
+      // who it went to, and later whether it was actually confirmed
+      // delivered (via /api/ack-delivery) or only accepted by FCM.
+      if (notificationId) {
+        const deliveriesCol = db.collection('notifications').doc(notificationId).collection('deliveries');
+        const writes = responses.map((r, i) => {
+          const owner = tokenOwner[i];
+          const errorCode = r.status === 'rejected' ? (r.reason?.errorInfo?.code || r.reason?.code || 'unknown') : null;
+          return deliveriesCol.doc(tokens[i]).set({
+            uid: owner.uid,
+            username: owner.username,
+            token: tokens[i],
+            sendStatus: r.status === 'fulfilled' ? 'sent' : 'failed',
+            sendError: errorCode,
+            delivered: false,
+            deliveredAt: null,
+            sentAt: admin.firestore.FieldValue.serverTimestamp(),
+          }).catch(() => {});
+        });
+        await Promise.allSettled(writes);
+      }
 
       // Clean up dead tokens (NotRegistered / InvalidArgument) so failure
       // count doesn't keep growing and future sends aren't wasted on them.
@@ -1196,6 +1227,30 @@ async function startServer() {
     } catch (error) {
       console.error("FCM Send Error:", error);
       res.status(500).json({ error: "Failed to send notification" });
+    }
+  });
+
+  // Called by the receiving device the moment it actually gets a push
+  // message — from MyFirebaseMessagingService.onMessageReceived() on
+  // native Android, from firebase-messaging-sw.js in the background on
+  // web, and from the foreground push listener in App.tsx. This is the
+  // only source of truth for "did it really arrive"; the send endpoint
+  // above can only say "FCM accepted it".
+  app.post("/api/ack-delivery", async (req, res) => {
+    const { notificationId, token } = req.body;
+    if (!notificationId || !token) {
+      return res.status(400).json({ error: "notificationId and token required" });
+    }
+    try {
+      const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+      await db.collection('notifications').doc(notificationId).collection('deliveries').doc(token).set({
+        delivered: true,
+        deliveredAt: admin.firestore.FieldValue.serverTimestamp(),
+      }, { merge: true });
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Ack delivery error:", error);
+      res.status(500).json({ error: "Failed to record delivery" });
     }
   });
   
