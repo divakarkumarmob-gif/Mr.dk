@@ -86,6 +86,13 @@ interface FirestoreErrorInfo {
   }
 }
 
+// IMPORTANT: never throw from here. Callers use this from onSnapshot
+// listener error callbacks (chatService, StudyDashboard, Flashcards,
+// NeuralSolver, etc.) as well as from catch blocks. Throwing inside a
+// listener's error callback is an uncaught exception with no one left to
+// catch it, which crashes the entire app for every user whose listener
+// happens to hit that error at the same time — e.g. right after a fresh
+// install, or the instant an admin broadcast trips a Firestore rule.
 export function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
   const errInfo: FirestoreErrorInfo = {
     error: error instanceof Error ? error.message : String(error),
@@ -105,5 +112,4 @@ export function handleFirestoreError(error: unknown, operationType: OperationTyp
     path
   }
   console.error('Firestore Error Detailed:', JSON.stringify(errInfo));
-  throw new Error(JSON.stringify(errInfo));
 }
