@@ -199,7 +199,7 @@ export default function NotificationUploader() {
     }
     setSendingNotification(true);
     try {
-      await addDoc(collection(db, 'notifications'), {
+      const notifRef = await addDoc(collection(db, 'notifications'), {
         title: batch.title || null,
         message: batch.comment || '',
         files: batch.succeeded,
@@ -210,7 +210,7 @@ export default function NotificationUploader() {
       const notifRes = await fetch(getApiUrl('/api/send-notification'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: batch.title || 'New Notification', message: batch.comment || 'New file uploaded' }),
+        body: JSON.stringify({ title: batch.title || 'New Notification', message: batch.comment || 'New file uploaded', notificationId: notifRef.id }),
       });
       if (!notifRes.ok) {
         const d = await notifRes.json().catch(() => ({}));

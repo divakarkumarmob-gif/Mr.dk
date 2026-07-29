@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import S3Uploader from './S3Uploader';
 import NotificationUploader from './NotificationUploader';
+import NotificationDeliveryDetail from './NotificationDeliveryDetail';
 import { motion, AnimatePresence } from 'motion/react';
 import { getApiUrl } from '../utils/api';
 import { showToast } from '../utils/toast';
@@ -114,6 +115,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const [userStats, setUserStats] = useState({ total: 0, online: 0 });
     const [deviceInfo, setDeviceInfo] = useState<any>(null);
     const [sending, setSending] = useState(false);
+    const [viewingDeliveryFor, setViewingDeliveryFor] = useState<string | null>(null);
 
     // Schedule state
     const [testName, setTestName] = useState('');
@@ -184,7 +186,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
         if (!message.trim() || sending) return;
         setSending(true);
         try {
-            await addDoc(collection(db, 'notifications'), {
+            const notifRef = await addDoc(collection(db, 'notifications'), {
                 message,
                 timestamp: serverTimestamp(),
                 readBy: []
@@ -193,7 +195,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             const notifRes = await fetch(getApiUrl('/api/send-notification'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ title: 'New Notification', message })
+                body: JSON.stringify({ title: 'New Notification', message, notificationId: notifRef.id })
             });
             const notifData = await notifRes.json();
             if (!notifRes.ok) {
@@ -302,6 +304,15 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const filteredChapterGroups = chapterSearch
         ? allChaptersFlat.filter(c => c.name.toLowerCase().includes(chapterSearch.toLowerCase()))
         : null;
+
+    if (viewingDeliveryFor) {
+        return (
+            <NotificationDeliveryDetail
+                notificationId={viewingDeliveryFor}
+                onBack={() => setViewingDeliveryFor(null)}
+            />
+        );
+    }
 
     return (
         <div className="bg-[#0f172a] min-h-dvh text-white overflow-hidden -mx-1.5 sm:-mx-3">
@@ -423,12 +434,15 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                                                 </div>
                                             ) : (
                                                 <div className="flex justify-between items-start gap-3">
-                                                    <div className="min-w-0">
+                                                    <button
+                                                        onClick={() => setViewingDeliveryFor(n.id)}
+                                                        className="min-w-0 text-left flex-1"
+                                                    >
                                                         <p className="text-sm break-words">{n.message}</p>
                                                         <p className="text-gray-500 text-xs mt-1">
-                                                            {n.timestamp?.toDate().toLocaleString()} · {n.readBy?.length || 0} seen
+                                                            {n.timestamp?.toDate().toLocaleString()} · {n.readBy?.length || 0} seen · tap for delivery status
                                                         </p>
-                                                    </div>
+                                                    </button>
                                                     <div className="flex gap-1 flex-shrink-0">
                                                         <button onClick={() => startEdit(n)} className="p-1.5 hover:bg-white/10 rounded-lg"><Edit2 className="h-3.5 w-3.5" /></button>
                                                         <button onClick={() => deleteNotification(n.id)} className="p-1.5 hover:bg-red-500/20 rounded-lg text-red-400"><Trash2 className="h-3.5 w-3.5" /></button>
