@@ -27,6 +27,8 @@ interface FirestoreErrorInfo {
   }
 }
 
+// Never throw here — see other handleFirestoreError copies in this repo;
+// throwing from a listener/handler error path crashes the whole app.
 function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
   const errInfo: FirestoreErrorInfo = {
     error: error instanceof Error ? error.message : String(error),
@@ -38,7 +40,6 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
     path
   }
   console.error('Firestore Error: ', JSON.stringify(errInfo));
-  throw new Error(JSON.stringify(errInfo));
 }
 
 export default function QuestionImporter() {

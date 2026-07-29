@@ -65,6 +65,10 @@ interface FirestoreErrorInfo {
         }[];
     }
 }
+// Never throw here — this is called from onSnapshot listener error
+// callbacks as well as from send/update/delete handlers. Throwing inside
+// a listener callback is an uncaught exception that crashes the app for
+// every admin/user whose listener is active at that moment. Log only.
 function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
     const errInfo: FirestoreErrorInfo = {
         error: error instanceof Error ? error.message : String(error),
@@ -83,7 +87,6 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
         path
     }
     console.error('Firestore Error: ', JSON.stringify(errInfo));
-    throw new Error(JSON.stringify(errInfo));
 }
 
 interface Notification {
