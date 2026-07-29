@@ -440,7 +440,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                                                     >
                                                         <p className="text-sm break-words">{n.message}</p>
                                                         <p className="text-gray-500 text-xs mt-1">
-                                                            {n.timestamp?.toDate().toLocaleString()} · {n.readBy?.length || 0} seen · tap for delivery status
+                                                            {n.timestamp?.toDate ? n.timestamp.toDate().toLocaleString() : 'Just now'} · {n.readBy?.length || 0} seen · tap for delivery status
                                                         </p>
                                                     </button>
                                                     <div className="flex gap-1 flex-shrink-0">

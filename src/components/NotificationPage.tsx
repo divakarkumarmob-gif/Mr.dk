@@ -171,7 +171,7 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
                         {Array.isArray(notif.files) && notif.files.map((file: NotificationFile) => (
                             <NotificationAttachment key={file.key} file={file} onOpen={setViewingFile} />
                         ))}
-                        <p className="text-xs text-gray-500 mt-2">{notif.timestamp?.toDate().toLocaleString()}</p>
+                        <p className="text-xs text-gray-500 mt-2">{notif.timestamp?.toDate ? notif.timestamp.toDate().toLocaleString() : ''}</p>
                     </div>
                 ))}
                 
