@@ -1202,9 +1202,12 @@ async function startServer() {
             delivered: false,
             deliveredAt: null,
             sentAt: admin.firestore.FieldValue.serverTimestamp(),
-          }).catch(() => {});
+          }).catch((e) => console.error(`[FCM] Failed to write delivery record for token ${tokens[i]}:`, e));
         });
         await Promise.allSettled(writes);
+        console.log(`[FCM] Wrote ${writes.length} delivery records under notifications/${notificationId}/deliveries`);
+      } else {
+        console.warn('[FCM] No notificationId in request body — skipping delivery tracking. This means the frontend calling this endpoint is running an OLD build without the notificationId change.');
       }
 
       // Clean up dead tokens (NotRegistered / InvalidArgument) so failure
