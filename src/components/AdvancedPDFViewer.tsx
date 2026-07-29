@@ -254,12 +254,24 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         // This replaces the old fixed `initialScale` guess, so text is never
         // cut off on narrow screens nor left with huge empty margins on wide
         // ones.
+        //
+        // IMPORTANT: this scale change must go through commitZoom (not a bare
+        // setCommittedScale) even though there's no pinch gesture involved.
+        // Calling setCommittedScale directly here was the root cause of all
+        // three visible bugs — jump, size "snap", and flicker — because it
+        // resized the <Page> canvas with no pendingAnchor captured, so
+        // collapseLiveScale had nothing to correct and the canvas's own
+        // native resize was left to move the page wherever the browser's
+        // default layout put it. Routing it through commitZoom anchors the
+        // change to the stage center exactly like the zoom buttons do, so
+        // collapseLiveScale re-solves the translation after this second
+        // render too and the page never visibly moves.
         pdf.getPage(1).then((page: any) => {
             const viewport = page.getViewport({ scale: 1 });
             const stageWidth = stageRef.current?.clientWidth ?? 400;
             // Leave a very small margin (8px total) instead of the old large padding.
             const fitScale = Math.min(Math.max((stageWidth - 8) / viewport.width, MIN_SCALE), MAX_SCALE);
-            setCommittedScale(fitScale);
+            commitZoom(fitScale);
         }).catch(() => {
             // If measurement fails for any reason, silently keep the existing
             // initialScale fallback — never block rendering on this.
@@ -707,7 +719,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 the viewport position never moves and nothing jumps. */}
                             <div
                                 ref={wrapRef}
-                                style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0' }}
+                                style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0', background: '#fff', borderRadius: 6 }}
                             >
                                 <Page
                                     pageNumber={currentPage}
