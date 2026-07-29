@@ -21,6 +21,9 @@ import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 
+const MIN_SCALE = 0.25;
+const MAX_SCALE = 3.0;
+
 function getTouchCenter(touches: TouchList) {
     return {
         x: (touches[0].clientX + touches[1].clientX) / 2,
@@ -39,9 +42,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
 
-    // committedScale = the scale react-pdf actually renders the canvas at.
-    // Only changes after a gesture ends or a button is pressed.
+    // committedScale = the scale react-pdf actually renders the <Page> canvas
+    // at. This only ever changes AFTER a gesture ends (or a zoom button is
+    // pressed) — never during a live pinch. During the pinch itself, zoom is
+    // purely a CSS transform on top of whatever canvas is already rendered.
     const [committedScale, setCommittedScale] = useState(initialScale);
+    const committedScaleRef = useRef(committedScale);
+    useEffect(() => {
+        committedScaleRef.current = committedScale;
+    }, [committedScale]);
 
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -75,28 +84,27 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         };
     }, []);
 
-    // Two-layer canvas system, like production PDF viewers:
-    // - "front" layer shows whatever is currently confirmed-rendered and visible.
-    // - "back" layer silently renders the next scale in the background.
-    // When back finishes rendering, we crossfade back->front and swap roles.
-    // This means the user NEVER sees a blank canvas, regardless of timing.
-    const [frontScale, setFrontScale] = useState(initialScale);
-    const frontScaleRef = useRef(initialScale);
-    const [backScale, setBackScale] = useState<number | null>(null);
-    const [backReady, setBackReady] = useState(false);
-    // Bumped on every new zoom request. Any in-flight back-layer render whose
-    // generation no longer matches the latest one is stale and must NOT be
-    // promoted to front — this is what prevents flashing during rapid,
-    // successive pinch adjustments where multiple back renders overlap.
-    const zoomGenerationRef = useRef(0);
-
     const pdfDocRef = useRef<any>(null);
     const wrapRef = useRef<HTMLDivElement>(null); // pan/zoom transform target (visual only)
     const stageRef = useRef<HTMLDivElement>(null);
 
-    // Live visual transform (CSS only, never triggers React re-render)
+    // Live visual transform (CSS only, never triggers a React re-render).
+    // While a pinch/pan gesture is active, this is the ONLY thing that
+    // changes — we just paint translate3d()+scale() on top of the single,
+    // already-rendered <Page> canvas. No react-pdf re-render happens until
+    // the gesture ends.
     const liveTransform = useRef({ scale: 1, x: 0, y: 0 });
-    const committedScaleRef = useRef(committedScale);
+
+    // Content-space anchor snapshot, captured the instant a scale commit is
+    // requested (gesture end / zoom button) and consumed once by
+    // collapseLiveScale after the fresh canvas paints. This is the single
+    // source of truth for "what content point must render at what screen
+    // point" across the commit — see captureViewportAnchor / collapseLiveScale.
+    // Using content-space coordinates (rather than carrying forward a CSS
+    // translation delta) means the math is exact regardless of how
+    // committedScale, liveScale, or clamping interact — it never depends on
+    // old-scale/new-scale cancelling out algebraically.
+    const pendingAnchor = useRef<{ contentX: number; contentY: number; screenX: number; screenY: number } | null>(null);
 
     // Gesture bookkeeping — supports pinch+pan simultaneously with 2 fingers,
     // and pan with 1 finger.
@@ -107,8 +115,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         startScale: number;
         startX: number;
         startY: number;
-        startCenterX: number;
-        startCenterY: number;
         // The pinch-center's position in *unscaled content space*, captured
         // once when the gesture begins. This is the point that must stay
         // pinned under the fingers for the whole gesture — it must NOT be
@@ -116,8 +122,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         // anchor drifts every frame and the page visibly slides around.
         startOrigX: number;
         startOrigY: number;
-        lastCenterX: number;
-        lastCenterY: number;
+        // Last known pinch center (screen coords), updated every touchmove.
+        // Used to anchor the commit-time content-space capture to exactly
+        // where the fingers are, rather than an arbitrary point.
+        lastCenterXRef: number;
+        lastCenterYRef: number;
         lastSingleX: number;
         lastSingleY: number;
         // Tap detection: recorded at touch-start, compared at touch-end.
@@ -132,12 +141,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         startScale: 1,
         startX: 0,
         startY: 0,
-        startCenterX: 0,
-        startCenterY: 0,
         startOrigX: 0,
         startOrigY: 0,
-        lastCenterX: 0,
-        lastCenterY: 0,
+        lastCenterXRef: 0,
+        lastCenterYRef: 0,
         lastSingleX: 0,
         lastSingleY: 0,
         tapStartX: 0,
@@ -146,32 +153,37 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         moved: false,
     });
 
-    const zoomDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-    const promoteTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    // rAF batching so touchmove never applies more than one style write per
+    // animation frame, avoiding layout thrashing on rapid multi-touch events.
+    const rafRef = useRef<number | null>(null);
+    const pendingTransform = useRef<{ scale: number; x: number; y: number } | null>(null);
 
-    useEffect(() => {
-        committedScaleRef.current = committedScale;
-    }, [committedScale]);
-
-    useEffect(() => {
-        frontScaleRef.current = frontScale;
-    }, [frontScale]);
-
-    const applyTransform = useCallback(() => {
+    const applyTransformNow = useCallback(() => {
         if (wrapRef.current) {
             const { scale, x, y } = liveTransform.current;
             wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
         }
     }, []);
 
-    const resetLiveTransform = useCallback((onlyScale = false) => {
-        if (onlyScale) {
-            liveTransform.current = { ...liveTransform.current, scale: 1 };
-        } else {
-            liveTransform.current = { scale: 1, x: 0, y: 0 };
-        }
-        applyTransform();
-    }, [applyTransform]);
+    // Queues a transform write for the next animation frame instead of
+    // writing to style directly on every touchmove callback.
+    const applyTransform = useCallback(() => {
+        pendingTransform.current = liveTransform.current;
+        if (rafRef.current !== null) return;
+        rafRef.current = requestAnimationFrame(() => {
+            rafRef.current = null;
+            if (pendingTransform.current && wrapRef.current) {
+                const { scale, x, y } = pendingTransform.current;
+                wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
+            }
+        });
+    }, []);
+
+    const resetLiveTransform = useCallback(() => {
+        liveTransform.current = { scale: 1, x: 0, y: 0 };
+        pendingAnchor.current = null;
+        applyTransformNow();
+    }, [applyTransformNow]);
 
     useEffect(() => {
         setIsLoading(true);
@@ -179,9 +191,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setNumPages(null);
         setCurrentPage(1);
         setCommittedScale(initialScale);
-        setFrontScale(initialScale);
-        setBackScale(null);
-        setBackReady(false);
         resetLiveTransform();
 
         const loadContent = async () => {
@@ -211,8 +220,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
         return () => {
             allowSleep();
-            if (zoomDebounceRef.current) clearTimeout(zoomDebounceRef.current);
-            if (promoteTimeoutRef.current) clearTimeout(promoteTimeoutRef.current);
+            if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pdfUrl]);
@@ -250,11 +258,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const viewport = page.getViewport({ scale: 1 });
             const stageWidth = stageRef.current?.clientWidth ?? 400;
             // Leave a very small margin (8px total) instead of the old large padding.
-            const fitScale = Math.min(Math.max((stageWidth - 8) / viewport.width, 0.25), 3);
+            const fitScale = Math.min(Math.max((stageWidth - 8) / viewport.width, MIN_SCALE), MAX_SCALE);
             setCommittedScale(fitScale);
-            setFrontScale(fitScale);
-            frontScaleRef.current = fitScale;
-            committedScaleRef.current = fitScale;
         }).catch(() => {
             // If measurement fails for any reason, silently keep the existing
             // initialScale fallback — never block rendering on this.
@@ -269,7 +274,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     const handleDownload = async () => {
         const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-        
+
         if (Capacitor.isNativePlatform()) {
             const cached = await cachePdf(pdfUrl, filename);
             if (cached) {
@@ -311,41 +316,54 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setIsSearching(false);
     };
 
-    // Kicks off a background render at the new scale via the "back" layer.
-    // The "front" layer (currently visible canvas) stays exactly as-is —
-    // still scaled via the live CSS transform — until the back layer reports
-    // it has actually painted, at which point we crossfade and promote it.
-    const requestZoom = useCallback((finalScale: number) => {
-        const clamped = Math.min(Math.max(finalScale, 0.25), 3);
-        // If this new target is actually the same as what's already showing
-        // up front, there's nothing to do — avoids pointless back-layer churn.
-        if (Math.abs(clamped - frontScaleRef.current) < 0.001) {
-            setBackScale(null);
-            setBackReady(false);
-            return;
-        }
-        zoomGenerationRef.current += 1;
-        setCommittedScale(clamped);
-        setBackScale(clamped);
-        setBackReady(false);
+    // Captures "what content point is at what screen point" right now, in
+    // PDF CONTENT coordinates (i.e. independent of committedScale), and
+    // stores it directly in pendingAnchor for collapseLiveScale to consume
+    // once the fresh canvas has painted. The wrapper's on-screen mapping at
+    // any instant is:
+    //   screenPos = liveX + liveScale * (committedScaleOld * contentPos)
+    // so solving for contentPos given a target screen point gives:
+    //   contentPos = (screenPos - liveX) / (liveScale * committedScaleOld)
+    // This is the inverse of the transform actually painted on screen, so it
+    // is exact regardless of what liveScale/committedScaleOld currently are.
+    const captureViewportAnchor = useCallback((screenX: number, screenY: number) => {
+        const { scale: liveScale, x: liveX, y: liveY } = liveTransform.current;
+        const totalScale = liveScale * committedScaleRef.current;
+        pendingAnchor.current = {
+            contentX: (screenX - liveX) / totalScale,
+            contentY: (screenY - liveY) / totalScale,
+            screenX,
+            screenY,
+        };
     }, []);
 
-    // Debounced commit used during continuous pinch — avoids spamming re-renders
-    // on every touchmove frame; only fires ~150ms after gesture activity pauses
-    // or immediately on gesture end.
-    const scheduleZoomCommit = useCallback((finalScale: number, immediate = false) => {
-        if (zoomDebounceRef.current) {
-            clearTimeout(zoomDebounceRef.current);
-            zoomDebounceRef.current = null;
-        }
-        if (immediate) {
-            requestZoom(finalScale);
-        } else {
-            zoomDebounceRef.current = setTimeout(() => {
-                requestZoom(finalScale);
-            }, 120);
-        }
-    }, [requestZoom]);
+    // Commits a new render scale to react-pdf. This is the ONLY place that
+    // triggers an actual canvas re-render (a React state update). It is
+    // called after a gesture ends, or from the zoom buttons — never during
+    // a live touchmove.
+    //
+    // Before changing committedScale, we snapshot the current viewport
+    // anchor in CONTENT space (see captureViewportAnchor) into
+    // pendingAnchor. Once the fresh canvas paints at the new committedScale,
+    // collapseLiveScale re-solves the forward equation for the translation
+    // that puts that same content point back at that same screen point —
+    // this is viewport-space math, not CSS-space math: it does not depend
+    // on committedScaleNew being algebraically related to committedScaleOld
+    // and liveScale (e.g. it stays correct even if commitZoom's clamping
+    // changes the scale independently, or the scale change came from the
+    // zoom buttons rather than a pinch).
+    const commitZoom = useCallback((finalScale: number, anchorScreenX?: number, anchorScreenY?: number) => {
+        const clamped = Math.min(Math.max(finalScale, MIN_SCALE), MAX_SCALE);
+
+        // Default anchor: the center of the visible stage — used for the
+        // +/- zoom buttons, which have no finger position to anchor to.
+        const stage = stageRef.current;
+        const fallbackX = anchorScreenX ?? (stage ? stage.clientWidth / 2 : 0);
+        const fallbackY = anchorScreenY ?? (stage ? stage.clientHeight / 2 : 0);
+        captureViewportAnchor(fallbackX, fallbackY);
+
+        setCommittedScale(clamped);
+    }, [captureViewportAnchor]);
 
     // ---- Native touch handlers ----
     // 2 fingers: pinch (zoom) AND pan (move) simultaneously, tracked from the
@@ -368,15 +386,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.startScale = liveTransform.current.scale;
             state.startX = liveTransform.current.x;
             state.startY = liveTransform.current.y;
-            state.startCenterX = center.x;
-            state.startCenterY = center.y;
             // Fixed anchor in unscaled content space — computed once, here,
             // from the start center. Used for the whole gesture so the
             // zoom stays pinned under the fingers instead of drifting.
             state.startOrigX = (center.x - state.startX) / state.startScale;
             state.startOrigY = (center.y - state.startY) / state.startScale;
-            state.lastCenterX = center.x;
-            state.lastCenterY = center.y;
+            state.lastCenterXRef = center.x;
+            state.lastCenterYRef = center.y;
             state.moved = true; // two-finger gestures are never a "tap"
         } else if (touches.length === 1) {
             state.active = true;
@@ -401,8 +417,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const center = getTouchCenter(touches as any);
 
             const rawScale = state.startScale * (currentDistance / state.startDistance);
-            const minLive = 0.25 / committedScaleRef.current;
-            const maxLive = 3 / committedScaleRef.current;
+            const minLive = MIN_SCALE / committedScaleRef.current;
+            const maxLive = MAX_SCALE / committedScaleRef.current;
             const clampedLiveScale = Math.min(Math.max(rawScale, minLive), maxLive);
 
             // Use the anchor captured once at gesture start (state.startOrigX/Y),
@@ -421,7 +437,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             };
             applyTransform();
 
-            // DO NOT schedule zoom commit during move to avoid flashing.
+            // Keep the last known pinch center around so touch-end can
+            // anchor the commit to exactly where the fingers currently are,
+            // in content-space terms, rather than the stage center.
+            state.lastCenterXRef = center.x;
+            state.lastCenterYRef = center.y;
+
+            // No React state update here — this is a pure CSS transform,
+            // no react-pdf re-render happens until the gesture ends.
         } else if (touches.length === 1 && state.touchCount === 1) {
             e.preventDefault();
             const dx = touches[0].clientX - state.lastSingleX;
@@ -444,7 +467,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             };
             applyTransform();
         }
-    }, [applyTransform, scheduleZoomCommit]);
+    }, [applyTransform]);
 
     const handleTouchEnd = useCallback((e: React.TouchEvent) => {
         const state = gestureState.current;
@@ -464,9 +487,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
 
         if (state.touchCount === 2 && remaining < 2) {
-            const finalLiveScale = liveTransform.current.scale;
-            const newCommittedScale = committedScaleRef.current * finalLiveScale;
-            scheduleZoomCommit(newCommittedScale, true);
+            // Gesture end: fold the live CSS scale into the committed scale
+            // and let react-pdf render exactly ONE new canvas at that scale.
+            // The anchor for this commit is the pinch center itself — so the
+            // exact content point under the fingers is what gets pinned back
+            // to the exact same screen point once the new canvas paints.
+            const finalScale = committedScaleRef.current * liveTransform.current.scale;
+            commitZoom(finalScale, state.lastCenterXRef, state.lastCenterYRef);
 
             if (remaining === 1) {
                 state.touchCount = 1;
@@ -480,23 +507,62 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.active = false;
             state.touchCount = 0;
         }
-    }, [scheduleZoomCommit]);
+    }, [commitZoom]);
 
-    // Discrete zoom via +/- buttons — same background-render + crossfade strategy.
+    // Discrete zoom via +/- buttons.
     const zoomButton = useCallback((direction: 1 | -1) => {
         const step = 0.2 * direction;
         const current = committedScaleRef.current;
-        const target = Math.min(Math.max(current + step, 0.25), 3);
-        requestZoom(target);
-    }, [requestZoom]);
+        const target = Math.min(Math.max(current + step, MIN_SCALE), MAX_SCALE);
+        commitZoom(target);
+    }, [commitZoom]);
 
+    // Page navigation preserves whatever zoom/pan the user currently has —
+    // same as Google Drive / Xodo, flipping pages never snaps you back to
+    // fit-width. The live transform is untouched; committedScale stays as-is.
     const goToPage = useCallback((updater: (p: number) => number) => {
-        liveTransform.current = { scale: 1, x: 0, y: 0 };
-        applyTransform();
-        setBackScale(null);
-        setBackReady(false);
         setCurrentPage(updater);
-    }, [applyTransform]);
+    }, []);
+
+    // Fires once the single <Page> canvas finishes painting at the new
+    // committedScale — whether that came from a pinch-end, a zoom button, or
+    // simply a page change (react-pdf re-renders the <Page> on every
+    // pageNumber change too, even when committedScale didn't move).
+    //
+    // This is where we solve the VIEWPORT-SPACE equation, not a CSS-space
+    // shortcut. pendingAnchor holds a content-space point (contentX/contentY,
+    // independent of any scale) and the exact screen point it must continue
+    // to render at (screenX/screenY). The new canvas is native at
+    // committedScaleRef.current, so under transform translate(x,y) scale(1):
+    //   screenX = x + committedScaleNew * contentX
+    //   screenY = y + committedScaleNew * contentY
+    // Solving for the translation:
+    //   x = screenX - committedScaleNew * contentX
+    //   y = screenY - committedScaleNew * contentY
+    // This holds regardless of how committedScaleNew relates to whatever
+    // scale was committed before, or to whatever liveScale was mid-gesture —
+    // there is no reliance on the two cancelling out algebraically. It is
+    // exact for pinch-end, zoom-button, and (if ever needed) any other
+    // scale-changing path, because it is re-derived from the anchor itself
+    // every time rather than carried forward as a CSS delta.
+    //
+    // If there's no pending anchor (e.g. a plain page change with no scale
+    // commit involved), the live transform is already correct as-is and is
+    // left untouched — no jump, because nothing about the transform needs
+    // to change.
+    const collapseLiveScale = useCallback(() => {
+        const anchor = pendingAnchor.current;
+        if (!anchor) return;
+        pendingAnchor.current = null;
+
+        const committedScaleNew = committedScaleRef.current;
+        liveTransform.current = {
+            scale: 1,
+            x: anchor.screenX - committedScaleNew * anchor.contentX,
+            y: anchor.screenY - committedScaleNew * anchor.contentY,
+        };
+        applyTransformNow();
+    }, [applyTransformNow]);
 
     return (
         <motion.div
@@ -631,142 +697,27 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
                             className="flex flex-col items-center"
                         >
+                            {/* Single transform target. During a pinch/pan gesture only
+                                this element's inline `transform` style changes (via refs
+                                + rAF) — no React state update, no re-render. Once the
+                                gesture ends, committedScale changes and react-pdf
+                                re-renders the ONE <Page> below at the new scale; when
+                                that finishes painting, collapseLiveScale drops just the
+                                `scale` term of the transform (translation untouched), so
+                                the viewport position never moves and nothing jumps. */}
                             <div
                                 ref={wrapRef}
                                 style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0' }}
                             >
-                                {/* FRONT layer: always visible, this is what the user sees while
-                                    a new scale renders in the background. */}
-                                <div style={{ 
-                                    opacity: backReady ? 0 : 1, 
-                                    position: 'relative',
-                                    zIndex: 1
-                                }}>
-                                    <Page
-                                        pageNumber={currentPage}
-                                        scale={frontScale}
-                                        renderTextLayer={false}
-                                        renderAnnotationLayer={false}
-                                        className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
-                                        loading={null}
-                                        onRenderSuccess={() => {
-                                            // Fires whenever the FRONT layer finishes painting —
-                                            // including the resync render we trigger after promoting
-                                            // the back layer (see backLayer's onRenderSuccess below).
-                                            // Only in that specific case (front is hidden AND a back
-                                            // layer is still mounted AND it matches the resynced
-                                            // scale) do we finally drop the back layer — this
-                                            // guarantees the back layer is never removed before the
-                                            // front layer underneath it has something painted to show.
-                                            if (
-                                                backReady &&
-                                                backScale !== null &&
-                                                Math.abs(frontScaleRef.current - backScale) < 0.001
-                                            ) {
-                                                setBackScale(null);
-                                                setBackReady(false);
-                                                // Only NOW is it safe to reset the wrapper's live CSS
-                                                // transform to identity. Resetting it earlier (e.g. as
-                                                // soon as the back layer was promoted) would snap the
-                                                // back layer — which was still the fully-visible layer,
-                                                // still relying on that same transform to show the
-                                                // pinch/zoom position — back to scale(1)/(0,0) BEFORE
-                                                // the front layer had taken over, causing a visible
-                                                // "jump to top-left corner" flash. Now that front has
-                                                // its own freshly-painted canvas at the correct scale
-                                                // and back is gone, resetting to identity is invisible.
-                                                liveTransform.current = { scale: 1, x: 0, y: 0 };
-                                                applyTransform();
-                                            }
-                                        }}
-                                    />
-                                </div>
- 
-                                {/* BACK layer: rendered far off-screen (not just opacity:0) so the
-                                    browser's paint of the fresh <canvas> that react-pdf creates
-                                    happens completely off the visible viewport. */}
-                                {backScale !== null && (
-                                    <div
-                                        style={{
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: 0,
-                                            opacity: backReady ? 1 : 0,
-                                            pointerEvents: 'none',
-                                            zIndex: 2,
-                                            // The parent wrapRef's live pinch transform (translate+scale)
-                                            // is calibrated for the FRONT layer's native render scale
-                                            // (frontScale), not the back layer's. The back layer's canvas
-                                            // is already rendered at its own final target scale
-                                            // (backScale), so applying that same parent transform to it
-                                            // unmodified double-scales/mis-positions it — this was the
-                                            // exact cause of the visible "jump" on crossfade. Countering
-                                            // it here with a ratio scale, anchored at the same (0,0)
-                                            // top-left origin both layers share, makes the back layer's
-                                            // canvas exactly overlay the front layer's current on-screen
-                                            // footprint (just sharper), regardless of whatever live
-                                            // scale/translate the parent currently has — so nothing
-                                            // visibly moves when the crossfade happens.
-                                            transform: `scale(${frontScale / backScale})`,
-                                            transformOrigin: '0 0'
-                                        }}
-                                    >
-                                        <Page
-                                            pageNumber={currentPage}
-                                            scale={backScale}
-                                            renderTextLayer={false}
-                                            renderAnnotationLayer={false}
-                                            className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
-                                            loading={null}
-                                            onRenderSuccess={() => {
-                                                const myGeneration = zoomGenerationRef.current;
-                                                requestAnimationFrame(() => {
-                                                    requestAnimationFrame(() => {
-                                                        requestAnimationFrame(() => {
-                                                            if (zoomGenerationRef.current !== myGeneration) return;
-                                                            // Back layer has now actually painted at the new
-                                                            // scale. Crossfade to it — it becomes the visible
-                                                            // layer. We do NOT touch frontScale/backScale yet:
-                                                            // changing frontScale here would force the (now
-                                                            // hidden) front <Page> to re-render at the new
-                                                            // scale immediately, clearing its canvas, and if we
-                                                            // also flip it back to visible in the same tick
-                                                            // (via backReady/backScale) that blank canvas would
-                                                            // flash on screen. Instead we let the crossfade
-                                                            // settle first, then quietly resync the front layer
-                                                            // while it's still hidden (opacity 0) behind the
-                                                            // (still-visible) back layer.
-                                                            setBackReady(true);
-
-                                                            if (promoteTimeoutRef.current) {
-                                                                clearTimeout(promoteTimeoutRef.current);
-                                                            }
-                                                            promoteTimeoutRef.current = setTimeout(() => {
-                                                                if (zoomGenerationRef.current !== myGeneration) return;
-
-                                                                // At this point the back layer has been the
-                                                                // fully-opaque, fully-painted visible layer for
-                                                                // one full render pass. Now it's safe to resync
-                                                                // the (hidden, opacity 0) front layer to the new
-                                                                // scale — its repaint is invisible since back is
-                                                                // still what's shown. We deliberately do NOT touch
-                                                                // liveTransform/applyTransform here: the back layer
-                                                                // is still relying on the current CSS transform to
-                                                                // display correctly, and resetting it now would
-                                                                // snap it to scale(1)/(0,0) before front has taken
-                                                                // over — causing a visible "jump to top-left
-                                                                // corner" flash. That reset now happens only in
-                                                                // front's own onRenderSuccess, once the handoff is
-                                                                // actually complete (see above).
-                                                                setFrontScale(backScale);
-                                                            }, 220);
-                                                        });
-                                                    });
-                                                });
-                                            }}
-                                        />
-                                    </div>
-                                )}
+                                <Page
+                                    pageNumber={currentPage}
+                                    scale={committedScale}
+                                    renderTextLayer={false}
+                                    renderAnnotationLayer={false}
+                                    className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
+                                    loading={null}
+                                    onRenderSuccess={collapseLiveScale}
+                                />
                             </div>
                         </Document>
                     )}
