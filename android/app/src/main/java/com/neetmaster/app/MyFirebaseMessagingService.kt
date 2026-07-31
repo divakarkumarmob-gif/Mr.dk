@@ -130,13 +130,19 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
             val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
-            // Safe icon selection: Adaptive icon XMLs (like ic_launcher_foreground)
-            // cause IllegalArgumentException: Invalid notification (no valid small icon) on API 26+.
+            // Safe icon selection from app's own package resources (never use android.R system drawables
+            // or adaptive icon XMLs which throw RemoteServiceException or IllegalArgumentException).
             val smallIconId = try {
-                val id = resources.getIdentifier("ic_notification", "drawable", packageName)
-                if (id != 0) id else android.R.drawable.ic_dialog_info
+                var id = resources.getIdentifier("ic_notification", "drawable", packageName)
+                if (id == 0) {
+                    id = resources.getIdentifier("ic_launcher", "mipmap", packageName)
+                }
+                if (id == 0) {
+                    id = R.mipmap.ic_launcher
+                }
+                id
             } catch (e: Exception) {
-                android.R.drawable.ic_dialog_info
+                R.mipmap.ic_launcher
             }
 
             val builder = NotificationCompat.Builder(this, CHANNEL_ID)
@@ -148,8 +154,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentIntent(pendingIntent)
 
-            val notificationId = System.currentTimeMillis().toInt()
-            notificationManager.notify(notificationId, builder.build())
+            try {
+                val notificationId = System.currentTimeMillis().toInt()
+                notificationManager.notify(notificationId, builder.build())
+            } catch (e: Exception) {
+                android.util.Log.e("FCM", "notificationManager.notify failed", e)
+            }
         } catch (e: Exception) {
             android.util.Log.e("FCM", "Failed to post notification in showNotification", e)
         }

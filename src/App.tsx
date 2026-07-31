@@ -1072,7 +1072,9 @@ function AppInner() {
             
             const regHandle = await PushNotifications.addListener('registration', (token) => {
               console.log("Native FCM Token received:", token.value);
-              setDoc(doc(db, 'users', user.uid, 'fcmTokens', token.value), {
+              const safeTokenId = encodeURIComponent(token.value).replace(/\./g, '%2E');
+              setDoc(doc(db, 'users', user.uid, 'fcmTokens', safeTokenId), {
+                token: token.value,
                 createdAt: serverTimestamp()
               }).then(() => console.log("Native FCM Token saved to Firestore"))
                 .catch(err => console.error("Error saving Native FCM Token to Firestore:", err));
@@ -1120,7 +1122,9 @@ function AppInner() {
             getToken(messaging).then((token) => {
               console.log("FCM Token received:", token);
               if (token) {
-                setDoc(doc(db, 'users', user.uid, 'fcmTokens', token), {
+                const safeTokenId = encodeURIComponent(token).replace(/\./g, '%2E');
+                setDoc(doc(db, 'users', user.uid, 'fcmTokens', safeTokenId), {
+                  token: token,
                   createdAt: serverTimestamp()
                 }).then(() => console.log("FCM Token saved to Firestore"))
                   .catch(err => console.error("Error saving FCM Token to Firestore:", err));

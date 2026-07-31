@@ -1141,7 +1141,8 @@ async function startServer() {
         const userData = userDoc.data();
         const username = userData.username || userData.displayName || userData.email || userDoc.id;
         tokensSnapshot.docs.forEach(tokenDoc => {
-          tokens.push(tokenDoc.id);
+          const rawToken = tokenDoc.data().token || tokenDoc.id;
+          tokens.push(rawToken);
           tokenRefs.push(tokenDoc.ref);
           tokenOwner.push({ uid: userDoc.id, username });
         });
