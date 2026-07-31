@@ -169,11 +169,18 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             const now = Date.now();
             snapshot.docs.forEach(doc => {
                 const data = doc.data();
-                if (data.lastSeen && now - data.lastSeen.toMillis() < 5 * 60 * 1000) {
+                const lastSeenMs = typeof data.lastSeen?.toMillis === 'function'
+                    ? data.lastSeen.toMillis()
+                    : typeof data.lastSeen?.toDate === 'function'
+                        ? data.lastSeen.toDate().getTime()
+                        : (typeof data.lastSeen === 'number' ? data.lastSeen : 0);
+                if (lastSeenMs > 0 && now - lastSeenMs < 5 * 60 * 1000) {
                     online++;
                 }
             });
             setUserStats({ total, online });
+        }, (error) => {
+            handleFirestoreError(error, OperationType.LIST, 'users');
         });
 
         return () => { unsubscribeNotifs(); unsubscribeUsers(); };
@@ -443,7 +450,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                                                     >
                                                         <p className="text-sm break-words">{n.message}</p>
                                                         <p className="text-gray-500 text-xs mt-1">
-                                                            {n.timestamp?.toDate ? n.timestamp.toDate().toLocaleString() : 'Just now'} · {n.readBy?.length || 0} seen · tap for delivery status
+                                                            {typeof n.timestamp?.toDate === 'function' ? n.timestamp.toDate().toLocaleString() : 'Just now'} · {n.readBy?.length || 0} seen · tap for delivery status
                                                         </p>
                                                     </button>
                                                     <div className="flex gap-1 flex-shrink-0">

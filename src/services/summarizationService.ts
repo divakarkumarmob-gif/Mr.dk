@@ -69,7 +69,7 @@ export const getSummaryForUser = async (userId: string, timeRange: string): Prom
     // doc.ref.update(), so doc.exists will correctly be true once a
     // background summary has ever been generated.)
     if (data && data.summary && data.summaryGeneratedAt) {
-        const summaryTimestamp = data.summaryGeneratedAt.toMillis();
+        const summaryTimestamp = typeof data.summaryGeneratedAt?.toMillis === 'function' ? data.summaryGeneratedAt.toMillis() : 0;
         if (summaryTimestamp >= cutoff) {
             return data.summary;
         }
