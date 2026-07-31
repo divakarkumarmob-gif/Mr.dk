@@ -1098,8 +1098,8 @@ function AppInner() {
                 LocalNotifications.schedule({
                   notifications: [
                     {
-                      title: notification.title || 'New Message',
-                      body: notification.body || 'You have a new notification',
+                      title: notification.title || notification.data?.title || 'New Message',
+                      body: notification.body || notification.data?.body || 'You have a new notification',
                       id: Math.floor(Math.random() * 100000),
                       schedule: { at: new Date(Date.now() + 1000) },
                       sound: 'default',
