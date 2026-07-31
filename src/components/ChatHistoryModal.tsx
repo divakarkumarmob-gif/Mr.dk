@@ -12,6 +12,7 @@ import { subscribeToMessages, sendMessage, uploadMedia } from '../services/chatS
 import { chatWithAI, chatWithAIVoice } from '../services/geminiService';
 import { triggerHaptic } from '../utils/haptics';
 import { showToast } from '../utils/toast';
+import { uploadToUserNoteS3 } from '../utils/s3Upload';
 
 interface ChatHistoryModalProps {
     onClose: () => void;
@@ -413,22 +414,34 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
 
             let downloadUrl = '';
             try {
-                // Attempt Firebase Storage Upload with an 8-second timeout
-                const snapshot = await withTimeout(
-                    uploadBytes(storageRef, blob),
-                    8000,
-                    'Upload'
+                // 1. Primary Target: AWS S3 Bucket 'user-note'
+                const s3Res = await withTimeout(
+                    uploadToUserNoteS3(blob, fileName, auth.currentUser.uid, 'screenshots'),
+                    12000,
+                    'AWS S3 Upload'
                 );
-                downloadUrl = await getDownloadURL(snapshot.ref);
-            } catch (storageErr) {
-                console.warn('[ChatHistoryModal] Firebase Storage upload bypassed or timed out, converting screenshot to Base64 fallback:', storageErr);
-                // Convert blob directly to Base64 to guarantee notes saving even without storage bucket / network connection
-                downloadUrl = await new Promise<string>((resolve, reject) => {
-                    const reader = new FileReader();
-                    reader.onload = () => resolve(reader.result as string);
-                    reader.onerror = reject;
-                    reader.readAsDataURL(blob);
-                });
+                downloadUrl = s3Res.url;
+                console.log('[ChatHistoryModal] Successfully uploaded chat screenshot to AWS S3 bucket user-note:', downloadUrl);
+            } catch (s3Err) {
+                console.warn('[ChatHistoryModal] AWS S3 upload to user-note bucket bypassed/failed, trying Firebase Storage:', s3Err);
+                try {
+                    // 2. Secondary Fallback: Firebase Storage
+                    const snapshot = await withTimeout(
+                        uploadBytes(storageRef, blob),
+                        8000,
+                        'Upload'
+                    );
+                    downloadUrl = await getDownloadURL(snapshot.ref);
+                } catch (storageErr) {
+                    console.warn('[ChatHistoryModal] Firebase Storage upload also bypassed, converting to Base64 fallback:', storageErr);
+                    // 3. Tertiary Fallback: Base64
+                    downloadUrl = await new Promise<string>((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => resolve(reader.result as string);
+                        reader.onerror = reject;
+                        reader.readAsDataURL(blob);
+                    });
+                }
             }
 
             const notesRef = collection(db, 'users', auth.currentUser.uid, 'notes');

@@ -15,6 +15,7 @@ import imageCompression from 'browser-image-compression';
 import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
+import { uploadToUserNoteS3 } from '../utils/s3Upload';
 
 interface SelectedFile {
   id: string;
@@ -267,47 +268,58 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
         let downloadUrl = '';
 
         try {
-          // Attempt Firebase Storage Upload with a 2.5-second timeout fallback
-          const uploadTask = uploadBytesResumable(storageRef, fileToUpload);
+          // 1. Primary Target: AWS S3 Bucket 'user-note'
+          const s3Res = await uploadToUserNoteS3(
+            fileToUpload,
+            sf.file.name,
+            auth.currentUser.uid,
+            'notes'
+          );
+          downloadUrl = s3Res.url;
+          console.log('Successfully uploaded note file to AWS S3 bucket user-note:', downloadUrl);
+        } catch (s3Err) {
+          console.warn('AWS S3 upload to user-note bucket bypassed/failed, falling back to Firebase Storage:', s3Err);
+          try {
+            // 2. Secondary Fallback: Firebase Storage
+            const uploadTask = uploadBytesResumable(storageRef, fileToUpload);
+            downloadUrl = await new Promise<string>((resolve, reject) => {
+              const timeoutId = setTimeout(() => {
+                uploadTask.cancel();
+                reject(new Error('Firebase Storage timeout'));
+              }, 2500);
 
-          downloadUrl = await new Promise<string>((resolve, reject) => {
-            const timeoutId = setTimeout(() => {
-              uploadTask.cancel();
-              reject(new Error('Firebase Storage timeout. Falling back to secure local document database...'));
-            }, 2500);
-
-            uploadTask.on(
-              'state_changed',
-              (snapshot) => {
-                const fileProgress = snapshot.totalBytes > 0 
-                  ? (snapshot.bytesTransferred / snapshot.totalBytes) 
-                  : 0;
-                // Calculate global progress across all selected files
-                const baseProgress = (i / selectedFiles.length) * 100;
-                const fileWeight = 100 / selectedFiles.length;
-                const currentProgress = Math.round(baseProgress + (fileProgress * fileWeight));
-                setUploadProgress(currentProgress);
-              },
-              (error) => {
-                clearTimeout(timeoutId);
-                reject(error);
-              },
-              async () => {
-                clearTimeout(timeoutId);
-                try {
-                  const url = await getDownloadURL(uploadTask.snapshot.ref);
-                  resolve(url);
-                } catch (urlErr) {
-                  reject(urlErr);
+              uploadTask.on(
+                'state_changed',
+                (snapshot) => {
+                  const fileProgress = snapshot.totalBytes > 0 
+                    ? (snapshot.bytesTransferred / snapshot.totalBytes) 
+                    : 0;
+                  const baseProgress = (i / selectedFiles.length) * 100;
+                  const fileWeight = 100 / selectedFiles.length;
+                  const currentProgress = Math.round(baseProgress + (fileProgress * fileWeight));
+                  setUploadProgress(currentProgress);
+                },
+                (error) => {
+                  clearTimeout(timeoutId);
+                  reject(error);
+                },
+                async () => {
+                  clearTimeout(timeoutId);
+                  try {
+                    const url = await getDownloadURL(uploadTask.snapshot.ref);
+                    resolve(url);
+                  } catch (urlErr) {
+                    reject(urlErr);
+                  }
                 }
-              }
-            );
-          });
-          console.log('Successfully uploaded file via standard Storage Bucket.');
-        } catch (storageErr) {
-          console.warn('Storage upload bypassed or timed out, falling back to secure local document database (Base64 format):', storageErr);
-          // Convert file directly to Base64 to bypass all storage bucket / CORS / provisioning blocks
-          downloadUrl = await convertToBase64(fileToUpload);
+              );
+            });
+            console.log('Successfully uploaded file via Firebase Storage Bucket.');
+          } catch (storageErr) {
+            console.warn('Firebase Storage upload also bypassed, falling back to Base64 format:', storageErr);
+            // 3. Tertiary Fallback: Base64
+            downloadUrl = await convertToBase64(fileToUpload);
+          }
         }
 
         uploadedFiles.push({

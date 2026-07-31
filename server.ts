@@ -554,6 +554,54 @@ async function startServer() {
     }
   });
 
+  // ---------- User Notes & Chat History Screenshot Uploads (AWS S3 Bucket: user-note) ----------
+  const USER_NOTE_BUCKET = process.env.USER_NOTE_S3_BUCKET || "user-note";
+
+  app.post("/api/user-notes/upload", s3Upload.array("files", 20), async (req, res) => {
+    const files = (req.files as Express.Multer.File[] | undefined) || [];
+    try {
+      if (files.length === 0) {
+        return res.status(400).json({ success: false, error: "No files provided" });
+      }
+      const { userId, category } = req.body;
+      const s3 = getS3Client();
+      const region = process.env.AWS_REGION || "ap-southeast-2";
+
+      const results = await Promise.all(files.map(async (file) => {
+        const safeName = file.originalname.replace(/[^a-zA-Z0-9._-]/g, "_");
+        const userFolder = userId ? `users/${userId}` : 'general';
+        const folder = category || 'notes';
+        const key = `${folder}/${userFolder}/${Date.now()}-${Math.random().toString(36).slice(2, 7)}-${safeName}`;
+        try {
+          await s3.send(new PutObjectCommand({
+            Bucket: USER_NOTE_BUCKET,
+            Key: key,
+            Body: file.buffer,
+            ContentType: file.mimetype,
+          }));
+          const url = `https://${USER_NOTE_BUCKET}.s3.${region}.amazonaws.com/${key}`;
+          return {
+            name: file.originalname,
+            key,
+            url,
+            size: file.size,
+            fileType: file.mimetype.startsWith("image/") ? "image" : "pdf",
+            success: true,
+          };
+        } catch (err: any) {
+          console.error(`User note S3 upload error for ${file.originalname}:`, err);
+          return { name: file.originalname, key: '', url: '', success: false, error: err.message };
+        }
+      }));
+
+      const allSucceeded = results.every(r => r.success);
+      res.status(allSucceeded ? 200 : 207).json({ success: allSucceeded, results });
+    } catch (error: any) {
+      console.error("User Note S3 Upload Error:", error);
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
+
   app.get("/api/s3/health", async (req, res) => {
     try {
         const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
