@@ -245,9 +245,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
         pdf.getPage(1).then((page: any) => {
             const viewport = page.getViewport({ scale: 1 });
-            const stageWidth = stageRef.current?.clientWidth ?? (window.innerWidth - 16);
-            const fitScale = Math.min(Math.max((stageWidth - 8) / viewport.width, MIN_SCALE), MAX_SCALE);
-            commitZoom(fitScale);
+            const stage = stageRef.current;
+            const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight - 100 };
+            const stageWidth = stageRect.width || (window.innerWidth - 16);
+            const stageHeight = stageRect.height || (window.innerHeight - 100);
+            
+            const fitScale = Math.min(Math.max((stageWidth - 16) / viewport.width, MIN_SCALE), MAX_SCALE);
+            
+            const scaledW = viewport.width * fitScale;
+            const scaledH = viewport.height * fitScale;
+            const initialX = Math.max(0, (stageWidth - scaledW) / 2);
+            const initialY = Math.max(0, (stageHeight - scaledH) / 2);
+
+            committedScaleRef.current = fitScale;
+            setCommittedScale(fitScale);
+            liveTransform.current = { scale: 1, x: initialX, y: initialY };
+            applyTransformNow();
         }).catch(() => {});
     }
 
@@ -301,14 +314,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setIsSearching(false);
     };
 
-    const captureViewportAnchor = useCallback((screenX: number, screenY: number) => {
+    const captureViewportAnchor = useCallback((stageX: number, stageY: number) => {
         const { scale: liveScale, x: liveX, y: liveY } = liveTransform.current;
         const totalScale = liveScale * committedScaleRef.current;
         pendingAnchor.current = {
-            contentX: (screenX - liveX) / totalScale,
-            contentY: (screenY - liveY) / totalScale,
-            screenX,
-            screenY,
+            contentX: (stageX - liveX) / totalScale,
+            contentY: (stageY - liveY) / totalScale,
+            screenX: stageX,
+            screenY: stageY,
         };
     }, []);
 
@@ -326,19 +339,19 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         applyTransformNow();
     }, [applyTransformNow]);
 
-    const commitZoom = useCallback((finalScale: number, anchorScreenX?: number, anchorScreenY?: number) => {
+    const commitZoom = useCallback((finalScale: number, anchorStageX?: number, anchorStageY?: number) => {
         const clamped = Math.min(Math.max(finalScale, MIN_SCALE), MAX_SCALE);
 
         const stage = stageRef.current;
-        const fallbackX = anchorScreenX ?? (stage ? stage.clientWidth / 2 : 0);
-        const fallbackY = anchorScreenY ?? (stage ? stage.clientHeight / 2 : 0);
+        const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
+        const fallbackX = anchorStageX ?? (stageRect.width / 2);
+        const fallbackY = anchorStageY ?? (stageRect.height / 2);
         captureViewportAnchor(fallbackX, fallbackY);
 
         committedScaleRef.current = clamped;
         setIsRendering(true);
         setCommittedScale(clamped);
-        collapseLiveScale();
-    }, [captureViewportAnchor, collapseLiveScale]);
+    }, [captureViewportAnchor]);
 
     // ---- Native touch handlers ----
 
@@ -350,18 +363,26 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             wrapRef.current.style.transition = 'none';
         }
 
+        const stage = stageRef.current;
+        const stageRect = stage ? stage.getBoundingClientRect() : { left: 0, top: 0 };
+
         if (touches.length >= 2) {
-            const center = getTouchCenter(touches as any);
+            const centerClient = getTouchCenter(touches as any);
+            const centerStage = {
+                x: centerClient.x - stageRect.left,
+                y: centerClient.y - stageRect.top,
+            };
+
             state.active = true;
             state.touchCount = 2;
             state.startDistance = getTouchDistance(touches as any);
             state.startScale = liveTransform.current.scale;
             state.startX = liveTransform.current.x;
             state.startY = liveTransform.current.y;
-            state.startOrigX = (center.x - state.startX) / state.startScale;
-            state.startOrigY = (center.y - state.startY) / state.startScale;
-            state.lastCenterXRef = center.x;
-            state.lastCenterYRef = center.y;
+            state.startOrigX = (centerStage.x - state.startX) / state.startScale;
+            state.startOrigY = (centerStage.y - state.startY) / state.startScale;
+            state.lastCenterXRef = centerStage.x;
+            state.lastCenterYRef = centerStage.y;
             state.moved = true;
         } else if (touches.length === 1) {
             state.active = true;
@@ -380,10 +401,17 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const state = gestureState.current;
         if (!state.active) return;
 
+        const stage = stageRef.current;
+        const stageRect = stage ? stage.getBoundingClientRect() : { left: 0, top: 0 };
+
         if (touches.length >= 2 && state.touchCount === 2) {
             e.preventDefault();
             const currentDistance = getTouchDistance(touches as any);
-            const center = getTouchCenter(touches as any);
+            const centerClient = getTouchCenter(touches as any);
+            const centerStage = {
+                x: centerClient.x - stageRect.left,
+                y: centerClient.y - stageRect.top,
+            };
 
             const rawScale = state.startScale * (currentDistance / state.startDistance);
             const minLive = MIN_SCALE / committedScaleRef.current;
@@ -392,13 +420,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
             liveTransform.current = {
                 scale: clampedLiveScale,
-                x: center.x - state.startOrigX * clampedLiveScale,
-                y: center.y - state.startOrigY * clampedLiveScale,
+                x: centerStage.x - state.startOrigX * clampedLiveScale,
+                y: centerStage.y - state.startOrigY * clampedLiveScale,
             };
             applyTransform();
 
-            state.lastCenterXRef = center.x;
-            state.lastCenterYRef = center.y;
+            state.lastCenterXRef = centerStage.x;
+            state.lastCenterYRef = centerStage.y;
         } else if (touches.length === 1 && state.touchCount === 1) {
             e.preventDefault();
             const dx = touches[0].clientX - state.lastSingleX;
@@ -570,8 +598,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             {/* Viewer Stage */}
             <div
                 ref={stageRef}
-                className="flex-grow relative overflow-hidden bg-slate-950 flex flex-col items-center justify-center"
-                style={{ touchAction: 'none' }}
+                className="flex-grow relative overflow-hidden bg-slate-950 w-full h-full touch-none"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -591,63 +618,69 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     </motion.div>
                 )}
 
-                <div className="w-full h-full overflow-hidden p-1 flex flex-col items-center justify-center">
-                    {error ? (
-                        <div className="max-w-sm text-center p-12 bg-gray-900/50 rounded-[40px] border border-white/5 backdrop-blur-xl mt-12">
-                            <div className="w-24 h-24 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-8">
-                                <AlertTriangle className="text-red-400 w-12 h-12" />
-                            </div>
-                            <h3 className="text-white font-bold text-xl mb-4">View Blocked</h3>
-                            <p className="text-[10px] text-yellow-300 mb-6 leading-relaxed break-all bg-black/30 p-3 rounded-xl">{error}</p>
-                            <div className="grid gap-3">
-                                <button
-                                    onClick={() => openExternalLink(pdfUrl)}
-                                    className="w-full bg-white/5 hover:bg-white/10 py-4 rounded-2xl text-sm font-bold text-gray-300 transition active:scale-95"
-                                >
-                                    Open in External Browser
-                                </button>
-                            </div>
+                {error ? (
+                    <div className="max-w-sm text-center p-12 bg-gray-900/50 rounded-[40px] border border-white/5 backdrop-blur-xl mx-auto mt-12">
+                        <div className="w-24 h-24 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                            <AlertTriangle className="text-red-400 w-12 h-12" />
                         </div>
-                    ) : (
-                        <Document
-                            file={activePdfUrl}
-                            onLoadSuccess={onDocumentLoadSuccess}
-                            onLoadError={onDocumentLoadError}
-                            onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
-                            className="flex flex-col items-center"
-                        >
-                            <div
-                                ref={wrapRef}
-                                style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0', background: '#0F172A', borderRadius: 6 }}
+                        <h3 className="text-white font-bold text-xl mb-4">View Blocked</h3>
+                        <p className="text-[10px] text-yellow-300 mb-6 leading-relaxed break-all bg-black/30 p-3 rounded-xl">{error}</p>
+                        <div className="grid gap-3">
+                            <button
+                                onClick={() => openExternalLink(pdfUrl)}
+                                className="w-full bg-white/5 hover:bg-white/10 py-4 rounded-2xl text-sm font-bold text-gray-300 transition active:scale-95"
                             >
-                                <Page
-                                    pageNumber={currentPage}
-                                    scale={committedScale}
-                                    renderTextLayer={false}
-                                    renderAnnotationLayer={false}
-                                    className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
-                                    loading={null}
-                                    onRenderSuccess={handleRenderSuccess}
-                                />
-                                <canvas
-                                    ref={overlayCanvasRef}
-                                    style={{
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0,
-                                        width: '100%',
-                                        height: '100%',
-                                        pointerEvents: 'none',
-                                        opacity: isRendering ? 1 : 0,
-                                        transition: 'opacity 0.15s ease-out',
-                                        borderRadius: 6,
-                                        zIndex: 5
-                                    }}
-                                />
-                            </div>
-                        </Document>
-                    )}
-                </div>
+                                Open in External Browser
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <Document
+                        file={activePdfUrl}
+                        onLoadSuccess={onDocumentLoadSuccess}
+                        onLoadError={onDocumentLoadError}
+                        onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
+                        className="relative w-full h-full"
+                    >
+                        <div
+                            ref={wrapRef}
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                willChange: 'transform',
+                                transformOrigin: '0 0',
+                                background: '#0F172A',
+                                borderRadius: 6
+                            }}
+                        >
+                            <Page
+                                pageNumber={currentPage}
+                                scale={committedScale}
+                                renderTextLayer={false}
+                                renderAnnotationLayer={false}
+                                className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
+                                loading={null}
+                                onRenderSuccess={handleRenderSuccess}
+                            />
+                            <canvas
+                                ref={overlayCanvasRef}
+                                style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    pointerEvents: 'none',
+                                    opacity: isRendering ? 1 : 0,
+                                    transition: 'opacity 0.15s ease-out',
+                                    borderRadius: 6,
+                                    zIndex: 5
+                                }}
+                            />
+                        </div>
+                    </Document>
+                )}
             </div>
 
             {/* Smart Control Bar */}
