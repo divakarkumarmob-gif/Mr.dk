@@ -1,11 +1,17 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, BookOpen, Sparkles } from 'lucide-react';
+import { ArrowLeft, BookOpen, Sparkles, PlusCircle } from 'lucide-react';
 import AIStudyPlanChat from './AIStudyPlanChat';
+import CreateCustomPlanPage from './CreateCustomPlanPage';
 
 export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => void, onNavigate: (view: any) => void }) {
     const [showPopup, setShowPopup] = useState(true);
     const [showChat, setShowChat] = useState(false);
+    const [showCustomPlan, setShowCustomPlan] = useState(false);
+
+    if (showCustomPlan) {
+        return <CreateCustomPlanPage onBack={() => setShowCustomPlan(false)} />;
+    }
 
     return (
         <div className="min-h-dvh bg-[#f0f4f8] text-[#1e293b] font-sans relative pt-[max(env(safe-area-inset-top,0px),5px)]">
@@ -38,6 +44,12 @@ export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => 
                             className="w-full bg-indigo-100 text-indigo-700 font-bold py-3 rounded-xl shadow-sm hover:bg-indigo-200 transition"
                         >
                             Learn How It Works
+                        </button>
+                        <button 
+                            onClick={() => setShowCustomPlan(true)}
+                            className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2"
+                        >
+                            <PlusCircle className="h-5 w-5 stroke-[2.5]" /> Create Custom Plan
                         </button>
                     </div>
                 </div>
