@@ -550,6 +550,18 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             </button>
 
                             <button
+                                onClick={toggleSearch}
+                                className={`p-2.5 rounded-xl transition ${
+                                    showSearch 
+                                        ? 'bg-red-500/20 text-red-400' 
+                                        : 'bg-white/5 hover:bg-white/10 text-gray-300'
+                                }`}
+                                title="Search in PDF"
+                            >
+                                <Search className="h-5 w-5" />
+                            </button>
+
+                            <button
                                 onClick={onClose}
                                 className="p-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-xl transition"
                             >
@@ -702,14 +714,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 )}
             </div>
 
-            {/* Smart Control Bar — Download button replaced with Search */}
+            {/* Smart Control Bar — Zoom & Page Navigation only */}
             <AnimatePresence>
                 {!error && numPages && !isLoading && showControls && (
                     <motion.div
                         initial={{ y: 100 }}
                         animate={{ y: 0 }}
                         exit={{ y: 100 }}
-                        className="px-4 py-2 bg-[#0F172A] border-t border-white/5 safe-bottom z-50 flex items-center justify-between"
+                        className="px-4 py-2 bg-[#0F172A] border-t border-white/5 safe-bottom z-50 flex items-center justify-center gap-4"
                     >
                         <div className="flex items-center gap-1 bg-white/5 rounded-2xl p-1">
                             <button
@@ -747,19 +759,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 <ChevronRight className="h-6 w-6" />
                             </button>
                         </div>
-
-                        {/* Search button — replaces old blue Download button */}
-                        <button
-                            onClick={toggleSearch}
-                            className={`p-3.5 rounded-2xl shadow-xl active:scale-95 transition ${
-                                showSearch 
-                                    ? 'bg-red-500 text-white shadow-red-500/20' 
-                                    : 'bg-white/10 hover:bg-white/15 text-gray-300'
-                            }`}
-                            title="Search in PDF"
-                        >
-                            {showSearch ? <X className="h-6 w-6" /> : <Search className="h-6 w-6" />}
-                        </button>
                     </motion.div>
                 )}
             </AnimatePresence>
