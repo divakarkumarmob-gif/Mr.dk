@@ -5,31 +5,21 @@ import {getStorage} from 'firebase/storage';
 import {getMessaging} from 'firebase/messaging';
 import firebaseConfig from '../../firebase-applet-config.json';
 
-console.log("Firebase config loaded:", firebaseConfig);
-console.log("Firebase SDK Version: 12.12.1");
-
 const config = {
   ...firebaseConfig,
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || firebaseConfig.apiKey,
 };
-console.log("Final config being used (API key redacted):", { ...config, apiKey: "***" });
 
 const app = initializeApp(config);
-console.log("Firebase app initialized. name:", app.name, "options:", { ...app.options, apiKey: "***" });
 
 const dbId = firebaseConfig.firestoreDatabaseId;
-console.log("Attempting to initialize Firestore with DB ID:", dbId);
 export const db = initializeFirestore(app, {}, dbId);
-console.log("Firestore successfully initialized with DB ID:", dbId);
 
 export const auth = getAuth();
-console.log("Auth initialized.");
 
 export const storage = getStorage(app, firebaseConfig.storageBucket);
-console.log("Storage initialized.");
 
 export const messaging = getMessaging(app);
-console.log("Messaging initialized.");
 
 // ---- Phone Auth: invisible reCAPTCHA verifier (web only) ------------------
 // Native Android/iOS uses @capacitor-firebase/authentication instead, which

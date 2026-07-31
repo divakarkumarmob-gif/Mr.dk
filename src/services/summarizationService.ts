@@ -125,7 +125,6 @@ export const getSummaryForUser = async (userId: string, timeRange: string): Prom
 };
 
 export const checkAndSummarizeStaleSessions = async () => {
-    console.log("[Summarization] Checking for stale sessions...");
     const db = getDb();
     const chatsRef = db.collection('chats');
     const now = Date.now();
@@ -139,13 +138,8 @@ export const checkAndSummarizeStaleSessions = async () => {
     try {
         snapshot = await staleSessionsQuery.get();
     } catch (error) {
-        // This compound query (range filter + equality filter) needs a
-        // Firestore composite index. If it's missing, .get() throws
-        // (code 5 / NOT_FOUND) and — since this runs inside a setInterval
-        // with no surrounding try/catch — an uncaught rejection here was
-        // crashing the whole process every 10 minutes. Never let this
-        // background job take down the server.
-        console.error("[Summarization] Failed to query stale sessions (likely missing Firestore composite index for lastInteraction+summaryGenerated):", error);
+        // Compound query catch block
+        console.error("[Summarization] Failed to query stale sessions:", error);
         return;
     }
 
@@ -161,7 +155,6 @@ export const checkAndSummarizeStaleSessions = async () => {
                 summaryGenerated: true,
                 summaryGeneratedAt: admin.firestore.Timestamp.now()
             });
-            console.log(`[Summarization] Summary generated for chat: ${doc.id}`);
         } catch (error) {
             console.error(`[Summarization] Error summarizing chat ${doc.id}:`, error);
         }

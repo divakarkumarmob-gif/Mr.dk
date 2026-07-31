@@ -9,9 +9,6 @@ import { SafeArea } from '@capacitor-community/safe-area';
 import { App as CapacitorApp } from '@capacitor/app';
 import { AuthProvider } from './contexts/AuthContext';
 
-// Ensure globalLogger is initialized
-console.log("Logger initialized", globalLogger);
-
 // Initialize Safe Area (edge-to-edge).
 // NOTE: We intentionally do NOT use @capacitor/status-bar anymore.
 // The safe-area plugin's own docs say it conflicts with @capacitor/status-bar

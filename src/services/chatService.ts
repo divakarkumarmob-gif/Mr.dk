@@ -36,12 +36,10 @@ const ensureChatDocExists = async (chatId: string, userId: string) => {
 };
 
 export const initializeChat = async (userId: string) => {
-    console.log(`[Chat] Initializing chat for user: ${userId}`);
     const chatRef = doc(db, 'chats', userId);
     try {
         const docSnap = await getDoc(chatRef);
         if (!docSnap.exists()) {
-            console.log(`[Chat] Creating new support chat for: ${userId}`);
             await setDoc(chatRef, { 
                 participants: [userId, 'admin'], 
                 isSupportChat: true, 
@@ -52,7 +50,6 @@ export const initializeChat = async (userId: string) => {
                 sessionActive: true
             });
         } else {
-            console.log(`[Chat] Chat already exists for: ${userId}`);
             await updateLastInteraction(userId); // Ensure it's active
         }
         return userId;
@@ -103,8 +100,6 @@ export const subscribeToChats = (callback: (chats: any[]) => void) => {
     
     const adminEmails = ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com'];
     const isAdmin = adminEmails.includes(auth.currentUser.email || '');
-    
-    console.log('DEBUG: currentUser email:', auth.currentUser.email, 'isAdmin:', isAdmin);
     
     let q;
     if (isAdmin) {
@@ -194,7 +189,6 @@ export const starMessage = async (chatId: string, messageId: string, starred: bo
 };
 
 export const sendMessage = async (chatId: string, senderId: string, text: string, mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio', replyTo?: { text: string; senderId: string } | null) => {
-  console.log(`[Chat] Sending message to ${chatId} from ${senderId}`);
   if (auth.currentUser) {
       await ensureChatDocExists(chatId, auth.currentUser.uid);
   }
@@ -208,14 +202,12 @@ export const sendMessage = async (chatId: string, senderId: string, text: string
   try {
       const messagesCol = collection(db, `chats/${chatId}/messages`);
       await addDoc(messagesCol, messageData);
-      console.log(`[Chat] Message added to subcollection`);
       
       await updateDoc(doc(db, 'chats', chatId), {
         lastMessage: text || 'Media message',
         updatedAt: serverTimestamp(),
       });
       await updateLastInteraction(chatId);
-      console.log(`[Chat] Parent chat doc updated`);
   } catch (error) {
       console.error(`[Chat] Send message error:`, error);
       handleFirestoreError(error, OperationType.WRITE, `chats/${chatId}/messages`);

@@ -1080,13 +1080,11 @@ function AppInner() {
             PushNotifications.register();
             
             const regHandle = await PushNotifications.addListener('registration', (token) => {
-              console.log("Native FCM Token received:", token.value);
               const safeTokenId = encodeURIComponent(token.value).replace(/\./g, '%2E');
               setDoc(doc(db, 'users', user.uid, 'fcmTokens', safeTokenId), {
                 token: token.value,
                 createdAt: serverTimestamp()
-              }).then(() => console.log("Native FCM Token saved to Firestore"))
-                .catch(err => console.error("Error saving Native FCM Token to Firestore:", err));
+              }).catch(err => console.error("Error saving Native FCM Token to Firestore:", err));
             });
             handles.push(regHandle);
 
@@ -1097,7 +1095,6 @@ function AppInner() {
 
             // Add listener for received notifications
             const recHandle = await PushNotifications.addListener('pushNotificationReceived', (notification) => {
-              console.log('Push notification received: ', notification);
               try {
                 // Confirm actual receipt — mirrors the ack sent from
                 // MyFirebaseMessagingService for background/killed delivery.
@@ -1118,7 +1115,6 @@ function AppInner() {
             
             // Add listener for action performed
             const actHandle = await PushNotifications.addListener('pushNotificationActionPerformed', (notification) => {
-              console.log('Push notification action performed: ', notification);
             });
             handles.push(actHandle);
           }
@@ -1127,18 +1123,13 @@ function AppInner() {
           granted = permission === 'granted';
           
           if (granted) {
-            console.log("FCM permission granted, requesting web token...");
             getToken(messaging).then((token) => {
-              console.log("FCM Token received:", token);
               if (token) {
                 const safeTokenId = encodeURIComponent(token).replace(/\./g, '%2E');
                 setDoc(doc(db, 'users', user.uid, 'fcmTokens', safeTokenId), {
                   token: token,
                   createdAt: serverTimestamp()
-                }).then(() => console.log("FCM Token saved to Firestore"))
-                  .catch(err => console.error("Error saving FCM Token to Firestore:", err));
-              } else {
-                console.warn("FCM token is null");
+                }).catch(err => console.error("Error saving FCM Token to Firestore:", err));
               }
             }).catch(err => console.error("FCM Token Error:", err));
           }
@@ -1392,23 +1383,19 @@ function AppInner() {
             return;
         }
 
-        console.log("Checking stats for user", user?.uid);
         const today = getISTDateString();
         const docRef = doc(db, 'users', user!.uid, 'analytics_v2', today);
         try {
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
                 const data = docSnap.data();
-                console.log("Stats document found", data);
                 setStats(prev => ({...prev, date: today, timeSpentSeconds: data.timeSpentSeconds, lectureTimeSeconds: data.lectureTimeSeconds || 0}));
             } else {
-                console.log("No stats document found for today");
                 setStats(prev => ({...prev, date: today, timeSpentSeconds: 0, lectureTimeSeconds: 0}));
             }
         } catch (e: any) {
             console.error("Error fetching stats:", e);
             if (e.message?.includes('offline') && retries > 0) {
-                 console.log(`Retrying fetchStats after offline error, retries left: ${retries}`);
                  setTimeout(() => fetchStats(retries - 1), 5000);
                  return;
             }
