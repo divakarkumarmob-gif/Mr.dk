@@ -3,9 +3,13 @@ import { Capacitor } from '@capacitor/core';
 
 export const requestNotificationPermission = async () => {
   if (Capacitor.isNativePlatform()) {
-    const { display } = await LocalNotifications.checkPermissions();
-    if (display !== 'granted') {
-      await LocalNotifications.requestPermissions();
+    try {
+      const { display } = await LocalNotifications.checkPermissions().catch(() => ({ display: 'prompt' }));
+      if (display !== 'granted') {
+        await LocalNotifications.requestPermissions().catch(() => {});
+      }
+    } catch (e) {
+      console.warn("LocalNotifications permission check failed:", e);
     }
   }
 };

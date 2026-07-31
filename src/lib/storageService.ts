@@ -1,20 +1,45 @@
 import { SecureStoragePlugin } from 'capacitor-secure-storage-plugin';
+import { Capacitor } from '@capacitor/core';
 import CryptoJS from 'crypto-js';
 
 const AES_KEY_STORAGE_KEY = 'APP_ENCRYPTION_KEY';
+let cachedKey: string | null = null;
 
-// Helper to get or create the encryption key
+// Helper to safely get or create the encryption key without crashing Android KeyStore on first run
 const getEncryptionKey = async (): Promise<string> => {
+  if (cachedKey) return cachedKey;
+
   try {
-    const { value } = await SecureStoragePlugin.get({ key: AES_KEY_STORAGE_KEY });
-    if (value) return value;
-  } catch (e) {
-    // Key not found or error, will generate new one
+    if (Capacitor.isNativePlatform()) {
+      const res = await SecureStoragePlugin.get({ key: AES_KEY_STORAGE_KEY }).catch(() => null);
+      if (res && res.value) {
+        cachedKey = res.value;
+        return res.value;
+      }
+    }
+  } catch (_) {
+    // Ignore native KeyStore initial error on fresh install
+  }
+
+  const localKey = localStorage.getItem(AES_KEY_STORAGE_KEY);
+  if (localKey) {
+    cachedKey = localKey;
+    return localKey;
   }
 
   // Generate new key
   const newKey = CryptoJS.lib.WordArray.random(32).toString();
-  await SecureStoragePlugin.set({ key: AES_KEY_STORAGE_KEY, value: newKey });
+  cachedKey = newKey;
+
+  try {
+    localStorage.setItem(AES_KEY_STORAGE_KEY, newKey);
+    if (Capacitor.isNativePlatform()) {
+      await SecureStoragePlugin.set({ key: AES_KEY_STORAGE_KEY, value: newKey }).catch(() => {});
+    }
+  } catch (_) {
+    // Safe fallback
+  }
+
   return newKey;
 };
 
@@ -23,38 +48,75 @@ export const storageService = {
     try {
       const keyStr = await getEncryptionKey();
       const encryptedValue = CryptoJS.AES.encrypt(JSON.stringify(value), keyStr).toString();
-      await SecureStoragePlugin.set({ key, value: encryptedValue });
+
+      // Write to localStorage first (instant & crash-proof)
+      try {
+        localStorage.setItem(key, encryptedValue);
+      } catch (_) {}
+
+      // Write to SecureStoragePlugin safely if on native
+      if (Capacitor.isNativePlatform()) {
+        await SecureStoragePlugin.set({ key, value: encryptedValue }).catch(() => {});
+      }
     } catch (e) {
       console.error('Failed to store data', e);
+      try {
+        localStorage.setItem(key, JSON.stringify(value));
+      } catch (_) {}
     }
   },
+
   getItem: async <T>(key: string): Promise<T | null> => {
     try {
       const keyStr = await getEncryptionKey();
-      const { value } = await SecureStoragePlugin.get({ key });
-      if (!value) return null;
-      
-      const decryptedBytes = CryptoJS.AES.decrypt(value, keyStr);
-      const decryptedString = decryptedBytes.toString(CryptoJS.enc.Utf8);
-      
-      return JSON.parse(decryptedString) as T;
-    } catch (e: any) {
-      if (e?.message && typeof e.message === 'string' && !e.message.includes('Item with given key does not exist')) {
-        console.error('Failed to retrieve data for key:', key, e);
+      let value: string | null = null;
+
+      if (Capacitor.isNativePlatform()) {
+        try {
+          const res = await SecureStoragePlugin.get({ key }).catch(() => null);
+          value = res?.value || null;
+        } catch (_) {}
       }
+
+      if (!value) {
+        value = localStorage.getItem(key);
+      }
+
+      if (!value) return null;
+
+      try {
+        const decryptedBytes = CryptoJS.AES.decrypt(value, keyStr);
+        const decryptedString = decryptedBytes.toString(CryptoJS.enc.Utf8);
+        if (decryptedString) {
+          return JSON.parse(decryptedString) as T;
+        }
+      } catch (_) {
+        // Fallback if stored value was plain JSON
+        try {
+          return JSON.parse(value) as T;
+        } catch (_) {}
+      }
+      return null;
+    } catch (e) {
       return null;
     }
   },
+
   removeItem: async (key: string) => {
     try {
-      await SecureStoragePlugin.remove({ key });
-    } catch (e: any) {
-      if (e?.message && typeof e.message === 'string' && !e.message.includes('Item with given key does not exist')) {
-        console.error('Failed to remove data', e);
+      localStorage.removeItem(key);
+      if (Capacitor.isNativePlatform()) {
+        await SecureStoragePlugin.remove({ key }).catch(() => {});
       }
-    }
+    } catch (_) {}
   },
+
   clear: async () => {
-    await SecureStoragePlugin.clear();
+    try {
+      localStorage.clear();
+      if (Capacitor.isNativePlatform()) {
+        await SecureStoragePlugin.clear().catch(() => {});
+      }
+    } catch (_) {}
   }
 };

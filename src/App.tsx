@@ -1057,7 +1057,10 @@ function AppInner() {
       const requestPermissionAndRegister = async () => {
         let granted = false;
         if (Capacitor.isNativePlatform()) {
-          const result = await PushNotifications.requestPermissions();
+          const result = await PushNotifications.requestPermissions().catch(err => {
+            console.warn("PushNotifications requestPermissions error on startup:", err);
+            return { receive: 'denied' as const };
+          });
           granted = result.receive === 'granted';
           if (granted) {
             PushNotifications.register();
