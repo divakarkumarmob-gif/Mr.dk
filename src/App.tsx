@@ -643,20 +643,29 @@ function AppInner() {
     
     const unsubscribeNeet = onSnapshot(qNeet, (snapshot) => {
         snapshot.docChanges().forEach((change) => {
-            if (change.type === 'added') {
-                if (initializedNeet && !knownNotificationIds.current.has(change.doc.id)) {
+            if (change.type === 'added' || change.type === 'modified') {
+                const changeKey = `${change.doc.id}_${change.type}`;
+                if (initializedNeet && !knownNotificationIds.current.has(changeKey)) {
                     const notif = change.doc.data();
+                    const notifTitle = "You have a message from NTA";
+                    const notifBody = notif.message || (Array.isArray(notif.updates) ? notif.updates.join(' · ') : null) || "New public notice or update available from NTA";
+
                     if (Capacitor.isNativePlatform()) {
                       LocalNotifications.schedule({
                           notifications: [{
-                              title: "NTA Public Notice",
-                              body: notif.message || "New public notice available",
+                              title: notifTitle,
+                              body: notifBody,
                               id: Math.floor(Math.random() * 100000),
                           }]
                       }).catch(err => console.warn('LocalNotifications.schedule for neet notification failed:', err));
+                    } else if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
+                      new Notification(notifTitle, {
+                        body: notifBody,
+                        icon: '/favicon.ico'
+                      });
                     }
                 }
-                knownNotificationIds.current.add(change.doc.id);
+                knownNotificationIds.current.add(changeKey);
             }
         });
         initializedNeet = true;
@@ -2086,7 +2095,9 @@ function AppInner() {
                   
                   {neetNotifications.length > 0 && (
                       <div className="mb-4">
-                          <h4 className="text-xs text-blue-400 font-bold mb-1 uppercase">NEET Updates</h4>
+                          <h4 className="text-xs text-blue-400 font-bold mb-1.5 uppercase flex items-center gap-1">
+                               <span>📢</span> You have a message from NTA
+                           </h4>
                           {neetNotifications.map((neet, idx) => (
                               <div key={idx} className="text-xs p-2 bg-[#0a1025] border border-blue-900/50 rounded-lg mb-2">
                                   {neet.updates.map((update, uIdx) => (
