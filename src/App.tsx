@@ -630,7 +630,7 @@ function AppInner() {
             }
         });
         initializedNotificationsRef.current = true;
-        const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()} as any));
+        const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()} as any)).filter(n => !n.hideFromBell);
         setNotifications(data);
     }, (error) => {
         handleFirestoreError(error, OperationType.GET, 'notifications');
@@ -638,7 +638,7 @@ function AppInner() {
 
     // NEET website notifications
     const neetRef = collection(db, 'neet_notifications');
-    const qNeet = query(neetRef, orderBy('timestamp', 'desc'), limit(5));
+    const qNeet = query(neetRef, orderBy('timestamp', 'desc'));
     let initializedNeet = false;
     
     const unsubscribeNeet = onSnapshot(qNeet, (snapshot) => {
@@ -1557,22 +1557,7 @@ function AppInner() {
     return () => { unsubscribe(); clearInterval(interval); };
   }, []);
 
-  useEffect(() => {
-    if (!user) return;
-    
-    const fetchNotifications = async () => {
-        const notifRef = collection(db, 'notifications');
-        const q = query(notifRef, limit(10));
-        try {
-            const snapshot = await getDocs(q);
-            const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()} as any));
-            setNotifications(data);
-        } catch (error) {
-            handleFirestoreError(error, OperationType.GET, 'notifications');
-        }
-    };
-    fetchNotifications();
-  }, [user]);
+
 
 
   useEffect(() => {

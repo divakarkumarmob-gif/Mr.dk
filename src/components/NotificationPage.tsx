@@ -113,11 +113,13 @@ export default function NotificationPage({ onBack }: NotificationPageProps) {
     }, []);
 
     useEffect(() => {
-        // Fetch Admin Notifications (limit 5)
+        // Fetch Admin Notifications
         const notifRef = collection(db, 'notifications');
-        const q = query(notifRef, orderBy('timestamp', 'desc'), limit(5));
+        const q = query(notifRef, orderBy('timestamp', 'desc'));
         const unsubscribe = onSnapshot(q, (snapshot) => {
-            const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as any));
+            const data = snapshot.docs
+                .map(doc => ({ id: doc.id, ...doc.data() } as any))
+                .filter(n => !n.hideFromBell);
             setAdminNotifications(data);
             
             // Mark as read

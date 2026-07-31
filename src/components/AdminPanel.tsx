@@ -94,6 +94,7 @@ interface Notification {
     message: string;
     timestamp: any;
     readBy?: string[];
+    hideFromBell?: boolean;
 }
 
 type TabKey = 'message' | 'upload' | 'import' | 'users' | 'schedule' | 'device';
@@ -119,6 +120,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const [deviceInfo, setDeviceInfo] = useState<any>(null);
     const [sending, setSending] = useState(false);
     const [viewingDeliveryFor, setViewingDeliveryFor] = useState<string | null>(null);
+    const [confirmDeleteNotif, setConfirmDeleteNotif] = useState<Notification | null>(null);
+
+    const longPressTimerRef = React.useRef<NodeJS.Timeout | null>(null);
+    const isLongPressRef = React.useRef(false);
 
     // Schedule state
     const [testName, setTestName] = useState('');
@@ -225,12 +230,37 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const [editingId, setEditingId] = useState<string | null>(null);
     const [editMessage, setEditMessage] = useState('');
 
-    const deleteNotification = async (id: string) => {
+    const hideFromBell = async (id: string) => {
+        try {
+            await updateDoc(doc(db, 'notifications', id), { hideFromBell: true });
+            showToast('Message removed from Bell icon (still in history)');
+        } catch (error) {
+            handleFirestoreError(error, OperationType.UPDATE, 'notifications/' + id);
+        }
+    };
+
+    const deleteFromFirestore = async (id: string) => {
         try {
             await deleteDoc(doc(db, 'notifications', id));
-            showToast('Message deleted');
+            showToast('Message permanently deleted from Firestore');
+            setConfirmDeleteNotif(null);
         } catch (error) {
             handleFirestoreError(error, OperationType.DELETE, 'notifications/' + id);
+        }
+    };
+
+    const handlePressStart = (n: Notification) => {
+        isLongPressRef.current = false;
+        longPressTimerRef.current = setTimeout(() => {
+            isLongPressRef.current = true;
+            setConfirmDeleteNotif(n);
+        }, 600);
+    };
+
+    const handlePressCancel = () => {
+        if (longPressTimerRef.current) {
+            clearTimeout(longPressTimerRef.current);
+            longPressTimerRef.current = null;
         }
     };
 
@@ -429,7 +459,15 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                             ) : (
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                     {filteredNotifications.map(n => (
-                                        <div key={n.id} className="bg-white/[0.03] hover:bg-white/[0.05] border border-white/10 p-3.5 rounded-xl transition-colors">
+                                        <div
+                                            key={n.id}
+                                            className="bg-white/[0.03] hover:bg-white/[0.05] border border-white/10 p-3.5 rounded-xl transition-colors relative select-none"
+                                            onMouseDown={() => handlePressStart(n)}
+                                            onMouseUp={handlePressCancel}
+                                            onMouseLeave={handlePressCancel}
+                                            onTouchStart={() => handlePressStart(n)}
+                                            onTouchEnd={handlePressCancel}
+                                        >
                                             {editingId === n.id ? (
                                                 <div className="flex flex-col sm:flex-row gap-2">
                                                     <input
@@ -445,17 +483,37 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                                             ) : (
                                                 <div className="flex justify-between items-start gap-3">
                                                     <button
-                                                        onClick={() => setViewingDeliveryFor(n.id)}
+                                                        onClick={() => {
+                                                            if (isLongPressRef.current) {
+                                                                isLongPressRef.current = false;
+                                                                return;
+                                                            }
+                                                            setViewingDeliveryFor(n.id);
+                                                        }}
                                                         className="min-w-0 text-left flex-1"
                                                     >
-                                                        <p className="text-sm break-words">{n.message}</p>
+                                                        <div className="flex items-center gap-1.5 flex-wrap">
+                                                            <p className="text-sm break-words">{n.message}</p>
+                                                            {n.hideFromBell && (
+                                                                <span className="text-[9px] bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-1.5 py-0.5 rounded font-medium">
+                                                                    Hidden from Bell
+                                                                </span>
+                                                            )}
+                                                        </div>
                                                         <p className="text-gray-500 text-xs mt-1">
-                                                            {typeof n.timestamp?.toDate === 'function' ? n.timestamp.toDate().toLocaleString() : 'Just now'} · {n.readBy?.length || 0} seen · tap for delivery status
+                                                            {typeof n.timestamp?.toDate === 'function' ? n.timestamp.toDate().toLocaleString() : 'Just now'} · {n.readBy?.length || 0} seen · tap for status · hold to delete
                                                         </p>
                                                     </button>
                                                     <div className="flex gap-1 flex-shrink-0">
-                                                        <button onClick={() => startEdit(n)} className="p-1.5 hover:bg-white/10 rounded-lg"><Edit2 className="h-3.5 w-3.5" /></button>
-                                                        <button onClick={() => deleteNotification(n.id)} className="p-1.5 hover:bg-red-500/20 rounded-lg text-red-400"><Trash2 className="h-3.5 w-3.5" /></button>
+                                                        <button onClick={() => startEdit(n)} title="Edit message" className="p-1.5 hover:bg-white/10 rounded-lg"><Edit2 className="h-3.5 w-3.5" /></button>
+                                                        <button
+                                                            onClick={() => hideFromBell(n.id)}
+                                                            disabled={n.hideFromBell}
+                                                            title={n.hideFromBell ? "Already hidden from Bell icon" : "Hide from Bell icon (stays in History)"}
+                                                            className={`p-1.5 rounded-lg transition-colors ${n.hideFromBell ? 'text-gray-600 cursor-not-allowed' : 'hover:bg-amber-500/20 text-amber-400'}`}
+                                                        >
+                                                            <Trash2 className="h-3.5 w-3.5" />
+                                                        </button>
                                                     </div>
                                                 </div>
                                             )}
@@ -719,6 +777,56 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                             >
                                 OK
                             </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+
+                {confirmDeleteNotif && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000] flex items-center justify-center p-4"
+                        onClick={() => setConfirmDeleteNotif(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="bg-[#0F172A] border border-red-500/40 rounded-2xl p-5 max-w-sm w-full shadow-2xl space-y-4 text-white"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex items-center gap-3 text-red-400">
+                                <AlertTriangle className="h-6 w-6 flex-shrink-0" />
+                                <h3 className="font-bold text-lg text-white">Delete Notification?</h3>
+                            </div>
+
+                            <p className="text-sm text-gray-300">
+                                Are you sure you want to delete this message from Firestore?
+                            </p>
+
+                            <div className="bg-white/5 border border-white/10 p-3 rounded-xl text-xs text-gray-300 italic max-h-24 overflow-y-auto break-words">
+                                "{confirmDeleteNotif.message}"
+                            </div>
+
+                            <p className="text-xs text-red-400">
+                                ⚠️ This message will be permanently deleted from Firestore database, History, and Bell icon view.
+                            </p>
+
+                            <div className="flex gap-3 pt-2">
+                                <button
+                                    onClick={() => setConfirmDeleteNotif(null)}
+                                    className="flex-1 py-2.5 bg-white/10 hover:bg-white/15 text-white font-semibold rounded-xl text-sm transition-colors"
+                                >
+                                    No
+                                </button>
+                                <button
+                                    onClick={() => deleteFromFirestore(confirmDeleteNotif.id)}
+                                    className="flex-1 py-2.5 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-red-600/30"
+                                >
+                                    Yes
+                                </button>
+                            </div>
                         </motion.div>
                     </motion.div>
                 )}
