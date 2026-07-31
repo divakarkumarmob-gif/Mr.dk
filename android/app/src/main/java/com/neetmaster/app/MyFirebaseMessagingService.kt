@@ -130,13 +130,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
             val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
-            // Safe icon selection: R.mipmap.ic_launcher is an adaptive icon XML on API 26+,
-            // which causes IllegalArgumentException: Invalid notification (no valid small icon).
+            // Safe icon selection: Adaptive icon XMLs (like ic_launcher_foreground)
+            // cause IllegalArgumentException: Invalid notification (no valid small icon) on API 26+.
             val smallIconId = try {
                 val id = resources.getIdentifier("ic_notification", "drawable", packageName)
-                if (id != 0) id else R.mipmap.ic_launcher_foreground
+                if (id != 0) id else android.R.drawable.ic_dialog_info
             } catch (e: Exception) {
-                R.mipmap.ic_launcher_foreground
+                android.R.drawable.ic_dialog_info
             }
 
             val builder = NotificationCompat.Builder(this, CHANNEL_ID)

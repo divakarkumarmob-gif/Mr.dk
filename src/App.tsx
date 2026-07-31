@@ -1054,6 +1054,7 @@ function AppInner() {
 
   useEffect(() => {
     if (user && !user.uid.startsWith('local_guest_')) {
+      let handles: { remove: () => void }[] = [];
       const requestPermissionAndRegister = async () => {
         let granted = false;
         if (Capacitor.isNativePlatform()) {
@@ -1065,54 +1066,24 @@ function AppInner() {
           if (granted) {
             PushNotifications.register();
             
-            PushNotifications.addListener('registration', (token) => {
+            const regHandle = await PushNotifications.addListener('registration', (token) => {
               console.log("Native FCM Token received:", token.value);
               setDoc(doc(db, 'users', user.uid, 'fcmTokens', token.value), {
                 createdAt: serverTimestamp()
               }).then(() => console.log("Native FCM Token saved to Firestore"))
                 .catch(err => console.error("Error saving Native FCM Token to Firestore:", err));
             });
+            handles.push(regHandle);
 
-            PushNotifications.addListener('registrationError', (error) => {
+            const errHandle = await PushNotifications.addListener('registrationError', (error) => {
               console.error("Native FCM Registration Error:", error);
             });
+            handles.push(errHandle);
 
             // Add listener for received notifications
-            PushNotifications.addListener('pushNotificationReceived', (notification) => {
+            const recHandle = await PushNotifications.addListener('pushNotificationReceived', (notification) => {
               console.log('Push notification received: ', notification);
               try {
-                // Handle foreground notification: show local notification.
-                // Only pass plain string/number fields into `extra` — the
-                // native bridge needs this to be safely serializable, and
-                // an unguarded schedule() call here can throw and crash
-                // the whole JS context (this listener fires again on every
-                // relaunch as long as the bad push is still being handled,
-                // which is what produced the "keeps crashing until storage
-                // is cleared" loop).
-                const safeExtra: Record<string, string> = {};
-                if (notification.data) {
-                  for (const [k, v] of Object.entries(notification.data)) {
-                    if (typeof v === 'string' || typeof v === 'number') {
-                      safeExtra[k] = String(v);
-                    }
-                  }
-                }
-
-                LocalNotifications.schedule({
-                  notifications: [
-                    {
-                      title: notification.title || notification.data?.title || 'New Message',
-                      body: notification.body || notification.data?.body || 'You have a new notification',
-                      id: Math.floor(Math.random() * 100000),
-                      schedule: { at: new Date(Date.now() + 1000) },
-                      sound: 'default',
-                      attachments: [],
-                      actionTypeId: "",
-                      extra: safeExtra
-                    }
-                  ]
-                }).catch(err => console.error('LocalNotifications.schedule failed:', err));
-
                 // Confirm actual receipt — mirrors the ack sent from
                 // MyFirebaseMessagingService for background/killed delivery.
                 const notificationId = notification.data?.notificationId;
@@ -1128,11 +1099,13 @@ function AppInner() {
                 console.error('Error handling pushNotificationReceived:', e);
               }
             });
+            handles.push(recHandle);
             
             // Add listener for action performed
-            PushNotifications.addListener('pushNotificationActionPerformed', (notification) => {
+            const actHandle = await PushNotifications.addListener('pushNotificationActionPerformed', (notification) => {
               console.log('Push notification action performed: ', notification);
             });
+            handles.push(actHandle);
           }
         } else {
           const permission = await Notification.requestPermission();
@@ -1155,6 +1128,9 @@ function AppInner() {
         }
       };
       requestPermissionAndRegister();
+      return () => {
+        handles.forEach(h => { try { h.remove(); } catch {} });
+      };
     }
   }, [user]);
 

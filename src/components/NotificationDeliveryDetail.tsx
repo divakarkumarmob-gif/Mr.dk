@@ -45,7 +45,7 @@ function statusFor(rec: DeliveryRecord): { icon: React.ReactNode; label: string;
         return {
             icon: <CheckCircle2 className="h-5 w-5 text-green-400 flex-shrink-0" />,
             label: 'Delivered',
-            detail: rec.deliveredAt?.toDate ? `Confirmed at ${rec.deliveredAt.toDate().toLocaleString()}` : 'Confirmed on device.',
+            detail: typeof rec.deliveredAt?.toDate === 'function' ? `Confirmed at ${rec.deliveredAt.toDate().toLocaleString()}` : 'Confirmed on device.',
         };
     }
     return {
@@ -127,7 +127,7 @@ export default function NotificationDeliveryDetail({ notificationId, onBack }: {
                                 <div className="px-3 pb-3 pt-0 border-t border-white/10 mt-1">
                                     <p className="text-sm text-gray-300 mt-2">{s.detail}</p>
                                     <p className="text-xs text-gray-500 mt-2 break-all">Token: {rec.token.slice(0, 24)}...</p>
-                                    {rec.sentAt?.toDate && (
+                                    {typeof rec.sentAt?.toDate === 'function' && (
                                         <p className="text-xs text-gray-500 mt-1">Sent at: {rec.sentAt.toDate().toLocaleString()}</p>
                                     )}
                                 </div>
