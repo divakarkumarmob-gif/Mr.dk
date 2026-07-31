@@ -166,3 +166,37 @@
 :root {
   --ion-safe-area-top: 0px;
 }
+
+/* ===== PDF Search Highlighting ===== */
+/* react-pdf text layer base — make it visible for search */
+.react-pdf__Page__textContent {
+  opacity: 1 !important;
+}
+
+.react-pdf__Page__textContent span {
+  color: transparent !important;
+}
+
+/* Highlighted search match — red underline */
+.pdf-search-highlight {
+  text-decoration: underline !important;
+  text-decoration-color: #ef4444 !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 2px !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: transparent !important;
+  border-radius: 2px;
+  padding: 1px 0;
+}
+
+/* Active/focused search match — stronger highlight */
+.pdf-search-highlight-active {
+  text-decoration: underline !important;
+  text-decoration-color: #dc2626 !important;
+  text-decoration-thickness: 4px !important;
+  text-underline-offset: 2px !important;
+  background: rgba(239, 68, 68, 0.3) !important;
+  color: transparent !important;
+  border-radius: 2px;
+  padding: 1px 0;
+}

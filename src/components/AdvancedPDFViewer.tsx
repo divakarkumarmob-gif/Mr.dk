@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search } from 'lucide-react';
+import 'react-pdf/dist/Page/TextLayer.css';
+import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { getCachedPdf, cachePdf } from '../lib/pdfCache';
+import { getCachedPdf, cachePdf, isPdfCached } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { openExternalLink } from '../utils/browser';
@@ -42,9 +43,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const [progress, setProgress] = useState(0);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<number[]>([]);
+    const [currentSearchIndex, setCurrentSearchIndex] = useState(0);
     const [isSearching, setIsSearching] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
     const [showControls, setShowControls] = useState(true);
+    const [isDownloaded, setIsDownloaded] = useState(false);
+    const [isDownloading, setIsDownloading] = useState(false);
 
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
@@ -69,6 +73,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const stageRef = useRef<HTMLDivElement>(null);
     const pageWidthRef = useRef<number>(600);
     const pageHeightRef = useRef<number>(800);
+    const searchInputRef = useRef<HTMLInputElement>(null);
+    const pageContainerRef = useRef<HTMLDivElement>(null);
 
     // Single source of truth for visual scale & position
     const transformRef = useRef({ zoom: initialScale, x: 0, y: 0 });
@@ -133,10 +139,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             let urlToLoad = pdfUrl;
             if (Capacitor.isNativePlatform()) {
                 const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-                const cachedUri = await getCachedPdf(filename);
-                if (cachedUri) {
-                    urlToLoad = cachedUri;
+                const cachedBlobUrl = await getCachedPdf(filename);
+                if (cachedBlobUrl) {
+                    urlToLoad = cachedBlobUrl;
+                    setIsDownloaded(true);
                 }
+                // Also check if already cached
+                const cached = await isPdfCached(filename);
+                if (cached) setIsDownloaded(true);
             }
             setActivePdfUrl(urlToLoad);
         };
@@ -192,8 +202,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const stage = stageRef.current;
             const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight - 100 };
             const stageWidth = stageRect.width || (window.innerWidth - 16);
+            const stageHeight = (stageRect as DOMRect).height || (window.innerHeight - 100);
 
-            const fitZoom = Math.min(Math.max((stageWidth - 16) / viewport.width, MIN_SCALE), MAX_SCALE);
+            // Fit-to-screen: consider BOTH width AND height
+            const fitWidth = (stageWidth - 16) / viewport.width;
+            const fitHeight = (stageHeight - 16) / viewport.height;
+            const fitZoom = Math.min(Math.max(Math.min(fitWidth, fitHeight), MIN_SCALE), MAX_SCALE);
             resetTransform(fitZoom);
         }).catch(() => {});
     }
@@ -206,11 +220,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     const handleDownload = async () => {
         const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+        setIsDownloading(true);
 
         if (Capacitor.isNativePlatform()) {
             const cached = await cachePdf(pdfUrl, filename);
             if (cached) {
-                alert("Saved for offline use in app. You can reopen it here anytime, even without internet — it won't appear in your phone's Downloads folder.");
+                setIsDownloaded(true);
+                setIsDownloading(false);
+                alert("✅ PDF saved securely! You can open it anytime offline from this app.");
                 return;
             }
         }
@@ -230,7 +247,42 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             console.error("Download failed:", err);
             openExternalLink(pdfUrl);
         }
+        setIsDownloading(false);
     };
+
+    // ---- Enhanced Search with Text Highlighting ----
+
+    const highlightSearchText = useCallback((query: string) => {
+        if (!pageContainerRef.current || !query) return;
+
+        // Clear previous highlights
+        const prevHighlights = pageContainerRef.current.querySelectorAll('.pdf-search-highlight, .pdf-search-highlight-active');
+        prevHighlights.forEach(el => {
+            el.classList.remove('pdf-search-highlight', 'pdf-search-highlight-active');
+        });
+
+        // Find text spans in the text layer
+        const textLayer = pageContainerRef.current.querySelector('.react-pdf__Page__textContent');
+        if (!textLayer) return;
+
+        const spans = textLayer.querySelectorAll('span');
+        const lowerQuery = query.toLowerCase();
+
+        spans.forEach(span => {
+            const text = span.textContent?.toLowerCase() || '';
+            if (text.includes(lowerQuery)) {
+                span.classList.add('pdf-search-highlight');
+            }
+        });
+    }, []);
+
+    const clearHighlights = useCallback(() => {
+        if (!pageContainerRef.current) return;
+        const highlights = pageContainerRef.current.querySelectorAll('.pdf-search-highlight, .pdf-search-highlight-active');
+        highlights.forEach(el => {
+            el.classList.remove('pdf-search-highlight', 'pdf-search-highlight-active');
+        });
+    }, []);
 
     const performSearch = async (query: string) => {
         if (!pdfDocRef.current || !query) return;
@@ -245,8 +297,62 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             }
         }
         setSearchResults(results);
+        setCurrentSearchIndex(0);
         setIsSearching(false);
+
+        // Navigate to first result and highlight
+        if (results.length > 0) {
+            setCurrentPage(results[0]);
+            // Highlight after a small delay to let page render
+            setTimeout(() => highlightSearchText(query), 500);
+        }
     };
+
+    // Re-highlight when page changes and we have active search
+    useEffect(() => {
+        if (searchQuery && searchResults.length > 0) {
+            // Wait for page to render then highlight
+            const timer = setTimeout(() => highlightSearchText(searchQuery), 600);
+            return () => clearTimeout(timer);
+        } else {
+            clearHighlights();
+        }
+    }, [currentPage, searchQuery, searchResults, highlightSearchText, clearHighlights]);
+
+    const navigateSearchResult = useCallback((direction: 'next' | 'prev') => {
+        if (searchResults.length === 0) return;
+        let newIndex: number;
+        if (direction === 'next') {
+            newIndex = (currentSearchIndex + 1) % searchResults.length;
+        } else {
+            newIndex = (currentSearchIndex - 1 + searchResults.length) % searchResults.length;
+        }
+        setCurrentSearchIndex(newIndex);
+        setCurrentPage(searchResults[newIndex]);
+    }, [searchResults, currentSearchIndex]);
+
+    const handleSearchSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (searchQuery.trim()) {
+            performSearch(searchQuery.trim());
+        }
+    };
+
+    const toggleSearch = useCallback(() => {
+        setShowSearch(prev => {
+            if (prev) {
+                // Closing search — clear everything
+                setSearchQuery('');
+                setSearchResults([]);
+                setCurrentSearchIndex(0);
+                clearHighlights();
+            } else {
+                // Opening search — focus input
+                setTimeout(() => searchInputRef.current?.focus(), 100);
+            }
+            return !prev;
+        });
+    }, [clearHighlights]);
 
     // ---- Native touch handlers ----
 
@@ -426,18 +532,21 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         <div className="flex items-center gap-2">
                             <button
                                 onClick={handleDownload}
-                                className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-xl transition"
-                                title={Capacitor.isNativePlatform() ? "Save for offline" : "Download PDF"}
+                                disabled={isDownloading || isDownloaded}
+                                className={`p-2.5 rounded-xl transition ${
+                                    isDownloaded 
+                                        ? 'bg-green-500/20 text-green-400' 
+                                        : isDownloading
+                                            ? 'bg-white/5 text-gray-500'
+                                            : 'bg-white/5 hover:bg-white/10 text-gray-300'
+                                }`}
+                                title={isDownloaded ? "Already saved offline" : Capacitor.isNativePlatform() ? "Save for offline" : "Download PDF"}
                             >
-                                <Download className="h-5 w-5" />
-                            </button>
-
-                            <button
-                                onClick={() => setShowSearch(!showSearch)}
-                                className={`p-2.5 ${showSearch ? 'bg-blue-600/20' : 'bg-white/5'} hover:bg-white/10 text-gray-300 rounded-xl transition`}
-                                title="Search PDF"
-                            >
-                                <Search className="h-5 w-5" />
+                                {isDownloading ? (
+                                    <Loader2 className="h-5 w-5 animate-spin" />
+                                ) : (
+                                    <Download className="h-5 w-5" />
+                                )}
                             </button>
 
                             <button
@@ -451,32 +560,73 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 )}
             </AnimatePresence>
 
-            {showSearch && showControls && (
-                <div className="p-3 bg-[#0F172A] border-b border-white/5 z-50 flex items-center gap-2">
-                    <input
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Search..."
-                        className="flex-grow bg-white/5 text-white p-2 rounded-xl text-sm"
-                    />
-                    <button
-                        onClick={() => performSearch(searchQuery)}
-                        className="p-2 bg-blue-600 rounded-xl text-white"
+            {/* Search Bar — shown from bottom search button */}
+            <AnimatePresence>
+                {showSearch && showControls && (
+                    <motion.div
+                        initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -20, opacity: 0 }}
+                        transition={{ duration: 0.15 }}
+                        className="p-3 bg-[#0F172A] border-b border-white/5 z-50"
                     >
-                        {isSearching ? <Loader2 className="animate-spin h-4 w-4" /> : <Search className="h-4 w-4" />}
-                    </button>
-                    {searchResults.length > 0 && (
-                        <div className="flex items-center gap-1 text-xs text-gray-400 overflow-x-auto">
-                            {searchResults.map((page) => (
-                                <button key={page} onClick={() => { setCurrentPage(page); setShowSearch(false); }} className="hover:text-blue-500 px-2">
-                                    {page}
-                                </button>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            )}
+                        <form onSubmit={handleSearchSubmit} className="flex items-center gap-2">
+                            <div className="flex-grow relative">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
+                                <input
+                                    ref={searchInputRef}
+                                    type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    placeholder="PDF mein search karo..."
+                                    className="w-full bg-white/5 text-white pl-10 pr-3 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-red-500/50 placeholder-gray-500"
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                disabled={isSearching || !searchQuery.trim()}
+                                className="p-2.5 bg-red-500/20 hover:bg-red-500/30 rounded-xl text-red-400 transition disabled:opacity-40"
+                            >
+                                {isSearching ? <Loader2 className="animate-spin h-4 w-4" /> : <Search className="h-4 w-4" />}
+                            </button>
+                            <button
+                                type="button"
+                                onClick={toggleSearch}
+                                className="p-2.5 bg-white/5 hover:bg-white/10 rounded-xl text-gray-400 transition"
+                            >
+                                <X className="h-4 w-4" />
+                            </button>
+                        </form>
+
+                        {/* Search results navigation */}
+                        {searchResults.length > 0 && (
+                            <div className="flex items-center justify-between mt-2 px-1">
+                                <span className="text-xs text-gray-400">
+                                    {searchResults.length} page{searchResults.length > 1 ? 's' : ''} mein mila — Page {searchResults[currentSearchIndex]}
+                                </span>
+                                <div className="flex items-center gap-1">
+                                    <button
+                                        onClick={() => navigateSearchResult('prev')}
+                                        className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition"
+                                    >
+                                        <ChevronUp className="h-3.5 w-3.5" />
+                                    </button>
+                                    <span className="text-[10px] text-gray-500 w-10 text-center">{currentSearchIndex + 1}/{searchResults.length}</span>
+                                    <button
+                                        onClick={() => navigateSearchResult('next')}
+                                        className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition"
+                                    >
+                                        <ChevronDown className="h-3.5 w-3.5" />
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                        {searchResults.length === 0 && searchQuery && !isSearching && (
+                            <p className="text-xs text-gray-500 mt-2 px-1">Kuch nahi mila 😕 — koi aur word try karo</p>
+                        )}
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Viewer Stage */}
             <div
@@ -537,20 +687,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 borderRadius: 6
                             }}
                         >
-                            <Page
-                                pageNumber={currentPage}
-                                scale={BASE_RENDER_SCALE}
-                                renderTextLayer={false}
-                                renderAnnotationLayer={false}
-                                className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
-                                loading={null}
-                            />
+                            <div ref={pageContainerRef}>
+                                <Page
+                                    pageNumber={currentPage}
+                                    scale={BASE_RENDER_SCALE}
+                                    renderTextLayer={true}
+                                    renderAnnotationLayer={false}
+                                    className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
+                                    loading={null}
+                                />
+                            </div>
                         </div>
                     </Document>
                 )}
             </div>
 
-            {/* Smart Control Bar */}
+            {/* Smart Control Bar — Download button replaced with Search */}
             <AnimatePresence>
                 {!error && numPages && !isLoading && showControls && (
                     <motion.div
@@ -596,12 +748,17 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             </button>
                         </div>
 
+                        {/* Search button — replaces old blue Download button */}
                         <button
-                            onClick={handleDownload}
-                            className="p-3.5 bg-blue-600 rounded-2xl text-white shadow-xl shadow-blue-500/20 active:scale-95"
-                            title={Capacitor.isNativePlatform() ? "Save for offline" : "Download PDF"}
+                            onClick={toggleSearch}
+                            className={`p-3.5 rounded-2xl shadow-xl active:scale-95 transition ${
+                                showSearch 
+                                    ? 'bg-red-500 text-white shadow-red-500/20' 
+                                    : 'bg-white/10 hover:bg-white/15 text-gray-300'
+                            }`}
+                            title="Search in PDF"
                         >
-                            <Download className="h-6 w-6" />
+                            {showSearch ? <X className="h-6 w-6" /> : <Search className="h-6 w-6" />}
                         </button>
                     </motion.div>
                 )}
