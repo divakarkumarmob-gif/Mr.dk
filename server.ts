@@ -602,6 +602,59 @@ async function startServer() {
     }
   });
 
+  // Stream/proxy user note file or screenshot from S3 bucket 'user-note' using server credentials
+  app.get("/api/user-notes/file", async (req, res) => {
+    try {
+      let key = req.query.key as string;
+      const urlParam = req.query.url as string;
+
+      if (!key && urlParam) {
+        // Extract S3 object key from full URL if passed
+        const match = urlParam.match(/amazonaws\.com\/(.+)$/);
+        if (match) {
+          key = decodeURIComponent(match[1]);
+        } else {
+          key = decodeURIComponent(urlParam);
+        }
+      }
+
+      if (!key || typeof key !== 'string') {
+        return res.status(400).send("Key or URL parameter required");
+      }
+
+      const s3 = getS3Client();
+      const command = new GetObjectCommand({
+        Bucket: USER_NOTE_BUCKET,
+        Key: key,
+      });
+
+      const s3Res = await s3.send(command);
+      if (s3Res.ContentType) {
+        res.setHeader("Content-Type", s3Res.ContentType);
+      } else if (key.endsWith(".png")) {
+        res.setHeader("Content-Type", "image/png");
+      } else if (key.endsWith(".jpg") || key.endsWith(".jpeg")) {
+        res.setHeader("Content-Type", "image/jpeg");
+      } else if (key.endsWith(".pdf")) {
+        res.setHeader("Content-Type", "application/pdf");
+      }
+      res.setHeader("Cache-Control", "public, max-age=31536000");
+
+      const stream = s3Res.Body as any;
+      if (stream && typeof stream.pipe === 'function') {
+        stream.pipe(res);
+      } else if (stream) {
+        const byteArray = await stream.transformToByteArray();
+        res.send(Buffer.from(byteArray));
+      } else {
+        res.status(404).send("File body empty");
+      }
+    } catch (error: any) {
+      console.error("S3 User Note File Proxy Error:", error);
+      res.status(500).send(error.message);
+    }
+  });
+
   app.get("/api/s3/health", async (req, res) => {
     try {
         const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";

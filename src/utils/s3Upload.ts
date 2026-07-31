@@ -44,3 +44,15 @@ export async function uploadToUserNoteS3(
   const firstErr = data.results?.[0]?.error || data.error || 'S3 upload failed';
   throw new Error(firstErr);
 }
+
+/**
+ * Safely converts an AWS S3 URL to our backend proxy stream URL so that
+ * thumbnails and clicked images/PDFs render without CORS or S3 AccessDenied errors.
+ */
+export function getDisplayUrl(url: string | undefined | null): string {
+  if (!url) return '';
+  if (url.includes('.amazonaws.com/')) {
+    return getApiUrl(`/api/user-notes/file?url=${encodeURIComponent(url)}`);
+  }
+  return url;
+}

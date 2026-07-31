@@ -15,7 +15,7 @@ import imageCompression from 'browser-image-compression';
 import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
-import { uploadToUserNoteS3 } from '../utils/s3Upload';
+import { uploadToUserNoteS3, getDisplayUrl } from '../utils/s3Upload';
 
 interface SelectedFile {
   id: string;
@@ -113,11 +113,12 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
 
   const handleDownloadFile = async (url: string, filename: string) => {
     await showToast("Downloading file...");
-    const saved = await savePdfToPublicDownloads(url, filename);
+    const displayUrl = getDisplayUrl(url);
+    const saved = await savePdfToPublicDownloads(displayUrl, filename);
     if (saved) {
       await showToast("✅ Downloaded to your Downloads folder!");
     } else {
-      window.open(url, '_blank');
+      window.open(displayUrl, '_blank');
     }
   };
 
@@ -541,7 +542,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                       <div className="h-28 w-full bg-slate-900 flex items-center justify-center overflow-hidden border-b border-slate-850 relative">
                         {isImage && (firstFile?.url || note.url) ? (
                           <img 
-                            src={firstFile?.url || note.url} 
+                            src={getDisplayUrl(firstFile?.url || note.url)} 
                             alt={note.name}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             referrerPolicy="no-referrer"
@@ -626,7 +627,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                         </div>
                         <div 
                           className="w-full h-[380px] bg-slate-950 relative cursor-pointer flex items-center justify-center"
-                          onClick={() => setViewerPdf({ url: file.url, title: file.name })}
+                          onClick={() => setViewerPdf({ url: getDisplayUrl(file.url), title: file.name })}
                         >
                           <div className="flex flex-col items-center gap-2 text-slate-400">
                             <FileText className="h-10 w-10 text-rose-500" />
@@ -641,10 +642,10 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                         <div className="text-slate-400 text-[10px] font-semibold mb-1 truncate">{file.name}</div>
                         <div 
                           className="h-64 rounded-xl overflow-hidden bg-slate-950 cursor-zoom-in relative group"
-                          onClick={() => setExpandedUploadedUrl(file.url)}
+                          onClick={() => setExpandedUploadedUrl(getDisplayUrl(file.url))}
                         >
                           <img 
-                            src={file.url} 
+                            src={getDisplayUrl(file.url)} 
                             alt={file.name} 
                             className="w-full h-full object-contain"
                             referrerPolicy="no-referrer"
@@ -676,7 +677,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                       </div>
                       <div 
                         className="w-full h-[380px] bg-slate-950 relative cursor-pointer flex items-center justify-center"
-                        onClick={() => setViewerPdf({ url: selectedNote.url!, title: selectedNote.name })}
+                        onClick={() => setViewerPdf({ url: getDisplayUrl(selectedNote.url!), title: selectedNote.name })}
                       >
                         <div className="flex flex-col items-center gap-2 text-slate-400">
                           <FileText className="h-10 w-10 text-rose-500" />
@@ -688,10 +689,10 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                     <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-sm p-2.5">
                       <div 
                         className="h-64 rounded-xl overflow-hidden bg-slate-950 cursor-zoom-in relative group"
-                        onClick={() => setExpandedUploadedUrl(selectedNote.url!)}
+                        onClick={() => setExpandedUploadedUrl(getDisplayUrl(selectedNote.url!))}
                       >
                         <img 
-                          src={selectedNote.url} 
+                          src={getDisplayUrl(selectedNote.url)} 
                           alt={selectedNote.name} 
                           className="w-full h-full object-contain"
                           referrerPolicy="no-referrer"
@@ -1051,7 +1052,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
             </button>
 
             <img 
-              src={expandedUploadedUrl} 
+              src={getDisplayUrl(expandedUploadedUrl)} 
               alt="Zoomed document note" 
               className="max-w-full max-h-[85vh] object-contain rounded-xl"
               referrerPolicy="no-referrer"
