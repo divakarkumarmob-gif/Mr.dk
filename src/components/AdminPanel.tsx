@@ -6,6 +6,7 @@ import {
     Upload as UploadIcon,
     FileUp,
     Trash2,
+    RotateCw,
     Edit2,
     Users,
     ClipboardList,
@@ -229,13 +230,13 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
 
     const [editingId, setEditingId] = useState<string | null>(null);
     const [editMessage, setEditMessage] = useState('');
-
-    const hideFromBell = async (id: string) => {
+    const toggleHideFromBell = async (n: Notification) => {
+        const newHideStatus = !n.hideFromBell;
         try {
-            await updateDoc(doc(db, 'notifications', id), { hideFromBell: true });
-            showToast('Message removed from Bell icon (still in history)');
+            await updateDoc(doc(db, 'notifications', n.id), { hideFromBell: newHideStatus });
+            showToast(newHideStatus ? 'Message removed from Bell icon (still in history)' : 'Message restored to Bell icon');
         } catch (error) {
-            handleFirestoreError(error, OperationType.UPDATE, 'notifications/' + id);
+            handleFirestoreError(error, OperationType.UPDATE, 'notifications/' + n.id);
         }
     };
 
@@ -320,21 +321,26 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             const res = await fetch(getApiUrl('/api/admin/delete-all-users'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ adminUid: auth.currentUser?.uid })
+                body: JSON.stringify({ confirmText: deleteConfirmText }),
             });
             const data = await res.json();
-            showToast(data.message || 'Done');
+            if (!res.ok) throw new Error(data.error || 'Failed to delete users');
+            showToast(`Deleted ${data.deletedCount} users!`);
             setDeleteConfirmText('');
-        } catch (e) {
-            showToast('Error deleting users');
+        } catch (err: any) {
+            showToast(`Error: ${err.message}`);
         } finally {
             setDeletingUsers(false);
         }
     };
 
-    const filteredNotifications = notifications.filter(n =>
-        n.message.toLowerCase().includes(historySearch.toLowerCase())
-    );
+    const filteredNotifications = notifications.filter(n => {
+        const q = historySearch.toLowerCase();
+        const msg = (n.message || '').toLowerCase();
+        const title = (n.title || '').toLowerCase();
+        const fileNames = (n.files || []).map(f => f.name.toLowerCase()).join(' ');
+        return msg.includes(q) || title.includes(q) || fileNames.includes(q);
+    });
 
     const allChaptersFlat = Object.entries(CHAPTER_DATA).flatMap(([subject, classes]) =>
         Object.entries(classes).flatMap(([className, chapters]) =>
@@ -492,27 +498,43 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                                                         }}
                                                         className="min-w-0 text-left flex-1"
                                                     >
-                                                        <div className="flex items-center gap-1.5 flex-wrap">
-                                                            <p className="text-sm break-words">{n.message}</p>
-                                                            {n.hideFromBell && (
-                                                                <span className="text-[9px] bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-1.5 py-0.5 rounded font-medium">
-                                                                    Hidden from Bell
-                                                                </span>
+                                                        <div className="space-y-1">
+                                                            {n.title && (
+                                                                <p className="text-xs font-bold text-orange-400">{n.title}</p>
+                                                            )}
+                                                            <div className="flex items-center gap-1.5 flex-wrap">
+                                                                <p className="text-sm break-words">
+                                                                    {n.message || (n.files && n.files.length > 0 ? `Uploaded ${n.files.length} file(s)` : 'Notification')}
+                                                                </p>
+                                                                {n.hideFromBell && (
+                                                                    <span className="text-[9px] bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-1.5 py-0.5 rounded font-medium">
+                                                                        Hidden from Bell
+                                                                    </span>
+                                                                )}
+                                                            </div>
+                                                            {n.files && n.files.length > 0 && (
+                                                                <div className="flex flex-wrap gap-1 mt-1">
+                                                                    {n.files.map((f: any, idx: number) => (
+                                                                        <span key={idx} className="text-[10px] bg-blue-500/15 text-blue-300 border border-blue-500/30 px-1.5 py-0.5 rounded-md flex items-center gap-1">
+                                                                            <span>{f.fileType === 'image' ? '🖼️' : '📄'}</span>
+                                                                            <span className="truncate max-w-[140px]">{f.name}</span>
+                                                                        </span>
+                                                                    ))}
+                                                                </div>
                                                             )}
                                                         </div>
-                                                        <p className="text-gray-500 text-xs mt-1">
+                                                        <p className="text-gray-500 text-xs mt-1.5">
                                                             {typeof n.timestamp?.toDate === 'function' ? n.timestamp.toDate().toLocaleString() : 'Just now'} · {n.readBy?.length || 0} seen · tap for status · hold to delete
                                                         </p>
                                                     </button>
                                                     <div className="flex gap-1 flex-shrink-0">
                                                         <button onClick={() => startEdit(n)} title="Edit message" className="p-1.5 hover:bg-white/10 rounded-lg"><Edit2 className="h-3.5 w-3.5" /></button>
                                                         <button
-                                                            onClick={() => hideFromBell(n.id)}
-                                                            disabled={n.hideFromBell}
-                                                            title={n.hideFromBell ? "Already hidden from Bell icon" : "Hide from Bell icon (stays in History)"}
-                                                            className={`p-1.5 rounded-lg transition-colors ${n.hideFromBell ? 'text-gray-600 cursor-not-allowed' : 'hover:bg-amber-500/20 text-amber-400'}`}
+                                                            onClick={() => toggleHideFromBell(n)}
+                                                            title={n.hideFromBell ? "Restore to Bell icon (will show to users)" : "Hide from Bell icon (stays in History)"}
+                                                            className={`p-1.5 rounded-lg transition-colors ${n.hideFromBell ? 'hover:bg-emerald-500/20 text-emerald-400 bg-emerald-500/10' : 'hover:bg-amber-500/20 text-amber-400'}`}
                                                         >
-                                                            <Trash2 className="h-3.5 w-3.5" />
+                                                            {n.hideFromBell ? <RotateCw className="h-3.5 w-3.5" /> : <Trash2 className="h-3.5 w-3.5" />}
                                                         </button>
                                                     </div>
                                                 </div>
