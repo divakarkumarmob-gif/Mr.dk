@@ -2,7 +2,7 @@ import { Capacitor } from '@capacitor/core';
 import { getApiUrl } from './api';
 import { showToast } from './toast';
 import { saveMediaToGallery } from './saveMediaToGallery';
-import { cachePdf } from '../lib/pdfCache';
+import { savePdfToPublicDownloads } from './publicDownload';
 
 /**
  * Fetches just the signed view URL for a notification attachment, without
@@ -17,20 +17,12 @@ export async function getNotificationFileViewUrl(fileKey: string): Promise<strin
 }
 
 /**
- * Saves a notification attachment (photo/PDF) to the device.
+ * Saves a notification attachment (photo/PDF) to the device's public storage.
  *
- * Images go through @capacitor-community/media (Media.savePhoto), the same
- * plugin already used elsewhere in the app (see saveMediaToGallery.ts) to
- * save chat photos to the gallery — this is a well-tested path.
+ * Images go through @capacitor-community/media (Media.savePhoto) into device Gallery.
  *
- * PDFs go through @capacitor/filesystem (the same `cachePdf` helper used by
- * AdvancedPDFViewer's "save for offline" button) instead of the previous
- * @capgo/capacitor-file-sharer + @capawesome-team/capacitor-file-opener
- * combo, which was unreliable and is what caused save/open to fail with a
- * generic error.
- *
- * On web, both types just open in a new tab / trigger a normal browser
- * download.
+ * PDFs go through savePdfToPublicDownloads into the device's public Downloads/Documents
+ * folder so the user can easily open & view them from their phone's File Manager!
  */
 export async function downloadAndOpenNotificationFile(
   fileKey: string,
@@ -40,25 +32,24 @@ export async function downloadAndOpenNotificationFile(
   try {
     const signedUrl = await getNotificationFileViewUrl(fileKey);
 
-    if (!Capacitor.isNativePlatform()) {
-      window.open(signedUrl, '_blank');
-      return;
-    }
-
     if (fileType === 'image') {
       await saveMediaToGallery(signedUrl, 'image');
       return;
     }
 
-    // PDF: cache into app storage, same as AdvancedPDFViewer's offline save.
-    await showToast('Saving...');
+    // PDF: Save directly to device's public Downloads / Documents folder
+    await showToast('Downloading PDF to Downloads folder...');
     const safeName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
     const filename = safeName.toLowerCase().endsWith('.pdf') ? safeName : `${safeName}.pdf`;
-    const saved = await cachePdf(signedUrl, filename);
-    if (!saved) throw new Error('Could not save PDF');
-    await showToast('Saved. You can reopen it anytime, even offline.');
+    
+    const saved = await savePdfToPublicDownloads(signedUrl, filename);
+    if (saved) {
+      await showToast('✅ Saved to Downloads folder! Check your File Manager.');
+    } else {
+      window.open(signedUrl, '_blank');
+    }
   } catch (error) {
     console.error('[downloadAndOpenNotificationFile] Failed:', error);
-    await showToast('Failed to save file. Please try again.');
+    await showToast('Failed to save file. Please check connection and try again.');
   }
 }

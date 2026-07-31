@@ -5,6 +5,7 @@ import { ArrowLeft, BookOpen, Download, Eye, Search, CheckCircle2, Loader2, Tras
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import Pressable from './Pressable';
 import { getApiUrl } from '@/utils/api';
+import { savePdfToPublicDownloads } from '../utils/publicDownload';
 
 // Simple IndexedDB wrapper for PDF storage
 const dbName = 'NCERT_OFFLINE_DB';
@@ -252,23 +253,46 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         
         setDownloadingId(id);
         try {
-            // S3 only - no NCERT.nic.in fallback
             const s3Match = findS3Match(s3Files, chNum, title);
             
             if (!s3Match) {
-                alert("This chapter's PDF is not available on S3 yet.");
+                alert("This chapter's PDF is not available on server yet.");
                 setDownloadingId(null);
                 return;
             }
             
-            const response = await fetch(s3Match.url);
-            if (!response.ok) throw new Error("Download failed");
-            const blob = await response.blob();
-            await savePDF(id, blob);
+            let blob: Blob | null = null;
+            try {
+                const response = await fetch(s3Match.url);
+                if (response.ok) {
+                    blob = await response.blob();
+                }
+            } catch (err) {
+                console.warn("Direct fetch CORS check:", err);
+            }
+
+            if (blob) {
+                await savePDF(id, blob);
+            }
+
+            const filename = `${title.replace(/[^a-zA-Z0-9._-]/g, '_')}.pdf`;
+            const saved = await savePdfToPublicDownloads(s3Match.url, filename);
+            if (!blob && !saved) {
+                const link = document.createElement('a');
+                link.href = s3Match.url;
+                link.download = filename;
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
             await refreshDownloads();
         } catch (error) {
             console.error("Download error:", error);
-            alert("Failed to download. Please check your internet.");
+            const s3Match = findS3Match(s3Files, chNum, title);
+            if (s3Match?.url) {
+                window.open(s3Match.url, '_blank');
+            }
         } finally {
             setDownloadingId(null);
         }

@@ -14,6 +14,7 @@ import { collection, addDoc, onSnapshot, query, orderBy, deleteDoc, doc } from '
 import imageCompression from 'browser-image-compression';
 import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
+import { savePdfToPublicDownloads } from '../utils/publicDownload';
 
 interface SelectedFile {
   id: string;
@@ -109,30 +110,14 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
     setSelectedFiles([]);
   };
 
-  const handleDownloadFile = (url: string, filename: string) => {
-    if ((window as any).Capacitor) {
-      if (url.startsWith('data:')) {
-        const w = window.open();
-        if (w) {
-          w.document.write(`<iframe src="${url}" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>`);
-        } else {
-          showToast("Please allow popups to view this document.");
-        }
-        return;
-      }
-      window.open(url, '_system');
-      return;
+  const handleDownloadFile = async (url: string, filename: string) => {
+    await showToast("Downloading file...");
+    const saved = await savePdfToPublicDownloads(url, filename);
+    if (saved) {
+      await showToast("✅ Downloaded to your Downloads folder!");
+    } else {
+      window.open(url, '_blank');
     }
-
-    // Standard web download
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = filename;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   // Select file in Popup 1
