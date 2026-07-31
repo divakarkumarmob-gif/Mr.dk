@@ -1791,7 +1791,7 @@ function AppInner() {
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.3 }}
             className="px-0"
-            style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}
+            style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
         >
             <StudyHub 
                 subjects={subjects} 
@@ -2054,7 +2054,7 @@ function AppInner() {
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
       className={`h-dvh bg-[#0a0f24] text-foreground font-sans pb-44 overflow-y-auto px-2 sm:px-4 ${showOnboarding ? 'blur-sm' : ''}`}
-      style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
+      style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
     >
       
       <div className="relative z-10 max-w-full mx-auto w-full">

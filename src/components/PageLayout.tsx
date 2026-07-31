@@ -50,7 +50,7 @@ export default function PageLayout({
   textColor = '',
   paddingX = 'px-3',
   paddingBottomExtra = '',
-  minTopPadding = 5,
+  minTopPadding = 0,
   className = '',
   scrollable = false,
 }: PageLayoutProps) {
@@ -70,7 +70,9 @@ export default function PageLayout({
         .filter(Boolean)
         .join(' ')}
       style={{
-        paddingTop: `max(env(safe-area-inset-top, 0px), ${minTopPadding}px)`,
+        paddingTop: minTopPadding > 0 
+          ? `max(env(safe-area-inset-top, 0px), ${minTopPadding}px)` 
+          : 'env(safe-area-inset-top, 0px)',
         // Bottom inset is always applied so content never sits under the
         // gesture bar / 3-button nav bar. Screens with a BottomNav add
         // paddingBottomExtra (e.g. "pb-20") as a Tailwind class on top of

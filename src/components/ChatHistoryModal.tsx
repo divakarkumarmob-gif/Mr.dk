@@ -474,7 +474,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     return (
         <div className="fixed inset-0 z-[1100] bg-[#0b141a] flex flex-col">
             {/* Header */}
-            <div className="w-full flex items-center gap-3 px-4 py-3 border-b border-white/10 flex-shrink-0 pt-[max(env(safe-area-inset-top,0px),12px)]">
+            <div className="w-full flex items-center gap-3 px-4 py-3 border-b border-white/10 flex-shrink-0 pt-[env(safe-area-inset-top,0px)]">
                 <button onClick={onClose} className="text-white p-1 -ml-1">
                     <X className="h-6 w-6" />
                 </button>

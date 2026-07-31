@@ -17,7 +17,7 @@ export default function SchoolSearch({ onNavigate }: { onNavigate: (view: 'home'
   };
 
   return (
-    <div className="min-h-dvh bg-background text-foreground font-sans p-4" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 5px)' }}>
+    <div className="min-h-dvh bg-background text-foreground font-sans p-4" style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}>
         <div className="flex items-center gap-2 mb-6">
             <button onClick={() => onNavigate('profile')} className="p-2 bg-muted rounded-full">
                 <ChevronLeft className="h-5 w-5" />

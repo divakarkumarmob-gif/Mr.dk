@@ -14,10 +14,10 @@ export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => 
     }
 
     return (
-        <div className="min-h-dvh bg-[#0f172a] text-white font-sans relative pt-[max(env(safe-area-inset-top,0px),12px)] px-4">
+        <div className="min-h-dvh bg-[#0f172a] text-white font-sans relative pt-[env(safe-area-inset-top,0px)] px-4">
             <button 
                 onClick={onBack} 
-                className="absolute top-[max(env(safe-area-inset-top,0px),12px)] left-4 flex items-center gap-2 text-sm font-bold bg-white/10 text-white p-2 px-3.5 rounded-full shadow-sm z-10 hover:bg-white/20 border border-white/10"
+                className="absolute top-[env(safe-area-inset-top,0px)] left-4 flex items-center gap-2 text-sm font-bold bg-white/10 text-white p-2 px-3.5 rounded-full shadow-sm z-10 hover:bg-white/20 border border-white/10"
             >
                 <ArrowLeft className="h-5 w-5" /> Back
             </button>

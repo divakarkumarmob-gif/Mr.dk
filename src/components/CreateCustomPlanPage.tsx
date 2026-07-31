@@ -237,7 +237,7 @@ export default function CreateCustomPlanPage({ onBack }: { onBack: () => void })
     };
 
     return (
-        <div className="min-h-dvh bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0f172a] text-white font-sans relative pb-12 pt-[max(env(safe-area-inset-top,0px),12px)]">
+        <div className="min-h-dvh bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0f172a] text-white font-sans relative pb-12 pt-[env(safe-area-inset-top,0px)]">
             {/* Header */}
             <div className="max-w-3xl mx-auto px-4 py-3.5 flex items-center justify-between border-b border-indigo-900/50 backdrop-blur-md sticky top-0 z-30 bg-[#0f172a]/90">
                 <button

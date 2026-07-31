@@ -97,7 +97,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
     const COLORS = ['#3b82f6', '#1e293b'];
 
     return (
-        <div ref={contentRef} className="min-h-dvh bg-[#0a0f24] text-white p-6 pb-44 overflow-y-auto" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 5px)' }}>
+        <div ref={contentRef} className="min-h-dvh bg-[#0a0f24] text-white p-6 pb-44 overflow-y-auto" style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}>
             <header className="flex justify-between items-center mb-6">
                 <button onClick={onBack} className="p-2 bg-[#161e38] rounded-full"><ArrowLeft /></button>
                 <h1 className="text-xl font-bold">Analysis</h1>

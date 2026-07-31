@@ -653,7 +653,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
 
     return (
         <div 
-            className="fixed inset-0 z-[1000] bg-gradient-to-b from-[#0a0f24] via-[#0a0f24] via-60% to-black text-white flex flex-col items-center pt-[max(env(safe-area-inset-top,0px),12px)] px-6 pb-[max(env(safe-area-inset-bottom,0px),12px)] overflow-hidden"
+            className="fixed inset-0 z-[1000] bg-gradient-to-b from-[#0a0f24] via-[#0a0f24] via-60% to-black text-white flex flex-col items-center pt-[env(safe-area-inset-top,0px)] px-6 pb-[max(env(safe-area-inset-bottom,0px),12px)] overflow-hidden"
             onClick={handleClose}
         >
             <div className="w-full h-full flex flex-col flex-1 overflow-hidden" onClick={e => e.stopPropagation()}>
