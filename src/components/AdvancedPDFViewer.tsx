@@ -88,6 +88,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const wrapRef = useRef<HTMLDivElement>(null); // pan/zoom transform target (visual only)
     const stageRef = useRef<HTMLDivElement>(null);
 
+    const overlayCanvasRef = useRef<HTMLCanvasElement | null>(null);
+    const [isRendering, setIsRendering] = useState(false);
+
     // Live visual transform (CSS only, never triggers a React re-render).
     // While a pinch/pan gesture is active, this is the ONLY thing that
     // changes — we just paint translate3d()+scale() on top of the single,
@@ -115,21 +118,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         startScale: number;
         startX: number;
         startY: number;
-        // The pinch-center's position in *unscaled content space*, captured
-        // once when the gesture begins. This is the point that must stay
-        // pinned under the fingers for the whole gesture — it must NOT be
-        // recomputed from the live/moving center on every touchmove, or the
-        // anchor drifts every frame and the page visibly slides around.
         startOrigX: number;
         startOrigY: number;
-        // Last known pinch center (screen coords), updated every touchmove.
-        // Used to anchor the commit-time content-space capture to exactly
-        // where the fingers are, rather than an arbitrary point.
         lastCenterXRef: number;
         lastCenterYRef: number;
         lastSingleX: number;
         lastSingleY: number;
-        // Tap detection: recorded at touch-start, compared at touch-end.
         tapStartX: number;
         tapStartY: number;
         tapStartTime: number;
@@ -249,33 +243,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setError(null);
         setIsLoading(false);
 
-        // Auto-fit: measure the first page's native width, then compute a scale
-        // so it exactly fills the available stage width (minus tiny padding).
-        // This replaces the old fixed `initialScale` guess, so text is never
-        // cut off on narrow screens nor left with huge empty margins on wide
-        // ones.
-        //
-        // IMPORTANT: this scale change must go through commitZoom (not a bare
-        // setCommittedScale) even though there's no pinch gesture involved.
-        // Calling setCommittedScale directly here was the root cause of all
-        // three visible bugs — jump, size "snap", and flicker — because it
-        // resized the <Page> canvas with no pendingAnchor captured, so
-        // collapseLiveScale had nothing to correct and the canvas's own
-        // native resize was left to move the page wherever the browser's
-        // default layout put it. Routing it through commitZoom anchors the
-        // change to the stage center exactly like the zoom buttons do, so
-        // collapseLiveScale re-solves the translation after this second
-        // render too and the page never visibly moves.
         pdf.getPage(1).then((page: any) => {
             const viewport = page.getViewport({ scale: 1 });
-            const stageWidth = stageRef.current?.clientWidth ?? 400;
-            // Leave a very small margin (8px total) instead of the old large padding.
+            const stageWidth = stageRef.current?.clientWidth ?? (window.innerWidth - 16);
             const fitScale = Math.min(Math.max((stageWidth - 8) / viewport.width, MIN_SCALE), MAX_SCALE);
             commitZoom(fitScale);
-        }).catch(() => {
-            // If measurement fails for any reason, silently keep the existing
-            // initialScale fallback — never block rendering on this.
-        });
+        }).catch(() => {});
     }
 
     function onDocumentLoadError(err: Error) {
@@ -328,16 +301,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setIsSearching(false);
     };
 
-    // Captures "what content point is at what screen point" right now, in
-    // PDF CONTENT coordinates (i.e. independent of committedScale), and
-    // stores it directly in pendingAnchor for collapseLiveScale to consume
-    // once the fresh canvas has painted. The wrapper's on-screen mapping at
-    // any instant is:
-    //   screenPos = liveX + liveScale * (committedScaleOld * contentPos)
-    // so solving for contentPos given a target screen point gives:
-    //   contentPos = (screenPos - liveX) / (liveScale * committedScaleOld)
-    // This is the inverse of the transform actually painted on screen, so it
-    // is exact regardless of what liveScale/committedScaleOld currently are.
     const captureViewportAnchor = useCallback((screenX: number, screenY: number) => {
         const { scale: liveScale, x: liveX, y: liveY } = liveTransform.current;
         const totalScale = liveScale * committedScaleRef.current;
@@ -349,38 +312,35 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         };
     }, []);
 
-    // Commits a new render scale to react-pdf. This is the ONLY place that
-    // triggers an actual canvas re-render (a React state update). It is
-    // called after a gesture ends, or from the zoom buttons — never during
-    // a live touchmove.
-    //
-    // Before changing committedScale, we snapshot the current viewport
-    // anchor in CONTENT space (see captureViewportAnchor) into
-    // pendingAnchor. Once the fresh canvas paints at the new committedScale,
-    // collapseLiveScale re-solves the forward equation for the translation
-    // that puts that same content point back at that same screen point —
-    // this is viewport-space math, not CSS-space math: it does not depend
-    // on committedScaleNew being algebraically related to committedScaleOld
-    // and liveScale (e.g. it stays correct even if commitZoom's clamping
-    // changes the scale independently, or the scale change came from the
-    // zoom buttons rather than a pinch).
+    const collapseLiveScale = useCallback(() => {
+        const anchor = pendingAnchor.current;
+        if (!anchor) return;
+        pendingAnchor.current = null;
+
+        const committedScaleNew = committedScaleRef.current;
+        liveTransform.current = {
+            scale: 1,
+            x: anchor.screenX - committedScaleNew * anchor.contentX,
+            y: anchor.screenY - committedScaleNew * anchor.contentY,
+        };
+        applyTransformNow();
+    }, [applyTransformNow]);
+
     const commitZoom = useCallback((finalScale: number, anchorScreenX?: number, anchorScreenY?: number) => {
         const clamped = Math.min(Math.max(finalScale, MIN_SCALE), MAX_SCALE);
 
-        // Default anchor: the center of the visible stage — used for the
-        // +/- zoom buttons, which have no finger position to anchor to.
         const stage = stageRef.current;
         const fallbackX = anchorScreenX ?? (stage ? stage.clientWidth / 2 : 0);
         const fallbackY = anchorScreenY ?? (stage ? stage.clientHeight / 2 : 0);
         captureViewportAnchor(fallbackX, fallbackY);
 
+        committedScaleRef.current = clamped;
+        setIsRendering(true);
         setCommittedScale(clamped);
-    }, [captureViewportAnchor]);
+        collapseLiveScale();
+    }, [captureViewportAnchor, collapseLiveScale]);
 
     // ---- Native touch handlers ----
-    // 2 fingers: pinch (zoom) AND pan (move) simultaneously, tracked from the
-    //            midpoint between the two touches.
-    // 1 finger:  pan only.
 
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
         const touches = e.touches;
@@ -398,14 +358,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.startScale = liveTransform.current.scale;
             state.startX = liveTransform.current.x;
             state.startY = liveTransform.current.y;
-            // Fixed anchor in unscaled content space — computed once, here,
-            // from the start center. Used for the whole gesture so the
-            // zoom stays pinned under the fingers instead of drifting.
             state.startOrigX = (center.x - state.startX) / state.startScale;
             state.startOrigY = (center.y - state.startY) / state.startScale;
             state.lastCenterXRef = center.x;
             state.lastCenterYRef = center.y;
-            state.moved = true; // two-finger gestures are never a "tap"
+            state.moved = true;
         } else if (touches.length === 1) {
             state.active = true;
             state.touchCount = 1;
@@ -433,15 +390,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const maxLive = MAX_SCALE / committedScaleRef.current;
             const clampedLiveScale = Math.min(Math.max(rawScale, minLive), maxLive);
 
-            // Use the anchor captured once at gesture start (state.startOrigX/Y),
-            // not one recomputed from the live center every frame — that was
-            // the bug: recomputing it here made the anchor drift on every
-            // touchmove, which is what made the page appear to slide/move
-            // during a pinch instead of zooming cleanly in place.
-            // Re-anchoring against the CURRENT center still gives correct
-            // simultaneous pan (the page follows the fingers), because the
-            // anchor's content-space position is fixed while its target
-            // screen position (center.x/y) tracks the fingers each frame.
             liveTransform.current = {
                 scale: clampedLiveScale,
                 x: center.x - state.startOrigX * clampedLiveScale,
@@ -449,14 +397,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             };
             applyTransform();
 
-            // Keep the last known pinch center around so touch-end can
-            // anchor the commit to exactly where the fingers currently are,
-            // in content-space terms, rather than the stage center.
             state.lastCenterXRef = center.x;
             state.lastCenterYRef = center.y;
-
-            // No React state update here — this is a pure CSS transform,
-            // no react-pdf re-render happens until the gesture ends.
         } else if (touches.length === 1 && state.touchCount === 1) {
             e.preventDefault();
             const dx = touches[0].clientX - state.lastSingleX;
@@ -464,8 +406,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.lastSingleX = touches[0].clientX;
             state.lastSingleY = touches[0].clientY;
 
-            // Tap-vs-drag: once total movement from the tap start exceeds a
-            // small threshold, this is a drag/pan, not a tap.
             const totalDx = touches[0].clientX - state.tapStartX;
             const totalDy = touches[0].clientY - state.tapStartY;
             if (Math.hypot(totalDx, totalDy) > 10) {
@@ -489,8 +429,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             wrapRef.current.style.transition = '';
         }
 
-        // Tap detection: single finger, didn't move past the threshold,
-        // and released quickly — toggle immersive reading mode.
         if (state.touchCount === 1 && remaining === 0 && !state.moved) {
             const elapsed = Date.now() - state.tapStartTime;
             if (elapsed < 300) {
@@ -499,11 +437,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
 
         if (state.touchCount === 2 && remaining < 2) {
-            // Gesture end: fold the live CSS scale into the committed scale
-            // and let react-pdf render exactly ONE new canvas at that scale.
-            // The anchor for this commit is the pinch center itself — so the
-            // exact content point under the fingers is what gets pinned back
-            // to the exact same screen point once the new canvas paints.
             const finalScale = committedScaleRef.current * liveTransform.current.scale;
             commitZoom(finalScale, state.lastCenterXRef, state.lastCenterYRef);
 
@@ -521,7 +454,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     }, [commitZoom]);
 
-    // Discrete zoom via +/- buttons.
     const zoomButton = useCallback((direction: 1 | -1) => {
         const step = 0.2 * direction;
         const current = committedScaleRef.current;
@@ -529,52 +461,27 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         commitZoom(target);
     }, [commitZoom]);
 
-    // Page navigation preserves whatever zoom/pan the user currently has —
-    // same as Google Drive / Xodo, flipping pages never snaps you back to
-    // fit-width. The live transform is untouched; committedScale stays as-is.
     const goToPage = useCallback((updater: (p: number) => number) => {
+        setIsRendering(true);
         setCurrentPage(updater);
     }, []);
 
-    // Fires once the single <Page> canvas finishes painting at the new
-    // committedScale — whether that came from a pinch-end, a zoom button, or
-    // simply a page change (react-pdf re-renders the <Page> on every
-    // pageNumber change too, even when committedScale didn't move).
-    //
-    // This is where we solve the VIEWPORT-SPACE equation, not a CSS-space
-    // shortcut. pendingAnchor holds a content-space point (contentX/contentY,
-    // independent of any scale) and the exact screen point it must continue
-    // to render at (screenX/screenY). The new canvas is native at
-    // committedScaleRef.current, so under transform translate(x,y) scale(1):
-    //   screenX = x + committedScaleNew * contentX
-    //   screenY = y + committedScaleNew * contentY
-    // Solving for the translation:
-    //   x = screenX - committedScaleNew * contentX
-    //   y = screenY - committedScaleNew * contentY
-    // This holds regardless of how committedScaleNew relates to whatever
-    // scale was committed before, or to whatever liveScale was mid-gesture —
-    // there is no reliance on the two cancelling out algebraically. It is
-    // exact for pinch-end, zoom-button, and (if ever needed) any other
-    // scale-changing path, because it is re-derived from the anchor itself
-    // every time rather than carried forward as a CSS delta.
-    //
-    // If there's no pending anchor (e.g. a plain page change with no scale
-    // commit involved), the live transform is already correct as-is and is
-    // left untouched — no jump, because nothing about the transform needs
-    // to change.
-    const collapseLiveScale = useCallback(() => {
-        const anchor = pendingAnchor.current;
-        if (!anchor) return;
-        pendingAnchor.current = null;
-
-        const committedScaleNew = committedScaleRef.current;
-        liveTransform.current = {
-            scale: 1,
-            x: anchor.screenX - committedScaleNew * anchor.contentX,
-            y: anchor.screenY - committedScaleNew * anchor.contentY,
-        };
-        applyTransformNow();
-    }, [applyTransformNow]);
+    const handleRenderSuccess = useCallback(() => {
+        if (wrapRef.current && overlayCanvasRef.current) {
+            const pdfCanvas = wrapRef.current.querySelector('canvas');
+            if (pdfCanvas && pdfCanvas.width > 0 && pdfCanvas.height > 0) {
+                const overlay = overlayCanvasRef.current;
+                overlay.width = pdfCanvas.width;
+                overlay.height = pdfCanvas.height;
+                const ctx = overlay.getContext('2d');
+                if (ctx) {
+                    ctx.drawImage(pdfCanvas, 0, 0);
+                }
+            }
+        }
+        setIsRendering(false);
+        collapseLiveScale();
+    }, [collapseLiveScale]);
 
     return (
         <motion.div
@@ -709,17 +616,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
                             className="flex flex-col items-center"
                         >
-                            {/* Single transform target. During a pinch/pan gesture only
-                                this element's inline `transform` style changes (via refs
-                                + rAF) — no React state update, no re-render. Once the
-                                gesture ends, committedScale changes and react-pdf
-                                re-renders the ONE <Page> below at the new scale; when
-                                that finishes painting, collapseLiveScale drops just the
-                                `scale` term of the transform (translation untouched), so
-                                the viewport position never moves and nothing jumps. */}
                             <div
                                 ref={wrapRef}
-                                style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0', background: '#fff', borderRadius: 6 }}
+                                style={{ willChange: 'transform', position: 'relative', transformOrigin: '0 0', background: '#0F172A', borderRadius: 6 }}
                             >
                                 <Page
                                     pageNumber={currentPage}
@@ -728,7 +627,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                     renderAnnotationLayer={false}
                                     className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
                                     loading={null}
-                                    onRenderSuccess={collapseLiveScale}
+                                    onRenderSuccess={handleRenderSuccess}
+                                />
+                                <canvas
+                                    ref={overlayCanvasRef}
+                                    style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '100%',
+                                        pointerEvents: 'none',
+                                        opacity: isRendering ? 1 : 0,
+                                        transition: 'opacity 0.15s ease-out',
+                                        borderRadius: 6,
+                                        zIndex: 5
+                                    }}
                                 />
                             </div>
                         </Document>
