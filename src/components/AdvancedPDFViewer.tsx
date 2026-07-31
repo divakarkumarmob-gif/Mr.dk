@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, ExternalLink, Loader2, Maximize2, Search } from 'lucide-react';
+import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { getCachedPdf, cachePdf } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
@@ -9,20 +9,14 @@ import { openExternalLink } from '../utils/browser';
 import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { keepAwake, allowSleep } from '../utils/keepAwake';
-// Bundle the pdf.js worker locally instead of fetching it from a CDN at
-// runtime. Loading pdf.worker.min.mjs from unpkg.com works fine in a regular
-// browser, but inside the Capacitor Android WebView that cross-origin script
-// load is unreliable (silently fails / times out), which means the worker
-// never initializes and PDFs never start rendering — this is what shows up
-// to the user as the viewer being "blocked". Importing with `?url` makes
-// Vite copy the worker file into dist/assets and gives us a same-origin URL
-// that ships inside the APK, so no network/CDN access is needed at all.
+
 import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 
 const MIN_SCALE = 0.25;
-const MAX_SCALE = 3.0;
+const MAX_SCALE = 4.0;
+const BASE_RENDER_SCALE = 1.5; // High-definition crisp rendering scale
 
 function getTouchCenter(touches: TouchList) {
     return {
@@ -41,16 +35,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const [activePdfUrl, setActivePdfUrl] = useState(pdfUrl);
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-
-    // committedScale = the scale react-pdf actually renders the <Page> canvas
-    // at. This only ever changes AFTER a gesture ends (or a zoom button is
-    // pressed) — never during a live pinch. During the pinch itself, zoom is
-    // purely a CSS transform on top of whatever canvas is already rendered.
-    const [committedScale, setCommittedScale] = useState(initialScale);
-    const committedScaleRef = useRef(committedScale);
-    useEffect(() => {
-        committedScaleRef.current = committedScale;
-    }, [committedScale]);
+    const [displayZoom, setDisplayZoom] = useState(initialScale);
 
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -59,10 +44,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const [searchResults, setSearchResults] = useState<number[]>([]);
     const [isSearching, setIsSearching] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
-
-    // Immersive reading mode: single tap on the page toggles the toolbar,
-    // search bar, and bottom controls together with the device status bar —
-    // same pattern as Google PDF Viewer / Kindle / YouTube fullscreen.
     const [showControls, setShowControls] = useState(true);
 
     useEffect(() => {
@@ -75,7 +56,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     }, [showControls]);
 
-    // Always restore the status bar when leaving the PDF viewer entirely.
     useEffect(() => {
         return () => {
             if (Capacitor.isNativePlatform()) {
@@ -85,60 +65,23 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, []);
 
     const pdfDocRef = useRef<any>(null);
-    const wrapRef = useRef<HTMLDivElement>(null); // pan/zoom transform target (visual only)
+    const wrapRef = useRef<HTMLDivElement>(null);
     const stageRef = useRef<HTMLDivElement>(null);
+    const pageWidthRef = useRef<number>(600);
+    const pageHeightRef = useRef<number>(800);
 
-    const overlayCanvasRef = useRef<HTMLCanvasElement | null>(null);
-    const [isRendering, setIsRendering] = useState(false);
+    // Single source of truth for visual scale & position
+    const transformRef = useRef({ zoom: initialScale, x: 0, y: 0 });
 
-    // Live visual transform (CSS only, never triggers a React re-render).
-    // While a pinch/pan gesture is active, this is the ONLY thing that
-    // changes — we just paint translate3d()+scale() on top of the single,
-    // already-rendered <Page> canvas. No react-pdf re-render happens until
-    // the gesture ends.
-    const liveTransform = useRef({ scale: 1, x: 0, y: 0 });
-
-    // Content-space anchor snapshot, captured the instant a scale commit is
-    // requested (gesture end / zoom button) and consumed once by
-    // collapseLiveScale after the fresh canvas paints. This is the single
-    // source of truth for "what content point must render at what screen
-    // point" across the commit — see captureViewportAnchor / collapseLiveScale.
-    // Using content-space coordinates (rather than carrying forward a CSS
-    // translation delta) means the math is exact regardless of how
-    // committedScale, liveScale, or clamping interact — it never depends on
-    // old-scale/new-scale cancelling out algebraically.
-    const pendingAnchor = useRef<{ contentX: number; contentY: number; screenX: number; screenY: number } | null>(null);
-
-    // Gesture bookkeeping — supports pinch+pan simultaneously with 2 fingers,
-    // and pan with 1 finger.
-    const gestureState = useRef<{
-        active: boolean;
-        touchCount: number;
-        startDistance: number;
-        startScale: number;
-        startX: number;
-        startY: number;
-        startOrigX: number;
-        startOrigY: number;
-        lastCenterXRef: number;
-        lastCenterYRef: number;
-        lastSingleX: number;
-        lastSingleY: number;
-        tapStartX: number;
-        tapStartY: number;
-        tapStartTime: number;
-        moved: boolean;
-    }>({
+    const gestureState = useRef({
         active: false,
         touchCount: 0,
         startDistance: 0,
-        startScale: 1,
+        startZoom: 1,
         startX: 0,
         startY: 0,
         startOrigX: 0,
         startOrigY: 0,
-        lastCenterXRef: 0,
-        lastCenterYRef: 0,
         lastSingleX: 0,
         lastSingleY: 0,
         tapStartX: 0,
@@ -147,45 +90,44 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         moved: false,
     });
 
-    // rAF batching so touchmove never applies more than one style write per
-    // animation frame, avoiding layout thrashing on rapid multi-touch events.
     const rafRef = useRef<number | null>(null);
-    const pendingTransform = useRef<{ scale: number; x: number; y: number } | null>(null);
 
     const applyTransformNow = useCallback(() => {
         if (wrapRef.current) {
-            const { scale, x, y } = liveTransform.current;
-            wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
+            const { zoom, x, y } = transformRef.current;
+            const cssScale = zoom / BASE_RENDER_SCALE;
+            wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${cssScale})`;
         }
     }, []);
 
-    // Queues a transform write for the next animation frame instead of
-    // writing to style directly on every touchmove callback.
     const applyTransform = useCallback(() => {
-        pendingTransform.current = liveTransform.current;
         if (rafRef.current !== null) return;
         rafRef.current = requestAnimationFrame(() => {
             rafRef.current = null;
-            if (pendingTransform.current && wrapRef.current) {
-                const { scale, x, y } = pendingTransform.current;
-                wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
-            }
+            applyTransformNow();
         });
-    }, []);
-
-    const resetLiveTransform = useCallback(() => {
-        liveTransform.current = { scale: 1, x: 0, y: 0 };
-        pendingAnchor.current = null;
-        applyTransformNow();
     }, [applyTransformNow]);
+
+    const resetTransform = useCallback((targetZoom = initialScale) => {
+        const stage = stageRef.current;
+        const stageWidth = stage?.clientWidth || (window.innerWidth - 16);
+        const stageHeight = stage?.clientHeight || (window.innerHeight - 100);
+
+        const scaledW = pageWidthRef.current * targetZoom;
+        const scaledH = pageHeightRef.current * targetZoom;
+        const initialX = Math.max(0, (stageWidth - scaledW) / 2);
+        const initialY = Math.max(0, (stageHeight - scaledH) / 2);
+
+        transformRef.current = { zoom: targetZoom, x: initialX, y: initialY };
+        setDisplayZoom(targetZoom);
+        applyTransformNow();
+    }, [applyTransformNow, initialScale]);
 
     useEffect(() => {
         setIsLoading(true);
         setError(null);
         setNumPages(null);
         setCurrentPage(1);
-        setCommittedScale(initialScale);
-        resetLiveTransform();
 
         const loadContent = async () => {
             let urlToLoad = pdfUrl;
@@ -216,8 +158,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             allowSleep();
             if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
         };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pdfUrl]);
+    }, [pdfUrl, title]);
 
     useEffect(() => {
         keepAwake();
@@ -244,23 +185,16 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setIsLoading(false);
 
         pdf.getPage(1).then((page: any) => {
-            const viewport = page.getViewport({ scale: 1 });
+            const viewport = page.getViewport({ scale: 1.0 });
+            pageWidthRef.current = viewport.width;
+            pageHeightRef.current = viewport.height;
+
             const stage = stageRef.current;
             const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight - 100 };
             const stageWidth = stageRect.width || (window.innerWidth - 16);
-            const stageHeight = stageRect.height || (window.innerHeight - 100);
-            
-            const fitScale = Math.min(Math.max((stageWidth - 16) / viewport.width, MIN_SCALE), MAX_SCALE);
-            
-            const scaledW = viewport.width * fitScale;
-            const scaledH = viewport.height * fitScale;
-            const initialX = Math.max(0, (stageWidth - scaledW) / 2);
-            const initialY = Math.max(0, (stageHeight - scaledH) / 2);
 
-            committedScaleRef.current = fitScale;
-            setCommittedScale(fitScale);
-            liveTransform.current = { scale: 1, x: initialX, y: initialY };
-            applyTransformNow();
+            const fitZoom = Math.min(Math.max((stageWidth - 16) / viewport.width, MIN_SCALE), MAX_SCALE);
+            resetTransform(fitZoom);
         }).catch(() => {});
     }
 
@@ -314,45 +248,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setIsSearching(false);
     };
 
-    const captureViewportAnchor = useCallback((stageX: number, stageY: number) => {
-        const { scale: liveScale, x: liveX, y: liveY } = liveTransform.current;
-        const totalScale = liveScale * committedScaleRef.current;
-        pendingAnchor.current = {
-            contentX: (stageX - liveX) / totalScale,
-            contentY: (stageY - liveY) / totalScale,
-            screenX: stageX,
-            screenY: stageY,
-        };
-    }, []);
-
-    const collapseLiveScale = useCallback(() => {
-        const anchor = pendingAnchor.current;
-        if (!anchor) return;
-        pendingAnchor.current = null;
-
-        const committedScaleNew = committedScaleRef.current;
-        liveTransform.current = {
-            scale: 1,
-            x: anchor.screenX - committedScaleNew * anchor.contentX,
-            y: anchor.screenY - committedScaleNew * anchor.contentY,
-        };
-        applyTransformNow();
-    }, [applyTransformNow]);
-
-    const commitZoom = useCallback((finalScale: number, anchorStageX?: number, anchorStageY?: number) => {
-        const clamped = Math.min(Math.max(finalScale, MIN_SCALE), MAX_SCALE);
-
-        const stage = stageRef.current;
-        const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
-        const fallbackX = anchorStageX ?? (stageRect.width / 2);
-        const fallbackY = anchorStageY ?? (stageRect.height / 2);
-        captureViewportAnchor(fallbackX, fallbackY);
-
-        committedScaleRef.current = clamped;
-        setIsRendering(true);
-        setCommittedScale(clamped);
-    }, [captureViewportAnchor]);
-
     // ---- Native touch handlers ----
 
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
@@ -376,13 +271,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.active = true;
             state.touchCount = 2;
             state.startDistance = getTouchDistance(touches as any);
-            state.startScale = liveTransform.current.scale;
-            state.startX = liveTransform.current.x;
-            state.startY = liveTransform.current.y;
-            state.startOrigX = (centerStage.x - state.startX) / state.startScale;
-            state.startOrigY = (centerStage.y - state.startY) / state.startScale;
-            state.lastCenterXRef = centerStage.x;
-            state.lastCenterYRef = centerStage.y;
+            state.startZoom = transformRef.current.zoom;
+            state.startX = transformRef.current.x;
+            state.startY = transformRef.current.y;
+            state.startOrigX = (centerStage.x - state.startX) / state.startZoom;
+            state.startOrigY = (centerStage.y - state.startY) / state.startZoom;
             state.moved = true;
         } else if (touches.length === 1) {
             state.active = true;
@@ -413,20 +306,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 y: centerClient.y - stageRect.top,
             };
 
-            const rawScale = state.startScale * (currentDistance / state.startDistance);
-            const minLive = MIN_SCALE / committedScaleRef.current;
-            const maxLive = MAX_SCALE / committedScaleRef.current;
-            const clampedLiveScale = Math.min(Math.max(rawScale, minLive), maxLive);
+            const rawZoom = state.startZoom * (currentDistance / state.startDistance);
+            const clampedZoom = Math.min(Math.max(rawZoom, MIN_SCALE), MAX_SCALE);
 
-            liveTransform.current = {
-                scale: clampedLiveScale,
-                x: centerStage.x - state.startOrigX * clampedLiveScale,
-                y: centerStage.y - state.startOrigY * clampedLiveScale,
+            transformRef.current = {
+                zoom: clampedZoom,
+                x: centerStage.x - state.startOrigX * clampedZoom,
+                y: centerStage.y - state.startOrigY * clampedZoom,
             };
             applyTransform();
-
-            state.lastCenterXRef = centerStage.x;
-            state.lastCenterYRef = centerStage.y;
         } else if (touches.length === 1 && state.touchCount === 1) {
             e.preventDefault();
             const dx = touches[0].clientX - state.lastSingleX;
@@ -440,10 +328,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 state.moved = true;
             }
 
-            liveTransform.current = {
-                ...liveTransform.current,
-                x: liveTransform.current.x + dx,
-                y: liveTransform.current.y + dy,
+            transformRef.current = {
+                ...transformRef.current,
+                x: transformRef.current.x + dx,
+                y: transformRef.current.y + dy,
             };
             applyTransform();
         }
@@ -453,10 +341,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const state = gestureState.current;
         const remaining = e.touches.length;
 
-        if (wrapRef.current) {
-            wrapRef.current.style.transition = '';
-        }
-
         if (state.touchCount === 1 && remaining === 0 && !state.moved) {
             const elapsed = Date.now() - state.tapStartTime;
             if (elapsed < 300) {
@@ -465,9 +349,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
 
         if (state.touchCount === 2 && remaining < 2) {
-            const finalScale = committedScaleRef.current * liveTransform.current.scale;
-            commitZoom(finalScale, state.lastCenterXRef, state.lastCenterYRef);
-
+            // Finger released! Touch zoom stays EXACTLY at the pinched zoom ratio — ZERO RE-RENDER!
+            setDisplayZoom(transformRef.current.zoom);
             if (remaining === 1) {
                 state.touchCount = 1;
                 state.lastSingleX = e.touches[0].clientX;
@@ -480,36 +363,36 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.active = false;
             state.touchCount = 0;
         }
-    }, [commitZoom]);
-
-    const zoomButton = useCallback((direction: 1 | -1) => {
-        const step = 0.2 * direction;
-        const current = committedScaleRef.current;
-        const target = Math.min(Math.max(current + step, MIN_SCALE), MAX_SCALE);
-        commitZoom(target);
-    }, [commitZoom]);
-
-    const goToPage = useCallback((updater: (p: number) => number) => {
-        setIsRendering(true);
-        setCurrentPage(updater);
     }, []);
 
-    const handleRenderSuccess = useCallback(() => {
-        if (wrapRef.current && overlayCanvasRef.current) {
-            const pdfCanvas = wrapRef.current.querySelector('canvas');
-            if (pdfCanvas && pdfCanvas.width > 0 && pdfCanvas.height > 0) {
-                const overlay = overlayCanvasRef.current;
-                overlay.width = pdfCanvas.width;
-                overlay.height = pdfCanvas.height;
-                const ctx = overlay.getContext('2d');
-                if (ctx) {
-                    ctx.drawImage(pdfCanvas, 0, 0);
-                }
-            }
+    const zoomButton = useCallback((direction: 1 | -1) => {
+        const step = 0.25 * direction;
+        const currentZoom = transformRef.current.zoom;
+        const targetZoom = Math.min(Math.max(currentZoom + step, MIN_SCALE), MAX_SCALE);
+
+        const stage = stageRef.current;
+        const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
+        const stageX = stageRect.width / 2;
+        const stageY = stageRect.height / 2;
+
+        const anchorX = (stageX - transformRef.current.x) / currentZoom;
+        const anchorY = (stageY - transformRef.current.y) / currentZoom;
+
+        const newX = stageX - anchorX * targetZoom;
+        const newY = stageY - anchorY * targetZoom;
+
+        if (wrapRef.current) {
+            wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0.2, 1)';
         }
-        setIsRendering(false);
-        collapseLiveScale();
-    }, [collapseLiveScale]);
+
+        transformRef.current = { zoom: targetZoom, x: newX, y: newY };
+        setDisplayZoom(targetZoom);
+        applyTransformNow();
+    }, [applyTransformNow]);
+
+    const goToPage = useCallback((updater: (p: number) => number) => {
+        setCurrentPage(updater);
+    }, []);
 
     return (
         <motion.div
@@ -656,27 +539,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         >
                             <Page
                                 pageNumber={currentPage}
-                                scale={committedScale}
+                                scale={BASE_RENDER_SCALE}
                                 renderTextLayer={false}
                                 renderAnnotationLayer={false}
                                 className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
                                 loading={null}
-                                onRenderSuccess={handleRenderSuccess}
-                            />
-                            <canvas
-                                ref={overlayCanvasRef}
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    width: '100%',
-                                    height: '100%',
-                                    pointerEvents: 'none',
-                                    opacity: isRendering ? 1 : 0,
-                                    transition: 'opacity 0.15s ease-out',
-                                    borderRadius: 6,
-                                    zIndex: 5
-                                }}
                             />
                         </div>
                     </Document>
@@ -699,7 +566,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             >
                                 <ZoomOut className="h-6 w-6" />
                             </button>
-                            <span className="text-[10px] font-mono text-gray-500 w-12 text-center">{Math.round(committedScale * 100)}%</span>
+                            <span className="text-[10px] font-mono text-gray-500 w-12 text-center">{Math.round(displayZoom * 100)}%</span>
                             <button
                                 onClick={() => zoomButton(1)}
                                 className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400"
