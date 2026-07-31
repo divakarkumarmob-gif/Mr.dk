@@ -1141,10 +1141,20 @@ async function startServer() {
         const userData = userDoc.data();
         const username = userData.username || userData.displayName || userData.email || userDoc.id;
         tokensSnapshot.docs.forEach(tokenDoc => {
-          const rawToken = tokenDoc.data().token || tokenDoc.id;
-          tokens.push(rawToken);
-          tokenRefs.push(tokenDoc.ref);
-          tokenOwner.push({ uid: userDoc.id, username });
+          let rawToken = tokenDoc.data().token || tokenDoc.id;
+          if (!rawToken && tokenDoc.id) {
+            rawToken = tokenDoc.id;
+          }
+          if (typeof rawToken === 'string' && rawToken.includes('%')) {
+            try {
+              rawToken = decodeURIComponent(rawToken.replace(/%2E/g, '.'));
+            } catch (e) {}
+          }
+          if (rawToken && typeof rawToken === 'string') {
+            tokens.push(rawToken);
+            tokenRefs.push(tokenDoc.ref);
+            tokenOwner.push({ uid: userDoc.id, username });
+          }
         });
       }
 
@@ -1156,13 +1166,10 @@ async function startServer() {
 
       const messagePayloads = tokens.map(token => ({
         token,
-        // Data-only payload: Android OS won't auto-handle this, so our own
-        // FirebaseMessagingService.onMessageReceived() runs even when the
-        // app is backgrounded or killed, and we show the notification ourselves.
-        // notificationId + token are echoed back so the receiving device can
-        // POST /api/ack-delivery and prove it actually got the message —
-        // a "success" from admin.messaging().send() below only means FCM
-        // accepted the message, not that it reached the device.
+        notification: {
+          title,
+          body: message,
+        },
         data: {
           title,
           body: message,
@@ -1170,6 +1177,26 @@ async function startServer() {
         },
         android: {
           priority: 'high' as const,
+          notification: {
+            title,
+            body: message,
+            channelId: 'fcm_default_channel',
+            sound: 'default',
+            priority: 'high' as const,
+            defaultSound: true,
+            defaultVibrateTimings: true,
+          }
+        },
+        webpush: {
+          notification: {
+            title,
+            body: message,
+            icon: '/logo.png',
+            badge: '/logo.png',
+          },
+          fcmOptions: {
+            link: '/'
+          }
         }
       }));
 

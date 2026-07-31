@@ -22,6 +22,7 @@ import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCir
 import { getApiUrl } from '@/utils/api';
 import { configureStatusBar } from './utils/statusBar';
 import { lockToPortrait } from './utils/screenOrientation';
+import { initNotificationChannel } from './utils/notifications';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion, AnimatePresence } from 'motion/react';
 import Footer from './components/Footer';
@@ -1071,6 +1072,7 @@ function AppInner() {
       const requestPermissionAndRegister = async () => {
         let granted = false;
         if (Capacitor.isNativePlatform()) {
+          await initNotificationChannel().catch(() => {});
           const result = await PushNotifications.requestPermissions().catch(err => {
             console.warn("PushNotifications requestPermissions error on startup:", err);
             return { receive: 'denied' as const };
@@ -2051,7 +2053,7 @@ function AppInner() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`h-dvh bg-background text-foreground font-sans pb-44 overflow-y-auto px-3 ${showOnboarding ? 'blur-sm' : ''}`}
+      className={`h-dvh bg-[#0a0f24] text-foreground font-sans pb-44 overflow-y-auto px-2 sm:px-4 ${showOnboarding ? 'blur-sm' : ''}`}
       style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
     >
       
