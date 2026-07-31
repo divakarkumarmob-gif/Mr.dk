@@ -639,23 +639,27 @@ function AppInner() {
     // NEET website notifications
     const neetRef = collection(db, 'neet_notifications');
     const qNeet = query(neetRef, orderBy('timestamp', 'desc'), limit(5));
+    let initializedNeet = false;
     
     const unsubscribeNeet = onSnapshot(qNeet, (snapshot) => {
         snapshot.docChanges().forEach((change) => {
             if (change.type === 'added') {
-                if (initializedNotificationsRef.current && !knownNotificationIds.current.has(change.doc.id)) {
+                if (initializedNeet && !knownNotificationIds.current.has(change.doc.id)) {
                     const notif = change.doc.data();
-                    LocalNotifications.schedule({
-                        notifications: [{
-                            title: "NTA Public Notice",
-                            body: notif.message || "New public notice available",
-                            id: Math.floor(Math.random() * 100000),
-                        }]
-                    });
+                    if (Capacitor.isNativePlatform()) {
+                      LocalNotifications.schedule({
+                          notifications: [{
+                              title: "NTA Public Notice",
+                              body: notif.message || "New public notice available",
+                              id: Math.floor(Math.random() * 100000),
+                          }]
+                      }).catch(err => console.warn('LocalNotifications.schedule for neet notification failed:', err));
+                    }
                 }
                 knownNotificationIds.current.add(change.doc.id);
             }
         });
+        initializedNeet = true;
         const data = snapshot.docs.map(doc => doc.data() as any);
         setNeetNotifications(data);
     }, (error) => {
