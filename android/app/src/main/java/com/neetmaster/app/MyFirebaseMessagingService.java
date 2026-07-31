@@ -55,7 +55,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 body = "";
             }
 
-            showNotification(title, body);
+            showNotification(this, title, body);
 
             String notificationId = data != null ? data.get("notificationId") : null;
             String token = data != null ? data.get("token") : null;
@@ -109,10 +109,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d("FCM", "New token generated: " + token);
     }
 
-    private void showNotification(String title, String body) {
+    private void showNotification(Context context, String title, String body) {
         try {
             NotificationManager notificationManager =
-                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 NotificationChannel channel = new NotificationChannel(
@@ -127,16 +127,16 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 }
             }
 
-            Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
+            Intent intent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
             if (intent == null) {
                 intent = new Intent(Intent.ACTION_MAIN);
-                intent.setPackage(getPackageName());
+                intent.setPackage(context.getPackageName());
                 intent.addCategory(Intent.CATEGORY_LAUNCHER);
             }
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(
-                    this,
+                    context,
                     0,
                     intent,
                     PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
@@ -146,9 +146,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
             int smallIconId = 0;
             try {
-                smallIconId = getResources().getIdentifier("ic_notification", "drawable", getPackageName());
+                smallIconId = context.getResources().getIdentifier("ic_notification", "drawable", context.getPackageName());
                 if (smallIconId == 0) {
-                    smallIconId = getResources().getIdentifier("ic_launcher", "mipmap", getPackageName());
+                    smallIconId = context.getResources().getIdentifier("ic_launcher", "mipmap", context.getPackageName());
                 }
                 if (smallIconId == 0) {
                     smallIconId = R.mipmap.ic_launcher;
@@ -157,7 +157,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 smallIconId = R.mipmap.ic_launcher;
             }
 
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                     .setSmallIcon(smallIconId)
                     .setContentTitle(title)
                     .setContentText(body)
