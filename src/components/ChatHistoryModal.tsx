@@ -392,7 +392,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             // pixel ratio can produce a canvas large enough to stall
             // (sometimes indefinitely) in mobile WebViews.
             const canvas = await withTimeout(
-                html2canvasFn(target, { backgroundColor: '#0b141a', useCORS: true, scale: 1 }),
+                html2canvasFn(target, { backgroundColor: '#0b141a', useCORS: true, allowTaint: true, scale: 1 }),
                 20000,
                 'Capturing chat'
             );
@@ -411,19 +411,25 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             const storagePath = `users/${auth.currentUser.uid}/notes/${Date.now()}_chat_screenshot.png`;
             const storageRef = ref(storage, storagePath);
 
-            // uploadBytesResumable (chunked/session upload) was hanging
-            // indefinitely in this environment. uploadBytes (single-shot)
-            // is the same method chatService.ts already uses successfully
-            // for chat image sends, so it's the proven-working path here.
-            // It doesn't report real progress, so uploadPercent is left
-            // alone — the popup shows an honest indeterminate spinner
-            // instead of a fabricated number.
-            const snapshot = await withTimeout(
-                uploadBytes(storageRef, blob),
-                30000,
-                'Upload'
-            );
-            const downloadUrl = await getDownloadURL(snapshot.ref);
+            let downloadUrl = '';
+            try {
+                // Attempt Firebase Storage Upload with an 8-second timeout
+                const snapshot = await withTimeout(
+                    uploadBytes(storageRef, blob),
+                    8000,
+                    'Upload'
+                );
+                downloadUrl = await getDownloadURL(snapshot.ref);
+            } catch (storageErr) {
+                console.warn('[ChatHistoryModal] Firebase Storage upload bypassed or timed out, converting screenshot to Base64 fallback:', storageErr);
+                // Convert blob directly to Base64 to guarantee notes saving even without storage bucket / network connection
+                downloadUrl = await new Promise<string>((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(reader.result as string);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(blob);
+                });
+            }
 
             const notesRef = collection(db, 'users', auth.currentUser.uid, 'notes');
             await addDoc(notesRef, {
