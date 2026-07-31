@@ -1746,7 +1746,7 @@ function AppInner() {
 
   if (currentView === 'aiStudyPlan') {
       return (
-        <PageLayout background="bg-[#f0f4f8]" minTopPadding={0}>
+        <PageLayout background="bg-[#0f172a]" paddingX="px-0" minTopPadding={0}>
             <AIStudyPlanPage onBack={() => setCurrentView('profile')} onNavigate={setCurrentView} />
         </PageLayout>
       );
