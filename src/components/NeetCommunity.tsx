@@ -71,7 +71,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     const [postText, setPostText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
     const [videoUrl, setVideoUrl] = useState<string>('');
-    const [selectedCategory, setSelectedCategory] = useState<string>('BioTips');
+    const [selectedCategory, setSelectedCategory] = useState<string>('chats');
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
     // Comments Section State
@@ -654,6 +654,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         // Update local state instantly
         setPosts(prev => [newPost, ...prev.filter(p => p.id !== newPost.id)]);
 
+        // Set default capsule filter to 'chats' when user posts
+        setSelectedTagFilter('chats');
+        setSelectedCategory('chats');
+
         showToast('Post community mein publish ho gaya! 🎉');
         setPostText('');
         setImageUrl('');
@@ -765,13 +769,34 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         setSelectedUserProfile(null);
     };
 
-    // Filter Posts by Tag & Search
+    // Helper to get timestamp in milliseconds for reliable sorting (Latest/Newest first, Purane niche)
+    const getTimestampMs = (ts: any): number => {
+        if (!ts) return Date.now();
+        if (typeof ts === 'number') return ts;
+        if (typeof ts === 'string') {
+            const parsed = new Date(ts).getTime();
+            return isNaN(parsed) ? Date.now() : parsed;
+        }
+        if (ts.toDate && typeof ts.toDate === 'function') {
+            try {
+                return ts.toDate().getTime();
+            } catch {
+                return Date.now();
+            }
+        }
+        if (ts.seconds) return ts.seconds * 1000;
+        return Date.now();
+    };
+
+    // Filter & Sort Posts by Tag & Search (Latest/Newest first upar, Purane chat niche)
     const filteredPosts = posts.filter(post => {
         let matchesTag = false;
         const myUid = currentUser?.uid || 'user_host_';
 
         if (selectedTagFilter === 'all') {
             matchesTag = true;
+        } else if (selectedTagFilter === 'chats') {
+            matchesTag = post.tag === 'chats' || !post.tag || post.tag === 'General';
         } else if (selectedTagFilter === 'rooms') {
             matchesTag = !!post.roomData;
         } else if (selectedTagFilter === 'myRooms') {
@@ -791,7 +816,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             post.userName.toLowerCase().includes(searchQuery.toLowerCase());
 
         return matchesTag && matchesSearch;
-    });
+    }).sort((a, b) => getTimestampMs(b.timestamp) - getTimestampMs(a.timestamp));
 
     // Helper date formatter
     const formatDate = (ts: any) => {
@@ -893,6 +918,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
                     {[
                         { id: 'all', label: '🌟 All Posts' },
+                        { id: 'chats', label: '💬 Chats' },
                         { id: 'myRooms', label: '👑 My Rooms' },
                         { id: 'rooms', label: '📻 All Live Rooms' },
                         { id: 'BioTips', label: '🌿 Biology Tricks' },
@@ -1355,6 +1381,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                         onChange={(e) => setSelectedCategory(e.target.value)}
                                         className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
                                     >
+                                        <option value="chats" className="bg-[#0c1222]">💬 General Chat / Message</option>
                                         <option value="BioTips" className="bg-[#0c1222]">🌿 Bio High-Yield Trick</option>
                                         <option value="PhysicsFormulas" className="bg-[#0c1222]">⚡ Physics Formula Note</option>
                                         <option value="ChemistryTricks" className="bg-[#0c1222]">🧪 Chemistry Mnemonic</option>

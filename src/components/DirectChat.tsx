@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
     ArrowLeft, Send, Image as ImageIcon, Check, CheckCheck, X, 
-    Camera, Phone, Video, Shield, Sparkles, User, Circle
+    Camera, Phone, Video, Shield, Sparkles, User, Circle,
+    Mic, MicOff, Square, Play, Pause, Trash2, Volume2
 } from 'lucide-react';
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc, where, getDocs } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
@@ -22,6 +23,8 @@ interface DirectMessage {
     senderName: string;
     text?: string;
     imageUrl?: string;
+    audioUrl?: string;
+    audioDuration?: number;
     status: 'sent' | 'delivered' | 'read'; // WhatsApp style ticks status
     timestamp: any;
 }
@@ -36,6 +39,23 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const [text, setText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
     const [activeMediaUrl, setActiveMediaUrl] = useState<string | null>(null);
+
+    // Voice Note Recording State (WhatsApp style)
+    const [isRecording, setIsRecording] = useState<boolean>(false);
+    const [recordingTime, setRecordingTime] = useState<number>(0);
+    const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
+    const [recordedAudioBlob, setRecordedAudioBlob] = useState<Blob | null>(null);
+    const [recordedDuration, setRecordedDuration] = useState<number>(0);
+    const [isPreviewPlaying, setIsPreviewPlaying] = useState<boolean>(false);
+    
+    // Playing audio state for chat messages feed
+    const [playingMessageId, setPlayingMessageId] = useState<string | null>(null);
+
+    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+    const audioChunksRef = useRef<Blob[]>([]);
+    const timerIntervalRef = useRef<NodeJS.Timeout | null>(null);
+    const previewAudioRef = useRef<HTMLAudioElement | null>(null);
+    const chatAudioRef = useRef<HTMLAudioElement | null>(null);
 
     // Target User Real Presence State (No fake status)
     const [presence, setPresence] = useState<{ isOnline: boolean; lastSeen: any }>({
@@ -64,10 +84,37 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         return unregister;
     }, [activeMediaUrl, onBack]);
 
+    // Clean up audio streams and timers on unmount
+    useEffect(() => {
+        return () => {
+            if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
+            if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+                try { mediaRecorderRef.current.stop(); } catch (e) {}
+            }
+            if (previewAudioRef.current) previewAudioRef.current.pause();
+            if (chatAudioRef.current) chatAudioRef.current.pause();
+        };
+    }, []);
+
     // Auto Scroll to Latest Message
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
+
+    // Helper to get timestamp in milliseconds for reliable WhatsApp-style chronological sorting
+    const getTimestampMs = (ts: any): number => {
+        if (!ts) return 0;
+        if (typeof ts === 'number') return ts;
+        if (typeof ts === 'string') {
+            const parsed = new Date(ts).getTime();
+            return isNaN(parsed) ? 0 : parsed;
+        }
+        if (ts.toDate && typeof ts.toDate === 'function') {
+            try { return ts.toDate().getTime(); } catch { return 0; }
+        }
+        if (ts.seconds) return ts.seconds * 1000;
+        return 0;
+    };
 
     // Update Current User's Own Online Presence in Firestore
     useEffect(() => {
@@ -78,7 +125,6 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             lastSeen: serverTimestamp()
         }, { merge: true }).catch(() => {});
 
-        // On unmount / tab close
         const handleOffline = () => {
             setDoc(userRef, {
                 online: false,
@@ -93,7 +139,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         };
     }, [currentUid]);
 
-    // Subscribe to Target User's REAL Presence Status from Firestore (Real Online / Last Seen)
+    // Subscribe to Target User's REAL Presence Status from Firestore
     useEffect(() => {
         if (!targetUser.uid) return;
         const targetRef = doc(db, 'users', targetUser.uid);
@@ -148,7 +194,8 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 const map = new Map<string, DirectMessage>();
                 [...fetched, ...localMsgs].forEach(m => map.set(m.id, m));
 
-                const sortedMsgs = Array.from(map.values()).sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+                // Sort chronologically like WhatsApp (oldest top, newest bottom)
+                const sortedMsgs = Array.from(map.values()).sort((a, b) => getTimestampMs(a.timestamp) - getTimestampMs(b.timestamp));
                 setMessages(sortedMsgs);
 
                 // Auto Mark Unread Messages from Target User as READ (Blue Ticks)
@@ -163,10 +210,12 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     }
                 });
             }, (err) => {
-                setMessages(getLocalDirectMessages(chatId));
+                const fallback = getLocalDirectMessages(chatId).sort((a, b) => getTimestampMs(a.timestamp) - getTimestampMs(b.timestamp));
+                setMessages(fallback);
             });
         } catch (e) {
-            setMessages(getLocalDirectMessages(chatId));
+            const fallback = getLocalDirectMessages(chatId).sort((a, b) => getTimestampMs(a.timestamp) - getTimestampMs(b.timestamp));
+            setMessages(fallback);
         }
 
         return () => unsubscribe();
@@ -189,12 +238,188 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         } catch {}
     };
 
-    // Send Message Handler
+    // Voice Recording Handlers (WhatsApp Style)
+    const startRecording = async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const mediaRecorder = new MediaRecorder(stream);
+            mediaRecorderRef.current = mediaRecorder;
+            audioChunksRef.current = [];
+
+            mediaRecorder.ondataavailable = (e) => {
+                if (e.data.size > 0) {
+                    audioChunksRef.current.push(e.data);
+                }
+            };
+
+            mediaRecorder.onstop = () => {
+                const blob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+                const url = URL.createObjectURL(blob);
+                setRecordedAudioUrl(url);
+                setRecordedAudioBlob(blob);
+                stream.getTracks().forEach(track => track.stop());
+            };
+
+            mediaRecorder.start();
+            setIsRecording(true);
+            setRecordingTime(0);
+
+            if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
+            timerIntervalRef.current = setInterval(() => {
+                setRecordingTime(prev => prev + 1);
+            }, 1000);
+
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate(40);
+            }
+        } catch (err) {
+            console.error("Mic access error:", err);
+            showToast('Microphone access permission chahiye voice note ke liye!');
+        }
+    };
+
+    const stopRecording = () => {
+        if (mediaRecorderRef.current && isRecording) {
+            mediaRecorderRef.current.stop();
+            setIsRecording(false);
+            setRecordedDuration(recordingTime);
+            if (timerIntervalRef.current) {
+                clearInterval(timerIntervalRef.current);
+                timerIntervalRef.current = null;
+            }
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate([30, 30]);
+            }
+        }
+    };
+
+    const cancelRecording = () => {
+        if (mediaRecorderRef.current && isRecording) {
+            mediaRecorderRef.current.onstop = () => {
+                if (mediaRecorderRef.current?.stream) {
+                    mediaRecorderRef.current.stream.getTracks().forEach(track => track.stop());
+                }
+            };
+            try { mediaRecorderRef.current.stop(); } catch (e) {}
+        }
+        setIsRecording(false);
+        setRecordingTime(0);
+        if (timerIntervalRef.current) {
+            clearInterval(timerIntervalRef.current);
+            timerIntervalRef.current = null;
+        }
+        if (recordedAudioUrl) {
+            URL.revokeObjectURL(recordedAudioUrl);
+        }
+        setRecordedAudioUrl(null);
+        setRecordedAudioBlob(null);
+        setIsPreviewPlaying(false);
+        if (previewAudioRef.current) {
+            previewAudioRef.current.pause();
+        }
+    };
+
+    const togglePreviewPlay = () => {
+        if (!recordedAudioUrl) return;
+        if (!previewAudioRef.current) {
+            const audio = new Audio(recordedAudioUrl);
+            previewAudioRef.current = audio;
+            audio.onended = () => setIsPreviewPlaying(false);
+        }
+
+        if (isPreviewPlaying) {
+            previewAudioRef.current.pause();
+            setIsPreviewPlaying(false);
+        } else {
+            previewAudioRef.current.play();
+            setIsPreviewPlaying(true);
+        }
+    };
+
+    const handleSendVoiceNote = async () => {
+        if (!recordedAudioBlob) return;
+
+        if (previewAudioRef.current) {
+            previewAudioRef.current.pause();
+            setIsPreviewPlaying(false);
+        }
+
+        const reader = new FileReader();
+        reader.readAsDataURL(recordedAudioBlob);
+        reader.onloadend = async () => {
+            const base64Audio = reader.result as string;
+            const initialStatus: 'sent' | 'delivered' = presence.isOnline ? 'delivered' : 'sent';
+
+            const newMsg: DirectMessage = {
+                id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+                senderId: currentUid,
+                senderName: currentName,
+                audioUrl: base64Audio,
+                audioDuration: recordedDuration || 1,
+                status: initialStatus,
+                timestamp: new Date().toISOString()
+            };
+
+            setMessages(prev => [...prev, newMsg]);
+            saveLocalDirectMessage(newMsg);
+
+            if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
+            setRecordedAudioUrl(null);
+            setRecordedAudioBlob(null);
+            setRecordingTime(0);
+            setRecordedDuration(0);
+
+            showToast('Voice Note bhej diya! 🎙️');
+
+            try {
+                await addDoc(collection(db, 'directChats', chatId, 'messages'), {
+                    senderId: currentUid,
+                    senderName: currentName,
+                    audioUrl: base64Audio,
+                    audioDuration: newMsg.audioDuration,
+                    status: initialStatus,
+                    timestamp: serverTimestamp()
+                });
+
+                await updateDoc(doc(db, 'directChats', chatId), {
+                    lastMessage: '🎵 Voice Note (' + (newMsg.audioDuration || 1) + 's)',
+                    updatedAt: serverTimestamp()
+                });
+            } catch (e) {
+                console.warn("Firestore voice note error:", e);
+            }
+        };
+    };
+
+    const toggleChatMessageAudio = (msgId: string, audioUrl: string) => {
+        if (playingMessageId === msgId) {
+            if (chatAudioRef.current) {
+                chatAudioRef.current.pause();
+            }
+            setPlayingMessageId(null);
+        } else {
+            if (chatAudioRef.current) {
+                chatAudioRef.current.pause();
+            }
+            const audio = new Audio(audioUrl);
+            chatAudioRef.current = audio;
+            audio.onended = () => setPlayingMessageId(null);
+            audio.play();
+            setPlayingMessageId(msgId);
+        }
+    };
+
+    const formatTimer = (seconds: number) => {
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    };
+
+    // Send Text / Image Message Handler
     const handleSend = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!text.trim() && !imageUrl.trim()) return;
 
-        // If recipient is online, initial status is 'delivered' (double grey tick); otherwise 'sent' (single grey tick)
         const initialStatus: 'sent' | 'delivered' = presence.isOnline ? 'delivered' : 'sent';
 
         const newMsg: DirectMessage = {
@@ -207,7 +432,6 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             timestamp: new Date().toISOString()
         };
 
-        // Optimistic State Update
         setMessages(prev => [...prev, newMsg]);
         saveLocalDirectMessage(newMsg);
 
@@ -215,7 +439,6 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         setText('');
         setImageUrl('');
 
-        // Save Message to Firestore
         try {
             await addDoc(collection(db, 'directChats', chatId, 'messages'), {
                 senderId: currentUid,
@@ -249,7 +472,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         reader.onload = (event) => {
             const result = event.target?.result as string;
             setImageUrl(result);
-            showToast('Photo attached! Tap Send. 📸');
+            showToast('Photo attached! Tap Send to share. 📸');
         };
         reader.readAsDataURL(file);
     };
@@ -348,7 +571,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 </span>
             </div>
 
-            {/* Chat Messages Feed */}
+            {/* Chat Messages Feed (WhatsApp Chronological Order: Oldest Top, Newest Bottom) */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
                 {messages.length === 0 ? (
                     <div className="py-24 text-center text-white/40 space-y-2">
@@ -364,7 +587,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                 key={msg.id}
                                 className={`flex flex-col ${isMe ? 'items-end' : 'items-start'}`}
                             >
-                                <div className={`max-w-[82%] sm:max-w-[70%] p-3 rounded-2xl space-y-2 ${
+                                <div className={`max-w-[85%] sm:max-w-[70%] p-3 rounded-2xl space-y-2 ${
                                     isMe 
                                         ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-br-none shadow-lg' 
                                         : 'bg-[#0c1222] border border-white/10 text-white/90 rounded-bl-none shadow-md'
@@ -387,6 +610,46 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                                 alt="Attached Photo" 
                                                 className="w-full h-full object-cover hover:scale-102 transition" 
                                             />
+                                        </div>
+                                    )}
+
+                                    {/* Voice Note Player */}
+                                    {msg.audioUrl && (
+                                        <div className="flex items-center gap-3 p-2 rounded-xl bg-black/30 border border-white/10 my-1 min-w-[210px]">
+                                            <button
+                                                type="button"
+                                                onClick={() => toggleChatMessageAudio(msg.id, msg.audioUrl!)}
+                                                className={`p-2.5 rounded-full transition shadow-md shrink-0 ${
+                                                    playingMessageId === msg.id 
+                                                        ? 'bg-amber-500 text-black font-bold animate-pulse' 
+                                                        : isMe ? 'bg-white text-indigo-700 hover:bg-white/90' : 'bg-indigo-500 text-white hover:bg-indigo-600'
+                                                }`}
+                                            >
+                                                {playingMessageId === msg.id ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
+                                            </button>
+                                            <div className="flex-1 space-y-1">
+                                                <div className="flex items-center justify-between text-[11px] font-semibold opacity-90">
+                                                    <span className="flex items-center gap-1 text-xs">
+                                                        <Mic className="w-3.5 h-3.5 text-red-400" />
+                                                        <span>Voice Note</span>
+                                                    </span>
+                                                    <span className="font-mono">{msg.audioDuration ? formatTimer(msg.audioDuration) : '0:05'}</span>
+                                                </div>
+                                                {/* Simulated Waveform Visualizer Bar */}
+                                                <div className="flex items-center gap-0.5 h-3">
+                                                    {[40, 75, 30, 90, 60, 100, 45, 80, 50, 70, 35, 85, 65, 40, 90, 55, 75, 35].map((h, i) => (
+                                                        <div 
+                                                            key={i} 
+                                                            className={`w-1 rounded-full transition-all duration-300 ${
+                                                                playingMessageId === msg.id 
+                                                                    ? 'bg-emerald-400 animate-pulse' 
+                                                                    : isMe ? 'bg-white/70' : 'bg-indigo-300/70'
+                                                            }`}
+                                                            style={{ height: `${playingMessageId === msg.id ? Math.max(25, (h * Math.random()).toFixed(0)) : h}%` }}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
                                     )}
 
@@ -426,28 +689,123 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 </div>
             )}
 
-            {/* Input Bar */}
-            <form onSubmit={handleSend} className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center gap-2">
-                <label className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-indigo-400 cursor-pointer transition">
-                    <ImageIcon className="w-5 h-5" />
-                    <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
-                </label>
+            {/* Bottom Controls / Recording Bar / Input Bar (WhatsApp Style) */}
+            {isRecording ? (
+                /* Live Recording Mode with Pulse Animation & Timer */
+                <div className="p-3 bg-[#0c1222] border-t border-red-500/40 flex items-center justify-between gap-3 shadow-2xl">
+                    {/* Cancel & Discard Button */}
+                    <button
+                        type="button"
+                        onClick={cancelRecording}
+                        className="p-2.5 rounded-xl bg-red-500/20 text-red-400 hover:bg-red-500/30 transition flex items-center gap-1.5 text-xs font-bold"
+                        title="Cancel Recording"
+                    >
+                        <Trash2 className="w-4 h-4" />
+                        <span className="hidden xs:inline">Discard</span>
+                    </button>
 
-                <input
-                    type="text"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                    placeholder={`Message ${targetUser.name}...`}
-                    className="flex-1 p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
-                />
+                    {/* Animated Mic & Live Timer */}
+                    <div className="flex-1 flex items-center justify-center gap-2.5 bg-red-500/10 border border-red-500/30 py-2 px-3 rounded-2xl">
+                        <div className="relative flex items-center justify-center w-7 h-7 rounded-full bg-red-500 text-white animate-pulse">
+                            <Mic className="w-4 h-4" />
+                            <span className="absolute inset-0 rounded-full bg-red-500 animate-ping opacity-50" />
+                        </div>
+                        <span className="font-mono font-bold text-sm text-red-400 tracking-wider">
+                            {formatTimer(recordingTime)}
+                        </span>
+                        <span className="text-xs text-white/70 hidden sm:inline">Recording... Tap Mic to Stop</span>
+                    </div>
 
-                <button
-                    type="submit"
-                    className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 transition shadow-md"
-                >
-                    <Send className="w-5 h-5" />
-                </button>
-            </form>
+                    {/* Stop & Preview Mic Button */}
+                    <button
+                        type="button"
+                        onClick={stopRecording}
+                        className="p-3 rounded-full bg-red-600 text-white font-bold hover:bg-red-700 transition shadow-lg shadow-red-600/50 flex items-center justify-center animate-bounce"
+                        title="Stop & Preview Voice Note"
+                    >
+                        <Square className="w-4 h-4 fill-current" />
+                    </button>
+                </div>
+            ) : recordedAudioUrl ? (
+                /* WhatsApp-Style Voice Note Preview Bar before sending */
+                <div className="p-3 bg-[#0c1222] border-t border-indigo-500/40 flex items-center justify-between gap-2.5 shadow-2xl">
+                    {/* Delete Preview */}
+                    <button
+                        type="button"
+                        onClick={cancelRecording}
+                        className="p-2.5 rounded-xl bg-red-500/20 text-red-400 hover:bg-red-500/30 transition shrink-0"
+                        title="Delete Recording"
+                    >
+                        <Trash2 className="w-4 h-4" />
+                    </button>
+
+                    {/* Play/Pause Preview Audio */}
+                    <button
+                        type="button"
+                        onClick={togglePreviewPlay}
+                        className="p-2.5 rounded-full bg-amber-500 text-black font-bold hover:brightness-110 transition shadow-md flex items-center gap-1 px-3 text-xs shrink-0"
+                    >
+                        {isPreviewPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
+                        <span>{isPreviewPlaying ? 'Pause' : 'Preview'}</span>
+                    </button>
+
+                    {/* Recording Duration Info */}
+                    <div className="flex-1 flex items-center gap-2 bg-white/5 border border-white/10 py-1.5 px-2.5 rounded-xl min-w-0">
+                        <Mic className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                        <span className="font-mono font-bold text-xs text-indigo-200 shrink-0">
+                            {formatTimer(recordedDuration || recordingTime)}
+                        </span>
+                        <div className="flex-1 h-1.5 rounded-full bg-indigo-950 overflow-hidden">
+                            <div className={`h-full bg-emerald-400 ${isPreviewPlaying ? 'w-full transition-all duration-3000' : 'w-1/2'}`} />
+                        </div>
+                    </div>
+
+                    {/* Send Voice Note Button */}
+                    <button
+                        type="button"
+                        onClick={handleSendVoiceNote}
+                        className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold hover:brightness-110 transition shadow-lg flex items-center gap-1 text-xs shrink-0"
+                        title="Send Voice Note"
+                    >
+                        <Send className="w-4 h-4" />
+                        <span className="hidden xs:inline">Send</span>
+                    </button>
+                </div>
+            ) : (
+                /* Standard Chat Input Bar */
+                <form onSubmit={handleSend} className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center gap-2">
+                    <label className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-indigo-400 cursor-pointer transition">
+                        <ImageIcon className="w-5 h-5" />
+                        <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
+                    </label>
+
+                    <input
+                        type="text"
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                        placeholder={`Message ${targetUser.name}...`}
+                        className="flex-1 p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
+                    />
+
+                    {text.trim() || imageUrl ? (
+                        <button
+                            type="submit"
+                            className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 transition shadow-md"
+                        >
+                            <Send className="w-5 h-5" />
+                        </button>
+                    ) : (
+                        <button
+                            type="button"
+                            onClick={startRecording}
+                            className="p-2.5 rounded-xl bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold hover:scale-105 active:scale-95 transition shadow-md shadow-red-500/20"
+                            title="Tap to Record Voice Note"
+                        >
+                            <Mic className="w-5 h-5" />
+                        </button>
+                    )}
+                </form>
+            )}
 
             {/* Zoom Media Modal */}
             {activeMediaUrl && (
