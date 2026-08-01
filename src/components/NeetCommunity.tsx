@@ -608,6 +608,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         markPostAsViewedInHistory(newPost.id);
 
         // Save to Firestore for permanent cloud storage across all devices, logins & reinstalls
+        let isCloudSaved = false;
         try {
             const docRef = await addDoc(collection(db, 'communityPosts'), {
                 userId: newPost.userId || 'anonymous',
@@ -625,9 +626,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 timestamp: serverTimestamp()
             });
             newPost.id = docRef.id;
+            isCloudSaved = true;
             console.log("Post cloud saved to Firestore successfully with ID:", docRef.id);
         } catch (err: any) {
             console.error("Firestore addDoc error:", err);
+            showToast(`⚠️ Cloud Sync Error: ${err?.message || 'Firestore Permission Denied'}`);
         }
 
         // Save to local storage as instant local cache
