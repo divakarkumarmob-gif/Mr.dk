@@ -66,8 +66,8 @@ public class LiveSessionService extends Service {
     }
 
     private void startForegroundSafely() {
-        Notification notification = buildNotification();
         try {
+            Notification notification = buildNotification();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
                     try {
@@ -79,8 +79,18 @@ public class LiveSessionService extends Service {
                     }
                 }
             }
-            startForeground(NOTIFICATION_ID, notification);
-            isForegroundStarted = true;
+            try {
+                startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE);
+                isForegroundStarted = true;
+            } catch (Exception e) {
+                e.printStackTrace();
+                try {
+                    startForeground(NOTIFICATION_ID, notification);
+                    isForegroundStarted = true;
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -102,10 +112,25 @@ public class LiveSessionService extends Service {
     // ------------------------------------------------------------------
 
     private Notification buildNotification() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) { // API 31+
-            return buildCallStyleNotification();
-        } else {
-            return buildFallbackNotification();
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) { // API 31+
+                try {
+                    return buildCallStyleNotification();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return buildFallbackNotification();
+                }
+            } else {
+                return buildFallbackNotification();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new NotificationCompat.Builder(this, CHANNEL_ID)
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setContentTitle("NeetMaster Live AI")
+                    .setContentText("Live Session Active")
+                    .setOngoing(true)
+                    .build();
         }
     }
 
@@ -113,10 +138,16 @@ public class LiveSessionService extends Service {
      * API 31+ (Android 12+): Native CallStyle notification.
      */
     private Notification buildCallStyleNotification() {
-        Bitmap iconBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round);
+        IconCompat callerIcon;
+        try {
+            callerIcon = IconCompat.createWithResource(this, R.mipmap.ic_launcher);
+        } catch (Exception e) {
+            callerIcon = IconCompat.createWithResource(this, R.drawable.ic_notification);
+        }
+
         Person caller = new Person.Builder()
                 .setName("NeetMaster Live AI")
-                .setIcon(IconCompat.createWithBitmap(iconBitmap))
+                .setIcon(callerIcon)
                 .setImportant(true)
                 .build();
 

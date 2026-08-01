@@ -95,10 +95,19 @@ public class LiveSessionPlugin extends Plugin {
             }
 
             Intent serviceIntent = new Intent(context, LiveSessionService.class);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                context.startForegroundService(serviceIntent);
-            } else {
-                context.startService(serviceIntent);
+            try {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    context.startForegroundService(serviceIntent);
+                } else {
+                    context.startService(serviceIntent);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                try {
+                    context.startService(serviceIntent);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
             call.resolve(new JSObject().put("started", true));
         } catch (Exception e) {
