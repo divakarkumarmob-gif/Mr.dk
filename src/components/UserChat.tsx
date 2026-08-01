@@ -118,7 +118,10 @@ export default function UserChat({ fullScreen, user, initialScreenshot, initialT
   return (
     <div className={`flex flex-col ${fullScreen ? 'h-full flex-1 min-h-0 bg-[#0b141a]' : 'h-[500px] bg-[#0b141a] border border-white/10 rounded-xl shadow-2xl'} overflow-hidden`}>
       {/* WhatsApp-style header */}
-      <div className="bg-[#1e293b] p-3 flex items-center gap-3 border-b border-white/10 flex-shrink-0">
+      <div 
+        className="bg-[#1e293b] px-3 pb-3 flex items-center gap-3 border-b border-white/10 flex-shrink-0"
+        style={{ paddingTop: fullScreen ? 'max(env(safe-area-inset-top, 0px), 14px)' : '12px' }}
+      >
         <div className="h-10 w-10 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
           <Headphones className="h-5 w-5 text-white" />
         </div>

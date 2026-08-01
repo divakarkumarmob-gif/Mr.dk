@@ -507,7 +507,10 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             className="fixed inset-0 z-50 bg-[#070b14] text-white flex flex-col font-sans overflow-hidden"
         >
             {/* Header: Target User Profile & REAL Presence Status */}
-            <div className="bg-[#0c1222]/95 backdrop-blur-md border-b border-white/10 px-4 py-3 flex items-center justify-between shadow-xl">
+            <div 
+                className="bg-[#0c1222]/95 backdrop-blur-md border-b border-white/10 px-4 pb-3 flex items-center justify-between shadow-xl"
+                style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 14px)' }}
+            >
                 <div className="flex items-center gap-3">
                     <button 
                         onClick={onBack}

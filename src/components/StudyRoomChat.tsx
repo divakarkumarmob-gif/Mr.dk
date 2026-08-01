@@ -5,7 +5,7 @@ import {
     UserCheck, Settings, Sparkles, AlertTriangle, Upload, CheckCircle2, Lock,
     Share2, Link as LinkIcon, Sliders, Mic, Square, Play, Pause, Pin, PinOff,
     BarChart2, HelpCircle, Timer, Volume2, VolumeX, Flame, BookOpen, MessageCircle,
-    Clock, Calendar, PowerOff
+    Clock, Calendar, PowerOff, Trash2, ArrowDown, Plus, Check, Vote, Music
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
@@ -30,12 +30,14 @@ export interface StudyRoom {
     expiresAt?: string | null; // ISO timestamp when room expires
     isClosed?: boolean; // Manual Admin closure status
     createdAt: any;
+    isMusicActive?: boolean; // Admin started music status
+    musicStartedBy?: string; // Host / Admin name who started music
 }
 
 export interface PollData {
     question: string;
     options: string[];
-    correctIdx: number;
+    correctIdx: number; // -1 for opinion poll, 0..N for MCQ
     votes: Record<string, number>; // uid -> optionIndex
 }
 
@@ -56,6 +58,20 @@ interface StudyRoomChatProps {
     room: StudyRoom;
     onBack: () => void;
 }
+
+// Safe timestamp millisecond extractor (prevents NaN sorting issues in Firestore)
+const parseTimestampMs = (ts: any): number => {
+    if (!ts) return Date.now();
+    if (typeof ts === 'number') return ts;
+    if (typeof ts.toMillis === 'function') return ts.toMillis();
+    if (typeof ts.seconds === 'number') return ts.seconds * 1000 + Math.floor((ts.nanoseconds || 0) / 1000000);
+    if (ts instanceof Date) return ts.getTime();
+    if (typeof ts === 'string') {
+        const parsed = new Date(ts).getTime();
+        return isNaN(parsed) ? Date.now() : parsed;
+    }
+    return Date.now();
+};
 
 export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomChatProps) {
     const [room, setRoom] = useState<StudyRoom>(initialRoom);
@@ -80,17 +96,26 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const audioChunksRef = useRef<Blob[]>([]);
     const recordingTimerRef = useRef<any>(null);
 
+    // Voice Note Preview State (WhatsApp style before sending)
+    const [recordedAudioBase64, setRecordedAudioBase64] = useState<string | null>(null);
+    const [recordedAudioDuration, setRecordedAudioDuration] = useState<number>(0);
+    const [isPlayingPreview, setIsPlayingPreview] = useState<boolean>(false);
+    const previewAudioRef = useRef<HTMLAudioElement | null>(null);
+
     // Live MCQ Poll Modal State
     const [showPollModal, setShowPollModal] = useState<boolean>(false);
     const [pollQuestion, setPollQuestion] = useState<string>('');
-    const [pollOptions, setPollOptions] = useState<string[]>(['', '', '', '']);
+    const [pollOptions, setPollOptions] = useState<string[]>(['Option A', 'Option B', 'Option C', 'Option D']);
     const [pollCorrectIdx, setPollCorrectIdx] = useState<number>(0);
 
-    // Group Pomodoro Timer State
-    const [isPomodoroActive, setIsPomodoroActive] = useState<boolean>(false);
-    const [pomodoroSeconds, setPomodoroSeconds] = useState<number>(25 * 60); // 25 mins
-    const [ambientSound, setAmbientSound] = useState<boolean>(false);
+    // Group Focus Audio & Mute State
+    const [isUserMuted, setIsUserMuted] = useState<boolean>(false);
     const audioSynthRef = useRef<AudioContext | null>(null);
+
+    // Chat Container & Scroll Refs
+    const chatContainerRef = useRef<HTMLDivElement>(null);
+    const messagesEndRef = useRef<HTMLDivElement>(null);
+    const [showScrollToBottom, setShowScrollToBottom] = useState<boolean>(false);
 
     // Pinned Message state
     const pinnedMessage = messages.find(m => m.id === room.pinnedMessageId || m.isPinned);
@@ -107,8 +132,6 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const isExpired = room.expiresAt ? new Date(room.expiresAt).getTime() <= Date.now() : false;
     const isRoomClosed = !!room.isClosed || isExpired;
     const isFull = !room.members?.includes(currentUid) && (room.members?.length || 0) >= maxLimit;
-
-    const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Android Hardware Physical Back Button Handler
     useEffect(() => {
@@ -131,10 +154,29 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         return unregister;
     }, [activeMediaUrl, showPollModal, showMembersDrawer, onBack]);
 
-    // Auto scroll to latest message
+    // Auto scroll to latest message (WhatsApp style - scroll strictly to bottom)
+    const scrollToBottom = (smooth = true) => {
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTo({
+                top: chatContainerRef.current.scrollHeight,
+                behavior: smooth ? 'smooth' : 'auto'
+            });
+        }
+        messagesEndRef.current?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
+    };
+
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }, [messages]);
+        scrollToBottom(true);
+        const timeout = setTimeout(() => scrollToBottom(false), 250);
+        return () => clearTimeout(timeout);
+    }, [messages.length]);
+
+    const handleScroll = () => {
+        if (!chatContainerRef.current) return;
+        const { scrollTop, scrollHeight, clientHeight } = chatContainerRef.current;
+        const isUp = scrollHeight - scrollTop - clientHeight > 150;
+        setShowScrollToBottom(isUp);
+    };
 
     // Live Countdown Timer Effect for Expiry
     useEffect(() => {
@@ -177,67 +219,128 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         }
     };
 
-    // Group Pomodoro Timer Effect
+    // Focus Ambient Music Audio Synthesizer (Plays when Admin turns on Music & User is not muted)
     useEffect(() => {
-        let timer: any = null;
-        if (isPomodoroActive && pomodoroSeconds > 0) {
-            timer = setInterval(() => {
-                setPomodoroSeconds(prev => prev - 1);
-            }, 1000);
-        } else if (pomodoroSeconds === 0) {
-            setIsPomodoroActive(false);
-            showToast('🎉 Group Pomodoro Focus Block Complete! Great Job!');
-        }
-        return () => clearInterval(timer);
-    }, [isPomodoroActive, pomodoroSeconds]);
+        const shouldPlay = !!room.isMusicActive && !isUserMuted;
 
-    // Web Audio Sound Generator for Ambient Rain
-    useEffect(() => {
-        if (!ambientSound) {
+        if (!shouldPlay) {
             if (audioSynthRef.current) {
-                audioSynthRef.current.close();
+                try { audioSynthRef.current.close(); } catch (e) {}
                 audioSynthRef.current = null;
             }
             return;
         }
 
         try {
-            const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
-            audioSynthRef.current = ctx;
+            if (!audioSynthRef.current) {
+                const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+                audioSynthRef.current = ctx;
 
-            const bufferSize = ctx.sampleRate * 2;
-            const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-            const data = buffer.getChannelData(0);
-            for (let i = 0; i < bufferSize; i++) {
-                data[i] = Math.random() * 2 - 1;
+                const bufferSize = ctx.sampleRate * 2;
+                const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+
+                const noise = ctx.createBufferSource();
+                noise.buffer = buffer;
+                noise.loop = true;
+
+                const filter = ctx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.value = 750;
+
+                const gain = ctx.createGain();
+                gain.gain.value = 0.05;
+
+                noise.connect(filter);
+                filter.connect(gain);
+                gain.connect(ctx.destination);
+                noise.start();
             }
-
-            const noise = ctx.createBufferSource();
-            noise.buffer = buffer;
-            noise.loop = true;
-
-            const filter = ctx.createBiquadFilter();
-            filter.type = 'lowpass';
-            filter.frequency.value = 800;
-
-            const gain = ctx.createGain();
-            gain.gain.value = 0.05;
-
-            noise.connect(filter);
-            filter.connect(gain);
-            gain.connect(ctx.destination);
-            noise.start();
         } catch (e) {
             console.warn("Web Audio API error:", e);
         }
 
         return () => {
             if (audioSynthRef.current) {
-                audioSynthRef.current.close();
+                try { audioSynthRef.current.close(); } catch (e) {}
                 audioSynthRef.current = null;
             }
         };
-    }, [ambientSound]);
+    }, [room.isMusicActive, isUserMuted]);
+
+    // Admin Action: Start / Stop Room Music
+    const handleToggleAdminMusic = async () => {
+        if (!isHost) return;
+        const nextState = !room.isMusicActive;
+
+        setRoom(prev => ({
+            ...prev,
+            isMusicActive: nextState,
+            musicStartedBy: currentName
+        }));
+
+        try {
+            const roomRef = doc(db, 'studyRooms', room.id);
+            await updateDoc(roomRef, {
+                isMusicActive: nextState,
+                musicStartedBy: currentName
+            });
+
+            if (nextState) {
+                showToast('🎵 Focus Music started for Room!');
+                const newMsg: RoomMessage = {
+                    id: 'msg_music_' + Date.now(),
+                    roomId: room.id,
+                    senderId: currentUid,
+                    senderName: 'SYSTEM ADMIN',
+                    text: `🎵 music started by admin (${currentName})`,
+                    timestamp: new Date().toISOString()
+                };
+                await addDoc(collection(db, 'studyRooms', room.id, 'messages'), {
+                    senderId: newMsg.senderId,
+                    senderName: newMsg.senderName,
+                    text: newMsg.text,
+                    timestamp: serverTimestamp()
+                });
+            } else {
+                showToast('🔇 Focus Music stopped.');
+            }
+        } catch (e) {
+            console.warn("Toggle admin music error:", e);
+        }
+    };
+
+    // Non-Admin Action: Request Music (Automatic chat message sent to room)
+    const handleRequestMusic = async () => {
+        if (isRoomClosed) return;
+        
+        const newMsg: RoomMessage = {
+            id: 'msg_req_music_' + Date.now(),
+            roomId: room.id,
+            senderId: currentUid,
+            senderName: currentName,
+            text: '🎵 pls start music',
+            timestamp: new Date().toISOString()
+        };
+
+        setMessages(prev => [...prev, newMsg].sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
+        saveLocalRoomMessage(newMsg);
+
+        try {
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), {
+                senderId: newMsg.senderId,
+                senderName: newMsg.senderName,
+                text: newMsg.text,
+                timestamp: serverTimestamp()
+            });
+            showToast('Music request sent to Admin! 🎵');
+        } catch (e) {}
+
+        setTimeout(() => scrollToBottom(true), 100);
+    };
 
     // Real-time Listener for Room Data
     useEffect(() => {
@@ -286,38 +389,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         }
     };
 
-    // Admin Action: Update Max Member Limit
-    const handleUpdateMaxMembers = async (newLimit: number) => {
-        if (!isHost) return;
-        if (isNaN(newLimit) || newLimit < 2 || newLimit > 500) {
-            showToast('Member limit 2 se 500 ke beech honi chahiye!');
-            return;
-        }
-
-        setInputMaxMembers(newLimit);
-        setRoom(prev => ({ ...prev, maxMembers: newLimit }));
-
-        try {
-            const roomRef = doc(db, 'studyRooms', room.id);
-            await updateDoc(roomRef, { maxMembers: newLimit });
-            showToast(`Room member limit updated to ${newLimit}! ⚙️`);
-        } catch (e) {
-            console.warn("Update max members error:", e);
-        }
-    };
-
-    // Admin Action: Update Room Mode / Badge
-    const handleUpdateRoomMode = async (mode: RoomMode) => {
-        if (!isHost) return;
-        setRoom(prev => ({ ...prev, roomMode: mode }));
-        try {
-            const roomRef = doc(db, 'studyRooms', room.id);
-            await updateDoc(roomRef, { roomMode: mode });
-            showToast('Room Mode updated! 🎯');
-        } catch (e) {}
-    };
-
-    // Real-time Listener for Messages
+    // Real-time Listener for Messages with Strict Chronological Timestamp Sorting
     useEffect(() => {
         let unsubscribe = () => {};
         try {
@@ -332,12 +404,13 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 const allMap = new Map<string, RoomMessage>();
                 [...fetched, ...localMsgs].forEach(m => allMap.set(m.id, m));
 
-                setMessages(Array.from(allMap.values()).sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()));
+                const sortedMsgs = Array.from(allMap.values()).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp));
+                setMessages(sortedMsgs);
             }, (err) => {
-                setMessages(getLocalRoomMessages(room.id));
+                setMessages(getLocalRoomMessages(room.id).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
             });
         } catch (e) {
-            setMessages(getLocalRoomMessages(room.id));
+            setMessages(getLocalRoomMessages(room.id).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
         }
 
         return () => unsubscribe();
@@ -391,7 +464,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 const reader = new FileReader();
                 reader.onloadend = () => {
                     const base64Audio = reader.result as string;
-                    sendVoiceNote(base64Audio);
+                    setRecordedAudioBase64(base64Audio);
                 };
                 reader.readAsDataURL(audioBlob);
                 stream.getTracks().forEach(track => track.stop());
@@ -413,10 +486,45 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
 
     const stopRecording = () => {
         if (mediaRecorderRef.current && isRecording) {
+            setRecordedAudioDuration(recordingTime);
             mediaRecorderRef.current.stop();
             setIsRecording(false);
             if (recordingTimerRef.current) clearInterval(recordingTimerRef.current);
         }
+    };
+
+    const cancelVoiceNotePreview = () => {
+        if (previewAudioRef.current) {
+            previewAudioRef.current.pause();
+            previewAudioRef.current = null;
+        }
+        setIsPlayingPreview(false);
+        setRecordedAudioBase64(null);
+        setRecordedAudioDuration(0);
+    };
+
+    const togglePlayPreview = () => {
+        if (!recordedAudioBase64) return;
+
+        if (isPlayingPreview) {
+            if (previewAudioRef.current) {
+                previewAudioRef.current.pause();
+            }
+            setIsPlayingPreview(false);
+        } else {
+            const audio = new Audio(recordedAudioBase64);
+            previewAudioRef.current = audio;
+            audio.onended = () => setIsPlayingPreview(false);
+            audio.play().catch(() => {});
+            setIsPlayingPreview(true);
+        }
+    };
+
+    const handleSendVoiceNote = async () => {
+        if (!recordedAudioBase64) return;
+        const base64Audio = recordedAudioBase64;
+        cancelVoiceNotePreview();
+        await sendVoiceNote(base64Audio);
     };
 
     const sendVoiceNote = async (base64Audio: string) => {
@@ -429,7 +537,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             timestamp: new Date().toISOString()
         };
 
-        setMessages(prev => [...prev, newMsg]);
+        setMessages(prev => [...prev, newMsg].sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
         saveLocalRoomMessage(newMsg);
 
         try {
@@ -441,14 +549,33 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             });
             showToast('Voice Doubt Note sent! 🎙️');
         } catch (e) {}
+
+        setTimeout(() => scrollToBottom(true), 100);
     };
 
-    // Create Live MCQ Poll Handler
+    // Question Poll Option Helpers
+    const handleAddPollOption = () => {
+        if (pollOptions.length < 6) {
+            setPollOptions(prev => [...prev, '']);
+        } else {
+            showToast('Maximum 6 options allowed!');
+        }
+    };
+
+    const handleRemovePollOption = (idx: number) => {
+        if (pollOptions.length > 2) {
+            setPollOptions(prev => prev.filter((_, i) => i !== idx));
+        } else {
+            showToast('Kam se kam 2 options zaruri hain!');
+        }
+    };
+
+    // Create Live MCQ Question Poll Handler
     const handleCreatePoll = async (e: React.FormEvent) => {
         e.preventDefault();
-        const validOptions = pollOptions.filter(o => o.trim() !== '');
+        const validOptions = pollOptions.map(o => o.trim()).filter(o => o !== '');
         if (!pollQuestion.trim() || validOptions.length < 2) {
-            showToast('Poll question aur kam se kam 2 options likhein!');
+            showToast('Poll question aur kam se kam 2 valid options likhein!');
             return;
         }
 
@@ -468,12 +595,13 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             timestamp: new Date().toISOString()
         };
 
-        setMessages(prev => [...prev, newMsg]);
+        setMessages(prev => [...prev, newMsg].sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
         saveLocalRoomMessage(newMsg);
 
         setShowPollModal(false);
         setPollQuestion('');
-        setPollOptions(['', '', '', '']);
+        setPollOptions(['Option A', 'Option B', 'Option C', 'Option D']);
+        setPollCorrectIdx(0);
 
         try {
             await addDoc(collection(db, 'studyRooms', room.id, 'messages'), {
@@ -482,8 +610,10 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 pollData: pollData,
                 timestamp: serverTimestamp()
             });
-            showToast('Live MCQ Poll launched in Room! 📊');
+            showToast('Live MCQ Question Poll posted! 📊');
         } catch (e) {}
+
+        setTimeout(() => scrollToBottom(true), 100);
     };
 
     // Vote on MCQ Poll Handler
@@ -519,7 +649,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         } catch (e) {}
     };
 
-    // Send Message Handler
+    // Send Text Message Handler
     const handleSendMessage = async (e: React.FormEvent) => {
         e.preventDefault();
         if (isRoomClosed) {
@@ -545,7 +675,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             timestamp: new Date().toISOString()
         };
 
-        setMessages(prev => [...prev, newMsg]);
+        setMessages(prev => [...prev, newMsg].sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
         saveLocalRoomMessage(newMsg);
 
         setMessageText('');
@@ -560,6 +690,8 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 timestamp: serverTimestamp()
             });
         } catch (err) {}
+
+        setTimeout(() => scrollToBottom(true), 100);
     };
 
     // File Upload Handler for Photos
@@ -616,18 +748,6 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         }
     };
 
-    // Admin Action: Unblock User
-    const handleUnblockUser = async (targetUid: string) => {
-        if (!isHost) return;
-        try {
-            const roomRef = doc(db, 'studyRooms', room.id);
-            await updateDoc(roomRef, { blockedUsers: arrayRemove(targetUid) });
-            showToast('User unblocked! ✅');
-        } catch (e) {
-            setRoom(prev => ({ ...prev, blockedUsers: (prev.blockedUsers || []).filter(uid => uid !== targetUid) }));
-        }
-    };
-
     // Clickable URL Formatter
     const renderFormattedMessageText = (text: string) => {
         const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -669,7 +789,8 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const formatDate = (ts: any) => {
         if (!ts) return 'Just now';
         try {
-            const d = ts.toDate ? ts.toDate() : new Date(ts);
+            const ms = parseTimestampMs(ts);
+            const d = new Date(ms);
             return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' · ' + d.toLocaleDateString([], { day: '2-digit', month: 'short' });
         } catch {
             return 'Recently';
@@ -765,50 +886,69 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 </div>
 
                 <div className="flex items-center gap-2">
-                    {/* Pomodoro Timer Toggle */}
-                    <button
-                        onClick={() => setIsPomodoroActive(!isPomodoroActive)}
-                        className={`p-2 rounded-xl border transition flex items-center gap-1 text-xs font-bold ${
-                            isPomodoroActive
-                                ? 'bg-pink-500/20 border-pink-500/40 text-pink-300 animate-pulse'
-                                : 'bg-white/5 border-white/10 text-white/70 hover:text-white'
-                        }`}
-                        title="Group Pomodoro Focus Sync"
-                    >
-                        <Timer className="w-4 h-4 text-pink-400" />
-                        <span className="hidden sm:inline">
-                            {isPomodoroActive ? `${Math.floor(pomodoroSeconds / 60)}:${(pomodoroSeconds % 60).toString().padStart(2, '0')}` : 'Pomodoro'}
-                        </span>
-                    </button>
-
                     {/* Launch Poll Button */}
                     <button
                         onClick={() => setShowPollModal(true)}
-                        className="p-2 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-300 hover:bg-amber-500/30 transition flex items-center gap-1 text-xs font-semibold"
-                        title="Create Live MCQ Poll"
+                        className="p-2.5 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-300 hover:bg-amber-500/30 transition flex items-center gap-1.5 text-xs font-semibold"
+                        title="Create Question Poll"
                     >
-                        <BarChart2 className="w-4 h-4 text-amber-400" />
+                        <BarChart2 className="w-4.5 h-4.5 text-amber-400" />
+                        <span className="hidden sm:inline">Poll</span>
                     </button>
 
                     {/* Share Room Link */}
                     <button
                         onClick={handleShareRoomLink}
-                        className="p-2 rounded-xl bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/30 transition text-xs font-semibold"
+                        className="p-2.5 rounded-xl bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/30 transition text-xs font-semibold"
                         title="Share Room Link"
                     >
-                        <Share2 className="w-4 h-4" />
+                        <Share2 className="w-4.5 h-4.5" />
                     </button>
 
-                    {/* Members Drawer */}
+                    {/* Members & Settings Panel Drawer Trigger */}
                     <button
                         onClick={() => setShowMembersDrawer(true)}
-                        className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/80 transition flex items-center gap-1.5 text-xs font-semibold"
+                        className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/80 transition flex items-center gap-1.5 text-xs font-semibold relative"
+                        title="Room Panel & Members"
                     >
-                        <Users className="w-4 h-4 text-indigo-400" />
+                        <Users className="w-4.5 h-4.5 text-indigo-400" />
+                        {room.isMusicActive && (
+                            <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-pink-500 animate-ping" />
+                        )}
                         {isHost && <Shield className="w-3.5 h-3.5 text-amber-400" />}
                     </button>
                 </div>
             </div>
+
+            {/* Admin Music Started Banner Notification in Room Header */}
+            {room.isMusicActive && (
+                <div className="bg-gradient-to-r from-pink-600/40 via-purple-600/40 to-indigo-600/40 border-b border-pink-500/40 px-4 py-2 flex items-center justify-between backdrop-blur-md shadow-lg animate-fadeIn">
+                    <div className="flex items-center gap-2 text-xs font-bold text-pink-200">
+                        <Volume2 className="w-4 h-4 text-pink-300 animate-bounce shrink-0" />
+                        <span>🎵 music started by admin ({room.musicStartedBy || room.hostName})</span>
+                    </div>
+                    <button
+                        onClick={() => setIsUserMuted(!isUserMuted)}
+                        className={`px-3 py-1 rounded-xl text-[11px] font-bold transition flex items-center gap-1.5 border shadow-sm ${
+                            isUserMuted
+                                ? 'bg-red-500/30 text-red-200 border-red-500/50 hover:bg-red-500/40'
+                                : 'bg-emerald-500/30 text-emerald-200 border-emerald-500/50 hover:bg-emerald-500/40'
+                        }`}
+                    >
+                        {isUserMuted ? (
+                            <>
+                                <VolumeX className="w-3.5 h-3.5 text-red-300" />
+                                <span>Muted</span>
+                            </>
+                        ) : (
+                            <>
+                                <Volume2 className="w-3.5 h-3.5 text-emerald-300" />
+                                <span>Playing</span>
+                            </>
+                        )}
+                    </button>
+                </div>
+            )}
 
             {/* Room Banner with Post Date/Time & Host Tag */}
             <div className="px-4 py-2 bg-indigo-900/20 border-b border-indigo-500/20 flex items-center justify-between text-xs text-indigo-200">
@@ -842,8 +982,12 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 </div>
             )}
 
-            {/* Live Chat Messages Feed */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3">
+            {/* Live Chat Messages Feed (WhatsApp Style Chronological Order) */}
+            <div 
+                ref={chatContainerRef}
+                onScroll={handleScroll}
+                className="flex-1 overflow-y-auto p-4 space-y-3 relative scroll-smooth"
+            >
                 {messages.length === 0 ? (
                     <div className="py-20 text-center text-white/40 space-y-2">
                         <Users className="w-12 h-12 text-indigo-400/40 mx-auto" />
@@ -853,14 +997,27 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 ) : (
                     messages.map((msg) => {
                         const isMe = msg.senderId === currentUid;
+                        const isSystem = msg.senderName === 'SYSTEM ADMIN';
+
+                        if (isSystem) {
+                            return (
+                                <div key={msg.id} className="flex justify-center my-2">
+                                    <div className="px-3.5 py-1.5 rounded-full bg-pink-500/20 border border-pink-500/40 text-pink-300 text-xs font-bold flex items-center gap-2 shadow-md animate-pulse">
+                                        <Volume2 className="w-3.5 h-3.5 text-pink-400" />
+                                        <span>{msg.text}</span>
+                                    </div>
+                                </div>
+                            );
+                        }
+
                         return (
                             <div 
                                 key={msg.id}
                                 className={`flex flex-col ${isMe ? 'items-end' : 'items-start'} group`}
                             >
                                 <div className="flex items-center gap-2 mb-1 px-1">
-                                    <span className="text-[10px] text-white/40">
-                                        {isMe ? 'You' : msg.senderName}
+                                    <span className="text-[10px] text-white/40 font-medium">
+                                        {isMe ? 'You' : msg.senderName} • {formatDate(msg.timestamp)}
                                     </span>
                                     {isHost && (
                                         <button
@@ -888,7 +1045,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                                     {/* Voice Doubt Note Audio Player */}
                                     {msg.audioUrl && (
                                         <div className="p-2.5 rounded-xl bg-black/40 border border-white/10 flex items-center gap-3">
-                                            <div className="p-2 rounded-full bg-indigo-500 text-white">
+                                            <div className="p-2 rounded-full bg-indigo-500 text-white shrink-0">
                                                 <Mic className="w-4 h-4" />
                                             </div>
                                             <audio src={msg.audioUrl} controls className="h-8 max-w-[200px]" />
@@ -897,42 +1054,63 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
 
                                     {/* Live MCQ Poll Card */}
                                     {msg.pollData && (
-                                        <div className="p-3 rounded-xl bg-black/40 border border-amber-500/30 space-y-2">
-                                            <div className="flex items-center gap-1.5 text-xs font-bold text-amber-300">
-                                                <BarChart2 className="w-4 h-4 text-amber-400" />
-                                                <span>Live MCQ Challenge</span>
+                                        <div className="p-3.5 rounded-xl bg-black/50 border border-amber-500/30 space-y-2.5 min-w-[240px]">
+                                            <div className="flex items-center justify-between border-b border-amber-500/20 pb-1.5">
+                                                <div className="flex items-center gap-1.5 text-xs font-bold text-amber-300">
+                                                    <BarChart2 className="w-4 h-4 text-amber-400" />
+                                                    <span>{msg.pollData.correctIdx !== -1 ? 'Live MCQ Quiz' : 'Opinion Poll'}</span>
+                                                </div>
+                                                <span className="text-[10px] text-amber-400/70 font-semibold">
+                                                    {Object.keys(msg.pollData.votes || {}).length} votes
+                                                </span>
                                             </div>
-                                            <p className="text-xs font-bold text-white">{msg.pollData.question}</p>
+                                            <p className="text-xs font-bold text-white leading-snug">{msg.pollData.question}</p>
 
-                                            <div className="space-y-1.5 pt-1">
+                                            <div className="space-y-2 pt-1">
                                                 {msg.pollData.options.map((opt, idx) => {
                                                     const totalVotes = Object.keys(msg.pollData?.votes || {}).length;
                                                     const optionVotes = Object.values(msg.pollData?.votes || {}).filter(v => v === idx).length;
                                                     const pct = totalVotes > 0 ? Math.round((optionVotes / totalVotes) * 100) : 0;
-                                                    const hasVoted = msg.pollData?.votes?.[currentUid] === idx;
+                                                    const userVotedIdx = msg.pollData?.votes?.[currentUid];
+                                                    const hasVoted = userVotedIdx === idx;
+                                                    const isCorrectOpt = msg.pollData?.correctIdx === idx;
+                                                    const showAnswers = userVotedIdx !== undefined && msg.pollData?.correctIdx !== -1;
+
+                                                    let borderBgStyle = 'bg-white/5 border-white/10 hover:bg-white/10 text-white';
+                                                    if (hasVoted) {
+                                                        borderBgStyle = 'bg-amber-500/20 border-amber-500 text-amber-300 font-bold';
+                                                    }
+                                                    if (showAnswers) {
+                                                        if (isCorrectOpt) {
+                                                            borderBgStyle = 'bg-emerald-500/25 border-emerald-400 text-emerald-300 font-bold';
+                                                        } else if (hasVoted && !isCorrectOpt) {
+                                                            borderBgStyle = 'bg-red-500/25 border-red-400 text-red-300 font-bold';
+                                                        }
+                                                    }
 
                                                     return (
                                                         <button
                                                             key={idx}
                                                             disabled={isRoomClosed}
                                                             onClick={() => handleVotePoll(msg.id, idx)}
-                                                            className={`w-full p-2 rounded-xl text-left text-xs transition relative overflow-hidden flex items-center justify-between border ${
-                                                                hasVoted
-                                                                    ? 'bg-amber-500/20 border-amber-500 text-amber-300 font-bold'
-                                                                    : 'bg-white/5 border-white/10 hover:bg-white/10 text-white'
-                                                            }`}
+                                                            className={`w-full p-2.5 rounded-xl text-left text-xs transition relative overflow-hidden flex items-center justify-between border ${borderBgStyle}`}
                                                         >
                                                             <div 
-                                                                className="absolute left-0 top-0 bottom-0 bg-amber-500/20 pointer-events-none transition-all"
+                                                                className={`absolute left-0 top-0 bottom-0 pointer-events-none transition-all ${
+                                                                    showAnswers && isCorrectOpt ? 'bg-emerald-500/20' : 'bg-amber-500/20'
+                                                                }`}
                                                                 style={{ width: `${pct}%` }}
                                                             />
-                                                            <span className="relative z-10 flex items-center gap-2">
-                                                                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[10px] font-bold">
+                                                            <span className="relative z-10 flex items-center gap-2 pr-2">
+                                                                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[10px] font-bold shrink-0">
                                                                     {String.fromCharCode(65 + idx)}
                                                                 </span>
                                                                 <span>{opt}</span>
+                                                                {showAnswers && isCorrectOpt && (
+                                                                    <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                                                )}
                                                             </span>
-                                                            <span className="relative z-10 text-[10px] font-mono text-amber-300">
+                                                            <span className="relative z-10 text-[10px] font-mono text-amber-300 shrink-0">
                                                                 {pct}% ({optionVotes})
                                                             </span>
                                                         </button>
@@ -963,49 +1141,296 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 <div ref={messagesEndRef} />
             </div>
 
-            {/* Chat Input Bar */}
-            {!isRoomClosed && (
-                <form onSubmit={handleSendMessage} className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center gap-2">
-                    {/* Voice Note Mic Button */}
-                    <button
-                        type="button"
-                        onClick={isRecording ? stopRecording : startRecording}
-                        className={`p-2.5 rounded-xl border transition ${
-                            isRecording 
-                                ? 'bg-red-500 text-white animate-pulse border-red-400' 
-                                : 'bg-white/5 border-white/10 text-indigo-400 hover:bg-white/10'
-                        }`}
-                        title="Record Voice Note"
-                    >
-                        <Mic className="w-5 h-5" />
-                    </button>
-
-                    {/* Photo File Picker Trigger */}
-                    <label className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-indigo-400 cursor-pointer transition">
-                        <ImageIcon className="w-5 h-5" />
-                        <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
-                    </label>
-
-                    {/* Text Message & Link Input */}
-                    <input
-                        type="text"
-                        value={messageText}
-                        onChange={(e) => setMessageText(e.target.value)}
-                        placeholder="Type doubt, text message or link (https://...)"
-                        className="flex-1 p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
-                    />
-
-                    {/* Send Button */}
-                    <button
-                        type="submit"
-                        className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 transition shadow-md"
-                    >
-                        <Send className="w-5 h-5" />
-                    </button>
-                </form>
+            {/* Scroll to Bottom Floating Button */}
+            {showScrollToBottom && (
+                <button
+                    onClick={() => scrollToBottom(true)}
+                    className="absolute bottom-20 right-5 z-30 p-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-2xl hover:brightness-110 transition border border-white/20 flex items-center justify-center animate-bounce"
+                    title="Scroll to latest message"
+                >
+                    <ArrowDown className="w-5 h-5" />
+                </button>
             )}
 
-            {/* Members & Admin Moderation Drawer Modal */}
+            {/* Image Preview Overlay */}
+            {imageUrl && !isRoomClosed && (
+                <div className="px-4 py-2 bg-[#0c1222] border-t border-white/10 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                        <img src={imageUrl} alt="Attached Preview" className="w-10 h-10 object-cover rounded-lg border border-white/20" />
+                        <span className="text-xs text-white/70">Photo attached and ready to send</span>
+                    </div>
+                    <button onClick={() => setImageUrl('')} className="p-1 rounded-lg bg-white/10 hover:bg-white/20 text-white/60 hover:text-white">
+                        <X className="w-4 h-4" />
+                    </button>
+                </div>
+            )}
+
+            {/* WhatsApp-Style Chat Input & Voice Preview Bar */}
+            {!isRoomClosed && (
+                recordedAudioBase64 ? (
+                    {/* WhatsApp-style Voice Note Preview Bar before sending */}
+                    <div className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2 flex-1 bg-white/5 p-2 rounded-xl border border-white/10">
+                            {/* Delete/Cancel Preview */}
+                            <button
+                                type="button"
+                                onClick={cancelVoiceNotePreview}
+                                className="p-2 rounded-lg bg-red-500/20 text-red-400 hover:bg-red-500/30 transition shrink-0"
+                                title="Discard Voice Note"
+                            >
+                                <Trash2 className="w-4.5 h-4.5" />
+                            </button>
+
+                            {/* Play/Pause Preview */}
+                            <button
+                                type="button"
+                                onClick={togglePlayPreview}
+                                className="p-2 rounded-lg bg-indigo-500 text-white hover:bg-indigo-400 transition shrink-0"
+                                title={isPlayingPreview ? "Pause" : "Play Preview"}
+                            >
+                                {isPlayingPreview ? <Pause className="w-4.5 h-4.5" /> : <Play className="w-4.5 h-4.5" />}
+                            </button>
+
+                            {/* Audio Progress & Timer */}
+                            <div className="flex-1 flex items-center gap-2 px-2 overflow-hidden">
+                                <Mic className="w-4 h-4 text-indigo-400 animate-pulse shrink-0" />
+                                <span className="text-xs font-mono font-bold text-white/90 shrink-0">
+                                    Voice Note ({Math.floor(recordedAudioDuration / 60)}:{(recordedAudioDuration % 60).toString().padStart(2, '0')})
+                                </span>
+                                <div className="flex-1 h-1.5 bg-white/20 rounded-full overflow-hidden hidden sm:block">
+                                    <div className={`h-full bg-gradient-to-r from-indigo-400 to-purple-400 ${isPlayingPreview ? 'w-full transition-all duration-[3000ms]' : 'w-1/2'}`} />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Send Voice Note Button */}
+                        <button
+                            type="button"
+                            onClick={handleSendVoiceNote}
+                            className="p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold hover:brightness-110 transition shadow-lg flex items-center gap-1.5 text-xs shrink-0"
+                            title="Send Voice Note"
+                        >
+                            <span className="hidden sm:inline">Send Voice</span>
+                            <Send className="w-4.5 h-4.5" />
+                        </button>
+                    </div>
+                ) : isRecording ? (
+                    {/* Active Voice Recording UI with Stop Button */}
+                    <div className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 flex-1 bg-red-500/10 border border-red-500/30 p-2 rounded-xl">
+                            <div className="w-3 h-3 rounded-full bg-red-500 animate-ping" />
+                            <span className="text-xs font-mono font-bold text-red-400">
+                                Recording... {Math.floor(recordingTime / 60)}:{(recordingTime % 60).toString().padStart(2, '0')}
+                            </span>
+                            <div className="flex-1 flex gap-1 items-center justify-center">
+                                <span className="w-1 h-3 bg-red-400 animate-bounce" />
+                                <span className="w-1 h-5 bg-red-400 animate-bounce delay-100" />
+                                <span className="w-1 h-2 bg-red-400 animate-bounce delay-200" />
+                                <span className="w-1 h-4 bg-red-400 animate-bounce delay-150" />
+                            </div>
+                        </div>
+
+                        {/* Stop Recording & Go to Preview Button */}
+                        <button
+                            type="button"
+                            onClick={stopRecording}
+                            className="px-4 py-2.5 rounded-xl bg-red-500 text-white font-bold hover:bg-red-600 transition shadow-md flex items-center gap-2 text-xs"
+                            title="Stop & Preview Voice Note"
+                        >
+                            <Square className="w-4 h-4 fill-white" />
+                            <span>Stop & Preview</span>
+                        </button>
+                    </div>
+                ) : (
+                    {/* Standard Text Input Bar with Mic, Photo & Question Poll Icon */}
+                    <form onSubmit={handleSendMessage} className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center gap-2">
+                        {/* Voice Note Mic Button */}
+                        <button
+                            type="button"
+                            onClick={startRecording}
+                            className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-indigo-400 hover:bg-white/10 transition"
+                            title="Record Voice Note"
+                        >
+                            <Mic className="w-5 h-5" />
+                        </button>
+
+                        {/* Photo File Picker Trigger */}
+                        <label className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-indigo-400 cursor-pointer transition" title="Attach Image">
+                            <ImageIcon className="w-5 h-5" />
+                            <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
+                        </label>
+
+                        {/* Question Poll Icon Button */}
+                        <button
+                            type="button"
+                            onClick={() => setShowPollModal(true)}
+                            className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 transition"
+                            title="Create Question Poll"
+                        >
+                            <BarChart2 className="w-5 h-5" />
+                        </button>
+
+                        {/* Text Message & Link Input */}
+                        <input
+                            type="text"
+                            value={messageText}
+                            onChange={(e) => setMessageText(e.target.value)}
+                            placeholder="Type doubt, message or link (https://...)"
+                            className="flex-1 p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
+                        />
+
+                        {/* Send Button */}
+                        <button
+                            type="submit"
+                            className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 transition shadow-md"
+                        >
+                            <Send className="w-5 h-5" />
+                        </button>
+                    </form>
+                )
+            )}
+
+            {/* Live Question Poll Creation Modal */}
+            <AnimatePresence>
+                {showPollModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.95, opacity: 0 }}
+                            className="w-full max-w-lg bg-[#0c1222] border border-white/15 rounded-2xl p-5 space-y-4 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                        >
+                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                                <div className="flex items-center gap-2">
+                                    <BarChart2 className="w-5 h-5 text-amber-400" />
+                                    <h3 className="font-bold text-base text-white">Create Question Poll</h3>
+                                </div>
+                                <button onClick={() => setShowPollModal(false)} className="p-1 rounded-lg hover:bg-white/10 text-white/60 hover:text-white">
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            <form onSubmit={handleCreatePoll} className="space-y-4 overflow-y-auto pr-1 flex-1">
+                                <div>
+                                    <label className="text-xs font-bold text-amber-300 block mb-1">
+                                        Question / Quiz Title *
+                                    </label>
+                                    <textarea
+                                        value={pollQuestion}
+                                        onChange={(e) => setPollQuestion(e.target.value)}
+                                        placeholder="e.g. Which cell organelle is known as the powerhouse of the cell?"
+                                        rows={3}
+                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-500 placeholder:text-white/30"
+                                        required
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <div className="flex items-center justify-between">
+                                        <label className="text-xs font-bold text-white/70 block">
+                                            Options *
+                                        </label>
+                                        {pollOptions.length < 6 && (
+                                            <button
+                                                type="button"
+                                                onClick={handleAddPollOption}
+                                                className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1"
+                                            >
+                                                <Plus className="w-3.5 h-3.5" />
+                                                <span>Add Option</span>
+                                            </button>
+                                        )}
+                                    </div>
+
+                                    {pollOptions.map((opt, idx) => (
+                                        <div key={idx} className="flex items-center gap-2">
+                                            <span className="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-bold flex items-center justify-center shrink-0">
+                                                {String.fromCharCode(65 + idx)}
+                                            </span>
+                                            <input
+                                                type="text"
+                                                value={opt}
+                                                onChange={(e) => {
+                                                    const updated = [...pollOptions];
+                                                    updated[idx] = e.target.value;
+                                                    setPollOptions(updated);
+                                                }}
+                                                placeholder={`Option ${String.fromCharCode(65 + idx)}`}
+                                                className="flex-1 p-2 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-amber-500 placeholder:text-white/30"
+                                                required={idx < 2}
+                                            />
+                                            {pollOptions.length > 2 && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => handleRemovePollOption(idx)}
+                                                    className="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition shrink-0"
+                                                >
+                                                    <Trash2 className="w-4 h-4" />
+                                                </button>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div>
+                                    <label className="text-xs font-bold text-white/70 block mb-1">
+                                        Select Correct Answer (For NEET Quiz)
+                                    </label>
+                                    <select
+                                        value={pollCorrectIdx}
+                                        onChange={(e) => setPollCorrectIdx(Number(e.target.value))}
+                                        className="w-full p-2.5 rounded-xl bg-[#070b14] border border-white/10 text-xs text-white focus:outline-none focus:border-amber-500"
+                                    >
+                                        <option value={-1}>Opinion Poll (No single correct answer)</option>
+                                        {pollOptions.map((_, idx) => (
+                                            <option key={idx} value={idx}>
+                                                Option {String.fromCharCode(65 + idx)} is Correct
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+
+                                <div className="pt-2 flex items-center gap-2">
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowPollModal(false)}
+                                        className="flex-1 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-bold text-white/70 hover:bg-white/10 transition"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-xs font-bold text-white hover:brightness-110 transition shadow-lg flex items-center justify-center gap-2"
+                                    >
+                                        <BarChart2 className="w-4 h-4" />
+                                        <span>Post Question Poll 🚀</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Media Overlay */}
+            {activeMediaUrl && (
+                <div 
+                    onClick={() => setActiveMediaUrl(null)}
+                    className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+                >
+                    <button onClick={() => setActiveMediaUrl(null)} className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20">
+                        <X className="w-6 h-6" />
+                    </button>
+                    <img src={activeMediaUrl} alt="Enlarged view" className="max-w-full max-h-full object-contain rounded-xl" />
+                </div>
+            )}
+
+            {/* Members & Room Settings Panel Drawer */}
             <AnimatePresence>
                 {showMembersDrawer && (
                     <motion.div
@@ -1024,13 +1449,85 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
                                     <div>
                                         <h3 className="font-bold text-base text-white flex items-center gap-2">
-                                            Room Members ({room.members?.length || 1} / {maxLimit})
+                                            Room Panel ({room.members?.length || 1} / {maxLimit})
                                         </h3>
                                         <p className="text-xs text-white/50">{room.name}</p>
                                     </div>
                                     <button onClick={() => setShowMembersDrawer(false)} className="p-1.5 rounded-full hover:bg-white/10 text-white/60 hover:text-white">
                                         <X className="w-5 h-5" />
                                     </button>
+                                </div>
+
+                                {/* Room Focus Music & Timer Controls Card inside Panel */}
+                                <div className="p-3.5 rounded-2xl bg-[#070b14] border border-pink-500/30 space-y-3 shadow-lg">
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2">
+                                            <Timer className="w-4.5 h-4.5 text-pink-400" />
+                                            <h4 className="text-xs font-bold text-pink-300">Focus Music & Timer Controls</h4>
+                                        </div>
+                                        {room.isMusicActive && (
+                                            <span className="px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-300 text-[10px] font-bold border border-pink-500/40 animate-pulse">
+                                                🎵 Music Active
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    {/* Admin vs Non-Admin Focus Music Control */}
+                                    {isHost ? (
+                                        <button
+                                            onClick={handleToggleAdminMusic}
+                                            className={`w-full py-2.5 px-3 rounded-xl font-bold text-xs transition flex items-center justify-center gap-2 ${
+                                                room.isMusicActive
+                                                    ? 'bg-pink-600 hover:bg-pink-500 text-white shadow-lg'
+                                                    : 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:brightness-110 text-white shadow-md'
+                                            }`}
+                                        >
+                                            {room.isMusicActive ? (
+                                                <>
+                                                    <VolumeX className="w-4 h-4" />
+                                                    <span>Stop Room Focus Music</span>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Volume2 className="w-4 h-4" />
+                                                    <span>Start Room Focus Music</span>
+                                                </>
+                                            )}
+                                        </button>
+                                    ) : (
+                                        <button
+                                            onClick={handleRequestMusic}
+                                            className="w-full py-2.5 px-3 rounded-xl bg-pink-500/20 border border-pink-500/40 text-pink-300 hover:bg-pink-500/30 font-bold text-xs transition flex items-center justify-center gap-2"
+                                        >
+                                            <Volume2 className="w-4 h-4 text-pink-400" />
+                                            <span>🎵 pls start music (Request Admin)</span>
+                                        </button>
+                                    )}
+
+                                    {/* User Local Mute/Unmute Control */}
+                                    <div className="pt-2 flex items-center justify-between border-t border-white/10">
+                                        <span className="text-[11px] text-white/60 font-medium">Your Local Audio Status:</span>
+                                        <button
+                                            onClick={() => setIsUserMuted(!isUserMuted)}
+                                            className={`px-3 py-1 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border ${
+                                                isUserMuted
+                                                    ? 'bg-red-500/20 text-red-300 border-red-500/40 hover:bg-red-500/30'
+                                                    : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
+                                            }`}
+                                        >
+                                            {isUserMuted ? (
+                                                <>
+                                                    <VolumeX className="w-3.5 h-3.5 text-red-400" />
+                                                    <span>Muted (Tap to Unmute)</span>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+                                                    <span>Unmuted (Tap to Mute)</span>
+                                                </>
+                                            )}
+                                        </button>
+                                    </div>
                                 </div>
 
                                 {/* Admin Direct Close Room Control */}
