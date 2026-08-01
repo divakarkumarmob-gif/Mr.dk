@@ -28,9 +28,9 @@ export async function saveMediaToGallery(url: string, mediaType: 'image' | 'vide
             const dataUrl = await toDataUrl(url);
 
             if (mediaType === 'video') {
-                await Media.saveVideo({ path: dataUrl, album: 'Mr.dk' });
+                await Media.saveVideo({ path: dataUrl });
             } else {
-                await Media.savePhoto({ path: dataUrl, album: 'Mr.dk' });
+                await Media.savePhoto({ path: dataUrl });
             }
             await showToast('Saved to gallery');
         } else {

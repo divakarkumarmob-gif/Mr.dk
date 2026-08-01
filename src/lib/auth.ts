@@ -113,8 +113,9 @@ export const resetPassword = async (email: string) => {
 // reCAPTCHA widget needed.
 // Web: uses an invisible reCAPTCHA + the Firebase JS SDK's signInWithPhoneNumber.
 
-// Holds the pending web confirmation so verifyPhoneOtp can complete it.
+// Holds the pending web confirmation and native verificationId so verifyPhoneOtp can complete it.
 let webConfirmationResult: ConfirmationResult | null = null;
+let nativeVerificationId: string | null = null;
 
 // Normalizes a raw 10-digit (or already-plus-prefixed) number into E.164
 // format. Defaults to India (+91) since that's the only allowed SMS region
@@ -133,7 +134,8 @@ export const sendPhoneOtp = async (rawPhone: string, recaptchaContainerId?: stri
     const phoneNumber = toE164(rawPhone);
     try {
         if (Capacitor.isNativePlatform()) {
-            await FirebaseAuthentication.signInWithPhoneNumber({ phoneNumber });
+            const res: any = await FirebaseAuthentication.signInWithPhoneNumber({ phoneNumber });
+            nativeVerificationId = res?.verificationId || null;
             return;
         }
         const verifier = getRecaptchaVerifier(recaptchaContainerId);
@@ -149,7 +151,11 @@ export const sendPhoneOtp = async (rawPhone: string, recaptchaContainerId?: stri
 export const verifyPhoneOtp = async (code: string) => {
     try {
         if (Capacitor.isNativePlatform()) {
-            const result = await FirebaseAuthentication.confirmVerificationCode({ verificationCode: code });
+            const result = await FirebaseAuthentication.confirmVerificationCode({
+                verificationId: nativeVerificationId || '',
+                verificationCode: code
+            });
+            nativeVerificationId = null;
             return result;
         }
         if (!webConfirmationResult) {

@@ -69,18 +69,18 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     if (isFullscreen) {
       document.body.classList.add('video-fullscreen');
       if (Capacitor.isNativePlatform()) {
-        SafeArea.hideSystemBars().catch(() => {});
+        SafeArea.hideSystemBars({}).catch(() => {});
       }
     } else {
       document.body.classList.remove('video-fullscreen');
       if (Capacitor.isNativePlatform()) {
-        SafeArea.showSystemBars().catch(() => {});
+        SafeArea.showSystemBars({}).catch(() => {});
       }
     }
     return () => {
       document.body.classList.remove('video-fullscreen');
       if (Capacitor.isNativePlatform()) {
-        SafeArea.showSystemBars().catch(() => {});
+        SafeArea.showSystemBars({}).catch(() => {});
       }
     };
   }, [isFullscreen]);

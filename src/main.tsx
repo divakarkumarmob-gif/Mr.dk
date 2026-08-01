@@ -16,15 +16,7 @@ import { AuthProvider } from './contexts/AuthContext';
 // root cause of the status bar randomly disappearing/glitching on
 // navigation. SafeArea's System Bars API replaces it everywhere.
 if (Capacitor.isNativePlatform()) {
-  SafeArea.enable({
-    config: {
-      customColorsForSystemBars: true,
-      statusBarColor: '#0a0f24',
-      statusBarContent: 'light',
-      navigationBarColor: '#0a0f24',
-      navigationBarContent: 'light',
-    },
-  }).catch(() => {});
+  SafeArea.showSystemBars({}).catch(() => {});
 
   // Re-assert the status bar whenever the app resumes from background,
   // unless a video is actively in fullscreen mode.
@@ -32,7 +24,7 @@ if (Capacitor.isNativePlatform()) {
     if (isActive) {
       const isVideoFullscreen = document.body.classList.contains('video-fullscreen');
       if (!isVideoFullscreen) {
-        SafeArea.showSystemBars().catch(() => {});
+        SafeArea.showSystemBars({}).catch(() => {});
       }
     }
   });

@@ -400,7 +400,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             setIsCapturing(false);
 
             const blob: Blob | null = await withTimeout(
-                new Promise((resolve) => canvas.toBlob(resolve, 'image/png', 0.92)),
+                new Promise((resolve) => (canvas as HTMLCanvasElement).toBlob(resolve, 'image/png', 0.92)),
                 10000,
                 'Generating image'
             );

@@ -53,9 +53,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
         if (showControls) {
-            SafeArea.showSystemBars().catch(() => {});
+            SafeArea.showSystemBars({}).catch(() => {});
         } else {
-            SafeArea.hideSystemBars().catch(() => {});
+            SafeArea.hideSystemBars({}).catch(() => {});
             setShowSearch(false);
         }
     }, [showControls]);
@@ -63,7 +63,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     useEffect(() => {
         return () => {
             if (Capacitor.isNativePlatform()) {
-                SafeArea.showSystemBars().catch(() => {});
+                SafeArea.showSystemBars({}).catch(() => {});
             }
         };
     }, []);

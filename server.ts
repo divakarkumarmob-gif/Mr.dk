@@ -2259,7 +2259,7 @@ App info — answer naturally if asked:
                 // response delay for noticeably better-reasoned, more
                 // accurate answers. User-configurable from Settings.
                 thinkingConfig: {
-                    thinkingLevel: ['low', 'medium', 'high'].includes(thinkingLevel) ? thinkingLevel : 'high',
+                    thinkingLevel: (['low', 'medium', 'high'].includes(thinkingLevel) ? thinkingLevel : 'high') as any,
                 },
                 ...(googleSearchMode ? { tools: [{ googleSearch: {} }] } : {}),
                 systemInstruction: systemInstruction,

@@ -1861,6 +1861,11 @@ function AppInner() {
                     setShowSupportModal(false);
                     setCurrentView('technicalSupport');
                 }}
+                onSendReport={(screenshot, text) => {
+                    setShowSupportModal(false);
+                    setPendingSupportData({ screenshot, text });
+                    setCurrentView('technicalSupport');
+                }}
             />
             {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
         </PageLayout>
@@ -1956,6 +1961,11 @@ function AppInner() {
                     setShowSupportModal(false);
                     setCurrentView('technicalSupport');
                 }}
+                onSendReport={(screenshot, text) => {
+                    setShowSupportModal(false);
+                    setPendingSupportData({ screenshot, text });
+                    setCurrentView('technicalSupport');
+                }}
             />
         </PageLayout>
       );
@@ -1970,6 +1980,11 @@ function AppInner() {
                  onClose={() => setShowSupportModal(false)}
                  onConfirm={() => {
                      setShowSupportModal(false);
+                     setCurrentView('technicalSupport');
+                 }}
+                 onSendReport={(screenshot, text) => {
+                     setShowSupportModal(false);
+                     setPendingSupportData({ screenshot, text });
                      setCurrentView('technicalSupport');
                  }}
              />

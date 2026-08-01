@@ -96,6 +96,8 @@ interface Notification {
     timestamp: any;
     readBy?: string[];
     hideFromBell?: boolean;
+    title?: string;
+    files?: any[];
 }
 
 type TabKey = 'message' | 'upload' | 'import' | 'users' | 'schedule' | 'device';
@@ -384,7 +386,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             <div className="px-4 sm:px-6 py-3 border-b border-white/10 overflow-x-auto no-scrollbar">
                 <div className="flex gap-2 w-max">
                     {TABS.map(tab => {
-                        const Icon = tab.icon;
+                        const Icon: any = tab.icon;
                         const isActive = activeTab === tab.key;
                         return (
                             <button

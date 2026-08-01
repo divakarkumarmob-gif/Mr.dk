@@ -67,7 +67,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                     ...data,
                     timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : new Date(data.timestamp),
                 };
-            }).filter(t => !t.hidden);
+            }).filter((t: any) => !t.hidden);
 
             setRecentTests(tests.slice(0, 3));
         }, (e) => {

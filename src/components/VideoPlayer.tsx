@@ -16,11 +16,11 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
   useEffect(() => {
     if (Capacitor.isNativePlatform()) {
       if (selectedVideoId) {
-        SafeArea.hideSystemBars().catch(() => {});
+        SafeArea.hideSystemBars({}).catch(() => {});
         ScreenOrientation.lock({ orientation: 'landscape' }).catch(() => {});
         keepAwake();
       } else {
-        SafeArea.showSystemBars().catch(() => {});
+        SafeArea.showSystemBars({}).catch(() => {});
         allowSleep();
         ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
           ScreenOrientation.unlock().catch(() => {});
@@ -36,7 +36,7 @@ export default function VideoPlayer({ topic, onClose, directUrl }: { topic: stri
     return () => {
       allowSleep();
       if (Capacitor.isNativePlatform()) {
-        SafeArea.showSystemBars().catch(() => {});
+        SafeArea.showSystemBars({}).catch(() => {});
         ScreenOrientation.lock({ orientation: 'portrait' }).then(() => {
           ScreenOrientation.unlock().catch(() => {});
         }).catch(() => {
