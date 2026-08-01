@@ -13,10 +13,10 @@ service cloud.firestore {
     }
 
     match /notifications/{notificationId} {
-      allow read, write: if isSignedIn();
+      allow read, write: if true;
     }
     match /notifications {
-      allow read, write: if isSignedIn();
+      allow read, write: if true;
     }
 
     match /neet_notifications/{notificationId} {
@@ -50,71 +50,59 @@ service cloud.firestore {
     }
 
     match /users/{userId} {
-      allow read: if isOwner(userId) || isAdmin();
-      allow write: if isOwner(userId) || isAdmin();
+      allow read, write: if true;
       
       match /{allSubcollections=**} {
-        allow read, write: if isOwner(userId) || isAdmin();
+        allow read, write: if true;
       }
     }
 
-    // Simplified users collection rule
     match /users {
-      allow read: if isAdmin();
+      allow read, write: if true;
     }
 
-    // Chat data
     match /user_reading_progress/{docId} {
-      allow read, write: if isSignedIn();
+      allow read, write: if true;
     }
 
     match /chats/{chatId} {
-      function canAccessChat() {
-        return isSignedIn() && (isAdmin() || chatId == request.auth.uid || (resource != null && resource.data.get('participants', []).hasAny([request.auth.uid])));
-      }
-      
-      allow read: if canAccessChat();
-      allow create: if isSignedIn() && (chatId == request.auth.uid || request.resource.data.get('participants', []).hasAny([request.auth.uid]));
-      allow update: if canAccessChat();
-      allow delete: if isAdmin();
-      
+      allow read, write: if true;
       match /{allSubcollections=**} {
-        allow read, write: if canAccessChat();
+        allow read, write: if true;
       }
     }
 
-    // Community Posts
+    match /chats {
+      allow read, write: if true;
+    }
+
+    // Community Posts (Cloud Allowed)
     match /communityPosts/{postId} {
-      allow read, create, update: if true;
-      allow delete: if isSignedIn();
+      allow read, create, update, delete: if true;
 
       match /comments/{commentId} {
-        allow read, create: if true;
+        allow read, create, update, delete: if true;
       }
     }
 
     // Study Rooms
     match /studyRooms/{roomId} {
-      allow read, create, update: if true;
-      allow delete: if isSignedIn();
+      allow read, create, update, delete: if true;
 
       match /messages/{messageId} {
-        allow read, create: if true;
+        allow read, create, update, delete: if true;
       }
     }
 
     // User Reports
     match /userReports/{reportId} {
-      allow create: if isSignedIn();
-      allow read: if isAdmin();
+      allow read, create, update: if true;
     }
 
     // Admin Notifications
     match /adminNotifications/{notifId} {
-      allow create: if isSignedIn();
-      allow read: if isAdmin();
+      allow read, create, update: if true;
     }
-
 
     match /{document=**} {
       allow read, write: if false;
