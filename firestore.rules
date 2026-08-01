@@ -1,8 +1,16 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    function isSignedIn() { return request.auth != null; }
-    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+
+    // Helper Functions
+    function isSignedIn() { 
+      return request.auth != null; 
+    }
+    
+    function isOwner(userId) { 
+      return isSignedIn() && request.auth.uid == userId; 
+    }
+    
     function isAdmin() { 
       return isSignedIn() && (
         request.auth.uid == 'b6BsG4T4z5ZfhSsybus6pcakEdB2' ||
@@ -12,20 +20,25 @@ service cloud.firestore {
       );
     }
 
+    // Notifications
     match /notifications/{notificationId} {
-      allow read, write: if true;
+      allow read, write: if isSignedIn();
     }
     match /notifications {
-      allow read, write: if true;
+      allow read, write: if isSignedIn();
     }
 
+    // NEET Notifications (Public read, Admin write)
     match /neet_notifications/{notificationId} {
-      allow read, write: if true;
+      allow read: if true;
+      allow write: if isAdmin();
     }
     match /neet_notifications {
-      allow read, write: if true;
+      allow read: if true;
+      allow write: if isAdmin();
     }
 
+    // Tests
     match /tests/{testId} {
       allow read: if isSignedIn();
       allow write: if isAdmin();
@@ -35,75 +48,95 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // OTPs (Required for authentication flow)
     match /otps/{otpId} {
-        allow read, write: if true;
+      allow read, write: if true;
     }
     
+    // Questions
     match /questions/{questionId} {
       allow read: if isSignedIn();
       allow write: if isAdmin(); 
     }
     
+    // Chapter Activity
     match /chapterActivity/{activityId} {
       allow read: if isSignedIn();
       allow write: if isAdmin();
     }
 
+    // User Reading Progress
+    match /user_reading_progress/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    // Users Collection (Owner or Admin access)
     match /users/{userId} {
-      allow read, write: if true;
+      allow read, write: if isOwner(userId) || isAdmin();
       
       match /{allSubcollections=**} {
-        allow read, write: if true;
+        allow read, write: if isOwner(userId) || isAdmin();
       }
     }
-
     match /users {
-      allow read, write: if true;
+      allow read: if isAdmin();
     }
 
-    match /user_reading_progress/{docId} {
-      allow read, write: if true;
-    }
-
+    // Chats Collection (Participant or Admin access)
     match /chats/{chatId} {
-      allow read, write: if true;
+      function canAccessChat() {
+        return isSignedIn() && (
+          isAdmin() || 
+          chatId == request.auth.uid || 
+          (resource != null && resource.data.get('participants', []).hasAny([request.auth.uid]))
+        );
+      }
+      
+      allow read: if canAccessChat();
+      allow create: if isSignedIn() && (chatId == request.auth.uid || request.resource.data.get('participants', []).hasAny([request.auth.uid]));
+      allow update: if canAccessChat();
+      allow delete: if isAdmin();
+      
       match /{allSubcollections=**} {
-        allow read, write: if true;
+        allow read, write: if canAccessChat();
       }
     }
-
     match /chats {
-      allow read, write: if true;
+      allow read: if isAdmin();
     }
 
-    // Community Posts (Cloud Allowed)
+    // Community Posts (Public read, Auth required for write operations)
     match /communityPosts/{postId} {
-      allow read, create, update, delete: if true;
+      allow read: if true;
+      allow create, update, delete: if isSignedIn();
 
       match /comments/{commentId} {
-        allow read, create, update, delete: if true;
+        allow read, create: if isSignedIn();
       }
     }
 
-    // Study Rooms
+    // Study Rooms (Auth required)
     match /studyRooms/{roomId} {
-      allow read, create, update, delete: if true;
+      allow read, create, update, delete: if isSignedIn();
 
       match /messages/{messageId} {
-        allow read, create, update, delete: if true;
+        allow read, create: if isSignedIn();
       }
     }
 
-    // User Reports
+    // User Reports (Auth create, Admin read)
     match /userReports/{reportId} {
-      allow read, create, update: if true;
+      allow create: if isSignedIn();
+      allow read: if isAdmin();
     }
 
-    // Admin Notifications
+    // Admin Notifications (Auth create, Admin read)
     match /adminNotifications/{notifId} {
-      allow read, create, update: if true;
+      allow create: if isSignedIn();
+      allow read: if isAdmin();
     }
 
+    // Default catch-all rule (Block unhandled routes)
     match /{document=**} {
       allow read, write: if false;
     }
