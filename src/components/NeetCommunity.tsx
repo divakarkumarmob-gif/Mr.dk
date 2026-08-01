@@ -4,12 +4,13 @@ import {
     Users, MessageSquare, Image as ImageIcon, Video, Heart, Send, Plus, X, 
     Sparkles, Filter, ThumbsUp, Trash2, Shield, Search, Play, ArrowLeft, 
     Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye, 
-    CornerDownRight, DoorOpen, Radio, Home
+    CornerDownRight, DoorOpen, Radio, Home, Flag
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
+import DirectChat, { DirectUser } from './DirectChat';
 
 interface NeetCommunityProps {
     onBack: () => void;
@@ -51,6 +52,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     // Active Live Room State (When user joins a room)
     const [activeRoom, setActiveRoom] = useState<StudyRoom | null>(null);
 
+    // Active 1v1 Direct Chat User State
+    const [activeDirectChatUser, setActiveDirectChatUser] = useState<DirectUser | null>(null);
+
     // Create Room State
     const [roomName, setRoomName] = useState<string>('');
     const [roomTopic, setRoomTopic] = useState<string>('Physics');
@@ -73,6 +77,18 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Active Media Preview Modal State
     const [activeMedia, setActiveMedia] = useState<{ type: 'image' | 'video', url: string } | null>(null);
+
+    // User Profile Quick Modal & Report System State
+    const [selectedUserProfile, setSelectedUserProfile] = useState<{
+        userId: string;
+        userName: string;
+        userPhoto?: string;
+        userBadge?: string;
+        postId?: string;
+    } | null>(null);
+
+    const [showReportModal, setShowReportModal] = useState<boolean>(false);
+    const [reportReason, setReportReason] = useState<string>('');
 
     // Active User Info
     const currentUser = auth.currentUser;
@@ -574,6 +590,53 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         }
     };
 
+    // Report User to Real App Admin Handler
+    const handleReportUser = async () => {
+        if (!selectedUserProfile) return;
+        if (!reportReason.trim()) {
+            showToast('Report ka reason likhein!');
+            return;
+        }
+
+        const reporterUid = currentUser?.uid || getViewerId();
+        const reporterName = currentUser?.displayName || 'NEET Aspirant';
+
+        const reportData = {
+            reportedUserId: selectedUserProfile.userId,
+            reportedUserName: selectedUserProfile.userName,
+            reporterUserId: reporterUid,
+            reporterUserName: reporterName,
+            reason: reportReason.trim(),
+            postId: selectedUserProfile.postId || '',
+            timestamp: serverTimestamp(),
+            status: 'pending'
+        };
+
+        // Save Report to Firestore userReports collection
+        try {
+            await addDoc(collection(db, 'userReports'), reportData);
+        } catch (e) {
+            console.warn("Firestore userReports fallback:", e);
+        }
+
+        // Send Alert Notification directly to Real App Admin Dashboard
+        try {
+            await addDoc(collection(db, 'adminNotifications'), {
+                type: 'user_reported',
+                title: '🚨 User Reported by Community Member',
+                message: `User "${selectedUserProfile.userName}" ko "${reporterName}" dwara report kiya gaya hai. Reason: "${reportReason.trim()}"`,
+                reportedUser: selectedUserProfile.userName,
+                reportedBy: reporterName,
+                timestamp: serverTimestamp()
+            });
+        } catch (e) {}
+
+        showToast(`User "${selectedUserProfile.userName}" ki report App Admin ko bhej di gayi hai! 🚨`);
+        setShowReportModal(false);
+        setReportReason('');
+        setSelectedUserProfile(null);
+    };
+
     // Filter Posts by Tag & Search
     const filteredPosts = posts.filter(post => {
         let matchesTag = false;
@@ -618,6 +681,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         return <StudyRoomChat room={activeRoom} onBack={() => setActiveRoom(null)} />;
     }
 
+    // Render 1v1 Direct Private Chat View if active
+    if (activeDirectChatUser) {
+        return <DirectChat targetUser={activeDirectChatUser} onBack={() => setActiveDirectChatUser(null)} />;
+    }
+
     return (
         <motion.div 
             initial={{ opacity: 0 }}
@@ -626,55 +694,58 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             className="min-h-screen bg-[#070b14] text-white flex flex-col font-sans"
         >
             {/* Header: "NEET Community" */}
-            <div className="sticky top-0 z-40 bg-[#0c1222]/90 backdrop-blur-md border-b border-white/10 px-4 py-3 flex items-center justify-between shadow-xl">
-                <div className="flex items-center gap-3">
+            <div className="sticky top-0 z-40 bg-[#0c1222]/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-4 py-2.5 flex items-center justify-between gap-2 shadow-xl overflow-hidden">
+                <div className="flex items-center gap-2 shrink-0">
                     <button 
                         onClick={onBack}
-                        className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/80 transition"
+                        className="p-1.5 sm:p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/80 transition"
                     >
-                        <ArrowLeft className="w-5 h-5" />
+                        <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
                     <div>
-                        <h1 className="text-lg font-bold text-white flex items-center gap-2">
-                            NEET Community <Sparkles className="w-4 h-4 text-amber-400" />
+                        <h1 className="text-sm sm:text-lg font-bold text-white flex items-center gap-1">
+                            NEET Community <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
                         </h1>
-                        <p className="text-[11px] text-indigo-300/70">Connect, Share Notes & Learn Together</p>
+                        <p className="text-[10px] sm:text-[11px] text-indigo-300/70 hidden sm:block">Connect, Share Notes & Learn Together</p>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                     <button
                         onClick={() => setSelectedTagFilter('myRooms')}
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold text-xs transition ${
+                        className={`flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl font-bold text-[11px] sm:text-xs transition ${
                             selectedTagFilter === 'myRooms'
                                 ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/30 font-extrabold'
                                 : 'bg-amber-500/20 border border-amber-500/40 text-amber-300 hover:bg-amber-500/30'
                         }`}
+                        title="My Created Rooms"
                     >
                         <Shield className="w-3.5 h-3.5 text-amber-400" />
-                        <span>My Rooms</span>
+                        <span className="hidden xs:inline sm:inline">My Rooms</span>
                     </button>
 
                     <button
                         onClick={() => setShowCreateRoomModal(true)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-bold text-xs hover:bg-indigo-500/30 transition"
+                        className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-bold text-[11px] sm:text-xs hover:bg-indigo-500/30 transition"
+                        title="Create Study Room"
                     >
                         <Radio className="w-3.5 h-3.5 text-red-400 animate-pulse" />
-                        <span>Create Room</span>
+                        <span className="hidden sm:inline">Create Room</span>
                     </button>
 
                     <button
                         onClick={() => setShowCreateModal(true)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 font-bold text-xs text-white shadow-lg shadow-indigo-500/25 hover:brightness-110 transition"
+                        className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 font-bold text-[11px] sm:text-xs text-white shadow-lg shadow-indigo-500/25 hover:brightness-110 transition"
+                        title="Create New Post"
                     >
-                        <Plus className="w-4 h-4" />
-                        <span>New Post</span>
+                        <Plus className="w-3.5 h-3.5" />
+                        <span className="hidden xs:inline sm:inline">New Post</span>
                     </button>
                 </div>
             </div>
 
             {/* Main Community Container */}
-            <div className="flex-1 max-w-3xl w-full mx-auto p-4 space-y-4">
+            <div className="flex-1 max-w-3xl w-full mx-auto px-3 sm:px-4 py-4 pb-28 space-y-4">
 
                 {/* Community Banner */}
                 <div className="p-4 rounded-2xl bg-gradient-to-r from-indigo-900/40 via-purple-900/30 to-[#0c1222] border border-indigo-500/30 flex items-center justify-between">
@@ -751,13 +822,31 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                 >
                                     {/* Post Author Info */}
                                     <div className="flex items-center justify-between">
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white shadow-md">
-                                                {post.userName ? post.userName.charAt(0).toUpperCase() : 'N'}
-                                            </div>
+                                        <div 
+                                            onClick={() => setSelectedUserProfile({
+                                                userId: post.userId,
+                                                userName: post.userName,
+                                                userPhoto: post.userPhoto,
+                                                userBadge: post.userBadge,
+                                                postId: post.id
+                                            })}
+                                            className="flex items-center gap-3 cursor-pointer group/user"
+                                            title="Click to view profile & report user"
+                                        >
+                                            {post.userPhoto ? (
+                                                <img 
+                                                    src={post.userPhoto} 
+                                                    alt={post.userName} 
+                                                    className="w-10 h-10 rounded-full object-cover border border-white/20 group-hover/user:border-indigo-400 transition" 
+                                                />
+                                            ) : (
+                                                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white shadow-md group-hover/user:scale-105 transition">
+                                                    {post.userName ? post.userName.charAt(0).toUpperCase() : 'N'}
+                                                </div>
+                                            )}
                                             <div>
                                                 <div className="flex items-center gap-2">
-                                                    <span className="font-bold text-sm text-white">{post.userName}</span>
+                                                    <span className="font-bold text-sm text-white group-hover/user:text-indigo-300 transition">{post.userName}</span>
                                                     {post.tag && (
                                                         <span className="px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 text-[10px] font-semibold border border-indigo-500/30">
                                                             #{post.tag}
@@ -788,10 +877,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                                     {/* Embedded Live Study Room Join Card if post is a Room */}
                                     {post.roomData && (
-                                        <div className="p-4 rounded-2xl bg-gradient-to-r from-indigo-950 to-purple-950 border border-indigo-500/40 flex items-center justify-between shadow-xl my-2">
+                                        <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-indigo-950 to-purple-950 border border-indigo-500/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl my-2">
                                             <div className="space-y-1">
                                                 <div className="flex items-center gap-2">
-                                                    <Radio className="w-4 h-4 text-red-400 animate-pulse" />
+                                                    <Radio className="w-4 h-4 text-red-400 animate-pulse shrink-0" />
                                                     <span className="font-bold text-sm text-white">{post.roomData.name}</span>
                                                 </div>
                                                 <p className="text-xs text-indigo-200/80">{post.roomData.description}</p>
@@ -802,7 +891,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                                             <button
                                                 onClick={() => handleJoinRoom(post.roomData!)}
-                                                className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 font-bold text-xs text-white shadow-lg hover:brightness-110 transition flex items-center gap-1.5 shrink-0"
+                                                className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 font-bold text-xs text-white shadow-lg hover:brightness-110 transition flex items-center justify-center gap-1.5 shrink-0"
                                             >
                                                 <DoorOpen className="w-4 h-4" />
                                                 <span>Join Room</span>
@@ -946,7 +1035,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             </div>
 
             {/* Floating Action Buttons */}
-            <div className="fixed bottom-6 right-6 z-30 flex flex-col gap-3 items-end">
+            <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-30 flex flex-col gap-2.5 items-end">
                 <button
                     onClick={() => setShowCreateRoomModal(true)}
                     title="Create Live Study Room"
@@ -971,13 +1060,13 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4"
                     >
                         <motion.div
                             initial={{ scale: 0.95, y: 20 }}
                             animate={{ scale: 1, y: 0 }}
                             exit={{ scale: 0.95, y: 20 }}
-                            className="w-full max-w-lg bg-[#0c1222] border border-white/15 rounded-3xl p-6 space-y-4 shadow-2xl"
+                            className="w-full max-w-lg bg-[#0c1222] border border-white/15 rounded-3xl p-5 sm:p-6 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto"
                         >
                             <div className="flex items-center justify-between border-b border-white/10 pb-3">
                                 <h3 className="font-bold text-base text-white flex items-center gap-2">
@@ -1231,6 +1320,137 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                     <img src={activeMedia.url} alt="Enlarged Media" className="max-w-full max-h-full object-contain rounded-xl" />
                 </div>
             )}
+
+            {/* User Profile Quick View Modal */}
+            <AnimatePresence>
+                {selectedUserProfile && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.95, y: 20 }}
+                            className="w-full max-w-sm bg-[#0c1222] border border-white/15 rounded-3xl p-6 space-y-5 text-center shadow-2xl relative"
+                        >
+                            <button
+                                onClick={() => setSelectedUserProfile(null)}
+                                className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-white/10 text-white/60 hover:text-white transition"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            {/* User Avatar */}
+                            <div className="mx-auto w-20 h-20 rounded-full overflow-hidden border-2 border-indigo-500 shadow-xl flex items-center justify-center bg-gradient-to-tr from-indigo-500 to-purple-600 font-bold text-2xl text-white">
+                                {selectedUserProfile.userPhoto ? (
+                                    <img src={selectedUserProfile.userPhoto} alt={selectedUserProfile.userName} className="w-full h-full object-cover" />
+                                ) : (
+                                    selectedUserProfile.userName ? selectedUserProfile.userName.charAt(0).toUpperCase() : 'N'
+                                )}
+                            </div>
+
+                            {/* User Name & Badge */}
+                            <div>
+                                <h3 className="font-bold text-lg text-white">{selectedUserProfile.userName}</h3>
+                                <span className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold border border-indigo-500/30 inline-block mt-1">
+                                    {selectedUserProfile.userBadge || 'NEET Aspirant 🌟'}
+                                </span>
+                            </div>
+
+                            {/* Actions: Send Message & Report User */}
+                            <div className="space-y-2 pt-2 border-t border-white/10">
+                                <button
+                                    onClick={() => {
+                                        setActiveDirectChatUser({
+                                            uid: selectedUserProfile.userId,
+                                            name: selectedUserProfile.userName,
+                                            photoURL: selectedUserProfile.userPhoto,
+                                            badge: selectedUserProfile.userBadge
+                                        });
+                                        setSelectedUserProfile(null);
+                                    }}
+                                    className="w-full py-2.5 rounded-xl bg-indigo-500 font-bold text-xs text-white hover:bg-indigo-600 transition flex items-center justify-center gap-2"
+                                >
+                                    <MessageSquare className="w-4 h-4" />
+                                    <span>Send Direct Message (1v1 Private Chat)</span>
+                                </button>
+
+                                <button
+                                    onClick={() => setShowReportModal(true)}
+                                    className="w-full py-2.5 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400 font-bold text-xs hover:bg-red-500/30 transition flex items-center justify-center gap-2"
+                                >
+                                    <Flag className="w-4 h-4 text-red-400" />
+                                    <span>Report User to Real App Admin</span>
+                                </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Report User Modal */}
+            <AnimatePresence>
+                {showReportModal && selectedUserProfile && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0.95 }}
+                            className="w-full max-w-md bg-[#0c1222] border border-red-500/40 rounded-3xl p-6 space-y-4 shadow-2xl"
+                        >
+                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                                <h3 className="font-bold text-base text-red-400 flex items-center gap-2">
+                                    <AlertCircle className="w-5 h-5" />
+                                    <span>Report User to Real App Admin</span>
+                                </h3>
+                                <button onClick={() => setShowReportModal(false)} className="p-1 text-white/60 hover:text-white">
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            <p className="text-xs text-white/70">
+                                Aap <strong>"{selectedUserProfile.userName}"</strong> ko report kar rahe hain. Real App Admin is report ko review karega.
+                            </p>
+
+                            <div>
+                                <label className="text-xs text-white/60 font-semibold mb-1 block">Report Reason</label>
+                                <textarea
+                                    rows={3}
+                                    value={reportReason}
+                                    onChange={(e) => setReportReason(e.target.value)}
+                                    placeholder="Abusive language, fake notes, spam, etc..."
+                                    className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-red-500"
+                                    required
+                                />
+                            </div>
+
+                            <div className="flex items-center gap-2 pt-2">
+                                <button
+                                    onClick={() => setShowReportModal(false)}
+                                    className="flex-1 py-2.5 rounded-xl bg-white/10 font-bold text-xs text-white"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleReportUser}
+                                    className="flex-1 py-2.5 rounded-xl bg-red-600 font-bold text-xs text-white hover:bg-red-700 transition flex items-center justify-center gap-1.5"
+                                >
+                                    <Flag className="w-4 h-4" />
+                                    <span>Submit Report to Admin</span>
+                                </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.div>
     );
 }
