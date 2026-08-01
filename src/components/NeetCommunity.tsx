@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     Users, MessageSquare, Image as ImageIcon, Video, Heart, Send, Plus, X, 
     Sparkles, Filter, ThumbsUp, Trash2, Shield, Search, Play, ArrowLeft, 
-    Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye
+    Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye, CornerDownRight
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
@@ -11,6 +11,13 @@ import { showToast } from '../utils/toast';
 
 interface NeetCommunityProps {
     onBack: () => void;
+}
+
+interface CommentItem {
+    id: string;
+    userName: string;
+    text: string;
+    timestamp: any;
 }
 
 interface Post {
@@ -42,6 +49,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     const [videoUrl, setVideoUrl] = useState<string>('');
     const [selectedCategory, setSelectedCategory] = useState<string>('BioTips');
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
+    // Comments Section State
+    const [openCommentPostId, setOpenCommentPostId] = useState<string | null>(null);
+    const [commentInputMap, setCommentInputMap] = useState<Record<string, string>>({});
+    const [postCommentsMap, setPostCommentsMap] = useState<Record<string, CommentItem[]>>({});
 
     // Active Media Preview Modal State
     const [activeMedia, setActiveMedia] = useState<{ type: 'image' | 'video', url: string } | null>(null);
@@ -131,6 +143,89 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             });
         } catch (e) {
             console.warn("Firestore view increment error:", e);
+        }
+    };
+
+    // Load comments for a post
+    const toggleCommentsForPost = (postId: string) => {
+        if (openCommentPostId === postId) {
+            setOpenCommentPostId(null);
+            return;
+        }
+
+        setOpenCommentPostId(postId);
+
+        // Load local comments fallback
+        try {
+            const stored = localStorage.getItem('neet_community_comments_' + postId);
+            if (stored) {
+                setPostCommentsMap(prev => ({ ...prev, [postId]: JSON.parse(stored) }));
+            }
+        } catch {}
+
+        // Listen to Firestore comments subcollection
+        try {
+            const q = query(collection(db, 'communityPosts', postId, 'comments'), orderBy('timestamp', 'asc'));
+            onSnapshot(q, (snapshot) => {
+                const fetchedComments: CommentItem[] = snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                } as CommentItem));
+                
+                if (fetchedComments.length > 0) {
+                    setPostCommentsMap(prev => ({ ...prev, [postId]: fetchedComments }));
+                }
+            });
+        } catch (e) {
+            console.warn("Firestore comments fetch error:", e);
+        }
+    };
+
+    // Add Comment Handler
+    const handleAddComment = async (postId: string) => {
+        const text = commentInputMap[postId]?.trim();
+        if (!text) {
+            showToast('Comment text likhein!');
+            return;
+        }
+
+        const newComment: CommentItem = {
+            id: 'comment_' + Date.now(),
+            userName: currentUser?.displayName || 'NEET Aspirant',
+            text: text,
+            timestamp: new Date().toISOString()
+        };
+
+        // Update local state for comments
+        const currentComments = postCommentsMap[postId] || [];
+        const updatedComments = [...currentComments, newComment];
+        setPostCommentsMap(prev => ({ ...prev, [postId]: updatedComments }));
+
+        // Update comment count on post
+        setPosts(prev => prev.map(p => p.id === postId ? { ...p, commentsCount: (p.commentsCount || 0) + 1 } : p));
+
+        // Clear input field
+        setCommentInputMap(prev => ({ ...prev, [postId]: '' }));
+
+        // Save to LocalStorage fallback
+        try {
+            localStorage.setItem('neet_community_comments_' + postId, JSON.stringify(updatedComments));
+        } catch {}
+
+        showToast('Comment add ho gaya! 💬');
+
+        // Try Firestore write
+        try {
+            await addDoc(collection(db, 'communityPosts', postId, 'comments'), {
+                userName: newComment.userName,
+                text: newComment.text,
+                timestamp: serverTimestamp()
+            });
+            await updateDoc(doc(db, 'communityPosts', postId), {
+                commentsCount: increment(1)
+            });
+        } catch (e) {
+            console.warn("Firestore comment add error:", e);
         }
     };
 
@@ -389,8 +484,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                         {filteredPosts.map(post => {
                             const isLiked = currentUser && post.likes?.includes(currentUser.uid);
                             const likesCount = post.likes?.length || 0;
+                            const commentsCount = post.commentsCount || (postCommentsMap[post.id]?.length || 0);
                             const viewsCount = post.viewsCount || 1;
                             const isOwner = currentUser && (currentUser.uid === post.userId || post.userId.startsWith('user_'));
+                            const isCommentsOpen = openCommentPostId === post.id;
+                            const postComments = postCommentsMap[post.id] || [];
 
                             return (
                                 <motion.div
@@ -461,8 +559,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                         </div>
                                     )}
 
-                                    {/* Actions Bar (Likes, Real Views, Share) */}
+                                    {/* Actions Bar (Likes, Comments, Real Views, Share) */}
                                     <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-white/60">
+                                        {/* Likes Button */}
                                         <button
                                             onClick={() => handleToggleLike(post)}
                                             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition ${
@@ -475,12 +574,26 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                             <span>{likesCount} Likes</span>
                                         </button>
 
+                                        {/* Comments Button */}
+                                        <button
+                                            onClick={() => toggleCommentsForPost(post.id)}
+                                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition ${
+                                                isCommentsOpen
+                                                    ? 'text-indigo-400 bg-indigo-500/20 font-bold'
+                                                    : 'hover:text-white hover:bg-white/5'
+                                            }`}
+                                        >
+                                            <MessageCircle className="w-4 h-4" />
+                                            <span>{commentsCount} Comments</span>
+                                        </button>
+
                                         {/* Real Views Counter Pill */}
                                         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-semibold text-xs">
                                             <Eye className="w-3.5 h-3.5 text-indigo-400" />
                                             <span>{viewsCount} Views</span>
                                         </div>
 
+                                        {/* Share Button */}
                                         <button
                                             onClick={() => {
                                                 if (navigator.share) {
@@ -495,6 +608,59 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                             <span>Share</span>
                                         </button>
                                     </div>
+
+                                    {/* Expandable Comments Drawer Section */}
+                                    <AnimatePresence>
+                                        {isCommentsOpen && (
+                                            <motion.div
+                                                initial={{ opacity: 0, height: 0 }}
+                                                animate={{ opacity: 1, height: 'auto' }}
+                                                exit={{ opacity: 0, height: 0 }}
+                                                className="pt-3 border-t border-white/10 space-y-3 overflow-hidden"
+                                            >
+                                                <h4 className="text-xs font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+                                                    <MessageSquare className="w-3.5 h-3.5" />
+                                                    <span>NEET Community Discussion ({postComments.length})</span>
+                                                </h4>
+
+                                                {/* Comments List */}
+                                                <div className="space-y-2 max-h-60 overflow-y-auto pr-1">
+                                                    {postComments.length === 0 ? (
+                                                        <p className="text-xs text-white/40 italic">Koi comment nahi hai abhi. Pehla comment aap karo!</p>
+                                                    ) : (
+                                                        postComments.map(c => (
+                                                            <div key={c.id} className="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-1">
+                                                                <div className="flex items-center justify-between text-[11px]">
+                                                                    <span className="font-bold text-indigo-300">{c.userName}</span>
+                                                                    <span className="text-white/40 text-[9px]">{formatDate(c.timestamp)}</span>
+                                                                </div>
+                                                                <p className="text-xs text-white/80 leading-snug">{c.text}</p>
+                                                            </div>
+                                                        ))
+                                                    )}
+                                                </div>
+
+                                                {/* Add Comment Input Box */}
+                                                <div className="flex items-center gap-2 pt-1">
+                                                    <input
+                                                        type="text"
+                                                        value={commentInputMap[post.id] || ''}
+                                                        onChange={(e) => setCommentInputMap({ ...commentInputMap, [post.id]: e.target.value })}
+                                                        onKeyDown={(e) => { if (e.key === 'Enter') handleAddComment(post.id); }}
+                                                        placeholder="Apna comment ya doubt yahan likhein..."
+                                                        className="flex-1 p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
+                                                    />
+                                                    <button
+                                                        onClick={() => handleAddComment(post.id)}
+                                                        className="p-2.5 rounded-xl bg-indigo-500 text-white font-bold hover:bg-indigo-600 transition"
+                                                    >
+                                                        <Send className="w-4 h-4" />
+                                                    </button>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+
                                 </motion.div>
                             );
                         })}
