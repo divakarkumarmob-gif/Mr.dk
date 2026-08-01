@@ -3,13 +3,26 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     ArrowLeft, Send, Image as ImageIcon, Check, CheckCheck, X, 
     Camera, Phone, Video, Shield, Sparkles, User, Circle,
-    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock
+    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock, ShieldCheck, Laptop, AlertTriangle
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
-import { encryptMessagePayload, decryptMessagePayload } from '../utils/encryption';
+import { decryptLegacyXOR } from '../utils/encryption';
+import { 
+    initUserE2EE, 
+    fetchUserPublicKey, 
+    deriveSharedSecret, 
+    encryptPayloadWithKey, 
+    decryptPayloadWithKey, 
+    checkContactKeyChange,
+    UserE2EEStatus,
+    EncryptedPrivateKeyBackupBlob
+} from '../utils/e2ee';
+import PinSetupModal, { PinModalMode } from './e2ee/PinSetupModal';
+import SafetyNumberModal from './e2ee/SafetyNumberModal';
+import DeviceManagementModal from './e2ee/DeviceManagementModal';
 
 export interface DirectUser {
     uid: string;
@@ -40,6 +53,20 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const [text, setText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
     const [activeMediaUrl, setActiveMediaUrl] = useState<string | null>(null);
+
+    // E2EE States
+    const [e2eeStatus, setE2eeStatus] = useState<UserE2EEStatus | null>(null);
+    const [e2eeLoading, setE2eeLoading] = useState<boolean>(true);
+    const [showPinModal, setShowPinModal] = useState<boolean>(false);
+    const [pinModalMode, setPinModalMode] = useState<PinModalMode>('setup');
+    const [backupBlob, setBackupBlob] = useState<EncryptedPrivateKeyBackupBlob | undefined>();
+
+    const [targetPublicKey, setTargetPublicKey] = useState<string | null>(null);
+    const [sharedSecret, setSharedSecret] = useState<Uint8Array | null>(null);
+    const [keyChangedAlert, setKeyChangedAlert] = useState<boolean>(false);
+
+    const [showSafetyModal, setShowSafetyModal] = useState<boolean>(false);
+    const [showDeviceModal, setShowDeviceModal] = useState<boolean>(false);
 
     // Voice Note Recording State (WhatsApp style)
     const [isRecording, setIsRecording] = useState<boolean>(false);
@@ -72,6 +99,61 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const chatId = [currentUid, targetUser.uid].sort().join('_direct_');
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
+    // Initialize E2EE for Current User
+    useEffect(() => {
+        let isMounted = true;
+        initUserE2EE(currentUid).then(status => {
+            if (!isMounted) return;
+            setE2eeStatus(status);
+            setE2eeLoading(false);
+
+            if (!status.initialized) {
+                if (status.isNewDevice && status.backupBlob) {
+                    setPinModalMode('restore');
+                    setBackupBlob(status.backupBlob);
+                    setShowPinModal(true);
+                } else if (status.isFirstTime) {
+                    setPinModalMode('setup');
+                    setShowPinModal(true);
+                }
+            }
+        }).catch(err => {
+            console.error("E2EE Init failed:", err);
+            setE2eeLoading(false);
+        });
+
+        return () => { isMounted = false; };
+    }, [currentUid]);
+
+    // Derive Shared Secret whenever E2EE private key & target user public key are ready
+    useEffect(() => {
+        let isMounted = true;
+        if (!e2eeStatus?.privateKey || !targetUser.uid) return;
+
+        fetchUserPublicKey(targetUser.uid).then(async (pubKey) => {
+            if (!isMounted) return;
+            if (pubKey) {
+                setTargetPublicKey(pubKey);
+
+                // Check key change alert
+                const keyChangeCheck = await checkContactKeyChange(targetUser.uid, pubKey);
+                if (keyChangeCheck.hasChanged) {
+                    setKeyChangedAlert(true);
+                }
+
+                // Derive ECDH shared secret
+                try {
+                    const secret = await deriveSharedSecret(e2eeStatus.privateKey!, pubKey);
+                    if (isMounted) setSharedSecret(secret);
+                } catch (e) {
+                    console.error("ECDH shared secret derivation error:", e);
+                }
+            }
+        });
+
+        return () => { isMounted = false; };
+    }, [e2eeStatus?.privateKey, targetUser.uid]);
+
     // Android Hardware Physical Back Button Handler
     useEffect(() => {
         const unregister = registerBackButtonHandler(() => {
@@ -102,7 +184,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
-    // Helper to get timestamp in milliseconds for reliable WhatsApp-style chronological sorting
+    // Helper to get timestamp in milliseconds
     const getTimestampMs = (ts: any): number => {
         if (!ts) return 0;
         if (typeof ts === 'number') return ts;
@@ -184,14 +266,19 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         let unsubscribe = () => {};
         try {
             const q = query(collection(db, 'directChats', chatId, 'messages'), orderBy('timestamp', 'asc'));
-            unsubscribe = onSnapshot(q, (snapshot) => {
-                const fetched: DirectMessage[] = snapshot.docs.map(docSnap => {
+            unsubscribe = onSnapshot(q, async (snapshot) => {
+                const fetchedPromises = snapshot.docs.map(async docSnap => {
                     const raw = { id: docSnap.id, ...docSnap.data() } as DirectMessage;
-                    return decryptMessagePayload(raw, chatId);
+                    if (sharedSecret) {
+                        return await decryptPayloadWithKey(raw, sharedSecret, (str) => decryptLegacyXOR(str, chatId));
+                    }
+                    return raw;
                 });
 
+                const fetched = await Promise.all(fetchedPromises);
+
                 // Merge with local fallback
-                const localMsgs = getLocalDirectMessages(chatId).map(m => decryptMessagePayload(m, chatId));
+                const localMsgs = getLocalDirectMessages(chatId);
                 const map = new Map<string, DirectMessage>();
                 [...fetched, ...localMsgs].forEach(m => map.set(m.id, m));
 
@@ -220,7 +307,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         }
 
         return () => unsubscribe();
-    }, [chatId, currentUid]);
+    }, [chatId, currentUid, sharedSecret]);
 
     // Local Storage Fallback Helpers
     const getLocalDirectMessages = (cid: string): DirectMessage[] => {
@@ -239,7 +326,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         } catch {}
     };
 
-    // Voice Recording Handlers (WhatsApp Style)
+    // Voice Recording Handlers
     const startRecording = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -373,14 +460,20 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             showToast('Voice Note bhej diya! 🎙️');
 
             try {
-                await addDoc(collection(db, 'directChats', chatId, 'messages'), encryptMessagePayload({
+                let payload: any = {
                     senderId: currentUid,
                     senderName: currentName,
                     audioUrl: base64Audio,
                     audioDuration: newMsg.audioDuration,
                     status: initialStatus,
                     timestamp: serverTimestamp()
-                }, chatId));
+                };
+
+                if (sharedSecret) {
+                    payload = await encryptPayloadWithKey(payload, sharedSecret);
+                }
+
+                await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
 
                 await updateDoc(doc(db, 'directChats', chatId), {
                     lastMessage: '🎵 Voice Note (' + (newMsg.audioDuration || 1) + 's)',
@@ -441,63 +534,41 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         setImageUrl('');
 
         try {
-            await addDoc(collection(db, 'directChats', chatId, 'messages'), encryptMessagePayload({
+            let payload: any = {
                 senderId: currentUid,
                 senderName: currentName,
                 text: textToSend || '',
                 imageUrl: newMsg.imageUrl || '',
                 status: initialStatus,
                 timestamp: serverTimestamp()
-            }, chatId));
+            };
+
+            if (sharedSecret) {
+                payload = await encryptPayloadWithKey(payload, sharedSecret);
+            }
+
+            await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
 
             await updateDoc(doc(db, 'directChats', chatId), {
-                lastMessage: textToSend || 'Photo attachment',
+                lastMessage: textToSend ? (textToSend.length > 30 ? textToSend.substring(0, 30) + '...' : textToSend) : '📷 Photo',
                 updatedAt: serverTimestamp()
             });
         } catch (e) {
-            console.warn("Firestore direct message error:", e);
+            console.warn("Firestore send message error:", e);
         }
     };
 
-    // File Upload Handler for Photo Attachments
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
+    const formatLastSeen = (lastSeen: any) => {
+        if (!lastSeen) return 'Offline';
+        const ms = getTimestampMs(lastSeen);
+        if (!ms) return 'Offline';
 
-        if (file.size > 15 * 1024 * 1024) {
-            showToast('Photo size 15MB se kam honi chahiye!');
-            return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = (event) => {
-            const result = event.target?.result as string;
-            setImageUrl(result);
-            showToast('Photo attached! Tap Send to share. 📸');
-        };
-        reader.readAsDataURL(file);
-    };
-
-    // Format Timestamp
-    const formatTime = (ts: any) => {
-        if (!ts) return '';
-        try {
-            const d = ts.toDate ? ts.toDate() : new Date(ts);
-            return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        } catch {
-            return '';
-        }
-    };
-
-    // Format Real Last Seen Date
-    const formatLastSeen = (ts: any) => {
-        if (!ts) return 'Offline';
-        try {
-            const d = ts.toDate ? ts.toDate() : new Date(ts);
-            return `Last seen ${d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
-        } catch {
-            return 'Offline';
-        }
+        const diffMinutes = Math.floor((Date.now() - ms) / (1000 * 60));
+        if (diffMinutes < 1) return 'Last seen just now';
+        if (diffMinutes < 60) return `Last seen ${diffMinutes}m ago`;
+        const diffHours = Math.floor(diffMinutes / 60);
+        if (diffHours < 24) return `Last seen ${diffHours}h ago`;
+        return `Last seen ${new Date(ms).toLocaleDateString()}`;
     };
 
     return (
@@ -558,32 +629,71 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 </div>
 
                 <div className="flex items-center gap-2">
+                    {/* Safety Number Modal trigger */}
                     <button 
-                        onClick={() => showToast('Voice calling feature coming soon!')}
-                        className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 transition"
+                        onClick={() => {
+                            if (!targetPublicKey) {
+                                showToast('Target user public key missing');
+                                return;
+                            }
+                            setShowSafetyModal(true);
+                        }}
+                        className={`p-2 rounded-xl transition relative ${
+                            keyChangedAlert ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse' : 'bg-white/5 hover:bg-white/10 text-emerald-400'
+                        }`}
+                        title="Verify Safety Number"
                     >
-                        <Phone className="w-4 h-4" />
+                        <ShieldCheck className="w-4 h-4" />
+                        {keyChangedAlert && (
+                            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-amber-500" />
+                        )}
+                    </button>
+
+                    {/* Linked devices modal trigger */}
+                    <button 
+                        onClick={() => setShowDeviceModal(true)}
+                        className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 transition"
+                        title="Linked Devices"
+                    >
+                        <Laptop className="w-4 h-4" />
                     </button>
                 </div>
             </div>
 
+            {/* Key Changed Alert Banner */}
+            {keyChangedAlert && (
+                <div className="px-4 py-2 bg-amber-500/20 border-b border-amber-500/30 text-amber-200 text-xs flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0" />
+                        <span>Safety number changed for {targetUser.name}. Contact ne naya device link kiya hai.</span>
+                    </div>
+                    <button 
+                        onClick={() => setShowSafetyModal(true)}
+                        className="font-bold underline ml-2 text-amber-300 hover:text-white"
+                    >
+                        Verify
+                    </button>
+                </div>
+            )}
+
             {/* Private 1v1 Encryption Notice */}
             <div className="px-4 py-1.5 bg-indigo-950/40 border-b border-indigo-500/20 text-center">
                 <span className="text-[10px] text-indigo-300/80 font-medium flex items-center justify-center gap-1">
-                    <Shield className="w-3 h-3 text-amber-400" />
-                    <span>Private 1v1 Direct Message • Real-time Sync & Ticks</span>
+                    <Shield className="w-3 h-3 text-emerald-400" />
+                    <span>Real E2EE (X25519 + XSalsa20-Poly1305) • Active</span>
                 </span>
             </div>
 
-            {/* Chat Messages Feed (WhatsApp Chronological Order: Oldest Top, Newest Bottom) */}
+            {/* Chat Messages Feed */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
-                {/* WhatsApp-Style End-to-End Encryption Banner */}
+                {/* E2EE Info Banner */}
                 <div className="flex justify-center my-2">
-                    <div className="max-w-xs px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-300/90 text-center font-medium shadow-md flex items-center justify-center gap-1.5 leading-snug">
-                        <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                        <span>Messages and calls are end-to-end encrypted. No one outside of this chat can read or listen to them.</span>
+                    <div className="max-w-xs px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-300/90 text-center font-medium shadow-md flex items-center justify-center gap-1.5 leading-snug">
+                        <Lock className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                        <span>Messages and media are end-to-end encrypted with libsodium keys. Only you and {targetUser.name} can read them.</span>
                     </div>
                 </div>
+
                 {messages.length === 0 ? (
                     <div className="py-24 text-center text-white/40 space-y-2">
                         <User className="w-12 h-12 text-indigo-400/40 mx-auto" />
@@ -598,85 +708,63 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                 key={msg.id}
                                 className={`flex flex-col ${isMe ? 'items-end' : 'items-start'}`}
                             >
-                                <div className={`max-w-[85%] sm:max-w-[70%] p-3 rounded-2xl space-y-2 ${
-                                    isMe 
-                                        ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-br-none shadow-lg' 
-                                        : 'bg-[#0c1222] border border-white/10 text-white/90 rounded-bl-none shadow-md'
-                                }`}>
-                                    {/* Message Text */}
-                                    {msg.text && (
-                                        <p className="text-xs leading-relaxed whitespace-pre-line font-sans">
-                                            {msg.text}
-                                        </p>
-                                    )}
-
-                                    {/* Attached Image */}
+                                <div 
+                                    className={`max-w-[80%] rounded-2xl p-3 shadow-md relative group ${
+                                        isMe 
+                                            ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-tr-none' 
+                                            : 'bg-white/10 border border-white/10 text-white rounded-tl-none'
+                                    }`}
+                                >
+                                    {/* Image Attachment */}
                                     {msg.imageUrl && (
                                         <div 
-                                            onClick={() => setActiveMediaUrl(msg.imageUrl!)}
-                                            className="rounded-xl overflow-hidden cursor-pointer max-h-60 border border-white/10 bg-black/40"
+                                            onClick={() => setActiveMediaUrl(msg.imageUrl || null)}
+                                            className="mb-2 rounded-xl overflow-hidden cursor-pointer border border-white/10 hover:opacity-90 transition max-h-60"
                                         >
-                                            <img 
-                                                src={msg.imageUrl} 
-                                                alt="Attached Photo" 
-                                                className="w-full h-full object-cover hover:scale-102 transition" 
-                                            />
+                                            <img src={msg.imageUrl} alt="Attached" className="w-full h-full object-cover" />
                                         </div>
                                     )}
 
                                     {/* Voice Note Player */}
                                     {msg.audioUrl && (
-                                        <div className="flex items-center gap-3 p-2 rounded-xl bg-black/30 border border-white/10 my-1 min-w-[210px]">
-                                            <button
-                                                type="button"
+                                        <div className="flex items-center gap-3 py-1 px-2 bg-black/20 rounded-xl mb-1 min-w-[200px]">
+                                            <button 
                                                 onClick={() => toggleChatMessageAudio(msg.id, msg.audioUrl!)}
-                                                className={`p-2.5 rounded-full transition shadow-md shrink-0 ${
-                                                    playingMessageId === msg.id 
-                                                        ? 'bg-amber-500 text-black font-bold animate-pulse' 
-                                                        : isMe ? 'bg-white text-indigo-700 hover:bg-white/90' : 'bg-indigo-500 text-white hover:bg-indigo-600'
-                                                }`}
+                                                className="p-2.5 rounded-full bg-emerald-500 text-white hover:bg-emerald-400 transition shadow-md shrink-0"
                                             >
                                                 {playingMessageId === msg.id ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
                                             </button>
-                                            <div className="flex-1 space-y-1">
-                                                <div className="flex items-center justify-between text-[11px] font-semibold opacity-90">
-                                                    <span className="flex items-center gap-1 text-xs">
-                                                        <Mic className="w-3.5 h-3.5 text-red-400" />
-                                                        <span>Voice Note</span>
-                                                    </span>
-                                                    <span className="font-mono">{msg.audioDuration ? formatTimer(msg.audioDuration) : '0:05'}</span>
+                                            <div className="flex-1">
+                                                <div className="h-1.5 w-full bg-white/20 rounded-full overflow-hidden">
+                                                    <div className={`h-full bg-emerald-400 ${playingMessageId === msg.id ? 'animate-pulse w-full' : 'w-0'}`} />
                                                 </div>
-                                                {/* Simulated Waveform Visualizer Bar */}
-                                                <div className="flex items-center gap-0.5 h-3">
-                                                    {[40, 75, 30, 90, 60, 100, 45, 80, 50, 70, 35, 85, 65, 40, 90, 55, 75, 35].map((h, i) => (
-                                                        <div 
-                                                            key={i} 
-                                                            className={`w-1 rounded-full transition-all duration-300 ${
-                                                                playingMessageId === msg.id 
-                                                                    ? 'bg-emerald-400 animate-pulse' 
-                                                                    : isMe ? 'bg-white/70' : 'bg-indigo-300/70'
-                                                            }`}
-                                                            style={{ height: `${playingMessageId === msg.id ? Math.max(25, (h * Math.random()).toFixed(0)) : h}%` }}
-                                                        />
-                                                    ))}
-                                                </div>
+                                                <span className="text-[10px] text-white/70 font-mono mt-1 block">
+                                                    🎵 Voice Note ({msg.audioDuration || 1}s)
+                                                </span>
                                             </div>
                                         </div>
                                     )}
 
-                                    {/* Message Timestamp & WhatsApp Ticks Indicator */}
-                                    <div className="flex items-center justify-end gap-1 text-[9px] text-white/60 pt-0.5">
-                                        <span>{formatTime(msg.timestamp)}</span>
+                                    {/* Message Text */}
+                                    {msg.text && (
+                                        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words font-normal">
+                                            {msg.text}
+                                        </p>
+                                    )}
+
+                                    {/* Time & WhatsApp Blue Ticks Status */}
+                                    <div className="flex items-center justify-end gap-1 mt-1 text-[10px] opacity-70 font-medium">
+                                        <span>
+                                            {msg.timestamp ? new Date(getTimestampMs(msg.timestamp)).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Just now'}
+                                        </span>
                                         {isMe && (
-                                            <span className="ml-0.5">
-                                                {msg.status === 'read' ? (
-                                                    <span title="Read (Blue Ticks)"><CheckCheck className="w-3.5 h-3.5 text-blue-400 font-bold" /></span>
-                                                ) : msg.status === 'delivered' ? (
-                                                    <span title="Delivered (Double Ticks)"><CheckCheck className="w-3.5 h-3.5 text-white/60" /></span>
-                                                ) : (
-                                                    <span title="Sent (Single Tick)"><Check className="w-3.5 h-3.5 text-white/40" /></span>
-                                                )}
-                                            </span>
+                                            msg.status === 'read' ? (
+                                                <CheckCheck className="w-3.5 h-3.5 text-sky-300 font-bold" />
+                                            ) : msg.status === 'delivered' ? (
+                                                <CheckCheck className="w-3.5 h-3.5 text-white/70" />
+                                            ) : (
+                                                <Check className="w-3.5 h-3.5 text-white/50" />
+                                            )
                                         )}
                                     </div>
                                 </div>
@@ -687,145 +775,136 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 <div ref={messagesEndRef} />
             </div>
 
-            {/* Photo Attachment Preview Strip */}
-            {imageUrl && (
-                <div className="px-4 py-2 bg-indigo-950/80 border-t border-indigo-500/30 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <img src={imageUrl} alt="Attached Preview" className="w-10 h-10 object-cover rounded-lg border border-white/20" />
-                        <span className="text-xs text-indigo-200 font-semibold">Photo Attached! Tap Send to share. 📸</span>
-                    </div>
-                    <button onClick={() => setImageUrl('')} className="p-1 text-white/60 hover:text-white">
-                        <X className="w-4 h-4" />
-                    </button>
-                </div>
-            )}
-
-            {/* Bottom Controls / Recording Bar / Input Bar (WhatsApp Style) */}
+            {/* Voice Recording Active Bar */}
             {isRecording ? (
-                /* Live Recording Mode with Pulse Animation & Timer */
-                <div className="p-3 bg-[#0c1222] border-t border-red-500/40 flex items-center justify-between gap-3 shadow-2xl">
-                    {/* Cancel & Discard Button */}
-                    <button
-                        type="button"
-                        onClick={cancelRecording}
-                        className="p-2.5 rounded-xl bg-red-500/20 text-red-400 hover:bg-red-500/30 transition flex items-center gap-1.5 text-xs font-bold"
-                        title="Cancel Recording"
-                    >
-                        <Trash2 className="w-4 h-4" />
-                        <span className="hidden xs:inline">Discard</span>
-                    </button>
-
-                    {/* Animated Mic & Live Timer */}
-                    <div className="flex-1 flex items-center justify-center gap-2.5 bg-red-500/10 border border-red-500/30 py-2 px-3 rounded-2xl">
-                        <div className="relative flex items-center justify-center w-7 h-7 rounded-full bg-red-500 text-white animate-pulse">
-                            <Mic className="w-4 h-4" />
-                            <span className="absolute inset-0 rounded-full bg-red-500 animate-ping opacity-50" />
-                        </div>
-                        <span className="font-mono font-bold text-sm text-red-400 tracking-wider">
-                            {formatTimer(recordingTime)}
-                        </span>
-                        <span className="text-xs text-white/70 hidden sm:inline">Recording... Tap Mic to Stop</span>
+                <div className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center justify-between gap-3 animate-pulse">
+                    <div className="flex items-center gap-2 text-red-400 font-bold text-sm">
+                        <span className="w-3 h-3 rounded-full bg-red-500 animate-ping" />
+                        <span>Recording... {formatTimer(recordingTime)}</span>
                     </div>
 
-                    {/* Stop & Preview Mic Button */}
-                    <button
-                        type="button"
-                        onClick={stopRecording}
-                        className="p-3 rounded-full bg-red-600 text-white font-bold hover:bg-red-700 transition shadow-lg shadow-red-600/50 flex items-center justify-center animate-bounce"
-                        title="Stop & Preview Voice Note"
-                    >
-                        <Square className="w-4 h-4 fill-current" />
-                    </button>
+                    <div className="flex items-center gap-2">
+                        <button 
+                            onClick={cancelRecording}
+                            className="p-2 rounded-xl bg-red-500/20 text-red-400 hover:bg-red-500/30 transition text-xs font-semibold flex items-center gap-1"
+                        >
+                            <Trash2 className="w-4 h-4" /> Cancel
+                        </button>
+                        <button 
+                            onClick={stopRecording}
+                            className="p-2.5 rounded-xl bg-emerald-600 text-white hover:bg-emerald-500 transition text-xs font-semibold flex items-center gap-1 shadow-lg"
+                        >
+                            <Square className="w-4 h-4 fill-white" /> Stop & Review
+                        </button>
+                    </div>
                 </div>
             ) : recordedAudioUrl ? (
-                /* WhatsApp-Style Voice Note Preview Bar before sending */
-                <div className="p-3 bg-[#0c1222] border-t border-indigo-500/40 flex items-center justify-between gap-2.5 shadow-2xl">
-                    {/* Delete Preview */}
-                    <button
-                        type="button"
-                        onClick={cancelRecording}
-                        className="p-2.5 rounded-xl bg-red-500/20 text-red-400 hover:bg-red-500/30 transition shrink-0"
-                        title="Delete Recording"
-                    >
-                        <Trash2 className="w-4 h-4" />
-                    </button>
-
-                    {/* Play/Pause Preview Audio */}
-                    <button
-                        type="button"
-                        onClick={togglePreviewPlay}
-                        className="p-2.5 rounded-full bg-amber-500 text-black font-bold hover:brightness-110 transition shadow-md flex items-center gap-1 px-3 text-xs shrink-0"
-                    >
-                        {isPreviewPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
-                        <span>{isPreviewPlaying ? 'Pause' : 'Preview'}</span>
-                    </button>
-
-                    {/* Recording Duration Info */}
-                    <div className="flex-1 flex items-center gap-2 bg-white/5 border border-white/10 py-1.5 px-2.5 rounded-xl min-w-0">
-                        <Mic className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                        <span className="font-mono font-bold text-xs text-indigo-200 shrink-0">
-                            {formatTimer(recordedDuration || recordingTime)}
+                /* Voice Preview & Send Bar */
+                <div className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2">
+                        <button 
+                            onClick={togglePreviewPlay}
+                            className="p-2.5 rounded-full bg-emerald-500 text-white hover:bg-emerald-400 transition"
+                        >
+                            {isPreviewPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
+                        </button>
+                        <span className="text-xs font-semibold text-emerald-400">
+                            Preview ({recordedDuration}s)
                         </span>
-                        <div className="flex-1 h-1.5 rounded-full bg-indigo-950 overflow-hidden">
-                            <div className={`h-full bg-emerald-400 ${isPreviewPlaying ? 'w-full transition-all duration-3000' : 'w-1/2'}`} />
-                        </div>
                     </div>
 
-                    {/* Send Voice Note Button */}
-                    <button
-                        type="button"
-                        onClick={handleSendVoiceNote}
-                        className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold hover:brightness-110 transition shadow-lg flex items-center gap-1 text-xs shrink-0"
-                        title="Send Voice Note"
-                    >
-                        <Send className="w-4 h-4" />
-                        <span className="hidden xs:inline">Send</span>
-                    </button>
+                    <div className="flex items-center gap-2">
+                        <button 
+                            onClick={cancelRecording}
+                            className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 transition"
+                        >
+                            <Trash2 className="w-4 h-4 text-red-400" />
+                        </button>
+                        <button 
+                            onClick={handleSendVoiceNote}
+                            className="p-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg"
+                        >
+                            <Send className="w-3.5 h-3.5" /> Send Voice Note
+                        </button>
+                    </div>
                 </div>
             ) : (
-                /* Standard Chat Input Bar */
-                <form onSubmit={handleSend} className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center gap-2">
-                    <label className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-indigo-400 cursor-pointer transition">
-                        <ImageIcon className="w-5 h-5" />
-                        <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
-                    </label>
-
-                    <input
+                /* Normal Chat Input Footer */
+                <form 
+                    onSubmit={handleSend}
+                    className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center gap-2"
+                    style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 12px)' }}
+                >
+                    <input 
                         type="text"
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         placeholder={`Message ${targetUser.name}...`}
-                        className="flex-1 p-2.5 rounded-xl bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
+                        className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition placeholder:text-white/30"
                     />
 
-                    {text.trim() || imageUrl ? (
-                        <button
-                            type="submit"
-                            className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 transition shadow-md"
-                        >
-                            <Send className="w-5 h-5" />
-                        </button>
-                    ) : (
-                        <button
-                            type="button"
-                            onClick={startRecording}
-                            className="p-2.5 rounded-xl bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold hover:scale-105 active:scale-95 transition shadow-md shadow-red-500/20"
-                            title="Tap to Record Voice Note"
-                        >
-                            <Mic className="w-5 h-5" />
-                        </button>
-                    )}
+                    <button 
+                        type="button"
+                        onClick={startRecording}
+                        className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-emerald-400 transition"
+                        title="Record Voice Note"
+                    >
+                        <Mic className="w-5 h-5" />
+                    </button>
+
+                    <button 
+                        type="submit"
+                        disabled={!text.trim() && !imageUrl.trim()}
+                        className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white disabled:opacity-40 transition shadow-lg"
+                    >
+                        <Send className="w-5 h-5" />
+                    </button>
                 </form>
             )}
 
-            {/* Zoom Media Modal */}
+            {/* Media Zoom Overlay Modal */}
             {activeMediaUrl && (
-                <div onClick={() => setActiveMediaUrl(null)} className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
-                    <button className="absolute top-4 right-4 p-2 text-white/80 hover:text-white">
-                        <X className="w-8 h-8" />
-                    </button>
-                    <img src={activeMediaUrl} alt="Enlarged Photo" className="max-w-full max-h-full object-contain rounded-xl" />
+                <div 
+                    onClick={() => setActiveMediaUrl(null)}
+                    className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+                >
+                    <img src={activeMediaUrl} alt="Zoom" className="max-w-full max-h-full object-contain rounded-xl" />
                 </div>
+            )}
+
+            {/* E2EE PIN Modal */}
+            {showPinModal && (
+                <PinSetupModal 
+                    uid={currentUid}
+                    mode={pinModalMode}
+                    backupBlob={backupBlob}
+                    onSuccess={(keys) => {
+                        setShowPinModal(false);
+                        setE2eeStatus({ initialized: true, publicKey: keys.publicKey, privateKey: keys.privateKey });
+                    }}
+                    onCancel={() => setShowPinModal(false)}
+                />
+            )}
+
+            {/* Safety Number Modal */}
+            {showSafetyModal && (
+                <SafetyNumberModal 
+                    contactUid={targetUser.uid}
+                    contactName={targetUser.name}
+                    myPublicKey={e2eeStatus?.publicKey || ''}
+                    targetPublicKey={targetPublicKey || ''}
+                    keyHasChanged={keyChangedAlert}
+                    onClose={() => setShowSafetyModal(false)}
+                    onVerified={() => setKeyChangedAlert(false)}
+                />
+            )}
+
+            {/* Device Management Modal */}
+            {showDeviceModal && (
+                <DeviceManagementModal 
+                    uid={currentUid}
+                    onClose={() => setShowDeviceModal(false)}
+                />
             )}
         </motion.div>
     );

@@ -7,11 +7,25 @@ import {
     BarChart2, HelpCircle, Timer, Volume2, VolumeX, Flame, BookOpen, MessageCircle,
     Clock, Calendar, PowerOff, Trash2, ArrowDown, Plus, Check, Vote, Music
 } from 'lucide-react';
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
-import { encryptMessagePayload, decryptMessagePayload } from '../utils/encryption';
+import { decryptLegacyXOR } from '../utils/encryption';
+import { 
+    initUserE2EE, 
+    fetchUserPublicKey, 
+    generateRoomSymmetricKey, 
+    wrapRoomKeyForMember, 
+    unwrapRoomKeyForMember, 
+    getRoomSymmetricKey, 
+    setRoomSymmetricKey, 
+    encryptPayloadWithKey, 
+    decryptPayloadWithKey,
+    ensureSodium,
+    UserE2EEStatus
+} from '../utils/e2ee';
+import PinSetupModal, { PinModalMode } from './e2ee/PinSetupModal';
 
 export type RoomMode = 'doubt_solving' | 'silent_study' | 'mcq_battle' | 'general';
 
@@ -79,6 +93,12 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const [messages, setMessages] = useState<RoomMessage[]>([]);
     const [messageText, setMessageText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
+
+    // E2EE Room States
+    const [e2eeStatus, setE2eeStatus] = useState<UserE2EEStatus | null>(null);
+    const [roomSymmetricKey, setRoomSymmetricKeyBytes] = useState<Uint8Array | null>(null);
+    const [showPinModal, setShowPinModal] = useState<boolean>(false);
+    const [pinModalMode, setPinModalMode] = useState<PinModalMode>('setup');
 
     // Active Media Preview State
     const [showMembersDrawer, setShowMembersDrawer] = useState<boolean>(false);
@@ -390,34 +410,96 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         }
     };
 
+    // Initialize User E2EE & Resolve Room Symmetric Key
+    useEffect(() => {
+        let isMounted = true;
+        initUserE2EE(currentUid).then(async (status) => {
+            if (!isMounted) return;
+            setE2eeStatus(status);
+
+            if (!status.initialized) {
+                if (status.isNewDevice && status.backupBlob) {
+                    setPinModalMode('restore');
+                    setShowPinModal(true);
+                } else if (status.isFirstTime) {
+                    setPinModalMode('setup');
+                    setShowPinModal(true);
+                }
+                return;
+            }
+
+            // Resolve Room Symmetric Key
+            try {
+                const sodium = await ensureSodium();
+                let keyBase64 = await getRoomSymmetricKey(room.id);
+
+                if (!keyBase64) {
+                    // Check wrapped keys in Firestore room document
+                    const roomRef = doc(db, 'studyRooms', room.id);
+                    const roomSnap = await getDoc(roomRef);
+                    const roomData = roomSnap.exists() ? roomSnap.data() : {};
+                    const wrappedKeys = roomData.wrappedKeys || {};
+
+                    if (wrappedKeys[currentUid] && status.publicKey && status.privateKey) {
+                        // Unwrap room key
+                        keyBase64 = await unwrapRoomKeyForMember(wrappedKeys[currentUid], status.publicKey, status.privateKey);
+                        await setRoomSymmetricKey(room.id, keyBase64);
+                    } else if (status.publicKey) {
+                        // Create or wrap room key
+                        keyBase64 = await generateRoomSymmetricKey();
+                        const wrapped = await wrapRoomKeyForMember(keyBase64, status.publicKey);
+                        await setDoc(roomRef, {
+                            wrappedKeys: { ...wrappedKeys, [currentUid]: wrapped }
+                        }, { merge: true });
+                        await setRoomSymmetricKey(room.id, keyBase64);
+                    }
+                }
+
+                if (keyBase64 && isMounted) {
+                    const bytes = sodium.from_base64(keyBase64, sodium.base64_variants.ORIGINAL);
+                    setRoomSymmetricKeyBytes(bytes);
+                }
+            } catch (e) {
+                console.error("Room E2EE key resolution error:", e);
+            }
+        });
+
+        return () => { isMounted = false; };
+    }, [room.id, currentUid]);
+
     // Real-time Listener for Messages with Strict Chronological Timestamp Sorting
     useEffect(() => {
         let unsubscribe = () => {};
         try {
             const q = query(collection(db, 'studyRooms', room.id, 'messages'), orderBy('timestamp', 'asc'));
-            unsubscribe = onSnapshot(q, (snapshot) => {
-                const fetched: RoomMessage[] = snapshot.docs.map(docSnap => {
+            unsubscribe = onSnapshot(q, async (snapshot) => {
+                const fetchedPromises = snapshot.docs.map(async docSnap => {
                     const raw = { id: docSnap.id, ...docSnap.data() } as RoomMessage;
-                    return decryptMessagePayload(raw, room.id);
+                    if (roomSymmetricKey) {
+                        return await decryptPayloadWithKey(raw, roomSymmetricKey, (str) => decryptLegacyXOR(str, room.id));
+                    }
+                    return raw;
                 });
 
-                const localMsgs = getLocalRoomMessages(room.id).map(m => decryptMessagePayload(m, room.id));
+                const fetched = await Promise.all(fetchedPromises);
+
+                const localMsgs = getLocalRoomMessages(room.id);
                 const allMap = new Map<string, RoomMessage>();
                 [...fetched, ...localMsgs].forEach(m => allMap.set(m.id, m));
 
                 const sortedMsgs = Array.from(allMap.values()).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp));
                 setMessages(sortedMsgs);
             }, (err) => {
-                const localMsgs = getLocalRoomMessages(room.id).map(m => decryptMessagePayload(m, room.id));
+                const localMsgs = getLocalRoomMessages(room.id);
                 setMessages(localMsgs.sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
             });
         } catch (e) {
-            const localMsgs = getLocalRoomMessages(room.id).map(m => decryptMessagePayload(m, room.id));
+            const localMsgs = getLocalRoomMessages(room.id);
             setMessages(localMsgs.sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
         }
 
         return () => unsubscribe();
-    }, [room.id]);
+    }, [room.id, roomSymmetricKey]);
 
     // Local Storage Helpers for Messages
     const getLocalRoomMessages = (roomId: string): RoomMessage[] => {
@@ -544,12 +626,18 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         saveLocalRoomMessage(newMsg);
 
         try {
-            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), encryptMessagePayload({
+            let payload: any = {
                 senderId: newMsg.senderId,
                 senderName: newMsg.senderName,
                 audioUrl: base64Audio,
                 timestamp: serverTimestamp()
-            }, room.id));
+            };
+
+            if (roomSymmetricKey) {
+                payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+            }
+
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), payload);
             showToast('Voice Doubt Note sent! 🎙️');
         } catch (e) {}
 
@@ -607,12 +695,18 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         setPollCorrectIdx(0);
 
         try {
-            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), encryptMessagePayload({
+            let payload: any = {
                 senderId: newMsg.senderId,
                 senderName: newMsg.senderName,
                 pollData: pollData,
                 timestamp: serverTimestamp()
-            }, room.id));
+            };
+
+            if (roomSymmetricKey) {
+                payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+            }
+
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), payload);
             showToast('Live MCQ Question Poll posted! 📊');
         } catch (e) {}
 
@@ -685,13 +779,19 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         setImageUrl('');
 
         try {
-            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), encryptMessagePayload({
+            let payload: any = {
                 senderId: newMsg.senderId || 'user',
                 senderName: newMsg.senderName || 'NEET Aspirant',
                 text: newMsg.text || '',
                 imageUrl: newMsg.imageUrl || '',
                 timestamp: serverTimestamp()
-            }, room.id));
+            };
+
+            if (roomSymmetricKey) {
+                payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+            }
+
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), payload);
         } catch (err) {}
 
         setTimeout(() => scrollToBottom(true), 100);
@@ -1611,6 +1711,18 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                             </button>
                         </motion.div>
                     </motion.div>
+                )}
+                {/* Pin Setup / Restore Modal */}
+                {showPinModal && (
+                    <PinSetupModal 
+                        uid={currentUid}
+                        mode={pinModalMode}
+                        onSuccess={(keys) => {
+                            setShowPinModal(false);
+                            setE2eeStatus({ initialized: true, publicKey: keys.publicKey, privateKey: keys.privateKey });
+                        }}
+                        onCancel={() => setShowPinModal(false)}
+                    />
                 )}
             </AnimatePresence>
         </motion.div>
