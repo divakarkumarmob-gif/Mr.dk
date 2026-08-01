@@ -95,6 +95,8 @@ const TimeSpentChart = lazy(() => import('./components/TimeSpentChart'));
 const FocusSessionSummary = lazy(() => import('./components/FocusSessionSummary'));
 const DistractionOverlay = lazy(() => import('./components/DistractionOverlay'));
 const Onboarding = lazy(() => import('./components/Onboarding'));
+const FocusSanctuary = lazy(() => import('./components/FocusSanctuary'));
+const RankPredictorMatrix = lazy(() => import('./components/RankPredictorMatrix'));
 
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const AboutFAQPage = lazy(() => import('./components/AboutFAQPage'));
@@ -204,7 +206,7 @@ const getRandomChapters = () => {
 const getInitialView = () => {
   const params = new URLSearchParams(window.location.search);
   const viewParam = params.get('view');
-  const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'analysisResultDetail', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan', 'schoolSearch', 'privacy', 'terms', 'contact', 'privacy-policy', 'terms-of-service', 'watch', 'chapter', 'privateVideosList', 'privateVideosChapter', 'privateVideosPlayer', 'about'];
+  const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'analysisResultDetail', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan', 'schoolSearch', 'privacy', 'terms', 'contact', 'privacy-policy', 'terms-of-service', 'watch', 'chapter', 'privateVideosList', 'privateVideosChapter', 'privateVideosPlayer', 'about', 'focusSanctuary', 'rankPredictor'];
   if (viewParam && validViews.includes(viewParam)) {
       return viewParam;
   }
@@ -1827,6 +1829,22 @@ function AppInner() {
         <PageLayout background="bg-[#f4e4bc]" minTopPadding={0}>
             <MindHackPage onBack={() => setCurrentView('profile')} />
         </PageLayout>
+      );
+  }
+
+  if (currentView === 'focusSanctuary') {
+      return (
+        <Suspense fallback={<div className="fixed inset-0 bg-[#070b14] text-white flex items-center justify-center">Loading Focus Sanctuary...</div>}>
+            <FocusSanctuary onClose={() => setCurrentView(previousView || 'study')} />
+        </Suspense>
+      );
+  }
+
+  if (currentView === 'rankPredictor') {
+      return (
+        <Suspense fallback={<div className="fixed inset-0 bg-[#070b14] text-white flex items-center justify-center">Loading AIR Predictor...</div>}>
+            <RankPredictorMatrix onClose={() => setCurrentView(previousView || 'study')} />
+        </Suspense>
       );
   }
 

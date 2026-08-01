@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
 import {collection, onSnapshot, query, orderBy, getDocs, where, doc, updateDoc} from 'firebase/firestore';                
 import {db, auth} from '../lib/firebase';
-import {ChevronDown, Leaf, Atom, Beaker, Play, Eye, EyeOff, AlertTriangle, Clock, Loader2, X} from 'lucide-react';
+import {ChevronDown, Leaf, Atom, Beaker, Play, Eye, EyeOff, AlertTriangle, Clock, Loader2, X, Shield, Trophy, Sparkles, Zap} from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import HubSwitcher from './HubSwitcher';
 import VideoPlayer from './VideoPlayer';
@@ -159,6 +159,39 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                 <HubSwitcher active="study" onNavigate={onNavigate} />
             </div>
           
+          {/* Feature 6 & Feature 7 Action Cards */}
+          <div className="grid grid-cols-2 gap-2 mb-3">
+              <button 
+                  onClick={() => setCurrentView('focusSanctuary')}
+                  className="p-3 rounded-xl bg-gradient-to-r from-indigo-900/60 to-purple-900/60 border border-indigo-500/40 text-left hover:border-indigo-400 transition flex items-center gap-2.5 shadow-lg group"
+              >
+                  <div className="p-2 rounded-lg bg-indigo-500/20 text-indigo-400 group-hover:scale-110 transition">
+                      <Shield className="w-5 h-5" />
+                  </div>
+                  <div>
+                      <div className="font-bold text-xs text-white flex items-center gap-1">
+                          Focus Sanctuary <Sparkles className="w-3 h-3 text-amber-400" />
+                      </div>
+                      <div className="text-[10px] text-indigo-200/70">Lofi & Aspirants Mode</div>
+                  </div>
+              </button>
+
+              <button 
+                  onClick={() => setCurrentView('rankPredictor')}
+                  className="p-3 rounded-xl bg-gradient-to-r from-amber-950/60 to-orange-950/60 border border-amber-500/40 text-left hover:border-amber-400 transition flex items-center gap-2.5 shadow-lg group"
+              >
+                  <div className="p-2 rounded-lg bg-amber-500/20 text-amber-400 group-hover:scale-110 transition">
+                      <Trophy className="w-5 h-5" />
+                  </div>
+                  <div>
+                      <div className="font-bold text-xs text-white flex items-center gap-1">
+                          AIR Predictor <Zap className="w-3 h-3 text-amber-400" />
+                      </div>
+                      <div className="text-[10px] text-amber-200/70">Speed & Matrix Rank</div>
+                  </div>
+              </button>
+          </div>
+
           <div className="bg-[#0F1729] rounded-xl border border-[#1E293B] p-3 mb-4 flex justify-between items-center">
               <button onClick={() => setShowSummary(true)} className="font-bold text-xs tracking-widest text-orange-400">FOCUS MODE</button>
               <button 
