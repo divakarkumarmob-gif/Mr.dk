@@ -10,6 +10,7 @@ import { saveAIMessage, subscribeToMessages, uploadMedia } from '../services/cha
 import { Message } from '../types';
 import { takePhoto } from '../utils/camera';
 import { LiveSession } from '../utils/liveSession';
+import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 
 interface LiveAIInterfaceProps {
     onClose: () => void;
@@ -129,6 +130,13 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     // can't make the dot flip color when the fetch resolves).
     const [memoryFetchStatus, setMemoryFetchStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
     
+
+    useEffect(() => {
+        enableScreenshot();
+        return () => {
+            disableScreenshot();
+        };
+    }, []);
 
     useEffect(() => {
         if (!auth.currentUser) return;

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ArrowLeft, Share2 } from 'lucide-react';
 import { shareResult } from '../utils/share';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
@@ -8,8 +8,16 @@ import TestTutor from './TestTutor';
 import { toPng } from 'html-to-image';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Capacitor } from '@capacitor/core';
+import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 
 export default function TestResultDetail({ result, onBack }: { result: any, onBack: () => void }) {
+    useEffect(() => {
+        enableScreenshot();
+        return () => {
+            disableScreenshot();
+        };
+    }, []);
+
     if (!result) return (
         <div className="min-h-dvh bg-[#0a0f24] text-white flex flex-col items-center justify-center p-6 text-center">
             <p className="text-xl font-bold mb-4">Result data not found</p>

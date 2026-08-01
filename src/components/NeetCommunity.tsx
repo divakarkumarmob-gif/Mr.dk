@@ -4,11 +4,13 @@ import {
     Users, MessageSquare, Image as ImageIcon, Video, Heart, Send, Plus, X, 
     Sparkles, Filter, ThumbsUp, Trash2, Shield, Search, Play, ArrowLeft, 
     Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye, 
-    CornerDownRight, DoorOpen, Radio, Home, Flag
+    CornerDownRight, DoorOpen, Radio, Home, Flag, Download
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
+import { saveMediaToGallery } from '../utils/saveMediaToGallery';
+import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
 import DirectChat, { DirectUser } from './DirectChat';
 
@@ -90,6 +92,26 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     const [showReportModal, setShowReportModal] = useState<boolean>(false);
     const [reportReason, setReportReason] = useState<string>('');
 
+    // Long Press Context Menu System State & Timers
+    const [longPressedPost, setLongPressedPost] = useState<Post | null>(null);
+    const pressTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    const handlePressStart = (post: Post) => {
+        pressTimerRef.current = setTimeout(() => {
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate(50);
+            }
+            setLongPressedPost(post);
+        }, 500);
+    };
+
+    const handlePressEnd = () => {
+        if (pressTimerRef.current) {
+            clearTimeout(pressTimerRef.current);
+            pressTimerRef.current = null;
+        }
+    };
+
     // Active User Info
     const currentUser = auth.currentUser;
 
@@ -137,6 +159,14 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             return [];
         }
     };
+
+    // Enable screenshots for NEET Community notes & posts
+    useEffect(() => {
+        enableScreenshot();
+        return () => {
+            disableScreenshot();
+        };
+    }, []);
 
     // Real-time Firestore listener for Community Posts + Local Merge
     useEffect(() => {
@@ -902,13 +932,23 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                     {/* Attached Image */}
                                     {post.imageUrl && (
                                         <div 
+                                            onMouseDown={() => handlePressStart(post)}
+                                            onMouseUp={handlePressEnd}
+                                            onMouseLeave={handlePressEnd}
+                                            onTouchStart={() => handlePressStart(post)}
+                                            onTouchEnd={handlePressEnd}
+                                            onTouchCancel={handlePressEnd}
+                                            onContextMenu={(e) => {
+                                                e.preventDefault();
+                                                setLongPressedPost(post);
+                                            }}
                                             onClick={() => setActiveMedia({ type: 'image', url: post.imageUrl! })}
-                                            className="relative rounded-xl overflow-hidden bg-black/40 max-h-96 cursor-pointer group border border-white/10"
+                                            className="relative rounded-xl overflow-hidden bg-black/40 max-h-96 cursor-pointer group border border-white/10 select-none"
                                         >
                                             <img 
                                                 src={post.imageUrl} 
                                                 alt="Community Media" 
-                                                className="w-full h-full object-cover group-hover:scale-102 transition duration-300"
+                                                className="w-full h-full object-cover group-hover:scale-102 transition duration-300 pointer-events-none"
                                             />
                                         </div>
                                     )}
@@ -1446,6 +1486,105 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                     <Flag className="w-4 h-4" />
                                     <span>Submit Report to Admin</span>
                                 </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            {/* Long Press Options Modal / Bottom Sheet */}
+            <AnimatePresence>
+                {longPressedPost && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4"
+                        onClick={() => setLongPressedPost(null)}
+                    >
+                        <motion.div
+                            initial={{ y: 100 }}
+                            animate={{ y: 0 }}
+                            exit={{ y: 100 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-md bg-[#0c1222] border-t sm:border border-white/15 rounded-t-3xl sm:rounded-3xl p-5 space-y-4 shadow-2xl"
+                        >
+                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                                <div>
+                                    <h3 className="font-bold text-sm text-white">Post Options & Actions</h3>
+                                    <p className="text-[11px] text-white/50">Posted by {longPressedPost.userName}</p>
+                                </div>
+                                <button onClick={() => setLongPressedPost(null)} className="p-1 text-white/60 hover:text-white">
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            <div className="space-y-2">
+                                {/* Download Photo to Gallery Button */}
+                                {(longPressedPost.imageUrl || longPressedPost.videoUrl) && (
+                                    <button
+                                        onClick={async () => {
+                                            const url = longPressedPost.imageUrl || longPressedPost.videoUrl!;
+                                            const type = longPressedPost.videoUrl ? 'video' : 'image';
+                                            setLongPressedPost(null);
+                                            await saveMediaToGallery(url, type);
+                                        }}
+                                        className="w-full p-3 rounded-xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/40 text-emerald-300 font-bold text-xs hover:bg-emerald-500/30 transition flex items-center gap-3"
+                                    >
+                                        <Download className="w-5 h-5 text-emerald-400 shrink-0" />
+                                        <div className="text-left">
+                                            <span className="block font-bold">Download Photo / Media to Device</span>
+                                            <span className="text-[10px] text-emerald-200/70 font-normal">Saves directly to Gallery & File Manager</span>
+                                        </div>
+                                    </button>
+                                )}
+
+                                {/* Copy Post Content / Link */}
+                                <button
+                                    onClick={() => {
+                                        const textToCopy = longPressedPost.imageUrl || longPressedPost.text || 'NEET Community Post';
+                                        navigator.clipboard.writeText(textToCopy);
+                                        showToast('Post link / text copied to clipboard! 📋');
+                                        setLongPressedPost(null);
+                                    }}
+                                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-xs hover:bg-white/10 transition flex items-center gap-3"
+                                >
+                                    <Share2 className="w-5 h-5 text-indigo-400 shrink-0" />
+                                    <span>Copy Post Link / Text</span>
+                                </button>
+
+                                {/* Author Profile / 1v1 Chat */}
+                                <button
+                                    onClick={() => {
+                                        const p = longPressedPost;
+                                        setLongPressedPost(null);
+                                        setSelectedUserProfile({
+                                            userId: p.userId,
+                                            userName: p.userName,
+                                            userPhoto: p.userPhoto,
+                                            userBadge: p.userBadge,
+                                            postId: p.id
+                                        });
+                                    }}
+                                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-xs hover:bg-white/10 transition flex items-center gap-3"
+                                >
+                                    <Users className="w-5 h-5 text-purple-400 shrink-0" />
+                                    <span>View {longPressedPost.userName}'s Profile & 1v1 Chat</span>
+                                </button>
+
+                                {/* Delete Post if Owner */}
+                                {(currentUser && (currentUser.uid === longPressedPost.userId || longPressedPost.userId.startsWith('user_'))) && (
+                                    <button
+                                        onClick={() => {
+                                            const p = longPressedPost;
+                                            setLongPressedPost(null);
+                                            handleDeletePost(p);
+                                        }}
+                                        className="w-full p-3 rounded-xl bg-red-500/20 border border-red-500/30 text-red-300 font-semibold text-xs hover:bg-red-500/30 transition flex items-center gap-3"
+                                    >
+                                        <Trash2 className="w-4 h-4 text-red-400 shrink-0" />
+                                        <span>Delete Post & Room Data</span>
+                                    </button>
+                                )}
                             </div>
                         </motion.div>
                     </motion.div>

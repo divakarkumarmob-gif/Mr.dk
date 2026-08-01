@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, BookOpen, Sparkles, PlusCircle } from 'lucide-react';
+import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 import AIStudyPlanChat from './AIStudyPlanChat';
 import CreateCustomPlanPage from './CreateCustomPlanPage';
 
@@ -8,6 +9,13 @@ export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => 
     const [showPopup, setShowPopup] = useState(true);
     const [showChat, setShowChat] = useState(false);
     const [showCustomPlan, setShowCustomPlan] = useState(false);
+
+    useEffect(() => {
+        enableScreenshot();
+        return () => {
+            disableScreenshot();
+        };
+    }, []);
 
     if (showCustomPlan) {
         return <CreateCustomPlanPage onBack={() => setShowCustomPlan(false)} />;

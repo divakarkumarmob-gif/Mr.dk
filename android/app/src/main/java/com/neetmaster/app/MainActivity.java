@@ -17,9 +17,10 @@ public class MainActivity extends BridgeActivity {
     protected void onCreate(Bundle savedInstanceState) {
         registerPlugin(BackgroundSettingsPlugin.class);
         registerPlugin(LiveSessionPlugin.class);
+        registerPlugin(ScreenSecurityPlugin.class);
         super.onCreate(savedInstanceState);
         
-        // Block screenshots and screen recordings
+        // Default: Block screenshots for security (unlocked dynamically on AI & Analysis screens)
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
 
         createNotificationChannel();

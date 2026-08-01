@@ -7,6 +7,7 @@ import { X, Send, Loader2, Trash2 } from 'lucide-react';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
 import { getApiUrl } from '@/utils/api';
+import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -21,6 +22,13 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     const [loading, setLoading] = useState(false);
     const messagesEndRef = React.useRef<HTMLDivElement>(null);
     const [selectedMessageIndex, setSelectedMessageIndex] = useState<number | null>(null);
+
+    useEffect(() => {
+        enableScreenshot();
+        return () => {
+            disableScreenshot();
+        };
+    }, []);
 
     useEffect(() => {
         setTimeout(() => {
