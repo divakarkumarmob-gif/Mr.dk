@@ -11,6 +11,7 @@ import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, update
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
+import { encryptMessagePayload, decryptMessagePayload } from '../utils/encryption';
 
 export type RoomMode = 'doubt_solving' | 'silent_study' | 'mcq_battle' | 'general';
 
@@ -395,22 +396,24 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         try {
             const q = query(collection(db, 'studyRooms', room.id, 'messages'), orderBy('timestamp', 'asc'));
             unsubscribe = onSnapshot(q, (snapshot) => {
-                const fetched: RoomMessage[] = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                } as RoomMessage));
+                const fetched: RoomMessage[] = snapshot.docs.map(docSnap => {
+                    const raw = { id: docSnap.id, ...docSnap.data() } as RoomMessage;
+                    return decryptMessagePayload(raw, room.id);
+                });
 
-                const localMsgs = getLocalRoomMessages(room.id);
+                const localMsgs = getLocalRoomMessages(room.id).map(m => decryptMessagePayload(m, room.id));
                 const allMap = new Map<string, RoomMessage>();
                 [...fetched, ...localMsgs].forEach(m => allMap.set(m.id, m));
 
                 const sortedMsgs = Array.from(allMap.values()).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp));
                 setMessages(sortedMsgs);
             }, (err) => {
-                setMessages(getLocalRoomMessages(room.id).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
+                const localMsgs = getLocalRoomMessages(room.id).map(m => decryptMessagePayload(m, room.id));
+                setMessages(localMsgs.sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
             });
         } catch (e) {
-            setMessages(getLocalRoomMessages(room.id).sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
+            const localMsgs = getLocalRoomMessages(room.id).map(m => decryptMessagePayload(m, room.id));
+            setMessages(localMsgs.sort((a, b) => parseTimestampMs(a.timestamp) - parseTimestampMs(b.timestamp)));
         }
 
         return () => unsubscribe();
@@ -541,12 +544,12 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         saveLocalRoomMessage(newMsg);
 
         try {
-            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), {
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), encryptMessagePayload({
                 senderId: newMsg.senderId,
                 senderName: newMsg.senderName,
                 audioUrl: base64Audio,
                 timestamp: serverTimestamp()
-            });
+            }, room.id));
             showToast('Voice Doubt Note sent! 🎙️');
         } catch (e) {}
 
@@ -604,12 +607,12 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         setPollCorrectIdx(0);
 
         try {
-            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), {
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), encryptMessagePayload({
                 senderId: newMsg.senderId,
                 senderName: newMsg.senderName,
                 pollData: pollData,
                 timestamp: serverTimestamp()
-            });
+            }, room.id));
             showToast('Live MCQ Question Poll posted! 📊');
         } catch (e) {}
 
@@ -682,13 +685,13 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         setImageUrl('');
 
         try {
-            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), {
+            await addDoc(collection(db, 'studyRooms', room.id, 'messages'), encryptMessagePayload({
                 senderId: newMsg.senderId || 'user',
                 senderName: newMsg.senderName || 'NEET Aspirant',
                 text: newMsg.text || '',
                 imageUrl: newMsg.imageUrl || '',
                 timestamp: serverTimestamp()
-            });
+            }, room.id));
         } catch (err) {}
 
         setTimeout(() => scrollToBottom(true), 100);
@@ -988,6 +991,13 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 onScroll={handleScroll}
                 className="flex-1 overflow-y-auto p-4 space-y-3 relative scroll-smooth"
             >
+                {/* WhatsApp-Style End-to-End Encryption Banner */}
+                <div className="flex justify-center my-2">
+                    <div className="max-w-xs px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-300/90 text-center font-medium shadow-md flex items-center justify-center gap-1.5 leading-snug">
+                        <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                        <span>Messages are end-to-end encrypted. No one outside of this chat can read or listen to them.</span>
+                    </div>
+                </div>
                 {messages.length === 0 ? (
                     <div className="py-20 text-center text-white/40 space-y-2">
                         <Users className="w-12 h-12 text-indigo-400/40 mx-auto" />

@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     ArrowLeft, Send, Image as ImageIcon, Check, CheckCheck, X, 
     Camera, Phone, Video, Shield, Sparkles, User, Circle,
-    Mic, MicOff, Square, Play, Pause, Trash2, Volume2
+    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
+import { encryptMessagePayload, decryptMessagePayload } from '../utils/encryption';
 
 export interface DirectUser {
     uid: string;
@@ -184,13 +185,13 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         try {
             const q = query(collection(db, 'directChats', chatId, 'messages'), orderBy('timestamp', 'asc'));
             unsubscribe = onSnapshot(q, (snapshot) => {
-                const fetched: DirectMessage[] = snapshot.docs.map(docSnap => ({
-                    id: docSnap.id,
-                    ...docSnap.data()
-                } as DirectMessage));
+                const fetched: DirectMessage[] = snapshot.docs.map(docSnap => {
+                    const raw = { id: docSnap.id, ...docSnap.data() } as DirectMessage;
+                    return decryptMessagePayload(raw, chatId);
+                });
 
                 // Merge with local fallback
-                const localMsgs = getLocalDirectMessages(chatId);
+                const localMsgs = getLocalDirectMessages(chatId).map(m => decryptMessagePayload(m, chatId));
                 const map = new Map<string, DirectMessage>();
                 [...fetched, ...localMsgs].forEach(m => map.set(m.id, m));
 
@@ -372,14 +373,14 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             showToast('Voice Note bhej diya! 🎙️');
 
             try {
-                await addDoc(collection(db, 'directChats', chatId, 'messages'), {
+                await addDoc(collection(db, 'directChats', chatId, 'messages'), encryptMessagePayload({
                     senderId: currentUid,
                     senderName: currentName,
                     audioUrl: base64Audio,
                     audioDuration: newMsg.audioDuration,
                     status: initialStatus,
                     timestamp: serverTimestamp()
-                });
+                }, chatId));
 
                 await updateDoc(doc(db, 'directChats', chatId), {
                     lastMessage: '🎵 Voice Note (' + (newMsg.audioDuration || 1) + 's)',
@@ -440,14 +441,14 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         setImageUrl('');
 
         try {
-            await addDoc(collection(db, 'directChats', chatId, 'messages'), {
+            await addDoc(collection(db, 'directChats', chatId, 'messages'), encryptMessagePayload({
                 senderId: currentUid,
                 senderName: currentName,
                 text: textToSend || '',
                 imageUrl: newMsg.imageUrl || '',
                 status: initialStatus,
                 timestamp: serverTimestamp()
-            });
+            }, chatId));
 
             await updateDoc(doc(db, 'directChats', chatId), {
                 lastMessage: textToSend || 'Photo attachment',
@@ -576,6 +577,13 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
             {/* Chat Messages Feed (WhatsApp Chronological Order: Oldest Top, Newest Bottom) */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
+                {/* WhatsApp-Style End-to-End Encryption Banner */}
+                <div className="flex justify-center my-2">
+                    <div className="max-w-xs px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-300/90 text-center font-medium shadow-md flex items-center justify-center gap-1.5 leading-snug">
+                        <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                        <span>Messages and calls are end-to-end encrypted. No one outside of this chat can read or listen to them.</span>
+                    </div>
+                </div>
                 {messages.length === 0 ? (
                     <div className="py-24 text-center text-white/40 space-y-2">
                         <User className="w-12 h-12 text-indigo-400/40 mx-auto" />

@@ -15,6 +15,7 @@ import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
 import DirectChat, { DirectUser } from './DirectChat';
 import imageCompression from 'browser-image-compression';
+import { encryptMessagePayload, decryptMessagePayload, encryptText, decryptText } from '../utils/encryption';
 
 interface NeetCommunityProps {
     onBack: () => void;
@@ -223,12 +224,12 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             const q = query(postsRef, orderBy('timestamp', 'desc'));
             
             unsubscribe = onSnapshot(q, (snapshot) => {
-                const fetchedPosts: Post[] = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                } as Post));
+                const fetchedPosts: Post[] = snapshot.docs.map(docSnap => {
+                    const raw = { id: docSnap.id, ...docSnap.data() } as Post;
+                    return decryptMessagePayload(raw, 'community');
+                });
 
-                const localPosts = getLocalPosts();
+                const localPosts = getLocalPosts().map(p => decryptMessagePayload(p, 'community'));
                 const allPostsMap = new Map<string, Post>();
                 localPosts.forEach(p => allPostsMap.set(p.id, p));
                 fetchedPosts.forEach(p => allPostsMap.set(p.id, p));
@@ -238,20 +239,20 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             }, (error) => {
                 console.warn("Firestore ordered listener warning, using standard fallback:", error);
                 onSnapshot(postsRef, (snapshot) => {
-                    const fetchedPosts: Post[] = snapshot.docs.map(doc => ({
-                        id: doc.id,
-                        ...doc.data()
-                    } as Post));
+                    const fetchedPosts: Post[] = snapshot.docs.map(docSnap => {
+                        const raw = { id: docSnap.id, ...docSnap.data() } as Post;
+                        return decryptMessagePayload(raw, 'community');
+                    });
                     setPosts(fetchedPosts);
                     setLoading(false);
                 }, () => {
-                    setPosts(getLocalPosts());
+                    setPosts(getLocalPosts().map(p => decryptMessagePayload(p, 'community')));
                     setLoading(false);
                 });
             });
         } catch (e) {
             console.warn("Firestore query error:", e);
-            setPosts(getLocalPosts());
+            setPosts(getLocalPosts().map(p => decryptMessagePayload(p, 'community')));
             setLoading(false);
         }
 
@@ -464,10 +465,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         try {
             const q = query(collection(db, 'communityPosts', postId, 'comments'), orderBy('timestamp', 'asc'));
             onSnapshot(q, (snapshot) => {
-                const fetchedComments: CommentItem[] = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                } as CommentItem));
+                const fetchedComments: CommentItem[] = snapshot.docs.map(docSnap => {
+                    const raw = { id: docSnap.id, ...docSnap.data() } as CommentItem;
+                    return decryptMessagePayload(raw, 'community');
+                });
                 
                 if (fetchedComments.length > 0) {
                     setPostCommentsMap(prev => ({ ...prev, [postId]: fetchedComments }));
@@ -480,8 +481,8 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Add Comment Handler
     const handleAddComment = async (postId: string) => {
-        const text = commentInputMap[postId]?.trim();
-        if (!text) {
+        const commentText = commentInputMap[postId]?.trim();
+        if (!commentText) {
             showToast('Comment text likhein!');
             return;
         }
@@ -489,7 +490,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         const newComment: CommentItem = {
             id: 'comment_' + Date.now(),
             userName: currentUser?.displayName || 'NEET Aspirant',
-            text: text,
+            text: commentText,
             timestamp: new Date().toISOString()
         };
 
@@ -513,11 +514,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
         // Try Firestore write
         try {
-            await addDoc(collection(db, 'communityPosts', postId, 'comments'), {
+            await addDoc(collection(db, 'communityPosts', postId, 'comments'), encryptMessagePayload({
                 userName: newComment.userName,
                 text: newComment.text,
                 timestamp: serverTimestamp()
-            });
+            }, 'community'));
             await updateDoc(doc(db, 'communityPosts', postId), {
                 commentsCount: increment(1)
             });
@@ -612,7 +613,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
         // Save to Firestore for permanent cloud storage across all devices, logins & reinstalls
         try {
-            const docRef = await addDoc(collection(db, 'communityPosts'), {
+            const docRef = await addDoc(collection(db, 'communityPosts'), encryptMessagePayload({
                 userId: newPost.userId || 'anonymous',
                 userName: newPost.userName || 'NEET Aspirant',
                 userPhoto: newPost.userPhoto || '',
@@ -626,7 +627,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 viewsCount: 1,
                 viewedBy: [viewerId],
                 timestamp: serverTimestamp()
-            });
+            }, 'community'));
             newPost.id = docRef.id;
             console.log("Post cloud saved to Firestore successfully with ID:", docRef.id);
         } catch (err: any) {
@@ -939,6 +940,14 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                             {tag.label}
                         </button>
                     ))}
+                </div>
+
+                {/* WhatsApp-Style End-to-End Encryption Security Notice Banner */}
+                <div className="my-2.5 flex justify-center">
+                    <div className="w-full max-w-md px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-300/90 text-center font-medium shadow-md flex items-center justify-center gap-1.5 leading-snug">
+                        <Shield className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                        <span>All Community Posts, Room Chats & 1v1 Messages are End-to-End Encrypted 🔒</span>
+                    </div>
                 </div>
 
                 {/* Posts Feed List */}
