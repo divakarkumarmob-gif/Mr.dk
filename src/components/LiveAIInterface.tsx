@@ -74,6 +74,9 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     const [selectedVoice, setSelectedVoice] = useState('Aoede');
     const [showVoiceDropdown, setShowVoiceDropdown] = useState(false);
     const [thinkingLevel, setThinkingLevel] = useState(() => localStorage.getItem('thinkingLevel') || 'high');
+    const [accurateMode, setAccurateMode] = useState(() => localStorage.getItem('accurateMode') === 'true');
+    const [answerLength, setAnswerLength] = useState(() => localStorage.getItem('answerLength') || 'short');
+    const [googleSearchMode, setGoogleSearchMode] = useState(() => localStorage.getItem('googleSearchMode') === 'true');
     const [showCaptions, setShowCaptions] = useState(true);
     const [captionText, setCaptionText] = useState('');
     const [showChatHistory, setShowChatHistory] = useState(false);
@@ -118,7 +121,10 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         localStorage.setItem('memoryEnabled', memoryEnabled.toString());
         localStorage.setItem('timeRange', timeRange);
         localStorage.setItem('thinkingLevel', thinkingLevel);
-    }, [memoryEnabled, timeRange, thinkingLevel]);
+        localStorage.setItem('accurateMode', accurateMode.toString());
+        localStorage.setItem('answerLength', answerLength);
+        localStorage.setItem('googleSearchMode', googleSearchMode.toString());
+    }, [memoryEnabled, timeRange, thinkingLevel, accurateMode, answerLength, googleSearchMode]);
 
     // Auto-scroll captions to the latest text as the AI speaks, like a
     // live-captioning UI in a big app (YouTube Live, Instagram Live, etc).
@@ -207,10 +213,13 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 memorySettings: { enabled: memoryEnabled, range: timeRange },
                 voice: selectedVoice,
                 thinkingLevel: thinkingLevel,
+                accurateMode: accurateMode,
+                answerLength: answerLength,
+                googleSearchMode: googleSearchMode,
                 prefetchedSummary: prefetchedSummaryRef.current
             }));
         }
-    }, [memoryEnabled, timeRange, selectedVoice, thinkingLevel]);
+    }, [memoryEnabled, timeRange, selectedVoice, thinkingLevel, accurateMode, answerLength, googleSearchMode]);
 
     const ws = useRef<WebSocket | null>(null);
     const inputAudioCtx = useRef<AudioContext | null>(null);
@@ -486,6 +495,9 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 memorySettings: { enabled: memoryEnabled, range: timeRange },
                 voice: selectedVoice,
                 thinkingLevel: thinkingLevel,
+                accurateMode: accurateMode,
+                answerLength: answerLength,
+                googleSearchMode: googleSearchMode,
                 prefetchedSummary: prefetchedSummaryRef.current
             }));
 
@@ -958,6 +970,57 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                                         {level}
                                     </button>
                                 ))}
+                            </div>
+                        </div>
+
+                        {/* Accurate Mode Toggle */}
+                        <div className="mb-6">
+                            <h3 className="text-sm font-semibold text-gray-400 mb-1">Accurate Mode</h3>
+                            <p className="text-xs text-gray-500 mb-2">AI will double-check calculations & facts internally before answering. Slower but more accurate.</p>
+                            <div className="flex justify-between items-center">
+                                <span>Enable Accurate Mode</span>
+                                <button 
+                                    onClick={() => setAccurateMode(!accurateMode)}
+                                    className={`w-12 h-6 rounded-full transition-colors flex items-center p-1 ${accurateMode ? 'bg-blue-600' : 'bg-gray-600'}`}
+                                >
+                                    <div className={`w-4 h-4 rounded-full bg-white transition-transform ${accurateMode ? 'translate-x-6' : 'translate-x-0'}`} />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Answer Length Toggle */}
+                        <div className="mb-6">
+                            <h3 className="text-sm font-semibold text-gray-400 mb-1">Answer Length</h3>
+                            <p className="text-xs text-gray-500 mb-2">Short = direct answer only. Detailed = answer + brief explanation.</p>
+                            <div className="grid grid-cols-2 gap-2">
+                                {(['short', 'detailed'] as const).map(length => (
+                                    <button
+                                        key={length}
+                                        onClick={() => setAnswerLength(length)}
+                                        className={`py-2 rounded-lg text-sm font-medium capitalize transition-colors ${
+                                            answerLength === length
+                                                ? 'bg-blue-600 text-white'
+                                                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                                        }`}
+                                    >
+                                        {length}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Google Search Toggle */}
+                        <div className="mb-6">
+                            <h3 className="text-sm font-semibold text-gray-400 mb-1">Google Search</h3>
+                            <p className="text-xs text-gray-500 mb-2">Let AI search Google to verify facts & constants. More accurate but slightly slower.</p>
+                            <div className="flex justify-between items-center">
+                                <span>Enable Google Search</span>
+                                <button 
+                                    onClick={() => setGoogleSearchMode(!googleSearchMode)}
+                                    className={`w-12 h-6 rounded-full transition-colors flex items-center p-1 ${googleSearchMode ? 'bg-green-600' : 'bg-gray-600'}`}
+                                >
+                                    <div className={`w-4 h-4 rounded-full bg-white transition-transform ${googleSearchMode ? 'translate-x-6' : 'translate-x-0'}`} />
+                                </button>
                             </div>
                         </div>
 
