@@ -19,7 +19,7 @@ import {auth, db, messaging} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import { storageService } from './lib/storageService';
-import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X } from 'lucide-react';
+import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X, Users } from 'lucide-react';
 import { getApiUrl } from '@/utils/api';
 import { configureStatusBar } from './utils/statusBar';
 import { lockToPortrait } from './utils/screenOrientation';
@@ -97,6 +97,7 @@ const DistractionOverlay = lazy(() => import('./components/DistractionOverlay'))
 const Onboarding = lazy(() => import('./components/Onboarding'));
 const FocusSanctuary = lazy(() => import('./components/FocusSanctuary'));
 const RankPredictorMatrix = lazy(() => import('./components/RankPredictorMatrix'));
+const NeetCommunity = lazy(() => import('./components/NeetCommunity'));
 
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const AboutFAQPage = lazy(() => import('./components/AboutFAQPage'));
@@ -206,7 +207,7 @@ const getRandomChapters = () => {
 const getInitialView = () => {
   const params = new URLSearchParams(window.location.search);
   const viewParam = params.get('view');
-  const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'analysisResultDetail', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan', 'schoolSearch', 'privacy', 'terms', 'contact', 'privacy-policy', 'terms-of-service', 'watch', 'chapter', 'privateVideosList', 'privateVideosChapter', 'privateVideosPlayer', 'about', 'focusSanctuary', 'rankPredictor'];
+  const validViews: any[] = ['home', 'study', 'profile', 'editProfile', 'tests', 'notes', 'notesLibrary', 'NCERT11thHub', 'ncertHub', 'ntaQuestionsHub', 'oldPyqHistory', 'admin', 'adminChat', 'technicalSupport', 'analytics', 'analysisResultDetail', 'customPractice', 'practiceTest', 'liveAI', 'mindHack', 'aiStudyPlan', 'schoolSearch', 'privacy', 'terms', 'contact', 'privacy-policy', 'terms-of-service', 'watch', 'chapter', 'privateVideosList', 'privateVideosChapter', 'privateVideosPlayer', 'about', 'focusSanctuary', 'rankPredictor', 'neetCommunity'];
   if (viewParam && validViews.includes(viewParam)) {
       return viewParam;
   }
@@ -1840,6 +1841,14 @@ function AppInner() {
       );
   }
 
+  if (currentView === 'neetCommunity') {
+      return (
+        <Suspense fallback={<div className="fixed inset-0 bg-[#070b14] text-white flex items-center justify-center">Loading NEET Community...</div>}>
+            <NeetCommunity onBack={() => setCurrentView(previousView || 'home')} />
+        </Suspense>
+      );
+  }
+
   if (currentView === 'rankPredictor') {
       return (
         <Suspense fallback={<div className="fixed inset-0 bg-[#070b14] text-white flex items-center justify-center">Loading AIR Predictor...</div>}>
@@ -2192,8 +2201,18 @@ function AppInner() {
            <h2 className="text-lg sm:text-xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h2>
            <p className="text-gray-400 text-[9px] sm:text-[11px]">Let's make today productive</p>
         </div>
-        <div className="relative" ref={notificationRef}>
-            <Bell className="h-6 w-6 cursor-pointer" onClick={handleOpenNotifications} />
+        <div className="flex items-center gap-3">
+            {/* NEET Community Icon Button (Left of Bell Icon) */}
+            <button 
+                onClick={() => setCurrentView('neetCommunity')} 
+                title="NEET Community"
+                className="relative p-1 rounded-full hover:bg-[#1e293b] text-indigo-400 hover:text-indigo-300 transition"
+            >
+                <Users className="h-6 w-6 cursor-pointer" />
+            </button>
+
+            <div className="relative" ref={notificationRef}>
+                <Bell className="h-6 w-6 cursor-pointer" onClick={handleOpenNotifications} />
              {notifications.some(n => !n.readBy?.includes(user?.uid)) ? (
                  <span className="absolute top-0 right-0 bg-red-500 rounded-full w-2.5 h-2.5 border-2 border-[#0a0f24]"></span>
              ) : null}
@@ -2261,6 +2280,7 @@ function AppInner() {
               )}
           </div>
         ) : null}
+        </div>
       </div>
     </div>
 
