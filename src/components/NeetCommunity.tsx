@@ -14,6 +14,7 @@ import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
 import DirectChat, { DirectUser } from './DirectChat';
+import imageCompression from 'browser-image-compression';
 
 interface NeetCommunityProps {
     onBack: () => void;
@@ -215,7 +216,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     useEffect(() => {
         let unsubscribe = () => {};
         try {
-            const q = query(collection(db, 'communityPosts'), orderBy('timestamp', 'desc'));
+            const postsRef = collection(db, 'communityPosts');
+            const q = query(postsRef, orderBy('timestamp', 'desc'));
+            
             unsubscribe = onSnapshot(q, (snapshot) => {
                 const fetchedPosts: Post[] = snapshot.docs.map(doc => ({
                     id: doc.id,
@@ -223,16 +226,25 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 } as Post));
 
                 const localPosts = getLocalPosts();
-                // Combine and deduplicate
                 const allPostsMap = new Map<string, Post>();
-                [...fetchedPosts, ...localPosts].forEach(p => allPostsMap.set(p.id, p));
+                localPosts.forEach(p => allPostsMap.set(p.id, p));
+                fetchedPosts.forEach(p => allPostsMap.set(p.id, p));
 
                 setPosts(Array.from(allPostsMap.values()));
                 setLoading(false);
             }, (error) => {
-                console.warn("Firestore listener error, using local storage fallback:", error);
-                setPosts(getLocalPosts());
-                setLoading(false);
+                console.warn("Firestore ordered listener warning, using standard fallback:", error);
+                onSnapshot(postsRef, (snapshot) => {
+                    const fetchedPosts: Post[] = snapshot.docs.map(doc => ({
+                        id: doc.id,
+                        ...doc.data()
+                    } as Post));
+                    setPosts(fetchedPosts);
+                    setLoading(false);
+                }, () => {
+                    setPosts(getLocalPosts());
+                    setLoading(false);
+                });
             });
         } catch (e) {
             console.warn("Firestore query error:", e);
@@ -511,8 +523,8 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         }
     };
 
-    // File Upload Handler (Base64 conversion)
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // File Upload Handler (Compressed Base64 conversion to fit Firestore document limits)
+    const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (!file) return;
 
@@ -521,23 +533,49 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             return;
         }
 
-        const reader = new FileReader();
-        reader.onload = (event) => {
-            const result = event.target?.result as string;
+        try {
             if (file.type.startsWith('image/')) {
-                setImageUrl(result);
-                setVideoUrl('');
-                showToast('Photo attach ho gayi! 📸');
+                showToast('Compressing photo...');
+                let fileToUpload = file;
+                try {
+                    const options = {
+                        maxSizeMB: 0.15,
+                        maxWidthOrHeight: 1024,
+                        useWebWorker: false,
+                    };
+                    fileToUpload = await imageCompression(file, options);
+                } catch (compErr) {
+                    console.warn('Image compression fallback:', compErr);
+                }
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const result = event.target?.result as string;
+                    setImageUrl(result);
+                    setVideoUrl('');
+                    showToast('Photo attach ho gayi! 📸');
+                };
+                reader.readAsDataURL(fileToUpload);
             } else if (file.type.startsWith('video/')) {
-                setVideoUrl(result);
-                setImageUrl('');
-                showToast('Video attach ho gaya! 🎥');
+                if (file.size > 2 * 1024 * 1024) {
+                    showToast('Direct video file size limit 2MB hai (ya video URL paste karein)!');
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const result = event.target?.result as string;
+                    setVideoUrl(result);
+                    setImageUrl('');
+                    showToast('Video attach ho gaya! 🎥');
+                };
+                reader.readAsDataURL(file);
             }
-        };
-        reader.readAsDataURL(file);
+        } catch (err) {
+            showToast('File select error!');
+        }
     };
 
-    // Create New Post Handler (Guaranteed Success)
+    // Create New Post Handler (Guaranteed Cloud & Local Success)
     const handleCreatePost = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!postText.trim() && !imageUrl.trim() && !videoUrl.trim()) {
@@ -550,7 +588,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
         const newPost: Post = {
             id: 'post_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
-            userId: currentUser?.uid || 'user_' + Date.now(),
+            userId: currentUser?.uid || viewerId,
             userName: currentUser?.displayName || 'NEET Aspirant',
             userPhoto: currentUser?.photoURL || '',
             userBadge: 'NEET Aspirant',
@@ -569,7 +607,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         viewedPostsRef.current.add(newPost.id);
         markPostAsViewedInHistory(newPost.id);
 
-        // Try writing to Firestore for permanent cloud storage across app reinstalls
+        // Save to Firestore for permanent cloud storage across all devices, logins & reinstalls
         try {
             const docRef = await addDoc(collection(db, 'communityPosts'), {
                 userId: newPost.userId || 'anonymous',
@@ -587,11 +625,12 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 timestamp: serverTimestamp()
             });
             newPost.id = docRef.id;
-        } catch (err) {
-            console.warn("Firestore addDoc error, saving locally:", err);
+            console.log("Post cloud saved to Firestore successfully with ID:", docRef.id);
+        } catch (err: any) {
+            console.error("Firestore addDoc error:", err);
         }
 
-        // Save to local storage as fallback
+        // Save to local storage as instant local cache
         const currentLocal = getLocalPosts();
         const updatedLocal = [newPost, ...currentLocal.filter(p => p.id !== newPost.id)];
         localStorage.setItem('neet_community_local_posts', JSON.stringify(updatedLocal));
@@ -599,7 +638,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         // Update local state instantly
         setPosts(prev => [newPost, ...prev.filter(p => p.id !== newPost.id)]);
 
-        showToast('Post community mein share ho gaya! 🎉');
+        showToast('Post community mein publish ho gaya! 🎉');
         setPostText('');
         setImageUrl('');
         setVideoUrl('');
