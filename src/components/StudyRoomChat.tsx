@@ -722,7 +722,10 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             className="fixed inset-0 z-50 bg-[#070b14] text-white flex flex-col font-sans overflow-hidden"
         >
             {/* Room Header Bar */}
-            <div className="bg-[#0c1222]/90 backdrop-blur-md border-b border-white/10 px-4 py-2.5 flex items-center justify-between shadow-xl">
+            <div 
+                className="bg-[#0c1222]/90 backdrop-blur-md border-b border-white/10 px-4 pb-2.5 flex items-center justify-between shadow-xl"
+                style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
+            >
                 <div className="flex items-center gap-3">
                     <button 
                         onClick={onBack}

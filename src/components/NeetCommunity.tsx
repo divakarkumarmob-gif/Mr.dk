@@ -767,7 +767,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             className="min-h-screen bg-[#070b14] text-white flex flex-col font-sans"
         >
             {/* Header: "NEET Community" */}
-            <div className="sticky top-0 z-40 bg-[#0c1222]/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-4 py-2.5 flex items-center justify-between gap-2 shadow-xl overflow-hidden">
+            <div 
+                className="sticky top-0 z-40 bg-[#0c1222]/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-4 pb-2.5 flex items-center justify-between gap-2 shadow-xl overflow-hidden"
+                style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
+            >
                 <div className="flex items-center gap-2 shrink-0">
                     <button 
                         onClick={onBack}
@@ -1007,7 +1010,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                         </div>
                                     )}
 
-                                    {/* Actions Bar (Likes, Comments, Unique Views, Share) */}
+                                    {/* Actions Bar (Icons with counts) */}
                                     <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-white/60">
                                         {/* Likes Button */}
                                         <button
@@ -1017,9 +1020,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                                     ? 'text-pink-500 bg-pink-500/10 font-bold'
                                                     : 'hover:text-white hover:bg-white/5'
                                             }`}
+                                            title="Like"
                                         >
                                             <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
-                                            <span>{likesCount} Likes</span>
+                                            <span>{likesCount}</span>
                                         </button>
 
                                         {/* Comments Button */}
@@ -1030,15 +1034,16 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                                     ? 'text-indigo-400 bg-indigo-500/20 font-bold'
                                                     : 'hover:text-white hover:bg-white/5'
                                             }`}
+                                            title="Comments"
                                         >
                                             <MessageCircle className="w-4 h-4" />
-                                            <span>{commentsCount} Comments</span>
+                                            <span>{commentsCount}</span>
                                         </button>
 
                                         {/* Strict Unique Views Counter Pill */}
                                         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-semibold text-xs" title="Unique Viewers Count">
                                             <Eye className="w-3.5 h-3.5 text-indigo-400" />
-                                            <span>{viewsCount} Unique Views</span>
+                                            <span>{viewsCount}</span>
                                         </div>
 
                                         {/* Share Button */}
@@ -1051,9 +1056,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                                 }
                                             }}
                                             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:text-white hover:bg-white/5 transition"
+                                            title="Share"
                                         >
                                             <Share2 className="w-4 h-4" />
-                                            <span>Share</span>
                                         </button>
                                     </div>
 

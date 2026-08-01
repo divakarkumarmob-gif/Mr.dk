@@ -139,9 +139,24 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         };
     }, []);
 
+    // Push history state whenever an overlay opens in Live AI Interface so device back button pops overlay first
+    useEffect(() => {
+        if (showSettings || showChatHistory || previewImage || showShortcutPrompt) {
+            window.history.pushState({ ...window.history.state, liveAiOverlay: true }, '', window.location.href);
+        }
+    }, [showSettings, showChatHistory, previewImage, showShortcutPrompt]);
+
     // Android Hardware Physical Back Button Handler
     useEffect(() => {
         const unregister = registerBackButtonHandler(() => {
+            if (showTimeRangeDropdown) {
+                setShowTimeRangeDropdown(false);
+                return true;
+            }
+            if (showVoiceDropdown) {
+                setShowVoiceDropdown(false);
+                return true;
+            }
             if (showChatHistory) {
                 setShowChatHistory(false);
                 return true;
@@ -162,7 +177,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             return true;
         });
         return unregister;
-    }, [showChatHistory, showSettings, showShortcutPrompt, previewImage, onClose]);
+    }, [showTimeRangeDropdown, showVoiceDropdown, showChatHistory, showSettings, showShortcutPrompt, previewImage, onClose]);
 
     // Desktop-Only 1-Time Add to Home Screen Prompt Check (Mobile users NEVER see this)
     useEffect(() => {

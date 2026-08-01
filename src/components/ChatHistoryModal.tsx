@@ -13,6 +13,7 @@ import { chatWithAI, chatWithAIVoice } from '../services/geminiService';
 import { triggerHaptic } from '../utils/haptics';
 import { showToast } from '../utils/toast';
 import { uploadToUserNoteS3 } from '../utils/s3Upload';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
 interface ChatHistoryModalProps {
     onClose: () => void;
@@ -94,6 +95,31 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         const unsubscribe = subscribeToMessages(aiChatId, (msgs) => setMessages(msgs));
         return () => unsubscribe();
     }, [aiChatId]);
+
+    // Physical Hardware Back Button Handler for Chat History Modal & Overlays
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (expandedImage) {
+                setExpandedImage(null);
+                return true;
+            }
+            if (pendingImage) {
+                setPendingImage(null);
+                return true;
+            }
+            if (showAttachMenu) {
+                setShowAttachMenu(false);
+                return true;
+            }
+            if (showSaveConfirm) {
+                setShowSaveConfirm(false);
+                return true;
+            }
+            onClose();
+            return true;
+        });
+        return unregister;
+    }, [expandedImage, pendingImage, showAttachMenu, showSaveConfirm, onClose]);
 
     // Auto-scroll to latest, same pattern as the caption box / live interface.
     useEffect(() => {
