@@ -3,11 +3,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     Users, MessageSquare, Image as ImageIcon, Video, Heart, Send, Plus, X, 
     Sparkles, Filter, ThumbsUp, Trash2, Shield, Search, Play, ArrowLeft, 
-    Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye, CornerDownRight
+    Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye, 
+    CornerDownRight, DoorOpen, Radio, Home
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
+import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
 
 interface NeetCommunityProps {
     onBack: () => void;
@@ -32,7 +34,9 @@ interface Post {
     tag?: string;
     likes?: string[]; // Array of user UIDs who liked
     commentsCount?: number;
-    viewsCount?: number; // Real Views Tracker
+    viewsCount?: number; // Real Unique Views Tracker
+    viewedBy?: string[]; // Array of unique viewer IDs
+    roomData?: StudyRoom; // Embedded Study Room data if post is a room invite
     timestamp: any;
 }
 
@@ -40,8 +44,20 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     const [posts, setPosts] = useState<Post[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [showCreateModal, setShowCreateModal] = useState<boolean>(false);
+    const [showCreateRoomModal, setShowCreateRoomModal] = useState<boolean>(false);
     const [selectedTagFilter, setSelectedTagFilter] = useState<string>('all');
     const [searchQuery, setSearchQuery] = useState<string>('');
+
+    // Active Live Room State (When user joins a room)
+    const [activeRoom, setActiveRoom] = useState<StudyRoom | null>(null);
+
+    // Create Room State
+    const [roomName, setRoomName] = useState<string>('');
+    const [roomTopic, setRoomTopic] = useState<string>('Physics');
+    const [roomDescription, setRoomDescription] = useState<string>('');
+    const [roomMaxMembers, setRoomMaxMembers] = useState<number>(50);
+    const [roomMode, setRoomMode] = useState<RoomMode>('doubt_solving');
+    const [roomExpiryOption, setRoomExpiryOption] = useState<string>('none');
 
     // Create Post State
     const [postText, setPostText] = useState<string>('');
@@ -61,8 +77,40 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     // Active User Info
     const currentUser = auth.currentUser;
 
-    // Track views per post in session
+    // Session ref to avoid duplicate calls in same render loop
     const viewedPostsRef = useRef<Set<string>>(new Set());
+
+    // Persistent Unique Device / User ID generator
+    const getViewerId = (): string => {
+        if (currentUser?.uid) return currentUser.uid;
+        let stored = localStorage.getItem('neet_unique_viewer_id');
+        if (!stored) {
+            stored = 'viewer_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+            localStorage.setItem('neet_unique_viewer_id', stored);
+        }
+        return stored;
+    };
+
+    // Check if post was already viewed by this unique user/device
+    const hasAlreadyViewedPost = (postId: string): boolean => {
+        const viewerId = getViewerId();
+        try {
+            const viewedMap = JSON.parse(localStorage.getItem('neet_viewed_posts_history') || '{}');
+            return !!viewedMap[postId + '_' + viewerId];
+        } catch {
+            return false;
+        }
+    };
+
+    // Mark post as viewed persistently in history
+    const markPostAsViewedInHistory = (postId: string) => {
+        const viewerId = getViewerId();
+        try {
+            const viewedMap = JSON.parse(localStorage.getItem('neet_viewed_posts_history') || '{}');
+            viewedMap[postId + '_' + viewerId] = true;
+            localStorage.setItem('neet_viewed_posts_history', JSON.stringify(viewedMap));
+        } catch {}
+    };
 
     // Helper: Load local fallback posts
     const getLocalPosts = (): Post[] => {
@@ -106,24 +154,35 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         return () => unsubscribe();
     }, []);
 
-    // Automatic Real Views Counter Trigger
+    // Strict Unique Views Counter Trigger (No Repeated Counting for Same User)
     useEffect(() => {
         if (posts.length === 0) return;
 
         posts.forEach(post => {
             if (!viewedPostsRef.current.has(post.id)) {
                 viewedPostsRef.current.add(post.id);
-                recordPostView(post.id);
+                recordPostView(post.id, post);
             }
         });
     }, [posts]);
 
-    const recordPostView = async (postId: string) => {
-        // Optimistic local update
+    const recordPostView = async (postId: string, postObj?: Post) => {
+        const viewerId = getViewerId();
+
+        // STRICT DEDUPLICATION: If already viewed by this user/device, DO NOT count again!
+        if (hasAlreadyViewedPost(postId) || (postObj?.viewedBy && postObj.viewedBy.includes(viewerId))) {
+            return;
+        }
+
+        // Record persistently in history so future re-opens also don't recount
+        markPostAsViewedInHistory(postId);
+
+        // Optimistic local update (+1 for new unique user)
         setPosts(prev => prev.map(p => {
             if (p.id === postId) {
                 const currentViews = p.viewsCount || 0;
-                return { ...p, viewsCount: currentViews + 1 };
+                const currentViewers = p.viewedBy || [];
+                return { ...p, viewsCount: currentViews + 1, viewedBy: [...currentViewers, viewerId] };
             }
             return p;
         }));
@@ -131,19 +190,153 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         // LocalStorage fallback update
         try {
             const localPosts: Post[] = getLocalPosts();
-            const updatedLocal = localPosts.map(p => p.id === postId ? { ...p, viewsCount: (p.viewsCount || 0) + 1 } : p);
+            const updatedLocal = localPosts.map(p => {
+                if (p.id === postId) {
+                    const currentViews = p.viewsCount || 0;
+                    const currentViewers = p.viewedBy || [];
+                    return { ...p, viewsCount: currentViews + 1, viewedBy: [...currentViewers, viewerId] };
+                }
+                return p;
+            });
             localStorage.setItem('neet_community_local_posts', JSON.stringify(updatedLocal));
         } catch {}
 
-        // Firestore sync
+        // Firestore sync with atomic arrayUnion & increment
         try {
             const postRef = doc(db, 'communityPosts', postId);
             await updateDoc(postRef, {
+                viewedBy: arrayUnion(viewerId),
                 viewsCount: increment(1)
             });
         } catch (e) {
-            console.warn("Firestore view increment error:", e);
+            console.warn("Firestore unique view increment error:", e);
         }
+    };
+
+    // Create New Custom Study Room Handler
+    const handleCreateStudyRoom = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!roomName.trim()) {
+            showToast('Study Room ka naam likhein!');
+            return;
+        }
+
+        setIsSubmitting(true);
+        const hostUid = currentUser?.uid || 'user_host_' + Date.now();
+        const hostName = currentUser?.displayName || 'NEET Aspirant';
+
+        let expiresAt: string | null = null;
+        if (roomExpiryOption === '1_hour') {
+            expiresAt = new Date(Date.now() + 1 * 60 * 60 * 1000).toISOString();
+        } else if (roomExpiryOption === '3_hours') {
+            expiresAt = new Date(Date.now() + 3 * 60 * 60 * 1000).toISOString();
+        } else if (roomExpiryOption === '6_hours') {
+            expiresAt = new Date(Date.now() + 6 * 60 * 60 * 1000).toISOString();
+        } else if (roomExpiryOption === '24_hours') {
+            expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+        }
+
+        const roomObj: StudyRoom = {
+            id: 'room_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+            name: roomName.trim(),
+            topic: roomTopic,
+            description: roomDescription.trim() || 'Live study & doubt room for NEET aspirants!',
+            hostId: hostUid,
+            hostName: hostName,
+            members: [hostUid],
+            blockedUsers: [],
+            maxMembers: roomMaxMembers,
+            roomMode: roomMode,
+            expiryOption: roomExpiryOption,
+            expiresAt: expiresAt,
+            isClosed: false,
+            createdAt: new Date().toISOString()
+        };
+
+        // Save Room to Firestore
+        try {
+            const docRef = await addDoc(collection(db, 'studyRooms'), {
+                name: roomObj.name,
+                topic: roomObj.topic,
+                description: roomObj.description,
+                hostId: roomObj.hostId,
+                hostName: roomObj.hostName,
+                members: [hostUid],
+                blockedUsers: [],
+                maxMembers: roomMaxMembers,
+                roomMode: roomMode,
+                expiryOption: roomExpiryOption,
+                expiresAt: expiresAt,
+                isClosed: false,
+                createdAt: serverTimestamp()
+            });
+            roomObj.id = docRef.id;
+        } catch (err) {
+            console.warn("Firestore studyRoom creation fallback:", err);
+        }
+
+        // Post Room Announcement into NEET Community feed
+        const roomPost: Post = {
+            id: 'post_room_' + Date.now(),
+            userId: hostUid,
+            userName: hostName,
+            text: `🔴 Live Study Room Open: "${roomObj.name}"! Join karke physics, bio & chemistry doubts solve karein!`,
+            tag: roomObj.topic,
+            roomData: roomObj,
+            likes: [],
+            commentsCount: 0,
+            viewsCount: 1,
+            viewedBy: [getViewerId()],
+            timestamp: new Date().toISOString()
+        };
+
+        // Save Post locally
+        const currentLocal = getLocalPosts();
+        localStorage.setItem('neet_community_local_posts', JSON.stringify([roomPost, ...currentLocal]));
+        setPosts(prev => [roomPost, ...prev]);
+
+        // Publish to Firestore communityPosts
+        try {
+            await addDoc(collection(db, 'communityPosts'), {
+                userId: roomPost.userId,
+                userName: roomPost.userName,
+                text: roomPost.text,
+                tag: roomPost.tag,
+                roomData: roomObj,
+                likes: [],
+                commentsCount: 0,
+                viewsCount: 1,
+                viewedBy: [getViewerId()],
+                timestamp: serverTimestamp()
+            });
+        } catch {}
+
+        showToast('Study Room ban gaya! 🚀 Join button par tap karein.');
+        setRoomName('');
+        setRoomDescription('');
+        setShowCreateRoomModal(false);
+        setIsSubmitting(false);
+
+        // Open Room Chat directly for Host
+        setActiveRoom(roomObj);
+    };
+
+    // Join Room Handler with Block & Expiry Check
+    const handleJoinRoom = (roomData: StudyRoom) => {
+        const viewerId = getViewerId();
+
+        if (roomData.blockedUsers?.includes(viewerId) || roomData.blockedUsers?.includes(currentUser?.uid || '')) {
+            showToast('⚠️ Host (Admin) ne aapko is study room se block kiya hai!');
+            return;
+        }
+
+        const isExpired = roomData.expiresAt ? new Date(roomData.expiresAt).getTime() <= Date.now() : false;
+        if (roomData.isClosed || isExpired) {
+            showToast('🔴 Is room ko close kar diya gaya hai. Read-only mode mein open ho raha hai.');
+        }
+
+        // Open Room Chat (StudyRoomChat handles read-only lock if room is closed)
+        setActiveRoom(roomData);
     };
 
     // Load comments for a post
@@ -264,6 +457,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         }
 
         setIsSubmitting(true);
+        const viewerId = getViewerId();
 
         const newPost: Post = {
             id: 'post_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
@@ -278,26 +472,29 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             likes: [],
             commentsCount: 0,
             viewsCount: 1, // Author's first view
+            viewedBy: [viewerId],
             timestamp: new Date().toISOString()
         };
 
-        // Mark as viewed by author
+        // Mark in persistent history for author
         viewedPostsRef.current.add(newPost.id);
+        markPostAsViewedInHistory(newPost.id);
 
-        // Try writing to Firestore
+        // Try writing to Firestore for permanent cloud storage across app reinstalls
         try {
             const docRef = await addDoc(collection(db, 'communityPosts'), {
-                userId: newPost.userId,
-                userName: newPost.userName,
-                userPhoto: newPost.userPhoto,
-                userBadge: newPost.userBadge,
-                text: newPost.text,
-                imageUrl: newPost.imageUrl,
-                videoUrl: newPost.videoUrl,
-                tag: newPost.tag,
+                userId: newPost.userId || 'anonymous',
+                userName: newPost.userName || 'NEET Aspirant',
+                userPhoto: newPost.userPhoto || '',
+                userBadge: newPost.userBadge || 'NEET Aspirant',
+                text: newPost.text || '',
+                imageUrl: newPost.imageUrl || '',
+                videoUrl: newPost.videoUrl || '',
+                tag: newPost.tag || 'BioTips',
                 likes: [],
                 commentsCount: 0,
                 viewsCount: 1,
+                viewedBy: [viewerId],
                 timestamp: serverTimestamp()
             });
             newPost.id = docRef.id;
@@ -345,18 +542,32 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         }
     };
 
-    // Delete Post Handler
-    const handleDeletePost = async (postId: string) => {
-        if (!window.confirm('Kya aap is post ko delete karna chahte hain?')) return;
-        
+    // Delete Post Handler (If Room Post, warns Admin and Purges all Room Data & Messages)
+    const handleDeletePost = async (post: Post) => {
+        const isRoom = !!post.roomData;
+        const confirmMsg = isRoom
+            ? '⚠️ WARNING: Is Room Post ko delete karne se is study room ki saari CHATS, VOICE NOTES, PHOTOS aur DATA hamesha ke liye PERMANENTLY DELETE ho jayega! Kya aap ise delete karna chahte hain?'
+            : 'Kya aap is post ko delete karna chahte hain?';
+
+        if (!window.confirm(confirmMsg)) return;
+
         // Remove locally
-        const currentLocal = getLocalPosts().filter(p => p.id !== postId);
+        const currentLocal = getLocalPosts().filter(p => p.id !== post.id);
         localStorage.setItem('neet_community_local_posts', JSON.stringify(currentLocal));
-        setPosts(prev => prev.filter(p => p.id !== postId));
+        setPosts(prev => prev.filter(p => p.id !== post.id));
+
+        if (isRoom && post.roomData) {
+            try {
+                localStorage.removeItem('study_room_msgs_' + post.roomData.id);
+            } catch {}
+        }
 
         try {
-            await deleteDoc(doc(db, 'communityPosts', postId));
-            showToast('Post delete ho gaya!');
+            await deleteDoc(doc(db, 'communityPosts', post.id));
+            if (isRoom && post.roomData) {
+                await deleteDoc(doc(db, 'studyRooms', post.roomData.id));
+            }
+            showToast(isRoom ? 'Study Room aur sara data permanently delete ho gaya! 🗑️' : 'Post delete ho gaya!');
         } catch (err) {
             console.warn("Firestore delete error:", err);
             showToast('Post remove ho gaya!');
@@ -365,10 +576,29 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Filter Posts by Tag & Search
     const filteredPosts = posts.filter(post => {
-        const matchesTag = selectedTagFilter === 'all' || post.tag === selectedTagFilter;
+        let matchesTag = false;
+        const myUid = currentUser?.uid || 'user_host_';
+
+        if (selectedTagFilter === 'all') {
+            matchesTag = true;
+        } else if (selectedTagFilter === 'rooms') {
+            matchesTag = !!post.roomData;
+        } else if (selectedTagFilter === 'myRooms') {
+            // Show rooms created by current user / admin
+            matchesTag = !!post.roomData && (
+                post.roomData.hostId === myUid || 
+                post.userId === myUid ||
+                (myUid.startsWith('user_') && post.userId.startsWith('user_')) ||
+                (myUid.startsWith('user_') && post.roomData.hostId.startsWith('user_'))
+            );
+        } else {
+            matchesTag = post.tag === selectedTagFilter;
+        }
+
         const matchesSearch = searchQuery === '' || 
             post.text.toLowerCase().includes(searchQuery.toLowerCase()) || 
             post.userName.toLowerCase().includes(searchQuery.toLowerCase());
+
         return matchesTag && matchesSearch;
     });
 
@@ -382,6 +612,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             return 'Just now';
         }
     };
+
+    // Render Live Study Room View if active
+    if (activeRoom) {
+        return <StudyRoomChat room={activeRoom} onBack={() => setActiveRoom(null)} />;
+    }
 
     return (
         <motion.div 
@@ -408,17 +643,32 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
-                        <UserCheck className="w-3.5 h-3.5" />
-                        <span>{posts.length > 0 ? `${posts.length * 12 + 450}+ Members` : '10,000+ Aspirants'}</span>
-                    </div>
+                    <button
+                        onClick={() => setSelectedTagFilter('myRooms')}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-bold text-xs transition ${
+                            selectedTagFilter === 'myRooms'
+                                ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/30 font-extrabold'
+                                : 'bg-amber-500/20 border border-amber-500/40 text-amber-300 hover:bg-amber-500/30'
+                        }`}
+                    >
+                        <Shield className="w-3.5 h-3.5 text-amber-400" />
+                        <span>My Rooms</span>
+                    </button>
+
+                    <button
+                        onClick={() => setShowCreateRoomModal(true)}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-bold text-xs hover:bg-indigo-500/30 transition"
+                    >
+                        <Radio className="w-3.5 h-3.5 text-red-400 animate-pulse" />
+                        <span>Create Room</span>
+                    </button>
 
                     <button
                         onClick={() => setShowCreateModal(true)}
-                        className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 font-bold text-xs text-white shadow-lg shadow-indigo-500/25 hover:brightness-110 transition"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 font-bold text-xs text-white shadow-lg shadow-indigo-500/25 hover:brightness-110 transition"
                     >
                         <Plus className="w-4 h-4" />
-                        <span className="hidden sm:inline">New Post</span>
+                        <span>New Post</span>
                     </button>
                 </div>
             </div>
@@ -432,8 +682,8 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                         <span className="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-amber-500/30">
                             NEET Aspirant Network
                         </span>
-                        <h2 className="text-sm font-bold text-white">Daily High-Yield Notes, Doubts & Video Discussions</h2>
-                        <p className="text-xs text-white/60">Apne doubts, handwritten notes aur study videos share karke sabki help karo!</p>
+                        <h2 className="text-sm font-bold text-white">Daily High-Yield Notes, Doubts & Live Group Rooms</h2>
+                        <p className="text-xs text-white/60">Apne study rooms banao, members ko join/remove/block karo aur doubts solve karo!</p>
                     </div>
                 </div>
 
@@ -441,6 +691,8 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
                     {[
                         { id: 'all', label: '🌟 All Posts' },
+                        { id: 'myRooms', label: '👑 My Rooms' },
+                        { id: 'rooms', label: '📻 All Live Rooms' },
                         { id: 'BioTips', label: '🌿 Biology Tricks' },
                         { id: 'PhysicsFormulas', label: '⚡ Physics Formulas' },
                         { id: 'ChemistryTricks', label: '🧪 Chemistry Mnemonics' },
@@ -518,9 +770,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                                         {isOwner && (
                                             <button 
-                                                onClick={() => handleDeletePost(post.id)}
+                                                onClick={() => handleDeletePost(post)}
                                                 className="p-1.5 rounded-lg hover:bg-red-500/20 text-white/40 hover:text-red-400 transition"
-                                                title="Delete Post"
+                                                title="Delete Post & Room Data"
                                             >
                                                 <Trash2 className="w-4 h-4" />
                                             </button>
@@ -532,6 +784,30 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                         <p className="text-sm text-white/90 leading-relaxed whitespace-pre-line">
                                             {post.text}
                                         </p>
+                                    )}
+
+                                    {/* Embedded Live Study Room Join Card if post is a Room */}
+                                    {post.roomData && (
+                                        <div className="p-4 rounded-2xl bg-gradient-to-r from-indigo-950 to-purple-950 border border-indigo-500/40 flex items-center justify-between shadow-xl my-2">
+                                            <div className="space-y-1">
+                                                <div className="flex items-center gap-2">
+                                                    <Radio className="w-4 h-4 text-red-400 animate-pulse" />
+                                                    <span className="font-bold text-sm text-white">{post.roomData.name}</span>
+                                                </div>
+                                                <p className="text-xs text-indigo-200/80">{post.roomData.description}</p>
+                                                <span className="text-[10px] text-emerald-400 font-semibold block">
+                                                    {post.roomData.members?.length || 1} Members Active in Chat
+                                                </span>
+                                            </div>
+
+                                            <button
+                                                onClick={() => handleJoinRoom(post.roomData!)}
+                                                className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 font-bold text-xs text-white shadow-lg hover:brightness-110 transition flex items-center gap-1.5 shrink-0"
+                                            >
+                                                <DoorOpen className="w-4 h-4" />
+                                                <span>Join Room</span>
+                                            </button>
+                                        </div>
                                     )}
 
                                     {/* Attached Image */}
@@ -559,7 +835,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                         </div>
                                     )}
 
-                                    {/* Actions Bar (Likes, Comments, Real Views, Share) */}
+                                    {/* Actions Bar (Likes, Comments, Unique Views, Share) */}
                                     <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-white/60">
                                         {/* Likes Button */}
                                         <button
@@ -587,10 +863,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                             <span>{commentsCount} Comments</span>
                                         </button>
 
-                                        {/* Real Views Counter Pill */}
-                                        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-semibold text-xs">
+                                        {/* Strict Unique Views Counter Pill */}
+                                        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-semibold text-xs" title="Unique Viewers Count">
                                             <Eye className="w-3.5 h-3.5 text-indigo-400" />
-                                            <span>{viewsCount} Views</span>
+                                            <span>{viewsCount} Unique Views</span>
                                         </div>
 
                                         {/* Share Button */}
@@ -669,13 +945,147 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
             </div>
 
-            {/* Floating Action Button (New Post) */}
-            <button
-                onClick={() => setShowCreateModal(true)}
-                className="fixed bottom-6 right-6 z-30 p-4 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 text-white shadow-2xl shadow-indigo-500/50 hover:scale-105 transition active:scale-95"
-            >
-                <Plus className="w-6 h-6" />
-            </button>
+            {/* Floating Action Buttons */}
+            <div className="fixed bottom-6 right-6 z-30 flex flex-col gap-3 items-end">
+                <button
+                    onClick={() => setShowCreateRoomModal(true)}
+                    title="Create Live Study Room"
+                    className="p-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-xl shadow-emerald-500/30 hover:scale-110 transition active:scale-95 border border-emerald-400/40"
+                >
+                    <DoorOpen className="w-6 h-6 text-white" />
+                </button>
+
+                <button
+                    onClick={() => setShowCreateModal(true)}
+                    title="Create Post"
+                    className="p-4 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 text-white shadow-2xl shadow-indigo-500/50 hover:scale-110 transition active:scale-95"
+                >
+                    <Plus className="w-6 h-6" />
+                </button>
+            </div>
+
+            {/* Create Room Modal */}
+            <AnimatePresence>
+                {showCreateRoomModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.95, y: 20 }}
+                            className="w-full max-w-lg bg-[#0c1222] border border-white/15 rounded-3xl p-6 space-y-4 shadow-2xl"
+                        >
+                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                                <h3 className="font-bold text-base text-white flex items-center gap-2">
+                                    Create Live Study Room 🚀
+                                </h3>
+                                <button
+                                    onClick={() => setShowCreateRoomModal(false)}
+                                    className="p-1.5 rounded-full hover:bg-white/10 text-white/60 hover:text-white transition"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            <form onSubmit={handleCreateStudyRoom} className="space-y-4">
+                                <div>
+                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Study Room Name</label>
+                                    <input
+                                        type="text"
+                                        value={roomName}
+                                        onChange={(e) => setRoomName(e.target.value)}
+                                        placeholder="e.g. Physics Optics Doubts & Problem Solving"
+                                        className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500"
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Subject Tag</label>
+                                    <select
+                                        value={roomTopic}
+                                        onChange={(e) => setRoomTopic(e.target.value)}
+                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                    >
+                                        <option value="Physics" className="bg-[#0c1222]">⚡ Physics</option>
+                                        <option value="Chemistry" className="bg-[#0c1222]">🧪 Chemistry</option>
+                                        <option value="Biology" className="bg-[#0c1222]">🌿 Biology</option>
+                                        <option value="General" className="bg-[#0c1222]">📚 General Discussion</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Select Room Purpose / Mode</label>
+                                    <select
+                                        value={roomMode}
+                                        onChange={(e) => setRoomMode(e.target.value as RoomMode)}
+                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                    >
+                                        <option value="doubt_solving" className="bg-[#0c1222]">🔴 Live Doubt Solving Mode</option>
+                                        <option value="silent_study" className="bg-[#0c1222]">📖 Silent Group Study Mode</option>
+                                        <option value="mcq_battle" className="bg-[#0c1222]">🧪 MCQ Speed Battle Mode</option>
+                                        <option value="general" className="bg-[#0c1222]">📚 General Discussion Mode</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Room Description</label>
+                                    <textarea
+                                        rows={2}
+                                        value={roomDescription}
+                                        onChange={(e) => setRoomDescription(e.target.value)}
+                                        placeholder="Room purpose and rules..."
+                                        className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-indigo-500"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Max Members Capacity Limit</label>
+                                    <select
+                                        value={roomMaxMembers}
+                                        onChange={(e) => setRoomMaxMembers(parseInt(e.target.value))}
+                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                    >
+                                        <option value={5} className="bg-[#0c1222]">5 Members (Small Focus Group)</option>
+                                        <option value={10} className="bg-[#0c1222]">10 Members (Intimate Group)</option>
+                                        <option value={25} className="bg-[#0c1222]">25 Members (Classroom Group)</option>
+                                        <option value={50} className="bg-[#0c1222]">50 Members (Standard Room)</option>
+                                        <option value={100} className="bg-[#0c1222]">100 Members (Large Batch)</option>
+                                        <option value={500} className="bg-[#0c1222]">500 Members (Mega Seminar)</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Room Expiry Duration (Countdown Timer)</label>
+                                    <select
+                                        value={roomExpiryOption}
+                                        onChange={(e) => setRoomExpiryOption(e.target.value)}
+                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                    >
+                                        <option value="none" className="bg-[#0c1222]">♾️ None (No Expiry - Runs until closed by Admin)</option>
+                                        <option value="1_hour" className="bg-[#0c1222]">⏱️ 1 Hour Expiry</option>
+                                        <option value="3_hours" className="bg-[#0c1222]">⏱️ 3 Hours Expiry</option>
+                                        <option value="6_hours" className="bg-[#0c1222]">⏱️ 6 Hours Expiry</option>
+                                        <option value="24_hours" className="bg-[#0c1222]">⏱️ 24 Hours Expiry</option>
+                                    </select>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="w-full py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 font-bold text-sm text-white shadow-xl hover:brightness-110 transition disabled:opacity-50"
+                                >
+                                    {isSubmitting ? 'Creating Room...' : 'Launch Live Study Room'}
+                                </button>
+                            </form>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Create Post Modal */}
             <AnimatePresence>
