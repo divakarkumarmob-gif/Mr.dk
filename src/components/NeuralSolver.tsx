@@ -8,6 +8,7 @@ import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
 import { getApiUrl } from '@/utils/api';
 import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -29,6 +30,19 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
             disableScreenshot();
         };
     }, []);
+
+    // Android Hardware Physical Back Button Handler
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (selectedMessageIndex !== null) {
+                setSelectedMessageIndex(null);
+                return true;
+            }
+            onClose();
+            return true;
+        });
+        return unregister;
+    }, [selectedMessageIndex, onClose]);
 
     useEffect(() => {
         setTimeout(() => {

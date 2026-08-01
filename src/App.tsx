@@ -32,6 +32,7 @@ import PageLayout from './components/PageLayout';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
 import { useAuth } from './contexts/AuthContext';
 import { useRouteBackButton } from './lib/useRouteBackButton';
+import { processHardwareBackButton } from './utils/hardwareBackButton';
 
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -454,6 +455,12 @@ function AppInner() {
 
     // Capacitor Back Button Handling
     const backButtonListener = CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+        // 1. Process component-level registered back button handlers first (LIFO for overlays, subviews, modals)
+        const handledByComponent = processHardwareBackButton();
+        if (handledByComponent) {
+            return;
+        }
+
         const currentView = currentViewRef.current;
         
         // Priority order for closing overlays

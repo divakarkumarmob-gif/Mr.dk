@@ -10,6 +10,7 @@ import {
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
 export type RoomMode = 'doubt_solving' | 'silent_study' | 'mcq_battle' | 'general';
 
@@ -108,6 +109,27 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const isFull = !room.members?.includes(currentUid) && (room.members?.length || 0) >= maxLimit;
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    // Android Hardware Physical Back Button Handler
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (activeMediaUrl) {
+                setActiveMediaUrl(null);
+                return true;
+            }
+            if (showPollModal) {
+                setShowPollModal(false);
+                return true;
+            }
+            if (showMembersDrawer) {
+                setShowMembersDrawer(false);
+                return true;
+            }
+            onBack();
+            return true;
+        });
+        return unregister;
+    }, [activeMediaUrl, showPollModal, showMembersDrawer, onBack]);
 
     // Auto scroll to latest message
     useEffect(() => {

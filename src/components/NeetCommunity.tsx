@@ -11,6 +11,7 @@ import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { saveMediaToGallery } from '../utils/saveMediaToGallery';
 import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
 import DirectChat, { DirectUser } from './DirectChat';
 
@@ -167,6 +168,48 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             disableScreenshot();
         };
     }, []);
+
+    // Android Hardware Physical Back Button Handler (Overlays, Modals, Rooms & Subviews)
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (longPressedPost) {
+                setLongPressedPost(null);
+                return true;
+            }
+            if (showReportModal) {
+                setShowReportModal(false);
+                return true;
+            }
+            if (selectedUserProfile) {
+                setSelectedUserProfile(null);
+                return true;
+            }
+            if (showCreateRoomModal) {
+                setShowCreateRoomModal(false);
+                return true;
+            }
+            if (showCreateModal) {
+                setShowCreateModal(false);
+                return true;
+            }
+            if (activeMedia) {
+                setActiveMedia(null);
+                return true;
+            }
+            if (activeDirectChatUser) {
+                setActiveDirectChatUser(null);
+                return true;
+            }
+            if (activeRoom) {
+                setActiveRoom(null);
+                return true;
+            }
+            onBack();
+            return true;
+        });
+
+        return unregister;
+    }, [longPressedPost, showReportModal, selectedUserProfile, showCreateRoomModal, showCreateModal, activeMedia, activeDirectChatUser, activeRoom, onBack]);
 
     // Real-time Firestore listener for Community Posts + Local Merge
     useEffect(() => {

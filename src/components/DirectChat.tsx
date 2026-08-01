@@ -7,6 +7,7 @@ import {
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc, where, getDocs } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
 export interface DirectUser {
     uid: string;
@@ -49,6 +50,19 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     // Deterministic 1v1 Chat ID (Sorted UIDs)
     const chatId = [currentUid, targetUser.uid].sort().join('_direct_');
     const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    // Android Hardware Physical Back Button Handler
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (activeMediaUrl) {
+                setActiveMediaUrl(null);
+                return true;
+            }
+            onBack();
+            return true;
+        });
+        return unregister;
+    }, [activeMediaUrl, onBack]);
 
     // Auto Scroll to Latest Message
     useEffect(() => {

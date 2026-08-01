@@ -11,6 +11,7 @@ import { Message } from '../types';
 import { takePhoto } from '../utils/camera';
 import { LiveSession } from '../utils/liveSession';
 import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
 interface LiveAIInterfaceProps {
     onClose: () => void;
@@ -136,6 +137,41 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         return () => {
             disableScreenshot();
         };
+    }, []);
+
+    // Android Hardware Physical Back Button Handler
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (showChatHistory) {
+                setShowChatHistory(false);
+                return true;
+            }
+            if (showSettings) {
+                setShowSettings(false);
+                return true;
+            }
+            if (showShortcutPrompt) {
+                setShowShortcutPrompt(false);
+                return true;
+            }
+            if (previewImage) {
+                setPreviewImage(null);
+                return true;
+            }
+            onClose();
+            return true;
+        });
+        return unregister;
+    }, [showChatHistory, showSettings, showShortcutPrompt, previewImage, onClose]);
+
+    // Desktop-Only 1-Time Add to Home Screen Prompt Check (Mobile users NEVER see this)
+    useEffect(() => {
+        const isMobile = Capacitor.isNativePlatform() || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+        const hasSeenShortcutPrompt = localStorage.getItem('has_seen_pwa_shortcut_prompt') === 'true';
+
+        if (!isMobile && !hasSeenShortcutPrompt) {
+            setShowShortcutPrompt(true);
+        }
     }, []);
 
     useEffect(() => {
@@ -1008,7 +1044,12 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             {showChatHistory && (
                 <ChatHistoryModal onClose={() => setShowChatHistory(false)} />
             )}
-            {showShortcutPrompt && <HomeScreenShortcutPrompt onClose={() => setShowShortcutPrompt(false)} />}
+            {showShortcutPrompt && (
+                <HomeScreenShortcutPrompt onClose={() => {
+                    localStorage.setItem('has_seen_pwa_shortcut_prompt', 'true');
+                    setShowShortcutPrompt(false);
+                }} />
+            )}
             {showSettings && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={() => setShowSettings(false)}>
                     <div className="relative bg-gray-900 rounded-2xl max-w-sm w-full p-6 text-white" onClick={e => e.stopPropagation()}>

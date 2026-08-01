@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, BookOpen, Sparkles, PlusCircle } from 'lucide-react';
 import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
+import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import AIStudyPlanChat from './AIStudyPlanChat';
 import CreateCustomPlanPage from './CreateCustomPlanPage';
 
@@ -16,6 +17,23 @@ export default function AIStudyPlanPage({ onBack, onNavigate }: { onBack: () => 
             disableScreenshot();
         };
     }, []);
+
+    // Android Hardware Physical Back Button Handler
+    useEffect(() => {
+        const unregister = registerBackButtonHandler(() => {
+            if (showCustomPlan) {
+                setShowCustomPlan(false);
+                return true;
+            }
+            if (showChat) {
+                setShowChat(false);
+                return true;
+            }
+            onBack();
+            return true;
+        });
+        return unregister;
+    }, [showCustomPlan, showChat, onBack]);
 
     if (showCustomPlan) {
         return <CreateCustomPlanPage onBack={() => setShowCustomPlan(false)} />;

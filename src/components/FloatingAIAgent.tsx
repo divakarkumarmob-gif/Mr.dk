@@ -27,6 +27,15 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
     const scale = useMotionValue(1);
 
     useEffect(() => {
+        // Run Right-to-Left Floating Icon Intro Animation ONLY ONCE for new users / app install
+        const hasSeenIntroAnimation = localStorage.getItem('has_seen_app_intro_ai_animation') === 'true';
+        if (!hasSeenIntroAnimation) {
+            animate(x, [250, 0], { duration: 1.2, ease: "easeOut" });
+            localStorage.setItem('has_seen_app_intro_ai_animation', 'true');
+        }
+    }, [x]);
+
+    useEffect(() => {
         isRecordingRef.current = isRecording;
         if (isTyping) {
             animate(x, 0, { type: "spring", stiffness: 300, damping: 30 });
