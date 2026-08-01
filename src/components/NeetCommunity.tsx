@@ -82,7 +82,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     // Active Media Preview Modal State
     const [activeMedia, setActiveMedia] = useState<{ type: 'image' | 'video', url: string } | null>(null);
 
-    // User Profile Quick Modal & Report System State
+    // Active User Profile Quick Modal & Report System State
     const [selectedUserProfile, setSelectedUserProfile] = useState<{
         userId: string;
         userName: string;
@@ -90,6 +90,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         userBadge?: string;
         postId?: string;
     } | null>(null);
+
+    // Detailed Firestore Debug Error Log Modal
+    const [debugError, setDebugError] = useState<{ code?: string; message: string; fullDetails?: string } | null>(null);
 
     const [showReportModal, setShowReportModal] = useState<boolean>(false);
     const [reportReason, setReportReason] = useState<string>('');
@@ -608,7 +611,6 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         markPostAsViewedInHistory(newPost.id);
 
         // Save to Firestore for permanent cloud storage across all devices, logins & reinstalls
-        let isCloudSaved = false;
         try {
             const docRef = await addDoc(collection(db, 'communityPosts'), {
                 userId: newPost.userId || 'anonymous',
@@ -626,11 +628,22 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 timestamp: serverTimestamp()
             });
             newPost.id = docRef.id;
-            isCloudSaved = true;
             console.log("Post cloud saved to Firestore successfully with ID:", docRef.id);
         } catch (err: any) {
             console.error("Firestore addDoc error:", err);
-            showToast(`⚠️ Cloud Sync Error: ${err?.message || 'Firestore Permission Denied'}`);
+            const errDetails = JSON.stringify({
+                code: err?.code || 'unknown_error',
+                message: err?.message || String(err),
+                userUid: currentUser?.uid || 'none (null auth)',
+                viewerId: viewerId,
+                timestamp: new Date().toISOString()
+            }, null, 2);
+
+            setDebugError({
+                code: err?.code || 'FIRESTORE_WRITE_ERROR',
+                message: err?.message || 'Firestore cloud save failed.',
+                fullDetails: errDetails
+            });
         }
 
         // Save to local storage as instant local cache
@@ -1676,6 +1689,57 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                     </button>
                                 )}
                             </div>
+                        </motion.div>
+                    </motion.div>
+            {/* Real-time Firestore Debug Error Inspection Modal */}
+            <AnimatePresence>
+                {debugError && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.95, y: 20 }}
+                            className="w-full max-w-md bg-[#121829] border border-red-500/50 rounded-3xl p-5 space-y-4 shadow-2xl"
+                        >
+                            <div className="flex items-center justify-between border-b border-red-500/30 pb-3">
+                                <h3 className="font-bold text-red-400 text-sm flex items-center gap-2">
+                                    <AlertCircle className="w-5 h-5 text-red-500" />
+                                    <span>Real Firestore Error Inspector</span>
+                                </h3>
+                                <button 
+                                    onClick={() => setDebugError(null)} 
+                                    className="p-1.5 rounded-full hover:bg-white/10 text-white/60 hover:text-white transition"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            <div className="p-3.5 rounded-2xl bg-red-950/40 border border-red-500/30 space-y-1.5 text-xs">
+                                <p className="font-bold text-red-300">Error Code: {debugError.code}</p>
+                                <p className="text-white/90 leading-relaxed font-mono text-[11px] break-all">{debugError.message}</p>
+                            </div>
+
+                            <div className="space-y-1">
+                                <span className="text-[10px] text-white/50 font-bold uppercase tracking-wider block">Full Debug Payload:</span>
+                                <pre className="p-3 rounded-2xl bg-black/70 border border-white/10 text-[10px] text-emerald-400 font-mono overflow-x-auto max-h-48 whitespace-pre-wrap">
+                                    {debugError.fullDetails}
+                                </pre>
+                            </div>
+
+                            <button
+                                onClick={() => {
+                                    navigator.clipboard.writeText(debugError.fullDetails || debugError.message);
+                                    showToast('Error log copied to clipboard! 📋');
+                                }}
+                                className="w-full py-3 rounded-2xl bg-gradient-to-r from-red-600 to-pink-600 font-bold text-xs text-white shadow-xl hover:brightness-110 transition flex items-center justify-center gap-2"
+                            >
+                                <span>Copy Error Details to Clipboard</span>
+                            </button>
                         </motion.div>
                     </motion.div>
                 )}
