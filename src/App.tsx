@@ -93,7 +93,6 @@ const SupportModal = lazy(() => import('./components/SupportModal'));
 const TimeSpentChart = lazy(() => import('./components/TimeSpentChart'));
 const FocusSessionSummary = lazy(() => import('./components/FocusSessionSummary'));
 const DistractionOverlay = lazy(() => import('./components/DistractionOverlay'));
-const BackgroundPermissionPrompt = lazy(() => import('./components/BackgroundPermissionPrompt'));
 const Onboarding = lazy(() => import('./components/Onboarding'));
 
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
@@ -2277,11 +2276,7 @@ function AppInner() {
       
       {isFocusMode && <DistractionOverlay isLooking={isLooking} />}
 
-      {user && !user.uid.startsWith('local_guest_') && (
-          <Suspense fallback={null}>
-              <BackgroundPermissionPrompt />
-          </Suspense>
-      )}
+
 
       {showSummary && (
           <FocusSessionSummary 
