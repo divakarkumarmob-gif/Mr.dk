@@ -27,7 +27,7 @@ import androidx.core.content.ContextCompat;
  */
 public class LiveSessionService extends Service {
 
-    public static final String CHANNEL_ID = "live_session_channel";
+    private static final String CHANNEL_ID = "live_ai_session_v2";
     private static final int NOTIFICATION_ID = 9001;
 
     public static final String ACTION_END_CALL = "com.neetmaster.app.ACTION_END_CALL";
@@ -250,7 +250,7 @@ public class LiveSessionService extends Service {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
                     "Live AI Session",
-                    NotificationManager.IMPORTANCE_LOW
+                    NotificationManager.IMPORTANCE_DEFAULT
             );
             channel.setDescription("Ongoing notification for Live AI voice sessions");
             channel.setShowBadge(false);
