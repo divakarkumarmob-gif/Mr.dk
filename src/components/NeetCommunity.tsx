@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     Users, MessageSquare, Image as ImageIcon, Video, Heart, Send, Plus, X, 
     Sparkles, Filter, ThumbsUp, Trash2, Shield, Search, Play, ArrowLeft, 
-    Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera
+    Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye
 } from 'lucide-react';
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 
@@ -25,6 +25,7 @@ interface Post {
     tag?: string;
     likes?: string[]; // Array of user UIDs who liked
     commentsCount?: number;
+    viewsCount?: number; // Real Views Tracker
     timestamp: any;
 }
 
@@ -47,6 +48,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Active User Info
     const currentUser = auth.currentUser;
+
+    // Track views per post in session
+    const viewedPostsRef = useRef<Set<string>>(new Set());
 
     // Helper: Load local fallback posts
     const getLocalPosts = (): Post[] => {
@@ -89,6 +93,46 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
         return () => unsubscribe();
     }, []);
+
+    // Automatic Real Views Counter Trigger
+    useEffect(() => {
+        if (posts.length === 0) return;
+
+        posts.forEach(post => {
+            if (!viewedPostsRef.current.has(post.id)) {
+                viewedPostsRef.current.add(post.id);
+                recordPostView(post.id);
+            }
+        });
+    }, [posts]);
+
+    const recordPostView = async (postId: string) => {
+        // Optimistic local update
+        setPosts(prev => prev.map(p => {
+            if (p.id === postId) {
+                const currentViews = p.viewsCount || 0;
+                return { ...p, viewsCount: currentViews + 1 };
+            }
+            return p;
+        }));
+
+        // LocalStorage fallback update
+        try {
+            const localPosts: Post[] = getLocalPosts();
+            const updatedLocal = localPosts.map(p => p.id === postId ? { ...p, viewsCount: (p.viewsCount || 0) + 1 } : p);
+            localStorage.setItem('neet_community_local_posts', JSON.stringify(updatedLocal));
+        } catch {}
+
+        // Firestore sync
+        try {
+            const postRef = doc(db, 'communityPosts', postId);
+            await updateDoc(postRef, {
+                viewsCount: increment(1)
+            });
+        } catch (e) {
+            console.warn("Firestore view increment error:", e);
+        }
+    };
 
     // File Upload Handler (Base64 conversion)
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -138,8 +182,12 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             tag: selectedCategory,
             likes: [],
             commentsCount: 0,
+            viewsCount: 1, // Author's first view
             timestamp: new Date().toISOString()
         };
+
+        // Mark as viewed by author
+        viewedPostsRef.current.add(newPost.id);
 
         // Try writing to Firestore
         try {
@@ -154,6 +202,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 tag: newPost.tag,
                 likes: [],
                 commentsCount: 0,
+                viewsCount: 1,
                 timestamp: serverTimestamp()
             });
             newPost.id = docRef.id;
@@ -340,6 +389,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                         {filteredPosts.map(post => {
                             const isLiked = currentUser && post.likes?.includes(currentUser.uid);
                             const likesCount = post.likes?.length || 0;
+                            const viewsCount = post.viewsCount || 1;
                             const isOwner = currentUser && (currentUser.uid === post.userId || post.userId.startsWith('user_'));
 
                             return (
@@ -411,7 +461,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                         </div>
                                     )}
 
-                                    {/* Actions Bar (Like, Comment, Share) */}
+                                    {/* Actions Bar (Likes, Real Views, Share) */}
                                     <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-white/60">
                                         <button
                                             onClick={() => handleToggleLike(post)}
@@ -425,9 +475,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                             <span>{likesCount} Likes</span>
                                         </button>
 
-                                        <div className="flex items-center gap-1.5 px-3 py-1.5 text-white/50">
-                                            <MessageCircle className="w-4 h-4" />
-                                            <span>NEET Discussion</span>
+                                        {/* Real Views Counter Pill */}
+                                        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-semibold text-xs">
+                                            <Eye className="w-3.5 h-3.5 text-indigo-400" />
+                                            <span>{viewsCount} Views</span>
                                         </div>
 
                                         <button
