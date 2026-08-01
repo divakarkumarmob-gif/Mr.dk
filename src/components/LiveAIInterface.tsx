@@ -30,6 +30,23 @@ function pcmToBase64(pcm: Float32Array): string {
     return btoa(base64);
 }
 
+function createAudioContext(sampleRate?: number): AudioContext {
+    try {
+        const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+        if (sampleRate) {
+            try {
+                return new AudioCtx({ sampleRate });
+            } catch (e) {
+                console.warn(`AudioContext with sampleRate ${sampleRate} failed, falling back to default`, e);
+            }
+        }
+        return new AudioCtx();
+    } catch (e) {
+        console.error("Failed to create AudioContext:", e);
+        throw e;
+    }
+}
+
 // Helper: Play Base64 Audio Chunk
 async function playAudioChunk(audioCtx: AudioContext, base64Audio: string, nextStartTime: { current: number }, isAiSpeaking: { current: boolean }) {
     try {
@@ -379,8 +396,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
 
     const stopAudio = () => {
         if (outputAudioCtx.current && outputAudioCtx.current.state !== 'closed') {
-            outputAudioCtx.current.close();
-            outputAudioCtx.current = new AudioContext({ sampleRate: 24000 });
+            try { outputAudioCtx.current.close(); } catch (e) {}
+            outputAudioCtx.current = createAudioContext(24000);
         }
     };
 
@@ -476,8 +493,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             try { LiveSession.startSession(); } catch (e) { console.warn('LiveSession.startSession failed:', e); }
         }
 
-        inputAudioCtx.current = new AudioContext({ sampleRate: 16000 });
-        outputAudioCtx.current = new AudioContext({ sampleRate: 24000 });
+        inputAudioCtx.current = createAudioContext(16000);
+        outputAudioCtx.current = createAudioContext(24000);
 
         try {
             await inputAudioCtx.current.resume();
@@ -589,8 +606,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 // Save the stream ref so notification mute-toggle can
                 // flip track.enabled without closing the socket.
                 mediaStreamRef.current = stream;
-                inputAudioCtx.current = new AudioContext({ sampleRate: 16000 });
-                outputAudioCtx.current = new AudioContext({ sampleRate: 24000 });
+                inputAudioCtx.current = createAudioContext(16000);
+                outputAudioCtx.current = createAudioContext(24000);
 
                 // CRITICAL: on mobile browsers / WebViews (Capacitor), a newly
                 // created AudioContext can start life in "suspended" state

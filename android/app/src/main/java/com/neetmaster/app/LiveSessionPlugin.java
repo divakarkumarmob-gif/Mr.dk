@@ -29,6 +29,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 public class LiveSessionPlugin extends Plugin {
 
     private BroadcastReceiver receiver;
+    private boolean isRegistered = false;
 
     @Override
     public void load() {
@@ -65,6 +66,7 @@ public class LiveSessionPlugin extends Plugin {
             } else {
                 getContext().registerReceiver(receiver, filter);
             }
+            isRegistered = true;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -133,8 +135,9 @@ public class LiveSessionPlugin extends Plugin {
     @Override
     protected void handleOnDestroy() {
         try {
-            if (receiver != null) {
+            if (receiver != null && isRegistered) {
                 getContext().unregisterReceiver(receiver);
+                isRegistered = false;
                 receiver = null;
             }
         } catch (Exception e) {

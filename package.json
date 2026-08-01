@@ -83,7 +83,6 @@
     "node-cron": "^4.2.1",
     "nodemailer": "^9.0.1",
     "openai": "^6.41.0",
-    "pdfjs-dist": "5.4.296",
     "razorpay": "^2.9.6",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",

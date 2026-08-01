@@ -130,11 +130,12 @@ export const subscribeToSupportChats = (callback: (chats: any[]) => void) => {
     
     let q;
     if (isAdmin) {
-        q = query(collection(db, 'chats'), orderBy('updatedAt', 'desc'));
+        q = query(collection(db, 'chats'), where('isSupportChat', '==', true), orderBy('updatedAt', 'desc'));
     } else {
         q = query(
             collection(db, 'chats'), 
             where('isSupportChat', '==', true), 
+            where('participants', 'array-contains', auth.currentUser.uid),
             orderBy('updatedAt', 'desc')
         );
     }
@@ -280,7 +281,11 @@ export const uploadMedia = async (file: File, path: string) => {
             return url;
         } catch (storageErr) {
             console.warn('[ChatService] Storage upload failed, attempting Base64 fallback:', storageErr);
-            return await convertToBase64(fileToUpload);
+            const base64 = await convertToBase64(fileToUpload);
+            if (base64.length > 800000) {
+                throw new Error('Media file is too large for offline/fallback upload. Max size 600KB.');
+            }
+            return base64;
         }
     } catch (error) {
         console.error('[ChatService] Error uploading media:', error);

@@ -48,7 +48,16 @@ function base64ToUint8(base64: string): Uint8Array {
 export const cachePdf = async (url: string, filename: string): Promise<string | null> => {
     try {
         const response = await fetch(url);
+        if (!response.ok) {
+            console.warn(`Failed to fetch PDF for caching, status: ${response.status}`);
+            return null;
+        }
         const arrayBuffer = await response.arrayBuffer();
+        if (!arrayBuffer || arrayBuffer.byteLength === 0) return null;
+        if (arrayBuffer.byteLength > 50 * 1024 * 1024) {
+            console.warn('PDF exceeds max 50MB cache limit:', filename);
+            return null;
+        }
         const pdfBytes = new Uint8Array(arrayBuffer);
 
         // XOR-encrypt the raw PDF bytes

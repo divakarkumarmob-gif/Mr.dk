@@ -68,39 +68,43 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     private void ackDelivery(final String notificationId, final String token) {
-        ackExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                HttpURLConnection conn = null;
-                try {
-                    URL url = new URL(BACKEND_BASE + "/api/ack-delivery");
-                    conn = (HttpURLConnection) url.openConnection();
-                    conn.setRequestMethod("POST");
-                    conn.setRequestProperty("Content-Type", "application/json");
-                    conn.setDoOutput(true);
-                    conn.setConnectTimeout(10000);
-                    conn.setReadTimeout(10000);
+        try {
+            ackExecutor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    HttpURLConnection conn = null;
+                    try {
+                        URL url = new URL(BACKEND_BASE + "/api/ack-delivery");
+                        conn = (HttpURLConnection) url.openConnection();
+                        conn.setRequestMethod("POST");
+                        conn.setRequestProperty("Content-Type", "application/json");
+                        conn.setDoOutput(true);
+                        conn.setConnectTimeout(5000);
+                        conn.setReadTimeout(5000);
 
-                    JSONObject body = new JSONObject();
-                    body.put("notificationId", notificationId);
-                    body.put("token", token);
+                        JSONObject body = new JSONObject();
+                        body.put("notificationId", notificationId);
+                        body.put("token", token);
 
-                    byte[] jsonBytes = body.toString().getBytes(StandardCharsets.UTF_8);
-                    try (OutputStream os = conn.getOutputStream()) {
-                        os.write(jsonBytes);
-                    }
+                        byte[] jsonBytes = body.toString().getBytes(StandardCharsets.UTF_8);
+                        try (OutputStream os = conn.getOutputStream()) {
+                            os.write(jsonBytes);
+                        }
 
-                    int code = conn.getResponseCode();
-                    Log.d("FCM", "ack-delivery response: " + code);
-                } catch (Exception e) {
-                    Log.w("FCM", "ack-delivery failed", e);
-                } finally {
-                    if (conn != null) {
-                        conn.disconnect();
+                        int code = conn.getResponseCode();
+                        Log.d("FCM", "ack-delivery response: " + code);
+                    } catch (Exception e) {
+                        Log.w("FCM", "ack-delivery failed", e);
+                    } finally {
+                        if (conn != null) {
+                            conn.disconnect();
+                        }
                     }
                 }
-            }
-        });
+            });
+        } catch (Exception e) {
+            Log.w("FCM", "Failed to schedule ack-delivery", e);
+        }
     }
 
     @Override

@@ -89,8 +89,8 @@ const logs: string[] = [];
 
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
 const razorpay = new Razorpay({
-        key_id: 'rzp_test_T3UJc0yCensXWD',
-        key_secret: 'W5a7EKvfdCGGV9tsIvC5Iqzp',
+        key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test_T3UJc0yCensXWD',
+        key_secret: process.env.RAZORPAY_KEY_SECRET || 'W5a7EKvfdCGGV9tsIvC5Iqzp',
     });
 
 function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {

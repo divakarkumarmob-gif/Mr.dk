@@ -29,13 +29,16 @@ export default function AdminChatPage({ onBack }: { onBack: () => void }) {
         setSelectedChat(id);
     };
 
+    const chatNamesRef = React.useRef<Record<string, string>>({});
+
     useEffect(() => {
         const unsubscribe = subscribeToSupportChats((chatData) => {
             setChats(chatData);
             chatData.forEach(async (chat) => {
                 const userId = chat.id; // As seen in UserChat.tsx, the chat ID is the user UID
-                if (userId === 'admin') return;
+                if (userId === 'admin' || chatNamesRef.current[userId]) return;
                 const name = await getUserName(userId);
+                chatNamesRef.current[userId] = name;
                 setChatNames(prev => ({ ...prev, [chat.id]: name }));
             });
         });
