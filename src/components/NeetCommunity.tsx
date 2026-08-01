@@ -1691,6 +1691,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                             </div>
                         </motion.div>
                     </motion.div>
+                )}
+            </AnimatePresence>
+
             {/* Real-time Firestore Debug Error Inspection Modal */}
             <AnimatePresence>
                 {debugError && (
