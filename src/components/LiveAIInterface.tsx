@@ -17,6 +17,7 @@ interface LiveAIInterfaceProps {
 
 // Helper: Convert PCM Float32Array to Base64
 function pcmToBase64(pcm: Float32Array): string {
+    if (!pcm || pcm.length === 0) return "";
     const buffer = new Int16Array(pcm.length);
     for (let i = 0; i < pcm.length; i++) {
         buffer[i] = Math.max(-1, Math.min(1, pcm[i])) * 32767;
@@ -31,34 +32,42 @@ function pcmToBase64(pcm: Float32Array): string {
 
 // Helper: Play Base64 Audio Chunk
 async function playAudioChunk(audioCtx: AudioContext, base64Audio: string, nextStartTime: { current: number }, isAiSpeaking: { current: boolean }) {
-    const binary = atob(base64Audio);
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-        bytes[i] = binary.charCodeAt(i);
-    }
-    
-    // Assuming 24kHz, 16-bit mono PCM
-    const buffer = audioCtx.createBuffer(1, bytes.length / 2, 24000);
-    const channelData = buffer.getChannelData(0);
-    for (let i = 0; i < bytes.length / 2; i++) {
-        const sample = (bytes[i * 2 + 1] << 8) | bytes[i * 2];
-        channelData[i] = ((sample << 16) >> 16) / 32768;
-    }
-
-    const source = audioCtx.createBufferSource();
-    source.buffer = buffer;
-    source.connect(audioCtx.destination);
-    
-    source.onended = () => {
-        if (audioCtx.currentTime >= nextStartTime.current - 0.1) {
-            isAiSpeaking.current = false;
+    try {
+        if (!base64Audio || !audioCtx || audioCtx.state === 'closed') return;
+        const binary = atob(base64Audio);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
         }
-    };
+        
+        // Assuming 24kHz, 16-bit mono PCM
+        const sampleCount = Math.floor(bytes.length / 2);
+        if (sampleCount <= 0) return;
 
-    const startTime = Math.max(audioCtx.currentTime, nextStartTime.current);
-    source.start(startTime);
-    nextStartTime.current = startTime + buffer.duration;
-    isAiSpeaking.current = true;
+        const buffer = audioCtx.createBuffer(1, sampleCount, 24000);
+        const channelData = buffer.getChannelData(0);
+        for (let i = 0; i < sampleCount; i++) {
+            const sample = (bytes[i * 2 + 1] << 8) | bytes[i * 2];
+            channelData[i] = ((sample << 16) >> 16) / 32768;
+        }
+
+        const source = audioCtx.createBufferSource();
+        source.buffer = buffer;
+        source.connect(audioCtx.destination);
+        
+        source.onended = () => {
+            if (audioCtx.currentTime >= nextStartTime.current - 0.1) {
+                isAiSpeaking.current = false;
+            }
+        };
+
+        const startTime = Math.max(audioCtx.currentTime, nextStartTime.current);
+        source.start(startTime);
+        nextStartTime.current = startTime + buffer.duration;
+        isAiSpeaking.current = true;
+    } catch (e) {
+        console.error("Error playing audio chunk:", e);
+    }
 }
 
 export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
