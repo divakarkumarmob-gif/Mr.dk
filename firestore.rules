@@ -83,7 +83,34 @@ service cloud.firestore {
       }
     }
 
-    match /chats {
+    // Community Posts
+    match /communityPosts/{postId} {
+      allow read: if true;
+      allow create, update, delete: if isSignedIn();
+
+      match /comments/{commentId} {
+        allow read, create: if isSignedIn();
+      }
+    }
+
+    // Study Rooms
+    match /studyRooms/{roomId} {
+      allow read, create, update, delete: if isSignedIn();
+
+      match /messages/{messageId} {
+        allow read, create: if isSignedIn();
+      }
+    }
+
+    // User Reports
+    match /userReports/{reportId} {
+      allow create: if isSignedIn();
+      allow read: if isAdmin();
+    }
+
+    // Admin Notifications
+    match /adminNotifications/{notifId} {
+      allow create: if isSignedIn();
       allow read: if isAdmin();
     }
 
