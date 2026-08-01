@@ -17,6 +17,9 @@ import android.widget.RemoteViews;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.Person;
 import androidx.core.graphics.drawable.IconCompat;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import androidx.core.content.ContextCompat;
 
 /**
  * Foreground service that shows an ongoing call-style notification while
@@ -66,12 +69,14 @@ public class LiveSessionService extends Service {
         Notification notification = buildNotification();
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                try {
-                    startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE);
-                    isForegroundStarted = true;
-                    return;
-                } catch (Exception e) {
-                    e.printStackTrace();
+                if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                    try {
+                        startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE);
+                        isForegroundStarted = true;
+                        return;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
             startForeground(NOTIFICATION_ID, notification);

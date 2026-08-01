@@ -79,6 +79,12 @@ public class LiveSessionPlugin extends Plugin {
         try {
             Context context = getContext();
 
+            // Safety check: ensure microphone permission is granted before launching foreground service with microphone type
+            if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                call.reject("RECORD_AUDIO permission not granted");
+                return;
+            }
+
             // Request POST_NOTIFICATIONS permission on Android 13+ if not already granted
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 if (ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {

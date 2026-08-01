@@ -723,9 +723,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         if (isRecording) {
             stopRecording();
         } else {
-            if (Capacitor.isNativePlatform()) {
-                try { LiveSession.startSession(); } catch (e) { console.warn('LiveSession.startSession failed:', e); }
-            }
             await ensureConnection(true);
         }
     };
