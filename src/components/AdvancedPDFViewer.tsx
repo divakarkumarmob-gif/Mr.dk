@@ -11,9 +11,7 @@ import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { keepAwake, allowSleep } from '../utils/keepAwake';
 
-import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
-
-pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const MIN_SCALE = 0.25;
 const MAX_SCALE = 4.0;
