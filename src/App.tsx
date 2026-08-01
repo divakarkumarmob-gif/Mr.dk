@@ -3,10 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, {useState, useEffect, lazy, Suspense} from 'react';
+import React, {useState, useEffect, useRef, useCallback, lazy, Suspense} from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { LocalNotifications } from '@capacitor/local-notifications';
 import {onAuthStateChanged, User} from 'firebase/auth';
+import { showToast } from './utils/toast';
 import { getToken } from 'firebase/messaging';
 import { App as CapacitorApp } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
@@ -995,54 +996,140 @@ function AppInner() {
     // CapacitorApp setup is not available, skipping to ensure build.
   }, []);
 
+  const lastBackPressTimeRef = useRef<number>(0);
+
+  const handleBackNavigation = useCallback(() => {
+    // 1. Close active overlays / modals (top to bottom priority)
+    if (showNeuralSolverRef.current || showNeuralSolver) {
+      setShowNeuralSolver(false);
+      return true;
+    }
+    if (showSupportModalRef.current || showSupportModal) {
+      setShowSupportModal(false);
+      return true;
+    }
+    if (showFlashcardsRef.current || showFlashcards) {
+      setShowFlashcards(false);
+      return true;
+    }
+    if (showStudyDashboardRef.current || showStudyDashboard) {
+      setShowStudyDashboard(false);
+      return true;
+    }
+    if (showAnalyticsRef.current || showAnalytics) {
+      setShowAnalytics(false);
+      return true;
+    }
+    if (showNotifications || isNotificationView) {
+      setShowNotifications(false);
+      setIsNotificationView(false);
+      return true;
+    }
+    if (showRandomPopupRef.current || showRandomPopup) {
+      setShowRandomPopup(false);
+      return true;
+    }
+    if (showResetModalRef.current || showResetModal) {
+      setShowResetModal(false);
+      return true;
+    }
+    if (showSummaryRef.current || showSummary) {
+      setShowSummary(false);
+      return true;
+    }
+    if (selectedAnalysisResult) {
+      setSelectedAnalysisResult(null);
+      return true;
+    }
+    if (activeVideo) {
+      setActiveVideo(null);
+      return true;
+    }
+    if (resumingTest) {
+      setResumingTest(null);
+      return true;
+    }
+
+    // 2. Sub-views within features
+    if (currentView === 'privateVideosPlayer') {
+      setCurrentView('privateVideosChapter');
+      return true;
+    }
+    if (currentView === 'privateVideosChapter') {
+      setCurrentView('privateVideosList');
+      return true;
+    }
+    if (currentView === 'privateVideosList') {
+      setCurrentView('study');
+      return true;
+    }
+    if (currentView === 'adminChat') {
+      setCurrentView('admin');
+      return true;
+    }
+    if (currentView === 'technicalSupport') {
+      setCurrentView('profile');
+      return true;
+    }
+    if (currentView === 'ncertHub' || currentView === 'ntaQuestionsHub' || currentView === 'oldPyqHistory') {
+      setCurrentView('notes');
+      return true;
+    }
+    if (currentView === 'customPractice') {
+      setCurrentView('study');
+      return true;
+    }
+    if (currentView === 'editProfile') {
+      setCurrentView('profile');
+      return true;
+    }
+
+    // 3. Secondary main tabs -> return to Home tab
+    if (currentView !== 'home') {
+      setCurrentView('home');
+      return true;
+    }
+
+    // 4. On Home screen with no modals open: double-press back to exit app
+    const now = Date.now();
+    if (now - lastBackPressTimeRef.current < 2000) {
+      if (Capacitor.isNativePlatform()) {
+        CapacitorApp.exitApp();
+      }
+    } else {
+      lastBackPressTimeRef.current = now;
+      showToast("Press back again to exit");
+    }
+    return true;
+  }, [
+    showNeuralSolver, showSupportModal, showFlashcards, showStudyDashboard,
+    showAnalytics, showNotifications, isNotificationView, showRandomPopup,
+    showResetModal, showSummary, selectedAnalysisResult, activeVideo,
+    resumingTest, currentView
+  ]);
+
+  // Hook into Capacitor native hardware back button (Android)
   useEffect(() => {
-    const handlePopState = (e: PopStateEvent) => {
-        if (e.state && e.state.privateVideoView) {
-            return;
-        }
+    if (!Capacitor.isNativePlatform()) return;
 
-        // If we have active overlays, close them
-        // But for activeVideo, only close if we are not returning to a state that still has activeVideo
-        if (showNotifications || showAnalytics || showResetModal || showRandomPopup) {
-            setShowNotifications(false);
-            setShowAnalytics(false);
-            setShowResetModal(false);
-            setShowRandomPopup(false);
-            return;
-        }
+    const backListenerPromise = CapacitorApp.addListener('backButton', () => {
+      handleBackNavigation();
+    });
 
-        if (activeVideo && !e.state?.activeVideo) {
-            setActiveVideo(null);
-            return;
-        }
+    return () => {
+      backListenerPromise.then(l => l.remove()).catch(() => {});
+    };
+  }, [handleBackNavigation]);
 
-        // Home exit-trap logic only if we are currently at home
-        if (currentView === 'home') {
-            setBackPressCount(prev => prev + 1);
-            setShowExitToast(true);
-            setTimeout(() => {
-                setShowExitToast(false);
-                setBackPressCount(0);
-            }, 2000);
-
-            if (backPressCount >= 1) {
-                // Really exit
-                window.history.back();
-            } else {
-                // Re-trap
-                window.history.pushState({ view: 'home' }, '', '/home');
-            }
-            return;
-        }
-
-        // Otherwise navigate back
-        const poppedView = e.state?.view || 'home';
-        _setCurrentView(poppedView);
+  // Hook into browser window popstate
+  useEffect(() => {
+    const handlePopState = () => {
+      handleBackNavigation();
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [currentView, activeVideo, showNotifications, showAnalytics, showResetModal, showRandomPopup, backPressCount]);
+  }, [handleBackNavigation]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
