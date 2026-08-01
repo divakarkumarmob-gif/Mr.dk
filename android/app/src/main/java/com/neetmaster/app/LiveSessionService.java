@@ -20,15 +20,7 @@ import androidx.core.graphics.drawable.IconCompat;
 
 /**
  * Foreground service that shows an ongoing call-style notification while
- * the Live AI session is active. On API 31+ it uses the real
- * {@link NotificationCompat.CallStyle} which gives the native round-icon,
- * marquee title, chronometer and action buttons for free (matching
- * Gemini Live's notification exactly). On API 24-30 it falls back to a
- * custom {@link RemoteViews} layout that replicates the same visual.
- *
- * The service communicates back to the Capacitor WebView exclusively via
- * broadcasts — LiveSessionPlugin registers a BroadcastReceiver that
- * converts them into Capacitor listener events.
+ * the Live AI session is active.
  */
 public class LiveSessionService extends Service {
 
@@ -38,52 +30,55 @@ public class LiveSessionService extends Service {
     public static final String ACTION_END_CALL = "com.neetmaster.app.ACTION_END_CALL";
     public static final String ACTION_MUTE_TOGGLE = "com.neetmaster.app.ACTION_MUTE_TOGGLE";
 
-    // Tracked so we can swap the mic icon without resetting the chronometer.
     private boolean isMuted = false;
     private long sessionStartTimeMillis;
+    private boolean isForegroundStarted = false;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        sessionStartTimeMillis = System.currentTimeMillis();
         createNotificationChannel();
+        startForegroundSafely();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // Allow re-start commands to update mute state without resetting the
-        // timer. The plugin sends an explicit "updateMute" extra when only
-        // the icon needs to change.
+        if (!isForegroundStarted) {
+            startForegroundSafely();
+        }
+
         if (intent != null && intent.hasExtra("updateMute")) {
             isMuted = intent.getBooleanExtra("updateMute", false);
-            NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-            if (nm != null) {
-                nm.notify(NOTIFICATION_ID, buildNotification());
-            }
-            return START_STICKY;
+        } else {
+            isMuted = false;
         }
 
-        sessionStartTimeMillis = System.currentTimeMillis();
-        isMuted = false;
-
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                startForeground(NOTIFICATION_ID, buildNotification(),
-                        ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE | ServiceInfo.FOREGROUND_SERVICE_TYPE_PHONE_CALL);
-            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                startForeground(NOTIFICATION_ID, buildNotification(),
-                        ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE);
-            } else {
-                startForeground(NOTIFICATION_ID, buildNotification());
-            }
-        } catch (Exception e) {
-            // On some OEMs startForeground can throw if the notification
-            // channel was deleted or permissions were revoked. Don't crash
-            // the app — the live session still works, just without the
-            // persistent notification.
-            e.printStackTrace();
-            stopSelf();
+        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (nm != null) {
+            nm.notify(NOTIFICATION_ID, buildNotification());
         }
+
         return START_STICKY;
+    }
+
+    private void startForegroundSafely() {
+        Notification notification = buildNotification();
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                try {
+                    startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE);
+                    isForegroundStarted = true;
+                    return;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            startForeground(NOTIFICATION_ID, notification);
+            isForegroundStarted = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -93,6 +88,7 @@ public class LiveSessionService extends Service {
 
     @Override
     public void onDestroy() {
+        isForegroundStarted = false;
         super.onDestroy();
     }
 
@@ -110,10 +106,8 @@ public class LiveSessionService extends Service {
 
     /**
      * API 31+ (Android 12+): Native CallStyle notification.
-     * Gives the exact Gemini-Live-style appearance for free.
      */
     private Notification buildCallStyleNotification() {
-        // Person object — its name becomes the marquee-scrolling title.
         Bitmap iconBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round);
         Person caller = new Person.Builder()
                 .setName("NeetMaster Live AI")
@@ -121,7 +115,6 @@ public class LiveSessionService extends Service {
                 .setImportant(true)
                 .build();
 
-        // Hang-up PendingIntent → broadcast
         Intent endIntent = new Intent(ACTION_END_CALL);
         endIntent.setPackage(getPackageName());
         PendingIntent hangUpPendingIntent = PendingIntent.getBroadcast(
@@ -129,7 +122,6 @@ public class LiveSessionService extends Service {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
-        // Mic toggle action
         Intent muteIntent = new Intent(ACTION_MUTE_TOGGLE);
         muteIntent.setPackage(getPackageName());
         PendingIntent mutePendingIntent = PendingIntent.getBroadcast(
@@ -145,14 +137,12 @@ public class LiveSessionService extends Service {
                 mutePendingIntent
         ).build();
 
-        // Content intent — tapping the notification body opens the app
         Intent contentIntent = getPackageManager().getLaunchIntentForPackage(getPackageName());
         PendingIntent contentPendingIntent = PendingIntent.getActivity(
                 this, 2, contentIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
-        // Build with CallStyle
         NotificationCompat.CallStyle callStyle =
                 NotificationCompat.CallStyle.forOngoingCall(caller, hangUpPendingIntent);
 
@@ -169,24 +159,18 @@ public class LiveSessionService extends Service {
     }
 
     /**
-     * API 24-30 fallback: custom RemoteViews layout replicating the
-     * CallStyle visual. Marquee may or may not animate depending on the
-     * OEM — falls back to static ellipsis gracefully.
+     * API 24-30 fallback: custom RemoteViews layout.
      */
     private Notification buildFallbackNotification() {
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.notification_live_session);
 
-        // Set the mic icon based on mute state
         remoteViews.setImageViewResource(R.id.btn_mic_toggle,
                 isMuted ? R.drawable.ic_mic_off : R.drawable.ic_mic_on);
 
-        // Set up the Chronometer — it needs a base relative to
-        // SystemClock.elapsedRealtime(), not System.currentTimeMillis().
         long elapsedSinceStart = System.currentTimeMillis() - sessionStartTimeMillis;
         long chronometerBase = SystemClock.elapsedRealtime() - elapsedSinceStart;
         remoteViews.setChronometer(R.id.notification_timer, chronometerBase, null, true);
 
-        // Hang-up PendingIntent
         Intent endIntent = new Intent(ACTION_END_CALL);
         endIntent.setPackage(getPackageName());
         PendingIntent hangUpPendingIntent = PendingIntent.getBroadcast(
@@ -195,7 +179,6 @@ public class LiveSessionService extends Service {
         );
         remoteViews.setOnClickPendingIntent(R.id.btn_end_call, hangUpPendingIntent);
 
-        // Mic toggle PendingIntent
         Intent muteIntent = new Intent(ACTION_MUTE_TOGGLE);
         muteIntent.setPackage(getPackageName());
         PendingIntent mutePendingIntent = PendingIntent.getBroadcast(
@@ -204,7 +187,6 @@ public class LiveSessionService extends Service {
         );
         remoteViews.setOnClickPendingIntent(R.id.btn_mic_toggle, mutePendingIntent);
 
-        // Content intent — tapping notification body opens the app
         Intent contentIntent = getPackageManager().getLaunchIntentForPackage(getPackageName());
         PendingIntent contentPendingIntent = PendingIntent.getActivity(
                 this, 2, contentIntent,
@@ -232,10 +214,11 @@ public class LiveSessionService extends Service {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
                     "Live AI Session",
-                    NotificationManager.IMPORTANCE_LOW // Silent — no sound/vibration
+                    NotificationManager.IMPORTANCE_LOW
             );
             channel.setDescription("Ongoing notification for Live AI voice sessions");
             channel.setShowBadge(false);
+            channel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
 
             NotificationManager manager = getSystemService(NotificationManager.class);
             if (manager != null) {

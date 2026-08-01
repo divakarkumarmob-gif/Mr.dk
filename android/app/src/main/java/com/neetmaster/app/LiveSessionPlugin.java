@@ -1,31 +1,36 @@
 package com.neetmaster.app;
 
+import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Build;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import com.getcapacitor.annotation.Permission;
 
 /**
  * Capacitor plugin that bridges the Live AI session's foreground service
  * (CallStyle notification) to the JS/TS side.
- *
- * JS API:
- *   LiveSession.startSession()   — starts the foreground service + notification
- *   LiveSession.stopSession()    — stops the foreground service
- *   LiveSession.updateMute({ muted: boolean }) — swaps mic icon without restarting
- *
- * Events emitted to JS via notifyListeners():
- *   "callEnded"    — user tapped the red end-call button in the notification
- *   "muteToggled"  — user tapped the mic button in the notification
  */
-@CapacitorPlugin(name = "LiveSession")
+@CapacitorPlugin(
+    name = "LiveSession",
+    permissions = {
+        @Permission(
+            alias = "notifications",
+            strings = { Manifest.permission.POST_NOTIFICATIONS }
+        )
+    }
+)
 public class LiveSessionPlugin extends Plugin {
 
     private BroadcastReceiver receiver;
@@ -33,8 +38,6 @@ public class LiveSessionPlugin extends Plugin {
 
     @Override
     public void load() {
-        // Register a broadcast receiver that listens for the notification
-        // action broadcasts and forwards them to the JS layer.
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -43,7 +46,6 @@ public class LiveSessionPlugin extends Plugin {
                     switch (intent.getAction()) {
                         case LiveSessionService.ACTION_END_CALL:
                             notifyListeners("callEnded", new JSObject());
-                            // Also stop the service since the user tapped end-call
                             stopServiceInternal();
                             break;
                         case LiveSessionService.ACTION_MUTE_TOGGLE:
@@ -75,11 +77,22 @@ public class LiveSessionPlugin extends Plugin {
     @PluginMethod
     public void startSession(PluginCall call) {
         try {
-            Intent serviceIntent = new Intent(getContext(), LiveSessionService.class);
+            Context context = getContext();
+
+            // Request POST_NOTIFICATIONS permission on Android 13+ if not already granted
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                if (ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                    if (getActivity() != null) {
+                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
+                    }
+                }
+            }
+
+            Intent serviceIntent = new Intent(context, LiveSessionService.class);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                getContext().startForegroundService(serviceIntent);
+                context.startForegroundService(serviceIntent);
             } else {
-                getContext().startService(serviceIntent);
+                context.startService(serviceIntent);
             }
             call.resolve(new JSObject().put("started", true));
         } catch (Exception e) {
@@ -99,12 +112,6 @@ public class LiveSessionPlugin extends Plugin {
         }
     }
 
-    /**
-     * Update the notification's mic icon without restarting the service
-     * or resetting the chronometer. Called from JS when the user mutes/
-     * unmutes from within the app UI, so the notification icon stays in
-     * sync.
-     */
     @PluginMethod
     public void updateMute(PluginCall call) {
         try {
@@ -141,7 +148,7 @@ public class LiveSessionPlugin extends Plugin {
                 receiver = null;
             }
         } catch (Exception e) {
-            // Receiver may not have been registered — safe to ignore.
+            // Safe to ignore
         }
         stopServiceInternal();
     }
