@@ -16,6 +16,7 @@ public class MainActivity extends BridgeActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         registerPlugin(BackgroundSettingsPlugin.class);
+        registerPlugin(LiveSessionPlugin.class);
         super.onCreate(savedInstanceState);
         
         // Block screenshots and screen recordings

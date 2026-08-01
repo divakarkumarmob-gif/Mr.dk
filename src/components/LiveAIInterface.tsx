@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings, ChevronDown, Captions, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Capacitor } from '@capacitor/core';
 import AgentFace from './AgentFace';
 import HomeScreenShortcutPrompt from './HomeScreenShortcutPrompt';
 import ChatHistoryModal from './ChatHistoryModal';
@@ -8,6 +9,7 @@ import { auth } from '../lib/firebase';
 import { saveAIMessage, subscribeToMessages, uploadMedia } from '../services/chatService';
 import { Message } from '../types';
 import { takePhoto } from '../utils/camera';
+import { LiveSession } from '../utils/liveSession';
 
 interface LiveAIInterfaceProps {
     onClose: () => void;
@@ -229,6 +231,10 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     const isAiSpeaking = useRef<boolean>(false);
     const isInitializedRef = useRef<boolean>(false);
     const initAckTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    // Tracks the MediaStream so we can toggle track.enabled on mute/unmute
+    // from the notification without closing the WebSocket.
+    const mediaStreamRef = useRef<MediaStream | null>(null);
+    const isMutedRef = useRef<boolean>(false);
 
     const fileToBase64 = (file: File): Promise<string> => {
         return new Promise((resolve, reject) => {
@@ -380,9 +386,17 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         if (inputAudioCtx.current && inputAudioCtx.current.state !== 'closed') {
             inputAudioCtx.current.close();
         }
+        // Stop all mic tracks and clear the ref
+        mediaStreamRef.current?.getTracks().forEach(t => t.stop());
+        mediaStreamRef.current = null;
+        isMutedRef.current = false;
         stopAudio();
         setIsRecording(false);
         setStatus("Idle");
+        // Stop the native foreground service / CallStyle notification
+        if (Capacitor.isNativePlatform()) {
+            try { LiveSession.stopSession(); } catch (e) { console.warn('LiveSession.stopSession failed:', e); }
+        }
     };
 
     const handleInterrupt = () => {
@@ -395,6 +409,38 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     useEffect(() => {
         return () => {
             stopRecording();
+        };
+    }, []);
+
+    // Listen for notification button events from native Android service.
+    // callEnded  → user tapped end-call in notification → close everything
+    // muteToggled → user tapped mic in notification → toggle mic tracks
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) return;
+
+        const endCallHandle = LiveSession.addListener('callEnded', () => {
+            console.log('Notification: callEnded received');
+            stopRecording();
+            onClose();
+        });
+
+        const muteHandle = LiveSession.addListener('muteToggled', () => {
+            console.log('Notification: muteToggled received');
+            const stream = mediaStreamRef.current;
+            if (!stream) return;
+            // Toggle all audio tracks
+            const newMuted = !isMutedRef.current;
+            stream.getAudioTracks().forEach(track => {
+                track.enabled = !newMuted;
+            });
+            isMutedRef.current = newMuted;
+            // Sync the notification icon
+            try { LiveSession.updateMute({ muted: newMuted }); } catch (e) { /* ignore */ }
+        });
+
+        return () => {
+            endCallHandle.then(h => h.remove()).catch(() => {});
+            muteHandle.then(h => h.remove()).catch(() => {});
         };
     }, []);
 
@@ -415,6 +461,11 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         setIsRecording(true);
         setStatus("Listening...");
         nextStartTime.current = 0;
+        mediaStreamRef.current = stream;
+        // Start native CallStyle notification
+        if (Capacitor.isNativePlatform()) {
+            try { LiveSession.startSession(); } catch (e) { console.warn('LiveSession.startSession failed:', e); }
+        }
 
         inputAudioCtx.current = new AudioContext({ sampleRate: 16000 });
         outputAudioCtx.current = new AudioContext({ sampleRate: 24000 });
@@ -483,6 +534,12 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             setStatus(withMic ? "Listening..." : "Connected");
             nextStartTime.current = 0;
 
+            // Start the native foreground service (CallStyle notification)
+            // the moment we have a mic-active live session.
+            if (withMic && Capacitor.isNativePlatform()) {
+                try { LiveSession.startSession(); } catch (e) { console.warn('LiveSession.startSession failed:', e); }
+            }
+
             // CRITICAL: the server only creates a Gemini Live session once it
             // receives an 'init' message. Without this, the socket looks
             // "open" and mic capture starts fine, but every audio chunk we
@@ -520,6 +577,9 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             // NOTE: Removed automatic sending of last 25 images to prevent AI from pre-emptively analyzing them.
 
             if (withMic && stream) {
+                // Save the stream ref so notification mute-toggle can
+                // flip track.enabled without closing the socket.
+                mediaStreamRef.current = stream;
                 inputAudioCtx.current = new AudioContext({ sampleRate: 16000 });
                 outputAudioCtx.current = new AudioContext({ sampleRate: 24000 });
 

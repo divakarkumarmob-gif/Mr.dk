@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Custom RemoteViews layout for API 24-30 (pre-Android 12) where CallStyle
+     is not available. Replicates the CallStyle visual: round app icon on the
+     left, marquee-scrolling title + chronometer in the center, mic and
+     end-call action buttons on the right. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp"
+    android:background="#FF1E1E1E">
+
+    <!-- Round app icon -->
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:scaleType="centerCrop"
+        android:contentDescription="NeetMaster" />
+
+    <!-- Title + Timer column -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp">
+
+        <!-- Marquee-scrolling title — mirrors CallStyle's auto-scrolling
+             caller name. android:selected="true" is needed because marquee
+             only animates on a focused/selected view; RemoteViews doesn't
+             support requestFocus(), so selected=true is our best bet. On
+             some OEMs it may fall back to static ellipsis, which is an
+             acceptable graceful degradation. -->
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NeetMaster Live AI"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true" />
+
+        <!-- Running chronometer — shows elapsed time since session start,
+             synced via setBase() from the service. -->
+        <Chronometer
+            android:id="@+id/notification_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFB0B0B0"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Mic toggle button -->
+    <ImageView
+        android:id="@+id/btn_mic_toggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_mic_on"
+        android:scaleType="centerInside"
+        android:padding="8dp"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Toggle Microphone"
+        android:layout_marginEnd="8dp" />
+
+    <!-- End call button -->
+    <ImageView
+        android:id="@+id/btn_end_call"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_call_end"
+        android:scaleType="centerInside"
+        android:padding="8dp"
+        android:background="#FFE53935"
+        android:contentDescription="End Call" />
+
+</LinearLayout>
