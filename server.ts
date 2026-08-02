@@ -19,7 +19,6 @@ import firebaseConfig from './firebase-applet-config.json' assert { type: 'json'
 import * as cheerio from 'cheerio';
 import { OpenRouter } from "@openrouter/sdk";
 import nodemailer from 'nodemailer';
-import Razorpay from 'razorpay';
 import crypto from 'crypto';
 import textToSpeech from '@google-cloud/text-to-speech';
 import { S3Client, ListObjectsV2Command, GetObjectCommand, ListBucketsCommand, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
@@ -130,15 +129,7 @@ async function requireAppCheck(req: any, res: any, next: any) {
 
 const logs: string[] = [];
 
-if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
-    throw new Error("RAZORPAY_KEY_ID / RAZORPAY_KEY_SECRET missing in environment");
-}
-
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
-const razorpay = new Razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID,
-    key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
 
 function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
         if (typeof prompt === 'string') return prompt;
@@ -1237,38 +1228,7 @@ async function startServer() {
       }
   });
 
-  app.post("/api/create-order", async (req, res) => {
-    if (!razorpay) return res.status(500).json({ error: "Razorpay not configured" });
-    const { amount } = req.body;
-    try {
-        const order = await razorpay.orders.create({
-            amount: amount * 100, // amount in paise
-            currency: "INR",
-            receipt: "receipt_order_" + Date.now(),
-        });
-        res.json(order);
-    } catch (error) {
-        console.error("Razorpay Error:", error);
-        res.status(500).json({ error: "Failed to create order" });
-    }
-  });                
 
-  app.post("/api/verify-payment", async (req, res) => {
-    if (!razorpay) return res.status(500).json({ error: "Razorpay not configured" });
-    const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
-    
-    // Verify
-    const hmac = crypto.createHmac('sha256', process.env.RAZORPAY_KEY_SECRET!);
-    hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
-    const generated_signature = hmac.digest('hex');
-    
-    if (generated_signature === razorpay_signature) {
-        // Success - You could mark payment as successful in db here
-        res.json({ success: true });
-    } else {
-        res.status(400).json({ error: "Invalid signature" });
-    }
-  });                
   
   app.post("/api/send-notification", async (req, res) => {
     const { title, message, notificationId } = req.body;

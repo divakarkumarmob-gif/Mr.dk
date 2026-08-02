@@ -28,7 +28,6 @@ export default function PrivacyPolicy({ onBack }: { onBack: () => void }) {
             <li>Photos or images you choose to capture/upload via the camera (e.g. for doubt-solving)</li>
             <li>Voice audio, only while you are actively using the Live AI Voice Interface</li>
             <li>Chat messages and transcripts from AI/doubt-solving conversations</li>
-            <li>Payment confirmation details (order ID, payment status) when you make a purchase — full card/bank details are handled directly by Razorpay and are never stored on our servers</li>
           </ul>
         </section>
 
@@ -39,7 +38,6 @@ export default function PrivacyPolicy({ onBack }: { onBack: () => void }) {
             <li>To save and track your study progress and performance analysis.</li>
             <li>To power AI features such as doubt-solving, AI search, study plans, and the Live AI Voice Interface.</li>
             <li>To send push/local notifications such as study reminders and updates (you can turn these off in device settings).</li>
-            <li>To process payments for premium features, and verify successful transactions.</li>
             <li>To improve the functionality and user experience of our app.</li>
           </ul>
         </section>
@@ -53,7 +51,6 @@ export default function PrivacyPolicy({ onBack }: { onBack: () => void }) {
             <li>Firebase Cloud Messaging (for push notifications)</li>
             <li>Google Sign-In</li>
             <li>Google Gemini AI (for AI search, doubt-solving, and the Live AI Voice Interface)</li>
-            <li>Razorpay (for secure payment processing)</li>
           </ul>
           <p className="mt-2">Each of these providers has its own privacy practices governing the data they process on our behalf.</p>
         </section>

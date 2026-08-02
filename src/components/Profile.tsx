@@ -140,7 +140,7 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                                         <Zap className="h-5 w-5 text-black fill-black" />
                                         <span className="text-sm font-black text-black uppercase tracking-tight">Get Premium Now</span>
                                     </Pressable>
-                                    <p className="text-[9px] text-gray-500 text-center uppercase font-bold tracking-widest">Secure Payments via Razorpay</p>
+                                    <p className="text-[9px] text-gray-500 text-center uppercase font-bold tracking-widest">100% Encrypted & Secure Access</p>
                                 </div>
                             </div>
                         </motion.div>

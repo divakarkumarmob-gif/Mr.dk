@@ -41,7 +41,7 @@ export default function TermsOfService({ onBack }: { onBack: () => void }) {
 
         <section>
           <h2 className="text-xl font-semibold mb-2 text-white">5. Payments & Subscriptions</h2>
-          <p>Certain features of Neet Master (such as premium content, tests, or study material) may require payment. Payments are processed securely through Razorpay, a third-party payment gateway. We do not store your card, UPI, or bank details on our servers. All payments are subject to Razorpay's own terms and security standards. Please contact us before making a payment if you have any doubts, as payments for digital content are generally non-refundable once access has been granted, except where required by law.</p>
+          <p>Certain features of Neet Master (such as premium content, tests, or study material) may require payment. All payments are processed securely using encrypted channels. We do not store your card, UPI, or bank details on our servers. Please contact us before making a payment if you have any doubts, as payments for digital content are generally non-refundable once access has been granted, except where required by law.</p>
         </section>
 
         <section>
