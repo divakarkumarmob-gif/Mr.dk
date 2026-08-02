@@ -946,7 +946,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 <div className="my-2.5 flex justify-center">
                     <div className="w-full max-w-md px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-300/90 text-center font-medium shadow-md flex items-center justify-center gap-1.5 leading-snug">
                         <Shield className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                        <span>All Community Posts, Room Chats & 1v1 Messages are End-to-End Encrypted 🔒</span>
+                        <span>Room Chats & 1v1 Messages are End-to-End Encrypted 🔒</span>
                     </div>
                 </div>
 

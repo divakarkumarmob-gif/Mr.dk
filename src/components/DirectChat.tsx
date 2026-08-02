@@ -427,6 +427,11 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const handleSendVoiceNote = async () => {
         if (!recordedAudioBlob) return;
 
+        if (!sharedSecret) {
+            showToast('Encryption ready nahi hai, thoda wait karo');
+            return;
+        }
+
         if (previewAudioRef.current) {
             previewAudioRef.current.pause();
             setIsPreviewPlaying(false);
@@ -437,6 +442,23 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         reader.onloadend = async () => {
             const base64Audio = reader.result as string;
             const initialStatus: 'sent' | 'delivered' = presence.isOnline ? 'delivered' : 'sent';
+
+            let payload: any = {
+                senderId: currentUid,
+                senderName: currentName,
+                audioUrl: base64Audio,
+                audioDuration: recordedDuration || 1,
+                status: initialStatus,
+                timestamp: serverTimestamp()
+            };
+
+            try {
+                payload = await encryptPayloadWithKey(payload, sharedSecret);
+            } catch (e) {
+                console.error("Encryption error for voice note:", e);
+                showToast('Encryption error, message bhej nahi paye');
+                return;
+            }
 
             const newMsg: DirectMessage = {
                 id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
@@ -460,19 +482,6 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             showToast('Voice Note bhej diya! 🎙️');
 
             try {
-                let payload: any = {
-                    senderId: currentUid,
-                    senderName: currentName,
-                    audioUrl: base64Audio,
-                    audioDuration: newMsg.audioDuration,
-                    status: initialStatus,
-                    timestamp: serverTimestamp()
-                };
-
-                if (sharedSecret) {
-                    payload = await encryptPayloadWithKey(payload, sharedSecret);
-                }
-
                 await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
 
                 await updateDoc(doc(db, 'directChats', chatId), {
@@ -514,14 +523,38 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         e.preventDefault();
         if (!text.trim() && !imageUrl.trim()) return;
 
+        if (!sharedSecret) {
+            showToast('Encryption ready nahi hai, thoda wait karo');
+            return;
+        }
+
         const initialStatus: 'sent' | 'delivered' = presence.isOnline ? 'delivered' : 'sent';
+        const textToSend = text.trim();
+        const imageToSend = imageUrl.trim();
+
+        let payload: any = {
+            senderId: currentUid,
+            senderName: currentName,
+            text: textToSend || '',
+            imageUrl: imageToSend || '',
+            status: initialStatus,
+            timestamp: serverTimestamp()
+        };
+
+        try {
+            payload = await encryptPayloadWithKey(payload, sharedSecret);
+        } catch (e) {
+            console.error("Encryption error for message:", e);
+            showToast('Encryption error, message bhej nahi paye');
+            return;
+        }
 
         const newMsg: DirectMessage = {
             id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
             senderId: currentUid,
             senderName: currentName,
-            text: text.trim() || undefined,
-            imageUrl: imageUrl.trim() || undefined,
+            text: textToSend || undefined,
+            imageUrl: imageToSend || undefined,
             status: initialStatus,
             timestamp: new Date().toISOString()
         };
@@ -529,24 +562,10 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         setMessages(prev => [...prev, newMsg]);
         saveLocalDirectMessage(newMsg);
 
-        const textToSend = text.trim();
         setText('');
         setImageUrl('');
 
         try {
-            let payload: any = {
-                senderId: currentUid,
-                senderName: currentName,
-                text: textToSend || '',
-                imageUrl: newMsg.imageUrl || '',
-                status: initialStatus,
-                timestamp: serverTimestamp()
-            };
-
-            if (sharedSecret) {
-                payload = await encryptPayloadWithKey(payload, sharedSecret);
-            }
-
             await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
 
             await updateDoc(doc(db, 'directChats', chatId), {
@@ -822,7 +841,8 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                         </button>
                         <button 
                             onClick={handleSendVoiceNote}
-                            className="p-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg"
+                            disabled={!sharedSecret}
+                            className="p-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg disabled:opacity-40 disabled:cursor-not-allowed"
                         >
                             <Send className="w-3.5 h-3.5" /> Send Voice Note
                         </button>
@@ -846,16 +866,17 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     <button 
                         type="button"
                         onClick={startRecording}
-                        className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-emerald-400 transition"
-                        title="Record Voice Note"
+                        disabled={!sharedSecret}
+                        className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-emerald-400 disabled:opacity-40 disabled:cursor-not-allowed transition"
+                        title={sharedSecret ? "Record Voice Note" : "Encryption ready nahi hai"}
                     >
                         <Mic className="w-5 h-5" />
                     </button>
 
                     <button 
                         type="submit"
-                        disabled={!text.trim() && !imageUrl.trim()}
-                        className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white disabled:opacity-40 transition shadow-lg"
+                        disabled={(!text.trim() && !imageUrl.trim()) || !sharedSecret}
+                        className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white disabled:opacity-40 disabled:cursor-not-allowed transition shadow-lg"
                     >
                         <Send className="w-5 h-5" />
                     </button>

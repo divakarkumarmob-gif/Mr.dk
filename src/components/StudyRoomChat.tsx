@@ -607,12 +607,31 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
 
     const handleSendVoiceNote = async () => {
         if (!recordedAudioBase64) return;
-        const base64Audio = recordedAudioBase64;
-        cancelVoiceNotePreview();
-        await sendVoiceNote(base64Audio);
-    };
 
-    const sendVoiceNote = async (base64Audio: string) => {
+        if (!roomSymmetricKey) {
+            showToast('Encryption ready nahi hai, thoda wait karo');
+            return;
+        }
+
+        const base64Audio = recordedAudioBase64;
+
+        let payload: any = {
+            senderId: currentUid,
+            senderName: currentName,
+            audioUrl: base64Audio,
+            timestamp: serverTimestamp()
+        };
+
+        try {
+            payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+        } catch (e) {
+            console.error("Voice note encryption error:", e);
+            showToast('Encryption error, message bhej nahi paye');
+            return;
+        }
+
+        cancelVoiceNotePreview();
+
         const newMsg: RoomMessage = {
             id: 'msg_voice_' + Date.now(),
             roomId: room.id,
@@ -626,17 +645,6 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         saveLocalRoomMessage(newMsg);
 
         try {
-            let payload: any = {
-                senderId: newMsg.senderId,
-                senderName: newMsg.senderName,
-                audioUrl: base64Audio,
-                timestamp: serverTimestamp()
-            };
-
-            if (roomSymmetricKey) {
-                payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
-            }
-
             await addDoc(collection(db, 'studyRooms', room.id, 'messages'), payload);
             showToast('Voice Doubt Note sent! 🎙️');
         } catch (e) {}
@@ -664,6 +672,12 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     // Create Live MCQ Question Poll Handler
     const handleCreatePoll = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!roomSymmetricKey) {
+            showToast('Encryption ready nahi hai, thoda wait karo');
+            return;
+        }
+
         const validOptions = pollOptions.map(o => o.trim()).filter(o => o !== '');
         if (!pollQuestion.trim() || validOptions.length < 2) {
             showToast('Poll question aur kam se kam 2 valid options likhein!');
@@ -676,6 +690,21 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             correctIdx: pollCorrectIdx,
             votes: {}
         };
+
+        let payload: any = {
+            senderId: currentUid,
+            senderName: currentName,
+            pollData: pollData,
+            timestamp: serverTimestamp()
+        };
+
+        try {
+            payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+        } catch (e) {
+            console.error("Poll encryption error:", e);
+            showToast('Encryption error, message bhej nahi paye');
+            return;
+        }
 
         const newMsg: RoomMessage = {
             id: 'msg_poll_' + Date.now(),
@@ -695,17 +724,6 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         setPollCorrectIdx(0);
 
         try {
-            let payload: any = {
-                senderId: newMsg.senderId,
-                senderName: newMsg.senderName,
-                pollData: pollData,
-                timestamp: serverTimestamp()
-            };
-
-            if (roomSymmetricKey) {
-                payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
-            }
-
             await addDoc(collection(db, 'studyRooms', room.id, 'messages'), payload);
             showToast('Live MCQ Question Poll posted! 📊');
         } catch (e) {}
@@ -762,13 +780,37 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             return;
         }
 
+        if (!roomSymmetricKey) {
+            showToast('Encryption ready nahi hai, thoda wait karo');
+            return;
+        }
+
+        const textToSend = messageText.trim();
+        const imageToSend = imageUrl.trim();
+
+        let payload: any = {
+            senderId: currentUid || 'user',
+            senderName: currentName || 'NEET Aspirant',
+            text: textToSend || '',
+            imageUrl: imageToSend || '',
+            timestamp: serverTimestamp()
+        };
+
+        try {
+            payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+        } catch (err) {
+            console.error("Message encryption error:", err);
+            showToast('Encryption error, message bhej nahi paye');
+            return;
+        }
+
         const newMsg: RoomMessage = {
             id: 'msg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
             roomId: room.id,
             senderId: currentUid,
             senderName: currentName,
-            text: messageText.trim() || undefined,
-            imageUrl: imageUrl.trim() || undefined,
+            text: textToSend || undefined,
+            imageUrl: imageToSend || undefined,
             timestamp: new Date().toISOString()
         };
 
@@ -779,18 +821,6 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         setImageUrl('');
 
         try {
-            let payload: any = {
-                senderId: newMsg.senderId || 'user',
-                senderName: newMsg.senderName || 'NEET Aspirant',
-                text: newMsg.text || '',
-                imageUrl: newMsg.imageUrl || '',
-                timestamp: serverTimestamp()
-            };
-
-            if (roomSymmetricKey) {
-                payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
-            }
-
             await addDoc(collection(db, 'studyRooms', room.id, 'messages'), payload);
         } catch (err) {}
 
@@ -1317,8 +1347,9 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         <button
                             type="button"
                             onClick={handleSendVoiceNote}
-                            className="p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold hover:brightness-110 transition shadow-lg flex items-center gap-1.5 text-xs shrink-0"
-                            title="Send Voice Note"
+                            disabled={!roomSymmetricKey}
+                            className="p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold hover:brightness-110 transition shadow-lg flex items-center gap-1.5 text-xs shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
+                            title={roomSymmetricKey ? "Send Voice Note" : "Encryption ready nahi hai"}
                         >
                             <span className="hidden sm:inline">Send Voice</span>
                             <Send className="w-4.5 h-4.5" />
@@ -1357,8 +1388,9 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         <button
                             type="button"
                             onClick={startRecording}
-                            className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-indigo-400 hover:bg-white/10 transition"
-                            title="Record Voice Note"
+                            disabled={!roomSymmetricKey}
+                            className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-indigo-400 hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition"
+                            title={roomSymmetricKey ? "Record Voice Note" : "Encryption ready nahi hai"}
                         >
                             <Mic className="w-5 h-5" />
                         </button>
@@ -1373,8 +1405,9 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         <button
                             type="button"
                             onClick={() => setShowPollModal(true)}
-                            className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 transition"
-                            title="Create Question Poll"
+                            disabled={!roomSymmetricKey}
+                            className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 disabled:opacity-40 disabled:cursor-not-allowed transition"
+                            title={roomSymmetricKey ? "Create Question Poll" : "Encryption ready nahi hai"}
                         >
                             <BarChart2 className="w-5 h-5" />
                         </button>
@@ -1391,7 +1424,8 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         {/* Send Button */}
                         <button
                             type="submit"
-                            className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 transition shadow-md"
+                            disabled={(!messageText.trim() && !imageUrl.trim()) || !roomSymmetricKey}
+                            className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed transition shadow-md"
                         >
                             <Send className="w-5 h-5" />
                         </button>
@@ -1514,7 +1548,8 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                                     </button>
                                     <button
                                         type="submit"
-                                        className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-xs font-bold text-white hover:brightness-110 transition shadow-lg flex items-center justify-center gap-2"
+                                        disabled={!roomSymmetricKey}
+                                        className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-xs font-bold text-white hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed transition shadow-lg flex items-center justify-center gap-2"
                                     >
                                         <BarChart2 className="w-4 h-4" />
                                         <span>Post Question Poll 🚀</span>
