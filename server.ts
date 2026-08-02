@@ -1249,7 +1249,7 @@ async function startServer() {
   });
 
   // API route for note analysis
-  app.post("/api/ask-note", async (req, res) => {
+  app.post("/api/ask-note", requireAppCheck, requireAuth, async (req, res) => {
       const { noteContent, question } = req.body;
       if (!noteContent || !question) {
           return res.status(400).json({ error: "Missing data" });
@@ -1871,7 +1871,10 @@ After writing your normal reply to the user, on a new line add the exact delimit
     }
   });
 
-  const PDF_TOKEN_SECRET = process.env.PDF_TOKEN_SECRET || process.env.JWT_SECRET || 'pdf-token-secret-key-mrdk-2026';
+  if (!process.env.PDF_TOKEN_SECRET && !process.env.JWT_SECRET) {
+    throw new Error("PDF_TOKEN_SECRET (or JWT_SECRET) missing in environment — refusing to start with an insecure default.");
+  }
+  const PDF_TOKEN_SECRET = (process.env.PDF_TOKEN_SECRET || process.env.JWT_SECRET)!;
 
   app.post("/api/proxy-pdf/token", requireAppCheck, requireAuth, async (req: any, res: any) => {
     const { url } = req.body;
