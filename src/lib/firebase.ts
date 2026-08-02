@@ -10,6 +10,8 @@ const config = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || firebaseConfig.apiKey,
 };
 
+import {initializeAppCheck, ReCaptchaEnterpriseProvider} from 'firebase/app-check';
+
 const app = initializeApp(config);
 
 const dbId = firebaseConfig.firestoreDatabaseId;
@@ -20,6 +22,20 @@ export const auth = getAuth();
 export const storage = getStorage(app, firebaseConfig.storageBucket);
 
 export const messaging = getMessaging(app);
+
+let appCheckInstance: any = null;
+if (typeof window !== 'undefined') {
+  try {
+    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LfZ-placeholder';
+    appCheckInstance = initializeAppCheck(app, {
+      provider: new ReCaptchaEnterpriseProvider(siteKey),
+      isTokenAutoRefreshEnabled: true,
+    });
+  } catch (e) {
+    console.warn('App Check init warning:', e);
+  }
+}
+export const appCheck = appCheckInstance;
 
 // ---- Phone Auth: invisible reCAPTCHA verifier (web only) ------------------
 // Native Android/iOS uses @capacitor-firebase/authentication instead, which

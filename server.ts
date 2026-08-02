@@ -84,14 +84,61 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  standardHeaders: true,
+  legacyHeaders: false,
+  keyGenerator: (req: any) => {
+    const ip = req.ip || req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown';
+    const identifier = req.body?.phone || req.body?.phoneNumber || req.body?.email || req.body?.recipient || '';
+    return `${ip}_${identifier}`;
+  },
+  message: { error: 'Too many OTP/Auth requests, please try again after 15 minutes.' }
+});
+
+async function requireAuth(req: any, res: any, next: any) {
+    const authHeader = req.headers.authorization || '';
+    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+    if (!token) {
+        return res.status(401).json({ error: 'Missing auth token' });
+    }
+    try {
+        const decoded = await admin.auth().verifyIdToken(token);
+        req.uid = decoded.uid;
+        next();
+    } catch (e) {
+        return res.status(401).json({ error: 'Invalid or expired auth token' });
+    }
+}
+
+async function requireAppCheck(req: any, res: any, next: any) {
+    if (process.env.DISABLE_APP_CHECK === 'true') {
+        return next();
+    }
+    const appCheckToken = req.headers['x-firebase-appcheck'];
+    if (!appCheckToken) {
+        return res.status(401).json({ error: 'Missing App Check token' });
+    }
+    try {
+        await admin.appCheck().verifyToken(appCheckToken as string);
+        next();
+    } catch (e) {
+        return res.status(401).json({ error: 'Invalid App Check token' });
+    }
+}
 
 const logs: string[] = [];
 
+if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+    throw new Error("RAZORPAY_KEY_ID / RAZORPAY_KEY_SECRET missing in environment");
+}
+
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
 const razorpay = new Razorpay({
-        key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test_T3UJc0yCensXWD',
-        key_secret: process.env.RAZORPAY_KEY_SECRET || 'W5a7EKvfdCGGV9tsIvC5Iqzp',
-    });
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
 
 function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
         if (typeof prompt === 'string') return prompt;
@@ -1335,24 +1382,6 @@ async function startServer() {
         });
         await Promise.allSettled(writes);
         console.log(`[FCM] Wrote ${writes.length} delivery records under notifications/${notificationId}/deliveries`);
-      } else {
-        console.warn('[FCM] No notificationId in request body — skipping delivery tracking. This means the frontend calling this endpoint is running an OLD build without the notificationId change.');
-      }
-
-      // Clean up dead tokens (NotRegistered / InvalidArgument) so failure
-      // count doesn't keep growing and future sends aren't wasted on them.
-      const deletions: Promise<any>[] = [];
-      responses.forEach((r, i) => {
-        if (r.status === 'rejected') {
-          const code = r.reason?.errorInfo?.code || r.reason?.code;
-          if (code === 'messaging/registration-token-not-registered' || code === 'messaging/invalid-argument') {
-            deletions.push(tokenRefs[i].delete().catch(() => {}));
-          }
-        }
-      });
-      if (deletions.length > 0) {
-        await Promise.allSettled(deletions);
-        console.log(`[FCM] Cleaned up ${deletions.length} dead tokens.`);
       }
 
       res.json({ success: true, successCount, failureCount });
@@ -1362,13 +1391,7 @@ async function startServer() {
     }
   });
 
-  // Called by the receiving device the moment it actually gets a push
-  // message — from MyFirebaseMessagingService.onMessageReceived() on
-  // native Android, from firebase-messaging-sw.js in the background on
-  // web, and from the foreground push listener in App.tsx. This is the
-  // only source of truth for "did it really arrive"; the send endpoint
-  // above can only say "FCM accepted it".
-  app.post("/api/ack-delivery", async (req, res) => {
+  app.post("/api/ack-delivery", requireAppCheck, requireAuth, async (req, res) => {
     const { notificationId, token } = req.body;
     if (!notificationId || !token) {
       return res.status(400).json({ error: "notificationId and token required" });
@@ -1385,47 +1408,9 @@ async function startServer() {
       res.status(500).json({ error: "Failed to record delivery" });
     }
   });
-  
-  app.post("/api/admin/delete-all-users", async (req, res) => {
-    const { adminUid } = req.body;
-    if (!adminUid) {
-      return res.status(400).json({ error: "Admin UID required" });
-    }
-
-    try {
-      // 1. Delete Firestore Users
-      const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
-      const usersSnapshot = await db.collection('users').get();
-      
-      const usersToDelete = usersSnapshot.docs.filter(doc => doc.id !== adminUid);
-
-      if (usersToDelete.length === 0) {
-        return res.json({ success: true, message: "No users found to delete." });
-      }
-
-      const bulkWriter = db.bulkWriter();
-      usersToDelete.forEach(doc => bulkWriter.delete(doc.ref));
-      await bulkWriter.close();
-
-      // 2. Delete Auth Users
-      const listUsersResult = await admin.auth().listUsers();
-      const uidsToDelete = listUsersResult.users
-        .filter(u => u.uid !== adminUid)
-        .map(u => u.uid);
-
-      if (uidsToDelete.length > 0) {
-        await admin.auth().deleteUsers(uidsToDelete);
-      }
-
-      res.json({ success: true, message: `Successfully deleted ${usersToDelete.length} users.` });
-    } catch (error) {
-      console.error("Delete All Users Error:", error);
-      res.status(500).json({ error: "Failed to delete users" });
-    }
-  });
 
   // API route for extracting questions from text
-  app.post("/api/extract-questions", async (req, res) => {
+  app.post("/api/extract-questions", requireAppCheck, requireAuth, async (req, res) => {
       const { text, subject } = req.body;
       if (!text) {
           return res.status(400).json({ error: "Missing text" });
@@ -1459,7 +1444,7 @@ async function startServer() {
   });
 
   // API route for gemini
-  app.post("/api/gemini", async (req, res) => {
+  app.post("/api/gemini", requireAppCheck, requireAuth, async (req, res) => {
       const { messages, base64Audio, isStudyPlanChat, studentMemory } = req.body;
       
       try {
@@ -1623,7 +1608,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
 
 
     // API route for deep analysis
-    app.post("/api/deep-analysis", async (req, res) => {
+    app.post("/api/deep-analysis", requireAppCheck, requireAuth, async (req, res) => {
         const { resultId, userId, results } = req.body;
         if (!resultId || !userId || !results) {
           return res.status(400).json({ error: "Missing data" });
@@ -1669,7 +1654,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     });
     
     // API route for analysis
-    app.post("/api/analysis", async (req, res) => {
+    app.post("/api/analysis", requireAppCheck, requireAuth, async (req, res) => {
         const { questions, answers } = req.body;
         if (!questions || !answers) {
           return res.status(400).json({ error: "Missing data" });
@@ -1704,7 +1689,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     // (no separate STT step) — it transcribes and answers as the NEET
     // tutor in one call. mimeType matches whatever MediaRecorder produced
     // on the client (webm/opus in browsers, m4a/aac on some native builds).
-    app.post("/api/tutor-voice", async (req, res) => {
+    app.post("/api/tutor-voice", requireAppCheck, requireAuth, async (req, res) => {
         const { base64Audio, mimeType } = req.body;
         if (!base64Audio) {
             return res.status(400).json({ error: "Missing base64Audio" });
@@ -1721,7 +1706,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
         }
     });
 
-    app.post("/api/tutor", async (req, res) => {
+    app.post("/api/tutor", requireAppCheck, requireAuth, async (req, res) => {
         const { messages, base64Image } = req.body;
         if (!messages || !Array.isArray(messages) || messages.length === 0) {
           return res.status(400).json({ error: "Missing messages" });
@@ -1750,7 +1735,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     });
 
   // API route for neural chat
-  app.post("/api/neural-chat", async (req, res) => {
+  app.post("/api/neural-chat", requireAppCheck, requireAuth, async (req, res) => {
     const { messages } = req.body;
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: "Missing messages" });
@@ -1775,7 +1760,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
 
 
   // API route for streaming search (Phase 2)
-  app.post("/api/search-stream", async (req, res) => {
+  app.post("/api/search-stream", requireAppCheck, requireAuth, async (req, res) => {
     const { prompt, base64Image } = req.body;
     if (!prompt && !base64Image) {
       return res.status(400).json({ error: "Missing prompt or image" });
@@ -1889,7 +1874,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     }
   });
 
-  app.get("/api/proxy-pdf", async (req, res) => {
+  app.get("/api/proxy-pdf", requireAppCheck, requireAuth, async (req, res) => {
     const { url } = req.query;
     if (typeof url !== 'string') return res.status(400).json({ error: "URL required" });
 
@@ -2049,7 +2034,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     });
   });
 
-  app.post("/api/tts", async (req, res) => {
+  app.post("/api/tts", requireAppCheck, requireAuth, async (req, res) => {
     try {
       const { text } = req.body;
       if (!text) {

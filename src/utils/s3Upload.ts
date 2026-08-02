@@ -1,4 +1,4 @@
-import { getApiUrl } from './api';
+import { getApiUrl, authFetch } from './api';
 
 export interface S3UploadResult {
   url: string;
@@ -21,7 +21,7 @@ export async function uploadToUserNoteS3(
   if (userId) formData.append('userId', userId);
   formData.append('category', category);
 
-  const response = await fetch(getApiUrl('/api/user-notes/upload'), {
+  const response = await authFetch(getApiUrl('/api/user-notes/upload'), {
     method: 'POST',
     body: formData,
   });

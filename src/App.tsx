@@ -20,7 +20,7 @@ import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc,
 import {updateUserPresence} from './services/chatService';
 import { storageService } from './lib/storageService';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X, Users } from 'lucide-react';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 import { configureStatusBar } from './utils/statusBar';
 import { lockToPortrait } from './utils/screenOrientation';
 import { initNotificationChannel } from './utils/notifications';
@@ -1199,7 +1199,7 @@ function AppInner() {
                 const notificationId = notification.data?.notificationId;
                 const ackToken = notification.data?.token;
                 if (notificationId && ackToken) {
-                  fetch(getApiUrl('/api/ack-delivery'), {
+                  authFetch(getApiUrl('/api/ack-delivery'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ notificationId, token: ackToken }),
@@ -1245,7 +1245,7 @@ function AppInner() {
       const fetchPrivateVideos = async () => {
         setPrivateVideosDebug(`user=${user.uid?.slice(0,6)} fetching url=${getApiUrl('/api/private-videos')}`);
         try {
-          const response = await fetch(getApiUrl('/api/private-videos'), {
+          const response = await authFetch(getApiUrl('/api/private-videos'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
           });

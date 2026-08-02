@@ -6,7 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import { X, Send, Loader2, Trash2 } from 'lucide-react';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
@@ -15,10 +15,8 @@ interface Message {
     content: string;
 }
 
-const welcomeMessage = { role: 'assistant' as const, content: "Namaste! Main tumhara Neural Doubt Solver hoon. Study se related koi bhi sawal pucho!" };
-
 export default function NeuralSolver({ onClose }: { onClose: () => void }) {
-    const [messages, setMessages] = useState<Message[]>([welcomeMessage]);
+    const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
     const messagesEndRef = React.useRef<HTMLDivElement>(null);
@@ -26,6 +24,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
 
     useEffect(() => {
         enableScreenshot();
+        loadChat();
         return () => {
             disableScreenshot();
         };
@@ -50,39 +49,26 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
         }, 100);
     }, [messages]);
 
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(user => {
-            if (!user) return;
-            console.log("Chat loading for user:", user.uid);
-            const chatRef = doc(db, 'chats', user.uid, 'history', 'default');
-            getDoc(chatRef).then(snap => {
-                let msgs = [welcomeMessage];
-                if (snap.exists()) {
-                    const loadedMessages = snap.data().messages;
-                    if (loadedMessages.length > 0 && loadedMessages[0].content !== welcomeMessage.content) {
-                        msgs = [welcomeMessage, ...loadedMessages];
-                    } else if (loadedMessages.length > 0) {
-                        msgs = loadedMessages;
-                    }
-                }
-                setMessages(msgs);
-                if (snap.exists() && msgs.length > (snap.data().messages?.length || 0)) {
-                    saveChat(msgs);
-                }
-            }).catch(error => {
-                handleFirestoreError(error, OperationType.GET, 'chats/history/default');
-            });
-        });
-        return unsubscribe;
-    }, []);
+    const loadChat = async () => {
+        if (!auth.currentUser) return;
+        try {
+            const docRef = doc(db, 'users', auth.currentUser.uid, 'settings', 'neural_chat');
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists() && docSnap.data().messages) {
+                setMessages(docSnap.data().messages);
+            }
+        } catch (e) {
+            handleFirestoreError(e, OperationType.GET, 'users/settings/neural_chat');
+        }
+    };
 
     const saveChat = async (msgs: Message[]) => {
         if (!auth.currentUser) return;
-        const chatRef = doc(db, 'chats', auth.currentUser.uid, 'history', 'default');
         try {
-            await setDoc(chatRef, { messages: msgs });
-        } catch (error) {
-            handleFirestoreError(error, OperationType.WRITE, 'chats/history/default');
+            const docRef = doc(db, 'users', auth.currentUser.uid, 'settings', 'neural_chat');
+            await setDoc(docRef, { messages: msgs });
+        } catch (e) {
+            handleFirestoreError(e, OperationType.WRITE, 'users/settings/neural_chat');
         }
     };
 
@@ -91,10 +77,21 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
         setMessages(newMessages);
         saveChat(newMessages);
         setSelectedMessageIndex(null);
-    }
+    };
+
+    const handleClearHistory = async () => {
+        if (!auth.currentUser) return;
+        try {
+            const docRef = doc(db, 'users', auth.currentUser.uid, 'settings', 'neural_chat');
+            await deleteDoc(docRef);
+            setMessages([]);
+        } catch (e) {
+            handleFirestoreError(e, OperationType.DELETE, 'users/settings/neural_chat');
+        }
+    };
 
     const handleSend = async () => {
-        if (!input.trim()) return;
+        if (!input.trim() || loading) return;
 
         const newMessages = [...messages, { role: 'user' as const, content: input }];
         setMessages(newMessages);
@@ -103,7 +100,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
         setLoading(true);
 
         try {
-            const response = await fetch(getApiUrl('/api/neural-chat'), {
+            const response = await authFetch(getApiUrl('/api/neural-chat'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ messages: newMessages })

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../lib/firebase';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch, getAuthHeaders } from '@/utils/api';
 import { showToast } from '../utils/toast';
 import {
   Bell,
@@ -207,7 +207,7 @@ export default function NotificationUploader() {
         readBy: [],
       });
 
-      const notifRes = await fetch(getApiUrl('/api/send-notification'), {
+      const notifRes = await authFetch(getApiUrl('/api/send-notification'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: batch.title || 'New Notification', message: batch.comment || 'New file uploaded', notificationId: notifRef.id }),
@@ -275,7 +275,15 @@ export default function NotificationUploader() {
     xhr.onabort = () => finalizeUpload(id, 'cancelled', 'Cancelled');
 
     setActiveUploads(prev => prev.map(u => (u.id === id ? { ...u, xhr } : u)));
-    xhr.send(formData);
+    
+    getAuthHeaders().then(headers => {
+      Object.entries(headers).forEach(([k, v]) => {
+        xhr.setRequestHeader(k, v);
+      });
+      xhr.send(formData);
+    }).catch(() => {
+      xhr.send(formData);
+    });
     return id;
   };
 

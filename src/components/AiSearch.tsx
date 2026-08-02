@@ -4,7 +4,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { Search, Loader2, History, Camera, X } from 'lucide-react';
 import { motion } from 'motion/react';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 import { storageService } from '../lib/storageService';
 
 export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
@@ -56,7 +56,7 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
     setShowSources(false);
     setShowHistory(false);
     try {
-        const response = await fetch(getApiUrl('/api/search-stream'), {
+        const response = await authFetch(getApiUrl('/api/search-stream'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt, base64Image })

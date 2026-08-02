@@ -12,7 +12,7 @@ import PosterSlider from './PosterSlider';
 import Pressable from './Pressable';
 import TermsOfService from './TermsOfService';
 import PrivacyPolicy from './PrivacyPolicy';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 import { updateProfile } from 'firebase/auth';
 import { auth, resetRecaptchaVerifier } from '@/lib/firebase';
 
@@ -216,7 +216,7 @@ export default function Login() {
     try {
       if (kind === 'email') {
         const fbEmail = getFirebaseEmail(value);
-        const response = await fetch(getApiUrl('/api/check-email-user'), {
+        const response = await authFetch(getApiUrl('/api/check-email-user'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: fbEmail }),
@@ -234,7 +234,7 @@ export default function Login() {
         }
       } else {
         // Phone: check existing/new via backend, then send a real SMS via Firebase
-        const response = await fetch(getApiUrl('/api/check-phone-user'), {
+        const response = await authFetch(getApiUrl('/api/check-phone-user'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ phoneNumber: toE164(value) }),

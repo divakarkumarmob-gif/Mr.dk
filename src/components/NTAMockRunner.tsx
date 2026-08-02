@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Menu, X, Hourglass, Info, User, CheckCircle2, Circle, Clock, LogOut } from 'lucide-react';
 import Pressable from './Pressable';
+import { getApiUrl, authFetch } from '@/utils/api';
 
 interface Question {
     id: string;
@@ -180,7 +181,7 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                 localStorage.setItem(`stats_${user.uid}`, JSON.stringify(stats));
             } else {
                 const docRef = await addDoc(collection(db, 'users', user.uid, 'results'), resultData);
-                fetch('/api/deep-analysis', {
+                authFetch(getApiUrl('/api/deep-analysis'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ resultId: docRef.id, userId: user.uid, results: resultData })

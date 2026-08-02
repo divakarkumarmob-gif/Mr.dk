@@ -1,7 +1,7 @@
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 
 export async function analyzeTestPerformance(questions: any[], answers: Record<string, string>) {
-    const response = await fetch(getApiUrl('/api/analysis'), {
+    const response = await authFetch(getApiUrl('/api/analysis'), {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

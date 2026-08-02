@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch, getAuthHeaders } from '@/utils/api';
 import {
   Database,
   Folder,
@@ -187,7 +187,7 @@ export default function S3Uploader() {
   const fetchBuckets = async () => {
     setBucketsLoading(true);
     try {
-      const res = await fetch(getApiUrl('/api/s3/buckets'));
+      const res = await authFetch(getApiUrl('/api/s3/buckets'));
       const data = await res.json();
       if (data.success) {
         setBuckets(data.buckets || []);
@@ -205,7 +205,7 @@ export default function S3Uploader() {
     setBrowseLoading(true);
     setBrowseError('');
     try {
-      const res = await fetch(
+      const res = await authFetch(
         getApiUrl(`/api/s3/browse?bucket=${encodeURIComponent(bucket)}&prefix=${encodeURIComponent(prefix)}`)
       );
       const data = await res.json();
@@ -292,7 +292,7 @@ export default function S3Uploader() {
         filesToCheck.map(async (file) => {
           const key = `${currentPrefix}${file.name}`;
           try {
-            const res = await fetch(
+            const res = await authFetch(
               getApiUrl(`/api/s3/exists?bucket=${encodeURIComponent(selectedBucket)}&key=${encodeURIComponent(key)}`)
             );
             const data = await res.json();
@@ -374,11 +374,13 @@ export default function S3Uploader() {
     xhr.onload = () => {
       let success = xhr.status >= 200 && xhr.status < 300;
       let errorMsg: string | undefined;
+      let key: string | undefined;
       try {
         const data = JSON.parse(xhr.responseText);
         if (data.results && data.results[0]) {
           success = !!data.results[0].success;
           errorMsg = data.results[0].error;
+          key = data.results[0].key;
         } else if (!data.success) {
           success = false;
           errorMsg = data.error;
@@ -386,7 +388,9 @@ export default function S3Uploader() {
       } catch {
         success = xhr.status >= 200 && xhr.status < 300;
       }
-
+      if (success && key) {
+        setActiveUploads(prev => prev.map(u => (u.id === id ? { ...u, key } : u)));
+      }
       finalizeUpload(id, success ? 'success' : 'failed', errorMsg);
     };
 
@@ -400,7 +404,15 @@ export default function S3Uploader() {
 
     // Track the live xhr so the Cancel button can abort it.
     setActiveUploads(prev => prev.map(u => (u.id === id ? { ...u, xhr } : u)));
-    xhr.send(formData);
+
+    getAuthHeaders().then(headers => {
+      Object.entries(headers).forEach(([k, v]) => {
+        xhr.setRequestHeader(k, v as string);
+      });
+      xhr.send(formData);
+    }).catch(() => {
+      xhr.send(formData);
+    });
   };
 
   // Files kept in memory (not localStorage) so "Retry" can re-send them

@@ -21,7 +21,7 @@ import S3Uploader from './S3Uploader';
 import NotificationUploader from './NotificationUploader';
 import NotificationDeliveryDetail from './NotificationDeliveryDetail';
 import { motion, AnimatePresence } from 'motion/react';
-import { getApiUrl } from '../utils/api';
+import { getApiUrl, authFetch } from '../utils/api';
 import { showToast } from '../utils/toast';
 import { getDeviceInfo } from '../utils/deviceInfo';
 
@@ -136,10 +136,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
     const [chapterSearch, setChapterSearch] = useState('');
     const [scheduling, setScheduling] = useState(false);
 
-    // Delete-all-users danger zone confirmation
-    const [deleteConfirmText, setDeleteConfirmText] = useState('');
-    const [deletingUsers, setDeletingUsers] = useState(false);
-
     useEffect(() => {
         const handlePop = () => {
             const state = window.history.state;
@@ -210,7 +206,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                 readBy: []
             });
 
-            const notifRes = await fetch(getApiUrl('/api/send-notification'), {
+            const notifRes = await authFetch(getApiUrl('/api/send-notification'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title: 'New Notification', message, notificationId: notifRef.id })
@@ -313,26 +309,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
             showToast("Failed to schedule test");
         } finally {
             setScheduling(false);
-        }
-    };
-
-    const handleDeleteAllUsers = async () => {
-        if (deleteConfirmText !== 'DELETE') return;
-        setDeletingUsers(true);
-        try {
-            const res = await fetch(getApiUrl('/api/admin/delete-all-users'), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ confirmText: deleteConfirmText }),
-            });
-            const data = await res.json();
-            if (!res.ok) throw new Error(data.error || 'Failed to delete users');
-            showToast(`Deleted ${data.deletedCount} users!`);
-            setDeleteConfirmText('');
-        } catch (err: any) {
-            showToast(`Error: ${err.message}`);
-        } finally {
-            setDeletingUsers(false);
         }
     };
 
@@ -565,29 +541,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: 'home' |
                                 <p className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-wider mb-1">Offline</p>
                                 <p className="text-2xl sm:text-3xl font-bold text-gray-400">{Math.max(userStats.total - userStats.online, 0)}</p>
                             </div>
-                        </div>
-
-                        <div className="bg-red-500/5 border border-red-500/20 rounded-2xl p-4 sm:p-5 space-y-3">
-                            <div className="flex items-center gap-2 text-red-400">
-                                <AlertTriangle className="h-4 w-4" />
-                                <h4 className="font-bold text-sm">Danger Zone</h4>
-                            </div>
-                            <p className="text-xs text-gray-400">
-                                This permanently deletes ALL users. This action is irreversible. Type <span className="font-mono font-bold text-red-300">DELETE</span> to confirm.
-                            </p>
-                            <input
-                                value={deleteConfirmText}
-                                onChange={e => setDeleteConfirmText(e.target.value)}
-                                placeholder="Type DELETE to confirm"
-                                className="w-full bg-white/5 border border-red-500/20 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-red-500/50"
-                            />
-                            <button
-                                onClick={handleDeleteAllUsers}
-                                disabled={deleteConfirmText !== 'DELETE' || deletingUsers}
-                                className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-30 disabled:cursor-not-allowed px-4 py-2.5 rounded-xl font-bold text-sm transition-colors"
-                            >
-                                {deletingUsers ? 'Deleting...' : 'Delete All Users'}
-                            </button>
                         </div>
                     </div>
                 )}

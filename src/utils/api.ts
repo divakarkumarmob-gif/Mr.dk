@@ -1,4 +1,6 @@
 import { Capacitor } from '@capacitor/core';
+import { auth, appCheck } from '../lib/firebase';
+import { getToken as getAppCheckToken } from 'firebase/app-check';
 
 export function getApiUrl(path: string): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
@@ -20,4 +22,38 @@ export function getApiUrl(path: string): string {
     return `${backendBase}${cleanPath}`;
   }
   return cleanPath;
+}
+
+export async function getAuthHeaders(headers: Record<string, string> = {}): Promise<Record<string, string>> {
+  const finalHeaders: Record<string, string> = { ...headers };
+
+  if (auth.currentUser) {
+    try {
+      const idToken = await auth.currentUser.getIdToken();
+      finalHeaders['Authorization'] = `Bearer ${idToken}`;
+    } catch (e) {
+      console.warn("Failed to get Firebase Auth ID token:", e);
+    }
+  }
+
+  if (appCheck) {
+    try {
+      const appCheckResult = await getAppCheckToken(appCheck, false);
+      if (appCheckResult?.token) {
+        finalHeaders['X-Firebase-AppCheck'] = appCheckResult.token;
+      }
+    } catch (e) {
+      console.warn("Failed to get Firebase App Check token:", e);
+    }
+  }
+
+  return finalHeaders;
+}
+
+export async function authFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response> {
+  const headers = await getAuthHeaders((init?.headers as Record<string, string>) || {});
+  return fetch(input, {
+    ...init,
+    headers,
+  });
 }

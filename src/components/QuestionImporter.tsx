@@ -3,7 +3,7 @@ import { db, auth } from '../lib/firebase';
 import { collection, writeBatch, doc } from 'firebase/firestore';
 import { Upload, FileType, Brain } from 'lucide-react';
 import * as pdfjs from 'pdfjs-dist';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 
 // Configure PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -121,7 +121,7 @@ export default function QuestionImporter() {
             const text = await extractTextFromPDF(file);
             
             setStatus(`AI is generating questions...`);
-            const response = await fetch(getApiUrl('/api/extract-questions'), {
+            const response = await authFetch(getApiUrl('/api/extract-questions'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ text, subject })

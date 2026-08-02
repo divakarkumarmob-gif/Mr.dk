@@ -1,5 +1,5 @@
 import { Capacitor } from '@capacitor/core';
-import { getApiUrl } from './api';
+import { getApiUrl, authFetch } from './api';
 import { showToast } from './toast';
 import { saveMediaToGallery } from './saveMediaToGallery';
 import { savePdfToPublicDownloads } from './publicDownload';
@@ -10,7 +10,7 @@ import { savePdfToPublicDownloads } from './publicDownload';
  * render the file (image/PDF) inside the app's own in-app viewer.
  */
 export async function getNotificationFileViewUrl(fileKey: string): Promise<string> {
-  const urlRes = await fetch(getApiUrl(`/api/notifications/file-url?key=${encodeURIComponent(fileKey)}`));
+  const urlRes = await authFetch(getApiUrl(`/api/notifications/file-url?key=${encodeURIComponent(fileKey)}`));
   const urlData = await urlRes.json();
   if (!urlData.success || !urlData.url) throw new Error(urlData.error || 'Could not get file link');
   return urlData.url as string;

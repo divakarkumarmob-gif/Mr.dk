@@ -5,7 +5,7 @@ import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp, doc, g
 import { db, auth } from '../lib/firebase';
 import ReactMarkdown from 'react-markdown';
 import ThinkingIndicator from './ThinkingIndicator';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, authFetch } from '@/utils/api';
 
 interface AIStudyPlanChatProps {
     onClose: () => void;
@@ -120,7 +120,7 @@ export default function AIStudyPlanChat({ onClose }: AIStudyPlanChatProps) {
 
         try {
             const contextMessages = getContextMessages([...messages, userMessage]);
-            const response = await fetch(getApiUrl('/api/gemini'), {
+            const response = await authFetch(getApiUrl('/api/gemini'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
