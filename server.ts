@@ -24,6 +24,8 @@ import textToSpeech from '@google-cloud/text-to-speech';
 import { S3Client, ListObjectsV2Command, GetObjectCommand, ListBucketsCommand, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import multer from "multer";
+import jwt from "jsonwebtoken";
+
 
 // Initialize Firebase Admin
 console.log("Initializing Firebase Admin...");
@@ -1869,12 +1871,32 @@ After writing your normal reply to the user, on a new line add the exact delimit
     }
   });
 
-  app.get("/api/proxy-pdf", requireAppCheck, requireAuth, async (req, res) => {
-    const { url } = req.query;
+  const PDF_TOKEN_SECRET = process.env.PDF_TOKEN_SECRET || process.env.JWT_SECRET || 'pdf-token-secret-key-mrdk-2026';
+
+  app.post("/api/proxy-pdf/token", requireAppCheck, requireAuth, async (req: any, res: any) => {
+    const { url } = req.body;
+    if (!url || typeof url !== 'string') return res.status(400).json({ error: 'Missing url' });
+    const token = jwt.sign({ uid: req.uid, url }, PDF_TOKEN_SECRET, { expiresIn: '5m' });
+    res.json({ token });
+  });
+
+  app.get("/api/proxy-pdf", async (req: any, res: any) => {
+    const { url, token } = req.query;
     if (typeof url !== 'string') return res.status(400).json({ error: "URL required" });
+    if (!token || typeof token !== 'string') return res.status(401).json({ error: "Missing access token" });
+
+    try {
+        const decoded = jwt.verify(token, PDF_TOKEN_SECRET) as { uid?: string; url?: string };
+        if (decoded.url !== url) {
+            return res.status(403).json({ error: 'Token does not match requested URL' });
+        }
+    } catch (e) {
+        return res.status(401).json({ error: 'Invalid or expired access token' });
+    }
 
     const maxRetries = 2;
     let attempt = 0;
+
 
     const fetchWithRedirects = (targetUrl: string, depth = 0): Promise<{buffer: Buffer, status: number, contentType: string}> => {
         if (depth > 5) return Promise.reject(new Error("Too many redirects"));

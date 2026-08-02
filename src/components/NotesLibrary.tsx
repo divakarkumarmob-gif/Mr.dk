@@ -5,30 +5,38 @@ import { CHAPTER_DATA } from '../constants';
 import { saveNoteOffline, getNoteOffline, isNoteDownloaded, clearOfflineNotes, toggleFavorite, isFavorite, addRecentlyViewed, getRecentlyViewed } from '../lib/offlineStorage';
 import { storageService } from '../lib/storageService';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 
 function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () => void }) {
     const pdfUrl = `https://raw.githubusercontent.com/divakarkumarmob-gif/shortnotes/main/${chapterName.toLowerCase().replace(/ /g, '_')}/${chapterName.toLowerCase().replace(/ /g, '_')}.pdf`;
     const [localUrl, setLocalUrl] = useState<string | null>(null);
+    const [remoteViewerUrl, setRemoteViewerUrl] = useState<string | null>(null);
     const [checkedCache, setCheckedCache] = useState(false);
 
     useEffect(() => {
+        let isMounted = true;
         (async () => {
             const localData = await getNoteOffline(chapterName);
+            if (!isMounted) return;
             if (localData) {
                 setLocalUrl(localData);
+            } else {
+                try {
+                    const url = await getPdfViewerUrl(pdfUrl);
+                    if (isMounted) setRemoteViewerUrl(url);
+                } catch (e) {
+                    console.error("Failed to get PDF token for note:", e);
+                    if (isMounted) setRemoteViewerUrl(getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(pdfUrl)}`));
+                }
             }
-            setCheckedCache(true);
+            if (isMounted) setCheckedCache(true);
         })();
-    }, [chapterName]);
+        return () => { isMounted = false; };
+    }, [chapterName, pdfUrl]);
 
-    if (!checkedCache) return null;
+    if (!checkedCache || (!localUrl && !remoteViewerUrl)) return null;
 
-    // If we have an offline-cached copy, pass its data URL straight through.
-    // Otherwise route the remote PDF through our backend proxy — embedding
-    // GitHub raw URLs (or Google Docs Viewer) directly gets blocked by
-    // X-Frame-Options / CSP inside the Android WebView.
-    const viewerUrl = localUrl || getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(pdfUrl)}`);
+    const viewerUrl = localUrl || remoteViewerUrl!;
 
     return (
         <AdvancedPDFViewer
@@ -39,6 +47,7 @@ function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () 
         />
     );
 }
+
 
 export default function NotesLibrary({ onBack }: { onBack: () => void }) {
     const [activeSubject, setActiveSubject] = useState<'Physics' | 'Chemistry' | 'Biology'>('Physics');

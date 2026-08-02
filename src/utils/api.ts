@@ -57,3 +57,18 @@ export async function authFetch(input: RequestInfo | URL, init?: RequestInit): P
     headers,
   });
 }
+
+export async function getPdfViewerUrl(pdfUrl: string): Promise<string> {
+  const response = await authFetch(getApiUrl('/api/proxy-pdf/token'), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: pdfUrl }),
+  });
+  if (!response.ok) {
+    const errData = await response.json().catch(() => ({}));
+    throw new Error(errData.error || 'Failed to get PDF access token');
+  }
+  const { token } = await response.json();
+  return getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(pdfUrl)}&token=${encodeURIComponent(token)}`);
+}
+

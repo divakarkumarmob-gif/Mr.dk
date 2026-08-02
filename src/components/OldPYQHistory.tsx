@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, Download, FileText, ExternalLink, Calendar, Search } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 
 interface PaperLink {
     year: string;
@@ -56,12 +56,21 @@ export default function OldPYQHistory({ onBack }: Props) {
         p.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    const openResource = (paper: PaperLink) => {
+    const openResource = async (paper: PaperLink) => {
         // Use proxy for direct PDFs if possible, or direct URL for sites
         const isDirectPdf = paper.url.toLowerCase().endsWith('.pdf');
-        const finalUrl = isDirectPdf ? getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(paper.url)}`) : paper.url;
+        let finalUrl = paper.url;
+        if (isDirectPdf) {
+            try {
+                finalUrl = await getPdfViewerUrl(paper.url);
+            } catch (e) {
+                console.error("Failed to get PDF token:", e);
+                finalUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(paper.url)}`);
+            }
+        }
         setActiveResource({ url: finalUrl, title: paper.title, originalUrl: paper.url });
     };
+
 
     return (
         <div className="min-h-dvh bg-[#05070A] text-white pb-24">

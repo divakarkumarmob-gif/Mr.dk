@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, FileText, Search, ExternalLink, BookOpen, Clock, Tag, Loader2, FileUp, Info, Share2, Check } from 'lucide-react';
 import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 
 interface NTAPaper {
     id: string;
@@ -58,12 +58,17 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
         return matchesSearch && matchesCat;
     });
 
-    const handleOpenPaper = (paper: NTAPaper) => {
+    const handleOpenPaper = async (paper: NTAPaper) => {
         const targetUrl = (useMirror && paper.mirrorUrl) ? paper.mirrorUrl : paper.url;
-        const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(targetUrl)}`);
-        setViewerUrl({ url: proxyUrl, title: paper.title, originalUrl: targetUrl });
-        window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
+        try {
+            const proxyUrl = await getPdfViewerUrl(targetUrl);
+            setViewerUrl({ url: proxyUrl, title: paper.title, originalUrl: targetUrl });
+            window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
+        } catch (e) {
+            console.error("Failed to get PDF token:", e);
+        }
     };
+
 
     const handleShare = (paper: NTAPaper) => {
         const url = `${window.location.origin}${window.location.pathname}?view=ntaQuestionsHub&paperId=${paper.id}`;

@@ -4,8 +4,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, BookOpen, Download, Eye, Search, CheckCircle2, Loader2, Trash2 } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import Pressable from './Pressable';
-import { getApiUrl } from '@/utils/api';
+import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
+
 
 // Simple IndexedDB wrapper for PDF storage
 const dbName = 'NCERT_OFFLINE_DB';
@@ -226,7 +227,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                         // Direct S3 URLs can send CORS headers that block the
                         // browser from embedding/fetching them directly
                         // (react-pdf sees this as a load error / "blocked" view).
-                        const proxyUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(s3Match.url)}`);
+                        const proxyUrl = await getPdfViewerUrl(s3Match.url);
                         setNcertDebug(`OK: matched "${s3Match.name}" -> proxy=${proxyUrl}`);
                         setViewerUrl({ url: proxyUrl, title });
                     } else {
