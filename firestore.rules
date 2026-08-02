@@ -79,19 +79,24 @@ service cloud.firestore {
 
     // Chats Collection (Participant or Admin access)
     match /chats/{chatId} {
+      function isParticipant() {
+        return isSignedIn() && exists(/databases/$(database)/documents/chats/$(chatId))
+          && get(/databases/$(database)/documents/chats/$(chatId)).data.get('participants', []).hasAny([request.auth.uid]);
+      }
+
       function canAccessChat() {
         return isSignedIn() && (
-          isAdmin() || 
-          chatId == request.auth.uid || 
-          (resource != null && resource.data.get('participants', []).hasAny([request.auth.uid]))
+          isAdmin() ||
+          chatId == request.auth.uid ||
+          isParticipant()
         );
       }
-      
+
       allow read: if canAccessChat();
       allow create: if isSignedIn() && (chatId == request.auth.uid || request.resource.data.get('participants', []).hasAny([request.auth.uid]));
       allow update: if canAccessChat();
       allow delete: if isAdmin();
-      
+
       match /{allSubcollections=**} {
         allow read, write: if canAccessChat();
       }
@@ -99,6 +104,7 @@ service cloud.firestore {
     match /chats {
       allow read: if isAdmin();
     }
+
 
     // Community Posts (Public read, Auth required for write operations)
     match /communityPosts/{postId} {
