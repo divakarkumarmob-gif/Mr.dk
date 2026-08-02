@@ -15,12 +15,14 @@ service cloud.firestore {
       return isSignedIn() && request.auth.token.admin == true;
     }
 
-    // Notifications
+    // Notifications (Broadcast read/update readBy for signed-in users, write for admin)
     match /notifications/{notificationId} {
-      allow read, write: if isSignedIn();
+      allow read, update: if isSignedIn();
+      allow create, delete: if isAdmin();
     }
     match /notifications {
-      allow read, write: if isSignedIn();
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
     }
 
     // NEET Notifications (Public read, Admin write)
@@ -43,9 +45,9 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
-    // OTPs (Required for authentication flow)
+    // OTPs (Backend Admin SDK only - direct client access locked down)
     match /otps/{otpId} {
-      allow read, write: if true;
+      allow read, write: if false;
     }
     
     // Questions
@@ -106,22 +108,29 @@ service cloud.firestore {
     }
 
 
-    // Community Posts (Public read, Auth required for write operations)
+    // Community Posts (Public read, owner/admin for update and delete)
     match /communityPosts/{postId} {
       allow read: if true;
-      allow create, update, delete: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if isSignedIn() && (resource.data.get('userId', '') == request.auth.uid || resource.data.get('authorId', '') == request.auth.uid || isAdmin());
 
       match /comments/{commentId} {
         allow read, create: if isSignedIn();
       }
     }
 
-    // Study Rooms (Auth required)
+    // Study Rooms (Member-only access and message authorization)
     match /studyRooms/{roomId} {
-      allow read, create, update, delete: if isSignedIn();
+      function isRoomMember() {
+        return isSignedIn() && resource != null && resource.data.get('members', []).hasAny([request.auth.uid]);
+      }
+
+      allow read, update: if isRoomMember() || isAdmin();
+      allow create: if isSignedIn() && request.resource.data.get('members', []).hasAny([request.auth.uid]);
+      allow delete: if isRoomMember() || isAdmin();
 
       match /messages/{messageId} {
-        allow read, create: if isSignedIn();
+        allow read, create: if isSignedIn() && get(/databases/$(database)/documents/studyRooms/$(roomId)).data.get('members', []).hasAny([request.auth.uid]);
       }
     }
 
