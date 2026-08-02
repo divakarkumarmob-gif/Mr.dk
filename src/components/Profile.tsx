@@ -2,13 +2,24 @@ import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mai
 import { logOut } from '../lib/auth';
 import { clearGuestData } from '../lib/clearGuestData';
 import { User as FirebaseUser } from 'firebase/auth';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Pressable from './Pressable';
 
 export default function Profile({ user, onNavigate, onSolverClick, onLogout }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub' | 'schoolSearch' | 'about') => void, onSolverClick: () => void, onLogout: () => void }) {
-    const isAdmin = user?.email === 'divakarkumarmob@gmail.com' || user?.email === 'shashikumarmob@gmail.com';
+    const [isAdmin, setIsAdmin] = useState(false);
+    useEffect(() => {
+        if (!user) {
+            setIsAdmin(false);
+            return;
+        }
+        user.getIdTokenResult().then(result => {
+            setIsAdmin(result.claims.admin === true);
+        }).catch(() => {
+            setIsAdmin(false);
+        });
+    }, [user]);
     const [showPremium, setShowPremium] = useState(false);
     const navigate = useNavigate();
 

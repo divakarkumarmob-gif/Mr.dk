@@ -12,12 +12,7 @@ service cloud.firestore {
     }
     
     function isAdmin() { 
-      return isSignedIn() && (
-        request.auth.uid == 'b6BsG4T4z5ZfhSsybus6pcakEdB2' ||
-        request.auth.token.email == 'divakarkumarmob@gmail.com' || 
-        request.auth.token.email == 'shashikumarmob@gmail.com' ||
-        request.auth.token.email == 'admin@neet.com'
-      );
+      return isSignedIn() && request.auth.token.admin == true;
     }
 
     // Notifications

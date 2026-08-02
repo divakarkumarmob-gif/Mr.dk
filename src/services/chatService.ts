@@ -98,52 +98,76 @@ export const subscribeToChats = (callback: (chats: any[]) => void) => {
         throw new Error('User not logged in');
     }
     
-    const adminEmails = ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com'];
-    const isAdmin = adminEmails.includes(auth.currentUser.email || '');
-    
-    let q;
-    if (isAdmin) {
-        q = query(
-            collection(db, 'chats'), 
-            where('isSupportChat', '==', true),
-            orderBy('updatedAt', 'desc')
-        );
-    } else {
-        q = query(
-            collection(db, 'chats'), 
-            where('participants', 'array-contains', auth.currentUser.uid),
-            orderBy('updatedAt', 'desc')
-        );
-    }
-    return onSnapshot(q, (snapshot) => {
-        callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    }, (error) => {
+    const currentUser = auth.currentUser;
+    let unsub: (() => void) | null = null;
+    let isSubscribed = true;
+
+    currentUser.getIdTokenResult().then((idTokenResult) => {
+        if (!isSubscribed) return;
+        const isAdmin = idTokenResult.claims.admin === true;
+        let q;
+        if (isAdmin) {
+            q = query(
+                collection(db, 'chats'), 
+                where('isSupportChat', '==', true),
+                orderBy('updatedAt', 'desc')
+            );
+        } else {
+            q = query(
+                collection(db, 'chats'), 
+                where('participants', 'array-contains', currentUser.uid),
+                orderBy('updatedAt', 'desc')
+            );
+        }
+        unsub = onSnapshot(q, (snapshot) => {
+            callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+        }, (error) => {
+            handleFirestoreError(error, OperationType.LIST, 'chats');
+        });
+    }).catch((error) => {
         handleFirestoreError(error, OperationType.LIST, 'chats');
     });
+
+    return () => {
+        isSubscribed = false;
+        if (unsub) unsub();
+    };
 };
 
 export const subscribeToSupportChats = (callback: (chats: any[]) => void) => {
     if (!auth.currentUser) return () => {};
     
-    const adminEmails = ['divakarkumarmob@gmail.com', 'shashikumarmob@gmail.com'];
-    const isAdmin = adminEmails.includes(auth.currentUser.email || '');
-    
-    let q;
-    if (isAdmin) {
-        q = query(collection(db, 'chats'), where('isSupportChat', '==', true), orderBy('updatedAt', 'desc'));
-    } else {
-        q = query(
-            collection(db, 'chats'), 
-            where('isSupportChat', '==', true), 
-            where('participants', 'array-contains', auth.currentUser.uid),
-            orderBy('updatedAt', 'desc')
-        );
-    }
-    return onSnapshot(q, (snapshot) => {
-        callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    }, (error) => {
+    const currentUser = auth.currentUser;
+    let unsub: (() => void) | null = null;
+    let isSubscribed = true;
+
+    currentUser.getIdTokenResult().then((idTokenResult) => {
+        if (!isSubscribed) return;
+        const isAdmin = idTokenResult.claims.admin === true;
+        let q;
+        if (isAdmin) {
+            q = query(collection(db, 'chats'), where('isSupportChat', '==', true), orderBy('updatedAt', 'desc'));
+        } else {
+            q = query(
+                collection(db, 'chats'), 
+                where('isSupportChat', '==', true), 
+                where('participants', 'array-contains', currentUser.uid),
+                orderBy('updatedAt', 'desc')
+            );
+        }
+        unsub = onSnapshot(q, (snapshot) => {
+            callback(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+        }, (error) => {
+            handleFirestoreError(error, OperationType.LIST, 'chats');
+        });
+    }).catch((error) => {
         handleFirestoreError(error, OperationType.LIST, 'chats');
     });
+
+    return () => {
+        isSubscribed = false;
+        if (unsub) unsub();
+    };
 };
 
 export const updateUserPresence = async (userId: string, isOnline: boolean) => {

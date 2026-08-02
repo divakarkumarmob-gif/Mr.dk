@@ -111,6 +111,22 @@ async function requireAuth(req: any, res: any, next: any) {
     }
 }
 
+async function requireAdmin(req: any, res: any, next: any) {
+    const authHeader = req.headers.authorization || '';
+    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+    if (!token) return res.status(401).json({ error: 'Missing auth token' });
+    try {
+        const decoded = await admin.auth().verifyIdToken(token);
+        if (decoded.admin !== true) {
+            return res.status(403).json({ error: 'Admin access required' });
+        }
+        req.uid = decoded.uid;
+        next();
+    } catch (e) {
+        return res.status(401).json({ error: 'Invalid or expired auth token' });
+    }
+}
+
 async function requireAppCheck(req: any, res: any, next: any) {
     if (process.env.DISABLE_APP_CHECK === 'true') {
         return next();
@@ -536,7 +552,7 @@ async function startServer() {
   // name if NOTIFICATIONS_S3_BUCKET isn't set in env.
   const NOTIFICATIONS_BUCKET = process.env.NOTIFICATIONS_S3_BUCKET || "neetmaster-notifications";
 
-  app.post("/api/notifications/upload", s3Upload.array("files", 20), async (req, res) => {
+  app.post("/api/notifications/upload", requireAdmin, s3Upload.array("files", 20), async (req, res) => {
     const files = (req.files as Express.Multer.File[] | undefined) || [];
     try {
       if (files.length === 0) {
@@ -1230,7 +1246,7 @@ async function startServer() {
 
 
   
-  app.post("/api/send-notification", async (req, res) => {
+  app.post("/api/send-notification", requireAdmin, async (req, res) => {
     const { title, message, notificationId } = req.body;
     if (!title || !message) {
       return res.status(400).json({ error: "Title and message required" });

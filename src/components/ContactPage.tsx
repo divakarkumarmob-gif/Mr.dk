@@ -23,7 +23,7 @@ export default function ContactPage({ onBack }: { onBack: () => void }) {
             <Mail className="text-[#3B82F6] h-6 w-6" />
             <div>
               <h3 className="font-semibold text-white">Email</h3>
-              <a href="mailto:shashikumarmob@gmail.com" className="text-gray-400 hover:text-[#3B82F6]">shashikumarmob@gmail.com</a>
+              <a href="mailto:neetmaster.online@gmail.com" className="text-gray-400 hover:text-[#3B82F6]">neetmaster.online@gmail.com</a>
             </div>
           </div>
 
