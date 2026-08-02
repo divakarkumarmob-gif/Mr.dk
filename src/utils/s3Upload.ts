@@ -1,4 +1,5 @@
 import { getApiUrl, authFetch } from './api';
+import { auth } from '../lib/firebase';
 
 export interface S3UploadResult {
   url: string;
@@ -51,8 +52,16 @@ export async function uploadToUserNoteS3(
  */
 export function getDisplayUrl(url: string | undefined | null): string {
   if (!url) return '';
+  let finalUrl = url;
   if (url.includes('.amazonaws.com/')) {
-    return getApiUrl(`/api/user-notes/file?url=${encodeURIComponent(url)}`);
+    finalUrl = getApiUrl(`/api/user-notes/file?url=${encodeURIComponent(url)}`);
   }
-  return url;
+  const token = (auth.currentUser as any)?.accessToken;
+  if (token && (finalUrl.startsWith('/api/') || finalUrl.includes('/api/'))) {
+    const separator = finalUrl.includes('?') ? '&' : '?';
+    if (!finalUrl.includes('token=')) {
+      finalUrl = `${finalUrl}${separator}token=${encodeURIComponent(token)}`;
+    }
+  }
+  return finalUrl;
 }

@@ -98,7 +98,10 @@ const authLimiter = rateLimit({
 
 async function requireAuth(req: any, res: any, next: any) {
     const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+    let token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+    if (!token && req.query?.token && typeof req.query.token === 'string') {
+        token = req.query.token;
+    }
     if (!token) {
         return res.status(401).json({ error: 'Missing auth token' });
     }
@@ -113,7 +116,10 @@ async function requireAuth(req: any, res: any, next: any) {
 
 async function requireAdmin(req: any, res: any, next: any) {
     const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+    let token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+    if (!token && req.query?.token && typeof req.query.token === 'string') {
+        token = req.query.token;
+    }
     if (!token) return res.status(401).json({ error: 'Missing auth token' });
     try {
         const decoded = await admin.auth().verifyIdToken(token);
@@ -131,7 +137,7 @@ async function requireAppCheck(req: any, res: any, next: any) {
     if (process.env.DISABLE_APP_CHECK === 'true') {
         return next();
     }
-    const appCheckToken = req.headers['x-firebase-appcheck'];
+    const appCheckToken = (req.headers['x-firebase-appcheck'] as string) || (req.query?.appCheckToken as string);
     if (!appCheckToken) {
         return res.status(401).json({ error: 'Missing App Check token' });
     }
@@ -387,7 +393,7 @@ async function startServer() {
 
   // List all S3 buckets available to these AWS credentials.
   // Falls back to the single .env-configured bucket if ListBuckets isn't permitted.
-  app.get("/api/s3/buckets", async (req, res) => {
+  app.get("/api/s3/buckets", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
       const s3 = getS3Client();
       const result = await s3.send(new ListBucketsCommand({}));
@@ -410,7 +416,7 @@ async function startServer() {
 
   // Browse a bucket one folder level at a time (like a file explorer).
   // Returns subfolders (CommonPrefixes) and files at the given prefix.
-  app.get("/api/s3/browse", async (req, res) => {
+  app.get("/api/s3/browse", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
       const { bucket, prefix } = req.query;
       if (!bucket || typeof bucket !== 'string') {
@@ -454,7 +460,7 @@ async function startServer() {
 
   // Upload one or more files (photo, video, pdf, etc.) directly to an S3 bucket/prefix.
   // Check if a given key already exists in the bucket (used for the duplicate-file warning).
-  app.get("/api/s3/exists", async (req, res) => {
+  app.get("/api/s3/exists", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
       const { bucket, key } = req.query;
       if (!bucket || typeof bucket !== 'string' || !key || typeof key !== 'string') {
@@ -477,7 +483,7 @@ async function startServer() {
     }
   });
 
-  app.post("/api/s3/upload", s3Upload.array("files", 20), async (req, res) => {
+  app.post("/api/s3/upload", requireAppCheck, requireAuth, s3Upload.array("files", 20), async (req: any, res: any) => {
     const files = (req.files as Express.Multer.File[] | undefined) || [];
     try {
       const { bucket, prefix, overwrite } = req.body;
@@ -592,7 +598,7 @@ async function startServer() {
 
   // Fresh presigned GET url for a notification attachment. Generated on-demand
   // (not stored) so it never goes stale — call this right before download/open.
-  app.get("/api/notifications/file-url", async (req, res) => {
+  app.get("/api/notifications/file-url", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
       const { key } = req.query;
       if (!key || typeof key !== "string") {
@@ -611,19 +617,20 @@ async function startServer() {
   // ---------- User Notes & Chat History Screenshot Uploads (AWS S3 Bucket: user-note) ----------
   const USER_NOTE_BUCKET = process.env.USER_NOTE_S3_BUCKET || "user-note";
 
-  app.post("/api/user-notes/upload", s3Upload.array("files", 20), async (req, res) => {
+  app.post("/api/user-notes/upload", requireAppCheck, requireAuth, s3Upload.array("files", 20), async (req: any, res: any) => {
     const files = (req.files as Express.Multer.File[] | undefined) || [];
     try {
       if (files.length === 0) {
         return res.status(400).json({ success: false, error: "No files provided" });
       }
-      const { userId, category } = req.body;
+      const { category } = req.body;
+      const targetUserId = req.uid;
       const s3 = getS3Client();
       const region = process.env.AWS_REGION || "ap-southeast-2";
 
       const results = await Promise.all(files.map(async (file) => {
         const safeName = file.originalname.replace(/[^a-zA-Z0-9._-]/g, "_");
-        const userFolder = userId ? `users/${userId}` : 'general';
+        const userFolder = `users/${targetUserId}`;
         const folder = category || 'notes';
         const key = `${folder}/${userFolder}/${Date.now()}-${Math.random().toString(36).slice(2, 7)}-${safeName}`;
         try {
@@ -657,7 +664,7 @@ async function startServer() {
   });
 
   // Stream/proxy user note file or screenshot from S3 bucket 'user-note' using server credentials
-  app.get("/api/user-notes/file", async (req, res) => {
+  app.get("/api/user-notes/file", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
       let key = req.query.key as string;
       const urlParam = req.query.url as string;
@@ -674,6 +681,18 @@ async function startServer() {
 
       if (!key || typeof key !== 'string') {
         return res.status(400).send("Key or URL parameter required");
+      }
+
+      // Ownership check: if key contains user folder (e.g. users/<uid>), verify ownership
+      let fileOwnerUid: string | null = null;
+      if (key.includes('/users/')) {
+        fileOwnerUid = key.split('/users/')[1]?.split('/')[0] || null;
+      } else if (key.startsWith('users/')) {
+        fileOwnerUid = key.split('users/')[1]?.split('/')[0] || null;
+      }
+
+      if (fileOwnerUid && fileOwnerUid !== req.uid) {
+        return res.status(403).json({ success: false, error: "Forbidden: You do not own this file" });
       }
 
       const s3 = getS3Client();
@@ -789,7 +808,7 @@ async function startServer() {
     }
   });
 
-  app.post("/api/private-videos", async (req, res) => {
+  app.post("/api/private-videos", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
         const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
         const s3 = getS3Client();
@@ -939,7 +958,7 @@ async function startServer() {
     }
   });
 
-  app.get("/api/logs", (req, res) => {
+  app.get("/api/logs", requireAppCheck, requireAuth, requireAdmin, (req: any, res: any) => {
       res.json({ logs });
   });
 
