@@ -1808,10 +1808,13 @@ After writing your normal reply to the user, on a new line add the exact delimit
                     model: "gemini-3.5-flash",
                     contents: {
                         parts: [
-                            { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. ${AI_SEARCH_FORMAT_RULE}` },
+                            { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. Work through the problem carefully step by step, double-check each calculation before moving to the next step, and verify the final answer makes physical sense before giving it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${AI_SEARCH_FORMAT_RULE}` },
                             { text: finalPrompt || "Describe this" }, 
                             { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
                         ] 
+                    },
+                    config: {
+                        tools: [{ googleSearch: {} }],
                     }
                  });
             } else {
