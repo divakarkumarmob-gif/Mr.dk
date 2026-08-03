@@ -376,6 +376,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     sendImageToWebSocket(image);
                 });
             });
+            e.target.value = '';
         }
     };
 
@@ -789,6 +790,10 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     };
 
     const handlePlusClick = async () => {
+        if (!Capacitor.isNativePlatform()) {
+            fileInputRef.current?.click();
+            return;
+        }
         try {
             const photo = await takePhoto();
             if (photo) {

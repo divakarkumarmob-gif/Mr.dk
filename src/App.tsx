@@ -15,7 +15,7 @@ import { Capacitor } from '@capacitor/core';
 import { PushNotifications } from '@capacitor/push-notifications';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
 import { getDeviceInfo } from './utils/deviceInfo';
-import {auth, db, messaging} from './lib/firebase';
+import {auth, db, messaging, handleFirestoreError, OperationType} from './lib/firebase';
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import { storageService } from './lib/storageService';
@@ -107,56 +107,7 @@ const TermsOfService = lazy(() => import('./components/TermsOfService'));
 const LandingPage = lazy(() => import('./components/LandingPage'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
 
-enum OperationType {
-  CREATE = 'create',
-  UPDATE = 'update',
-  DELETE = 'delete',
-  LIST = 'list',
-  GET = 'get',
-  WRITE = 'write',
-}
 
-interface FirestoreErrorInfo {
-  error: string;
-  operationType: OperationType;
-  path: string | null;
-  authInfo: {
-    userId?: string | null;
-    email?: string | null;
-    emailVerified?: boolean | null;
-    isAnonymous?: boolean | null;
-    tenantId?: string | null;
-    providerInfo?: {
-      providerId?: string | null;
-      email?: string | null;
-    }[];
-  }
-}
-// IMPORTANT: this must never throw. It's called from onSnapshot's error
-// callback (a listener, not a normal try/catch-able call site) — throwing
-// there becomes an uncaught exception that crashes the entire JS runtime
-// for every connected client whose listener hits this path at the same
-// moment (e.g. right after a fresh install, or the instant an admin
-// message/notification write trips a Firestore rule). We only log now.
-function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
-  const errInfo: FirestoreErrorInfo = {
-    error: error instanceof Error ? error.message : String(error),
-    authInfo: {
-      userId: auth.currentUser?.uid,
-      email: auth.currentUser?.email,
-      emailVerified: auth.currentUser?.emailVerified,
-      isAnonymous: auth.currentUser?.isAnonymous,
-      tenantId: auth.currentUser?.tenantId,
-      providerInfo: auth.currentUser?.providerData?.map(provider => ({
-        providerId: provider.providerId,
-        email: provider.email,
-      })) || []
-    },
-    operationType,
-    path
-  }
-  console.error('Firestore Error: ', JSON.stringify(errInfo));
-}
 
 const getISTDateString = () => {
     const istOffset = 5.5 * 60 * 60 * 1000;
@@ -395,6 +346,14 @@ function AppInner() {
       lockToPortrait().catch(() => {});
       getDeviceInfo().catch(() => {});
     }
+  }, []);
+
+  useEffect(() => {
+    const handler = (e: any) => {
+      showToast(`Access issue loading data (${e.detail?.path || 'unknown'}) — this usually means a permissions rule needs to be updated.`);
+    };
+    window.addEventListener('firestore-permission-error', handler);
+    return () => window.removeEventListener('firestore-permission-error', handler);
   }, []);
 
   useEffect(() => {

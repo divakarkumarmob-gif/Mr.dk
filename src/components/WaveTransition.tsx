@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { motion, useMotionValue, useTransform, animate } from 'motion/react';
+import React, { useEffect, useRef } from 'react';
+import { motion, useMotionValue, animate } from 'motion/react';
 
 export default function WaveReveal({
     active,
@@ -14,52 +14,54 @@ export default function WaveReveal({
     onFullyRevealed?: () => void;
     children: React.ReactNode;
 }) {
-    const maxRadius = Math.hypot(window.innerWidth, window.innerHeight) * 1.05;
-    const radius = useMotionValue(0);
-    const clipPath = useTransform(radius, (r) => `circle(${r}px at ${originX}px ${originY}px)`);
-    const ringSize = useTransform(radius, (r) => r * 2);
-    const ringOffset = useTransform(radius, (r) => -r);
+    const maxDiameter = Math.hypot(window.innerWidth, window.innerHeight) * 2.1;
+    const scale = useMotionValue(1);
+    const hasRevealedRef = useRef(false);
 
     useEffect(() => {
         if (!active) {
-            radius.set(0);
+            scale.set(1);
+            hasRevealedRef.current = false;
             return;
         }
-        radius.set(0);
-        const controls = animate(radius, maxRadius, {
-            duration: 0.75,
-            ease: [0.22, 1, 0.36, 1], // smooth "ease-out-expo"-style curve — no abrupt start/stop
-            onComplete: () => onFullyRevealed?.(),
+        scale.set(1);
+        hasRevealedRef.current = false;
+        const controls = animate(scale, 0, {
+            duration: 0.65,
+            ease: [0.22, 1, 0.36, 1],
+            onComplete: () => {
+                hasRevealedRef.current = true;
+                onFullyRevealed?.();
+            },
         });
         return () => controls.stop();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [active, originX, originY]);
 
-    if (!active) return null;
-
     return (
-        <div className="fixed inset-0 z-[3000]" style={{ willChange: 'clip-path' }}>
-            <motion.div
-                className="absolute inset-0 overflow-hidden"
-                style={{ clipPath, willChange: 'clip-path' }}
-            >
+        <div className="fixed inset-0 z-[3000]">
+            {/* Content mounts immediately and unclipped — cheap, painted once */}
+            <div className="absolute inset-0 overflow-hidden">
                 {children}
-            </motion.div>
+            </div>
 
-            <motion.div
-                className="absolute rounded-full pointer-events-none"
-                style={{
-                    width: ringSize,
-                    height: ringSize,
-                    left: originX,
-                    top: originY,
-                    x: ringOffset,
-                    y: ringOffset,
-                    boxShadow: '0 0 24px 6px rgba(139, 92, 246, 0.55), inset 0 0 18px 4px rgba(59, 130, 246, 0.35)',
-                    border: '2px solid rgba(255,255,255,0.4)',
-                    willChange: 'width, height, transform',
-                }}
-            />
+            {/* Overlay shape shrinks away toward the origin point using only
+                transform (GPU-composited, never repaints the content below) */}
+            {active && (
+                <motion.div
+                    className="absolute rounded-full pointer-events-none"
+                    style={{
+                        width: maxDiameter,
+                        height: maxDiameter,
+                        left: originX - maxDiameter / 2,
+                        top: originY - maxDiameter / 2,
+                        scale,
+                        background: 'radial-gradient(circle, rgba(59,130,246,0.95) 0%, rgba(139,92,246,0.95) 60%, rgba(139,92,246,0.7) 100%)',
+                        boxShadow: '0 0 40px 12px rgba(139, 92, 246, 0.5)',
+                        willChange: 'transform',
+                    }}
+                />
+            )}
         </div>
     );
 }

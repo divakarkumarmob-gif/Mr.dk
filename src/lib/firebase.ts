@@ -103,10 +103,9 @@ export function handleFirestoreError(error: unknown, operationType: OperationTyp
   const errInfo: FirestoreErrorInfo = {
     error: error instanceof Error ? error.message : String(error),
     // @ts-ignore
-    code: error?.code, // Try to capture Firebase error code
+    code: error?.code,
     authInfo: {
       userId: auth.currentUser?.uid,
-      // email and provider email removed for security
       emailVerified: auth.currentUser?.emailVerified,
       isAnonymous: auth.currentUser?.isAnonymous,
       tenantId: auth.currentUser?.tenantId,
@@ -118,4 +117,21 @@ export function handleFirestoreError(error: unknown, operationType: OperationTyp
     path
   }
   console.error('Firestore Error Detailed:', JSON.stringify(errInfo));
+
+  // @ts-ignore
+  const code = error?.code;
+  if (code === 'permission-denied') {
+    // Surface only permission errors visibly — these are almost always a
+    // real bug (missing/undeployed rule) rather than a transient network
+    // blip, so they're worth interrupting the user for; other error codes
+    // stay console-only to avoid noisy toasts on things like brief
+    // connectivity hiccups that Firestore usually recovers from on its own.
+    try {
+      window.dispatchEvent(new CustomEvent('firestore-permission-error', {
+        detail: { path, operationType }
+      }));
+    } catch (e) {
+      // never let the error-reporting path itself throw
+    }
+  }
 }
