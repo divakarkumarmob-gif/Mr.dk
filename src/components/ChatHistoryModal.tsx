@@ -273,15 +273,17 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         setPendingImage(null);
         setIsSending(true);
         try {
-            const mediaUrl = await uploadMedia(file, `chats/${auth.currentUser.uid}/images/${Date.now()}_${file.name}`);
-            await saveUserMessage(caption, mediaUrl, 'image');
-
+            // Read to base64 ONCE, immediately — before any network delay that
+            // could invalidate the underlying file handle on Android WebView.
             const base64: string = await new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => resolve(reader.result as string);
-                reader.onerror = reject;
+                reader.onerror = () => reject(new Error(reader.error?.message || 'Failed to read image file'));
                 reader.readAsDataURL(file);
             });
+
+            const mediaUrl = await uploadMedia(file, `chats/${auth.currentUser.uid}/images/${Date.now()}_${file.name}`);
+            await saveUserMessage(caption, mediaUrl, 'image');
             await requestAIReplyForImage(caption, base64);
         } catch (e) {
             console.error('[ChatHistoryModal] Image send failed:', e);
@@ -341,15 +343,17 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         setIsSending(true);
         try {
             const file = new File([blob], `voice_${Date.now()}.webm`, { type: mimeType });
-            const mediaUrl = await uploadMedia(file, `chats/${auth.currentUser.uid}/voice/${Date.now()}.webm`);
-            await saveUserMessage('', mediaUrl, 'audio');
 
+            // Read to base64 ONCE, immediately — before any network delay
             const base64: string = await new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => resolve(reader.result as string);
-                reader.onerror = reject;
+                reader.onerror = () => reject(new Error(reader.error?.message || 'Failed to read audio file'));
                 reader.readAsDataURL(blob);
             });
+
+            const mediaUrl = await uploadMedia(file, `chats/${auth.currentUser.uid}/voice/${Date.now()}.webm`);
+            await saveUserMessage('', mediaUrl, 'audio');
             await requestAIReplyForVoice(base64, mimeType);
         } catch (e) {
             console.error('[ChatHistoryModal] Voice send failed:', e);
@@ -464,7 +468,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
                     downloadUrl = await new Promise<string>((resolve, reject) => {
                         const reader = new FileReader();
                         reader.onload = () => resolve(reader.result as string);
-                        reader.onerror = reject;
+                        reader.onerror = () => reject(new Error(reader.error?.message || 'Failed to read screenshot blob'));
                         reader.readAsDataURL(blob);
                     });
                 }

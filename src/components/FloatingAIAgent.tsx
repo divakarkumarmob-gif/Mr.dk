@@ -4,7 +4,11 @@ import { Mic, Square } from 'lucide-react';
 import { stripLatexForTTS } from '../lib/utils';
 import { getApiUrl, authFetch } from '@/utils/api';
 import AgentFace from './AgentFace';
-const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI', origin?: { x: number; y: number }) => void, isTyping: boolean, isCentered?: boolean}> = ({ onNavigate, isTyping, isCentered }) => {
+export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
+    onNavigate: (view: string, origin?: { x: number; y: number }) => void;
+    isTyping: boolean;
+    isCentered?: boolean;
+}) {
     const [isOpen, setIsOpen] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState(false);
@@ -263,16 +267,8 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI', origin?: { x: numb
                    const rect = e.currentTarget.getBoundingClientRect();
                    const origin = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
 
-                   const screenWidth = window.innerWidth;
-                   const targetX = (screenWidth / 2) - 52; 
-                   const midX = screenWidth / 6;
-                   const midY = -130;
-                   const targetY = -65;
-                   
-                   animate(x, [0, midX, targetX], { duration: 0.4, ease: "easeInOut" });
-                   animate(y, [0, midY, targetY], { duration: 0.4, ease: "easeInOut" });
-                   animate(scale, 1.45, { duration: 0.4, ease: "easeInOut" });
-                   setTimeout(() => onNavigate('liveAI', origin), 250);
+                   animate(scale, 0, { duration: 0.2, ease: "easeIn" });
+                   onNavigate('liveAI', origin);
                 }}
             >
                 <AgentFace status={status} volume={0} size={56} colorIndex={colorIndex} />
@@ -339,6 +335,4 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI', origin?: { x: numb
             </AnimatePresence>
         </>
     );
-};
-
-export default FloatingAIAgent;
+}
