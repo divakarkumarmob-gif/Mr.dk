@@ -199,16 +199,12 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
     };
 
     const handleIconClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (isClicked) return;
-        setIsClicked(true);
         const rect = e.currentTarget.getBoundingClientRect();
         const origin = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
 
-        setTimeout(() => {
-            animate(scale, 0, { duration: 0.25, ease: "easeIn" });
-            onNavigate('liveAI', origin);
-            setTimeout(() => setIsClicked(false), 500);
-        }, 280);
+        setIsClicked(true);
+        onNavigate('liveAI', origin);
+        setTimeout(() => setIsClicked(false), 600);
     };
 
     return (
