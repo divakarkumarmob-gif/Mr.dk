@@ -25,7 +25,7 @@ export const summarizeChat = async (chatId: string, messages: any[]): Promise<st
 
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
+            model: "gemini-3.6-flash",
             contents: { parts: [{ text: prompt }] }
         });
         return response.text || "";

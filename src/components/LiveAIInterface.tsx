@@ -333,10 +333,10 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         });
     };
 
-    const sendImageToWebSocket = async (image: { id: string; file: File }) => {
+    const sendImageToWebSocket = async (image: { id: string; file: File; caption?: string }) => {
         if (ws.current && ws.current.readyState === WebSocket.OPEN) {
             const base64 = await fileToBase64(image.file);
-            ws.current.send(JSON.stringify({ image: base64, mimeType: image.file.type, imageId: image.id }));
+            ws.current.send(JSON.stringify({ image: base64, mimeType: image.file.type, imageId: image.id, caption: image.caption || '' }));
             
             // Save to Firestore history
             if (auth.currentUser) {
@@ -704,6 +704,8 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     setStatus("Speaking...");
                     playAudioChunk(outputAudioCtx.current, msg.audio, nextStartTime, isAiSpeaking);
                 }
+            } else if (msg.type === 'thinking') {
+                setStatus("Thinking...");
             } else if (msg.text) {
                 console.log("Caption received:", msg.text);
                 if (!captionTurnStartedRef.current) {

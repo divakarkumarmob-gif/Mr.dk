@@ -204,7 +204,7 @@ async function withGeminiRetry<T>(fn: () => Promise<T>, maxAttempts: number = 3)
     throw lastError;
 }
 
-// On the free tier, gemini-3.5-flash's quota/capacity is the one that runs
+// On the free tier, gemini-3.6-flash's quota/capacity is the one that runs
 // out fastest and hits 429/503 most often (its free-tier daily request cap
 // is much lower than the older Flash-Lite models). If the primary model is
 // still down after retries, fall through this chain of lighter models —
@@ -254,7 +254,24 @@ async function generateWithFallback(primaryModel: string, contents: any): Promis
 // \frac{3}{4}.
 const PLAIN_FORMAT_RULE = "Formatting rules: Do not use markdown symbols like #, *, _, or backticks. Only use **bold** for an occasional short heading/key term, nothing else. For lists, put each item on its own line starting with a dash and a space, nothing fancier. For math, write it the way a person would write it by hand — use ², ³, √, ×, ÷, and plain fractions like 3/4, never LaTeX or ^ or sqrt().";
 const NEURAL_SOLVER_FORMAT_RULE = "Formatting rules: Use markdown freely — **bold** for key results, terms, and final answers; numbered or bulleted steps for multi-step solutions; short section headers (##) when a question has multiple parts. For math, always use proper LaTeX: inline math wrapped in single $ signs (e.g. $B = \\frac{\\mu_0 i}{2R}$), and standalone equations wrapped in double $$ (e.g. $$B_{net} = B_{loop} - B_{wire}$$). Never write math as plain text like 'mu0*i/2R' — always use LaTeX.";
-const AI_SEARCH_FORMAT_RULE = "Formatting rules: Use markdown — **bold** for the key answer, important terms, and final results; numbered/bulleted steps for multi-step explanations; short headers for multi-part answers. For math, always use LaTeX: inline with single $ (e.g. $E = mc^2$), block equations with double $$. Never strip or avoid LaTeX.";
+const AI_SEARCH_FORMAT_RULE = "Formatting rules: Use markdown — **bold** for the key answer, important terms, and final results; numbered/bulleted steps for multi-step explanations; short headers for multi-part answers. For math, always use LaTeX: inline with single $ (e.g. $E = mc^2$), block equations with double $$. Never strip or avoid LaTeX.\n\nSynthesis rules: Don't just repeat or lightly reword a single source — read across all the retrieved sources, cross-check the key facts and numbers against each other, and write the answer in your own words as a synthesized, verified conclusion. If sources genuinely disagree on a specific fact (e.g. a live score, a date, a statistic), say so explicitly rather than silently picking one — state what the most current/reliable source says and note the discrepancy briefly. Never present a single source's claim as certain fact without that cross-check.";
+const SPOKEN_ACCURATE_RULE = "This answer will be read aloud by a voice assistant, not displayed as text. Do not use markdown, bold, bullet points, or LaTeX — write it as natural spoken sentences a tutor would say out loud, including the numbers and final answer in plain words (e.g. say 'mu naught i over two R', not '$\\mu_0 i / 2R$').";
+
+async function solveImageAccurately(base64Image: string, mimeType: string, caption: string): Promise<string> {
+    const response = await ai.models.generateContent({
+        model: "gemini-3.6-flash",
+        contents: {
+            parts: [
+                { text: `You are a NEET tutor solving a Physics/Chemistry/Biology problem from a photo, strictly according to NCERT. Work through the problem carefully step by step, double-check each calculation, and verify the final answer makes physical sense before finalizing it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${SPOKEN_ACCURATE_RULE}\n\nThe student's question/caption: "${caption || '(no caption, just solve what is shown in the image)'}"` },
+                { inlineData: { data: base64Image, mimeType: mimeType || "image/jpeg" } }
+            ]
+        },
+        config: {
+            tools: [{ googleSearch: {} }],
+        }
+    });
+    return response.text || "";
+}
 
 async function callAI(prompt: string | any[]): Promise<string> {
     try {
@@ -269,7 +286,7 @@ async function callAI(prompt: string | any[]): Promise<string> {
             contentParts = [{ text: systemInstruction }, prompt];
         }
 
-        const response = await generateWithFallback("gemini-3.5-flash", { parts: contentParts });
+        const response = await generateWithFallback("gemini-3.6-flash", { parts: contentParts });
         return response.text || "";
     } catch (error) {
         console.error("Gemini AI Error:", error);
@@ -286,7 +303,7 @@ async function callAI(prompt: string | any[]): Promise<string> {
 async function callAIStream(prompt: string | any[], res: express.Response): Promise<void> {
     try {
         const stream = await ai.models.generateContentStream({
-            model: "gemini-3.5-flash",
+            model: "gemini-3.6-flash",
             contents: Array.isArray(prompt) ? { parts: prompt } : prompt
         });
         for await (const chunk of stream) {
@@ -1564,7 +1581,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
 - Do NOT mention this memory block or the delimiter anywhere in your visible reply to the user — it must only appear after "///MEMORY///".
 - This memory section is mandatory in every single response, even simple greetings.`;
 
-          const response = await generateWithFallback("gemini-3.5-flash", { 
+          const response = await generateWithFallback("gemini-3.6-flash", { 
                 parts: [
                     { text: isStudyPlanChat ? studyPlanInstruction : baseInstruction },
                     ...contents
@@ -1630,7 +1647,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
         try {
             // Initiate AI analysis
             const response = await ai.models.generateContent({
-                model: "gemini-3.5-flash",
+                model: "gemini-3.6-flash",
                 contents: [{ parts: [{ text: prompt }] }]
             });
             
@@ -1716,7 +1733,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
         try {
             let reply: string;
             if (base64Image) {
-                const imgResponse = await generateWithFallback("gemini-3.5-flash", {
+                const imgResponse = await generateWithFallback("gemini-3.6-flash", {
                     parts: [
                         { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE} The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
                         { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
@@ -1743,7 +1760,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     const lastMessage = messages[messages.length - 1].content;
     
     try {
-        const response = await generateWithFallback("gemini-3.5-flash", {
+        const response = await generateWithFallback("gemini-3.6-flash", {
             parts: [
                 { text: `You are a NEET-focused doubt solver for Physics, Chemistry, and Biology, answering strictly according to NCERT. Give a complete, accurate, step-by-step solution — show the reasoning and working, not just the final answer. Bold the key formula, the final answer, and any critical facts the student should remember. ${NEURAL_SOLVER_FORMAT_RULE}` },
                 { text: lastMessage }
@@ -1776,7 +1793,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
             try {
                 // Use Gemini for image analysis
                 const response = await ai.models.generateContent({
-                    model: "gemini-3.5-flash",
+                    model: "gemini-3.6-flash",
                     contents: {
                         parts: [
                             { text: "What is in the image? Give a 5 word search query." },
@@ -1805,7 +1822,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
             let stream: any;
             if (isDirectImageQuestion) {
                  stream = await ai.models.generateContentStream({
-                    model: "gemini-3.5-flash",
+                    model: "gemini-3.6-flash",
                     contents: {
                         parts: [
                             { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. Work through the problem carefully step by step, double-check each calculation before moving to the next step, and verify the final answer makes physical sense before giving it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${AI_SEARCH_FORMAT_RULE}` },
@@ -1819,7 +1836,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
                  });
             } else {
                  stream = await ai.models.generateContentStream({
-                    model: "gemini-3.5-flash",
+                    model: "gemini-3.6-flash",
                     contents: {
                         parts: [{ text: `You are Google AI Mode. Answer the user's query directly and accurately using current, real information. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. For general queries (e.g. live scores, current events), give the direct current answer clearly. ${AI_SEARCH_FORMAT_RULE}\n\nQuery: "${finalPrompt}"` }]
                     },
@@ -2109,6 +2126,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     // still injecting into the session the user is actually on, not a
     // stale one from before a quick re-init (e.g. toggling settings).
     let currentSessionToken = 0;
+    let sessionAccurateMode = false;
 
     // Server-side equivalent of chatService.ts's saveAIMessage, using the
     // admin SDK (the client SDK saveAIMessage uses can't run here). Used to
@@ -2323,6 +2341,7 @@ App info — answer naturally if asked:
           try {
               if (currentSession) await currentSession.close();
               currentSessionToken++;
+              sessionAccurateMode = !!parsedData.accurateMode;
               const thisToken = currentSessionToken;
               currentSession = await createSession(parsedData.userId, parsedData.memorySettings, parsedData.voice, parsedData.thinkingLevel, parsedData.accurateMode, parsedData.answerLength, parsedData.googleSearchMode);
               console.log("Gemini Live session created successfully for user:", parsedData.userId);
@@ -2360,6 +2379,33 @@ App info — answer naturally if asked:
               }
             });
             clientWs.send(JSON.stringify({ imageAck: true, imageId: parsedData.imageId }));
+
+            if (sessionAccurateMode) {
+                const thisToken = currentSessionToken;
+                const sessionAtCaptureTime = currentSession;
+                clientWs.send(JSON.stringify({ type: 'thinking' }));
+
+                solveImageAccurately(parsedData.image, parsedData.mimeType, parsedData.caption || '')
+                    .then((accurateAnswer) => {
+                        if (thisToken !== currentSessionToken || sessionAtCaptureTime !== currentSession) {
+                            console.log("Session changed before accurate-solve finished, discarding.");
+                            return;
+                        }
+                        sessionAtCaptureTime.sendClientContent({
+                            turns: [{
+                                role: "user",
+                                parts: [{ text: `[System note: here is a verified, carefully worked solution to the image the student just sent — speak this answer to the student in your own natural voice, as if you worked it out yourself]\n${accurateAnswer}` }],
+                            }],
+                            turnComplete: true,
+                        });
+                    })
+                    .catch((err) => {
+                        console.error("Background accurate image solve failed:", err);
+                        // Fail silently from the user's perspective — the model already
+                        // has the image via the video frame and can still attempt a normal
+                        // response; we just don't get the extra accuracy boost this time.
+                    });
+            }
           } catch (err) {
             console.error("Failed to forward image to Gemini Live session:", err);
             clientWs.send(JSON.stringify({ imageAck: false, imageId: parsedData.imageId, error: "image_forward_failed" }));
