@@ -1,55 +1,78 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React, { useEffect } from 'react';
+import { motion, useMotionValue, useTransform, animate } from 'motion/react';
 
-export default function WaveTransition({ active, originX, originY, onCovered }: {
+export default function WaveReveal({
+    active,
+    originX,
+    originY,
+    onFullyRevealed,
+    children,
+}: {
     active: boolean;
     originX: number;
     originY: number;
-    onCovered?: () => void;
+    onFullyRevealed?: () => void;
+    children: React.ReactNode;
 }) {
+    const maxRadius = Math.hypot(window.innerWidth, window.innerHeight) * 1.05;
+    const radius = useMotionValue(0);
+
+    useEffect(() => {
+        if (active) {
+            radius.set(0);
+            const controls = animate(radius, maxRadius, {
+                duration: 0.6,
+                ease: [0.65, 0, 0.35, 1],
+                onComplete: () => onFullyRevealed?.(),
+            });
+            return () => controls.stop();
+        } else {
+            radius.set(0);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [active, originX, originY]);
+
+    if (!active) return null;
+
     return (
-        <AnimatePresence>
-            {active && (
-                <motion.div
-                    className="fixed inset-0 z-[3000] pointer-events-none"
-                    initial={{ opacity: 1 }}
-                    exit={{ opacity: 0, transition: { duration: 0.35, ease: 'easeInOut' } }}
-                >
-                    <svg
-                        className="w-full h-full"
-                        viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`}
-                        preserveAspectRatio="none"
-                    >
-                        <defs>
-                            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stopColor="#3b82f6" />
-                                <stop offset="100%" stopColor="#8b5cf6" />
-                            </linearGradient>
-                        </defs>
-                        <motion.circle
-                            cx={originX}
-                            cy={originY}
-                            fill="url(#waveGradient)"
-                            initial={{ r: 0 }}
-                            animate={{
-                                r: Math.hypot(window.innerWidth, window.innerHeight) * 1.1,
-                            }}
-                            transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
-                            onAnimationComplete={onCovered}
-                        />
-                        {/* Wavy edge overlay for a liquid feel, riding just inside the circle's edge */}
-                        <motion.path
-                            d="M0,0 Q 50,20 100,0 T 200,0"
-                            stroke="rgba(255,255,255,0.25)"
-                            strokeWidth="6"
-                            fill="none"
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            animate={{ pathLength: 1, opacity: [0, 1, 0] }}
-                            transition={{ duration: 0.5 }}
-                        />
-                    </svg>
-                </motion.div>
-            )}
-        </AnimatePresence>
+        <div className="fixed inset-0 z-[3000]">
+            {/* The revealed content, clipped to the growing circle */}
+            <motion.div
+                className="absolute inset-0 overflow-hidden"
+                style={{
+                    clipPath: useMotionValueClipPath(radius, originX, originY),
+                }}
+            >
+                {children}
+            </motion.div>
+
+            {/* Decorative wave ring riding the edge of the reveal circle */}
+            <RevealRing radius={radius} originX={originX} originY={originY} />
+        </div>
+    );
+}
+
+function useMotionValueClipPath(radius: ReturnType<typeof useMotionValue<number>>, x: number, y: number) {
+    return useTransform(radius, (r: number) => `circle(${r}px at ${x}px ${y}px)`);
+}
+
+function RevealRing({ radius, originX, originY }: { radius: ReturnType<typeof useMotionValue<number>>; originX: number; originY: number }) {
+    const size = useTransform(radius, (r: number) => r * 2);
+    const offset = useTransform(radius, (r: number) => -r);
+
+    return (
+        <motion.div
+            className="absolute rounded-full pointer-events-none"
+            style={{
+                width: size,
+                height: size,
+                left: originX,
+                top: originY,
+                x: offset,
+                y: offset,
+                boxShadow: '0 0 24px 6px rgba(139, 92, 246, 0.55), inset 0 0 18px 4px rgba(59, 130, 246, 0.35)',
+                border: '2px solid rgba(255,255,255,0.4)',
+            }}
+        />
     );
 }

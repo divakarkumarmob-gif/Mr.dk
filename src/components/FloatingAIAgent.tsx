@@ -4,11 +4,7 @@ import { Mic, Square } from 'lucide-react';
 import { stripLatexForTTS } from '../lib/utils';
 import { getApiUrl, authFetch } from '@/utils/api';
 import AgentFace from './AgentFace';
-import WaveTransition from './WaveTransition';
-
-const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping: boolean, isCentered?: boolean}> = ({ onNavigate, isTyping, isCentered }) => {
-    const [waveActive, setWaveActive] = useState(false);
-    const [waveOrigin, setWaveOrigin] = useState({ x: 0, y: 0 });
+const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI', origin?: { x: number; y: number }) => void, isTyping: boolean, isCentered?: boolean}> = ({ onNavigate, isTyping, isCentered }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState(false);
@@ -265,8 +261,7 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                 }}
                 onClick={(e) => {
                    const rect = e.currentTarget.getBoundingClientRect();
-                   setWaveOrigin({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 });
-                   setWaveActive(true);
+                   const origin = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
 
                    const screenWidth = window.innerWidth;
                    const targetX = (screenWidth / 2) - 52; 
@@ -277,7 +272,7 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                    animate(x, [0, midX, targetX], { duration: 0.4, ease: "easeInOut" });
                    animate(y, [0, midY, targetY], { duration: 0.4, ease: "easeInOut" });
                    animate(scale, 1.45, { duration: 0.4, ease: "easeInOut" });
-                   setTimeout(() => onNavigate('liveAI'), 400);
+                   setTimeout(() => onNavigate('liveAI', origin), 250);
                 }}
             >
                 <AgentFace status={status} volume={0} size={56} colorIndex={colorIndex} />
@@ -342,14 +337,6 @@ const FloatingAIAgent: React.FC<{onNavigate: (view: 'liveAI') => void, isTyping:
                     </motion.div>
                 )}
             </AnimatePresence>
-            <WaveTransition
-                active={waveActive}
-                originX={waveOrigin.x}
-                originY={waveOrigin.y}
-                onCovered={() => {
-                    setTimeout(() => setWaveActive(false), 150);
-                }}
-            />
         </>
     );
 };

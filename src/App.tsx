@@ -29,6 +29,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Footer from './components/Footer';
 import BottomNav from './components/BottomNav';
 import PageLayout from './components/PageLayout';
+import WaveReveal from './components/WaveTransition';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
 import { useAuth } from './contexts/AuthContext';
 import { useRouteBackButton } from './lib/useRouteBackButton';
@@ -338,6 +339,7 @@ function AppInner() {
   const [user, setUser] = useState<User | null>(null);
   const [showLoginFromLanding, setShowLoginFromLanding] = useState(false);
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
+  const [liveAIOrigin, setLiveAIOrigin] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
   const currentViewRef = React.useRef(currentView);
   const [urlParams, setUrlParams] = useState<URLSearchParams>(new URLSearchParams(window.location.search));
   const urlParamsRef = React.useRef(urlParams);
@@ -1826,9 +1828,11 @@ function AppInner() {
 
   if (currentView === 'liveAI') {
       return (
-        <PageLayout background="bg-background">
-            <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />
-        </PageLayout>
+        <WaveReveal active={true} originX={liveAIOrigin.x} originY={liveAIOrigin.y}>
+            <Suspense fallback={null}>
+                <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />
+            </Suspense>
+        </WaveReveal>
       );
   }
 
@@ -2405,7 +2409,15 @@ function AppInner() {
       
       <Footer onNavigate={setCurrentView} />
       
-      {currentView !== 'liveAI' && <FloatingAIAgent onNavigate={setCurrentView} isTyping={isTyping} />}
+      {currentView !== 'liveAI' && (
+        <FloatingAIAgent
+          onNavigate={(view, origin) => {
+            if (origin) setLiveAIOrigin(origin);
+            setCurrentView(view);
+          }}
+          isTyping={isTyping}
+        />
+      )}
       
       <SupportModal 
         isOpen={showSupportModal} 
