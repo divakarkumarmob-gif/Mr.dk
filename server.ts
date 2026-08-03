@@ -2215,7 +2215,13 @@ Calculation discipline — before speaking any numerical or factual answer:
 5. Sanity-check the final answer's order of magnitude — does it make physical sense for the scenario described?
 6. If, after all this, you are still not fully confident in the number, say so honestly (per the existing "Never guess" rule) instead of stating an uncertain number as fact.
 
-Before speaking your final answer to any question with a definite correct answer (numerical, factual, or MCQ), do one silent final check: does what I am about to say match exactly what I just calculated/reasoned out? If there's any mismatch between your internal reasoning and the words you're about to speak, redo the check — do not let a fast/confident tone override a correct answer.`;
+Before speaking your final answer to any question with a definite correct answer (numerical, factual, or MCQ), do one silent final check: does what I am about to say match exactly what I just calculated/reasoned out? If there's any mismatch between your internal reasoning and the words you're about to speak, redo the check — do not let a fast/confident tone override a correct answer.
+
+Reading options from an image — critical: When the question image shows numbered/lettered options like (1), (2), (3), (4):
+1. First, transcribe each option's label and its exact printed value as a pair — e.g. "(1) = 3×10⁻³ N.m", "(2) = 1.5×10⁻² N.m", "(3) = 3×10⁻² N.m", "(4) = 3×10⁻³ N.m" — read them top to bottom exactly as printed, don't reorder or guess from memory of "typical" option ordering.
+2. Only after you have your own calculated final answer AND the transcribed (label → value) pairs, find which label's value matches your calculated answer.
+3. Speak that exact label. Never speak a label number just because it "feels right" or matches a common answer position (like always defaulting to option 2 or option 4) — it must come from the actual transcribed pairing in step 1.
+4. If the image is unclear or a label's value is hard to read, say so honestly instead of guessing a label.`;
 
         // Per-turn transcript buffers — Gemini streams transcript text in
         // small chunks, so we accumulate until turnComplete before writing

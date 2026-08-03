@@ -28,6 +28,20 @@ interface CommentItem {
     timestamp: any;
 }
 
+interface PollOption {
+    id: string;
+    text: string;
+    votes: string[]; // Array of viewer IDs / user UIDs who voted for this option
+}
+
+interface PollData {
+    question?: string;
+    options: PollOption[];
+    correctOptionIndex: number; // 0-based index of correct option
+    totalVotes: number;
+    votedUsers?: Record<string, number>; // Map of viewerId -> optionIndex voted
+}
+
 interface Post {
     id: string;
     userId: string;
@@ -43,6 +57,7 @@ interface Post {
     viewsCount?: number; // Real Unique Views Tracker
     viewedBy?: string[]; // Array of unique viewer IDs
     roomData?: StudyRoom; // Embedded Study Room data if post is a room invite
+    pollData?: PollData; // Embedded MCQ Poll data if post is an MCQ poll
     timestamp: any;
 }
 
@@ -68,7 +83,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     const [roomMode, setRoomMode] = useState<RoomMode>('doubt_solving');
     const [roomExpiryOption, setRoomExpiryOption] = useState<string>('none');
 
-    // Create Post State
+    // Create Post & MCQ Poll State
+    const [postType, setPostType] = useState<'standard' | 'poll'>('standard');
+    const [pollOptions, setPollOptions] = useState<string[]>(['', '', '', '']);
+    const [correctOptionIndex, setCorrectOptionIndex] = useState<number>(0);
     const [postText, setPostText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
     const [videoUrl, setVideoUrl] = useState<string>('');
@@ -582,9 +600,46 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     // Create New Post Handler (Guaranteed Cloud & Local Success)
     const handleCreatePost = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!postText.trim() && !imageUrl.trim() && !videoUrl.trim()) {
-            showToast('Kucch text, photo ya video select karein!');
-            return;
+        
+        let finalPollData: PollData | undefined = undefined;
+        let finalTag = selectedCategory;
+
+        if (postType === 'poll') {
+            if (!postText.trim()) {
+                showToast('MCQ Question statement likhein!');
+                return;
+            }
+            const filledOptions = pollOptions.map((opt, i) => ({ opt: opt.trim(), originalIndex: i })).filter(item => item.opt !== '');
+            if (filledOptions.length < 2) {
+                showToast('Poll ke liye kam se kam 2 options likhein!');
+                return;
+            }
+
+            let newCorrectIndex = 0;
+            const validPollOptions: PollOption[] = filledOptions.map((item, idx) => {
+                if (item.originalIndex === correctOptionIndex) {
+                    newCorrectIndex = idx;
+                }
+                return {
+                    id: 'opt_' + idx,
+                    text: item.opt,
+                    votes: []
+                };
+            });
+
+            finalPollData = {
+                question: postText.trim(),
+                options: validPollOptions,
+                correctOptionIndex: newCorrectIndex,
+                totalVotes: 0,
+                votedUsers: {}
+            };
+            finalTag = 'polls';
+        } else {
+            if (!postText.trim() && !imageUrl.trim() && !videoUrl.trim()) {
+                showToast('Kucch text, photo ya video select karein!');
+                return;
+            }
         }
 
         setIsSubmitting(true);
@@ -599,7 +654,8 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             text: postText.trim(),
             imageUrl: imageUrl.trim() || '',
             videoUrl: videoUrl.trim() || '',
-            tag: selectedCategory,
+            tag: finalTag,
+            pollData: finalPollData,
             likes: [],
             commentsCount: 0,
             viewsCount: 1, // Author's first view
@@ -613,7 +669,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
         // Save to Firestore for permanent cloud storage across all devices, logins & reinstalls
         try {
-            const docRef = await addDoc(collection(db, 'communityPosts'), encryptMessagePayload({
+            const payload: any = {
                 userId: newPost.userId || 'anonymous',
                 userName: newPost.userName || 'NEET Aspirant',
                 userPhoto: newPost.userPhoto || '',
@@ -621,13 +677,18 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 text: newPost.text || '',
                 imageUrl: newPost.imageUrl || '',
                 videoUrl: newPost.videoUrl || '',
-                tag: newPost.tag || 'BioTips',
+                tag: newPost.tag || 'chats',
                 likes: [],
                 commentsCount: 0,
                 viewsCount: 1,
                 viewedBy: [viewerId],
                 timestamp: serverTimestamp()
-            }, 'community'));
+            };
+            if (newPost.pollData) {
+                payload.pollData = newPost.pollData;
+            }
+
+            const docRef = await addDoc(collection(db, 'communityPosts'), encryptMessagePayload(payload, 'community'));
             newPost.id = docRef.id;
             console.log("Post cloud saved to Firestore successfully with ID:", docRef.id);
         } catch (err: any) {
@@ -655,16 +716,72 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         // Update local state instantly
         setPosts(prev => [newPost, ...prev.filter(p => p.id !== newPost.id)]);
 
-        // Set default capsule filter to 'chats' when user posts
-        setSelectedTagFilter('chats');
-        setSelectedCategory('chats');
+        // Set default capsule filter to finalTag when user posts
+        setSelectedTagFilter(finalTag);
+        if (finalTag !== 'polls') setSelectedCategory(finalTag);
 
-        showToast('Post community mein publish ho gaya! 🎉');
+        showToast(postType === 'poll' ? 'MCQ Poll community mein publish ho gaya! 📊' : 'Post community mein publish ho gaya! 🎉');
         setPostText('');
         setImageUrl('');
         setVideoUrl('');
+        setPollOptions(['', '', '', '']);
+        setCorrectOptionIndex(0);
+        setPostType('standard');
         setShowCreateModal(false);
         setIsSubmitting(false);
+    };
+
+    // Handle MCQ Poll Vote
+    const handleVotePoll = async (post: Post, optionIndex: number) => {
+        if (!post.pollData) return;
+        const viewerId = getViewerId();
+        const currentPollData = post.pollData;
+        const votedUsers = currentPollData.votedUsers || {};
+
+        if (votedUsers[viewerId] !== undefined) {
+            showToast('Aap pehle hi is MCQ poll par vote kar chuke hain! 📊');
+            return;
+        }
+
+        const updatedOptions = currentPollData.options.map((opt, idx) => {
+            if (idx === optionIndex) {
+                const currentVotes = opt.votes || [];
+                return { ...opt, votes: [...currentVotes, viewerId] };
+            }
+            return opt;
+        });
+
+        const updatedVotedUsers = { ...votedUsers, [viewerId]: optionIndex };
+        const updatedTotalVotes = (currentPollData.totalVotes || 0) + 1;
+
+        const updatedPollData: PollData = {
+            ...currentPollData,
+            options: updatedOptions,
+            totalVotes: updatedTotalVotes,
+            votedUsers: updatedVotedUsers
+        };
+
+        // Update state locally first
+        setPosts(prev => prev.map(p => p.id === post.id ? { ...p, pollData: updatedPollData } : p));
+
+        // LocalStorage fallback update
+        try {
+            const currentLocal: Post[] = getLocalPosts();
+            const updatedLocal = currentLocal.map(p => p.id === post.id ? { ...p, pollData: updatedPollData } : p);
+            localStorage.setItem('neet_community_local_posts', JSON.stringify(updatedLocal));
+        } catch {}
+
+        showToast('Aapka vote record ho gaya! 🗳️');
+
+        // Firestore sync
+        try {
+            const postRef = doc(db, 'communityPosts', post.id);
+            await updateDoc(postRef, {
+                pollData: updatedPollData
+            });
+        } catch (err) {
+            console.warn("Firestore poll vote update error:", err);
+        }
     };
 
     // Toggle Like Handler
@@ -796,6 +913,8 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
         if (selectedTagFilter === 'all') {
             matchesTag = true;
+        } else if (selectedTagFilter === 'polls') {
+            matchesTag = !!post.pollData || post.tag === 'polls';
         } else if (selectedTagFilter === 'chats') {
             matchesTag = post.tag === 'chats' || !post.tag || post.tag === 'General';
         } else if (selectedTagFilter === 'rooms') {
@@ -919,6 +1038,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
                     {[
                         { id: 'all', label: '🌟 All Posts' },
+                        { id: 'polls', label: '📊 MCQ Polls' },
                         { id: 'chats', label: '💬 Chats' },
                         { id: 'myRooms', label: '👑 My Rooms' },
                         { id: 'rooms', label: '📻 All Live Rooms' },
@@ -1064,6 +1184,123 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                             </button>
                                         </div>
                                     )}
+
+                                    {/* Embedded YouTube-Style MCQ Poll Card if post is a Poll */}
+                                    {post.pollData && (() => {
+                                        const poll = post.pollData;
+                                        const viewerId = getViewerId();
+                                        const votedUsers = poll.votedUsers || {};
+                                        const userVotedIndex = votedUsers[viewerId];
+                                        const isOwner = currentUser && (currentUser.uid === post.userId || post.userId.startsWith('user_'));
+                                        const hasVoted = userVotedIndex !== undefined || isOwner;
+                                        const totalVotes = poll.totalVotes || 0;
+
+                                        return (
+                                            <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e1b4b] border border-indigo-500/40 space-y-3 my-2 shadow-xl">
+                                                <div className="flex items-center justify-between">
+                                                    <span className="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/30 flex items-center gap-1">
+                                                        <Sparkles className="w-3 h-3 text-amber-400" /> Community MCQ Poll
+                                                    </span>
+                                                    <span className="text-[10px] text-white/50 font-medium">
+                                                        {totalVotes} {totalVotes === 1 ? 'Vote' : 'Votes'}
+                                                    </span>
+                                                </div>
+
+                                                <p className="text-sm font-bold text-white leading-snug">
+                                                    {poll.question || post.text}
+                                                </p>
+
+                                                <div className="space-y-2 pt-1">
+                                                    {poll.options.map((option, idx) => {
+                                                        const voteCount = option.votes?.length || 0;
+                                                        const percentage = totalVotes > 0 ? Math.round((voteCount / totalVotes) * 100) : 0;
+                                                        const isSelected = userVotedIndex === idx;
+                                                        const isCorrect = poll.correctOptionIndex === idx;
+
+                                                        return (
+                                                            <div
+                                                                key={option.id || idx}
+                                                                onClick={() => !hasVoted && handleVotePoll(post, idx)}
+                                                                className={`relative overflow-hidden rounded-xl border p-3 text-xs transition-all duration-200 ${
+                                                                    !hasVoted
+                                                                        ? 'border-white/15 bg-white/5 hover:border-indigo-400 hover:bg-white/10 cursor-pointer active:scale-[0.99]'
+                                                                        : isSelected
+                                                                            ? isCorrect
+                                                                                ? 'border-emerald-500/60 bg-emerald-950/40 text-emerald-100 font-semibold'
+                                                                                : 'border-rose-500/60 bg-rose-950/40 text-rose-100 font-semibold'
+                                                                            : isCorrect
+                                                                                ? 'border-emerald-500/50 bg-emerald-950/20 text-emerald-200'
+                                                                                : 'border-white/10 bg-white/5 text-white/70'
+                                                                }`}
+                                                            >
+                                                                {/* YouTube-Style Animated Progress Fill Bar */}
+                                                                {hasVoted && (
+                                                                    <motion.div
+                                                                        initial={{ width: 0 }}
+                                                                        animate={{ width: `${percentage}%` }}
+                                                                        transition={{ duration: 0.5, ease: "easeOut" }}
+                                                                        className={`absolute inset-y-0 left-0 -z-0 opacity-25 ${
+                                                                            isCorrect
+                                                                                ? 'bg-emerald-500'
+                                                                                : isSelected
+                                                                                    ? 'bg-rose-500'
+                                                                                    : 'bg-indigo-400'
+                                                                        }`}
+                                                                    />
+                                                                )}
+
+                                                                <div className="relative z-10 flex items-center justify-between gap-2">
+                                                                    <div className="flex items-center gap-2 flex-1">
+                                                                        <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 border ${
+                                                                            hasVoted
+                                                                                ? isCorrect
+                                                                                    ? 'bg-emerald-500 text-black border-emerald-400'
+                                                                                    : isSelected
+                                                                                        ? 'bg-rose-500 text-white border-rose-400'
+                                                                                        : 'bg-white/10 text-white/60 border-white/20'
+                                                                                : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
+                                                                        }`}>
+                                                                            {String.fromCharCode(65 + idx)}
+                                                                        </span>
+                                                                        <span className="font-medium text-white/90 leading-snug">
+                                                                            {option.text}
+                                                                        </span>
+                                                                        {hasVoted && isSelected && (
+                                                                            <span className="px-1.5 py-0.5 rounded bg-indigo-500/30 text-indigo-200 text-[9px] font-bold uppercase tracking-wider">
+                                                                                Your Vote
+                                                                            </span>
+                                                                        )}
+                                                                    </div>
+
+                                                                    {hasVoted && (
+                                                                        <div className="flex items-center gap-1.5 shrink-0">
+                                                                            {isCorrect && (
+                                                                                <span className="text-emerald-400 font-bold text-[11px] flex items-center gap-0.5">
+                                                                                    ✓ Correct
+                                                                                </span>
+                                                                            )}
+                                                                            <span className="font-bold text-white text-xs min-w-[32px] text-right">
+                                                                                {percentage}%
+                                                                            </span>
+                                                                        </div>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+
+                                                {hasVoted && (
+                                                    <div className="pt-1 flex items-center justify-between text-[10px] text-white/50 border-t border-white/5">
+                                                        <span>💡 {totalVotes} student{totalVotes !== 1 ? 's' : ''} voted</span>
+                                                        <span className="text-emerald-400/80 font-medium">
+                                                            Correct Answer: Option {String.fromCharCode(65 + (poll.correctOptionIndex || 0))}
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        );
+                                    })()}
 
                                     {/* Attached Image */}
                                     {post.imageUrl && (
@@ -1244,9 +1481,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                             initial={{ scale: 0.95, y: 20 }}
                             animate={{ scale: 1, y: 0 }}
                             exit={{ scale: 0.95, y: 20 }}
-                            className="w-full max-w-lg bg-[#0c1222] border border-white/15 rounded-3xl p-5 sm:p-6 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto"
+                            className="w-full max-w-lg bg-gradient-to-b from-[#0f172a] via-[#111827] to-[#0c1222] border border-indigo-500/40 rounded-3xl p-5 sm:p-6 space-y-4 shadow-2xl shadow-indigo-500/20 max-h-[85vh] overflow-y-auto"
                         >
-                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                            <div className="flex items-center justify-between border-b border-indigo-500/20 pb-3">
                                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                                     Create Live Study Room 🚀
                                 </h3>
@@ -1260,84 +1497,84 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                             <form onSubmit={handleCreateStudyRoom} className="space-y-4">
                                 <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Study Room Name</label>
+                                    <label className="text-xs text-indigo-300 font-semibold mb-1 block">Study Room Name</label>
                                     <input
                                         type="text"
                                         value={roomName}
                                         onChange={(e) => setRoomName(e.target.value)}
                                         placeholder="e.g. Physics Optics Doubts & Problem Solving"
-                                        className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500"
+                                        className="w-full p-3 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 text-white text-sm focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30"
                                         required
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Subject Tag</label>
+                                    <label className="text-xs text-indigo-300 font-semibold mb-1 block">Subject Tag</label>
                                     <select
                                         value={roomTopic}
                                         onChange={(e) => setRoomTopic(e.target.value)}
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                        className="w-full p-3 rounded-2xl bg-gradient-to-r from-indigo-950/80 to-purple-950/80 border border-indigo-500/40 text-white text-xs font-bold focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/30 cursor-pointer shadow-inner"
                                     >
-                                        <option value="Physics" className="bg-[#0c1222]">⚡ Physics</option>
-                                        <option value="Chemistry" className="bg-[#0c1222]">🧪 Chemistry</option>
-                                        <option value="Biology" className="bg-[#0c1222]">🌿 Biology</option>
-                                        <option value="General" className="bg-[#0c1222]">📚 General Discussion</option>
+                                        <option value="Physics" className="bg-[#0f172a] text-amber-300 font-bold py-1">⚡ Physics</option>
+                                        <option value="Chemistry" className="bg-[#0f172a] text-purple-300 font-bold py-1">🧪 Chemistry</option>
+                                        <option value="Biology" className="bg-[#0f172a] text-emerald-300 font-bold py-1">🌿 Biology</option>
+                                        <option value="General" className="bg-[#0f172a] text-blue-300 font-bold py-1">📚 General Discussion</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Select Room Purpose / Mode</label>
+                                    <label className="text-xs text-purple-300 font-semibold mb-1 block">Select Room Purpose / Mode</label>
                                     <select
                                         value={roomMode}
                                         onChange={(e) => setRoomMode(e.target.value as RoomMode)}
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                        className="w-full p-3 rounded-2xl bg-gradient-to-r from-purple-950/80 to-indigo-950/80 border border-purple-500/40 text-white text-xs font-bold focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 cursor-pointer shadow-inner"
                                     >
-                                        <option value="doubt_solving" className="bg-[#0c1222]">🔴 Live Doubt Solving Mode</option>
-                                        <option value="silent_study" className="bg-[#0c1222]">📖 Silent Group Study Mode</option>
-                                        <option value="mcq_battle" className="bg-[#0c1222]">🧪 MCQ Speed Battle Mode</option>
-                                        <option value="general" className="bg-[#0c1222]">📚 General Discussion Mode</option>
+                                        <option value="doubt_solving" className="bg-[#0f172a] text-red-300 font-bold py-1">🔴 Live Doubt Solving Mode</option>
+                                        <option value="silent_study" className="bg-[#0f172a] text-cyan-300 font-bold py-1">📖 Silent Group Study Mode</option>
+                                        <option value="mcq_battle" className="bg-[#0f172a] text-amber-300 font-bold py-1">🧪 MCQ Speed Battle Mode</option>
+                                        <option value="general" className="bg-[#0f172a] text-indigo-300 font-bold py-1">📚 General Discussion Mode</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Room Description</label>
+                                    <label className="text-xs text-indigo-300 font-semibold mb-1 block">Room Description</label>
                                     <textarea
                                         rows={2}
                                         value={roomDescription}
                                         onChange={(e) => setRoomDescription(e.target.value)}
                                         placeholder="Room purpose and rules..."
-                                        className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-indigo-500"
+                                        className="w-full p-3 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 text-white text-xs focus:outline-none focus:border-indigo-400"
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Max Members Capacity Limit</label>
+                                    <label className="text-xs text-emerald-300 font-semibold mb-1 block">Max Members Capacity Limit</label>
                                     <select
                                         value={roomMaxMembers}
                                         onChange={(e) => setRoomMaxMembers(parseInt(e.target.value))}
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                        className="w-full p-3 rounded-2xl bg-gradient-to-r from-emerald-950/80 to-teal-950/80 border border-emerald-500/40 text-white text-xs font-bold focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/30 cursor-pointer shadow-inner"
                                     >
-                                        <option value={5} className="bg-[#0c1222]">5 Members (Small Focus Group)</option>
-                                        <option value={10} className="bg-[#0c1222]">10 Members (Intimate Group)</option>
-                                        <option value={25} className="bg-[#0c1222]">25 Members (Classroom Group)</option>
-                                        <option value={50} className="bg-[#0c1222]">50 Members (Standard Room)</option>
-                                        <option value={100} className="bg-[#0c1222]">100 Members (Large Batch)</option>
-                                        <option value={500} className="bg-[#0c1222]">500 Members (Mega Seminar)</option>
+                                        <option value={5} className="bg-[#0f172a] text-emerald-300 font-bold py-1">5 Members (Small Focus Group)</option>
+                                        <option value={10} className="bg-[#0f172a] text-emerald-300 font-bold py-1">10 Members (Intimate Group)</option>
+                                        <option value={25} className="bg-[#0f172a] text-emerald-300 font-bold py-1">25 Members (Classroom Group)</option>
+                                        <option value={50} className="bg-[#0f172a] text-emerald-300 font-bold py-1">50 Members (Standard Room)</option>
+                                        <option value={100} className="bg-[#0f172a] text-emerald-300 font-bold py-1">100 Members (Large Batch)</option>
+                                        <option value={500} className="bg-[#0f172a] text-emerald-300 font-bold py-1">500 Members (Mega Seminar)</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Room Expiry Duration (Countdown Timer)</label>
+                                    <label className="text-xs text-amber-300 font-semibold mb-1 block">Room Expiry Duration (Countdown Timer)</label>
                                     <select
                                         value={roomExpiryOption}
                                         onChange={(e) => setRoomExpiryOption(e.target.value)}
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                        className="w-full p-3 rounded-2xl bg-gradient-to-r from-amber-950/80 to-orange-950/80 border border-amber-500/40 text-white text-xs font-bold focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/30 cursor-pointer shadow-inner"
                                     >
-                                        <option value="none" className="bg-[#0c1222]">♾️ None (No Expiry - Runs until closed by Admin)</option>
-                                        <option value="1_hour" className="bg-[#0c1222]">⏱️ 1 Hour Expiry</option>
-                                        <option value="3_hours" className="bg-[#0c1222]">⏱️ 3 Hours Expiry</option>
-                                        <option value="6_hours" className="bg-[#0c1222]">⏱️ 6 Hours Expiry</option>
-                                        <option value="24_hours" className="bg-[#0c1222]">⏱️ 24 Hours Expiry</option>
+                                        <option value="none" className="bg-[#0f172a] text-amber-300 font-bold py-1">♾️ None (No Expiry - Runs until closed by Admin)</option>
+                                        <option value="1_hour" className="bg-[#0f172a] text-amber-300 font-bold py-1">⏱️ 1 Hour Expiry</option>
+                                        <option value="3_hours" className="bg-[#0f172a] text-amber-300 font-bold py-1">⏱️ 3 Hours Expiry</option>
+                                        <option value="6_hours" className="bg-[#0f172a] text-amber-300 font-bold py-1">⏱️ 6 Hours Expiry</option>
+                                        <option value="24_hours" className="bg-[#0f172a] text-amber-300 font-bold py-1">⏱️ 24 Hours Expiry</option>
                                     </select>
                                 </div>
 
@@ -1367,9 +1604,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                             initial={{ scale: 0.95, y: 20 }}
                             animate={{ scale: 1, y: 0 }}
                             exit={{ scale: 0.95, y: 20 }}
-                            className="w-full max-w-lg bg-[#0c1222] border border-white/15 rounded-3xl p-6 space-y-4 shadow-2xl max-h-[90vh] overflow-y-auto"
+                            className="w-full max-w-lg bg-gradient-to-b from-[#0f172a] via-[#111827] to-[#0c1222] border border-purple-500/40 rounded-3xl p-6 space-y-4 shadow-2xl shadow-purple-500/20 max-h-[90vh] overflow-y-auto"
                         >
-                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                            <div className="flex items-center justify-between border-b border-purple-500/20 pb-3">
                                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                                     Create NEET Community Post 📝
                                 </h3>
@@ -1382,97 +1619,194 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                             </div>
 
                             <form onSubmit={handleCreatePost} className="space-y-4">
-                                {/* Category Picker */}
-                                <div>
-                                    <label className="text-xs text-white/60 font-semibold mb-1 block">Select Category Tag</label>
-                                    <select
-                                        value={selectedCategory}
-                                        onChange={(e) => setSelectedCategory(e.target.value)}
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-semibold focus:outline-none focus:border-indigo-500"
+                                {/* Post Type Selector Tabs */}
+                                <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-indigo-950/60 border border-indigo-500/30">
+                                    <button
+                                        type="button"
+                                        onClick={() => setPostType('standard')}
+                                        className={`flex-1 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${
+                                            postType === 'standard'
+                                                ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/30 font-extrabold'
+                                                : 'text-indigo-200/70 hover:text-white hover:bg-white/5'
+                                        }`}
                                     >
-                                        <option value="chats" className="bg-[#0c1222]">💬 General Chat / Message</option>
-                                        <option value="BioTips" className="bg-[#0c1222]">🌿 Bio High-Yield Trick</option>
-                                        <option value="PhysicsFormulas" className="bg-[#0c1222]">⚡ Physics Formula Note</option>
-                                        <option value="ChemistryTricks" className="bg-[#0c1222]">🧪 Chemistry Mnemonic</option>
-                                        <option value="Motivation" className="bg-[#0c1222]">🔥 Motivation / AIIMS Goal</option>
-                                        <option value="Doubt" className="bg-[#0c1222]">❓ Doubt Help</option>
-                                    </select>
+                                        <MessageSquare className="w-3.5 h-3.5" />
+                                        <span>💬 Standard Post</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setPostType('poll')}
+                                        className={`flex-1 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${
+                                            postType === 'poll'
+                                                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/30 font-extrabold'
+                                                : 'text-purple-200/70 hover:text-white hover:bg-white/5'
+                                        }`}
+                                    >
+                                        <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-spin-slow" />
+                                        <span>📊 Create MCQ Poll</span>
+                                    </button>
                                 </div>
 
-                                {/* Text Area */}
-                                <div>
-                                    <textarea
-                                        rows={3}
-                                        value={postText}
-                                        onChange={(e) => setPostText(e.target.value)}
-                                        placeholder="Apna NEET study tip, doubt, ya note yahan likhein..."
-                                        className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
-                                    />
-                                </div>
-
-                                {/* Direct File Upload (Photo / Video File Picker) */}
-                                <div className="p-3 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-center space-y-2">
-                                    <label className="cursor-pointer flex flex-col items-center gap-1.5">
-                                        <div className="flex items-center gap-2 text-xs font-bold text-indigo-300">
-                                            <Upload className="w-4 h-4 text-indigo-400" />
-                                            <span>Select Photo or Video File from Device</span>
+                                {postType === 'poll' ? (
+                                    <div className="space-y-3">
+                                        <div>
+                                            <label className="text-xs text-purple-300 font-bold mb-1 block">MCQ Question Statement *</label>
+                                            <textarea
+                                                rows={2}
+                                                value={postText}
+                                                onChange={(e) => setPostText(e.target.value)}
+                                                placeholder="e.g. Which organelle is known as the powerhouse of the cell?"
+                                                className="w-full p-3 rounded-2xl bg-purple-950/40 border border-purple-500/30 text-white text-sm focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 placeholder:text-white/30"
+                                                required
+                                            />
                                         </div>
-                                        <span className="text-[10px] text-white/50">Tap to pick Image or Video file</span>
-                                        <input 
-                                            type="file" 
-                                            accept="image/*,video/*"
-                                            onChange={handleFileChange}
-                                            className="hidden" 
-                                        />
-                                    </label>
-                                </div>
 
-                                {/* Image Preview */}
-                                {imageUrl && (
-                                    <div className="relative rounded-xl overflow-hidden max-h-40 border border-white/10">
-                                        <img src={imageUrl} alt="Attached Preview" className="w-full h-full object-cover" />
-                                        <button 
-                                            type="button"
-                                            onClick={() => setImageUrl('')}
-                                            className="absolute top-2 right-2 p-1 rounded-full bg-black/70 text-white hover:bg-red-600"
-                                        >
-                                            <X className="w-4 h-4" />
-                                        </button>
+                                        <div className="space-y-2">
+                                            <label className="text-xs text-emerald-300 font-bold block">Options (Select radio button for Correct Answer) *</label>
+                                            {pollOptions.map((optText, index) => (
+                                                <div key={index} className={`flex items-center gap-2 p-1.5 rounded-2xl border transition ${
+                                                    correctOptionIndex === index
+                                                        ? 'bg-gradient-to-r from-emerald-950/60 to-teal-950/60 border-emerald-500/60 shadow-md'
+                                                        : 'bg-white/5 border-white/10'
+                                                }`}>
+                                                    <input
+                                                        type="radio"
+                                                        name="correctOption"
+                                                        checked={correctOptionIndex === index}
+                                                        onChange={() => setCorrectOptionIndex(index)}
+                                                        className="w-4 h-4 accent-emerald-500 cursor-pointer ml-1"
+                                                        title="Mark as correct answer"
+                                                    />
+                                                    <span className={`w-7 h-7 rounded-xl flex items-center justify-center text-xs font-extrabold shrink-0 border ${
+                                                        correctOptionIndex === index
+                                                            ? 'bg-emerald-500 text-black border-emerald-400'
+                                                            : 'bg-white/10 text-indigo-300 border-white/10'
+                                                    }`}>
+                                                        {String.fromCharCode(65 + index)}
+                                                    </span>
+                                                    <input
+                                                        type="text"
+                                                        value={optText}
+                                                        onChange={(e) => {
+                                                            const newOpts = [...pollOptions];
+                                                            newOpts[index] = e.target.value;
+                                                            setPollOptions(newOpts);
+                                                        }}
+                                                        placeholder={`Option ${String.fromCharCode(65 + index)}...`}
+                                                        className="flex-1 p-2 rounded-xl bg-transparent text-xs text-white focus:outline-none"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                )}
+                                ) : (
+                                    <>
+                                        {/* Category Picker with Color Fill Cards */}
+                                        <div>
+                                            <label className="text-xs text-indigo-300 font-bold mb-1.5 flex items-center gap-1.5">
+                                                <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Select Category Tag
+                                            </label>
+                                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                                {[
+                                                    { id: 'chats', label: '💬 General Chat', color: 'from-indigo-600 to-blue-600' },
+                                                    { id: 'BioTips', label: '🌿 Bio Tricks', color: 'from-emerald-600 to-teal-600' },
+                                                    { id: 'PhysicsFormulas', label: '⚡ Physics Notes', color: 'from-amber-600 to-orange-600' },
+                                                    { id: 'ChemistryTricks', label: '🧪 Chem Mnemonics', color: 'from-purple-600 to-pink-600' },
+                                                    { id: 'Motivation', label: '🔥 Motivation', color: 'from-rose-600 to-red-600' },
+                                                    { id: 'Doubt', label: '❓ Doubt Help', color: 'from-cyan-600 to-blue-600' }
+                                                ].map(cat => (
+                                                    <button
+                                                        key={cat.id}
+                                                        type="button"
+                                                        onClick={() => setSelectedCategory(cat.id)}
+                                                        className={`p-2.5 rounded-xl font-bold text-xs text-left border transition flex items-center gap-1.5 ${
+                                                            selectedCategory === cat.id
+                                                                ? `bg-gradient-to-r ${cat.color} text-white border-white/40 shadow-lg scale-102`
+                                                                : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10'
+                                                        }`}
+                                                    >
+                                                        <span>{cat.label}</span>
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
 
-                                {/* Video Preview */}
-                                {videoUrl && (
-                                    <div className="relative rounded-xl overflow-hidden max-h-40 border border-white/10">
-                                        <video src={videoUrl} controls className="w-full max-h-40 object-contain" />
-                                        <button 
-                                            type="button"
-                                            onClick={() => setVideoUrl('')}
-                                            className="absolute top-2 right-2 p-1 rounded-full bg-black/70 text-white hover:bg-red-600"
-                                        >
-                                            <X className="w-4 h-4" />
-                                        </button>
-                                    </div>
-                                )}
+                                        {/* Text Area */}
+                                        <div>
+                                            <textarea
+                                                rows={3}
+                                                value={postText}
+                                                onChange={(e) => setPostText(e.target.value)}
+                                                placeholder="Apna NEET study tip, doubt, ya note yahan likhein..."
+                                                className="w-full p-3 rounded-2xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 placeholder:text-white/30"
+                                            />
+                                        </div>
 
-                                {/* Or Image/Video URL Input */}
-                                <div className="space-y-2 pt-1 border-t border-white/5">
-                                    <span className="text-[10px] text-white/40 font-semibold block uppercase">Or Enter Media URL:</span>
-                                    <input
-                                        type="url"
-                                        value={imageUrl}
-                                        onChange={(e) => setImageUrl(e.target.value)}
-                                        placeholder="Image URL (https://...)"
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-indigo-500"
-                                    />
-                                    <input
-                                        type="url"
-                                        value={videoUrl}
-                                        onChange={(e) => setVideoUrl(e.target.value)}
-                                        placeholder="Video URL (https://...)"
-                                        className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-indigo-500"
-                                    />
-                                </div>
+                                        {/* Direct File Upload (Photo / Video File Picker) */}
+                                        <div className="p-3 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-center space-y-2">
+                                            <label className="cursor-pointer flex flex-col items-center gap-1.5">
+                                                <div className="flex items-center gap-2 text-xs font-bold text-indigo-300">
+                                                    <Upload className="w-4 h-4 text-indigo-400" />
+                                                    <span>Select Photo or Video File from Device</span>
+                                                </div>
+                                                <span className="text-[10px] text-white/50">Tap to pick Image or Video file</span>
+                                                <input 
+                                                    type="file" 
+                                                    accept="image/*,video/*"
+                                                    onChange={handleFileChange}
+                                                    className="hidden" 
+                                                />
+                                            </label>
+                                        </div>
+
+                                        {/* Image Preview */}
+                                        {imageUrl && (
+                                            <div className="relative rounded-xl overflow-hidden max-h-40 border border-white/10">
+                                                <img src={imageUrl} alt="Attached Preview" className="w-full h-full object-cover" />
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => setImageUrl('')}
+                                                    className="absolute top-2 right-2 p-1 rounded-full bg-black/70 text-white hover:bg-red-600"
+                                                >
+                                                    <X className="w-4 h-4" />
+                                                </button>
+                                            </div>
+                                        )}
+
+                                        {/* Video Preview */}
+                                        {videoUrl && (
+                                            <div className="relative rounded-xl overflow-hidden max-h-40 border border-white/10">
+                                                <video src={videoUrl} controls className="w-full max-h-40 object-contain" />
+                                                <button 
+                                                    type="button"
+                                                    onClick={() => setVideoUrl('')}
+                                                    className="absolute top-2 right-2 p-1 rounded-full bg-black/70 text-white hover:bg-red-600"
+                                                >
+                                                    <X className="w-4 h-4" />
+                                                </button>
+                                            </div>
+                                        )}
+
+                                        {/* Or Image/Video URL Input */}
+                                        <div className="space-y-2 pt-1 border-t border-white/5">
+                                            <span className="text-[10px] text-white/40 font-semibold block uppercase">Or Enter Media URL:</span>
+                                            <input
+                                                type="url"
+                                                value={imageUrl}
+                                                onChange={(e) => setImageUrl(e.target.value)}
+                                                placeholder="Image URL (https://...)"
+                                                className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-indigo-500"
+                                            />
+                                            <input
+                                                type="url"
+                                                value={videoUrl}
+                                                onChange={(e) => setVideoUrl(e.target.value)}
+                                                placeholder="Video URL (https://...)"
+                                                className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-xs focus:outline-none focus:border-indigo-500"
+                                            />
+                                        </div>
+                                    </>
+                                )}
 
                                 <button
                                     type="submit"
@@ -1513,7 +1847,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                             initial={{ scale: 0.95, y: 20 }}
                             animate={{ scale: 1, y: 0 }}
                             exit={{ scale: 0.95, y: 20 }}
-                            className="w-full max-w-sm bg-[#0c1222] border border-white/15 rounded-3xl p-6 space-y-5 text-center shadow-2xl relative"
+                            className="w-full max-w-sm bg-gradient-to-b from-[#0f172a] via-[#111827] to-[#0c1222] border border-indigo-500/40 rounded-3xl p-6 space-y-5 text-center shadow-2xl shadow-indigo-500/20 relative"
                         >
                             <button
                                 onClick={() => setSelectedUserProfile(null)}
