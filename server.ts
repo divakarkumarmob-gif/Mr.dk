@@ -253,6 +253,8 @@ async function generateWithFallback(primaryModel: string, contents: any): Promis
 // person would write it by hand: x², √16, 3/4, not x^2, sqrt(16), or
 // \frac{3}{4}.
 const PLAIN_FORMAT_RULE = "Formatting rules: Do not use markdown symbols like #, *, _, or backticks. Only use **bold** for an occasional short heading/key term, nothing else. For lists, put each item on its own line starting with a dash and a space, nothing fancier. For math, write it the way a person would write it by hand — use ², ³, √, ×, ÷, and plain fractions like 3/4, never LaTeX or ^ or sqrt().";
+const NEURAL_SOLVER_FORMAT_RULE = "Formatting rules: Use markdown freely — **bold** for key results, terms, and final answers; numbered or bulleted steps for multi-step solutions; short section headers (##) when a question has multiple parts. For math, always use proper LaTeX: inline math wrapped in single $ signs (e.g. $B = \\frac{\\mu_0 i}{2R}$), and standalone equations wrapped in double $$ (e.g. $$B_{net} = B_{loop} - B_{wire}$$). Never write math as plain text like 'mu0*i/2R' — always use LaTeX.";
+const AI_SEARCH_FORMAT_RULE = "Formatting rules: Use markdown — **bold** for the key answer, important terms, and final results; numbered/bulleted steps for multi-step explanations; short headers for multi-part answers. For math, always use LaTeX: inline with single $ (e.g. $E = mc^2$), block equations with double $$. Never strip or avoid LaTeX.";
 
 async function callAI(prompt: string | any[]): Promise<string> {
     try {
@@ -1743,7 +1745,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     try {
         const response = await generateWithFallback("gemini-3.5-flash", {
             parts: [
-                { text: `Strict Instruction: Be extremely brief, accurate, and simple. No fluff. ${PLAIN_FORMAT_RULE}` },
+                { text: `You are a NEET-focused doubt solver for Physics, Chemistry, and Biology, answering strictly according to NCERT. Give a complete, accurate, step-by-step solution — show the reasoning and working, not just the final answer. Bold the key formula, the final answer, and any critical facts the student should remember. ${NEURAL_SOLVER_FORMAT_RULE}` },
                 { text: lastMessage }
             ]
         });
@@ -1798,68 +1800,53 @@ After writing your normal reply to the user, on a new line add the exact delimit
             res.write(`data: ${JSON.stringify({ sources: searchResults })}\n\n`);
         }
         
-        const sanitizeText = (text: string): string => {
-            return text
-                .replace(/\\\[|\\\]|\\\(|\\\)/g, '')
-                .replace(/\$/g, '')
-                .replace(/\\frac\s*\{([^}]+)\}\s*\{([^}]+)\}/g, '($1 / $2)')
-                .replace(/\\times/g, ' × ')
-                .replace(/\\dot\s*\{([^}]+)\}/g, ' · ')
-                .replace(/\\cdot/g, ' · ')
-                .replace(/\\text\s*\{([^}]+)\}/g, '$1')
-                .replace(/_([a-zA-Z0-9])/g, '$1')
-                .replace(/\^2/g, '²')
-                .replace(/\\theta/g, 'θ')
-                .replace(/\\alpha/g, 'α')
-                .replace(/\\beta/g, 'β')
-                .replace(/\\gamma/g, 'γ')
-                .replace(/\\pi/g, 'π')
-                .replace(/\\Delta/g, 'Δ')
-                .replace(/\\[a-zA-Z]+/g, '')
-                .replace(/[\{\}]/g, '');
-        };
-
-        // Return result using AI
-        if (isDirectImageQuestion || searchResults.length > 0) {
-            let contents: any;
+        let streamed = false;
+        try {
+            let stream: any;
             if (isDirectImageQuestion) {
-                 contents = { 
-                    parts: [
-                        { text: "Strict Instruction: Identify what is in the image and answer the user's question with extreme brevity and accuracy. No fluff." },
-                        { text: finalPrompt || "Describe this" }, 
-                        { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                    ] 
-                 };
+                 stream = await ai.models.generateContentStream({
+                    model: "gemini-3.5-flash",
+                    contents: {
+                        parts: [
+                            { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. ${AI_SEARCH_FORMAT_RULE}` },
+                            { text: finalPrompt || "Describe this" }, 
+                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+                        ] 
+                    }
+                 });
             } else {
-                 const context = searchResults.slice(0, 3).map(s => `Title: ${s.title}\nContent: ${s.content}`).join('\n\n');
-                 contents = {
-                    parts: [{ text: `Strict Instruction: Summarize the following search results to answer the query: "${finalPrompt}" with extreme brevity and 100% accuracy. Use plain simple text. No LaTeX. No pleasantries.\n\nContext:\n${context}` }]
-                 };
+                 stream = await ai.models.generateContentStream({
+                    model: "gemini-3.5-flash",
+                    contents: {
+                        parts: [{ text: `You are Google AI Mode. Answer the user's query directly and accurately using current, real information. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. For general queries (e.g. live scores, current events), give the direct current answer clearly. ${AI_SEARCH_FORMAT_RULE}\n\nQuery: "${finalPrompt}"` }]
+                    },
+                    config: {
+                        tools: [{ googleSearch: {} }],
+                    }
+                 });
             }
 
-            let streamed = false;
-            try {
-                // Stream with Gemini
-                const stream = await ai.models.generateContentStream({
-                    model: "gemini-3.5-flash",
-                    contents: contents
-                });
-                
-                for await (const chunk of stream) {
-                    if (chunk.text) {
-                        res.write(`data: ${JSON.stringify({ content: sanitizeText(chunk.text) })}\n\n`);
-                        streamed = true;
+            for await (const chunk of stream) {
+                if (chunk.text) {
+                    res.write(`data: ${JSON.stringify({ content: chunk.text })}\n\n`);
+                    streamed = true;
+                }
+                const webChunks = chunk.candidates?.[0]?.groundingMetadata?.groundingChunks;
+                if (webChunks && Array.isArray(webChunks)) {
+                    const groundedSources = webChunks
+                        .filter((c: any) => c.web && c.web.uri)
+                        .map((c: any) => ({ title: c.web.title || c.web.uri, url: c.web.uri }));
+                    if (groundedSources.length > 0) {
+                        res.write(`data: ${JSON.stringify({ sources: groundedSources })}\n\n`);
                     }
                 }
-            } catch (e) {
-                console.error("Gemini stream failed", e);
             }
-            
-            if (!streamed) {
-                 throw new Error("No AI response available");
-            }
-        } else {
-            res.write(`data: ${JSON.stringify({ content: "No results found." })}\n\n`);
+        } catch (e) {
+            console.error("Gemini stream failed", e);
+        }
+        
+        if (!streamed) {
+             throw new Error("No AI response available");
         }
         
         res.write('data: [DONE]\n\n');
