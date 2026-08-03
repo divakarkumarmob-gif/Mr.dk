@@ -97,6 +97,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     const [openCommentPostId, setOpenCommentPostId] = useState<string | null>(null);
     const [commentInputMap, setCommentInputMap] = useState<Record<string, string>>({});
     const [postCommentsMap, setPostCommentsMap] = useState<Record<string, CommentItem[]>>({});
+    const [animatingPollPostId, setAnimatingPollPostId] = useState<string | null>(null);
 
     // Active Media Preview Modal State
     const [activeMedia, setActiveMedia] = useState<{ type: 'image' | 'video', url: string } | null>(null);
@@ -743,6 +744,27 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             return;
         }
 
+        const isCorrectVote = optionIndex === currentPollData.correctOptionIndex;
+
+        // Trigger Haptic Vibration Feedback (Double buzz for wrong, single buzz for correct)
+        if (typeof window !== 'undefined' && 'vibrate' in navigator) {
+            try {
+                if (!isCorrectVote) {
+                    navigator.vibrate([100, 50, 100]); // 100ms buzz, 50ms pause, 100ms buzz
+                } else {
+                    navigator.vibrate(50); // 50ms gentle success buzz
+                }
+            } catch (e) {
+                // ignore
+            }
+        }
+
+        // Pulse animation for 500ms
+        setAnimatingPollPostId(post.id);
+        setTimeout(() => {
+            setAnimatingPollPostId(null);
+        }, 500);
+
         const updatedOptions = currentPollData.options.map((opt, idx) => {
             if (idx === optionIndex) {
                 const currentVotes = opt.votes || [];
@@ -771,7 +793,11 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             localStorage.setItem('neet_community_local_posts', JSON.stringify(updatedLocal));
         } catch {}
 
-        showToast('Aapka vote record ho gaya! 🗳️');
+        if (isCorrectVote) {
+            showToast('🎉 Waah! Bilkul Sahi Jawab! 🌟');
+        } else {
+            showToast(`❌ Galat Jawab! Sahi Answer: Option ${String.fromCharCode(65 + currentPollData.correctOptionIndex)}`);
+        }
 
         // Firestore sync
         try {
@@ -1187,120 +1213,138 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                                     {/* Embedded YouTube-Style MCQ Poll Card if post is a Poll */}
                                     {post.pollData && (() => {
-                                        const poll = post.pollData;
-                                        const viewerId = getViewerId();
-                                        const votedUsers = poll.votedUsers || {};
-                                        const userVotedIndex = votedUsers[viewerId];
-                                        const isOwner = currentUser && (currentUser.uid === post.userId || post.userId.startsWith('user_'));
-                                        const hasVoted = userVotedIndex !== undefined || isOwner;
-                                        const totalVotes = poll.totalVotes || 0;
+                                         const poll = post.pollData;
+                                         const viewerId = getViewerId();
+                                         const votedUsers = poll.votedUsers || {};
+                                         const userVotedIndex = votedUsers[viewerId];
+                                         const hasVoted = userVotedIndex !== undefined;
+                                         const totalVotes = poll.totalVotes || 0;
+                                         const isAnimating = animatingPollPostId === post.id;
 
-                                        return (
-                                            <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e1b4b] border border-indigo-500/40 space-y-3 my-2 shadow-xl">
-                                                <div className="flex items-center justify-between">
-                                                    <span className="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/30 flex items-center gap-1">
-                                                        <Sparkles className="w-3 h-3 text-amber-400" /> Community MCQ Poll
-                                                    </span>
-                                                    <span className="text-[10px] text-white/50 font-medium">
-                                                        {totalVotes} {totalVotes === 1 ? 'Vote' : 'Votes'}
-                                                    </span>
-                                                </div>
+                                         return (
+                                             <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e1b4b] border border-indigo-500/40 space-y-3 my-2 shadow-xl">
+                                                 <div className="flex items-center justify-between">
+                                                     <span className="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/30 flex items-center gap-1">
+                                                         <Sparkles className="w-3 h-3 text-amber-400" /> Community MCQ Poll
+                                                     </span>
+                                                     <span className="text-[10px] text-white/50 font-medium">
+                                                         {totalVotes} {totalVotes === 1 ? 'Vote' : 'Votes'}
+                                                     </span>
+                                                 </div>
 
-                                                <p className="text-sm font-bold text-white leading-snug">
-                                                    {poll.question || post.text}
-                                                </p>
+                                                 <p className="text-sm font-bold text-white leading-snug">
+                                                     {poll.question || post.text}
+                                                 </p>
 
-                                                <div className="space-y-2 pt-1">
-                                                    {poll.options.map((option, idx) => {
-                                                        const voteCount = option.votes?.length || 0;
-                                                        const percentage = totalVotes > 0 ? Math.round((voteCount / totalVotes) * 100) : 0;
-                                                        const isSelected = userVotedIndex === idx;
-                                                        const isCorrect = poll.correctOptionIndex === idx;
+                                                 <div className="space-y-2 pt-1">
+                                                     {poll.options.map((option, idx) => {
+                                                         const voteCount = option.votes?.length || 0;
+                                                         const percentage = totalVotes > 0 ? Math.round((voteCount / totalVotes) * 100) : 0;
+                                                         const isSelected = userVotedIndex === idx;
+                                                         const isCorrect = poll.correctOptionIndex === idx;
 
-                                                        return (
-                                                            <div
-                                                                key={option.id || idx}
-                                                                onClick={() => !hasVoted && handleVotePoll(post, idx)}
-                                                                className={`relative overflow-hidden rounded-xl border p-3 text-xs transition-all duration-200 ${
-                                                                    !hasVoted
-                                                                        ? 'border-white/15 bg-white/5 hover:border-indigo-400 hover:bg-white/10 cursor-pointer active:scale-[0.99]'
-                                                                        : isSelected
-                                                                            ? isCorrect
-                                                                                ? 'border-emerald-500/60 bg-emerald-950/40 text-emerald-100 font-semibold'
-                                                                                : 'border-rose-500/60 bg-rose-950/40 text-rose-100 font-semibold'
-                                                                            : isCorrect
-                                                                                ? 'border-emerald-500/50 bg-emerald-950/20 text-emerald-200'
-                                                                                : 'border-white/10 bg-white/5 text-white/70'
-                                                                }`}
-                                                            >
-                                                                {/* YouTube-Style Animated Progress Fill Bar */}
-                                                                {hasVoted && (
-                                                                    <motion.div
-                                                                        initial={{ width: 0 }}
-                                                                        animate={{ width: `${percentage}%` }}
-                                                                        transition={{ duration: 0.5, ease: "easeOut" }}
-                                                                        className={`absolute inset-y-0 left-0 -z-0 opacity-25 ${
-                                                                            isCorrect
-                                                                                ? 'bg-emerald-500'
-                                                                                : isSelected
-                                                                                    ? 'bg-rose-500'
-                                                                                    : 'bg-indigo-400'
-                                                                        }`}
-                                                                    />
-                                                                )}
+                                                         return (
+                                                             <motion.div
+                                                                 key={option.id || idx}
+                                                                 onClick={() => !hasVoted && handleVotePoll(post, idx)}
+                                                                 animate={
+                                                                     isAnimating && (isSelected || (hasVoted && isCorrect))
+                                                                         ? {
+                                                                             scale: [1, 1.03, 1],
+                                                                             boxShadow: isCorrect
+                                                                                 ? ["0 0 0px rgba(16,185,129,0)", "0 0 20px rgba(16,185,129,0.8)", "0 0 5px rgba(16,185,129,0.2)"]
+                                                                                 : ["0 0 0px rgba(244,63,94,0)", "0 0 20px rgba(244,63,94,0.8)", "0 0 5px rgba(244,63,94,0.2)"]
+                                                                         }
+                                                                         : { scale: 1 }
+                                                                 }
+                                                                 transition={{ duration: 0.5 }}
+                                                                 className={`relative overflow-hidden rounded-xl border p-3 text-xs transition-all duration-200 ${
+                                                                     !hasVoted
+                                                                         ? 'border-white/15 bg-white/5 hover:border-indigo-400 hover:bg-white/10 cursor-pointer active:scale-[0.99]'
+                                                                         : isSelected
+                                                                             ? isCorrect
+                                                                                 ? 'border-emerald-500 bg-emerald-950/60 text-emerald-100 font-bold shadow-[0_0_15px_rgba(16,185,129,0.3)]'
+                                                                                 : 'border-rose-500 bg-rose-950/60 text-rose-100 font-bold shadow-[0_0_15px_rgba(244,63,94,0.3)]'
+                                                                             : isCorrect
+                                                                                 ? 'border-emerald-500/80 bg-emerald-950/40 text-emerald-200 font-semibold'
+                                                                                 : 'border-white/10 bg-white/5 text-white/60'
+                                                                 }`}
+                                                             >
+                                                                 {/* YouTube-Style Animated Progress Fill Bar */}
+                                                                 {hasVoted && (
+                                                                     <motion.div
+                                                                         initial={{ width: 0 }}
+                                                                         animate={{ width: `${percentage}%` }}
+                                                                         transition={{ duration: 0.5, ease: "easeOut" }}
+                                                                         className={`absolute inset-y-0 left-0 -z-0 opacity-25 ${
+                                                                             isCorrect
+                                                                                 ? 'bg-emerald-500'
+                                                                                 : isSelected
+                                                                                     ? 'bg-rose-500'
+                                                                                     : 'bg-indigo-400'
+                                                                         }`}
+                                                                     />
+                                                                 )}
 
-                                                                <div className="relative z-10 flex items-center justify-between gap-2">
-                                                                    <div className="flex items-center gap-2 flex-1">
-                                                                        <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 border ${
-                                                                            hasVoted
-                                                                                ? isCorrect
-                                                                                    ? 'bg-emerald-500 text-black border-emerald-400'
-                                                                                    : isSelected
-                                                                                        ? 'bg-rose-500 text-white border-rose-400'
-                                                                                        : 'bg-white/10 text-white/60 border-white/20'
-                                                                                : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
-                                                                        }`}>
-                                                                            {String.fromCharCode(65 + idx)}
-                                                                        </span>
-                                                                        <span className="font-medium text-white/90 leading-snug">
-                                                                            {option.text}
-                                                                        </span>
-                                                                        {hasVoted && isSelected && (
-                                                                            <span className="px-1.5 py-0.5 rounded bg-indigo-500/30 text-indigo-200 text-[9px] font-bold uppercase tracking-wider">
-                                                                                Your Vote
-                                                                            </span>
-                                                                        )}
-                                                                    </div>
+                                                                 <div className="relative z-10 flex items-center justify-between gap-2">
+                                                                     <div className="flex items-center gap-2 flex-1">
+                                                                         <span className={`w-5.5 h-5.5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 border ${
+                                                                             hasVoted
+                                                                                 ? isCorrect
+                                                                                     ? 'bg-emerald-500 text-black border-emerald-400 shadow-sm'
+                                                                                     : isSelected
+                                                                                         ? 'bg-rose-500 text-white border-rose-400 shadow-sm'
+                                                                                         : 'bg-white/10 text-white/50 border-white/10'
+                                                                                 : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
+                                                                         }`}>
+                                                                             {hasVoted && isCorrect ? '✓' : hasVoted && isSelected && !isCorrect ? '✕' : String.fromCharCode(65 + idx)}
+                                                                         </span>
+                                                                         <span className="font-medium text-white/90 leading-snug">
+                                                                             {option.text}
+                                                                         </span>
+                                                                         {hasVoted && isSelected && (
+                                                                             <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${
+                                                                                 isCorrect ? 'bg-emerald-500/30 text-emerald-200 border border-emerald-500/40' : 'bg-rose-500/30 text-rose-200 border border-rose-500/40'
+                                                                             }`}>
+                                                                                 Your Choice
+                                                                             </span>
+                                                                         )}
+                                                                     </div>
 
-                                                                    {hasVoted && (
-                                                                        <div className="flex items-center gap-1.5 shrink-0">
-                                                                            {isCorrect && (
-                                                                                <span className="text-emerald-400 font-bold text-[11px] flex items-center gap-0.5">
-                                                                                    ✓ Correct
-                                                                                </span>
-                                                                            )}
-                                                                            <span className="font-bold text-white text-xs min-w-[32px] text-right">
-                                                                                {percentage}%
-                                                                            </span>
-                                                                        </div>
-                                                                    )}
-                                                                </div>
-                                                            </div>
-                                                        );
-                                                    })}
-                                                </div>
+                                                                     {hasVoted && (
+                                                                         <div className="flex items-center gap-1.5 shrink-0">
+                                                                             {isCorrect && (
+                                                                                 <span className="text-emerald-400 font-bold text-[11px] flex items-center gap-0.5">
+                                                                                     ✓ Correct
+                                                                                 </span>
+                                                                             )}
+                                                                             {isSelected && !isCorrect && (
+                                                                                 <span className="text-rose-400 font-bold text-[11px] flex items-center gap-0.5">
+                                                                                     ✕ Wrong
+                                                                                 </span>
+                                                                             )}
+                                                                             <span className="font-bold text-white text-xs min-w-[32px] text-right">
+                                                                                 {percentage}%
+                                                                             </span>
+                                                                         </div>
+                                                                     )}
+                                                                 </div>
+                                                             </motion.div>
+                                                         );
+                                                     })}
+                                                 </div>
 
-                                                {hasVoted && (
-                                                    <div className="pt-1 flex items-center justify-between text-[10px] text-white/50 border-t border-white/5">
-                                                        <span>💡 {totalVotes} student{totalVotes !== 1 ? 's' : ''} voted</span>
-                                                        <span className="text-emerald-400/80 font-medium">
-                                                            Correct Answer: Option {String.fromCharCode(65 + (poll.correctOptionIndex || 0))}
-                                                        </span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        );
-                                    })()}
+                                                 {hasVoted && (
+                                                     <div className="pt-1 flex items-center justify-between text-[10px] text-white/50 border-t border-white/5">
+                                                         <span>💡 {totalVotes} student{totalVotes !== 1 ? 's' : ''} voted</span>
+                                                         <span className="text-emerald-400 font-medium">
+                                                             Correct Answer: Option {String.fromCharCode(65 + (poll.correctOptionIndex || 0))}
+                                                         </span>
+                                                     </div>
+                                                 )}
+                                             </div>
+                                         );
+                                     })()}
 
                                     {/* Attached Image */}
                                     {post.imageUrl && (
