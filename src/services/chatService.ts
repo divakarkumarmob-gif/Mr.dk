@@ -19,15 +19,12 @@ import { Message } from '../types';
 const ensureChatDocExists = async (chatId: string, userId: string) => {
     try {
         const chatRef = doc(db, 'chats', chatId);
-        const snap = await getDoc(chatRef);
-        if (!snap.exists()) {
-            await setDoc(chatRef, {
-                participants: [userId],
-                isSupportChat: false,
-                lastMessage: '',
-                updatedAt: serverTimestamp(),
-            });
-        }
+        await setDoc(chatRef, {
+            participants: [userId],
+            isSupportChat: false,
+            lastMessage: '',
+            updatedAt: serverTimestamp(),
+        }, { merge: true });
     } catch (error) {
         // Don't block the actual message send on this — if it fails here,
         // the subsequent addDoc will fail too and surface its own error.
