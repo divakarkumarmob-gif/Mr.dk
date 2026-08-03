@@ -4,6 +4,7 @@ import { Mic, Square } from 'lucide-react';
 import { stripLatexForTTS } from '../lib/utils';
 import { getApiUrl, authFetch } from '@/utils/api';
 import AgentFace from './AgentFace';
+
 export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
     onNavigate: (view: string, origin?: { x: number; y: number }) => void;
     isTyping: boolean;
@@ -17,6 +18,7 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
     const [logs, setLogs] = useState<string[]>([]);
     const [showLogs, setShowLogs] = useState(false);
     const [volume, setVolume] = useState(0);
+    const [isClicked, setIsClicked] = useState(false);
     const analyserRef = useRef<AnalyserNode | null>(null);
     const mediaRecorderRef = useRef<MediaRecorder | null>(null);
     const audioChunksRef = useRef<Blob[]>([]);
@@ -56,8 +58,6 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
         console.log(msg);
         setLogs(prev => [...prev.slice(-19), `${new Date().toLocaleTimeString()}: ${msg}`]);
     };
-    
-    // ...
     
     const startRecording = async () => {
         try {
@@ -134,13 +134,11 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
     
     const processAudio = async (audioBlob: Blob) => {
         try {
-            // Convert Blob to base64
             const reader = new FileReader();
             reader.readAsDataURL(audioBlob);
             reader.onloadend = async () => {
                 const base64Audio = (reader.result as string).split(',')[1];
                 
-                // Call /api/gemini proxy
                 const response = await authFetch(getApiUrl('/api/gemini'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -151,57 +149,37 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                 });
 
                 if (!response.ok) {
-                    throw new Error(`Failed to call AI API: ${response.statusText}`);
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
                 const data = await response.json();
-                const aiResponse = data.text;
-                
-                setAiText(aiResponse);
-                
-                // Browser TTS -> Server TTS
-                setStatus("Speaking...");
-                const cleanedResponse = stripLatexForTTS(aiResponse);
-                
-                try {
-                    const ttsResponse = await authFetch(getApiUrl('/api/tts'), {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ text: cleanedResponse })
-                    });
-
-                    if (ttsResponse.ok) {
-                        const audioBlob = await ttsResponse.blob();
-                        const audio = new Audio(URL.createObjectURL(audioBlob));
-                        audio.onplay = () => setIsSpeaking(true);
-                        audio.onended = () => {
-                            setIsSpeaking(false);
-                            setStatus("Done");
-                        };
-                        audio.play();
-                    } else {
-                        throw new Error("Server TTS failed");
-                    }
-                } catch (ttsErr) {
-                    console.error("Server TTS error, falling back:", ttsErr);
-                    // Fallback to robotic browser TTS
-                    const utterThis = new SpeechSynthesisUtterance(cleanedResponse);
-                    utterThis.onstart = () => setIsSpeaking(true);
-                    utterThis.onend = () => {
-                        setIsSpeaking(false);
-                        setStatus("Done");
-                    };
-                    utterThis.lang = "hi-IN";
-                    window.speechSynthesis.speak(utterThis);
-                }
+                setAiText(data.text);
+                addLog(`AI: ${data.text}`);
+                speak(data.text);
             };
         } catch (e) {
             addLog(`Error processing audio: ${e}`);
             setStatus("Error");
         }
     };
+
+    const speak = (text: string) => {
+        if ('speechSynthesis' in window) {
+            setIsSpeaking(true);
+            setStatus("Speaking...");
+            const cleanText = stripLatexForTTS(text);
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            utterance.onend = () => {
+                setIsSpeaking(false);
+                setStatus("Tap to start recording");
+            };
+            window.speechSynthesis.speak(utterance);
+        } else {
+            addLog("TTS not supported");
+        }
+    };
+
     const handleDragEnd = (_: any, info: any) => {
-        // Reset if dragged down more than 50px
         if (info.offset.y > 50) {
             animate(x, 0, { type: "spring", stiffness: 300, damping: 30 });
             animate(y, 0, { type: "spring", stiffness: 300, damping: 30 });
@@ -209,11 +187,10 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
         }
         
         const screenWidth = window.innerWidth;
-        const buttonWidth = 56; // 14 pixels * 4
+        const buttonWidth = 56;
         const margin = 24;
         const currentLeft = 24;
         
-        // Determine whether to snap to left or right side
         const isLeft = (info.point.x + buttonWidth / 2) < screenWidth / 2;
         const targetXPos = isLeft ? currentLeft : (screenWidth - buttonWidth - margin);
         const targetXValue = targetXPos - currentLeft; 
@@ -221,29 +198,40 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
         animate(x, targetXValue, { type: "spring", stiffness: 300, damping: 30 });
     };
 
+    const handleIconClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (isClicked) return;
+        setIsClicked(true);
+        const rect = e.currentTarget.getBoundingClientRect();
+        const origin = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+
+        setTimeout(() => {
+            animate(scale, 0, { duration: 0.25, ease: "easeIn" });
+            onNavigate('liveAI', origin);
+            setTimeout(() => setIsClicked(false), 500);
+        }, 280);
+    };
+
     return (
         <>
-            {/* Floating Button */}
+            {/* Floating AI Icon Button with Glossy Wave Aura Animation */}
             <motion.div
+                id="agent-face-container"
                 style={{ x, y, scale }}
-                className="fixed bottom-28 left-6 w-14 h-14 rounded-full shadow-lg cursor-grab z-[2000]"
                 drag
                 dragMomentum={false}
                 dragConstraints={{ top: -500, bottom: 100, left: -24, right: 300 }}
                 onDragEnd={handleDragEnd}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ 
-                    scale: 0.9, 
-                    cursor: "grabbing" 
-                }}
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.92 }}
+                animate={{ y: [0, -6, 0] }}
+                transition={{ y: { duration: 3.2, repeat: Infinity, ease: "easeInOut" } }}
+                className="fixed bottom-28 left-6 cursor-pointer z-[2000] touch-none select-none"
                 onPointerDown={() => {
+                    hasCycledRef.current = false;
                     const el = document.getElementById('agent-face-container');
                     if (el) el.classList.add('angry');
-                    setStatus("remove ur finger");
+                    setStatus("Changing color...");
                     
-                    hasCycledRef.current = false;
-                    
-                    // Start cycling
                     colorIntervalRef.current = setInterval(() => {
                         setColorIndex((prev) => (prev + 1) % 12);
                         hasCycledRef.current = true;
@@ -263,17 +251,69 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                 onPointerLeave={() => {
                     if (colorIntervalRef.current) clearInterval(colorIntervalRef.current);
                 }}
-                onClick={(e) => {
-                   const rect = e.currentTarget.getBoundingClientRect();
-                   const origin = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
-
-                   animate(scale, 0, { duration: 0.2, ease: "easeIn" });
-                   onNavigate('liveAI', origin);
-                }}
+                onClick={handleIconClick}
             >
-                <AgentFace status={status} volume={0} size={56} colorIndex={colorIndex} />
-            </motion.div>
+                {/* 🌊 Glossy Outer Ambient Pulse Waves */}
+                <motion.div
+                    className="absolute -inset-3 rounded-full bg-gradient-to-r from-blue-500/30 via-indigo-500/25 to-purple-500/30 blur-md pointer-events-none"
+                    animate={{ scale: [1, 1.25, 1], opacity: [0.4, 0.75, 0.4] }}
+                    transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+                />
 
+                <motion.div
+                    className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-400/35 to-fuchsia-500/35 blur-sm pointer-events-none"
+                    animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.9, 0.5] }}
+                    transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                />
+
+                {/* 🌀 Rotating Glossy Conic Aura Ring */}
+                <motion.div
+                    className="absolute -inset-1 rounded-full bg-[conic-gradient(from_0deg,#3b82f6,#8b5cf6,#ec4899,#06b6d4,#3b82f6)] opacity-80 p-[2px] pointer-events-none"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                >
+                    <div className="w-full h-full rounded-full bg-[#0a0f24]" />
+                </motion.div>
+
+                {/* 🌊 Click / Tap Expanding Glossy Liquid Waves */}
+                <AnimatePresence>
+                    {isClicked && (
+                        <>
+                            <motion.div
+                                key="wave-1"
+                                initial={{ scale: 1, opacity: 0.85 }}
+                                animate={{ scale: 3.2, opacity: 0 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+                                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/60 via-purple-500/50 to-pink-500/60 border border-white/50 backdrop-blur-md shadow-[0_0_35px_rgba(59,130,246,0.9)] pointer-events-none"
+                            />
+                            <motion.div
+                                key="wave-2"
+                                initial={{ scale: 1, opacity: 0.9 }}
+                                animate={{ scale: 2.2, opacity: 0 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+                                className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/60 to-indigo-500/60 border border-cyan-300/50 backdrop-blur-sm pointer-events-none"
+                            />
+                            <motion.div
+                                key="wave-3"
+                                initial={{ scale: 1, opacity: 1 }}
+                                animate={{ scale: 1.5, opacity: 0 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+                                className="absolute inset-0 rounded-full bg-white/50 border border-white pointer-events-none"
+                            />
+                        </>
+                    )}
+                </AnimatePresence>
+
+                {/* 💎 Glassmorphic Button Capsule Container */}
+                <div className="relative rounded-full p-1.5 bg-[#0a0f24]/90 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.5),0_0_20px_rgba(59,130,246,0.4)] overflow-hidden flex items-center justify-center">
+                    {/* Glass reflection shine highlight */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/25 via-transparent to-transparent pointer-events-none" />
+                    <AgentFace status={status} volume={0} size={54} colorIndex={colorIndex} />
+                </div>
+            </motion.div>
 
             {/* Modal */}
             <AnimatePresence>
