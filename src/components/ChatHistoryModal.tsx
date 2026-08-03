@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
     X, Send, Mic, Camera, Image as ImageIcon, Plus, Loader2,
@@ -17,6 +17,8 @@ import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 
 interface ChatHistoryModalProps {
     onClose: () => void;
+    isLiveActive?: boolean;
+    onCloseLive?: () => void;
 }
 
 // How far (px) the user must drag a bubble left/right before it counts as
@@ -24,7 +26,7 @@ interface ChatHistoryModalProps {
 // small scroll jitters shouldn't accidentally trigger a reply.
 const SWIPE_REPLY_THRESHOLD = 55;
 
-export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
+function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputText, setInputText] = useState('');
     const [isSending, setIsSending] = useState(false);
@@ -36,6 +38,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     // input bar (WhatsApp-style) so the user can add a caption or back out
     // via the X before it actually goes anywhere.
     const [pendingImage, setPendingImage] = useState<{ file: File; previewUrl: string } | null>(null);
+    const [showLiveBanner, setShowLiveBanner] = useState(true);
 
     // Voice recording
     const [isRecording, setIsRecording] = useState(false);
@@ -160,15 +163,38 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
 
     const saveUserMessage = async (text: string, mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio') => {
         if (!aiChatId || !auth.currentUser) return;
-        const reply = replyTarget ? { text: replyTarget.text, senderId: replyTarget.senderId } : null;
+        const reply = replyTarget ? {
+            text: replyTarget.text || (replyTarget.mediaType === 'image' ? '📷 Photo' : replyTarget.mediaType === 'audio' ? '🎤 Voice message' : 'Message'),
+            senderId: replyTarget.senderId
+        } : null;
+
         setReplyTarget(null);
         scrollToBottomOnOwnSend();
+
+        // Instant Optimistic Update (0ms delay for text & media display)
+        const tempMsgId = 'temp_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6);
+        const optimisticMsg: Message = {
+            id: tempMsgId,
+            senderId: auth.currentUser.uid,
+            text,
+            mediaUrl,
+            mediaType,
+            replyTo: reply || undefined,
+            timestamp: new Date().toISOString()
+        };
+
+        setMessages(prev => {
+            if (mediaUrl && prev.some(m => m.mediaUrl === mediaUrl)) return prev;
+            return [...prev, optimisticMsg];
+        });
+
         try {
             await sendMessage(aiChatId, auth.currentUser.uid, text, mediaUrl, mediaType, reply);
         } catch (e) {
             console.error('[ChatHistoryModal] Failed to save user message:', e);
+            setMessages(prev => prev.filter(m => m.id !== tempMsgId));
             showToast('Message failed to send. Please try again.');
-            throw e; // Stop the AI-reply request that would otherwise follow.
+            throw e;
         }
     };
 
@@ -271,10 +297,27 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
         if (!aiChatId || !auth.currentUser || !pendingImage) return;
         const { file, previewUrl } = pendingImage;
         setPendingImage(null);
+
+        // Instant Optimistic Image Display
+        const tempMsgId = 'temp_img_' + Date.now();
+        const optimisticMsg: Message = {
+            id: tempMsgId,
+            senderId: auth.currentUser.uid,
+            text: caption,
+            mediaUrl: previewUrl,
+            mediaType: 'image',
+            replyTo: replyTarget ? {
+                text: replyTarget.text || (replyTarget.mediaType === 'image' ? '📷 Photo' : '🎤 Voice message'),
+                senderId: replyTarget.senderId
+            } : undefined,
+            timestamp: new Date().toISOString()
+        };
+        setMessages(prev => [...prev, optimisticMsg]);
+        scrollToBottomOnOwnSend();
+
         setIsSending(true);
         try {
-            // Read to base64 ONCE, immediately — before any network delay that
-            // could invalidate the underlying file handle on Android WebView.
+            // Read to base64 ONCE, immediately
             const base64: string = await new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => resolve(reader.result as string);
@@ -287,6 +330,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             await requestAIReplyForImage(caption, base64);
         } catch (e) {
             console.error('[ChatHistoryModal] Image send failed:', e);
+            setMessages(prev => prev.filter(m => m.id !== tempMsgId));
             const detail = e instanceof Error ? e.message : String(e);
             showToast(`Failed to send image: ${detail}`);
         } finally {
@@ -438,7 +482,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
 
             if (!auth.currentUser) throw new Error('Not signed in');
 
-            const fileName = `Chat History ${new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} ${new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}.png`;
+            const fileName = `Neural Solver 2.0 ${new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} ${new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}.png`;
             const storagePath = `users/${auth.currentUser.uid}/notes/${Date.now()}_chat_screenshot.png`;
             const storageRef = ref(storage, storagePath);
 
@@ -502,14 +546,57 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
     };
 
     return (
-        <div className="fixed inset-0 z-[1100] bg-[#0b141a] flex flex-col">
+        <div className="fixed inset-0 z-[1100] bg-[#0b141a] flex flex-col isolate">
+            {/* "AI is Live 🔴" Floating Banner Modal */}
+            <AnimatePresence>
+                {showLiveBanner && isLiveActive && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                        className="absolute top-16 left-4 right-4 z-[1200] bg-gradient-to-r from-red-950/90 via-[#1f2c34]/95 to-purple-950/90 border border-red-500/40 backdrop-blur-md p-3.5 rounded-2xl shadow-2xl flex items-center justify-between gap-3 text-white"
+                    >
+                        <div className="flex items-center gap-2.5">
+                            <span className="relative flex h-3 w-3 shrink-0">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                            </span>
+                            <div>
+                                <p className="text-xs font-bold text-white flex items-center gap-1.5">
+                                    AI is Live <span className="text-[9px] px-1.5 py-0.2 rounded bg-red-500/30 text-red-300 border border-red-500/40 uppercase font-semibold">Active</span>
+                                </p>
+                                <p className="text-[11px] text-gray-300">Live AI session background mein chal raha hai.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 shrink-0">
+                            <button
+                                onClick={() => setShowLiveBanner(false)}
+                                className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition active:scale-95"
+                            >
+                                Continue
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setShowLiveBanner(false);
+                                    if (onCloseLive) onCloseLive();
+                                }}
+                                className="px-3 py-1.5 rounded-xl bg-red-600 hover:bg-red-500 text-xs font-bold text-white shadow-lg transition active:scale-95"
+                            >
+                                Close AI Live
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             {/* Header */}
-            <div className="w-full flex items-center gap-3 px-4 py-3 border-b border-white/10 flex-shrink-0 pt-[env(safe-area-inset-top,0px)]">
-                <button onClick={onClose} className="text-white p-1 -ml-1">
+            <div className="w-full flex items-center gap-3 px-4 py-3 border-b border-white/10 flex-shrink-0 pt-[max(env(safe-area-inset-top,0px),12px)] bg-[#0b141a] z-20 isolate transform-gpu">
+                <button onClick={onClose} className="text-white p-1 -ml-1 hover:bg-white/10 rounded-full transition">
                     <X className="h-6 w-6" />
                 </button>
-                <h2 className="text-lg font-bold text-white flex-1">Chat History</h2>
-                <button onClick={handleScreenshotIconClick} className="text-white p-1" title="Save chat to Notes">
+                <h2 className="text-lg font-bold text-white flex-1 tracking-wide">Neural Solver 2.0</h2>
+                <button onClick={handleScreenshotIconClick} className="text-white p-1 hover:bg-white/10 rounded-full transition" title="Save to Notes">
                     <Camera className="h-6 w-6" />
                 </button>
             </div>
@@ -585,7 +672,7 @@ export default function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
             )}
 
             {/* Input bar */}
-            <div className="flex-shrink-0 px-3 py-3 pb-[max(env(safe-area-inset-bottom,0px),12px)] bg-[#0b141a] flex items-end gap-2">
+            <div className="flex-shrink-0 px-3 py-3 pb-[max(env(safe-area-inset-bottom,0px),12px)] bg-[#0b141a] border-t border-white/5 flex items-end gap-2 z-20 isolate transform-gpu">
                 <input type="file" ref={fileInputRef} accept="image/*" className="hidden" onChange={handleFileChange} />
 
                 <div className="relative">
@@ -981,3 +1068,5 @@ function FormattedText({ text }: { text: string }) {
         </>
     );
 }
+
+export default memo(ChatHistoryModal);

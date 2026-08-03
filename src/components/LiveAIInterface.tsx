@@ -140,21 +140,21 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     }, []);
 
     // Helper functions to close overlays & sync browser history
-    const closeSettings = () => {
+    const closeSettings = useCallback(() => {
         setShowSettings(false);
         setShowVoiceDropdown(false);
         setShowTimeRangeDropdown(false);
         if (window.history.state?.liveAiOverlay) {
             window.history.back();
         }
-    };
+    }, []);
 
-    const closeChatHistory = () => {
+    const closeChatHistory = useCallback(() => {
         setShowChatHistory(false);
         if (window.history.state?.liveAiOverlay) {
             window.history.back();
         }
-    };
+    }, []);
 
     // Push history state whenever an overlay opens in Live AI Interface so device back button pops overlay first
     useEffect(() => {
@@ -1115,7 +1115,14 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 </div>
             )}
             {showChatHistory && (
-                <ChatHistoryModal onClose={closeChatHistory} />
+                <ChatHistoryModal
+                    onClose={closeChatHistory}
+                    isLiveActive={isRecording}
+                    onCloseLive={() => {
+                        stopRecording();
+                        onClose();
+                    }}
+                />
             )}
             {showShortcutPrompt && (
                 <HomeScreenShortcutPrompt onClose={() => {
