@@ -243,35 +243,46 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             const q = query(postsRef, orderBy('timestamp', 'desc'));
             
             unsubscribe = onSnapshot(q, (snapshot) => {
-                const fetchedPosts: Post[] = snapshot.docs.map(docSnap => {
-                    const raw = { id: docSnap.id, ...docSnap.data() } as Post;
-                    return decryptMessagePayload(raw, 'community');
-                });
-
-                const localPosts = getLocalPosts().map(p => decryptMessagePayload(p, 'community'));
-                const allPostsMap = new Map<string, Post>();
-                localPosts.forEach(p => allPostsMap.set(p.id, p));
-                fetchedPosts.forEach(p => allPostsMap.set(p.id, p));
-
-                setPosts(Array.from(allPostsMap.values()));
-                setLoading(false);
-            }, (error) => {
-                console.warn("Firestore ordered listener warning, using standard fallback:", error);
-                onSnapshot(postsRef, (snapshot) => {
+                try {
                     const fetchedPosts: Post[] = snapshot.docs.map(docSnap => {
                         const raw = { id: docSnap.id, ...docSnap.data() } as Post;
                         return decryptMessagePayload(raw, 'community');
                     });
-                    setPosts(fetchedPosts);
+
+                    const localPosts = getLocalPosts().map(p => decryptMessagePayload(p, 'community'));
+                    const allPostsMap = new Map<string, Post>();
+                    localPosts.forEach(p => { if (p && p.id) allPostsMap.set(p.id, p); });
+                    fetchedPosts.forEach(p => { if (p && p.id) allPostsMap.set(p.id, p); });
+
+                    setPosts(Array.from(allPostsMap.values()));
+                } catch (mapErr) {
+                    console.warn("Post processing error fallback:", mapErr);
+                } finally {
+                    setLoading(false);
+                }
+            }, (error) => {
+                console.warn("Firestore ordered listener warning, using standard fallback:", error);
+                onSnapshot(postsRef, (snapshot) => {
+                    try {
+                        const fetchedPosts: Post[] = snapshot.docs.map(docSnap => {
+                            const raw = { id: docSnap.id, ...docSnap.data() } as Post;
+                            return decryptMessagePayload(raw, 'community');
+                        });
+                        setPosts(fetchedPosts);
+                    } catch {}
                     setLoading(false);
                 }, () => {
-                    setPosts(getLocalPosts().map(p => decryptMessagePayload(p, 'community')));
+                    try {
+                        setPosts(getLocalPosts().map(p => decryptMessagePayload(p, 'community')));
+                    } catch {}
                     setLoading(false);
                 });
             });
         } catch (e) {
             console.warn("Firestore query error:", e);
-            setPosts(getLocalPosts().map(p => decryptMessagePayload(p, 'community')));
+            try {
+                setPosts(getLocalPosts().map(p => decryptMessagePayload(p, 'community')));
+            } catch {}
             setLoading(false);
         }
 

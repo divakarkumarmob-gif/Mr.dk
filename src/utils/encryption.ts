@@ -52,6 +52,7 @@ export function encryptText(text: string | undefined | null, _chatRoomId: string
  */
 export function decryptText(ciphertext: string | undefined | null, chatRoomId: string = 'global'): string {
     if (!ciphertext) return '';
+    if (typeof ciphertext !== 'string') return String(ciphertext);
     if (ciphertext.startsWith('🔒ENC:')) {
         return decryptLegacyXOR(ciphertext, chatRoomId);
     }
@@ -70,22 +71,35 @@ export function encryptMessagePayload<T extends Record<string, any>>(payload: T,
  * Compatibility wrapper for message payload decryption
  */
 export function decryptMessagePayload<T extends Record<string, any>>(payload: T, chatRoomId: string): T {
+    if (!payload || typeof payload !== 'object') return payload;
     const decrypted: Record<string, any> = { ...payload };
 
-    if (decrypted.text) {
+    if (decrypted.text && typeof decrypted.text === 'string') {
         decrypted.text = decryptText(decrypted.text, chatRoomId);
     }
-    if (decrypted.audioUrl) {
+    if (decrypted.audioUrl && typeof decrypted.audioUrl === 'string') {
         decrypted.audioUrl = decryptText(decrypted.audioUrl, chatRoomId);
     }
-    if (decrypted.imageUrl) {
+    if (decrypted.imageUrl && typeof decrypted.imageUrl === 'string') {
         decrypted.imageUrl = decryptText(decrypted.imageUrl, chatRoomId);
     }
-    if (decrypted.pollData) {
+    if (decrypted.pollData && typeof decrypted.pollData === 'object') {
         decrypted.pollData = {
             ...decrypted.pollData,
-            question: decryptText(decrypted.pollData.question, chatRoomId),
-            options: (decrypted.pollData.options || []).map((opt: string) => decryptText(opt, chatRoomId))
+            question: typeof decrypted.pollData.question === 'string'
+                ? decryptText(decrypted.pollData.question, chatRoomId)
+                : decrypted.pollData.question,
+            options: (decrypted.pollData.options || []).map((opt: any) => {
+                if (typeof opt === 'string') {
+                    return { id: 'opt_' + Math.random().toString(36).substring(2, 6), text: decryptText(opt, chatRoomId), votes: [] };
+                } else if (opt && typeof opt === 'object') {
+                    return {
+                        ...opt,
+                        text: typeof opt.text === 'string' ? decryptText(opt.text, chatRoomId) : (opt.text || '')
+                    };
+                }
+                return opt;
+            })
         };
     }
 
