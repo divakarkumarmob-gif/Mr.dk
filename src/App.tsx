@@ -367,7 +367,7 @@ function AppInner() {
 
     const handlePopState = (event: PopStateEvent) => {
         const state = event.state;
-        if (state && state.privateVideoView) {
+        if (state && (state.privateVideoView || state.liveAiOverlay)) {
             return;
         }
         

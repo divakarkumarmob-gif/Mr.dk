@@ -139,6 +139,23 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         };
     }, []);
 
+    // Helper functions to close overlays & sync browser history
+    const closeSettings = () => {
+        setShowSettings(false);
+        setShowVoiceDropdown(false);
+        setShowTimeRangeDropdown(false);
+        if (window.history.state?.liveAiOverlay) {
+            window.history.back();
+        }
+    };
+
+    const closeChatHistory = () => {
+        setShowChatHistory(false);
+        if (window.history.state?.liveAiOverlay) {
+            window.history.back();
+        }
+    };
+
     // Push history state whenever an overlay opens in Live AI Interface so device back button pops overlay first
     useEffect(() => {
         if (showSettings || showChatHistory || previewImage || showShortcutPrompt) {
@@ -146,7 +163,42 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         }
     }, [showSettings, showChatHistory, previewImage, showShortcutPrompt]);
 
-    // Android Hardware Physical Back Button Handler
+    // Handle browser popstate event specifically for Live AI overlays
+    useEffect(() => {
+        const handlePopState = (e: PopStateEvent) => {
+            if (showTimeRangeDropdown) {
+                setShowTimeRangeDropdown(false);
+                return;
+            }
+            if (showVoiceDropdown) {
+                setShowVoiceDropdown(false);
+                return;
+            }
+            if (showChatHistory) {
+                setShowChatHistory(false);
+                return;
+            }
+            if (showSettings) {
+                setShowSettings(false);
+                return;
+            }
+            if (showShortcutPrompt) {
+                setShowShortcutPrompt(false);
+                return;
+            }
+            if (previewImage) {
+                setPreviewImage(null);
+                return;
+            }
+        };
+
+        window.addEventListener('popstate', handlePopState);
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+        };
+    }, [showTimeRangeDropdown, showVoiceDropdown, showChatHistory, showSettings, showShortcutPrompt, previewImage]);
+
+    // Android Hardware Physical Back Button Handler (Capacitor & Hardware events)
     useEffect(() => {
         const unregister = registerBackButtonHandler(() => {
             if (showTimeRangeDropdown) {
@@ -720,16 +772,10 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     setCaptionText(prev => prev + msg.text);
                 }
             } else if (msg.turnComplete) {
-                // Reliable end-of-turn signal from the server (Gemini's
-                // serverContent.turnComplete) — this is the correct moment
-                // to clear the caption for the next turn. We deliberately do
-                // NOT clear on every audio chunk or on the "Speaking..." ->
-                // "Listening..." status flicker, because Gemini can pause
-                // mid-turn (brief gap between audio chunks) without the turn
-                // actually ending; clearing there was wiping captions
-                // mid-sentence even though the AI was still talking.
+                // Don't clear captionText here — leave the last answer's caption
+                // visible until the next turn's first text chunk arrives, which
+                // replaces it (see captionTurnStartedRef logic above).
                 captionTurnStartedRef.current = false;
-                setCaptionText('');
             } else if (msg.type === 'init_ack') {
                 isInitializedRef.current = true;
                 console.log("Gemini session initialized");
@@ -1069,7 +1115,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 </div>
             )}
             {showChatHistory && (
-                <ChatHistoryModal onClose={() => setShowChatHistory(false)} />
+                <ChatHistoryModal onClose={closeChatHistory} />
             )}
             {showShortcutPrompt && (
                 <HomeScreenShortcutPrompt onClose={() => {
@@ -1078,11 +1124,11 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 }} />
             )}
             {showSettings && (
-                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={() => setShowSettings(false)}>
+                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={closeSettings}>
                     <div className="relative bg-gray-900 rounded-2xl max-w-sm w-full p-6 text-white" onClick={e => e.stopPropagation()}>
                         <div className="flex justify-between items-center mb-6">
                             <h2 className="text-xl font-bold">Settings</h2>
-                            <button onClick={() => setShowSettings(false)} className="text-gray-400">
+                            <button onClick={closeSettings} className="text-gray-400">
                                 <X className="h-6 w-6" />
                             </button>
                         </div>
