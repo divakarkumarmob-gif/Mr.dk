@@ -787,19 +787,24 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     };
 
     const handlePlusClick = async () => {
-        const photo = await takePhoto();
-        if (photo) {
-            const newImage = {
-                id: Math.random().toString(36).substr(2, 9),
-                file: photo,
-                status: 'uploading' as const
-            };
+        try {
+            const photo = await takePhoto();
+            if (photo) {
+                const newImage = {
+                    id: Math.random().toString(36).substr(2, 9),
+                    file: photo,
+                    status: 'uploading' as const
+                };
 
-            setSelectedImages(prev => [...prev, newImage]);
+                setSelectedImages(prev => [...prev, newImage]);
 
-            ensureConnection(false).then(() => {
-                sendImageToWebSocket(newImage);
-            });
+                ensureConnection(false).then(() => {
+                    sendImageToWebSocket(newImage);
+                });
+            }
+        } catch (e) {
+            console.error("Failed to open camera/gallery:", e);
+            setStatus("Error opening camera/gallery");
         }
     };
 

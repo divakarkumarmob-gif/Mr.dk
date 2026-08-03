@@ -69,4 +69,5 @@
         android:maxSdkVersion="29"
         tools:replace="android:maxSdkVersion" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 </manifest>

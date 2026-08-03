@@ -25,10 +25,13 @@ export const takePhoto = async (): Promise<File | null> => {
       const blob = await response.blob();
       const fileName = `photo_${Date.now()}.jpg`;
       return new File([blob], fileName, { type: blob.type || 'image/jpeg' });
-    } catch (e) {
-      // User cancelling the camera/gallery prompt also lands here — that's
-      // expected and not an error worth logging loudly.
-      console.log("Camera cancelled or failed:", e);
+    } catch (e: any) {
+      const isUserCancel = e?.message?.toLowerCase().includes('cancel');
+      if (!isUserCancel) {
+        console.error("Camera/gallery failed:", e);
+        throw e; // let the caller show a toast/status for real failures
+      }
+      console.log("Camera cancelled by user");
       return null;
     }
   } else {
