@@ -253,64 +253,22 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                 }}
                 onClick={handleIconClick}
             >
-                {/* 🌊 Glossy Outer Ambient Pulse Waves */}
-                <motion.div
-                    className="absolute -inset-3 rounded-full bg-gradient-to-r from-blue-500/30 via-indigo-500/25 to-purple-500/30 blur-md pointer-events-none"
-                    animate={{ scale: [1, 1.25, 1], opacity: [0.4, 0.75, 0.4] }}
-                    transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-                />
-
-                <motion.div
-                    className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-400/35 to-fuchsia-500/35 blur-sm pointer-events-none"
-                    animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.9, 0.5] }}
-                    transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-                />
-
-                {/* 🌀 Rotating Glossy Conic Aura Ring */}
-                <motion.div
-                    className="absolute -inset-1 rounded-full bg-[conic-gradient(from_0deg,#3b82f6,#8b5cf6,#ec4899,#06b6d4,#3b82f6)] opacity-80 p-[2px] pointer-events-none"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                >
-                    <div className="w-full h-full rounded-full bg-[#0a0f24]" />
-                </motion.div>
-
-                {/* 🌊 Click / Tap Expanding Glossy Liquid Waves */}
+                {/* Simple click feedback ripple */}
                 <AnimatePresence>
                     {isClicked && (
-                        <>
-                            <motion.div
-                                key="wave-1"
-                                initial={{ scale: 1, opacity: 0.85 }}
-                                animate={{ scale: 3.2, opacity: 0 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-                                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/60 via-purple-500/50 to-pink-500/60 border border-white/50 backdrop-blur-md shadow-[0_0_35px_rgba(59,130,246,0.9)] pointer-events-none"
-                            />
-                            <motion.div
-                                key="wave-2"
-                                initial={{ scale: 1, opacity: 0.9 }}
-                                animate={{ scale: 2.2, opacity: 0 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
-                                className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/60 to-indigo-500/60 border border-cyan-300/50 backdrop-blur-sm pointer-events-none"
-                            />
-                            <motion.div
-                                key="wave-3"
-                                initial={{ scale: 1, opacity: 1 }}
-                                animate={{ scale: 1.5, opacity: 0 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-                                className="absolute inset-0 rounded-full bg-white/50 border border-white pointer-events-none"
-                            />
-                        </>
+                        <motion.div
+                            key="click-pulse"
+                            initial={{ scale: 1, opacity: 0.6 }}
+                            animate={{ scale: 1.35, opacity: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.35, ease: "easeOut" }}
+                            className="absolute inset-0 rounded-full bg-blue-500/40 pointer-events-none"
+                        />
                     )}
                 </AnimatePresence>
 
-                {/* 💎 Glassmorphic Button Capsule Container */}
-                <div className="relative rounded-full p-1.5 bg-[#0a0f24]/90 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.5),0_0_20px_rgba(59,130,246,0.4)] overflow-hidden flex items-center justify-center">
-                    {/* Glass reflection shine highlight */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/25 via-transparent to-transparent pointer-events-none" />
+                {/* Clean Button Container */}
+                <div className="relative rounded-full p-1.5 bg-[#0a0f24]/90 backdrop-blur-xl border border-white/20 shadow-lg flex items-center justify-center">
                     <AgentFace status={status} volume={0} size={54} colorIndex={colorIndex} />
                 </div>
             </motion.div>
