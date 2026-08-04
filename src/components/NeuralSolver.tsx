@@ -4,6 +4,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import { X, Send, Loader2, Trash2 } from 'lucide-react';
+import StatusLoader from './StatusLoader';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
 import { getApiUrl, authFetch } from '@/utils/api';
@@ -146,7 +147,15 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
                     </div>
                 ))}
                 <div ref={messagesEndRef} />
-                {loading && <div className="self-start p-3"><Loader2 className="animate-spin text-blue-500" /></div>}
+                {loading && (
+                    <div className="self-start p-2 my-1">
+                        <StatusLoader 
+                            variant="solving" 
+                            cycleLabels={["Neural Solving....", "Analyzing Doubt....", "Generating Solution...."]} 
+                            size="md" 
+                        />
+                    </div>
+                )}
             </div>
 
             <div className="flex gap-2 bg-[#161e38] p-3 rounded-full shadow-md">

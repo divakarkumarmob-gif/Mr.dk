@@ -10,6 +10,7 @@ import { Camera, X, Crop, Sparkles, RefreshCw, Volume2, Check, ArrowRight } from
 import { takePhoto } from '../utils/camera';
 import { chatWithAI } from '../services/geminiService';
 import { showToast } from '../utils/toast';
+import StatusLoader from './StatusLoader';
 
 export default function CameraDoubtModal({ onClose }: { onClose: () => void }) {
     const [capturedImage, setCapturedImage] = useState<string | null>(null);
@@ -139,9 +140,11 @@ Provide:
                                 className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-extrabold py-4 rounded-3xl text-sm shadow-xl flex items-center justify-center gap-2 active:scale-95 transition-all"
                             >
                                 {isAnalyzing ? (
-                                    <>
-                                        <RefreshCw className="w-5 h-5 animate-spin" /> Analyzing Photo with NCERT Engine...
-                                    </>
+                                    <StatusLoader 
+                                        variant="solving" 
+                                        cycleLabels={["Analyzing Photo...", "NCERT Engine Processing...", "Formulating Solution..."]} 
+                                        size="sm" 
+                                    />
                                 ) : (
                                     <>
                                         <Sparkles className="w-5 h-5" /> Solve Question with AI

@@ -4,6 +4,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { Search, Loader2, History, Camera, X } from 'lucide-react';
 import { motion } from 'motion/react';
+import StatusLoader from './StatusLoader';
 import { getApiUrl, authFetch } from '@/utils/api';
 import { storageService } from '../lib/storageService';
 
@@ -204,6 +205,15 @@ export default function AiSearch({ onFocus }: { onFocus?: () => void }) {
                 </div>
             )}
           </div>
+        )}
+        {loading && !result && (
+            <div className="mt-4">
+                <StatusLoader 
+                    variant="searching" 
+                    cycleLabels={["Searching Google AI...", "Analyzing Web Data...", "Formatting Answer..."]} 
+                    size="sm" 
+                />
+            </div>
         )}
         {result && (
             <div className="mt-4 p-3 bg-[#0a0f24] border border-white/10 rounded text-sm text-gray-200">

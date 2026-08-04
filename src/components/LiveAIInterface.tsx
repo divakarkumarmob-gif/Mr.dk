@@ -3,6 +3,7 @@ import { X, Mic, Sparkles, Plus, Loader2, Image as ImageIcon, Settings, ChevronD
 import { motion, AnimatePresence } from 'motion/react';
 import { Capacitor } from '@capacitor/core';
 import AgentFace from './AgentFace';
+import StatusLoader from './StatusLoader';
 import HomeScreenShortcutPrompt from './HomeScreenShortcutPrompt';
 import ChatHistoryModal from './ChatHistoryModal';
 import { auth } from '../lib/firebase';
@@ -1080,7 +1081,20 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                                     <Mic className="h-8 w-8 text-white" />
                                 </motion.button>
                             </div>
-                            <span className="mt-2 text-xs text-gray-400">{isRecording ? status : "Tap to talk"}</span>
+                            <div className="mt-2">
+                                {isRecording ? (
+                                    <StatusLoader 
+                                        variant={
+                                            status === "Thinking..." ? "thinking" : 
+                                            status === "Speaking..." ? "working" : "searching"
+                                        } 
+                                        label={status} 
+                                        size="sm" 
+                                    />
+                                ) : (
+                                    <span className="text-xs text-gray-400 font-medium">Tap to talk</span>
+                                )}
+                            </div>
                         </div>
 
                         <button onClick={() => setShowChatHistory(true)} className="p-4 bg-white/10 rounded-full text-white">
