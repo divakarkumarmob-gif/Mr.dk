@@ -919,7 +919,15 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             
             <h2 className="text-lg font-bold mb-1 -mt-4">Hello, Future Doctor! 👋</h2>
             
-            <p className="text-gray-400 mb-8 text-center text-sm -mt-1">I'm your AI study companion for NEET.</p>
+            <p className="text-gray-400 mb-2 text-center text-sm -mt-1">I'm your AI study companion for NEET.</p>
+            
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs font-semibold mb-6 shadow-sm">
+                <span className="relative flex h-2 w-2 shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Performance Synced 📊
+            </div>
 
             <div className={`relative flex items-center justify-center gap-4 transition-all ${selectedImages.length > 0 ? 'mb-2 scale-75 -mt-2' : 'mb-8 -mt-4'}`}>
                 <div className="flex flex-col gap-3">

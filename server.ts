@@ -2168,6 +2168,24 @@ After writing your normal reply to the user, on a new line add the exact delimit
             thinkingLevel = 'high';
         }
 
+        let performanceMemory = "";
+        try {
+            if (userId && firebaseAdminApp) {
+                const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+                const resultsSnap = await db.collection('users').doc(userId).collection('results').orderBy('timestamp', 'desc').limit(3).get();
+                if (!resultsSnap.empty) {
+                    const latestResult = resultsSnap.docs[0].data();
+                    const score = latestResult.score || 0;
+                    const totalPossible = latestResult.totalPossibleMarks || 720;
+                    const sillyLoss = latestResult.sillyMistakesLoss || 0;
+                    const conceptLoss = latestResult.conceptGapLoss || 0;
+                    performanceMemory = `\n[Student Live Test Performance Sync]\n- Latest Test Score: ${score}/${totalPossible}\n- Silly Mistakes Loss: ${sillyLoss} marks\n- Concept Gap Loss: ${conceptLoss} marks\n- Physics Score: ${latestResult.physicsScore || 0}, Chemistry: ${latestResult.chemScore || 0}, Biology: ${latestResult.bioScore || 0}\nUse this real performance data naturally to guide, encourage, and mentor the student on their specific weak areas!`;
+                }
+            }
+        } catch (e) {
+            console.log("Performance memory fetch skipped:", e);
+        }
+
         let systemInstruction = `You are NeetMaster AI, a specialized voice study companion for NEET aspirants, expert in Physics, Chemistry, and Biology (NCERT Class 11-12 syllabus).
 You MUST speak ONLY in natural, fluent Hindi. Do not use English unless necessary for technical terms.
 Use a warm, encouraging, emotionally expressive tone. Pause naturally, sound like a real NEET mentor.
@@ -2229,7 +2247,7 @@ Calculation discipline — before speaking any numerical or factual answer:
 Before speaking your final answer to any question with a definite correct answer (numerical, factual, or MCQ), do one silent final check: does what I am about to say match exactly what I just calculated/reasoned out? If there's any mismatch between your internal reasoning and the words you're about to speak, redo the check — do not let a fast/confident tone override a correct answer.
 
 Gold-Standard Exemplars & Solution Discipline:
-${getFineTunedExemplarsText()}`;
+${getFineTunedExemplarsText()}${performanceMemory}`;
 
         // Per-turn transcript buffers — Gemini streams transcript text in
         // small chunks, so we accumulate until turnComplete before writing

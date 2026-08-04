@@ -503,6 +503,24 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                 </div>
             </div>
 
+            {/* DISCUSS WITH AI LIVE BUTTON */}
+            <div className="mb-4">
+                <button 
+                    onClick={() => {
+                        if (window.dispatchEvent) {
+                            window.dispatchEvent(new CustomEvent('open-ai-live-voice'));
+                        }
+                    }}
+                    className="w-full bg-gradient-to-r from-red-600 via-purple-600 to-indigo-600 text-white py-3.5 px-4 rounded-2xl font-extrabold text-sm shadow-xl shadow-red-600/20 flex items-center justify-center gap-2 active:scale-95 transition-all border border-white/20"
+                >
+                    <span className="relative flex h-3 w-3 shrink-0">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                    </span>
+                    Discuss this Test with AI Live 🎙️
+                </button>
+            </div>
+
             {/* BOTTOM ACTION BUTTONS */}
             <div className="grid grid-cols-3 gap-2.5">
                 <button 
