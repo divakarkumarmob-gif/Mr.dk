@@ -26,7 +26,7 @@ interface ChatHistoryModalProps {
 // small scroll jitters shouldn't accidentally trigger a reply.
 const SWIPE_REPLY_THRESHOLD = 55;
 
-function ChatHistoryModal({ onClose }: ChatHistoryModalProps) {
+function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryModalProps) {
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputText, setInputText] = useState('');
     const [isSending, setIsSending] = useState(false);
