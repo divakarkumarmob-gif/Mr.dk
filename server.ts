@@ -12,6 +12,8 @@ dotenv.config();
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { performSearch } from "./src/services/searchService";
+import { getRelevantNCERTContext } from "./src/utils/ncertKnowledge";
+import { getFineTunedExemplarsText } from "./src/services/aiFineTuning";
 import { GoogleGenAI, Modality } from "@google/genai";
 import admin from 'firebase-admin';
 import { getFirestore } from 'firebase-admin/firestore';
@@ -258,11 +260,16 @@ const AI_SEARCH_FORMAT_RULE = "Formatting rules: Use markdown — **bold** for t
 const SPOKEN_ACCURATE_RULE = "This answer will be read aloud by a voice assistant, not displayed as text. Do not use markdown, bold, bullet points, or LaTeX — write it as natural spoken sentences a tutor would say out loud, including the numbers and final answer in plain words (e.g. say 'mu naught i over two R', not '$\\mu_0 i / 2R$').";
 
 async function solveImageAccurately(base64Image: string, mimeType: string, caption: string): Promise<string> {
+    const ncertRef = getRelevantNCERTContext(caption || '');
+    const fineTunedContext = getFineTunedExemplarsText();
+
+    const promptText = `You are NeetMaster AI, an expert NEET tutor solving a Physics/Chemistry/Biology problem from a photo, strictly according to NCERT. Work through the problem carefully step by step, double-check each calculation, and verify the final answer makes physical sense before finalizing it. ${SPOKEN_ACCURATE_RULE}\n\n${ncertRef ? `NCERT Knowledge Base Context:\n${ncertRef}\n\n` : ''}Few-Shot Exemplars:\n${fineTunedContext}\n\nThe student's question/caption: "${caption || '(no caption, just solve what is shown in the image)'}"`;
+
     const response = await ai.models.generateContent({
         model: "gemini-3.6-flash",
         contents: {
             parts: [
-                { text: `You are a NEET tutor solving a Physics/Chemistry/Biology problem from a photo, strictly according to NCERT. Work through the problem carefully step by step, double-check each calculation, and verify the final answer makes physical sense before finalizing it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${SPOKEN_ACCURATE_RULE}\n\nThe student's question/caption: "${caption || '(no caption, just solve what is shown in the image)'}"` },
+                { text: promptText },
                 { inlineData: { data: base64Image, mimeType: mimeType || "image/jpeg" } }
             ]
         },
@@ -275,7 +282,11 @@ async function solveImageAccurately(base64Image: string, mimeType: string, capti
 
 async function callAI(prompt: string | any[]): Promise<string> {
     try {
-        const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. ${PLAIN_FORMAT_RULE} Current Time: ${new Date().toISOString()}`;
+        const queryStr = typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
+        const ncertRef = getRelevantNCERTContext(queryStr);
+        const fineTunedContext = getFineTunedExemplarsText();
+
+        const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. ${PLAIN_FORMAT_RULE}\n${ncertRef ? `NCERT Reference:\n${ncertRef}\n` : ''}Fine-Tuned Exemplars:\n${fineTunedContext}\nCurrent Time: ${new Date().toISOString()}`;
         
         let contentParts: any[] = [];
         if (typeof prompt === 'string') {
@@ -2215,7 +2226,10 @@ Calculation discipline — before speaking any numerical or factual answer:
 5. Sanity-check the final answer's order of magnitude — does it make physical sense for the scenario described?
 6. If, after all this, you are still not fully confident in the number, say so honestly (per the existing "Never guess" rule) instead of stating an uncertain number as fact.
 
-Before speaking your final answer to any question with a definite correct answer (numerical, factual, or MCQ), do one silent final check: does what I am about to say match exactly what I just calculated/reasoned out? If there's any mismatch between your internal reasoning and the words you're about to speak, redo the check — do not let a fast/confident tone override a correct answer.`;
+Before speaking your final answer to any question with a definite correct answer (numerical, factual, or MCQ), do one silent final check: does what I am about to say match exactly what I just calculated/reasoned out? If there's any mismatch between your internal reasoning and the words you're about to speak, redo the check — do not let a fast/confident tone override a correct answer.
+
+Gold-Standard Exemplars & Solution Discipline:
+${getFineTunedExemplarsText()}`;
 
         // Per-turn transcript buffers — Gemini streams transcript text in
         // small chunks, so we accumulate until turnComplete before writing
