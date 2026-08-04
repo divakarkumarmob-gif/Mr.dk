@@ -90,12 +90,13 @@ service cloud.firestore {
         return isSignedIn() && (
           isAdmin() ||
           chatId == request.auth.uid ||
+          chatId == (request.auth.uid + "_ai") ||
           isParticipant()
         );
       }
 
       allow read: if canAccessChat();
-      allow create: if isSignedIn() && (chatId == request.auth.uid || request.resource.data.get('participants', []).hasAny([request.auth.uid]));
+      allow create: if isSignedIn() && (chatId == request.auth.uid || chatId == (request.auth.uid + "_ai") || request.resource.data.get('participants', []).hasAny([request.auth.uid]));
       allow update: if canAccessChat();
       allow delete: if isAdmin();
 

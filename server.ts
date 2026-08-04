@@ -2151,6 +2151,11 @@ After writing your normal reply to the user, on a new line add the exact delimit
         try {
             const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
             const aiChatId = `${userId}_ai`;
+            await db.collection('chats').doc(aiChatId).set({
+                participants: [userId],
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            }, { merge: true });
+
             await db.collection('chats').doc(aiChatId).collection('messages').add({
                 senderId,
                 text: text.trim(),
@@ -2172,6 +2177,11 @@ After writing your normal reply to the user, on a new line add the exact delimit
         try {
             if (userId && firebaseAdminApp) {
                 const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+                const aiChatId = `${userId}_ai`;
+                await db.collection('chats').doc(aiChatId).set({
+                    participants: [userId],
+                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+                }, { merge: true });
                 const resultsSnap = await db.collection('users').doc(userId).collection('results').orderBy('timestamp', 'desc').limit(3).get();
                 if (!resultsSnap.empty) {
                     const latestResult = resultsSnap.docs[0].data();

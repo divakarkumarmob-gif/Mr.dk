@@ -74,7 +74,9 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
     useEffect(() => {
         if (!aiChatId || !auth.currentUser) return;
         const uid = auth.currentUser.uid;
-        const ensureParentChatDoc = async () => {
+        let unsubscribe: (() => void) | null = null;
+
+        const initChat = async () => {
             try {
                 const chatDocRef = doc(db, 'chats', aiChatId);
                 const snap = await getDoc(chatDocRef);
@@ -89,14 +91,15 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
             } catch (e) {
                 console.error('[ChatHistoryModal] Failed to ensure parent chat doc:', e);
             }
-        };
-        ensureParentChatDoc();
-    }, [aiChatId]);
 
-    useEffect(() => {
-        if (!aiChatId) return;
-        const unsubscribe = subscribeToMessages(aiChatId, (msgs) => setMessages(msgs));
-        return () => unsubscribe();
+            unsubscribe = subscribeToMessages(aiChatId, (msgs) => setMessages(msgs));
+        };
+
+        initChat();
+
+        return () => {
+            if (unsubscribe) unsubscribe();
+        };
     }, [aiChatId]);
 
     // Physical Hardware Back Button Handler for Chat History Modal & Overlays
