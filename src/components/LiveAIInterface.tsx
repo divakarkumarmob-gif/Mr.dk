@@ -151,9 +151,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
 
     const closeChatHistory = useCallback(() => {
         setShowChatHistory(false);
-        if (window.history.state?.liveAiOverlay) {
-            window.history.back();
-        }
     }, []);
 
     // Push history state whenever an overlay opens in Live AI Interface so device back button pops overlay first
@@ -1128,7 +1125,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     isLiveActive={isRecording}
                     onCloseLive={() => {
                         stopRecording();
-                        onClose();
                     }}
                 />
             )}
