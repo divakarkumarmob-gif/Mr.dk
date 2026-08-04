@@ -7,6 +7,7 @@ import { collection, query, where, getDocs, orderBy, limit, onSnapshot, doc, upd
 import PYQTestRunner from './PYQTestRunner';
 import TestResultDetail from './TestResultDetail';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
+import NTAMockGenerator from './NTAMockGenerator';
 import { generateNEETPdf } from '../lib/pdfUtils';
 
 
@@ -31,6 +32,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
   const [testTitle, setTestTitle] = useState('');
   const [resumeTestData, setResumeTestData] = useState<any | null>(null);
   const [initialTestData, setInitialTestData] = useState<any | null>(null);
+  const [showNTAMockGenerator, setShowNTAMockGenerator] = useState(false);
 
   useEffect(() => {
     const data = localStorage.getItem('resumeTestData');
@@ -242,6 +244,24 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       ) : (
         <div className="px-3">
             <h1 className="text-lg font-bold mb-2">Tests</h1>
+
+            {/* GENERATE 180-Q AI MOCK TEST BUTTON */}
+            <div className="mb-4">
+                <button 
+                    onClick={() => setShowNTAMockGenerator(true)}
+                    className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-3.5 px-4 rounded-2xl font-extrabold text-sm shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 active:scale-95 transition-all border border-blue-400/30"
+                >
+                    <span className="relative flex h-3 w-3 shrink-0">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-400"></span>
+                    </span>
+                    Generate 180-Q AI Mock Test 🚀
+                </button>
+            </div>
+
+            {showNTAMockGenerator && (
+                <NTAMockGenerator onBack={() => setShowNTAMockGenerator(false)} />
+            )}
 
             {resumeTestData && (
                 <motion.div 

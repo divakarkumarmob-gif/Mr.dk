@@ -10,6 +10,7 @@ import TestResultDetail from './TestResultDetail';
 import Flashcards from './Flashcards';
 import StudyDashboard from './StudyDashboard';
 import PrivateVideos from './PrivateVideos';
+import NCERTRevisionPlanner from './NCERTRevisionPlanner';
 
 const CHAPTER_DATA: any = {
     Physics: { 
@@ -191,6 +192,9 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
                   </div>
               </button>
           </div>
+
+          {/* DAILY NCERT REVISION TARGETS WIDGET */}
+          <NCERTRevisionPlanner />
 
           <div className="bg-[#0F1729] rounded-xl border border-[#1E293B] p-3 mb-4 flex justify-between items-center">
               <button onClick={() => setShowSummary(true)} className="font-bold text-xs tracking-widest text-orange-400">FOCUS MODE</button>
