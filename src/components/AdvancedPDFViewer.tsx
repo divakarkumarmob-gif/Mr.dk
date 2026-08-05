@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { getCachedPdf, cachePdf, isPdfCached } from '../lib/pdfCache';
+import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { openExternalLink } from '../utils/browser';
@@ -11,7 +11,13 @@ import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { keepAwake, allowSleep } from '../utils/keepAwake';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+
+try {
+    pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+} catch {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+}
 
 const MIN_SCALE = 0.25;
 const MAX_SCALE = 4.0;
@@ -133,20 +139,30 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setNumPages(null);
         setCurrentPage(1);
 
+        let isMounted = true;
+
         const loadContent = async () => {
-            let urlToLoad = pdfUrl;
-            if (Capacitor.isNativePlatform()) {
-                const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-                const cachedBlobUrl = await getCachedPdf(filename);
-                if (cachedBlobUrl) {
-                    urlToLoad = cachedBlobUrl;
-                    setIsDownloaded(true);
-                }
-                // Also check if already cached
-                const cached = await isPdfCached(filename);
-                if (cached) setIsDownloaded(true);
+            const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+            
+            // 1. Try local cache first for sub-second instant load
+            const cachedBlobUrl = await getCachedPdf(filename);
+            if (cachedBlobUrl && isMounted) {
+                setActivePdfUrl(cachedBlobUrl);
+                setIsDownloaded(true);
+                return;
             }
-            setActivePdfUrl(urlToLoad);
+
+            // 2. Load online/passed URL
+            if (isMounted) {
+                setActivePdfUrl(pdfUrl);
+            }
+
+            // 3. Auto cache in background so next load is instant
+            if (pdfUrl) {
+                cachePdf(pdfUrl, filename).then((cached) => {
+                    if (cached && isMounted) setIsDownloaded(true);
+                }).catch(() => {});
+            }
         };
         loadContent();
 
@@ -155,7 +171,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 const encodedUrl = btoa(encodeURIComponent(pdfUrl)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
                 const docRef = doc(db, 'user_reading_progress', `${auth.currentUser.uid}_${encodedUrl}`);
                 const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
+                if (docSnap.exists() && isMounted) {
                     setCurrentPage(docSnap.data().page);
                 }
             }
@@ -163,6 +179,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         loadProgress();
 
         return () => {
+            isMounted = false;
             allowSleep();
             if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
         };
@@ -220,32 +237,24 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
         setIsDownloading(true);
 
-        if (Capacitor.isNativePlatform()) {
-            const cached = await cachePdf(pdfUrl, filename);
-            if (cached) {
-                setIsDownloaded(true);
-                setIsDownloading(false);
-                alert("✅ PDF saved securely! You can open it anytime offline from this app.");
-                return;
-            }
-        }
-
         try {
-            const response = await fetch(pdfUrl);
-            const blob = await response.blob();
-            const blobUrl = window.URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = blobUrl;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
+            // 1. Cache locally for offline viewing inside app
+            await cachePdf(activePdfUrl || pdfUrl, filename);
+            setIsDownloaded(true);
+
+            // 2. Download raw PDF file to device local storage
+            const success = await downloadPdfToDevice(activePdfUrl || pdfUrl, title);
+            setIsDownloading(false);
+            if (success) {
+                alert("✅ PDF successfully downloaded & saved to your local storage!");
+            } else {
+                openExternalLink(pdfUrl);
+            }
         } catch (err) {
             console.error("Download failed:", err);
+            setIsDownloading(false);
             openExternalLink(pdfUrl);
         }
-        setIsDownloading(false);
     };
 
     // ---- Enhanced Search with Text Highlighting ----
@@ -498,6 +507,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setCurrentPage(updater);
     }, []);
 
+    const pdfOptions = useMemo(() => ({
+        cMapUrl: `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+        cMapPacked: true,
+        standardFontDataUrl: `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+    }), []);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -680,6 +695,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <Document
                         file={activePdfUrl}
+                        options={pdfOptions}
                         onLoadSuccess={onDocumentLoadSuccess}
                         onLoadError={onDocumentLoadError}
                         onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}

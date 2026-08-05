@@ -5,8 +5,14 @@ import { Upload, FileType, Brain } from 'lucide-react';
 import * as pdfjs from 'pdfjs-dist';
 import { getApiUrl, authFetch } from '@/utils/api';
 
-// Configure PDF.js worker
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+
+// Configure PDF.js worker using bundled local asset
+try {
+    pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+} catch {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+}
 
 enum OperationType {
   CREATE = 'create',

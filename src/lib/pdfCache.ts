@@ -1,7 +1,69 @@
 import { Filesystem, Directory } from '@capacitor/filesystem';
+import { Capacitor } from '@capacitor/core';
 
 // Obfuscated XOR key — app-only decode possible
 const ENC_KEY = 'MrDk$N33tM@st3r#2026!SecurePDF';
+
+// IndexedDB Fallback Config for Web & Webview
+const IDB_NAME = 'MrDkPdfCacheDB';
+const IDB_STORE = 'pdfs';
+const IDB_VERSION = 1;
+
+/**
+ * Open IndexedDB database for local storage PDF persistence on Web/PWA
+ */
+function openPdfDB(): Promise<IDBDatabase> {
+    return new Promise((resolve, reject) => {
+        if (typeof window === 'undefined' || !window.indexedDB) {
+            reject(new Error('IndexedDB not supported'));
+            return;
+        }
+        const request = window.indexedDB.open(IDB_NAME, IDB_VERSION);
+        request.onupgradeneeded = (e: any) => {
+            const db = e.target.result;
+            if (!db.objectStoreNames.contains(IDB_STORE)) {
+                db.createObjectStore(IDB_STORE);
+            }
+        };
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+    });
+}
+
+async function saveToIDB(key: string, data: Uint8Array): Promise<boolean> {
+    try {
+        const db = await openPdfDB();
+        return new Promise((resolve) => {
+            const tx = db.transaction(IDB_STORE, 'readwrite');
+            const store = tx.objectStore(IDB_STORE);
+            const req = store.put(data, key);
+            req.onsuccess = () => resolve(true);
+            req.onerror = () => resolve(false);
+        });
+    } catch {
+        return false;
+    }
+}
+
+async function getFromIDB(key: string): Promise<Uint8Array | null> {
+    try {
+        const db = await openPdfDB();
+        return new Promise((resolve) => {
+            const tx = db.transaction(IDB_STORE, 'readonly');
+            const store = tx.objectStore(IDB_STORE);
+            const req = store.get(key);
+            req.onsuccess = () => resolve(req.result || null);
+            req.onerror = () => resolve(null);
+        });
+    } catch {
+        return null;
+    }
+}
+
+async function isIDBCached(key: string): Promise<boolean> {
+    const data = await getFromIDB(key);
+    return data !== null;
+}
 
 /**
  * XOR-encode/decode a Uint8Array with the secret key.
@@ -54,24 +116,29 @@ export const cachePdf = async (url: string, filename: string): Promise<string | 
         }
         const arrayBuffer = await response.arrayBuffer();
         if (!arrayBuffer || arrayBuffer.byteLength === 0) return null;
-        if (arrayBuffer.byteLength > 50 * 1024 * 1024) {
-            console.warn('PDF exceeds max 50MB cache limit:', filename);
+        if (arrayBuffer.byteLength > 100 * 1024 * 1024) { // 100MB safety limit
+            console.warn('PDF exceeds max 100MB cache limit:', filename);
             return null;
         }
         const pdfBytes = new Uint8Array(arrayBuffer);
 
         // XOR-encrypt the raw PDF bytes
         const encryptedBytes = xorTransform(pdfBytes);
-        const base64Encoded = uint8ToBase64(encryptedBytes);
-
-        // Save with .mrdkpdf extension — won't open in any external viewer
         const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
 
-        await Filesystem.writeFile({
-            path: `pdfs/${encFilename}`,
-            data: base64Encoded,
-            directory: Directory.Data,
-        });
+        if (Capacitor.isNativePlatform()) {
+            const base64Encoded = uint8ToBase64(encryptedBytes);
+            // Save with .mrdkpdf extension & recursive: true to automatically create directory
+            await Filesystem.writeFile({
+                path: `pdfs/${encFilename}`,
+                data: base64Encoded,
+                directory: Directory.Data,
+                recursive: true,
+            });
+        }
+
+        // Also save to IndexedDB as reliable cross-platform fallback
+        await saveToIDB(encFilename, encryptedBytes);
 
         return encFilename;
     } catch (error) {
@@ -87,33 +154,44 @@ export const cachePdf = async (url: string, filename: string): Promise<string | 
  */
 export const getCachedPdf = async (filename: string): Promise<string | null> => {
     const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
-    try {
-        // Check existence first
-        await Filesystem.stat({
-            directory: Directory.Data,
-            path: `pdfs/${encFilename}`,
-        });
 
-        // Read the encrypted base64 data
-        const result = await Filesystem.readFile({
-            directory: Directory.Data,
-            path: `pdfs/${encFilename}`,
-        });
+    // 1. Try Native Filesystem first
+    if (Capacitor.isNativePlatform()) {
+        try {
+            await Filesystem.stat({
+                directory: Directory.Data,
+                path: `pdfs/${encFilename}`,
+            });
 
-        const base64Data = result.data as string;
+            const result = await Filesystem.readFile({
+                directory: Directory.Data,
+                path: `pdfs/${encFilename}`,
+            });
 
-        // Decode: base64 → encrypted bytes → XOR decrypt → original PDF bytes
-        const encryptedBytes = base64ToUint8(base64Data);
-        const pdfBytes = xorTransform(encryptedBytes);
+            const base64Data = result.data as string;
+            const encryptedBytes = base64ToUint8(base64Data);
+            const pdfBytes = xorTransform(encryptedBytes);
 
-        // Create a blob URL for instant viewing
-        const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-        const blobUrl = URL.createObjectURL(blob);
-
-        return blobUrl;
-    } catch {
-        return null;
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            return URL.createObjectURL(blob);
+        } catch {
+            // Fallthrough to IndexedDB check
+        }
     }
+
+    // 2. Try IndexedDB
+    try {
+        const encryptedBytes = await getFromIDB(encFilename);
+        if (encryptedBytes) {
+            const pdfBytes = xorTransform(encryptedBytes);
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            return URL.createObjectURL(blob);
+        }
+    } catch (err) {
+        console.error('Error reading from IDB cache:', err);
+    }
+
+    return null;
 };
 
 /**
@@ -121,13 +199,68 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
  */
 export const isPdfCached = async (filename: string): Promise<boolean> => {
     const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+    if (Capacitor.isNativePlatform()) {
+        try {
+            await Filesystem.stat({
+                directory: Directory.Data,
+                path: `pdfs/${encFilename}`,
+            });
+            return true;
+        } catch {
+            // Check IDB
+        }
+    }
+    return await isIDBCached(encFilename);
+};
+
+/**
+ * Save raw PDF file directly into user's device storage (Documents / Downloads)
+ * or trigger browser file download.
+ */
+export const downloadPdfToDevice = async (pdfUrl: string, title: string): Promise<boolean> => {
+    const cleanFilename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
     try {
-        await Filesystem.stat({
-            directory: Directory.Data,
-            path: `pdfs/${encFilename}`,
-        });
+        const response = await fetch(pdfUrl);
+        const blob = await response.blob();
+        const arrayBuffer = await blob.arrayBuffer();
+
+        if (Capacitor.isNativePlatform()) {
+            const base64Data = uint8ToBase64(new Uint8Array(arrayBuffer));
+
+            // Write raw PDF into device Documents directory
+            await Filesystem.writeFile({
+                path: cleanFilename,
+                data: base64Data,
+                directory: Directory.Documents,
+                recursive: true,
+            });
+
+            // Attempt native share/open if sharer plugin is available
+            try {
+                const { FileSharer } = await import('@capgo/capacitor-file-sharer');
+                await FileSharer.share({
+                    filename: cleanFilename,
+                    base64Data: base64Data,
+                    contentType: 'application/pdf',
+                });
+            } catch (shareErr) {
+                console.log('Native sharer fallback:', shareErr);
+            }
+            return true;
+        }
+
+        // Web Browser download trigger
+        const blobUrl = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = cleanFilename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
         return true;
-    } catch {
+    } catch (err) {
+        console.error('Download PDF to device failed:', err);
         return false;
     }
 };
