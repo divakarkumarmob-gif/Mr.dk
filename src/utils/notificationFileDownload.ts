@@ -32,24 +32,24 @@ export async function downloadAndOpenNotificationFile(
   try {
     const signedUrl = await getNotificationFileViewUrl(fileKey);
 
+    const safeName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+    
     if (fileType === 'image') {
-      await saveMediaToGallery(signedUrl, 'image');
+      const imgFilename = safeName.match(/\.(jpg|jpeg|png|webp)$/i) ? safeName : `${safeName}.jpg`;
+      await savePdfToPublicDownloads(signedUrl, imgFilename);
+      try {
+        await saveMediaToGallery(signedUrl, 'image');
+      } catch (e) {
+        console.warn('Gallery save fallback:', e);
+      }
       return;
     }
 
-    // PDF: Save directly to device's public Downloads / Documents folder
-    await showToast('Downloading PDF to Downloads folder...');
-    const safeName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const filename = safeName.toLowerCase().endsWith('.pdf') ? safeName : `${safeName}.pdf`;
-    
-    const saved = await savePdfToPublicDownloads(signedUrl, filename);
-    if (saved) {
-      await showToast('✅ Saved to Downloads folder! Check your File Manager.');
-    } else {
-      window.open(signedUrl, '_blank');
-    }
-  } catch (error) {
+    // PDF: Save directly to device's public Downloads folder with Live Mobile System Notification
+    const pdfFilename = safeName.toLowerCase().endsWith('.pdf') ? safeName : `${safeName}.pdf`;
+    await savePdfToPublicDownloads(signedUrl, pdfFilename);
+  } catch (error: any) {
     console.error('[downloadAndOpenNotificationFile] Failed:', error);
-    await showToast('Failed to save file. Please check connection and try again.');
+    await showToast(`❌ Failed to load attachment: ${error.message || 'Check connection'}`);
   }
 }

@@ -22,19 +22,32 @@ function formatFileSize(bytes: number): string {
     return `${val.toFixed(val < 10 && i > 0 ? 1 : 0)} ${units[i]}`;
 }
 
+import { downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
+
 function NotificationAttachment({ file, onOpen }: { file: NotificationFile; onOpen: (file: NotificationFile) => void }) {
+    const handleDownloadClick = async (e: React.MouseEvent) => {
+        e.stopPropagation();
+        await downloadAndOpenNotificationFile(file.key, file.name, file.fileType);
+    };
+
     return (
-        <button
+        <div
             onClick={() => onOpen(file)}
-            className="w-full flex items-center gap-3 bg-black/20 hover:bg-black/30 border border-white/10 rounded-lg px-3 py-2.5 mt-2 text-left transition-colors"
+            className="w-full flex items-center gap-3 bg-black/20 hover:bg-black/30 border border-white/10 rounded-lg px-3 py-2.5 mt-2 text-left transition-colors cursor-pointer group"
         >
             {file.fileType === 'image' ? <ImageIcon className="w-5 h-5 text-blue-400 flex-shrink-0" /> : <FileText className="w-5 h-5 text-red-400 flex-shrink-0" />}
             <span className="min-w-0 flex-1">
-                <span className="block text-sm truncate">{file.name}</span>
+                <span className="block text-sm truncate group-hover:text-blue-300 transition-colors">{file.name}</span>
                 {file.size ? <span className="block text-[11px] text-gray-500">{formatFileSize(file.size)}</span> : null}
             </span>
-            <Download className="w-4 h-4 text-gray-400 flex-shrink-0" />
-        </button>
+            <button
+                onClick={handleDownloadClick}
+                className="p-1.5 rounded-lg bg-white/5 hover:bg-blue-600 hover:text-white text-gray-400 transition-all flex-shrink-0"
+                title="Download locally to Downloads folder"
+            >
+                <Download className="w-4 h-4" />
+            </button>
+        </div>
     );
 }
 

@@ -213,54 +213,13 @@ export const isPdfCached = async (filename: string): Promise<boolean> => {
     return await isIDBCached(encFilename);
 };
 
+import { savePdfToPublicDownloads } from '../utils/publicDownload';
+
 /**
  * Save raw PDF file directly into user's device storage (Documents / Downloads)
- * or trigger browser file download.
+ * or trigger browser file download with live mobile system notifications.
  */
 export const downloadPdfToDevice = async (pdfUrl: string, title: string): Promise<boolean> => {
     const cleanFilename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-    try {
-        const response = await fetch(pdfUrl);
-        const blob = await response.blob();
-        const arrayBuffer = await blob.arrayBuffer();
-
-        if (Capacitor.isNativePlatform()) {
-            const base64Data = uint8ToBase64(new Uint8Array(arrayBuffer));
-
-            // Write raw PDF into device Documents directory
-            await Filesystem.writeFile({
-                path: cleanFilename,
-                data: base64Data,
-                directory: Directory.Documents,
-                recursive: true,
-            });
-
-            // Attempt native share/open if sharer plugin is available
-            try {
-                const { FileSharer } = await import('@capgo/capacitor-file-sharer');
-                await FileSharer.share({
-                    filename: cleanFilename,
-                    base64Data: base64Data,
-                    contentType: 'application/pdf',
-                });
-            } catch (shareErr) {
-                console.log('Native sharer fallback:', shareErr);
-            }
-            return true;
-        }
-
-        // Web Browser download trigger
-        const blobUrl = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = blobUrl;
-        link.download = cleanFilename;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
-        return true;
-    } catch (err) {
-        console.error('Download PDF to device failed:', err);
-        return false;
-    }
+    return await savePdfToPublicDownloads(pdfUrl, cleanFilename);
 };

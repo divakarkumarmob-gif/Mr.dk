@@ -423,6 +423,61 @@ async function startServer() {
     limits: { fileSize: 500 * 1024 * 1024, files: 20 },
   });
 
+  // Notification Attachments (Photos & PDFs) Signed View Link
+  app.get("/api/notifications/file-url", async (req: any, res: any) => {
+    try {
+      const { key } = req.query;
+      if (!key || typeof key !== 'string') {
+        return res.status(400).json({ success: false, error: 'Missing file key' });
+      }
+
+      const bucket = process.env.S3_BUCKET || "neetmaster-videos-01";
+      const s3 = getS3Client();
+      const command = new GetObjectCommand({
+        Bucket: bucket,
+        Key: key,
+      });
+
+      const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
+      res.json({ success: true, url: signedUrl });
+    } catch (error: any) {
+      console.error("[Notification File URL Error]:", error);
+      res.status(500).json({ success: false, error: error.message || "Failed to generate file link" });
+    }
+  });
+
+  // Notification File Upload
+  app.post("/api/notifications/upload", s3Upload.single("file"), async (req: any, res: any) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ success: false, error: 'No file provided' });
+      }
+
+      const bucket = process.env.S3_BUCKET || "neetmaster-videos-01";
+      const key = `notifications/${Date.now()}_${file.originalname.replace(/[^a-zA-Z0-9._-]/g, '_')}`;
+
+      const s3 = getS3Client();
+      await s3.send(new PutObjectCommand({
+        Bucket: bucket,
+        Key: key,
+        Body: file.buffer,
+        ContentType: file.mimetype,
+      }));
+
+      res.json({
+        success: true,
+        key,
+        name: file.originalname,
+        size: file.size,
+        fileType: file.mimetype.includes('pdf') ? 'pdf' : 'image',
+      });
+    } catch (error: any) {
+      console.error("[Notification Upload Error]:", error);
+      res.status(500).json({ success: false, error: error.message || 'Upload failed' });
+    }
+  });
+
   // List all S3 buckets available to these AWS credentials.
   // Falls back to the single .env-configured bucket if ListBuckets isn't permitted.
   app.get("/api/s3/buckets", requireAppCheck, requireAuth, async (req: any, res: any) => {
