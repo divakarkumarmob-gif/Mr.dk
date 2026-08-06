@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X, Download, Loader2, AlertCircle } from 'lucide-react';
 import { getNotificationFileViewUrl, downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
+import { getPdfViewerUrl } from '../utils/api';
 import { fetchAndCachePdf } from '../lib/pdfCache';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 
@@ -17,14 +18,6 @@ interface NotificationFileViewerProps {
  * Full-screen in-app viewer for notification attachments (image or PDF).
  * Opens directly inside the app — no external browser / gallery / PDF app
  * needed.
- *
- * - Images: rendered with a plain <img>, inside a header/content layout that
- *   respects the device's safe-area (status bar) inset via `.safe-pt`, so
- *   the header no longer sits underneath the status bar.
- * - PDFs: delegated entirely to AdvancedPDFViewer, the app's existing
- *   production PDF viewer (DPR-correct two-layer rendering, pinch-to-zoom,
- *   pan, page navigation) — no quality loss and proper zoom, instead of a
- *   basic one-off canvas renderer.
  */
 export default function NotificationFileViewer({ file, onClose }: NotificationFileViewerProps) {
     const [url, setUrl] = useState<string | null>(null);
@@ -37,10 +30,18 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
             try {
                 const signedUrl = await getNotificationFileViewUrl(file.key);
                 if (!cancelled) {
-                    setUrl(signedUrl);
                     if (file.fileType === 'pdf') {
-                        const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-                        fetchAndCachePdf(signedUrl, cleanName).catch(() => {});
+                        try {
+                            const proxyUrl = await getPdfViewerUrl(signedUrl);
+                            if (!cancelled) setUrl(proxyUrl);
+                            const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+                            fetchAndCachePdf(proxyUrl, cleanName).catch(() => {});
+                        } catch (proxyErr) {
+                            console.warn('[NotificationFileViewer] Proxy fetch warning, fallback to signedUrl:', proxyErr);
+                            if (!cancelled) setUrl(signedUrl);
+                        }
+                    } else {
+                        setUrl(signedUrl);
                     }
                 }
             } catch (err: any) {

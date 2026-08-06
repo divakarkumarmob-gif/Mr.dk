@@ -7,6 +7,7 @@ import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedP
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { openExternalLink } from '../utils/browser';
+import { getPdfViewerUrl } from '../utils/api';
 import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { keepAwake, allowSleep } from '../utils/keepAwake';
@@ -133,7 +134,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const loadContent = async () => {
             const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
             
-            // 0. Try RAM Memory Cache (0ms Instant)
+            // Step 1: Ultra-fast 0ms RAM Memory Cache Check
             const ramUrl = getRamCachedPdf(filename);
             if (ramUrl && isMounted) {
                 setActivePdfUrl(ramUrl);
@@ -141,26 +142,25 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 return;
             }
 
-            // 1. Try local disk/IndexedDB cache
-            const cachedBlobUrl = await getCachedPdf(filename);
-            if (cachedBlobUrl && isMounted) {
-                setActivePdfUrl(cachedBlobUrl);
-                setIsDownloaded(true);
-                return;
+            // Step 2: Millisecond Persistent Storage (IndexedDB / Disk) Check (<5ms)
+            try {
+                const cachedBlobUrl = await getCachedPdf(filename);
+                if (cachedBlobUrl && isMounted) {
+                    setActivePdfUrl(cachedBlobUrl);
+                    setIsDownloaded(true);
+                    return;
+                }
+            } catch (err) {
+                console.warn('[AdvancedPDFViewer] Local disk cache check notice:', err);
             }
 
-            // 2. Single-fetch & instant Blob URL creation
+            // Step 3: Local Cache Miss -> Server Stream Fallback (<200ms Range Stream)
             if (pdfUrl && isMounted) {
-                try {
-                    const blobUrl = await fetchAndCachePdf(pdfUrl, filename);
-                    if (isMounted) {
-                        setActivePdfUrl(blobUrl);
-                        setIsDownloaded(true);
-                    }
-                } catch (err) {
-                    console.warn('[AdvancedPDFViewer] Single fetch error, fallback to raw url:', err);
-                    if (isMounted) setActivePdfUrl(pdfUrl);
-                }
+                setActivePdfUrl(pdfUrl);
+                // Save to local IndexedDB & RAM cache in background for future 0ms loads
+                fetchAndCachePdf(pdfUrl, filename).then(() => {
+                    if (isMounted) setIsDownloaded(true);
+                }).catch(() => {});
             }
         };
         loadContent();
@@ -190,6 +190,61 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             allowSleep();
         };
     }, []);
+
+    const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    const triggerUserActivity = useCallback(() => {
+        setShowControls(true);
+        if (controlsTimeoutRef.current) {
+            clearTimeout(controlsTimeoutRef.current);
+        }
+        controlsTimeoutRef.current = setTimeout(() => {
+            setShowControls(false);
+        }, 3000);
+    }, []);
+
+    useEffect(() => {
+        triggerUserActivity();
+        return () => {
+            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+        };
+    }, [triggerUserActivity]);
+
+    useEffect(() => {
+        const stage = stageRef.current;
+        if (!stage) return;
+
+        const handleScroll = () => {
+            triggerUserActivity();
+            if (stage.scrollTop <= 30) {
+                setShowControls(true);
+            }
+
+            if (numPages) {
+                const pageElements = stage.querySelectorAll('.pdf-page-item');
+                const stageRect = stage.getBoundingClientRect();
+                const stageCenter = stageRect.top + stageRect.height / 3;
+
+                let closestPage = 1;
+                let minDistance = Infinity;
+
+                pageElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    const distance = Math.abs(rect.top - stageCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        const p = el.getAttribute('data-page');
+                        if (p) closestPage = parseInt(p, 10);
+                    }
+                });
+
+                setCurrentPage(closestPage);
+            }
+        };
+
+        stage.addEventListener('scroll', handleScroll, { passive: true });
+        return () => stage.removeEventListener('scroll', handleScroll);
+    }, [numPages, triggerUserActivity]);
 
     useEffect(() => {
         const saveProgress = async () => {
@@ -224,8 +279,21 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }).catch(() => {});
     }
 
-    function onDocumentLoadError(err: Error) {
+    async function onDocumentLoadError(err: Error) {
         console.error("PDF load error:", err);
+
+        // Automatic CORS / Network Fetch Proxy Fallback!
+        if (pdfUrl && !activePdfUrl?.includes('/api/proxy-pdf')) {
+            try {
+                console.log('[AdvancedPDFViewer] Direct PDF load failed, attempting backend CORS proxy fallback...');
+                const proxyUrl = await getPdfViewerUrl(pdfUrl);
+                setActivePdfUrl(proxyUrl);
+                return;
+            } catch (proxyErr) {
+                console.warn('[AdvancedPDFViewer] Proxy fallback error:', proxyErr);
+            }
+        }
+
         setError(`Failed to load PDF: ${err?.message || String(err)} | URL: ${activePdfUrl}`);
         setIsLoading(false);
     }
@@ -496,6 +564,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         cMapUrl: `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
         cMapPacked: true,
         standardFontDataUrl: `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+        disableAutoFetch: false,
+        disableStream: false,
+        rangeChunkSize: 65536,
     }), []);
 
     return (
@@ -639,6 +710,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             {/* Continuous Vertical Scroll Viewer Stage */}
             <div
                 ref={stageRef}
+                onMouseMove={triggerUserActivity}
+                onTouchStart={triggerUserActivity}
+                onTouchMove={triggerUserActivity}
+                onClick={triggerUserActivity}
                 className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar py-4"
             >
                 {isLoading && (

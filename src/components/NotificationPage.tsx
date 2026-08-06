@@ -40,13 +40,6 @@ function NotificationAttachment({ file, onOpen }: { file: NotificationFile; onOp
                 <span className="block text-sm truncate group-hover:text-blue-300 transition-colors">{file.name}</span>
                 {file.size ? <span className="block text-[11px] text-gray-500">{formatFileSize(file.size)}</span> : null}
             </span>
-            <button
-                onClick={handleDownloadClick}
-                className="p-1.5 rounded-lg bg-white/5 hover:bg-blue-600 hover:text-white text-gray-400 transition-all flex-shrink-0"
-                title="Download locally to Downloads folder"
-            >
-                <Download className="w-4 h-4" />
-            </button>
         </div>
     );
 }

@@ -131,20 +131,8 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                                     }}
                                 />
                                 <Eye onClick={() => { addRecentlyViewed(chapter); setSelectedChapter(chapter); }} className="text-muted-foreground h-4 w-4 hover:text-foreground" />
-                                {isNoteDownloaded(chapter) ? (
+                                {isNoteDownloaded(chapter) && (
                                     <CheckCircle className="text-green-500 h-4 w-4" />
-                                ) : (
-                                    <button
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            addRecentlyViewed(chapter);
-                                            setSelectedChapter(chapter);
-                                        }}
-                                        title="Download & View Chapter"
-                                        className="p-1 hover:bg-white/10 rounded transition-colors"
-                                    >
-                                        <Download className="text-muted-foreground h-4 w-4 hover:text-foreground" />
-                                    </button>
                                 )}
                              </div>
                          </div>

@@ -457,7 +457,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-1.5 flex-shrink-0">
-                                        {isDownloaded ? (
+                                        {isDownloaded && (
                                             <>
                                                 <button onClick={() => handleDelete(id)} className="p-1.5 text-gray-500 hover:text-red-400 transition-colors">
                                                     <Trash2 className="w-3.5 h-3.5" />
@@ -466,14 +466,6 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                                                     <CheckCircle2 className="w-2.5 h-2.5" /> OFFLINE
                                                 </div>
                                             </>
-                                        ) : (
-                                            <button 
-                                                onClick={(e) => { e.stopPropagation(); handleDownload(selectedBook.code, chNum, `${chNum}. ${chName}`); }}
-                                                className="p-1.5 text-blue-400 hover:bg-blue-400/10 rounded-full transition-all"
-                                                disabled={isDownloading}
-                                            >
-                                                {isDownloading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Download className="w-3.5 h-3.5" />}
-                                            </button>
                                         )}
                                         <Pressable 
                                             onClick={() => handleOpenPdf(selectedBook.code, chNum, `${chNum}. ${chName}`)}
