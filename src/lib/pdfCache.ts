@@ -1,16 +1,13 @@
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Capacitor } from '@capacitor/core';
 
-// Obfuscated XOR key — app-only decode possible
-const ENC_KEY = 'MrDk$N33tM@st3r#2026!SecurePDF';
-
-// IndexedDB Fallback Config for Web & Webview
+// IndexedDB Config for local storage PDF persistence
 const IDB_NAME = 'MrDkPdfCacheDB';
 const IDB_STORE = 'pdfs';
 const IDB_VERSION = 1;
 
 /**
- * Open IndexedDB database for local storage PDF persistence on Web/PWA
+ * Open IndexedDB database for local storage PDF persistence
  */
 function openPdfDB(): Promise<IDBDatabase> {
     return new Promise((resolve, reject) => {
@@ -30,7 +27,7 @@ function openPdfDB(): Promise<IDBDatabase> {
     });
 }
 
-async function saveToIDB(key: string, data: Uint8Array): Promise<boolean> {
+async function saveToIDB(key: string, data: ArrayBuffer): Promise<boolean> {
     try {
         const db = await openPdfDB();
         return new Promise((resolve) => {
@@ -45,7 +42,7 @@ async function saveToIDB(key: string, data: Uint8Array): Promise<boolean> {
     }
 }
 
-async function getFromIDB(key: string): Promise<Uint8Array | null> {
+async function getFromIDB(key: string): Promise<ArrayBuffer | null> {
     try {
         const db = await openPdfDB();
         return new Promise((resolve) => {
@@ -65,92 +62,65 @@ async function isIDBCached(key: string): Promise<boolean> {
     return data !== null;
 }
 
-/**
- * XOR-encode/decode a Uint8Array with the secret key.
- * XOR is symmetric — same function encrypts & decrypts.
- */
-function xorTransform(data: Uint8Array): Uint8Array {
-    const key = new TextEncoder().encode(ENC_KEY);
-    const result = new Uint8Array(data.length);
-    for (let i = 0; i < data.length; i++) {
-        result[i] = data[i] ^ key[i % key.length];
-    }
-    return result;
+// Native C++ FileReader Blob to Base64 conversion (300x faster than JS loops)
+function blobToBase64(blob: Blob): Promise<string> {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            const res = reader.result as string;
+            resolve(res.includes(',') ? res.split(',')[1] : res);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+    });
 }
 
-/**
- * Convert Uint8Array to base64 string (works in browser & Capacitor)
- */
-function uint8ToBase64(bytes: Uint8Array): string {
-    let binary = '';
-    const chunkSize = 8192;
-    for (let i = 0; i < bytes.length; i += chunkSize) {
-        const chunk = bytes.subarray(i, i + chunkSize);
-        binary += String.fromCharCode(...chunk);
-    }
-    return btoa(binary);
-}
-
-/**
- * Convert base64 string back to Uint8Array
- */
-function base64ToUint8(base64: string): Uint8Array {
-    const binary = atob(base64);
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-        bytes[i] = binary.charCodeAt(i);
-    }
-    return bytes;
-}
-
-// RAM In-Memory Cache for sub-millisecond 0ms instant display
+// RAM In-Memory Cache Map for sub-millisecond 0ms instant display
 const ramPdfCache = new Map<string, string>();
 
 /**
  * Get PDF Blob URL from RAM memory if available
  */
 export const getRamCachedPdf = (filename: string): string | null => {
-    const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
-    return ramPdfCache.get(encFilename) || null;
+    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+    return ramPdfCache.get(cleanKey) || null;
 };
 
 /**
- * Single-fetch loader: Fetches remote PDF once, returns an in-memory Blob URL for instant rendering,
- * and asynchronously saves the encrypted PDF to disk/IndexedDB without blocking the UI.
+ * Single-fetch loader: Fetches remote PDF once, creates an in-memory Blob URL for instant rendering,
+ * and asynchronously saves to IndexedDB & Filesystem in background without blocking main UI thread.
  */
 export const fetchAndCachePdf = async (url: string, filename: string): Promise<string> => {
-    const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
 
     // 1. Return from RAM cache if already present
-    if (ramPdfCache.has(encFilename)) {
-        return ramPdfCache.get(encFilename)!;
+    if (ramPdfCache.has(cleanKey)) {
+        return ramPdfCache.get(cleanKey)!;
     }
 
     // 2. Single network fetch
     const response = await fetch(url);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const arrayBuffer = await response.arrayBuffer();
-    const pdfBytes = new Uint8Array(arrayBuffer);
+    const blob = await response.blob();
+    const arrayBuffer = await blob.arrayBuffer();
 
     // Create in-memory Blob URL for instant viewer rendering
-    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const blobUrl = URL.createObjectURL(blob);
-    ramPdfCache.set(encFilename, blobUrl);
+    ramPdfCache.set(cleanKey, blobUrl);
 
-    // 3. Persist to disk / IndexedDB asynchronously in background
+    // 3. Persist to disk / IndexedDB asynchronously in background (non-blocking)
     (async () => {
         try {
-            const encryptedBytes = xorTransform(pdfBytes);
+            await saveToIDB(cleanKey, arrayBuffer);
             if (Capacitor.isNativePlatform()) {
-                const base64Encoded = uint8ToBase64(encryptedBytes);
+                const base64Data = await blobToBase64(blob);
                 await Filesystem.writeFile({
-                    path: `pdfs/${encFilename}`,
-                    data: base64Encoded,
+                    path: `pdfs/${cleanKey}`,
+                    data: base64Data,
                     directory: Directory.Data,
                     recursive: true,
                 });
             }
-            await saveToIDB(encFilename, encryptedBytes);
         } catch (err) {
             console.warn('[pdfCache] Background persist error:', err);
         }
@@ -160,13 +130,12 @@ export const fetchAndCachePdf = async (url: string, filename: string): Promise<s
 };
 
 /**
- * Download, encrypt (XOR), and cache a PDF locally as .mrdkpdf
- * Returns the encoded filename on success, null on failure.
+ * Cache PDF locally
  */
 export const cachePdf = async (url: string, filename: string): Promise<string | null> => {
     try {
         await fetchAndCachePdf(url, filename);
-        return filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+        return filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
     } catch (error) {
         console.error('Failed to cache PDF:', error);
         return null;
@@ -174,56 +143,56 @@ export const cachePdf = async (url: string, filename: string): Promise<string | 
 };
 
 /**
- * Retrieve a cached, encrypted PDF — decode it and return a blob:// URL
- * that can be directly loaded in the PDF viewer.
- * Returns null if the file doesn't exist.
+ * Retrieve a cached PDF — return a blob:// URL for instant loading.
  */
 export const getCachedPdf = async (filename: string): Promise<string | null> => {
-    const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
 
     // 0. Try RAM Cache first (0ms instant)
-    if (ramPdfCache.has(encFilename)) {
-        return ramPdfCache.get(encFilename)!;
+    if (ramPdfCache.has(cleanKey)) {
+        return ramPdfCache.get(cleanKey)!;
     }
 
-    // 1. Try Native Filesystem first
+    // 1. Try IndexedDB first (fastest local storage retrieval)
+    try {
+        const arrayBuffer = await getFromIDB(cleanKey);
+        if (arrayBuffer && arrayBuffer.byteLength > 0) {
+            const blob = new Blob([arrayBuffer], { type: 'application/pdf' });
+            const blobUrl = URL.createObjectURL(blob);
+            ramPdfCache.set(cleanKey, blobUrl);
+            return blobUrl;
+        }
+    } catch (err) {
+        console.warn('[pdfCache] IndexedDB read error:', err);
+    }
+
+    // 2. Try Native Filesystem
     if (Capacitor.isNativePlatform()) {
         try {
             await Filesystem.stat({
                 directory: Directory.Data,
-                path: `pdfs/${encFilename}`,
+                path: `pdfs/${cleanKey}`,
             });
 
             const result = await Filesystem.readFile({
                 directory: Directory.Data,
-                path: `pdfs/${encFilename}`,
+                path: `pdfs/${cleanKey}`,
             });
 
             const base64Data = result.data as string;
-            const encryptedBytes = base64ToUint8(base64Data);
-            const pdfBytes = xorTransform(encryptedBytes);
-
-            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const byteCharacters = atob(base64Data);
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+            const blob = new Blob([byteArray], { type: 'application/pdf' });
             const blobUrl = URL.createObjectURL(blob);
-            ramPdfCache.set(encFilename, blobUrl);
+            ramPdfCache.set(cleanKey, blobUrl);
             return blobUrl;
         } catch {
-            // Fallthrough to IndexedDB check
+            // Ignore filesystem errors
         }
-    }
-
-    // 2. Try IndexedDB
-    try {
-        const encryptedBytes = await getFromIDB(encFilename);
-        if (encryptedBytes) {
-            const pdfBytes = xorTransform(encryptedBytes);
-            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-            const blobUrl = URL.createObjectURL(blob);
-            ramPdfCache.set(encFilename, blobUrl);
-            return blobUrl;
-        }
-    } catch (err) {
-        console.error('Error reading from IDB cache:', err);
     }
 
     return null;
@@ -233,26 +202,27 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
  * Check if a PDF is already cached locally
  */
 export const isPdfCached = async (filename: string): Promise<boolean> => {
-    const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+    if (ramPdfCache.has(cleanKey)) return true;
+    if (await isIDBCached(cleanKey)) return true;
     if (Capacitor.isNativePlatform()) {
         try {
             await Filesystem.stat({
                 directory: Directory.Data,
-                path: `pdfs/${encFilename}`,
+                path: `pdfs/${cleanKey}`,
             });
             return true;
         } catch {
-            // Check IDB
+            return false;
         }
     }
-    return await isIDBCached(encFilename);
+    return false;
 };
 
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
 
 /**
  * Save raw PDF file directly into user's device storage (Documents / Downloads)
- * or trigger browser file download with live mobile system notifications.
  */
 export const downloadPdfToDevice = async (pdfUrl: string, title: string): Promise<boolean> => {
     const cleanFilename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;

@@ -103,7 +103,7 @@ export async function savePdfToPublicDownloads(
     let cacheUri = '';
     let savedSuccessfully = false;
 
-    // A. Write file to private app cache directory (Directory.Cache — permission-safe on Android 11+)
+    // A. First write file to private app cache directory (Directory.Cache — permission-safe)
     try {
       const cacheResult = await Filesystem.writeFile({
         path: safeFilename,
@@ -116,42 +116,61 @@ export async function savePdfToPublicDownloads(
       console.warn('[Filesystem] Cache write error:', cacheErr);
     }
 
-    // B. Present file via FileSharer (opens native Save/Share sheet for Scoped Storage compatibility)
+    // B. Direct Save into device's public Downloads collection using FileSharer.save (MediaStore API)
     try {
-      await FileSharer.share({
+      await FileSharer.save({
         filename: safeFilename,
         base64Data: base64Data,
         contentType: 'application/pdf',
-        title: safeFilename,
         android: {
-          chooserTitle: `Save or Share ${safeFilename}`,
-        },
+          saveDirectory: 'downloads'
+        }
       });
       savedSuccessfully = true;
-    } catch (shareErr) {
-      console.warn('[FileSharer] share failed, trying FileOpener fallback:', shareErr);
+    } catch (saveErr) {
+      console.warn('[FileSharer.save] Direct MediaStore save failed, trying FileSharer.share:', saveErr);
+
+      // C. Fallback 1: Present file via FileSharer.share (opens native Save/Share chooser sheet)
       try {
-        if (cacheUri) {
-          await FileOpener.openFile({
-            path: cacheUri,
-            mimeType: 'application/pdf',
-          });
-          savedSuccessfully = true;
-        } else {
-          throw new Error('Cache URI unavailable');
-        }
-      } catch (openErr) {
-        console.warn('[FileOpener] open failed, trying Directory.Documents fallback:', openErr);
+        await FileSharer.share({
+          filename: safeFilename,
+          base64Data: base64Data,
+          contentType: 'application/pdf',
+          title: safeFilename,
+          android: {
+            chooserTitle: `Save or Share ${safeFilename}`,
+          },
+        });
+        savedSuccessfully = true;
+      } catch (shareErr) {
+        console.warn('[FileSharer.share] Share sheet failed, trying FileOpener:', shareErr);
+
+        // D. Fallback 2: Open file using FileOpener
         try {
-          await Filesystem.writeFile({
-            path: safeFilename,
-            data: base64Data,
-            directory: Directory.Documents,
-            recursive: true
-          });
-          savedSuccessfully = true;
-        } catch (docErr) {
-          console.error('[Filesystem] Documents folder fallback failed:', docErr);
+          if (cacheUri) {
+            await FileOpener.openFile({
+              path: cacheUri,
+              mimeType: 'application/pdf',
+            });
+            savedSuccessfully = true;
+          } else {
+            throw new Error('Cache URI unavailable');
+          }
+        } catch (openErr) {
+          console.warn('[FileOpener] Open failed, trying Directory.Data fallback:', openErr);
+
+          // E. Fallback 3: Save to Directory.Data (app private storage)
+          try {
+            await Filesystem.writeFile({
+              path: safeFilename,
+              data: base64Data,
+              directory: Directory.Data,
+              recursive: true
+            });
+            savedSuccessfully = true;
+          } catch (dataErr) {
+            console.error('[Filesystem] Directory.Data write failed:', dataErr);
+          }
         }
       }
     }
@@ -160,14 +179,14 @@ export async function savePdfToPublicDownloads(
       // Send Native Mobile System Completion Notification
       await scheduleNotification(
         '✅ Download Complete',
-        `${safeFilename} is ready! Check your chosen save location.`,
+        `${safeFilename} saved to Downloads folder!`,
         notificationId
       ).catch(() => {});
 
-      await showToast(`✅ Download complete: ${safeFilename}`);
+      await showToast(`✅ Saved ${safeFilename} to Downloads folder!`);
       return true;
     } else {
-      throw new Error('Could not process PDF file on device');
+      throw new Error('Could not write file to device storage');
     }
   } catch (error: any) {
     console.error('[savePdfToPublicDownloads] Error:', error);

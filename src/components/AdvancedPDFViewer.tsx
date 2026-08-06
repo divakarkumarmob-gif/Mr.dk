@@ -111,13 +111,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     const resetTransform = useCallback((targetZoom = initialScale) => {
         const stage = stageRef.current;
-        const stageWidth = stage?.clientWidth || (window.innerWidth - 16);
-        const stageHeight = stage?.clientHeight || (window.innerHeight - 100);
+        const stageWidth = stage?.clientWidth || window.innerWidth;
 
         const scaledW = pageWidthRef.current * targetZoom;
-        const scaledH = pageHeightRef.current * targetZoom;
-        const initialX = Math.max(0, (stageWidth - scaledW) / 2);
-        const initialY = Math.max(0, (stageHeight - scaledH) / 2);
+        const initialX = scaledW >= stageWidth ? 0 : Math.max(0, (stageWidth - scaledW) / 2);
+        const initialY = 0; // Top of page for natural reading
 
         transformRef.current = { zoom: targetZoom, x: initialX, y: initialY };
         setDisplayZoom(targetZoom);
@@ -216,14 +214,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             pageHeightRef.current = viewport.height;
 
             const stage = stageRef.current;
-            const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight - 100 };
-            const stageWidth = stageRect.width || (window.innerWidth - 16);
-            const stageHeight = (stageRect as DOMRect).height || (window.innerHeight - 100);
+            const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
+            const stageWidth = stageRect.width || window.innerWidth;
 
-            // Fit-to-screen: consider BOTH width AND height
-            const fitWidth = (stageWidth - 16) / viewport.width;
-            const fitHeight = (stageHeight - 16) / viewport.height;
-            const fitZoom = Math.min(Math.max(Math.min(fitWidth, fitHeight), MIN_SCALE), MAX_SCALE);
+            // Fit 100% Edge-to-Edge across full screen width (Mobile & Desktop like major apps)
+            const fitWidthZoom = stageWidth / viewport.width;
+            const fitZoom = Math.min(Math.max(fitWidthZoom, MIN_SCALE), MAX_SCALE);
             resetTransform(fitZoom);
         }).catch(() => {});
     }

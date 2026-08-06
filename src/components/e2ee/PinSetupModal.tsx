@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Shield, Lock, AlertTriangle, Key, ArrowRight, RefreshCw, CheckCircle2, X } from 'lucide-react';
 import { validatePinStrength, createPinBackupBlob, restorePrivateKeyFromBlob, resetUserKeysAndBackup, setLocalPrivateKey, setLocalPublicKey, generateKeyPair, EncryptedPrivateKeyBackupBlob } from '../../utils/e2ee';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { showToast } from '../../utils/toast';
 
@@ -82,18 +82,24 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
         try {
             const privKey = await restorePrivateKeyFromBlob(backupBlob, pin);
             
-            // Get public key from user profile or backup
-            const userDoc = await doc(db, 'users', uid);
-            // Save locally
+            // Get public key from user profile
+            const userDocRef = doc(db, 'users', uid);
+            const userSnap = await getDoc(userDocRef);
+            let pubKey = '';
+            if (userSnap.exists() && userSnap.data()?.publicKey) {
+                pubKey = userSnap.data().publicKey;
+                await setLocalPublicKey(uid, pubKey);
+            }
+            // Save private key locally
             await setLocalPrivateKey(uid, privKey);
             
             // Restore complete
             showToast('Naye device par chats restore ho gaye! 🔓');
-            onSuccess({ publicKey: '', privateKey: privKey });
+            onSuccess({ publicKey: pubKey, privateKey: privKey });
         } catch (e: any) {
             console.error("PIN restore error:", e);
             setFailedAttempts(prev => prev + 1);
-            setErrorMsg('Incorrect PIN! Phir se try karein.');
+            setErrorMsg(e?.message || 'Incorrect PIN! Phir se try karein.');
         } finally {
             setLoading(false);
         }

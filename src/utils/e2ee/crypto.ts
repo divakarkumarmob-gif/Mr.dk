@@ -26,9 +26,19 @@ export async function generateKeyPair(): Promise<KeyPair> {
  * Derive 1v1 ECDH Shared Secret using current user's private key and target user's public key
  */
 export async function deriveSharedSecret(myPrivateKeyBase64: string, targetPublicKeyBase64: string): Promise<Uint8Array> {
+    if (!myPrivateKeyBase64 || !targetPublicKeyBase64 || myPrivateKeyBase64.trim() === '' || targetPublicKeyBase64.trim() === '') {
+        throw new Error('Encryption keys cannot be null or empty string');
+    }
     const sodium = await ensureSodium();
     const myPrivKey = sodium.from_base64(myPrivateKeyBase64, sodium.base64_variants.ORIGINAL);
     const targetPubKey = sodium.from_base64(targetPublicKeyBase64, sodium.base64_variants.ORIGINAL);
+
+    if (myPrivKey.length !== sodium.crypto_box_SECRETKEYBYTES) {
+        throw new Error(`Private key length invalid (got ${myPrivKey.length}, expected ${sodium.crypto_box_SECRETKEYBYTES})`);
+    }
+    if (targetPubKey.length !== sodium.crypto_box_PUBLICKEYBYTES) {
+        throw new Error(`Public key length invalid (got ${targetPubKey.length}, expected ${sodium.crypto_box_PUBLICKEYBYTES})`);
+    }
 
     // crypto_box_beforenm computes precalculated shared key from scalar multiplication
     return sodium.crypto_box_beforenm(targetPubKey, myPrivKey);
@@ -38,6 +48,9 @@ export async function deriveSharedSecret(myPrivateKeyBase64: string, targetPubli
  * Encrypt a text string using XSalsa20-Poly1305 with a 32-byte symmetric key (or ECDH shared secret)
  */
 export async function encryptTextSymmetric(text: string, key: Uint8Array): Promise<string> {
+    if (!key || key.length !== 32) {
+        throw new Error('Encryption key length cannot be null or invalid');
+    }
     const sodium = await ensureSodium();
     const nonce = sodium.randombytes_buf(sodium.crypto_secretbox_NONCEBYTES);
     const textBytes = sodium.from_string(encodeURIComponent(text));
@@ -53,6 +66,9 @@ export async function encryptTextSymmetric(text: string, key: Uint8Array): Promi
  * Decrypt a text string encrypted with XSalsa20-Poly1305
  */
 export async function decryptTextSymmetric(ciphertext: string, key: Uint8Array): Promise<string> {
+    if (!key || key.length !== 32) {
+        throw new Error('Decryption key length cannot be null or invalid');
+    }
     if (!ciphertext || !ciphertext.startsWith('🔒E2EE:v1:')) {
         throw new Error('Invalid E2EE format');
     }
@@ -91,6 +107,9 @@ export async function generateRoomSymmetricKey(): Promise<string> {
  * Wrap (encrypt) a room key for a specific member using their X25519 Public Key (Sealed Box)
  */
 export async function wrapRoomKeyForMember(roomKeyBase64: string, memberPublicKeyBase64: string): Promise<string> {
+    if (!roomKeyBase64 || !memberPublicKeyBase64) {
+        throw new Error('Member public key or room key cannot be null or empty');
+    }
     const sodium = await ensureSodium();
     const roomKeyBytes = sodium.from_base64(roomKeyBase64, sodium.base64_variants.ORIGINAL);
     const memberPubKeyBytes = sodium.from_base64(memberPublicKeyBase64, sodium.base64_variants.ORIGINAL);
@@ -103,6 +122,9 @@ export async function wrapRoomKeyForMember(roomKeyBase64: string, memberPublicKe
  * Unwrap (decrypt) a sealed box room key using current user's public & private key pair
  */
 export async function unwrapRoomKeyForMember(wrappedKeyBase64: string, myPublicKeyBase64: string, myPrivateKeyBase64: string): Promise<string> {
+    if (!wrappedKeyBase64 || !myPublicKeyBase64 || !myPrivateKeyBase64) {
+        throw new Error('Keys for unwrapping cannot be null or empty');
+    }
     const sodium = await ensureSodium();
     const sealedBytes = sodium.from_base64(wrappedKeyBase64, sodium.base64_variants.ORIGINAL);
     const myPubKeyBytes = sodium.from_base64(myPublicKeyBase64, sodium.base64_variants.ORIGINAL);

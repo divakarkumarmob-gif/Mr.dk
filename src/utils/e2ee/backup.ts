@@ -73,6 +73,9 @@ export async function createPinBackupBlob(privateKeyBase64: string, pin: string)
  * Restores private key from backup blob using user's PIN
  */
 export async function restorePrivateKeyFromBlob(blob: EncryptedPrivateKeyBackupBlob, pin: string): Promise<string> {
+    if (!blob || !blob.salt || !blob.nonce || !blob.encryptedPrivateKey) {
+        throw new Error('Backup data is missing required encryption parameters');
+    }
     const sodium = await ensureSodium();
     const salt = sodium.from_base64(blob.salt, sodium.base64_variants.ORIGINAL);
     const nonce = sodium.from_base64(blob.nonce, sodium.base64_variants.ORIGINAL);
