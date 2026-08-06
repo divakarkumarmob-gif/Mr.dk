@@ -2020,7 +2020,7 @@ function AppInner() {
 
   if (currentView === 'tests') {
       return (
-        <div className="flex flex-col min-h-dvh">
+        <div className="flex flex-col min-h-dvh md:pl-64">
             <div className="flex-grow"><TestHub subjects={subjects} onNavigate={setCurrentView} setIsPYQRunning={setIsPYQRunning} /></div>
             {!isPYQRunning && <BottomNav currentView="tests" onNavigate={setCurrentView} />}
             <SupportModal 
@@ -2183,7 +2183,7 @@ function AppInner() {
       animate={{ opacity: 1, x: 0 }} 
       transition={{ duration: 0.3 }} 
       ref={mainContainerRef} 
-      className={`h-dvh bg-[#0a0f24] text-foreground font-sans pb-44 overflow-y-auto px-2 sm:px-4 ${showOnboarding ? 'blur-sm' : ''}`}
+      className={`h-dvh bg-[#0a0f24] text-foreground font-sans pb-44 overflow-y-auto px-2 sm:px-4 md:pl-64 ${showOnboarding ? 'blur-sm' : ''}`}
       style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
     >
       

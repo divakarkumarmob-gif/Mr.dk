@@ -44,6 +44,8 @@ interface PageLayoutProps {
   scrollable?: boolean;
 }
 
+import { motion } from 'motion/react';
+
 export default function PageLayout({
   children,
   background = '',
@@ -57,7 +59,10 @@ export default function PageLayout({
   const heightClass = scrollable ? 'h-dvh overflow-y-auto' : 'min-h-dvh';
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
       className={[
         'flex flex-col md:pl-64',
         heightClass,
@@ -73,14 +78,10 @@ export default function PageLayout({
         paddingTop: minTopPadding > 0 
           ? `max(env(safe-area-inset-top, 0px), ${minTopPadding}px)` 
           : 'env(safe-area-inset-top, 0px)',
-        // Bottom inset is always applied so content never sits under the
-        // gesture bar / 3-button nav bar. Screens with a BottomNav add
-        // paddingBottomExtra (e.g. "pb-20") as a Tailwind class on top of
-        // this so the nav bar itself has room, matching prior behavior.
         paddingBottom: 'env(safe-area-inset-bottom, 0px)',
       }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
