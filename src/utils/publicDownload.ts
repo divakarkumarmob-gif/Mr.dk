@@ -81,24 +81,41 @@ export async function savePdfToPublicDownloads(
     }
 
     // Native Mobile (Android / iOS): Fetch blob & convert to Base64
-    const response = await fetchFn(fullUrl);
-    if (!response.ok) {
-      throw new Error(`Server returned HTTP ${response.status}`);
+    let blob: Blob;
+    if (url.startsWith('blob:')) {
+      const response = await fetch(url); // Plain fetch for blob: URLs (no headers!)
+      if (!response.ok) throw new Error(`Local blob fetch failed with status ${response.status}`);
+      blob = await response.blob();
+    } else {
+      let response = await fetch(fullUrl);
+      if (!response.ok && useAuth) {
+        response = await authFetch(fullUrl);
+      }
+      if (!response.ok) {
+        throw new Error(`Server returned HTTP ${response.status}`);
+      }
+      blob = await response.blob();
     }
 
-    const blob = await response.blob();
+    if (!blob || blob.size === 0) {
+      throw new Error('PDF file binary is empty (0 bytes)');
+    }
 
-    // Convert blob to Base64
+    // Convert blob to Base64 using native FileReader
     const base64Data = await new Promise<string>((resolve, reject) => {
       const reader = new FileReader();
       reader.onloadend = () => {
         const result = reader.result as string;
         const base64 = result.includes(',') ? result.split(',')[1] : result;
-        resolve(base64);
+        resolve(base64 ? base64.trim() : '');
       };
       reader.onerror = reject;
       reader.readAsDataURL(blob);
     });
+
+    if (!base64Data) {
+      throw new Error('Failed to encode PDF data');
+    }
 
     let cacheUri = '';
     let savedSuccessfully = false;

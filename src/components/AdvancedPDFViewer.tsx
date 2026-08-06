@@ -236,16 +236,18 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
         try {
             // 1. Cache locally for offline viewing inside app
-            await cachePdf(activePdfUrl || pdfUrl, filename);
+            const sourceUrl = activePdfUrl || originalUrl || pdfUrl;
+            await cachePdf(sourceUrl, filename);
             setIsDownloaded(true);
 
             // 2. Download raw PDF file to device local storage
-            const success = await downloadPdfToDevice(activePdfUrl || pdfUrl, title);
+            const success = await downloadPdfToDevice(sourceUrl, title);
             setIsDownloading(false);
-            if (success) {
-                alert("✅ PDF successfully downloaded & saved to your local storage!");
-            } else {
-                openExternalLink(pdfUrl);
+            if (!success) {
+                // Fallback attempt with raw pdfUrl if activePdfUrl failed
+                if (activePdfUrl && pdfUrl && activePdfUrl !== pdfUrl) {
+                    await downloadPdfToDevice(pdfUrl, title);
+                }
             }
         } catch (err) {
             console.error("Download failed:", err);
@@ -475,33 +477,19 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     }, []);
 
-    const zoomButton = useCallback((direction: 1 | -1) => {
-        const step = 0.25 * direction;
-        const currentZoom = transformRef.current.zoom;
-        const targetZoom = Math.min(Math.max(currentZoom + step, MIN_SCALE), MAX_SCALE);
-
-        const stage = stageRef.current;
-        const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
-        const stageX = stageRect.width / 2;
-        const stageY = stageRect.height / 2;
-
-        const anchorX = (stageX - transformRef.current.x) / currentZoom;
-        const anchorY = (stageY - transformRef.current.y) / currentZoom;
-
-        const newX = stageX - anchorX * targetZoom;
-        const newY = stageY - anchorY * targetZoom;
-
-        if (wrapRef.current) {
-            wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0.2, 1)';
-        }
-
-        transformRef.current = { zoom: targetZoom, x: newX, y: newY };
-        setDisplayZoom(targetZoom);
-        applyTransformNow();
-    }, [applyTransformNow]);
+    const zoomButton = (delta: number) => {
+        setDisplayZoom(prev => Math.min(Math.max(prev + delta * 0.15, MIN_SCALE), MAX_SCALE));
+    };
 
     const goToPage = useCallback((updater: (p: number) => number) => {
-        setCurrentPage(updater);
+        setCurrentPage(prev => {
+            const nextPage = updater(prev);
+            const el = document.getElementById(`pdf-page-${nextPage}`);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            return nextPage;
+        });
     }, []);
 
     const pdfOptions = useMemo(() => ({
@@ -515,7 +503,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#05070A] z-[999] flex flex-col font-sans pt-[env(safe-area-inset-top,12px)]"
+            className="fixed inset-0 bg-[#05070A] z-[999] flex flex-col font-sans pt-[env(safe-area-inset-top,12px)] select-none"
         >
             {/* Superior Toolbar */}
             <AnimatePresence>
@@ -525,7 +513,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -60, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-b border-white/5 shadow-2xl relative z-50"
+                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-b border-white/5 shadow-2xl relative z-50 shrink-0"
                     >
                         <div className="flex items-center gap-3 overflow-hidden flex-grow mr-2">
                             <button
@@ -542,15 +530,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         <div className="flex items-center gap-2">
                             <button
                                 onClick={handleDownload}
-                                disabled={isDownloading || isDownloaded}
+                                disabled={isDownloading}
                                 className={`p-2.5 rounded-xl transition ${
-                                    isDownloaded 
-                                        ? 'bg-green-500/20 text-green-400' 
-                                        : isDownloading
-                                            ? 'bg-white/5 text-gray-500'
-                                            : 'bg-white/5 hover:bg-white/10 text-gray-300'
+                                    isDownloading
+                                        ? 'bg-white/5 text-gray-500 cursor-not-allowed'
+                                        : 'bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 active:scale-95'
                                 }`}
-                                title={isDownloaded ? "Already saved offline" : Capacitor.isNativePlatform() ? "Save for offline" : "Download PDF"}
+                                title="Save PDF to device Downloads folder"
                             >
                                 {isDownloading ? (
                                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -582,7 +568,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 )}
             </AnimatePresence>
 
-            {/* Search Bar — shown from bottom search button */}
+            {/* Search Bar */}
             <AnimatePresence>
                 {showSearch && showControls && (
                     <motion.div
@@ -590,7 +576,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -20, opacity: 0 }}
                         transition={{ duration: 0.15 }}
-                        className="p-3 bg-[#0F172A] border-b border-white/5 z-50"
+                        className="p-3 bg-[#0F172A] border-b border-white/5 z-50 shrink-0"
                     >
                         <form onSubmit={handleSearchSubmit} className="flex items-center gap-2">
                             <div className="flex-grow relative">
@@ -650,14 +636,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 )}
             </AnimatePresence>
 
-            {/* Viewer Stage */}
+            {/* Continuous Vertical Scroll Viewer Stage */}
             <div
                 ref={stageRef}
-                className="flex-grow relative overflow-hidden bg-slate-950 w-full h-full touch-none"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-                onTouchCancel={handleTouchEnd}
+                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar py-4"
             >
                 {isLoading && (
                     <motion.div
@@ -668,8 +650,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         className="absolute inset-0 z-40 bg-slate-950 flex flex-col items-center justify-center p-8 text-center"
                     >
                         <Loader2 className="w-12 h-12 text-blue-500 animate-spin mb-4" />
-                        <h3 className="text-white font-bold text-lg">Initializing High-Definition Preview</h3>
-                        <p className="text-xs text-gray-400 mt-2 max-w-xs">Connecting to secure document server. This may take a few seconds...</p>
+                        <h3 className="text-white font-bold text-lg">Initializing High-Definition Document</h3>
+                        <p className="text-xs text-gray-400 mt-2 max-w-xs">Loading pages...</p>
                     </motion.div>
                 )}
 
@@ -696,43 +678,44 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         onLoadSuccess={onDocumentLoadSuccess}
                         onLoadError={onDocumentLoadError}
                         onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
-                        className="relative w-full h-full"
+                        className="flex flex-col items-center gap-6 px-1 min-h-full"
                     >
-                        <div
-                            ref={wrapRef}
-                            style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                willChange: 'transform',
-                                transformOrigin: '0 0',
-                                background: '#0F172A',
-                                borderRadius: 6
-                            }}
-                        >
-                            <div ref={pageContainerRef}>
-                                <Page
-                                    pageNumber={currentPage}
-                                    scale={BASE_RENDER_SCALE}
-                                    renderTextLayer={true}
-                                    renderAnnotationLayer={false}
-                                    className="shadow-2xl bg-white rounded-md overflow-hidden ring-1 ring-white/10"
-                                    loading={null}
-                                />
-                            </div>
-                        </div>
+                        {Array.from(new Array(numPages || 0), (_, index) => {
+                            const pageNum = index + 1;
+                            return (
+                                <div
+                                    key={`pdf_page_${pageNum}`}
+                                    id={`pdf-page-${pageNum}`}
+                                    data-page={pageNum}
+                                    className="pdf-page-item flex justify-center w-full shadow-2xl transition-transform"
+                                >
+                                    <Page
+                                        pageNumber={pageNum}
+                                        scale={displayZoom}
+                                        renderTextLayer={true}
+                                        renderAnnotationLayer={false}
+                                        className="bg-white rounded-md overflow-hidden ring-1 ring-white/10"
+                                        loading={
+                                            <div className="w-full max-w-xl h-96 bg-slate-900 animate-pulse rounded-md flex items-center justify-center text-gray-400 text-xs">
+                                                Loading Page {pageNum}...
+                                            </div>
+                                        }
+                                    />
+                                </div>
+                            );
+                        })}
                     </Document>
                 )}
             </div>
 
-            {/* Smart Control Bar — Zoom & Page Navigation only */}
+            {/* Smart Control Bar — Zoom & Page Navigation */}
             <AnimatePresence>
                 {!error && numPages && !isLoading && showControls && (
                     <motion.div
                         initial={{ y: 100 }}
                         animate={{ y: 0 }}
                         exit={{ y: 100 }}
-                        className="px-4 py-2 bg-[#0F172A] border-t border-white/5 safe-bottom z-50 flex items-center justify-center gap-4"
+                        className="px-4 py-2 bg-[#0F172A] border-t border-white/5 safe-bottom z-50 flex items-center justify-center gap-4 shrink-0"
                     >
                         <div className="flex items-center gap-1 bg-white/5 rounded-2xl p-1">
                             <button

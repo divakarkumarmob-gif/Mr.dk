@@ -221,10 +221,22 @@ export const isPdfCached = async (filename: string): Promise<boolean> => {
 
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
 
-/**
- * Save raw PDF file directly into user's device storage (Documents / Downloads)
- */
 export const downloadPdfToDevice = async (pdfUrl: string, title: string): Promise<boolean> => {
     const cleanFilename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+
+    // 1. If we ALREADY have the PDF in local RAM/IDB cache, pass local blob URL directly (0ms network delay!)
+    try {
+        const cachedBlobUrl = await getCachedPdf(cleanFilename);
+        if (cachedBlobUrl) {
+            const res = await fetch(cachedBlobUrl);
+            const blob = await res.blob();
+            if (blob && blob.size > 100) {
+                return await savePdfToPublicDownloads(cachedBlobUrl, cleanFilename);
+            }
+        }
+    } catch (e) {
+        console.warn('[downloadPdfToDevice] Cache extraction error:', e);
+    }
+
     return await savePdfToPublicDownloads(pdfUrl, cleanFilename);
 };
