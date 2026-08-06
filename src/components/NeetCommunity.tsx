@@ -171,7 +171,16 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         try {
             const viewedMap = JSON.parse(localStorage.getItem('neet_viewed_posts_history') || '{}');
             viewedMap[postId + '_' + viewerId] = true;
-            localStorage.setItem('neet_viewed_posts_history', JSON.stringify(viewedMap));
+            
+            // Limit keys to 200 items to prevent LocalStorage quota overflow
+            const keys = Object.keys(viewedMap);
+            if (keys.length > 200) {
+                const trimmedMap: Record<string, boolean> = {};
+                keys.slice(keys.length - 200).forEach(k => { trimmedMap[k] = true; });
+                localStorage.setItem('neet_viewed_posts_history', JSON.stringify(trimmedMap));
+            } else {
+                localStorage.setItem('neet_viewed_posts_history', JSON.stringify(viewedMap));
+            }
         } catch {}
     };
 

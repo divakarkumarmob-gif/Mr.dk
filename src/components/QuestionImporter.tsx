@@ -121,7 +121,7 @@ export default function QuestionImporter() {
         if (file.name.endsWith('.json')) {
             const text = await file.text();
             const json = JSON.parse(text);
-            questions = Array.isArray(json) ? json : (json.biolog || []);
+            questions = Array.isArray(json) ? json : (json.questions || json.items || json.data || json.biolog || []);
         } else if (file.name.endsWith('.pdf')) {
             setStatus(`Extracting text from PDF...`);
             const text = await extractTextFromPDF(file);

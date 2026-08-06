@@ -34,7 +34,8 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
                         try {
                             const proxyUrl = await getPdfViewerUrl(signedUrl);
                             if (!cancelled) setUrl(proxyUrl);
-                            const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+                            const baseName = file.name.replace(/\.pdf$/i, '').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                            const cleanName = `${baseName}.pdf`;
                             fetchAndCachePdf(proxyUrl, cleanName).catch(() => {});
                         } catch (proxyErr) {
                             console.warn('[NotificationFileViewer] Proxy fetch warning, fallback to signedUrl:', proxyErr);

@@ -71,7 +71,13 @@ export default function PosterSlider() {
   if (loadedImages.length === 0) return null;
 
   return (
-    <div className="w-full h-48 sm:h-64 rounded-xl overflow-hidden shadow-lg mb-6 relative bg-gray-100">
+    <div 
+      className="w-full h-48 sm:h-64 rounded-xl overflow-hidden shadow-lg mb-6 relative bg-gray-100"
+      onMouseEnter={() => { if (intervalRef.current) clearInterval(intervalRef.current); }}
+      onMouseLeave={startTimer}
+      onTouchStart={() => { if (intervalRef.current) clearInterval(intervalRef.current); }}
+      onTouchEnd={startTimer}
+    >
       <AnimatePresence mode="wait" initial={false} custom={direction}>
         <motion.img
           key={currentIndex}

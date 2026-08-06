@@ -28,15 +28,16 @@ const allQuestions: any[] = []; // Replaced legacy QUESTIONS with empty array
     };
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(prev => prev - 1);
-        }, 1000);
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            finishBattle(score > botScore ? 'You' : 'Bot');
+        let timer: any = null;
+        if (timeLeft > 0 && !winner) {
+            timer = setInterval(() => {
+                setTimeLeft(prev => prev - 1);
+            }, 1000);
+        } else if (timeLeft <= 0 && !winner) {
+            finishBattle(score >= botScore ? 'You' : 'Bot');
         }
         return () => clearInterval(timer);
-    }, [timeLeft]);
+    }, [timeLeft, winner, score, botScore]);
 
     const handleAnswer = (answer: string) => {
         if (answer === questions[currentIndex].answer) {

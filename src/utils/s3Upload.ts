@@ -56,7 +56,7 @@ export function getDisplayUrl(url: string | undefined | null): string {
   if (url.includes('.amazonaws.com/')) {
     finalUrl = getApiUrl(`/api/user-notes/file?url=${encodeURIComponent(url)}`);
   }
-  const token = (auth.currentUser as any)?.accessToken;
+  const token = (auth.currentUser as any)?.stsTokenManager?.accessToken || (auth.currentUser as any)?.accessToken || '';
   if (token && (finalUrl.startsWith('/api/') || finalUrl.includes('/api/'))) {
     const separator = finalUrl.includes('?') ? '&' : '?';
     if (!finalUrl.includes('token=')) {

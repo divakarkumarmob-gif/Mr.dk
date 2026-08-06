@@ -1965,7 +1965,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
   app.post("/api/proxy-pdf/token", requireAppCheck, requireAuth, async (req: any, res: any) => {
     const { url } = req.body;
     if (!url || typeof url !== 'string') return res.status(400).json({ error: 'Missing url' });
-    const token = jwt.sign({ uid: req.uid, url }, PDF_TOKEN_SECRET, { expiresIn: '5m' });
+    const token = jwt.sign({ uid: req.uid, url }, PDF_TOKEN_SECRET, { expiresIn: '4h' });
     res.json({ token });
   });
 

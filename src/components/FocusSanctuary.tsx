@@ -59,23 +59,34 @@ export default function FocusSanctuary({ onClose, onSessionComplete }: FocusSanc
         return () => clearInterval(quoteInterval);
     }, []);
 
-    // Timer Countdown Logic
+    // Timer Countdown Logic using Date.now() delta calculation to prevent screen sleep drift
+    const endTimeRef = useRef<number | null>(null);
+
     useEffect(() => {
         let interval: any = null;
-        if (isActive && timeLeft > 0) {
+        if (isActive) {
+            if (!endTimeRef.current) {
+                endTimeRef.current = Date.now() + timeLeft * 1000;
+            }
             interval = setInterval(() => {
-                setTimeLeft(prev => prev - 1);
-            }, 1000);
-        } else if (isActive && timeLeft === 0) {
-            setIsActive(false);
-            stopAmbientSound();
-            setCompletedSessions(prev => prev + 1);
-            const addedMins = selectedDuration;
-            setTotalFocusMinutes(prev => prev + addedMins);
-            if (onSessionComplete) onSessionComplete(addedMins);
+                if (!endTimeRef.current) return;
+                const remaining = Math.max(0, Math.ceil((endTimeRef.current - Date.now()) / 1000));
+                setTimeLeft(remaining);
+                if (remaining === 0) {
+                    endTimeRef.current = null;
+                    setIsActive(false);
+                    stopAmbientSound();
+                    setCompletedSessions(prev => prev + 1);
+                    const addedMins = selectedDuration;
+                    setTotalFocusMinutes(prev => prev + addedMins);
+                    if (onSessionComplete) onSessionComplete(addedMins);
+                }
+            }, 500);
+        } else {
+            endTimeRef.current = null;
         }
         return () => clearInterval(interval);
-    }, [isActive, timeLeft]);
+    }, [isActive, selectedDuration, onSessionComplete]);
 
     // Handle duration selection
     const handleDurationChange = (mins: number) => {

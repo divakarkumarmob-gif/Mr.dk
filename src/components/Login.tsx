@@ -86,8 +86,13 @@ export default function Login() {
     if (resendIntervalRef.current) clearInterval(resendIntervalRef.current);
     resendIntervalRef.current = null;
     setResendSecondsLeft(0);
-    setResendCount(0);
   };
+
+  useEffect(() => {
+    return () => {
+      if (resendIntervalRef.current) clearInterval(resendIntervalRef.current);
+    };
+  }, []);
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
