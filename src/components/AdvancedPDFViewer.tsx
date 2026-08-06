@@ -97,10 +97,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const applyTransformNow = useCallback(() => {
         if (wrapRef.current) {
             const { zoom, x, y } = transformRef.current;
-            const cssScale = zoom / BASE_RENDER_SCALE;
-            wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${cssScale})`;
+            const scaleRatio = displayZoom > 0 ? zoom / displayZoom : 1;
+            wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scaleRatio})`;
         }
-    }, []);
+    }, [displayZoom]);
 
     const applyTransform = useCallback(() => {
         if (rafRef.current !== null) return;
@@ -111,6 +111,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, [applyTransformNow]);
 
     const resetTransform = useCallback((targetZoom = initialScale) => {
+        if (!Capacitor.isNativePlatform()) {
+            setDisplayZoom(targetZoom);
+            return;
+        }
         const stage = stageRef.current;
         const stageWidth = stage?.clientWidth || window.innerWidth;
 
@@ -428,9 +432,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         });
     }, [clearHighlights]);
 
-    // ---- Native touch handlers ----
+    // ---- Native touch handlers (Capacitor Mobile ONLY) ----
 
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
+        if (!Capacitor.isNativePlatform()) return;
         const touches = e.touches;
         const state = gestureState.current;
 
@@ -470,6 +475,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, []);
 
     const handleTouchMove = useCallback((e: React.TouchEvent) => {
+        if (!Capacitor.isNativePlatform()) return;
         const touches = e.touches;
         const state = gestureState.current;
         if (!state.active) return;
@@ -518,6 +524,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, [applyTransform]);
 
     const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+        if (!Capacitor.isNativePlatform()) return;
         const state = gestureState.current;
         const remaining = e.touches.length;
 
@@ -529,7 +536,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
 
         if (state.touchCount === 2 && remaining < 2) {
-            // Finger released! Touch zoom stays EXACTLY at the pinched zoom ratio — ZERO RE-RENDER!
             setDisplayZoom(transformRef.current.zoom);
             if (remaining === 1) {
                 state.touchCount = 1;
@@ -711,8 +717,24 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             <div
                 ref={stageRef}
                 onMouseMove={triggerUserActivity}
-                onTouchStart={triggerUserActivity}
-                onTouchMove={triggerUserActivity}
+                onTouchStart={(e) => {
+                    triggerUserActivity();
+                    if (Capacitor.isNativePlatform()) {
+                        handleTouchStart(e);
+                    }
+                }}
+                onTouchMove={(e) => {
+                    triggerUserActivity();
+                    if (Capacitor.isNativePlatform()) {
+                        handleTouchMove(e);
+                    }
+                }}
+                onTouchEnd={(e) => {
+                    triggerUserActivity();
+                    if (Capacitor.isNativePlatform()) {
+                        handleTouchEnd(e);
+                    }
+                }}
                 onClick={triggerUserActivity}
                 className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar py-4"
             >
@@ -747,39 +769,42 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         </div>
                     </div>
                 ) : (
-                    <Document
-                        file={activePdfUrl}
-                        options={pdfOptions}
-                        onLoadSuccess={onDocumentLoadSuccess}
-                        onLoadError={onDocumentLoadError}
-                        onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
-                        className="flex flex-col items-center gap-6 px-1 min-h-full"
-                    >
-                        {Array.from(new Array(numPages || 0), (_, index) => {
-                            const pageNum = index + 1;
-                            return (
-                                <div
-                                    key={`pdf_page_${pageNum}`}
-                                    id={`pdf-page-${pageNum}`}
-                                    data-page={pageNum}
-                                    className="pdf-page-item flex justify-center w-full shadow-2xl transition-transform"
-                                >
-                                    <Page
-                                        pageNumber={pageNum}
-                                        scale={displayZoom}
-                                        renderTextLayer={true}
-                                        renderAnnotationLayer={false}
-                                        className="bg-white rounded-md overflow-hidden ring-1 ring-white/10"
-                                        loading={
-                                            <div className="w-full max-w-xl h-96 bg-slate-900 animate-pulse rounded-md flex items-center justify-center text-gray-400 text-xs">
-                                                Loading Page {pageNum}...
-                                            </div>
-                                        }
-                                    />
-                                </div>
-                            );
-                        })}
-                    </Document>
+                    <div ref={wrapRef} className="w-full min-h-full flex flex-col items-center origin-top-left transition-transform duration-75 will-change-transform">
+                        <Document
+                            file={activePdfUrl}
+                            options={pdfOptions}
+                            onLoadSuccess={onDocumentLoadSuccess}
+                            onLoadError={onDocumentLoadError}
+                            onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
+                            className="flex flex-col items-center gap-6 px-1 min-h-full"
+                        >
+                            {Array.from(new Array(numPages || 0), (_, index) => {
+                                const pageNum = index + 1;
+                                return (
+                                    <div
+                                        key={`pdf_page_${pageNum}`}
+                                        id={`pdf-page-${pageNum}`}
+                                        data-page={pageNum}
+                                        className="pdf-page-item flex justify-center w-full shadow-2xl transition-transform"
+                                    >
+                                        <Page
+                                            pageNumber={pageNum}
+                                            scale={displayZoom}
+                                            canvasBackground="transparent"
+                                            renderTextLayer={true}
+                                            renderAnnotationLayer={false}
+                                            className="bg-[#0f172a] rounded-md overflow-hidden ring-1 ring-white/10"
+                                            loading={
+                                                <div className="w-full max-w-xl h-96 bg-slate-900 animate-pulse rounded-md flex items-center justify-center text-gray-400 text-xs">
+                                                    Loading Page {pageNum}...
+                                                </div>
+                                            }
+                                        />
+                                    </div>
+                                );
+                            })}
+                        </Document>
+                    </div>
                 )}
             </div>
 

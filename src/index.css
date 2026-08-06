@@ -166,7 +166,17 @@
   --ion-safe-area-top: 0px;
 }
 
-/* ===== PDF Search Highlighting ===== */
+/* ===== PDF Search Highlighting & Zero-Flash Styling ===== */
+/* Eliminate white flash during canvas redraw / zoom */
+.react-pdf__Page {
+  background-color: #0f172a !important;
+}
+
+.react-pdf__Page__canvas {
+  background-color: transparent !important;
+  display: block;
+}
+
 /* react-pdf text layer base — make it visible for search */
 .react-pdf__Page__textContent {
   opacity: 1 !important;
