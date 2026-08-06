@@ -1,12 +1,14 @@
 import { Capacitor } from '@capacitor/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
+import { FileSharer } from '@capgo/capacitor-file-sharer';
+import { FileOpener } from '@capawesome-team/capacitor-file-opener';
 import { getApiUrl, authFetch } from './api';
 import { showToast } from './toast';
 import { scheduleNotification } from './notifications';
 
 /**
  * Downloads a file (PDF or Media) with live mobile system notifications
- * and saves it directly into the phone's public Downloads / Documents storage.
+ * and presents it via modern, permission-safe native APIs compatible with Android 11+ Scoped Storage.
  *
  * @param url File URL to download (e.g. S3 pre-signed URL or backend endpoint)
  * @param filename Target filename
@@ -31,7 +33,7 @@ export async function savePdfToPublicDownloads(
     // 1. Trigger Initial System Notification: Downloading Started
     await scheduleNotification(
       '📥 Downloading PDF...',
-      `Downloading ${safeFilename} to Downloads folder`,
+      `Downloading ${safeFilename}`,
       notificationId
     ).catch(() => {});
 
@@ -78,7 +80,7 @@ export async function savePdfToPublicDownloads(
       }
     }
 
-    // Native Mobile (Android / iOS): Fetch with fetchFn & Save to Downloads
+    // Native Mobile (Android / iOS): Fetch blob & convert to Base64
     const response = await fetchFn(fullUrl);
     if (!response.ok) {
       throw new Error(`Server returned HTTP ${response.status}`);
@@ -98,28 +100,59 @@ export async function savePdfToPublicDownloads(
       reader.readAsDataURL(blob);
     });
 
-    // Write file to public Downloads directory
+    let cacheUri = '';
     let savedSuccessfully = false;
+
+    // A. Write file to private app cache directory (Directory.Cache — permission-safe on Android 11+)
     try {
-      await Filesystem.writeFile({
-        path: `Download/${safeFilename}`,
+      const cacheResult = await Filesystem.writeFile({
+        path: safeFilename,
         data: base64Data,
-        directory: Directory.ExternalStorage,
+        directory: Directory.Cache,
         recursive: true
       });
+      cacheUri = cacheResult.uri;
+    } catch (cacheErr) {
+      console.warn('[Filesystem] Cache write error:', cacheErr);
+    }
+
+    // B. Present file via FileSharer (opens native Save/Share sheet for Scoped Storage compatibility)
+    try {
+      await FileSharer.share({
+        filename: safeFilename,
+        base64Data: base64Data,
+        contentType: 'application/pdf',
+        title: safeFilename,
+        android: {
+          chooserTitle: `Save or Share ${safeFilename}`,
+        },
+      });
       savedSuccessfully = true;
-    } catch (e1) {
-      console.warn('[Filesystem] Download folder write fallback:', e1);
+    } catch (shareErr) {
+      console.warn('[FileSharer] share failed, trying FileOpener fallback:', shareErr);
       try {
-        await Filesystem.writeFile({
-          path: safeFilename,
-          data: base64Data,
-          directory: Directory.Documents,
-          recursive: true
-        });
-        savedSuccessfully = true;
-      } catch (e2) {
-        console.error('[Filesystem] Documents folder write error:', e2);
+        if (cacheUri) {
+          await FileOpener.openFile({
+            path: cacheUri,
+            mimeType: 'application/pdf',
+          });
+          savedSuccessfully = true;
+        } else {
+          throw new Error('Cache URI unavailable');
+        }
+      } catch (openErr) {
+        console.warn('[FileOpener] open failed, trying Directory.Documents fallback:', openErr);
+        try {
+          await Filesystem.writeFile({
+            path: safeFilename,
+            data: base64Data,
+            directory: Directory.Documents,
+            recursive: true
+          });
+          savedSuccessfully = true;
+        } catch (docErr) {
+          console.error('[Filesystem] Documents folder fallback failed:', docErr);
+        }
       }
     }
 
@@ -127,14 +160,14 @@ export async function savePdfToPublicDownloads(
       // Send Native Mobile System Completion Notification
       await scheduleNotification(
         '✅ Download Complete',
-        `${safeFilename} saved to Downloads! Open File Manager.`,
+        `${safeFilename} is ready! Check your chosen save location.`,
         notificationId
       ).catch(() => {});
 
-      await showToast(`✅ Saved ${safeFilename} to Downloads folder! Check File Manager.`);
+      await showToast(`✅ Download complete: ${safeFilename}`);
       return true;
     } else {
-      throw new Error('Could not write file to device storage');
+      throw new Error('Could not process PDF file on device');
     }
   } catch (error: any) {
     console.error('[savePdfToPublicDownloads] Error:', error);
