@@ -59,7 +59,7 @@ export default function PageLayout({
   return (
     <div
       className={[
-        'flex flex-col',
+        'flex flex-col md:pl-64',
         heightClass,
         background,
         textColor,

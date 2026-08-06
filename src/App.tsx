@@ -475,6 +475,38 @@ function AppInner() {
     };
   }, []);
 
+  // Desktop / Laptop Keyboard Navigation Shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const activeTag = document.activeElement?.tagName.toLowerCase();
+      if (activeTag === 'input' || activeTag === 'textarea' || (document.activeElement as HTMLElement)?.isContentEditable) {
+        if (e.key === 'Escape') {
+          (document.activeElement as HTMLElement).blur();
+        }
+        return;
+      }
+
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        const searchInput = (document.querySelector('input[placeholder*="Search"]') || document.querySelector('input')) as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+          searchInput.select();
+        }
+        return;
+      }
+
+      if (e.key === '1') setCurrentView('home');
+      if (e.key === '2') setCurrentView('tests');
+      if (e.key === '3') setCurrentView('analytics');
+      if (e.key === '4') setCurrentView('notes');
+      if (e.key === '5') setCurrentView('profile');
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const [practiceChapters, setPracticeChapters] = useState<{name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[]>([]);
 
   const [previousView, setPreviousView] = useState<typeof currentView | null>(null);
@@ -1773,7 +1805,7 @@ function AppInner() {
   // /terms-of-service) in the top-level App() router wrapper above,
   // so those currentView blocks were removed from here.
 
-  if (!user && currentView === 'home' && !showLoginFromLanding) {
+  if (!user && currentView === 'home' && !showLoginFromLanding && !Capacitor.isNativePlatform()) {
       return (
           <Suspense fallback={<div className="fixed inset-0 bg-[#0a0f24] text-white flex items-center justify-center">Loading...</div>}>
               <LandingPage onGetStarted={() => setShowLoginFromLanding(true)} />
