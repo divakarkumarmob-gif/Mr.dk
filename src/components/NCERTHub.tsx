@@ -148,7 +148,8 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
             setIsLoadingS3(true);
             try {
                 const subjectFolder = selectedSubject.toLowerCase();
-                const res = await fetch(getApiUrl(`/api/ncert-list?bucket=class-11th&prefix=${subjectFolder}`));
+                const bucket = selectedClass === '12' ? 'class-12th' : 'class-11th';
+                const res = await fetch(getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${subjectFolder}`));
                 const data = await res.json();
                 if (data.success) {
                     console.log("S3 files fetched:", data.files);
@@ -161,7 +162,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
             }
         };
         fetchFiles();
-    }, [selectedSubject]);
+    }, [selectedSubject, selectedClass]);
 
     const refreshDownloads = async () => {
         const ids = await getAllDownloadedIds();
@@ -209,11 +210,12 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
             console.log("Fetching online PDF for:", id);
             // Refresh S3 list to ensure we have fresh URLs
             setIsLoadingS3(true);
-            const listUrl = getApiUrl(`/api/ncert-list?bucket=class-11th&prefix=${selectedSubject.toLowerCase()}`);
+            const bucket = selectedClass === '12' ? 'class-12th' : 'class-11th';
+            const listUrl = getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${selectedSubject.toLowerCase()}`);
             setNcertDebug(`fetching list url=${listUrl}`);
             try {
                 const subjectFolder = selectedSubject.toLowerCase();
-                const res = await fetch(getApiUrl(`/api/ncert-list?bucket=class-11th&prefix=${subjectFolder}`));
+                const res = await fetch(getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${subjectFolder}`));
                 setNcertDebug(`list status=${res.status}`);
                 const data = await res.json();
                 console.log("NCERT list fetch result:", data);

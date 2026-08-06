@@ -34,6 +34,7 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
   const [showControls, setShowControls] = useState(true);
   const [showSettingsMenu, setShowSettingsMenu] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isMobileLandscape, setIsMobileLandscape] = useState(false);
   const [activeMenu, setActiveMenu] = useState<'main' | 'speed' | 'quality'>('main');
 
   // Skip & Slide Gesture Visual Feedback States
@@ -133,10 +134,10 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
         toggleMute();
       } else if (e.code === 'ArrowRight') {
         e.preventDefault();
-        seekRelative(10);
+        skip(10);
       } else if (e.code === 'ArrowLeft') {
         e.preventDefault();
-        seekRelative(-10);
+        skip(-10);
       }
     };
 
@@ -305,6 +306,29 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
+  // Track auto-fullscreen for touch mobile/tablet devices in landscape orientation
+  useEffect(() => {
+    const checkMobileLandscape = () => {
+      const isTouchDevice = 
+        (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) || 
+        Capacitor.isNativePlatform();
+      const isLandscape = 
+        typeof window !== 'undefined' && window.matchMedia('(orientation: landscape)').matches;
+
+      setIsMobileLandscape(isTouchDevice && isLandscape);
+    };
+
+    checkMobileLandscape();
+
+    window.addEventListener('resize', checkMobileLandscape);
+    window.addEventListener('orientationchange', checkMobileLandscape);
+
+    return () => {
+      window.removeEventListener('resize', checkMobileLandscape);
+      window.removeEventListener('orientationchange', checkMobileLandscape);
+    };
+  }, []);
+
   // Jump Backward/Forward 10 seconds
   const skip = (seconds: number) => {
     if (!videoRef.current) return;
@@ -453,10 +477,12 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     }, 800);
   };
 
+  const isPlayerFullscreen = isFullscreen || isMobileLandscape;
+
   return (
     <div 
       ref={containerRef}
-      className={`relative w-full bg-black select-none group transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none flex items-center justify-center overflow-hidden ${isFullscreen ? 'fixed inset-0 z-[2000]' : 'aspect-video rounded-xl border border-white/15 hover:border-white/25 shadow-2xl'} landscape:fixed landscape:inset-0 landscape:z-[2000] landscape:rounded-none landscape:border-0`}
+      className={`relative w-full bg-black select-none group transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.8)] touch-none flex items-center justify-center overflow-hidden ${isPlayerFullscreen ? 'fixed inset-0 z-[2000] rounded-none border-0' : 'aspect-video rounded-xl border border-white/15 hover:border-white/25 shadow-2xl'}`}
       onPointerDown={(e) => {
         // Only handle left clicks for mouse
         if (e.pointerType === 'mouse' && e.button !== 0) return;
@@ -786,9 +812,9 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
                   <button 
                     onClick={toggleFullscreen}
                     className="p-2.5 h-10 w-10 bg-white/10 hover:bg-blue-600 active:bg-blue-700 text-white rounded-xl border border-white/10 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-black/20 cursor-pointer"
-                    title={isFullscreen ? "Exit Fullscreen (F)" : "Fullscreen (F)"}
+                    title={isPlayerFullscreen ? "Exit Fullscreen (F)" : "Fullscreen (F)"}
                   >
-                    {isFullscreen ? (
+                    {isPlayerFullscreen ? (
                       <Minimize className="h-4.5 w-4.5 text-white" />
                     ) : (
                       <Maximize className="h-4.5 w-4.5 text-white" />
