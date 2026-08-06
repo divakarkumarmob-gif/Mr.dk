@@ -61,8 +61,8 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     }
   };
 
-  // Dynamic Navigation states
-  const [currentView, setCurrentView] = useState<'list' | 'chapter' | 'player'>('list');
+  // Dynamic Navigation states: Unified 2-step system ('list' | 'player')
+  const [currentView, setCurrentView] = useState<'list' | 'player'>('list');
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
@@ -94,7 +94,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
       if (state.privateVideoView) {
         currentIndexRef.current = state.index || 0;
-        const view = state.privateVideoView as 'list' | 'chapter' | 'player';
+        const view = (state.privateVideoView === 'player' ? 'player' : 'list') as 'list' | 'player';
         setCurrentView(view);
         
         if (view === 'list') {
@@ -109,9 +109,13 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                const chap = subj.chapters.find(c => c.name === state.chapterName);
                if (chap) {
                  setSelectedChapter(chap);
-                 if (state.videoKey) {
+                 if (state.videoKey && Array.isArray(chap.videos)) {
                     const vid = chap.videos.find(v => v.key === state.videoKey);
                     if (vid) setActiveVideo(vid);
+                    else if (chap.videos.length > 0) setActiveVideo(chap.videos[0]);
+                    else setActiveVideo(null);
+                 } else if (Array.isArray(chap.videos) && chap.videos.length > 0) {
+                    setActiveVideo(chap.videos[0]);
                  } else {
                     setActiveVideo(null);
                  }
@@ -136,34 +140,24 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
     setSelectedSubject(subj);
     setSelectedChapter(chap);
 
-    if (chap.videos && chap.videos.length > 0) {
-      setActiveVideo(chap.videos[0]);
-      window.history.pushState({ 
-        privateVideoView: 'player', 
-        index: nextIndex,
-        videoKey: chap.videos[0].key,
-        subjectName: subj.name,
-        chapterName: chap.name,
-        showPrivateVideos: true
-      }, '');
-      currentIndexRef.current = nextIndex;
-      setCurrentView('player');
-    } else {
-      window.history.pushState({ 
-        privateVideoView: 'chapter', 
-        index: nextIndex,
-        subjectName: subj.name,
-        chapterName: chap.name,
-        showPrivateVideos: true
-      }, '');
-      currentIndexRef.current = nextIndex;
-      setCurrentView('chapter');
-    }
+    const hasVideos = Array.isArray(chap.videos) && chap.videos.length > 0;
+    const firstVid = hasVideos ? chap.videos[0] : null;
+    setActiveVideo(firstVid);
+
+    window.history.pushState({ 
+      privateVideoView: 'player', 
+      index: nextIndex,
+      videoKey: firstVid ? firstVid.key : null,
+      subjectName: subj.name,
+      chapterName: chap.name,
+      showPrivateVideos: true
+    }, '');
+    currentIndexRef.current = nextIndex;
+    setCurrentView('player');
   };
 
   const navigateToPlayer = (video: VideoItem) => {
     const nextIndex = currentIndexRef.current + 1;
-    // We push a state for the player
     window.history.pushState({ 
       privateVideoView: 'player', 
       index: nextIndex,
@@ -226,7 +220,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
   // Helper to count total videos in a Subject
   const getTotalSubjectVideos = (subj: Subject) => {
-    return subj.chapters.reduce((total, chap) => total + chap.videos.length, 0);
+    return subj.chapters.reduce((total, chap) => total + (Array.isArray(chap.videos) ? chap.videos.length : 0), 0);
   };
 
   return (
@@ -255,9 +249,7 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
           )}
           <div>
             <h2 className="text-sm font-extrabold text-white tracking-wide uppercase">
-              {currentView === 'list' && "Private Lecture Hub"}
-              {currentView === 'chapter' && "Chapter Details"}
-              {currentView === 'player' && "Playing Lecture"}
+              {currentView === 'list' ? "Private Lecture Hub" : "Playing Lecture"}
             </h2>
             <p className="text-[10px] text-gray-400 font-semibold tracking-wider uppercase">Lecture Directory Stream</p>
           </div>
@@ -392,187 +384,150 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                     </div>
 
                     <div className="grid grid-cols-1 gap-2.5">
-                      {subject.chapters.map((chapter) => (
-                        <div 
-                          key={chapter.name}
-                          onClick={() => {
-                            navigateToChapter(subject, chapter);
-                          }}
-                          className="bg-[#0e142e] border border-white/5 hover:border-orange-500/20 rounded-2xl p-3.5 transition-all active:scale-[0.98] cursor-pointer flex items-center justify-between"
-                        >
-                          <div className="flex items-center gap-3 min-w-0">
-                            <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
-                              <FolderOpen className="h-5 w-5 text-blue-400" />
+                      {subject.chapters.map((chapter) => {
+                        const videoCount = Array.isArray(chapter.videos) ? chapter.videos.length : 0;
+                        return (
+                          <div 
+                            key={chapter.name}
+                            onClick={() => {
+                              navigateToChapter(subject, chapter);
+                            }}
+                            className="bg-[#0e142e] border border-white/5 hover:border-orange-500/20 rounded-2xl p-3.5 transition-all active:scale-[0.98] cursor-pointer flex items-center justify-between"
+                          >
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                                <FolderOpen className="h-5 w-5 text-blue-400" />
+                              </div>
+                              <div className="min-w-0">
+                                <h4 className="text-sm font-bold text-gray-100 truncate">{chapter.name}</h4>
+                                <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mt-0.5">
+                                  {videoCount} {videoCount === 1 ? 'Lecture' : 'Lectures'} available
+                                </p>
+                              </div>
                             </div>
-                            <div className="min-w-0">
-                              <h4 className="text-sm font-bold text-gray-100 truncate">{chapter.name}</h4>
-                              <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mt-0.5">
-                                {chapter.videos.length} {chapter.videos.length === 1 ? 'Lecture' : 'Lectures'} available
-                              </p>
-                            </div>
+                            <ChevronRight className="h-5 w-5 text-gray-500" />
                           </div>
-                          <ChevronRight className="h-5 w-5 text-gray-500" />
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
               </motion.div>
             )}
 
-            {/* VIEW 2: CHAPTER PAGE (Big Heading, Lectures Listed Below) */}
-            {currentView === 'chapter' && selectedChapter && (
-              <motion.div
-                key="chapter-view"
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -10 }}
-                className="space-y-4"
-              >
-                {/* BIG CHAPTER HEADING */}
-                <div className="bg-gradient-to-br from-[#12193a] to-[#0d122b] border border-white/5 rounded-2xl p-5 shadow-xl">
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2.5 py-1 rounded-full">
-                    {selectedSubject?.name || "SUBJECT"}
-                  </span>
-                  <h1 className="text-2xl font-black text-white tracking-tight mt-3 mb-1.5 leading-tight">
-                    {selectedChapter.name}
-                  </h1>
-                  <p className="text-xs text-gray-400 font-semibold">
-                    Select a lecture from the list below to begin streaming instantly.
-                  </p>
-                </div>
-
-                {/* LECTURES LIST */}
-                <div className="space-y-2">
-                  <h3 className="text-[10px] font-extrabold tracking-widest text-gray-500 uppercase px-1">
-                    LECTURES IN THIS CHAPTER ({selectedChapter.videos.length})
-                  </h3>
-                  
-                  <div className="space-y-2">
-                    {selectedChapter.videos.map((vid, idx) => (
-                      <div
-                        key={vid.key}
-                        onClick={() => {
-                          navigateToPlayer(vid);
-                        }}
-                        className="bg-[#0e142e] border border-white/5 hover:border-orange-500/25 rounded-2xl p-3.5 flex items-center justify-between gap-3 active:scale-[0.98] transition-all cursor-pointer"
-                      >
-                        <div className="flex items-center gap-3 min-w-0">
-                          <div className="h-10 w-10 rounded-xl bg-orange-500/10 border border-orange-500/15 flex items-center justify-center shrink-0 text-orange-400 font-mono text-sm font-extrabold">
-                            {idx + 1}
-                          </div>
-                          <div className="min-w-0">
-                            <h4 className="text-xs font-bold text-gray-100 truncate">{vid.title}</h4>
-                          </div>
-                        </div>
-
-                        <button
-                          className="px-3 py-1.5 bg-orange-500/10 text-orange-400 hover:bg-orange-600 hover:text-white rounded-xl text-[10px] font-extrabold uppercase tracking-wider transition border border-orange-500/10 shrink-0"
-                        >
-                          Stream
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {/* VIEW 3: LECTURE PLAYER PAGE (Desktop Split Layout: Left side Lectures, Right side Video Player) */}
-            {currentView === 'player' && selectedChapter && activeVideo && (
+            {/* VIEW 2: LECTURE PLAYER PAGE (Unified Desktop Split / Mobile Stacked Layout) */}
+            {currentView === 'player' && selectedChapter && (
               <motion.div
                 key="player-view"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-5 h-full"
+                className="grid grid-cols-1 md:grid-cols-12 gap-5 h-full"
               >
                 {/* LEFT SIDE: LECTURES LIST SIDEBAR */}
-                <div className="lg:col-span-4 bg-[#0b1126] border border-white/10 rounded-2xl p-4 flex flex-col gap-3 order-2 lg:order-1 max-h-[500px] lg:max-h-none overflow-y-auto">
+                <div className="md:col-span-4 bg-[#0b1126] border border-white/10 rounded-2xl p-4 flex flex-col gap-3 order-2 md:order-1 max-h-[500px] md:max-h-none overflow-y-auto">
                   <div className="flex items-center justify-between pb-2 border-b border-white/10">
-                    <div className="flex items-center gap-2">
-                      <FolderOpen className="h-4 w-4 text-orange-400" />
-                      <h3 className="text-xs font-extrabold uppercase tracking-wider text-white">
-                        Lectures ({selectedChapter.videos.length})
+                    <div className="flex items-center gap-2 min-w-0">
+                      <FolderOpen className="h-4 w-4 text-orange-400 shrink-0" />
+                      <h3 className="text-xs font-extrabold uppercase tracking-wider text-white truncate">
+                        {selectedChapter.name} ({Array.isArray(selectedChapter.videos) ? selectedChapter.videos.length : 0})
                       </h3>
                     </div>
-                    <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded">
+                    <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded shrink-0">
                       Playlist
                     </span>
                   </div>
 
-                  <div className="space-y-2 flex-1 overflow-y-auto">
-                    {selectedChapter.videos.map((vid, idx) => {
-                      const isCurrent = vid.key === activeVideo.key;
-                      return (
-                        <div
-                          key={vid.key}
-                          onClick={() => {
-                            if (!isCurrent) {
-                              setActiveVideo(vid);
-                            }
-                          }}
-                          className={`p-3 rounded-xl flex items-center justify-between gap-3 transition-all cursor-pointer border ${
-                            isCurrent 
-                              ? 'bg-orange-500/15 border-orange-500/30 shadow-[0_4px_20px_rgba(249,115,22,0.1)]' 
-                              : 'bg-[#0e142e] border-white/5 hover:border-orange-500/20 active:scale-[0.98]'
-                          }`}
-                        >
-                          <div className="flex items-center gap-3 min-w-0">
-                            <div className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 font-mono text-xs font-extrabold border ${
+                  {(!Array.isArray(selectedChapter.videos) || selectedChapter.videos.length === 0) ? (
+                    <div className="p-6 text-center text-gray-400 text-xs">
+                      No videos available in this chapter.
+                    </div>
+                  ) : (
+                    <div className="space-y-2 flex-1 overflow-y-auto">
+                      {selectedChapter.videos.map((vid, idx) => {
+                        const isCurrent = activeVideo && vid.key === activeVideo.key;
+                        return (
+                          <div
+                            key={vid.key}
+                            onClick={() => {
+                              if (!isCurrent) {
+                                setActiveVideo(vid);
+                              }
+                            }}
+                            className={`p-3 rounded-xl flex items-center justify-between gap-3 transition-all cursor-pointer border ${
                               isCurrent 
-                                ? 'bg-orange-500/20 border-orange-500/30 text-orange-400' 
-                                : 'bg-white/5 border-white/5 text-gray-400'
-                            }`}>
-                              {isCurrent ? <Play className="h-3.5 w-3.5 fill-orange-400 text-orange-400" /> : idx + 1}
+                                ? 'bg-orange-500/15 border-orange-500/30 shadow-[0_4px_20px_rgba(249,115,22,0.1)]' 
+                                : 'bg-[#0e142e] border-white/5 hover:border-orange-500/20 active:scale-[0.98]'
+                            }`}
+                          >
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 font-mono text-xs font-extrabold border ${
+                                isCurrent 
+                                  ? 'bg-orange-500/20 border-orange-500/30 text-orange-400' 
+                                  : 'bg-white/5 border-white/5 text-gray-400'
+                              }`}>
+                                {isCurrent ? <Play className="h-3.5 w-3.5 fill-orange-400 text-orange-400" /> : idx + 1}
+                              </div>
+                              <div className="min-w-0">
+                                <h4 className={`text-xs font-bold truncate ${isCurrent ? 'text-orange-400 font-extrabold' : 'text-gray-200'}`}>
+                                  {vid.title}
+                                </h4>
+                                <p className="text-[10px] text-gray-400">Lecture #{idx + 1}</p>
+                              </div>
                             </div>
-                            <div className="min-w-0">
-                              <h4 className={`text-xs font-bold truncate ${isCurrent ? 'text-orange-400 font-extrabold' : 'text-gray-200'}`}>
-                                {vid.title}
-                              </h4>
-                              <p className="text-[10px] text-gray-400">Lecture #{idx + 1}</p>
-                            </div>
-                          </div>
 
-                          {isCurrent && (
-                            <span className="text-[9px] font-extrabold uppercase tracking-widest px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded">
-                              Playing
-                            </span>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
+                            {isCurrent && (
+                              <span className="text-[9px] font-extrabold uppercase tracking-widest px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded shrink-0">
+                                Playing
+                              </span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
 
                 {/* RIGHT SIDE: VIDEO PLAYER MODAL */}
-                <div className="lg:col-span-8 flex flex-col gap-3 order-1 lg:order-2">
-                  <div className="bg-[#0c1124] border border-white/10 sm:rounded-2xl overflow-hidden shadow-2xl">
-                    <CustomVideoPlayer 
-                      src={activeVideo.url} 
-                      title={activeVideo.title} 
-                    />
-                  </div>
+                <div className="md:col-span-8 flex flex-col gap-3 order-1 md:order-2">
+                  {activeVideo ? (
+                    <>
+                      <div className="bg-[#0c1124] border border-white/10 sm:rounded-2xl overflow-hidden shadow-2xl">
+                        <CustomVideoPlayer 
+                          src={activeVideo.url} 
+                          title={activeVideo.title} 
+                        />
+                      </div>
 
-                  {/* CURRENT PLAYING TITLE AND INFO */}
-                  <div className="p-4 bg-[#0c1124] border border-white/10 rounded-2xl">
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 mb-1">
-                      <Tv className="h-4 w-4 animate-pulse text-orange-500" />
-                      <span>NOW STREAMING LECTURE</span>
+                      {/* CURRENT PLAYING TITLE AND INFO */}
+                      <div className="p-4 bg-[#0c1124] border border-white/10 rounded-2xl">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 mb-1">
+                          <Tv className="h-4 w-4 animate-pulse text-orange-500" />
+                          <span>NOW STREAMING LECTURE</span>
+                        </div>
+                        <h2 className="text-lg font-black text-white leading-snug">{activeVideo.title}</h2>
+                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">
+                          {selectedSubject?.name} • {selectedChapter.name}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="p-8 bg-[#0c1124] border border-white/10 rounded-2xl text-center flex flex-col items-center justify-center min-h-[300px] space-y-3">
+                      <div className="h-12 w-12 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto">
+                        <Film className="h-6 w-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-sm font-bold text-white">No Video Selected</h3>
+                      <p className="text-xs text-gray-400 max-w-xs">
+                        There are no video lectures available in this chapter to stream.
+                      </p>
                     </div>
-                    <h2 className="text-lg font-black text-white leading-snug">{activeVideo.title}</h2>
-                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">
-                      {selectedSubject?.name} • {selectedChapter.name}
-                    </p>
-                  </div>
+                  )}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         )}
       </div>
-
-
     </motion.div>
   );
 }

@@ -7,8 +7,17 @@ import { scheduleNotification } from './notifications';
 /**
  * Downloads a file (PDF or Media) with live mobile system notifications
  * and saves it directly into the phone's public Downloads / Documents storage.
+ *
+ * @param url File URL to download (e.g. S3 pre-signed URL or backend endpoint)
+ * @param filename Target filename
+ * @param useAuth If true, uses authFetch with Firebase headers. Default is false (uses plain fetch)
+ *                to avoid header signature mismatch on S3 pre-signed URLs.
  */
-export async function savePdfToPublicDownloads(url: string, filename: string): Promise<boolean> {
+export async function savePdfToPublicDownloads(
+  url: string, 
+  filename: string,
+  useAuth: boolean = false
+): Promise<boolean> {
   const safeFilename = filename.toLowerCase().endsWith('.pdf') ? filename : `${filename}.pdf`;
   const notificationId = Math.abs(
     safeFilename.split('').reduce((acc, char) => (acc << 5) - acc + char.charCodeAt(0), 0)
@@ -16,6 +25,7 @@ export async function savePdfToPublicDownloads(url: string, filename: string): P
 
   // Resolve API URL (e.g. /api/proxy-pdf -> https://mrdk.onrender.com/api/proxy-pdf)
   const fullUrl = url.startsWith('http://') || url.startsWith('https://') ? url : getApiUrl(url);
+  const fetchFn = useAuth ? authFetch : fetch;
 
   try {
     // 1. Trigger Initial System Notification: Downloading Started
@@ -30,7 +40,7 @@ export async function savePdfToPublicDownloads(url: string, filename: string): P
     // Web Browser environment: direct browser download
     if (!Capacitor.isNativePlatform()) {
       try {
-        const response = await authFetch(fullUrl);
+        const response = await fetchFn(fullUrl);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const blob = await response.blob();
         const blobUrl = URL.createObjectURL(blob);
@@ -68,8 +78,8 @@ export async function savePdfToPublicDownloads(url: string, filename: string): P
       }
     }
 
-    // Native Mobile (Android / iOS): Fetch with Auth Headers & Save to Downloads
-    const response = await authFetch(fullUrl);
+    // Native Mobile (Android / iOS): Fetch with fetchFn & Save to Downloads
+    const response = await fetchFn(fullUrl);
     if (!response.ok) {
       throw new Error(`Server returned HTTP ${response.status}`);
     }
