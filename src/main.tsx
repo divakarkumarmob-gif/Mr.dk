@@ -18,6 +18,8 @@ try {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 }
 
+import { SplashScreen } from '@capacitor/splash-screen';
+
 // Initialize Safe Area (edge-to-edge).
 // NOTE: We intentionally do NOT use @capacitor/status-bar anymore.
 // The safe-area plugin's own docs say it conflicts with @capacitor/status-bar
@@ -25,6 +27,7 @@ try {
 // root cause of the status bar randomly disappearing/glitching on
 // navigation. SafeArea's System Bars API replaces it everywhere.
 if (Capacitor.isNativePlatform()) {
+  SplashScreen.hide().catch(() => {});
   SafeArea.showSystemBars({}).catch(() => {});
 
   // Re-assert the status bar whenever the app resumes from background,

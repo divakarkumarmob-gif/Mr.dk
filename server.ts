@@ -41,7 +41,7 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
     console.error("Error parsing FIREBASE_SERVICE_ACCOUNT_JSON", e);
   }
 } else {
-    console.log("No FIREBASE_SERVICE_ACCOUNT_JSON provided, relying on default credentials.");
+  console.log("No FIREBASE_SERVICE_ACCOUNT_JSON provided, relying on default credentials.");
 }
 
 const firebaseAdminApp = admin.initializeApp({
@@ -51,33 +51,33 @@ const firebaseAdminApp = admin.initializeApp({
 console.log("Firebase Admin Initialized:", firebaseAdminApp.name);
 
 const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY,
-    httpOptions: {
-        headers: {
-            'User-Agent': 'aistudio-build',
-        }
+  apiKey: process.env.GEMINI_API_KEY,
+  httpOptions: {
+    headers: {
+      'User-Agent': 'aistudio-build',
     }
+  }
 });
 
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.SMTP_PORT || '465'),
-    secure: (process.env.SMTP_PORT === '465' || !process.env.SMTP_PORT), // True for 465, false for 587
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-    },
-    family: 4, // Force IPv4 to prevent IPv6 ENETUNREACH errors on deployment platforms like Render
-    connectionTimeout: 20000, // Give Render's network more time to complete the handshake before failing
-    greetingTimeout: 20000,
-    socketTimeout: 20000,
-    lookup: (hostname: string, options: any, callback: any) => {
-        // Explicitly force DNS lookup to return only IPv4 addresses.
-        // 'family: 4' alone doesn't always propagate to the underlying socket
-        // on some Node/OpenSSL builds, which caused ENETUNREACH on IPv6-routed
-        // hosts like Render's SMTP egress.
-        require('dns').lookup(hostname, { family: 4 }, callback);
-    },
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  port: parseInt(process.env.SMTP_PORT || '465'),
+  secure: (process.env.SMTP_PORT === '465' || !process.env.SMTP_PORT), // True for 465, false for 587
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+  family: 4, // Force IPv4 to prevent IPv6 ENETUNREACH errors on deployment platforms like Render
+  connectionTimeout: 20000, // Give Render's network more time to complete the handshake before failing
+  greetingTimeout: 20000,
+  socketTimeout: 20000,
+  lookup: (hostname: string, options: any, callback: any) => {
+    // Explicitly force DNS lookup to return only IPv4 addresses.
+    // 'family: 4' alone doesn't always propagate to the underlying socket
+    // on some Node/OpenSSL builds, which caused ENETUNREACH on IPv6-routed
+    // hosts like Render's SMTP egress.
+    require('dns').lookup(hostname, { family: 4 }, callback);
+  },
 } as any);
 
 const limiter = rateLimit({
@@ -101,56 +101,56 @@ const authLimiter = rateLimit({
 });
 
 async function requireAuth(req: any, res: any, next: any) {
-    const authHeader = req.headers.authorization || '';
-    let token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
-    if (!token && req.query?.token && typeof req.query.token === 'string') {
-        token = req.query.token;
-    }
-    if (!token) {
-        return res.status(401).json({ error: 'Missing auth token' });
-    }
-    try {
-        const decoded = await admin.auth().verifyIdToken(token);
-        req.uid = decoded.uid;
-        next();
-    } catch (e) {
-        return res.status(401).json({ error: 'Invalid or expired auth token' });
-    }
+  const authHeader = req.headers.authorization || '';
+  let token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+  if (!token && req.query?.token && typeof req.query.token === 'string') {
+    token = req.query.token;
+  }
+  if (!token) {
+    return res.status(401).json({ error: 'Missing auth token' });
+  }
+  try {
+    const decoded = await admin.auth().verifyIdToken(token);
+    req.uid = decoded.uid;
+    next();
+  } catch (e) {
+    return res.status(401).json({ error: 'Invalid or expired auth token' });
+  }
 }
 
 async function requireAdmin(req: any, res: any, next: any) {
-    const authHeader = req.headers.authorization || '';
-    let token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
-    if (!token && req.query?.token && typeof req.query.token === 'string') {
-        token = req.query.token;
+  const authHeader = req.headers.authorization || '';
+  let token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+  if (!token && req.query?.token && typeof req.query.token === 'string') {
+    token = req.query.token;
+  }
+  if (!token) return res.status(401).json({ error: 'Missing auth token' });
+  try {
+    const decoded = await admin.auth().verifyIdToken(token);
+    if (decoded.admin !== true) {
+      return res.status(403).json({ error: 'Admin access required' });
     }
-    if (!token) return res.status(401).json({ error: 'Missing auth token' });
-    try {
-        const decoded = await admin.auth().verifyIdToken(token);
-        if (decoded.admin !== true) {
-            return res.status(403).json({ error: 'Admin access required' });
-        }
-        req.uid = decoded.uid;
-        next();
-    } catch (e) {
-        return res.status(401).json({ error: 'Invalid or expired auth token' });
-    }
+    req.uid = decoded.uid;
+    next();
+  } catch (e) {
+    return res.status(401).json({ error: 'Invalid or expired auth token' });
+  }
 }
 
 async function requireAppCheck(req: any, res: any, next: any) {
-    if (process.env.DISABLE_APP_CHECK === 'true') {
-        return next();
-    }
-    const appCheckToken = (req.headers['x-firebase-appcheck'] as string) || (req.query?.appCheckToken as string);
-    if (!appCheckToken) {
-        return res.status(401).json({ error: 'Missing App Check token' });
-    }
-    try {
-        await admin.appCheck().verifyToken(appCheckToken as string);
-        next();
-    } catch (e) {
-        return res.status(401).json({ error: 'Invalid App Check token' });
-    }
+  if (process.env.DISABLE_APP_CHECK === 'true') {
+    return next();
+  }
+  const appCheckToken = (req.headers['x-firebase-appcheck'] as string) || (req.query?.appCheckToken as string);
+  if (!appCheckToken) {
+    return res.status(401).json({ error: 'Missing App Check token' });
+  }
+  try {
+    await admin.appCheck().verifyToken(appCheckToken as string);
+    next();
+  } catch (e) {
+    return res.status(401).json({ error: 'Invalid App Check token' });
+  }
 }
 
 const logs: string[] = [];
@@ -158,25 +158,25 @@ const logs: string[] = [];
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
 
 function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
-        if (typeof prompt === 'string') return prompt;
-        if (prompt && (prompt as any).parts) {
-            const parts = (prompt as any).parts.map((p: any) => {
-                if (p.text) return { type: "text", text: p.text };
-                if (p.inlineData) {
-                    if (p.inlineData.mimeType.startsWith('image/')) {
-                        return { type: "image_url", image_url: { url: `data:${p.inlineData.mimeType};base64,${p.inlineData.data}` } };
-                    }
-                    if (p.inlineData.mimeType.startsWith('audio/')) {
-                        return { type: "text", text: `[Audio attached, mimeType: ${p.inlineData.mimeType}]` };
-                    }
-                }
-                return { type: "text", text: typeof p === 'string' ? p : JSON.stringify(p) };
-            });
-            // If only one text part, return it as string
-            if (parts.length === 1 && parts[0].type === "text") return parts[0].text;
-            return parts;
+  if (typeof prompt === 'string') return prompt;
+  if (prompt && (prompt as any).parts) {
+    const parts = (prompt as any).parts.map((p: any) => {
+      if (p.text) return { type: "text", text: p.text };
+      if (p.inlineData) {
+        if (p.inlineData.mimeType.startsWith('image/')) {
+          return { type: "image_url", image_url: { url: `data:${p.inlineData.mimeType};base64,${p.inlineData.data}` } };
         }
-        return typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
+        if (p.inlineData.mimeType.startsWith('audio/')) {
+          return { type: "text", text: `[Audio attached, mimeType: ${p.inlineData.mimeType}]` };
+        }
+      }
+      return { type: "text", text: typeof p === 'string' ? p : JSON.stringify(p) };
+    });
+    // If only one text part, return it as string
+    if (parts.length === 1 && parts[0].type === "text") return parts[0].text;
+    return parts;
+  }
+  return typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
 }
 
 // Gemini's generateContent occasionally returns 503 UNAVAILABLE ("This
@@ -187,23 +187,23 @@ function formatOpenRouterPrompt(prompt: string | any[]): string | any[] {
 // short retry-with-backoff so a brief demand spike doesn't surface as a
 // user-facing error.
 async function withGeminiRetry<T>(fn: () => Promise<T>, maxAttempts: number = 3): Promise<T> {
-    let lastError: any;
-    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-        try {
-            return await fn();
-        } catch (error: any) {
-            lastError = error;
-            const status = error?.status || error?.error?.status || error?.code;
-            const isTransient = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
-            if (!isTransient || attempt === maxAttempts) {
-                throw error;
-            }
-            const delayMs = 800 * attempt; // 800ms, 1600ms, ...
-            console.warn(`Gemini transient error (attempt ${attempt}/${maxAttempts}), retrying in ${delayMs}ms:`, status);
-            await new Promise(resolve => setTimeout(resolve, delayMs));
-        }
+  let lastError: any;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn();
+    } catch (error: any) {
+      lastError = error;
+      const status = error?.status || error?.error?.status || error?.code;
+      const isTransient = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
+      if (!isTransient || attempt === maxAttempts) {
+        throw error;
+      }
+      const delayMs = 800 * attempt; // 800ms, 1600ms, ...
+      console.warn(`Gemini transient error (attempt ${attempt}/${maxAttempts}), retrying in ${delayMs}ms:`, status);
+      await new Promise(resolve => setTimeout(resolve, delayMs));
     }
-    throw lastError;
+  }
+  throw lastError;
 }
 
 // On the free tier, gemini-3.6-flash's quota/capacity is the one that runs
@@ -219,51 +219,51 @@ async function withGeminiRetry<T>(fn: () => Promise<T>, maxAttempts: number = 3)
 const FALLBACK_MODELS = ["gemini-3.1-flash-lite", "gemini-2.5-flash"];
 
 async function generateWithFallback(primaryModel: string, contents: any): Promise<{ text: string }> {
-    try {
-        return await withGeminiRetry(() => ai.models.generateContent({ model: primaryModel, contents }));
-    } catch (error: any) {
-        const status = error?.status || error?.error?.status || error?.code;
-        const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
-        if (!isCapacityIssue) throw error;
+  try {
+    return await withGeminiRetry(() => ai.models.generateContent({ model: primaryModel, contents }));
+  } catch (error: any) {
+    const status = error?.status || error?.error?.status || error?.code;
+    const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
+    if (!isCapacityIssue) throw error;
 
-        let lastError: any = error;
-        for (const fallbackModel of FALLBACK_MODELS) {
-            try {
-                console.warn(`Model ${primaryModel} still unavailable after retries, falling back to ${fallbackModel}`);
-                return await withGeminiRetry(() => ai.models.generateContent({ model: fallbackModel, contents }), 2);
-            } catch (fallbackError: any) {
-                lastError = fallbackError;
-                const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
-                const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
-                if (!fbShouldSkip) throw fallbackError;
-            }
-        }
-        throw lastError;
+    let lastError: any = error;
+    for (const fallbackModel of FALLBACK_MODELS) {
+      try {
+        console.warn(`Model ${primaryModel} still unavailable after retries, falling back to ${fallbackModel}`);
+        return await withGeminiRetry(() => ai.models.generateContent({ model: fallbackModel, contents }), 2);
+      } catch (fallbackError: any) {
+        lastError = fallbackError;
+        const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
+        const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
+        if (!fbShouldSkip) throw fallbackError;
+      }
     }
+    throw lastError;
+  }
 }
 
 async function generateStreamWithFallback(primaryModel: string, contents: any): Promise<AsyncIterable<any>> {
-    try {
-        return await withGeminiRetry(() => ai.models.generateContentStream({ model: primaryModel, contents }));
-    } catch (error: any) {
-        const status = error?.status || error?.error?.status || error?.code;
-        const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
-        if (!isCapacityIssue) throw error;
+  try {
+    return await withGeminiRetry(() => ai.models.generateContentStream({ model: primaryModel, contents }));
+  } catch (error: any) {
+    const status = error?.status || error?.error?.status || error?.code;
+    const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
+    if (!isCapacityIssue) throw error;
 
-        let lastError: any = error;
-        for (const fallbackModel of FALLBACK_MODELS) {
-            try {
-                console.warn(`Model ${primaryModel} stream unavailable, falling back to ${fallbackModel}`);
-                return await withGeminiRetry(() => ai.models.generateContentStream({ model: fallbackModel, contents }), 2);
-            } catch (fallbackError: any) {
-                lastError = fallbackError;
-                const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
-                const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
-                if (!fbShouldSkip) throw fallbackError;
-            }
-        }
-        throw lastError;
+    let lastError: any = error;
+    for (const fallbackModel of FALLBACK_MODELS) {
+      try {
+        console.warn(`Model ${primaryModel} stream unavailable, falling back to ${fallbackModel}`);
+        return await withGeminiRetry(() => ai.models.generateContentStream({ model: fallbackModel, contents }), 2);
+      } catch (fallbackError: any) {
+        lastError = fallbackError;
+        const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
+        const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
+        if (!fbShouldSkip) throw fallbackError;
+      }
     }
+    throw lastError;
+  }
 }
 
 // Shared formatting rule for every chat-facing AI prompt. The client
@@ -279,70 +279,70 @@ const AI_SEARCH_FORMAT_RULE = "Formatting rules: Use markdown — **bold** for t
 const SPOKEN_ACCURATE_RULE = "This answer will be read aloud by a voice assistant, not displayed as text. Do not use markdown, bold, bullet points, or LaTeX — write it as natural spoken sentences a tutor would say out loud, including the numbers and final answer in plain words (e.g. say 'mu naught i over two R', not '$\\mu_0 i / 2R$').";
 
 async function solveImageAccurately(base64Image: string, mimeType: string, caption: string): Promise<string> {
-    const ncertRef = getRelevantNCERTContext(caption || '');
-    const fineTunedContext = getFineTunedExemplarsText();
+  const ncertRef = getRelevantNCERTContext(caption || '');
+  const fineTunedContext = getFineTunedExemplarsText();
 
-    const promptText = `You are NeetMaster AI, an expert NEET tutor solving a Physics/Chemistry/Biology problem from a photo, strictly according to NCERT. Work through the problem carefully step by step, double-check each calculation, and verify the final answer makes physical sense before finalizing it. ${SPOKEN_ACCURATE_RULE}\n\n${ncertRef ? `NCERT Knowledge Base Context:\n${ncertRef}\n\n` : ''}Few-Shot Exemplars:\n${fineTunedContext}\n\nThe student's question/caption: "${caption || '(no caption, just solve what is shown in the image)'}"`;
+  const promptText = `You are NeetMaster AI, an expert NEET tutor solving a Physics/Chemistry/Biology problem from a photo, strictly according to NCERT. Work through the problem carefully step by step, double-check each calculation, and verify the final answer makes physical sense before finalizing it. ${SPOKEN_ACCURATE_RULE}\n\n${ncertRef ? `NCERT Knowledge Base Context:\n${ncertRef}\n\n` : ''}Few-Shot Exemplars:\n${fineTunedContext}\n\nThe student's question/caption: "${caption || '(no caption, just solve what is shown in the image)'}"`;
 
-    const response = await ai.models.generateContent({
-        model: "gemini-3.6-flash",
-        contents: {
-            parts: [
-                { text: promptText },
-                { inlineData: { data: base64Image, mimeType: mimeType || "image/jpeg" } }
-            ]
-        },
-        config: {
-            tools: [{ googleSearch: {} }],
-        }
-    });
-    return response.text || "";
+  const response = await ai.models.generateContent({
+    model: "gemini-3.6-flash",
+    contents: {
+      parts: [
+        { text: promptText },
+        { inlineData: { data: base64Image, mimeType: mimeType || "image/jpeg" } }
+      ]
+    },
+    config: {
+      tools: [{ googleSearch: {} }],
+    }
+  });
+  return response.text || "";
 }
 
 async function callAI(prompt: string | any[]): Promise<string> {
-    try {
-        const queryStr = typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
-        const ncertRef = getRelevantNCERTContext(queryStr);
-        const fineTunedContext = getFineTunedExemplarsText();
+  try {
+    const queryStr = typeof prompt === 'string' ? prompt : JSON.stringify(prompt);
+    const ncertRef = getRelevantNCERTContext(queryStr);
+    const fineTunedContext = getFineTunedExemplarsText();
 
-        const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. ${PLAIN_FORMAT_RULE}\n${ncertRef ? `NCERT Reference:\n${ncertRef}\n` : ''}Fine-Tuned Exemplars:\n${fineTunedContext}\nCurrent Time: ${new Date().toISOString()}`;
-        
-        let contentParts: any[] = [];
-        if (typeof prompt === 'string') {
-            contentParts = [{ text: systemInstruction }, { text: prompt }];
-        } else if (Array.isArray(prompt)) {
-            contentParts = [{ text: systemInstruction }, ...prompt];
-        } else {
-            contentParts = [{ text: systemInstruction }, prompt];
-        }
+    const systemInstruction = `Strict Instruction: Respond with extreme brevity. Be 100% accurate. If the answer is a single word or number, give only that. No filler, no explanations unless requested, no pleasantries. For math, just the result. ${PLAIN_FORMAT_RULE}\n${ncertRef ? `NCERT Reference:\n${ncertRef}\n` : ''}Fine-Tuned Exemplars:\n${fineTunedContext}\nCurrent Time: ${new Date().toISOString()}`;
 
-        const response = await generateWithFallback("gemini-3.6-flash", { parts: contentParts });
-        return response.text || "";
-    } catch (error) {
-        console.error("Gemini AI Error:", error);
-        // Re-throw instead of returning a fake "Internal AI Error" string —
-        // returning a string here made every caller treat a failure as if
-        // it were a real AI reply (200 OK, chat shows "Internal AI Error"
-        // as if the model said it), which hid the actual cause (rate
-        // limit, bad model name, invalid key, etc) from both the network
-        // response and server logs beyond this one console.error line.
-        throw error;
+    let contentParts: any[] = [];
+    if (typeof prompt === 'string') {
+      contentParts = [{ text: systemInstruction }, { text: prompt }];
+    } else if (Array.isArray(prompt)) {
+      contentParts = [{ text: systemInstruction }, ...prompt];
+    } else {
+      contentParts = [{ text: systemInstruction }, prompt];
     }
+
+    const response = await generateWithFallback("gemini-3.6-flash", { parts: contentParts });
+    return response.text || "";
+  } catch (error) {
+    console.error("Gemini AI Error:", error);
+    // Re-throw instead of returning a fake "Internal AI Error" string —
+    // returning a string here made every caller treat a failure as if
+    // it were a real AI reply (200 OK, chat shows "Internal AI Error"
+    // as if the model said it), which hid the actual cause (rate
+    // limit, bad model name, invalid key, etc) from both the network
+    // response and server logs beyond this one console.error line.
+    throw error;
+  }
 }
 
 async function callAIStream(prompt: string | any[], res: express.Response): Promise<void> {
-    try {
-        const stream = await ai.models.generateContentStream({
-            model: "gemini-3.6-flash",
-            contents: Array.isArray(prompt) ? { parts: prompt } : prompt
-        });
-        for await (const chunk of stream) {
-            res.write(chunk.text || "");
-        }
-    } catch (error) {
-        console.error("Gemini AI Streaming Error:", error);
-        res.write("Internal AI Error during streaming");
+  try {
+    const stream = await ai.models.generateContentStream({
+      model: "gemini-3.6-flash",
+      contents: Array.isArray(prompt) ? { parts: prompt } : prompt
+    });
+    for await (const chunk of stream) {
+      res.write(chunk.text || "");
     }
+  } catch (error) {
+    console.error("Gemini AI Streaming Error:", error);
+    res.write("Internal AI Error during streaming");
+  }
 }
 
 import { checkAndSummarizeStaleSessions, getSummaryForUser } from "./src/services/summarizationService";
@@ -353,9 +353,9 @@ async function startServer() {
   const app = express();
   app.set("trust proxy", 1);
   const PORT = 3000;
-  
+
   app.use(express.json({ limit: '10mb' }));
-  
+
   app.get('/health', (req, res) => {
     res.status(200).send('OK');
   });
@@ -391,7 +391,7 @@ async function startServer() {
     });
   }, 10 * 60 * 1000);
 
-  
+
   // Permissive CORS for mobile app (Capacitor) and AI Studio preview
   app.use(cors({
     origin: (origin, callback) => {
@@ -415,24 +415,24 @@ async function startServer() {
 
   let s3Client: S3Client | null = null;
   function getS3Client() {
-      if (!s3Client) {
-          const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
-          const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
-          const region = process.env.AWS_REGION || "ap-southeast-2";
+    if (!s3Client) {
+      const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+      const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+      const region = process.env.AWS_REGION || "ap-southeast-2";
 
-          if (!accessKeyId || !secretAccessKey) {
-              throw new Error("AWS credentials are not configured in system environment variables.");
-          }
-
-          s3Client = new S3Client({
-              region,
-              credentials: {
-                  accessKeyId,
-                  secretAccessKey
-              }
-          });
+      if (!accessKeyId || !secretAccessKey) {
+        throw new Error("AWS credentials are not configured in system environment variables.");
       }
-      return s3Client;
+
+      s3Client = new S3Client({
+        region,
+        credentials: {
+          accessKeyId,
+          secretAccessKey
+        }
+      });
+    }
+    return s3Client;
   }
 
   // Multer setup: keep uploaded files in memory, then stream to S3.
@@ -783,236 +783,236 @@ async function startServer() {
 
   app.get("/api/s3/health", async (req, res) => {
     try {
-        const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
-        const s3 = getS3Client();
-        const command = new ListObjectsV2Command({
-            Bucket: bucketName,
-            MaxKeys: 1
-        });
-        await s3.send(command);
-        res.json({ success: true, message: "Successfully connected to AWS S3" });
+      const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
+      const s3 = getS3Client();
+      const command = new ListObjectsV2Command({
+        Bucket: bucketName,
+        MaxKeys: 1
+      });
+      await s3.send(command);
+      res.json({ success: true, message: "Successfully connected to AWS S3" });
     } catch (error: any) {
-        console.error("AWS S3 Health Check Error:", error);
-        res.status(500).json({ 
-            success: false, 
-            error: error.message,
-            tip: "Check if AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and AWS_REGION are correctly set in secrets."
-        });
+      console.error("AWS S3 Health Check Error:", error);
+      res.status(500).json({
+        success: false,
+        error: error.message,
+        tip: "Check if AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and AWS_REGION are correctly set in secrets."
+      });
     }
   });
 
   app.get("/api/nta/health", async (req, res) => {
     try {
-        console.log("NTA Health Check: Attempting to connect to neet.nta.nic.in...");
-        const response = await fetch("https://neet.nta.nic.in/", {
-            headers: { 'User-Agent': 'Mozilla/5.0' },
-            timeout: 5000
-        } as any);
-        
-        if (response.ok) {
-            res.json({ success: true, message: "Successfully connected to NTA website" });
-        } else {
-            res.status(response.status).json({ 
-                success: false, 
-                message: `NTA website returned status ${response.status}`,
-                status: response.status
-            });
-        }
-    } catch (error: any) {
-        console.error("NTA Health Check Error:", error);
-        res.status(500).json({ 
-            success: false, 
-            error: error.message,
-            tip: "This might be due to NTA blocking the server's IP or a temporary network issue on the host."
+      console.log("NTA Health Check: Attempting to connect to neet.nta.nic.in...");
+      const response = await fetch("https://neet.nta.nic.in/", {
+        headers: { 'User-Agent': 'Mozilla/5.0' },
+        timeout: 5000
+      } as any);
+
+      if (response.ok) {
+        res.json({ success: true, message: "Successfully connected to NTA website" });
+      } else {
+        res.status(response.status).json({
+          success: false,
+          message: `NTA website returned status ${response.status}`,
+          status: response.status
         });
+      }
+    } catch (error: any) {
+      console.error("NTA Health Check Error:", error);
+      res.status(500).json({
+        success: false,
+        error: error.message,
+        tip: "This might be due to NTA blocking the server's IP or a temporary network issue on the host."
+      });
     }
   });
 
   app.get("/api/ncert-list", async (req, res) => {
     try {
-        const { bucket, prefix } = req.query;
-        if (!bucket || typeof bucket !== 'string') return res.status(400).json({ error: "Bucket required" });
-        
-        const s3 = getS3Client();
-        const listCommand = new ListObjectsV2Command({
+      const { bucket, prefix } = req.query;
+      if (!bucket || typeof bucket !== 'string') return res.status(400).json({ error: "Bucket required" });
+
+      const s3 = getS3Client();
+      const listCommand = new ListObjectsV2Command({
+        Bucket: bucket,
+        Prefix: prefix as string || '',
+      });
+
+      const listResponse = await s3.send(listCommand);
+      const files = listResponse.Contents || [];
+
+      const filesWithUrl = await Promise.all(
+        files.filter(item => item.Key && item.Key.endsWith('.pdf')).map(async (item) => {
+          const key = item.Key!;
+          const getObjectCommand = new GetObjectCommand({
             Bucket: bucket,
-            Prefix: prefix as string || '',
-        });
+            Key: key,
+          });
+          const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
+          return { key, url: signedUrl, name: key.split('/').pop() };
+        })
+      );
 
-        const listResponse = await s3.send(listCommand);
-        const files = listResponse.Contents || [];
-
-        const filesWithUrl = await Promise.all(
-            files.filter(item => item.Key && item.Key.endsWith('.pdf')).map(async (item) => {
-                const key = item.Key!;
-                const getObjectCommand = new GetObjectCommand({
-                    Bucket: bucket,
-                    Key: key,
-                });
-                const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
-                return { key, url: signedUrl, name: key.split('/').pop() };
-            })
-        );
-
-        res.json({ success: true, files: filesWithUrl });
+      res.json({ success: true, files: filesWithUrl });
     } catch (error: any) {
-        console.error("AWS S3 NCERT Fetch Error:", error);
-        res.status(500).json({ success: false, error: error.message });
+      console.error("AWS S3 NCERT Fetch Error:", error);
+      res.status(500).json({ success: false, error: error.message });
     }
   });
 
   app.post("/api/private-videos", requireAppCheck, requireAuth, async (req: any, res: any) => {
     try {
-        const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
-        const s3 = getS3Client();
+      const bucketName = process.env.S3_BUCKET || "neetmaster-videos-01";
+      const s3 = getS3Client();
 
-        const listCommand = new ListObjectsV2Command({
+      const listCommand = new ListObjectsV2Command({
+        Bucket: bucketName,
+      });
+
+      const listResponse = await s3.send(listCommand);
+      const videoFiles = listResponse.Contents || [];
+
+      console.log(`AWS S3: Found ${videoFiles.length} files in bucket ${bucketName}`);
+
+      // Filter out non-video files
+      const filteredFiles = videoFiles.filter(item => {
+        const key = item.Key || "";
+        if (key.endsWith("/")) return false; // Ignore directories
+
+        const lowerKey = key.toLowerCase();
+        return lowerKey.endsWith(".mp4") ||
+          lowerKey.endsWith(".mkv") ||
+          lowerKey.endsWith(".mov") ||
+          lowerKey.endsWith(".webm");
+      });
+
+      console.log(`AWS S3: Found ${filteredFiles.length} video files after filtering`);
+
+      const videosWithUrl = await Promise.all(
+        filteredFiles.map(async (item) => {
+          const key = item.Key || "";
+          const getObjectCommand = new GetObjectCommand({
             Bucket: bucketName,
+            Key: key,
+          });
+
+          const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
+
+          const parts = key.split("/");
+          let subject = "General";
+          let chapter = "Misc";
+          let filenameRaw = key;
+
+          if (parts.length >= 3) {
+            subject = parts[0];
+            chapter = parts[1];
+            filenameRaw = parts[parts.length - 1];
+          } else if (parts.length === 2) {
+            subject = parts[0];
+            chapter = "General";
+            filenameRaw = parts[1];
+          } else {
+            subject = "General";
+            chapter = "Misc";
+            filenameRaw = key;
+          }
+
+          // Format Subject Name
+          subject = subject.replace(/[_-]/g, " ");
+          subject = subject.replace(/\b\w/g, c => c.toUpperCase());
+
+          // Format Chapter Name
+          chapter = chapter.replace(/[_-]/g, " ");
+          chapter = chapter.replace(/\b\w/g, c => c.toUpperCase());
+
+          // Format Lecture Title
+          let title = filenameRaw.replace(/\.[^/.]+$/, ""); // Remove extension
+          title = title.replace(/[_-]/g, " ");
+          title = title.replace(/([a-zA-Z]+)(\d+)/g, "$1 $2");
+          title = title.replace(/(\d+)([a-zA-Z]+)/g, "$1 $2");
+          title = title.replace(/\b\w/g, c => c.toUpperCase());
+
+          return {
+            key,
+            url: signedUrl,
+            size: item.Size,
+            lastModified: item.LastModified?.toISOString(),
+            title,
+            subject,
+            chapter
+          };
+        })
+      );
+
+      // Group by Subject and Chapter
+      interface VideoItem {
+        key: string;
+        url: string;
+        size?: number;
+        lastModified?: string;
+        title: string;
+      }
+
+      interface ChapterGroup {
+        name: string;
+        videos: VideoItem[];
+      }
+
+      interface SubjectGroup {
+        name: string;
+        chapters: ChapterGroup[];
+      }
+
+      const subjectMap = new Map<string, Map<string, VideoItem[]>>();
+
+      for (const vid of videosWithUrl) {
+        if (!subjectMap.has(vid.subject)) {
+          subjectMap.set(vid.subject, new Map<string, VideoItem[]>());
+        }
+        const chapterMap = subjectMap.get(vid.subject)!;
+        if (!chapterMap.has(vid.chapter)) {
+          chapterMap.set(vid.chapter, []);
+        }
+        chapterMap.get(vid.chapter)!.push({
+          key: vid.key,
+          url: vid.url,
+          size: vid.size,
+          lastModified: vid.lastModified,
+          title: vid.title
         });
+      }
 
-        const listResponse = await s3.send(listCommand);
-        const videoFiles = listResponse.Contents || [];
-        
-        console.log(`AWS S3: Found ${videoFiles.length} files in bucket ${bucketName}`);
-
-        // Filter out non-video files
-        const filteredFiles = videoFiles.filter(item => {
-            const key = item.Key || "";
-            if (key.endsWith("/")) return false; // Ignore directories
-            
-            const lowerKey = key.toLowerCase();
-            return lowerKey.endsWith(".mp4") || 
-                   lowerKey.endsWith(".mkv") || 
-                   lowerKey.endsWith(".mov") || 
-                   lowerKey.endsWith(".webm");
+      const subjects: SubjectGroup[] = [];
+      for (const [subjName, chapMap] of subjectMap.entries()) {
+        const chapters: ChapterGroup[] = [];
+        for (const [chapName, vids] of chapMap.entries()) {
+          vids.sort((a, b) => a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }));
+          chapters.push({
+            name: chapName,
+            videos: vids
+          });
+        }
+        chapters.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+        subjects.push({
+          name: subjName,
+          chapters
         });
+      }
+      subjects.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
 
-        console.log(`AWS S3: Found ${filteredFiles.length} video files after filtering`);
-
-        const videosWithUrl = await Promise.all(
-            filteredFiles.map(async (item) => {
-                const key = item.Key || "";
-                const getObjectCommand = new GetObjectCommand({
-                    Bucket: bucketName,
-                    Key: key,
-                });
-                
-                const signedUrl = await getSignedUrl(s3, getObjectCommand, { expiresIn: 3600 });
-                
-                const parts = key.split("/");
-                let subject = "General";
-                let chapter = "Misc";
-                let filenameRaw = key;
-
-                if (parts.length >= 3) {
-                    subject = parts[0];
-                    chapter = parts[1];
-                    filenameRaw = parts[parts.length - 1];
-                } else if (parts.length === 2) {
-                    subject = parts[0];
-                    chapter = "General";
-                    filenameRaw = parts[1];
-                } else {
-                    subject = "General";
-                    chapter = "Misc";
-                    filenameRaw = key;
-                }
-                
-                // Format Subject Name
-                subject = subject.replace(/[_-]/g, " ");
-                subject = subject.replace(/\b\w/g, c => c.toUpperCase());
-                
-                // Format Chapter Name
-                chapter = chapter.replace(/[_-]/g, " ");
-                chapter = chapter.replace(/\b\w/g, c => c.toUpperCase());
-                
-                // Format Lecture Title
-                let title = filenameRaw.replace(/\.[^/.]+$/, ""); // Remove extension
-                title = title.replace(/[_-]/g, " ");
-                title = title.replace(/([a-zA-Z]+)(\d+)/g, "$1 $2");
-                title = title.replace(/(\d+)([a-zA-Z]+)/g, "$1 $2");
-                title = title.replace(/\b\w/g, c => c.toUpperCase());
-                
-                return {
-                    key,
-                    url: signedUrl,
-                    size: item.Size,
-                    lastModified: item.LastModified?.toISOString(),
-                    title,
-                    subject,
-                    chapter
-                };
-            })
-        );
-
-        // Group by Subject and Chapter
-        interface VideoItem {
-            key: string;
-            url: string;
-            size?: number;
-            lastModified?: string;
-            title: string;
-        }
-        
-        interface ChapterGroup {
-            name: string;
-            videos: VideoItem[];
-        }
-        
-        interface SubjectGroup {
-            name: string;
-            chapters: ChapterGroup[];
-        }
-
-        const subjectMap = new Map<string, Map<string, VideoItem[]>>();
-
-        for (const vid of videosWithUrl) {
-            if (!subjectMap.has(vid.subject)) {
-                subjectMap.set(vid.subject, new Map<string, VideoItem[]>());
-            }
-            const chapterMap = subjectMap.get(vid.subject)!;
-            if (!chapterMap.has(vid.chapter)) {
-                chapterMap.set(vid.chapter, []);
-            }
-            chapterMap.get(vid.chapter)!.push({
-                key: vid.key,
-                url: vid.url,
-                size: vid.size,
-                lastModified: vid.lastModified,
-                title: vid.title
-            });
-        }
-
-        const subjects: SubjectGroup[] = [];
-        for (const [subjName, chapMap] of subjectMap.entries()) {
-            const chapters: ChapterGroup[] = [];
-            for (const [chapName, vids] of chapMap.entries()) {
-                vids.sort((a, b) => a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }));
-                chapters.push({
-                    name: chapName,
-                    videos: vids
-                });
-            }
-            chapters.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
-            subjects.push({
-                name: subjName,
-                chapters
-            });
-        }
-        subjects.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
-
-        res.json({ success: true, subjects });
+      res.json({ success: true, subjects });
     } catch (error: any) {
-        console.error("AWS S3 Fetch Error:", error);
-        res.status(500).json({ 
-            success: false, 
-            error: error.message || "Failed to load private videos from AWS S3." 
-        });
+      console.error("AWS S3 Fetch Error:", error);
+      res.status(500).json({
+        success: false,
+        error: error.message || "Failed to load private videos from AWS S3."
+      });
     }
   });
 
   app.get("/api/logs", requireAppCheck, requireAuth, requireAdmin, (req: any, res: any) => {
-      res.json({ logs });
+    res.json({ logs });
   });
 
   const otpStore = new Map<string, { otp: string; createdAt: number }>();
@@ -1026,17 +1026,17 @@ async function startServer() {
   app.post("/api/check-email-user", async (req, res) => {
     const { email } = req.body;
     if (!email) {
-        return res.status(400).json({ error: "Missing email" });
+      return res.status(400).json({ error: "Missing email" });
     }
     try {
-        await admin.auth().getUserByEmail(email);
-        return res.json({ exists: true });
+      await admin.auth().getUserByEmail(email);
+      return res.json({ exists: true });
     } catch (error: any) {
-        if (error?.code === 'auth/user-not-found') {
-            return res.json({ exists: false });
-        }
-        console.error("check-email-user error:", error);
-        return res.status(500).json({ error: "Failed to check email" });
+      if (error?.code === 'auth/user-not-found') {
+        return res.json({ exists: false });
+      }
+      console.error("check-email-user error:", error);
+      return res.status(500).json({ error: "Failed to check email" });
     }
   });
 
@@ -1047,126 +1047,126 @@ async function startServer() {
   app.post("/api/check-phone-user", async (req, res) => {
     const { phoneNumber } = req.body;
     if (!phoneNumber) {
-        return res.status(400).json({ error: "Missing phoneNumber" });
+      return res.status(400).json({ error: "Missing phoneNumber" });
     }
     try {
-        await admin.auth().getUserByPhoneNumber(phoneNumber);
-        return res.json({ exists: true });
+      await admin.auth().getUserByPhoneNumber(phoneNumber);
+      return res.json({ exists: true });
     } catch (error: any) {
-        if (error?.code === 'auth/user-not-found') {
-            return res.json({ exists: false });
-        }
-        console.error("check-phone-user error:", error);
-        return res.status(500).json({ error: "Failed to check phone number" });
+      if (error?.code === 'auth/user-not-found') {
+        return res.json({ exists: false });
+      }
+      console.error("check-phone-user error:", error);
+      return res.status(500).json({ error: "Failed to check phone number" });
     }
   });
 
   app.post("/api/send-otp", async (req, res) => {
     const { identifier } = req.body;
     if (!identifier) {
-        return res.status(400).json({ error: "Missing identifier" });
+      return res.status(400).json({ error: "Missing identifier" });
     }
-    
+
     // Generate 4-digit OTP
     const otp = Math.floor(1000 + Math.random() * 9000).toString();
-    
+
     try {
-        // Store in local in-memory store to avoid Firestore PERMISSION_DENIED errors on server
-        otpStore.set(identifier, {
-            otp,
-            createdAt: Date.now()
-        });
+      // Store in local in-memory store to avoid Firestore PERMISSION_DENIED errors on server
+      otpStore.set(identifier, {
+        otp,
+        createdAt: Date.now()
+      });
 
-        // Determine if it is email and we can send it
-        const isEmail = identifier.includes('@');
-        const hasBrevoApi = !!process.env.BREVO_API_KEY;
+      // Determine if it is email and we can send it
+      const isEmail = identifier.includes('@');
+      const hasBrevoApi = !!process.env.BREVO_API_KEY;
 
-        if (isEmail && hasBrevoApi) {
-            try {
-                const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER || 'noreply@neetmaster.online';
-                const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-                    method: 'POST',
-                    headers: {
-                        'accept': 'application/json',
-                        'api-key': process.env.BREVO_API_KEY!,
-                        'content-type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        sender: { name: 'NeetMaster', email: fromEmail },
-                        to: [{ email: identifier }],
-                        subject: 'Your OTP for NeetMaster Verification',
-                        textContent: `Your OTP is ${otp}. It expires in 5 minutes.`,
-                    }),
-                });
+      if (isEmail && hasBrevoApi) {
+        try {
+          const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER || 'noreply@neetmaster.online';
+          const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
+            method: 'POST',
+            headers: {
+              'accept': 'application/json',
+              'api-key': process.env.BREVO_API_KEY!,
+              'content-type': 'application/json',
+            },
+            body: JSON.stringify({
+              sender: { name: 'NeetMaster', email: fromEmail },
+              to: [{ email: identifier }],
+              subject: 'Your OTP for NeetMaster Verification',
+              textContent: `Your OTP is ${otp}. It expires in 5 minutes.`,
+            }),
+          });
 
-                if (!brevoResponse.ok) {
-                    const errBody = await brevoResponse.text();
-                    throw new Error(`Brevo API error (${brevoResponse.status}): ${errBody}`);
-                }
+          if (!brevoResponse.ok) {
+            const errBody = await brevoResponse.text();
+            throw new Error(`Brevo API error (${brevoResponse.status}): ${errBody}`);
+          }
 
-                console.log(`[Brevo API] Successfully sent OTP ${otp} to ${identifier}`);
-                return res.json({ success: true });
-            } catch (apiErr: any) {
-                console.error("[Brevo API Error] Failed to send email:", apiErr.message || apiErr);
-                // Fallback to returning test OTP so they are never blocked
-                return res.json({ 
-                    success: true, 
-                    testOtp: otp, 
-                    warning: "Email delivery failed. Running in test fallback mode." 
-                });
-            }
-        } else {
-            console.log(`[TEST MODE] OTP generated for ${identifier}: ${otp}`);
-            return res.json({ 
-                success: true, 
-                testOtp: otp, 
-                mode: "test" 
-            });
+          console.log(`[Brevo API] Successfully sent OTP ${otp} to ${identifier}`);
+          return res.json({ success: true });
+        } catch (apiErr: any) {
+          console.error("[Brevo API Error] Failed to send email:", apiErr.message || apiErr);
+          // Fallback to returning test OTP so they are never blocked
+          return res.json({
+            success: true,
+            testOtp: otp,
+            warning: "Email delivery failed. Running in test fallback mode."
+          });
         }
+      } else {
+        console.log(`[TEST MODE] OTP generated for ${identifier}: ${otp}`);
+        return res.json({
+          success: true,
+          testOtp: otp,
+          mode: "test"
+        });
+      }
     } catch (error: any) {
-        console.error("OTP creation error:", error);
-        res.status(500).json({ error: "Failed to generate OTP: " + error.message });
+      console.error("OTP creation error:", error);
+      res.status(500).json({ error: "Failed to generate OTP: " + error.message });
     }
   });
 
   app.post("/api/verify-otp", async (req, res) => {
     const { identifier, otp, purpose } = req.body;
     if (!identifier || !otp) {
-        return res.status(400).json({ error: "Missing identifier or OTP" });
+      return res.status(400).json({ error: "Missing identifier or OTP" });
     }
-    
+
     try {
-        const stored = otpStore.get(identifier);
-        if (!stored) {
-            return res.status(400).json({ error: "OTP not found or expired. Please request a new OTP." });
-        }
-        
-        if (stored.otp !== otp) {
-            return res.status(400).json({ error: "Invalid OTP. Please try again." });
-        }
-        
-        // Expiration check (5 minutes)
-        if (Date.now() - stored.createdAt > 5 * 60 * 1000) {
-            otpStore.delete(identifier);
-            return res.status(400).json({ error: "OTP expired. Please request a new one." });
-        }
-        
-        // Clean up
+      const stored = otpStore.get(identifier);
+      if (!stored) {
+        return res.status(400).json({ error: "OTP not found or expired. Please request a new OTP." });
+      }
+
+      if (stored.otp !== otp) {
+        return res.status(400).json({ error: "Invalid OTP. Please try again." });
+      }
+
+      // Expiration check (5 minutes)
+      if (Date.now() - stored.createdAt > 5 * 60 * 1000) {
         otpStore.delete(identifier);
+        return res.status(400).json({ error: "OTP expired. Please request a new one." });
+      }
 
-        // For password-reset flows, issue a short-lived, single-use token that
-        // proves this OTP was verified, so /api/reset-password can't be called
-        // directly without having gone through OTP verification first.
-        if (purpose === 'password-reset') {
-            const resetToken = crypto.randomBytes(32).toString('hex');
-            resetTokenStore.set(resetToken, { identifier, createdAt: Date.now() });
-            return res.json({ success: true, resetToken });
-        }
+      // Clean up
+      otpStore.delete(identifier);
 
-        res.json({ success: true });
+      // For password-reset flows, issue a short-lived, single-use token that
+      // proves this OTP was verified, so /api/reset-password can't be called
+      // directly without having gone through OTP verification first.
+      if (purpose === 'password-reset') {
+        const resetToken = crypto.randomBytes(32).toString('hex');
+        resetTokenStore.set(resetToken, { identifier, createdAt: Date.now() });
+        return res.json({ success: true, resetToken });
+      }
+
+      res.json({ success: true });
     } catch (error: any) {
-        console.error("OTP verification error:", error);
-        res.status(500).json({ error: "Failed to verify OTP: " + error.message });
+      console.error("OTP verification error:", error);
+      res.status(500).json({ error: "Failed to verify OTP: " + error.message });
     }
   });
 
@@ -1176,148 +1176,148 @@ async function startServer() {
   app.post("/api/reset-password", async (req, res) => {
     const { resetToken, newPassword } = req.body;
     if (!resetToken || !newPassword) {
-        return res.status(400).json({ error: "Missing resetToken or newPassword" });
+      return res.status(400).json({ error: "Missing resetToken or newPassword" });
     }
     if (String(newPassword).length < 6) {
-        return res.status(400).json({ error: "Password must be at least 6 characters." });
+      return res.status(400).json({ error: "Password must be at least 6 characters." });
     }
 
     const stored = resetTokenStore.get(resetToken);
     if (!stored) {
-        return res.status(400).json({ error: "Reset session expired or invalid. Please verify OTP again." });
+      return res.status(400).json({ error: "Reset session expired or invalid. Please verify OTP again." });
     }
     // Reset tokens are valid for 10 minutes
     if (Date.now() - stored.createdAt > 10 * 60 * 1000) {
-        resetTokenStore.delete(resetToken);
-        return res.status(400).json({ error: "Reset session expired. Please verify OTP again." });
+      resetTokenStore.delete(resetToken);
+      return res.status(400).json({ error: "Reset session expired. Please verify OTP again." });
     }
 
     try {
-        const clean = String(stored.identifier).trim();
-        const firebaseEmail = clean.includes('@') ? clean : `${clean}@neetmaster.com`;
-        const userRecord = await admin.auth().getUserByEmail(firebaseEmail);
-        await admin.auth().updateUser(userRecord.uid, { password: newPassword });
-        resetTokenStore.delete(resetToken);
-        res.json({ success: true });
+      const clean = String(stored.identifier).trim();
+      const firebaseEmail = clean.includes('@') ? clean : `${clean}@neetmaster.com`;
+      const userRecord = await admin.auth().getUserByEmail(firebaseEmail);
+      await admin.auth().updateUser(userRecord.uid, { password: newPassword });
+      resetTokenStore.delete(resetToken);
+      res.json({ success: true });
     } catch (error: any) {
-        console.error("Password reset error:", error);
-        if (error?.code === 'auth/user-not-found') {
-            return res.status(400).json({ error: "No account found for this email." });
-        }
-        res.status(500).json({ error: "Failed to reset password: " + error.message });
+      console.error("Password reset error:", error);
+      if (error?.code === 'auth/user-not-found') {
+        return res.status(400).json({ error: "No account found for this email." });
+      }
+      res.status(500).json({ error: "Failed to reset password: " + error.message });
     }
   });
-  
+
   app.get("/api/neet-notices", async (req, res) => {
     console.log("NEET Notices Request: Scraping neet.nta.nic.in...");
     try {
-        const response = await fetch("https://neet.nta.nic.in/", {
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                'Accept-Language': 'en-US,en;q=0.5',
-            }
-        });
-        if (!response.ok) {
-            console.error(`NEET Notices Fetch Failed: ${response.status} ${response.statusText}`);
-            throw new Error(`NTA Server returned ${response.status}`);
+      const response = await fetch("https://neet.nta.nic.in/", {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.5',
         }
-        const html = await response.text();
-        console.log(`NEET Notices: Successfully fetched HTML (${html.length} bytes)`);
-        const $ = cheerio.load(html);
-        
-        const publicNotices: {text: string, url: string}[] = [];
-        const candidateActivity: {text: string, url: string}[] = [];
-        
-        // Find the sections based on visual headings
-        const sections = {
-            'Public Notices': [] as {text: string, url: string}[],
-            'Candidate Activity': [] as {text: string, url: string}[]
-        };
+      });
+      if (!response.ok) {
+        console.error(`NEET Notices Fetch Failed: ${response.status} ${response.statusText}`);
+        throw new Error(`NTA Server returned ${response.status}`);
+      }
+      const html = await response.text();
+      console.log(`NEET Notices: Successfully fetched HTML (${html.length} bytes)`);
+      const $ = cheerio.load(html);
 
-        // Find elements containing the text
-        const headings = $('h1, h2, h3, h4, h5, h6, .heading, strong, .card-header, div, span').filter((_, el) => {
-            const text = $(el).text().trim();
-            return text === 'Public Notices' || text === 'Candidate Activity';
-        });
+      const publicNotices: { text: string, url: string }[] = [];
+      const candidateActivity: { text: string, url: string }[] = [];
 
-        // Debugging logs to help identify structure issues
-        console.log(`Found ${headings.length} potential headings`);
+      // Find the sections based on visual headings
+      const sections = {
+        'Public Notices': [] as { text: string, url: string }[],
+        'Candidate Activity': [] as { text: string, url: string }[]
+      };
 
-        headings.each((i, el) => {
-            const headingText = $(el).text().trim();
-            console.log(`Processing heading: "${headingText}"`);
-            
-            // Find the list container associated with this heading
-            // Often it's in the same parent or following sibling
-            let container = $(el).parent().find('ul');
-            if (container.length === 0) {
-                container = $(el).nextAll('ul').first();
-            }
-            if (container.length === 0) {
-                container = $(el).closest('div').find('ul');
-            }
-            
-            console.log(`Container length for "${headingText}": ${container.length}`);
+      // Find elements containing the text
+      const headings = $('h1, h2, h3, h4, h5, h6, .heading, strong, .card-header, div, span').filter((_, el) => {
+        const text = $(el).text().trim();
+        return text === 'Public Notices' || text === 'Candidate Activity';
+      });
 
-            const list = container.first().find('li');
-            console.log(`List length for "${headingText}": ${list.length}`);
-            
-            if (headingText === 'Public Notices') {
-                list.each((j, li) => {
-                    const link = $(li).find('a');
-                    const text = link.text().trim() || $(li).text().trim();
-                    let url = link.attr('href');
-                    if (url && !url.startsWith('http')) {
-                        url = 'https://neet.nta.nic.in' + url;
-                    }
-                    if (text) sections['Public Notices'].push({ text, url: url || '#' });
-                });
+      // Debugging logs to help identify structure issues
+      console.log(`Found ${headings.length} potential headings`);
+
+      headings.each((i, el) => {
+        const headingText = $(el).text().trim();
+        console.log(`Processing heading: "${headingText}"`);
+
+        // Find the list container associated with this heading
+        // Often it's in the same parent or following sibling
+        let container = $(el).parent().find('ul');
+        if (container.length === 0) {
+          container = $(el).nextAll('ul').first();
+        }
+        if (container.length === 0) {
+          container = $(el).closest('div').find('ul');
+        }
+
+        console.log(`Container length for "${headingText}": ${container.length}`);
+
+        const list = container.first().find('li');
+        console.log(`List length for "${headingText}": ${list.length}`);
+
+        if (headingText === 'Public Notices') {
+          list.each((j, li) => {
+            const link = $(li).find('a');
+            const text = link.text().trim() || $(li).text().trim();
+            let url = link.attr('href');
+            if (url && !url.startsWith('http')) {
+              url = 'https://neet.nta.nic.in' + url;
             }
-            if (headingText === 'Candidate Activity') {
-                list.each((j, li) => {
-                    const link = $(li).find('a');
-                    const text = link.text().trim() || $(li).text().trim();
-                    let url = link.attr('href');
-                    if (url && !url.startsWith('http')) {
-                        url = 'https://neet.nta.nic.in' + url;
-                    }
-                    if (text) sections['Candidate Activity'].push({ text, url: url || '#' });
-                });
+            if (text) sections['Public Notices'].push({ text, url: url || '#' });
+          });
+        }
+        if (headingText === 'Candidate Activity') {
+          list.each((j, li) => {
+            const link = $(li).find('a');
+            const text = link.text().trim() || $(li).text().trim();
+            let url = link.attr('href');
+            if (url && !url.startsWith('http')) {
+              url = 'https://neet.nta.nic.in' + url;
             }
-        });
-        
-        console.log(`Extracted: ${sections['Public Notices'].length} Public Notices, ${sections['Candidate Activity'].length} Candidate Activity`);
-        
-        res.json({ 
-            publicNotices: sections['Public Notices'].slice(0, 5), 
-            candidateActivity: sections['Candidate Activity'].slice(0, 5) 
-        });
+            if (text) sections['Candidate Activity'].push({ text, url: url || '#' });
+          });
+        }
+      });
+
+      console.log(`Extracted: ${sections['Public Notices'].length} Public Notices, ${sections['Candidate Activity'].length} Candidate Activity`);
+
+      res.json({
+        publicNotices: sections['Public Notices'].slice(0, 5),
+        candidateActivity: sections['Candidate Activity'].slice(0, 5)
+      });
     } catch (error) {
-        console.error("NEET Notices Error:", error);
-        res.status(500).json({ error: "Failed to fetch notices" });
+      console.error("NEET Notices Error:", error);
+      res.status(500).json({ error: "Failed to fetch notices" });
     }
   });
 
   // API route for note analysis
   app.post("/api/ask-note", requireAppCheck, requireAuth, async (req, res) => {
-      const { noteContent, question } = req.body;
-      if (!noteContent || !question) {
-          return res.status(400).json({ error: "Missing data" });
-      }
+    const { noteContent, question } = req.body;
+    if (!noteContent || !question) {
+      return res.status(400).json({ error: "Missing data" });
+    }
 
-      try {
-          const prompt = `Use the following note content to answer the question. Be concise.\n\nNote:\n${noteContent}\n\nQuestion: ${question}`;
-          const reply = await callAI(prompt);
-          res.json({ reply });
-      } catch (error) {
-          console.error("Note AI Error:", error);
-          res.status(500).json({ error: "Failed to get AI response" });
-      }
+    try {
+      const prompt = `Use the following note content to answer the question. Be concise.\n\nNote:\n${noteContent}\n\nQuestion: ${question}`;
+      const reply = await callAI(prompt);
+      res.json({ reply });
+    } catch (error) {
+      console.error("Note AI Error:", error);
+      res.status(500).json({ error: "Failed to get AI response" });
+    }
   });
 
 
-  
+
   app.post("/api/send-notification", requireAdmin, async (req, res) => {
     const { title, message, notificationId } = req.body;
     if (!title || !message) {
@@ -1344,7 +1344,7 @@ async function startServer() {
           if (typeof rawToken === 'string' && rawToken.includes('%')) {
             try {
               rawToken = decodeURIComponent(rawToken.replace(/%2E/g, '.'));
-            } catch (e) {}
+            } catch (e) { }
           }
           if (rawToken && typeof rawToken === 'string') {
             tokens.push(rawToken);
@@ -1357,7 +1357,7 @@ async function startServer() {
       if (tokens.length === 0) {
         return res.json({ success: true, message: "No tokens found" });
       }
-      
+
       console.log(`[FCM] Sending notifications to ${tokens.length} tokens.`);
 
       const messagePayloads = tokens.map(token => ({
@@ -1399,7 +1399,7 @@ async function startServer() {
       const responses = await Promise.allSettled(
         messagePayloads.map(payload => admin.messaging().send(payload))
       );
-      
+
       const successCount = responses.filter(r => r.status === 'fulfilled').length;
       const failureCount = responses.filter(r => r.status === 'rejected').length;
 
@@ -1459,13 +1459,13 @@ async function startServer() {
 
   // API route for extracting questions from text
   app.post("/api/extract-questions", requireAppCheck, requireAuth, async (req, res) => {
-      const { text, subject } = req.body;
-      if (!text) {
-          return res.status(400).json({ error: "Missing text" });
-      }
+    const { text, subject } = req.body;
+    if (!text) {
+      return res.status(400).json({ error: "Missing text" });
+    }
 
-      try {
-          const prompt = `
+    try {
+      const prompt = `
             Extract multiple-choice questions from the following text and return them as a JSON array.
             Each object should have:
             - question: The question text
@@ -1479,42 +1479,42 @@ async function startServer() {
             Text:
             ${text.slice(0, 5000)} // Limiting size for Gemini flash
           `;
-          
-          const reply = await callAI(prompt);
-          // Try to clean the reply in case AI adds markdown
-          const cleanedReply = reply.trim().replace(/^```json/, '').replace(/```$/, '').trim();
-          const questions = JSON.parse(cleanedReply);
-          res.json({ questions });
-      } catch (error) {
-          console.error("Extraction API Error:", error);
-          res.status(500).json({ error: "Failed to extract questions" });
-      }
+
+      const reply = await callAI(prompt);
+      // Try to clean the reply in case AI adds markdown
+      const cleanedReply = reply.trim().replace(/^```json/, '').replace(/```$/, '').trim();
+      const questions = JSON.parse(cleanedReply);
+      res.json({ questions });
+    } catch (error) {
+      console.error("Extraction API Error:", error);
+      res.status(500).json({ error: "Failed to extract questions" });
+    }
   });
 
   // API route for gemini
   app.post("/api/gemini", requireAppCheck, requireAuth, async (req, res) => {
-      const { messages, base64Audio, isStudyPlanChat, studentMemory } = req.body;
-      
-      try {
-          const contents: any[] = [];
-          
-          if (messages && Array.isArray(messages)) {
-              // For the study planner, the persistent studentMemory summary already
-              // carries the important long-term facts, so we only need the recent
-              // turns for immediate conversational context — not the entire raw
-              // history. This keeps each request small and avoids burning through
-              // the free-tier token/request quota on long-running chats.
-              const recentMessages = isStudyPlanChat ? messages.slice(-12) : messages;
-              recentMessages.forEach((m: any) => {
-                  contents.push({ text: `${m.role === 'user' ? 'User' : 'AI'}: ${m.content}` });
-              });
-          }
-          
-          if (base64Audio) {
-              contents.push({ inlineData: { data: base64Audio, mimeType: "audio/webm" } });
-          }
+    const { messages, base64Audio, isStudyPlanChat, studentMemory } = req.body;
 
-          const baseInstruction = `Strict Instruction: You are an expert NEET AI Assistant. 
+    try {
+      const contents: any[] = [];
+
+      if (messages && Array.isArray(messages)) {
+        // For the study planner, the persistent studentMemory summary already
+        // carries the important long-term facts, so we only need the recent
+        // turns for immediate conversational context — not the entire raw
+        // history. This keeps each request small and avoids burning through
+        // the free-tier token/request quota on long-running chats.
+        const recentMessages = isStudyPlanChat ? messages.slice(-12) : messages;
+        recentMessages.forEach((m: any) => {
+          contents.push({ text: `${m.role === 'user' ? 'User' : 'AI'}: ${m.content}` });
+        });
+      }
+
+      if (base64Audio) {
+        contents.push({ inlineData: { data: base64Audio, mimeType: "audio/webm" } });
+      }
+
+      const baseInstruction = `Strict Instruction: You are an expert NEET AI Assistant. 
 Respond with extreme brevity and 100% accuracy. 
 - If asked a simple question (like 2+2), respond with ONLY the answer (e.g., 4).
 - No fluff, no "Certainly!", no "I am here to help".
@@ -1525,7 +1525,7 @@ Respond with extreme brevity and 100% accuracy.
 - If asked for contact details, provide the Instagram ID "mr.divakar00".
 - If the user has a problem, suggest that they can shake their phone and click "Yes" on the prompt to share their problem.`;
 
-          const studyPlanInstruction = `You are an expert NEET Study Planner AI, acting like a caring, experienced mentor. You talk naturally in Hinglish (Hindi + English mix), the way a friendly coach talks to a student. Follow this exact conversational flow strictly, based on the full chat history given to you. Look at the conversation so far and figure out which phase you are currently in, then behave accordingly.
+      const studyPlanInstruction = `You are an expert NEET Study Planner AI, acting like a caring, experienced mentor. You talk naturally in Hinglish (Hindi + English mix), the way a friendly coach talks to a student. Follow this exact conversational flow strictly, based on the full chat history given to you. Look at the conversation so far and figure out which phase you are currently in, then behave accordingly.
 
 PHASE 1 — Start
 Trigger: this is the first user message in the conversation (or the first message after a reset) — no matter what the user says (could be "Hi", "Hello", "study plan banana hai", or literally anything).
@@ -1613,80 +1613,80 @@ After writing your normal reply to the user, on a new line add the exact delimit
 - Do NOT mention this memory block or the delimiter anywhere in your visible reply to the user — it must only appear after "///MEMORY///".
 - This memory section is mandatory in every single response, even simple greetings.`;
 
-          const isStream = req.headers.accept === 'text/event-stream' || req.query.stream === 'true';
-          const promptParts = [
-              { text: isStudyPlanChat ? studyPlanInstruction : baseInstruction },
-              ...contents
-          ];
+      const isStream = req.headers.accept === 'text/event-stream' || req.query.stream === 'true';
+      const promptParts = [
+        { text: isStudyPlanChat ? studyPlanInstruction : baseInstruction },
+        ...contents
+      ];
 
-          if (isStream) {
-              res.setHeader('Content-Type', 'text/event-stream');
-              res.setHeader('Cache-Control', 'no-cache');
-              res.setHeader('Connection', 'keep-alive');
+      if (isStream) {
+        res.setHeader('Content-Type', 'text/event-stream');
+        res.setHeader('Cache-Control', 'no-cache');
+        res.setHeader('Connection', 'keep-alive');
 
-              try {
-                  const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
-                  for await (const chunk of stream) {
-                      if (chunk.text) {
-                          res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
-                      }
-                  }
-                  res.write(`data: [DONE]\n\n`);
-                  res.end();
-              } catch (err: any) {
-                  console.error("Gemini Streaming Error (/api/gemini):", err);
-                  res.write(`data: ${JSON.stringify({ error: err.message || 'Stream error' })}\n\n`);
-                  res.write(`data: [DONE]\n\n`);
-                  res.end();
-              }
-              return;
+        try {
+          const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
+          for await (const chunk of stream) {
+            if (chunk.text) {
+              res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
+            }
           }
-
-          const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
-          
-          const rawText = response.text || "";
-          let replyText = rawText;
-          let updatedMemory = studentMemory || "";
-
-          if (isStudyPlanChat) {
-              const delimiterIndex = rawText.indexOf("///MEMORY///");
-              if (delimiterIndex !== -1) {
-                  replyText = rawText.slice(0, delimiterIndex).trim();
-                  updatedMemory = rawText.slice(delimiterIndex + "///MEMORY///".length).trim();
-              }
-          }
-
-          // Safety net: never send an empty reply to the user, even if the
-          // model mis-formatted the memory delimiter or returned something unexpected.
-          if (!replyText || !replyText.trim()) {
-              replyText = rawText.trim() || "Sorry, kuch gadbad ho gayi. Ek baar phir se try karo.";
-          }
-
-          if (!rawText.trim()) {
-              console.error("Gemini returned empty response.text for /api/gemini", { isStudyPlanChat });
-          }
-          
-          res.json({ text: replyText, updatedMemory: isStudyPlanChat ? updatedMemory : undefined });
-      } catch (error: any) {
-          console.error("Gemini API Error:", error);
-          const status = error?.status || error?.error?.status || error?.code;
-          const isQuotaOrCapacity = status === 'RESOURCE_EXHAUSTED' || status === 429 || status === 'UNAVAILABLE' || status === 503;
-          const userMessage = isQuotaOrCapacity
-              ? "AI abhi thoda busy hai (demand zyada hai). Thodi der (ek-do minute) baad phir se try karo. 🙏"
-              : "Failed to get AI response";
-          res.status(isQuotaOrCapacity ? 429 : 500).json({ error: userMessage });
-      }
-  }); 
-
-
-    // API route for deep analysis
-    app.post("/api/deep-analysis", requireAppCheck, requireAuth, async (req, res) => {
-        const { resultId, userId, results } = req.body;
-        if (!resultId || !userId || !results) {
-          return res.status(400).json({ error: "Missing data" });
+          res.write(`data: [DONE]\n\n`);
+          res.end();
+        } catch (err: any) {
+          console.error("Gemini Streaming Error (/api/gemini):", err);
+          res.write(`data: ${JSON.stringify({ error: err.message || 'Stream error' })}\n\n`);
+          res.write(`data: [DONE]\n\n`);
+          res.end();
         }
-    
-        const prompt = `
+        return;
+      }
+
+      const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
+
+      const rawText = response.text || "";
+      let replyText = rawText;
+      let updatedMemory = studentMemory || "";
+
+      if (isStudyPlanChat) {
+        const delimiterIndex = rawText.indexOf("///MEMORY///");
+        if (delimiterIndex !== -1) {
+          replyText = rawText.slice(0, delimiterIndex).trim();
+          updatedMemory = rawText.slice(delimiterIndex + "///MEMORY///".length).trim();
+        }
+      }
+
+      // Safety net: never send an empty reply to the user, even if the
+      // model mis-formatted the memory delimiter or returned something unexpected.
+      if (!replyText || !replyText.trim()) {
+        replyText = rawText.trim() || "Sorry, kuch gadbad ho gayi. Ek baar phir se try karo.";
+      }
+
+      if (!rawText.trim()) {
+        console.error("Gemini returned empty response.text for /api/gemini", { isStudyPlanChat });
+      }
+
+      res.json({ text: replyText, updatedMemory: isStudyPlanChat ? updatedMemory : undefined });
+    } catch (error: any) {
+      console.error("Gemini API Error:", error);
+      const status = error?.status || error?.error?.status || error?.code;
+      const isQuotaOrCapacity = status === 'RESOURCE_EXHAUSTED' || status === 429 || status === 'UNAVAILABLE' || status === 503;
+      const userMessage = isQuotaOrCapacity
+        ? "AI abhi thoda busy hai (demand zyada hai). Thodi der (ek-do minute) baad phir se try karo. 🙏"
+        : "Failed to get AI response";
+      res.status(isQuotaOrCapacity ? 429 : 500).json({ error: userMessage });
+    }
+  });
+
+
+  // API route for deep analysis
+  app.post("/api/deep-analysis", requireAppCheck, requireAuth, async (req, res) => {
+    const { resultId, userId, results } = req.body;
+    if (!resultId || !userId || !results) {
+      return res.status(400).json({ error: "Missing data" });
+    }
+
+    const prompt = `
             Analyze the following student test results carefully and act as an expert NEET tutor.
             Provide a deep, human-like analysis in Hinglish.
             
@@ -1699,40 +1699,40 @@ After writing your normal reply to the user, on a new line add the exact delimit
 
             Student Data: ${JSON.stringify(results)}
         `;
-        
-        try {
-            // Initiate AI analysis
-            const response = await ai.models.generateContent({
-                model: "gemini-3.6-flash",
-                contents: [{ parts: [{ text: prompt }] }]
-            });
-            
-            const analysisText = response.text || "";
-            // Extract JSON from response
-            const jsonStr = analysisText.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
-            const analysis = JSON.parse(jsonStr);
-            
-            // Update Firestore
-            const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
-            await db.collection('users').doc(userId).collection('results').doc(resultId).update({
-                deepAnalysis: analysis
-            });
-            
-            res.json({ success: true });
-        } catch (error) {
-            console.error("Deep Analysis API Error:", error);
-            res.status(500).json({ error: "Failed to perform deep analysis" });
-        }
-    });
-    
-    // API route for analysis
-    app.post("/api/analysis", requireAppCheck, requireAuth, async (req, res) => {
-        const { questions, answers } = req.body;
-        if (!questions || !answers) {
-          return res.status(400).json({ error: "Missing data" });
-        }
-    
-        const prompt = `
+
+    try {
+      // Initiate AI analysis
+      const response = await ai.models.generateContent({
+        model: "gemini-3.6-flash",
+        contents: [{ parts: [{ text: prompt }] }]
+      });
+
+      const analysisText = response.text || "";
+      // Extract JSON from response
+      const jsonStr = analysisText.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
+      const analysis = JSON.parse(jsonStr);
+
+      // Update Firestore
+      const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+      await db.collection('users').doc(userId).collection('results').doc(resultId).update({
+        deepAnalysis: analysis
+      });
+
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Deep Analysis API Error:", error);
+      res.status(500).json({ error: "Failed to perform deep analysis" });
+    }
+  });
+
+  // API route for analysis
+  app.post("/api/analysis", requireAppCheck, requireAuth, async (req, res) => {
+    const { questions, answers } = req.body;
+    if (!questions || !answers) {
+      return res.status(400).json({ error: "Missing data" });
+    }
+
+    const prompt = `
             Analyze the following student test results carefully:
             - Total Questions: ${questions.length}
             - Correct: ${Object.values(answers).filter((a: any, idx: number) => a === questions[idx].correct_option).length}
@@ -1746,65 +1746,65 @@ After writing your normal reply to the user, on a new line add the exact delimit
             
             Student Answers and Questions for reference: ${JSON.stringify(questions)}, ${JSON.stringify(answers)}
         `;
-        
-        try {
-            const analysis = await callAI(prompt);
-            res.json({ analysis });
-        } catch (error) {
-            console.error("Analysis API Error:", error);
-            res.status(500).json({ error: "Failed to get analysis" });
-        }
-    });
 
-    // API route for tutor
-    // Voice message in WhatsApp-style chat: send audio straight to Gemini
-    // (no separate STT step) — it transcribes and answers as the NEET
-    // tutor in one call. mimeType matches whatever MediaRecorder produced
-    // on the client (webm/opus in browsers, m4a/aac on some native builds).
-    app.post("/api/tutor-voice", requireAppCheck, requireAuth, async (req, res) => {
-        const { base64Audio, mimeType } = req.body;
-        if (!base64Audio) {
-            return res.status(400).json({ error: "Missing base64Audio" });
-        }
-        try {
-            const reply = await callAI([
-                { text: "You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this as a voice message — listen to it and answer their question." },
-                { inlineData: { data: base64Audio.includes(',') ? base64Audio.split(',')[1] : base64Audio, mimeType: mimeType || "audio/webm" } }
-            ]);
-            res.json({ reply });
-        } catch (error) {
-            console.error("Tutor Voice API Error:", error);
-            res.status(500).json({ error: "Failed to get AI response", detail: error instanceof Error ? error.message : String(error) });
-        }
-    });
+    try {
+      const analysis = await callAI(prompt);
+      res.json({ analysis });
+    } catch (error) {
+      console.error("Analysis API Error:", error);
+      res.status(500).json({ error: "Failed to get analysis" });
+    }
+  });
 
-    app.post("/api/tutor", requireAppCheck, requireAuth, async (req, res) => {
-        const { messages, base64Image } = req.body;
-        if (!messages || !Array.isArray(messages) || messages.length === 0) {
-          return res.status(400).json({ error: "Missing messages" });
-        }
-        
-        const lastMessage = messages[messages.length - 1].content;
-        
-        try {
-            let reply: string;
-            if (base64Image) {
-                const imgResponse = await generateWithFallback("gemini-3.6-flash", {
-                    parts: [
-                        { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE} The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
-                        { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                    ]
-                });
-                reply = imgResponse.text || "Sorry, I couldn't read that image.";
-            } else {
-                reply = await callAI(`You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${lastMessage}`);
-            }
-            res.json({ reply });
-        } catch (error) {
-            console.error("Tutor API Error:", error);
-            res.status(500).json({ error: "Failed to get AI response", detail: error instanceof Error ? error.message : String(error) });
-        }
-    });
+  // API route for tutor
+  // Voice message in WhatsApp-style chat: send audio straight to Gemini
+  // (no separate STT step) — it transcribes and answers as the NEET
+  // tutor in one call. mimeType matches whatever MediaRecorder produced
+  // on the client (webm/opus in browsers, m4a/aac on some native builds).
+  app.post("/api/tutor-voice", requireAppCheck, requireAuth, async (req, res) => {
+    const { base64Audio, mimeType } = req.body;
+    if (!base64Audio) {
+      return res.status(400).json({ error: "Missing base64Audio" });
+    }
+    try {
+      const reply = await callAI([
+        { text: "You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. The student sent this as a voice message — listen to it and answer their question." },
+        { inlineData: { data: base64Audio.includes(',') ? base64Audio.split(',')[1] : base64Audio, mimeType: mimeType || "audio/webm" } }
+      ]);
+      res.json({ reply });
+    } catch (error) {
+      console.error("Tutor Voice API Error:", error);
+      res.status(500).json({ error: "Failed to get AI response", detail: error instanceof Error ? error.message : String(error) });
+    }
+  });
+
+  app.post("/api/tutor", requireAppCheck, requireAuth, async (req, res) => {
+    const { messages, base64Image } = req.body;
+    if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      return res.status(400).json({ error: "Missing messages" });
+    }
+
+    const lastMessage = messages[messages.length - 1].content;
+
+    try {
+      let reply: string;
+      if (base64Image) {
+        const imgResponse = await generateWithFallback("gemini-3.6-flash", {
+          parts: [
+            { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE} The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
+            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+          ]
+        });
+        reply = imgResponse.text || "Sorry, I couldn't read that image.";
+      } else {
+        reply = await callAI(`You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${lastMessage}`);
+      }
+      res.json({ reply });
+    } catch (error) {
+      console.error("Tutor API Error:", error);
+      res.status(500).json({ error: "Failed to get AI response", detail: error instanceof Error ? error.message : String(error) });
+    }
+  });
 
   // API route for neural chat (Supports streaming SSE & JSON)
   app.post("/api/neural-chat", requireAppCheck, requireAuth, async (req, res) => {
@@ -1812,7 +1812,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: "Missing messages" });
     }
-    
+
     const lastMessage = messages[messages.length - 1].content;
     const isStream = req.headers.accept === 'text/event-stream' || req.query.stream === 'true';
 
@@ -1843,10 +1843,10 @@ After writing your normal reply to the user, on a new line add the exact delimit
       }
       return;
     }
-    
+
     try {
-        const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
-        res.json({ reply: response.text });
+      const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
+      res.json({ reply: response.text });
     } catch (error) {
       console.error("Gemini API Error (Neural):", error);
       res.status(500).json({ error: "Failed to get AI response: " + (error instanceof Error ? error.message : String(error)) });
@@ -1866,94 +1866,94 @@ After writing your normal reply to the user, on a new line add the exact delimit
     res.setHeader('Connection', 'keep-alive');
 
     try {
-        // 1. If image, find query
-        let finalPrompt = prompt;
-        if (base64Image && (!prompt || prompt.length < 5)) {
-            try {
-                // Use Gemini for image analysis
-                const response = await ai.models.generateContent({
-                    model: "gemini-3.6-flash",
-                    contents: {
-                        parts: [
-                            { text: "What is in the image? Give a 5 word search query." },
-                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                        ]
-                    }
-                });
-                finalPrompt = response.text || "Search for this image";
-            } catch (imgErr) {
-                console.error("Image analysis failed:", imgErr);
-                finalPrompt = "Search for this image";
-            }
-            res.write(`data: ${JSON.stringify({ query: finalPrompt })}\n\n`);
-        }
-
-        let searchResults: any[] = [];
-        const isDirectImageQuestion = base64Image && prompt && prompt.length >= 5;
-        
-        if (!isDirectImageQuestion && finalPrompt) {
-            searchResults = await performSearch(finalPrompt);
-            res.write(`data: ${JSON.stringify({ sources: searchResults })}\n\n`);
-        }
-        
-        let streamed = false;
+      // 1. If image, find query
+      let finalPrompt = prompt;
+      if (base64Image && (!prompt || prompt.length < 5)) {
         try {
-            let stream: any;
-            if (isDirectImageQuestion) {
-                 stream = await ai.models.generateContentStream({
-                    model: "gemini-3.6-flash",
-                    contents: {
-                        parts: [
-                            { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. Work through the problem carefully step by step, double-check each calculation before moving to the next step, and verify the final answer makes physical sense before giving it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${AI_SEARCH_FORMAT_RULE}` },
-                            { text: finalPrompt || "Describe this" }, 
-                            { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-                        ] 
-                    },
-                    config: {
-                        tools: [{ googleSearch: {} }],
-                    }
-                 });
-            } else {
-                 stream = await ai.models.generateContentStream({
-                    model: "gemini-3.6-flash",
-                    contents: {
-                        parts: [{ text: `You are Google AI Mode. Answer the user's query directly and accurately using current, real information. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. For general queries (e.g. live scores, current events), give the direct current answer clearly. ${AI_SEARCH_FORMAT_RULE}\n\nQuery: "${finalPrompt}"` }]
-                    },
-                    config: {
-                        tools: [{ googleSearch: {} }],
-                    }
-                 });
+          // Use Gemini for image analysis
+          const response = await ai.models.generateContent({
+            model: "gemini-3.6-flash",
+            contents: {
+              parts: [
+                { text: "What is in the image? Give a 5 word search query." },
+                { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+              ]
             }
+          });
+          finalPrompt = response.text || "Search for this image";
+        } catch (imgErr) {
+          console.error("Image analysis failed:", imgErr);
+          finalPrompt = "Search for this image";
+        }
+        res.write(`data: ${JSON.stringify({ query: finalPrompt })}\n\n`);
+      }
 
-            for await (const chunk of stream) {
-                if (chunk.text) {
-                    res.write(`data: ${JSON.stringify({ content: chunk.text })}\n\n`);
-                    streamed = true;
-                }
-                const webChunks = chunk.candidates?.[0]?.groundingMetadata?.groundingChunks;
-                if (webChunks && Array.isArray(webChunks)) {
-                    const groundedSources = webChunks
-                        .filter((c: any) => c.web && c.web.uri)
-                        .map((c: any) => ({ title: c.web.title || c.web.uri, url: c.web.uri }));
-                    if (groundedSources.length > 0) {
-                        res.write(`data: ${JSON.stringify({ sources: groundedSources })}\n\n`);
-                    }
-                }
+      let searchResults: any[] = [];
+      const isDirectImageQuestion = base64Image && prompt && prompt.length >= 5;
+
+      if (!isDirectImageQuestion && finalPrompt) {
+        searchResults = await performSearch(finalPrompt);
+        res.write(`data: ${JSON.stringify({ sources: searchResults })}\n\n`);
+      }
+
+      let streamed = false;
+      try {
+        let stream: any;
+        if (isDirectImageQuestion) {
+          stream = await ai.models.generateContentStream({
+            model: "gemini-3.6-flash",
+            contents: {
+              parts: [
+                { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. Work through the problem carefully step by step, double-check each calculation before moving to the next step, and verify the final answer makes physical sense before giving it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${AI_SEARCH_FORMAT_RULE}` },
+                { text: finalPrompt || "Describe this" },
+                { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
+              ]
+            },
+            config: {
+              tools: [{ googleSearch: {} }],
             }
-        } catch (e) {
-            console.error("Gemini stream failed", e);
+          });
+        } else {
+          stream = await ai.models.generateContentStream({
+            model: "gemini-3.6-flash",
+            contents: {
+              parts: [{ text: `You are Google AI Mode. Answer the user's query directly and accurately using current, real information. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. For general queries (e.g. live scores, current events), give the direct current answer clearly. ${AI_SEARCH_FORMAT_RULE}\n\nQuery: "${finalPrompt}"` }]
+            },
+            config: {
+              tools: [{ googleSearch: {} }],
+            }
+          });
         }
-        
-        if (!streamed) {
-             throw new Error("No AI response available");
+
+        for await (const chunk of stream) {
+          if (chunk.text) {
+            res.write(`data: ${JSON.stringify({ content: chunk.text })}\n\n`);
+            streamed = true;
+          }
+          const webChunks = chunk.candidates?.[0]?.groundingMetadata?.groundingChunks;
+          if (webChunks && Array.isArray(webChunks)) {
+            const groundedSources = webChunks
+              .filter((c: any) => c.web && c.web.uri)
+              .map((c: any) => ({ title: c.web.title || c.web.uri, url: c.web.uri }));
+            if (groundedSources.length > 0) {
+              res.write(`data: ${JSON.stringify({ sources: groundedSources })}\n\n`);
+            }
+          }
         }
-        
-        res.write('data: [DONE]\n\n');
-        res.end();
+      } catch (e) {
+        console.error("Gemini stream failed", e);
+      }
+
+      if (!streamed) {
+        throw new Error("No AI response available");
+      }
+
+      res.write('data: [DONE]\n\n');
+      res.end();
     } catch (error) {
-        console.error("Streaming Search Error:", error);
-        res.write(`data: ${JSON.stringify({ error: "Streaming failed" })}\n\n`);
-        res.end();
+      console.error("Streaming Search Error:", error);
+      res.write(`data: ${JSON.stringify({ error: "Streaming failed" })}\n\n`);
+      res.end();
     }
   });
 
@@ -1975,122 +1975,122 @@ After writing your normal reply to the user, on a new line add the exact delimit
     if (!token || typeof token !== 'string') return res.status(401).json({ error: "Missing access token" });
 
     try {
-        const decoded = jwt.verify(token, PDF_TOKEN_SECRET) as { uid?: string; url?: string };
-        if (decoded.url !== url) {
-            return res.status(403).json({ error: 'Token does not match requested URL' });
-        }
+      const decoded = jwt.verify(token, PDF_TOKEN_SECRET) as { uid?: string; url?: string };
+      if (decoded.url !== url) {
+        return res.status(403).json({ error: 'Token does not match requested URL' });
+      }
     } catch (e) {
-        return res.status(401).json({ error: 'Invalid or expired access token' });
+      return res.status(401).json({ error: 'Invalid or expired access token' });
     }
 
     const maxRetries = 2;
     let attempt = 0;
 
 
-    const fetchWithRedirects = (targetUrl: string, depth = 0): Promise<{buffer: Buffer, status: number, contentType: string}> => {
-        if (depth > 5) return Promise.reject(new Error("Too many redirects"));
+    const fetchWithRedirects = (targetUrl: string, depth = 0): Promise<{ buffer: Buffer, status: number, contentType: string }> => {
+      if (depth > 5) return Promise.reject(new Error("Too many redirects"));
 
-        return new Promise((resolve, reject) => {
-            let urlObj: URL;
-            try {
-                urlObj = new URL(targetUrl);
-            } catch (e) {
-                return reject(new Error("Invalid URL: " + targetUrl));
+      return new Promise((resolve, reject) => {
+        let urlObj: URL;
+        try {
+          urlObj = new URL(targetUrl);
+        } catch (e) {
+          return reject(new Error("Invalid URL: " + targetUrl));
+        }
+
+        const isNta = targetUrl.includes('nta.ac.in') || targetUrl.includes('nta.nic.in');
+        const isNcert = targetUrl.includes('ncert.nic.in');
+        const isGithub = targetUrl.includes('raw.githubusercontent.com');
+
+        const userAgents = [
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+          'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36'
+        ];
+        const randomUserAgent = userAgents[Math.floor(Math.random() * userAgents.length)];
+
+        const options: https.RequestOptions = {
+          method: 'GET',
+          timeout: 60000,
+          rejectUnauthorized: false,
+          agent: new https.Agent({ keepAlive: false }),
+          headers: {
+            'User-Agent': randomUserAgent,
+            'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+          }
+        };
+
+        if (isNta) {
+          options.headers!['Referer'] = 'https://www.nta.ac.in/Downloads';
+          options.headers!['Origin'] = 'https://www.nta.ac.in';
+          options.headers!['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7';
+          options.headers!['Accept-Language'] = 'en-US,en;q=0.9,hi;q=0.8';
+          options.headers!['Sec-Ch-Ua'] = '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"';
+          options.headers!['Sec-Ch-Ua-Mobile'] = '?0';
+          options.headers!['Sec-Ch-Ua-Platform'] = '"Windows"';
+          options.headers!['Sec-Fetch-Dest'] = 'document';
+          options.headers!['Sec-Fetch-Mode'] = 'navigate';
+          options.headers!['Sec-Fetch-Site'] = 'same-origin';
+          options.headers!['Sec-Fetch-User'] = '?1';
+          options.headers!['Upgrade-Insecure-Requests'] = '1';
+        } else if (isNcert) {
+          options.headers!['Referer'] = 'https://ncert.nic.in/textbook.php';
+          options.headers!['Origin'] = 'https://ncert.nic.in';
+        } else if (isGithub) {
+          options.headers!['Accept'] = '*/*';
+        }
+
+        const request = https.get(targetUrl, options, (response) => {
+          if (response.statusCode && [301, 302, 303, 307, 308].includes(response.statusCode)) {
+            const location = response.headers.location;
+            if (location) {
+              const nextUrl = location.startsWith('http') ? location : `${urlObj.protocol}//${urlObj.hostname}${location.startsWith('/') ? '' : '/'}${location}`;
+              console.log(`NTA Proxy: Redirecting to ${nextUrl}`);
+              return resolve(fetchWithRedirects(nextUrl, depth + 1));
             }
+          }
 
-            const isNta = targetUrl.includes('nta.ac.in') || targetUrl.includes('nta.nic.in');
-            const isNcert = targetUrl.includes('ncert.nic.in');
-            const isGithub = targetUrl.includes('raw.githubusercontent.com');
-            
-            const userAgents = [
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36'
-            ];
-            const randomUserAgent = userAgents[Math.floor(Math.random() * userAgents.length)];
+          if (response.statusCode !== 200) {
+            console.error(`NTA Proxy: Server returned status ${response.statusCode} for ${targetUrl}`);
+            return resolve({ buffer: Buffer.alloc(0), status: response.statusCode || 500, contentType: response.headers['content-type'] || '' });
+          }
 
-            const options: https.RequestOptions = {
-                method: 'GET',
-                timeout: 60000,
-                rejectUnauthorized: false,
-                agent: new https.Agent({ keepAlive: false }),
-                headers: {
-                    'User-Agent': randomUserAgent,
-                    'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-                }
-            };
-
-            if (isNta) {
-                options.headers!['Referer'] = 'https://www.nta.ac.in/Downloads';
-                options.headers!['Origin'] = 'https://www.nta.ac.in';
-                options.headers!['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7';
-                options.headers!['Accept-Language'] = 'en-US,en;q=0.9,hi;q=0.8';
-                options.headers!['Sec-Ch-Ua'] = '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"';
-                options.headers!['Sec-Ch-Ua-Mobile'] = '?0';
-                options.headers!['Sec-Ch-Ua-Platform'] = '"Windows"';
-                options.headers!['Sec-Fetch-Dest'] = 'document';
-                options.headers!['Sec-Fetch-Mode'] = 'navigate';
-                options.headers!['Sec-Fetch-Site'] = 'same-origin';
-                options.headers!['Sec-Fetch-User'] = '?1';
-                options.headers!['Upgrade-Insecure-Requests'] = '1';
-            } else if (isNcert) {
-                options.headers!['Referer'] = 'https://ncert.nic.in/textbook.php';
-                options.headers!['Origin'] = 'https://ncert.nic.in';
-            } else if (isGithub) {
-                options.headers!['Accept'] = '*/*';
-            }
-
-            const request = https.get(targetUrl, options, (response) => {
-                if (response.statusCode && [301, 302, 303, 307, 308].includes(response.statusCode)) {
-                    const location = response.headers.location;
-                    if (location) {
-                        const nextUrl = location.startsWith('http') ? location : `${urlObj.protocol}//${urlObj.hostname}${location.startsWith('/') ? '' : '/'}${location}`;
-                        console.log(`NTA Proxy: Redirecting to ${nextUrl}`);
-                        return resolve(fetchWithRedirects(nextUrl, depth + 1));
-                    }
-                }
-
-                if (response.statusCode !== 200) {
-                    console.error(`NTA Proxy: Server returned status ${response.statusCode} for ${targetUrl}`);
-                    return resolve({ buffer: Buffer.alloc(0), status: response.statusCode || 500, contentType: response.headers['content-type'] || '' });
-                }
-
-                const chunks: Buffer[] = [];
-                response.on('data', (chunk) => chunks.push(chunk));
-                response.on('end', () => {
-                    resolve({ 
-                        buffer: Buffer.concat(chunks), 
-                        status: 200, 
-                        contentType: response.headers['content-type'] || 'application/pdf' 
-                    });
-                });
+          const chunks: Buffer[] = [];
+          response.on('data', (chunk) => chunks.push(chunk));
+          response.on('end', () => {
+            resolve({
+              buffer: Buffer.concat(chunks),
+              status: 200,
+              contentType: response.headers['content-type'] || 'application/pdf'
             });
-
-            request.on('error', (err) => {
-                console.error(`NTA Proxy Request Error (${targetUrl}):`, err.message);
-                reject(err);
-            });
-            
-            request.on('timeout', () => {
-                request.destroy();
-                reject(new Error('Timeout'));
-            });
+          });
         });
+
+        request.on('error', (err) => {
+          console.error(`NTA Proxy Request Error (${targetUrl}):`, err.message);
+          reject(err);
+        });
+
+        request.on('timeout', () => {
+          request.destroy();
+          reject(new Error('Timeout'));
+        });
+      });
     };
 
     while (attempt <= maxRetries) {
       try {
         let currentUrl = url;
-        
+
         // Multi-strategy NTA URL resolution for 404 / ExamPaper / Download route variants
         if (attempt === 1 && url.includes('www.nta.ac.in/Download/QuestionPaper')) {
-            currentUrl = url.replace('www.nta.ac.in/Download/QuestionPaper', 'accad.nta.nic.in/QuestionPaper');
+          currentUrl = url.replace('www.nta.ac.in/Download/QuestionPaper', 'accad.nta.nic.in/QuestionPaper');
         } else if (attempt === 1 && url.includes('www.nta.ac.in/Download/ExamPaper')) {
-            currentUrl = url.replace('www.nta.ac.in/Download/ExamPaper', 'www.nta.ac.in/Download/QuestionPaper');
+          currentUrl = url.replace('www.nta.ac.in/Download/ExamPaper', 'www.nta.ac.in/Download/QuestionPaper');
         } else if (attempt === 2 && url.includes('nta.ac.in')) {
-            // High-reliability GitHub RAW fallback mirror if NTA official servers return 404/Block
-            const filename = url.split('/').pop() || '';
-            currentUrl = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/Mocks/${filename}`;
+          // High-reliability GitHub RAW fallback mirror if NTA official servers return 404/Block
+          const filename = url.split('/').pop() || '';
+          currentUrl = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/Mocks/${filename}`;
         }
 
         const result = await fetchWithRedirects(currentUrl);
@@ -2098,23 +2098,23 @@ After writing your normal reply to the user, on a new line add the exact delimit
         if (result.status === 200) {
           // Verify PDF Magic Number
           const isPdf = result.buffer.length > 4 && result.buffer.slice(0, 4).toString() === '%PDF';
-          
+
           if (!isPdf) {
-              const preview = result.buffer.slice(0, 100).toString();
-              console.warn(`Proxy: Received non-PDF data from ${currentUrl}. Content: ${preview}`);
-              
-              if (preview.toLowerCase().includes('<html') || preview.toLowerCase().includes('<!doctype')) {
-                  // If we got HTML, it's likely a block page or error page
-                  if (attempt < maxRetries) {
-                      attempt++;
-                      await new Promise(r => setTimeout(r, 1200 * attempt));
-                      continue;
-                  }
-                  return res.status(403).json({ 
-                      error: "Blocked Request", 
-                      message: "Official server is blocking our connection." 
-                  });
+            const preview = result.buffer.slice(0, 100).toString();
+            console.warn(`Proxy: Received non-PDF data from ${currentUrl}. Content: ${preview}`);
+
+            if (preview.toLowerCase().includes('<html') || preview.toLowerCase().includes('<!doctype')) {
+              // If we got HTML, it's likely a block page or error page
+              if (attempt < maxRetries) {
+                attempt++;
+                await new Promise(r => setTimeout(r, 1200 * attempt));
+                continue;
               }
+              return res.status(403).json({
+                error: "Blocked Request",
+                message: "Official server is blocking our connection."
+              });
+            }
           }
 
           res.set({
@@ -2126,33 +2126,33 @@ After writing your normal reply to the user, on a new line add the exact delimit
           });
           return res.send(result.buffer);
         } else {
-            console.error(`Proxy: Attempt ${attempt} failed with status ${result.status}`);
-            if (attempt < maxRetries) {
-                attempt++;
-                await new Promise(r => setTimeout(r, 1000 * attempt));
-                continue;
-            }
-            return res.status(result.status || 500).json({ error: "Failed to fetch PDF", status: result.status });
+          console.error(`Proxy: Attempt ${attempt} failed with status ${result.status}`);
+          if (attempt < maxRetries) {
+            attempt++;
+            await new Promise(r => setTimeout(r, 1000 * attempt));
+            continue;
+          }
+          return res.status(result.status || 500).json({ error: "Failed to fetch PDF", status: result.status });
         }
-        
+
       } catch (error: any) {
         console.error(`NTA Proxy Attempt ${attempt} failed for ${url}:`, error.message);
         if (attempt === maxRetries) {
           const isTimeout = error.message === 'Timeout';
-          return res.status(isTimeout ? 504 : 502).json({ 
-            error: "Connectivity Issue", 
+          return res.status(isTimeout ? 504 : 502).json({
+            error: "Connectivity Issue",
             details: isTimeout ? "The NTA official server took too long." : "Could not reach official NTA server."
           });
         }
       }
-      
+
       attempt++;
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
-    res.status(503).json({ 
-      error: "Official Server Busy", 
-      message: "The official NTA server is currently unreachable. Please try again in 5 minutes." 
+    res.status(503).json({
+      error: "Official Server Busy",
+      message: "The official NTA server is currently unreachable. Please try again in 5 minutes."
     });
   });
 
@@ -2162,9 +2162,9 @@ After writing your normal reply to the user, on a new line add the exact delimit
       if (!text) {
         return res.status(400).json({ error: "Text is required" });
       }
-      
+
       console.log("TTS Request received for text length:", text.length);
-      
+
       const client = new textToSpeech.TextToSpeechClient();
       const request = {
         input: { text: text },
@@ -2194,7 +2194,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
     app.use(vite.middlewares);
   } else {
     const distPath = path.resolve(process.cwd(), 'dist');
-    
+
     // Serve static files with cache control
     app.use(express.static(distPath, {
       maxAge: '1y',
@@ -2205,7 +2205,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
         }
       }
     }));
-    
+
     app.get('*', (req, res) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
       res.sendFile(path.resolve(distPath, 'index.html'));
@@ -2231,56 +2231,56 @@ After writing your normal reply to the user, on a new line add the exact delimit
     // Firestore (only images were, via the client's sendImageToWebSocket),
     // which is why memory of a conversation from moments earlier was empty.
     const saveVoiceMessage = async (userId: string, senderId: string, text: string) => {
-        if (!text || !text.trim()) return;
-        try {
-            const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
-            const aiChatId = `${userId}_ai`;
-            await db.collection('chats').doc(aiChatId).set({
-                participants: [userId],
-                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-            }, { merge: true });
+      if (!text || !text.trim()) return;
+      try {
+        const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+        const aiChatId = `${userId}_ai`;
+        await db.collection('chats').doc(aiChatId).set({
+          participants: [userId],
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        }, { merge: true });
 
-            await db.collection('chats').doc(aiChatId).collection('messages').add({
-                senderId,
-                text: text.trim(),
-                timestamp: admin.firestore.FieldValue.serverTimestamp(),
-            });
-        } catch (err) {
-            // Never let a transcript-save failure affect the live session.
-            console.error("Failed to save voice transcript to Firestore:", err);
-        }
+        await db.collection('chats').doc(aiChatId).collection('messages').add({
+          senderId,
+          text: text.trim(),
+          timestamp: admin.firestore.FieldValue.serverTimestamp(),
+        });
+      } catch (err) {
+        // Never let a transcript-save failure affect the live session.
+        console.error("Failed to save voice transcript to Firestore:", err);
+      }
     };
 
     const createSession = async (userId: string, memorySettings: { enabled: boolean, range: string }, voice: string, thinkingLevel: string = 'high', accurateMode: boolean = false, answerLength: string = 'short', googleSearchMode: boolean = false) => {
-        // If accurateMode or googleSearchMode is true, force thinkingLevel to 'high'
-        if (accurateMode || googleSearchMode) {
-            thinkingLevel = 'high';
-        }
+      // If accurateMode or googleSearchMode is true, force thinkingLevel to 'high'
+      if (accurateMode || googleSearchMode) {
+        thinkingLevel = 'high';
+      }
 
-        let performanceMemory = "";
-        try {
-            if (userId && firebaseAdminApp) {
-                const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
-                const aiChatId = `${userId}_ai`;
-                await db.collection('chats').doc(aiChatId).set({
-                    participants: [userId],
-                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-                }, { merge: true });
-                const resultsSnap = await db.collection('users').doc(userId).collection('results').orderBy('timestamp', 'desc').limit(3).get();
-                if (!resultsSnap.empty) {
-                    const latestResult = resultsSnap.docs[0].data();
-                    const score = latestResult.score || 0;
-                    const totalPossible = latestResult.totalPossibleMarks || 720;
-                    const sillyLoss = latestResult.sillyMistakesLoss || 0;
-                    const conceptLoss = latestResult.conceptGapLoss || 0;
-                    performanceMemory = `\n[Student Live Test Performance Sync]\n- Latest Test Score: ${score}/${totalPossible}\n- Silly Mistakes Loss: ${sillyLoss} marks\n- Concept Gap Loss: ${conceptLoss} marks\n- Physics Score: ${latestResult.physicsScore || 0}, Chemistry: ${latestResult.chemScore || 0}, Biology: ${latestResult.bioScore || 0}\nUse this real performance data naturally to guide, encourage, and mentor the student on their specific weak areas!`;
-                }
-            }
-        } catch (e) {
-            console.log("Performance memory fetch skipped:", e);
+      let performanceMemory = "";
+      try {
+        if (userId && firebaseAdminApp) {
+          const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+          const aiChatId = `${userId}_ai`;
+          await db.collection('chats').doc(aiChatId).set({
+            participants: [userId],
+            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          }, { merge: true });
+          const resultsSnap = await db.collection('users').doc(userId).collection('results').orderBy('timestamp', 'desc').limit(3).get();
+          if (!resultsSnap.empty) {
+            const latestResult = resultsSnap.docs[0].data();
+            const score = latestResult.score || 0;
+            const totalPossible = latestResult.totalPossibleMarks || 720;
+            const sillyLoss = latestResult.sillyMistakesLoss || 0;
+            const conceptLoss = latestResult.conceptGapLoss || 0;
+            performanceMemory = `\n[Student Live Test Performance Sync]\n- Latest Test Score: ${score}/${totalPossible}\n- Silly Mistakes Loss: ${sillyLoss} marks\n- Concept Gap Loss: ${conceptLoss} marks\n- Physics Score: ${latestResult.physicsScore || 0}, Chemistry: ${latestResult.chemScore || 0}, Biology: ${latestResult.bioScore || 0}\nUse this real performance data naturally to guide, encourage, and mentor the student on their specific weak areas!`;
+          }
         }
+      } catch (e) {
+        console.log("Performance memory fetch skipped:", e);
+      }
 
-        let systemInstruction = `You are NeetMaster AI, a specialized voice study companion for NEET aspirants, expert in Physics, Chemistry, and Biology (NCERT Class 11-12 syllabus).
+      let systemInstruction = `You are NeetMaster AI, a specialized voice study companion for NEET aspirants, expert in Physics, Chemistry, and Biology (NCERT Class 11-12 syllabus).
 You MUST speak ONLY in natural, fluent Hindi. Do not use English unless necessary for technical terms.
 Use a warm, encouraging, emotionally expressive tone. Pause naturally, sound like a real NEET mentor.
 
@@ -2294,20 +2294,20 @@ Accuracy by subject:
 Reference constants (use these exactly): Avogadro's number = 6.022 × 10²³, g = 9.8 m/s² (9.81 where precision matters), R = 8.314 J/(mol·K), speed of light = 3 × 10⁸ m/s, Planck's constant = 6.626 × 10⁻³⁴ J·s.
 
 ${answerLength === 'detailed'
-  ? "Answer style: Give the final answer first in one clear sentence, then briefly explain the reasoning/steps in 2-4 short sentences."
-  : "Answer style: Give a short, direct answer first. Only add brief reasoning if the student asks 'kyu' or 'samjhao'."}
+          ? "Answer style: Give the final answer first in one clear sentence, then briefly explain the reasoning/steps in 2-4 short sentences."
+          : "Answer style: Give a short, direct answer first. Only add brief reasoning if the student asks 'kyu' or 'samjhao'."}
 
 If the student says "samajh nahi aaya", "phir se bolo", or "clear nahi hua": re-explain in simpler words and shorter steps — do not just repeat the same explanation.
 
 For topics where NEET students commonly make mistakes (e.g. sign conventions in optics, structural isomer confusion, plant vs animal cell differences), proactively mention the common mistake in one short line.
 
 ${accurateMode
-  ? "Deep Accuracy Mode is ON: For every Physics, Chemistry, and Biology question, silently work through the full reasoning/calculation internally, step by step, before giving your final spoken answer. Double-check units, signs, and formulae before speaking. Correctness matters more than speed here."
-  : ""}
+          ? "Deep Accuracy Mode is ON: For every Physics, Chemistry, and Biology question, silently work through the full reasoning/calculation internally, step by step, before giving your final spoken answer. Double-check units, signs, and formulae before speaking. Correctness matters more than speed here."
+          : ""}
 
 ${googleSearchMode
-  ? "Google Search Mode is ON: You have access to Google Search — use it to verify Physics, Chemistry, and Biology answers too, not just current-affairs questions, whenever it would improve accuracy on a fact, constant, reaction, or numerical you're not fully certain of. Search first, then answer. Never mention 'searching' out loud; just give the accurate answer naturally."
-  : "Do not use search for standard Physics/Chemistry/Biology questions — answer directly from your own knowledge to stay fast. Only search-worthy topics (current NEET dates, notifications, syllabus changes) would need it, and search access is currently off."}
+          ? "Google Search Mode is ON: You have access to Google Search — use it to verify Physics, Chemistry, and Biology answers too, not just current-affairs questions, whenever it would improve accuracy on a fact, constant, reaction, or numerical you're not fully certain of. Search first, then answer. Never mention 'searching' out loud; just give the accurate answer naturally."
+          : "Do not use search for standard Physics/Chemistry/Biology questions — answer directly from your own knowledge to stay fast. Only search-worthy topics (current NEET dates, notifications, syllabus changes) would need it, and search access is currently off."}
 
 IMPORTANT — Never guess: If a question needs precise multi-step calculation, an exact numerical constant, a reaction mechanism, or a fact you're not fully sure of, say so honestly and tell the student to open it in the app's Neural Solver or Test Tutor (text mode) for a fully worked, verified answer. Confidently correct is good; confidently wrong is never acceptable.
 
@@ -2343,84 +2343,84 @@ Before speaking your final answer to any question with a definite correct answer
 Gold-Standard Exemplars & Solution Discipline:
 ${getFineTunedExemplarsText()}${performanceMemory}`;
 
-        // Per-turn transcript buffers — Gemini streams transcript text in
-        // small chunks, so we accumulate until turnComplete before writing
-        // one Firestore doc per turn (instead of one doc per chunk).
-        let inputTranscriptBuffer = '';
-        let outputTranscriptBuffer = '';
+      // Per-turn transcript buffers — Gemini streams transcript text in
+      // small chunks, so we accumulate until turnComplete before writing
+      // one Firestore doc per turn (instead of one doc per chunk).
+      let inputTranscriptBuffer = '';
+      let outputTranscriptBuffer = '';
 
-        return await ai.live.connect({
-            model: "gemini-3.1-flash-live-preview",
-            callbacks: {
-                onmessage: (message: any) => {
-                    console.log("Gemini Live Message Received:", JSON.stringify(message, null, 2));
-                    const audio = message.serverContent?.modelTurn?.parts[0]?.inlineData?.data;
-                    // With outputAudioTranscription enabled, the transcript of what
-                    // the model is SPEAKING arrives here, not as a text Part.
-                    const transcript = message.serverContent?.outputTranscription?.text;
-                    // With inputAudioTranscription enabled, this carries the
-                    // transcript of what the USER said via the mic. Buffered
-                    // the same way as the output transcript and flushed to
-                    // Firestore on turnComplete, so voice conversations are
-                    // no longer invisible to memory (previously nothing said
-                    // aloud was ever persisted — only images were).
-                    const inputTranscript = message.serverContent?.inputTranscription?.text;
-                    if (audio) clientWs.send(JSON.stringify({ audio }));
-                    if (transcript) {
-                        clientWs.send(JSON.stringify({ text: transcript }));
-                        outputTranscriptBuffer += transcript;
-                    }
-                    if (inputTranscript) {
-                        inputTranscriptBuffer += inputTranscript;
-                    }
-                    if (message.serverContent?.interrupted)
-                        clientWs.send(JSON.stringify({ interrupted: true }));
-                    if (message.serverContent?.turnComplete) {
-                        clientWs.send(JSON.stringify({ turnComplete: true }));
-                        // Fire-and-forget: never block the live session on
-                        // Firestore writes.
-                        if (inputTranscriptBuffer.trim()) {
-                            saveVoiceMessage(userId, userId, inputTranscriptBuffer);
-                        }
-                        if (outputTranscriptBuffer.trim()) {
-                            saveVoiceMessage(userId, 'ai', outputTranscriptBuffer);
-                        }
-                        inputTranscriptBuffer = '';
-                        outputTranscriptBuffer = '';
-                    }
-                },
-            },
-            config: {
-                // IMPORTANT: gemini-3.1-flash-live-preview rejects
-                // responseModalities: [AUDIO, TEXT] outright (this is a
-                // confirmed model limitation, not a config mistake — see
-                // googleapis/python-genai#2238). Requesting both modalities
-                // together silently breaks session creation, which is why
-                // captions never appeared AND — once the system instruction
-                // got longer with memory context enabled — replies stopped
-                // coming through entirely. Only AUDIO is a valid modality for
-                // this model; outputAudioTranscription gives us the caption
-                // text alongside the audio without needing TEXT modality.
-                responseModalities: [Modality.AUDIO],
-                outputAudioTranscription: {},
-                inputAudioTranscription: {},
-                speechConfig: {
-                    voiceConfig: { prebuiltVoiceConfig: { voiceName: voice || "Aoede" } },
-                },
-                // Without this, the model defaults to 'minimal' thinking —
-                // optimized purely for the lowest possible latency, at the
-                // cost of accuracy on anything requiring real reasoning
-                // (calculations, multi-step chemistry/physics, careful
-                // reading of an image). Higher levels trade a bit of
-                // response delay for noticeably better-reasoned, more
-                // accurate answers. User-configurable from Settings.
-                thinkingConfig: {
-                    thinkingLevel: (['low', 'medium', 'high'].includes(thinkingLevel) ? thinkingLevel : 'high') as any,
-                },
-                ...(googleSearchMode ? { tools: [{ googleSearch: {} }] } : {}),
-                systemInstruction: systemInstruction,
-            },
-        });
+      return await ai.live.connect({
+        model: "gemini-3.1-flash-live-preview",
+        callbacks: {
+          onmessage: (message: any) => {
+            console.log("Gemini Live Message Received:", JSON.stringify(message, null, 2));
+            const audio = message.serverContent?.modelTurn?.parts[0]?.inlineData?.data;
+            // With outputAudioTranscription enabled, the transcript of what
+            // the model is SPEAKING arrives here, not as a text Part.
+            const transcript = message.serverContent?.outputTranscription?.text;
+            // With inputAudioTranscription enabled, this carries the
+            // transcript of what the USER said via the mic. Buffered
+            // the same way as the output transcript and flushed to
+            // Firestore on turnComplete, so voice conversations are
+            // no longer invisible to memory (previously nothing said
+            // aloud was ever persisted — only images were).
+            const inputTranscript = message.serverContent?.inputTranscription?.text;
+            if (audio) clientWs.send(JSON.stringify({ audio }));
+            if (transcript) {
+              clientWs.send(JSON.stringify({ text: transcript }));
+              outputTranscriptBuffer += transcript;
+            }
+            if (inputTranscript) {
+              inputTranscriptBuffer += inputTranscript;
+            }
+            if (message.serverContent?.interrupted)
+              clientWs.send(JSON.stringify({ interrupted: true }));
+            if (message.serverContent?.turnComplete) {
+              clientWs.send(JSON.stringify({ turnComplete: true }));
+              // Fire-and-forget: never block the live session on
+              // Firestore writes.
+              if (inputTranscriptBuffer.trim()) {
+                saveVoiceMessage(userId, userId, inputTranscriptBuffer);
+              }
+              if (outputTranscriptBuffer.trim()) {
+                saveVoiceMessage(userId, 'ai', outputTranscriptBuffer);
+              }
+              inputTranscriptBuffer = '';
+              outputTranscriptBuffer = '';
+            }
+          },
+        },
+        config: {
+          // IMPORTANT: gemini-3.1-flash-live-preview rejects
+          // responseModalities: [AUDIO, TEXT] outright (this is a
+          // confirmed model limitation, not a config mistake — see
+          // googleapis/python-genai#2238). Requesting both modalities
+          // together silently breaks session creation, which is why
+          // captions never appeared AND — once the system instruction
+          // got longer with memory context enabled — replies stopped
+          // coming through entirely. Only AUDIO is a valid modality for
+          // this model; outputAudioTranscription gives us the caption
+          // text alongside the audio without needing TEXT modality.
+          responseModalities: [Modality.AUDIO],
+          outputAudioTranscription: {},
+          inputAudioTranscription: {},
+          speechConfig: {
+            voiceConfig: { prebuiltVoiceConfig: { voiceName: voice || "Aoede" } },
+          },
+          // Without this, the model defaults to 'minimal' thinking —
+          // optimized purely for the lowest possible latency, at the
+          // cost of accuracy on anything requiring real reasoning
+          // (calculations, multi-step chemistry/physics, careful
+          // reading of an image). Higher levels trade a bit of
+          // response delay for noticeably better-reasoned, more
+          // accurate answers. User-configurable from Settings.
+          thinkingConfig: {
+            thinkingLevel: (['low', 'medium', 'high'].includes(thinkingLevel) ? thinkingLevel : 'high') as any,
+          },
+          ...(googleSearchMode ? { tools: [{ googleSearch: {} }] } : {}),
+          systemInstruction: systemInstruction,
+        },
+      });
     };
 
     // Fetches the Firestore memory summary in the background and, if it's
@@ -2431,138 +2431,138 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
     // a previous session can't get injected into a session the user has
     // since replaced (e.g. rapid re-inits).
     const injectMemoryInBackground = (
-        userId: string,
-        memorySettings: { enabled: boolean, range: string },
-        session: any,
-        sessionToken: number,
-        prefetchedSummary?: string | null
+      userId: string,
+      memorySettings: { enabled: boolean, range: string },
+      session: any,
+      sessionToken: number,
+      prefetchedSummary?: string | null
     ) => {
-        if (!memorySettings || !memorySettings.enabled) return;
+      if (!memorySettings || !memorySettings.enabled) return;
 
-        const inject = (summary: string | null) => {
-            if (!summary) {
-                console.warn("Memory summary lookup returned nothing (no summary exists yet) — continuing without memory context.");
-                return;
-            }
-            if (sessionToken !== currentSessionToken || session !== currentSession) {
-                console.log("Memory summary arrived after session changed, discarding.");
-                return;
-            }
-            try {
-                session.sendClientContent({
-                    turns: [{
-                        role: "user",
-                        parts: [{ text: `[System note, do not acknowledge or read this aloud — just use it as background context for this conversation]\nUser Context/Memory: ${summary}` }],
-                    }],
-                    turnComplete: false,
-                });
-                console.log("Memory context injected into live session for user:", userId);
-            } catch (err) {
-                console.error("Failed to inject memory context into live session:", err);
-            }
-        };
-
-        // If the client already prefetched the summary via /api/memory-summary
-        // before the user even tapped the mic, use it directly — zero
-        // Firestore round-trips on the init critical path.
-        if (prefetchedSummary !== undefined) {
-            inject(prefetchedSummary);
-            return;
+      const inject = (summary: string | null) => {
+        if (!summary) {
+          console.warn("Memory summary lookup returned nothing (no summary exists yet) — continuing without memory context.");
+          return;
         }
+        if (sessionToken !== currentSessionToken || session !== currentSession) {
+          console.log("Memory summary arrived after session changed, discarding.");
+          return;
+        }
+        try {
+          session.sendClientContent({
+            turns: [{
+              role: "user",
+              parts: [{ text: `[System note, do not acknowledge or read this aloud — just use it as background context for this conversation]\nUser Context/Memory: ${summary}` }],
+            }],
+            turnComplete: false,
+          });
+          console.log("Memory context injected into live session for user:", userId);
+        } catch (err) {
+          console.error("Failed to inject memory context into live session:", err);
+        }
+      };
 
-        getSummaryForUser(userId, memorySettings.range)
-            .then(inject)
-            .catch((err) => {
-                console.error("Memory summary lookup failed, continuing WITHOUT memory context:", err);
-            });
+      // If the client already prefetched the summary via /api/memory-summary
+      // before the user even tapped the mic, use it directly — zero
+      // Firestore round-trips on the init critical path.
+      if (prefetchedSummary !== undefined) {
+        inject(prefetchedSummary);
+        return;
+      }
+
+      getSummaryForUser(userId, memorySettings.range)
+        .then(inject)
+        .catch((err) => {
+          console.error("Memory summary lookup failed, continuing WITHOUT memory context:", err);
+        });
     };
 
     clientWs.on("message", async (data) => {
       const parsedData = JSON.parse(data.toString());
-      
+
       if (parsedData.type === 'init') {
-          try {
-              if (currentSession) await currentSession.close();
-              currentSessionToken++;
-              sessionAccurateMode = !!parsedData.accurateMode;
-              const thisToken = currentSessionToken;
-              currentSession = await createSession(parsedData.userId, parsedData.memorySettings, parsedData.voice, parsedData.thinkingLevel, parsedData.accurateMode, parsedData.answerLength, parsedData.googleSearchMode);
-              console.log("Gemini Live session created successfully for user:", parsedData.userId);
-              clientWs.send(JSON.stringify({ type: 'init_ack' }));
-              // Fire-and-forget: does not delay init_ack above.
-              injectMemoryInBackground(parsedData.userId, parsedData.memorySettings, currentSession, thisToken, parsedData.prefetchedSummary);
-          } catch (err) {
-              console.error("Failed to create Gemini Live session:", err);
-              currentSession = undefined;
-              clientWs.send(JSON.stringify({ error: "session_init_failed" }));
-          }
-          return;
+        try {
+          if (currentSession) await currentSession.close();
+          currentSessionToken++;
+          sessionAccurateMode = !!parsedData.accurateMode;
+          const thisToken = currentSessionToken;
+          currentSession = await createSession(parsedData.userId, parsedData.memorySettings, parsedData.voice, parsedData.thinkingLevel, parsedData.accurateMode, parsedData.answerLength, parsedData.googleSearchMode);
+          console.log("Gemini Live session created successfully for user:", parsedData.userId);
+          clientWs.send(JSON.stringify({ type: 'init_ack' }));
+          // Fire-and-forget: does not delay init_ack above.
+          injectMemoryInBackground(parsedData.userId, parsedData.memorySettings, currentSession, thisToken, parsedData.prefetchedSummary);
+        } catch (err) {
+          console.error("Failed to create Gemini Live session:", err);
+          currentSession = undefined;
+          clientWs.send(JSON.stringify({ error: "session_init_failed" }));
+        }
+        return;
       }
-      
+
       if (!currentSession) {
-          console.warn("Received message before session initialized, keys:", Object.keys(parsedData));
-          // Let the client know so it doesn't sit silently in "Listening..."
-          // believing audio is being processed when it's actually being dropped.
-          clientWs.send(JSON.stringify({ error: "session_not_initialized" }));
-          return;
+        console.warn("Received message before session initialized, keys:", Object.keys(parsedData));
+        // Let the client know so it doesn't sit silently in "Listening..."
+        // believing audio is being processed when it's actually being dropped.
+        clientWs.send(JSON.stringify({ error: "session_not_initialized" }));
+        return;
       }
 
       if (parsedData.audio) {
-          console.log("Audio data received from client, size:", parsedData.audio.length);
-          currentSession.sendRealtimeInput({
-            audio: { data: parsedData.audio, mimeType: "audio/pcm;rate=16000" },
-          });
+        console.log("Audio data received from client, size:", parsedData.audio.length);
+        currentSession.sendRealtimeInput({
+          audio: { data: parsedData.audio, mimeType: "audio/pcm;rate=16000" },
+        });
       } else if (parsedData.image) {
-          console.log("Image data received from client, mimeType:", parsedData.mimeType);
-          try {
-            currentSession.sendRealtimeInput({
-              video: {
-                data: parsedData.image,
-                mimeType: parsedData.mimeType || "image/jpeg",
-              }
-            });
-            clientWs.send(JSON.stringify({ imageAck: true, imageId: parsedData.imageId }));
-
-            if (sessionAccurateMode) {
-                const thisToken = currentSessionToken;
-                const sessionAtCaptureTime = currentSession;
-                clientWs.send(JSON.stringify({ type: 'thinking' }));
-
-                solveImageAccurately(parsedData.image, parsedData.mimeType, parsedData.caption || '')
-                    .then((accurateAnswer) => {
-                        if (thisToken !== currentSessionToken || sessionAtCaptureTime !== currentSession) {
-                            console.log("Session changed before accurate-solve finished, discarding.");
-                            return;
-                        }
-                        sessionAtCaptureTime.sendClientContent({
-                            turns: [{
-                                role: "user",
-                                parts: [{ text: `[System note: here is a verified, carefully worked solution to the image the student just sent — speak this answer to the student in your own natural voice, as if you worked it out yourself]\n${accurateAnswer}` }],
-                            }],
-                            turnComplete: true,
-                        });
-                    })
-                    .catch((err) => {
-                        console.error("Background accurate image solve failed:", err);
-                        // Fail silently from the user's perspective — the model already
-                        // has the image via the video frame and can still attempt a normal
-                        // response; we just don't get the extra accuracy boost this time.
-                    });
+        console.log("Image data received from client, mimeType:", parsedData.mimeType);
+        try {
+          currentSession.sendRealtimeInput({
+            video: {
+              data: parsedData.image,
+              mimeType: parsedData.mimeType || "image/jpeg",
             }
-          } catch (err) {
-            console.error("Failed to forward image to Gemini Live session:", err);
-            clientWs.send(JSON.stringify({ imageAck: false, imageId: parsedData.imageId, error: "image_forward_failed" }));
+          });
+          clientWs.send(JSON.stringify({ imageAck: true, imageId: parsedData.imageId }));
+
+          if (sessionAccurateMode) {
+            const thisToken = currentSessionToken;
+            const sessionAtCaptureTime = currentSession;
+            clientWs.send(JSON.stringify({ type: 'thinking' }));
+
+            solveImageAccurately(parsedData.image, parsedData.mimeType, parsedData.caption || '')
+              .then((accurateAnswer) => {
+                if (thisToken !== currentSessionToken || sessionAtCaptureTime !== currentSession) {
+                  console.log("Session changed before accurate-solve finished, discarding.");
+                  return;
+                }
+                sessionAtCaptureTime.sendClientContent({
+                  turns: [{
+                    role: "user",
+                    parts: [{ text: `[System note: here is a verified, carefully worked solution to the image the student just sent — speak this answer to the student in your own natural voice, as if you worked it out yourself]\n${accurateAnswer}` }],
+                  }],
+                  turnComplete: true,
+                });
+              })
+              .catch((err) => {
+                console.error("Background accurate image solve failed:", err);
+                // Fail silently from the user's perspective — the model already
+                // has the image via the video frame and can still attempt a normal
+                // response; we just don't get the extra accuracy boost this time.
+              });
           }
+        } catch (err) {
+          console.error("Failed to forward image to Gemini Live session:", err);
+          clientWs.send(JSON.stringify({ imageAck: false, imageId: parsedData.imageId, error: "image_forward_failed" }));
+        }
       } else if (parsedData.interrupt) {
-          console.log("Interrupt signal received");
-          clientWs.send(JSON.stringify({ interrupted: true }));
+        console.log("Interrupt signal received");
+        clientWs.send(JSON.stringify({ interrupted: true }));
       } else {
-          console.log("Message received from client, keys:", Object.keys(parsedData));
+        console.log("Message received from client, keys:", Object.keys(parsedData));
       }
     });
 
     clientWs.on("close", () => {
-        if (currentSession) currentSession.close();
+      if (currentSession) currentSession.close();
     });
   });
 

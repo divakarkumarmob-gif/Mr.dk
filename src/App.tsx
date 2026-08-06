@@ -1731,6 +1731,9 @@ function AppInner() {
   }, []);
 
   if (loading) {
+    if (!Capacitor.isNativePlatform()) {
+      return <div className="min-h-dvh bg-[#0a0f24]" />;
+    }
     return (
         <div className="flex flex-col items-center justify-center min-h-dvh bg-[#0a0f24] text-white overflow-hidden">
             <motion.div

@@ -45,6 +45,16 @@ const config: CapacitorConfig = {
         webClientId: "900766773228-18ih7jtctcqv60up90djcg1ifee2h270.apps.googleusercontent.com",
       },
     },
+    SplashScreen: {
+      launchShowDuration: 0,
+      launchAutoHide: true,
+      launchFadeOutDuration: 150,
+      backgroundColor: "#0a0f24",
+      androidScaleType: "CENTER_CROP",
+      showSpinner: false,
+      splashFullScreen: true,
+      splashImmersive: true,
+    },
     // StatusBar plugin config intentionally removed — the app now uses
     // @capacitor-community/safe-area exclusively for system bar handling
     // (see src/main.tsx). Keeping both configured at once was causing the
