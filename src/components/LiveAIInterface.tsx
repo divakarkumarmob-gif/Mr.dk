@@ -749,32 +749,26 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         };
         
         socket.onmessage = (event) => {
-            const msg = JSON.parse(event.data);
-            if (msg.audio) {
-                if (outputAudioCtx.current) {
-                    setStatus("Speaking...");
-                    playAudioChunk(outputAudioCtx.current, msg.audio, nextStartTime, isAiSpeaking);
-                }
-            } else if (msg.type === 'thinking') {
-                setStatus("Thinking...");
-            } else if (msg.text) {
-                console.log("Caption received:", msg.text);
-                if (!captionTurnStartedRef.current) {
-                    // First chunk of a brand-new turn — replace, don't
-                    // append, so the previous answer's leftover caption
-                    // (if turnComplete hasn't landed/rendered yet) can never
-                    // get glued to the front of this one.
-                    captionTurnStartedRef.current = true;
-                    setCaptionText(msg.text);
-                } else {
-                    setCaptionText(prev => prev + msg.text);
-                }
-            } else if (msg.turnComplete) {
-                // Don't clear captionText here — leave the last answer's caption
-                // visible until the next turn's first text chunk arrives, which
-                // replaces it (see captionTurnStartedRef logic above).
-                captionTurnStartedRef.current = false;
-            } else if (msg.type === 'init_ack') {
+            try {
+                if (typeof event.data !== 'string') return;
+                const msg = JSON.parse(event.data);
+                if (msg.audio) {
+                    if (outputAudioCtx.current) {
+                        setStatus("Speaking...");
+                        playAudioChunk(outputAudioCtx.current, msg.audio, nextStartTime, isAiSpeaking);
+                    }
+                } else if (msg.type === 'thinking') {
+                    setStatus("Thinking...");
+                } else if (msg.text) {
+                    if (!captionTurnStartedRef.current) {
+                        captionTurnStartedRef.current = true;
+                        setCaptionText(msg.text);
+                    } else {
+                        setCaptionText(prev => prev + msg.text);
+                    }
+                } else if (msg.turnComplete) {
+                    captionTurnStartedRef.current = false;
+                } else if (msg.type === 'init_ack') {
                 isInitializedRef.current = true;
                 console.log("Gemini session initialized");
                 if (initAckTimeoutRef.current) {
@@ -806,6 +800,9 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 }
             } else {
                 console.log("Received message:", msg);
+            }
+            } catch (err) {
+                console.warn("[LiveAIInterface] Error processing socket message:", err);
             }
         };
 

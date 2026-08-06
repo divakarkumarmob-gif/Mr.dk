@@ -2023,6 +2023,16 @@ After writing your normal reply to the user, on a new line add the exact delimit
             if (isNta) {
                 options.headers!['Referer'] = 'https://www.nta.ac.in/Downloads';
                 options.headers!['Origin'] = 'https://www.nta.ac.in';
+                options.headers!['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7';
+                options.headers!['Accept-Language'] = 'en-US,en;q=0.9,hi;q=0.8';
+                options.headers!['Sec-Ch-Ua'] = '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"';
+                options.headers!['Sec-Ch-Ua-Mobile'] = '?0';
+                options.headers!['Sec-Ch-Ua-Platform'] = '"Windows"';
+                options.headers!['Sec-Fetch-Dest'] = 'document';
+                options.headers!['Sec-Fetch-Mode'] = 'navigate';
+                options.headers!['Sec-Fetch-Site'] = 'same-origin';
+                options.headers!['Sec-Fetch-User'] = '?1';
+                options.headers!['Upgrade-Insecure-Requests'] = '1';
             } else if (isNcert) {
                 options.headers!['Referer'] = 'https://ncert.nic.in/textbook.php';
                 options.headers!['Origin'] = 'https://ncert.nic.in';
@@ -2072,9 +2082,15 @@ After writing your normal reply to the user, on a new line add the exact delimit
       try {
         let currentUrl = url;
         
-        // Strategy: If first attempt fails (404), maybe try alternative NTA domain pattern
+        // Multi-strategy NTA URL resolution for 404 / ExamPaper / Download route variants
         if (attempt === 1 && url.includes('www.nta.ac.in/Download/QuestionPaper')) {
             currentUrl = url.replace('www.nta.ac.in/Download/QuestionPaper', 'accad.nta.nic.in/QuestionPaper');
+        } else if (attempt === 1 && url.includes('www.nta.ac.in/Download/ExamPaper')) {
+            currentUrl = url.replace('www.nta.ac.in/Download/ExamPaper', 'www.nta.ac.in/Download/QuestionPaper');
+        } else if (attempt === 2 && url.includes('nta.ac.in')) {
+            // High-reliability GitHub RAW fallback mirror if NTA official servers return 404/Block
+            const filename = url.split('/').pop() || '';
+            currentUrl = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/Mocks/${filename}`;
         }
 
         const result = await fetchWithRedirects(currentUrl);

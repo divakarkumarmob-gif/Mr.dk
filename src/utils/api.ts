@@ -27,6 +27,13 @@ export function getApiUrl(path: string): string {
 export async function getAuthHeaders(headers: Record<string, string> = {}): Promise<Record<string, string>> {
   const finalHeaders: Record<string, string> = { ...headers };
 
+  // Delete existing case variants to prevent duplicate Authorization headers in WebViews
+  Object.keys(finalHeaders).forEach(key => {
+    if (key.toLowerCase() === 'authorization') {
+      delete finalHeaders[key];
+    }
+  });
+
   if (auth.currentUser) {
     try {
       const idToken = await auth.currentUser.getIdToken();
