@@ -64,26 +64,23 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // Manage body class and status bar for padding removal
+  // Auto-hide status bar when video is actively playing or in fullscreen
   useEffect(() => {
-    if (isFullscreen) {
-      document.body.classList.add('video-fullscreen');
-      if (Capacitor.isNativePlatform()) {
-        SafeArea.hideSystemBars({}).catch(() => {});
-      }
+    if (!Capacitor.isNativePlatform()) return;
+
+    if (isFullscreen || isPlaying) {
+      SafeArea.hideSystemBars({}).catch(() => {});
     } else {
-      document.body.classList.remove('video-fullscreen');
-      if (Capacitor.isNativePlatform()) {
-        SafeArea.showSystemBars({}).catch(() => {});
-      }
+      SafeArea.showSystemBars({}).catch(() => {});
     }
+
     return () => {
       document.body.classList.remove('video-fullscreen');
       if (Capacitor.isNativePlatform()) {
         SafeArea.showSystemBars({}).catch(() => {});
       }
     };
-  }, [isFullscreen]);
+  }, [isFullscreen, isPlaying]);
 
   // Autohide controls logic
   const triggerControlsActivity = () => {
@@ -104,6 +101,34 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
       if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
     };
   }, [isPlaying, showSettingsMenu]);
+
+  // Desktop Keyboard Shortcuts (Space, F, M, Left/Right Arrows)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore when user is typing inside input or textarea
+      if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement)?.tagName)) return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePlay();
+      } else if (e.code === 'KeyF') {
+        e.preventDefault();
+        toggleFullscreen();
+      } else if (e.code === 'KeyM') {
+        e.preventDefault();
+        toggleMute();
+      } else if (e.code === 'ArrowRight') {
+        e.preventDefault();
+        seekRelative(10);
+      } else if (e.code === 'ArrowLeft') {
+        e.preventDefault();
+        seekRelative(-10);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isPlaying, isFullscreen, isMuted, volume]);
 
   // Handle Play/Pause
   const togglePlay = () => {
@@ -683,33 +708,76 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
               </div>
 
               {/* Action Toolbar Row */}
-              <div className="flex justify-between items-center px-1">
-                <div className="flex items-center">
+              <div className="flex justify-between items-center px-1 py-1">
+                {/* Left Controls: Play/Pause, Volume Control Slider, Time Display */}
+                <div className="flex items-center gap-3">
                   {/* Play & Pause toggle button */}
                   <button 
                     onClick={togglePlay}
-                    className="p-2.5 bg-white/10 hover:bg-white/20 active:bg-white/30 rounded-xl text-white transition active:scale-95 flex items-center justify-center h-11 w-11 border border-white/10"
-                    title={isPlaying ? "Pause" : "Play"}
+                    className="p-2.5 bg-white/10 hover:bg-blue-600 active:bg-blue-700 rounded-xl text-white transition-all active:scale-95 flex items-center justify-center h-10 w-10 border border-white/10 shadow-md cursor-pointer"
+                    title={isPlaying ? "Pause (Space)" : "Play (Space)"}
                   >
                     {isPlaying ? (
-                      <Pause className="h-5.5 w-5.5 fill-white" />
+                      <Pause className="h-5 w-5 fill-white" />
                     ) : (
-                      <Play className="h-5.5 w-5.5 fill-white" />
+                      <Play className="h-5 w-5 fill-white" />
                     )}
+                  </button>
+
+                  {/* Volume Slider Control (Expandable on hover for Desktop) */}
+                  <div className="relative flex items-center gap-2 group/vol">
+                    <button
+                      onClick={toggleMute}
+                      className="p-2 rounded-lg bg-white/5 hover:bg-white/15 text-gray-200 hover:text-white transition cursor-pointer"
+                      title={isMuted ? "Unmute (M)" : "Mute (M)"}
+                    >
+                      {isMuted || volume === 0 ? (
+                        <VolumeX className="h-4.5 w-4.5 text-red-400" />
+                      ) : (
+                        <Volume2 className="h-4.5 w-4.5 text-blue-400" />
+                      )}
+                    </button>
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.05"
+                      value={isMuted ? 0 : volume}
+                      onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
+                      className="w-16 sm:w-20 accent-blue-500 h-1.5 bg-white/20 rounded-lg cursor-pointer transition-all opacity-80 group-hover/vol:opacity-100"
+                      title="Volume Control"
+                    />
+                  </div>
+
+                  {/* Quick Playback Speed Switcher */}
+                  <button
+                    onClick={() => {
+                      const speeds = [1.0, 1.25, 1.5, 2.0];
+                      const nextIdx = (speeds.indexOf(playbackSpeed) + 1) % speeds.length;
+                      handleSpeedChange(speeds[nextIdx]);
+                    }}
+                    className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 text-[11px] font-mono font-bold text-white transition cursor-pointer"
+                    title="Change Playback Speed"
+                  >
+                    <span>{playbackSpeed}x</span>
                   </button>
                 </div>
 
-                {/* Fullscreen controls */}
-                <div className="flex items-center">
+                {/* Right Controls: Quality Indicator & Fullscreen Toggle */}
+                <div className="flex items-center gap-2">
+                  <span className="hidden sm:inline-block px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold border border-blue-500/30">
+                    {selectedQuality}
+                  </span>
+
                   <button 
                     onClick={toggleFullscreen}
-                    className="p-2.5 h-11 w-11 bg-white/10 hover:bg-white/20 active:bg-white/30 text-white rounded-xl border border-white/10 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-black/20"
-                    title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+                    className="p-2.5 h-10 w-10 bg-white/10 hover:bg-blue-600 active:bg-blue-700 text-white rounded-xl border border-white/10 flex items-center justify-center active:scale-95 transition-all shadow-md shadow-black/20 cursor-pointer"
+                    title={isFullscreen ? "Exit Fullscreen (F)" : "Fullscreen (F)"}
                   >
                     {isFullscreen ? (
-                      <Minimize className="h-5.5 w-5.5 text-white" />
+                      <Minimize className="h-4.5 w-4.5 text-white" />
                     ) : (
-                      <Maximize className="h-5.5 w-5.5 text-white" />
+                      <Maximize className="h-4.5 w-4.5 text-white" />
                     )}
                   </button>
                 </div>

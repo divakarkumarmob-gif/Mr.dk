@@ -54,21 +54,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const [isDownloaded, setIsDownloaded] = useState(false);
     const [isDownloading, setIsDownloading] = useState(false);
 
+    // Auto-hide status bar while viewing PDF on mobile
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
-        if (showControls) {
-            SafeArea.showSystemBars({}).catch(() => {});
-        } else {
-            SafeArea.hideSystemBars({}).catch(() => {});
-            setShowSearch(false);
-        }
-    }, [showControls]);
-
-    useEffect(() => {
+        SafeArea.hideSystemBars({}).catch(() => {});
         return () => {
-            if (Capacitor.isNativePlatform()) {
-                SafeArea.showSystemBars({}).catch(() => {});
-            }
+            SafeArea.showSystemBars({}).catch(() => {});
         };
     }, []);
 

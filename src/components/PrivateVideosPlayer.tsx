@@ -60,8 +60,11 @@ export default function PrivateVideosPlayer({
 
   return (
     <div className="min-h-dvh bg-[#050814] text-white flex flex-col font-sans selection:bg-blue-500/30 selection:text-blue-200">
-      {/* Top Header Navbar */}
-      <header className="sticky top-0 z-40 bg-[#080d1e]/90 backdrop-blur-xl border-b border-slate-800/80 px-4 py-3 flex items-center justify-between shadow-lg">
+      {/* Top Header Navbar with Safe Area Top Padding */}
+      <header 
+        className="sticky top-0 z-40 bg-[#080d1e]/90 backdrop-blur-xl border-b border-slate-800/80 px-4 py-3 flex items-center justify-between shadow-lg"
+        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' }}
+      >
         <div className="flex items-center gap-3 min-w-0">
           <button 
             onClick={onBack} 
