@@ -6,7 +6,7 @@ import AdvancedPDFViewer from './AdvancedPDFViewer';
 import Pressable from './Pressable';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
-
+import { fetchAndCachePdf } from '../lib/pdfCache';
 
 // Simple IndexedDB wrapper for PDF storage
 const dbName = 'NCERT_OFFLINE_DB';
@@ -219,8 +219,16 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                 setNcertDebug(`list status=${res.status}`);
                 const data = await res.json();
                 console.log("NCERT list fetch result:", data);
-                if (data.success) {
+                if (data.success && Array.isArray(data.files)) {
                     setS3Files(data.files);
+
+                    // Background pre-fetch chapter PDFs into RAM cache for 0ms instant first-time open
+                    data.files.slice(0, 10).forEach((file: any) => {
+                        if (file.url && file.name) {
+                            const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+                            fetchAndCachePdf(file.url, cleanName).catch(() => {});
+                        }
+                    });
                     
                     const s3Match = findS3Match(data.files, chNum, title);
                     if (s3Match) {

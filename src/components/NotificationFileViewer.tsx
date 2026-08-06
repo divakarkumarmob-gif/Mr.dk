@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X, Download, Loader2, AlertCircle } from 'lucide-react';
 import { getNotificationFileViewUrl, downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
+import { fetchAndCachePdf } from '../lib/pdfCache';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 
 interface NotificationFileViewerProps {
@@ -35,13 +36,19 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
         (async () => {
             try {
                 const signedUrl = await getNotificationFileViewUrl(file.key);
-                if (!cancelled) setUrl(signedUrl);
+                if (!cancelled) {
+                    setUrl(signedUrl);
+                    if (file.fileType === 'pdf') {
+                        const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+                        fetchAndCachePdf(signedUrl, cleanName).catch(() => {});
+                    }
+                }
             } catch (err: any) {
                 if (!cancelled) setError(err.message || 'Failed to load file');
             }
         })();
         return () => { cancelled = true; };
-    }, [file.key]);
+    }, [file.key, file.name, file.fileType]);
 
     // PDFs get their own full viewer (header, zoom controls, save button
     // included) — just hand off to it once we have the signed URL.

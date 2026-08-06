@@ -8,6 +8,15 @@ import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { App as CapacitorApp } from '@capacitor/app';
 import { AuthProvider } from './contexts/AuthContext';
+import { pdfjs } from 'react-pdf';
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+
+// Global PDF.js Worker Pre-warming: Initializes worker thread on app startup for 0ms first-open PDF delay
+try {
+    pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+} catch {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+}
 
 // Initialize Safe Area (edge-to-edge).
 // NOTE: We intentionally do NOT use @capacitor/status-bar anymore.
