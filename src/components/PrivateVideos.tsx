@@ -133,18 +133,32 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
 
   const navigateToChapter = (subj: Subject, chap: Chapter) => {
     const nextIndex = currentIndexRef.current + 1;
-    // Store subject and chapter names in state so we can recover them on back
-    window.history.pushState({ 
-      privateVideoView: 'chapter', 
-      index: nextIndex,
-      subjectName: subj.name,
-      chapterName: chap.name,
-      showPrivateVideos: true
-    }, '');
-    currentIndexRef.current = nextIndex;
     setSelectedSubject(subj);
     setSelectedChapter(chap);
-    setCurrentView('chapter');
+
+    if (chap.videos && chap.videos.length > 0) {
+      setActiveVideo(chap.videos[0]);
+      window.history.pushState({ 
+        privateVideoView: 'player', 
+        index: nextIndex,
+        videoKey: chap.videos[0].key,
+        subjectName: subj.name,
+        chapterName: chap.name,
+        showPrivateVideos: true
+      }, '');
+      currentIndexRef.current = nextIndex;
+      setCurrentView('player');
+    } else {
+      window.history.pushState({ 
+        privateVideoView: 'chapter', 
+        index: nextIndex,
+        subjectName: subj.name,
+        chapterName: chap.name,
+        showPrivateVideos: true
+      }, '');
+      currentIndexRef.current = nextIndex;
+      setCurrentView('chapter');
+    }
   };
 
   const navigateToPlayer = (video: VideoItem) => {
@@ -464,42 +478,30 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
               </motion.div>
             )}
 
-            {/* VIEW 3: LECTURE PLAYER PAGE (Video Player Top, Lectures Listed Below) */}
+            {/* VIEW 3: LECTURE PLAYER PAGE (Desktop Split Layout: Left side Lectures, Right side Video Player) */}
             {currentView === 'player' && selectedChapter && activeVideo && (
               <motion.div
                 key="player-view"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="space-y-4 landscape:space-y-0 h-full"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-5 h-full"
               >
-                {/* VIDEO PLAYER ON TOP */}
-                <div className="bg-[#0c1124] border border-white/10 sm:rounded-2xl overflow-hidden shadow-2xl landscape:h-dvh landscape:w-screen landscape:border-0 landscape:rounded-none">
-                  <CustomVideoPlayer 
-                    src={activeVideo.url} 
-                    title={activeVideo.title} 
-                  />
-                </div>
-
-                {/* CURRENT PLAYING TITLE AND INFO */}
-                <div className="px-4 sm:px-1 landscape:hidden">
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 mb-1">
-                    <Tv className="h-4 w-4 animate-pulse text-orange-500" />
-                    <span>NOW STREAMING LECTURE</span>
+                {/* LEFT SIDE: LECTURES LIST SIDEBAR */}
+                <div className="lg:col-span-4 bg-[#0b1126] border border-white/10 rounded-2xl p-4 flex flex-col gap-3 order-2 lg:order-1 max-h-[500px] lg:max-h-none overflow-y-auto">
+                  <div className="flex items-center justify-between pb-2 border-b border-white/10">
+                    <div className="flex items-center gap-2">
+                      <FolderOpen className="h-4 w-4 text-orange-400" />
+                      <h3 className="text-xs font-extrabold uppercase tracking-wider text-white">
+                        Lectures ({selectedChapter.videos.length})
+                      </h3>
+                    </div>
+                    <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded">
+                      Playlist
+                    </span>
                   </div>
-                  <h2 className="text-lg font-black text-white leading-snug">{activeVideo.title}</h2>
-                  <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">
-                    {selectedSubject?.name} • {selectedChapter.name}
-                  </p>
-                </div>
 
-                {/* LECTURES LIST BELOW */}
-                <div className="space-y-2 pt-2 border-t border-white/5 px-4 sm:px-1 landscape:hidden">
-                  <h3 className="text-[10px] font-extrabold tracking-widest text-gray-500 uppercase px-1">
-                    PLAYLIST ({selectedChapter.videos.length} LECTURES)
-                  </h3>
-
-                  <div className="space-y-2 max-h-[280px] overflow-y-auto pr-1">
+                  <div className="space-y-2 flex-1 overflow-y-auto">
                     {selectedChapter.videos.map((vid, idx) => {
                       const isCurrent = vid.key === activeVideo.key;
                       return (
@@ -510,10 +512,10 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                               setActiveVideo(vid);
                             }
                           }}
-                          className={`p-3 rounded-2xl flex items-center justify-between gap-3 transition-all cursor-pointer border ${
+                          className={`p-3 rounded-xl flex items-center justify-between gap-3 transition-all cursor-pointer border ${
                             isCurrent 
-                              ? 'bg-orange-500/10 border-orange-500/30 shadow-[0_4px_20px_rgba(249,115,22,0.1)]' 
-                              : 'bg-[#0e142e] border-white/5 hover:border-orange-500/10 active:scale-[0.98]'
+                              ? 'bg-orange-500/15 border-orange-500/30 shadow-[0_4px_20px_rgba(249,115,22,0.1)]' 
+                              : 'bg-[#0e142e] border-white/5 hover:border-orange-500/20 active:scale-[0.98]'
                           }`}
                         >
                           <div className="flex items-center gap-3 min-w-0">
@@ -525,24 +527,43 @@ export default function PrivateVideos({ onClose }: { onClose: () => void }) {
                               {isCurrent ? <Play className="h-3.5 w-3.5 fill-orange-400 text-orange-400" /> : idx + 1}
                             </div>
                             <div className="min-w-0">
-                              <h4 className={`text-xs font-bold truncate ${isCurrent ? 'text-orange-400' : 'text-gray-200'}`}>
+                              <h4 className={`text-xs font-bold truncate ${isCurrent ? 'text-orange-400 font-extrabold' : 'text-gray-200'}`}>
                                 {vid.title}
                               </h4>
+                              <p className="text-[10px] text-gray-400">Lecture #{idx + 1}</p>
                             </div>
                           </div>
 
-                          {isCurrent ? (
-                            <span className="text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-400 rounded-lg">
+                          {isCurrent && (
+                            <span className="text-[9px] font-extrabold uppercase tracking-widest px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded">
                               Playing
-                            </span>
-                          ) : (
-                            <span className="text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-white/5 text-gray-400 rounded-lg">
-                              Select
                             </span>
                           )}
                         </div>
                       );
                     })}
+                  </div>
+                </div>
+
+                {/* RIGHT SIDE: VIDEO PLAYER MODAL */}
+                <div className="lg:col-span-8 flex flex-col gap-3 order-1 lg:order-2">
+                  <div className="bg-[#0c1124] border border-white/10 sm:rounded-2xl overflow-hidden shadow-2xl">
+                    <CustomVideoPlayer 
+                      src={activeVideo.url} 
+                      title={activeVideo.title} 
+                    />
+                  </div>
+
+                  {/* CURRENT PLAYING TITLE AND INFO */}
+                  <div className="p-4 bg-[#0c1124] border border-white/10 rounded-2xl">
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 mb-1">
+                      <Tv className="h-4 w-4 animate-pulse text-orange-500" />
+                      <span>NOW STREAMING LECTURE</span>
+                    </div>
+                    <h2 className="text-lg font-black text-white leading-snug">{activeVideo.title}</h2>
+                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">
+                      {selectedSubject?.name} • {selectedChapter.name}
+                    </p>
                   </div>
                 </div>
               </motion.div>

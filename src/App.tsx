@@ -1879,7 +1879,12 @@ function AppInner() {
       return <PrivateVideosList subjects={privateVideosSubjects} debugInfo={privateVideosDebug} onClose={() => { setShowPrivateVideos(false); setCurrentView('study'); }} onNavigate={(subj, chap) => { 
           setSelectedSubject(subj); 
           setSelectedChapter(chap);
-          setCurrentView('privateVideosChapter');
+          if (chap && chap.videos && chap.videos.length > 0) {
+              setPrivateActiveVideo(chap.videos[0]);
+              setCurrentView('privateVideosPlayer');
+          } else {
+              setCurrentView('privateVideosChapter');
+          }
       }} />;
   }
   if (currentView === 'privateVideosChapter' && selectedSubject && selectedChapter) {
@@ -1889,7 +1894,7 @@ function AppInner() {
       }} />;
   }
   if (currentView === 'privateVideosPlayer' && selectedSubject && selectedChapter && privateActiveVideo) {
-      return <PrivateVideosPlayer activeVideo={privateActiveVideo} selectedSubject={selectedSubject} selectedChapter={selectedChapter} onBack={() => setCurrentView('privateVideosChapter')} onNavigate={(vid) => {
+      return <PrivateVideosPlayer activeVideo={privateActiveVideo} selectedSubject={selectedSubject} selectedChapter={selectedChapter} onBack={() => setCurrentView('privateVideosList')} onNavigate={(vid) => {
           setPrivateActiveVideo(vid);
       }} />;
   }

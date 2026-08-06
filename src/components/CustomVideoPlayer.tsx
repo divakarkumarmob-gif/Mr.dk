@@ -102,6 +102,20 @@ export default function CustomVideoPlayer({ src, title }: CustomVideoPlayerProps
     };
   }, [isPlaying, showSettingsMenu]);
 
+  // Auto-play when src changes
+  useEffect(() => {
+    setIsLoading(true);
+    setVideoError(null);
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(err => {
+        console.log('Autoplay deferred until user interaction or muted:', err);
+      });
+    }
+  }, [src]);
+
   // Desktop Keyboard Shortcuts (Space, F, M, Left/Right Arrows)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
