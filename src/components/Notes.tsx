@@ -16,6 +16,7 @@ import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
 import { uploadToUserNoteS3, getDisplayUrl } from '../utils/s3Upload';
+import { getPdfViewerUrl } from '../utils/api';
 
 interface SelectedFile {
   id: string;
@@ -435,6 +436,51 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                   <p className="font-bold text-sm">Legacy PYQs 📜</p>
                 </div>
               </Pressable>
+            </div>
+
+            {/* Quick Access Official NTA Real PYQ Question Bank PDFs */}
+            <div className="mt-6 bg-[#161e38] border border-white/10 rounded-2xl p-4 shadow-xl">
+              <div className="flex items-center justify-between mb-3.5">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></div>
+                  <h3 className="text-sm font-bold text-white">NTA Real Question Papers</h3>
+                </div>
+                <span className="text-[10px] bg-blue-500/20 text-blue-300 font-extrabold px-2 py-0.5 rounded-full border border-blue-500/30">Official NTA PDFs</span>
+              </div>
+              
+              <div className="grid gap-2.5">
+                {[
+                  { id: 'neet2024', year: '2024', title: 'NEET 2024 Official Question Paper', url: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2024.pdf' },
+                  { id: 'neet2023', year: '2023', title: 'NEET 2023 Official Question Paper', url: 'https://accad.nta.nic.in/QuestionPaper/NEET_2023.pdf' },
+                  { id: 'neet2022', year: '2022', title: 'NEET 2022 Official Question Paper (English)', url: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2022_Eng.pdf' },
+                  { id: 'neet2021', year: '2021', title: 'NEET 2021 Official Question Paper', url: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2021.pdf' },
+                  { id: 'neet2020', year: '2020', title: 'NEET 2020 Official Question Paper', url: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2020.pdf' },
+                  { id: 'mock_bio', year: '2025', title: 'NTA Abhyas: Biology Mock Paper', url: 'https://www.nta.ac.in/Download/Sample/Biology_Mock.pdf' },
+                ].map((paper) => (
+                  <div 
+                    key={paper.id}
+                    onClick={async () => {
+                      try {
+                        const proxyUrl = await getPdfViewerUrl(paper.url);
+                        setViewerPdf({ url: proxyUrl, title: paper.title });
+                      } catch (e) {
+                        setViewerPdf({ url: paper.url, title: paper.title });
+                      }
+                    }}
+                    className="bg-slate-900/80 hover:bg-slate-800 border border-white/5 p-3 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all active:scale-[0.98]"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-extrabold text-[10px] shrink-0">
+                        {paper.year}
+                      </div>
+                      <span className="text-xs font-bold text-gray-200 truncate">{paper.title}</span>
+                    </div>
+                    <div className="bg-blue-600 hover:bg-blue-500 text-white px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shrink-0 shadow-sm">
+                      <Eye className="w-3 h-3" /> View PDF
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}

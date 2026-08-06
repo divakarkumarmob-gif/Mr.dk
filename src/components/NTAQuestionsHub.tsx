@@ -19,7 +19,7 @@ const NTA_PAPERS: NTAPaper[] = [
     { 
         id: 'neet2024', 
         year: '2024', 
-        title: 'NEET (UG) - 2024 Question Paper', 
+        title: 'NEET (UG) - 2024 Official Question Paper', 
         url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2024/NEET_2024.pdf', 
         mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2024.pdf',
         category: 'Main' 
@@ -27,7 +27,7 @@ const NTA_PAPERS: NTAPaper[] = [
     { 
         id: 'neet2023', 
         year: '2023', 
-        title: 'NEET (UG) - 2023 Question Paper', 
+        title: 'NEET (UG) - 2023 Official Question Paper', 
         url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2023/NEET_2023.pdf', 
         mirrorUrl: 'https://accad.nta.nic.in/QuestionPaper/NEET_2023.pdf',
         category: 'Main' 
@@ -35,14 +35,51 @@ const NTA_PAPERS: NTAPaper[] = [
     { 
         id: 'neet2022', 
         year: '2022', 
-        title: 'NEET (UG) - 2022 Question Paper (English)', 
+        title: 'NEET (UG) - 2022 Official Question Paper (English)', 
         url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2022/NEET_2022.pdf', 
         mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2022_Eng.pdf',
         category: 'Main' 
     },
-    { id: 'neet2021', year: '2021', title: 'NEET (UG) - 2021 Question Paper', url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2021/NEET_2021.pdf', mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2021.pdf', category: 'Main' },
-    { id: 'neet2020', year: '2020', title: 'NEET (UG) - 2020 Question Paper', url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2020/NEET_2020.pdf', mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2020.pdf', category: 'Main' },
-    { id: 'mock_bio', year: '2025', title: 'NTA Abhyas: Biology Mock', url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/Mocks/Biology_Mock.pdf', mirrorUrl: 'https://www.nta.ac.in/Download/Sample/Biology_Mock.pdf', category: 'Mock' },
+    { 
+        id: 'neet2021', 
+        year: '2021', 
+        title: 'NEET (UG) - 2021 Official Question Paper', 
+        url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2021/NEET_2021.pdf', 
+        mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2021.pdf', 
+        category: 'Main' 
+    },
+    { 
+        id: 'neet2020', 
+        year: '2020', 
+        title: 'NEET (UG) - 2020 Official Question Paper', 
+        url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2020/NEET_2020.pdf', 
+        mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2020.pdf', 
+        category: 'Main' 
+    },
+    { 
+        id: 'neet2019', 
+        year: '2019', 
+        title: 'NEET (UG) - 2019 Official Question Paper', 
+        url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2019/NEET_2019.pdf', 
+        mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2019.pdf', 
+        category: 'Main' 
+    },
+    { 
+        id: 'neet2018', 
+        year: '2018', 
+        title: 'NEET (UG) - 2018 Official Question Paper', 
+        url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2018/NEET_2018.pdf', 
+        mirrorUrl: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2018.pdf', 
+        category: 'Main' 
+    },
+    { 
+        id: 'mock_bio', 
+        year: '2025', 
+        title: 'NTA Abhyas: Biology Official Sample Paper', 
+        url: 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/Mocks/Biology_Mock.pdf', 
+        mirrorUrl: 'https://www.nta.ac.in/Download/Sample/Biology_Mock.pdf', 
+        category: 'Mock' 
+    },
 ];
 
 export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: () => void, autoOpenPaperId?: string }) {
