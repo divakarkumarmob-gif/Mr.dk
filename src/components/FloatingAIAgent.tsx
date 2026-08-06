@@ -141,7 +141,10 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                 
                 const response = await authFetch(getApiUrl('/api/gemini'), {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'text/event-stream'
+                    },
                     body: JSON.stringify({
                         base64Audio: base64Audio,
                         prompt: "Transcribe the audio and then answer the query concisely as a helpful assistant."
@@ -152,10 +155,41 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
-                const data = await response.json();
-                setAiText(data.text);
-                addLog(`AI: ${data.text}`);
-                speak(data.text);
+                let streamedText = '';
+                if (response.body) {
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let buffer = '';
+
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+                        buffer += decoder.decode(value, { stream: true });
+                        const lines = buffer.split('\n');
+                        buffer = lines.pop() || '';
+
+                        for (const line of lines) {
+                            const trimmed = line.trim();
+                            if (!trimmed || !trimmed.startsWith('data:')) continue;
+                            const dataStr = trimmed.replace(/^data:\s*/, '');
+                            if (dataStr === '[DONE]') break;
+                            try {
+                                const parsed = JSON.parse(dataStr);
+                                if (parsed.text) {
+                                    streamedText += parsed.text;
+                                    setAiText(streamedText);
+                                }
+                            } catch {
+                                // Skip partial JSON parse errors
+                            }
+                        }
+                    }
+                }
+
+                const finalText = streamedText.trim() || "Completed response.";
+                setAiText(finalText);
+                addLog(`AI: ${finalText}`);
+                speak(finalText);
             };
         } catch (e) {
             addLog(`Error processing audio: ${e}`);

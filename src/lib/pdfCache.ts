@@ -103,44 +103,70 @@ function base64ToUint8(base64: string): Uint8Array {
     return bytes;
 }
 
+// RAM In-Memory Cache for sub-millisecond 0ms instant display
+const ramPdfCache = new Map<string, string>();
+
+/**
+ * Get PDF Blob URL from RAM memory if available
+ */
+export const getRamCachedPdf = (filename: string): string | null => {
+    const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+    return ramPdfCache.get(encFilename) || null;
+};
+
+/**
+ * Single-fetch loader: Fetches remote PDF once, returns an in-memory Blob URL for instant rendering,
+ * and asynchronously saves the encrypted PDF to disk/IndexedDB without blocking the UI.
+ */
+export const fetchAndCachePdf = async (url: string, filename: string): Promise<string> => {
+    const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+
+    // 1. Return from RAM cache if already present
+    if (ramPdfCache.has(encFilename)) {
+        return ramPdfCache.get(encFilename)!;
+    }
+
+    // 2. Single network fetch
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const arrayBuffer = await response.arrayBuffer();
+    const pdfBytes = new Uint8Array(arrayBuffer);
+
+    // Create in-memory Blob URL for instant viewer rendering
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const blobUrl = URL.createObjectURL(blob);
+    ramPdfCache.set(encFilename, blobUrl);
+
+    // 3. Persist to disk / IndexedDB asynchronously in background
+    (async () => {
+        try {
+            const encryptedBytes = xorTransform(pdfBytes);
+            if (Capacitor.isNativePlatform()) {
+                const base64Encoded = uint8ToBase64(encryptedBytes);
+                await Filesystem.writeFile({
+                    path: `pdfs/${encFilename}`,
+                    data: base64Encoded,
+                    directory: Directory.Data,
+                    recursive: true,
+                });
+            }
+            await saveToIDB(encFilename, encryptedBytes);
+        } catch (err) {
+            console.warn('[pdfCache] Background persist error:', err);
+        }
+    })();
+
+    return blobUrl;
+};
+
 /**
  * Download, encrypt (XOR), and cache a PDF locally as .mrdkpdf
  * Returns the encoded filename on success, null on failure.
  */
 export const cachePdf = async (url: string, filename: string): Promise<string | null> => {
     try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            console.warn(`Failed to fetch PDF for caching, status: ${response.status}`);
-            return null;
-        }
-        const arrayBuffer = await response.arrayBuffer();
-        if (!arrayBuffer || arrayBuffer.byteLength === 0) return null;
-        if (arrayBuffer.byteLength > 100 * 1024 * 1024) { // 100MB safety limit
-            console.warn('PDF exceeds max 100MB cache limit:', filename);
-            return null;
-        }
-        const pdfBytes = new Uint8Array(arrayBuffer);
-
-        // XOR-encrypt the raw PDF bytes
-        const encryptedBytes = xorTransform(pdfBytes);
-        const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
-
-        if (Capacitor.isNativePlatform()) {
-            const base64Encoded = uint8ToBase64(encryptedBytes);
-            // Save with .mrdkpdf extension & recursive: true to automatically create directory
-            await Filesystem.writeFile({
-                path: `pdfs/${encFilename}`,
-                data: base64Encoded,
-                directory: Directory.Data,
-                recursive: true,
-            });
-        }
-
-        // Also save to IndexedDB as reliable cross-platform fallback
-        await saveToIDB(encFilename, encryptedBytes);
-
-        return encFilename;
+        await fetchAndCachePdf(url, filename);
+        return filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
     } catch (error) {
         console.error('Failed to cache PDF:', error);
         return null;
@@ -154,6 +180,11 @@ export const cachePdf = async (url: string, filename: string): Promise<string | 
  */
 export const getCachedPdf = async (filename: string): Promise<string | null> => {
     const encFilename = filename.replace(/\.pdf$/i, '') + '.mrdkpdf';
+
+    // 0. Try RAM Cache first (0ms instant)
+    if (ramPdfCache.has(encFilename)) {
+        return ramPdfCache.get(encFilename)!;
+    }
 
     // 1. Try Native Filesystem first
     if (Capacitor.isNativePlatform()) {
@@ -173,7 +204,9 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
             const pdfBytes = xorTransform(encryptedBytes);
 
             const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-            return URL.createObjectURL(blob);
+            const blobUrl = URL.createObjectURL(blob);
+            ramPdfCache.set(encFilename, blobUrl);
+            return blobUrl;
         } catch {
             // Fallthrough to IndexedDB check
         }
@@ -185,7 +218,9 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
         if (encryptedBytes) {
             const pdfBytes = xorTransform(encryptedBytes);
             const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-            return URL.createObjectURL(blob);
+            const blobUrl = URL.createObjectURL(blob);
+            ramPdfCache.set(encFilename, blobUrl);
+            return blobUrl;
         }
     } catch (err) {
         console.error('Error reading from IDB cache:', err);

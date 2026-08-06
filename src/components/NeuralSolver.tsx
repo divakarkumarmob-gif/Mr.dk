@@ -94,26 +94,77 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
     const handleSend = async () => {
         if (!input.trim() || loading) return;
 
-        const newMessages = [...messages, { role: 'user' as const, content: input }];
+        const userMsg = { role: 'user' as const, content: input };
+        const newMessages = [...messages, userMsg];
         setMessages(newMessages);
         saveChat(newMessages); // Save user message
         setInput('');
         setLoading(true);
 
+        const assistantIndex = newMessages.length;
+        setMessages([...newMessages, { role: 'assistant', content: '' }]);
+
+        let fullText = '';
         try {
             const response = await authFetch(getApiUrl('/api/neural-chat'), {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'text/event-stream'
+                },
                 body: JSON.stringify({ messages: newMessages })
             });
 
             if (!response.ok) throw new Error('Failed to fetch');
-            const data = await response.json();
-            const updatedMessages = [...newMessages, { role: 'assistant' as const, content: data.reply }];
+
+            if (response.body) {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop() || '';
+
+                    for (const line of lines) {
+                        const trimmed = line.trim();
+                        if (!trimmed || !trimmed.startsWith('data:')) continue;
+                        const dataStr = trimmed.replace(/^data:\s*/, '');
+                        if (dataStr === '[DONE]') break;
+                        try {
+                            const parsed = JSON.parse(dataStr);
+                            if (parsed.text) {
+                                fullText += parsed.text;
+                                setMessages(prev => {
+                                    const next = [...prev];
+                                    if (next[assistantIndex]) {
+                                        next[assistantIndex] = { role: 'assistant', content: fullText };
+                                    }
+                                    return next;
+                                });
+                            }
+                        } catch {
+                            // Skip partial JSON parse errors
+                        }
+                    }
+                }
+            }
+
+            if (!fullText.trim()) {
+                fullText = "Sorry, error aa gaya. Study related pucho.";
+            }
+
+            const updatedMessages = [...newMessages, { role: 'assistant' as const, content: fullText }];
             setMessages(updatedMessages);
             saveChat(updatedMessages); // Save updated history
         } catch (error) {
-            setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, error aa gaya. Study related pucho." }]);
+            console.error('[NeuralSolver] Streaming error:', error);
+            const fallbackMessages = [...newMessages, { role: 'assistant' as const, content: "Sorry, error aa gaya. Study related pucho." }];
+            setMessages(fallbackMessages);
+            saveChat(fallbackMessages);
         } finally {
             setLoading(false);
         }

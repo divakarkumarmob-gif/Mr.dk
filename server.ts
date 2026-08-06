@@ -234,13 +234,32 @@ async function generateWithFallback(primaryModel: string, contents: any): Promis
             } catch (fallbackError: any) {
                 lastError = fallbackError;
                 const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
-                // NOT_FOUND (404) means this model ID isn't usable on this
-                // project at all — also worth skipping to the next model,
-                // not just capacity errors, so one dead model ID can't
-                // break the whole chain.
                 const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
                 if (!fbShouldSkip) throw fallbackError;
-                // otherwise, try the next model in the chain
+            }
+        }
+        throw lastError;
+    }
+}
+
+async function generateStreamWithFallback(primaryModel: string, contents: any): Promise<AsyncIterable<any>> {
+    try {
+        return await withGeminiRetry(() => ai.models.generateContentStream({ model: primaryModel, contents }));
+    } catch (error: any) {
+        const status = error?.status || error?.error?.status || error?.code;
+        const isCapacityIssue = status === 'UNAVAILABLE' || status === 503 || status === 'RESOURCE_EXHAUSTED' || status === 429;
+        if (!isCapacityIssue) throw error;
+
+        let lastError: any = error;
+        for (const fallbackModel of FALLBACK_MODELS) {
+            try {
+                console.warn(`Model ${primaryModel} stream unavailable, falling back to ${fallbackModel}`);
+                return await withGeminiRetry(() => ai.models.generateContentStream({ model: fallbackModel, contents }), 2);
+            } catch (fallbackError: any) {
+                lastError = fallbackError;
+                const fbStatus = fallbackError?.status || fallbackError?.error?.status || fallbackError?.code;
+                const fbShouldSkip = fbStatus === 'UNAVAILABLE' || fbStatus === 503 || fbStatus === 'RESOURCE_EXHAUSTED' || fbStatus === 429 || fbStatus === 'NOT_FOUND' || fbStatus === 404;
+                if (!fbShouldSkip) throw fallbackError;
             }
         }
         throw lastError;
@@ -1594,12 +1613,36 @@ After writing your normal reply to the user, on a new line add the exact delimit
 - Do NOT mention this memory block or the delimiter anywhere in your visible reply to the user — it must only appear after "///MEMORY///".
 - This memory section is mandatory in every single response, even simple greetings.`;
 
-          const response = await generateWithFallback("gemini-3.6-flash", { 
-                parts: [
-                    { text: isStudyPlanChat ? studyPlanInstruction : baseInstruction },
-                    ...contents
-                ] 
-            });
+          const isStream = req.headers.accept === 'text/event-stream' || req.query.stream === 'true';
+          const promptParts = [
+              { text: isStudyPlanChat ? studyPlanInstruction : baseInstruction },
+              ...contents
+          ];
+
+          if (isStream) {
+              res.setHeader('Content-Type', 'text/event-stream');
+              res.setHeader('Cache-Control', 'no-cache');
+              res.setHeader('Connection', 'keep-alive');
+
+              try {
+                  const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
+                  for await (const chunk of stream) {
+                      if (chunk.text) {
+                          res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
+                      }
+                  }
+                  res.write(`data: [DONE]\n\n`);
+                  res.end();
+              } catch (err: any) {
+                  console.error("Gemini Streaming Error (/api/gemini):", err);
+                  res.write(`data: ${JSON.stringify({ error: err.message || 'Stream error' })}\n\n`);
+                  res.write(`data: [DONE]\n\n`);
+                  res.end();
+              }
+              return;
+          }
+
+          const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
           
           const rawText = response.text || "";
           let replyText = rawText;
@@ -1763,7 +1806,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
         }
     });
 
-  // API route for neural chat
+  // API route for neural chat (Supports streaming SSE & JSON)
   app.post("/api/neural-chat", requireAppCheck, requireAuth, async (req, res) => {
     const { messages } = req.body;
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
@@ -1771,15 +1814,38 @@ After writing your normal reply to the user, on a new line add the exact delimit
     }
     
     const lastMessage = messages[messages.length - 1].content;
+    const isStream = req.headers.accept === 'text/event-stream' || req.query.stream === 'true';
+
+    const promptParts = [
+      { text: `You are a NEET-focused doubt solver for Physics, Chemistry, and Biology, answering strictly according to NCERT. Give a complete, accurate, step-by-step solution — show the reasoning and working, not just the final answer. Bold the key formula, the final answer, and any critical facts the student should remember. ${NEURAL_SOLVER_FORMAT_RULE}` },
+      { text: lastMessage }
+    ];
+
+    if (isStream) {
+      res.setHeader('Content-Type', 'text/event-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
+
+      try {
+        const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
+        for await (const chunk of stream) {
+          if (chunk.text) {
+            res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
+          }
+        }
+        res.write(`data: [DONE]\n\n`);
+        res.end();
+      } catch (error: any) {
+        console.error("Gemini Streaming Error (Neural):", error);
+        res.write(`data: ${JSON.stringify({ error: error.message || 'Stream error' })}\n\n`);
+        res.write(`data: [DONE]\n\n`);
+        res.end();
+      }
+      return;
+    }
     
     try {
-        const response = await generateWithFallback("gemini-3.6-flash", {
-            parts: [
-                { text: `You are a NEET-focused doubt solver for Physics, Chemistry, and Biology, answering strictly according to NCERT. Give a complete, accurate, step-by-step solution — show the reasoning and working, not just the final answer. Bold the key formula, the final answer, and any critical facts the student should remember. ${NEURAL_SOLVER_FORMAT_RULE}` },
-                { text: lastMessage }
-            ]
-        });
-
+        const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
         res.json({ reply: response.text });
     } catch (error) {
       console.error("Gemini API Error (Neural):", error);

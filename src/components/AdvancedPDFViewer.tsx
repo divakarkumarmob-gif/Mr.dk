@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice } from '../lib/pdfCache';
+import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedPdf, fetchAndCachePdf } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { openExternalLink } from '../utils/browser';
@@ -135,7 +135,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const loadContent = async () => {
             const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
             
-            // 1. Try local cache first for sub-second instant load
+            // 0. Try RAM Memory Cache (0ms Instant)
+            const ramUrl = getRamCachedPdf(filename);
+            if (ramUrl && isMounted) {
+                setActivePdfUrl(ramUrl);
+                setIsDownloaded(true);
+                return;
+            }
+
+            // 1. Try local disk/IndexedDB cache
             const cachedBlobUrl = await getCachedPdf(filename);
             if (cachedBlobUrl && isMounted) {
                 setActivePdfUrl(cachedBlobUrl);
@@ -143,16 +151,18 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 return;
             }
 
-            // 2. Load online/passed URL
-            if (isMounted) {
-                setActivePdfUrl(pdfUrl);
-            }
-
-            // 3. Auto cache in background so next load is instant
-            if (pdfUrl) {
-                cachePdf(pdfUrl, filename).then((cached) => {
-                    if (cached && isMounted) setIsDownloaded(true);
-                }).catch(() => {});
+            // 2. Single-fetch & instant Blob URL creation
+            if (pdfUrl && isMounted) {
+                try {
+                    const blobUrl = await fetchAndCachePdf(pdfUrl, filename);
+                    if (isMounted) {
+                        setActivePdfUrl(blobUrl);
+                        setIsDownloaded(true);
+                    }
+                } catch (err) {
+                    console.warn('[AdvancedPDFViewer] Single fetch error, fallback to raw url:', err);
+                    if (isMounted) setActivePdfUrl(pdfUrl);
+                }
             }
         };
         loadContent();
