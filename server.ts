@@ -828,6 +828,74 @@ async function startServer() {
     }
   });
 
+  // ---------- PDF Proxy Endpoints (CORS & External Download Bypass) ----------
+  const PDF_PROXY_SECRET = process.env.JWT_SECRET || process.env.FIREBASE_PRIVATE_KEY || "neetmaster_pdf_proxy_secret_key_2026";
+
+  app.post("/api/proxy-pdf/token", requireAppCheck, requireAuth, (req: any, res: any) => {
+    try {
+      const { url } = req.body;
+      if (!url || typeof url !== 'string') {
+        return res.status(400).json({ error: "PDF url required" });
+      }
+      const token = jwt.sign({ url, uid: req.uid }, PDF_PROXY_SECRET, { expiresIn: '2h' });
+      res.json({ success: true, token });
+    } catch (err: any) {
+      console.error("PDF Proxy Token Error:", err);
+      res.status(500).json({ error: err.message || "Failed to issue token" });
+    }
+  });
+
+  app.get("/api/proxy-pdf", async (req: any, res: any) => {
+    try {
+      let targetUrl = req.query.url as string;
+      const token = req.query.token as string;
+
+      if (!targetUrl || !token) {
+        return res.status(400).send("Missing url or token parameter");
+      }
+
+      try {
+        const decoded = jwt.verify(token, PDF_PROXY_SECRET) as any;
+        if (decoded.url !== targetUrl) {
+          return res.status(403).send("Invalid proxy token for target URL");
+        }
+      } catch (err) {
+        return res.status(401).send("Expired or invalid proxy token");
+      }
+
+      if (targetUrl.includes("drive.google.com/file/d/")) {
+        const fileIdMatch = targetUrl.match(/\/file\/d\/([^\/]+)/);
+        if (fileIdMatch && fileIdMatch[1]) {
+          targetUrl = `https://drive.google.com/uc?export=download&id=${fileIdMatch[1]}`;
+        }
+      }
+
+      const fetchRes = await fetch(targetUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'application/pdf,application/octet-stream,*/*',
+        },
+      });
+
+      if (!fetchRes.ok) {
+        return res.status(fetchRes.status).send(`Failed to fetch target PDF. HTTP ${fetchRes.status}`);
+      }
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Headers', '*');
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      res.setHeader('Content-Disposition', 'inline');
+
+      const arrayBuffer = await fetchRes.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      res.send(buffer);
+    } catch (err: any) {
+      console.error("Server PDF Proxy Error:", err);
+      res.status(500).send(`Server PDF Proxy Error: ${err.message}`);
+    }
+  });
+
   app.get("/api/ncert-list", async (req, res) => {
     try {
       const { bucket, prefix } = req.query;

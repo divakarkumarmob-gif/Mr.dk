@@ -1,10 +1,21 @@
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Capacitor } from '@capacitor/core';
+import { savePdfToPublicDownloads } from '../utils/publicDownload';
 
 // IndexedDB Config for local storage PDF persistence
 const IDB_NAME = 'MrDkPdfCacheDB';
 const IDB_STORE = 'pdfs';
 const IDB_VERSION = 1;
+
+/**
+ * Magic Bytes PDF Validator (%PDF- = 0x25, 0x50, 0x44, 0x46)
+ * Guarantees that fetched/cached data is a real PDF and not an HTML/JSON error page.
+ */
+export function isValidPdfBuffer(data: ArrayBuffer | Uint8Array | null | undefined): boolean {
+    if (!data || data.byteLength < 4) return false;
+    const view = data instanceof Uint8Array ? data : new Uint8Array(data);
+    return view[0] === 0x25 && view[1] === 0x50 && view[2] === 0x44 && view[3] === 0x46;
+}
 
 /**
  * Open IndexedDB database for local storage PDF persistence
@@ -42,6 +53,17 @@ async function saveToIDB(key: string, data: ArrayBuffer): Promise<boolean> {
     }
 }
 
+async function removeFromIDB(key: string): Promise<void> {
+    try {
+        const db = await openPdfDB();
+        const tx = db.transaction(IDB_STORE, 'readwrite');
+        const store = tx.objectStore(IDB_STORE);
+        store.delete(key);
+    } catch {
+        // Ignore deletion error
+    }
+}
+
 async function getFromIDB(key: string): Promise<ArrayBuffer | null> {
     try {
         const db = await openPdfDB();
@@ -59,10 +81,10 @@ async function getFromIDB(key: string): Promise<ArrayBuffer | null> {
 
 async function isIDBCached(key: string): Promise<boolean> {
     const data = await getFromIDB(key);
-    return data !== null;
+    return data !== null && isValidPdfBuffer(data);
 }
 
-// Native C++ FileReader Blob to Base64 conversion (300x faster than JS loops)
+// Native C++ FileReader Blob to Base64 conversion
 function blobToBase64(blob: Blob): Promise<string> {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -79,19 +101,34 @@ function blobToBase64(blob: Blob): Promise<string> {
 const ramPdfCache = new Map<string, string>();
 
 /**
+ * Generate clean, unique cache key combining title and URL signature
+ */
+export function getPdfCacheKey(filename: string, url?: string): string {
+    const cleanTitle = filename.replace(/\.pdf$/i, '').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    if (!url) return `${cleanTitle}.pdf`;
+    let hash = 0;
+    for (let i = 0; i < url.length; i++) {
+        hash = ((hash << 5) - hash) + url.charCodeAt(i);
+        hash |= 0;
+    }
+    const hashStr = Math.abs(hash).toString(36);
+    return `${cleanTitle}_${hashStr}.pdf`;
+}
+
+/**
  * Get PDF Blob URL from RAM memory if available
  */
-export const getRamCachedPdf = (filename: string): string | null => {
-    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+export const getRamCachedPdf = (filename: string, url?: string): string | null => {
+    const cleanKey = getPdfCacheKey(filename, url);
     return ramPdfCache.get(cleanKey) || null;
 };
 
 /**
- * Single-fetch loader: Fetches remote PDF once, creates an in-memory Blob URL for instant rendering,
- * and asynchronously saves to IndexedDB & Filesystem in background without blocking main UI thread.
+ * Single-fetch loader: Fetches remote PDF once, verifies magic bytes (%PDF-),
+ * creates an in-memory Blob URL for instant rendering, and saves to IndexedDB/disk.
  */
 export const fetchAndCachePdf = async (url: string, filename: string): Promise<string> => {
-    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+    const cleanKey = getPdfCacheKey(filename, url);
 
     // 1. Return from RAM cache if already present
     if (ramPdfCache.has(cleanKey)) {
@@ -104,8 +141,14 @@ export const fetchAndCachePdf = async (url: string, filename: string): Promise<s
     const blob = await response.blob();
     const arrayBuffer = await blob.arrayBuffer();
 
+    // Verify PDF header (%PDF-)
+    if (!isValidPdfBuffer(arrayBuffer)) {
+        throw new Error('Downloaded data is not a valid PDF file (possible HTML error/redirect page)');
+    }
+
     // Create in-memory Blob URL for instant viewer rendering
-    const blobUrl = URL.createObjectURL(blob);
+    const pdfBlob = new Blob([arrayBuffer], { type: 'application/pdf' });
+    const blobUrl = URL.createObjectURL(pdfBlob);
     ramPdfCache.set(cleanKey, blobUrl);
 
     // 3. Persist to disk / IndexedDB asynchronously in background (non-blocking)
@@ -113,7 +156,7 @@ export const fetchAndCachePdf = async (url: string, filename: string): Promise<s
         try {
             await saveToIDB(cleanKey, arrayBuffer);
             if (Capacitor.isNativePlatform()) {
-                const base64Data = await blobToBase64(blob);
+                const base64Data = await blobToBase64(pdfBlob);
                 await Filesystem.writeFile({
                     path: `pdfs/${cleanKey}`,
                     data: base64Data,
@@ -122,7 +165,7 @@ export const fetchAndCachePdf = async (url: string, filename: string): Promise<s
                 });
             }
         } catch (err) {
-            console.warn('[pdfCache] Background persist error:', err);
+            console.warn('[pdfCache] Background persist notice:', err);
         }
     })();
 
@@ -135,7 +178,7 @@ export const fetchAndCachePdf = async (url: string, filename: string): Promise<s
 export const cachePdf = async (url: string, filename: string): Promise<string | null> => {
     try {
         await fetchAndCachePdf(url, filename);
-        return filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+        return getPdfCacheKey(filename, url);
     } catch (error) {
         console.error('Failed to cache PDF:', error);
         return null;
@@ -143,10 +186,10 @@ export const cachePdf = async (url: string, filename: string): Promise<string | 
 };
 
 /**
- * Retrieve a cached PDF — return a blob:// URL for instant loading.
+ * Retrieve a cached PDF — return a blob:// URL for instant loading if valid.
  */
-export const getCachedPdf = async (filename: string): Promise<string | null> => {
-    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+export const getCachedPdf = async (filename: string, url?: string): Promise<string | null> => {
+    const cleanKey = getPdfCacheKey(filename, url);
 
     // 0. Try RAM Cache first (0ms instant)
     if (ramPdfCache.has(cleanKey)) {
@@ -157,10 +200,16 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
     try {
         const arrayBuffer = await getFromIDB(cleanKey);
         if (arrayBuffer && arrayBuffer.byteLength > 0) {
-            const blob = new Blob([arrayBuffer], { type: 'application/pdf' });
-            const blobUrl = URL.createObjectURL(blob);
-            ramPdfCache.set(cleanKey, blobUrl);
-            return blobUrl;
+            if (isValidPdfBuffer(arrayBuffer)) {
+                const blob = new Blob([arrayBuffer], { type: 'application/pdf' });
+                const blobUrl = URL.createObjectURL(blob);
+                ramPdfCache.set(cleanKey, blobUrl);
+                return blobUrl;
+            } else {
+                // Purge invalid non-PDF cache entry
+                console.warn('[pdfCache] Removing invalid/corrupted cached PDF entry from IndexedDB');
+                await removeFromIDB(cleanKey);
+            }
         }
     } catch (err) {
         console.warn('[pdfCache] IndexedDB read error:', err);
@@ -186,10 +235,12 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
                 byteNumbers[i] = byteCharacters.charCodeAt(i);
             }
             const byteArray = new Uint8Array(byteNumbers);
-            const blob = new Blob([byteArray], { type: 'application/pdf' });
-            const blobUrl = URL.createObjectURL(blob);
-            ramPdfCache.set(cleanKey, blobUrl);
-            return blobUrl;
+            if (isValidPdfBuffer(byteArray.buffer)) {
+                const blob = new Blob([byteArray], { type: 'application/pdf' });
+                const blobUrl = URL.createObjectURL(blob);
+                ramPdfCache.set(cleanKey, blobUrl);
+                return blobUrl;
+            }
         } catch {
             // Ignore filesystem errors
         }
@@ -201,8 +252,8 @@ export const getCachedPdf = async (filename: string): Promise<string | null> => 
 /**
  * Check if a PDF is already cached locally
  */
-export const isPdfCached = async (filename: string): Promise<boolean> => {
-    const cleanKey = filename.replace(/\.pdf$/i, '').toLowerCase() + '.pdf';
+export const isPdfCached = async (filename: string, url?: string): Promise<boolean> => {
+    const cleanKey = getPdfCacheKey(filename, url);
     if (ramPdfCache.has(cleanKey)) return true;
     if (await isIDBCached(cleanKey)) return true;
     if (Capacitor.isNativePlatform()) {
@@ -219,14 +270,11 @@ export const isPdfCached = async (filename: string): Promise<boolean> => {
     return false;
 };
 
-import { savePdfToPublicDownloads } from '../utils/publicDownload';
-
 export const downloadPdfToDevice = async (pdfUrl: string, title: string): Promise<boolean> => {
-    const cleanFilename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+    const cleanFilename = getPdfCacheKey(title, pdfUrl);
 
-    // 1. If we ALREADY have the PDF in local RAM/IDB cache, pass local blob URL directly (0ms network delay!)
     try {
-        const cachedBlobUrl = await getCachedPdf(cleanFilename);
+        const cachedBlobUrl = await getCachedPdf(title, pdfUrl);
         if (cachedBlobUrl) {
             const res = await fetch(cachedBlobUrl);
             const blob = await res.blob();

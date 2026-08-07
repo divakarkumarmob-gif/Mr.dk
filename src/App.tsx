@@ -60,6 +60,7 @@ const safeToDate = (ts: any): Date | undefined => {
 };
 
 const AiSearch = lazy(() => import('./components/AiSearch'));
+const FocusSanctuary = lazy(() => import('./components/FocusSanctuary'));
 const WeakTopics = lazy(() => import('./components/WeakTopics'));
 const AnalysisHistory = lazy(() => import('./components/AnalysisHistory'));
 const FloatingAIAgent = lazy(() => import('./components/FloatingAIAgent'));

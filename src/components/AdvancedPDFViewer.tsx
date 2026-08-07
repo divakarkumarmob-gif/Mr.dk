@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedPdf, fetchAndCachePdf } from '../lib/pdfCache';
+import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedPdf, fetchAndCachePdf, getPdfCacheKey } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { openExternalLink } from '../utils/browser';
@@ -17,7 +17,7 @@ import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 try {
     pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
 } catch {
-    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version || '5.4.296'}/build/pdf.worker.min.mjs`;
 }
 
 const MIN_SCALE = 0.25;
@@ -133,10 +133,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         let isMounted = true;
 
         const loadContent = async () => {
-            const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-            
             // Step 1: Ultra-fast 0ms RAM Memory Cache Check
-            const ramUrl = getRamCachedPdf(filename);
+            const ramUrl = getRamCachedPdf(title, pdfUrl);
             if (ramUrl && isMounted) {
                 setActivePdfUrl(ramUrl);
                 setIsDownloaded(true);
@@ -145,7 +143,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
             // Step 2: Millisecond Persistent Storage (IndexedDB / Disk) Check (<5ms)
             try {
-                const cachedBlobUrl = await getCachedPdf(filename);
+                const cachedBlobUrl = await getCachedPdf(title, pdfUrl);
                 if (cachedBlobUrl && isMounted) {
                     setActivePdfUrl(cachedBlobUrl);
                     setIsDownloaded(true);
@@ -155,13 +153,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 console.warn('[AdvancedPDFViewer] Local disk cache check notice:', err);
             }
 
-            // Step 3: Local Cache Miss -> Server Stream Fallback (<200ms Range Stream)
+            // Step 3: Local Cache Miss -> Server Stream Fallback
             if (pdfUrl && isMounted) {
                 setActivePdfUrl(pdfUrl);
-                // Save to local IndexedDB & RAM cache in background for future 0ms loads
-                fetchAndCachePdf(pdfUrl, filename).then(() => {
+                fetchAndCachePdf(pdfUrl, title).then(() => {
                     if (isMounted) setIsDownloaded(true);
-                }).catch(() => {});
+                }).catch(async (fetchErr) => {
+                    console.warn('[AdvancedPDFViewer] Direct fetch notice, trying proxy:', fetchErr);
+                    if (isMounted && pdfUrl && !pdfUrl.includes('/api/proxy-pdf')) {
+                        try {
+                            const proxyUrl = await getPdfViewerUrl(pdfUrl);
+                            if (isMounted) setActivePdfUrl(proxyUrl);
+                        } catch (proxyErr) {
+                            console.warn('[AdvancedPDFViewer] Proxy fallback error:', proxyErr);
+                        }
+                    }
+                });
             }
         };
         loadContent();
@@ -740,22 +747,16 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         >
                             {Array.from(new Array(numPages || 0), (_, index) => {
                                 const pageNum = index + 1;
-                                const currentScaleRatio = displayZoom / BASE_RENDER_SCALE;
                                 return (
                                     <div
                                         key={`pdf_page_${pageNum}`}
                                         id={`pdf-page-${pageNum}`}
                                         data-page={pageNum}
-                                        className="pdf-page-item flex justify-center shadow-2xl origin-top transition-transform duration-100 ease-out"
-                                        style={{
-                                            transform: `scale(${currentScaleRatio})`,
-                                            transformOrigin: 'top center',
-                                            marginBottom: `${(currentScaleRatio - 1) * 300}px`
-                                        }}
+                                        className="pdf-page-item flex justify-center shadow-2xl my-2"
                                     >
                                         <Page
                                             pageNumber={pageNum}
-                                            scale={BASE_RENDER_SCALE}
+                                            scale={displayZoom}
                                             canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}

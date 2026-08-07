@@ -31,7 +31,7 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
     const [inputText, setInputText] = useState('');
     const [isSending, setIsSending] = useState(false);
     const [isAiTyping, setIsAiTyping] = useState(false);
-    const [replyTarget, setReplyTarget] = useState<{ text: string; senderId: string; mediaType?: string } | null>(null);
+    const [replyTarget, setReplyTarget] = useState<{ text: string; senderId: string; mediaType?: string; mediaUrl?: string } | null>(null);
     const [expandedImage, setExpandedImage] = useState<string | null>(null);
     const [showAttachMenu, setShowAttachMenu] = useState(false);
     // Photo picked but not yet sent — shown as a small preview above the
