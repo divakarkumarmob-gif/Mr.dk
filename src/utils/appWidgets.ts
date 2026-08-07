@@ -2,7 +2,7 @@ import { Capacitor } from '@capacitor/core';
 import { App as CapacitorApp } from '@capacitor/app';
 
 export interface WidgetTarget {
-    id: 'neural_solver' | 'liveAI';
+    id: 'neural_solver' | 'liveAI' | 'ai_search' | 'study';
     title: string;
     description: string;
     icon: string;
@@ -14,7 +14,7 @@ export const APP_WIDGETS: WidgetTarget[] = [
     {
         id: 'neural_solver',
         title: 'Neural 2.0 Doubt Solver',
-        description: 'Instant 1-tap AI NCERT doubt resolution with photo & voice support.',
+        description: 'Instant 1-tap AI NCERT doubt resolution with live photo & voice preview player.',
         icon: '🧠',
         deepLink: 'neetmaster://open?target=neural_solver',
         webUrl: `${window.location.origin}/?target=neural_solver`,
@@ -27,9 +27,25 @@ export const APP_WIDGETS: WidgetTarget[] = [
         deepLink: 'neetmaster://open?target=liveAI',
         webUrl: `${window.location.origin}/?target=liveAI`,
     },
+    {
+        id: 'ai_search',
+        title: 'Google-Style AI Search Widget',
+        description: 'Google Search bar style widget — Type questions & get direct Google Gemini AI answers.',
+        icon: '🔍',
+        deepLink: 'neetmaster://open?target=ai_search',
+        webUrl: `${window.location.origin}/?target=ai_search`,
+    },
+    {
+        id: 'study',
+        title: 'NEET Exam Countdown & Streak',
+        description: 'Live daily exam countdown timer & study streak booster widget.',
+        icon: '⚡',
+        deepLink: 'neetmaster://open?target=study',
+        webUrl: `${window.location.origin}/?target=study`,
+    },
 ];
 
-export const setPendingWidgetTarget = (target: 'neural_solver' | 'liveAI') => {
+export const setPendingWidgetTarget = (target: 'neural_solver' | 'liveAI' | 'ai_search' | 'study') => {
     try {
         localStorage.setItem('pending_widget_target', target);
     } catch (e) {
@@ -37,9 +53,9 @@ export const setPendingWidgetTarget = (target: 'neural_solver' | 'liveAI') => {
     }
 };
 
-export const getAndClearPendingWidgetTarget = (): 'neural_solver' | 'liveAI' | null => {
+export const getAndClearPendingWidgetTarget = (): 'neural_solver' | 'liveAI' | 'ai_search' | 'study' | null => {
     try {
-        const target = localStorage.getItem('pending_widget_target') as 'neural_solver' | 'liveAI' | null;
+        const target = localStorage.getItem('pending_widget_target') as 'neural_solver' | 'liveAI' | 'ai_search' | 'study' | null;
         if (target) {
             localStorage.removeItem('pending_widget_target');
             return target;
@@ -51,7 +67,7 @@ export const getAndClearPendingWidgetTarget = (): 'neural_solver' | 'liveAI' | n
 };
 
 export const initWidgetDeepLinkListeners = (
-    onNavigateTarget: (target: 'neural_solver' | 'liveAI') => void,
+    onNavigateTarget: (target: 'neural_solver' | 'liveAI' | 'ai_search' | 'study') => void,
     isUserLoggedIn: boolean
 ) => {
     if (!Capacitor.isNativePlatform()) return;
@@ -72,6 +88,18 @@ export const initWidgetDeepLinkListeners = (
                     onNavigateTarget('liveAI');
                 } else {
                     setPendingWidgetTarget('liveAI');
+                }
+            } else if (target === 'ai_search' || target === 'search') {
+                if (isUserLoggedIn) {
+                    onNavigateTarget('ai_search');
+                } else {
+                    setPendingWidgetTarget('ai_search');
+                }
+            } else if (target === 'study' || target === 'streak') {
+                if (isUserLoggedIn) {
+                    onNavigateTarget('study');
+                } else {
+                    setPendingWidgetTarget('study');
                 }
             }
         } catch (err) {

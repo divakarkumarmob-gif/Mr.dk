@@ -101,6 +101,7 @@ const Onboarding = lazy(() => import('./components/Onboarding'));
 const RankPredictorMatrix = lazy(() => import('./components/RankPredictorMatrix'));
 const NeetCommunity = lazy(() => import('./components/NeetCommunity'));
 const AppWidgetModal = lazy(() => import('./components/AppWidgetModal'));
+const GoogleAiSearchWidget = lazy(() => import('./components/GoogleAiSearchWidget'));
 
 import { initWidgetDeepLinkListeners, getAndClearPendingWidgetTarget, setPendingWidgetTarget } from './utils/appWidgets';
 
@@ -2441,6 +2442,12 @@ function AppInner() {
       </div>
 
       <div className="mb-4">
+        <Suspense fallback={null}>
+            <GoogleAiSearchWidget
+                onOpenNeuralSolver={() => setShowNeuralSolver(true)}
+                onOpenLiveAI={() => setCurrentView('liveAI')}
+            />
+        </Suspense>
         <AiSearch onFocus={() => setIsTyping(true)} />
       </div>
 
