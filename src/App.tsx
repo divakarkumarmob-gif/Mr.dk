@@ -98,9 +98,11 @@ const TimeSpentChart = lazy(() => import('./components/TimeSpentChart'));
 const FocusSessionSummary = lazy(() => import('./components/FocusSessionSummary'));
 const DistractionOverlay = lazy(() => import('./components/DistractionOverlay'));
 const Onboarding = lazy(() => import('./components/Onboarding'));
-const FocusSanctuary = lazy(() => import('./components/FocusSanctuary'));
 const RankPredictorMatrix = lazy(() => import('./components/RankPredictorMatrix'));
 const NeetCommunity = lazy(() => import('./components/NeetCommunity'));
+const AppWidgetModal = lazy(() => import('./components/AppWidgetModal'));
+
+import { initWidgetDeepLinkListeners, getAndClearPendingWidgetTarget, setPendingWidgetTarget } from './utils/appWidgets';
 
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const AboutFAQPage = lazy(() => import('./components/AboutFAQPage'));
@@ -991,6 +993,7 @@ function AppInner() {
     _setShowSupportModal(v);
     showSupportModalRef.current = v;
   };
+  const [showAppWidgetModal, setShowAppWidgetModal] = useState(false);
   const [showNeuralSolver, _setShowNeuralSolver] = useState(false);
   const setShowNeuralSolver = (v: boolean) => {
     _setShowNeuralSolver(v);
@@ -1401,8 +1404,25 @@ function AppInner() {
   };
 
   useEffect(() => {
+    initWidgetDeepLinkListeners((target) => {
+        if (target === 'neural_solver') {
+            setShowNeuralSolver(true);
+        } else if (target === 'liveAI') {
+            setCurrentView('liveAI');
+        }
+    }, !!user);
+  }, [user]);
+
+  useEffect(() => {
     if (user) {
-        setCurrentView('home');
+        const pendingWidget = getAndClearPendingWidgetTarget();
+        if (pendingWidget === 'neural_solver') {
+            setShowNeuralSolver(true);
+        } else if (pendingWidget === 'liveAI') {
+            setCurrentView('liveAI');
+        } else {
+            setCurrentView('home');
+        }
     } else {
         _setCurrentView('home');
     }
@@ -2228,7 +2248,17 @@ function AppInner() {
            <h2 className="text-lg sm:text-xl font-bold flex items-center gap-1 sm:gap-2 truncate">Hello, {user?.displayName || 'Aspirant'}! 👋</h2>
            <p className="text-gray-400 text-[9px] sm:text-[11px]">Let's make today productive</p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+            {/* App Widgets Launcher Button */}
+            <button
+                onClick={() => setShowAppWidgetModal(true)}
+                title="Home Screen Widgets"
+                className="relative p-1.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:text-white transition active:scale-95 flex items-center gap-1 text-xs font-bold px-2.5"
+            >
+                <Sparkles className="h-4 w-4 text-yellow-400 animate-pulse" />
+                <span className="hidden sm:inline">Widgets</span>
+            </button>
+
             {/* NEET Community Icon Button (Left of Bell Icon) */}
             <button 
                 onClick={() => setCurrentView('neetCommunity')} 
@@ -2460,6 +2490,21 @@ function AppInner() {
               onClose={() => setShowSummary(false)}
           />
       )}
+
+      <Suspense fallback={null}>
+        <AppWidgetModal
+          isOpen={showAppWidgetModal}
+          onClose={() => setShowAppWidgetModal(false)}
+          onLaunchTarget={(t) => {
+            if (t === 'neural_solver') {
+              setShowNeuralSolver(true);
+            } else if (t === 'liveAI') {
+              setCurrentView('liveAI');
+            }
+          }}
+          isLoggedIn={!!user}
+        />
+      </Suspense>
       </div>
     </motion.div>
     </>
