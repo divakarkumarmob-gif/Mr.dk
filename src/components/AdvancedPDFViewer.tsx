@@ -740,16 +740,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         >
                             {Array.from(new Array(numPages || 0), (_, index) => {
                                 const pageNum = index + 1;
+                                const currentScaleRatio = displayZoom / BASE_RENDER_SCALE;
                                 return (
                                     <div
                                         key={`pdf_page_${pageNum}`}
                                         id={`pdf-page-${pageNum}`}
                                         data-page={pageNum}
-                                        className="pdf-page-item flex justify-center shadow-2xl"
+                                        className="pdf-page-item flex justify-center shadow-2xl origin-top transition-transform duration-100 ease-out"
+                                        style={{
+                                            transform: `scale(${currentScaleRatio})`,
+                                            transformOrigin: 'top center',
+                                            marginBottom: `${(currentScaleRatio - 1) * 300}px`
+                                        }}
                                     >
                                         <Page
                                             pageNumber={pageNum}
-                                            scale={displayZoom}
+                                            scale={BASE_RENDER_SCALE}
                                             canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
