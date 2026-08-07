@@ -940,7 +940,13 @@ function AppInner() {
     _setActiveVideo(v);
     activeVideoRef.current = v;
   };
-  const [subjects, setSubjects] = useState(getDailyChapters());
+  const [subjects, setSubjects] = useState(() => {
+    try {
+      const cached = localStorage.getItem('neetmaster_cached_subjects');
+      if (cached) return JSON.parse(cached);
+    } catch {}
+    return getDailyChapters();
+  });
   const [privateVideosSubjects, setPrivateVideosSubjects] = useState<any[]>([]);
   const [privateVideosDebug, setPrivateVideosDebug] = useState<string>('not started');
   const [selectedSubject, setSelectedSubject] = useState<any>(null);
@@ -1452,24 +1458,6 @@ function AppInner() {
     }
   }, [user]);
 
-  useEffect(() => {
-    if (!user) return;
-    setShowOnboarding(true);
-    
-    const text = "This is Ask AI, you can ask questions directly!";
-    let i = 0;
-    const typingInterval = setInterval(() => {
-        setDisplayedText(text.substring(0, i));
-        i++;
-        if (i > text.length) clearInterval(typingInterval);
-    }, 50);
-
-    const timer = setTimeout(() => setShowOnboarding(false), 6000);
-    return () => {
-        clearTimeout(timer);
-        clearInterval(typingInterval);
-    };
-  }, [user]);
 
   useEffect(() => {
       if (!statsLoaded) return;
@@ -1619,8 +1607,9 @@ function AppInner() {
       setLoading(false);
       if (!currentUser) {
           setShowLoginFromLanding(false);
-          // Clear cached auth on logout
+          // Clear cached auth & subjects on logout
           localStorage.removeItem('neetmaster_cached_user');
+          localStorage.removeItem('neetmaster_cached_subjects');
       } else {
           // Cache auth for instant startup next time
           try {
@@ -1660,14 +1649,17 @@ function AppInner() {
                   const data = docSnap.data();
                   if (data.day === getDayIndex()) {
                       setSubjects(data.subjects);
+                      try { localStorage.setItem('neetmaster_cached_subjects', JSON.stringify(data.subjects)); } catch {}
                   } else {
                       const newDaily = getDailyChapters();
                       setSubjects(newDaily);
+                      try { localStorage.setItem('neetmaster_cached_subjects', JSON.stringify(newDaily)); } catch {}
                       await setDoc(docRef, { subjects: newDaily, day: getDayIndex() });
                   }
               } else {
                   const newSubjects = getNewUserChapters();
                   setSubjects(newSubjects);
+                  try { localStorage.setItem('neetmaster_cached_subjects', JSON.stringify(newSubjects)); } catch {}
                   await setDoc(docRef, { subjects: newSubjects, day: getDayIndex() });
               }
           } catch (e) {
