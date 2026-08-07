@@ -350,13 +350,6 @@ function AppInner() {
     }
   }, []);
 
-  // Instagram-style: hide native splash ONLY after auth state is resolved.
-  // This ensures users never see a blank page or login flash on startup.
-  useEffect(() => {
-    if (!loading && Capacitor.isNativePlatform()) {
-      SplashScreen.hide({ fadeOutDuration: 300 }).catch(() => {});
-    }
-  }, [loading]);
 
   useEffect(() => {
     const handler = (e: any) => {
@@ -917,6 +910,14 @@ function AppInner() {
   useEffect(() => {
     _setAuthLoading(loading);
   }, [loading, _setAuthLoading]);
+
+  // Instagram-style: hide native splash ONLY after auth state is resolved.
+  // This ensures users never see a blank page or login flash on startup.
+  useEffect(() => {
+    if (!loading && Capacitor.isNativePlatform()) {
+      SplashScreen.hide({ fadeOutDuration: 300 }).catch(() => {});
+    }
+  }, [loading]);
 
   const [activeVideo, _setActiveVideo] = useState<string | null>(null);
   const setActiveVideo = (v: string | null) => {
