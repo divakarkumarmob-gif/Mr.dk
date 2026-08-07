@@ -790,12 +790,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                         <Page
                                             pageNumber={pageNum}
                                             scale={displayZoom}
-                                            canvasBackground="transparent"
+                                            canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
-                                            className="bg-[#0f172a] rounded-md overflow-hidden ring-1 ring-white/10"
+                                            className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
                                             loading={
-                                                <div className="w-full max-w-xl h-96 bg-slate-900 animate-pulse rounded-md flex items-center justify-center text-gray-400 text-xs">
+                                                <div className="w-full max-w-xl h-96 bg-white animate-pulse rounded-md flex items-center justify-center text-slate-400 text-xs font-medium">
                                                     Loading Page {pageNum}...
                                                 </div>
                                             }

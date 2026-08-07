@@ -169,11 +169,12 @@
 /* ===== PDF Search Highlighting & Zero-Flash Styling ===== */
 /* Eliminate white flash during canvas redraw / zoom */
 .react-pdf__Page {
-  background-color: #0f172a !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 .react-pdf__Page__canvas {
-  background-color: transparent !important;
+  background-color: #ffffff !important;
   display: block;
 }
 
