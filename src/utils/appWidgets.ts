@@ -10,6 +10,8 @@ export interface WidgetTarget {
     webUrl: string;
 }
 
+const getBaseUrl = () => (typeof window !== 'undefined' ? window.location.origin : 'https://mr-dk.web.app');
+
 export const APP_WIDGETS: WidgetTarget[] = [
     {
         id: 'neural_solver',
@@ -17,7 +19,7 @@ export const APP_WIDGETS: WidgetTarget[] = [
         description: 'Instant 1-tap AI NCERT doubt resolution with live photo & voice preview player.',
         icon: '🧠',
         deepLink: 'neetmaster://open?target=neural_solver',
-        webUrl: `${window.location.origin}/?target=neural_solver`,
+        webUrl: `${getBaseUrl()}/?target=neural_solver`,
     },
     {
         id: 'liveAI',
@@ -25,7 +27,7 @@ export const APP_WIDGETS: WidgetTarget[] = [
         description: 'Real-time interactive hands-free audio voice tutor for NEET prep.',
         icon: '🎙️',
         deepLink: 'neetmaster://open?target=liveAI',
-        webUrl: `${window.location.origin}/?target=liveAI`,
+        webUrl: `${getBaseUrl()}/?target=liveAI`,
     },
     {
         id: 'ai_search',
@@ -33,7 +35,7 @@ export const APP_WIDGETS: WidgetTarget[] = [
         description: 'Google Search bar style widget — Type questions & get direct Google Gemini AI answers.',
         icon: '🔍',
         deepLink: 'neetmaster://open?target=ai_search',
-        webUrl: `${window.location.origin}/?target=ai_search`,
+        webUrl: `${getBaseUrl()}/?target=ai_search`,
     },
     {
         id: 'study',
@@ -41,7 +43,7 @@ export const APP_WIDGETS: WidgetTarget[] = [
         description: 'Live daily exam countdown timer & study streak booster widget.',
         icon: '⚡',
         deepLink: 'neetmaster://open?target=study',
-        webUrl: `${window.location.origin}/?target=study`,
+        webUrl: `${getBaseUrl()}/?target=study`,
     },
 ];
 

@@ -39,6 +39,7 @@ import { processHardwareBackButton } from './utils/hardwareBackButton';
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
 import ProtectedRoute from './components/ProtectedRoute';
+import { initWidgetDeepLinkListeners, getAndClearPendingWidgetTarget, setPendingWidgetTarget } from './utils/appWidgets';
 
 // Firestore serverTimestamp() fields are `null` locally until the server
 // confirms the write — which is exactly the moment right after someone
@@ -102,8 +103,6 @@ const RankPredictorMatrix = lazy(() => import('./components/RankPredictorMatrix'
 const NeetCommunity = lazy(() => import('./components/NeetCommunity'));
 const AppWidgetModal = lazy(() => import('./components/AppWidgetModal'));
 const GoogleAiSearchWidget = lazy(() => import('./components/GoogleAiSearchWidget'));
-
-import { initWidgetDeepLinkListeners, getAndClearPendingWidgetTarget, setPendingWidgetTarget } from './utils/appWidgets';
 
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const AboutFAQPage = lazy(() => import('./components/AboutFAQPage'));
@@ -2442,12 +2441,14 @@ function AppInner() {
       </div>
 
       <div className="mb-4">
-        <Suspense fallback={null}>
-            <GoogleAiSearchWidget
-                onOpenNeuralSolver={() => setShowNeuralSolver(true)}
-                onOpenLiveAI={() => setCurrentView('liveAI')}
-            />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={null}>
+              <GoogleAiSearchWidget
+                  onOpenNeuralSolver={() => setShowNeuralSolver(true)}
+                  onOpenLiveAI={() => setCurrentView('liveAI')}
+              />
+          </Suspense>
+        </ErrorBoundary>
         <AiSearch onFocus={() => setIsTyping(true)} />
       </div>
 
