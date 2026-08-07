@@ -23,6 +23,7 @@ import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCir
 import { getApiUrl, authFetch } from '@/utils/api';
 import { configureStatusBar } from './utils/statusBar';
 import { lockToPortrait } from './utils/screenOrientation';
+import { scheduleDailyNeetCountdown, checkAndScheduleStreakWarning, scheduleInactivityWarning } from './utils/studyNotificationEngine';
 import { initNotificationChannel } from './utils/notifications';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion, AnimatePresence } from 'motion/react';
@@ -596,6 +597,22 @@ function AppInner() {
   useEffect(() => {
     if (!user) return;
     
+    // Background study notification engine initialization
+    scheduleDailyNeetCountdown().catch(() => {});
+    checkAndScheduleStreakWarning(0).catch(() => {});
+    scheduleInactivityWarning().catch(() => {});
+
+    // Native Notification Click Handling (Deep-linking to target page)
+    if (Capacitor.isNativePlatform()) {
+      LocalNotifications.addListener('localNotificationActionPerformed', (action) => {
+        const targetView = action.notification?.extra?.targetView;
+        if (targetView) {
+          console.log(`[NotificationClick] Landing user on target view: ${targetView}`);
+          setCurrentView(targetView as any);
+        }
+      }).catch(console.warn);
+    }
+
     if (user.uid.startsWith('local_guest_')) {
       setNotifications([
         {

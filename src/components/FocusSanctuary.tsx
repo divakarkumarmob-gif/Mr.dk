@@ -4,6 +4,7 @@ import {
     Play, Pause, RotateCcw, Volume2, VolumeX, Shield, Users, 
     Flame, Award, Sparkles, X, Music, CloudRain, Disc, Waves, Headphones, CheckCircle2
 } from 'lucide-react';
+import { scheduleFocusSessionCompleteNotification } from '../utils/studyNotificationEngine';
 
 interface FocusSanctuaryProps {
     onClose: () => void;
@@ -79,6 +80,7 @@ export default function FocusSanctuary({ onClose, onSessionComplete }: FocusSanc
                     setCompletedSessions(prev => prev + 1);
                     const addedMins = selectedDuration;
                     setTotalFocusMinutes(prev => prev + addedMins);
+                    scheduleFocusSessionCompleteNotification(addedMins, 'NEET Prep').catch(console.warn);
                     if (onSessionComplete) onSessionComplete(addedMins);
                 }
             }, 500);

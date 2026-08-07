@@ -7,6 +7,7 @@ import Pressable from './Pressable';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
 import { fetchAndCachePdf } from '../lib/pdfCache';
+import { scheduleNcertRereadNotification } from '../utils/studyNotificationEngine';
 
 // Simple IndexedDB wrapper for PDF storage
 const dbName = 'NCERT_OFFLINE_DB';
@@ -342,6 +343,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
 
     const handleOpenPdf = (bookCode: string, chNum: number, title: string) => {
         handleView(bookCode, chNum, title);
+        scheduleNcertRereadNotification(title).catch(console.warn);
         window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
     };
 

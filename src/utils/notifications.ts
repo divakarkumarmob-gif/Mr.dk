@@ -47,7 +47,8 @@ export const scheduleNotification = async (
   title: string,
   body: string,
   id: number,
-  scheduleAt?: Date
+  scheduleAt?: Date,
+  targetView?: string
 ): Promise<boolean> => {
   const hasPermission = await requestNotificationPermission();
 
@@ -62,11 +63,12 @@ export const scheduleNotification = async (
             id,
             channelId: 'study_reminders',
             schedule: scheduleAt ? { at: scheduleAt, allowWhileIdle: true } : undefined,
+            extra: { targetView: targetView || 'home' },
             sound: undefined,
           },
         ],
       });
-      console.log(`[Native Notification Scheduled] ID: ${id} at ${scheduleAt?.toLocaleString() || 'NOW'}`);
+      console.log(`[Native Notification Scheduled] ID: ${id} at ${scheduleAt?.toLocaleString() || 'NOW'} -> View: ${targetView}`);
       return true;
     } catch (e) {
       console.error("Error scheduling native notification:", e);
@@ -77,26 +79,27 @@ export const scheduleNotification = async (
     const now = Date.now();
     const delay = scheduleAt ? scheduleAt.getTime() - now : 0;
 
-    if (delay <= 0) {
+    const triggerWebNotif = () => {
       try {
-        new Notification(title, {
+        const notif = new Notification(title, {
           body,
           icon: '/pwa-192x192.png',
         });
+        notif.onclick = () => {
+          window.focus();
+          if (targetView) {
+            window.location.href = `/?view=${targetView}`;
+          }
+        };
       } catch (e) {
         console.warn("Web Notification error:", e);
       }
+    };
+
+    if (delay <= 0) {
+      triggerWebNotif();
     } else if (delay < 2147483647) {
-      setTimeout(() => {
-        try {
-          new Notification(title, {
-            body,
-            icon: '/pwa-192x192.png',
-          });
-        } catch (e) {
-          console.warn("Web Notification error:", e);
-        }
-      }, delay);
+      setTimeout(triggerWebNotif, delay);
     }
     return true;
   }

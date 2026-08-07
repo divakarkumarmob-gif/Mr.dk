@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Menu, X, Hourglass, CheckCircle2 } from 'luc
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { generateNEETPdf } from '../lib/pdfUtils';
 import { storageService } from '../lib/storageService';
+import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
 interface Question {
     id: string;
     question: string;
@@ -235,6 +236,15 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                 await addDoc(collection(db, 'users', user.uid, 'results'), resultData);
             }
             console.log("Test submitted successfully");
+
+            // Schedule system notification for test result analysis after exactly 2 MINUTES
+            scheduleDelayedTestResultNotification(
+                title,
+                resultData.obtainedMarks,
+                resultData.totalPossibleMarks,
+                resultData.accuracy
+            ).catch(console.warn);
+
             localStorage.removeItem('resumeTestData');
             setIsSubmitted(true);
         } catch (err) {

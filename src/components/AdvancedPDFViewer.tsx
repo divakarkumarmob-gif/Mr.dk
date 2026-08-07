@@ -195,35 +195,24 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         };
     }, []);
 
-    const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const lastTapTimeRef = useRef<number>(0);
 
-    const triggerUserActivity = useCallback(() => {
-        setShowControls(true);
-        if (controlsTimeoutRef.current) {
-            clearTimeout(controlsTimeoutRef.current);
+    const toggleControlsOnTap = useCallback((e?: React.MouseEvent | React.TouchEvent) => {
+        if (e && e.target) {
+            const target = e.target as HTMLElement;
+            if (target.closest('button, input, form, a')) return;
         }
-        controlsTimeoutRef.current = setTimeout(() => {
-            setShowControls(false);
-        }, 3000);
+        const now = Date.now();
+        if (now - lastTapTimeRef.current < 350) return;
+        lastTapTimeRef.current = now;
+        setShowControls(prev => !prev);
     }, []);
-
-    useEffect(() => {
-        triggerUserActivity();
-        return () => {
-            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-        };
-    }, [triggerUserActivity]);
 
     useEffect(() => {
         const stage = stageRef.current;
         if (!stage) return;
 
         const handleScroll = () => {
-            triggerUserActivity();
-            if (stage.scrollTop <= 30) {
-                setShowControls(true);
-            }
-
             if (numPages) {
                 const pageElements = stage.querySelectorAll('.pdf-page-item');
                 const stageRect = stage.getBoundingClientRect();
@@ -248,7 +237,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
         stage.addEventListener('scroll', handleScroll, { passive: true });
         return () => stage.removeEventListener('scroll', handleScroll);
-    }, [numPages, triggerUserActivity]);
+    }, [numPages]);
 
     useEffect(() => {
         const saveProgress = async () => {
@@ -531,7 +520,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         if (state.touchCount === 1 && remaining === 0 && !state.moved) {
             const elapsed = Date.now() - state.tapStartTime;
             if (elapsed < 300) {
-                setShowControls(prev => !prev);
+                toggleControlsOnTap(e);
             }
         }
 
@@ -716,26 +705,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             {/* Continuous Vertical Scroll Viewer Stage */}
             <div
                 ref={stageRef}
-                onMouseMove={triggerUserActivity}
                 onTouchStart={(e) => {
-                    triggerUserActivity();
                     if (Capacitor.isNativePlatform()) {
                         handleTouchStart(e);
                     }
                 }}
                 onTouchMove={(e) => {
-                    triggerUserActivity();
                     if (Capacitor.isNativePlatform()) {
                         handleTouchMove(e);
                     }
                 }}
                 onTouchEnd={(e) => {
-                    triggerUserActivity();
                     if (Capacitor.isNativePlatform()) {
                         handleTouchEnd(e);
                     }
                 }}
-                onClick={triggerUserActivity}
+                onClick={toggleControlsOnTap}
                 className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar py-4"
             >
                 {isLoading && (
@@ -794,11 +779,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
                                             className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
-                                            loading={
-                                                <div className="w-full max-w-xl h-96 bg-white animate-pulse rounded-md flex items-center justify-center text-slate-400 text-xs font-medium">
-                                                    Loading Page {pageNum}...
-                                                </div>
-                                            }
+                                            loading={null}
                                         />
                                     </div>
                                 );

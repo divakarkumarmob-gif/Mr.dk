@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import { X, Send, Loader2, Trash2 } from 'lucide-react';
 import StatusLoader from './StatusLoader';
+import { scheduleNeuralSolverResponseNotification } from '../utils/studyNotificationEngine';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
 import { getApiUrl, authFetch } from '@/utils/api';
@@ -160,6 +161,7 @@ export default function NeuralSolver({ onClose }: { onClose: () => void }) {
             const updatedMessages = [...newMessages, { role: 'assistant' as const, content: fullText }];
             setMessages(updatedMessages);
             saveChat(updatedMessages); // Save updated history
+            scheduleNeuralSolverResponseNotification(text.slice(0, 30) || 'Doubt Solution').catch(console.warn);
         } catch (error) {
             console.error('[NeuralSolver] Streaming error:', error);
             const fallbackMessages = [...newMessages, { role: 'assistant' as const, content: "Sorry, error aa gaya. Study related pucho." }];

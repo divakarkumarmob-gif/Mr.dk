@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Menu, X, Hourglass, Info, User, CheckCircle2, Circle, Clock, LogOut } from 'lucide-react';
 import Pressable from './Pressable';
 import { getApiUrl, authFetch } from '@/utils/api';
+import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
 
 interface Question {
     id: string;
@@ -187,6 +188,15 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                     body: JSON.stringify({ resultId: docRef.id, userId: user.uid, results: resultData })
                 }).catch(console.error);
             }
+
+            // Schedule system notification for test result analysis after exactly 2 MINUTES
+            scheduleDelayedTestResultNotification(
+                title,
+                resultData.obtainedMarks,
+                resultData.totalPossibleMarks,
+                resultData.accuracy
+            ).catch(console.warn);
+
             setIsSubmitted(true);
         } catch (err) {
             console.error("Error submitting NTA test:", err);
