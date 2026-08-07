@@ -681,6 +681,16 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
             // "open" and mic capture starts fine, but every audio chunk we
             // send is silently dropped server-side (session === undefined),
             // so the AI never hears anything and never replies.
+            // Check if there is pending test result context to inject from Firebase / Test Result
+            let testPerformancePayload: any = null;
+            try {
+                const rawContext = localStorage.getItem('pendingTestResultContext');
+                if (rawContext) {
+                    testPerformancePayload = JSON.parse(rawContext);
+                    localStorage.removeItem('pendingTestResultContext');
+                }
+            } catch { /* ignore */ }
+
             isInitializedRef.current = false;
             socket.send(JSON.stringify({
                 type: 'init',
@@ -691,8 +701,27 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                 accurateMode: accurateMode,
                 answerLength: answerLength,
                 googleSearchMode: googleSearchMode,
-                prefetchedSummary: prefetchedSummaryRef.current
+                prefetchedSummary: prefetchedSummaryRef.current,
+                testPerformanceContext: testPerformancePayload
             }));
+
+            if (testPerformancePayload) {
+                const promptText = `[SYSTEM CONTEXT - FIREBASE TEST PERFORMANCE LOADED]:
+The user just completed test: "${testPerformancePayload.testName || 'NEET Test'}".
+- Marks Obtained: ${testPerformancePayload.obtainedMarks}/${testPerformancePayload.totalPossibleMarks}
+- Accuracy: ${testPerformancePayload.accuracy}%
+- Correct: ${testPerformancePayload.correct}, Incorrect: ${testPerformancePayload.incorrect}, Unattempted: ${testPerformancePayload.unattempted}.
+Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an analysis of their score, encourage them, and ask which question or weak topic they want to discuss!`;
+
+                setTimeout(() => {
+                    if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+                        ws.current.send(JSON.stringify({
+                            type: 'text_input',
+                            text: promptText
+                        }));
+                    }
+                }, 800);
+            }
 
             // If the server takes unusually long to confirm the session
             // (e.g. cold start), let the user know instead of leaving them

@@ -483,6 +483,174 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                 </div>
             </div>
 
+            {/* CARD 3: SPEED VS ACCURACY QUADRANT MATRIX */}
+            <div className="rounded-3xl bg-[#0d1326] border border-white/10 p-5 mb-5 shadow-xl">
+                <div className="flex justify-between items-start mb-4">
+                    <div>
+                        <div className="flex items-center gap-2">
+                            <Zap className="w-5 h-5 text-amber-400" />
+                            <h3 className="text-base font-bold text-white tracking-wide">Speed vs Accuracy Quadrant Matrix</h3>
+                        </div>
+                    </div>
+                    <span className="text-[11px] text-gray-400 font-medium shrink-0">Select your pattern</span>
+                </div>
+
+                <div className="space-y-3">
+                    {/* Quadrant 1: Sniper Zone */}
+                    <div 
+                        onClick={() => setSelectedQuadrant('sniper')}
+                        className={`rounded-2xl p-4 border transition-all cursor-pointer ${
+                            activeZone === 'sniper' 
+                                ? 'bg-[#092c20] border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.25)] scale-[1.01]' 
+                                : 'bg-[#091f18]/60 border-emerald-500/30 opacity-80 hover:opacity-100'
+                        }`}
+                    >
+                        <div className="flex items-center justify-between mb-1.5">
+                            <span className="text-sm font-bold text-emerald-400 flex items-center gap-2">
+                                🎯 ❌ Sniper Zone (AIR 1 - 500)
+                            </span>
+                            {activeZone === 'sniper' && (
+                                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                                    Your Zone
+                                </span>
+                            )}
+                        </div>
+                        <p className="text-xs text-gray-300 leading-relaxed font-light">
+                            High Speed + High Accuracy. Ideal state! Focus on maintaining exam composure and mock tests.
+                        </p>
+                    </div>
+
+                    {/* Quadrant 2: Silly Mistake Trap */}
+                    <div 
+                        onClick={() => setSelectedQuadrant('silly')}
+                        className={`rounded-2xl p-4 border transition-all cursor-pointer ${
+                            activeZone === 'silly' 
+                                ? 'bg-[#332207] border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.25)] scale-[1.01]' 
+                                : 'bg-[#241907]/60 border-amber-500/30 opacity-80 hover:opacity-100'
+                        }`}
+                    >
+                        <div className="flex items-center justify-between mb-1.5">
+                            <span className="text-sm font-bold text-amber-400 flex items-center gap-2">
+                                ⚠️ ⚠️ Silly Mistake Trap
+                            </span>
+                            {activeZone === 'silly' && (
+                                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                                    Your Zone
+                                </span>
+                            )}
+                        </div>
+                        <p className="text-xs text-gray-300 leading-relaxed font-light">
+                            High Speed + Low Accuracy. You are rushing through questions. Slow down by 10% to eliminate negative marks.
+                        </p>
+                    </div>
+
+                    {/* Quadrant 3: Perfectionist Zone */}
+                    <div 
+                        onClick={() => setSelectedQuadrant('perfectionist')}
+                        className={`rounded-2xl p-4 border transition-all cursor-pointer ${
+                            activeZone === 'perfectionist' 
+                                ? 'bg-[#0f2444] border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.25)] scale-[1.01]' 
+                                : 'bg-[#0c1a33]/60 border-blue-500/30 opacity-80 hover:opacity-100'
+                        }`}
+                    >
+                        <div className="flex items-center justify-between mb-1.5">
+                            <span className="text-sm font-bold text-blue-400 flex items-center gap-2">
+                                📈 ⏳ Perfectionist Zone
+                            </span>
+                            {activeZone === 'perfectionist' && (
+                                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40">
+                                    Your Zone
+                                </span>
+                            )}
+                        </div>
+                        <p className="text-xs text-gray-300 leading-relaxed font-light">
+                            Low Speed + High Accuracy. Great accuracy but left paper unattempted. Practice timed 30-sec Rapid Fire rounds.
+                        </p>
+                    </div>
+
+                    {/* Quadrant 4: Concept Deficit Zone */}
+                    <div 
+                        onClick={() => setSelectedQuadrant('concept')}
+                        className={`rounded-2xl p-4 border transition-all cursor-pointer ${
+                            activeZone === 'concept' 
+                                ? 'bg-[#331118] border-rose-500 shadow-[0_0_20px_rgba(244,63,94,0.25)] scale-[1.01]' 
+                                : 'bg-[#240c12]/60 border-rose-500/30 opacity-80 hover:opacity-100'
+                        }`}
+                    >
+                        <div className="flex items-center justify-between mb-1.5">
+                            <span className="text-sm font-bold text-rose-400 flex items-center gap-2">
+                                📖 📚 Concept Deficit Zone
+                            </span>
+                            {activeZone === 'concept' && (
+                                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40">
+                                    Your Zone
+                                </span>
+                            )}
+                        </div>
+                        <p className="text-xs text-gray-300 leading-relaxed font-light">
+                            Low Speed + Low Accuracy. Concepts need revision. Re-read NCERT Biology & basic Physics formula derivations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* CARD 4: NEGATIVE MARKS & LOST POTENTIAL CALCULATOR */}
+            <div className="rounded-3xl bg-[#0d1326] border border-white/10 p-5 mb-6 shadow-xl">
+                <div className="flex items-center gap-2 mb-4">
+                    <AlertTriangle className="w-5 h-5 text-rose-400" />
+                    <h3 className="text-base font-bold text-white tracking-wide">Negative Marks & Lost Potential Calculator</h3>
+                </div>
+
+                <div className="space-y-4 mb-5">
+                    {/* Silly Mistakes */}
+                    <div>
+                        <div className="flex justify-between items-center text-xs font-semibold mb-1.5">
+                            <span className="text-gray-300">Calculation / Misread Error (Silly Mistakes)</span>
+                            <span className="text-amber-400 font-bold">-{sillyMistakesLoss} Marks</span>
+                        </div>
+                        <div className="w-full h-2.5 bg-[#080d1a] rounded-full overflow-hidden">
+                            <div className="h-full bg-amber-500 rounded-full" style={{ width: `${Math.min(100, Math.max(10, (sillyMistakesLoss / (totalPossibleMarks || 720)) * 500))}%` }} />
+                        </div>
+                    </div>
+
+                    {/* Weak Topics */}
+                    <div>
+                        <div className="flex justify-between items-center text-xs font-semibold mb-1.5">
+                            <span className="text-gray-300">Unstudied / Weak Topics (Concept Gap)</span>
+                            <span className="text-rose-400 font-bold">-{conceptGapLoss} Marks</span>
+                        </div>
+                        <div className="w-full h-2.5 bg-[#080d1a] rounded-full overflow-hidden">
+                            <div className="h-full bg-rose-500 rounded-full" style={{ width: `${Math.min(100, Math.max(10, (conceptGapLoss / (totalPossibleMarks || 720)) * 500))}%` }} />
+                        </div>
+                    </div>
+
+                    {/* Time Running Out */}
+                    <div>
+                        <div className="flex justify-between items-center text-xs font-semibold mb-1.5">
+                            <span className="text-gray-300">Unattempted due to Time Running Out</span>
+                            <span className="text-blue-400 font-bold">-{timeOutLoss} Marks</span>
+                        </div>
+                        <div className="w-full h-2.5 bg-[#080d1a] rounded-full overflow-hidden">
+                            <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.min(100, Math.max(10, (timeOutLoss / (totalPossibleMarks || 720)) * 500))}%` }} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* POTENTIAL MAXIMUM SCORE BOX */}
+                <div className="rounded-2xl bg-[#09261c]/90 border border-emerald-500/40 p-4 flex items-center justify-between">
+                    <div>
+                        <p className="text-xs font-bold text-emerald-400 mb-0.5">
+                            Potential Maximum Score with Zero Silly Mistakes:
+                        </p>
+                    </div>
+                    <div className="text-right shrink-0">
+                        <p className="text-2xl font-black text-white leading-none">
+                            {potentialMaxScore} <span className="text-sm font-semibold text-emerald-400">/ {totalPossibleMarks}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             {/* STATS QUICK METRICS */}
             <div className="grid grid-cols-4 gap-2 mb-6">
                 <div onClick={() => { setFilterType('correct'); setShowReview(true); }} className="bg-[#0d1326] border border-emerald-500/30 p-3 rounded-2xl text-center cursor-pointer hover:bg-emerald-950/30 transition">
@@ -507,9 +675,22 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
             <div className="mb-4">
                 <button 
                     onClick={() => {
-                        if (window.dispatchEvent) {
-                            window.dispatchEvent(new CustomEvent('open-ai-live-voice'));
-                        }
+                        const payload = {
+                            testName: result?.testName || result?.title || 'NEET Practice Test',
+                            obtainedMarks: result?.obtainedMarks ?? result?.score ?? 0,
+                            totalPossibleMarks: result?.totalPossibleMarks ?? (result?.totalQuestions ? result.totalQuestions * 4 : 720),
+                            accuracy: result?.accuracy ?? 0,
+                            correct: result?.correct ?? 0,
+                            incorrect: result?.incorrect ?? 0,
+                            unattempted: result?.unattempted ?? 0,
+                            topicAnalysis: result?.topicAnalysis || [],
+                            timestamp: new Date().toISOString(),
+                        };
+                        try {
+                            localStorage.setItem('pendingTestResultContext', JSON.stringify(payload));
+                        } catch { /* ignore */ }
+                        window.dispatchEvent(new CustomEvent('open-live-ai-with-test', { detail: payload }));
+                        window.dispatchEvent(new CustomEvent('open-ai-live-voice', { detail: payload }));
                     }}
                     className="w-full bg-gradient-to-r from-red-600 via-purple-600 to-indigo-600 text-white py-3.5 px-4 rounded-2xl font-extrabold text-sm shadow-xl shadow-red-600/20 flex items-center justify-center gap-2 active:scale-95 transition-all border border-white/20"
                 >

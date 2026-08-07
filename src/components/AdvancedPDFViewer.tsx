@@ -21,7 +21,7 @@ try {
 }
 
 const MIN_SCALE = 0.25;
-const MAX_SCALE = 4.0;
+const MAX_SCALE = 6.0;
 const BASE_RENDER_SCALE = 1.8; // Ultra-crisp high-definition vector rendering scale
 
 function getTouchCenter(touches: TouchList) {
@@ -261,10 +261,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const stage = stageRef.current;
             const stageWidth = stage ? stage.clientWidth : window.innerWidth;
 
-            // Fit full page width cleanly across Desktop & Mobile (accounting for padding)
-            const availableWidth = Math.max(300, stageWidth - (window.innerWidth > 768 ? 64 : 16));
+            // Fit 100% full page width edge-to-edge across full screen on Desktop & Mobile
+            const availableWidth = stageWidth > 0 ? stageWidth : window.innerWidth;
             const fitWidthZoom = availableWidth / viewport.width;
-            const fitZoom = Math.min(Math.max(fitWidthZoom, 0.4), 2.5);
+            const fitZoom = Math.min(Math.max(fitWidthZoom, 0.4), MAX_SCALE);
             resetTransform(fitZoom);
         }).catch(() => {});
     }
@@ -728,7 +728,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="min-w-fit w-full flex flex-col items-center justify-start mx-auto px-2 pt-2 sm:px-4 sm:pt-4 pb-0 mb-0 shrink-0"
+                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0"
                     >
                         <Document
                             file={activePdfUrl}

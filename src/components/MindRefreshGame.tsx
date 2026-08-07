@@ -89,7 +89,15 @@ export default function MindRefreshGame({ onClose }: MindRefreshGameProps) {
         };
     }, [isGameOver]);
 
-    const handleOrbClick = (orbId: number, points: number) => {
+    const poppedIdsRef = useRef<Set<number>>(new Set());
+
+    const handleOrbPop = (e: React.SyntheticEvent, orbId: number, points: number) => {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (poppedIdsRef.current.has(orbId)) return;
+        poppedIdsRef.current.add(orbId);
+
         setScore(prev => prev + points * combo);
         setCombo(prev => Math.min(prev + 1, 5));
         setPoppedCount(prev => prev + 1);
@@ -97,6 +105,7 @@ export default function MindRefreshGame({ onClose }: MindRefreshGameProps) {
     };
 
     const restartGame = () => {
+        poppedIdsRef.current.clear();
         setScore(0);
         setCombo(1);
         setPoppedCount(0);
@@ -151,16 +160,18 @@ export default function MindRefreshGame({ onClose }: MindRefreshGameProps) {
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 1.4, opacity: 0 }}
                                     style={{ left: `${orb.x}%`, top: `${orb.y}%` }}
-                                    onClick={() => handleOrbClick(orb.id, orb.points)}
-                                    className={`absolute -translate-x-1/2 -translate-y-1/2 px-4 py-2.5 rounded-2xl font-bold text-xs shadow-2xl backdrop-blur-md transition-transform active:scale-90 border flex items-center gap-1.5 whitespace-nowrap ${
-                                        orb.type === 'bio' ? 'bg-emerald-500/25 border-emerald-400/50 text-emerald-200 shadow-emerald-500/20' :
-                                        orb.type === 'phy' ? 'bg-blue-500/25 border-blue-400/50 text-blue-200 shadow-blue-500/20' :
-                                        orb.type === 'chem' ? 'bg-purple-500/25 border-purple-400/50 text-purple-200 shadow-purple-500/20' :
-                                        'bg-yellow-500/30 border-yellow-400/60 text-yellow-200 shadow-yellow-500/30 animate-pulse'
+                                    onPointerDown={(e) => handleOrbPop(e, orb.id, orb.points)}
+                                    onTouchStart={(e) => handleOrbPop(e, orb.id, orb.points)}
+                                    onClick={(e) => handleOrbPop(e, orb.id, orb.points)}
+                                    className={`absolute -translate-x-1/2 -translate-y-1/2 px-5 py-3 rounded-2xl font-bold text-xs shadow-2xl backdrop-blur-md transition-all active:scale-90 border flex items-center gap-1.5 whitespace-nowrap cursor-pointer touch-none select-none ${
+                                        orb.type === 'bio' ? 'bg-emerald-500/35 border-emerald-400/70 text-emerald-100 shadow-emerald-500/30' :
+                                        orb.type === 'phy' ? 'bg-blue-500/35 border-blue-400/70 text-blue-100 shadow-blue-500/30' :
+                                        orb.type === 'chem' ? 'bg-purple-500/35 border-purple-400/70 text-purple-100 shadow-purple-500/30' :
+                                        'bg-yellow-500/40 border-yellow-400/80 text-yellow-100 shadow-yellow-500/40 animate-pulse'
                                     }`}
                                 >
-                                    <Sparkles className="w-3.5 h-3.5" />
-                                    <span>{orb.text}</span>
+                                    <Sparkles className="w-4 h-4 pointer-events-none" />
+                                    <span className="pointer-events-none">{orb.text}</span>
                                 </motion.button>
                             ))}
                         </AnimatePresence>

@@ -138,6 +138,21 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
         return () => clearInterval(interval);
     }, [isSubmitted, submissionTimer]);
 
+    useEffect(() => {
+        if (!isSubmitted) return;
+        try {
+            window.history.pushState({ testSubmittedScreen: true }, '');
+        } catch { /* ignore */ }
+        const handlePhysicalBack = (e: PopStateEvent) => {
+            e.preventDefault();
+            onBack();
+        };
+        window.addEventListener('popstate', handlePhysicalBack);
+        return () => {
+            window.removeEventListener('popstate', handlePhysicalBack);
+        };
+    }, [isSubmitted, onBack]);
+
     const formatSubmissionTime = (seconds: number) => {
         const mins = Math.floor(seconds / 60);
         const secs = seconds % 60;

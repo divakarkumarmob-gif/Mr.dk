@@ -368,6 +368,19 @@ function AppInner() {
   }, []);
 
   useEffect(() => {
+    const handleOpenLiveAIWithTest = (e: any) => {
+        if (e.detail) {
+            try {
+                localStorage.setItem('pendingTestResultContext', JSON.stringify(e.detail));
+            } catch { /* ignore */ }
+        }
+        setCurrentView('liveAI');
+    };
+    window.addEventListener('open-live-ai-with-test', handleOpenLiveAIWithTest);
+    return () => window.removeEventListener('open-live-ai-with-test', handleOpenLiveAIWithTest);
+  }, []);
+
+  useEffect(() => {
     // Initial state replacement to ensure first view is in history
     if (!window.history.state) {
         const view = currentView;
