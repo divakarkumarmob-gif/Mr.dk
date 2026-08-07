@@ -46,9 +46,11 @@ const config: CapacitorConfig = {
       },
     },
     SplashScreen: {
-      launchShowDuration: 0,
-      launchAutoHide: true,
-      launchFadeOutDuration: 150,
+      // Splash stays visible until App.tsx explicitly calls SplashScreen.hide()
+      // after Firebase auth resolves. This prevents blank/login flash (Instagram-style).
+      launchAutoHide: false,
+      launchShowDuration: 3000, // safety fallback: auto-hide after 3s max
+      launchFadeOutDuration: 300,
       backgroundColor: "#0a0f24",
       androidScaleType: "CENTER_CROP",
       showSpinner: false,

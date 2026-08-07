@@ -27,7 +27,9 @@ import { SplashScreen } from '@capacitor/splash-screen';
 // root cause of the status bar randomly disappearing/glitching on
 // navigation. SafeArea's System Bars API replaces it everywhere.
 if (Capacitor.isNativePlatform()) {
-  SplashScreen.hide().catch(() => {});
+  // NOTE: SplashScreen.hide() is intentionally NOT called here.
+  // The native splash stays visible until auth resolves in App.tsx,
+  // preventing any blank/login flash on startup (Instagram-style flow).
   SafeArea.showSystemBars({}).catch(() => {});
 
   // Re-assert the status bar whenever the app resumes from background,

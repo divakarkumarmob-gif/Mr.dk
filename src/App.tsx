@@ -345,11 +345,18 @@ function AppInner() {
   // render above the keyboard, so it has been intentionally removed.
   useEffect(() => {
     if (Capacitor.isNativePlatform()) {
-      SplashScreen.hide().catch(() => {});
       lockToPortrait().catch(() => {});
       getDeviceInfo().catch(() => {});
     }
   }, []);
+
+  // Instagram-style: hide native splash ONLY after auth state is resolved.
+  // This ensures users never see a blank page or login flash on startup.
+  useEffect(() => {
+    if (!loading && Capacitor.isNativePlatform()) {
+      SplashScreen.hide({ fadeOutDuration: 300 }).catch(() => {});
+    }
+  }, [loading]);
 
   useEffect(() => {
     const handler = (e: any) => {
@@ -1767,10 +1774,12 @@ function AppInner() {
     return () => { delete (window as any).setAsHomeScreen; };
   }, []);
 
-  // Note: 'about', 'privacy'/'privacy-policy', and 'terms'/'terms-of-service'
-  // are now handled by real routes (/about, /privacy-policy,
-  // /terms-of-service) in the top-level App() router wrapper above,
-  // so those currentView blocks were removed from here.
+  // Instagram-style startup: while Firebase auth is resolving,
+  // render an invisible dark div that sits behind the native splash screen.
+  // This prevents the Login page from flashing for already-logged-in users.
+  if (loading) {
+    return <div className="fixed inset-0 bg-[#0a0f24]" />;
+  }
 
   if (!user && currentView === 'home' && !showLoginFromLanding && !Capacitor.isNativePlatform()) {
       return (
