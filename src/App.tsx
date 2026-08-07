@@ -290,7 +290,15 @@ export default function App() {
 function AppInner() {
   useReportProblemGesture(() => setShowSupportModal(true));
   const { _setAuthUser, _setAuthLoading } = useAuth();
-  const [user, setUser] = useState<User | null>(null);
+  // Cached Auth: read cached user from localStorage for 0ms instant startup.
+  // Firebase verifies in background — if invalid, cache is cleared.
+  const [user, setUser] = useState<User | null>(() => {
+    try {
+      const cached = localStorage.getItem('neetmaster_cached_user');
+      if (cached) return JSON.parse(cached) as User;
+    } catch {}
+    return null;
+  });
   const [showLoginFromLanding, setShowLoginFromLanding] = useState(false);
   const [currentView, _setCurrentView] = useState<any>(getInitialView());
   const [liveAIOrigin, setLiveAIOrigin] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -903,7 +911,15 @@ function AppInner() {
       requestAnimationFrame(startDetectionLoop);
   };
 
-  const [loading, setLoading] = useState(true);
+  // If we have a cached user, skip loading entirely (0ms instant Dashboard).
+  // Firebase will verify auth in background via onAuthStateChanged.
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !localStorage.getItem('neetmaster_cached_user');
+    } catch {
+      return true;
+    }
+  });
 
   // See the `user` sync effect near the top of this component for why
   // this exists (keeps AuthContext mirrored for routes outside AppInner).
@@ -1603,6 +1619,18 @@ function AppInner() {
       setLoading(false);
       if (!currentUser) {
           setShowLoginFromLanding(false);
+          // Clear cached auth on logout
+          localStorage.removeItem('neetmaster_cached_user');
+      } else {
+          // Cache auth for instant startup next time
+          try {
+              localStorage.setItem('neetmaster_cached_user', JSON.stringify({
+                  uid: currentUser.uid,
+                  displayName: currentUser.displayName,
+                  email: currentUser.email,
+                  photoURL: currentUser.photoURL,
+              }));
+          } catch {}
       }
       
       if (currentUser) {
