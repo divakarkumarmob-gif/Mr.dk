@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { Search, Sparkles, Camera, Mic, ArrowRight, RefreshCw, Globe, ExternalLink, ShieldCheck, X, Image as ImageIcon } from 'lucide-react';
+import { Search, Sparkles, Camera, Mic, ArrowRight, RefreshCw, Globe, ExternalLink, ShieldCheck, X, ChevronDown, ChevronUp } from 'lucide-react';
 import { getApiUrl, authFetch } from '../utils/api';
 import { showToast } from '../utils/toast';
 
@@ -18,6 +18,12 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
     const [searchStage, setSearchStage] = useState<'idle' | 'searching_web' | 'summarizing'>('idle');
     const [aiResponse, setAiResponse] = useState<string | null>(null);
     const [sources, setSources] = useState<{ title: string; url: string; snippet?: string }[]>([]);
+    
+    // Collapsible Web Sources (collapsed by default)
+    const [isSourcesExpanded, setIsSourcesExpanded] = useState(false);
+
+    // Input Ref for horizontal sliding auto-scroll during voice typing
+    const inputRef = useRef<HTMLInputElement>(null);
 
     // Image Photo Doubt Search State
     const [selectedImageBase64, setSelectedImageBase64] = useState<string | null>(null);
@@ -26,6 +32,13 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
 
     // Voice Search State
     const [isVoiceRecording, setIsVoiceRecording] = useState(false);
+
+    // Auto-scroll input to the right so live spoken text is always visible
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.scrollLeft = inputRef.current.scrollWidth;
+        }
+    }, [query]);
 
     const handleCameraClick = () => {
         cameraInputRef.current?.click();
@@ -99,6 +112,7 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
         setSearchStage('searching_web');
         setAiResponse('');
         setSources([]);
+        setIsSourcesExpanded(false); // Collapsed by default
 
         try {
             const response = await authFetch(getApiUrl('/api/search-stream'), {
@@ -222,11 +236,12 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
                     <Search className="w-5 h-5 text-gray-400 group-focus-within:text-cyan-400 mr-2.5 shrink-0" />
                     
                     <input
+                        ref={inputRef}
                         type="text"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder={isVoiceRecording ? "Listening... Speak your doubt now 🎙️" : "Search web & ask Google AI (e.g. Optics formula, Krebs cycle)..."}
-                        className="w-full bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none"
+                        className="w-full bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none overflow-x-auto whitespace-nowrap scroll-smooth"
                     />
 
                     <div className="flex items-center gap-1.5 ml-2 shrink-0">
@@ -291,27 +306,50 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
                             </button>
                         </div>
 
-                        {/* Web Sources / Sites Browsed */}
+                        {/* Collapsible Web Sources / Sites Browsed */}
                         {sources.length > 0 && (
-                            <div className="mb-3">
-                                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-                                    <Globe className="w-3 h-3 text-cyan-400" /> Web Sources Consulted ({sources.length})
-                                </p>
-                                <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto custom-scrollbar">
-                                    {sources.map((src, idx) => (
-                                        <a
-                                            key={idx}
-                                            href={src.url !== '#' ? src.url : undefined}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-500/15 hover:bg-blue-500/25 border border-blue-500/30 text-[11px] text-cyan-200 transition truncate max-w-[200px]"
+                            <div className="mb-3 border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                                <button
+                                    type="button"
+                                    onClick={() => setIsSourcesExpanded(prev => !prev)}
+                                    className="w-full px-3 py-2 flex items-center justify-between text-[11px] text-cyan-300 font-semibold hover:bg-white/5 transition"
+                                >
+                                    <span className="flex items-center gap-1.5">
+                                        <Globe className="w-3.5 h-3.5 text-cyan-400" />
+                                        Web Sources Consulted ({sources.length})
+                                    </span>
+                                    <span className="flex items-center gap-1 text-[10px] text-gray-400 font-normal">
+                                        {isSourcesExpanded ? 'Collapse' : 'Show Sources'}
+                                        {isSourcesExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                                    </span>
+                                </button>
+
+                                <AnimatePresence>
+                                    {isSourcesExpanded && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            className="px-3 pb-3 pt-1 border-t border-white/5"
                                         >
-                                            <span className="font-bold text-cyan-400">[{idx + 1}]</span>
-                                            <span className="truncate">{src.title}</span>
-                                            {src.url !== '#' && <ExternalLink className="w-2.5 h-2.5 shrink-0 opacity-70" />}
-                                        </a>
-                                    ))}
-                                </div>
+                                            <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto custom-scrollbar">
+                                                {sources.map((src, idx) => (
+                                                    <a
+                                                        key={idx}
+                                                        href={src.url !== '#' ? src.url : undefined}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-500/15 hover:bg-blue-500/25 border border-blue-500/30 text-[11px] text-cyan-200 transition truncate max-w-[200px]"
+                                                    >
+                                                        <span className="font-bold text-cyan-400">[{idx + 1}]</span>
+                                                        <span className="truncate">{src.title}</span>
+                                                        {src.url !== '#' && <ExternalLink className="w-2.5 h-2.5 shrink-0 opacity-70" />}
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         )}
 
