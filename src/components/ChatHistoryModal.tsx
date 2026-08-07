@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
     X, Send, Mic, Camera, Image as ImageIcon, Plus, Loader2,
-    CheckCircle, XCircle, Play, Pause, Trash2
+    CheckCircle, XCircle, Play, Pause, Trash2, Square
 } from 'lucide-react';
 import { auth, db, storage } from '../lib/firebase';
 import { collection, addDoc, doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
@@ -40,12 +40,15 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
     const [pendingImage, setPendingImage] = useState<{ file: File; previewUrl: string } | null>(null);
     const [showLiveBanner, setShowLiveBanner] = useState(true);
 
-    // Voice recording
+    // Voice recording & preview
     const [isRecording, setIsRecording] = useState(false);
     const [recordSeconds, setRecordSeconds] = useState(0);
+    const [pendingVoice, setPendingVoice] = useState<{ blob: Blob; previewUrl: string; durationSec: number; mimeType: string } | null>(null);
+    const [isVoicePreviewPlaying, setIsVoicePreviewPlaying] = useState(false);
     const mediaRecorderRef = useRef<MediaRecorder | null>(null);
     const recordedChunksRef = useRef<Blob[]>([]);
     const recordTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const previewAudioRef = useRef<HTMLAudioElement | null>(null);
 
     // Screenshot -> Notes flow
     const [showSaveConfirm, setShowSaveConfirm] = useState(false);
@@ -58,6 +61,7 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
     const chatBoxRef = useRef<HTMLDivElement>(null);
     const userScrolledUpRef = useRef(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const cameraInputRef = useRef<HTMLInputElement>(null);
     const messagesCaptureRef = useRef<HTMLDivElement>(null);
 
     const aiChatId = auth.currentUser ? `${auth.currentUser.uid}_ai` : null;
@@ -152,16 +156,41 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
         if (box) box.scrollTop = box.scrollHeight;
     };
 
+    // Helper: convert remote image URL back to base64 for re-attaching when replying to a photo
+    const urlToBase64 = async (url: string): Promise<string> => {
+        try {
+            const res = await fetch(url);
+            const blob = await res.blob();
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result as string);
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+            });
+        } catch (e) {
+            console.warn('[ChatHistoryModal] Failed to convert image URL to base64:', e);
+            return '';
+        }
+    };
+
     // ---------- AI reply helpers ----------
 
-    const getRecentTextHistory = useCallback(() => {
+    const getRecentContextHistory = useCallback(() => {
         return messages
-            .filter(m => m.text)
-            .slice(-8)
-            .map(m => ({
-                role: m.senderId === auth.currentUser?.uid ? 'user' : 'assistant',
-                content: m.text,
-            }));
+            .slice(-10)
+            .map(m => {
+                const role = m.senderId === auth.currentUser?.uid ? 'user' : 'assistant';
+                let content = m.text || '';
+                if (m.mediaType === 'image') {
+                    content = m.text ? `[Photo: "${m.text}"]` : '[Photo Attachment]';
+                } else if (m.mediaType === 'audio') {
+                    content = '[Voice Message]';
+                }
+                if (m.replyTo) {
+                    content = `[Replying to: "${m.replyTo.text || 'Media'}"] ${content}`;
+                }
+                return { role, content: content || '(empty message)' };
+            });
     }, [messages]);
 
     const saveUserMessage = async (text: string, mediaUrl?: string, mediaType?: 'image' | 'video' | 'audio') => {
@@ -214,7 +243,7 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
     const requestAIReplyForText = async (text: string) => {
         setIsAiTyping(true);
         try {
-            const reply = await chatWithAI(getRecentTextHistory(), text);
+            const reply = await chatWithAI(getRecentContextHistory(), text);
             await saveAIReply(reply || "Sorry, I couldn't come up with an answer for that.");
         } catch (e) {
             console.error('[ChatHistoryModal] AI text reply failed:', e);
@@ -228,7 +257,7 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
     const requestAIReplyForImage = async (text: string, base64Image: string) => {
         setIsAiTyping(true);
         try {
-            const reply = await chatWithAI(getRecentTextHistory(), text || '(Image sent)', base64Image);
+            const reply = await chatWithAI(getRecentContextHistory(), text || '(Image sent)', base64Image);
             await saveAIReply(reply || "Sorry, I couldn't read that image.");
         } catch (e) {
             console.error('[ChatHistoryModal] AI image reply failed:', e);
@@ -268,10 +297,31 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
 
         if (!text) return;
         setInputText('');
+
+        // Store reply state reference BEFORE saveUserMessage resets replyTarget
+        const activeReply = replyTarget;
+        let replyPrompt = text;
+        let reattachedImageBase64: string | undefined = undefined;
+
+        if (activeReply) {
+            const senderLabel = activeReply.senderId === auth.currentUser?.uid ? 'Student' : 'NEET Tutor (AI)';
+            const targetSummary = activeReply.text || (activeReply.mediaType === 'image' ? 'Photo Attachment' : activeReply.mediaType === 'audio' ? 'Voice Message' : 'Message');
+            replyPrompt = `[Replying to ${senderLabel}'s message: "${targetSummary}"] ${text}`;
+
+            if (activeReply.mediaType === 'image' && activeReply.mediaUrl) {
+                showToast('Re-analyzing photo in context...');
+                reattachedImageBase64 = await urlToBase64(activeReply.mediaUrl);
+            }
+        }
+
         setIsSending(true);
         try {
             await saveUserMessage(text);
-            await requestAIReplyForText(text);
+            if (reattachedImageBase64) {
+                await requestAIReplyForImage(replyPrompt, reattachedImageBase64);
+            } else {
+                await requestAIReplyForText(replyPrompt);
+            }
         } finally {
             setIsSending(false);
         }
@@ -346,6 +396,9 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
 
     const startRecording = async () => {
         try {
+            if (pendingVoice) {
+                cancelPendingVoice();
+            }
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             const mimeType = MediaRecorder.isTypeSupported('audio/webm') ? 'audio/webm' : 'audio/mp4';
             const recorder = new MediaRecorder(stream, { mimeType });
@@ -361,19 +414,22 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
             setIsRecording(true);
             setRecordSeconds(0);
             triggerHaptic();
+            if (recordTimerRef.current) clearInterval(recordTimerRef.current);
             recordTimerRef.current = setInterval(() => setRecordSeconds(s => s + 1), 1000);
         } catch (e) {
             console.error('[ChatHistoryModal] Mic access failed:', e);
-            showToast('Could not access microphone.');
+            showToast('Microphone access karne me dikkat aayi.');
         }
     };
 
-    const stopRecordingAndSend = async () => {
+    const stopRecordingAndPreview = async () => {
         const recorder = mediaRecorderRef.current;
         if (!recorder) return;
         if (recordTimerRef.current) clearInterval(recordTimerRef.current);
 
         const mimeType = recorder.mimeType || 'audio/webm';
+        const duration = recordSeconds;
+
         const blob: Blob = await new Promise((resolve) => {
             recorder.onstop = () => {
                 recorder.stream.getTracks().forEach(t => t.stop());
@@ -381,17 +437,38 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
             };
             recorder.stop();
         });
+
         setIsRecording(false);
         mediaRecorderRef.current = null;
+        setRecordSeconds(0);
 
-        if (blob.size < 500) return; // Accidental tap, essentially empty.
+        if (blob.size < 500) {
+            showToast('Recording too short!');
+            return;
+        }
 
-        if (!aiChatId || !auth.currentUser) return;
+        const previewUrl = URL.createObjectURL(blob);
+        setPendingVoice({ blob, previewUrl, durationSec: duration, mimeType });
+    };
+
+    const cancelPendingVoice = () => {
+        if (pendingVoice) {
+            URL.revokeObjectURL(pendingVoice.previewUrl);
+        }
+        setPendingVoice(null);
+        setIsVoicePreviewPlaying(false);
+    };
+
+    const sendPendingVoice = async () => {
+        if (!aiChatId || !auth.currentUser || !pendingVoice) return;
+        const { blob, previewUrl, mimeType } = pendingVoice;
+        setPendingVoice(null);
+        setIsVoicePreviewPlaying(false);
+
         setIsSending(true);
         try {
             const file = new File([blob], `voice_${Date.now()}.webm`, { type: mimeType });
 
-            // Read to base64 ONCE, immediately — before any network delay
             const base64: string = await new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => resolve(reader.result as string);
@@ -407,6 +484,16 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
             showToast('Failed to send voice message.');
         } finally {
             setIsSending(false);
+            URL.revokeObjectURL(previewUrl);
+        }
+    };
+
+    const toggleVoicePreviewPlayback = () => {
+        if (!previewAudioRef.current) return;
+        if (isVoicePreviewPlaying) {
+            previewAudioRef.current.pause();
+        } else {
+            previewAudioRef.current.play();
         }
     };
 
@@ -677,11 +764,14 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
             {/* Input bar */}
             <div className="flex-shrink-0 px-3 py-3 pb-[max(env(safe-area-inset-bottom,0px),12px)] bg-[#0b141a] border-t border-white/5 flex items-end gap-2 z-20 isolate transform-gpu">
                 <input type="file" ref={fileInputRef} accept="image/*" className="hidden" onChange={handleFileChange} />
+                <input type="file" ref={cameraInputRef} accept="image/*" capture="environment" className="hidden" onChange={handleFileChange} />
 
+                {/* Attachment Plus Menu */}
                 <div className="relative">
                     <button
                         onClick={() => setShowAttachMenu(v => !v)}
-                        className="p-3 bg-white/10 rounded-full text-gray-300 flex-shrink-0"
+                        className="p-3 bg-white/10 hover:bg-white/15 rounded-full text-gray-300 flex-shrink-0 transition"
+                        title="Add attachment"
                     >
                         <Plus className={`h-5 w-5 transition-transform ${showAttachMenu ? 'rotate-45' : ''}`} />
                     </button>
@@ -691,29 +781,75 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
                                 initial={{ opacity: 0, y: 10, scale: 0.9 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: 10, scale: 0.9 }}
-                                className="absolute bottom-14 left-0 bg-[#1f2c34] rounded-xl p-2 flex flex-col gap-1 shadow-lg"
+                                className="absolute bottom-14 left-0 bg-[#1f2c34] rounded-xl p-2 flex flex-col gap-1 shadow-2xl border border-white/10 z-30"
                             >
                                 <button
-                                    onClick={() => { setShowAttachMenu(false); fileInputRef.current?.click(); }}
-                                    className="flex items-center gap-2 px-3 py-2 text-white text-sm hover:bg-white/5 rounded-lg whitespace-nowrap"
+                                    onClick={() => { setShowAttachMenu(false); cameraInputRef.current?.click(); }}
+                                    className="flex items-center gap-2.5 px-3 py-2 text-white text-sm hover:bg-white/10 rounded-lg whitespace-nowrap transition"
                                 >
-                                    <ImageIcon className="h-4 w-4 text-purple-400" /> Photo
+                                    <Camera className="h-4 w-4 text-green-400" /> Camera Photo
+                                </button>
+                                <button
+                                    onClick={() => { setShowAttachMenu(false); fileInputRef.current?.click(); }}
+                                    className="flex items-center gap-2.5 px-3 py-2 text-white text-sm hover:bg-white/10 rounded-lg whitespace-nowrap transition"
+                                >
+                                    <ImageIcon className="h-4 w-4 text-purple-400" /> Gallery Photo
                                 </button>
                             </motion.div>
                         )}
                     </AnimatePresence>
                 </div>
 
-                {isRecording ? (
-                    <div className="flex-1 flex items-center gap-3 bg-[#1f2c34] rounded-full px-4 py-3">
+                {/* Direct Live Camera Button */}
+                <button
+                    onClick={() => cameraInputRef.current?.click()}
+                    className="p-3 bg-white/10 hover:bg-white/15 rounded-full text-gray-300 flex-shrink-0 transition"
+                    title="Take Live Camera Photo"
+                >
+                    <Camera className="h-5 w-5 text-green-400" />
+                </button>
+
+                {/* Dynamic Input Center: Recording / Voice Preview / Text Input */}
+                {pendingVoice ? (
+                    <div className="flex-1 bg-[#1f2c34] rounded-full px-4 py-2 flex items-center gap-3 border border-green-500/30">
+                        <audio
+                            ref={previewAudioRef}
+                            src={pendingVoice.previewUrl}
+                            onPlay={() => setIsVoicePreviewPlaying(true)}
+                            onPause={() => setIsVoicePreviewPlaying(false)}
+                            onEnded={() => setIsVoicePreviewPlaying(false)}
+                            className="hidden"
+                        />
+                        <button
+                            onClick={toggleVoicePreviewPlayback}
+                            className="p-2 bg-green-600 rounded-full text-white hover:bg-green-500 transition shrink-0 shadow-md"
+                        >
+                            {isVoicePreviewPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+                        </button>
+                        <div className="flex-1 flex flex-col justify-center min-w-0">
+                            <span className="text-white text-xs font-semibold truncate">Voice Note Preview</span>
+                            <span className="text-gray-400 text-[10px] font-mono">{formatVoiceDuration(pendingVoice.durationSec)}</span>
+                        </div>
+                        <button onClick={cancelPendingVoice} className="p-1.5 text-gray-400 hover:text-red-400 transition" title="Delete voice note">
+                            <Trash2 className="h-4 w-4" />
+                        </button>
+                    </div>
+                ) : isRecording ? (
+                    <div className="flex-1 flex items-center gap-3 bg-[#1f2c34] rounded-full px-4 py-2 border border-red-500/30">
                         <motion.span
-                            className="w-2.5 h-2.5 rounded-full bg-red-500"
+                            className="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0"
                             animate={{ opacity: [1, 0.3, 1] }}
                             transition={{ duration: 1, repeat: Infinity }}
                         />
-                        <span className="text-white text-sm flex-1">{formatVoiceDuration(recordSeconds)}</span>
-                        <button onClick={cancelRecording} className="text-gray-400">
-                            <Trash2 className="h-5 w-5" />
+                        <span className="text-white text-xs font-mono font-medium flex-1">{formatVoiceDuration(recordSeconds)}</span>
+                        <button
+                            onClick={stopRecordingAndPreview}
+                            className="p-1.5 px-3 bg-red-500/20 hover:bg-red-500/30 text-red-400 rounded-full transition flex items-center gap-1.5 text-xs font-bold"
+                        >
+                            <Square className="h-3.5 w-3.5 fill-red-400" /> Done
+                        </button>
+                        <button onClick={cancelRecording} className="p-1 text-gray-400 hover:text-gray-200" title="Cancel recording">
+                            <Trash2 className="h-4 w-4" />
                         </button>
                     </div>
                 ) : (
@@ -723,31 +859,40 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
                             value={inputText}
                             onChange={(e) => setInputText(e.target.value)}
                             onKeyDown={(e) => { if (e.key === 'Enter') handleSendText(); }}
-                            placeholder="Type a message"
+                            placeholder="Type a message or doubt..."
                             className="bg-transparent flex-1 text-white text-sm outline-none placeholder:text-gray-500"
                         />
                     </div>
                 )}
 
-                {(inputText.trim() || pendingImage) ? (
+                {/* Send / Mic Action Button */}
+                {pendingVoice ? (
                     <button
-                        onClick={handleSendText}
+                        onClick={sendPendingVoice}
                         disabled={isSending}
-                        className="p-3 bg-green-600 rounded-full text-white flex-shrink-0 disabled:opacity-50"
+                        className="p-3 bg-green-600 rounded-full text-white flex-shrink-0 disabled:opacity-50 hover:bg-green-500 transition shadow-lg"
+                        title="Send Voice Note"
                     >
                         {isSending ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
                     </button>
-                ) : (
+                ) : (inputText.trim() || pendingImage) ? (
                     <button
-                        onMouseDown={startRecording}
-                        onMouseUp={stopRecordingAndSend}
-                        onTouchStart={startRecording}
-                        onTouchEnd={stopRecordingAndSend}
-                        className={`p-3 rounded-full text-white flex-shrink-0 transition-colors ${isRecording ? 'bg-red-500' : 'bg-green-600'}`}
+                        onClick={handleSendText}
+                        disabled={isSending}
+                        className="p-3 bg-green-600 rounded-full text-white flex-shrink-0 disabled:opacity-50 hover:bg-green-500 transition shadow-lg"
+                        title="Send Message"
+                    >
+                        {isSending ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
+                    </button>
+                ) : !isRecording ? (
+                    <button
+                        onClick={startRecording}
+                        className="p-3 bg-green-600 hover:bg-green-500 rounded-full text-white flex-shrink-0 transition shadow-lg"
+                        title="Record Voice Note"
                     >
                         <Mic className="h-5 w-5" />
                     </button>
-                )}
+                ) : null}
             </div>
 
             {/* Expanded image viewer */}

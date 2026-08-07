@@ -1785,19 +1785,23 @@ After writing your normal reply to the user, on a new line add the exact delimit
     }
 
     const lastMessage = messages[messages.length - 1].content;
+    const historyText = messages
+      .slice(-10)
+      .map((m: any) => `${m.role === 'user' ? 'Student' : 'NEET Tutor'}: ${m.content}`)
+      .join('\n');
 
     try {
       let reply: string;
       if (base64Image) {
         const imgResponse = await generateWithFallback("gemini-3.6-flash", {
           parts: [
-            { text: `You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE} The student sent this image along with the message: "${lastMessage || '(no caption, just the image)'}"` },
+            { text: `You are a NEET tutor answering strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE}\n\nRecent 10-Message Conversation Context:\n${historyText}\n\nThe student sent or replied to an image with message: "${lastMessage}". Please examine the image and answer the student's question directly in context.` },
             { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
           ]
         });
         reply = imgResponse.text || "Sorry, I couldn't read that image.";
       } else {
-        reply = await callAI(`You are a NEET tutor. Answer strictly according to NCERT. Respond with extreme brevity. Simple words only. ${lastMessage}`);
+        reply = await callAI(`You are a NEET tutor answering strictly according to NCERT. Respond with extreme brevity. Simple words only. ${PLAIN_FORMAT_RULE}\n\nRecent 10-Message Conversation Context:\n${historyText}\n\nStudent's latest message:\n${lastMessage}`);
       }
       res.json({ reply });
     } catch (error) {

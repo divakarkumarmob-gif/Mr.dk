@@ -42,6 +42,24 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [displayZoom, setDisplayZoom] = useState(initialScale);
+    const [renderScale, setRenderScale] = useState(initialScale);
+    const zoomDebounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Debounce canvas redraw scale to prevent white flashing during zoom
+    useEffect(() => {
+        if (zoomDebounceTimerRef.current) {
+            clearTimeout(zoomDebounceTimerRef.current);
+        }
+        zoomDebounceTimerRef.current = setTimeout(() => {
+            setRenderScale(displayZoom);
+        }, 350);
+
+        return () => {
+            if (zoomDebounceTimerRef.current) {
+                clearTimeout(zoomDebounceTimerRef.current);
+            }
+        };
+    }, [displayZoom]);
 
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -774,11 +792,16 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                     >
                                         <Page
                                             pageNumber={pageNum}
-                                            scale={displayZoom}
+                                            scale={renderScale}
                                             canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
-                                            className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
+                                            className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl transition-transform duration-75 ease-out"
+                                            style={{
+                                                transform: `scale(${renderScale > 0 ? displayZoom / renderScale : 1})`,
+                                                transformOrigin: 'top center',
+                                                willChange: 'transform',
+                                            }}
                                             loading={null}
                                         />
                                     </div>
