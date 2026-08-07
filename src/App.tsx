@@ -23,7 +23,7 @@ import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCir
 import { getApiUrl, authFetch } from '@/utils/api';
 import { configureStatusBar } from './utils/statusBar';
 import { lockToPortrait } from './utils/screenOrientation';
-import { scheduleDailyNeetCountdown, checkAndScheduleStreakWarning, scheduleInactivityWarning } from './utils/studyNotificationEngine';
+import { scheduleDailyNeetCountdown, checkAndScheduleStreakWarning, scheduleInactivityWarning, getRealNeetDaysRemaining } from './utils/studyNotificationEngine';
 import { initNotificationChannel } from './utils/notifications';
 import { PHYSICS_CHAPTERS, CHEMISTRY_CHAPTERS, BIOLOGY_CHAPTERS } from './constants';
 import { motion, AnimatePresence } from 'motion/react';
@@ -607,9 +607,10 @@ function AppInner() {
   useEffect(() => {
     if (!user) return;
     
-    // Background study notification engine initialization
-    scheduleDailyNeetCountdown().catch(() => {});
-    checkAndScheduleStreakWarning(0).catch(() => {});
+    // Background study notification engine initialization with real dynamic countdown & study data
+    const realDaysLeft = getRealNeetDaysRemaining();
+    scheduleDailyNeetCountdown(realDaysLeft).catch(() => {});
+    checkAndScheduleStreakWarning(stats?.questionsSolved || 0).catch(() => {});
     scheduleInactivityWarning().catch(() => {});
 
     // Native Notification Click Handling (Deep-linking to target page)
@@ -1306,16 +1307,36 @@ function AppInner() {
     }
   }, [user]);
 
-  const [stats, setStats] = useState({
+  const [stats, setStats] = useState(() => {
+      try {
+          const today = getISTDateString();
+          const cached = localStorage.getItem(`neetmaster_cached_stats_${today}`);
+          if (cached) {
+              const parsed = JSON.parse(cached);
+              if (parsed.date === today) return parsed;
+          }
+      } catch (e) {}
+      return {
           testsAttempted: 0,
           questionsSolved: 0,
           accuracy: 0,
           timeSpentSeconds: 0,
           lectureTimeSeconds: 0,
           date: getISTDateString()
+      };
   });
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [chartData, setChartData] = useState<any[]>([]);
+
+  // Keep stats cached in localStorage for instant 0ms startup without 00 flashing
+  useEffect(() => {
+      try {
+          const today = getISTDateString();
+          if (stats && stats.date === today) {
+              localStorage.setItem(`neetmaster_cached_stats_${today}`, JSON.stringify(stats));
+          }
+      } catch (e) {}
+  }, [stats]);
 
   useEffect(() => {
       if (!user) return;
@@ -1816,11 +1837,9 @@ function AppInner() {
 
   if (currentView === 'liveAI') {
       return (
-        <WaveReveal active={true} originX={liveAIOrigin.x} originY={liveAIOrigin.y}>
-            <Suspense fallback={null}>
-                <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />
-            </Suspense>
-        </WaveReveal>
+          <Suspense fallback={null}>
+              <LiveAIInterface onClose={() => setCurrentView(previousView || 'home')} />
+          </Suspense>
       );
   }
 

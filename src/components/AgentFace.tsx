@@ -89,7 +89,7 @@ const AgentFace: React.FC<AgentFaceProps> = ({ status, volume, size = 120, color
       
       {/* Face Circle */}
       <motion.div
-        className="rounded-full bg-[#0a0f24] border-2 flex items-center justify-center agent-face-circle"
+        className="rounded-full bg-transparent border-2 flex items-center justify-center agent-face-circle"
         style={{ width: size * 0.75, height: size * 0.75, borderColor: `${color}80`, boxShadow: `0 0 20px ${color}4d` }}
         animate={{ rotateY: [0, 0, 0, -20, 20, 0] }}
         transition={{

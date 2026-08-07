@@ -297,8 +297,8 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                     )}
                 </AnimatePresence>
 
-                {/* Clean Button Container */}
-                <div className="relative rounded-full p-1.5 bg-[#0a0f24]/90 backdrop-blur-xl border border-white/20 shadow-lg flex items-center justify-center">
+                {/* Transparent Button Container */}
+                <div className="relative flex items-center justify-center bg-transparent border-0 shadow-none p-0">
                     <AgentFace status={status} volume={0} size={54} colorIndex={colorIndex} />
                 </div>
             </motion.div>

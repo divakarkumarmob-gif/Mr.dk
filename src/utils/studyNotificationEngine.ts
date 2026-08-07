@@ -1,10 +1,42 @@
 import { scheduleNotification } from './notifications';
 
 /**
- * NEET Master AI - Centralized Study Notification Engine
- * Manages 13 automated notification triggers tailored for NEET Aspirants,
- * complete with Deep-Link targetView routing so clicking any notification lands on the exact page.
+ * NEET Master AI - Centralized Real-Data Study Notification Engine
+ * Calculates real-time dynamic countdowns, exam dates, streak counts, and target goals.
  */
+
+/**
+ * Dynamically calculates exact days remaining until the next upcoming NEET UG Exam.
+ * Standard NEET UG Exam is held on the first Sunday of May.
+ */
+export const getRealNeetDaysRemaining = (targetYear?: number): number => {
+  const now = new Date();
+  
+  let year = targetYear;
+  if (!year) {
+    try {
+      const savedYear = localStorage.getItem('neet_target_year');
+      if (savedYear) year = parseInt(savedYear, 10);
+    } catch {}
+  }
+  
+  if (!year || isNaN(year)) {
+    const currentYear = now.getFullYear();
+    const currentMayExam = new Date(currentYear, 4, 10);
+    year = now.getTime() > currentMayExam.getTime() ? currentYear + 1 : currentYear;
+  }
+  
+  // First Sunday of May for target year
+  const mayFirst = new Date(year, 4, 1);
+  const dayOfWeek = mayFirst.getDay(); // 0 is Sunday
+  const firstSundayDate = dayOfWeek === 0 ? 1 : 1 + (7 - dayOfWeek);
+  
+  const examDate = new Date(year, 4, firstSundayDate, 14, 0, 0); // 2:00 PM IST on exam day
+  const diffTime = examDate.getTime() - now.getTime();
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  return diffDays > 0 ? diffDays : 0;
+};
 
 // 1. Test Result & Analysis Alert (Scheduled for 2 MINUTES (120,000ms) after test submit -> Target: 'tests')
 export const scheduleDelayedTestResultNotification = async (
@@ -18,16 +50,17 @@ export const scheduleDelayedTestResultNotification = async (
   const notificationId = Math.abs(Math.floor(Math.random() * 1000000));
 
   const title = `📊 Test Analysis Ready! (${obtainedMarks}/${totalPossibleMarks})`;
-  const body = `Aapka ${testName} result ready ho gaya hai! Accuracy: ${accuracy}%. Weak topics aur detailed solution dekhne ke liye tap karein 🎯`;
+  const body = `Aapka ${testName} result ready ho gaya hai! Real Accuracy: ${Math.round(accuracy)}%. Weak topics aur detailed solution dekhne ke liye tap karein 🎯`;
 
-  console.log(`[NotificationEngine] Scheduling test analysis notification in 2 minutes for test "${testName}"...`);
+  console.log(`[NotificationEngine] Scheduling test analysis notification for test "${testName}"...`);
   return await scheduleNotification(title, body, notificationId, scheduleAt, 'tests');
 };
 
 // 2. Daily Study Streak & Goal Warning (7:00 PM Reminder -> Target: 'customPractice')
-export const checkAndScheduleStreakWarning = async (questionsSolvedToday: number): Promise<boolean> => {
+export const checkAndScheduleStreakWarning = async (questionsSolvedToday: number = 0): Promise<boolean> => {
   if (questionsSolvedToday >= 15) return false;
 
+  const remainingNeeded = Math.max(1, 15 - questionsSolvedToday);
   const now = new Date();
   const scheduleAt = new Date();
   scheduleAt.setHours(19, 0, 0, 0); // 7:00 PM today
@@ -38,7 +71,7 @@ export const checkAndScheduleStreakWarning = async (questionsSolvedToday: number
 
   const notificationId = 70019;
   const title = "🔥 NEET Streak Alert!";
-  const body = "Aapki 5-Day Study Streak khatre me hai! ⚡ Aaj ke 15 Biology & Physics questions bache hain. Tap to complete & save your streak! 🎯";
+  const body = `Aaj aapne ${questionsSolvedToday}/15 questions solve kiye hain. Streak save karne ke liye ${remainingNeeded} questions bache hain! Tap to complete 🎯`;
 
   return await scheduleNotification(title, body, notificationId, scheduleAt, 'customPractice');
 };
@@ -68,7 +101,11 @@ export const sendBattleRoomChallengeNotification = async (
 };
 
 // 5. Daily NEET Countdown Morning Alert (8:00 AM Daily -> Target: 'aiStudyPlan')
-export const scheduleDailyNeetCountdown = async (daysRemaining: number = 75): Promise<boolean> => {
+export const scheduleDailyNeetCountdown = async (daysRemaining?: number): Promise<boolean> => {
+  const realDays = typeof daysRemaining === 'number' && daysRemaining > 0 
+    ? daysRemaining 
+    : getRealNeetDaysRemaining();
+
   const now = new Date();
   const scheduleAt = new Date();
   scheduleAt.setHours(8, 0, 0, 0);
@@ -79,7 +116,7 @@ export const scheduleDailyNeetCountdown = async (daysRemaining: number = 75): Pr
 
   const notificationId = 80088;
   const title = `⏳ NEET Exam Target Alert!`;
-  const body = `NEET UG Exam me sirf ${daysRemaining} Days bache hain! Today's Target: Plant Physiology & Organic Chemistry. Let's make today count! 🩺✨`;
+  const body = `NEET UG Exam me sirf ${realDays} Days bache hain! Real-time daily goals complete karke score boost karein. Let's make today count! 🩺✨`;
 
   return await scheduleNotification(title, body, notificationId, scheduleAt, 'aiStudyPlan');
 };
@@ -109,7 +146,7 @@ export const scheduleFocusSessionCompleteNotification = async (durationMins: num
 export const scheduleFlashcardReviewNotification = async (dueCount: number = 10): Promise<boolean> => {
   const notificationId = 30030;
   const title = `🃏 Flashcards Retention Review`;
-  const body = `${dueCount} Biology & Chemistry flashcards pending for review! Keep your memory retention rate at 95%+ 🧠`;
+  const body = `${dueCount} Biology & Chemistry flashcards pending for review! Keep your memory retention rate high 🧠`;
 
   return await scheduleNotification(title, body, notificationId, undefined, 'mindHack');
 };
@@ -148,13 +185,4 @@ export const scheduleCommunityChatNotification = async (senderName: string, mess
   const body = `${messageSnippet} — Tap to open study group discussion! 📩`;
 
   return await scheduleNotification(title, body, notificationId, undefined, 'neetCommunity');
-};
-
-// 13. Offline Note Saved Confirmation (Target: 'notes')
-export const scheduleOfflineNoteSavedNotification = async (noteTitle: string): Promise<boolean> => {
-  const notificationId = Math.floor(Math.random() * 900000) + 700000;
-  const title = `💾 Note Saved Offline!`;
-  const body = `"${noteTitle}" successfully offline storage me save ho gaya hai. Tap to read anytime 📱`;
-
-  return await scheduleNotification(title, body, notificationId, undefined, 'notes');
 };
