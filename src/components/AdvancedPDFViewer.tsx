@@ -22,7 +22,7 @@ try {
 
 const MIN_SCALE = 0.25;
 const MAX_SCALE = 4.0;
-const BASE_RENDER_SCALE = 1.5; // High-definition crisp rendering scale
+const BASE_RENDER_SCALE = 1.8; // Ultra-crisp high-definition vector rendering scale
 
 function getTouchCenter(touches: TouchList) {
     return {
@@ -421,10 +421,21 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         });
     }, [clearHighlights]);
 
-    // ---- Native touch handlers (Capacitor Mobile ONLY) ----
+    // Desktop Horizontal Slide Helper (< and > buttons)
+    const slideHorizontal = useCallback((direction: 'left' | 'right') => {
+        const stage = stageRef.current;
+        if (stage) {
+            const amount = Math.max(250, stage.clientWidth * 0.35);
+            stage.scrollBy({
+                left: direction === 'right' ? amount : -amount,
+                behavior: 'smooth',
+            });
+        }
+    }, []);
+
+    // ---- Universal Touch & Pinch Handlers (Native Mobile & Mobile Web) ----
 
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
-        if (!Capacitor.isNativePlatform()) return;
         const touches = e.touches;
         const state = gestureState.current;
 
@@ -432,88 +443,51 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             wrapRef.current.style.transition = 'none';
         }
 
-        const stage = stageRef.current;
-        const stageRect = stage ? stage.getBoundingClientRect() : { left: 0, top: 0 };
-
         if (touches.length >= 2) {
-            const centerClient = getTouchCenter(touches as any);
-            const centerStage = {
-                x: centerClient.x - stageRect.left,
-                y: centerClient.y - stageRect.top,
-            };
-
             state.active = true;
             state.touchCount = 2;
             state.startDistance = getTouchDistance(touches as any);
-            state.startZoom = transformRef.current.zoom;
-            state.startX = transformRef.current.x;
-            state.startY = transformRef.current.y;
-            state.startOrigX = (centerStage.x - state.startX) / state.startZoom;
-            state.startOrigY = (centerStage.y - state.startY) / state.startZoom;
+            state.startZoom = displayZoom; // Sync touch zoom with displayZoom
+            transformRef.current.zoom = displayZoom;
             state.moved = true;
         } else if (touches.length === 1) {
             state.active = true;
             state.touchCount = 1;
-            state.lastSingleX = touches[0].clientX;
-            state.lastSingleY = touches[0].clientY;
             state.tapStartX = touches[0].clientX;
             state.tapStartY = touches[0].clientY;
             state.tapStartTime = Date.now();
             state.moved = false;
         }
-    }, []);
+    }, [displayZoom]);
 
     const handleTouchMove = useCallback((e: React.TouchEvent) => {
-        if (!Capacitor.isNativePlatform()) return;
         const touches = e.touches;
         const state = gestureState.current;
         if (!state.active) return;
 
-        const stage = stageRef.current;
-        const stageRect = stage ? stage.getBoundingClientRect() : { left: 0, top: 0 };
-
         if (touches.length >= 2 && state.touchCount === 2) {
             e.preventDefault();
             const currentDistance = getTouchDistance(touches as any);
-            const centerClient = getTouchCenter(touches as any);
-            const centerStage = {
-                x: centerClient.x - stageRect.left,
-                y: centerClient.y - stageRect.top,
-            };
-
             const rawZoom = state.startZoom * (currentDistance / state.startDistance);
             const clampedZoom = Math.min(Math.max(rawZoom, MIN_SCALE), MAX_SCALE);
 
-            transformRef.current = {
-                zoom: clampedZoom,
-                x: centerStage.x - state.startOrigX * clampedZoom,
-                y: centerStage.y - state.startOrigY * clampedZoom,
-            };
-            applyTransform();
-        } else if (touches.length === 1 && state.touchCount === 1) {
-            e.preventDefault();
-            const dx = touches[0].clientX - state.lastSingleX;
-            const dy = touches[0].clientY - state.lastSingleY;
-            state.lastSingleX = touches[0].clientX;
-            state.lastSingleY = touches[0].clientY;
+            transformRef.current.zoom = clampedZoom;
+            setDisplayZoom(clampedZoom);
 
+            if (wrapRef.current) {
+                wrapRef.current.style.transition = 'none';
+                wrapRef.current.style.transform = `scale(${clampedZoom / BASE_RENDER_SCALE})`;
+            }
+        } else if (touches.length === 1 && state.touchCount === 1) {
             const totalDx = touches[0].clientX - state.tapStartX;
             const totalDy = touches[0].clientY - state.tapStartY;
             if (Math.hypot(totalDx, totalDy) > 10) {
                 state.moved = true;
             }
-
-            transformRef.current = {
-                ...transformRef.current,
-                x: transformRef.current.x + dx,
-                y: transformRef.current.y + dy,
-            };
-            applyTransform();
         }
-    }, [applyTransform]);
+    }, []);
 
     const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-        if (!Capacitor.isNativePlatform()) return;
         const state = gestureState.current;
         const remaining = e.touches.length;
 
@@ -525,7 +499,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
 
         if (state.touchCount === 2 && remaining < 2) {
-            setDisplayZoom(transformRef.current.zoom);
             if (remaining === 1) {
                 state.touchCount = 1;
                 state.lastSingleX = e.touches[0].clientX;
@@ -538,7 +511,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.active = false;
             state.touchCount = 0;
         }
-    }, []);
+    }, [toggleControlsOnTap]);
 
     const zoomButton = (delta: number) => {
         setDisplayZoom(prev => {
@@ -546,7 +519,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             transformRef.current.zoom = nextZoom;
             if (wrapRef.current) {
                 wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0.2, 1)';
-                wrapRef.current.style.transform = `scale(${nextZoom})`;
+                wrapRef.current.style.transform = `scale(${nextZoom / BASE_RENDER_SCALE})`;
             }
             return nextZoom;
         });
@@ -729,7 +702,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     }
                 }}
                 onClick={toggleControlsOnTap}
-                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar py-4"
+                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0"
             >
                 {isLoading && (
                     <motion.div
@@ -764,10 +737,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="w-full min-h-full flex flex-col items-center origin-top transform-gpu"
+                        className="flex flex-col items-center origin-top transform-gpu transition-transform duration-75"
                         style={{
-                            transform: `scale(${displayZoom})`,
+                            transform: `scale(${displayZoom / BASE_RENDER_SCALE})`,
                             transformOrigin: 'top center',
+                            width: `${Math.max(100, (displayZoom / BASE_RENDER_SCALE) * 100)}%`,
                         }}
                     >
                         <Document
@@ -776,7 +750,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             onLoadSuccess={onDocumentLoadSuccess}
                             onLoadError={onDocumentLoadError}
                             onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
-                            className="flex flex-col items-center gap-6 px-1 min-h-full"
+                            className="flex flex-col items-center gap-6 px-1 pb-0"
                         >
                             {Array.from(new Array(numPages || 0), (_, index) => {
                                 const pageNum = index + 1;
@@ -789,7 +763,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                     >
                                         <Page
                                             pageNumber={pageNum}
-                                            scale={1.0}
+                                            scale={BASE_RENDER_SCALE}
                                             canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
@@ -799,10 +773,47 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                     </div>
                                 );
                             })}
+
+                            {/* End of Document — Thank You Card (Strict Bottom Stop) */}
+                            {numPages && (
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="mt-6 mb-0 px-8 py-6 bg-gradient-to-r from-blue-950/80 via-indigo-950/70 to-slate-900/80 border border-blue-500/20 rounded-3xl text-center shadow-2xl max-w-sm mx-auto backdrop-blur-xl shrink-0"
+                                >
+                                    <div className="text-3xl mb-2">✨ 🩺 ✨</div>
+                                    <h3 className="text-base font-bold text-white mb-1">Thank You & Best of Luck for NEET!</h3>
+                                    <p className="text-xs text-blue-300 font-medium">Keep Practicing • Revision is the Key to Success!</p>
+                                </motion.div>
+                            )}
                         </Document>
                     </div>
                 )}
             </div>
+
+            {/* Desktop Horizontal Slide Controls (< and >) */}
+            {!error && numPages && !isLoading && (
+                <>
+                    <div className="hidden md:flex fixed left-5 top-1/2 -translate-y-1/2 z-40">
+                        <button
+                            onClick={() => slideHorizontal('left')}
+                            className="p-3.5 bg-slate-900/90 hover:bg-blue-600 border border-white/10 text-white rounded-full shadow-2xl backdrop-blur-xl transition-all duration-200 hover:scale-110 active:scale-95 group"
+                            title="Slide Left"
+                        >
+                            <ChevronLeft className="h-6 w-6 text-gray-300 group-hover:text-white" />
+                        </button>
+                    </div>
+                    <div className="hidden md:flex fixed right-5 top-1/2 -translate-y-1/2 z-40">
+                        <button
+                            onClick={() => slideHorizontal('right')}
+                            className="p-3.5 bg-slate-900/90 hover:bg-blue-600 border border-white/10 text-white rounded-full shadow-2xl backdrop-blur-xl transition-all duration-200 hover:scale-110 active:scale-95 group"
+                            title="Slide Right"
+                        >
+                            <ChevronRight className="h-6 w-6 text-gray-300 group-hover:text-white" />
+                        </button>
+                    </div>
+                </>
+            )}
 
             {/* Smart Control Bar — Zoom & Page Navigation */}
             <AnimatePresence>
