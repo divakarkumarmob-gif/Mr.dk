@@ -465,16 +465,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         if (touches.length >= 2 && state.touchCount === 2) {
             e.preventDefault();
             const currentDistance = getTouchDistance(touches as any);
-            const rawZoom = state.startZoom * (currentDistance / state.startDistance);
-            const clampedZoom = Math.min(Math.max(rawZoom, MIN_SCALE), MAX_SCALE);
+            const ratio = currentDistance / state.startDistance;
+            // Damped pinch-zoom multiplier for smooth, natural finger zoom
+            const dampedRatio = 1 + (ratio - 1) * 0.45;
+            const rawZoom = state.startZoom * dampedRatio;
+            const clampedZoom = Math.min(Math.max(rawZoom, 0.4), 3.5);
 
             transformRef.current.zoom = clampedZoom;
             setDisplayZoom(clampedZoom);
-
-            if (wrapRef.current) {
-                wrapRef.current.style.transition = 'none';
-                wrapRef.current.style.transform = `scale(${clampedZoom / BASE_RENDER_SCALE})`;
-            }
         } else if (touches.length === 1 && state.touchCount === 1) {
             const totalDx = touches[0].clientX - state.tapStartX;
             const totalDy = touches[0].clientY - state.tapStartY;
@@ -695,7 +693,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     }
                 }}
                 onClick={toggleControlsOnTap}
-                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0"
+                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0 overscroll-contain"
             >
                 {isLoading && (
                     <motion.div
@@ -730,7 +728,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="min-w-fit w-full flex flex-col items-center justify-start mx-auto p-2 sm:p-4"
+                        className="min-w-fit w-full flex flex-col items-center justify-start mx-auto px-2 pt-2 sm:px-4 sm:pt-4 pb-0 mb-0 shrink-0"
                     >
                         <Document
                             file={activePdfUrl}
@@ -738,7 +736,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             onLoadSuccess={onDocumentLoadSuccess}
                             onLoadError={onDocumentLoadError}
                             onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
-                            className="flex flex-col items-center gap-6 px-1 pb-0"
+                            className="flex flex-col items-center gap-6 px-1 pb-0 mb-0"
                         >
                             {Array.from(new Array(numPages || 0), (_, index) => {
                                 const pageNum = index + 1;
@@ -767,7 +765,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="mt-6 mb-0 px-8 py-6 bg-gradient-to-r from-blue-950/80 via-indigo-950/70 to-slate-900/80 border border-blue-500/20 rounded-3xl text-center shadow-2xl max-w-sm mx-auto backdrop-blur-xl shrink-0"
+                                    className="mt-6 mb-2 px-8 py-5 bg-gradient-to-r from-blue-950/80 via-indigo-950/70 to-slate-900/80 border border-blue-500/20 rounded-3xl text-center shadow-2xl max-w-sm mx-auto backdrop-blur-xl shrink-0"
                                 >
                                     <div className="text-3xl mb-2">✨ 🩺 ✨</div>
                                     <h3 className="text-base font-bold text-white mb-1">Thank You & Best of Luck for NEET!</h3>
