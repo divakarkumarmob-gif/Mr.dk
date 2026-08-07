@@ -2,10 +2,11 @@ import { addDoc, collection } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, ChevronRight, Menu, X, Hourglass, Info, User, CheckCircle2, Circle, Clock, LogOut } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Menu, X, Hourglass, Info, User, CheckCircle2, Circle, Clock, LogOut, Gamepad2 } from 'lucide-react';
 import Pressable from './Pressable';
 import { getApiUrl, authFetch } from '@/utils/api';
 import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
+import MindRefreshGame from './MindRefreshGame';
 
 interface Question {
     id: string;
@@ -209,6 +210,7 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
     const filteredQuestions = activeSubject === 'All' ? questions : questions.filter(q => q.subject === activeSubject);
 
     const [submissionTimer, setSubmissionTimer] = useState(120);
+    const [showGameModal, setShowGameModal] = useState(false);
     useEffect(() => {
         let interval: any;
         if (isSubmitted && submissionTimer > 0) {
@@ -244,9 +246,21 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                             <>
                                 <p className="text-gray-500 mb-2">Generating detailed NTA analysis...</p>
                                 <div className="text-5xl font-mono font-bold text-blue-600 mb-8">{formatSubmissionTime(submissionTimer)}</div>
-                                <button onClick={() => onBack()} className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-bold transition-all hover:bg-gray-200">
+                                <button onClick={() => onBack()} className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-bold transition-all hover:bg-gray-200 mb-3">
                                     Back to Home
                                 </button>
+                                
+                                <button 
+                                    onClick={() => setShowGameModal(true)} 
+                                    className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white py-4 rounded-2xl font-bold transition-all shadow-xl shadow-purple-600/30 active:scale-95 flex items-center justify-center gap-2"
+                                >
+                                    <Gamepad2 className="w-5 h-5 text-yellow-300 animate-pulse" />
+                                    <span>Play Game (Mind Refresh)</span>
+                                </button>
+
+                                {showGameModal && (
+                                    <MindRefreshGame onClose={() => setShowGameModal(false)} />
+                                )}
                             </>
                         ) : (
                             <div className="space-y-4">

@@ -2,11 +2,12 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, ChevronRight, Menu, X, Hourglass, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Menu, X, Hourglass, CheckCircle2, Gamepad2 } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { generateNEETPdf } from '../lib/pdfUtils';
 import { storageService } from '../lib/storageService';
 import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
+import MindRefreshGame from './MindRefreshGame';
 interface Question {
     id: string;
     question: string;
@@ -125,6 +126,7 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submissionTimer, setSubmissionTimer] = useState(120);
+    const [showGameModal, setShowGameModal] = useState(false);
 
     useEffect(() => {
         let interval: any;
@@ -304,11 +306,23 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                                 
                                 <button 
                                     onClick={() => onBack()} 
-                                    className="w-full bg-white/5 border border-white/10 text-white py-4 rounded-2xl font-bold transition-all hover:bg-white/10 active:scale-95"
+                                    className="w-full bg-white/5 border border-white/10 text-white py-4 rounded-2xl font-bold transition-all hover:bg-white/10 active:scale-95 mb-3"
                                 >
                                     Go to Home
                                 </button>
+                                
+                                <button 
+                                    onClick={() => setShowGameModal(true)} 
+                                    className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white py-4 rounded-2xl font-bold transition-all shadow-xl shadow-purple-600/30 active:scale-95 flex items-center justify-center gap-2"
+                                >
+                                    <Gamepad2 className="w-5 h-5 text-yellow-300 animate-pulse" />
+                                    <span>Play Game (Mind Refresh)</span>
+                                </button>
                                 <p className="mt-4 text-[10px] text-gray-500 uppercase tracking-widest font-bold">Analysis will be available in History</p>
+                                
+                                {showGameModal && (
+                                    <MindRefreshGame onClose={() => setShowGameModal(false)} />
+                                )}
                             </>
                         ) : (
                             <div className="space-y-4">

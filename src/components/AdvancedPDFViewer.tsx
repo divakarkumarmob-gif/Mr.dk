@@ -111,20 +111,17 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, [applyTransformNow]);
 
     const resetTransform = useCallback((targetZoom = initialScale) => {
-        if (!Capacitor.isNativePlatform()) {
-            setDisplayZoom(targetZoom);
-            return;
-        }
-        const stage = stageRef.current;
-        const stageWidth = stage?.clientWidth || window.innerWidth;
-
-        const scaledW = pageWidthRef.current * targetZoom;
-        const initialX = scaledW >= stageWidth ? 0 : Math.max(0, (stageWidth - scaledW) / 2);
-        const initialY = 0; // Top of page for natural reading
-
-        transformRef.current = { zoom: targetZoom, x: initialX, y: initialY };
+        transformRef.current.zoom = targetZoom;
         setDisplayZoom(targetZoom);
-        applyTransformNow();
+        if (Capacitor.isNativePlatform()) {
+            const stage = stageRef.current;
+            const stageWidth = stage?.clientWidth || window.innerWidth;
+            const scaledW = pageWidthRef.current * targetZoom;
+            const initialX = scaledW >= stageWidth ? 0 : Math.max(0, (stageWidth - scaledW) / 2);
+            transformRef.current.x = initialX;
+            transformRef.current.y = 0;
+            applyTransformNow();
+        }
     }, [applyTransformNow, initialScale]);
 
     useEffect(() => {
@@ -262,12 +259,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             pageHeightRef.current = viewport.height;
 
             const stage = stageRef.current;
-            const stageRect = stage ? stage.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
-            const stageWidth = stageRect.width || window.innerWidth;
+            const stageWidth = stage ? stage.clientWidth : window.innerWidth;
 
-            // Fit 100% Edge-to-Edge across full screen width (Mobile & Desktop like major apps)
-            const fitWidthZoom = stageWidth / viewport.width;
-            const fitZoom = Math.min(Math.max(fitWidthZoom, MIN_SCALE), MAX_SCALE);
+            // Fit full page width cleanly across Desktop & Mobile (accounting for padding)
+            const availableWidth = Math.max(300, stageWidth - (window.innerWidth > 768 ? 64 : 16));
+            const fitWidthZoom = availableWidth / viewport.width;
+            const fitZoom = Math.min(Math.max(fitWidthZoom, 0.4), 2.5);
             resetTransform(fitZoom);
         }).catch(() => {});
     }
@@ -425,7 +422,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const slideHorizontal = useCallback((direction: 'left' | 'right') => {
         const stage = stageRef.current;
         if (stage) {
-            const amount = Math.max(250, stage.clientWidth * 0.35);
+            const amount = Math.max(300, stage.clientWidth * 0.4);
             stage.scrollBy({
                 left: direction === 'right' ? amount : -amount,
                 behavior: 'smooth',
@@ -515,12 +512,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     const zoomButton = (delta: number) => {
         setDisplayZoom(prev => {
-            const nextZoom = Math.min(Math.max(prev + delta * 0.15, MIN_SCALE), MAX_SCALE);
+            const nextZoom = Math.min(Math.max(prev + delta * 0.2, MIN_SCALE), MAX_SCALE);
             transformRef.current.zoom = nextZoom;
-            if (wrapRef.current) {
-                wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0.2, 1)';
-                wrapRef.current.style.transform = `scale(${nextZoom / BASE_RENDER_SCALE})`;
-            }
             return nextZoom;
         });
     };
@@ -737,12 +730,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="flex flex-col items-center origin-top transform-gpu transition-transform duration-75"
-                        style={{
-                            transform: `scale(${displayZoom / BASE_RENDER_SCALE})`,
-                            transformOrigin: 'top center',
-                            width: `${Math.max(100, (displayZoom / BASE_RENDER_SCALE) * 100)}%`,
-                        }}
+                        className="min-w-fit w-full flex flex-col items-center justify-start mx-auto p-2 sm:p-4"
                     >
                         <Document
                             file={activePdfUrl}
@@ -759,11 +747,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                         key={`pdf_page_${pageNum}`}
                                         id={`pdf-page-${pageNum}`}
                                         data-page={pageNum}
-                                        className="pdf-page-item flex justify-center w-full shadow-2xl"
+                                        className="pdf-page-item flex justify-center shadow-2xl"
                                     >
                                         <Page
                                             pageNumber={pageNum}
-                                            scale={BASE_RENDER_SCALE}
+                                            scale={displayZoom}
                                             canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
