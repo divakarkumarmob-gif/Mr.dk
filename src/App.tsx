@@ -19,7 +19,7 @@ import {auth, db, messaging, handleFirestoreError, OperationType} from './lib/fi
 import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import { storageService } from './lib/storageService';
-import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X, Users } from 'lucide-react';
+import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X, Users, Sparkles } from 'lucide-react';
 import { getApiUrl, authFetch } from '@/utils/api';
 import { configureStatusBar } from './utils/statusBar';
 import { lockToPortrait } from './utils/screenOrientation';
