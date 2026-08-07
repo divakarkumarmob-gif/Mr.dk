@@ -1900,56 +1900,55 @@ After writing your normal reply to the user, on a new line add the exact delimit
         res.write(`data: ${JSON.stringify({ sources: searchResults })}\n\n`);
       }
 
+      const webContext = searchResults.length > 0
+        ? searchResults.map((s: any, i: number) => `[Source ${i+1}: ${s.title} (${s.url})]: ${s.content || s.snippet || ''}`).join('\n\n')
+        : '';
+
+      const summaryPrompt = `You are Google AI Search Mode. Analyze the following live web search results and summarize the answer clearly, accurately, and directly for the student.
+
+Live Web Results Found:
+${webContext || 'No live web snippets.'}
+
+Student Question: "${finalPrompt || 'Explain this query'}"
+
+Instructions:
+1. Synthesize a comprehensive, clear, step-by-step answer summarizing the web results.
+2. For study/academic questions (Physics, Chemistry, Biology, Math), state the key concepts, formulas in LaTeX formatting (e.g. $E=mc^2$), and bold the final answer.
+3. Keep the tone helpful, structured, and easy to read.`;
+
       let streamed = false;
       try {
-        let stream: any;
-        if (isDirectImageQuestion) {
-          stream = await ai.models.generateContentStream({
-            model: "gemini-3.6-flash",
-            contents: {
-              parts: [
-                { text: `You are Google AI Mode. Identify what is in the image and answer the user's question directly and accurately. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. Work through the problem carefully step by step, double-check each calculation before moving to the next step, and verify the final answer makes physical sense before giving it. If this looks like a standard textbook problem, use search to check your working against known solutions. ${AI_SEARCH_FORMAT_RULE}` },
-                { text: finalPrompt || "Describe this" },
-                { inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } }
-              ]
-            },
-            config: {
-              tools: [{ googleSearch: {} }],
-            }
-          });
-        } else {
-          stream = await ai.models.generateContentStream({
-            model: "gemini-3.6-flash",
-            contents: {
-              parts: [{ text: `You are Google AI Mode. Answer the user's query directly and accurately using current, real information. For study/exam questions (Physics, Chemistry, Biology, or any academic topic), give a complete step-by-step explanation with the key formula and final answer in **bold**. For general queries (e.g. live scores, current events), give the direct current answer clearly. ${AI_SEARCH_FORMAT_RULE}\n\nQuery: "${finalPrompt}"` }]
-            },
-            config: {
-              tools: [{ googleSearch: {} }],
-            }
-          });
+        let promptParts: any[] = [{ text: summaryPrompt }];
+        if (base64Image) {
+          promptParts.push({ inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } });
         }
 
+        const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
         for await (const chunk of stream) {
           if (chunk.text) {
             res.write(`data: ${JSON.stringify({ content: chunk.text })}\n\n`);
             streamed = true;
           }
-          const webChunks = chunk.candidates?.[0]?.groundingMetadata?.groundingChunks;
-          if (webChunks && Array.isArray(webChunks)) {
-            const groundedSources = webChunks
-              .filter((c: any) => c.web && c.web.uri)
-              .map((c: any) => ({ title: c.web.title || c.web.uri, url: c.web.uri }));
-            if (groundedSources.length > 0) {
-              res.write(`data: ${JSON.stringify({ sources: groundedSources })}\n\n`);
-            }
-          }
         }
-      } catch (e) {
-        console.error("Gemini stream failed", e);
+      } catch (streamErr) {
+        console.warn("[SearchStream] Stream fallback attempt:", streamErr);
+        try {
+          let promptParts: any[] = [{ text: summaryPrompt }];
+          if (base64Image) {
+            promptParts.push({ inlineData: { data: base64Image.includes(',') ? base64Image.split(',')[1] : base64Image, mimeType: "image/jpeg" } });
+          }
+          const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
+          if (response.text) {
+            res.write(`data: ${JSON.stringify({ content: response.text })}\n\n`);
+            streamed = true;
+          }
+        } catch (fallbackErr) {
+          console.error("[SearchStream] Single-shot fallback failed:", fallbackErr);
+        }
       }
 
       if (!streamed) {
-        throw new Error("No AI response available");
+        res.write(`data: ${JSON.stringify({ content: "Google AI searched the web but could not generate a summary. Please rephrase your question." })}\n\n`);
       }
 
       res.write('data: [DONE]\n\n');

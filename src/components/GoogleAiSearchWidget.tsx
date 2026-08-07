@@ -72,9 +72,10 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
                                 });
                                 setSearchStage('summarizing');
                             }
-                            if (parsed.content) {
+                            const chunkText = parsed.content || parsed.text || parsed.reply;
+                            if (chunkText) {
                                 setSearchStage('summarizing');
-                                accumulatedResult += parsed.content;
+                                accumulatedResult += chunkText;
                                 setAiResponse(accumulatedResult);
                             }
                         } catch (e) {
