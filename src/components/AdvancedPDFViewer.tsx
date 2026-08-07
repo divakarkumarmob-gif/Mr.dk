@@ -37,29 +37,11 @@ function getTouchDistance(touches: TouchList) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
-export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 0.6 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
+export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 1.0 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
     const [activePdfUrl, setActivePdfUrl] = useState(pdfUrl);
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [displayZoom, setDisplayZoom] = useState(initialScale);
-    const [renderScale, setRenderScale] = useState(initialScale);
-    const zoomDebounceTimerRef = useRef<NodeJS.Timeout | null>(null);
-
-    // Debounce canvas redraw scale to prevent white flashing during zoom
-    useEffect(() => {
-        if (zoomDebounceTimerRef.current) {
-            clearTimeout(zoomDebounceTimerRef.current);
-        }
-        zoomDebounceTimerRef.current = setTimeout(() => {
-            setRenderScale(displayZoom);
-        }, 350);
-
-        return () => {
-            if (zoomDebounceTimerRef.current) {
-                clearTimeout(zoomDebounceTimerRef.current);
-            }
-        };
-    }, [displayZoom]);
 
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -559,7 +541,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, []);
 
     const zoomButton = (delta: number) => {
-        setDisplayZoom(prev => Math.min(Math.max(prev + delta * 0.15, MIN_SCALE), MAX_SCALE));
+        setDisplayZoom(prev => {
+            const nextZoom = Math.min(Math.max(prev + delta * 0.15, MIN_SCALE), MAX_SCALE);
+            transformRef.current.zoom = nextZoom;
+            if (wrapRef.current) {
+                wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0.2, 1)';
+                wrapRef.current.style.transform = `scale(${nextZoom})`;
+            }
+            return nextZoom;
+        });
     };
 
     const goToPage = useCallback((updater: (p: number) => number) => {
@@ -772,7 +762,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         </div>
                     </div>
                 ) : (
-                    <div ref={wrapRef} className="w-full min-h-full flex flex-col items-center origin-top-left transition-transform duration-75 will-change-transform">
+                    <div
+                        ref={wrapRef}
+                        className="w-full min-h-full flex flex-col items-center origin-top transform-gpu"
+                        style={{
+                            transform: `scale(${displayZoom})`,
+                            transformOrigin: 'top center',
+                        }}
+                    >
                         <Document
                             file={activePdfUrl}
                             options={pdfOptions}
@@ -788,20 +785,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                         key={`pdf_page_${pageNum}`}
                                         id={`pdf-page-${pageNum}`}
                                         data-page={pageNum}
-                                        className="pdf-page-item flex justify-center w-full shadow-2xl transition-transform"
+                                        className="pdf-page-item flex justify-center w-full shadow-2xl"
                                     >
                                         <Page
                                             pageNumber={pageNum}
-                                            scale={renderScale}
+                                            scale={1.0}
                                             canvasBackground="white"
                                             renderTextLayer={true}
                                             renderAnnotationLayer={false}
-                                            className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl transition-transform duration-75 ease-out"
-                                            style={{
-                                                transform: `scale(${renderScale > 0 ? displayZoom / renderScale : 1})`,
-                                                transformOrigin: 'top center',
-                                                willChange: 'transform',
-                                            }}
+                                            className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
                                             loading={null}
                                         />
                                     </div>
