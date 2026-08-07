@@ -21,6 +21,18 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="com.neetmaster.app" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="neetmaster" />
+            </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
         </activity>
 
@@ -50,6 +62,43 @@
             android:name=".LiveSessionService"
             android:exported="false"
             android:foregroundServiceType="microphone" />
+
+        <!-- Native Android Home Screen Widgets -->
+        <receiver
+            android:name=".GoogleSearchWidgetProvider"
+            android:label="Google AI Search Bar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_google_search_info" />
+        </receiver>
+
+        <receiver
+            android:name=".NeuralSolverWidgetProvider"
+            android:label="Neural 2.0 AI Solver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_neural_solver_info" />
+        </receiver>
+
+        <receiver
+            android:name=".LiveAiWidgetProvider"
+            android:label="Live AI Voice Tutor"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_live_ai_info" />
+        </receiver>
     </application>
 
     <!-- Permissions -->

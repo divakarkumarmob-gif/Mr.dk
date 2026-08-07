@@ -800,15 +800,6 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
                     </AnimatePresence>
                 </div>
 
-                {/* Direct Live Camera Button */}
-                <button
-                    onClick={() => cameraInputRef.current?.click()}
-                    className="p-3 bg-white/10 hover:bg-white/15 rounded-full text-gray-300 flex-shrink-0 transition"
-                    title="Take Live Camera Photo"
-                >
-                    <Camera className="h-5 w-5 text-green-400" />
-                </button>
-
                 {/* Dynamic Input Center: Recording / Voice Preview / Text Input */}
                 {pendingVoice ? (
                     <div className="flex-1 bg-[#1f2c34] rounded-full px-4 py-2 flex items-center gap-3 border border-green-500/30">

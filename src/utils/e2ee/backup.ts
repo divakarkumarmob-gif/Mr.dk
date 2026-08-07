@@ -15,12 +15,13 @@ export interface EncryptedPrivateKeyBackupBlob {
 /**
  * Validates PIN strength: min 6 chars, alphanumeric (must contain both letters & digits)
  */
-export function validatePinStrength(pin: string): { valid: boolean; message?: string } {
-    if (!pin || pin.length < 6) {
+export function validatePinStrength(pin: any): { valid: boolean; message?: string } {
+    const safePin = typeof pin === 'string' ? pin : (pin ? String(pin) : '');
+    if (!safePin || safePin.length < 6) {
         return { valid: false, message: 'PIN kam se kam 6 characters ka hona chahiye!' };
     }
-    const hasLetters = /[a-zA-Z]/.test(pin);
-    const hasDigits = /[0-9]/.test(pin);
+    const hasLetters = /[a-zA-Z]/.test(safePin);
+    const hasDigits = /[0-9]/.test(safePin);
     if (!hasLetters || !hasDigits) {
         return { valid: false, message: 'PIN me kam se kam ek letter aur ek digit hona zaroori hai!' };
     }
@@ -30,9 +31,10 @@ export function validatePinStrength(pin: string): { valid: boolean; message?: st
 /**
  * Derives a 32-byte key from PIN and salt using Argon2id
  */
-async function deriveKeyFromPin(pin: string, salt: Uint8Array): Promise<Uint8Array> {
+async function deriveKeyFromPin(pin: any, salt: Uint8Array): Promise<Uint8Array> {
     const sodium = await ensureSodium();
-    const pinBytes = sodium.from_string(pin);
+    const safePinStr = typeof pin === 'string' ? pin : (pin ? String(pin) : '');
+    const pinBytes = sodium.from_string(safePinStr);
 
     // crypto_pwhash uses Argon2id
     const derivedKey = sodium.crypto_pwhash(
@@ -50,12 +52,20 @@ async function deriveKeyFromPin(pin: string, salt: Uint8Array): Promise<Uint8Arr
 /**
  * Creates an encrypted private key backup blob using a PIN-derived key
  */
-export async function createPinBackupBlob(privateKeyBase64: string, pin: string): Promise<EncryptedPrivateKeyBackupBlob> {
+export async function createPinBackupBlob(privateKeyBase64: string, pin: any): Promise<EncryptedPrivateKeyBackupBlob> {
+    if (!privateKeyBase64 || typeof privateKeyBase64 !== 'string') {
+        throw new Error('PrivateKey base64 data missing or invalid');
+    }
+    const safePin = typeof pin === 'string' ? pin : (pin ? String(pin) : '');
+    if (!safePin || safePin.length < 6) {
+        throw new Error('Valid PIN required for backup creation');
+    }
+
     const sodium = await ensureSodium();
     const salt = sodium.randombytes_buf(sodium.crypto_pwhash_SALTBYTES);
     const nonce = sodium.randombytes_buf(sodium.crypto_secretbox_NONCEBYTES);
 
-    const derivedKey = await deriveKeyFromPin(pin, salt);
+    const derivedKey = await deriveKeyFromPin(safePin, salt);
     const privKeyBytes = sodium.from_base64(privateKeyBase64, sodium.base64_variants.ORIGINAL);
 
     const cipherBytes = sodium.crypto_secretbox_easy(privKeyBytes, nonce, derivedKey);
@@ -72,16 +82,21 @@ export async function createPinBackupBlob(privateKeyBase64: string, pin: string)
 /**
  * Restores private key from backup blob using user's PIN
  */
-export async function restorePrivateKeyFromBlob(blob: EncryptedPrivateKeyBackupBlob, pin: string): Promise<string> {
+export async function restorePrivateKeyFromBlob(blob: EncryptedPrivateKeyBackupBlob, pin: any): Promise<string> {
     if (!blob || !blob.salt || !blob.nonce || !blob.encryptedPrivateKey) {
         throw new Error('Backup data is missing required encryption parameters');
     }
+    const safePin = typeof pin === 'string' ? pin : (pin ? String(pin) : '');
+    if (!safePin) {
+        throw new Error('PIN enter karna zaroori hai');
+    }
+
     const sodium = await ensureSodium();
     const salt = sodium.from_base64(blob.salt, sodium.base64_variants.ORIGINAL);
     const nonce = sodium.from_base64(blob.nonce, sodium.base64_variants.ORIGINAL);
     const cipherBytes = sodium.from_base64(blob.encryptedPrivateKey, sodium.base64_variants.ORIGINAL);
 
-    const derivedKey = await deriveKeyFromPin(pin, salt);
+    const derivedKey = await deriveKeyFromPin(safePin, salt);
     const decryptedBytes = sodium.crypto_secretbox_open_easy(cipherBytes, nonce, derivedKey);
 
     if (!decryptedBytes) {

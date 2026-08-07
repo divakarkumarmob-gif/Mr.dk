@@ -106,11 +106,15 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
     };
 
     const handleResetKeys = async () => {
-        if (!pin || pin.length < 6) {
-            setErrorMsg('Naya 6+ character PIN enter karein!');
+        const safePin = typeof pin === 'string' ? pin.trim() : (pin ? String(pin) : '');
+        const safeConfirmPin = typeof confirmPin === 'string' ? confirmPin.trim() : (confirmPin ? String(confirmPin) : '');
+
+        const validation = validatePinStrength(safePin);
+        if (!validation.valid) {
+            setErrorMsg(validation.message || 'Naya 6+ character PIN enter karein!');
             return;
         }
-        if (pin !== confirmPin) {
+        if (safePin !== safeConfirmPin) {
             setErrorMsg('PIN match nahi ho raha.');
             return;
         }
