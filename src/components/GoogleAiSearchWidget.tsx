@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { Search, Sparkles, Camera, Mic, ArrowRight, Zap, RefreshCw, Globe, ExternalLink, ShieldCheck, X } from 'lucide-react';
+import { Search, Sparkles, Camera, Mic, ArrowRight, RefreshCw, Globe, ExternalLink, ShieldCheck, X, Image as ImageIcon } from 'lucide-react';
 import { getApiUrl, authFetch } from '../utils/api';
 import { showToast } from '../utils/toast';
 
@@ -19,9 +19,81 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
     const [aiResponse, setAiResponse] = useState<string | null>(null);
     const [sources, setSources] = useState<{ title: string; url: string; snippet?: string }[]>([]);
 
+    // Image Photo Doubt Search State
+    const [selectedImageBase64, setSelectedImageBase64] = useState<string | null>(null);
+    const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
+    const cameraInputRef = useRef<HTMLInputElement>(null);
+
+    // Voice Search State
+    const [isVoiceRecording, setIsVoiceRecording] = useState(false);
+
+    const handleCameraClick = () => {
+        cameraInputRef.current?.click();
+    };
+
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const previewUrl = URL.createObjectURL(file);
+        setImagePreviewUrl(previewUrl);
+
+        const reader = new FileReader();
+        reader.onload = () => {
+            setSelectedImageBase64(reader.result as string);
+            showToast('Photo selected! Click search to analyze & search web 📷');
+        };
+        reader.readAsDataURL(file);
+        e.target.value = '';
+    };
+
+    const clearSelectedImage = () => {
+        if (imagePreviewUrl) URL.revokeObjectURL(imagePreviewUrl);
+        setImagePreviewUrl(null);
+        setSelectedImageBase64(null);
+    };
+
+    const handleMicClick = () => {
+        const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+        if (SpeechRecognition) {
+            try {
+                const recognition = new SpeechRecognition();
+                recognition.lang = 'en-IN';
+                recognition.continuous = false;
+                recognition.interimResults = true;
+
+                setIsVoiceRecording(true);
+                showToast('Boliye! Voice search web query active hai... 🎙️');
+
+                recognition.onresult = (event: any) => {
+                    const transcript = Array.from(event.results)
+                        .map((result: any) => result[0].transcript)
+                        .join('');
+                    setQuery(transcript);
+                };
+
+                recognition.onerror = (event: any) => {
+                    console.error('[VoiceSearch] Speech recognition error:', event);
+                    setIsVoiceRecording(false);
+                    onOpenLiveAI();
+                };
+
+                recognition.onend = () => {
+                    setIsVoiceRecording(false);
+                };
+
+                recognition.start();
+                return;
+            } catch (e) {
+                console.warn('[VoiceSearch] SpeechRecognition failed, falling back to Live AI:', e);
+            }
+        }
+        onOpenLiveAI();
+    };
+
     const handleSearchSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!query.trim() || isSearching) return;
+        if ((!query.trim() && !selectedImageBase64) || isSearching) return;
 
         setIsSearching(true);
         setSearchStage('searching_web');
@@ -32,7 +104,10 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
             const response = await authFetch(getApiUrl('/api/search-stream'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt: query.trim() }),
+                body: JSON.stringify({
+                    prompt: query.trim() || 'Analyze and solve this photo doubt step-by-step',
+                    base64Image: selectedImageBase64
+                }),
             });
 
             if (!response.body) throw new Error('No stream body received');
@@ -99,6 +174,16 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
 
     return (
         <div className="w-full bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#0F172A] border border-blue-500/30 rounded-3xl p-4 sm:p-5 shadow-2xl backdrop-blur-xl my-4 text-white">
+            {/* Hidden Input for Camera Photo Capture */}
+            <input
+                ref={cameraInputRef}
+                type="file"
+                accept="image/*"
+                capture="environment"
+                onChange={handleImageChange}
+                className="hidden"
+            />
+
             {/* Widget Top Title Header */}
             <div className="flex items-center justify-between mb-3 px-1">
                 <div className="flex items-center gap-2">
@@ -110,43 +195,60 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
                     </span>
                 </div>
                 <span className="text-[9px] font-mono bg-blue-500/15 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full flex items-center gap-1">
-                    <Globe className="w-2.5 h-2.5 animate-pulse" /> Web Grounded AI
+                    <Globe className="w-2.5 h-2.5" /> Web Grounded AI
                 </span>
             </div>
 
+            {/* Photo Attachment Chip Preview */}
+            {imagePreviewUrl && (
+                <div className="mb-2 flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 rounded-xl p-2 w-fit">
+                    <img src={imagePreviewUrl} alt="Photo Doubt" className="w-10 h-10 object-cover rounded-lg" />
+                    <div className="text-[11px] text-cyan-200 font-medium pr-1">
+                        <span>Photo doubt attached</span>
+                        <p className="text-[9px] text-gray-400">Web search will analyze this image</p>
+                    </div>
+                    <button
+                        onClick={clearSelectedImage}
+                        className="p-1 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition"
+                    >
+                        <X className="w-3.5 h-3.5" />
+                    </button>
+                </div>
+            )}
+
             {/* Google Search Bar Box */}
             <form onSubmit={handleSearchSubmit} className="relative flex items-center">
-                <div className="relative w-full flex items-center bg-slate-900/90 border border-white/15 focus-within:border-cyan-400/80 rounded-full px-4 py-2.5 shadow-inner transition-all group">
+                <div className={`relative w-full flex items-center bg-slate-900/90 border ${isVoiceRecording ? 'border-purple-500 animate-pulse' : 'border-white/15 focus-within:border-cyan-400/80'} rounded-full px-4 py-2.5 shadow-inner transition-all group`}>
                     <Search className="w-5 h-5 text-gray-400 group-focus-within:text-cyan-400 mr-2.5 shrink-0" />
                     
                     <input
                         type="text"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
-                        placeholder="Search web & ask Google AI (e.g. Optics formula, Krebs cycle)..."
+                        placeholder={isVoiceRecording ? "Listening... Speak your doubt now 🎙️" : "Search web & ask Google AI (e.g. Optics formula, Krebs cycle)..."}
                         className="w-full bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none"
                     />
 
                     <div className="flex items-center gap-1.5 ml-2 shrink-0">
                         <button
                             type="button"
-                            onClick={onOpenNeuralSolver}
-                            title="Snap Question Photo (Neural 2.0)"
-                            className="p-2 rounded-full hover:bg-white/10 text-blue-400 hover:text-blue-300 transition active:scale-90"
+                            onClick={handleCameraClick}
+                            title="Snap Question Photo (Web Search)"
+                            className="p-2 rounded-full hover:bg-white/10 text-cyan-400 hover:text-cyan-300 transition active:scale-90"
                         >
                             <Camera className="w-4 h-4" />
                         </button>
                         <button
                             type="button"
-                            onClick={onOpenLiveAI}
-                            title="Voice Search (Live AI Tutor)"
-                            className="p-2 rounded-full hover:bg-white/10 text-purple-400 hover:text-purple-300 transition active:scale-90"
+                            onClick={handleMicClick}
+                            title="Voice Web Search"
+                            className={`p-2 rounded-full transition active:scale-90 ${isVoiceRecording ? 'bg-purple-500/30 text-purple-300 animate-pulse' : 'hover:bg-white/10 text-purple-400 hover:text-purple-300'}`}
                         >
                             <Mic className="w-4 h-4" />
                         </button>
                         <button
                             type="submit"
-                            disabled={isSearching || !query.trim()}
+                            disabled={isSearching || (!query.trim() && !selectedImageBase64)}
                             className="p-2.5 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white disabled:opacity-40 transition active:scale-95 shadow-md shadow-blue-500/30"
                         >
                             {isSearching ? <RefreshCw className="w-4 h-4 animate-spin" /> : <ArrowRight className="w-4 h-4" />}
@@ -157,7 +259,7 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
 
             {/* Live Web Search Stage Indicator */}
             {isSearching && (
-                <div className="mt-3 px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-between text-xs text-cyan-300 animate-pulse">
+                <div className="mt-3 px-3 py-2 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-between text-xs text-cyan-300">
                     <span className="flex items-center gap-2 font-medium">
                         <Globe className="w-3.5 h-3.5 animate-spin text-cyan-400" />
                         {searchStage === 'searching_web' ? 'Searching websites across the web...' : 'Synthesizing web results into Google AI Overview...'}
@@ -182,7 +284,7 @@ export default function GoogleAiSearchWidget({ onOpenNeuralSolver, onOpenLiveAI 
                                 Google AI Overview
                             </span>
                             <button
-                                onClick={() => { setAiResponse(null); setSources([]); }}
+                                onClick={() => { setAiResponse(null); setSources([]); clearSelectedImage(); }}
                                 className="p-1 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition"
                             >
                                 <X className="w-3.5 h-3.5" />
