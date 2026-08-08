@@ -2,13 +2,7 @@ import { useEffect } from 'react';
 
 type BackButtonHandler = () => boolean | void;
 
-interface ModalHistoryState {
-    isModalOverlay: boolean;
-    id: number;
-}
-
 const backHandlers: { id: number; handler: BackButtonHandler }[] = [];
-let isInternalHistoryOperation = false;
 let nextId = 1;
 
 // Global popstate event listener in capture phase for Web Browsers & Mobile Browsers
@@ -16,18 +10,14 @@ if (typeof window !== 'undefined') {
     window.addEventListener(
         'popstate',
         (event) => {
-            if (isInternalHistoryOperation) {
-                isInternalHistoryOperation = false;
-                return;
-            }
-
             if (backHandlers.length > 0) {
                 const top = backHandlers[backHandlers.length - 1];
                 try {
                     const handled = top.handler();
                     if (handled === true || handled === undefined) {
-                        // Consumed the back gesture for modal
+                        // Consumed the back gesture for active top modal/overlay
                         event.stopImmediatePropagation();
+                        event.preventDefault();
                         return;
                     }
                 } catch (e) {
@@ -35,7 +25,7 @@ if (typeof window !== 'undefined') {
                 }
             }
         },
-        true // Capture phase: run before other popstate listeners
+        true // Capture phase: intercept before page router popstate listeners
     );
 }
 
@@ -48,17 +38,6 @@ export function registerBackButtonHandler(handler: BackButtonHandler): () => voi
     const id = nextId++;
     backHandlers.push({ id, handler });
 
-    let pushedState = false;
-    if (typeof window !== 'undefined' && window.history) {
-        try {
-            const currentModalState: ModalHistoryState = { isModalOverlay: true, id };
-            window.history.pushState(currentModalState, '');
-            pushedState = true;
-        } catch (e) {
-            console.warn('[HardwareBackButton] History pushState failed:', e);
-        }
-    }
-
     let cleanedUp = false;
     return () => {
         if (cleanedUp) return;
@@ -67,14 +46,6 @@ export function registerBackButtonHandler(handler: BackButtonHandler): () => voi
         const index = backHandlers.findIndex((item) => item.id === id);
         if (index !== -1) {
             backHandlers.splice(index, 1);
-        }
-
-        if (pushedState && typeof window !== 'undefined' && window.history) {
-            // If the top state in history is still our modal state (closed via UI X button), revert it cleanly
-            if (window.history.state && window.history.state.isModalOverlay && window.history.state.id === id) {
-                isInternalHistoryOperation = true;
-                window.history.back();
-            }
         }
     };
 }
@@ -114,4 +85,3 @@ export function useModalBackButton(isOpen: boolean, onClose: () => void) {
         };
     }, [isOpen, onClose]);
 }
-
