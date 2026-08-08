@@ -12,7 +12,7 @@ import { Message } from '../types';
 import { takePhoto } from '../utils/camera';
 import { LiveSession } from '../utils/liveSession';
 import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
-import { registerBackButtonHandler } from '../utils/hardwareBackButton';
+import { registerBackButtonHandler, useModalBackButton } from '../utils/hardwareBackButton';
 
 interface LiveAIInterfaceProps {
     onClose: () => void;
@@ -140,94 +140,24 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         };
     }, []);
 
-    // Helper functions to close overlays & sync browser history
+    // Helper functions to close overlays
     const closeSettings = useCallback(() => {
         setShowSettings(false);
         setShowVoiceDropdown(false);
         setShowTimeRangeDropdown(false);
-        if (window.history.state?.liveAiOverlay) {
-            window.history.back();
-        }
     }, []);
 
     const closeChatHistory = useCallback(() => {
         setShowChatHistory(false);
     }, []);
 
-    // Push history state whenever an overlay opens in Live AI Interface so device back button pops overlay first
-    useEffect(() => {
-        if (showSettings || showChatHistory || previewImage || showShortcutPrompt) {
-            window.history.pushState({ ...window.history.state, liveAiOverlay: true }, '', window.location.href);
-        }
-    }, [showSettings, showChatHistory, previewImage, showShortcutPrompt]);
-
-    // Handle browser popstate event specifically for Live AI overlays
-    useEffect(() => {
-        const handlePopState = (e: PopStateEvent) => {
-            if (showTimeRangeDropdown) {
-                setShowTimeRangeDropdown(false);
-                return;
-            }
-            if (showVoiceDropdown) {
-                setShowVoiceDropdown(false);
-                return;
-            }
-            if (showChatHistory) {
-                setShowChatHistory(false);
-                return;
-            }
-            if (showSettings) {
-                setShowSettings(false);
-                return;
-            }
-            if (showShortcutPrompt) {
-                setShowShortcutPrompt(false);
-                return;
-            }
-            if (previewImage) {
-                setPreviewImage(null);
-                return;
-            }
-        };
-
-        window.addEventListener('popstate', handlePopState);
-        return () => {
-            window.removeEventListener('popstate', handlePopState);
-        };
-    }, [showTimeRangeDropdown, showVoiceDropdown, showChatHistory, showSettings, showShortcutPrompt, previewImage]);
-
-    // Android Hardware Physical Back Button Handler (Capacitor & Hardware events)
-    useEffect(() => {
-        const unregister = registerBackButtonHandler(() => {
-            if (showTimeRangeDropdown) {
-                setShowTimeRangeDropdown(false);
-                return true;
-            }
-            if (showVoiceDropdown) {
-                setShowVoiceDropdown(false);
-                return true;
-            }
-            if (showChatHistory) {
-                setShowChatHistory(false);
-                return true;
-            }
-            if (showSettings) {
-                setShowSettings(false);
-                return true;
-            }
-            if (showShortcutPrompt) {
-                setShowShortcutPrompt(false);
-                return true;
-            }
-            if (previewImage) {
-                setPreviewImage(null);
-                return true;
-            }
-            onClose();
-            return true;
-        });
-        return unregister;
-    }, [showTimeRangeDropdown, showVoiceDropdown, showChatHistory, showSettings, showShortcutPrompt, previewImage, onClose]);
+    // Hierarchy of Back Button Handlers (LIFO: sub-overlays close first, base layer closes Live AI)
+    useModalBackButton(true, onClose);
+    useModalBackButton(showSettings, closeSettings);
+    useModalBackButton(showVoiceDropdown, () => setShowVoiceDropdown(false));
+    useModalBackButton(showTimeRangeDropdown, () => setShowTimeRangeDropdown(false));
+    useModalBackButton(!!previewImage, () => setPreviewImage(null));
+    useModalBackButton(showShortcutPrompt, () => setShowShortcutPrompt(false));
 
     // Desktop-Only 1-Time Add to Home Screen Prompt Check (Mobile users NEVER see this)
     useEffect(() => {
