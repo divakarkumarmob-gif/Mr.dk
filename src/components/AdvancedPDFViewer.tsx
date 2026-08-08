@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedPdf, fetchAndCachePdf, getPdfCacheKey } from '../lib/pdfCache';
+import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedPdf, fetchAndCachePdf } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { openExternalLink } from '../utils/browser';
@@ -11,6 +11,7 @@ import { getPdfViewerUrl } from '../utils/api';
 import { Capacitor } from '@capacitor/core';
 import { SafeArea } from '@capacitor-community/safe-area';
 import { keepAwake, allowSleep } from '../utils/keepAwake';
+import { useModalBackButton } from '../utils/hardwareBackButton';
 
 import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
@@ -20,16 +21,8 @@ try {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version || '5.4.296'}/build/pdf.worker.min.mjs`;
 }
 
-const MIN_SCALE = 0.25;
-const MAX_SCALE = 6.0;
-const BASE_RENDER_SCALE = 1.8; // Ultra-crisp high-definition vector rendering scale
-
-function getTouchCenter(touches: TouchList) {
-    return {
-        x: (touches[0].clientX + touches[1].clientX) / 2,
-        y: (touches[0].clientY + touches[1].clientY) / 2,
-    };
-}
+const MIN_SCALE = 0.4;
+const MAX_SCALE = 4.0;
 
 function getTouchDistance(touches: TouchList) {
     const dx = touches[0].clientX - touches[1].clientX;
@@ -37,18 +30,20 @@ function getTouchDistance(touches: TouchList) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
-import { useModalBackButton } from '../utils/hardwareBackButton';
-
 export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 1.0 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
     useModalBackButton(true, onClose);
     const [activePdfUrl, setActivePdfUrl] = useState(pdfUrl);
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const [displayZoom, setDisplayZoom] = useState(initialScale);
+    
+    // GPU-accelerated visual scale for 0ms lag & 0 flashing zoom
+    const [visualScale, setVisualScale] = useState(initialScale);
+    
+    // Stable base canvas resolution for react-pdf to prevent canvas destruction flashing
+    const [renderScale, setRenderScale] = useState(1.2);
 
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [progress, setProgress] = useState(0);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<number[]>([]);
     const [currentSearchIndex, setCurrentSearchIndex] = useState(0);
@@ -75,57 +70,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const searchInputRef = useRef<HTMLInputElement>(null);
     const pageContainerRef = useRef<HTMLDivElement>(null);
 
-    // Single source of truth for visual scale & position
-    const transformRef = useRef({ zoom: initialScale, x: 0, y: 0 });
-
     const gestureState = useRef({
         active: false,
-        touchCount: 0,
         startDistance: 0,
-        startZoom: 1,
-        startX: 0,
-        startY: 0,
-        startOrigX: 0,
-        startOrigY: 0,
-        lastSingleX: 0,
-        lastSingleY: 0,
+        startScale: 1.0,
         tapStartX: 0,
         tapStartY: 0,
         tapStartTime: 0,
         moved: false,
     });
-
-    const rafRef = useRef<number | null>(null);
-
-    const applyTransformNow = useCallback(() => {
-        if (wrapRef.current) {
-            const { zoom, x, y } = transformRef.current;
-            const scaleRatio = displayZoom > 0 ? zoom / displayZoom : 1;
-            wrapRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scaleRatio})`;
-        }
-    }, [displayZoom]);
-
-    const applyTransform = useCallback(() => {
-        if (rafRef.current !== null) return;
-        rafRef.current = requestAnimationFrame(() => {
-            rafRef.current = null;
-            applyTransformNow();
-        });
-    }, [applyTransformNow]);
-
-    const resetTransform = useCallback((targetZoom = initialScale) => {
-        transformRef.current.zoom = targetZoom;
-        setDisplayZoom(targetZoom);
-        if (Capacitor.isNativePlatform()) {
-            const stage = stageRef.current;
-            const stageWidth = stage?.clientWidth || window.innerWidth;
-            const scaledW = pageWidthRef.current * targetZoom;
-            const initialX = scaledW >= stageWidth ? 0 : Math.max(0, (stageWidth - scaledW) / 2);
-            transformRef.current.x = initialX;
-            transformRef.current.y = 0;
-            applyTransformNow();
-        }
-    }, [applyTransformNow, initialScale]);
 
     useEffect(() => {
         setIsLoading(true);
@@ -191,7 +144,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         return () => {
             isMounted = false;
             allowSleep();
-            if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
         };
     }, [pdfUrl, title]);
 
@@ -215,6 +167,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setShowControls(prev => !prev);
     }, []);
 
+    // Intersection observer for fast current page detection during continuous scroll
     useEffect(() => {
         const stage = stageRef.current;
         if (!stage) return;
@@ -267,22 +220,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const viewport = page.getViewport({ scale: 1.0 });
             pageWidthRef.current = viewport.width;
             pageHeightRef.current = viewport.height;
-
-            const stage = stageRef.current;
-            const stageWidth = stage ? stage.clientWidth : window.innerWidth;
-
-            // Fit 100% full page width edge-to-edge across full screen on Desktop & Mobile
-            const availableWidth = stageWidth > 0 ? stageWidth : window.innerWidth;
-            const fitWidthZoom = availableWidth / viewport.width;
-            const fitZoom = Math.min(Math.max(fitWidthZoom, 0.4), MAX_SCALE);
-            resetTransform(fitZoom);
         }).catch(() => {});
     }
 
     async function onDocumentLoadError(err: Error) {
         console.error("PDF load error:", err);
 
-        // Automatic CORS / Network Fetch Proxy Fallback!
         if (pdfUrl && !activePdfUrl?.includes('/api/proxy-pdf')) {
             try {
                 console.log('[AdvancedPDFViewer] Direct PDF load failed, attempting backend CORS proxy fallback...');
@@ -303,16 +246,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         setIsDownloading(true);
 
         try {
-            // 1. Cache locally for offline viewing inside app
             const sourceUrl = activePdfUrl || originalUrl || pdfUrl;
             await cachePdf(sourceUrl, filename);
             setIsDownloaded(true);
 
-            // 2. Download raw PDF file to device local storage
             const success = await downloadPdfToDevice(sourceUrl, title);
             setIsDownloading(false);
             if (!success) {
-                // Fallback attempt with raw pdfUrl if activePdfUrl failed
                 if (activePdfUrl && pdfUrl && activePdfUrl !== pdfUrl) {
                     await downloadPdfToDevice(pdfUrl, title);
                 }
@@ -324,205 +264,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     };
 
-    // ---- Enhanced Search with Text Highlighting ----
-
-    const highlightSearchText = useCallback((query: string) => {
-        if (!pageContainerRef.current || !query) return;
-
-        // Clear previous highlights
-        const prevHighlights = pageContainerRef.current.querySelectorAll('.pdf-search-highlight, .pdf-search-highlight-active');
-        prevHighlights.forEach(el => {
-            el.classList.remove('pdf-search-highlight', 'pdf-search-highlight-active');
-        });
-
-        // Find text spans in the text layer
-        const textLayer = pageContainerRef.current.querySelector('.react-pdf__Page__textContent');
-        if (!textLayer) return;
-
-        const spans = textLayer.querySelectorAll('span');
-        const lowerQuery = query.toLowerCase();
-
-        spans.forEach(span => {
-            const text = span.textContent?.toLowerCase() || '';
-            if (text.includes(lowerQuery)) {
-                span.classList.add('pdf-search-highlight');
-            }
-        });
-    }, []);
-
-    const clearHighlights = useCallback(() => {
-        if (!pageContainerRef.current) return;
-        const highlights = pageContainerRef.current.querySelectorAll('.pdf-search-highlight, .pdf-search-highlight-active');
-        highlights.forEach(el => {
-            el.classList.remove('pdf-search-highlight', 'pdf-search-highlight-active');
-        });
-    }, []);
-
-    const performSearch = async (query: string) => {
-        if (!pdfDocRef.current || !query) return;
-        setIsSearching(true);
-        const results: number[] = [];
-        for (let i = 1; i <= pdfDocRef.current.numPages; i++) {
-            const page = await pdfDocRef.current.getPage(i);
-            const textContent = await page.getTextContent();
-            const text = textContent.items.map((item: any) => item.str).join(' ');
-            if (text.toLowerCase().includes(query.toLowerCase())) {
-                results.push(i);
-            }
-        }
-        setSearchResults(results);
-        setCurrentSearchIndex(0);
-        setIsSearching(false);
-
-        // Navigate to first result and highlight
-        if (results.length > 0) {
-            setCurrentPage(results[0]);
-            // Highlight after a small delay to let page render
-            setTimeout(() => highlightSearchText(query), 500);
-        }
-    };
-
-    // Re-highlight when page changes and we have active search
-    useEffect(() => {
-        if (searchQuery && searchResults.length > 0) {
-            // Wait for page to render then highlight
-            const timer = setTimeout(() => highlightSearchText(searchQuery), 600);
-            return () => clearTimeout(timer);
-        } else {
-            clearHighlights();
-        }
-    }, [currentPage, searchQuery, searchResults, highlightSearchText, clearHighlights]);
-
-    const navigateSearchResult = useCallback((direction: 'next' | 'prev') => {
-        if (searchResults.length === 0) return;
-        let newIndex: number;
-        if (direction === 'next') {
-            newIndex = (currentSearchIndex + 1) % searchResults.length;
-        } else {
-            newIndex = (currentSearchIndex - 1 + searchResults.length) % searchResults.length;
-        }
-        setCurrentSearchIndex(newIndex);
-        setCurrentPage(searchResults[newIndex]);
-    }, [searchResults, currentSearchIndex]);
-
-    const handleSearchSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (searchQuery.trim()) {
-            performSearch(searchQuery.trim());
-        }
-    };
-
-    const toggleSearch = useCallback(() => {
-        setShowSearch(prev => {
-            if (prev) {
-                // Closing search — clear everything
-                setSearchQuery('');
-                setSearchResults([]);
-                setCurrentSearchIndex(0);
-                clearHighlights();
-            } else {
-                // Opening search — focus input
-                setTimeout(() => searchInputRef.current?.focus(), 100);
-            }
-            return !prev;
-        });
-    }, [clearHighlights]);
-
-    // Desktop Horizontal Slide Helper (< and > buttons)
-    const slideHorizontal = useCallback((direction: 'left' | 'right') => {
-        const stage = stageRef.current;
-        if (stage) {
-            const amount = Math.max(300, stage.clientWidth * 0.4);
-            stage.scrollBy({
-                left: direction === 'right' ? amount : -amount,
-                behavior: 'smooth',
-            });
-        }
-    }, []);
-
-    // ---- Universal Touch & Pinch Handlers (Native Mobile & Mobile Web) ----
-
-    const handleTouchStart = useCallback((e: React.TouchEvent) => {
-        const touches = e.touches;
-        const state = gestureState.current;
-
-        if (wrapRef.current) {
-            wrapRef.current.style.transition = 'none';
-        }
-
-        if (touches.length >= 2) {
-            state.active = true;
-            state.touchCount = 2;
-            state.startDistance = getTouchDistance(touches as any);
-            state.startZoom = displayZoom; // Sync touch zoom with displayZoom
-            transformRef.current.zoom = displayZoom;
-            state.moved = true;
-        } else if (touches.length === 1) {
-            state.active = true;
-            state.touchCount = 1;
-            state.tapStartX = touches[0].clientX;
-            state.tapStartY = touches[0].clientY;
-            state.tapStartTime = Date.now();
-            state.moved = false;
-        }
-    }, [displayZoom]);
-
-    const handleTouchMove = useCallback((e: React.TouchEvent) => {
-        const touches = e.touches;
-        const state = gestureState.current;
-        if (!state.active) return;
-
-        if (touches.length >= 2 && state.touchCount === 2) {
-            e.preventDefault();
-            const currentDistance = getTouchDistance(touches as any);
-            const ratio = currentDistance / state.startDistance;
-            // Damped pinch-zoom multiplier for smooth, natural finger zoom
-            const dampedRatio = 1 + (ratio - 1) * 0.45;
-            const rawZoom = state.startZoom * dampedRatio;
-            const clampedZoom = Math.min(Math.max(rawZoom, 0.4), 3.5);
-
-            transformRef.current.zoom = clampedZoom;
-            setDisplayZoom(clampedZoom);
-        } else if (touches.length === 1 && state.touchCount === 1) {
-            const totalDx = touches[0].clientX - state.tapStartX;
-            const totalDy = touches[0].clientY - state.tapStartY;
-            if (Math.hypot(totalDx, totalDy) > 10) {
-                state.moved = true;
-            }
-        }
-    }, []);
-
-    const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-        const state = gestureState.current;
-        const remaining = e.touches.length;
-
-        if (state.touchCount === 1 && remaining === 0 && !state.moved) {
-            const elapsed = Date.now() - state.tapStartTime;
-            if (elapsed < 300) {
-                toggleControlsOnTap(e);
-            }
-        }
-
-        if (state.touchCount === 2 && remaining < 2) {
-            if (remaining === 1) {
-                state.touchCount = 1;
-                state.lastSingleX = e.touches[0].clientX;
-                state.lastSingleY = e.touches[0].clientY;
-            } else {
-                state.active = false;
-                state.touchCount = 0;
-            }
-        } else if (state.touchCount === 1 && remaining === 0) {
-            state.active = false;
-            state.touchCount = 0;
-        }
-    }, [toggleControlsOnTap]);
-
+    // Fast GPU-accelerated Zoom Control (0ms lag, 0 flashing)
     const zoomButton = (delta: number) => {
-        setDisplayZoom(prev => {
-            const nextZoom = Math.min(Math.max(prev + delta * 0.2, MIN_SCALE), MAX_SCALE);
-            transformRef.current.zoom = nextZoom;
-            return nextZoom;
+        setVisualScale(prev => {
+            const nextScale = Math.min(Math.max(prev + delta * 0.25, MIN_SCALE), MAX_SCALE);
+            return nextScale;
         });
     };
 
@@ -545,6 +291,112 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         disableStream: false,
         rangeChunkSize: 65536,
     }), []);
+
+    // ---- Touch & Pinch Gestures ----
+    const handleTouchStart = useCallback((e: React.TouchEvent) => {
+        const touches = e.touches;
+        const state = gestureState.current;
+
+        if (touches.length >= 2) {
+            state.active = true;
+            state.startDistance = getTouchDistance(touches as any);
+            state.startScale = visualScale;
+            state.moved = true;
+        } else if (touches.length === 1) {
+            state.active = true;
+            state.tapStartX = touches[0].clientX;
+            state.tapStartY = touches[0].clientY;
+            state.tapStartTime = Date.now();
+            state.moved = false;
+        }
+    }, [visualScale]);
+
+    const handleTouchMove = useCallback((e: React.TouchEvent) => {
+        const touches = e.touches;
+        const state = gestureState.current;
+        if (!state.active) return;
+
+        if (touches.length >= 2) {
+            e.preventDefault();
+            const currentDistance = getTouchDistance(touches as any);
+            if (state.startDistance > 0) {
+                const ratio = currentDistance / state.startDistance;
+                const newScale = Math.min(Math.max(state.startScale * ratio, MIN_SCALE), MAX_SCALE);
+                setVisualScale(newScale);
+            }
+        } else if (touches.length === 1) {
+            const totalDx = touches[0].clientX - state.tapStartX;
+            const totalDy = touches[0].clientY - state.tapStartY;
+            if (Math.hypot(totalDx, totalDy) > 10) {
+                state.moved = true;
+            }
+        }
+    }, []);
+
+    const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+        const state = gestureState.current;
+        const remaining = e.touches.length;
+
+        if (remaining === 0) {
+            if (!state.moved && (Date.now() - state.tapStartTime < 300)) {
+                toggleControlsOnTap(e);
+            }
+            state.active = false;
+        }
+    }, [toggleControlsOnTap]);
+
+    // Search helpers
+    const performSearch = async (query: string) => {
+        if (!pdfDocRef.current || !query) return;
+        setIsSearching(true);
+        const results: number[] = [];
+        for (let i = 1; i <= pdfDocRef.current.numPages; i++) {
+            const page = await pdfDocRef.current.getPage(i);
+            const textContent = await page.getTextContent();
+            const text = textContent.items.map((item: any) => item.str).join(' ');
+            if (text.toLowerCase().includes(query.toLowerCase())) {
+                results.push(i);
+            }
+        }
+        setSearchResults(results);
+        setCurrentSearchIndex(0);
+        setIsSearching(false);
+
+        if (results.length > 0) {
+            setCurrentPage(results[0]);
+        }
+    };
+
+    const handleSearchSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (searchQuery.trim()) {
+            performSearch(searchQuery.trim());
+        }
+    };
+
+    const toggleSearch = useCallback(() => {
+        setShowSearch(prev => {
+            if (prev) {
+                setSearchQuery('');
+                setSearchResults([]);
+                setCurrentSearchIndex(0);
+            } else {
+                setTimeout(() => searchInputRef.current?.focus(), 100);
+            }
+            return !prev;
+        });
+    }, []);
+
+    const slideHorizontal = useCallback((direction: 'left' | 'right') => {
+        const stage = stageRef.current;
+        if (stage) {
+            const amount = Math.max(300, stage.clientWidth * 0.4);
+            stage.scrollBy({
+                left: direction === 'right' ? amount : -amount,
+                behavior: 'smooth',
+            });
+        }
+    }, []);
 
     return (
         <motion.div
@@ -653,33 +505,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 <X className="h-4 w-4" />
                             </button>
                         </form>
-
-                        {/* Search results navigation */}
-                        {searchResults.length > 0 && (
-                            <div className="flex items-center justify-between mt-2 px-1">
-                                <span className="text-xs text-gray-400">
-                                    {searchResults.length} page{searchResults.length > 1 ? 's' : ''} mein mila — Page {searchResults[currentSearchIndex]}
-                                </span>
-                                <div className="flex items-center gap-1">
-                                    <button
-                                        onClick={() => navigateSearchResult('prev')}
-                                        className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition"
-                                    >
-                                        <ChevronUp className="h-3.5 w-3.5" />
-                                    </button>
-                                    <span className="text-[10px] text-gray-500 w-10 text-center">{currentSearchIndex + 1}/{searchResults.length}</span>
-                                    <button
-                                        onClick={() => navigateSearchResult('next')}
-                                        className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition"
-                                    >
-                                        <ChevronDown className="h-3.5 w-3.5" />
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                        {searchResults.length === 0 && searchQuery && !isSearching && (
-                            <p className="text-xs text-gray-500 mt-2 px-1">Kuch nahi mila 😕 — koi aur word try karo</p>
-                        )}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -687,21 +512,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             {/* Continuous Vertical Scroll Viewer Stage */}
             <div
                 ref={stageRef}
-                onTouchStart={(e) => {
-                    if (Capacitor.isNativePlatform()) {
-                        handleTouchStart(e);
-                    }
-                }}
-                onTouchMove={(e) => {
-                    if (Capacitor.isNativePlatform()) {
-                        handleTouchMove(e);
-                    }
-                }}
-                onTouchEnd={(e) => {
-                    if (Capacitor.isNativePlatform()) {
-                        handleTouchEnd(e);
-                    }
-                }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
                 onClick={toggleControlsOnTap}
                 className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0 overscroll-contain"
             >
@@ -714,7 +527,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         className="absolute inset-0 z-40 bg-slate-950 flex flex-col items-center justify-center p-8 text-center"
                     >
                         <Loader2 className="w-12 h-12 text-blue-500 animate-spin mb-4" />
-                        <h3 className="text-white font-bold text-lg">Initializing High-Definition Document</h3>
+                        <h3 className="text-white font-bold text-lg">Initializing Document</h3>
                         <p className="text-xs text-gray-400 mt-2 max-w-xs">Loading pages...</p>
                     </motion.div>
                 )}
@@ -738,39 +551,54 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0"
+                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0 transition-transform duration-75 ease-out origin-top"
+                        style={{
+                            transform: `scale(${visualScale})`,
+                            willChange: 'transform',
+                        }}
                     >
                         <Document
                             file={activePdfUrl}
                             options={pdfOptions}
                             onLoadSuccess={onDocumentLoadSuccess}
                             onLoadError={onDocumentLoadError}
-                            onLoadProgress={(p) => setProgress(Math.round((p.loaded / p.total) * 100))}
                             className="flex flex-col items-center gap-6 px-1 pb-0 mb-0"
                         >
                             {Array.from(new Array(numPages || 0), (_, index) => {
                                 const pageNum = index + 1;
+                                // Fast page virtualization: Render visible pages (current page ± 2 pages)
+                                const isVisible = pageNum >= Math.max(1, currentPage - 2) && pageNum <= Math.min(numPages || 1, currentPage + 3);
+
                                 return (
                                     <div
                                         key={`pdf_page_${pageNum}`}
                                         id={`pdf-page-${pageNum}`}
                                         data-page={pageNum}
-                                        className="pdf-page-item flex justify-center shadow-2xl my-2"
+                                        className="pdf-page-item flex justify-center shadow-2xl my-2 min-h-[350px] min-w-[300px]"
+                                        style={{
+                                            width: pageWidthRef.current ? `${pageWidthRef.current * renderScale}px` : '100%',
+                                            minHeight: pageHeightRef.current ? `${pageHeightRef.current * renderScale}px` : '500px',
+                                        }}
                                     >
-                                        <Page
-                                            pageNumber={pageNum}
-                                            scale={displayZoom}
-                                            canvasBackground="white"
-                                            renderTextLayer={true}
-                                            renderAnnotationLayer={false}
-                                            className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
-                                            loading={null}
-                                        />
+                                        {isVisible ? (
+                                            <Page
+                                                pageNumber={pageNum}
+                                                scale={renderScale}
+                                                canvasBackground="white"
+                                                renderTextLayer={true}
+                                                renderAnnotationLayer={false}
+                                                className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full bg-slate-900/60 rounded-md border border-white/5 flex items-center justify-center text-xs text-gray-500 font-mono">
+                                                Page {pageNum}
+                                            </div>
+                                        )}
                                     </div>
                                 );
                             })}
 
-                            {/* End of Document — Thank You Card (Strict Bottom Stop) */}
+                            {/* End of Document — Thank You Card */}
                             {numPages && (
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
@@ -823,14 +651,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         <div className="flex items-center gap-1 bg-white/5 rounded-2xl p-1">
                             <button
                                 onClick={() => zoomButton(-1)}
-                                className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400"
+                                className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400 active:scale-90"
                             >
                                 <ZoomOut className="h-6 w-6" />
                             </button>
-                            <span className="text-[10px] font-mono text-gray-500 w-12 text-center">{Math.round(displayZoom * 100)}%</span>
+                            <span className="text-[10px] font-mono text-gray-400 w-12 text-center">{Math.round(visualScale * 100)}%</span>
                             <button
                                 onClick={() => zoomButton(1)}
-                                className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400"
+                                className="p-3 hover:bg-white/10 rounded-xl transition text-gray-400 active:scale-90"
                             >
                                 <ZoomIn className="h-6 w-6" />
                             </button>
