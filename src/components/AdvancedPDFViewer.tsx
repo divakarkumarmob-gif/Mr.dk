@@ -24,10 +24,17 @@ try {
 const MIN_SCALE = 0.4;
 const MAX_SCALE = 4.0;
 
-function getTouchDistance(touches: TouchList) {
+function getTouchDistance(touches: React.TouchList) {
     const dx = touches[0].clientX - touches[1].clientX;
     const dy = touches[0].clientY - touches[1].clientY;
     return Math.sqrt(dx * dx + dy * dy);
+}
+
+function getTouchCenter(touches: React.TouchList) {
+    return {
+        x: (touches[0].clientX + touches[1].clientX) / 2,
+        y: (touches[0].clientY + touches[1].clientY) / 2,
+    };
 }
 
 export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 1.0 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
@@ -39,7 +46,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     // GPU-accelerated visual scale for 0ms lag & 0 flashing zoom
     const [visualScale, setVisualScale] = useState(initialScale);
     
-    // Stable base canvas resolution for react-pdf to prevent canvas destruction flashing
+    // Stable base canvas resolution for react-pdf
     const [renderScale, setRenderScale] = useState(1.2);
 
     const [error, setError] = useState<string | null>(null);
@@ -68,15 +75,17 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     const pageWidthRef = useRef<number>(600);
     const pageHeightRef = useRef<number>(800);
     const searchInputRef = useRef<HTMLInputElement>(null);
-    const pageContainerRef = useRef<HTMLDivElement>(null);
 
     const gestureState = useRef({
         active: false,
         startDistance: 0,
         startScale: 1.0,
+        focalX: 0,
+        focalY: 0,
         tapStartX: 0,
         tapStartY: 0,
         tapStartTime: 0,
+        lastTapTime: 0,
         moved: false,
     });
 
@@ -89,7 +98,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         let isMounted = true;
 
         const loadContent = async () => {
-            // Step 1: Ultra-fast 0ms RAM Memory Cache Check
             const ramUrl = getRamCachedPdf(title, pdfUrl);
             if (ramUrl && isMounted) {
                 setActivePdfUrl(ramUrl);
@@ -97,7 +105,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 return;
             }
 
-            // Step 2: Millisecond Persistent Storage (IndexedDB / Disk) Check (<5ms)
             try {
                 const cachedBlobUrl = await getCachedPdf(title, pdfUrl);
                 if (cachedBlobUrl && isMounted) {
@@ -109,7 +116,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 console.warn('[AdvancedPDFViewer] Local disk cache check notice:', err);
             }
 
-            // Step 3: Local Cache Miss -> Server Stream Fallback
             if (pdfUrl && isMounted) {
                 setActivePdfUrl(pdfUrl);
                 fetchAndCachePdf(pdfUrl, title).then(() => {
@@ -154,20 +160,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         };
     }, []);
 
-    const lastTapTimeRef = useRef<number>(0);
-
     const toggleControlsOnTap = useCallback((e?: React.MouseEvent | React.TouchEvent) => {
         if (e && e.target) {
             const target = e.target as HTMLElement;
             if (target.closest('button, input, form, a')) return;
         }
-        const now = Date.now();
-        if (now - lastTapTimeRef.current < 350) return;
-        lastTapTimeRef.current = now;
         setShowControls(prev => !prev);
     }, []);
 
-    // Intersection observer for fast current page detection during continuous scroll
     useEffect(() => {
         const stage = stageRef.current;
         if (!stage) return;
@@ -228,7 +228,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
         if (pdfUrl && !activePdfUrl?.includes('/api/proxy-pdf')) {
             try {
-                console.log('[AdvancedPDFViewer] Direct PDF load failed, attempting backend CORS proxy fallback...');
                 const proxyUrl = await getPdfViewerUrl(pdfUrl);
                 setActivePdfUrl(proxyUrl);
                 return;
@@ -292,7 +291,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         rangeChunkSize: 65536,
     }), []);
 
-    // ---- Touch & Pinch Gestures ----
+    // ---- Touch & Pinch Gestures with Focal-Point Centering on Target Word ----
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
         const touches = e.touches;
         const state = gestureState.current;
@@ -302,6 +301,18 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             state.startDistance = getTouchDistance(touches as any);
             state.startScale = visualScale;
             state.moved = true;
+
+            const center = getTouchCenter(touches as any);
+            const stage = stageRef.current;
+            if (stage && wrapRef.current) {
+                const rect = stage.getBoundingClientRect();
+                const focalX = center.x - rect.left + stage.scrollLeft;
+                const focalY = center.y - rect.top + stage.scrollTop;
+
+                state.focalX = focalX;
+                state.focalY = focalY;
+                wrapRef.current.style.transformOrigin = `${focalX}px ${focalY}px`;
+            }
         } else if (touches.length === 1) {
             state.active = true;
             state.tapStartX = touches[0].clientX;
@@ -338,8 +349,16 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const remaining = e.touches.length;
 
         if (remaining === 0) {
-            if (!state.moved && (Date.now() - state.tapStartTime < 300)) {
-                toggleControlsOnTap(e);
+            const now = Date.now();
+            if (!state.moved && (now - state.tapStartTime < 300)) {
+                // Double tap check for quick 2.0x zoom on target word
+                if (now - state.lastTapTime < 300) {
+                    setVisualScale(prev => (prev > 1.5 ? 1.0 : 2.0));
+                    state.lastTapTime = 0;
+                } else {
+                    state.lastTapTime = now;
+                    toggleControlsOnTap(e);
+                }
             }
             state.active = false;
         }
@@ -551,9 +570,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0 transition-transform duration-75 ease-out origin-top"
+                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0 transition-transform duration-75 ease-out"
                         style={{
                             transform: `scale(${visualScale})`,
+                            transformOrigin: 'top center',
                             willChange: 'transform',
                         }}
                     >
@@ -566,7 +586,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         >
                             {Array.from(new Array(numPages || 0), (_, index) => {
                                 const pageNum = index + 1;
-                                // Fast page virtualization: Render visible pages (current page ± 2 pages)
                                 const isVisible = pageNum >= Math.max(1, currentPage - 2) && pageNum <= Math.min(numPages || 1, currentPage + 3);
 
                                 return (
