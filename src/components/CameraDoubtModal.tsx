@@ -11,8 +11,10 @@ import { takePhoto } from '../utils/camera';
 import { chatWithAI } from '../services/geminiService';
 import { showToast } from '../utils/toast';
 import StatusLoader from './StatusLoader';
+import { useModalBackButton } from '../utils/hardwareBackButton';
 
 export default function CameraDoubtModal({ onClose }: { onClose: () => void }) {
+    useModalBackButton(true, onClose);
     const [capturedImage, setCapturedImage] = useState<string | null>(null);
     const [caption, setCaption] = useState<string>('');
     const [isAnalyzing, setIsAnalyzing] = useState(false);

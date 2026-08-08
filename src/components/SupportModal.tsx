@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { toPng } from 'html-to-image';
 import { Camera, Send, X } from 'lucide-react';
+import { useModalBackButton } from '../utils/hardwareBackButton';
 
 export default function SupportModal({ isOpen, onClose, onConfirm, onSendReport }: { isOpen: boolean, onClose: () => void, onConfirm: () => void, onSendReport: (screenshot: string, text: string) => void }) {
+    useModalBackButton(isOpen, onClose);
     const [isSharing, setIsSharing] = useState(false);
     const [screenshot, setScreenshot] = useState<string | null>(null);
     const [text, setText] = useState('');

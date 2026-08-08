@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Zap, Trophy, RefreshCw, X, Sparkles, Flame, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { useModalBackButton } from '../utils/hardwareBackButton';
 
 interface MindRefreshGameProps {
     onClose: () => void;
@@ -30,6 +31,7 @@ const ORB_TERMS = [
 ];
 
 export default function MindRefreshGame({ onClose }: MindRefreshGameProps) {
+    useModalBackButton(true, onClose);
     const [score, setScore] = useState(0);
     const [combo, setCombo] = useState(1);
     const [orbs, setOrbs] = useState<Orb[]>([]);

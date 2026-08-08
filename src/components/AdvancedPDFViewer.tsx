@@ -37,7 +37,10 @@ function getTouchDistance(touches: TouchList) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
+import { useModalBackButton } from '../utils/hardwareBackButton';
+
 export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl, initialScale = 1.0 }: { pdfUrl: string, title: string, onClose: () => void, originalUrl?: string, initialScale?: number }) {
+    useModalBackButton(true, onClose);
     const [activePdfUrl, setActivePdfUrl] = useState(pdfUrl);
     const [numPages, setNumPages] = useState<number | null>(null);
     const [currentPage, setCurrentPage] = useState(1);

@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 import { mindHackText } from '../data/mindHackData';
+import { useModalBackButton } from '../utils/hardwareBackButton';
 
 export default function MindHackModal({ onClose }: { onClose: () => void }) {
+    useModalBackButton(true, onClose);
     return (
         <motion.div
             initial={{ opacity: 0 }}

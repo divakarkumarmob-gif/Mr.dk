@@ -14,7 +14,10 @@ interface SafetyNumberModalProps {
     onVerified?: () => void;
 }
 
+import { useModalBackButton } from '../../utils/hardwareBackButton';
+
 export default function SafetyNumberModal({ contactUid, contactName, myPublicKey, targetPublicKey, keyHasChanged, onClose, onVerified }: SafetyNumberModalProps) {
+    useModalBackButton(true, onClose);
     const [fingerprint, setFingerprint] = useState<string>('Loading...');
     const [copied, setCopied] = useState(false);
 

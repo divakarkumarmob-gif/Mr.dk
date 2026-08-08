@@ -5,6 +5,8 @@ import { APP_WIDGETS, WidgetTarget, setPendingWidgetTarget } from '../utils/appW
 import { showToast } from '../utils/toast';
 import GoogleAiSearchWidget from './GoogleAiSearchWidget';
 
+import { useModalBackButton } from '../utils/hardwareBackButton';
+
 interface AppWidgetModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -13,6 +15,7 @@ interface AppWidgetModalProps {
 }
 
 export default function AppWidgetModal({ isOpen, onClose, onLaunchTarget, isLoggedIn }: AppWidgetModalProps) {
+    useModalBackButton(isOpen, onClose);
     const [activeTab, setActiveTab] = useState<'widgets' | 'googleSearch'>('widgets');
 
     if (!isOpen) return null;

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Clock, Target, AlertTriangle } from 'lucide-react';
 import FocusAnalytics from './FocusAnalytics';
+import { useModalBackButton } from '../utils/hardwareBackButton';
 
 export default function FocusSessionSummary({ 
     focusedTime, 
@@ -11,6 +12,7 @@ export default function FocusSessionSummary({
     distractedTime: number, 
     onClose: () => void 
 }) {
+    useModalBackButton(true, onClose);
     const totalTime = focusedTime + distractedTime;
     const focusPercentage = totalTime > 0 ? Math.round((focusedTime / totalTime) * 100) : 0;
 

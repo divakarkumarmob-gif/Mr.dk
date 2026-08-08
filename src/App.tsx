@@ -34,7 +34,7 @@ import WaveReveal from './components/WaveTransition';
 import { useReportProblemGesture } from './lib/useReportProblemGesture';
 import { useAuth } from './contexts/AuthContext';
 import { useRouteBackButton } from './lib/useRouteBackButton';
-import { processHardwareBackButton } from './utils/hardwareBackButton';
+import { processHardwareBackButton, useModalBackButton } from './utils/hardwareBackButton';
 
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1050,6 +1050,19 @@ function AppInner() {
     _setShowSummary(v);
     showSummaryRef.current = v;
   };
+
+  // Connect all top-level app modals to universal back-button engine
+  useModalBackButton(showNotifications, () => setShowNotifications(false));
+  useModalBackButton(showChat, () => setShowChat(false));
+  useModalBackButton(showSupportModal, () => setShowSupportModal(false));
+  useModalBackButton(showResetModal, () => setShowResetModal(false));
+  useModalBackButton(showAnalytics, () => setShowAnalytics(false));
+  useModalBackButton(showFlashcards, () => setShowFlashcards(false));
+  useModalBackButton(showStudyDashboard, () => setShowStudyDashboard(false));
+  useModalBackButton(showSummary, () => setShowSummary(false));
+  useModalBackButton(showRandomPopup, () => setShowRandomPopup(false));
+  useModalBackButton(showAppWidgetModal, () => setShowAppWidgetModal(false));
+  useModalBackButton(showNeuralSolver, () => setShowNeuralSolver(false));
   const [randomChapter, setRandomChapter] = useState<{name: string, topic: string, color: string} | null>(null);
   const [displayedText, setDisplayedText] = useState("");
   const [backPressCount, setBackPressCount] = useState(0);

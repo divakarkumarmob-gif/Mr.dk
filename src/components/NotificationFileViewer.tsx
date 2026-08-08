@@ -14,12 +14,15 @@ interface NotificationFileViewerProps {
     onClose: () => void;
 }
 
+import { useModalBackButton } from '../utils/hardwareBackButton';
+
 /**
  * Full-screen in-app viewer for notification attachments (image or PDF).
  * Opens directly inside the app — no external browser / gallery / PDF app
  * needed.
  */
 export default function NotificationFileViewer({ file, onClose }: NotificationFileViewerProps) {
+    useModalBackButton(true, onClose);
     const [url, setUrl] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [saving, setSaving] = useState(false);

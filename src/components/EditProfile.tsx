@@ -5,6 +5,8 @@ import { storage, db } from '../lib/firebase';
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { doc, updateDoc } from 'firebase/firestore';
 
+import { useModalBackButton } from '../utils/hardwareBackButton';
+
 export default function EditProfile({ user, onNavigate }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile') => void }) {
     const [name, setName] = useState(user?.displayName || '');
     const [email, setEmail] = useState(user?.email || '');
@@ -13,6 +15,9 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
     const [showPhotoModal, setShowPhotoModal] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
+
+    useModalBackButton(showPhotoModal, () => setShowPhotoModal(false));
+    useModalBackButton(true, () => onNavigate('profile'));
 
     const showError = (message: string) => {
         setErrorMessage(message);

@@ -16,7 +16,10 @@ interface PinSetupModalProps {
     onCancel?: () => void;
 }
 
+import { useModalBackButton } from '../../utils/hardwareBackButton';
+
 export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCancel }: PinSetupModalProps) {
+    useModalBackButton(true, () => { if (onCancel) onCancel(); });
     const [pin, setPin] = useState('');
     const [confirmPin, setConfirmPin] = useState('');
     const [currentMode, setCurrentMode] = useState<PinModalMode>(mode);

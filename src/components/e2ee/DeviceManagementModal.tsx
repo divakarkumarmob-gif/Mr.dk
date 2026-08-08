@@ -9,7 +9,10 @@ interface DeviceManagementModalProps {
     onClose: () => void;
 }
 
+import { useModalBackButton } from '../../utils/hardwareBackButton';
+
 export default function DeviceManagementModal({ uid, onClose }: DeviceManagementModalProps) {
+    useModalBackButton(true, onClose);
     const [devices, setDevices] = useState<DeviceInfo[]>([]);
     const [loading, setLoading] = useState(true);
     const [revokingId, setRevokingId] = useState<string | null>(null);
