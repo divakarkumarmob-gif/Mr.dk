@@ -6,12 +6,10 @@ type BackButtonHandler = () => boolean | void;
 interface BackHandlerItem {
     id: number;
     handler: BackButtonHandler;
-    isMobileOverlay?: boolean;
 }
 
 const backHandlers: BackHandlerItem[] = [];
 let nextId = 1;
-let isInternalPopOperation = false;
 
 // Helper to check if current device is Mobile / Mobile Web
 export function isMobileDevice(): boolean {
@@ -24,8 +22,8 @@ export function isMobileDevice(): boolean {
 }
 
 // -------------------------------------------------------------
-// 1. DESKTOP NATIVE NAVIGATION SYSTEM
-// Handles Desktop Keyboard 'Escape' key to close active top modal/overlay
+// 1. DESKTOP KEYBOARD ESCAPE KEY LISTENER
+// Pressing 'Escape' key on Desktop closes the active top modal
 // -------------------------------------------------------------
 if (typeof window !== 'undefined') {
     window.addEventListener('keydown', (event: KeyboardEvent) => {
@@ -44,17 +42,12 @@ if (typeof window !== 'undefined') {
     });
 
     // -------------------------------------------------------------
-    // 2. MOBILE BROWSER POPSTATE INTERCEPTOR
-    // Intercepts Mobile gesture swipe back to pop active modal cleanly
+    // 2. BROWSER / GESTURE POPSTATE INTERCEPTOR
+    // Intercepts browser/swipe back gesture to close active top modal cleanly
     // -------------------------------------------------------------
     window.addEventListener(
         'popstate',
         (event) => {
-            if (isInternalPopOperation) {
-                isInternalPopOperation = false;
-                return;
-            }
-
             if (backHandlers.length > 0) {
                 const top = backHandlers[backHandlers.length - 1];
                 try {
@@ -65,34 +58,22 @@ if (typeof window !== 'undefined') {
                         return;
                     }
                 } catch (e) {
-                    console.warn('[HardwareBackButton] Mobile popstate handler error:', e);
+                    console.warn('[HardwareBackButton] Popstate handler error:', e);
                 }
             }
         },
-        true // Capture phase execution
+        true // Capture phase: run before default router popstate listeners
     );
 }
 
 /**
  * Register a hardware back button / gesture navigation handler.
- * Works seamlessly across both Mobile (Capacitor & Touch Swipes) and Desktop (Escape Key & UI Buttons).
+ * Works in memory LIFO order (last registered handler executes first).
+ * Completely safe with ZERO browser history mutations or auto-back side-effects!
  */
 export function registerBackButtonHandler(handler: BackButtonHandler): () => void {
     const id = nextId++;
-    const isMobile = isMobileDevice();
-    
-    backHandlers.push({ id, handler, isMobileOverlay: isMobile });
-
-    // On Mobile browsers, push a lightweight history state so swipe-back gesture pops modal first
-    let pushedMobileState = false;
-    if (isMobile && typeof window !== 'undefined' && window.history) {
-        try {
-            window.history.pushState({ isMobileModalOverlay: true, id }, '');
-            pushedMobileState = true;
-        } catch (e) {
-            console.warn('[HardwareBackButton] Mobile state push skipped:', e);
-        }
-    }
+    backHandlers.push({ id, handler });
 
     let cleanedUp = false;
     return () => {
@@ -102,14 +83,6 @@ export function registerBackButtonHandler(handler: BackButtonHandler): () => voi
         const index = backHandlers.findIndex((item) => item.id === id);
         if (index !== -1) {
             backHandlers.splice(index, 1);
-        }
-
-        // Cleanup mobile pushed state safely without triggering popstate side-effects
-        if (pushedMobileState && isMobile && typeof window !== 'undefined' && window.history) {
-            if (window.history.state && window.history.state.isMobileModalOverlay && window.history.state.id === id) {
-                isInternalPopOperation = true;
-                window.history.back();
-            }
         }
     };
 }
