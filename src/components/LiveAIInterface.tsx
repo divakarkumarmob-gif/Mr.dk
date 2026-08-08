@@ -818,8 +818,7 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                     nextStartTime.current = outputAudioCtx.current?.currentTime || 0;
                     resetTypewriter();
                     setStatus("Listening...");
-                }
-            } else if (msg.error === "session_not_initialized") {
+                } else if (msg.error === "session_not_initialized") {
                 console.error("Server dropped a message: Gemini session wasn't initialized yet.");
             } else if (msg.error === "session_init_failed") {
                 console.error("Server failed to create the Gemini Live session.");
