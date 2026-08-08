@@ -172,7 +172,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         };
     }, []);
 
-    const toggleControlsOnTap = useCallback((e?: React.MouseEvent | React.TouchEvent) => {
+    const toggleControlsOnTap = useCallback((e?: any) => {
         if (e && e.target) {
             const target = e.target as HTMLElement;
             if (target.closest('button, input, form, a')) return;
@@ -368,87 +368,140 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     }, []);
 
-    // ---- Touch & Pinch Gestures with 60 FPS Real-time Finger Tracking & Target Word Focal-Point ----
-    const handleTouchStart = useCallback((e: React.TouchEvent) => {
-        const touches = e.touches;
-        const state = gestureState.current;
-
-        if (touches.length >= 2) {
-            state.active = true;
-            setIsPinching(true);
-            state.startDistance = getTouchDistance(touches as any);
-            state.startScale = visualScale;
-            state.moved = true;
-
-            const center = getTouchCenter(touches as any);
-            const stage = stageRef.current;
-            if (stage && wrapRef.current) {
-                const rect = stage.getBoundingClientRect();
-                const focalX = center.x - rect.left + stage.scrollLeft;
-                const focalY = center.y - rect.top + stage.scrollTop;
-
-                state.focalX = focalX;
-                state.focalY = focalY;
-                wrapRef.current.style.transformOrigin = `${focalX}px ${focalY}px`;
-            }
-        } else if (touches.length === 1) {
-            state.active = true;
-            state.tapStartX = touches[0].clientX;
-            state.tapStartY = touches[0].clientY;
-            state.tapStartTime = Date.now();
-            state.moved = false;
-        }
+    const currentScaleRef = useRef(initialScale);
+    useEffect(() => {
+        currentScaleRef.current = visualScale;
     }, [visualScale]);
 
-    const handleTouchMove = useCallback((e: React.TouchEvent) => {
-        const touches = e.touches;
-        const state = gestureState.current;
-        if (!state.active) return;
+    // ---- Native Non-Passive Touch Event Listener for 60 FPS Lag-Free Finger Pinch Zoom ----
+    useEffect(() => {
+        const stage = stageRef.current;
+        if (!stage) return;
 
-        if (touches.length >= 2) {
-            e.preventDefault();
-            const currentDistance = getTouchDistance(touches as any);
-            if (state.startDistance > 0) {
-                const ratio = currentDistance / state.startDistance;
-                const newScale = Math.min(Math.max(state.startScale * ratio, MIN_SCALE), MAX_SCALE);
-                
-                if (state.rafId !== null) cancelAnimationFrame(state.rafId);
-                state.rafId = requestAnimationFrame(() => {
-                    state.rafId = null;
-                    setVisualScale(newScale);
-                });
-            }
-        } else if (touches.length === 1) {
-            const totalDx = touches[0].clientX - state.tapStartX;
-            const totalDy = touches[0].clientY - state.tapStartY;
-            if (Math.hypot(totalDx, totalDy) > 10) {
+        const state = gestureState.current;
+
+        const onTouchStart = (e: TouchEvent) => {
+            const touches = e.touches;
+            if (touches.length >= 2) {
+                if (e.cancelable) e.preventDefault();
+
+                state.active = true;
+                setIsPinching(true);
+                state.startDistance = getTouchDistance(touches as any);
+                state.startScale = currentScaleRef.current;
                 state.moved = true;
+
+                const center = getTouchCenter(touches as any);
+                const rect = stage.getBoundingClientRect();
+                state.focalX = center.x - rect.left + stage.scrollLeft;
+                state.focalY = center.y - rect.top + stage.scrollTop;
+
+                if (wrapRef.current) {
+                    wrapRef.current.style.transition = 'none';
+                    wrapRef.current.style.transformOrigin = 'top center';
+                }
+            } else if (touches.length === 1) {
+                state.active = true;
+                state.tapStartX = touches[0].clientX;
+                state.tapStartY = touches[0].clientY;
+                state.tapStartTime = Date.now();
+                state.moved = false;
             }
-        }
-    }, []);
+        };
 
-    const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-        const state = gestureState.current;
-        const remaining = e.touches.length;
+        const onTouchMove = (e: TouchEvent) => {
+            const touches = e.touches;
+            if (!state.active) return;
 
-        if (remaining < 2) {
-            setIsPinching(false);
-        }
+            if (touches.length >= 2) {
+                // CRITICAL: Prevent native browser pinch/scroll conflict to eliminate jitter
+                if (e.cancelable) e.preventDefault();
 
-        if (remaining === 0) {
-            const now = Date.now();
-            if (!state.moved && (now - state.tapStartTime < 300)) {
-                if (now - state.lastTapTime < 300) {
-                    setIsPinching(false);
-                    setVisualScale(prev => (prev > 1.5 ? 1.0 : 2.0));
-                    state.lastTapTime = 0;
-                } else {
-                    state.lastTapTime = now;
-                    toggleControlsOnTap(e);
+                const currentDistance = getTouchDistance(touches as any);
+                if (state.startDistance > 0) {
+                    const ratio = currentDistance / state.startDistance;
+                    const newScale = Math.min(Math.max(state.startScale * ratio, MIN_SCALE), MAX_SCALE);
+                    
+                    const oldScale = currentScaleRef.current;
+                    currentScaleRef.current = newScale;
+
+                    // Smooth scroll tracking relative to pinch center
+                    if (oldScale > 0 && newScale !== oldScale) {
+                        const scaleRatio = newScale / oldScale;
+                        const center = getTouchCenter(touches as any);
+                        const rect = stage.getBoundingClientRect();
+                        const currentTouchFocalY = center.y - rect.top;
+                        
+                        stage.scrollTop = (stage.scrollTop + currentTouchFocalY) * scaleRatio - currentTouchFocalY;
+                    }
+
+                    // Direct GPU DOM scale for 0ms lag
+                    if (wrapRef.current) {
+                        wrapRef.current.style.transform = `scale(${newScale})`;
+                    }
+                }
+            } else if (touches.length === 1) {
+                const totalDx = touches[0].clientX - state.tapStartX;
+                const totalDy = touches[0].clientY - state.tapStartY;
+                if (Math.hypot(totalDx, totalDy) > 10) {
+                    state.moved = true;
                 }
             }
-            state.active = false;
-        }
+        };
+
+        const onTouchEnd = (e: TouchEvent) => {
+            const remaining = e.touches.length;
+
+            if (remaining < 2) {
+                if (state.startDistance > 0) {
+                    setIsPinching(false);
+                    state.startDistance = 0;
+
+                    // Sync final visual scale to React state
+                    const finalScale = currentScaleRef.current;
+                    setVisualScale(finalScale);
+
+                    if (wrapRef.current) {
+                        wrapRef.current.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)';
+                        wrapRef.current.style.transform = `scale(${finalScale})`;
+                    }
+                }
+            }
+
+            if (remaining === 0) {
+                const now = Date.now();
+                if (!state.moved && (now - state.tapStartTime < 300)) {
+                    if (now - state.lastTapTime < 300) {
+                        // Double tap toggle
+                        setIsPinching(false);
+                        const targetScale = currentScaleRef.current > 1.5 ? 1.0 : 2.0;
+                        currentScaleRef.current = targetScale;
+                        setVisualScale(targetScale);
+                        if (wrapRef.current) {
+                            wrapRef.current.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)';
+                            wrapRef.current.style.transform = `scale(${targetScale})`;
+                        }
+                        state.lastTapTime = 0;
+                    } else {
+                        state.lastTapTime = now;
+                        toggleControlsOnTap(e);
+                    }
+                }
+                state.active = false;
+            }
+        };
+
+        stage.addEventListener('touchstart', onTouchStart, { passive: false });
+        stage.addEventListener('touchmove', onTouchMove, { passive: false });
+        stage.addEventListener('touchend', onTouchEnd, { passive: true });
+        stage.addEventListener('touchcancel', onTouchEnd, { passive: true });
+
+        return () => {
+            stage.removeEventListener('touchstart', onTouchStart);
+            stage.removeEventListener('touchmove', onTouchMove);
+            stage.removeEventListener('touchend', onTouchEnd);
+            stage.removeEventListener('touchcancel', onTouchEnd);
+        };
     }, [toggleControlsOnTap]);
 
     // ---- High-Precision Case-Insensitive Transparent Red Highlight Engine ----
@@ -721,9 +774,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseUp}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
                 onClick={(e) => {
                     if (!mousePanState.current.hasDragged) {
                         toggleControlsOnTap(e);
@@ -732,6 +782,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 }}
                 style={{
                     cursor: isDraggingMouse ? 'grabbing' : 'grab',
+                    touchAction: isPinching ? 'none' : 'pan-x pan-y',
                 }}
                 className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0 overscroll-contain select-none"
             >

@@ -132,6 +132,83 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     // can't make the dot flip color when the fetch resolves).
     const [memoryFetchStatus, setMemoryFetchStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
     
+    // Human Typewriter Engine state & refs
+    const [isTyping, setIsTyping] = useState(false);
+    const targetCaptionTextRef = useRef('');
+    const displayedLengthRef = useRef(0);
+    const typewriterTimeoutRef = useRef<any>(null);
+
+    const resetTypewriter = useCallback(() => {
+        if (typewriterTimeoutRef.current) {
+            clearTimeout(typewriterTimeoutRef.current);
+            typewriterTimeoutRef.current = null;
+        }
+        targetCaptionTextRef.current = '';
+        displayedLengthRef.current = 0;
+        setIsTyping(false);
+        setCaptionText('');
+    }, []);
+
+    const scheduleNextTypewriterTick = useCallback(() => {
+        if (typewriterTimeoutRef.current) return;
+
+        const tick = () => {
+            const target = targetCaptionTextRef.current;
+            const currentLen = displayedLengthRef.current;
+
+            if (currentLen < target.length) {
+                const remaining = target.length - currentLen;
+                const charsToAdvance = remaining > 50 ? 3 : remaining > 25 ? 2 : 1;
+                const nextLen = Math.min(currentLen + charsToAdvance, target.length);
+
+                displayedLengthRef.current = nextLen;
+                const newText = target.slice(0, nextLen);
+                setCaptionText(newText);
+                setIsTyping(true);
+
+                if (captionBoxRef.current && !userScrolledUpRef.current) {
+                    captionBoxRef.current.scrollTop = captionBoxRef.current.scrollHeight;
+                }
+
+                const lastChar = newText[newText.length - 1];
+                let delay = 18;
+                if (['.', '!', '?', '\n'].includes(lastChar)) {
+                    delay = 75;
+                } else if ([',', ';', ':'].includes(lastChar)) {
+                    delay = 45;
+                } else if (lastChar === ' ') {
+                    delay = 24;
+                }
+
+                typewriterTimeoutRef.current = setTimeout(() => {
+                    typewriterTimeoutRef.current = null;
+                    tick();
+                }, delay);
+            } else {
+                typewriterTimeoutRef.current = null;
+                setIsTyping(false);
+            }
+        };
+
+        tick();
+    }, []);
+
+    const enqueueTextChunk = useCallback((chunk: string, isNewTurn: boolean) => {
+        if (isNewTurn) {
+            if (typewriterTimeoutRef.current) {
+                clearTimeout(typewriterTimeoutRef.current);
+                typewriterTimeoutRef.current = null;
+            }
+            targetCaptionTextRef.current = chunk;
+            displayedLengthRef.current = 0;
+            setCaptionText('');
+            setIsTyping(true);
+        } else {
+            targetCaptionTextRef.current += chunk;
+            setIsTyping(true);
+        }
+        scheduleNextTypewriterTick();
+    }, [scheduleNextTypewriterTick]);
 
     useEffect(() => {
         enableScreenshot();
@@ -469,6 +546,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         console.log("Interrupting AI...");
         ws.current?.send(JSON.stringify({ interrupt: true }));
         stopAudio();
+        resetTypewriter();
         setStatus("Listening...");
     };
 
@@ -597,7 +675,7 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
         socket.onopen = async () => {
             console.log("WebSocket open");
             setIsRecording(withMic);
-            setStatus(withMic ? "Listening..." : "Connected");
+            setStatus(withMic ? "Connecting AI..." : "Connected");
             nextStartTime.current = 0;
 
             // Start the native foreground service (CallStyle notification)
@@ -660,7 +738,7 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                 if (!isInitializedRef.current) {
                     setStatus("Starting up, please wait...");
                 }
-            }, 3000);
+            }, 6000);
             initAckTimeoutRef.current = initAckTimeout;
 
             // Send pending images and history
@@ -721,26 +799,26 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                 } else if (msg.text) {
                     if (!captionTurnStartedRef.current) {
                         captionTurnStartedRef.current = true;
-                        setCaptionText(msg.text);
+                        enqueueTextChunk(msg.text, true);
                     } else {
-                        setCaptionText(prev => prev + msg.text);
+                        enqueueTextChunk(msg.text, false);
                     }
                 } else if (msg.turnComplete) {
                     captionTurnStartedRef.current = false;
                 } else if (msg.type === 'init_ack') {
-                isInitializedRef.current = true;
-                console.log("Gemini session initialized");
-                if (initAckTimeoutRef.current) {
-                    clearTimeout(initAckTimeoutRef.current);
-                    initAckTimeoutRef.current = null;
-                }
-                if (status === "Starting up, please wait...") {
+                    isInitializedRef.current = true;
+                    console.log("Gemini session initialized");
+                    if (initAckTimeoutRef.current) {
+                        clearTimeout(initAckTimeoutRef.current);
+                        initAckTimeoutRef.current = null;
+                    }
+                    setStatus("Listening...");
+                } else if (msg.interrupted) {
+                    isAiSpeaking.current = false;
+                    nextStartTime.current = outputAudioCtx.current?.currentTime || 0;
+                    resetTypewriter();
                     setStatus("Listening...");
                 }
-            } else if (msg.interrupted) {
-                isAiSpeaking.current = false;
-                nextStartTime.current = outputAudioCtx.current?.currentTime || 0;
-                setStatus("Listening...");
             } else if (msg.error === "session_not_initialized") {
                 console.error("Server dropped a message: Gemini session wasn't initialized yet.");
             } else if (msg.error === "session_init_failed") {
@@ -948,7 +1026,16 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                         }}
                         className="w-full flex-1 bg-slate-900/90 border border-slate-800 rounded-2xl p-4 overflow-y-auto text-xs text-slate-200 leading-relaxed shadow-xl backdrop-blur-md"
                     >
-                        {captionText || "AI voice transcript yaha live display hoga..."}
+                        {captionText ? (
+                            <span>
+                                {captionText}
+                                {isTyping && (
+                                    <span className="inline-block w-1.5 h-3.5 bg-cyan-400 animate-pulse ml-1 align-middle rounded-sm shadow-[0_0_8px_rgba(34,211,238,0.9)]" />
+                                )}
+                            </span>
+                        ) : (
+                            <span className="text-slate-500 italic">AI voice transcript yaha live display hoga...</span>
+                        )}
                     </div>
                 )}
                 {!showCaptions && selectedImages.length === 0 && (
