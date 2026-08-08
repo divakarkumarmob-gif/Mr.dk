@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
-import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp } from 'lucide-react';
+import { ZoomIn, ZoomOut, Download, X, ChevronLeft, ChevronRight, AlertTriangle, Loader2, Search, ChevronDown, ChevronUp, Maximize2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { getCachedPdf, cachePdf, isPdfCached, downloadPdfToDevice, getRamCachedPdf, fetchAndCachePdf } from '../lib/pdfCache';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
@@ -45,6 +45,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     
     // GPU-accelerated visual scale for 0ms lag & 0 flashing zoom
     const [visualScale, setVisualScale] = useState(initialScale);
+    const [isPinching, setIsPinching] = useState(false);
+    const [isDraggingMouse, setIsDraggingMouse] = useState(false);
     
     // Stable base canvas resolution for react-pdf
     const [renderScale, setRenderScale] = useState(1.2);
@@ -87,6 +89,16 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         tapStartTime: 0,
         lastTapTime: 0,
         moved: false,
+        rafId: null as number | null,
+    });
+
+    const mousePanState = useRef({
+        isDown: false,
+        startX: 0,
+        startY: 0,
+        scrollLeft: 0,
+        scrollTop: 0,
+        hasDragged: false,
     });
 
     useEffect(() => {
@@ -210,6 +222,17 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         saveProgress();
     }, [currentPage, pdfUrl, numPages]);
 
+    // Calculate Default Full-Width Fit for Edge-to-Edge Screen Coverage
+    const fitToScreenWidth = useCallback(() => {
+        const stage = stageRef.current;
+        const availableWidth = stage ? stage.clientWidth - 24 : window.innerWidth - 24;
+        if (pageWidthRef.current > 0 && availableWidth > 0) {
+            const autoFitScale = Math.min(Math.max(availableWidth / (pageWidthRef.current * renderScale), 0.5), 3.0);
+            setIsPinching(false);
+            setVisualScale(autoFitScale);
+        }
+    }, [renderScale]);
+
     function onDocumentLoadSuccess(pdf: any) {
         setNumPages(pdf.numPages);
         pdfDocRef.current = pdf;
@@ -220,6 +243,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const viewport = page.getViewport({ scale: 1.0 });
             pageWidthRef.current = viewport.width;
             pageHeightRef.current = viewport.height;
+
+            const stage = stageRef.current;
+            const availableWidth = stage ? stage.clientWidth - 24 : window.innerWidth - 24;
+            if (viewport.width > 0 && availableWidth > 0) {
+                const autoFitScale = Math.min(Math.max(availableWidth / (viewport.width * renderScale), 0.5), 3.0);
+                setVisualScale(autoFitScale);
+            }
         }).catch(() => {});
     }
 
@@ -265,6 +295,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     // Fast GPU-accelerated Zoom Control (0ms lag, 0 flashing)
     const zoomButton = (delta: number) => {
+        setIsPinching(false);
         setVisualScale(prev => {
             const nextScale = Math.min(Math.max(prev + delta * 0.25, MIN_SCALE), MAX_SCALE);
             return nextScale;
@@ -291,13 +322,60 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         rangeChunkSize: 65536,
     }), []);
 
-    // ---- Touch & Pinch Gestures with Focal-Point Centering on Target Word ----
+    // ---- Desktop Mouse Click-and-Hold Drag-to-Pan (Hand Tool) ----
+    const handleMouseDown = useCallback((e: React.MouseEvent) => {
+        if (e.button !== 0) return;
+        const target = e.target as HTMLElement;
+        if (target.closest('button, input, form, a')) return;
+
+        const stage = stageRef.current;
+        if (!stage) return;
+
+        mousePanState.current = {
+            isDown: true,
+            startX: e.clientX,
+            startY: e.clientY,
+            scrollLeft: stage.scrollLeft,
+            scrollTop: stage.scrollTop,
+            hasDragged: false,
+        };
+        setIsDraggingMouse(true);
+    }, []);
+
+    const handleMouseMove = useCallback((e: React.MouseEvent) => {
+        const state = mousePanState.current;
+        if (!state.isDown) return;
+
+        const dx = e.clientX - state.startX;
+        const dy = e.clientY - state.startY;
+
+        if (Math.hypot(dx, dy) > 5) {
+            state.hasDragged = true;
+        }
+
+        const stage = stageRef.current;
+        if (stage) {
+            stage.scrollLeft = state.scrollLeft - dx;
+            stage.scrollTop = state.scrollTop - dy;
+        }
+    }, []);
+
+    const handleMouseUp = useCallback((e: React.MouseEvent) => {
+        const state = mousePanState.current;
+        if (state.isDown) {
+            state.isDown = false;
+            setIsDraggingMouse(false);
+        }
+    }, []);
+
+    // ---- Touch & Pinch Gestures with 60 FPS Real-time Finger Tracking & Target Word Focal-Point ----
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
         const touches = e.touches;
         const state = gestureState.current;
 
         if (touches.length >= 2) {
             state.active = true;
+            setIsPinching(true);
             state.startDistance = getTouchDistance(touches as any);
             state.startScale = visualScale;
             state.moved = true;
@@ -333,7 +411,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             if (state.startDistance > 0) {
                 const ratio = currentDistance / state.startDistance;
                 const newScale = Math.min(Math.max(state.startScale * ratio, MIN_SCALE), MAX_SCALE);
-                setVisualScale(newScale);
+                
+                if (state.rafId !== null) cancelAnimationFrame(state.rafId);
+                state.rafId = requestAnimationFrame(() => {
+                    state.rafId = null;
+                    setVisualScale(newScale);
+                });
             }
         } else if (touches.length === 1) {
             const totalDx = touches[0].clientX - state.tapStartX;
@@ -348,11 +431,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         const state = gestureState.current;
         const remaining = e.touches.length;
 
+        if (remaining < 2) {
+            setIsPinching(false);
+        }
+
         if (remaining === 0) {
             const now = Date.now();
             if (!state.moved && (now - state.tapStartTime < 300)) {
-                // Double tap check for quick 2.0x zoom on target word
                 if (now - state.lastTapTime < 300) {
+                    setIsPinching(false);
                     setVisualScale(prev => (prev > 1.5 ? 1.0 : 2.0));
                     state.lastTapTime = 0;
                 } else {
@@ -364,16 +451,52 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     }, [toggleControlsOnTap]);
 
+    // ---- High-Precision Case-Insensitive Transparent Red Highlight Engine ----
+    const highlightSearchText = useCallback((query: string) => {
+        const stage = stageRef.current;
+        if (!stage) return;
+
+        // Clear previous highlights safely
+        const prevMarks = stage.querySelectorAll('.pdf-search-red-mark');
+        prevMarks.forEach(mark => {
+            const parent = mark.parentNode;
+            if (parent) {
+                parent.replaceChild(document.createTextNode(mark.textContent || ''), mark);
+                parent.normalize();
+            }
+        });
+
+        if (!query || !query.trim()) return;
+
+        const trimmedQuery = query.trim();
+        const escapedQuery = trimmedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(${escapedQuery})`, 'gi');
+
+        const spans = stage.querySelectorAll('.react-pdf__Page__textContent span');
+        spans.forEach(span => {
+            const text = span.textContent;
+            if (text && regex.test(text)) {
+                const highlighted = text.replace(
+                    regex,
+                    `<mark class="pdf-search-red-mark bg-red-500/40 text-white font-bold border border-red-500/70 rounded-[3px] px-0.5 shadow-[0_0_10px_rgba(239,68,68,0.6)] transition-all duration-200">$1</mark>`
+                );
+                span.innerHTML = highlighted;
+            }
+        });
+    }, []);
+
     // Search helpers
     const performSearch = async (query: string) => {
         if (!pdfDocRef.current || !query) return;
         setIsSearching(true);
         const results: number[] = [];
+        const lowerQuery = query.toLowerCase().trim();
+
         for (let i = 1; i <= pdfDocRef.current.numPages; i++) {
             const page = await pdfDocRef.current.getPage(i);
             const textContent = await page.getTextContent();
             const text = textContent.items.map((item: any) => item.str).join(' ');
-            if (text.toLowerCase().includes(query.toLowerCase())) {
+            if (text.toLowerCase().includes(lowerQuery)) {
                 results.push(i);
             }
         }
@@ -385,6 +508,30 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             setCurrentPage(results[0]);
         }
     };
+
+    // Auto-trigger transparent red highlight on page render or search update
+    useEffect(() => {
+        if (searchQuery.trim()) {
+            const timer = setTimeout(() => {
+                highlightSearchText(searchQuery);
+            }, 250);
+            return () => clearTimeout(timer);
+        } else {
+            highlightSearchText('');
+        }
+    }, [currentPage, searchQuery, searchResults, highlightSearchText]);
+
+    const navigateSearchResult = useCallback((direction: 'next' | 'prev') => {
+        if (searchResults.length === 0) return;
+        let newIndex: number;
+        if (direction === 'next') {
+            newIndex = (currentSearchIndex + 1) % searchResults.length;
+        } else {
+            newIndex = (currentSearchIndex - 1 + searchResults.length) % searchResults.length;
+        }
+        setCurrentSearchIndex(newIndex);
+        setCurrentPage(searchResults[newIndex]);
+    }, [searchResults, currentSearchIndex]);
 
     const handleSearchSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -399,12 +546,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 setSearchQuery('');
                 setSearchResults([]);
                 setCurrentSearchIndex(0);
+                highlightSearchText('');
             } else {
                 setTimeout(() => searchInputRef.current?.focus(), 100);
             }
             return !prev;
         });
-    }, []);
+    }, [highlightSearchText]);
 
     const slideHorizontal = useCallback((direction: 'left' | 'right') => {
         const stage = stageRef.current;
@@ -447,6 +595,15 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         </div>
 
                         <div className="flex items-center gap-2">
+                            <button
+                                onClick={fitToScreenWidth}
+                                className="p-2.5 bg-white/5 hover:bg-white/10 rounded-xl text-gray-300 transition active:scale-95 flex items-center gap-1.5 text-xs"
+                                title="Full Screen Width Fit"
+                            >
+                                <Maximize2 className="h-4 w-4 text-blue-400" />
+                                <span className="hidden sm:inline text-[11px] font-medium text-gray-300">Fit Width</span>
+                            </button>
+
                             <button
                                 onClick={handleDownload}
                                 disabled={isDownloading}
@@ -524,6 +681,35 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                                 <X className="h-4 w-4" />
                             </button>
                         </form>
+
+                        {/* Search results navigation */}
+                        {searchResults.length > 0 && (
+                            <div className="flex items-center justify-between mt-2 px-1">
+                                <span className="text-xs text-gray-400">
+                                    {searchResults.length} page{searchResults.length > 1 ? 's' : ''} mein mila — Page {searchResults[currentSearchIndex]}
+                                </span>
+                                <div className="flex items-center gap-1">
+                                    <button
+                                        type="button"
+                                        onClick={() => navigateSearchResult('prev')}
+                                        className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition"
+                                    >
+                                        <ChevronUp className="h-3.5 w-3.5" />
+                                    </button>
+                                    <span className="text-[10px] text-gray-500 w-10 text-center">{currentSearchIndex + 1}/{searchResults.length}</span>
+                                    <button
+                                        type="button"
+                                        onClick={() => navigateSearchResult('next')}
+                                        className="p-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition"
+                                    >
+                                        <ChevronDown className="h-3.5 w-3.5" />
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                        {searchResults.length === 0 && searchQuery && !isSearching && (
+                            <p className="text-xs text-gray-500 mt-2 px-1">Kuch nahi mila 😕 — koi aur word try karo</p>
+                        )}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -531,11 +717,23 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             {/* Continuous Vertical Scroll Viewer Stage */}
             <div
                 ref={stageRef}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
-                onClick={toggleControlsOnTap}
-                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0 overscroll-contain"
+                onClick={(e) => {
+                    if (!mousePanState.current.hasDragged) {
+                        toggleControlsOnTap(e);
+                    }
+                    mousePanState.current.hasDragged = false;
+                }}
+                style={{
+                    cursor: isDraggingMouse ? 'grabbing' : 'grab',
+                }}
+                className="flex-grow relative overflow-y-auto overflow-x-auto bg-slate-950 w-full h-full custom-scrollbar pt-4 pb-0 overscroll-contain select-none"
             >
                 {isLoading && (
                     <motion.div
@@ -570,10 +768,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 ) : (
                     <div
                         ref={wrapRef}
-                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0 transition-transform duration-75 ease-out"
+                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0"
                         style={{
                             transform: `scale(${visualScale})`,
                             transformOrigin: 'top center',
+                            transition: isPinching ? 'none' : 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
                             willChange: 'transform',
                         }}
                     >
