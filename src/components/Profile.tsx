@@ -1,8 +1,8 @@
-import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit, Crown, Check, X as CloseIcon, Zap, Sparkles, Search } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit, Crown, Check, X as CloseIcon, Zap, Sparkles, Search, Bot, Brain, Calendar, Database, Star } from 'lucide-react';
 import { logOut } from '../lib/auth';
 import { clearGuestData } from '../lib/clearGuestData';
 import { User as FirebaseUser } from 'firebase/auth';
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Pressable from './Pressable';
@@ -20,6 +20,7 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
             setIsAdmin(false);
         });
     }, [user]);
+
     const [showPremium, setShowPremium] = useState(false);
     const navigate = useNavigate();
 
@@ -48,208 +49,312 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
     };
 
     return (
-        <div className="min-h-dvh bg-background text-foreground font-sans pb-16">
-            <div className="max-w-full mx-auto w-full">
-                {/* Header */}
-            <div className="bg-card text-card-foreground rounded-lg p-2 border border-border mb-2 flex flex-col items-center">
-                <div className="relative mb-1">
-                    <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center overflow-hidden">
-                        {user?.photoURL ? (
-                            <img src={user.photoURL} alt="Profile" className="w-full h-full object-cover" />
-                        ) : (
-                            <User className="h-6 w-6 text-muted-foreground" />
-                        )}
-                    </div>
-                </div>
-                <h2 className="text-base font-bold">{user?.displayName || 'Aspirant'}</h2>
-                <p className="text-muted-foreground text-[10px] mb-2">{user?.email}</p>
-                <Pressable onClick={() => navigate('/edit-profile')} className="bg-primary text-primary-foreground flex items-center gap-0.5 px-1.5 py-0 rounded-full font-bold text-[8px]">
-                    <Edit className="h-2 w-2" /> EDIT PROFILE
-                </Pressable>
-            </div>
+        <div className="min-h-dvh bg-gradient-to-b from-[#070B19] via-[#0A0F24] to-[#05070E] text-white font-sans pb-24 pt-2 px-3 sm:px-4 selection:bg-blue-500/30">
+            <div className="max-w-md mx-auto w-full space-y-4">
+                
+                {/* Modern Glassmorphic Profile Header Card */}
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="relative overflow-hidden bg-gradient-to-r from-slate-900/90 via-blue-950/40 to-slate-900/90 border border-white/10 rounded-3xl p-5 shadow-2xl backdrop-blur-xl text-center"
+                >
+                    {/* Ambient Background Glow */}
+                    <div className="absolute -top-12 -left-12 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl pointer-events-none" />
+                    <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl pointer-events-none" />
 
-            {/* Vip Premium Card */}
-            <Pressable 
-                onClick={() => setShowPremium(true)}
-                className="w-full bg-gradient-to-r from-[#D4AF37] via-[#F9D67E] to-[#D4AF37] p-[1.5px] rounded-xl mb-3 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all"
-            >
-                <div className="bg-[#0a0f24] rounded-[11px] p-3 flex justify-between items-center h-full">
-                    <div className="flex items-center gap-3">
-                        <div className="bg-[#D4AF37]/20 p-2 rounded-lg border border-[#D4AF37]/30">
-                            <Crown className="h-5 w-5 text-[#D4AF37]" />
-                        </div>
-                        <div>
-                            <div className="flex items-center gap-1.5">
-                                <h3 className="text-sm font-black text-white uppercase tracking-tighter italic">Vip Membership</h3>
-                                <span className="text-[8px] bg-[#D4AF37] text-black px-1 py-0 rounded font-black">PRO</span>
+                    <div className="relative z-10 flex flex-col items-center">
+                        <div className="relative mb-3 group">
+                            <div className="w-20 h-20 bg-slate-800/80 rounded-full p-1 ring-2 ring-amber-400/80 shadow-[0_0_20px_rgba(245,158,11,0.35)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                                {user?.photoURL ? (
+                                    <img src={user.photoURL} alt="Profile" className="w-full h-full object-cover rounded-full" />
+                                ) : (
+                                    <User className="h-10 w-10 text-blue-400" />
+                                )}
                             </div>
-                            <p className="text-[10px] text-gray-400 font-medium tracking-tight">Unlocked: 2026 Elite Edition</p>
+                            <div className="absolute bottom-0 right-0 bg-amber-400 text-black p-1 rounded-full shadow-lg border border-slate-950" title="NEET Aspirant PRO">
+                                <Crown className="h-3.5 w-3.5 fill-black" />
+                            </div>
                         </div>
-                    </div>
-                    <ChevronRight className="h-4 w-4 text-[#D4AF37]" />
-                </div>
-            </Pressable>
 
-            <AnimatePresence>
-                {showPremium && (
-                    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-                        <motion.div 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setShowPremium(false)}
-                            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-                        />
-                        <motion.div 
-                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-                            animate={{ scale: 1, opacity: 1, y: 0 }}
-                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            className="relative w-full max-w-sm bg-[#0a0f24] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+                        <h2 className="text-lg font-black text-white tracking-tight">{user?.displayName || 'NEET Aspirant'}</h2>
+                        <p className="text-gray-400 text-xs font-medium mb-3">{user?.email || 'aspirant@neetmaster.ai'}</p>
+
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => navigate('/edit-profile')}
+                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white flex items-center gap-1.5 px-4 py-1.5 rounded-full font-bold text-xs shadow-lg shadow-blue-500/25 transition-all"
                         >
-                            <div className="bg-gradient-to-b from-[#D4AF37]/20 to-transparent p-6 pt-8 text-center relative">
-                                <button 
-                                    onClick={() => setShowPremium(false)}
-                                    className="absolute top-4 right-4 p-2 bg-white/5 rounded-full text-gray-400"
-                                >
-                                    <CloseIcon className="h-4 w-4" />
-                                </button>
-                                <div className="inline-flex bg-[#D4AF37]/20 p-3 rounded-2xl mb-4 border border-[#D4AF37]/30">
-                                    <Sparkles className="h-8 w-8 text-[#D4AF37]" />
-                                </div>
-                                <h2 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-1">Elite Upgrade</h2>
-                                <p className="text-gray-400 text-xs">Unlock the complete NEET preparation toolkit</p>
+                            <Edit className="h-3.5 w-3.5" /> EDIT PROFILE
+                        </motion.button>
+                    </div>
+                </motion.div>
+
+                {/* VIP Membership Banner (Glowing Gold Card) */}
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.05 }}
+                >
+                    <Pressable 
+                        onClick={() => setShowPremium(true)}
+                        className="w-full relative overflow-hidden bg-gradient-to-r from-amber-950/50 via-yellow-900/30 to-slate-950 p-4 rounded-3xl border border-amber-400/40 shadow-[0_0_25px_rgba(245,158,11,0.2)] hover:shadow-[0_0_30px_rgba(245,158,11,0.35)] transition-all flex items-center justify-between group backdrop-blur-xl"
+                    >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+                        
+                        <div className="flex items-center gap-3.5 relative z-10">
+                            <div className="bg-amber-400/20 p-3 rounded-2xl border border-amber-400/30 shadow-inner">
+                                <Crown className="h-6 w-6 text-amber-400" />
                             </div>
-
-                            <div className="p-6 space-y-6">
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="space-y-3 opacity-60">
-                                        <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest pl-1">Free Tier</p>
-                                        {FreeFeatures.map((f, i) => (
-                                            <div key={i} className="flex items-center gap-2">
-                                                <div className="h-3.5 w-3.5 rounded-full bg-gray-800 flex items-center justify-center">
-                                                    <CloseIcon className="h-2 w-2 text-gray-500" />
-                                                </div>
-                                                <span className="text-[10px] text-gray-400 font-medium">{f}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="space-y-3">
-                                        <p className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-widest pl-1">Pro Features</p>
-                                        {ProFeatures.map((f, i) => (
-                                            <div key={i} className="flex items-center gap-2">
-                                                <div className="h-3.5 w-3.5 rounded-full bg-[#D4AF37]/20 flex items-center justify-center border border-[#D4AF37]/30">
-                                                    <Check className="h-2 w-2 text-[#D4AF37]" />
-                                                </div>
-                                                <span className="text-[10px] text-white font-bold">{f}</span>
-                                            </div>
-                                        ))}
-                                    </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h3 className="text-sm font-black text-amber-300 uppercase tracking-wider italic">Vip Membership</h3>
+                                    <span className="text-[9px] bg-gradient-to-r from-amber-400 to-yellow-300 text-black px-1.5 py-0.5 rounded-md font-black shadow-sm">PRO 2026</span>
                                 </div>
-
-                                <div className="space-y-3 pt-2">
-                                    <Pressable className="w-full bg-gradient-to-r from-[#D4AF37] to-[#F9D67E] py-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-[#D4AF37]/20">
-                                        <Zap className="h-5 w-5 text-black fill-black" />
-                                        <span className="text-sm font-black text-black uppercase tracking-tight">Get Premium Now</span>
-                                    </Pressable>
-                                    <p className="text-[9px] text-gray-500 text-center uppercase font-bold tracking-widest">100% Encrypted & Secure Access</p>
-                                </div>
+                                <p className="text-xs text-gray-400 font-medium tracking-tight mt-0.5">Unlocked: 2026 Elite NEET Edition</p>
                             </div>
-                        </motion.div>
-                    </div>
-                )}
-            </AnimatePresence>
+                        </div>
 
-            {/* AI Intelligence */}
-            <h3 className="text-muted-foreground text-[10px] font-bold mb-1.5 uppercase">AI Intelligence</h3>
-            <Pressable onClick={onSolverClick} className="w-full text-left bg-primary text-primary-foreground p-2 rounded-lg mb-3 flex justify-between items-center">
-                <div className="flex items-center gap-1.5">
-                    <div className="bg-white/20 p-1 rounded-md"><User className="h-4 w-4"/></div>
-                    <div>
-                        <p className="font-bold text-xs">Neural Doubt Solver</p>
-                        <p className="text-[9px] opacity-70">CORE ACCESS V3.1</p>
-                    </div>
-                </div>
-                <ChevronRight className="h-4 w-4 opacity-50" />
-            </Pressable>
-            
-            {/* Mind Hack */}
-            <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-            >
-                <Pressable onClick={() => onNavigate('mindHack')} className="w-full text-left bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-2 rounded-lg mb-3 flex justify-between items-center shadow-lg">
-                    <div className="flex items-center gap-1.5">
-                        <div className="bg-white/20 p-1 rounded-md">🧠</div>
-                        <p className="font-bold text-xs">Mind Hack</p>
-                    </div>
-                    <ChevronRight className="h-4 w-4 opacity-50" />
-                </Pressable>
-            </motion.div>
-            
-            {/* AI Study Plan */}
-            <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-            >
-                <Pressable onClick={() => onNavigate('aiStudyPlan')} className="w-full text-left bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-2 rounded-lg mb-3 flex justify-between items-center shadow-lg">
-                    <div className="flex items-center gap-1.5">
-                        <div className="bg-white/20 p-1 rounded-md">📅</div>
-                        <p className="font-bold text-xs">AI Study Plan</p>
-                    </div>
-                    <ChevronRight className="h-4 w-4 opacity-50" />
-                </Pressable>
-            </motion.div>
-
-            <div className="bg-blue-600 text-white p-2 rounded-lg mb-3 flex justify-between items-center cursor-pointer">
-                 <div className="flex items-center gap-1.5">
-                    <div className="bg-white/20 p-1 rounded-md"><Shield className="h-4 w-4"/></div>
-                    <div>
-                        <p className="font-bold text-xs">Memory & Backup</p>
-                        <p className="text-[9px] opacity-70">Access secure system data</p>
-                    </div>
-                </div>
-                <ChevronRight className="h-4 w-4 opacity-50" />
-            </div>
-
-            {/* Support Network */}
-            <h3 className="text-muted-foreground text-[10px] font-bold mb-1.5 uppercase">Support Network</h3>
-            <Pressable onClick={() => navigate('/notes-library')} className="w-full text-left bg-orange-500 text-white p-2 rounded-lg mb-2 flex justify-between items-center">
-                 <div className="flex items-center gap-1.5">
-                    <Download className="h-4 w-4"/>
-                    <p className="font-bold text-xs">Download Notes</p>
-                </div>
-                <ChevronRight className="h-3 w-3" />
-            </Pressable>
-            
-            <div className="space-y-1 mb-3 text-foreground">
-                {isAdmin && (
-                    <Pressable onClick={() => onNavigate('admin')} className="w-full text-left flex items-center justify-between p-1">
-                        <div className="flex items-center gap-1.5 text-xs"><Shield className="h-4 w-4 text-orange-500"/><span>Admin Panel</span></div>
-                        <ChevronRight className="h-3 w-3" />
+                        <ChevronRight className="h-5 w-5 text-amber-400 group-hover:translate-x-1 transition-transform relative z-10" />
                     </Pressable>
-                )}
-                <div className="flex items-center justify-between p-1">
-                    <a href="https://instagram.com/mr.divakar00" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs"><Mail className="h-4 w-4"/><span>@mr.divakar00</span></a>
-                    <ChevronRight className="h-3 w-3" />
-                </div>
-                <Pressable onClick={() => navigate('/school-search')} className="w-full text-left flex items-center justify-between p-1">
-                    <div className="flex items-center gap-1.5 text-xs"><Search className="h-4 w-4"/><span>Search School</span></div>
-                    <ChevronRight className="h-3 w-3" />
-                </Pressable>
-                <Pressable onClick={() => navigate('/about')} className="w-full text-left flex items-center justify-between p-1">
-                    <div className="flex items-center gap-1.5 text-xs"><HelpCircle className="h-4 w-4"/><span>About NeetMaster & FAQ</span></div>
-                    <ChevronRight className="h-3 w-3" />
-                </Pressable>
-                <Pressable onClick={() => onNavigate('technicalSupport')} className="w-full text-left flex items-center justify-between p-1">
-                    <div className="flex items-center gap-1.5 text-xs"><HelpCircle className="h-4 w-4"/><span>Technical Support</span></div>
-                    <ChevronRight className="h-3 w-3" />
-                </Pressable>
-            </div>
+                </motion.div>
 
-            <Pressable onClick={handleLogOut} className="w-full bg-secondary text-secondary-foreground py-1.5 rounded-md font-bold flex items-center justify-center gap-1 text-[10px]">
-                <LogOut className="h-3 w-3" /> END SESSION
-            </Pressable>
-          </div>
+                {/* Premium Modal Popup */}
+                <AnimatePresence>
+                    {showPremium && (
+                        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                            <motion.div 
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                onClick={() => setShowPremium(false)}
+                                className="absolute inset-0 bg-black/80 backdrop-blur-md"
+                            />
+                            <motion.div 
+                                initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                                animate={{ scale: 1, opacity: 1, y: 0 }}
+                                exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                                className="relative w-full max-w-sm bg-slate-900 border border-white/15 rounded-3xl overflow-hidden shadow-2xl z-10"
+                            >
+                                <div className="bg-gradient-to-b from-amber-500/20 via-slate-900/60 to-slate-900 p-6 pt-8 text-center relative">
+                                    <button 
+                                        onClick={() => setShowPremium(false)}
+                                        className="absolute top-4 right-4 p-2 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 transition"
+                                    >
+                                        <CloseIcon className="h-4 w-4" />
+                                    </button>
+                                    <div className="inline-flex bg-amber-400/20 p-3 rounded-2xl mb-3 border border-amber-400/30">
+                                        <Sparkles className="h-8 w-8 text-amber-400" />
+                                    </div>
+                                    <h2 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-1">Elite Upgrade</h2>
+                                    <p className="text-gray-400 text-xs">Unlock the complete NEET preparation toolkit</p>
+                                </div>
+
+                                <div className="p-6 space-y-6">
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="space-y-3 opacity-60">
+                                            <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest pl-1">Free Tier</p>
+                                            {FreeFeatures.map((f, i) => (
+                                                <div key={i} className="flex items-center gap-2">
+                                                    <div className="h-3.5 w-3.5 rounded-full bg-gray-800 flex items-center justify-center">
+                                                        <CloseIcon className="h-2 w-2 text-gray-500" />
+                                                    </div>
+                                                    <span className="text-[10px] text-gray-400 font-medium">{f}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="space-y-3">
+                                            <p className="text-[10px] font-bold text-amber-400 uppercase tracking-widest pl-1">Pro Features</p>
+                                            {ProFeatures.map((f, i) => (
+                                                <div key={i} className="flex items-center gap-2">
+                                                    <div className="h-3.5 w-3.5 rounded-full bg-amber-400/20 flex items-center justify-center border border-amber-400/30">
+                                                        <Check className="h-2 w-2 text-amber-400" />
+                                                    </div>
+                                                    <span className="text-[10px] text-white font-bold">{f}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3 pt-2">
+                                        <Pressable className="w-full bg-gradient-to-r from-amber-400 to-yellow-300 py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-amber-400/20 active:scale-95 transition">
+                                            <Zap className="h-5 w-5 text-black fill-black" />
+                                            <span className="text-sm font-black text-black uppercase tracking-tight">Get Premium Now</span>
+                                        </Pressable>
+                                        <p className="text-[9px] text-gray-500 text-center uppercase font-bold tracking-widest">100% Encrypted & Secure Access</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    )}
+                </AnimatePresence>
+
+                {/* AI Intelligence Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.1 }}
+                    className="space-y-2.5"
+                >
+                    <h3 className="text-blue-400 text-[11px] font-black uppercase tracking-widest px-1 flex items-center gap-1.5">
+                        <Sparkles className="h-3.5 w-3.5 text-blue-400" /> AI Intelligence Suite
+                    </h3>
+
+                    {/* Neural Doubt Solver Card */}
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                        <Pressable onClick={onSolverClick} className="w-full text-left bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white p-3.5 rounded-2xl flex justify-between items-center shadow-[0_4px_20px_rgba(37,99,235,0.3)] border border-blue-400/30">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-white/20 p-2 rounded-xl backdrop-blur-md">
+                                    <Bot className="h-5 w-5 text-white" />
+                                </div>
+                                <div>
+                                    <p className="font-extrabold text-sm leading-tight">Neural Doubt Solver</p>
+                                    <p className="text-[10px] text-blue-100/80 font-medium mt-0.5">CORE ACCESS V3.1 • Instant Solutions</p>
+                                </div>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-white/80" />
+                        </Pressable>
+                    </motion.div>
+                    
+                    {/* Mind Hack Card */}
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                        <Pressable onClick={() => onNavigate('mindHack')} className="w-full text-left bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white p-3.5 rounded-2xl flex justify-between items-center shadow-[0_4px_20px_rgba(147,51,234,0.3)] border border-purple-400/30">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-white/20 p-2 rounded-xl backdrop-blur-md">
+                                    <Brain className="h-5 w-5 text-white" />
+                                </div>
+                                <div>
+                                    <p className="font-extrabold text-sm leading-tight">Mind Hack</p>
+                                    <p className="text-[10px] text-purple-100/80 font-medium mt-0.5">Memory Booster & Tricks</p>
+                                </div>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-white/80" />
+                        </Pressable>
+                    </motion.div>
+                    
+                    {/* AI Study Plan Card */}
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                        <Pressable onClick={() => onNavigate('aiStudyPlan')} className="w-full text-left bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white p-3.5 rounded-2xl flex justify-between items-center shadow-[0_4px_20px_rgba(16,185,129,0.3)] border border-emerald-400/30">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-white/20 p-2 rounded-xl backdrop-blur-md">
+                                    <Calendar className="h-5 w-5 text-white" />
+                                </div>
+                                <div>
+                                    <p className="font-extrabold text-sm leading-tight">AI Study Plan</p>
+                                    <p className="text-[10px] text-emerald-100/80 font-medium mt-0.5">Custom NEET Routine</p>
+                                </div>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-white/80" />
+                        </Pressable>
+                    </motion.div>
+
+                    {/* Memory & Backup Card */}
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                        <div className="bg-gradient-to-r from-blue-950/60 to-indigo-950/60 text-blue-300 p-3.5 rounded-2xl flex justify-between items-center border border-blue-500/30 backdrop-blur-xl shadow-lg cursor-pointer">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-blue-500/20 p-2 rounded-xl border border-blue-500/30">
+                                    <Database className="h-5 w-5 text-blue-400" />
+                                </div>
+                                <div>
+                                    <p className="font-extrabold text-sm text-white leading-tight">Memory & System Backup</p>
+                                    <p className="text-[10px] text-blue-300/80 font-medium mt-0.5">Access Encrypted Cloud Sync</p>
+                                </div>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-blue-400" />
+                        </div>
+                    </motion.div>
+                </motion.div>
+
+                {/* Support Network & Utilities */}
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.15 }}
+                    className="space-y-2.5 pt-2"
+                >
+                    <h3 className="text-orange-400 text-[11px] font-black uppercase tracking-widest px-1 flex items-center gap-1.5">
+                        <Shield className="h-3.5 w-3.5 text-orange-400" /> Support Network & Hubs
+                    </h3>
+
+                    {/* Download Notes Card */}
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                        <Pressable onClick={() => navigate('/notes-library')} className="w-full text-left bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 text-white p-3.5 rounded-2xl flex justify-between items-center shadow-[0_4px_20px_rgba(249,115,22,0.3)] border border-orange-400/30">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-white/20 p-2 rounded-xl backdrop-blur-md">
+                                    <Download className="h-5 w-5 text-white" />
+                                </div>
+                                <div>
+                                    <p className="font-extrabold text-sm leading-tight">Download Notes Library</p>
+                                    <p className="text-[10px] text-orange-100/80 font-medium mt-0.5">Offline Revision PDFs</p>
+                                </div>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-white/80" />
+                        </Pressable>
+                    </motion.div>
+                    
+                    {/* Glassmorphic Navigation Links */}
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-1.5 backdrop-blur-xl divide-y divide-white/5 space-y-1">
+                        {isAdmin && (
+                            <Pressable onClick={() => onNavigate('admin')} className="w-full text-left flex items-center justify-between p-2.5 hover:bg-white/10 rounded-xl transition-colors">
+                                <div className="flex items-center gap-2.5 text-xs font-bold text-orange-400">
+                                    <Shield className="h-4 w-4" />
+                                    <span>Admin Master Panel</span>
+                                </div>
+                                <ChevronRight className="h-4 w-4 text-gray-400" />
+                            </Pressable>
+                        )}
+
+                        <div className="flex items-center justify-between p-2.5 hover:bg-white/10 rounded-xl transition-colors">
+                            <a href="https://instagram.com/mr.divakar00" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-xs font-medium text-gray-200">
+                                <Mail className="h-4 w-4 text-blue-400" />
+                                <span>Official Instagram: @mr.divakar00</span>
+                            </a>
+                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                        </div>
+
+                        <Pressable onClick={() => navigate('/school-search')} className="w-full text-left flex items-center justify-between p-2.5 hover:bg-white/10 rounded-xl transition-colors">
+                            <div className="flex items-center gap-2.5 text-xs font-medium text-gray-200">
+                                <Search className="h-4 w-4 text-cyan-400" />
+                                <span>Search Schools & Institutes</span>
+                            </div>
+                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                        </Pressable>
+
+                        <Pressable onClick={() => navigate('/about')} className="w-full text-left flex items-center justify-between p-2.5 hover:bg-white/10 rounded-xl transition-colors">
+                            <div className="flex items-center gap-2.5 text-xs font-medium text-gray-200">
+                                <HelpCircle className="h-4 w-4 text-purple-400" />
+                                <span>About NeetMaster & FAQ</span>
+                            </div>
+                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                        </Pressable>
+
+                        <Pressable onClick={() => onNavigate('technicalSupport')} className="w-full text-left flex items-center justify-between p-2.5 hover:bg-white/10 rounded-xl transition-colors">
+                            <div className="flex items-center gap-2.5 text-xs font-medium text-gray-200">
+                                <HelpCircle className="h-4 w-4 text-emerald-400" />
+                                <span>Technical Support & Helpdesk</span>
+                            </div>
+                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                        </Pressable>
+                    </div>
+                </motion.div>
+
+                {/* Modern Red Logout Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                    className="pt-2"
+                >
+                    <Pressable 
+                        onClick={handleLogOut} 
+                        className="w-full bg-gradient-to-r from-red-600/20 via-red-500/10 to-red-600/20 hover:from-red-600 hover:to-red-700 border border-red-500/30 hover:border-red-500 text-red-400 hover:text-white py-3 rounded-2xl font-black flex items-center justify-center gap-2 text-xs tracking-wider transition-all shadow-lg active:scale-95"
+                    >
+                        <LogOut className="h-4 w-4" /> END SESSION (LOG OUT)
+                    </Pressable>
+                </motion.div>
+
+            </div>
         </div>
     );
 }
