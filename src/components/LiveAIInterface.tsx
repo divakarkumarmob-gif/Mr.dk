@@ -883,68 +883,60 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                 Performance Synced 📊
             </div>
 
-            <div className={`relative flex items-center justify-center gap-4 transition-all ${selectedImages.length > 0 ? 'mb-2 scale-75 -mt-2' : 'mb-8 -mt-4'}`}>
-                <div className="flex flex-col gap-3">
-                    <motion.div 
-                        className="flex flex-col items-center gap-1"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.95 }}
-                        animate={{ y: [0, -8, 0] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                        <div className="w-9 h-9 rounded-full bg-blue-900/50 flex items-center justify-center border border-blue-500/30">
-                            <span className="text-base">⚛️</span>
-                        </div>
-                        <span className="text-xs text-gray-400">Physics</span>
-                    </motion.div>
-                    <motion.div 
-                        className="flex flex-col items-center gap-1"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.95 }}
-                        animate={{ y: [0, -6, 0] }}
-                        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                        <div className="w-9 h-9 rounded-full bg-purple-900/50 flex items-center justify-center border border-purple-500/30">
-                            <span className="text-base">🧪</span>
-                        </div>
-                        <span className="text-xs text-gray-400">Chemistry</span>
-                    </motion.div>
-                </div>
+            {/* Science subject floating icons header */}
+            <div className="flex items-center justify-around w-full max-w-sm mb-4 relative z-10">
+                <motion.div 
+                    className="flex flex-col items-center gap-1"
+                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    whileTap={{ scale: 0.95 }}
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    <div className="w-10 h-10 rounded-2xl bg-blue-950/60 border border-blue-500/40 flex items-center justify-center shadow-lg shadow-blue-500/10 backdrop-blur-md">
+                        <span className="text-lg">⚛️</span>
+                    </div>
+                    <span className="text-[10px] text-cyan-300 font-extrabold uppercase tracking-wider">Physics</span>
+                </motion.div>
+
                 <div className="flex flex-col items-center">
-                    <AgentFace status={status} volume={isAiSpeaking.current ? volume : 0} size={110} colorIndex={0} />
+                    <div className="relative p-2 rounded-full bg-slate-900/60 border border-slate-800 shadow-2xl backdrop-blur-md">
+                        <AgentFace status={status} volume={isAiSpeaking.current ? volume : 0} size={110} colorIndex={0} />
+                    </div>
                     {status === "Speaking..." && (
                         <button
                             onClick={handleInterrupt}
-                            className="text-[10px] text-red-400 bg-red-950/30 px-2 py-0.5 rounded-full mt-2 border border-red-500/20 hover:bg-red-950/50"
+                            className="text-[10px] font-extrabold text-rose-300 bg-rose-950/60 px-3 py-1 rounded-full mt-3 border border-rose-500/30 hover:bg-rose-900/80 transition cursor-pointer"
                         >
                             Tap to interrupt
                         </button>
                     )}
                 </div>
+
                 <motion.div 
                     className="flex flex-col items-center gap-1"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
-                    animate={{ y: [0, -12, 0] }}
+                    animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    <div className="w-9 h-9 rounded-full bg-green-900/50 flex items-center justify-center border border-green-500/30">
-                        <span className="text-base">🌿</span>
+                    <div className="w-10 h-10 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-center shadow-lg shadow-emerald-500/10 backdrop-blur-md">
+                        <span className="text-lg">🌿</span>
                     </div>
-                    <span className="text-xs text-gray-400">Biology</span>
+                    <span className="text-[10px] text-emerald-300 font-extrabold uppercase tracking-wider">Biology</span>
                 </motion.div>
             </div>
 
             {!isRecording && (
-                <h3 className={`font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 transition-all ${selectedImages.length > 0 ? 'text-lg mb-0' : 'text-2xl mb-2'}`}>Tap to talk</h3>
+                <h3 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-400 text-2xl mb-1 tracking-tight">Tap Mic to Speak</h3>
             )}
             {isRecording && (
-                <h3 className={`font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 transition-all ${selectedImages.length > 0 ? 'text-lg mb-0' : 'text-2xl mb-2'}`}>{status}</h3>
+                <h3 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 text-2xl mb-1 tracking-tight">{status}</h3>
             )}
             {selectedImages.length === 0 && (
-                <p className="text-gray-400 mb-3 text-center text-sm -mt-1">Ask me anything about NEET</p>
+                <p className="text-slate-400 mb-3 text-center text-xs font-medium">Ask any physics, chemistry, or biology doubt in Hindi or English</p>
             )}
-            <div className="flex-1 min-h-0 overflow-hidden w-full mb-2 flex flex-col gap-2">
+
+            <div className="flex-1 min-h-0 overflow-hidden w-full mb-3 flex flex-col gap-2 relative z-10">
                 {showCaptions && (
                     <div
                         ref={captionBoxRef}
@@ -952,20 +944,18 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                             const box = captionBoxRef.current;
                             if (!box) return;
                             const distanceFromBottom = box.scrollHeight - box.scrollTop - box.clientHeight;
-                            // Small threshold so "basically at the bottom" still counts as
-                            // following along, not as having scrolled away.
                             userScrolledUpRef.current = distanceFromBottom > 40;
                         }}
-                        className="w-full flex-1 bg-gray-800 rounded-lg p-3 overflow-y-auto text-sm text-gray-200"
+                        className="w-full flex-1 bg-slate-900/90 border border-slate-800 rounded-2xl p-4 overflow-y-auto text-xs text-slate-200 leading-relaxed shadow-xl backdrop-blur-md"
                     >
-                        {captionText || "AI ke liye captions yaha show honge..."}
+                        {captionText || "AI voice transcript yaha live display hoga..."}
                     </div>
                 )}
-                {selectedImages.length === 0 && (
-                    <div className="w-full flex-1 overflow-y-auto space-y-2">
+                {!showCaptions && selectedImages.length === 0 && (
+                    <div className="w-full flex-1 overflow-y-auto space-y-2 pr-1">
                         {messages.slice(-5).map((msg, index) => (
                             msg.text && (
-                                <div key={index} className={`p-2 rounded-lg text-xs ${msg.senderId === auth.currentUser?.uid ? 'bg-blue-600/50 self-end' : 'bg-gray-800/50 self-start'}`}>
+                                <div key={index} className={`p-3 rounded-2xl text-xs max-w-[85%] ${msg.senderId === auth.currentUser?.uid ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white self-end ml-auto shadow-md' : 'bg-slate-900/90 border border-slate-800 text-slate-200 self-start shadow-md'}`}>
                                     {msg.text}
                                 </div>
                             )
@@ -974,7 +964,7 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                 )}
             </div>
 
-            <div className="w-full flex flex-col items-center px-4 mt-auto flex-shrink-0">
+            <div className="w-full flex flex-col items-center px-4 mt-auto flex-shrink-0 relative z-20">
                 <AnimatePresence>
                     {selectedImages.length > 0 && (
                         <motion.div 
@@ -984,16 +974,16 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                             className="flex gap-2 mb-4 overflow-x-auto max-w-full pb-2 max-h-24"
                         >
                             {selectedImages.map((image) => (
-                                <div key={image.id} className="relative w-16 h-16 rounded-xl overflow-hidden border border-white/10 cursor-pointer" onClick={() => setPreviewImage({id: image.id, file: image.file})}>
+                                <div key={image.id} className="relative w-16 h-16 rounded-xl overflow-hidden border border-cyan-500/40 cursor-pointer shadow-lg" onClick={() => setPreviewImage({id: image.id, file: image.file})}>
                                     <img src={URL.createObjectURL(image.file)} alt="preview" className="w-full h-full object-cover" />
                                     {image.status === 'uploading' && (
-                                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                                            <Loader2 className="h-6 w-6 text-white animate-spin" />
+                                        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center">
+                                            <Loader2 className="h-5 w-5 text-cyan-400 animate-spin" />
                                         </div>
                                     )}
                                     <button 
                                         onClick={(e) => { e.stopPropagation(); handleRemoveImage(image.id); }}
-                                        className="absolute top-0 right-0 bg-red-500 rounded-full p-0.5"
+                                        className="absolute top-1 right-1 bg-rose-600 rounded-full p-1 shadow-md hover:bg-rose-500"
                                     >
                                         <X className="h-3 w-3 text-white" />
                                     </button>
@@ -1005,9 +995,9 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                 
                 <div className="w-full flex justify-between items-center mb-2">
                     <div className="w-12"></div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={handlePlusClick} className="p-4 bg-white/10 rounded-full">
-                            <Plus className="h-6 w-6 text-gray-200" />
+                    <div className="flex items-center gap-5">
+                        <button onClick={handlePlusClick} className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-full text-slate-300 hover:text-white hover:border-cyan-500/40 transition cursor-pointer shadow-lg">
+                            <Plus className="h-5 w-5" />
                         </button>
                         <input type="file" ref={fileInputRef} multiple accept="image/*" className="hidden" onChange={handleFileChange} />
                         
@@ -1016,12 +1006,12 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                                 {isRecording && status !== "Speaking..." && (
                                     <>
                                         <motion.span
-                                            className="absolute inset-0 rounded-full bg-red-500/40"
+                                            className="absolute inset-0 rounded-full bg-rose-500/40"
                                             animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
                                             transition={{ duration: 1.4, repeat: Infinity, ease: "easeOut" }}
                                         />
                                         <motion.span
-                                            className="absolute inset-0 rounded-full bg-red-500/30"
+                                            className="absolute inset-0 rounded-full bg-rose-500/30"
                                             animate={{ scale: [1, 1.35, 1], opacity: [0.7, 0, 0.7] }}
                                             transition={{ duration: 1.4, repeat: Infinity, ease: "easeOut", delay: 0.3 }}
                                         />
@@ -1032,7 +1022,7 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                                     animate={isRecording && status !== "Speaking..." ? { scale: [1, 1.06, 1] } : { scale: 1 }}
                                     transition={isRecording && status !== "Speaking..." ? { duration: 1.2, repeat: Infinity, ease: "easeInOut" } : {}}
                                     whileTap={{ scale: 0.9 }}
-                                    className={`relative w-20 h-20 rounded-full flex items-center justify-center ${isRecording ? 'bg-red-500' : 'bg-gradient-to-r from-blue-500 to-purple-500'}`}
+                                    className={`relative w-20 h-20 rounded-full flex items-center justify-center cursor-pointer shadow-2xl transition ${isRecording ? 'bg-rose-600 shadow-rose-600/40' : 'bg-gradient-to-tr from-blue-600 via-cyan-500 to-indigo-600 shadow-cyan-500/30'}`}
                                 >
                                     <Mic className="h-8 w-8 text-white" />
                                 </motion.button>
