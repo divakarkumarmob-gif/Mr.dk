@@ -126,7 +126,7 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
     }, [viewerUrl]);
 
     const handleViewerClose = () => {
-        window.history.back();
+        setViewerUrl(null);
     };
 
     const handleBack = () => {

@@ -209,7 +209,7 @@ export default function StudyHub({ subjects, onNavigate, setResumingTest, setCur
           
           {selectedResult && (
             <div className="fixed inset-0 bg-[#0a0e1a] z-[100] p-2 flex flex-col text-white">
-                <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />
+                <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
             </div>
           )
         }

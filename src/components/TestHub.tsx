@@ -313,7 +313,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
             {selectedResult && (
                 <div className="fixed inset-0 bg-[#0a0f24] z-[100] flex flex-col text-white overflow-y-auto">
                     <div className="p-2 min-h-full">
-                        <TestResultDetail result={selectedResult} onBack={() => window.history.back()} />
+                        <TestResultDetail result={selectedResult} onBack={() => setSelectedResult(null)} />
                     </div>
                 </div>
             )}

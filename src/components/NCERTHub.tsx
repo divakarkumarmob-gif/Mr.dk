@@ -348,11 +348,14 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
     };
 
     const handleChapterBack = () => {
-        window.history.back();
+        setSelectedBook(null);
     };
 
     const handlePdfClose = () => {
-        window.history.back();
+        if (viewerUrl?.url && viewerUrl.url.startsWith('blob:')) {
+            URL.revokeObjectURL(viewerUrl.url);
+        }
+        setViewerUrl(null);
     };
 
     return (
