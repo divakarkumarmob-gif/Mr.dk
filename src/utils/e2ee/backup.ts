@@ -62,6 +62,11 @@ export async function createPinBackupBlob(privateKeyBase64: string, pin: any): P
     }
 
     const sodium = await ensureSodium();
+
+    if (!sodium.crypto_pwhash_SALTBYTES || !sodium.crypto_secretbox_NONCEBYTES) {
+        throw new Error('Encryption library not fully initialized. Please retry in a moment.');
+    }
+
     const salt = sodium.randombytes_buf(sodium.crypto_pwhash_SALTBYTES);
     const nonce = sodium.randombytes_buf(sodium.crypto_secretbox_NONCEBYTES);
 
