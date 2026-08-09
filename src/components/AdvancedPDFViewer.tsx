@@ -24,6 +24,21 @@ try {
 const MIN_SCALE = 0.4;
 const MAX_SCALE = 4.0;
 
+// Firestore document IDs are capped at 1500 bytes — a base64-encoded full
+// PDF URL (especially a proxy URL with a long signed token attached) can
+// exceed that and makes every read/write throw an uncaught FirebaseError.
+// A short numeric hash of a stable identifier (title + origin, not the
+// full rotating token) stays well under the limit and is still unique
+// enough per chapter/paper.
+function shortHash(input: string): string {
+    let hash = 0;
+    for (let i = 0; i < input.length; i++) {
+        hash = ((hash << 5) - hash) + input.charCodeAt(i);
+        hash |= 0;
+    }
+    return Math.abs(hash).toString(36);
+}
+
 function getTouchDistance(touches: React.TouchList) {
     const dx = touches[0].clientX - touches[1].clientX;
     const dy = touches[0].clientY - touches[1].clientY;
@@ -170,8 +185,14 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
         const loadProgress = async () => {
             if (auth.currentUser && pdfUrl) {
-                const encodedUrl = btoa(encodeURIComponent(pdfUrl)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
-                const docRef = doc(db, 'user_reading_progress', `${auth.currentUser.uid}_${encodedUrl}`);
+                // Use a stable identifier (originalUrl if given, else title)
+                // instead of the full pdfUrl — pdfUrl can be a long proxy
+                // URL with a rotating token, which both changes between
+                // sessions (breaking lookup) and can exceed Firestore's
+                // 1500-byte document ID limit.
+                const stableId = originalUrl || title;
+                const docId = `${auth.currentUser.uid}_${shortHash(stableId)}`;
+                const docRef = doc(db, 'user_reading_progress', docId);
                 const docSnap = await getDoc(docRef);
                 if (docSnap.exists() && isMounted) {
                     setCurrentPage(docSnap.data().page);
@@ -235,8 +256,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     useEffect(() => {
         const saveProgress = async () => {
             if (auth.currentUser && numPages && pdfUrl) {
-                const encodedUrl = btoa(encodeURIComponent(pdfUrl)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
-                const docRef = doc(db, 'user_reading_progress', `${auth.currentUser.uid}_${encodedUrl}`);
+                const stableId = originalUrl || title;
+                const docId = `${auth.currentUser.uid}_${shortHash(stableId)}`;
+                const docRef = doc(db, 'user_reading_progress', docId);
                 await setDoc(docRef, { page: currentPage, lastUpdated: new Date() }, { merge: true });
             }
         };
