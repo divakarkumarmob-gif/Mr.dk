@@ -84,6 +84,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         startScale: 1.0,
         focalX: 0,
         focalY: 0,
+        startScrollLeft: 0,
+        startScrollTop: 0,
         tapStartX: 0,
         tapStartY: 0,
         tapStartTime: 0,
@@ -298,11 +300,25 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     // Fast GPU-accelerated Zoom Control (0ms lag, smooth 120 FPS animation)
     const zoomButton = (delta: number) => {
         setIsPinching(false);
-        setVisualScale(prev => {
-            const nextScale = Math.min(Math.max(prev + delta * 0.25, MIN_SCALE), MAX_SCALE);
+        const stage = stageRef.current;
+        const oldScale = currentScaleRef.current;
+        const nextScale = Math.min(Math.max(oldScale + delta * 0.25, MIN_SCALE), MAX_SCALE);
+
+        if (stage && oldScale > 0) {
+            const focalX = stage.clientWidth / 2;
+            const focalY = stage.clientHeight / 3;
+            const scaleRatio = nextScale / oldScale;
+            const targetScrollLeft = (stage.scrollLeft + focalX) * scaleRatio - focalX;
+            const targetScrollTop = (stage.scrollTop + focalY) * scaleRatio - focalY;
+
             currentScaleRef.current = nextScale;
-            return nextScale;
-        });
+            setVisualScale(nextScale);
+            stage.scrollLeft = Math.max(0, targetScrollLeft);
+            stage.scrollTop = Math.max(0, targetScrollTop);
+        } else {
+            currentScaleRef.current = nextScale;
+            setVisualScale(nextScale);
+        }
     };
 
     const goToPage = useCallback((updater: (p: number) => number) => {
@@ -394,6 +410,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 state.startScale = currentScaleRef.current;
                 state.moved = true;
 
+                const center = getTouchCenter(touches as any);
+                const rect = stage.getBoundingClientRect();
+                state.focalX = center.x - rect.left;
+                state.focalY = center.y - rect.top;
+                state.startScrollLeft = stage.scrollLeft;
+                state.startScrollTop = stage.scrollTop;
+
                 if (wrapRef.current) {
                     wrapRef.current.style.transition = 'none';
                 }
@@ -414,15 +437,23 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 if (e.cancelable) e.preventDefault();
 
                 const currentDistance = getTouchDistance(touches as any);
-                if (state.startDistance > 0) {
+                if (state.startDistance > 0 && state.startScale > 0) {
                     const ratio = currentDistance / state.startDistance;
                     const newScale = Math.min(Math.max(state.startScale * ratio, MIN_SCALE), MAX_SCALE);
                     currentScaleRef.current = newScale;
+
+                    const scaleRatio = newScale / state.startScale;
+                    const targetScrollLeft = (state.startScrollLeft + state.focalX) * scaleRatio - state.focalX;
+                    const targetScrollTop = (state.startScrollTop + state.focalY) * scaleRatio - state.focalY;
 
                     if (state.rafId) cancelAnimationFrame(state.rafId);
                     state.rafId = requestAnimationFrame(() => {
                         if (wrapRef.current) {
                             wrapRef.current.style.transform = `scale(${newScale})`;
+                        }
+                        if (stageRef.current) {
+                            stageRef.current.scrollLeft = Math.max(0, targetScrollLeft);
+                            stageRef.current.scrollTop = Math.max(0, targetScrollTop);
                         }
                     });
                 }
@@ -460,12 +491,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         // Double tap toggle
                         setIsPinching(false);
                         const targetScale = currentScaleRef.current > 1.4 ? 1.0 : 2.0;
+                        const rect = stage.getBoundingClientRect();
+                        const focalX = state.tapStartX - rect.left;
+                        const focalY = state.tapStartY - rect.top;
+                        const oldScale = currentScaleRef.current;
+                        const scaleRatio = targetScale / (oldScale || 1.0);
+                        const targetScrollLeft = (stage.scrollLeft + focalX) * scaleRatio - focalX;
+                        const targetScrollTop = (stage.scrollTop + focalY) * scaleRatio - focalY;
+
                         currentScaleRef.current = targetScale;
                         setVisualScale(targetScale);
                         if (wrapRef.current) {
                             wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0, 1)';
                             wrapRef.current.style.transform = `scale(${targetScale})`;
                         }
+                        stage.scrollLeft = Math.max(0, targetScrollLeft);
+                        stage.scrollTop = Math.max(0, targetScrollTop);
                         state.lastTapTime = 0;
                     } else {
                         state.lastTapTime = now;
@@ -481,10 +522,22 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             if (e.ctrlKey || e.metaKey) {
                 if (e.cancelable) e.preventDefault();
                 setIsPinching(false);
+                const rect = stage.getBoundingClientRect();
+                const focalX = e.clientX - rect.left;
+                const focalY = e.clientY - rect.top;
+
                 const zoomFactor = e.deltaY < 0 ? 1.15 : 0.85;
-                const nextScale = Math.min(Math.max(currentScaleRef.current * zoomFactor, MIN_SCALE), MAX_SCALE);
+                const oldScale = currentScaleRef.current;
+                const nextScale = Math.min(Math.max(oldScale * zoomFactor, MIN_SCALE), MAX_SCALE);
+                const scaleRatio = nextScale / (oldScale || 1.0);
+
+                const targetScrollLeft = (stage.scrollLeft + focalX) * scaleRatio - focalX;
+                const targetScrollTop = (stage.scrollTop + focalY) * scaleRatio - focalY;
+
                 currentScaleRef.current = nextScale;
                 setVisualScale(nextScale);
+                stage.scrollLeft = Math.max(0, targetScrollLeft);
+                stage.scrollTop = Math.max(0, targetScrollTop);
             }
         };
 
@@ -818,7 +871,9 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     </div>
                 ) : (
                     <div
-                        className="min-w-full min-h-full flex flex-col items-center justify-start mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0 transition-all duration-150 ease-out"
+                        className={`min-w-full min-h-full flex flex-col ${
+                            visualScale > 1.0 ? 'items-start justify-start' : 'items-center justify-start'
+                        } mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0 transition-all duration-150 ease-out`}
                         style={{
                             width: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
                             minHeight: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
@@ -829,7 +884,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             className="flex flex-col items-center justify-start shrink-0"
                             style={{
                                 transform: `scale(${visualScale})`,
-                                transformOrigin: 'top center',
+                                transformOrigin: visualScale > 1.0 ? 'top left' : 'top center',
                                 transition: isPinching ? 'none' : 'transform 0.18s cubic-bezier(0.2, 0, 0, 1)',
                                 willChange: 'transform',
                             }}
