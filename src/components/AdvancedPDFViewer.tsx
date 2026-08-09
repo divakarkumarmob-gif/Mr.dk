@@ -419,6 +419,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
                 if (wrapRef.current) {
                     wrapRef.current.style.transition = 'none';
+                    wrapRef.current.style.transformOrigin = 'top left';
+                    if (wrapRef.current.parentElement) {
+                        wrapRef.current.parentElement.style.alignItems = 'flex-start';
+                    }
                 }
             } else if (touches.length === 1) {
                 state.active = true;
@@ -449,7 +453,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     if (state.rafId) cancelAnimationFrame(state.rafId);
                     state.rafId = requestAnimationFrame(() => {
                         if (wrapRef.current) {
+                            wrapRef.current.style.transformOrigin = 'top left';
                             wrapRef.current.style.transform = `scale(${newScale})`;
+                            if (wrapRef.current.parentElement) {
+                                wrapRef.current.parentElement.style.alignItems = newScale > 1.0 ? 'flex-start' : 'center';
+                            }
                         }
                         if (stageRef.current) {
                             stageRef.current.scrollLeft = Math.max(0, targetScrollLeft);
@@ -478,7 +486,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     setVisualScale(finalScale);
 
                     if (wrapRef.current) {
-                        wrapRef.current.style.transition = 'transform 0.18s cubic-bezier(0.2, 0, 0, 1)';
+                        wrapRef.current.style.transition = 'transform 0.1s ease-out';
+                        wrapRef.current.style.transformOrigin = finalScale > 1.0 ? 'top left' : 'top center';
                         wrapRef.current.style.transform = `scale(${finalScale})`;
                     }
                 }
@@ -873,7 +882,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     <div
                         className={`min-w-full min-h-full flex flex-col ${
                             visualScale > 1.0 ? 'items-start justify-start' : 'items-center justify-start'
-                        } mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0 transition-all duration-150 ease-out`}
+                        } mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0`}
                         style={{
                             width: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
                             minHeight: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
@@ -885,7 +894,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             style={{
                                 transform: `scale(${visualScale})`,
                                 transformOrigin: visualScale > 1.0 ? 'top left' : 'top center',
-                                transition: isPinching ? 'none' : 'transform 0.18s cubic-bezier(0.2, 0, 0, 1)',
+                                transition: isPinching ? 'none' : 'transform 0.1s ease-out',
                                 willChange: 'transform',
                             }}
                         >
