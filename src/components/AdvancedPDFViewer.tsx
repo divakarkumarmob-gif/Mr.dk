@@ -455,9 +455,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         if (wrapRef.current) {
                             wrapRef.current.style.transformOrigin = 'top left';
                             wrapRef.current.style.transform = `scale(${newScale})`;
-                            if (wrapRef.current.parentElement) {
-                                wrapRef.current.parentElement.style.alignItems = newScale > 1.0 ? 'flex-start' : 'center';
-                            }
                         }
                         if (stageRef.current) {
                             stageRef.current.scrollLeft = Math.max(0, targetScrollLeft);
@@ -487,7 +484,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
                     if (wrapRef.current) {
                         wrapRef.current.style.transition = 'transform 0.1s ease-out';
-                        wrapRef.current.style.transformOrigin = finalScale > 1.0 ? 'top left' : 'top center';
+                        wrapRef.current.style.transformOrigin = 'top left';
                         wrapRef.current.style.transform = `scale(${finalScale})`;
                     }
                 }
@@ -880,12 +877,10 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     </div>
                 ) : (
                     <div
-                        className={`min-w-full min-h-full flex flex-col ${
-                            visualScale > 1.0 ? 'items-start justify-start' : 'items-center justify-start'
-                        } mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0`}
+                        className="min-w-full min-h-full flex flex-col items-start justify-start mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0"
                         style={{
-                            width: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
-                            minHeight: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
+                            width: `${Math.max(visualScale, 1.0) * 100}%`,
+                            minHeight: `${Math.max(visualScale, 1.0) * 100}%`,
                         }}
                     >
                         <div
@@ -893,7 +888,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                             className="flex flex-col items-center justify-start shrink-0"
                             style={{
                                 transform: `scale(${visualScale})`,
-                                transformOrigin: visualScale > 1.0 ? 'top left' : 'top center',
+                                transformOrigin: 'top left',
                                 transition: isPinching ? 'none' : 'transform 0.1s ease-out',
                                 willChange: 'transform',
                             }}
