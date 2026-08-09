@@ -229,6 +229,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         if (pageWidthRef.current > 0 && availableWidth > 0) {
             const autoFitScale = Math.min(Math.max(availableWidth / (pageWidthRef.current * renderScale), 0.5), 3.0);
             setIsPinching(false);
+            currentScaleRef.current = autoFitScale;
             setVisualScale(autoFitScale);
         }
     }, [renderScale]);
@@ -248,6 +249,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const availableWidth = stage ? stage.clientWidth - 24 : window.innerWidth - 24;
             if (viewport.width > 0 && availableWidth > 0) {
                 const autoFitScale = Math.min(Math.max(availableWidth / (viewport.width * renderScale), 0.5), 3.0);
+                currentScaleRef.current = autoFitScale;
                 setVisualScale(autoFitScale);
             }
         }).catch(() => {});
@@ -293,11 +295,12 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         }
     };
 
-    // Fast GPU-accelerated Zoom Control (0ms lag, 0 flashing)
+    // Fast GPU-accelerated Zoom Control (0ms lag, smooth 120 FPS animation)
     const zoomButton = (delta: number) => {
         setIsPinching(false);
         setVisualScale(prev => {
             const nextScale = Math.min(Math.max(prev + delta * 0.25, MIN_SCALE), MAX_SCALE);
+            currentScaleRef.current = nextScale;
             return nextScale;
         });
     };
@@ -373,7 +376,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
         currentScaleRef.current = visualScale;
     }, [visualScale]);
 
-    // ---- Native Non-Passive Touch Event Listener for 60 FPS Lag-Free Finger Pinch Zoom ----
+    // ---- Native Non-Passive Touch & Wheel Event Listener for 60-120 FPS Lag-Free Zoom ----
     useEffect(() => {
         const stage = stageRef.current;
         if (!stage) return;
@@ -391,14 +394,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 state.startScale = currentScaleRef.current;
                 state.moved = true;
 
-                const center = getTouchCenter(touches as any);
-                const rect = stage.getBoundingClientRect();
-                state.focalX = center.x - rect.left + stage.scrollLeft;
-                state.focalY = center.y - rect.top + stage.scrollTop;
-
                 if (wrapRef.current) {
                     wrapRef.current.style.transition = 'none';
-                    wrapRef.current.style.transformOrigin = 'top center';
                 }
             } else if (touches.length === 1) {
                 state.active = true;
@@ -414,31 +411,20 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             if (!state.active) return;
 
             if (touches.length >= 2) {
-                // CRITICAL: Prevent native browser pinch/scroll conflict to eliminate jitter
                 if (e.cancelable) e.preventDefault();
 
                 const currentDistance = getTouchDistance(touches as any);
                 if (state.startDistance > 0) {
                     const ratio = currentDistance / state.startDistance;
                     const newScale = Math.min(Math.max(state.startScale * ratio, MIN_SCALE), MAX_SCALE);
-                    
-                    const oldScale = currentScaleRef.current;
                     currentScaleRef.current = newScale;
 
-                    // Smooth scroll tracking relative to pinch center
-                    if (oldScale > 0 && newScale !== oldScale) {
-                        const scaleRatio = newScale / oldScale;
-                        const center = getTouchCenter(touches as any);
-                        const rect = stage.getBoundingClientRect();
-                        const currentTouchFocalY = center.y - rect.top;
-                        
-                        stage.scrollTop = (stage.scrollTop + currentTouchFocalY) * scaleRatio - currentTouchFocalY;
-                    }
-
-                    // Direct GPU DOM scale for 0ms lag
-                    if (wrapRef.current) {
-                        wrapRef.current.style.transform = `scale(${newScale})`;
-                    }
+                    if (state.rafId) cancelAnimationFrame(state.rafId);
+                    state.rafId = requestAnimationFrame(() => {
+                        if (wrapRef.current) {
+                            wrapRef.current.style.transform = `scale(${newScale})`;
+                        }
+                    });
                 }
             } else if (touches.length === 1) {
                 const totalDx = touches[0].clientX - state.tapStartX;
@@ -457,12 +443,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     setIsPinching(false);
                     state.startDistance = 0;
 
-                    // Sync final visual scale to React state
                     const finalScale = currentScaleRef.current;
                     setVisualScale(finalScale);
 
                     if (wrapRef.current) {
-                        wrapRef.current.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)';
+                        wrapRef.current.style.transition = 'transform 0.18s cubic-bezier(0.2, 0, 0, 1)';
                         wrapRef.current.style.transform = `scale(${finalScale})`;
                     }
                 }
@@ -474,11 +459,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     if (now - state.lastTapTime < 300) {
                         // Double tap toggle
                         setIsPinching(false);
-                        const targetScale = currentScaleRef.current > 1.5 ? 1.0 : 2.0;
+                        const targetScale = currentScaleRef.current > 1.4 ? 1.0 : 2.0;
                         currentScaleRef.current = targetScale;
                         setVisualScale(targetScale);
                         if (wrapRef.current) {
-                            wrapRef.current.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)';
+                            wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0, 1)';
                             wrapRef.current.style.transform = `scale(${targetScale})`;
                         }
                         state.lastTapTime = 0;
@@ -491,16 +476,31 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             }
         };
 
+        // Desktop Trackpad Pinch & Ctrl + Mouse Wheel Zoom Listener
+        const onWheel = (e: WheelEvent) => {
+            if (e.ctrlKey || e.metaKey) {
+                if (e.cancelable) e.preventDefault();
+                setIsPinching(false);
+                const zoomFactor = e.deltaY < 0 ? 1.15 : 0.85;
+                const nextScale = Math.min(Math.max(currentScaleRef.current * zoomFactor, MIN_SCALE), MAX_SCALE);
+                currentScaleRef.current = nextScale;
+                setVisualScale(nextScale);
+            }
+        };
+
         stage.addEventListener('touchstart', onTouchStart, { passive: false });
         stage.addEventListener('touchmove', onTouchMove, { passive: false });
         stage.addEventListener('touchend', onTouchEnd, { passive: true });
         stage.addEventListener('touchcancel', onTouchEnd, { passive: true });
+        stage.addEventListener('wheel', onWheel, { passive: false });
 
         return () => {
+            if (state.rafId) cancelAnimationFrame(state.rafId);
             stage.removeEventListener('touchstart', onTouchStart);
             stage.removeEventListener('touchmove', onTouchMove);
             stage.removeEventListener('touchend', onTouchEnd);
             stage.removeEventListener('touchcancel', onTouchEnd);
+            stage.removeEventListener('wheel', onWheel);
         };
     }, [toggleControlsOnTap]);
 
@@ -818,68 +818,76 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                     </div>
                 ) : (
                     <div
-                        ref={wrapRef}
-                        className="w-full flex flex-col items-center justify-start mx-auto px-0 pt-2 sm:pt-4 pb-0 mb-0 shrink-0"
+                        className="min-w-full min-h-full flex flex-col items-center justify-start mx-auto px-1 pt-2 sm:pt-4 pb-12 shrink-0 transition-all duration-150 ease-out"
                         style={{
-                            transform: `scale(${visualScale})`,
-                            transformOrigin: 'top center',
-                            transition: isPinching ? 'none' : 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
-                            willChange: 'transform',
+                            width: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
+                            minHeight: visualScale > 1.0 ? `${visualScale * 100}%` : '100%',
                         }}
                     >
-                        <Document
-                            file={activePdfUrl}
-                            options={pdfOptions}
-                            onLoadSuccess={onDocumentLoadSuccess}
-                            onLoadError={onDocumentLoadError}
-                            className="flex flex-col items-center gap-6 px-1 pb-0 mb-0"
+                        <div
+                            ref={wrapRef}
+                            className="flex flex-col items-center justify-start shrink-0"
+                            style={{
+                                transform: `scale(${visualScale})`,
+                                transformOrigin: 'top center',
+                                transition: isPinching ? 'none' : 'transform 0.18s cubic-bezier(0.2, 0, 0, 1)',
+                                willChange: 'transform',
+                            }}
                         >
-                            {Array.from(new Array(numPages || 0), (_, index) => {
-                                const pageNum = index + 1;
-                                const isVisible = pageNum >= Math.max(1, currentPage - 2) && pageNum <= Math.min(numPages || 1, currentPage + 3);
+                            <Document
+                                file={activePdfUrl}
+                                options={pdfOptions}
+                                onLoadSuccess={onDocumentLoadSuccess}
+                                onLoadError={onDocumentLoadError}
+                                className="flex flex-col items-center gap-6 px-1 pb-0 mb-0"
+                            >
+                                {Array.from(new Array(numPages || 0), (_, index) => {
+                                    const pageNum = index + 1;
+                                    const isVisible = pageNum >= Math.max(1, currentPage - 2) && pageNum <= Math.min(numPages || 1, currentPage + 3);
 
-                                return (
-                                    <div
-                                        key={`pdf_page_${pageNum}`}
-                                        id={`pdf-page-${pageNum}`}
-                                        data-page={pageNum}
-                                        className="pdf-page-item flex justify-center shadow-2xl my-2 min-h-[350px] min-w-[300px]"
-                                        style={{
-                                            width: pageWidthRef.current ? `${pageWidthRef.current * renderScale}px` : '100%',
-                                            minHeight: pageHeightRef.current ? `${pageHeightRef.current * renderScale}px` : '500px',
-                                        }}
+                                    return (
+                                        <div
+                                            key={`pdf_page_${pageNum}`}
+                                            id={`pdf-page-${pageNum}`}
+                                            data-page={pageNum}
+                                            className="pdf-page-item flex justify-center shadow-2xl my-2 min-h-[350px] min-w-[300px]"
+                                            style={{
+                                                width: pageWidthRef.current ? `${pageWidthRef.current * renderScale}px` : '100%',
+                                                minHeight: pageHeightRef.current ? `${pageHeightRef.current * renderScale}px` : '500px',
+                                            }}
+                                        >
+                                            {isVisible ? (
+                                                <Page
+                                                    pageNumber={pageNum}
+                                                    scale={renderScale}
+                                                    canvasBackground="white"
+                                                    renderTextLayer={true}
+                                                    renderAnnotationLayer={false}
+                                                    className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full bg-slate-900/60 rounded-md border border-white/5 flex items-center justify-center text-xs text-gray-500 font-mono">
+                                                    Page {pageNum}
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+
+                                {/* End of Document — Thank You Card */}
+                                {numPages && (
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        className="mt-6 mb-2 px-8 py-5 bg-gradient-to-r from-blue-950/80 via-indigo-950/70 to-slate-900/80 border border-blue-500/20 rounded-3xl text-center shadow-2xl max-w-sm mx-auto backdrop-blur-xl shrink-0"
                                     >
-                                        {isVisible ? (
-                                            <Page
-                                                pageNumber={pageNum}
-                                                scale={renderScale}
-                                                canvasBackground="white"
-                                                renderTextLayer={true}
-                                                renderAnnotationLayer={false}
-                                                className="bg-white rounded-md overflow-hidden ring-1 ring-black/10 shadow-2xl"
-                                            />
-                                        ) : (
-                                            <div className="w-full h-full bg-slate-900/60 rounded-md border border-white/5 flex items-center justify-center text-xs text-gray-500 font-mono">
-                                                Page {pageNum}
-                                            </div>
-                                        )}
-                                    </div>
-                                );
-                            })}
-
-                            {/* End of Document — Thank You Card */}
-                            {numPages && (
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    className="mt-6 mb-2 px-8 py-5 bg-gradient-to-r from-blue-950/80 via-indigo-950/70 to-slate-900/80 border border-blue-500/20 rounded-3xl text-center shadow-2xl max-w-sm mx-auto backdrop-blur-xl shrink-0"
-                                >
-                                    <div className="text-3xl mb-2">✨ 🩺 ✨</div>
-                                    <h3 className="text-base font-bold text-white mb-1">Thank You & Best of Luck for NEET!</h3>
-                                    <p className="text-xs text-blue-300 font-medium">Keep Practicing • Revision is the Key to Success!</p>
-                                </motion.div>
-                            )}
-                        </Document>
+                                        <div className="text-3xl mb-2">✨ 🩺 ✨</div>
+                                        <h3 className="text-base font-bold text-white mb-1">Thank You & Best of Luck for NEET!</h3>
+                                        <p className="text-xs text-blue-300 font-medium">Keep Practicing • Revision is the Key to Success!</p>
+                                    </motion.div>
+                                )}
+                            </Document>
+                        </div>
                     </div>
                 )}
             </div>

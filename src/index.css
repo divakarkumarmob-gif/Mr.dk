@@ -172,18 +172,11 @@
   background-color: #ffffff !important;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
   position: relative;
-  contain: content;
-  transform-style: preserve-3d;
-  will-change: transform;
 }
 
 .react-pdf__Page__canvas {
   background-color: #ffffff !important;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 /* react-pdf text layer base — make it visible for search */
