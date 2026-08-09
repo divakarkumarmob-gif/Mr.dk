@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { X, Download, Loader2, AlertCircle } from 'lucide-react';
 import { getNotificationFileViewUrl, downloadAndOpenNotificationFile } from '../utils/notificationFileDownload';
 import { getPdfViewerUrl } from '../utils/api';
-import { fetchAndCachePdf } from '../lib/pdfCache';
+import { fetchAndCacheByStableKey, getRamCachedPdf, getCachedPdf } from '../lib/pdfCache';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 
 interface NotificationFileViewerProps {
@@ -31,15 +31,34 @@ export default function NotificationFileViewer({ file, onClose }: NotificationFi
         let cancelled = false;
         (async () => {
             try {
+                if (file.fileType === 'pdf') {
+                    // file.key is stable — check RAM/disk cache by it first,
+                    // before paying for the signed-URL + proxy-token round
+                    // trips (both of which return a fresh, rotating URL on
+                    // every call and so can never be cached-by-URL usefully).
+                    const ramUrl = getRamCachedPdf(file.key);
+                    if (ramUrl) {
+                        if (!cancelled) setUrl(ramUrl);
+                        return;
+                    }
+                    try {
+                        const diskUrl = await getCachedPdf(file.key);
+                        if (diskUrl) {
+                            if (!cancelled) setUrl(diskUrl);
+                            return;
+                        }
+                    } catch {
+                        // fall through to network fetch below
+                    }
+                }
+
                 const signedUrl = await getNotificationFileViewUrl(file.key);
                 if (!cancelled) {
                     if (file.fileType === 'pdf') {
                         try {
                             const proxyUrl = await getPdfViewerUrl(signedUrl);
                             if (!cancelled) setUrl(proxyUrl);
-                            const baseName = file.name.replace(/\.pdf$/i, '').replace(/[^a-z0-9]/gi, '_').toLowerCase();
-                            const cleanName = `${baseName}.pdf`;
-                            fetchAndCachePdf(proxyUrl, cleanName).catch(() => {});
+                            fetchAndCacheByStableKey(proxyUrl, file.key).catch(() => {});
                         } catch (proxyErr) {
                             console.warn('[NotificationFileViewer] Proxy fetch warning, fallback to signedUrl:', proxyErr);
                             if (!cancelled) setUrl(signedUrl);

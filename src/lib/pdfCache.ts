@@ -173,6 +173,54 @@ export const fetchAndCachePdf = async (url: string, filename: string): Promise<s
 };
 
 /**
+ * Cache a PDF under a caller-provided STABLE key (no URL hashing). Use this
+ * when the source URL can change between sessions (e.g. a signed/proxy URL
+ * with a rotating token) but the content itself is identified by something
+ * stable, like a chapter id — otherwise a later lookup with just that stable
+ * id (via getRamCachedPdf(stableKey) / getCachedPdf(stableKey)) will never
+ * match what was stored under the URL-hashed key.
+ */
+export const fetchAndCacheByStableKey = async (url: string, stableKey: string): Promise<string> => {
+    const cleanKey = getPdfCacheKey(stableKey);
+
+    if (ramPdfCache.has(cleanKey)) {
+        return ramPdfCache.get(cleanKey)!;
+    }
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const blob = await response.blob();
+    const arrayBuffer = await blob.arrayBuffer();
+
+    if (!isValidPdfBuffer(arrayBuffer)) {
+        throw new Error('Downloaded data is not a valid PDF file (possible HTML error/redirect page)');
+    }
+
+    const pdfBlob = new Blob([arrayBuffer], { type: 'application/pdf' });
+    const blobUrl = URL.createObjectURL(pdfBlob);
+    ramPdfCache.set(cleanKey, blobUrl);
+
+    (async () => {
+        try {
+            await saveToIDB(cleanKey, arrayBuffer);
+            if (Capacitor.isNativePlatform()) {
+                const base64Data = await blobToBase64(pdfBlob);
+                await Filesystem.writeFile({
+                    path: `pdfs/${cleanKey}`,
+                    data: base64Data,
+                    directory: Directory.Data,
+                    recursive: true,
+                });
+            }
+        } catch (err) {
+            console.warn('[pdfCache] Background persist notice:', err);
+        }
+    })();
+
+    return blobUrl;
+};
+
+/**
  * Cache PDF locally
  */
 export const cachePdf = async (url: string, filename: string): Promise<string | null> => {

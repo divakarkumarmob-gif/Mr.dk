@@ -6,6 +6,7 @@ import { saveNoteOffline, getNoteOffline, isNoteDownloaded, clearOfflineNotes, t
 import { storageService } from '../lib/storageService';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
+import { getRamCachedPdf, getCachedPdf, fetchAndCacheByStableKey } from '../lib/pdfCache';
 import { useModalBackButton } from '../utils/hardwareBackButton';
 
 function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () => void }) {
@@ -21,14 +22,42 @@ function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () 
             if (!isMounted) return;
             if (localData) {
                 setLocalUrl(localData);
-            } else {
-                try {
-                    const url = await getPdfViewerUrl(pdfUrl);
-                    if (isMounted) setRemoteViewerUrl(url);
-                } catch (e) {
-                    console.error("Failed to get PDF token for note:", e);
-                    if (isMounted) setRemoteViewerUrl(getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(pdfUrl)}`));
+                setCheckedCache(true);
+                return;
+            }
+
+            // pdfUrl here is stable (deterministic from chapterName, no
+            // rotating token) so we can cache/lookup directly by it — this
+            // skips the proxy-token network round trip entirely on repeat
+            // opens of the same chapter.
+            const ramUrl = getRamCachedPdf(pdfUrl);
+            if (ramUrl) {
+                if (isMounted) {
+                    setLocalUrl(ramUrl);
+                    setCheckedCache(true);
                 }
+                return;
+            }
+            try {
+                const diskUrl = await getCachedPdf(pdfUrl);
+                if (diskUrl && isMounted) {
+                    setLocalUrl(diskUrl);
+                    setCheckedCache(true);
+                    return;
+                }
+            } catch {
+                // fall through to network fetch below
+            }
+
+            try {
+                const url = await getPdfViewerUrl(pdfUrl);
+                if (isMounted) setRemoteViewerUrl(url);
+                // Warm the stable-key cache in the background so the next
+                // open of this same chapter hits the RAM/disk check above.
+                fetchAndCacheByStableKey(url, pdfUrl).catch(() => {});
+            } catch (e) {
+                console.error("Failed to get PDF token for note:", e);
+                if (isMounted) setRemoteViewerUrl(getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(pdfUrl)}`));
             }
             if (isMounted) setCheckedCache(true);
         })();

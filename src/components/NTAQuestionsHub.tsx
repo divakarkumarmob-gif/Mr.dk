@@ -5,6 +5,7 @@ import { ArrowLeft, FileText, Search, ExternalLink, BookOpen, Clock, Tag, Loader
 import Pressable from './Pressable';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
+import { getRamCachedPdf, getCachedPdf, fetchAndCacheByStableKey } from '../lib/pdfCache';
 
 interface NTAPaper {
     id: string;
@@ -97,10 +98,32 @@ export default function NTAQuestionsHub({ onBack, autoOpenPaperId }: { onBack: (
 
     const handleOpenPaper = async (paper: NTAPaper) => {
         const targetUrl = (useMirror && paper.mirrorUrl) ? paper.mirrorUrl : paper.url;
+
+        // targetUrl is stable (hardcoded per paper, no rotating token) so we
+        // can cache/lookup by it directly — skips the proxy-token round
+        // trip on repeat opens of the same paper.
+        const ramUrl = getRamCachedPdf(targetUrl);
+        if (ramUrl) {
+            setViewerUrl({ url: ramUrl, title: paper.title, originalUrl: targetUrl });
+            window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
+            return;
+        }
+        try {
+            const diskUrl = await getCachedPdf(targetUrl);
+            if (diskUrl) {
+                setViewerUrl({ url: diskUrl, title: paper.title, originalUrl: targetUrl });
+                window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
+                return;
+            }
+        } catch {
+            // fall through to network fetch below
+        }
+
         try {
             const proxyUrl = await getPdfViewerUrl(targetUrl);
             setViewerUrl({ url: proxyUrl, title: paper.title, originalUrl: targetUrl });
             window.history.pushState({ ...window.history.state, isPdfOpen: true }, '', window.location.href);
+            fetchAndCacheByStableKey(proxyUrl, targetUrl).catch(() => {});
         } catch (e) {
             console.error("Failed to get PDF token:", e);
         }

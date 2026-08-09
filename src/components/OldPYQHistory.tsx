@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, Download, FileText, ExternalLink, Calendar, Search } from 'lucide-react';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
+import { getRamCachedPdf, getCachedPdf, fetchAndCacheByStableKey } from '../lib/pdfCache';
 
 interface PaperLink {
     year: string;
@@ -61,8 +62,26 @@ export default function OldPYQHistory({ onBack }: Props) {
         const isDirectPdf = paper.url.toLowerCase().endsWith('.pdf');
         let finalUrl = paper.url;
         if (isDirectPdf) {
+            // paper.url is stable (hardcoded), so check RAM/disk cache by it
+            // directly before paying for a fresh proxy-token round trip.
+            const ramUrl = getRamCachedPdf(paper.url);
+            if (ramUrl) {
+                setActiveResource({ url: ramUrl, title: paper.title, originalUrl: paper.url });
+                return;
+            }
+            try {
+                const diskUrl = await getCachedPdf(paper.url);
+                if (diskUrl) {
+                    setActiveResource({ url: diskUrl, title: paper.title, originalUrl: paper.url });
+                    return;
+                }
+            } catch {
+                // fall through to network fetch below
+            }
+
             try {
                 finalUrl = await getPdfViewerUrl(paper.url);
+                fetchAndCacheByStableKey(finalUrl, paper.url).catch(() => {});
             } catch (e) {
                 console.error("Failed to get PDF token:", e);
                 finalUrl = getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(paper.url)}`);

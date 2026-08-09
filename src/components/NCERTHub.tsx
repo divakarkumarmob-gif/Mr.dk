@@ -6,7 +6,7 @@ import AdvancedPDFViewer from './AdvancedPDFViewer';
 import Pressable from './Pressable';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
-import { fetchAndCachePdf } from '../lib/pdfCache';
+import { fetchAndCachePdf, fetchAndCacheByStableKey, getRamCachedPdf, getCachedPdf } from '../lib/pdfCache';
 import { scheduleNcertRereadNotification } from '../utils/studyNotificationEngine';
 
 // Simple IndexedDB wrapper for PDF storage
@@ -207,55 +207,93 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
             console.log("Loading offline PDF for:", id);
             const url = URL.createObjectURL(offlineBlob);
             setViewerUrl({ url, title });
-        } else {
-            console.log("Fetching online PDF for:", id);
-            // Refresh S3 list to ensure we have fresh URLs
-            setIsLoadingS3(true);
+            return;
+        }
+
+        // This chapter was viewed before (even without an explicit
+        // "Download") — fetchAndCachePdf already stored it in RAM/disk in
+        // pdfCache.ts. Re-using that here skips BOTH the S3 list fetch and
+        // the proxy-token round trip entirely on repeat opens, which is
+        // where the real "still slow on 2nd open" delay was coming from.
+        const cacheKey = `${bookCode}_ch${chNum}`;
+        const ramUrl = getRamCachedPdf(cacheKey);
+        if (ramUrl) {
+            console.log("Loading RAM-cached PDF for:", id);
+            setViewerUrl({ url: ramUrl, title });
+            return;
+        }
+        try {
+            const diskUrl = await getCachedPdf(cacheKey);
+            if (diskUrl) {
+                console.log("Loading disk-cached PDF for:", id);
+                setViewerUrl({ url: diskUrl, title });
+                return;
+            }
+        } catch {
+            // fall through to network fetch below
+        }
+
+        console.log("Fetching online PDF for:", id);
+        setIsLoadingS3(true);
+        try {
             const bucket = selectedClass === '12' ? 'class-12th' : 'class-11th';
-            const listUrl = getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${selectedSubject.toLowerCase()}`);
-            setNcertDebug(`fetching list url=${listUrl}`);
-            try {
-                const subjectFolder = selectedSubject.toLowerCase();
-                const res = await fetch(getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${subjectFolder}`));
+            const subjectFolder = selectedSubject.toLowerCase();
+
+            // Reuse the already-fetched file list for this subject/class
+            // (populated by the useEffect above) instead of re-fetching it
+            // on every single chapter open — the list doesn't change
+            // between chapter taps within the same subject.
+            let files = s3Files;
+            if (files.length === 0) {
+                const listUrl = getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${subjectFolder}`);
+                setNcertDebug(`fetching list url=${listUrl}`);
+                const res = await fetch(listUrl);
                 setNcertDebug(`list status=${res.status}`);
                 const data = await res.json();
                 console.log("NCERT list fetch result:", data);
                 if (data.success && Array.isArray(data.files)) {
+                    files = data.files;
                     setS3Files(data.files);
-
-                    // Background pre-fetch chapter PDFs into RAM cache for 0ms instant first-time open
-                    data.files.slice(0, 10).forEach((file: any) => {
-                        if (file.url && file.name) {
-                            const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-                            fetchAndCachePdf(file.url, cleanName).catch(() => {});
-                        }
-                    });
-                    
-                    const s3Match = findS3Match(data.files, chNum, title);
-                    if (s3Match) {
-                        console.log("Using S3 match:", s3Match);
-                        // Always route through our backend proxy, even on web.
-                        // Direct S3 URLs can send CORS headers that block the
-                        // browser from embedding/fetching them directly
-                        // (react-pdf sees this as a load error / "blocked" view).
-                        const proxyUrl = await getPdfViewerUrl(s3Match.url);
-                        setNcertDebug(`OK: matched "${s3Match.name}" -> proxy=${proxyUrl}`);
-                        setViewerUrl({ url: proxyUrl, title });
-                    } else {
-                        console.error("No matching file found on S3 for:", title);
-                        setNcertDebug(`NO MATCH: chNum=${chNum} title="${title}" among ${data.files.length} S3 files: [${data.files.map((f:any)=>f.name).join(', ')}]`);
-                        alert("This chapter's PDF is not available on S3 yet.");
-                    }
                 } else {
                     setNcertDebug(`list success=false: ${JSON.stringify(data)}`);
+                    return;
                 }
-            } catch (e: any) {
-                console.error("Failed to fetch S3 files", e);
-                setNcertDebug(`ERROR: ${e?.message || String(e)}`);
-                alert("Failed to load PDF. Please check your connection and try again.");
-            } finally {
-                setIsLoadingS3(false);
             }
+
+            // Background pre-fetch chapter PDFs into RAM cache for 0ms instant first-time open
+            files.slice(0, 10).forEach((file: any) => {
+                if (file.url && file.name) {
+                    const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
+                    fetchAndCachePdf(file.url, cleanName).catch(() => {});
+                }
+            });
+
+            const s3Match = findS3Match(files, chNum, title);
+            if (s3Match) {
+                console.log("Using S3 match:", s3Match);
+                // Always route through our backend proxy, even on web.
+                // Direct S3 URLs can send CORS headers that block the
+                // browser from embedding/fetching them directly
+                // (react-pdf sees this as a load error / "blocked" view).
+                const proxyUrl = await getPdfViewerUrl(s3Match.url);
+                setNcertDebug(`OK: matched "${s3Match.name}" -> proxy=${proxyUrl}`);
+                setViewerUrl({ url: proxyUrl, title });
+
+                // Cache under the stable chapter id (not the proxy URL,
+                // which can change per-session) so the RAM/disk lookup
+                // above finds it next time this exact chapter is opened.
+                fetchAndCacheByStableKey(proxyUrl, cacheKey).catch(() => {});
+            } else {
+                console.error("No matching file found on S3 for:", title);
+                setNcertDebug(`NO MATCH: chNum=${chNum} title="${title}" among ${files.length} S3 files: [${files.map((f: any) => f.name).join(', ')}]`);
+                alert("This chapter's PDF is not available on S3 yet.");
+            }
+        } catch (e: any) {
+            console.error("Failed to fetch S3 files", e);
+            setNcertDebug(`ERROR: ${e?.message || String(e)}`);
+            alert("Failed to load PDF. Please check your connection and try again.");
+        } finally {
+            setIsLoadingS3(false);
         }
     };
 

@@ -17,6 +17,7 @@ import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
 import { uploadToUserNoteS3, getDisplayUrl } from '../utils/s3Upload';
 import { getPdfViewerUrl } from '../utils/api';
+import { getRamCachedPdf, getCachedPdf, fetchAndCacheByStableKey } from '../lib/pdfCache';
 
 interface SelectedFile {
   id: string;
@@ -460,9 +461,27 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                   <div 
                     key={paper.id}
                     onClick={async () => {
+                      // paper.url is stable (hardcoded) — check RAM/disk
+                      // cache first so a repeat open of the same paper
+                      // skips the proxy-token network round trip.
+                      const ramUrl = getRamCachedPdf(paper.url);
+                      if (ramUrl) {
+                        setViewerPdf({ url: ramUrl, title: paper.title });
+                        return;
+                      }
+                      try {
+                        const diskUrl = await getCachedPdf(paper.url);
+                        if (diskUrl) {
+                          setViewerPdf({ url: diskUrl, title: paper.title });
+                          return;
+                        }
+                      } catch {
+                        // fall through to network fetch below
+                      }
                       try {
                         const proxyUrl = await getPdfViewerUrl(paper.url);
                         setViewerPdf({ url: proxyUrl, title: paper.title });
+                        fetchAndCacheByStableKey(proxyUrl, paper.url).catch(() => {});
                       } catch (e) {
                         setViewerPdf({ url: paper.url, title: paper.title });
                       }
