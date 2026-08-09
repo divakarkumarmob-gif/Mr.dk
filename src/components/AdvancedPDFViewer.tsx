@@ -299,7 +299,6 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
 
     // Fast GPU-accelerated Zoom Control (0ms lag, smooth 120 FPS animation)
     const zoomButton = (delta: number) => {
-        setIsPinching(false);
         const stage = stageRef.current;
         const oldScale = currentScaleRef.current;
         const nextScale = Math.min(Math.max(oldScale + delta * 0.25, MIN_SCALE), MAX_SCALE);
@@ -312,9 +311,24 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
             const targetScrollTop = (stage.scrollTop + focalY) * scaleRatio - focalY;
 
             currentScaleRef.current = nextScale;
-            setVisualScale(nextScale);
+
+            // Apply transform directly first (no transition), then sync scroll
+            // in the SAME frame so the visual scale and scroll position never
+            // go out of sync for a frame (that mismatch was the zoom glitch).
+            if (wrapRef.current) {
+                wrapRef.current.style.transition = 'none';
+                wrapRef.current.style.transformOrigin = 'top left';
+                wrapRef.current.style.transform = `scale(${nextScale})`;
+            }
             stage.scrollLeft = Math.max(0, targetScrollLeft);
             stage.scrollTop = Math.max(0, targetScrollTop);
+
+            requestAnimationFrame(() => {
+                if (wrapRef.current) {
+                    wrapRef.current.style.transition = 'transform 0.1s ease-out';
+                }
+                setVisualScale(nextScale);
+            });
         } else {
             currentScaleRef.current = nextScale;
             setVisualScale(nextScale);
@@ -692,7 +706,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -60, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-b border-white/5 shadow-2xl relative z-50 shrink-0"
+                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-white/5 shadow-2xl relative z-50 shrink-0"
+                        style={{ borderBottomWidth: '0.5px', borderBottomStyle: 'solid' }}
                     >
                         <div className="flex items-center gap-3 overflow-hidden flex-grow mr-2">
                             <button
@@ -834,6 +849,11 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseUp}
                 onClick={(e) => {
+                    // Touch taps are already handled by the native onTouchEnd
+                    // listener below. Without this guard, a tap on a touch
+                    // device fires BOTH the touchend toggle AND this click
+                    // toggle, cancelling each other out (net: nothing happens).
+                    if (e.nativeEvent && (e.nativeEvent as PointerEvent).pointerType === 'touch') return;
                     if (!mousePanState.current.hasDragged) {
                         toggleControlsOnTap(e);
                     }
@@ -982,7 +1002,8 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         initial={{ y: 100 }}
                         animate={{ y: 0 }}
                         exit={{ y: 100 }}
-                        className="px-4 py-2 bg-[#0F172A] border-t border-white/5 safe-bottom z-50 flex items-center justify-center gap-4 shrink-0"
+                        className="px-4 py-2 bg-[#0F172A] border-white/5 safe-bottom z-50 flex items-center justify-center gap-4 shrink-0"
+                        style={{ borderTopWidth: '0.5px', borderTopStyle: 'solid' }}
                     >
                         <div className="flex items-center gap-1 bg-white/5 rounded-2xl p-1">
                             <button
