@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Shield, Lock, AlertTriangle, Key, ArrowRight, RefreshCw, CheckCircle2, X } from 'lucide-react';
+import { Shield, Lock, AlertTriangle, Key, ArrowRight, RefreshCw, CheckCircle2, X, Eye, EyeOff } from 'lucide-react';
 import { validatePinStrength, createPinBackupBlob, restorePrivateKeyFromBlob, resetUserKeysAndBackup, setLocalPrivateKey, setLocalPublicKey, generateKeyPair, EncryptedPrivateKeyBackupBlob } from '../../utils/e2ee';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
@@ -26,18 +26,23 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [failedAttempts, setFailedAttempts] = useState(0);
+    const [showPin, setShowPin] = useState(false);
+    const [showConfirmPin, setShowConfirmPin] = useState(false);
 
     const handleSetupPin = async (e: React.FormEvent) => {
         e.preventDefault();
         setErrorMsg(null);
 
-        const val = validatePinStrength(pin);
+        const safePin = pin.trim();
+        const safeConfirmPin = confirmPin.trim();
+
+        const val = validatePinStrength(safePin);
         if (!val.valid) {
             setErrorMsg(val.message || 'Invalid PIN');
             return;
         }
 
-        if (pin !== confirmPin) {
+        if (safePin !== safeConfirmPin) {
             setErrorMsg('PINs match nahi kar rahe hain! Dobara check karein.');
             return;
         }
@@ -52,7 +57,7 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
             await setLocalPublicKey(uid, keyPair.publicKey);
 
             // 3. Create Backup Blob
-            const blob = await createPinBackupBlob(keyPair.privateKey, pin);
+            const blob = await createPinBackupBlob(keyPair.privateKey, safePin);
 
             // 4. Update Firestore User Profile
             const userRef = doc(db, 'users', uid);
@@ -214,13 +219,22 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                             <div className="relative">
                                 <Lock className="w-4 h-4 absolute left-3 top-3 text-slate-400" />
                                 <input 
-                                    type="password"
+                                    type={showPin ? 'text' : 'password'}
                                     value={pin}
                                     onChange={(e) => setPin(e.target.value)}
                                     placeholder="e.g. Neet2026Pass"
-                                    className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500"
+                                    className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-10 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500"
+                                    autoComplete="new-password"
                                     required
                                 />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPin(prev => !prev)}
+                                    className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-200"
+                                    tabIndex={-1}
+                                >
+                                    {showPin ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                                </button>
                             </div>
                         </div>
 
@@ -232,13 +246,22 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                                 <div className="relative">
                                     <Lock className="w-4 h-4 absolute left-3 top-3 text-slate-400" />
                                     <input 
-                                        type="password"
+                                        type={showConfirmPin ? 'text' : 'password'}
                                         value={confirmPin}
                                         onChange={(e) => setConfirmPin(e.target.value)}
                                         placeholder="Repeat PIN"
-                                        className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500"
+                                        className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-10 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500"
+                                        autoComplete="new-password"
                                         required
                                     />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowConfirmPin(prev => !prev)}
+                                        className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-200"
+                                        tabIndex={-1}
+                                    >
+                                        {showConfirmPin ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                                    </button>
                                 </div>
                             </div>
                         )}
