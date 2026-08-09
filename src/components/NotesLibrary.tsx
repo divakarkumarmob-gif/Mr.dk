@@ -131,11 +131,11 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
 
                     {/* Search Bar */}
                     <div className="relative">
-                        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-cyan-400 h-4 w-4" />
+                        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-purple-300 h-4 w-4" />
                         <input
                             type="text"
                             placeholder="Search chapter or topic (e.g., Optics, Genetics, Chemical Kinetics)..."
-                            className="w-full bg-slate-900/90 text-slate-100 placeholder-slate-500 pl-10 pr-4 py-3 rounded-2xl border border-slate-800 text-xs focus:outline-none focus:border-cyan-400 backdrop-blur-md transition"
+                            className="w-full bg-slate-900/80 text-slate-100 placeholder-slate-400 pl-10 pr-4 py-3 rounded-2xl border border-purple-500/30 text-xs focus:outline-none focus:border-purple-400 backdrop-blur-xl transition-all shadow-md"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -147,18 +147,18 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                     </div>
 
                     {/* Subject Tabs */}
-                    <div className="grid grid-cols-3 bg-slate-900/80 border border-slate-800 p-1 rounded-2xl backdrop-blur-md gap-1">
+                    <div className="grid grid-cols-3 bg-slate-900/80 border border-purple-500/25 p-1.5 rounded-2xl backdrop-blur-xl gap-1.5 shadow-lg">
                         {(['Physics', 'Chemistry', 'Biology'] as const).map(sub => {
                             const isActive = activeSubject === sub;
-                            let activeClass = 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md shadow-cyan-500/20';
-                            if (sub === 'Chemistry') activeClass = 'bg-gradient-to-r from-cyan-600 to-teal-500 text-white shadow-md shadow-cyan-500/20';
-                            if (sub === 'Biology') activeClass = 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md shadow-emerald-500/20';
+                            let activeClass = 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.4)]';
+                            if (sub === 'Chemistry') activeClass = 'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-[0_0_15px_rgba(236,72,153,0.4)]';
+                            if (sub === 'Biology') activeClass = 'bg-gradient-to-r from-emerald-600 to-teal-500 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]';
 
                             return (
                                 <button
                                     key={sub}
-                                    className={`py-2 text-xs font-extrabold rounded-xl transition-all cursor-pointer ${
-                                        isActive ? activeClass : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                                    className={`py-2.5 text-xs font-extrabold rounded-xl transition-all cursor-pointer ${
+                                        isActive ? activeClass : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
                                     }`}
                                     onClick={() => setActiveSubject(sub)}
                                 >
@@ -169,14 +169,14 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                     </div>
 
                     {/* Class Selector Tabs */}
-                    <div className="grid grid-cols-2 bg-slate-900/80 border border-slate-800 p-1 rounded-2xl backdrop-blur-md gap-1">
+                    <div className="grid grid-cols-2 bg-slate-900/80 border border-purple-500/25 p-1.5 rounded-2xl backdrop-blur-xl gap-1.5 shadow-lg">
                         {(['Class 11', 'Class 12'] as const).map(cls => (
                             <button
                                 key={cls}
                                 className={`py-2 text-xs font-extrabold rounded-xl transition-all cursor-pointer ${
                                     activeClass === cls 
-                                        ? 'bg-slate-800 border border-slate-700 text-cyan-300 shadow-sm' 
-                                        : 'text-slate-400 hover:text-white'
+                                        ? 'gradient-btn-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.3)]' 
+                                        : 'text-slate-400 hover:text-slate-200'
                                 }`}
                                 onClick={() => setActiveClass(cls)}
                             >
@@ -186,9 +186,9 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                     </div>
 
                     {/* Chapters Grid / List */}
-                    <div className="space-y-2.5 pt-1">
+                    <div className="space-y-3 pt-1">
                         {chapters.length === 0 ? (
-                            <div className="p-8 text-center bg-slate-900/80 border border-slate-800 rounded-3xl backdrop-blur-md">
+                            <div className="p-8 text-center bg-slate-900/80 border border-purple-500/20 rounded-3xl backdrop-blur-xl">
                                 <p className="text-sm font-bold text-slate-300">Koi chapter nahi mila 😕</p>
                                 <p className="text-xs text-slate-500 mt-1">Dusra query try karein ya subject switch karein.</p>
                             </div>
@@ -196,31 +196,31 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                             chapters.map((chapter, idx) => (
                                 <motion.div
                                     key={idx}
-                                    whileHover={{ x: 4 }}
+                                    whileHover={{ x: 4, scale: 1.01 }}
                                     onClick={() => { addRecentlyViewed(chapter); setSelectedChapter(chapter); }}
-                                    className="bg-slate-900/90 border border-slate-800 hover:border-cyan-500/40 p-3.5 rounded-2xl flex items-center justify-between cursor-pointer backdrop-blur-xl shadow-md transition-all group"
+                                    className="glass-card glass-card-hover border border-purple-500/20 p-4 rounded-2xl flex items-center justify-between cursor-pointer backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all group"
                                 >
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2.5 bg-cyan-500/10 border border-cyan-500/20 rounded-xl group-hover:bg-cyan-500 group-hover:text-slate-950 transition duration-300 text-cyan-400">
+                                    <div className="flex items-center gap-3.5">
+                                        <div className="p-2.5 bg-purple-500/15 border border-purple-500/30 rounded-xl group-hover:bg-purple-600 group-hover:text-white transition duration-300 text-purple-300">
                                             <BookOpen className="h-4 w-4" />
                                         </div>
                                         <div>
-                                            <span className="font-extrabold text-xs text-slate-100 group-hover:text-cyan-300 transition block leading-tight">{chapter}</span>
-                                            <span className="text-[10px] text-cyan-400/70 font-medium">{activeClass} • {activeSubject}</span>
+                                            <span className="font-extrabold text-xs sm:text-sm text-white group-hover:text-purple-200 transition block leading-tight">{chapter}</span>
+                                            <span className="text-[10px] text-purple-300 font-semibold">{activeClass} • {activeSubject}</span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2.5">
                                         <button 
                                             onClick={(e) => {
                                                 e.stopPropagation();
                                                 toggleFavorite(chapter);
                                                 setFavorites(prev => isFavorite(chapter) ? prev.filter(f => f !== chapter) : [...prev, chapter]);
                                             }} 
-                                            className="p-1.5 rounded-lg text-slate-500 hover:text-rose-400 transition"
+                                            className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-rose-400 transition cursor-pointer"
                                         >
                                             <Heart className={`h-4 w-4 ${isFavorite(chapter) ? 'fill-rose-500 text-rose-500' : ''}`} />
                                         </button>
-                                        <span className="text-[10px] font-bold text-slate-950 bg-gradient-to-r from-blue-500 to-cyan-400 px-3 py-1 rounded-full shadow-sm">
+                                        <span className="text-[11px] font-extrabold text-white gradient-btn-primary px-3.5 py-1.5 rounded-xl shadow-md shadow-purple-500/20">
                                             View PDF
                                         </span>
                                     </div>
@@ -228,6 +228,7 @@ export default function NotesLibrary({ onBack }: { onBack: () => void }) {
                             ))
                         )}
                     </div>
+
 
                     {/* Recently Viewed Section */}
                     {recentlyViewed.length > 0 && (

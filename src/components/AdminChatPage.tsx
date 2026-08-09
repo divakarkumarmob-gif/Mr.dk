@@ -46,16 +46,17 @@ export default function AdminChatPage({ onBack }: { onBack: () => void }) {
     }, []);
 
     return (
-        <div className="h-dvh bg-[#0f172a] text-white flex flex-col overflow-hidden" style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}>
-            {/* Mobile: show either list or chat window, WhatsApp style */}
+        <div className="h-dvh bg-[#0a0f24] text-white flex flex-col overflow-hidden" style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}>
+            {/* Mobile: show either list or chat window */}
             <div className="flex-1 flex overflow-hidden">
                 {/* List panel */}
                 <div className={`
-                    w-full sm:w-[340px] sm:flex-shrink-0 sm:border-r sm:border-white/10
+                    w-full sm:w-[340px] sm:flex-shrink-0 sm:border-r sm:border-purple-500/20
                     ${selectedChat ? 'hidden sm:block' : 'block'}
                 `}>
                     <ChatList chats={chats} selectedChat={selectedChat} setSelectedChat={handleSelectChat} chatNames={chatNames} />
                 </div>
+
 
                 {/* Chat window panel */}
                 <div className={`

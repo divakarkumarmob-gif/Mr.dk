@@ -79,18 +79,36 @@ const AgentFace: React.FC<AgentFaceProps> = ({ status, volume, size = 120, color
 
   return (
     <motion.div className="relative flex items-center justify-center agent-face" style={{ width: size, height: size, perspective: 1000 }}>
-      {/* Outer Glow */}
+      {/* Outer Glowing Neon Ring 1 */}
       <motion.div
-        className="absolute rounded-full agent-face-glow"
-        style={{ width: size, height: size, backgroundColor: `${color}1a` }}
-        animate={{ scale: [1, 1 + volume / 50, 1] }}
-        transition={{ duration: 0.2, repeat: Infinity }}
+        className="absolute rounded-full pointer-events-none"
+        style={{ 
+          width: size * 1.3, 
+          height: size * 1.3, 
+          background: `radial-gradient(circle, ${color}33 0%, rgba(139,92,246,0.15) 50%, transparent 70%)`,
+          boxShadow: `0 0 40px ${color}66, inset 0 0 20px ${color}33`
+        }}
+        animate={{ scale: [1, 1 + volume / 40, 1], opacity: [0.7, 1, 0.7] }}
+        transition={{ duration: 0.3, repeat: Infinity }}
       />
       
+      {/* Outer Glowing Pulsing Ring 2 */}
+      <motion.div
+        className="absolute rounded-full border border-purple-400/30 pointer-events-none"
+        style={{ width: size * 1.1, height: size * 1.1 }}
+        animate={{ scale: [0.95, 1.05, 0.95], opacity: [0.5, 0.9, 0.5] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       {/* Face Circle */}
       <motion.div
-        className="rounded-full bg-transparent border-2 flex items-center justify-center agent-face-circle"
-        style={{ width: size * 0.75, height: size * 0.75, borderColor: `${color}80`, boxShadow: `0 0 20px ${color}4d` }}
+        className="rounded-full bg-slate-950/80 backdrop-blur-xl border-2 flex items-center justify-center agent-face-circle relative z-10"
+        style={{ 
+          width: size * 0.75, 
+          height: size * 0.75, 
+          borderColor: `${color}`, 
+          boxShadow: `0 0 30px ${color}80, inset 0 0 15px ${color}4d` 
+        }}
         animate={{ rotateY: [0, 0, 0, -20, 20, 0] }}
         transition={{
           repeat: Infinity,
@@ -109,3 +127,4 @@ const AgentFace: React.FC<AgentFaceProps> = ({ status, volume, size = 120, color
 };
 
 export default AgentFace;
+

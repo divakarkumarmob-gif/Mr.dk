@@ -763,70 +763,70 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -60, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-white/[0.03] shadow-2xl relative z-50 shrink-0"
-                        style={{ borderBottomWidth: '0.5px', borderBottomStyle: 'solid' }}
+                        className="flex items-center justify-between px-4 py-2.5 bg-[#0a0f24]/90 backdrop-blur-xl border-b border-purple-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.6)] relative z-50 shrink-0"
                     >
                         <div className="flex items-center gap-3 overflow-hidden flex-grow mr-2">
                             <button
                                 onClick={onClose}
-                                className="p-2.5 bg-white/5 hover:bg-white/10 rounded-full transition active:scale-90"
+                                className="p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition active:scale-90 border border-white/15 cursor-pointer"
                             >
-                                <ChevronLeft className="h-6 w-6 text-gray-300" />
+                                <ChevronLeft className="h-5 w-5 text-purple-300" />
                             </button>
-                            <div className="flex flex-col min-w-0">
-                                <h2 className="text-sm font-bold text-white truncate leading-tight">{title}</h2>
+                            <div className="flex flex-col min-w-0 px-3 py-1 rounded-xl bg-purple-500/10 border border-purple-500/30 backdrop-blur-md shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+                                <h2 className="text-xs sm:text-sm font-black truncate leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-pink-300 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">{title}</h2>
                             </div>
                         </div>
 
                         <div className="flex items-center gap-2">
                             <button
                                 onClick={fitToScreenWidth}
-                                className="p-2.5 bg-white/5 hover:bg-white/10 rounded-xl text-gray-300 transition active:scale-95 flex items-center gap-1.5 text-xs"
+                                className="p-2 sm:px-3 bg-slate-800/80 hover:bg-slate-700/80 border border-purple-500/30 rounded-xl text-purple-300 transition active:scale-95 flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
                                 title="Full Screen Width Fit"
                             >
-                                <Maximize2 className="h-4 w-4 text-blue-400" />
-                                <span className="hidden sm:inline text-[11px] font-medium text-gray-300">Fit Width</span>
+                                <Maximize2 className="h-4 w-4 text-purple-300" />
+                                <span className="hidden sm:inline text-[11px]">Fit Width</span>
                             </button>
 
                             <button
                                 onClick={handleDownload}
                                 disabled={isDownloading}
-                                className={`p-2.5 rounded-xl transition ${
+                                className={`p-2 rounded-xl border transition cursor-pointer ${
                                     isDownloading
-                                        ? 'bg-white/5 text-gray-500 cursor-not-allowed'
-                                        : 'bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 active:scale-95'
+                                        ? 'bg-slate-800/50 border-slate-700 text-slate-500 cursor-not-allowed'
+                                        : 'bg-purple-600/20 hover:bg-purple-600/30 border-purple-500/40 text-purple-300 active:scale-95 shadow-sm'
                                 }`}
                                 title="Save PDF to device Downloads folder"
                             >
                                 {isDownloading ? (
-                                    <Loader2 className="h-5 w-5 animate-spin" />
+                                    <Loader2 className="h-4 w-4 animate-spin text-purple-300" />
                                 ) : (
-                                    <Download className="h-5 w-5" />
+                                    <Download className="h-4 w-4" />
                                 )}
                             </button>
 
                             <button
                                 onClick={toggleSearch}
-                                className={`p-2.5 rounded-xl transition ${
+                                className={`p-2 rounded-xl border transition cursor-pointer ${
                                     showSearch 
-                                        ? 'bg-red-500/20 text-red-400' 
-                                        : 'bg-white/5 hover:bg-white/10 text-gray-300'
+                                        ? 'bg-pink-500/20 border-pink-500/50 text-pink-300' 
+                                        : 'bg-slate-800/80 hover:bg-slate-700/80 border-purple-500/30 text-purple-300'
                                 }`}
                                 title="Search in PDF"
                             >
-                                <Search className="h-5 w-5" />
+                                <Search className="h-4 w-4" />
                             </button>
 
                             <button
                                 onClick={onClose}
-                                className="p-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-xl transition"
+                                className="p-2 bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-300 rounded-xl transition cursor-pointer"
                             >
-                                <X className="h-5 w-5" />
+                                <X className="h-4 w-4" />
                             </button>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
+
 
             {/* Search Bar */}
             <AnimatePresence>

@@ -241,15 +241,16 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 }} 
             />
       </div>
-      ) : (
-        <div className="px-3">
-            <h1 className="text-lg font-bold mb-2">Tests</h1>
+      ) : (        <div className="px-3">
+            <h1 className="text-xl font-extrabold mb-3 text-white flex items-center gap-2">
+                <ClipboardList className="h-6 w-6 text-purple-400" /> NEET Test Hub
+            </h1>
 
             {/* GENERATE 180-Q AI MOCK TEST BUTTON */}
-            <div className="mb-4">
+            <div className="mb-5">
                 <button 
                     onClick={() => setShowNTAMockGenerator(true)}
-                    className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-3.5 px-4 rounded-2xl font-extrabold text-sm shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 active:scale-95 transition-all border border-blue-400/30"
+                    className="w-full gradient-btn-primary text-white py-4 px-4 rounded-2xl font-black text-sm shadow-[0_0_30px_rgba(139,92,246,0.35)] flex items-center justify-center gap-2.5 active:scale-95 transition-all border border-purple-400/40 cursor-pointer"
                 >
                     <span className="relative flex h-3 w-3 shrink-0">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -267,32 +268,32 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="mb-3 bg-gradient-to-r from-blue-950/80 to-indigo-950/80 p-2.5 rounded-md border border-blue-500/40 flex flex-row items-center justify-between gap-2 shadow-lg shadow-blue-500/5"
+                    className="mb-4 glass-card border border-purple-500/30 p-3.5 rounded-2xl flex flex-row items-center justify-between gap-2 shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
                 >
-                    <div className="flex items-center gap-2 w-full">
-                        <div className="bg-blue-500/20 text-blue-400 p-1.5 rounded-full flex-shrink-0 animate-pulse">
-                            <Clock className="h-3.5 w-3.5" />
+                    <div className="flex items-center gap-3 w-full min-w-0">
+                        <div className="bg-purple-500/20 text-purple-300 p-2 rounded-xl shrink-0 animate-pulse border border-purple-500/30">
+                            <Clock className="h-4 w-4" />
                         </div>
-                        <div className="w-full">
-                            <h3 className="font-bold text-xs flex items-center gap-1.5 text-blue-300">
+                        <div className="w-full min-w-0">
+                            <h3 className="font-extrabold text-xs text-purple-300">
                                 Active Test (Paused)
                             </h3>
-                            <h2 className="font-extrabold text-sm text-white leading-tight">
+                            <h2 className="font-black text-sm text-white truncate leading-tight">
                                 {resumeTestData.title}
                             </h2>
-                            <p className="text-[9px] text-gray-400 mt-0.5 flex items-center gap-2">
-                                <span>Questions: <strong className="text-gray-300">{Object.keys(resumeTestData.answers || {}).length} / {resumeTestData.questions?.length || 0}</strong></span>
+                            <p className="text-[9px] text-slate-400 mt-0.5 flex items-center gap-2">
+                                <span>Questions: <strong className="text-slate-200">{Object.keys(resumeTestData.answers || {}).length} / {resumeTestData.questions?.length || 0}</strong></span>
                                 <span>•</span>
-                                <span>Time left: <strong className="text-red-400 font-mono">{Math.floor(resumeTestData.timeLeft / 60)}m</strong></span>
+                                <span>Time left: <strong className="text-rose-400 font-mono font-bold">{Math.floor(resumeTestData.timeLeft / 60)}m</strong></span>
                             </p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                    <div className="flex items-center gap-1.5 shrink-0">
                         <button 
                             onClick={handleResumeTest}
-                            className="bg-blue-600 hover:bg-blue-500 active:scale-95 text-white text-[10px] px-2.5 py-1 rounded-md font-extrabold flex items-center gap-0.5 whitespace-nowrap shadow-md shadow-blue-600/20 transition-all"
+                            className="gradient-btn-primary text-white text-xs px-3 py-2 rounded-xl font-extrabold flex items-center gap-1 shrink-0 shadow-md shadow-purple-500/20 cursor-pointer"
                         >
-                            <PlayCircle className="h-3 w-3" /> Resume
+                            <PlayCircle className="h-3.5 w-3.5" /> Resume
                         </button>
                         <button 
                             onClick={() => {
@@ -301,7 +302,7 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                     setResumeTestData(null);
                                 }
                             }}
-                            className="text-gray-500 hover:text-red-400 p-1 rounded-md transition-colors"
+                            className="text-slate-400 hover:text-rose-400 p-2 rounded-xl hover:bg-white/5 transition-colors cursor-pointer"
                             title="Discard test"
                         >
                             <X className="h-4 w-4" />
@@ -323,8 +324,8 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                 if (hideUntil && now > parseInt(hideUntil)) return false;
                 return true;
             }).length > 0 && (
-                <div className="mb-3">
-                    <h2 className="font-bold text-xs mb-1.5 text-orange-400">Recently Completed</h2>
+                <div className="mb-4">
+                    <h2 className="font-extrabold text-xs mb-2 text-purple-300 uppercase tracking-wider">Recently Completed</h2>
                     {recentTests
                       .filter(test => {
                           const hideUntil = localStorage.getItem('hide-' + test.id);
@@ -344,40 +345,40 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
                         return (
                         <div key={test.id} 
-                            className="bg-gradient-to-r from-orange-900/40 to-red-900/40 p-2 rounded-md border border-orange-500/20 flex justify-between items-center mb-1 cursor-pointer"
+                            className="glass-card glass-card-hover p-3 rounded-2xl border border-purple-500/25 flex justify-between items-center mb-2 cursor-pointer shadow-md"
                             ref={el => { if (el) dropdownRefs.current.set(test.id, el); else dropdownRefs.current.delete(test.id); }}
                             onClick={() => setOpenDropdownId(openDropdownId === test.id ? null : test.id)}
                         >
                             <div className="flex flex-col">
-                                <span className="font-bold text-xs">{test.testName}</span>
+                                <span className="font-extrabold text-xs text-white">{test.testName}</span>
                                 {!isReady && (
-                                    <span className="text-[8px] text-orange-300 animate-pulse font-mono flex items-center gap-1">
-                                        <Clock className="w-2 h-2" /> Analyzing... {timeStr}
+                                    <span className="text-[9px] text-purple-300 animate-pulse font-mono flex items-center gap-1 mt-0.5">
+                                        <Clock className="w-2.5 h-2.5" /> Analyzing... {timeStr}
                                     </span>
                                 )}
                             </div>
                             {isReady ? (
                                 countdown > 0 ? (
-                                    <div className="bg-orange-600/50 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold flex items-center gap-1">
+                                    <div className="bg-purple-600/30 border border-purple-500/40 text-purple-300 text-[10px] px-2.5 py-1 rounded-xl font-bold flex items-center gap-1">
                                         ⏳ {countdown}...
                                     </div>
                                 ) : (
                                     <div className="relative">
-                                        <div className="bg-orange-600 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold flex items-center gap-1">
+                                        <div className="gradient-btn-primary text-white text-[10px] px-3 py-1 rounded-xl font-extrabold flex items-center gap-1 shadow-sm">
                                             Results
                                         </div>
                                         {openDropdownId === test.id && (
-                                            <div className="absolute right-0 mt-1 w-24 bg-[#1e293b] rounded-md shadow-lg z-10" onClick={(e) => e.stopPropagation()}>
-                                                <button onClick={() => { handleSeeResults(test); setOpenDropdownId(null); }} className="block w-full text-left px-2 py-1 text-[10px] text-white hover:bg-white/10">See Results</button>
-                                                <button onClick={() => { setSelectedSyllabusTest(test); setOpenDropdownId(null); }} className="block w-full text-left px-2 py-1 text-[10px] text-white hover:bg-white/10">Syllabus</button>
-                                                <button onClick={() => { removeTest(test.id); setOpenDropdownId(null); }} className="block w-full text-left px-2 py-1 text-[10px] text-red-400 hover:bg-white/10">Remove</button>
+                                            <div className="absolute right-0 mt-1 w-28 bg-slate-900 border border-purple-500/30 rounded-xl shadow-2xl z-20 overflow-hidden backdrop-blur-xl p-1" onClick={(e) => e.stopPropagation()}>
+                                                <button onClick={() => { handleSeeResults(test); setOpenDropdownId(null); }} className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-purple-600/30 rounded-lg font-bold">See Results</button>
+                                                <button onClick={() => { setSelectedSyllabusTest(test); setOpenDropdownId(null); }} className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-purple-600/30 rounded-lg font-bold">Syllabus</button>
+                                                <button onClick={() => { removeTest(test.id); setOpenDropdownId(null); }} className="block w-full text-left px-3 py-1.5 text-xs text-rose-400 hover:bg-rose-500/20 rounded-lg font-bold">Remove</button>
                                             </div>
                                         )}
                                     </div>
                                 )
                             ) : (
-                                <div className="bg-white/10 text-white/40 text-[9px] px-1.5 py-0.5 rounded-md font-bold flex items-center gap-1">
-                                    <Loader2 className="w-2 h-2 animate-spin" /> Processing
+                                <div className="bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] px-2.5 py-1 rounded-xl font-bold flex items-center gap-1">
+                                    <Loader2 className="w-3 h-3 animate-spin" /> Processing
                                 </div>
                             )}
                         </div>
@@ -389,22 +390,23 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
 
             {/* Weakness Highlights */}
             {recentTests.filter(t => (t.score || 0) < 50).length > 0 && (
-                <div className="mb-4 bg-red-900/20 p-3 rounded-xl border border-red-500/30">
-                    <h2 className="font-bold text-xs mb-2 text-red-400 flex items-center gap-2"><AlertTriangle className="h-3 w-3" /> Focus on these:</h2>
+                <div className="mb-4 bg-rose-500/10 p-3 rounded-2xl border border-rose-500/30 shadow-md">
+                    <h2 className="font-extrabold text-xs mb-2 text-rose-300 flex items-center gap-2"><AlertTriangle className="h-3.5 w-3.5" /> Focus on these:</h2>
                     <div className="flex gap-2 flex-wrap">
                         {Array.from(new Set(recentTests.filter(t => (t.score || 0) < 50).map(t => t.testName))).slice(0, 3).map(chapter => (
-                            <span key={chapter} className="bg-red-500/20 text-red-200 text-[10px] px-2 py-1 rounded-full font-bold">{chapter}</span>
+                            <span key={chapter} className="bg-rose-500/20 border border-rose-500/30 text-rose-200 text-[10px] px-2.5 py-1 rounded-full font-bold">{chapter}</span>
                         ))}
                     </div>
                 </div>
             )}
             
-            <div className="flex bg-card p-0.5 rounded-md mb-2">
+            {/* Filter Tabs */}
+            <div className="flex bg-slate-900/80 border border-purple-500/25 p-1 rounded-2xl backdrop-blur-xl mb-4 gap-1 shadow-lg">
                 {(['Upcoming', 'Current', 'Missed'] as const).map(tab => (
                     <button 
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`flex-1 py-0.5 rounded-md font-bold text-[10px] ${activeTab === tab ? 'bg-blue-600' : 'bg-transparent text-gray-400'}`}
+                        className={`flex-1 py-2 rounded-xl font-extrabold text-xs transition-all cursor-pointer ${activeTab === tab ? 'gradient-btn-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]' : 'bg-transparent text-slate-400 hover:text-white'}`}
                     >
                         {tab}
                     </button>
@@ -683,18 +685,23 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
       <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="mt-4 bg-gradient-to-r from-orange-900/40 to-red-900/40 p-4 rounded-xl border border-orange-500/20 flex justify-between items-center cursor-pointer"
+          className="mt-5 glass-card glass-card-hover p-4.5 rounded-2xl border border-purple-500/30 flex justify-between items-center cursor-pointer shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all group"
           onClick={() => setShowPYQOptions(true)}
       >
-          <div className="flex items-center gap-3">
-                  <BookOpen className="h-8 w-8 text-orange-400" />
+          <div className="flex items-center gap-3.5">
+                  <div className="p-3 bg-purple-500/20 border border-purple-500/30 rounded-xl text-purple-300 group-hover:bg-purple-600 group-hover:text-white transition duration-300">
+                      <BookOpen className="h-6 w-6" />
+                  </div>
                   <div>
-                  <p className="font-bold">NEET PYQ Tests</p>
-                  <p className="text-xs text-gray-400">Interactive Previous Year Questions</p>
+                  <p className="font-extrabold text-sm text-white group-hover:text-purple-300 transition">NEET PYQ Tests</p>
+                  <p className="text-xs text-purple-300/80 font-medium">Interactive Previous Year Questions</p>
                   </div>
           </div>
-          <button className="text-orange-400 font-bold text-sm">Start PYQ &gt;</button>
+          <button className="gradient-btn-primary text-white font-extrabold text-xs px-3.5 py-2 rounded-xl shadow-md shadow-purple-500/20 cursor-pointer flex items-center gap-1">
+              Start PYQ <ChevronRight className="w-3.5 h-3.5" />
+          </button>
       </motion.div>
+
 
       {selectedSyllabusTest && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6" onClick={() => setSelectedSyllabusTest(null)}>

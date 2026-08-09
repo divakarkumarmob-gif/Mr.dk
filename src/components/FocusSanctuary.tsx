@@ -262,25 +262,26 @@ export default function FocusSanctuary({ onClose, onSessionComplete }: FocusSanc
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.96 }}
-            className="fixed inset-0 z-[3000] bg-[#070b14] text-white flex flex-col overflow-y-auto"
+            className="fixed inset-0 z-[3000] bg-[#0a0f24] text-white flex flex-col overflow-y-auto"
         >
             {/* Ambient Background Aura */}
-            <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/40 via-purple-950/20 to-[#070b14] pointer-events-none" />
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-indigo-600/15 blur-[120px] rounded-full pointer-events-none animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-blue-950/20 to-[#0a0f24] pointer-events-none" />
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple-600/15 blur-[120px] rounded-full pointer-events-none animate-pulse" />
 
             {/* Header Nav */}
-            <div className="relative z-10 flex items-center justify-between p-4 border-b border-white/10 max-w-4xl mx-auto w-full">
+            <div className="relative z-10 flex items-center justify-between p-4 border-b border-purple-500/20 max-w-4xl mx-auto w-full backdrop-blur-xl bg-slate-900/60 rounded-b-2xl">
                 <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-xl bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+                    <div className="p-2 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-[0_0_15px_rgba(139,92,246,0.3)]">
                         <Shield className="w-6 h-6 animate-pulse" />
                     </div>
                     <div>
-                        <h1 className="font-bold text-lg text-white flex items-center gap-2">
+                        <h1 className="font-extrabold text-lg text-white flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-pink-300">
                             Focus Sanctuary <Sparkles className="w-4 h-4 text-amber-400" />
                         </h1>
-                        <p className="text-xs text-white/50">Zero Distraction NEET Study Zone</p>
+                        <p className="text-xs text-purple-300">Zero Distraction NEET Study Zone</p>
                     </div>
                 </div>
+
 
                 {/* Live Aspirants Pill */}
                 <div className="flex items-center gap-4">

@@ -64,56 +64,58 @@ export default function StudyDashboard({ onClose }: { onClose: () => void }) {
     ];
 
     return (
-        <div className="fixed inset-0 bg-gradient-to-br from-black to-[#0a0e1a] z-[100] p-6 flex flex-col">
-            <div className="flex items-center gap-4 mb-8">
-                <button onClick={onClose} className="text-white"><ArrowLeft /></button>
-                <h2 className="text-xl font-bold text-white">Study Progress</h2>
+        <div className="fixed inset-0 bg-[#0a0f24] z-[100] p-4 sm:p-6 flex flex-col overflow-y-auto text-white">
+            <div className="flex items-center gap-4 mb-6">
+                <button onClick={onClose} className="p-2 bg-white/10 hover:bg-white/20 rounded-full border border-white/15 text-purple-300 transition cursor-pointer">
+                    <ArrowLeft className="h-5 w-5" />
+                </button>
+                <h2 className="text-xl sm:text-2xl font-extrabold text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-pink-300">Study Analytics Dashboard</h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                 {stats.map((stat, i) => (
-                    <div key={i} className="bg-[#0F1729] p-4 rounded-xl border border-[#1E293B] flex items-center gap-4">
-                        <div className={`p-3 bg-[#0a0e1a] rounded-lg ${stat.color}`}>
+                    <div key={i} className="bg-slate-900/60 backdrop-blur-xl p-5 rounded-2xl border border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex items-center gap-4">
+                        <div className={`p-3 bg-purple-500/15 rounded-xl border border-purple-500/30 ${stat.color}`}>
                             <stat.icon className="h-6 w-6" />
                         </div>
                         <div>
-                            <p className="text-xs text-gray-400 font-bold uppercase">{stat.label}</p>
-                            <p className="text-xl font-bold text-white">{stat.value}</p>
+                            <p className="text-xs text-purple-300 font-bold uppercase tracking-wide">{stat.label}</p>
+                            <p className="text-2xl font-extrabold text-white mt-0.5">{stat.value}</p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="bg-[#0F1729] p-6 rounded-xl border border-[#1E293B] w-full mb-8">
-                <h3 className="text-sm font-bold text-gray-300 mb-6">Focus Trend</h3>
+            <div className="bg-slate-900/60 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.4)] w-full mb-6">
+                <h3 className="text-sm font-extrabold text-purple-200 mb-4 tracking-wide">Focus Trend</h3>
                 <FocusAnalytics data={focusData} />
             </div>
 
-            <div className="bg-[#0F1729] p-6 rounded-xl border border-[#1E293B] w-full mb-8">
-                <h3 className="text-sm font-bold text-gray-300 mb-6">Recent Notes</h3>
+            <div className="bg-slate-900/60 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.4)] w-full mb-6">
+                <h3 className="text-sm font-extrabold text-purple-200 mb-4 tracking-wide">Recently Viewed Notes</h3>
                 <div className="space-y-2">
                     {recentlyViewed.slice(0, 3).map((chapter: string, idx: number) => (
-                        <div key={idx} className="flex items-center gap-2 p-2 rounded-lg bg-[#0a0e1a] text-xs text-white">
-                            <BookOpen className="h-4 w-4 text-[#3B82F6]" />
+                        <div key={idx} className="flex items-center gap-2 p-3 rounded-xl bg-purple-950/40 border border-purple-800/30 text-xs font-semibold text-white">
+                            <BookOpen className="h-4 w-4 text-purple-300" />
                             {chapter}
                         </div>
                     ))}
-                    {recentlyViewed.length === 0 && <p className="text-gray-500 text-xs">No recent notes.</p>}
+                    {recentlyViewed.length === 0 && <p className="text-slate-400 text-xs">No recent notes.</p>}
                 </div>
             </div>
 
-            <div className="bg-[#0F1729] p-6 rounded-xl border border-[#1E293B] w-full">
-                <h3 className="text-sm font-bold text-gray-300 mb-6">Subject Mastery</h3>
+            <div className="bg-slate-900/60 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.4)] w-full">
+                <h3 className="text-sm font-extrabold text-purple-200 mb-6 tracking-wide">Subject Mastery</h3>
                 <div className="space-y-6">
                     {subjectProgress.map(sub => (
                         <div key={sub.name}>
-                            <div className="flex justify-between text-xs mb-2">
-                                <span className="font-bold text-white">{sub.name}</span>
-                                <span className="text-gray-400">{sub.progress}%</span>
+                            <div className="flex justify-between text-xs font-bold mb-2">
+                                <span className="text-white">{sub.name}</span>
+                                <span className="text-purple-300">{sub.progress}%</span>
                             </div>
-                            <div className="w-full bg-[#0a0e1a] h-2 rounded-full overflow-hidden">
+                            <div className="w-full bg-slate-950 h-2.5 rounded-full overflow-hidden border border-purple-500/20">
                                 <motion.div 
-                                    className="bg-orange-600 h-full"
+                                    className="bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 h-full rounded-full shadow-[0_0_10px_rgba(168,85,247,0.5)]"
                                     initial={{ width: 0 }}
                                     animate={{ width: `${sub.progress}%` }}
                                     transition={{ duration: 1 }}
@@ -126,3 +128,4 @@ export default function StudyDashboard({ onClose }: { onClose: () => void }) {
         </div>
     );
 }
+

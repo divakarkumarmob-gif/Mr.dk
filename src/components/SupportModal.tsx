@@ -57,9 +57,10 @@ export default function SupportModal({ isOpen, onClose, onConfirm, onSendReport 
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 20 }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative w-full max-w-sm bg-gradient-to-b from-slate-900 via-[#0d152a] to-slate-950 p-6 rounded-3xl border border-white/15 shadow-2xl z-10 text-center space-y-4"
+                        className="relative w-full max-w-sm bg-[#0a0f24]/95 backdrop-blur-2xl p-6 rounded-3xl border border-purple-500/30 shadow-[0_0_50px_rgba(139,92,246,0.4)] z-10 text-center space-y-4 text-white"
                     >
                         <div className="flex items-center justify-between border-b border-white/10 pb-3">
+
                             <div className="flex items-center gap-2">
                                 <div className="p-2 bg-blue-500/20 rounded-xl border border-blue-500/30">
                                     <Camera className="h-5 w-5 text-blue-400" />

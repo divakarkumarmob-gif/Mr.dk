@@ -399,7 +399,7 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
     return (
         <>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex-1 min-h-0 w-full bg-[#0a0f24] text-white font-sans overflow-y-auto">
-            <div className="pt-[env(safe-area-inset-top,0px)] pl-[max(env(safe-area-inset-left),16px)] pb-40 max-w-full mx-auto px-3">
+            <div className="pt-[env(safe-area-inset-top,0px)] pb-40 max-w-5xl mx-auto px-4 sm:px-6 w-full">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
                     <Pressable onClick={selectedBook ? handleChapterBack : onBack} className="p-2 bg-white/5 rounded-full">
@@ -422,38 +422,51 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                     <>
                         {/* Selector Controls */}
                         <div className="space-y-4 mb-8">
-                            <div className="grid grid-cols-2 gap-2 bg-white/5 p-1 rounded-xl">
+                            <div className="grid grid-cols-2 gap-2 bg-slate-900/80 p-1.5 rounded-2xl border border-purple-500/25 backdrop-blur-xl shadow-lg">
                                 {(['11', '12'] as const).map(c => (
                                     <button 
                                         key={c}
                                         onClick={() => setSelectedClass(c)}
-                                        className={`py-2 rounded-lg font-bold text-sm transition-all ${selectedClass === c ? 'bg-blue-600 text-white' : 'text-gray-400'}`}
+                                        className={`py-2.5 rounded-xl font-extrabold text-sm transition-all cursor-pointer ${
+                                            selectedClass === c 
+                                                ? 'gradient-btn-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]' 
+                                                : 'text-slate-400 hover:text-slate-200'
+                                        }`}
                                     >
-                                        Class {c}th
+                                        Class {c}th NCERT
                                     </button>
                                 ))}
                             </div>
 
                             <div className="grid grid-cols-3 gap-2">
-                                {(['Physics', 'Chemistry', 'Biology'] as const).map(s => (
-                                    <button 
-                                        key={s}
-                                        onClick={() => setSelectedSubject(s)}
-                                        className={`py-2 rounded-lg font-bold text-[10px] sm:text-xs transition-all border ${selectedSubject === s ? 'bg-green-600 border-green-500 text-white' : 'bg-transparent border-white/10 text-gray-400'}`}
-                                    >
-                                        {s}
-                                    </button>
-                                ))}
+                                {(['Physics', 'Chemistry', 'Biology'] as const).map(s => {
+                                    const isActive = selectedSubject === s;
+                                    let activeGlow = 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-cyan-400/50 shadow-[0_0_15px_rgba(59,130,246,0.4)]';
+                                    if (s === 'Chemistry') activeGlow = 'bg-gradient-to-r from-purple-600 to-pink-500 text-white border-pink-400/50 shadow-[0_0_15px_rgba(236,72,153,0.4)]';
+                                    if (s === 'Biology') activeGlow = 'bg-gradient-to-r from-emerald-600 to-teal-500 text-white border-emerald-400/50 shadow-[0_0_15px_rgba(16,185,129,0.4)]';
+
+                                    return (
+                                        <button 
+                                            key={s}
+                                            onClick={() => setSelectedSubject(s)}
+                                            className={`py-2.5 rounded-xl font-extrabold text-xs transition-all border cursor-pointer ${
+                                                isActive ? activeGlow : 'bg-slate-900/60 border-purple-500/20 text-slate-400 hover:text-slate-200 hover:border-purple-500/40 backdrop-blur-md'
+                                            }`}
+                                        >
+                                            {s}
+                                        </button>
+                                    );
+                                })}
                             </div>
 
                             <div className="relative">
-                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+                                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-purple-300" />
                                 <input 
                                     type="text" 
-                                    placeholder="Search book title..." 
+                                    placeholder="Search NCERT book title or chapter..." 
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm focus:outline-none focus:border-blue-500 transition-all"
+                                    className="w-full bg-slate-900/80 border border-purple-500/30 rounded-2xl py-3 pl-10 pr-4 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 backdrop-blur-xl transition-all shadow-md"
                                 />
                             </div>
                         </div>
@@ -463,24 +476,28 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                             {filteredBooks.map(book => (
                                 <motion.div 
                                     key={book.id}
+                                    whileHover={{ scale: 1.02, y: -2 }}
                                     whileTap={{ scale: 0.98 }}
                                     onClick={() => handleSelectBook(book)}
-                                    className="bg-[#161e38] border border-white/5 p-4 rounded-2xl flex items-center gap-4 cursor-pointer hover:border-blue-500/50 transition-all"
+                                    className="glass-card glass-card-hover p-4 rounded-2xl flex items-center gap-4 cursor-pointer transition-all border border-purple-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
                                 >
-                                    <div className={`w-12 h-16 rounded-lg flex items-center justify-center text-white font-bold text-xl ${
-                                        book.subject === 'Physics' ? 'bg-blue-600' : book.subject === 'Chemistry' ? 'bg-orange-600' : 'bg-green-600'
+                                    <div className={`w-12 h-16 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg ${
+                                        book.subject === 'Physics' ? 'bg-gradient-to-br from-blue-600 to-indigo-600 shadow-blue-500/30' : book.subject === 'Chemistry' ? 'bg-gradient-to-br from-purple-600 to-pink-600 shadow-purple-500/30' : 'bg-gradient-to-br from-emerald-600 to-teal-600 shadow-emerald-500/30'
                                     }`}>
                                         {book.subject[0]}
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="font-bold text-sm truncate">{book.title}</h3>
-                                        <p className="text-[10px] text-gray-400 uppercase tracking-widest">{book.chapterNames.length} Chapters</p>
+                                        <h3 className="font-extrabold text-sm text-white truncate group-hover:text-purple-200">{book.title}</h3>
+                                        <p className="text-[10px] text-purple-300 font-bold uppercase tracking-widest mt-0.5">{book.chapterNames.length} Chapters</p>
                                     </div>
-                                    <BookOpen className="w-5 h-5 text-white/20" />
+                                    <div className="p-2 rounded-xl bg-purple-500/15 text-purple-300">
+                                        <BookOpen className="w-5 h-5 text-purple-300" />
+                                    </div>
                                 </motion.div>
                             ))}
                         </div>
                     </>
+
                 ) : (
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
                         {selectedBook.chapterNames.map((chName, idx) => {
@@ -490,35 +507,36 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
                             const isDownloading = downloadingId === id;
 
                             return (
-                                <div key={chNum} className="bg-[#161e38] border border-white/5 p-3 rounded-2xl flex items-center justify-between gap-3">
+                                <div key={chNum} className="glass-card p-3 sm:p-4 rounded-2xl flex items-center justify-between gap-3 border border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
                                     <div className="flex items-center gap-3 min-w-0 overflow-hidden">
-                                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 font-extrabold text-[10px]">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-300 font-extrabold text-[11px]">
                                             {chNum}
                                         </div>
-                                        <span className="font-bold text-[11px] sm:text-xs truncate leading-tight text-gray-200">
+                                        <span className="font-extrabold text-xs sm:text-sm truncate leading-tight text-white">
                                             {chNum}. {chName}
                                         </span>
                                     </div>
-                                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                                    <div className="flex items-center gap-2 flex-shrink-0">
                                         {isDownloaded && (
                                             <>
-                                                <button onClick={() => handleDelete(id)} className="p-1.5 text-gray-500 hover:text-red-400 transition-colors">
-                                                    <Trash2 className="w-3.5 h-3.5" />
+                                                <button onClick={() => handleDelete(id)} className="p-2 text-slate-400 hover:text-rose-400 transition-colors cursor-pointer">
+                                                    <Trash2 className="w-4 h-4" />
                                                 </button>
-                                                <div className="flex items-center gap-1 text-[9px] text-green-400 bg-green-400/10 px-2 py-1 rounded-full font-bold">
-                                                    <CheckCircle2 className="w-2.5 h-2.5" /> OFFLINE
+                                                <div className="flex items-center gap-1 text-[9px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-full font-bold">
+                                                    <CheckCircle2 className="w-3 h-3" /> OFFLINE
                                                 </div>
                                             </>
                                         )}
                                         <Pressable 
                                             onClick={() => handleOpenPdf(selectedBook.code, chNum, `${chNum}. ${chName}`)}
-                                            className="bg-blue-600 px-3 py-1.5 rounded-lg text-[10px] font-bold flex items-center gap-1 active:scale-95 transition-transform"
+                                            className="gradient-btn-primary px-3.5 py-2 rounded-xl text-[11px] font-extrabold flex items-center gap-1.5 active:scale-95 transition-all shadow-md shadow-purple-500/20 cursor-pointer"
                                         >
-                                            <Eye className="w-3 h-3" /> VIEW
+                                            <Eye className="w-3.5 h-3.5" /> VIEW
                                         </Pressable>
                                     </div>
                                 </div>
                             );
+
                         })}
                     </motion.div>
                 )}

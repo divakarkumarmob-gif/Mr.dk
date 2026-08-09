@@ -80,7 +80,7 @@ export default function PosterSlider() {
 
   return (
     <div 
-      className="w-full h-48 sm:h-64 rounded-xl overflow-hidden shadow-lg mb-6 relative bg-gray-100"
+      className="w-full h-48 sm:h-64 rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.5)] mb-6 relative bg-slate-900/60 backdrop-blur-xl border border-purple-500/20"
       onMouseEnter={() => { if (intervalRef.current) clearInterval(intervalRef.current); }}
       onMouseLeave={startTimer}
       onTouchStart={() => { if (intervalRef.current) clearInterval(intervalRef.current); }}
@@ -115,15 +115,16 @@ export default function PosterSlider() {
           }}
         />
       </AnimatePresence>
-      <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2 z-10">
+      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10">
         {loadedImages.map((_, index) => (
           <div
             key={index}
-            className={`h-2 w-2 rounded-full ${index === currentIndex ? 'bg-black' : 'bg-black/50'}`}
+            className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-6 bg-gradient-to-r from-purple-400 to-pink-500 shadow-[0_0_10px_rgba(168,85,247,0.8)]' : 'w-2 bg-slate-700/70'}`}
           />
         ))}
       </div>
     </div>
   );
 }
+
 

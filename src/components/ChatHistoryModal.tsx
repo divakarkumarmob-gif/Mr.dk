@@ -681,15 +681,16 @@ function ChatHistoryModal({ onClose, isLiveActive, onCloseLive }: ChatHistoryMod
             </AnimatePresence>
 
             {/* Header */}
-            <div className="w-full flex items-center gap-3 px-4 py-3 border-b border-white/10 flex-shrink-0 pt-[max(env(safe-area-inset-top,0px),12px)] bg-[#0b141a] z-20 isolate transform-gpu">
-                <button onClick={onClose} className="text-white p-1 -ml-1 hover:bg-white/10 rounded-full transition">
-                    <X className="h-6 w-6" />
+            <div className="w-full flex items-center justify-between gap-3 px-4 py-3.5 border-b border-purple-500/25 flex-shrink-0 pt-[max(env(safe-area-inset-top,0px),14px)] bg-slate-900/90 backdrop-blur-2xl z-20 isolate transform-gpu shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+                <button onClick={onClose} className="text-purple-300 p-2 hover:bg-white/10 rounded-xl transition cursor-pointer border border-purple-500/20">
+                    <X className="h-5 w-5" />
                 </button>
-                <h2 className="text-lg font-bold text-white flex-1 tracking-wide">Neural Solver 2.0</h2>
-                <button onClick={handleScreenshotIconClick} className="text-white p-1 hover:bg-white/10 rounded-full transition" title="Save to Notes">
-                    <Camera className="h-6 w-6" />
+                <h2 className="text-base sm:text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-blue-200 to-pink-300 tracking-wide drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]">Neural Solver 2.0</h2>
+                <button onClick={handleScreenshotIconClick} className="text-purple-300 p-2 hover:bg-white/10 rounded-xl transition cursor-pointer border border-purple-500/20" title="Save to Notes">
+                    <Camera className="h-5 w-5" />
                 </button>
             </div>
+
 
             {/* Messages */}
             <div

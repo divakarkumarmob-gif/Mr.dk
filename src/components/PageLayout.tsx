@@ -1,27 +1,9 @@
 import React from 'react';
-
-/**
- * PageLayout
- * ----------
- * Central place for safe-area (status bar / gesture bar) padding so every
- * full-screen view in App.tsx applies it the same way instead of repeating
- * the same Tailwind arbitrary-value classes 16+ times.
- *
- * Usage (replaces patterns like):
- *   <div className="flex flex-col min-h-dvh bg-background pt-[max(env(safe-area-inset-top,0px),12px)] px-3">
- *
- * with:
- *   <PageLayout background="bg-background">
- *
- * Props intentionally mirror the variations already present in App.tsx
- * (different bg colors, some views need extra bottom padding for the
- * BottomNav, some need px-0, one needs px-1.5 sm:px-3) so this is a
- * drop-in replacement with zero visual change by default.
- */
+import { motion } from 'motion/react';
 
 interface PageLayoutProps {
   children: React.ReactNode;
-  /** Tailwind background class, e.g. "bg-background" or "bg-[#f4e4bc]" */
+  /** Tailwind background class, e.g. "bg-background" or custom class */
   background?: string;
   /** Tailwind text color class, e.g. "text-foreground" */
   textColor?: string;
@@ -35,7 +17,7 @@ interface PageLayoutProps {
   paddingBottomExtra?: string;
   /**
    * Minimum top padding fallback (used before env() is supported / on web).
-   * Defaults to 12px. StudyHub uses 24px, so that's overridable.
+   * Defaults to 0px.
    */
   minTopPadding?: number;
   /** Extra classes appended to the outer wrapper, for one-off tweaks. */
@@ -44,13 +26,11 @@ interface PageLayoutProps {
   scrollable?: boolean;
 }
 
-import { motion } from 'motion/react';
-
 export default function PageLayout({
   children,
   background = '',
-  textColor = '',
-  paddingX = 'px-3',
+  textColor = 'text-slate-100',
+  paddingX = 'px-3 sm:px-6',
   paddingBottomExtra = '',
   minTopPadding = 0,
   className = '',
@@ -60,9 +40,9 @@ export default function PageLayout({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25, ease: 'easeOut' }}
+      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       className={[
         'flex flex-col md:pl-64',
         heightClass,
@@ -85,3 +65,4 @@ export default function PageLayout({
     </motion.div>
   );
 }
+

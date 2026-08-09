@@ -213,7 +213,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
     const activeZone = selectedQuadrant || autoZone;
 
     return (
-        <div ref={contentRef} className="min-h-dvh bg-gradient-to-b from-[#070B19] via-[#0A0F24] to-[#05070E] text-white p-4 pb-36 overflow-y-auto selection:bg-blue-500/30" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 16px)' }}>
+        <div ref={contentRef} className="min-h-dvh bg-[#0a0f24] text-white p-4 pb-36 overflow-y-auto selection:bg-purple-500/30" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 16px)' }}>
             
             {/* Superior Header */}
             <motion.header 
@@ -221,15 +221,15 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                 animate={{ opacity: 1, y: 0 }}
                 className="flex justify-between items-center mb-5 px-1 max-w-xl mx-auto"
             >
-                <button onClick={onBack} className="p-2.5 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition active:scale-90">
-                    <ArrowLeft className="w-5 h-5 text-gray-300" />
+                <button onClick={onBack} className="p-2.5 bg-slate-900/80 border border-purple-500/30 rounded-full hover:bg-slate-800 transition active:scale-90 text-purple-300 hover:text-white cursor-pointer shadow-md">
+                    <ArrowLeft className="w-5 h-5 text-purple-300" />
                 </button>
                 <div className="flex items-center gap-2">
                     <Trophy className="w-5 h-5 text-amber-400" />
                     <h1 className="text-base font-black tracking-tight text-white">Scorecard & Rank Analysis</h1>
                 </div>
-                <button onClick={handleShare} className="p-2.5 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition active:scale-90" title="Share Scorecard">
-                    <Share2 className="w-5 h-5 text-gray-300" />
+                <button onClick={handleShare} className="p-2.5 bg-slate-900/80 border border-purple-500/30 rounded-full hover:bg-slate-800 transition active:scale-90 text-purple-300 hover:text-white cursor-pointer shadow-md" title="Share Scorecard">
+                    <Share2 className="w-5 h-5 text-purple-300" />
                 </button>
             </motion.header>
 
@@ -239,9 +239,9 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                 <motion.div 
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-950/80 via-purple-950/60 to-slate-900/90 border border-indigo-500/40 p-5 sm:p-6 shadow-[0_0_30px_rgba(99,102,241,0.25)] backdrop-blur-xl"
+                    className="relative overflow-hidden rounded-3xl glass-card border border-purple-500/30 p-5 sm:p-6 shadow-[0_0_35px_rgba(139,92,246,0.3)] backdrop-blur-2xl"
                 >
-                    <div className="absolute -top-12 -right-12 w-32 h-32 bg-amber-500/20 rounded-full blur-2xl pointer-events-none" />
+                    <div className="absolute -top-12 -right-12 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl pointer-events-none" />
 
                     <div className="flex items-center justify-between mb-3 relative z-10">
                         <span className="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
@@ -262,12 +262,12 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         </div>
 
                         {/* TOTAL SCORE BOX */}
-                        <div className="bg-white/10 border border-white/15 backdrop-blur-md rounded-2xl px-5 py-3 text-center min-w-[120px] shadow-2xl shrink-0">
-                            <p className="text-[9px] text-gray-400 font-bold tracking-widest uppercase mb-0.5">TOTAL SCORE</p>
+                        <div className="bg-slate-900/80 border border-purple-500/30 backdrop-blur-xl rounded-2xl px-5 py-3 text-center min-w-[120px] shadow-2xl shrink-0">
+                            <p className="text-[9px] text-purple-300/80 font-bold tracking-widest uppercase mb-0.5">TOTAL SCORE</p>
                             <p className="text-3xl font-black text-emerald-400 leading-none mb-1">
                                 {obtainedMarks}
                             </p>
-                            <p className="text-[10px] text-gray-400 font-medium">out of {totalPossibleMarks}</p>
+                            <p className="text-[10px] text-slate-400 font-medium">out of {totalPossibleMarks}</p>
                         </div>
                     </div>
                 </motion.div>
@@ -277,10 +277,10 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.05 }}
-                    className="rounded-3xl bg-white/5 border border-white/10 p-5 shadow-2xl backdrop-blur-xl"
+                    className="rounded-3xl glass-card border border-purple-500/25 p-5 shadow-2xl backdrop-blur-xl"
                 >
                     <div className="flex items-center gap-2 mb-4">
-                        <Award className="w-5 h-5 text-blue-400" />
+                        <Award className="w-5 h-5 text-purple-400" />
                         <h3 className="text-sm font-black text-white tracking-tight">Interactive Subject Score Breakdown</h3>
                     </div>
 
@@ -290,10 +290,10 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                             <div className="flex justify-between items-center mb-2">
                                 <span className="text-xs font-black text-blue-400">Physics</span>
                                 <span className="text-xs font-black text-white">
-                                    {subjects.physics.obtained} <span className="text-gray-400 font-normal">/ {subjects.physics.max}</span>
+                                    {subjects.physics.obtained} <span className="text-slate-400 font-normal">/ {subjects.physics.max}</span>
                                 </span>
                             </div>
-                            <div className="relative w-full h-2.5 bg-black/40 rounded-full overflow-hidden">
+                            <div className="relative w-full h-2.5 bg-slate-950/60 rounded-full overflow-hidden">
                                 <div 
                                     className="h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full transition-all duration-700 shadow-[0_0_12px_rgba(59,130,246,0.6)]" 
                                     style={{ width: `${subjects.physics.max > 0 ? Math.min(100, Math.max(0, (subjects.physics.obtained / subjects.physics.max) * 100)) : 0}%` }}
@@ -302,20 +302,21 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         </div>
 
                         {/* Chemistry */}
-                        <div className="bg-amber-500/10 border border-amber-500/25 rounded-2xl p-4 backdrop-blur-md">
+                        <div className="bg-purple-500/10 border border-purple-500/25 rounded-2xl p-4 backdrop-blur-md">
                             <div className="flex justify-between items-center mb-2">
-                                <span className="text-xs font-black text-amber-400">Chemistry</span>
+                                <span className="text-xs font-black text-purple-300">Chemistry</span>
                                 <span className="text-xs font-black text-white">
-                                    {subjects.chemistry.obtained} <span className="text-gray-400 font-normal">/ {subjects.chemistry.max}</span>
+                                    {subjects.chemistry.obtained} <span className="text-slate-400 font-normal">/ {subjects.chemistry.max}</span>
                                 </span>
                             </div>
-                            <div className="relative w-full h-2.5 bg-black/40 rounded-full overflow-hidden">
+                            <div className="relative w-full h-2.5 bg-slate-950/60 rounded-full overflow-hidden">
                                 <div 
-                                    className="h-full bg-gradient-to-r from-amber-600 to-yellow-400 rounded-full transition-all duration-700 shadow-[0_0_12px_rgba(245,158,11,0.6)]" 
+                                    className="h-full bg-gradient-to-r from-purple-600 to-pink-400 rounded-full transition-all duration-700 shadow-[0_0_12px_rgba(236,72,153,0.6)]" 
                                     style={{ width: `${subjects.chemistry.max > 0 ? Math.min(100, Math.max(0, (subjects.chemistry.obtained / subjects.chemistry.max) * 100)) : 0}%` }}
                                 />
                             </div>
                         </div>
+
 
                         {/* Biology */}
                         <div className="bg-emerald-500/10 border border-emerald-500/25 rounded-2xl p-4 backdrop-blur-md">
@@ -340,14 +341,14 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="rounded-3xl bg-white/5 border border-white/10 p-5 shadow-2xl backdrop-blur-xl"
+                    className="rounded-3xl glass-card border border-purple-500/25 p-5 shadow-2xl backdrop-blur-xl"
                 >
                     <div className="flex justify-between items-center mb-4">
                         <div className="flex items-center gap-2">
                             <Zap className="w-5 h-5 text-amber-400" />
                             <h3 className="text-sm font-black text-white tracking-tight">Speed vs Accuracy Matrix</h3>
                         </div>
-                        <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Tap to inspect</span>
+                        <span className="text-[10px] text-purple-300 font-extrabold uppercase tracking-wider">Tap to inspect</span>
                     </div>
 
                     <div className="space-y-2.5">
@@ -356,8 +357,8 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                             onClick={() => setSelectedQuadrant('sniper')}
                             className={`rounded-2xl p-3.5 border transition-all cursor-pointer ${
                                 activeZone === 'sniper' 
-                                    ? 'bg-emerald-500/20 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.25)] scale-[1.01]' 
-                                    : 'bg-white/5 border-emerald-500/30 opacity-80 hover:opacity-100'
+                                    ? 'bg-emerald-500/20 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.3)] scale-[1.01]' 
+                                    : 'bg-slate-900/60 border-emerald-500/30 opacity-80 hover:opacity-100'
                             }`}
                         >
                             <div className="flex items-center justify-between mb-1">
@@ -370,7 +371,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                                     </span>
                                 )}
                             </div>
-                            <p className="text-[11px] text-gray-300 leading-relaxed">
+                            <p className="text-[11px] text-slate-300 leading-relaxed">
                                 High Speed + High Accuracy. Ideal state! Maintain mock test rhythm.
                             </p>
                         </div>
@@ -380,8 +381,8 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                             onClick={() => setSelectedQuadrant('silly')}
                             className={`rounded-2xl p-3.5 border transition-all cursor-pointer ${
                                 activeZone === 'silly' 
-                                    ? 'bg-amber-500/20 border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.25)] scale-[1.01]' 
-                                    : 'bg-white/5 border-amber-500/30 opacity-80 hover:opacity-100'
+                                    ? 'bg-amber-500/20 border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.3)] scale-[1.01]' 
+                                    : 'bg-slate-900/60 border-amber-500/30 opacity-80 hover:opacity-100'
                             }`}
                         >
                             <div className="flex items-center justify-between mb-1">
@@ -394,7 +395,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                                     </span>
                                 )}
                             </div>
-                            <p className="text-[11px] text-gray-300 leading-relaxed">
+                            <p className="text-[11px] text-slate-300 leading-relaxed">
                                 High Speed + Low Accuracy. Slow down by 10% to eliminate negative marks.
                             </p>
                         </div>
@@ -404,21 +405,21 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                             onClick={() => setSelectedQuadrant('perfectionist')}
                             className={`rounded-2xl p-3.5 border transition-all cursor-pointer ${
                                 activeZone === 'perfectionist' 
-                                    ? 'bg-blue-500/20 border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.25)] scale-[1.01]' 
-                                    : 'bg-white/5 border-blue-500/30 opacity-80 hover:opacity-100'
+                                    ? 'bg-purple-500/20 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.3)] scale-[1.01]' 
+                                    : 'bg-slate-900/60 border-purple-500/30 opacity-80 hover:opacity-100'
                             }`}
                         >
                             <div className="flex items-center justify-between mb-1">
-                                <span className="text-xs font-extrabold text-blue-400">
+                                <span className="text-xs font-extrabold text-purple-300">
                                     📈 Perfectionist Zone
                                 </span>
                                 {activeZone === 'perfectionist' && (
-                                    <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40">
+                                    <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40">
                                         Your Zone
                                     </span>
                                 )}
                             </div>
-                            <p className="text-[11px] text-gray-300 leading-relaxed">
+                            <p className="text-[11px] text-slate-300 leading-relaxed">
                                 Low Speed + High Accuracy. Practice timed 30-sec Rapid Fire rounds.
                             </p>
                         </div>
@@ -428,8 +429,8 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                             onClick={() => setSelectedQuadrant('concept')}
                             className={`rounded-2xl p-3.5 border transition-all cursor-pointer ${
                                 activeZone === 'concept' 
-                                    ? 'bg-rose-500/20 border-rose-500 shadow-[0_0_20px_rgba(244,63,94,0.25)] scale-[1.01]' 
-                                    : 'bg-white/5 border-rose-500/30 opacity-80 hover:opacity-100'
+                                    ? 'bg-rose-500/20 border-rose-500 shadow-[0_0_20px_rgba(244,63,94,0.3)] scale-[1.01]' 
+                                    : 'bg-slate-900/60 border-rose-500/30 opacity-80 hover:opacity-100'
                             }`}
                         >
                             <div className="flex items-center justify-between mb-1">
@@ -442,7 +443,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                                     </span>
                                 )}
                             </div>
-                            <p className="text-[11px] text-gray-300 leading-relaxed">
+                            <p className="text-[11px] text-slate-300 leading-relaxed">
                                 Low Speed + Low Accuracy. Re-read NCERT Biology & Physics derivations.
                             </p>
                         </div>
@@ -454,7 +455,7 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15 }}
-                    className="rounded-3xl bg-white/5 border border-white/10 p-5 shadow-2xl backdrop-blur-xl"
+                    className="rounded-3xl glass-card border border-purple-500/25 p-5 shadow-2xl backdrop-blur-xl"
                 >
                     <div className="flex items-center gap-2 mb-4">
                         <AlertTriangle className="w-5 h-5 text-rose-400" />
@@ -465,10 +466,10 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         {/* Silly Mistakes */}
                         <div>
                             <div className="flex justify-between items-center text-xs font-bold mb-1">
-                                <span className="text-gray-300">Silly Mistakes (Incorrect Ans)</span>
+                                <span className="text-slate-300">Silly Mistakes (Incorrect Ans)</span>
                                 <span className="text-amber-400">-{sillyMistakesLoss} Marks</span>
                             </div>
-                            <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+                            <div className="w-full h-2.5 bg-slate-950/60 rounded-full overflow-hidden">
                                 <div className="h-full bg-amber-500 rounded-full" style={{ width: `${Math.min(100, Math.max(10, (sillyMistakesLoss / (totalPossibleMarks || 720)) * 500))}%` }} />
                             </div>
                         </div>
@@ -476,10 +477,10 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         {/* Weak Topics */}
                         <div>
                             <div className="flex justify-between items-center text-xs font-bold mb-1">
-                                <span className="text-gray-300">Concept Gap (Unstudied Topics)</span>
+                                <span className="text-slate-300">Concept Gap (Unstudied Topics)</span>
                                 <span className="text-rose-400">-{conceptGapLoss} Marks</span>
                             </div>
-                            <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+                            <div className="w-full h-2.5 bg-slate-950/60 rounded-full overflow-hidden">
                                 <div className="h-full bg-rose-500 rounded-full" style={{ width: `${Math.min(100, Math.max(10, (conceptGapLoss / (totalPossibleMarks || 720)) * 500))}%` }} />
                             </div>
                         </div>
@@ -487,10 +488,10 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                         {/* Time Running Out */}
                         <div>
                             <div className="flex justify-between items-center text-xs font-bold mb-1">
-                                <span className="text-gray-300">Time Running Out</span>
+                                <span className="text-slate-300">Time Running Out</span>
                                 <span className="text-blue-400">-{timeOutLoss} Marks</span>
                             </div>
-                            <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+                            <div className="w-full h-2.5 bg-slate-950/60 rounded-full overflow-hidden">
                                 <div className="h-full bg-blue-500 rounded-full" style={{ width: `${Math.min(100, Math.max(10, (timeOutLoss / (totalPossibleMarks || 720)) * 500))}%` }} />
                             </div>
                         </div>
@@ -513,21 +514,21 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
 
                 {/* STATS QUICK METRICS */}
                 <div className="grid grid-cols-4 gap-2.5">
-                    <motion.div whileHover={{ scale: 1.05 }} onClick={() => { setFilterType('correct'); setShowReview(true); }} className="bg-emerald-500/10 border border-emerald-500/30 p-3 rounded-2xl text-center cursor-pointer backdrop-blur-md transition">
+                    <motion.div whileHover={{ scale: 1.05 }} onClick={() => { setFilterType('correct'); setShowReview(true); }} className="glass-card border border-emerald-500/30 p-3 rounded-2xl text-center cursor-pointer backdrop-blur-md transition">
                         <div className="font-black text-lg text-emerald-400">{correct}</div>
-                        <div className="text-[9px] text-gray-300 uppercase font-extrabold">Correct</div>
+                        <div className="text-[9px] text-slate-300 uppercase font-extrabold">Correct</div>
                     </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} onClick={() => { setFilterType('incorrect'); setShowReview(true); }} className="bg-rose-500/10 border border-rose-500/30 p-3 rounded-2xl text-center cursor-pointer backdrop-blur-md transition">
+                    <motion.div whileHover={{ scale: 1.05 }} onClick={() => { setFilterType('incorrect'); setShowReview(true); }} className="glass-card border border-rose-500/30 p-3 rounded-2xl text-center cursor-pointer backdrop-blur-md transition">
                         <div className="font-black text-lg text-rose-400">{incorrect}</div>
-                        <div className="text-[9px] text-gray-300 uppercase font-extrabold">Incorrect</div>
+                        <div className="text-[9px] text-slate-300 uppercase font-extrabold">Incorrect</div>
                     </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} onClick={() => { setFilterType('unattempted'); setShowReview(true); }} className="bg-blue-500/10 border border-blue-500/30 p-3 rounded-2xl text-center cursor-pointer backdrop-blur-md transition">
+                    <motion.div whileHover={{ scale: 1.05 }} onClick={() => { setFilterType('unattempted'); setShowReview(true); }} className="glass-card border border-blue-500/30 p-3 rounded-2xl text-center cursor-pointer backdrop-blur-md transition">
                         <div className="font-black text-lg text-blue-400">{unattempted}</div>
-                        <div className="text-[9px] text-gray-300 uppercase font-extrabold">Left</div>
+                        <div className="text-[9px] text-slate-300 uppercase font-extrabold">Left</div>
                     </motion.div>
-                    <div className="bg-amber-500/10 border border-amber-500/30 p-3 rounded-2xl text-center backdrop-blur-md">
+                    <div className="glass-card border border-amber-500/30 p-3 rounded-2xl text-center backdrop-blur-md">
                         <div className="font-black text-lg text-amber-400">{timeTakenMin}:{timeTakenSec.toString().padStart(2, '0')}</div>
-                        <div className="text-[9px] text-gray-300 uppercase font-extrabold">Time</div>
+                        <div className="text-[9px] text-slate-300 uppercase font-extrabold">Time</div>
                     </div>
                 </div>
 
@@ -552,11 +553,11 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                             window.dispatchEvent(new CustomEvent('open-live-ai-with-test', { detail: payload }));
                             window.dispatchEvent(new CustomEvent('open-ai-live-voice', { detail: payload }));
                         }}
-                        className="w-full bg-gradient-to-r from-red-600 via-purple-600 to-indigo-600 hover:from-red-500 hover:to-indigo-500 text-white py-4 px-4 rounded-2xl font-black text-xs shadow-xl shadow-red-600/25 flex items-center justify-center gap-2 transition-all border border-white/20"
+                        className="w-full gradient-btn-primary text-white py-4 px-4 rounded-2xl font-black text-xs shadow-[0_0_25px_rgba(139,92,246,0.35)] flex items-center justify-center gap-2.5 transition-all border border-purple-400/40 cursor-pointer"
                     >
                         <span className="relative flex h-3 w-3 shrink-0">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-400"></span>
                         </span>
                         Discuss this Test with AI Live 🎙️
                     </button>
@@ -566,21 +567,21 @@ export default function TestResultDetail({ result, onBack }: { result: any, onBa
                 <div className="grid grid-cols-3 gap-2.5">
                     <button 
                         onClick={() => { setFilterType('all'); setShowReview(true); }}
-                        className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white py-3.5 px-2 rounded-2xl font-black text-xs active:scale-95 transition-all shadow-lg shadow-blue-600/20 flex items-center justify-center gap-1.5"
+                        className="gradient-btn-secondary text-white py-3.5 px-2 rounded-2xl font-extrabold text-xs active:scale-95 transition-all shadow-md cursor-pointer flex items-center justify-center gap-1.5"
                     >
                         <BookOpen className="w-4 h-4 shrink-0" />
                         Review Qs
                     </button>
                     <button 
                         onClick={() => setShowAnalysis(true)}
-                        className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white py-3.5 px-2 rounded-2xl font-black text-xs active:scale-95 transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-1.5"
+                        className="gradient-btn-primary text-white py-3.5 px-2 rounded-2xl font-extrabold text-xs active:scale-95 transition-all shadow-md cursor-pointer flex items-center justify-center gap-1.5"
                     >
                         <Target className="w-4 h-4 shrink-0" />
                         Deep Analysis
                     </button>
                     <button 
                         onClick={() => setShowTutor(true)}
-                        className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white py-3.5 px-2 rounded-2xl font-black text-xs active:scale-95 transition-all shadow-lg shadow-purple-600/20 flex items-center justify-center gap-1.5"
+                        className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white py-3.5 px-2 rounded-2xl font-extrabold text-xs active:scale-95 transition-all shadow-md cursor-pointer flex items-center justify-center gap-1.5"
                     >
                         <Sparkles className="w-4 h-4 shrink-0" />
                         Ask AI Tutor

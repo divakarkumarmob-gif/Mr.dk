@@ -310,48 +310,48 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/60 backdrop-blur-md z-[100] flex items-center justify-center"
+                        className="fixed inset-0 bg-black/80 backdrop-blur-md z-[100] flex items-center justify-center p-4"
                         onClick={() => setIsOpen(false)}
                     >
                         <motion.div
                              initial={{ scale: 0.9, opacity: 0 }}
                              animate={{ scale: 1, opacity: 1 }}
                              exit={{ scale: 0.9, opacity: 0 }}
-                             className="relative bg-[#0f172a] p-[2px] rounded-[32px] w-72 h-80 flex flex-col items-center justify-between"
+                             className="relative bg-[#0a0f24] p-[2px] rounded-[36px] w-80 h-96 flex flex-col items-center justify-between shadow-[0_0_50px_rgba(139,92,246,0.4)] border border-purple-500/30"
                              onClick={(e) => e.stopPropagation()}
                         >
-                            {/* Rotating RGB Border */}
+                            {/* Rotating RGB / Neon Border */}
                             <motion.div
-                                className="absolute inset-0 rounded-[32px] bg-[conic-gradient(from_0deg,transparent_0_340deg,#3b82f6_350deg,#8b5cf6_360deg)] opacity-100"
+                                className="absolute inset-0 rounded-[36px] bg-[conic-gradient(from_0deg,transparent_0_300deg,#8b5cf6_340deg,#ec4899_360deg)] opacity-100"
                                 animate={{ rotate: 360 }}
-                                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                                style={{ opacity: 0.5 + volume / 100 }}
+                                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                                style={{ opacity: 0.6 + volume / 100 }}
                             />
-                            <div className="relative w-full h-full bg-[#0f172a] p-6 rounded-[30px] flex flex-col items-center justify-between border border-white/10">
-                                <h2 className="text-white text-lg font-medium tracking-wide">Live Conversation</h2>
+                            <div className="relative w-full h-full bg-[#0a0f24]/95 backdrop-blur-xl p-6 rounded-[34px] flex flex-col items-center justify-between border border-purple-500/20">
+                                <h2 className="text-white text-lg font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-pink-300">Live Voice Assistant</h2>
                                 
-                                <AgentFace status={status} volume={volume} size={128} colorIndex={colorIndex} />
+                                <AgentFace status={status} volume={volume} size={135} colorIndex={colorIndex} />
 
-                                <p className="text-white/70 text-sm font-light text-center h-16 overflow-y-auto w-full px-4">
+                                <p className="text-slate-300 text-sm font-medium text-center h-14 overflow-y-auto w-full px-4">
                                     {status}
                                 </p>
 
                                 {showLogs && (
-                                    <div className="bg-black/80 text-green-400 text-xs p-2 rounded w-full h-32 overflow-y-auto mt-2 font-mono">
+                                    <div className="bg-slate-950/90 text-emerald-400 text-xs p-2 rounded-xl w-full h-32 overflow-y-auto mt-2 font-mono border border-emerald-500/30">
                                         {logs.map((log, i) => <div key={i}>{log}</div>)}
                                     </div>
                                 )}
 
-                                <div className="flex gap-4 w-full justify-center">
+                                <div className="flex items-center gap-4 w-full justify-center">
                                     <button
                                         onClick={() => setShowLogs(!showLogs)}
-                                        className="text-white/50 text-xs underline"
+                                        className="text-slate-400 text-xs underline hover:text-slate-200 transition-colors"
                                     >
                                         {showLogs ? "Hide Logs" : "Show Logs"}
                                     </button>
                                     <button 
                                         onClick={isRecording ? stopRecording : startRecording}
-                                        className={`p-5 rounded-full text-white transition-all ${isRecording ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'}`}
+                                        className={`p-4 rounded-full text-white transition-all shadow-lg cursor-pointer ${isRecording ? 'bg-red-600 hover:bg-red-500 shadow-red-500/30' : 'gradient-btn-primary shadow-purple-500/30'}`}
                                     >
                                         {isRecording ? <Square className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
                                     </button>
@@ -361,6 +361,7 @@ export default function FloatingAIAgent({ onNavigate, isTyping, isCentered }: {
                     </motion.div>
                 )}
             </AnimatePresence>
+
         </>
     );
 }

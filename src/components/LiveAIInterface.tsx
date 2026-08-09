@@ -1108,7 +1108,7 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                                     animate={isRecording && status !== "Speaking..." ? { scale: [1, 1.06, 1] } : { scale: 1 }}
                                     transition={isRecording && status !== "Speaking..." ? { duration: 1.2, repeat: Infinity, ease: "easeInOut" } : {}}
                                     whileTap={{ scale: 0.9 }}
-                                    className={`relative w-20 h-20 rounded-full flex items-center justify-center cursor-pointer shadow-2xl transition ${isRecording ? 'bg-rose-600 shadow-rose-600/40' : 'bg-gradient-to-tr from-blue-600 via-cyan-500 to-indigo-600 shadow-cyan-500/30'}`}
+                                    className={`relative w-20 h-20 rounded-full flex items-center justify-center cursor-pointer shadow-2xl transition ${isRecording ? 'bg-rose-600 shadow-rose-600/50' : 'gradient-btn-primary shadow-[0_0_30px_rgba(139,92,246,0.6)]'}`}
                                 >
                                     <Mic className="h-8 w-8 text-white" />
                                 </motion.button>
@@ -1124,14 +1124,15 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                                         size="sm" 
                                     />
                                 ) : (
-                                    <span className="text-xs text-gray-400 font-medium">Tap to talk</span>
+                                    <span className="text-xs text-purple-300 font-semibold tracking-wide">Tap to talk</span>
                                 )}
                             </div>
                         </div>
 
-                        <button onClick={() => setShowChatHistory(true)} className="p-4 bg-white/10 rounded-full text-white">
-                            <MessageSquare className="h-6 w-6" />
+                        <button onClick={() => setShowChatHistory(true)} className="p-4 bg-slate-900/80 border border-purple-500/30 rounded-full text-white backdrop-blur-xl hover:bg-slate-800 transition cursor-pointer shadow-lg">
+                            <MessageSquare className="h-6 w-6 text-purple-300" />
                         </button>
+
                     </div>
                     <div className="w-12"></div>
                 </div>

@@ -10,22 +10,29 @@ interface PressableProps {
   disabled?: boolean;
 }
 
-export default function Pressable({ children, onClick, className, type = 'button', disabled }: PressableProps) {
+export default function Pressable({ children, onClick, className = '', type = 'button', disabled }: PressableProps) {
   const handlePress = async () => {
     if (disabled) return;
-    await Haptics.impact({ style: ImpactStyle.Light });
+    try {
+      await Haptics.impact({ style: ImpactStyle.Light });
+    } catch {
+      // Fallback if Haptics is unavailable
+    }
     if (onClick) onClick();
   };
 
   return (
     <motion.button
       type={type}
-      whileTap={disabled ? undefined : { scale: 0.98 }}
+      whileHover={disabled ? undefined : { scale: 1.02 }}
+      whileTap={disabled ? undefined : { scale: 0.96 }}
+      transition={{ type: 'spring', stiffness: 450, damping: 25 }}
       onClick={handlePress}
       disabled={disabled}
-      className={`transition-colors duration-150 ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : 'active:opacity-70'}`}
+      className={`transition-all duration-200 cursor-pointer ${className} ${disabled ? 'opacity-40 cursor-not-allowed' : ''}`}
     >
       {children}
     </motion.button>
   );
 }
+

@@ -88,35 +88,37 @@ export default function AnalysisHistory({ onNavigate, user, onResultSelect }: { 
     };
 
     return (
-        <div className="flex flex-col h-full flex-1 min-h-0 bg-background text-foreground px-3 overflow-y-auto pb-44">
-            <div className="flex-grow">
-                <h1 className="text-2xl font-bold mb-6">Test History</h1>
+        <div className="flex flex-col h-full flex-1 min-h-0 bg-[#0a0f24] text-white px-3 overflow-y-auto pb-44">
+            <div className="flex-grow pt-[env(safe-area-inset-top,0px)]">
+                <h1 className="text-xl font-black mb-4 text-white">Test History & Analysis 📊</h1>
 
-                <div className="flex gap-2 mb-6 bg-card p-1 rounded-xl">
+                <div className="flex gap-1.5 mb-6 bg-slate-900/80 border border-purple-500/25 p-1.5 rounded-2xl backdrop-blur-xl shadow-lg">
                     <button
                         onClick={() => setActiveTab('current')}
-                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === 'current' ? 'bg-blue-600 text-white' : 'text-muted-foreground'}`}
+                        className={`flex-1 py-2.5 rounded-xl font-extrabold text-xs transition-all cursor-pointer ${activeTab === 'current' ? 'gradient-btn-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]' : 'text-slate-400 hover:text-slate-200'}`}
                     >
                         Current (Latest 3)
                     </button>
                     <button
                         onClick={() => setActiveTab('past')}
-                        className={`flex-1 py-2 rounded-lg font-bold text-sm ${activeTab === 'past' ? 'bg-blue-600 text-white' : 'text-muted-foreground'}`}
+                        className={`flex-1 py-2.5 rounded-xl font-extrabold text-xs transition-all cursor-pointer ${activeTab === 'past' ? 'gradient-btn-primary text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]' : 'text-slate-400 hover:text-slate-200'}`}
                     >
-                        Past
+                        Past History
                     </button>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                     {displayedResults.length === 0 ? (
-                        <p className="text-muted-foreground text-center mt-10">No tests found in this category.</p>
+                        <div className="glass-card border border-purple-500/20 p-8 rounded-3xl text-center">
+                            <p className="text-slate-400 text-sm font-bold">No test records found in this category.</p>
+                        </div>
                     ) : (
                         displayedResults.map(result => (
-                            <div key={result.id} className="bg-card p-4 rounded-xl flex justify-between items-center">
+                            <div key={result.id} className="glass-card glass-card-hover border border-purple-500/20 p-4 rounded-2xl flex justify-between items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
                                 <div className="flex flex-col text-left">
-                                    <span className="font-semibold">{result.testName}</span>
+                                    <span className="font-extrabold text-sm text-white">{result.testName}</span>
                                     {result.timestamp && !isNaN(result.timestamp.getTime()) && (
-                                        <span className="text-muted-foreground text-xs">
+                                        <span className="text-purple-300/80 text-[11px] font-semibold mt-0.5">
                                             {result.timestamp.toLocaleDateString()}
                                         </span>
                                     )}
@@ -125,14 +127,14 @@ export default function AnalysisHistory({ onNavigate, user, onResultSelect }: { 
                                     {isAnalysisReady(result.timestamp) ? (
                                         <button 
                                             onClick={() => handleSeeResult(result)}
-                                            className="bg-blue-600 px-5 py-1.5 rounded-lg text-sm font-bold active:scale-95 transition-all"
+                                            className="gradient-btn-primary px-4 py-2 rounded-xl text-xs font-extrabold active:scale-95 transition-all shadow-md shadow-purple-500/20 cursor-pointer"
                                         >
                                             See Result
                                         </button>
                                     ) : (
                                         <div className="flex flex-col items-end">
-                                            <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Analyzing...</span>
-                                            <div className="bg-blue-600/10 text-blue-400 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border border-blue-400/20">
+                                            <span className="text-[9px] font-extrabold text-purple-300 uppercase tracking-widest mb-1">Analyzing...</span>
+                                            <div className="bg-purple-500/10 text-purple-300 px-3 py-1.5 rounded-xl text-xs font-mono font-bold border border-purple-500/30">
                                                 {getRemainingTime(result.timestamp)}
                                             </div>
                                         </div>

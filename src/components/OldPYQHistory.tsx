@@ -92,28 +92,31 @@ export default function OldPYQHistory({ onBack }: Props) {
 
 
     return (
-        <div className="min-h-dvh bg-[#05070A] text-white pb-24">
-            <div className="flex items-center gap-3 mb-6">
-                <button 
-                    onClick={onBack}
-                    className="p-2 hover:bg-white/10 rounded-full transition"
-                >
-                    <ChevronLeft className="h-6 w-6" />
-                </button>
-                <div>
-                    <h1 className="text-xl font-bold">NEET Legacy PYQs</h1>
-                    <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-400">Previous Year Papers (2005 - 2025)</span>
+        <div className="min-h-dvh bg-[#0a0f24] text-white pb-24 font-sans">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4">
+                <div className="flex items-center gap-3 mb-6 bg-slate-900/80 border border-purple-500/30 p-3.5 px-4 rounded-2xl backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+                    <button 
+                        onClick={onBack}
+                        className="p-2 bg-purple-500/15 hover:bg-purple-500/30 border border-purple-500/30 text-purple-300 hover:text-white rounded-xl transition cursor-pointer"
+                    >
+                        <ChevronLeft className="h-5 w-5" />
+                    </button>
+                    <div>
+                        <h1 className="text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-pink-300">
+                            NEET Legacy PYQs 📜
+                        </h1>
+                        <div className="flex items-center gap-2">
+                            <span className="text-xs text-purple-300/80 font-medium">Previous Year Papers (2005 - 2025)</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             <div className="relative mb-6">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-purple-300" />
                 <input 
                     type="text" 
                     placeholder="Search year or paper..." 
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                    className="w-full bg-slate-900/80 border border-purple-500/30 rounded-2xl py-3 pl-10 pr-4 text-sm focus:outline-none focus:border-purple-400 backdrop-blur-xl transition-all text-white placeholder-slate-400 shadow-md"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -148,6 +151,7 @@ export default function OldPYQHistory({ onBack }: Props) {
                     </div>
                     </motion.div>
                 ))}
+            </div>
             </div>
 
             {activeResource && (

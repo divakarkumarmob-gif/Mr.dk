@@ -379,7 +379,7 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
   };
 
   return (
-    <div id="notes-root" className="h-full flex-1 min-h-0 text-slate-100 pb-44 px-3 overflow-y-auto">
+    <div id="notes-root" className="h-full flex-1 min-h-0 text-slate-100 pb-44 px-4 sm:px-6 max-w-5xl mx-auto w-full overflow-y-auto">
       <AnimatePresence mode="wait">
         
         {/* VIEW 1: Main View (Important Notes Dashboard) */}
@@ -399,57 +399,59 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
             <button 
               id="upload-my-private-notes-btn"
               onClick={() => setView('uploads')}
-              className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 active:scale-[0.98] rounded-xl p-3.5 flex items-center justify-center gap-2 text-white shadow-lg shadow-orange-500/10 transition-all text-sm font-extrabold mb-5"
+              className="w-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:from-purple-500 hover:to-pink-500 active:scale-[0.98] rounded-2xl p-4 flex items-center justify-center gap-2.5 text-white shadow-[0_0_30px_rgba(236,72,153,0.35)] border border-pink-400/40 transition-all text-sm font-black mb-5 cursor-pointer"
             >
-              <FileUp className="h-5 w-5" /> Upload & My Private Notes
+              <FileUp className="h-5 w-5 text-white animate-bounce" /> Upload & My Private Notes
             </button>
 
             {/* Other hub navigations */}
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
               <Pressable 
                 onClick={() => onNavigate('ncertHub')} 
-                className="bg-green-600 text-white p-3 rounded-2xl flex flex-col items-start gap-2 cursor-pointer shadow-lg active:scale-95 transition-transform"
+                className="glass-card glass-card-hover border border-emerald-500/30 p-3.5 rounded-2xl flex flex-col items-start gap-2.5 cursor-pointer shadow-[0_4px_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:border-emerald-400/60 transition-all group"
               >
-                <div className="bg-white/20 p-2 rounded-xl"><BookOpen className="h-5 w-5 text-white"/></div>
+                <div className="bg-emerald-500/20 border border-emerald-400/30 p-2.5 rounded-xl text-emerald-300 group-hover:bg-emerald-500 group-hover:text-white transition duration-300"><BookOpen className="h-5 w-5"/></div>
                 <div>
-                  <p className="font-bold text-sm">NCERT 📚</p>
-                  <p className="text-[10px] opacity-80 leading-tight">Digital Textbooks Hub</p>
+                  <p className="font-extrabold text-sm text-white group-hover:text-emerald-300 transition">NCERT 📚</p>
+                  <p className="text-[10px] text-emerald-300/80 font-medium leading-tight">Digital Textbooks Hub</p>
                 </div>
               </Pressable>
 
               <Pressable 
                 onClick={() => onNavigate('ntaQuestionsHub')} 
-                className="bg-blue-600 text-white p-3 rounded-2xl flex flex-col items-start gap-2 cursor-pointer shadow-lg active:scale-95 transition-transform"
+                className="glass-card glass-card-hover border border-blue-500/30 p-3.5 rounded-2xl flex flex-col items-start gap-2.5 cursor-pointer shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:border-blue-400/60 transition-all group"
               >
-                <div className="bg-white/20 p-2 rounded-xl"><FileUp className="h-5 w-5 text-white"/></div>
+                <div className="bg-blue-500/20 border border-blue-400/30 p-2.5 rounded-xl text-blue-300 group-hover:bg-blue-500 group-hover:text-white transition duration-300"><FileUp className="h-5 w-5"/></div>
                 <div>
-                  <p className="font-bold text-sm">Question Bank 📚</p>
-                  <p className="text-[10px] opacity-80 leading-tight">Official NTA PDFs Hub</p>
+                  <p className="font-extrabold text-sm text-white group-hover:text-blue-300 transition">Question Bank 📚</p>
+                  <p className="text-[10px] text-blue-300/80 font-medium leading-tight">Official NTA PDFs Hub</p>
                 </div>
               </Pressable>
 
               <Pressable 
                 onClick={() => onNavigate('oldPyqHistory')} 
-                className="bg-slate-800 text-white p-3 rounded-2xl flex flex-col items-start gap-2 cursor-pointer shadow-lg active:scale-95 transition-transform border border-white/10 hover:border-orange-500/50"
+                className="glass-card glass-card-hover border border-purple-500/30 p-3.5 rounded-2xl flex flex-col items-start gap-2.5 cursor-pointer shadow-[0_4px_20px_rgba(168,85,247,0.2)] hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:border-purple-400/60 transition-all group col-span-2 sm:col-span-1"
               >
-                <div className="bg-orange-600 p-2 rounded-xl"><Download className="h-4 w-4 text-white"/></div>
+                <div className="bg-purple-500/20 border border-purple-400/30 p-2.5 rounded-xl text-purple-300 group-hover:bg-purple-600 group-hover:text-white transition duration-300"><Download className="h-5 w-5"/></div>
                 <div>
-                  <p className="font-bold text-sm">Legacy PYQs 📜</p>
+                  <p className="font-extrabold text-sm text-white group-hover:text-purple-300 transition">Legacy PYQs 📜</p>
+                  <p className="text-[10px] text-purple-300/80 font-medium leading-tight">Past Question Papers</p>
                 </div>
               </Pressable>
             </div>
 
+
             {/* Quick Access Official NTA Real PYQ Question Bank PDFs */}
-            <div className="mt-6 bg-[#161e38] border border-white/10 rounded-2xl p-4 shadow-xl">
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></div>
-                  <h3 className="text-sm font-bold text-white">NTA Real Question Papers</h3>
+            <div className="mt-6 glass-card border border-purple-500/25 rounded-2xl p-3.5 sm:p-4 shadow-[0_8px_32px_rgba(0,0,0,0.5)] w-full min-w-0 overflow-hidden">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-3.5">
+                <div className="flex items-center gap-2 min-w-0">
+                  <div className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse shrink-0"></div>
+                  <h3 className="text-sm font-extrabold text-white truncate">NTA Real Question Papers</h3>
                 </div>
-                <span className="text-[10px] bg-blue-500/20 text-blue-300 font-extrabold px-2 py-0.5 rounded-full border border-blue-500/30">Official NTA PDFs</span>
+                <span className="text-[10px] bg-purple-500/20 text-purple-300 font-extrabold px-2.5 py-0.5 rounded-full border border-purple-500/30 shrink-0">Official NTA PDFs</span>
               </div>
               
-              <div className="grid gap-2.5">
+              <div className="grid gap-2.5 w-full min-w-0">
                 {[
                   { id: 'neet2024', year: '2024', title: 'NEET 2024 Official Question Paper', url: 'https://www.nta.ac.in/Download/QuestionPaper/NEET_2024.pdf' },
                   { id: 'neet2023', year: '2023', title: 'NEET 2023 Official Question Paper', url: 'https://accad.nta.nic.in/QuestionPaper/NEET_2023.pdf' },
@@ -486,21 +488,22 @@ export default function Notes({ onNavigate }: { onNavigate: (view: any) => void 
                         setViewerPdf({ url: paper.url, title: paper.title });
                       }
                     }}
-                    className="bg-slate-900/80 hover:bg-slate-800 border border-white/5 p-3 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all active:scale-[0.98]"
+                    className="bg-slate-900/80 hover:bg-slate-800/90 border border-purple-500/20 p-3 rounded-xl flex items-center justify-between gap-2 cursor-pointer transition-all active:scale-[0.98] w-full min-w-0 overflow-hidden"
                   >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-extrabold text-[10px] shrink-0">
+                    <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                      <div className="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center justify-center font-extrabold text-[10px] shrink-0">
                         {paper.year}
                       </div>
-                      <span className="text-xs font-bold text-gray-200 truncate">{paper.title}</span>
+                      <span className="text-xs font-bold text-slate-200 truncate leading-tight flex-1 min-w-0">{paper.title}</span>
                     </div>
-                    <div className="bg-blue-600 hover:bg-blue-500 text-white px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shrink-0 shadow-sm">
+                    <div className="gradient-btn-primary text-white px-2.5 py-1.5 rounded-lg text-[10px] font-extrabold flex items-center gap-1 shrink-0 shadow-sm cursor-pointer">
                       <Eye className="w-3 h-3" /> View PDF
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+
           </motion.div>
         )}
 

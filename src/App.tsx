@@ -2090,7 +2090,7 @@ function AppInner() {
 
   if (currentView === 'ncertHub') {
       return (
-        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]" paddingX="px-0" minTopPadding={0}>
+        <PageLayout background="bg-[#0a0f24]" paddingX="px-0" minTopPadding={0}>
             <NCERTHub onBack={() => setCurrentView('notes')} />
         </PageLayout>
       );
@@ -2099,7 +2099,7 @@ function AppInner() {
   if (currentView === 'ntaQuestionsHub') {
       const paperId = urlParams.get('paper');
       return (
-        <PageLayout background="bg-gradient-to-br from-black to-[#0a0e1a]" paddingX="px-0" minTopPadding={0}>
+        <PageLayout background="bg-[#0a0f24]" paddingX="px-0" minTopPadding={0}>
             <NTAQuestionsHub onBack={() => setCurrentView('notes')} autoOpenPaperId={paperId || undefined} />
         </PageLayout>
       );
@@ -2107,7 +2107,7 @@ function AppInner() {
 
   if (currentView === 'oldPyqHistory') {
       return (
-        <PageLayout background="bg-[#05070A]">
+        <PageLayout background="bg-[#0a0f24]">
             <OldPYQHistory onBack={() => setCurrentView('notes')} />
         </PageLayout>
       );
@@ -2115,7 +2115,7 @@ function AppInner() {
 
   if (currentView === 'notes') {
       return (
-        <PageLayout background="bg-background" paddingBottomExtra="pb-20">
+        <PageLayout background="bg-[#0a0f24]" paddingBottomExtra="pb-20">
             <div className="flex-grow"><Notes onNavigate={setCurrentView} /></div>
             <BottomNav currentView="notes" onNavigate={setCurrentView} />
             <SupportModal 
@@ -2137,7 +2137,7 @@ function AppInner() {
 
     if (currentView === 'analytics') {
         return (
-          <PageLayout background="bg-background">
+          <PageLayout background="bg-[#0a0f24]">
               <div className="flex-grow"><AnalysisHistory onNavigate={setCurrentView} user={user} onResultSelect={setSelectedAnalysisResult} /></div>
               <SupportModal 
                  isOpen={showSupportModal} 
@@ -2162,8 +2162,8 @@ function AppInner() {
 
    if (currentView === 'technicalSupport') {
        return (
-         <PageLayout background="bg-[#0b141a]" textColor="text-foreground" paddingX="" className="!h-dvh overflow-hidden">
-             <UserChat fullScreen={true} user={user} initialScreenshot={pendingSupportData?.screenshot} initialText={pendingSupportData?.text} />
+         <PageLayout background="bg-[#0a0f24]" textColor="text-foreground" paddingX="" className="!h-dvh overflow-hidden">
+             <UserChat fullScreen={true} user={user} initialScreenshot={pendingSupportData?.screenshot} initialText={pendingSupportData?.text} onBack={() => setCurrentView(previousView || 'profile')} />
          </PageLayout>
        );
    }
@@ -2347,41 +2347,69 @@ function AppInner() {
 
       <HubSwitcher active="home" onNavigate={setCurrentView} />
 
-      <div className="bg-card rounded-2xl p-3 sm:p-5 border border-border mb-4 mt-0 select-none">
-        <div className="flex justify-between items-center mb-2.5">
-            <h2 className="font-bold text-sm sm:text-lg">Your Performance</h2>
-            <div className="text-orange-500 text-[10px] sm:text-xs font-semibold">
-                {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+      {/* Performance Card */}
+      <div className="bg-slate-900/60 backdrop-blur-xl rounded-3xl p-4 sm:p-6 border border-purple-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] mb-6 mt-0 select-none relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="flex justify-between items-center mb-4 relative z-10">
+            <div>
+              <h2 className="font-extrabold text-base sm:text-xl tracking-tight text-white flex items-center gap-2">
+                <span>Your Performance</span>
+                <span className="flex h-2 w-2 rounded-full bg-purple-400 animate-ping" />
+              </h2>
+              <p className="text-slate-400 text-[10px] sm:text-xs">Real-time NEET metrics & practice stats</p>
+            </div>
+            <div className="text-purple-300 text-[10px] sm:text-xs font-mono font-bold bg-purple-950/70 border border-purple-800/50 px-3 py-1 rounded-full">
+                {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
             </div>
         </div>
-        <div className="grid grid-cols-2 gap-2 sm:gap-3">
-            <div onClick={() => setCurrentView('analytics')} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
-                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Tests Attempted</p>
-                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.testsAttempted} <BarChart2 className="text-blue-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+        <div className="grid grid-cols-2 gap-3 relative z-10">
+            <div onClick={() => setCurrentView('analytics')} className="bg-slate-950/60 p-3 sm:p-4 rounded-2xl border border-blue-500/20 cursor-pointer hover:border-blue-500/50 hover:bg-slate-800/60 transition-all duration-300 shadow-md group">
+                <div className="flex items-center justify-between mb-1">
+                  <p className="text-slate-400 text-[10px] sm:text-xs font-semibold">Tests Attempted</p>
+                  <div className="p-1.5 rounded-xl bg-blue-500/15 text-blue-400 group-hover:scale-110 transition-transform">
+                    <BarChart2 className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </div>
+                </div>
+                <h3 className="font-extrabold text-lg sm:text-2xl text-white">{stats.testsAttempted}</h3>
             </div>
-             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
-                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Questions Solved</p>
-                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.questionsSolved} <CheckCircle2 className="text-green-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            <div className="bg-slate-950/60 p-3 sm:p-4 rounded-2xl border border-emerald-500/20 shadow-md group">
+                <div className="flex items-center justify-between mb-1">
+                  <p className="text-slate-400 text-[10px] sm:text-xs font-semibold">Questions Solved</p>
+                  <div className="p-1.5 rounded-xl bg-emerald-500/15 text-emerald-400 group-hover:scale-110 transition-transform">
+                    <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </div>
+                </div>
+                <h3 className="font-extrabold text-lg sm:text-2xl text-white">{stats.questionsSolved}</h3>
             </div>
-             <div className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5">
-                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Accuracy</p>
-                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{stats.accuracy}% <Target className="text-orange-500 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            <div className="bg-slate-950/60 p-3 sm:p-4 rounded-2xl border border-amber-500/20 shadow-md group">
+                <div className="flex items-center justify-between mb-1">
+                  <p className="text-slate-400 text-[10px] sm:text-xs font-semibold">Accuracy</p>
+                  <div className="p-1.5 rounded-xl bg-amber-500/15 text-amber-400 group-hover:scale-110 transition-transform">
+                    <Target className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </div>
+                </div>
+                <h3 className="font-extrabold text-lg sm:text-2xl text-white">{stats.accuracy}%</h3>
             </div>
-             <div onClick={openAnalytics} className="bg-white/5 p-2 sm:p-3 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-colors">
-                <p className="text-gray-400 text-[9px] sm:text-xs mb-0.5">Time Spent</p>
-                <h3 className="font-bold text-base sm:text-2xl flex items-center gap-2">{Math.floor(stats.timeSpentSeconds / 60)}m <Clock className="text-purple-400 h-4 w-4 sm:h-5 sm:w-5"/></h3>
+            <div onClick={openAnalytics} className="bg-slate-950/60 p-3 sm:p-4 rounded-2xl border border-purple-500/20 cursor-pointer hover:border-purple-500/50 hover:bg-slate-800/60 transition-all duration-300 shadow-md group">
+                <div className="flex items-center justify-between mb-1">
+                  <p className="text-slate-400 text-[10px] sm:text-xs font-semibold">Time Spent</p>
+                  <div className="p-1.5 rounded-xl bg-purple-500/15 text-purple-400 group-hover:scale-110 transition-transform">
+                    <Clock className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </div>
+                </div>
+                <h3 className="font-extrabold text-lg sm:text-2xl text-white">{Math.floor(stats.timeSpentSeconds / 60)}m</h3>
             </div>
         </div>
       </div>
       
       {showAnalytics && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000] flex items-center justify-center p-4">
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-card p-5 sm:p-7 rounded-3xl border border-border w-full max-w-lg shadow-2xl relative">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-[1000] flex items-center justify-center p-4">
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-[#0a0f24] p-5 sm:p-7 rounded-3xl border border-purple-500/30 w-full max-w-lg shadow-[0_0_50px_rgba(139,92,246,0.3)] relative">
                <button onClick={() => window.history.back()} className="absolute top-4 right-4 bg-white/5 p-2 rounded-full hover:bg-white/10 transition-colors">
-                   <X className="h-4 w-4" />
+                   <X className="h-4 w-4 text-white" />
                </button>
                <div className="mb-6">
-                   <h2 className="text-xl font-bold flex items-center gap-2">
+                   <h2 className="text-xl font-bold flex items-center gap-2 text-white">
                        <Clock className="text-purple-400 h-5 w-5" />
                        Activity Analytics
                    </h2>
@@ -2393,54 +2421,75 @@ function AppInner() {
       )}
 
 
-      {/* Continue Learning */}
+      {/* Continue Learning Header */}
       <div className="flex justify-between items-center mb-4 mt-6">
-          <h2 className="font-bold text-lg sm:text-xl">Continue Learning</h2>
+          <div>
+            <h2 className="font-extrabold text-lg sm:text-xl text-white tracking-tight">Continue Learning</h2>
+            <p className="text-slate-400 text-xs">Jump back into your active subjects</p>
+          </div>
           <div className="flex items-center gap-2">
-            <button onClick={handleOpenResetModal} className="text-xs bg-red-900/50 text-red-300 px-3 py-1 rounded-full">Reset</button>
-            <button onClick={handleOpenRandomPopup} className="text-xs bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-1">
+            <button onClick={handleOpenResetModal} className="text-xs bg-red-950/60 text-red-300 border border-red-800/40 px-3 py-1.5 rounded-xl font-medium hover:bg-red-900/80 transition-colors">Reset</button>
+            <button onClick={handleOpenRandomPopup} className="text-xs bg-purple-950/60 text-purple-300 border border-purple-800/40 px-3 py-1.5 rounded-xl font-medium flex items-center gap-1 hover:bg-purple-900/80 transition-colors">
                 <Shuffle className="h-3 w-3" /> Random
             </button>
           </div>
       </div>
       {showRandomPopup && (
-        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
-            <div className="bg-card p-6 rounded-2xl border border-border w-full max-w-sm text-center">
-                <h2 className="text-xl font-bold mb-4">Random Chapter Picked!</h2>
-                <p className="text-gray-300">"{randomChapter?.topic}" will be for 2 hours.</p>
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-center justify-center p-6">
+            <div className="bg-[#0a0f24] p-6 rounded-3xl border border-purple-500/30 w-full max-w-sm text-center shadow-[0_0_40px_rgba(139,92,246,0.4)]">
+                <h2 className="text-xl font-bold mb-4 text-white">Random Chapter Picked!</h2>
+                <p className="text-slate-300">"{randomChapter?.topic}" will be for 2 hours.</p>
                 <div className="flex flex-col gap-2 mt-6">
-                  <button onClick={applyRandomChapter} className="w-full bg-blue-600 py-2 rounded-lg font-bold">Got it</button>
-                  <button onClick={() => window.history.back()} className="w-full bg-gray-700 py-2 rounded-lg font-bold">Restore Original</button>
+                  <button onClick={applyRandomChapter} className="w-full gradient-btn-primary py-2.5 rounded-xl font-bold">Got it</button>
+                  <button onClick={() => window.history.back()} className="w-full bg-slate-800 text-slate-200 py-2.5 rounded-xl font-bold hover:bg-slate-700">Restore Original</button>
                 </div>
             </div>
         </div>
       )}
       
       {showResetModal && (
-        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-6">
-            <div className="bg-card p-6 rounded-2xl border border-border w-full max-w-sm">
-                <h2 className="text-xl font-bold mb-4">Are you sure you want to restart?</h2>
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-center justify-center p-6">
+            <div className="bg-[#0a0f24] p-6 rounded-3xl border border-purple-500/30 w-full max-w-sm">
+                <h2 className="text-xl font-bold mb-4 text-white">Are you sure you want to restart?</h2>
                 <div className="flex gap-3 mt-6">
-                    <button onClick={handleReset} className="flex-1 bg-red-600 py-2 rounded-lg font-bold">Yes</button>
-                    <button onClick={() => window.history.back()} className="flex-1 bg-white/10 py-2 rounded-lg font-bold">No</button>
-                    <button onClick={handleRestore} className="flex-1 bg-blue-600 py-2 rounded-lg font-bold">Restore</button>
+                    <button onClick={handleReset} className="flex-1 bg-red-600 hover:bg-red-500 py-2.5 rounded-xl font-bold text-white">Yes</button>
+                    <button onClick={() => window.history.back()} className="flex-1 bg-white/10 hover:bg-white/20 py-2.5 rounded-xl font-bold text-white">No</button>
+                    <button onClick={handleRestore} className="flex-1 bg-blue-600 hover:bg-blue-500 py-2.5 rounded-xl font-bold text-white">Restore</button>
                 </div>
             </div>
         </div>
       )}
-      <div className="space-y-3 mb-5 scroll-mt-20">
-        {subjects.map((sub, idx) => (
-            <div key={idx} className={`bg-card/80 backdrop-blur-sm border-l-4 ${sub.color} rounded-xl p-4 sm:p-6 flex justify-between items-center group shadow-md`}>
-                <div className="flex-1 min-w-0 mr-3">
-                  <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-wider truncate mb-1">{sub.name}</p>
-                  <p className="font-bold text-sm sm:text-lg truncate">{sub.topic}</p>
+
+      {/* Subject Cards */}
+      <div className="space-y-3.5 mb-6 scroll-mt-20">
+        {subjects.map((sub, idx) => {
+            const subjectGlowColors = [
+                'from-blue-500/20 via-cyan-500/10 to-transparent border-blue-500/30',
+                'from-purple-500/20 via-pink-500/10 to-transparent border-purple-500/30',
+                'from-emerald-500/20 via-teal-500/10 to-transparent border-emerald-500/30'
+            ];
+            const badgeGlows = [
+                'bg-blue-500/20 text-blue-300 border-blue-500/40',
+                'bg-purple-500/20 text-purple-300 border-purple-500/40',
+                'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+            ];
+            const glowStyle = subjectGlowColors[idx % subjectGlowColors.length];
+            const badgeStyle = badgeGlows[idx % badgeGlows.length];
+
+            return (
+                <div key={idx} className={`bg-gradient-to-r ${glowStyle} backdrop-blur-xl border rounded-2xl p-4 sm:p-6 flex justify-between items-center group shadow-[0_8px_25px_rgba(0,0,0,0.4)] transition-all duration-300 hover:scale-[1.01]`}>
+                    <div className="flex-1 min-w-0 mr-4">
+                      <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full border mb-1.5 ${badgeStyle}`}>
+                        {sub.name}
+                      </span>
+                      <p className="font-extrabold text-base sm:text-xl text-white truncate group-hover:text-purple-200 transition-colors">{sub.topic}</p>
+                    </div>
+                    <div className="flex gap-2 sm:gap-3 flex-shrink-0">
+                        <button className="gradient-btn-primary px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm font-bold shadow-lg cursor-pointer" onClick={() => handleOpenVideo(sub.topic)}>START</button>
+                    </div>
                 </div>
-                <div className="flex gap-2 sm:gap-3 flex-shrink-0">
-                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm hidden sm:block hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
-                    <button className="bg-white text-[#0a0f24] font-bold px-4 py-2 rounded-lg text-xs sm:hidden hover:bg-gray-200 transition" onClick={() => handleOpenVideo(sub.topic)}>START</button>
-                </div>
-            </div>
-        ))}
+            );
+        })}
       </div>
 
       <div className="mb-4">

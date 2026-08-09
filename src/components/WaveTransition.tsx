@@ -49,15 +49,15 @@ export default function WaveReveal({
                 transform (GPU-composited, never repaints the content below) */}
             {active && (
                 <motion.div
-                    className="absolute rounded-full pointer-events-none"
+                    className="absolute rounded-full pointer-events-none z-[3000]"
                     style={{
                         width: maxDiameter,
                         height: maxDiameter,
                         left: originX - maxDiameter / 2,
                         top: originY - maxDiameter / 2,
                         scale,
-                        background: 'radial-gradient(circle, rgba(59,130,246,0.95) 0%, rgba(139,92,246,0.95) 60%, rgba(139,92,246,0.7) 100%)',
-                        boxShadow: '0 0 40px 12px rgba(139, 92, 246, 0.5)',
+                        background: 'radial-gradient(circle, rgba(139,92,246,0.95) 0%, rgba(59,130,246,0.95) 50%, rgba(236,72,153,0.85) 100%)',
+                        boxShadow: '0 0 60px 20px rgba(139, 92, 246, 0.6), inset 0 0 30px rgba(236, 72, 153, 0.4)',
                         willChange: 'transform',
                     }}
                 />
@@ -65,3 +65,4 @@ export default function WaveReveal({
         </div>
     );
 }
+
