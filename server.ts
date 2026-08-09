@@ -153,6 +153,40 @@ async function requireAppCheck(req: any, res: any, next: any) {
   }
 }
 
+// Combined App Check + Auth middleware for latency-sensitive routes
+// (the streaming AI endpoints). requireAppCheck and requireAuth verify two
+// independent tokens against Google — running them one after another pays
+// for two sequential network round-trips before the actual AI call even
+// starts. Firing both verifications at once with Promise.all cuts that
+// down to the slower of the two, instead of the sum of both.
+async function requireAppCheckAndAuth(req: any, res: any, next: any) {
+  const authHeader = req.headers.authorization || '';
+  let authToken = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+  if (!authToken && req.query?.token && typeof req.query.token === 'string') {
+    authToken = req.query.token;
+  }
+  if (!authToken) {
+    return res.status(401).json({ error: 'Missing auth token' });
+  }
+
+  const appCheckDisabled = process.env.DISABLE_APP_CHECK === 'true';
+  const appCheckToken = (req.headers['x-firebase-appcheck'] as string) || (req.query?.appCheckToken as string);
+  if (!appCheckDisabled && !appCheckToken) {
+    return res.status(401).json({ error: 'Missing App Check token' });
+  }
+
+  try {
+    const [decodedAuth] = await Promise.all([
+      admin.auth().verifyIdToken(authToken),
+      appCheckDisabled ? Promise.resolve() : admin.appCheck().verifyToken(appCheckToken as string),
+    ]);
+    req.uid = decodedAuth.uid;
+    next();
+  } catch (e) {
+    return res.status(401).json({ error: 'Invalid or expired auth/App Check token' });
+  }
+}
+
 const logs: string[] = [];
 
 const openrouter = process.env.OPENROUTER_API_KEY ? new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY }) : null;
@@ -1560,7 +1594,7 @@ async function startServer() {
   });
 
   // API route for gemini
-  app.post("/api/gemini", requireAppCheck, requireAuth, async (req, res) => {
+  app.post("/api/gemini", requireAppCheckAndAuth, async (req, res) => {
     const { messages, base64Audio, isStudyPlanChat, studentMemory } = req.body;
 
     try {
@@ -1885,7 +1919,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
   });
 
   // API route for neural chat (Supports streaming SSE & JSON)
-  app.post("/api/neural-chat", requireAppCheck, requireAuth, async (req, res) => {
+  app.post("/api/neural-chat", requireAppCheckAndAuth, async (req, res) => {
     const { messages } = req.body;
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: "Missing messages" });
@@ -1939,7 +1973,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
 
 
   // API route for streaming search (Phase 2)
-  app.post("/api/search-stream", requireAppCheck, requireAuth, async (req, res) => {
+  app.post("/api/search-stream", requireAppCheckAndAuth, async (req, res) => {
     const { prompt, base64Image } = req.body;
     if (!prompt && !base64Image) {
       return res.status(400).json({ error: "Missing prompt or image" });
@@ -2349,28 +2383,15 @@ Instructions:
         thinkingLevel = 'high';
       }
 
-      let performanceMemory = "";
-      try {
-        if (userId && firebaseAdminApp) {
-          const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
-          const aiChatId = `${userId}_ai`;
-          await db.collection('chats').doc(aiChatId).set({
-            participants: [userId],
-            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-          }, { merge: true });
-          const resultsSnap = await db.collection('users').doc(userId).collection('results').orderBy('timestamp', 'desc').limit(3).get();
-          if (!resultsSnap.empty) {
-            const latestResult = resultsSnap.docs[0].data();
-            const score = latestResult.score || 0;
-            const totalPossible = latestResult.totalPossibleMarks || 720;
-            const sillyLoss = latestResult.sillyMistakesLoss || 0;
-            const conceptLoss = latestResult.conceptGapLoss || 0;
-            performanceMemory = `\n[Student Live Test Performance Sync]\n- Latest Test Score: ${score}/${totalPossible}\n- Silly Mistakes Loss: ${sillyLoss} marks\n- Concept Gap Loss: ${conceptLoss} marks\n- Physics Score: ${latestResult.physicsScore || 0}, Chemistry: ${latestResult.chemScore || 0}, Biology: ${latestResult.bioScore || 0}\nUse this real performance data naturally to guide, encourage, and mentor the student on their specific weak areas!`;
-          }
-        }
-      } catch (e) {
-        console.log("Performance memory fetch skipped:", e);
-      }
+      // Performance memory (latest test scores) used to be fetched here with
+      // two sequential AWAITed Firestore calls before ai.live.connect() —
+      // that put two Firestore round-trips on the critical path of every
+      // mic-tap, delaying init_ack and the first AI response. It's now
+      // fetched in the background by injectPerformanceMemoryInBackground
+      // (called right after the session is created) and injected as a
+      // system turn, the same pattern already used for memory-summary
+      // injection below. Session creation no longer waits on it.
+      const performanceMemory = "";
 
       let systemInstruction = `You are NeetMaster AI, a specialized voice study companion for NEET aspirants, expert in Physics, Chemistry, and Biology (NCERT Class 11-12 syllabus).
 You MUST speak ONLY in natural, fluent Hindi. Do not use English unless necessary for technical terms.
@@ -2569,6 +2590,60 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
         });
     };
 
+    // Same background-injection pattern as injectMemoryInBackground above,
+    // but for the student's latest test performance (score, silly-mistake
+    // loss, subject-wise breakdown). This used to be fetched with two
+    // AWAITed Firestore calls inside createSession, blocking init_ack on
+    // every mic-tap. Now it runs after the session is already live, and is
+    // discarded if a newer session has since replaced this one.
+    const injectPerformanceMemoryInBackground = (
+      userId: string,
+      session: any,
+      sessionToken: number
+    ) => {
+      if (!userId || !firebaseAdminApp) return;
+
+      (async () => {
+        try {
+          const db = getFirestore(firebaseAdminApp, firebaseConfig.firestoreDatabaseId);
+          const aiChatId = `${userId}_ai`;
+          // Fire-and-forget: ensures the AI chat doc exists so later
+          // transcript saves have somewhere to land. saveVoiceMessage also
+          // does this same merge-set before writing a message, so this is
+          // belt-and-suspenders, not load-bearing — no need to await it.
+          db.collection('chats').doc(aiChatId).set({
+            participants: [userId],
+            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          }, { merge: true }).catch((e) => console.warn("AI chat doc ensure failed:", e));
+
+          const resultsSnap = await db.collection('users').doc(userId).collection('results').orderBy('timestamp', 'desc').limit(3).get();
+          if (resultsSnap.empty) return;
+
+          const latestResult = resultsSnap.docs[0].data();
+          const score = latestResult.score || 0;
+          const totalPossible = latestResult.totalPossibleMarks || 720;
+          const sillyLoss = latestResult.sillyMistakesLoss || 0;
+          const conceptLoss = latestResult.conceptGapLoss || 0;
+          const performanceMemory = `[Student Live Test Performance Sync]\n- Latest Test Score: ${score}/${totalPossible}\n- Silly Mistakes Loss: ${sillyLoss} marks\n- Concept Gap Loss: ${conceptLoss} marks\n- Physics Score: ${latestResult.physicsScore || 0}, Chemistry: ${latestResult.chemScore || 0}, Biology: ${latestResult.bioScore || 0}\nUse this real performance data naturally to guide, encourage, and mentor the student on their specific weak areas!`;
+
+          if (sessionToken !== currentSessionToken || session !== currentSession) {
+            console.log("Performance memory arrived after session changed, discarding.");
+            return;
+          }
+          session.sendClientContent({
+            turns: [{
+              role: "user",
+              parts: [{ text: `[System note, do not acknowledge or read this aloud — just use it as background context for this conversation]\n${performanceMemory}` }],
+            }],
+            turnComplete: false,
+          });
+          console.log("Performance memory injected into live session for user:", userId);
+        } catch (e) {
+          console.log("Performance memory fetch/injection skipped:", e);
+        }
+      })();
+    };
+
     let pendingImages: any[] = [];
 
     const processImageInput = async (parsedData: any) => {
@@ -2643,6 +2718,7 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
           clientWs.send(JSON.stringify({ type: 'init_ack' }));
           // Fire-and-forget: does not delay init_ack above.
           injectMemoryInBackground(parsedData.userId, parsedData.memorySettings, currentSession, thisToken, parsedData.prefetchedSummary);
+          injectPerformanceMemoryInBackground(parsedData.userId, currentSession, thisToken);
 
           // Flush any pending images queued while session was initializing
           if (pendingImages.length > 0) {
