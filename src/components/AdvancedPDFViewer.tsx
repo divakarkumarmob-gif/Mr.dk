@@ -520,13 +520,25 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         const targetScrollTop = (stage.scrollTop + focalY) * scaleRatio - focalY;
 
                         currentScaleRef.current = targetScale;
-                        setVisualScale(targetScale);
+
+                        // Apply the DOM transform + scroll together first (no
+                        // React render involved yet), THEN commit the React
+                        // state on the next frame. Doing setVisualScale first
+                        // triggers a re-render whose JSX-driven transform can
+                        // paint a frame behind the direct DOM change above,
+                        // producing the blank flash during double-tap zoom.
                         if (wrapRef.current) {
                             wrapRef.current.style.transition = 'transform 0.2s cubic-bezier(0.2, 0, 0, 1)';
+                            wrapRef.current.style.transformOrigin = 'top left';
                             wrapRef.current.style.transform = `scale(${targetScale})`;
                         }
                         stage.scrollLeft = Math.max(0, targetScrollLeft);
                         stage.scrollTop = Math.max(0, targetScrollTop);
+
+                        requestAnimationFrame(() => {
+                            setVisualScale(targetScale);
+                        });
+
                         state.lastTapTime = 0;
                     } else {
                         state.lastTapTime = now;
@@ -706,7 +718,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -60, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-white/5 shadow-2xl relative z-50 shrink-0"
+                        className="flex items-center justify-between px-3 py-1.5 bg-[#0F172A] border-white/[0.03] shadow-2xl relative z-50 shrink-0"
                         style={{ borderBottomWidth: '0.5px', borderBottomStyle: 'solid' }}
                     >
                         <div className="flex items-center gap-3 overflow-hidden flex-grow mr-2">
@@ -1002,7 +1014,7 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                         initial={{ y: 100 }}
                         animate={{ y: 0 }}
                         exit={{ y: 100 }}
-                        className="px-4 py-2 bg-[#0F172A] border-white/5 safe-bottom z-50 flex items-center justify-center gap-4 shrink-0"
+                        className="px-4 py-2 bg-[#0F172A] border-white/[0.03] safe-bottom z-50 flex items-center justify-center gap-4 shrink-0"
                         style={{ borderTopWidth: '0.5px', borderTopStyle: 'solid' }}
                     >
                         <div className="flex items-center gap-1 bg-white/5 rounded-2xl p-1">
