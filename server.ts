@@ -1691,12 +1691,18 @@ After writing your normal reply to the user, on a new line add the exact delimit
         res.setHeader('Content-Type', 'text/event-stream');
         res.setHeader('Cache-Control', 'no-cache');
         res.setHeader('Connection', 'keep-alive');
+        // Render's proxy buffers chunked responses by default; this tells
+        // it to pass writes straight through instead of holding the whole
+        // response until the stream ends.
+        res.setHeader('X-Accel-Buffering', 'no');
+        res.flushHeaders();
 
         try {
           const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
           for await (const chunk of stream) {
             if (chunk.text) {
               res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
+              (res as any).flush?.();
             }
           }
           res.write(`data: [DONE]\n\n`);
@@ -1897,12 +1903,18 @@ After writing your normal reply to the user, on a new line add the exact delimit
       res.setHeader('Content-Type', 'text/event-stream');
       res.setHeader('Cache-Control', 'no-cache');
       res.setHeader('Connection', 'keep-alive');
+      // Render's proxy buffers chunked responses by default; this tells
+      // it to pass writes straight through instead of holding the whole
+      // response until the stream ends.
+      res.setHeader('X-Accel-Buffering', 'no');
+      res.flushHeaders();
 
       try {
         const stream = await generateStreamWithFallback("gemini-3.6-flash", { parts: promptParts });
         for await (const chunk of stream) {
           if (chunk.text) {
             res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
+            (res as any).flush?.();
           }
         }
         res.write(`data: [DONE]\n\n`);
@@ -1936,6 +1948,11 @@ After writing your normal reply to the user, on a new line add the exact delimit
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
+    // Render's proxy buffers chunked responses by default; this tells
+    // it to pass writes straight through instead of holding the whole
+    // response until the stream ends.
+    res.setHeader('X-Accel-Buffering', 'no');
+    res.flushHeaders();
 
     try {
       // 1. If image, find query
@@ -1958,6 +1975,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
           finalPrompt = "Search for this image";
         }
         res.write(`data: ${JSON.stringify({ query: finalPrompt })}\n\n`);
+        (res as any).flush?.();
       }
 
       let searchResults: any[] = [];
@@ -1966,6 +1984,7 @@ After writing your normal reply to the user, on a new line add the exact delimit
       if (!isDirectImageQuestion && finalPrompt) {
         searchResults = await performSearch(finalPrompt);
         res.write(`data: ${JSON.stringify({ sources: searchResults })}\n\n`);
+        (res as any).flush?.();
       }
 
       const webContext = searchResults.length > 0
@@ -1995,6 +2014,7 @@ Instructions:
         for await (const chunk of stream) {
           if (chunk.text) {
             res.write(`data: ${JSON.stringify({ content: chunk.text })}\n\n`);
+            (res as any).flush?.();
             streamed = true;
           }
         }
@@ -2008,6 +2028,7 @@ Instructions:
           const response = await generateWithFallback("gemini-3.6-flash", { parts: promptParts });
           if (response.text) {
             res.write(`data: ${JSON.stringify({ content: response.text })}\n\n`);
+            (res as any).flush?.();
             streamed = true;
           }
         } catch (fallbackErr) {
