@@ -119,18 +119,37 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
                 return;
             }
 
-            try {
-                const cachedBlobUrl = await getCachedPdf(title, pdfUrl);
-                if (cachedBlobUrl && isMounted) {
-                    setActivePdfUrl(cachedBlobUrl);
-                    setIsDownloaded(true);
-                    return;
-                }
-            } catch (err) {
-                console.warn('[AdvancedPDFViewer] Local disk cache check notice:', err);
+            // Race the disk cache lookup against a short timer instead of
+            // always awaiting it fully. IndexedDB reads for large PDF blobs
+            // can take longer than a fresh network fetch's first byte — this
+            // way we use whichever resolves first, and only set
+            // activePdfUrl ONCE (no source swap => no reload flash).
+            let settled = false;
+            const diskCachePromise = getCachedPdf(title, pdfUrl)
+                .catch((err) => {
+                    console.warn('[AdvancedPDFViewer] Local disk cache check notice:', err);
+                    return null;
+                });
+
+            const fastPathTimer = new Promise<null>((resolve) => setTimeout(() => resolve(null), 120));
+
+            const winner = await Promise.race([diskCachePromise, fastPathTimer]);
+
+            if (!isMounted || settled) return;
+
+            if (winner) {
+                settled = true;
+                setActivePdfUrl(winner);
+                setIsDownloaded(true);
+                return;
             }
 
+            // Disk cache didn't win the race (or missed) — go straight to
+            // network so the Document mounts immediately, and let the disk
+            // cache promise keep resolving in the background just to warm
+            // the RAM cache for next time.
             if (pdfUrl && isMounted) {
+                settled = true;
                 setActivePdfUrl(pdfUrl);
                 fetchAndCachePdf(pdfUrl, title).then(() => {
                     if (isMounted) setIsDownloaded(true);
@@ -347,9 +366,13 @@ export default function AdvancedPDFViewer({ pdfUrl, title, onClose, originalUrl,
     }, []);
 
     const pdfOptions = useMemo(() => ({
-        cMapUrl: `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+        // Served locally from /public instead of jsdelivr CDN — removes an
+        // extra network round-trip (DNS + TLS + fetch to a third-party host)
+        // that was adding latency before the PDF could start rendering,
+        // especially on slower/mobile networks.
+        cMapUrl: '/pdf-assets/cmaps/',
         cMapPacked: true,
-        standardFontDataUrl: `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+        standardFontDataUrl: '/pdf-assets/standard_fonts/',
         disableAutoFetch: false,
         disableStream: false,
         rangeChunkSize: 65536,
