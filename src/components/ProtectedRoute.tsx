@@ -9,7 +9,7 @@ export default function ProtectedRoute({ children }: { children: ReactNode }) {
   if (loading) {
     return (
       <div className="fixed inset-0 bg-[#0a0f24] text-white flex items-center justify-center">
-        <StatusLoader variant="thinking" label="Authenticating NEET Master session..." size="lg" />
+        <StatusLoader variant="thinking" label="Authenticating NEET Master session..." size="md" />
       </div>
     );
   }
