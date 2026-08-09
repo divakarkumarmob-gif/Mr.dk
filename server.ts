@@ -2548,6 +2548,66 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
         });
     };
 
+    let pendingImages: any[] = [];
+
+    const processImageInput = async (parsedData: any) => {
+      if (!currentSession) return;
+      console.log("Image data received from client, mimeType:", parsedData.mimeType);
+      try {
+        currentSession.sendRealtimeInput({
+          video: {
+            data: parsedData.image,
+            mimeType: parsedData.mimeType || "image/jpeg",
+          }
+        });
+        clientWs.send(JSON.stringify({ imageAck: true, imageId: parsedData.imageId }));
+
+        const thisToken = currentSessionToken;
+        const sessionAtCaptureTime = currentSession;
+        clientWs.send(JSON.stringify({ type: 'thinking' }));
+
+        if (sessionAccurateMode) {
+          solveImageAccurately(parsedData.image, parsedData.mimeType, parsedData.caption || '')
+            .then((accurateAnswer) => {
+              if (thisToken !== currentSessionToken || sessionAtCaptureTime !== currentSession) {
+                console.log("Session changed before accurate-solve finished, discarding.");
+                return;
+              }
+              sessionAtCaptureTime.sendClientContent({
+                turns: [{
+                  role: "user",
+                  parts: [{ text: `[System note: here is a verified, carefully worked solution to the image the student just sent — speak this answer to the student in your own natural voice, as if you worked it out yourself]\n${accurateAnswer}` }],
+                }],
+                turnComplete: true,
+              });
+            })
+            .catch((err) => {
+              console.error("Background accurate image solve failed:", err);
+              if (thisToken === currentSessionToken && sessionAtCaptureTime === currentSession) {
+                sessionAtCaptureTime.sendClientContent({
+                  turns: [{
+                    role: "user",
+                    parts: [{ text: `[System note: Student has attached an image of a NEET question/doubt. Analyze the question shown in the photo, solve it step-by-step, state the correct option label & value, and explain the concept clearly in warm Hindi/Hinglish!]${parsedData.caption ? ` Caption: "${parsedData.caption}"` : ''}` }],
+                  }],
+                  turnComplete: true,
+                });
+              }
+            });
+        } else {
+          sessionAtCaptureTime.sendClientContent({
+            turns: [{
+              role: "user",
+              parts: [{ text: `[System note: Student has attached an image of a NEET question/doubt. Analyze the question shown in the photo, solve it step-by-step, state the correct option label & value, and explain the concept clearly in warm Hindi/Hinglish!]${parsedData.caption ? ` Caption: "${parsedData.caption}"` : ''}` }],
+            }],
+            turnComplete: true,
+          });
+        }
+      } catch (err) {
+        console.error("Failed to forward image to Gemini Live session:", err);
+        clientWs.send(JSON.stringify({ imageAck: false, imageId: parsedData.imageId, error: "image_forward_failed" }));
+      }
+    };
+
     clientWs.on("message", async (data) => {
       const parsedData = JSON.parse(data.toString());
 
@@ -2562,6 +2622,16 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
           clientWs.send(JSON.stringify({ type: 'init_ack' }));
           // Fire-and-forget: does not delay init_ack above.
           injectMemoryInBackground(parsedData.userId, parsedData.memorySettings, currentSession, thisToken, parsedData.prefetchedSummary);
+
+          // Flush any pending images queued while session was initializing
+          if (pendingImages.length > 0) {
+            console.log(`Flushing ${pendingImages.length} pending images after session init...`);
+            const queued = [...pendingImages];
+            pendingImages = [];
+            for (const imgMsg of queued) {
+              await processImageInput(imgMsg);
+            }
+          }
         } catch (err) {
           console.error("Failed to create Gemini Live session:", err);
           currentSession = undefined;
@@ -2571,9 +2641,12 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
       }
 
       if (!currentSession) {
+        if (parsedData.image) {
+          console.log("Image received before session ready, queueing pending image...");
+          pendingImages.push(parsedData);
+          return;
+        }
         console.warn("Received message before session initialized, keys:", Object.keys(parsedData));
-        // Let the client know so it doesn't sit silently in "Listening..."
-        // believing audio is being processed when it's actually being dropped.
         clientWs.send(JSON.stringify({ error: "session_not_initialized" }));
         return;
       }
@@ -2584,46 +2657,7 @@ ${getFineTunedExemplarsText()}${performanceMemory}`;
           audio: { data: parsedData.audio, mimeType: "audio/pcm;rate=16000" },
         });
       } else if (parsedData.image) {
-        console.log("Image data received from client, mimeType:", parsedData.mimeType);
-        try {
-          currentSession.sendRealtimeInput({
-            video: {
-              data: parsedData.image,
-              mimeType: parsedData.mimeType || "image/jpeg",
-            }
-          });
-          clientWs.send(JSON.stringify({ imageAck: true, imageId: parsedData.imageId }));
-
-          if (sessionAccurateMode) {
-            const thisToken = currentSessionToken;
-            const sessionAtCaptureTime = currentSession;
-            clientWs.send(JSON.stringify({ type: 'thinking' }));
-
-            solveImageAccurately(parsedData.image, parsedData.mimeType, parsedData.caption || '')
-              .then((accurateAnswer) => {
-                if (thisToken !== currentSessionToken || sessionAtCaptureTime !== currentSession) {
-                  console.log("Session changed before accurate-solve finished, discarding.");
-                  return;
-                }
-                sessionAtCaptureTime.sendClientContent({
-                  turns: [{
-                    role: "user",
-                    parts: [{ text: `[System note: here is a verified, carefully worked solution to the image the student just sent — speak this answer to the student in your own natural voice, as if you worked it out yourself]\n${accurateAnswer}` }],
-                  }],
-                  turnComplete: true,
-                });
-              })
-              .catch((err) => {
-                console.error("Background accurate image solve failed:", err);
-                // Fail silently from the user's perspective — the model already
-                // has the image via the video frame and can still attempt a normal
-                // response; we just don't get the extra accuracy boost this time.
-              });
-          }
-        } catch (err) {
-          console.error("Failed to forward image to Gemini Live session:", err);
-          clientWs.send(JSON.stringify({ imageAck: false, imageId: parsedData.imageId, error: "image_forward_failed" }));
-        }
+        await processImageInput(parsedData);
       } else if (parsedData.interrupt) {
         console.log("Interrupt signal received");
         clientWs.send(JSON.stringify({ interrupted: true }));

@@ -378,24 +378,65 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
     const mediaStreamRef = useRef<MediaStream | null>(null);
     const isMutedRef = useRef<boolean>(false);
 
-    const fileToBase64 = (file: File): Promise<string> => {
+    const pendingImagePayloadsRef = useRef<{ id: string; file: File; caption?: string }[]>([]);
+
+    const compressImageFile = (file: File, maxDim = 1280, quality = 0.8): Promise<{ base64: string; mimeType: string }> => {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-                const result = reader.result as string;
-                resolve(result.split(',')[1]);
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    let width = img.width;
+                    let height = img.height;
+                    if (width > maxDim || height > maxDim) {
+                        if (width > height) {
+                            height = Math.round((height * maxDim) / width);
+                            width = maxDim;
+                        } else {
+                            width = Math.round((width * maxDim) / height);
+                            height = maxDim;
+                        }
+                    }
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    if (!ctx) {
+                        const rawBase64 = (e.target?.result as string).split(',')[1];
+                        return resolve({ base64: rawBase64, mimeType: file.type && file.type.startsWith('image/') ? file.type : 'image/jpeg' });
+                    }
+                    ctx.drawImage(img, 0, 0, width, height);
+                    const dataUrl = canvas.toDataURL('image/jpeg', quality);
+                    const base64 = dataUrl.split(',')[1];
+                    resolve({ base64, mimeType: 'image/jpeg' });
+                };
+                img.onerror = () => {
+                    const rawBase64 = (e.target?.result as string).split(',')[1];
+                    resolve({ base64: rawBase64, mimeType: file.type && file.type.startsWith('image/') ? file.type : 'image/jpeg' });
+                };
+                img.src = e.target?.result as string;
             };
-            reader.onerror = error => reject(error);
+            reader.onerror = (err) => reject(err);
+            reader.readAsDataURL(file);
         });
     };
 
     const sendImageToWebSocket = async (image: { id: string; file: File; caption?: string }) => {
-        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-            const base64 = await fileToBase64(image.file);
-            ws.current.send(JSON.stringify({ image: base64, mimeType: image.file.type, imageId: image.id, caption: image.caption || '' }));
+        if (ws.current && ws.current.readyState === WebSocket.OPEN && isInitializedRef.current) {
+            try {
+                const compressed = await compressImageFile(image.file);
+                ws.current.send(JSON.stringify({
+                    image: compressed.base64,
+                    mimeType: compressed.mimeType,
+                    imageId: image.id,
+                    caption: image.caption || ''
+                }));
+                console.log("[LiveAI] Compressed image sent to WebSocket successfully:", image.id);
+            } catch (err) {
+                console.error("[LiveAI] Failed to compress/send image:", err);
+            }
             
-            // Save to Firestore history
+            // Save to Firestore history asynchronously
             if (auth.currentUser) {
                 try {
                     const mediaUrl = await uploadMedia(image.file, `chats/${auth.currentUser.uid}/images/${Date.now()}_${image.id}.jpg`);
@@ -406,7 +447,6 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     });
                 } catch (e) {
                     console.error("Error uploading image to history:", e);
-                    // Fallback to placeholder if upload fails
                     saveAIMessage(auth.currentUser.uid, {
                         senderId: auth.currentUser.uid,
                         mediaType: 'image',
@@ -414,6 +454,12 @@ export default function LiveAIInterface({ onClose }: LiveAIInterfaceProps) {
                     });
                 }
             }
+        } else {
+            console.log("[LiveAI] Connection/Session not open yet, queueing image:", image.id);
+            if (!pendingImagePayloadsRef.current.some(p => p.id === image.id)) {
+                pendingImagePayloadsRef.current.push(image);
+            }
+            ensureConnection(false);
         }
     };
 
@@ -813,6 +859,19 @@ Please greet the student in warm Hindi/Hinglish as their NEET mentor, give an an
                         initAckTimeoutRef.current = null;
                     }
                     setStatus("Listening...");
+
+                    // Flush any pending images queued while connecting / initializing
+                    if (pendingImagePayloadsRef.current.length > 0) {
+                        const queued = [...pendingImagePayloadsRef.current];
+                        pendingImagePayloadsRef.current = [];
+                        queued.forEach(img => {
+                            sendImageToWebSocket(img);
+                        });
+                    }
+                    const imageMessages = selectedImagesRef.current.filter(img => img.status === 'uploading');
+                    imageMessages.forEach(image => {
+                        sendImageToWebSocket(image);
+                    });
                 } else if (msg.interrupted) {
                     isAiSpeaking.current = false;
                     nextStartTime.current = outputAudioCtx.current?.currentTime || 0;
