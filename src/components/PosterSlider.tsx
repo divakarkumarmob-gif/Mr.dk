@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
-const images = [
-  "/posters/poster_1.jpeg",
-  "/posters/poster_2.jpeg",
-  "/posters/poster_3.jpeg",
-  "/posters/poster_4.jpeg"
+const candidateImages = [
+  "/posters/poster_1.png",
+  "/posters/poster_2.png",
+  "/posters/poster_3.png",
+  "/posters/poster_4.png",
 ];
 
 export default function PosterSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 for next, -1 for prev
-  const [loadedImages, setLoadedImages] = useState<string[]>(images);
+  const [loadedImages, setLoadedImages] = useState<string[]>(candidateImages);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startTimer = () => {
@@ -24,22 +24,30 @@ export default function PosterSlider() {
   };
 
   useEffect(() => {
-    // Pre-validate which images are actually loadable (e.g. in Capacitor
-    // WebView the public/ files may not have been synced yet)
     let cancelled = false;
     const validate = async () => {
       const valid: string[] = [];
-      for (const src of images) {
-        const ok = await new Promise<boolean>((resolve) => {
-          const img = new Image();
-          img.onload = () => resolve(true);
-          img.onerror = () => resolve(false);
-          img.src = src;
-        });
-        if (ok) valid.push(src);
+      for (let i = 1; i <= 4; i++) {
+        const sources = [
+          `/posters/poster_${i}.png`,
+          `/posters/poster_${i}.jpeg`,
+          `/posters/poster_${i}.jpg`,
+        ];
+        for (const src of sources) {
+          const ok = await new Promise<boolean>((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = src;
+          });
+          if (ok) {
+            valid.push(src);
+            break;
+          }
+        }
       }
-      if (!cancelled) {
-        setLoadedImages(valid.length > 0 ? valid : images); // fallback to all if none pre-loaded
+      if (!cancelled && valid.length > 0) {
+        setLoadedImages(valid);
       }
     };
     validate();
