@@ -3,7 +3,7 @@ import { getLocalPrivateKey, getLocalPublicKey, setLocalPrivateKey, setLocalPubl
 import { generateKeyPair, generateIdentityKeyBundle, deriveSharedSecret, encryptTextSymmetric, decryptTextSymmetric, generateRoomSymmetricKey, wrapRoomKeyForMember, unwrapRoomKeyForMember } from './crypto';
 import { restorePrivateKeyFromBlob, EncryptedPrivateKeyBackupBlob } from './backup';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { db } from '../../lib/firebase';
+import { db, auth } from '../../lib/firebase';
 import { registerDeviceInFirestore } from './deviceManagement';
 import { setLocalIdentitySignKeyPair, publishKeyBundle, getLocalIdentitySignPublicKey, ensureKeyBundleFresh } from './x3dh';
 import {
@@ -199,8 +199,12 @@ export async function initUserE2EE(uid: string): Promise<UserE2EEStatus> {
  */
 export async function fetchUserPublicKey(uid: string): Promise<string | null> {
     try {
-        const local = await getLocalPublicKey(uid);
-        if (local && uid === local) return local; // if matching
+        if (!uid) return null;
+        const myUid = auth.currentUser?.uid;
+        if (myUid && uid === myUid) {
+            const local = await getLocalPublicKey(uid);
+            if (local) return local;
+        }
 
         const userDocRef = doc(db, 'users', uid);
         const userSnap = await getDoc(userDocRef);

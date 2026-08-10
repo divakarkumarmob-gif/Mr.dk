@@ -31,22 +31,19 @@ export default function SafetyNumberModal({ contactUid, contactName, myPublicKey
                 let keyA = myPublicKey;
                 let keyB = targetPublicKey;
 
-                if (myUid) {
+                if (!keyA && myUid) {
                     const mySnap = await getDoc(doc(db, 'users', myUid));
                     if (mySnap.exists() && mySnap.data().publicKey) {
                         keyA = mySnap.data().publicKey;
                     }
                 }
 
-                if (contactUid) {
+                if (!keyB && contactUid) {
                     const contactSnap = await getDoc(doc(db, 'users', contactUid));
                     if (contactSnap.exists() && contactSnap.data().publicKey) {
                         keyB = contactSnap.data().publicKey;
                     }
                 }
-
-                if (!keyA && myPublicKey) keyA = myPublicKey;
-                if (!keyB && targetPublicKey) keyB = targetPublicKey;
 
                 if (keyA && keyB) {
                     const num = await computeSafetyNumber(keyA, keyB);

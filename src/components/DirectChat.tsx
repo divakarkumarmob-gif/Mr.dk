@@ -193,27 +193,17 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         handshake: { ephemeralPublicKey: string; usedSignedPreKeyId: number; usedOneTimePreKeyId: string | null; senderIdentityPublicKey: string },
         senderUid: string
     ) => {
+        if (!e2eeStatus?.privateKey) return;
         const haveOwnSession = !!ratchetStateRef.current;
         const weInitiatedOurs = ratchetSessionMeta.current?.initiatedByMe === true;
-        const theyShouldWin = senderUid < currentUid;
 
-        if (haveOwnSession) {
-            if (!weInitiatedOurs) {
-                // We already adopted a session (either resumed from storage,
-                // or already processed a handshake) - don't reprocess.
-                return;
-            }
-            if (!theyShouldWin) {
-                // We self-initiated AND we have the smaller uid - our
-                // session wins. Ignore their handshake.
-                return;
-            }
-            // Fall through: we self-initiated but they have the smaller
-            // uid, so their session should win - discard ours and adopt
-            // theirs below.
+        // If we already adopted a recipient session from a processed handshake, skip.
+        // But if we only have an un-sent/un-matched self-initiated session, adopt sender's handshake
+        // so we can decrypt their incoming message and sync the Double Ratchet.
+        if (haveOwnSession && !weInitiatedOurs && handshakeProcessedRef.current) {
+            return;
         }
-        if (handshakeProcessedRef.current && !haveOwnSession) return;
-        if (!e2eeStatus?.privateKey) return;
+
         handshakeProcessedRef.current = true;
 
         try {
@@ -563,12 +553,28 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                     decryptedSuccess = true;
                                 }
 
-                                // Check fallback payload text if present
-                                if (!decryptedSuccess && raw.fallbackText) {
-                                    const fallbackDec = await decryptPayloadWithKey({ text: raw.fallbackText }, sharedSecret);
-                                    if (fallbackDec.text && !fallbackDec.text.startsWith('🔒E2EE:')) {
-                                        processed = { ...raw, text: fallbackDec.text };
-                                        decryptedSuccess = true;
+                                // Check fallback payload text/media if present
+                                if (!decryptedSuccess) {
+                                    if (raw.fallbackText) {
+                                        const fallbackDec = await decryptPayloadWithKey({ text: raw.fallbackText }, sharedSecret);
+                                        if (fallbackDec.text && !fallbackDec.text.startsWith('🔒E2EE:')) {
+                                            processed = { ...processed, text: fallbackDec.text };
+                                            decryptedSuccess = true;
+                                        }
+                                    }
+                                    if (raw.fallbackAudioUrl) {
+                                        const fallbackDec = await decryptPayloadWithKey({ audioUrl: raw.fallbackAudioUrl }, sharedSecret);
+                                        if (fallbackDec.audioUrl && !fallbackDec.audioUrl.startsWith('🔒E2EE:')) {
+                                            processed = { ...processed, audioUrl: fallbackDec.audioUrl };
+                                            decryptedSuccess = true;
+                                        }
+                                    }
+                                    if (raw.fallbackImageUrl) {
+                                        const fallbackDec = await decryptPayloadWithKey({ imageUrl: raw.fallbackImageUrl }, sharedSecret);
+                                        if (fallbackDec.imageUrl && !fallbackDec.imageUrl.startsWith('🔒E2EE:')) {
+                                            processed = { ...processed, imageUrl: fallbackDec.imageUrl };
+                                            decryptedSuccess = true;
+                                        }
                                     }
                                 }
                             }
@@ -647,13 +653,19 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         let currentState = ratchetStateRef.current;
         let finalPayload = { ...payload };
 
-        // Create fallback symmetric encrypted text using ECDH
+        // Create fallback symmetric encrypted text/media using ECDH
         if (e2eeStatus?.privateKey && targetPublicKey) {
             try {
                 const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, targetPublicKey);
                 const symPayload = await encryptPayloadWithKey(payload, sharedSecret);
                 if (symPayload.text) {
                     finalPayload.fallbackText = symPayload.text;
+                }
+                if (symPayload.audioUrl) {
+                    finalPayload.fallbackAudioUrl = symPayload.audioUrl;
+                }
+                if (symPayload.imageUrl) {
+                    finalPayload.fallbackImageUrl = symPayload.imageUrl;
                 }
             } catch (e) {}
         }

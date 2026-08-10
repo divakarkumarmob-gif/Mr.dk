@@ -165,6 +165,13 @@ export async function publishKeyBundle(uid: string, identitySignPublicKey: strin
  * / E2EE init, in addition to publishing on first setup.
  */
 export async function ensureKeyBundleFresh(uid: string, identityPublicKey: string, identitySignPublicKey: string): Promise<void> {
+    try {
+        const userRef = doc(db, 'users', uid);
+        await setDoc(userRef, { publicKey: identityPublicKey, identityKeySign: identitySignPublicKey, e2eeEnabled: true }, { merge: true });
+    } catch (e) {
+        console.warn('Syncing identity key to user doc failed:', e);
+    }
+
     const bundleRef = doc(db, 'users', uid, 'e2ee', 'keyBundle');
     const snap = await getDoc(bundleRef);
 
