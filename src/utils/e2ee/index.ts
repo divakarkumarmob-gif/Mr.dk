@@ -343,16 +343,11 @@ export async function ratchetDecryptPayload<T extends Record<string, any>>(
     const decryptField = async (val: string | undefined): Promise<string> => {
         if (!val) return '';
         if (val.startsWith('🔒E2EE:v2:')) {
-            try {
-                const json = val.substring('🔒E2EE:v2:'.length);
-                const message: EncryptedRatchetMessage = JSON.parse(json);
-                const result = await ratchetDecryptRaw(state, message);
-                state = result.state;
-                return result.plaintext;
-            } catch (e) {
-                console.error('Ratchet decrypt failed:', e);
-                return '[Encrypted message - Decryption failed]';
-            }
+            const json = val.substring('🔒E2EE:v2:'.length);
+            const message: EncryptedRatchetMessage = JSON.parse(json);
+            const result = await ratchetDecryptRaw(state, message);
+            state = result.state;
+            return result.plaintext;
         }
         return val; // Not a v2 ratchet field - leave untouched for caller to handle
     };
