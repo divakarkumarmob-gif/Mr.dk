@@ -369,7 +369,10 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
             <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] rounded-full bg-pink-600/20 blur-[130px] pointer-events-none animate-pulse" style={{ animationDelay: '2s' }} />
 
             {/* Header: WhatsApp-Style Glassy Navbar */}
-            <div className="relative z-10 bg-[#0a0f1d]/80 backdrop-blur-2xl border-b border-white/10 px-4 py-3 flex items-center justify-between shadow-2xl">
+            <div 
+                className="relative z-10 bg-[#0a0f1d]/80 backdrop-blur-2xl border-b border-white/10 px-4 pb-3 flex items-center justify-between shadow-2xl"
+                style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 14px)' }}
+            >
                 <div className="flex items-center gap-3">
                     <button 
                         onClick={onBack}

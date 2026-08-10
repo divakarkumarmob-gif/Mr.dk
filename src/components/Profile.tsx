@@ -71,10 +71,15 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
     const handleRevokeSession = async (deviceId: string, isCurrent: boolean) => {
         if (!user?.uid) return;
         setRevokingSessionId(deviceId);
+        // Instantly remove device/session from UI list ("name bhi hat jaye")
+        setSessions(prev => prev.filter(s => s.deviceId !== deviceId));
         try {
             await revokeDevice(user.uid, deviceId);
             if (isCurrent) {
-                await removeSession(user.uid);
+                await removeSession(user.uid).catch(console.error);
+                if (user.uid.startsWith('local_guest_')) {
+                    await clearGuestData(user.uid).catch(console.error);
+                }
                 await logOut().catch(console.error);
                 onLogout();
             }
@@ -123,8 +128,11 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
     ];
 
     const handleLogOut = async () => {
-        if (user?.uid.startsWith('local_guest_')) {
-            await clearGuestData(user.uid).catch(console.error);
+        if (user?.uid) {
+            await removeSession(user.uid).catch(console.error);
+            if (user.uid.startsWith('local_guest_')) {
+                await clearGuestData(user.uid).catch(console.error);
+            }
         }
         await logOut().catch(console.error);
         onLogout();
