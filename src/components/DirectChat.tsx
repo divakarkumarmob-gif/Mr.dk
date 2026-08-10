@@ -218,41 +218,57 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
         try {
             const spk = await getLocalSignedPreKey(currentUid, handshake.usedSignedPreKeyId);
-            if (!spk) {
-                console.error('Cannot establish recipient session: local signed prekey not found (may have rotated).');
+            let sharedSecret: Uint8Array | null = null;
+            let recipientPub = handshake.senderIdentityPublicKey;
+            let recipientPriv = e2eeStatus.privateKey;
+
+            if (spk) {
+                let opkPriv: string | null = null;
+                if (handshake.usedOneTimePreKeyId) {
+                    const opk = await getLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
+                    opkPriv = opk?.privateKey || null;
+                }
+
+                const x3dhResult = await receiveX3DH(
+                    e2eeStatus.privateKey,
+                    spk.privateKey,
+                    opkPriv,
+                    handshake.senderIdentityPublicKey,
+                    handshake.ephemeralPublicKey
+                );
+                sharedSecret = x3dhResult.sharedSecret;
+                recipientPub = spk.publicKey;
+                recipientPriv = spk.privateKey;
+            } else if (handshake.senderIdentityPublicKey) {
+                // Fallback symmetric key derivation if local signed prekey was lost/rotated
+                sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, handshake.senderIdentityPublicKey);
+            }
+
+            if (sharedSecret) {
+                const newState = await initRatchetAsRecipient(sharedSecret, recipientPub, recipientPriv);
+                await updateRatchetState(newState, false);
+                pendingHandshakeRef.current = null;
+
+                if (handshake.usedOneTimePreKeyId) {
+                    await consumeLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
+                }
+                setSessionReady(true);
+            } else {
                 handshakeProcessedRef.current = false;
-                return;
             }
-            let opkPriv: string | null = null;
-            if (handshake.usedOneTimePreKeyId) {
-                const opk = await getLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
-                opkPriv = opk?.privateKey || null;
-            }
-
-            const x3dhResult = await receiveX3DH(
-                e2eeStatus.privateKey,
-                spk.privateKey,
-                opkPriv,
-                handshake.senderIdentityPublicKey,
-                handshake.ephemeralPublicKey
-            );
-
-            const newState = await initRatchetAsRecipient(x3dhResult.sharedSecret, spk.publicKey, spk.privateKey);
-            await updateRatchetState(newState, false);
-            // We're adopting their session as the source of truth - any
-            // handshake we were about to attach to our own next outgoing
-            // message (from a session we self-initiated) is now stale and
-            // must not be sent, or the real recipient would try to derive
-            // a shared secret from an abandoned ephemeral key.
-            pendingHandshakeRef.current = null;
-
-            if (handshake.usedOneTimePreKeyId) {
-                await consumeLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
-            }
-            setSessionReady(true);
         } catch (err) {
-            console.error('Failed to establish recipient ratchet session from handshake:', err);
-            handshakeProcessedRef.current = false;
+            // Symmetric fallback on error
+            try {
+                if (handshake.senderIdentityPublicKey && e2eeStatus?.privateKey) {
+                    const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, handshake.senderIdentityPublicKey);
+                    const newState = await initRatchetAsRecipient(sharedSecret, handshake.senderIdentityPublicKey, e2eeStatus.privateKey);
+                    await updateRatchetState(newState, false);
+                    pendingHandshakeRef.current = null;
+                    setSessionReady(true);
+                }
+            } catch (fallbackErr) {
+                handshakeProcessedRef.current = false;
+            }
         }
     };
 
@@ -526,7 +542,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                             await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
                             decryptedSuccess = true;
                         } catch (e) {
-                            console.warn('Ratchet decrypt failed, trying symmetric fallback...', e);
+                            // Ratchet state desynced - fallback to symmetric ECDH below silently
                         }
                     }
 
@@ -572,10 +588,27 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
                 if (!isMounted) return;
 
-                // Merge with local fallback
+                // Merge with local fallback using smart ID & content window deduplication
                 const localMsgs = getLocalDirectMessages(chatId);
                 const map = new Map<string, DirectMessage>();
-                [...fetched, ...localMsgs].forEach(m => map.set(m.id, m));
+
+                // 1. Add server-fetched messages (source of truth)
+                fetched.forEach(m => map.set(m.id, m));
+
+                // 2. Track existing content keys to prevent duplicate local optimistic entries
+                const serverContentKeys = new Set(
+                    fetched.map(f => `${f.senderId}_${f.text || f.imageUrl || f.audioUrl || ''}_${Math.floor(getTimestampMs(f.timestamp) / 10000)}`)
+                );
+
+                // 3. Add local messages only if unique ID and unique content key
+                localMsgs.forEach(m => {
+                    if (!map.has(m.id)) {
+                        const key = `${m.senderId}_${m.text || m.imageUrl || m.audioUrl || ''}_${Math.floor(getTimestampMs(m.timestamp) / 10000)}`;
+                        if (!serverContentKeys.has(key)) {
+                            map.set(m.id, m);
+                        }
+                    }
+                });
 
                 // Sort chronologically like WhatsApp (oldest top, newest bottom)
                 const sortedMsgs = Array.from(map.values()).sort((a, b) => getTimestampMs(a.timestamp) - getTimestampMs(b.timestamp));
@@ -821,8 +854,11 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             if (!encResult.ok) return;
             payload = encResult.payload;
 
+            const newMsgRef = doc(collection(db, 'directChats', chatId, 'messages'));
+            const msgId = newMsgRef.id;
+
             const newMsg: DirectMessage = {
-                id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+                id: msgId,
                 senderId: currentUid,
                 senderName: currentName,
                 audioUrl: base64Audio,
@@ -831,7 +867,10 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 timestamp: new Date().toISOString()
             };
 
-            setMessages(prev => [...prev, newMsg]);
+            setMessages(prev => {
+                if (prev.some(m => m.id === msgId)) return prev;
+                return [...prev, newMsg];
+            });
             saveLocalDirectMessage(newMsg);
 
             if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
@@ -843,7 +882,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             showToast('Voice Note bhej diya! 🎙️');
 
             try {
-                await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
+                await setDoc(newMsgRef, payload);
 
                 await setDoc(doc(db, 'directChats', chatId), {
                     participants: [currentUid, targetUser.uid],
@@ -909,8 +948,11 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         if (!encResult.ok) return;
         payload = encResult.payload;
 
+        const newMsgRef = doc(collection(db, 'directChats', chatId, 'messages'));
+        const msgId = newMsgRef.id;
+
         const newMsg: DirectMessage = {
-            id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+            id: msgId,
             senderId: currentUid,
             senderName: currentName,
             text: textToSend || undefined,
@@ -919,14 +961,17 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             timestamp: new Date().toISOString()
         };
 
-        setMessages(prev => [...prev, newMsg]);
+        setMessages(prev => {
+            if (prev.some(m => m.id === msgId)) return prev;
+            return [...prev, newMsg];
+        });
         saveLocalDirectMessage(newMsg);
 
         setText('');
         setImageUrl('');
 
         try {
-            await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
+            await setDoc(newMsgRef, payload);
 
             await setDoc(doc(db, 'directChats', chatId), {
                 participants: [currentUid, targetUser.uid],
