@@ -796,10 +796,13 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             try {
                 await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
 
-                await updateDoc(doc(db, 'directChats', chatId), {
+                await setDoc(doc(db, 'directChats', chatId), {
+                    participants: [currentUid, targetUser.uid],
                     lastMessage: '🎵 Voice Note (' + (newMsg.audioDuration || 1) + 's)',
+                    lastMessageSenderId: currentUid,
+                    lastMessageTimestamp: serverTimestamp(),
                     updatedAt: serverTimestamp()
-                });
+                }, { merge: true });
             } catch (e) {
                 console.warn("Firestore voice note error:", e);
             }
@@ -876,10 +879,13 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         try {
             await addDoc(collection(db, 'directChats', chatId, 'messages'), payload);
 
-            await updateDoc(doc(db, 'directChats', chatId), {
+            await setDoc(doc(db, 'directChats', chatId), {
+                participants: [currentUid, targetUser.uid],
                 lastMessage: textToSend ? (textToSend.length > 30 ? textToSend.substring(0, 30) + '...' : textToSend) : '📷 Photo',
+                lastMessageSenderId: currentUid,
+                lastMessageTimestamp: serverTimestamp(),
                 updatedAt: serverTimestamp()
-            });
+            }, { merge: true });
         } catch (e) {
             console.warn("Firestore send message error:", e);
         }

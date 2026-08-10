@@ -6,8 +6,11 @@ import { getE2EEStorageItem, setE2EEStorageItem } from './storage';
  * from two public keys (or room member public keys)
  */
 export async function computeSafetyNumber(publicKeyA: string, publicKeyB: string): Promise<string> {
+    if (!publicKeyA || !publicKeyB || !publicKeyA.trim() || !publicKeyB.trim()) {
+        return 'Verification pending...';
+    }
     const sodium = await ensureSodium();
-    const sortedKeys = [publicKeyA, publicKeyB].sort().join('::');
+    const sortedKeys = [publicKeyA.trim(), publicKeyB.trim()].sort().join('::');
 
     const hashBytes = sodium.crypto_generichash(32, sodium.from_string(sortedKeys), null);
 

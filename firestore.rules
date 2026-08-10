@@ -67,12 +67,14 @@ service cloud.firestore {
       allow read, write: if isSignedIn();
     }
 
-    // Users Collection (Owner or Admin access)
+    // Users Collection (Public read for signed-in users, owner/admin for write)
     match /users/{userId} {
-      allow read, write: if isOwner(userId) || isAdmin();
+      allow read: if isSignedIn();
+      allow write: if isOwner(userId) || isAdmin();
       
       match /{allSubcollections=**} {
-        allow read, write: if isOwner(userId) || isAdmin();
+        allow read: if isSignedIn();
+        allow write: if isOwner(userId) || isAdmin();
       }
 
       // E2EE X3DH Key Bundle (identity signing key + signed prekey).
@@ -94,10 +96,36 @@ service cloud.firestore {
       }
     }
     match /users {
-      allow read: if isAdmin();
+      allow read: if isSignedIn();
     }
 
-    // Chats Collection (Participant or Admin access)
+    // Direct Chats Collection (1v1 E2EE Chats Participant access)
+    match /directChats/{chatId} {
+      function isDirectParticipant() {
+        return isSignedIn() && (
+          (resource != null && resource.data.get('participants', []).hasAny([request.auth.uid])) ||
+          (request.resource != null && request.resource.data.get('participants', []).hasAny([request.auth.uid])) ||
+          chatId.matches(".*" + request.auth.uid + ".*")
+        );
+      }
+
+      allow read, create, update: if isSignedIn() && (
+        isDirectParticipant() || isAdmin()
+      );
+      allow delete: if isAdmin();
+
+      match /{allSubcollections=**} {
+        allow read, create, update: if isSignedIn() && (
+          isDirectParticipant() || isAdmin()
+        );
+        allow delete: if isAdmin();
+      }
+    }
+    match /directChats {
+      allow read: if isSignedIn();
+    }
+
+    // Legacy Chats Collection (Participant or Admin access)
     match /chats/{chatId} {
       function isParticipant() {
         return isSignedIn() && exists(/databases/$(database)/documents/chats/$(chatId))
