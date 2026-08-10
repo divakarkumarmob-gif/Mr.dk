@@ -200,20 +200,24 @@ export async function initUserE2EE(uid: string): Promise<UserE2EEStatus> {
 export async function fetchUserPublicKey(uid: string): Promise<string | null> {
     try {
         if (!uid) return null;
+        // Priority 1: Published public key in Firestore (canonical across all devices)
+        const userDocRef = doc(db, 'users', uid);
+        const userSnap = await getDoc(userDocRef);
+        if (userSnap.exists() && userSnap.data().publicKey) {
+            return userSnap.data().publicKey;
+        }
+
+        // Priority 2: Local storage fallback if offline or not yet in profile document
         const myUid = auth.currentUser?.uid;
         if (myUid && uid === myUid) {
             const local = await getLocalPublicKey(uid);
             if (local) return local;
         }
 
-        const userDocRef = doc(db, 'users', uid);
-        const userSnap = await getDoc(userDocRef);
-        if (userSnap.exists()) {
-            return userSnap.data().publicKey || null;
-        }
         return null;
     } catch {
-        return null;
+        const local = await getLocalPublicKey(uid);
+        return local || null;
     }
 }
 

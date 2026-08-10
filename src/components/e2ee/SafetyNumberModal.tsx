@@ -27,23 +27,33 @@ export default function SafetyNumberModal({ contactUid, contactName, myPublicKey
         let isMounted = true;
         (async () => {
             try {
+                let keyA = '';
+                let keyB = '';
+
                 const myUid = auth.currentUser?.uid || '';
-                let keyA = myPublicKey;
-                let keyB = targetPublicKey;
-
-                if (!keyA && myUid) {
-                    const mySnap = await getDoc(doc(db, 'users', myUid));
-                    if (mySnap.exists() && mySnap.data().publicKey) {
-                        keyA = mySnap.data().publicKey;
+                if (myUid) {
+                    try {
+                        const mySnap = await getDoc(doc(db, 'users', myUid));
+                        if (mySnap.exists() && mySnap.data().publicKey) {
+                            keyA = mySnap.data().publicKey;
+                        }
+                    } catch (err) {
+                        console.warn('Failed to fetch my published key from Firestore:', err);
                     }
                 }
+                if (!keyA) keyA = myPublicKey;
 
-                if (!keyB && contactUid) {
-                    const contactSnap = await getDoc(doc(db, 'users', contactUid));
-                    if (contactSnap.exists() && contactSnap.data().publicKey) {
-                        keyB = contactSnap.data().publicKey;
+                if (contactUid) {
+                    try {
+                        const contactSnap = await getDoc(doc(db, 'users', contactUid));
+                        if (contactSnap.exists() && contactSnap.data().publicKey) {
+                            keyB = contactSnap.data().publicKey;
+                        }
+                    } catch (err) {
+                        console.warn('Failed to fetch contact published key from Firestore:', err);
                     }
                 }
+                if (!keyB) keyB = targetPublicKey;
 
                 if (keyA && keyB) {
                     const num = await computeSafetyNumber(keyA, keyB);
