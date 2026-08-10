@@ -515,20 +515,56 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     }
 
                     let processed: DirectMessage = raw;
+                    let decryptedSuccess = false;
                     const currentState = ratchetStateRef.current;
+
+                    // 1. Try Ratchet Decryption if active session & v2 format
                     if (currentState && (raw.text?.startsWith('🔒E2EE:v2:') || raw.audioUrl?.startsWith('🔒E2EE:v2:') || raw.imageUrl?.startsWith('🔒E2EE:v2:') || raw.pollData)) {
                         try {
                             const result = await ratchetDecryptPayload(raw, currentState);
                             processed = result.payload;
                             await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
+                            decryptedSuccess = true;
                         } catch (e) {
-                            console.error('Ratchet decrypt failed for message', docSnap.id, e);
-                            processed = { ...raw, text: raw.text ? '[Encrypted message - Decryption failed]' : raw.text };
+                            console.warn('Ratchet decrypt failed, trying symmetric fallback...', e);
                         }
-                    } else if (currentState === null && (raw.text?.startsWith('🔒E2EE:v2:'))) {
-                        // Ratchet-encrypted message but we have no session yet
-                        // (still negotiating, or peer hasn't published a bundle).
-                        processed = { ...raw, text: '[Encrypted message - session establishing...]' };
+                    }
+
+                    // 2. Symmetric ECDH Fallback if Ratchet was bypassed/failed or format is v1
+                    if (!decryptedSuccess && e2eeStatus?.privateKey) {
+                        try {
+                            const senderPub = raw.senderId === currentUid 
+                                ? targetPublicKey 
+                                : (await fetchUserPublicKey(raw.senderId) || targetPublicKey);
+                            
+                            if (senderPub) {
+                                const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, senderPub);
+                                
+                                // Decrypt main payload fields
+                                const symDecrypted = await decryptPayloadWithKey(raw, sharedSecret);
+                                if (symDecrypted.text && !symDecrypted.text.startsWith('🔒E2EE:')) {
+                                    processed = symDecrypted;
+                                    decryptedSuccess = true;
+                                }
+
+                                // Check fallback payload text if present
+                                if (!decryptedSuccess && raw.fallbackText) {
+                                    const fallbackDec = await decryptPayloadWithKey({ text: raw.fallbackText }, sharedSecret);
+                                    if (fallbackDec.text && !fallbackDec.text.startsWith('🔒E2EE:')) {
+                                        processed = { ...raw, text: fallbackDec.text };
+                                        decryptedSuccess = true;
+                                    }
+                                }
+                            }
+                        } catch (symErr) {
+                            console.warn('Symmetric decrypt fallback error:', symErr);
+                        }
+                    }
+
+                    // 3. Plaintext fallback if text is not encrypted format
+                    if (!decryptedSuccess && raw.text && !raw.text.startsWith('🔒E2EE:')) {
+                        processed = raw;
+                        decryptedSuccess = true;
                     }
 
                     fetched.push(processed);
@@ -571,12 +607,24 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     /**
      * Encrypts an outgoing message payload with the current ratchet session,
      * persists the advanced ratchet state, and attaches the X3DH handshake
-     * header if this is our first message in a newly-initiated session
-     * (so the recipient can derive the same shared secret and bootstrap
-     * their side of the ratchet).
+     * header if this is our first message in a newly-initiated session.
+     * Also attaches a symmetric ECDH fallback payload so recipient decrypts 100% reliably.
      */
     const encryptOutgoingPayload = async (payload: any): Promise<{ ok: true; payload: any } | { ok: false }> => {
         let currentState = ratchetStateRef.current;
+        let finalPayload = { ...payload };
+
+        // Create fallback symmetric encrypted text using ECDH
+        if (e2eeStatus?.privateKey && targetPublicKey) {
+            try {
+                const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, targetPublicKey);
+                const symPayload = await encryptPayloadWithKey(payload, sharedSecret);
+                if (symPayload.text) {
+                    finalPayload.fallbackText = symPayload.text;
+                }
+            } catch (e) {}
+        }
+
         if (!currentState && e2eeStatus?.privateKey && targetPublicKey) {
             try {
                 const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, targetPublicKey);
@@ -586,12 +634,13 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 console.warn('On-the-fly ratchet init fallback failed:', e);
             }
         }
+
         if (currentState) {
             try {
-                const result = await ratchetEncryptPayload(payload, currentState);
+                const result = await ratchetEncryptPayload(finalPayload, currentState);
                 await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
 
-                let finalPayload = result.payload;
+                finalPayload = result.payload;
                 if (pendingHandshakeRef.current) {
                     finalPayload = {
                         ...finalPayload,

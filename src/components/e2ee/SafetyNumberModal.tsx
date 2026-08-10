@@ -14,18 +14,57 @@ interface SafetyNumberModalProps {
     onVerified?: () => void;
 }
 
+import { doc, getDoc } from 'firebase/firestore';
+import { db, auth } from '../../lib/firebase';
 import { useModalBackButton } from '../../utils/hardwareBackButton';
 
 export default function SafetyNumberModal({ contactUid, contactName, myPublicKey, targetPublicKey, keyHasChanged, onClose, onVerified }: SafetyNumberModalProps) {
     useModalBackButton(true, onClose);
-    const [fingerprint, setFingerprint] = useState<string>('Loading...');
+    const [fingerprint, setFingerprint] = useState<string>('Computing Safety Number...');
     const [copied, setCopied] = useState(false);
 
     useEffect(() => {
-        if (myPublicKey && targetPublicKey) {
-            computeSafetyNumber(myPublicKey, targetPublicKey).then(num => setFingerprint(num));
-        }
-    }, [myPublicKey, targetPublicKey]);
+        let isMounted = true;
+        (async () => {
+            try {
+                const myUid = auth.currentUser?.uid || '';
+                let keyA = myPublicKey;
+                let keyB = targetPublicKey;
+
+                if (myUid) {
+                    const mySnap = await getDoc(doc(db, 'users', myUid));
+                    if (mySnap.exists() && mySnap.data().publicKey) {
+                        keyA = mySnap.data().publicKey;
+                    }
+                }
+
+                if (contactUid) {
+                    const contactSnap = await getDoc(doc(db, 'users', contactUid));
+                    if (contactSnap.exists() && contactSnap.data().publicKey) {
+                        keyB = contactSnap.data().publicKey;
+                    }
+                }
+
+                if (!keyA && myPublicKey) keyA = myPublicKey;
+                if (!keyB && targetPublicKey) keyB = targetPublicKey;
+
+                if (keyA && keyB) {
+                    const num = await computeSafetyNumber(keyA, keyB);
+                    if (isMounted) setFingerprint(num);
+                } else if (isMounted) {
+                    setFingerprint('Safety Number pending (Keys loading...)');
+                }
+            } catch (e) {
+                console.error('Safety number calculation error:', e);
+                if (isMounted && myPublicKey && targetPublicKey) {
+                    const num = await computeSafetyNumber(myPublicKey, targetPublicKey);
+                    setFingerprint(num);
+                }
+            }
+        })();
+
+        return () => { isMounted = false; };
+    }, [contactUid, myPublicKey, targetPublicKey]);
 
     const handleCopy = () => {
         navigator.clipboard.writeText(fingerprint);
