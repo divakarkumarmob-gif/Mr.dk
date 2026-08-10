@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit, Crown, Check, X as CloseIcon, Zap, Sparkles, Search, Bot, Brain, Calendar, Database, Star } from 'lucide-react';
+import { User, Settings, Shield, LogOut, ChevronRight, Download, HelpCircle, Mail, Edit, Crown, Check, X as CloseIcon, Zap, Sparkles, Search, Bot, Brain, Calendar, Database, Star, Lock } from 'lucide-react';
 import { logOut } from '../lib/auth';
 import { clearGuestData } from '../lib/clearGuestData';
 import { User as FirebaseUser } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Pressable from './Pressable';
+import PinSetupModal from './e2ee/PinSetupModal';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../lib/firebase';
 
 export default function Profile({ user, onNavigate, onSolverClick, onLogout }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub' | 'schoolSearch' | 'about') => void, onSolverClick: () => void, onLogout: () => void }) {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -23,6 +26,27 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
 
     const [showPremium, setShowPremium] = useState(false);
     const navigate = useNavigate();
+
+    // E2EE Chat Backup status - identity is already created silently at
+    // login; this only tracks whether the user has opted in to an
+    // encrypted PIN backup of it yet.
+    const [backupEnabled, setBackupEnabled] = useState<boolean | null>(null);
+    const [showBackupPinModal, setShowBackupPinModal] = useState(false);
+
+    useEffect(() => {
+        if (!user) {
+            setBackupEnabled(null);
+            return;
+        }
+        let isMounted = true;
+        getDoc(doc(db, 'users', user.uid)).then(snap => {
+            if (!isMounted) return;
+            setBackupEnabled(!!snap.data()?.e2eeBackupEnabled);
+        }).catch(() => {
+            if (isMounted) setBackupEnabled(false);
+        });
+        return () => { isMounted = false; };
+    }, [user]);
 
     const FreeFeatures = [
         "Basic Study Hub Access",
@@ -264,6 +288,32 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                             <ChevronRight className="h-5 w-5 text-blue-400" />
                         </div>
                     </motion.div>
+
+                    {/* Chat Backup PIN Card - E2EE identity is already active
+                        for every user automatically; this only sets up the
+                        OPTIONAL encrypted backup that lets a new device
+                        restore it later. */}
+                    {user && (
+                        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                            <Pressable
+                                onClick={() => setShowBackupPinModal(true)}
+                                className="w-full text-left bg-gradient-to-r from-emerald-950/60 to-teal-950/60 text-emerald-300 p-3.5 rounded-2xl flex justify-between items-center border border-emerald-500/30 backdrop-blur-xl shadow-lg cursor-pointer"
+                            >
+                                <div className="flex items-center gap-3">
+                                    <div className="bg-emerald-500/20 p-2 rounded-xl border border-emerald-500/30">
+                                        <Lock className="h-5 w-5 text-emerald-400" />
+                                    </div>
+                                    <div>
+                                        <p className="font-extrabold text-sm text-white leading-tight">Chat Backup PIN</p>
+                                        <p className="text-[10px] text-emerald-300/80 font-medium mt-0.5">
+                                            {backupEnabled === null ? 'Checking status...' : backupEnabled ? 'Enabled - chats restorable on new device' : 'Not set up - enable to protect against device loss'}
+                                        </p>
+                                    </div>
+                                </div>
+                                <ChevronRight className="h-5 w-5 text-emerald-400" />
+                            </Pressable>
+                        </motion.div>
+                    )}
                 </motion.div>
 
                 {/* Support Network & Utilities */}
@@ -355,6 +405,18 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                 </motion.div>
 
             </div>
+
+            {showBackupPinModal && user && (
+                <PinSetupModal
+                    uid={user.uid}
+                    mode="backup"
+                    onSuccess={() => {
+                        setShowBackupPinModal(false);
+                        setBackupEnabled(true);
+                    }}
+                    onCancel={() => setShowBackupPinModal(false)}
+                />
+            )}
         </div>
     );
 }

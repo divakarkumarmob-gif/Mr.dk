@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc, setDoc, getDocs, where } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import { decryptLegacyXOR } from '../utils/encryption';
@@ -150,11 +151,28 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     // Pinned Message state
     const pinnedMessage = messages.find(m => m.id === room.pinnedMessageId || m.isPinned);
 
-    const currentUser = auth.currentUser;
-    const currentUid = currentUser?.uid || 'user_guest_' + Date.now();
-    const currentName = currentUser?.displayName || 'NEET Aspirant';
+    // IMPORTANT: `auth.currentUser` can briefly be null on initial load even
+    // when the user IS logged in (Firebase Auth resolves the persisted
+    // session asynchronously). Reading it synchronously here previously
+    // caused a fake fallback uid ('user_guest_<timestamp>') to be used for
+    // Firestore writes, which never matches request.auth.uid in security
+    // rules and always fails with permission-denied. Track real auth state
+    // explicitly instead.
+    const [authUid, setAuthUid] = useState<string | null>(auth.currentUser?.uid || null);
+    const [authName, setAuthName] = useState<string>(auth.currentUser?.displayName || 'NEET Aspirant');
 
-    const isHost = currentUser?.uid === room.hostId || room.hostId.startsWith('user_');
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setAuthUid(user?.uid || null);
+            setAuthName(user?.displayName || 'NEET Aspirant');
+        });
+        return () => unsubscribe();
+    }, []);
+
+    const currentUid = authUid || '';
+    const currentName = authName;
+
+    const isHost = authUid === room.hostId || room.hostId.startsWith('user_');
     const isBlocked = room.blockedUsers?.includes(currentUid);
     const maxLimit = room.maxMembers || 50;
 
@@ -426,8 +444,13 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     // Initialize User E2EE, establish our own sender-key chain for this room,
     // distribute it to all current members, and fetch/decrypt any
     // distribution messages other members have sent us.
+    // NOTE: identity is now created silently at login (see ensureSilentIdentity
+    // in App.tsx). The only user-facing modal this can still trigger is
+    // 'restore' (isNewDevice) for an account with a backup blob from
+    // another device.
     useEffect(() => {
         let isMounted = true;
+        if (!currentUid) return;
         initUserE2EE(currentUid).then(async (status) => {
             if (!isMounted) return;
             setE2eeStatus(status);
@@ -435,9 +458,6 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             if (!status.initialized) {
                 if (status.isNewDevice && status.backupBlob) {
                     setPinModalMode('restore');
-                    setShowPinModal(true);
-                } else if (status.isFirstTime) {
-                    setPinModalMode('setup');
                     setShowPinModal(true);
                 }
                 return;

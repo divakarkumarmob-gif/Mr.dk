@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Shield, Lock, AlertTriangle, Key, ArrowRight, RefreshCw, CheckCircle2, X, Eye, EyeOff } from 'lucide-react';
-import { validatePinStrength, createPinBackupBlob, restorePrivateKeyFromBlob, resetUserKeysAndBackup, setLocalPrivateKey, setLocalPublicKey, generateIdentityKeyBundle, EncryptedPrivateKeyBackupBlob } from '../../utils/e2ee';
-import { setLocalIdentitySignKeyPair, publishKeyBundle } from '../../utils/e2ee/x3dh';
+import { validatePinStrength, createPinBackupBlob, restorePrivateKeyFromBlob, resetUserKeysAndBackup, setLocalPrivateKey, setLocalPublicKey, getLocalPrivateKey, getLocalPublicKey, generateIdentityKeyBundle, EncryptedPrivateKeyBackupBlob } from '../../utils/e2ee';
+import { setLocalIdentitySignKeyPair, publishKeyBundle, getLocalIdentitySignPrivateKey } from '../../utils/e2ee/x3dh';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { showToast } from '../../utils/toast';
 
-export type PinModalMode = 'setup' | 'restore' | 'reset';
+// 'setup' is kept only for any old callers still passing it - it now
+// behaves identically to 'backup' (identity always exists by the time this
+// modal can open, since it's created silently at login). New code should
+// use 'backup' explicitly.
+export type PinModalMode = 'setup' | 'backup' | 'restore' | 'reset';
 
 interface PinSetupModalProps {
     uid: string;
@@ -23,12 +27,74 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
     useModalBackButton(true, () => { if (onCancel) onCancel(); });
     const [pin, setPin] = useState('');
     const [confirmPin, setConfirmPin] = useState('');
-    const [currentMode, setCurrentMode] = useState<PinModalMode>(mode);
+    const [currentMode, setCurrentMode] = useState<PinModalMode>(mode === 'setup' ? 'backup' : mode);
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [failedAttempts, setFailedAttempts] = useState(0);
     const [showPin, setShowPin] = useState(false);
     const [showConfirmPin, setShowConfirmPin] = useState(false);
+
+    /**
+     * 'backup' mode: identity keys already exist (generated silently at
+     * login - see ensureSilentIdentity). This does NOT generate new keys;
+     * it just encrypts the EXISTING local identity with the chosen PIN and
+     * uploads the backup blob, so a future new-device login can restore
+     * this same identity via 'restore' mode. This is the WhatsApp/Signal
+     * "enable backup" flow, decoupled from being able to send/receive
+     * messages at all (which never required a PIN in the first place).
+     */
+    const handleEnableBackup = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setErrorMsg(null);
+
+        const safePin = pin.trim();
+        const safeConfirmPin = confirmPin.trim();
+
+        const val = validatePinStrength(safePin);
+        if (!val.valid) {
+            setErrorMsg(val.message || 'Invalid PIN');
+            return;
+        }
+
+        if (safePin !== safeConfirmPin) {
+            setErrorMsg('PINs match nahi kar rahe hain! Dobara check karein.');
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const dhPrivateKey = await getLocalPrivateKey(uid);
+            const dhPublicKey = await getLocalPublicKey(uid);
+            const signPrivateKey = await getLocalIdentitySignPrivateKey(uid);
+
+            if (!dhPrivateKey || !dhPublicKey) {
+                throw new Error('Koi identity nahi mili is device par. Pehle app dobara kholiye taaki identity generate ho.');
+            }
+            if (!signPrivateKey) {
+                throw new Error('Signing key nahi mili. Kripya app restart karke dobara try karein.');
+            }
+
+            const blob = await createPinBackupBlob(
+                JSON.stringify({ dh: dhPrivateKey, sign: signPrivateKey }),
+                safePin
+            );
+
+            const userRef = doc(db, 'users', uid);
+            await setDoc(userRef, {
+                encryptedPrivateKeyBackup: blob,
+                e2eeBackupEnabled: true,
+                updatedAt: new Date().toISOString()
+            }, { merge: true });
+
+            showToast('Backup PIN set ho gaya! Ab naye device par chats restore kar sakte hain. 🔐');
+            onSuccess({ publicKey: dhPublicKey, privateKey: dhPrivateKey });
+        } catch (e: any) {
+            console.error("Backup PIN setup error:", e);
+            setErrorMsg(e.message || 'Backup setup me error aayi.');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const handleSetupPin = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -74,6 +140,7 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                 identityKeySign: identity.signPublicKey,
                 encryptedPrivateKeyBackup: blob,
                 e2eeEnabled: true,
+                e2eeBackupEnabled: true,
                 updatedAt: new Date().toISOString()
             }, { merge: true });
 
@@ -201,7 +268,7 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                     </div>
                     <div>
                         <h3 className="text-lg font-bold text-slate-100">
-                            {currentMode === 'setup' && 'Set Up E2EE Backup PIN'}
+                            {(currentMode === 'setup' || currentMode === 'backup') && 'Enable Chat Backup'}
                             {currentMode === 'restore' && 'Restore Encrypted Chats'}
                             {currentMode === 'reset' && 'Reset Encryption Keys'}
                         </h3>
@@ -215,11 +282,11 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                 </div>
 
                 {/* Warning box */}
-                {currentMode === 'setup' && (
+                {(currentMode === 'setup' || currentMode === 'backup') && (
                     <div className="mb-4 p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-300 text-xs flex items-start gap-2">
                         <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
                         <span>
-                            <strong>Important Warning:</strong> Agar aap ye PIN bhool gaye, toh aapke encrypted messages permanent unreadable ho jayenge. PIN server par nahi rakha jata.
+                            <strong>Kaam kaise karta hai:</strong> Aapki chats pehle se hi end-to-end encrypted hain - iske liye PIN ki zaroorat nahi. Ye PIN sirf ek backup password hai: agar aap naye phone/browser par login karein, isi PIN se apni purani identity restore kar payenge. <strong>PIN bhool gaye toh</strong> naye device par purani chats unreadable ho jayengi (server par PIN kabhi save nahi hota, isliye hum bhi recover nahi kar sakte).
                         </span>
                     </div>
                 )}
@@ -256,11 +323,15 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                 )}
 
                 {/* Form */}
-                <form onSubmit={currentMode === 'setup' ? handleSetupPin : currentMode === 'restore' ? handleRestorePin : (e) => { e.preventDefault(); handleResetKeys(); }}>
+                <form onSubmit={
+                    currentMode === 'setup' || currentMode === 'backup' ? handleEnableBackup
+                    : currentMode === 'restore' ? handleRestorePin
+                    : (e) => { e.preventDefault(); handleResetKeys(); }
+                }>
                     <div className="space-y-4">
                         <div>
                             <label className="block text-xs font-medium text-slate-300 mb-1">
-                                {currentMode === 'restore' ? 'Apna 6+ Character Backup PIN darj karein:' : 'Security PIN (Min 6 chars, Alphanumeric):'}
+                                {currentMode === 'restore' ? 'Apna 6+ Character Backup PIN darj karein:' : 'Backup PIN banayein (Min 6 chars, Alphanumeric):'}
                             </label>
                             <div className="relative">
                                 <Lock className="w-4 h-4 absolute left-3 top-3 text-slate-400" />
@@ -284,7 +355,7 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                             </div>
                         </div>
 
-                        {(currentMode === 'setup' || currentMode === 'reset') && (
+                        {(currentMode === 'setup' || currentMode === 'backup' || currentMode === 'reset') && (
                             <div>
                                 <label className="block text-xs font-medium text-slate-300 mb-1">
                                     Confirm Security PIN:
@@ -333,7 +404,7 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
                                 <RefreshCw className="w-4 h-4 animate-spin" />
                             ) : (
                                 <>
-                                    {currentMode === 'setup' && 'Create E2EE PIN & Continue'}
+                                    {(currentMode === 'setup' || currentMode === 'backup') && 'Enable Backup'}
                                     {currentMode === 'restore' && 'Restore Device Chats'}
                                     {currentMode === 'reset' && 'Reset Keys & Set New PIN'}
                                     <ArrowRight className="w-4 h-4" />

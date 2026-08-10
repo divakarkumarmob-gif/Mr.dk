@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import { decryptLegacyXOR } from '../utils/encryption';
@@ -119,12 +120,32 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         lastSeen: null
     });
 
-    const currentUser = auth.currentUser;
-    const currentUid = currentUser?.uid || 'user_local_' + Date.now();
-    const currentName = currentUser?.displayName || 'NEET Aspirant';
+    // IMPORTANT: `auth.currentUser` can be null for a brief moment on initial
+    // load / page refresh even when the user IS logged in, because Firebase
+    // Auth resolves the persisted session asynchronously. Reading it
+    // synchronously here previously caused a fake fallback uid
+    // ('user_local_<timestamp>') to be used for Firestore writes, which
+    // never matches request.auth.uid in security rules and always fails
+    // with permission-denied. We track the real auth state explicitly
+    // instead, and hold off on any E2EE/Firestore work until it resolves.
+    const [authUid, setAuthUid] = useState<string | null>(auth.currentUser?.uid || null);
+    const [authName, setAuthName] = useState<string>(auth.currentUser?.displayName || 'NEET Aspirant');
+    const [authResolved, setAuthResolved] = useState<boolean>(!!auth.currentUser);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setAuthUid(user?.uid || null);
+            setAuthName(user?.displayName || 'NEET Aspirant');
+            setAuthResolved(true);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    const currentUid = authUid || '';
+    const currentName = authName;
 
     // Deterministic 1v1 Chat ID (Sorted UIDs)
-    const chatId = [currentUid, targetUser.uid].sort().join('_direct_');
+    const chatId = currentUid ? [currentUid, targetUser.uid].sort().join('_direct_') : '';
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const sessionChannelId = directSessionChannelId(targetUser.uid);
@@ -195,8 +216,18 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     };
 
     // Initialize E2EE for Current User
+    // NOTE: identity is now created silently at login (see ensureSilentIdentity
+    // in App.tsx), so `status.initialized` should almost always be true by
+    // the time a chat is opened. The only user-facing modal this can still
+    // trigger is 'restore' (isNewDevice) - i.e. this is a device that hasn't
+    // seen this account's identity before AND the account has a backup blob
+    // from another device, so we prompt for the backup PIN to restore it.
     useEffect(() => {
         let isMounted = true;
+        if (!currentUid) {
+            setE2eeLoading(true);
+            return;
+        }
         initUserE2EE(currentUid).then(status => {
             if (!isMounted) return;
             setE2eeStatus(status);
@@ -207,10 +238,10 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     setPinModalMode('restore');
                     setBackupBlob(status.backupBlob);
                     setShowPinModal(true);
-                } else if (status.isFirstTime) {
-                    setPinModalMode('setup');
-                    setShowPinModal(true);
                 }
+                // NOTE: the old `isFirstTime` branch that force-opened the
+                // PIN modal here has been removed - identity generation no
+                // longer requires or waits on a PIN (see ensureSilentIdentity).
             } else if (status.identityKeySign) {
                 // Keep our published X3DH key bundle fresh (rotates signed
                 // prekey periodically, replenishes one-time prekeys).
@@ -393,6 +424,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
     // Ensure Parent 1v1 Chat Doc Exists in Firestore
     useEffect(() => {
+        if (!currentUid || !chatId) return;
         const initDirectChatDoc = async () => {
             try {
                 const chatRef = doc(db, 'directChats', chatId);
@@ -417,6 +449,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     useEffect(() => {
         let unsubscribe = () => {};
         let isMounted = true;
+        if (!currentUid || !chatId) return () => { isMounted = false; };
         try {
             const q = query(collection(db, 'directChats', chatId, 'messages'), orderBy('timestamp', 'asc'));
             unsubscribe = onSnapshot(q, async (snapshot) => {

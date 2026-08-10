@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import {
   signInWithGoogle,
   signInWithEmail,
@@ -7,7 +8,7 @@ import {
   sendPhoneOtp,
   verifyPhoneOtp,
 } from '@/lib/auth';
-import { Mail, Lock, Eye, EyeOff, HelpCircle, User, KeyRound, ArrowLeft, Check, Smartphone } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, HelpCircle, User, KeyRound, ArrowLeft, Check, Smartphone, Sparkles, ShieldCheck } from 'lucide-react';
 import PosterSlider from './PosterSlider';
 import Pressable from './Pressable';
 import TermsOfService from './TermsOfService';
@@ -17,13 +18,6 @@ import { updateProfile } from 'firebase/auth';
 import { auth, resetRecaptchaVerifier } from '@/lib/firebase';
 
 // ---- Wizard step machine -------------------------------------------------
-// IDENTIFIER       -> single box, auto-detects email vs phone
-// PASSWORD         -> existing email user, password + login
-// OTP              -> new email / existing phone / new phone, 4-digit code
-// SET_PASSWORD     -> new email user only, choose a password after OTP
-// USERNAME         -> new user only, name + terms checkbox, then finish
-// FORGOT_OTP       -> existing email user forgot password: OTP sent to email
-// FORGOT_NEW_PASSWORD -> after OTP verified, choose a new password
 type Step = 'IDENTIFIER' | 'PASSWORD' | 'OTP' | 'SET_PASSWORD' | 'USERNAME' | 'FORGOT_OTP' | 'FORGOT_NEW_PASSWORD';
 type IdentifierKind = 'email' | 'phone' | null;
 
@@ -61,9 +55,47 @@ export default function Login() {
   const [isSubmittingProfile, setIsSubmittingProfile] = useState(false);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
-  // Resend-OTP anti-spam cooldown: 1st resend waits 30s, 2nd waits 2min,
-  // after that we stop offering a timer and show "Try another method" instead.
-  const RESEND_COOLDOWNS = [30, 120]; // seconds, indexed by resend attempt number
+  // Glassy Loading & Progressive Progress Bar Modal state
+  const [loadingModal, setLoadingModal] = useState<{
+    show: boolean;
+    title: string;
+    message: string;
+    progress: number;
+  }>({
+    show: false,
+    title: '',
+    message: '',
+    progress: 0,
+  });
+
+  const startLoadingProgress = (title: string, message: string) => {
+    setLoadingModal({ show: true, title, message, progress: 15 });
+    const interval = setInterval(() => {
+      setLoadingModal((prev) => {
+        if (!prev.show) {
+          clearInterval(interval);
+          return prev;
+        }
+        const next = prev.progress + Math.floor(Math.random() * 14 + 8);
+        if (next >= 92) {
+          clearInterval(interval);
+          return { ...prev, progress: 92 };
+        }
+        return { ...prev, progress: next };
+      });
+    }, 100);
+
+    return () => {
+      clearInterval(interval);
+      setLoadingModal((prev) => ({ ...prev, progress: 100 }));
+      setTimeout(() => {
+        setLoadingModal({ show: false, title: '', message: '', progress: 0 });
+      }, 250);
+    };
+  };
+
+  // Resend-OTP anti-spam cooldown
+  const RESEND_COOLDOWNS = [30, 120];
   const [resendCount, setResendCount] = useState(0);
   const [resendSecondsLeft, setResendSecondsLeft] = useState(0);
   const resendIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -113,7 +145,6 @@ export default function Login() {
     _setLegalView(v);
   };
 
-  // Debounce handle for auto-advance on the identifier box
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const autoVerifyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -186,13 +217,10 @@ export default function Login() {
     return `${clean}@neetmaster.com`;
   };
 
-  // ---- Step 1: Identifier (single box, auto-detect + auto-advance) -------
-
   const validateIdentifier = (raw: string): IdentifierKind => {
     const clean = raw.trim();
     if (!clean) return null;
     if (clean.includes('@')) {
-      // simple, forgiving email shape check
       const looksLikeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(clean);
       return looksLikeEmail ? 'email' : null;
     }
@@ -217,6 +245,7 @@ export default function Login() {
     }
 
     setIsCheckingIdentifier(true);
+    const stopLoading = startLoadingProgress('Checking Account', 'Verifying details...');
     clearResendCooldown();
     try {
       if (kind === 'email') {
@@ -231,14 +260,11 @@ export default function Login() {
         setIsExistingUser(exists);
 
         if (exists) {
-          // Existing email -> password box -> login
           setStep('PASSWORD');
         } else {
-          // New email -> OTP box (Brevo-delivered code)
           await sendOtp(value);
         }
       } else {
-        // Phone: check existing/new via backend, then send a real SMS via Firebase
         const response = await authFetch(getApiUrl('/api/check-phone-user'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -253,10 +279,10 @@ export default function Login() {
       showError(error.message || 'Something went wrong. Please try again.');
     } finally {
       setIsCheckingIdentifier(false);
+      stopLoading();
     }
   };
 
-  // Formats a raw 10-digit number into E.164 (+91XXXXXXXXXX), matching auth.ts
   const toE164 = (rawPhone: string) => {
     const clean = rawPhone.trim();
     if (clean.startsWith('+')) return clean;
@@ -264,12 +290,11 @@ export default function Login() {
     return `+91${digitsOnly}`;
   };
 
-  // ---- Email OTP (custom 4-digit code via backend + Brevo) ------------------
-
   const sendOtp = async (rawIdentifier?: string, isResend: boolean = false) => {
     if (isSendingOtp) return;
     const value = (rawIdentifier ?? identifier).trim();
     setIsSendingOtp(true);
+    const stopLoading = startLoadingProgress('Sending OTP', `Generating security code for ${value}...`);
     try {
       const response = await fetch(getApiUrl('/api/send-otp'), {
         method: 'POST',
@@ -281,7 +306,7 @@ export default function Login() {
 
       if (data.testOtp) {
         setTestOtp(data.testOtp);
-        showSuccess(`OTP generated! [Dev Mode] Testing Code: ${data.testOtp}`);
+        showSuccess(`OTP generated! [Dev Mode] Code: ${data.testOtp}`);
       } else {
         setTestOtp(null);
         showSuccess(`OTP sent successfully to ${value}!`);
@@ -299,6 +324,7 @@ export default function Login() {
       showError(error.message || 'Failed to send OTP.');
     } finally {
       setIsSendingOtp(false);
+      stopLoading();
     }
   };
 
@@ -312,12 +338,11 @@ export default function Login() {
     if (!response.ok) throw new Error(data.error || 'Invalid OTP');
   };
 
-  // ---- Phone OTP (real SMS via Firebase Phone Auth) --------------------------
-
   const sendPhoneVerification = async (rawIdentifier?: string, isResend: boolean = false) => {
     if (isSendingOtp) return;
     const value = (rawIdentifier ?? identifier).trim();
     setIsSendingOtp(true);
+    const stopLoading = startLoadingProgress('Sending SMS OTP', `Sending code to ${toE164(value)}...`);
     try {
       await sendPhoneOtp(value, 'recaptcha-container');
       setTestOtp(null);
@@ -342,10 +367,9 @@ export default function Login() {
       }
     } finally {
       setIsSendingOtp(false);
+      stopLoading();
     }
   };
-
-  // ---- Combined OTP box (routes to email or phone verification) -------------
 
   const otpMaxLength = identifierKind === 'phone' ? 6 : 4;
 
@@ -355,7 +379,6 @@ export default function Login() {
 
     if (autoVerifyTimer.current) clearTimeout(autoVerifyTimer.current);
     if (digitsOnly.length === otpMaxLength) {
-      // Auto-verify as soon as the last digit lands
       autoVerifyTimer.current = setTimeout(() => {
         verifyOtp(digitsOnly);
       }, 150);
@@ -370,11 +393,9 @@ export default function Login() {
       return;
     }
     setIsVerifyingOtp(true);
+    const stopLoading = startLoadingProgress('Verifying OTP', 'Authenticating security code...');
     try {
       if (identifierKind === 'phone') {
-        // Real Firebase Phone Auth verification - this itself completes sign-in
-        // for BOTH existing and new phone users (Firebase creates the account
-        // automatically on first-time verification).
         setIsLoggingIn(true);
         try {
           await verifyPhoneOtp(value);
@@ -384,13 +405,10 @@ export default function Login() {
         showSuccess('OTP verified successfully!');
 
         if (isExistingUser) {
-          // Existing phone user is now fully signed in - nothing else to do.
           return;
         }
-        // New phone user is signed in too, but still needs a display name.
         setStep('USERNAME');
       } else {
-        // Email OTP goes through our own backend + Brevo
         await verifyEmailOtp(value);
         showSuccess('OTP verified successfully!');
         setStep('SET_PASSWORD');
@@ -405,10 +423,9 @@ export default function Login() {
       setOtp('');
     } finally {
       setIsVerifyingOtp(false);
+      stopLoading();
     }
   };
-
-  // ---- Existing email login (password box) --------------------------------
 
   const handleLogin = async () => {
     if (!identifier.trim() || !password.trim()) {
@@ -416,6 +433,7 @@ export default function Login() {
       return;
     }
     setIsLoggingIn(true);
+    const stopLoading = startLoadingProgress('Logging In', 'Authenticating your NEET Master credentials...');
     try {
       const fbEmail = getFirebaseEmail(identifier);
       await signInWithEmail(fbEmail, password);
@@ -429,10 +447,9 @@ export default function Login() {
       }
     } finally {
       setIsLoggingIn(false);
+      stopLoading();
     }
   };
-
-  // ---- New user: set password (email only) then continue to username -----
 
   const handlePasswordChange = (value: string) => {
     setPassword(value);
@@ -443,8 +460,6 @@ export default function Login() {
       }, AUTO_ADVANCE_DELAY);
     }
   };
-
-  // ---- New user: username + terms, then create account --------------------
 
   const canFinishSignUp = name.trim() !== '' && agreeTerms;
 
@@ -464,13 +479,12 @@ export default function Login() {
     }
 
     setIsSubmittingProfile(true);
+    const stopLoading = startLoadingProgress('Creating Account', 'Setting up your NEET Master dashboard...');
     try {
       if (identifierKind === 'email') {
         const fbEmail = getFirebaseEmail(identifier);
         await signUpWithEmail(fbEmail, password, name.trim());
       } else {
-        // Phone signup: Firebase Phone Auth already created and signed in the
-        // account the moment the OTP was verified. Just attach the display name.
         if (auth.currentUser) {
           await updateProfile(auth.currentUser, { displayName: name.trim() });
         }
@@ -486,18 +500,9 @@ export default function Login() {
       }
     } finally {
       setIsSubmittingProfile(false);
+      stopLoading();
     }
   };
-
-  // ---- Misc -----------------------------------------------------------------
-
-
-  // ---- Forgot password (OTP-based) -----------------------------------------
-  // 1. Send a 4-digit OTP to the user's email (same backend/Brevo path as signup OTP)
-  // 2. User enters the OTP -> verified against backend, returns a short-lived resetToken
-  // 3. User chooses a new password -> sent to backend along with resetToken
-  // 4. Back to the identifier box; user re-enters email, system detects existing
-  //    user again, and they log in with the new password.
 
   const handleForgotPassword = async () => {
     if (isSendingForgotOtp) return;
@@ -511,6 +516,7 @@ export default function Login() {
       return;
     }
     setIsSendingForgotOtp(true);
+    const stopLoading = startLoadingProgress('Password Reset', `Sending reset OTP to ${email}...`);
     try {
       const response = await fetch(getApiUrl('/api/send-otp'), {
         method: 'POST',
@@ -522,7 +528,7 @@ export default function Login() {
 
       if (data.testOtp) {
         setTestOtp(data.testOtp);
-        showSuccess(`OTP generated! [Dev Mode] Testing Code: ${data.testOtp}`);
+        showSuccess(`OTP generated! [Dev Mode] Code: ${data.testOtp}`);
       } else {
         setTestOtp(null);
         showSuccess(`OTP sent to ${email} to reset your password.`);
@@ -536,6 +542,7 @@ export default function Login() {
       showError(error.message || 'Failed to send OTP.');
     } finally {
       setIsSendingForgotOtp(false);
+      stopLoading();
     }
   };
 
@@ -561,6 +568,7 @@ export default function Login() {
       return;
     }
     setIsVerifyingForgotOtp(true);
+    const stopLoading = startLoadingProgress('Verifying OTP', 'Validating password reset token...');
     try {
       const response = await fetch(getApiUrl('/api/verify-otp'), {
         method: 'POST',
@@ -578,6 +586,7 @@ export default function Login() {
       setForgotOtp('');
     } finally {
       setIsVerifyingForgotOtp(false);
+      stopLoading();
     }
   };
 
@@ -593,6 +602,7 @@ export default function Login() {
       return;
     }
     setIsResettingPassword(true);
+    const stopLoading = startLoadingProgress('Updating Password', 'Saving new credentials securely...');
     try {
       const response = await fetch(getApiUrl('/api/reset-password'), {
         method: 'POST',
@@ -603,14 +613,13 @@ export default function Login() {
       if (!response.ok) throw new Error(data.error || 'Failed to reset password');
 
       showSuccess('Password updated! Please log in with your new password.');
-      // Back to the identifier box, fully reset, so the user re-enters their
-      // email and the system re-detects them as an existing user.
       setStep('IDENTIFIER');
       resetWizard();
     } catch (error: any) {
       showError(error.message || 'Failed to reset password.');
     } finally {
       setIsResettingPassword(false);
+      stopLoading();
     }
   };
 
@@ -619,10 +628,13 @@ export default function Login() {
       showTermsNotice();
       return;
     }
+    const stopLoading = startLoadingProgress('Google Sign-In', 'Connecting with Google Authentication...');
     try {
       await signInWithGoogle();
     } catch (error) {
       showError('Google login failed!');
+    } finally {
+      stopLoading();
     }
   };
 
@@ -632,6 +644,7 @@ export default function Login() {
       return;
     }
     setIsLoggingInGuest(true);
+    const stopLoading = startLoadingProgress('Guest Session', `Initializing workspace for ${guestName.trim()}...`);
     try {
       showSuccess(`Welcome ${guestName.trim()}! Accessing app as guest...`);
       await signInAsGuest(guestName.trim());
@@ -650,6 +663,7 @@ export default function Login() {
       window.location.reload();
     } finally {
       setIsLoggingInGuest(false);
+      stopLoading();
     }
   };
 
@@ -671,8 +685,6 @@ export default function Login() {
       setStep('FORGOT_OTP');
       setNewPassword('');
     }
-    // Phone USERNAME step: no back button shown (see canGoBack below) since
-    // the Firebase account is already created/signed-in at that point.
   };
 
   const canGoBack =
@@ -683,7 +695,6 @@ export default function Login() {
     step === 'FORGOT_NEW_PASSWORD' ||
     (step === 'USERNAME' && identifierKind === 'email');
 
-  // ---- Legal pages (Terms / Privacy) shown as full overlay, then back to previous step ----
   if (legalView === 'terms') {
     return <TermsOfService onBack={() => window.history.back()} />;
   }
@@ -716,58 +727,80 @@ export default function Login() {
   const identifierIsValid = !!identifierKind;
 
   return (
-    <div className="min-h-dvh bg-gray-50 px-3 pb-8 flex flex-col items-center pt-[env(safe-area-inset-top,0px)]">
-      {/* Invisible reCAPTCHA anchor for web Phone Auth. Native platforms don't use this. */}
+    <div className="min-h-dvh bg-[#080c14] text-white px-3 pb-8 flex flex-col items-center pt-[env(safe-area-inset-top,0px)] relative overflow-x-hidden selection:bg-pink-500/30 selection:text-pink-200">
+      {/* Ambient Glowing Glass Spheres (Red, Blue, Pink accent glow) */}
+      <div className="fixed -top-24 left-1/2 -translate-x-1/2 w-[550px] h-[380px] bg-gradient-to-tr from-red-600/25 via-pink-600/30 to-blue-600/25 rounded-full blur-[140px] pointer-events-none" />
+      <div className="fixed top-1/3 -right-24 w-80 h-80 bg-blue-600/20 rounded-full blur-[130px] pointer-events-none" />
+      <div className="fixed bottom-10 -left-24 w-80 h-80 bg-red-600/20 rounded-full blur-[130px] pointer-events-none" />
+
+      {/* Invisible reCAPTCHA anchor */}
       <div id="recaptcha-container" />
+      
       {errorMessage && (
-        <div className="fixed top-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-[1001]">{errorMessage}</div>
+        <div className="fixed top-4 bg-red-600/90 border border-red-400/50 backdrop-blur-xl text-white px-5 py-3 rounded-2xl shadow-[0_0_30px_rgba(239,68,68,0.5)] z-[2001] text-sm font-semibold animate-bounce">
+          {errorMessage}
+        </div>
       )}
       {successMessage && (
-        <div className="fixed top-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-[1001]">{successMessage}</div>
+        <div className="fixed top-4 bg-emerald-600/90 border border-emerald-400/50 backdrop-blur-xl text-white px-5 py-3 rounded-2xl shadow-[0_0_30px_rgba(16,185,129,0.5)] z-[2001] text-sm font-semibold">
+          {successMessage}
+        </div>
       )}
       {termsNoticeMessage && (
-        <div className="fixed top-4 bg-orange-500 text-white p-4 rounded-lg shadow-lg z-[1001] text-center">
+        <div className="fixed top-4 bg-amber-600/90 border border-amber-400/50 backdrop-blur-xl text-white px-5 py-3 rounded-2xl shadow-[0_0_30px_rgba(245,158,11,0.5)] z-[2001] text-xs font-semibold text-center">
           {termsNoticeMessage}
         </div>
       )}
-      <div className="w-full max-w-4xl flex items-center justify-between mb-8">
+
+      {/* Top Header */}
+      <div className="w-full max-w-4xl flex items-center justify-between mb-6 pt-3 relative z-10">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">
-            Welcome to <span className="text-blue-600">Neet Master</span>
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            Welcome to <span className="bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(236,72,153,0.5)]">Neet Master</span>
           </h1>
-          <p className="text-gray-600">Master the NEET, Secure Your Future</p>
+          <p className="text-slate-300 text-xs sm:text-sm font-medium mt-0.5 flex items-center gap-1.5">
+            <Sparkles className="h-3.5 w-3.5 text-pink-400 inline" /> Master the NEET, Secure Your Future
+          </p>
         </div>
         <a
           href="https://ig.me/m/mr.divakar00"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-600"
+          className="flex items-center gap-1.5 text-xs font-semibold px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-pink-500/40 text-slate-300 hover:text-white transition-all shadow-sm backdrop-blur-md"
         >
-          <HelpCircle className="mr-1 h-4 w-4" /> Support
+          <HelpCircle className="h-3.5 w-3.5 text-pink-400" /> Support
         </a>
       </div>
 
-      <div className="w-full max-w-lg">
+      {/* Main Login Card Wrapper */}
+      <div className="w-full max-w-lg relative z-10">
         <PosterSlider />
 
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="px-0 pt-0 pb-2">
+        <div className="bg-slate-900/70 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.6)] border border-white/15 relative overflow-hidden">
+          {/* Glowing Top Border Line */}
+          <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-red-500 via-pink-500 to-blue-500" />
+
+          <div className="px-0 pt-0 pb-3">
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-gray-900">{stepTitle()}</h2>
+              <h2 className="text-xl font-extrabold bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
+                {stepTitle()}
+              </h2>
               {(isGuestMode || canGoBack) && (
                 <button
                   onClick={() => {
                     if (isGuestMode) setIsGuestMode(false);
                     else goBack();
                   }}
-                  className="text-xs text-gray-500 hover:text-purple-700 flex items-center gap-1 font-semibold"
+                  className="text-xs text-slate-400 hover:text-pink-400 flex items-center gap-1 font-semibold transition-colors px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10"
                 >
                   <ArrowLeft className="h-3 w-3" /> Back
                 </button>
               )}
             </div>
             {!isGuestMode && step === 'IDENTIFIER' && (
-              <p className="text-xs text-gray-500 mt-0">🔐 your data is secure with us</p>
+              <p className="text-xs text-slate-400 mt-1 flex items-center gap-1 font-medium">
+                <ShieldCheck className="h-3.5 w-3.5 text-pink-400" /> Your data is encrypted & secure
+              </p>
             )}
           </div>
 
@@ -775,13 +808,13 @@ export default function Login() {
             {/* Guest Login Form */}
             {isGuestMode && (
               <div className="space-y-4">
-                <p className="text-sm text-gray-600">
+                <p className="text-xs sm:text-sm text-slate-300">
                   Enter your name to start practicing and master the NEET exam right away.
                 </p>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <User className="absolute left-3.5 top-3.5 h-5 w-5 text-pink-400" />
                   <input
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500"
+                    className="w-full pl-11 pr-4 py-3 bg-slate-950/70 border border-white/15 rounded-xl text-white placeholder-slate-400 text-sm font-medium transition-all shadow-inner focus:outline-none focus:border-pink-500/80 focus:ring-2 focus:ring-pink-500/30"
                     type="text"
                     placeholder="Enter Your Name"
                     value={guestName}
@@ -789,10 +822,11 @@ export default function Login() {
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') handleGuestSubmit();
                     }}
+                    autoFocus
                   />
                 </div>
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 text-white rounded-md py-2 font-semibold text-center flex items-center justify-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={handleGuestSubmit}
                   disabled={isLoggingInGuest}
                 >
@@ -806,13 +840,13 @@ export default function Login() {
               <>
                 <div className="relative">
                   {identifierKind === 'phone' ? (
-                    <Smartphone className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                    <Smartphone className="absolute left-3.5 top-3.5 h-5 w-5 text-blue-400" />
                   ) : (
-                    <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                    <Mail className="absolute left-3.5 top-3.5 h-5 w-5 text-pink-400" />
                   )}
                   <input
-                    className={`w-full pl-10 pr-4 py-2 border rounded-md text-gray-900 placeholder-gray-500 transition-colors ${
-                      identifierIsValid ? 'border-green-500 focus:border-green-500' : 'border-gray-300'
+                    className={`w-full pl-11 pr-4 py-3 bg-slate-950/70 border rounded-xl text-white placeholder-slate-400 text-sm font-medium transition-all shadow-inner focus:outline-none ${
+                      identifierIsValid ? 'border-pink-500/80 focus:ring-2 focus:ring-pink-500/30' : 'border-white/15 focus:border-blue-500/80 focus:ring-2 focus:ring-blue-500/30'
                     }`}
                     type="text"
                     placeholder="Email or 10-digit Mobile Number"
@@ -825,19 +859,19 @@ export default function Login() {
                   />
                 </div>
 
-                <label className="flex items-start gap-2 text-xs text-gray-600 select-none cursor-pointer">
+                <label className="flex items-start gap-2.5 text-xs text-slate-300 select-none cursor-pointer">
                   <button
                     type="button"
                     role="checkbox"
                     aria-checked={agreeTerms}
                     onClick={() => setAgreeTerms(!agreeTerms)}
-                    className={`mt-0.5 flex-shrink-0 h-4 w-4 rounded border flex items-center justify-center transition-colors ${
-                      agreeTerms ? 'bg-purple-700 border-purple-700' : 'border-gray-400 bg-white'
+                    className={`mt-0.5 flex-shrink-0 h-4 w-4 rounded-md border flex items-center justify-center transition-all ${
+                      agreeTerms ? 'bg-gradient-to-r from-red-500 to-pink-500 border-pink-500 shadow-[0_0_10px_rgba(236,72,153,0.5)]' : 'border-white/30 bg-slate-950/50 hover:border-pink-400'
                     }`}
                   >
                     {agreeTerms && <Check className="h-3 w-3 text-white" strokeWidth={3} />}
                   </button>
-                  <span>
+                  <span className="leading-relaxed">
                     I agree to the{' '}
                     <button
                       type="button"
@@ -845,7 +879,7 @@ export default function Login() {
                         e.preventDefault();
                         setLegalView('terms');
                       }}
-                      className="text-purple-700 underline font-medium"
+                      className="text-pink-400 hover:text-pink-300 underline font-medium"
                     >
                       Terms of Service
                     </button>{' '}
@@ -856,7 +890,7 @@ export default function Login() {
                         e.preventDefault();
                         setLegalView('privacy');
                       }}
-                      className="text-purple-700 underline font-medium"
+                      className="text-pink-400 hover:text-pink-300 underline font-medium"
                     >
                       Privacy Policy
                     </button>
@@ -864,7 +898,7 @@ export default function Login() {
                 </label>
 
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                   onClick={() => proceedFromIdentifier()}
                   disabled={!identifierIsValid || !agreeTerms || isCheckingIdentifier}
                 >
@@ -876,14 +910,14 @@ export default function Login() {
             {/* Step: PASSWORD - existing email/mobile user */}
             {!isGuestMode && step === 'PASSWORD' && (
               <>
-                <p className="text-xs text-gray-500 mb-1">
+                <p className="text-xs text-slate-300 mb-1">
                   Welcome back! Enter the password for{' '}
-                  <span className="font-semibold text-gray-800">{identifier}</span>.
+                  <span className="font-semibold text-pink-400">{identifier}</span>.
                 </p>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-blue-400" />
                   <input
-                    className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500"
+                    className="w-full pl-11 pr-11 py-3 bg-slate-950/70 border border-white/15 rounded-xl text-white placeholder-slate-400 text-sm font-medium transition-all shadow-inner focus:outline-none focus:border-blue-500/80 focus:ring-2 focus:ring-blue-500/30"
                     type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                     value={password}
@@ -893,17 +927,17 @@ export default function Login() {
                     }}
                     autoFocus
                   />
-                  <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
+                  <Pressable className="absolute right-3.5 top-3.5" onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <EyeOff className="h-5 w-5 text-slate-400 hover:text-white" /> : <Eye className="h-5 w-5 text-slate-400 hover:text-white" />}
                   </Pressable>
                 </div>
                 <div className="text-right">
-                  <Pressable onClick={handleForgotPassword} className="text-sm text-purple-700 font-semibold" disabled={isSendingForgotOtp}>
+                  <Pressable onClick={handleForgotPassword} className="text-xs text-pink-400 hover:text-pink-300 font-semibold transition-colors" disabled={isSendingForgotOtp}>
                     {isSendingForgotOtp ? 'Sending OTP...' : 'Forgot Password?'}
                   </Pressable>
                 </div>
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={handleLogin}
                   disabled={isLoggingIn}
                 >
@@ -912,34 +946,34 @@ export default function Login() {
               </>
             )}
 
-            {/* Step: FORGOT_OTP - OTP sent to email to verify identity before reset */}
+            {/* Step: FORGOT_OTP */}
             {!isGuestMode && step === 'FORGOT_OTP' && (
               <>
-                <p className="text-xs text-gray-500 mb-2">
+                <p className="text-xs text-slate-300 mb-2">
                   We've sent a {forgotOtpMaxLength}-digit OTP to{' '}
-                  <span className="font-semibold text-gray-800">{identifier}</span> to verify it's you.
+                  <span className="font-semibold text-pink-400">{identifier}</span> to verify it's you.
                 </p>
                 {testOtp && (
-                  <div className="bg-purple-50 border border-purple-200 text-purple-800 text-xs rounded-md p-3 mb-2 font-mono flex items-center justify-between">
+                  <div className="bg-pink-950/40 border border-pink-500/40 text-pink-200 text-xs rounded-xl p-3 mb-2 font-mono flex items-center justify-between backdrop-blur-md">
                     <span>
-                      🔑 [Dev Mode] Your OTP Code is: <strong>{testOtp}</strong>
+                      🔑 [Dev Mode] Code: <strong>{testOtp}</strong>
                     </span>
                     <button
                       onClick={() => {
                         handleForgotOtpChange(testOtp);
                         showSuccess('Testing OTP filled!');
                       }}
-                      className="text-[10px] bg-purple-600 hover:bg-purple-700 text-white px-2 py-0.5 rounded font-sans font-bold"
+                      className="text-[10px] bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-0.5 rounded-lg font-sans font-bold shadow"
                     >
                       Auto-Fill
                     </button>
                   </div>
                 )}
                 <div className="relative">
-                  <KeyRound className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <KeyRound className="absolute left-3.5 top-3.5 h-5 w-5 text-pink-400" />
                   <input
-                    className={`w-full pl-10 pr-4 py-2 border rounded-md text-gray-950 placeholder-gray-500 font-mono text-center tracking-widest text-lg font-bold transition-colors ${
-                      forgotOtp.length === forgotOtpMaxLength ? 'border-green-500' : 'border-gray-300'
+                    className={`w-full pl-11 pr-4 py-3 bg-slate-950/70 border rounded-xl text-white placeholder-slate-500 font-mono text-center tracking-widest text-lg font-bold transition-all focus:outline-none ${
+                      forgotOtp.length === forgotOtpMaxLength ? 'border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/30' : 'border-white/15 focus:border-pink-500'
                     }`}
                     type="text"
                     inputMode="numeric"
@@ -950,13 +984,13 @@ export default function Login() {
                     autoFocus
                   />
                 </div>
-                <div className="flex gap-2 justify-between items-center">
+                <div className="flex gap-2 justify-between items-center text-xs">
                   {resendCount >= RESEND_COOLDOWNS.length && resendSecondsLeft === 0 ? (
-                    <span className="text-xs text-orange-600 font-semibold">
+                    <span className="text-amber-400 font-medium">
                       Still not received? Check spam or try again later.
                     </span>
                   ) : resendSecondsLeft > 0 ? (
-                    <span className="text-xs text-gray-400 font-semibold">Resend OTP in {resendSecondsLeft}s</span>
+                    <span className="text-slate-400 font-medium">Resend OTP in {resendSecondsLeft}s</span>
                   ) : (
                     <button
                       onClick={async () => {
@@ -967,14 +1001,14 @@ export default function Login() {
                         startResendCooldown(cooldown);
                       }}
                       disabled={isSendingForgotOtp}
-                      className="text-xs text-purple-700 font-semibold hover:underline disabled:text-gray-400 disabled:no-underline"
+                      className="text-pink-400 font-semibold hover:underline disabled:text-slate-500"
                     >
                       {isSendingForgotOtp ? 'Resending...' : 'Resend OTP'}
                     </button>
                   )}
                 </div>
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={() => verifyForgotOtp()}
                   disabled={forgotOtp.length !== forgotOtpMaxLength || isVerifyingForgotOtp}
                 >
@@ -983,15 +1017,15 @@ export default function Login() {
               </>
             )}
 
-            {/* Step: FORGOT_NEW_PASSWORD - choose a new password after OTP verified */}
+            {/* Step: FORGOT_NEW_PASSWORD */}
             {!isGuestMode && step === 'FORGOT_NEW_PASSWORD' && (
               <>
-                <p className="text-xs text-gray-500 mb-2">OTP verified! Choose a new password for your account.</p>
+                <p className="text-xs text-slate-300 mb-2">OTP verified! Choose a new password for your account.</p>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-blue-400" />
                   <input
-                    className={`w-full pl-10 pr-10 py-2 border rounded-md text-gray-900 placeholder-gray-500 transition-colors ${
-                      newPassword.trim().length >= 6 ? 'border-green-500' : 'border-gray-300'
+                    className={`w-full pl-11 pr-11 py-3 bg-slate-950/70 border rounded-xl text-white placeholder-slate-400 text-sm font-medium transition-all focus:outline-none ${
+                      newPassword.trim().length >= 6 ? 'border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/30' : 'border-white/15 focus:border-blue-500'
                     }`}
                     type={showPassword ? 'text' : 'password'}
                     placeholder="New Password (min 6 chars)"
@@ -1002,12 +1036,12 @@ export default function Login() {
                     }}
                     autoFocus
                   />
-                  <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
+                  <Pressable className="absolute right-3.5 top-3.5" onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <EyeOff className="h-5 w-5 text-slate-400 hover:text-white" /> : <Eye className="h-5 w-5 text-slate-400 hover:text-white" />}
                   </Pressable>
                 </div>
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={handleResetPasswordSubmit}
                   disabled={newPassword.trim().length < 6 || isResettingPassword}
                 >
@@ -1016,37 +1050,37 @@ export default function Login() {
               </>
             )}
 
-            {/* Step: OTP - new email / existing phone / new phone */}
+            {/* Step: OTP */}
             {!isGuestMode && step === 'OTP' && (
               <>
-                <p className="text-xs text-gray-500 mb-2">
+                <p className="text-xs text-slate-300 mb-2">
                   We have generated a {otpMaxLength}-digit OTP for{' '}
-                  <span className="font-semibold text-gray-800">
+                  <span className="font-semibold text-pink-400">
                     {identifierKind === 'phone' ? toE164(identifier) : identifier}
                   </span>
                   .
                 </p>
                 {testOtp && (
-                  <div className="bg-purple-50 border border-purple-200 text-purple-800 text-xs rounded-md p-3 mb-2 font-mono flex items-center justify-between">
+                  <div className="bg-pink-950/40 border border-pink-500/40 text-pink-200 text-xs rounded-xl p-3 mb-2 font-mono flex items-center justify-between backdrop-blur-md">
                     <span>
-                      🔑 [Dev Mode] Your OTP Code is: <strong>{testOtp}</strong>
+                      🔑 [Dev Mode] Code: <strong>{testOtp}</strong>
                     </span>
                     <button
                       onClick={() => {
                         handleOtpChange(testOtp);
                         showSuccess('Testing OTP filled!');
                       }}
-                      className="text-[10px] bg-purple-600 hover:bg-purple-700 text-white px-2 py-0.5 rounded font-sans font-bold"
+                      className="text-[10px] bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-0.5 rounded-lg font-sans font-bold shadow"
                     >
                       Auto-Fill
                     </button>
                   </div>
                 )}
                 <div className="relative">
-                  <KeyRound className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <KeyRound className="absolute left-3.5 top-3.5 h-5 w-5 text-pink-400" />
                   <input
-                    className={`w-full pl-10 pr-4 py-2 border rounded-md text-gray-950 placeholder-gray-500 font-mono text-center tracking-widest text-lg font-bold transition-colors ${
-                      otp.length === otpMaxLength ? 'border-green-500' : 'border-gray-300'
+                    className={`w-full pl-11 pr-4 py-3 bg-slate-950/70 border rounded-xl text-white placeholder-slate-500 font-mono text-center tracking-widest text-lg font-bold transition-all focus:outline-none ${
+                      otp.length === otpMaxLength ? 'border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/30' : 'border-white/15 focus:border-pink-500'
                     }`}
                     type="text"
                     inputMode="numeric"
@@ -1057,19 +1091,19 @@ export default function Login() {
                     autoFocus
                   />
                 </div>
-                <div className="flex gap-2 justify-between items-center">
+                <div className="flex gap-2 justify-between items-center text-xs">
                   {resendCount >= RESEND_COOLDOWNS.length && resendSecondsLeft === 0 ? (
                     <button
                       onClick={() => {
                         setStep('IDENTIFIER');
                         resetWizard();
                       }}
-                      className="text-xs text-orange-600 font-semibold hover:underline"
+                      className="text-amber-400 font-semibold hover:underline"
                     >
                       Not received? Try another method
                     </button>
                   ) : resendSecondsLeft > 0 ? (
-                    <span className="text-xs text-gray-400 font-semibold">
+                    <span className="text-slate-400 font-medium">
                       Resend OTP in {resendSecondsLeft}s
                     </span>
                   ) : (
@@ -1078,7 +1112,7 @@ export default function Login() {
                         identifierKind === 'phone' ? sendPhoneVerification(undefined, true) : sendOtp(undefined, true)
                       }
                       disabled={isSendingOtp}
-                      className="text-xs text-purple-700 font-semibold hover:underline disabled:text-gray-400 disabled:no-underline"
+                      className="text-pink-400 font-semibold hover:underline disabled:text-slate-500"
                     >
                       {isSendingOtp ? 'Resending...' : 'Resend OTP'}
                     </button>
@@ -1088,13 +1122,13 @@ export default function Login() {
                       setStep('IDENTIFIER');
                       resetWizard();
                     }}
-                    className="text-xs text-gray-500 font-semibold hover:underline"
+                    className="text-slate-400 font-medium hover:text-white hover:underline"
                   >
                     Change Email/Mobile
                   </button>
                 </div>
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={() => verifyOtp()}
                   disabled={otp.length !== otpMaxLength || isVerifyingOtp || isLoggingIn}
                 >
@@ -1103,15 +1137,15 @@ export default function Login() {
               </>
             )}
 
-            {/* Step: SET_PASSWORD - new email user chooses a password */}
+            {/* Step: SET_PASSWORD */}
             {!isGuestMode && step === 'SET_PASSWORD' && (
               <>
-                <p className="text-xs text-gray-500 mb-2">OTP Verified! Now choose a password for your account.</p>
+                <p className="text-xs text-slate-300 mb-2">OTP Verified! Now choose a password for your account.</p>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <Lock className="absolute left-3.5 top-3.5 h-5 w-5 text-blue-400" />
                   <input
-                    className={`w-full pl-10 pr-10 py-2 border rounded-md text-gray-900 placeholder-gray-500 transition-colors ${
-                      password.trim().length >= 6 ? 'border-green-500' : 'border-gray-300'
+                    className={`w-full pl-11 pr-11 py-3 bg-slate-950/70 border rounded-xl text-white placeholder-slate-400 text-sm font-medium transition-all focus:outline-none ${
+                      password.trim().length >= 6 ? 'border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/30' : 'border-white/15 focus:border-blue-500'
                     }`}
                     type={showPassword ? 'text' : 'password'}
                     placeholder="Choose Password (min 6 chars)"
@@ -1122,12 +1156,12 @@ export default function Login() {
                     }}
                     autoFocus
                   />
-                  <Pressable className="absolute right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? <EyeOff className="h-5 w-5 text-gray-500" /> : <Eye className="h-5 w-5 text-gray-500" />}
+                  <Pressable className="absolute right-3.5 top-3.5" onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <EyeOff className="h-5 w-5 text-slate-400 hover:text-white" /> : <Eye className="h-5 w-5 text-slate-400 hover:text-white" />}
                   </Pressable>
                 </div>
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={() => setStep('USERNAME')}
                   disabled={password.trim().length < 6}
                 >
@@ -1136,14 +1170,14 @@ export default function Login() {
               </>
             )}
 
-            {/* Step: USERNAME - new user: name only (terms already agreed on identifier step) */}
+            {/* Step: USERNAME */}
             {!isGuestMode && step === 'USERNAME' && (
               <>
-                <p className="text-xs text-gray-500 mb-2">Almost done! Tell us who you are to set up your dashboard.</p>
+                <p className="text-xs text-slate-300 mb-2">Almost done! Tell us who you are to set up your dashboard.</p>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
+                  <User className="absolute left-3.5 top-3.5 h-5 w-5 text-pink-400" />
                   <input
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-gray-900 placeholder-gray-500"
+                    className="w-full pl-11 pr-4 py-3 bg-slate-950/70 border border-white/15 rounded-xl text-white placeholder-slate-400 text-sm font-medium transition-all focus:outline-none focus:border-pink-500/80 focus:ring-2 focus:ring-pink-500/30"
                     type="text"
                     placeholder="Your Full Name"
                     value={name}
@@ -1153,7 +1187,7 @@ export default function Login() {
                 </div>
 
                 <Pressable
-                  className="w-full bg-purple-700 hover:bg-purple-800 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-md py-2 font-semibold text-center"
+                  className="w-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 hover:from-red-600 hover:via-pink-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold rounded-xl py-3 text-sm shadow-[0_0_20px_rgba(236,72,153,0.35)] active:scale-[0.98] transition-all flex items-center justify-center"
                   onClick={handleCompleteSignUp}
                   disabled={!canFinishSignUp || isSubmittingProfile}
                 >
@@ -1164,22 +1198,28 @@ export default function Login() {
 
             {!isGuestMode && (
               <>
-                <div className="flex items-center gap-2 py-2">
-                  <hr className="flex-1 border-gray-300" />
-                  <span className="text-gray-600 text-xs">or</span>
-                  <hr className="flex-1 border-gray-300" />
+                <div className="flex items-center gap-3 py-2">
+                  <hr className="flex-1 border-white/10" />
+                  <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">or</span>
+                  <hr className="flex-1 border-white/10" />
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2.5">
                   <Pressable
-                    className="w-full border border-gray-300 py-2 rounded-md font-semibold hover:bg-gray-50 text-gray-900 text-center"
+                    className="w-full bg-white/5 hover:bg-white/10 border border-white/15 hover:border-pink-500/40 text-white font-semibold rounded-xl py-3 text-sm backdrop-blur-md transition-all flex items-center justify-center gap-2.5 shadow-sm"
                     onClick={handleGoogleLogin}
                   >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.2 9 5 12 5z"/>
+                      <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/>
+                      <path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15s.7 5.3 1.9 7.7l3.7-2.9 shadow-none"/>
+                      <path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.2-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z"/>
+                    </svg>
                     Continue with Google
                   </Pressable>
 
                   <Pressable
-                    className="w-full bg-gray-950 hover:bg-black text-white py-2 rounded-md font-semibold text-center flex items-center justify-center gap-2"
+                    className="w-full bg-slate-950/60 hover:bg-slate-950/90 border border-white/15 hover:border-blue-500/40 text-white py-3 rounded-xl font-semibold text-sm backdrop-blur-md transition-all flex items-center justify-center gap-2 shadow-sm"
                     onClick={() => {
                       if (!agreeTerms) {
                         showTermsNotice();
@@ -1188,13 +1228,13 @@ export default function Login() {
                       setIsGuestMode(true);
                     }}
                   >
-                    <User className="h-4 w-4" /> Continue as Guest
+                    <User className="h-4 w-4 text-blue-400" /> Continue as Guest
                   </Pressable>
                 </div>
 
                 {step === 'IDENTIFIER' && (
-                  <p className="text-center text-gray-500 pt-2 text-xs">
-                    New here or already have an account? Just enter your Email/Mobile above — we'll figure it out.
+                  <p className="text-center text-slate-400 pt-2 text-xs leading-relaxed font-medium">
+                    New here or already have an account? Enter your Email or Mobile above — we'll handle the rest.
                   </p>
                 )}
               </>
@@ -1202,6 +1242,68 @@ export default function Login() {
           </div>
         </div>
       </div>
+
+      {/* Glassy Loading & Progressive Progress Bar Popup Modal */}
+      <AnimatePresence>
+        {loadingModal.show && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[2500] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl"
+          >
+            <motion.div 
+              initial={{ scale: 0.85, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: -10 }}
+              transition={{ type: "spring", stiffness: 350, damping: 25 }}
+              className="w-full max-w-sm bg-gradient-to-b from-slate-900/90 via-slate-900/85 to-slate-950/95 border border-white/20 p-6 sm:p-8 rounded-3xl shadow-[0_0_50px_rgba(236,72,153,0.35)] backdrop-blur-2xl text-center relative overflow-hidden flex flex-col items-center"
+            >
+              {/* Top ambient glow lines inside modal */}
+              <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-red-500 via-pink-500 to-blue-500" />
+              <div className="absolute -top-10 -left-10 w-28 h-28 bg-red-500/25 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-blue-500/25 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Animated Glowing Ring Icon */}
+              <div className="relative mb-5 flex items-center justify-center">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 blur-lg opacity-80 animate-pulse" />
+                <div className="relative w-16 h-16 rounded-2xl bg-slate-900/90 border border-white/25 flex items-center justify-center shadow-xl">
+                  <Sparkles className="h-8 w-8 text-pink-400 animate-spin" style={{ animationDuration: '3s' }} />
+                </div>
+              </div>
+
+              {/* Loading Title & Message */}
+              <h3 className="text-xl font-extrabold bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-1">
+                {loadingModal.title || 'Connecting to NEET Master'}
+              </h3>
+              <p className="text-xs text-slate-300 font-medium mb-6 leading-relaxed">
+                {loadingModal.message || 'Please wait a moment while we set up your session...'}
+              </p>
+
+              {/* Progressive Straight Progress Bar */}
+              <div className="w-full bg-slate-950/80 border border-white/15 rounded-full h-3 overflow-hidden p-0.5 relative shadow-inner">
+                <motion.div 
+                  className="h-full rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 shadow-[0_0_15px_rgba(236,72,153,0.8)] relative"
+                  initial={{ width: "8%" }}
+                  animate={{ width: `${loadingModal.progress}%` }}
+                  transition={{ ease: "easeInOut", duration: 0.25 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-pulse" />
+                </motion.div>
+              </div>
+
+              <div className="mt-3 flex items-center justify-between w-full text-[11px] font-semibold text-slate-400">
+                <span className="flex items-center gap-1.5 text-pink-400">
+                  <span className="w-2 h-2 rounded-full bg-pink-500 animate-ping" />
+                  Authenticating
+                </span>
+                <span className="font-mono text-blue-300 font-bold">{Math.round(loadingModal.progress)}%</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

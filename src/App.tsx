@@ -35,6 +35,7 @@ import { useReportProblemGesture } from './lib/useReportProblemGesture';
 import { useAuth } from './contexts/AuthContext';
 import { useRouteBackButton } from './lib/useRouteBackButton';
 import { processHardwareBackButton, useModalBackButton } from './utils/hardwareBackButton';
+import { ensureSilentIdentity } from './utils/e2ee';
 
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -174,7 +175,20 @@ const getInitialView = () => {
 };
 
 function StaticPageFallback() {
-  return <div className="fixed inset-0 bg-[#0a0e1a] text-white flex items-center justify-center">Loading...</div>;
+  return (
+    <div className="fixed inset-0 bg-[#080c14] text-white flex flex-col items-center justify-center p-4 relative overflow-hidden">
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-red-600/20 via-pink-600/20 to-blue-600/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="relative mb-4 flex items-center justify-center">
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 blur-lg opacity-70 animate-pulse" />
+        <div className="relative w-14 h-14 rounded-2xl bg-slate-900/90 border border-white/20 flex items-center justify-center shadow-xl">
+          <Sparkles className="h-7 w-7 text-pink-400 animate-spin" style={{ animationDuration: '3s' }} />
+        </div>
+      </div>
+      <p className="text-sm font-bold bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
+        Loading NEET Master...
+      </p>
+    </div>
+  );
 }
 
 function AboutRoute() {
@@ -1659,6 +1673,16 @@ function AppInner() {
           localStorage.removeItem('neetmaster_cached_user');
           localStorage.removeItem('neetmaster_cached_subjects');
       } else {
+          // Silently generate this user's E2EE identity (X25519 + Ed25519
+          // keypairs, X3DH key bundle) if they don't already have one -
+          // fire-and-forget, never blocks login. This is what lets any two
+          // users message each other immediately after signup without
+          // either of them needing to set up a PIN first (PIN is only for
+          // the optional encrypted backup, handled separately in Settings).
+          ensureSilentIdentity(currentUser.uid).catch(err => {
+              console.error('Failed to ensure E2EE identity at login:', err);
+          });
+
           // Cache auth for instant startup next time
           try {
               localStorage.setItem('neetmaster_cached_user', JSON.stringify({
