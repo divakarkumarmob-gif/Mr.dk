@@ -18,7 +18,6 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     useModalBackButton(showPhotoModal, () => setShowPhotoModal(false));
-    useModalBackButton(true, () => onNavigate('profile'));
 
     const showError = (message: string) => {
         setErrorMessage(message);
