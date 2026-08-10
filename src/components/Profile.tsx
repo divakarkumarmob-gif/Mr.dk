@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Pressable from './Pressable';
 import PinSetupModal from './e2ee/PinSetupModal';
 import { doc, getDoc, collection, onSnapshot } from 'firebase/firestore';
-import { db } from '../lib/firebase';
+import { db, auth } from '../lib/firebase';
 import { getUserDevices, revokeDevice, DeviceInfo } from '../utils/e2ee';
 import { removeSession } from '../utils/e2ee/sessionManager';
 import { Smartphone, Laptop, Trash2 } from 'lucide-react';
@@ -20,11 +20,19 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
             setIsAdmin(false);
             return;
         }
-        user.getIdTokenResult().then(result => {
-            setIsAdmin(result.claims.admin === true);
-        }).catch(() => {
+        const authUser = typeof (user as any)?.getIdTokenResult === 'function'
+            ? user
+            : (auth.currentUser && typeof auth.currentUser.getIdTokenResult === 'function' ? auth.currentUser : null);
+
+        if (authUser) {
+            authUser.getIdTokenResult().then(result => {
+                setIsAdmin(result.claims.admin === true);
+            }).catch(() => {
+                setIsAdmin(false);
+            });
+        } else {
             setIsAdmin(false);
-        });
+        }
     }, [user]);
 
     const [showPremium, setShowPremium] = useState(false);

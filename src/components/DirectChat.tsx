@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     ArrowLeft, Send, Image as ImageIcon, Check, CheckCheck, X, 
     Camera, Phone, Video, Shield, Sparkles, User, Circle,
-    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock, ShieldCheck, Laptop, AlertTriangle,
+    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock, Key, ShieldCheck, Laptop, AlertTriangle,
     Ban, UserX, UserCheck, CheckCircle2, MoreVertical, Reply, CornerDownRight,
     Pin, PinOff, Edit3, ChevronRight, ChevronLeft
 } from 'lucide-react';
@@ -146,6 +146,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const [showPinModal, setShowPinModal] = useState<boolean>(false);
     const [pinModalMode, setPinModalMode] = useState<PinModalMode>('setup');
     const [backupBlob, setBackupBlob] = useState<EncryptedPrivateKeyBackupBlob | undefined>();
+    const [hasBackup, setHasBackup] = useState<boolean | null>(null);
 
     const [targetPublicKey, setTargetPublicKey] = useState<string | null>(null);
     // Ratchet session state replaces the old static `sharedSecret`. Every
@@ -207,6 +208,19 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
     const currentUid = authUid || '';
     const currentName = authName;
+
+    useEffect(() => {
+        if (!currentUid) return;
+        const unsub = onSnapshot(doc(db, 'users', currentUid), (snap) => {
+            if (snap.exists()) {
+                const data = snap.data();
+                setHasBackup(!!(data.encryptedPrivateKeyBackup || data.e2eeBackupEnabled));
+            } else {
+                setHasBackup(false);
+            }
+        });
+        return () => unsub();
+    }, [currentUid]);
 
     // Deterministic 1v1 Chat ID (Sorted UIDs)
     const chatId = currentUid ? [currentUid, targetUser.uid].sort().join('_direct_') : '';
@@ -1455,6 +1469,77 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     </button>
                 </div>
             </div>
+
+            {/* Highlighted E2EE Restore Banner (When modal closed with X without entering PIN) */}
+            {!showPinModal && !e2eeStatus?.initialized && e2eeStatus?.isNewDevice && (
+                <div 
+                    onClick={() => {
+                        setPinModalMode('restore');
+                        if (e2eeStatus.backupBlob) setBackupBlob(e2eeStatus.backupBlob);
+                        setShowPinModal(true);
+                    }}
+                    className="bg-gradient-to-r from-amber-950/90 via-yellow-900/70 to-amber-950/90 border-b border-amber-500/50 px-4 py-2.5 flex items-center justify-between shadow-[0_4px_20px_rgba(245,158,11,0.25)] backdrop-blur-md cursor-pointer hover:bg-amber-900/60 transition group animate-pulse"
+                    style={{ animationDuration: '3s' }}
+                >
+                    <div className="flex items-center gap-3 min-w-0">
+                        <div className="p-2 rounded-xl bg-amber-400/20 text-amber-300 border border-amber-400/40 group-hover:scale-105 transition-transform shrink-0 shadow-[0_0_10px_rgba(245,158,11,0.35)]">
+                            <Key className="w-4 h-4" />
+                        </div>
+                        <div className="min-w-0">
+                            <div className="flex items-center gap-2">
+                                <p className="text-xs font-black text-amber-200 tracking-wide uppercase">Backup & History Locked</p>
+                                <span className="text-[9px] bg-amber-400 text-black px-1.5 py-0.5 rounded font-black uppercase shadow-sm">Action Needed</span>
+                            </div>
+                            <p className="text-[11px] text-amber-300/90 truncate font-medium mt-0.5">Click to enter PIN & restore encrypted chat history</p>
+                        </div>
+                    </div>
+                    <button 
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setPinModalMode('restore');
+                            if (e2eeStatus.backupBlob) setBackupBlob(e2eeStatus.backupBlob);
+                            setShowPinModal(true);
+                        }}
+                        className="ml-3 px-3.5 py-1.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-black text-xs font-black rounded-xl shadow-[0_0_12px_rgba(245,158,11,0.4)] transition-all active:scale-95 shrink-0 flex items-center gap-1"
+                    >
+                        Restore Backup
+                    </button>
+                </div>
+            )}
+
+            {/* Highlighted E2EE Setup PIN Banner (For new users who haven't set up a PIN backup) */}
+            {!showPinModal && e2eeStatus?.initialized && hasBackup === false && (
+                <div 
+                    onClick={() => {
+                        setPinModalMode('setup');
+                        setShowPinModal(true);
+                    }}
+                    className="bg-gradient-to-r from-indigo-950/90 via-blue-900/70 to-indigo-950/90 border-b border-indigo-500/50 px-4 py-2.5 flex items-center justify-between shadow-[0_4px_20px_rgba(99,102,241,0.25)] backdrop-blur-md cursor-pointer hover:bg-indigo-900/60 transition group"
+                >
+                    <div className="flex items-center gap-3 min-w-0">
+                        <div className="p-2 rounded-xl bg-indigo-400/20 text-indigo-300 border border-indigo-400/40 group-hover:scale-105 transition-transform shrink-0 shadow-[0_0_10px_rgba(99,102,241,0.35)]">
+                            <ShieldCheck className="w-4 h-4 animate-pulse" />
+                        </div>
+                        <div className="min-w-0">
+                            <div className="flex items-center gap-2">
+                                <p className="text-xs font-black text-indigo-200 tracking-wide uppercase">Set Up PIN For Chat Backup</p>
+                                <span className="text-[9px] bg-indigo-400 text-black px-1.5 py-0.5 rounded font-black uppercase shadow-sm">Recommended</span>
+                            </div>
+                            <p className="text-[11px] text-indigo-300/90 truncate font-medium mt-0.5">Backup chats so you can restore history on any device</p>
+                        </div>
+                    </div>
+                    <button 
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setPinModalMode('setup');
+                            setShowPinModal(true);
+                        }}
+                        className="ml-3 px-3.5 py-1.5 bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-400 hover:to-blue-400 text-white text-xs font-black rounded-xl shadow-[0_0_12px_rgba(99,102,241,0.4)] transition-all active:scale-95 shrink-0 flex items-center gap-1"
+                    >
+                        Set Up PIN
+                    </button>
+                </div>
+            )}
 
             {/* WhatsApp Pinned Messages Bar under Header */}
             {pinnedMessages.length > 0 && (

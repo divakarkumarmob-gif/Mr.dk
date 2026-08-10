@@ -151,6 +151,31 @@ export async function initUserE2EE(uid: string): Promise<UserE2EEStatus> {
     const localPrivKey = await getLocalPrivateKey(uid);
     const localPubKey = await getLocalPublicKey(uid);
 
+    // Check Firestore profile for existing keys / backup
+    try {
+        const userDocRef = doc(db, 'users', uid);
+        const userSnap = await getDoc(userDocRef);
+
+        if (userSnap.exists()) {
+            const data = userSnap.data();
+            if (data.encryptedPrivateKeyBackup && data.publicKey) {
+                // If local key is missing OR local key is out-of-sync with published cloud backup key,
+                // trigger PIN restoration flow to sync keys across devices.
+                if (!localPrivKey || !localPubKey || localPubKey !== data.publicKey) {
+                    return {
+                        initialized: false,
+                        isNewDevice: true,
+                        publicKey: data.publicKey,
+                        identityKeySign: data.identityKeySign,
+                        backupBlob: data.encryptedPrivateKeyBackup
+                    };
+                }
+            }
+        }
+    } catch (e) {
+        console.warn('E2EE Firestore profile check warning:', e);
+    }
+
     if (localPrivKey && localPubKey) {
         // Register device activity
         try {
@@ -161,24 +186,6 @@ export async function initUserE2EE(uid: string): Promise<UserE2EEStatus> {
             publicKey: localPubKey,
             privateKey: localPrivKey
         };
-    }
-
-    // Check Firestore profile for existing keys / backup
-    const userDocRef = doc(db, 'users', uid);
-    const userSnap = await getDoc(userDocRef);
-
-    if (userSnap.exists()) {
-        const data = userSnap.data();
-        if (data.encryptedPrivateKeyBackup && data.publicKey) {
-            // User has a backup blob, prompt for PIN restoration on this new device
-            return {
-                initialized: false,
-                isNewDevice: true,
-                publicKey: data.publicKey,
-                identityKeySign: data.identityKeySign,
-                backupBlob: data.encryptedPrivateKeyBackup
-            };
-        }
     }
 
     // No local identity, no backup to restore from - generate one silently

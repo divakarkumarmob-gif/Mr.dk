@@ -7,6 +7,7 @@ import {
     CornerDownRight, DoorOpen, Radio, Home, Flag, Download
 } from 'lucide-react';
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment, where, getDoc } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { saveMediaToGallery } from '../utils/saveMediaToGallery';
@@ -92,9 +93,37 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         activeChatUserRef.current = activeDirectChatUser;
     }, [activeDirectChatUser]);
 
+    const [currentUid, setCurrentUid] = useState<string>(() => {
+        if (auth.currentUser?.uid) return auth.currentUser.uid;
+        try {
+            const guest = localStorage.getItem('guest_user');
+            if (guest) return JSON.parse(guest).uid;
+            const cached = localStorage.getItem('neetmaster_cached_user');
+            if (cached) return JSON.parse(cached).uid;
+        } catch {}
+        return '';
+    });
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user?.uid) {
+                setCurrentUid(user.uid);
+            } else {
+                try {
+                    const guest = localStorage.getItem('guest_user');
+                    if (guest) {
+                        setCurrentUid(JSON.parse(guest).uid);
+                        return;
+                    }
+                } catch {}
+                setCurrentUid('');
+            }
+        });
+        return () => unsubscribe();
+    }, []);
+
     // Listen for Incoming 1v1 Direct Messages for Floating Push Banner
     useEffect(() => {
-        const currentUid = auth.currentUser?.uid;
         if (!currentUid) return;
 
         const q = query(
@@ -174,7 +203,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         });
 
         return () => unsubscribe();
-    }, []);
+    }, [currentUid]);
 
     // Auto-dismiss floating push banner after 6s
     useEffect(() => {
@@ -198,7 +227,6 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Realtime Listener for Unread Chats to Control Green Dot
     useEffect(() => {
-        const currentUid = auth.currentUser?.uid;
         if (!currentUid) return;
 
         const q = query(
@@ -223,7 +251,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         });
 
         return () => unsubscribe();
-    }, []);
+    }, [currentUid]);
 
     const handleDmPressStart = () => {
         dmPressTimerRef.current = setTimeout(() => {

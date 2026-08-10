@@ -112,8 +112,28 @@ export default function EditProfile({ user, onNavigate }: { user: FirebaseUser |
         if (!user) return;
         setLoading(true);
         try {
+            const isGuest = user.uid?.startsWith('local_guest_');
+            if (isGuest) {
+                const updatedGuest = { ...user, displayName: name, email };
+                localStorage.setItem('guest_user', JSON.stringify(updatedGuest));
+                showSuccess('Profile updated! ✨');
+                setTimeout(() => onNavigate('profile'), 1200);
+                return;
+            }
+
             if (name !== user.displayName) await updateProfile(user, { displayName: name });
-            if (email !== user.email) await updateEmail(user, email);
+            if (email !== user.email && email) await updateEmail(user, email);
+
+            try {
+                const cached = localStorage.getItem('neetmaster_cached_user');
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    parsed.displayName = name;
+                    parsed.email = email;
+                    localStorage.setItem('neetmaster_cached_user', JSON.stringify(parsed));
+                }
+            } catch {}
+
             showSuccess('Profile updated! ✨');
             setTimeout(() => onNavigate('profile'), 1200);
         } catch (error) {

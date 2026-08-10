@@ -6,6 +6,7 @@ import {
     Volume2, VolumeX, BellOff, Trash2, Ban, UserX, CheckCircle2, MoreVertical
 } from 'lucide-react';
 import { collection, onSnapshot, query, where, orderBy, limit, doc, getDoc, getDocs, deleteDoc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
@@ -42,8 +43,34 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
     const [userSearchQuery, setUserSearchQuery] = useState<string>('');
     const [loadingUsers, setLoadingUsers] = useState<boolean>(false);
 
-    const currentUser = auth.currentUser;
-    const currentUid = currentUser?.uid || '';
+    const [currentUid, setCurrentUid] = useState<string>(() => {
+        if (auth.currentUser?.uid) return auth.currentUser.uid;
+        try {
+            const guest = localStorage.getItem('guest_user');
+            if (guest) return JSON.parse(guest).uid;
+            const cached = localStorage.getItem('neetmaster_cached_user');
+            if (cached) return JSON.parse(cached).uid;
+        } catch {}
+        return '';
+    });
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user?.uid) {
+                setCurrentUid(user.uid);
+            } else {
+                try {
+                    const guest = localStorage.getItem('guest_user');
+                    if (guest) {
+                        setCurrentUid(JSON.parse(guest).uid);
+                        return;
+                    }
+                } catch {}
+                setCurrentUid('');
+            }
+        });
+        return () => unsubscribe();
+    }, []);
 
     // Long Press Context Menu & Mute States
     const [selectedChatMenu, setSelectedChatMenu] = useState<ChatConversation | null>(null);
