@@ -1134,7 +1134,14 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                     {/* Message Text */}
                                     {msg.text && (
                                         <p className="text-sm leading-relaxed whitespace-pre-wrap break-words font-normal">
-                                            {msg.text}
+                                            {msg.text.startsWith('🔒E2EE:') || msg.text === '[Encrypted message - Decryption failed]' ? (
+                                                <span className="italic text-xs text-amber-200/80 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 inline-flex items-center gap-1">
+                                                    <Lock className="w-3 h-3 text-amber-400" />
+                                                    <span>Prior Session Encrypted Message</span>
+                                                </span>
+                                            ) : (
+                                                msg.text
+                                            )}
                                         </p>
                                     )}
 
