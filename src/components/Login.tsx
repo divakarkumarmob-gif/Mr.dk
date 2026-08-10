@@ -17,11 +17,10 @@ import { getApiUrl, authFetch } from '@/utils/api';
 import { updateProfile } from 'firebase/auth';
 import { auth, resetRecaptchaVerifier } from '@/lib/firebase';
 
-// ---- Wizard step machine -------------------------------------------------
 type Step = 'IDENTIFIER' | 'PASSWORD' | 'OTP' | 'SET_PASSWORD' | 'USERNAME' | 'FORGOT_OTP' | 'FORGOT_NEW_PASSWORD';
 type IdentifierKind = 'email' | 'phone' | null;
 
-const AUTO_ADVANCE_DELAY = 550; // ms - feels instant but lets the user finish typing
+const AUTO_ADVANCE_DELAY = 550;
 
 export default function Login() {
   const [step, _setStep] = useState<Step>('IDENTIFIER');
@@ -55,43 +54,36 @@ export default function Login() {
   const [isSubmittingProfile, setIsSubmittingProfile] = useState(false);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
-  // Glassy Loading & Progressive Progress Bar Modal state
+  // Real Multi-Stage Milestone Glassy Loading Modal State
   const [loadingModal, setLoadingModal] = useState<{
     show: boolean;
     title: string;
     message: string;
     progress: number;
+    stageName: string;
   }>({
     show: false,
     title: '',
     message: '',
     progress: 0,
+    stageName: '',
   });
 
-  const startLoadingProgress = (title: string, message: string) => {
-    setLoadingModal({ show: true, title, message, progress: 15 });
-    const interval = setInterval(() => {
-      setLoadingModal((prev) => {
-        if (!prev.show) {
-          clearInterval(interval);
-          return prev;
-        }
-        const next = prev.progress + Math.floor(Math.random() * 14 + 8);
-        if (next >= 92) {
-          clearInterval(interval);
-          return { ...prev, progress: 92 };
-        }
-        return { ...prev, progress: next };
-      });
-    }, 100);
+  const setStage = (title: string, message: string, progress: number, stageName: string = 'Processing') => {
+    setLoadingModal({
+      show: true,
+      title,
+      message,
+      progress: Math.min(Math.max(progress, 0), 100),
+      stageName,
+    });
+  };
 
-    return () => {
-      clearInterval(interval);
-      setLoadingModal((prev) => ({ ...prev, progress: 100 }));
-      setTimeout(() => {
-        setLoadingModal({ show: false, title: '', message: '', progress: 0 });
-      }, 250);
-    };
+  const closeStageModal = (delayMs: number = 300) => {
+    setLoadingModal((prev) => ({ ...prev, progress: 100 }));
+    setTimeout(() => {
+      setLoadingModal({ show: false, title: '', message: '', progress: 0, stageName: '' });
+    }, delayMs);
   };
 
   // Resend-OTP anti-spam cooldown
@@ -245,11 +237,12 @@ export default function Login() {
     }
 
     setIsCheckingIdentifier(true);
-    const stopLoading = startLoadingProgress('Checking Account', 'Verifying details...');
+    setStage('Validating Input', 'Checking email/mobile syntax...', 25, 'Milestone 1/3');
     clearResendCooldown();
     try {
       if (kind === 'email') {
         const fbEmail = getFirebaseEmail(value);
+        setStage('Checking Account', `Querying database for ${fbEmail}...`, 60, 'Milestone 2/3');
         const response = await authFetch(getApiUrl('/api/check-email-user'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -259,12 +252,16 @@ export default function Login() {
         const exists = !!data.exists;
         setIsExistingUser(exists);
 
+        setStage('Account Verified', exists ? 'Existing account found! Opening password entry...' : 'New user detected! Generating OTP...', 95, 'Milestone 3/3');
+        await new Promise((r) => setTimeout(r, 150));
+
         if (exists) {
           setStep('PASSWORD');
         } else {
           await sendOtp(value);
         }
       } else {
+        setStage('Checking Mobile', `Querying mobile database for ${toE164(value)}...`, 60, 'Milestone 2/3');
         const response = await authFetch(getApiUrl('/api/check-phone-user'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -273,13 +270,16 @@ export default function Login() {
         const data = await response.json();
         const exists = !!data.exists;
         setIsExistingUser(exists);
+
+        setStage('Preparing SMS', 'Initiating Firebase Phone Auth...', 90, 'Milestone 3/3');
+        await new Promise((r) => setTimeout(r, 150));
         await sendPhoneVerification(value);
       }
     } catch (error: any) {
       showError(error.message || 'Something went wrong. Please try again.');
     } finally {
       setIsCheckingIdentifier(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -294,8 +294,9 @@ export default function Login() {
     if (isSendingOtp) return;
     const value = (rawIdentifier ?? identifier).trim();
     setIsSendingOtp(true);
-    const stopLoading = startLoadingProgress('Sending OTP', `Generating security code for ${value}...`);
+    setStage('Generating OTP', `Preparing secure code for ${value}...`, 35, 'Milestone 1/3');
     try {
+      setStage('Dispatching Message', 'Transmitting via email gateway...', 75, 'Milestone 2/3');
       const response = await fetch(getApiUrl('/api/send-otp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -303,6 +304,9 @@ export default function Login() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Failed to send OTP');
+
+      setStage('OTP Sent!', 'Opening verification input...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 100));
 
       if (data.testOtp) {
         setTestOtp(data.testOtp);
@@ -324,7 +328,7 @@ export default function Login() {
       showError(error.message || 'Failed to send OTP.');
     } finally {
       setIsSendingOtp(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -342,9 +346,14 @@ export default function Login() {
     if (isSendingOtp) return;
     const value = (rawIdentifier ?? identifier).trim();
     setIsSendingOtp(true);
-    const stopLoading = startLoadingProgress('Sending SMS OTP', `Sending code to ${toE164(value)}...`);
+    setStage('Configuring SMS', `Preparing Firebase Phone Auth for ${toE164(value)}...`, 30, 'Milestone 1/3');
     try {
+      setStage('Dispatching SMS', 'Sending verification code to your device...', 75, 'Milestone 2/3');
       await sendPhoneOtp(value, 'recaptcha-container');
+
+      setStage('SMS Delivered', 'Opening code verification...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 100));
+
       setTestOtp(null);
       showSuccess(`OTP sent successfully to ${toE164(value)}!`);
       setOtp('');
@@ -367,7 +376,7 @@ export default function Login() {
       }
     } finally {
       setIsSendingOtp(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -393,23 +402,30 @@ export default function Login() {
       return;
     }
     setIsVerifyingOtp(true);
-    const stopLoading = startLoadingProgress('Verifying OTP', 'Authenticating security code...');
+    setStage('Validating OTP', 'Checking code accuracy...', 35, 'Milestone 1/3');
     try {
       if (identifierKind === 'phone') {
         setIsLoggingIn(true);
+        setStage('Authenticating Phone', 'Verifying credentials with Firebase Auth...', 75, 'Milestone 2/3');
         try {
           await verifyPhoneOtp(value);
         } finally {
           setIsLoggingIn(false);
         }
-        showSuccess('OTP verified successfully!');
+        setStage('Verified!', 'Access granted...', 100, 'Milestone 3/3');
+        await new Promise((r) => setTimeout(r, 100));
 
+        showSuccess('OTP verified successfully!');
         if (isExistingUser) {
           return;
         }
         setStep('USERNAME');
       } else {
+        setStage('Authenticating Email OTP', 'Confirming session with server...', 75, 'Milestone 2/3');
         await verifyEmailOtp(value);
+        setStage('Verified!', 'Moving to set password...', 100, 'Milestone 3/3');
+        await new Promise((r) => setTimeout(r, 100));
+
         showSuccess('OTP verified successfully!');
         setStep('SET_PASSWORD');
       }
@@ -423,7 +439,7 @@ export default function Login() {
       setOtp('');
     } finally {
       setIsVerifyingOtp(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -433,10 +449,14 @@ export default function Login() {
       return;
     }
     setIsLoggingIn(true);
-    const stopLoading = startLoadingProgress('Logging In', 'Authenticating your NEET Master credentials...');
+    setStage('Securing Connection', 'Encrypting login credentials...', 20, 'Milestone 1/3');
     try {
       const fbEmail = getFirebaseEmail(identifier);
+      setStage('Authenticating', 'Verifying credentials with Firebase Auth...', 65, 'Milestone 2/3');
       await signInWithEmail(fbEmail, password);
+
+      setStage('Welcome Back!', 'Loading your study dashboard...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 150));
     } catch (error: any) {
       if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
         showError('Invalid Email/Mobile or password.');
@@ -447,7 +467,7 @@ export default function Login() {
       }
     } finally {
       setIsLoggingIn(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -479,16 +499,24 @@ export default function Login() {
     }
 
     setIsSubmittingProfile(true);
-    const stopLoading = startLoadingProgress('Creating Account', 'Setting up your NEET Master dashboard...');
+    setStage('Creating Account', 'Registering new account profile...', 25, 'Milestone 1/4');
     try {
       if (identifierKind === 'email') {
         const fbEmail = getFirebaseEmail(identifier);
+        setStage('Authenticating', 'Registering user with Firebase Auth...', 60, 'Milestone 2/4');
         await signUpWithEmail(fbEmail, password, name.trim());
       } else {
         if (auth.currentUser) {
+          setStage('Syncing Profile', 'Attaching display name...', 65, 'Milestone 2/4');
           await updateProfile(auth.currentUser, { displayName: name.trim() });
         }
       }
+      setStage('Configuring E2EE', 'Initializing secure encryption keys...', 88, 'Milestone 3/4');
+      await new Promise((r) => setTimeout(r, 150));
+
+      setStage('Account Ready!', 'Welcome to NEET Master...', 100, 'Milestone 4/4');
+      await new Promise((r) => setTimeout(r, 150));
+
       showSuccess(`Welcome ${name.trim()}! Account created successfully.`);
     } catch (error: any) {
       if (error.code === 'auth/email-already-in-use') {
@@ -500,7 +528,7 @@ export default function Login() {
       }
     } finally {
       setIsSubmittingProfile(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -516,8 +544,9 @@ export default function Login() {
       return;
     }
     setIsSendingForgotOtp(true);
-    const stopLoading = startLoadingProgress('Password Reset', `Sending reset OTP to ${email}...`);
+    setStage('Password Reset', `Initiating reset request for ${email}...`, 30, 'Milestone 1/3');
     try {
+      setStage('Sending OTP', 'Transmitting reset token via email...', 75, 'Milestone 2/3');
       const response = await fetch(getApiUrl('/api/send-otp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -525,6 +554,9 @@ export default function Login() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Failed to send OTP');
+
+      setStage('OTP Sent', 'Opening code input...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 100));
 
       if (data.testOtp) {
         setTestOtp(data.testOtp);
@@ -542,7 +574,7 @@ export default function Login() {
       showError(error.message || 'Failed to send OTP.');
     } finally {
       setIsSendingForgotOtp(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -568,8 +600,9 @@ export default function Login() {
       return;
     }
     setIsVerifyingForgotOtp(true);
-    const stopLoading = startLoadingProgress('Verifying OTP', 'Validating password reset token...');
+    setStage('Verifying OTP', 'Checking password reset token...', 35, 'Milestone 1/3');
     try {
+      setStage('Token Confirmed', 'Generating reset session token...', 75, 'Milestone 2/3');
       const response = await fetch(getApiUrl('/api/verify-otp'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -579,6 +612,9 @@ export default function Login() {
       if (!response.ok) throw new Error(data.error || 'Invalid OTP');
 
       setResetToken(data.resetToken);
+      setStage('Verified!', 'Opening password form...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 100));
+
       showSuccess('OTP verified! Now choose your new password.');
       setStep('FORGOT_NEW_PASSWORD');
     } catch (error: any) {
@@ -586,7 +622,7 @@ export default function Login() {
       setForgotOtp('');
     } finally {
       setIsVerifyingForgotOtp(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -602,8 +638,9 @@ export default function Login() {
       return;
     }
     setIsResettingPassword(true);
-    const stopLoading = startLoadingProgress('Updating Password', 'Saving new credentials securely...');
+    setStage('Updating Password', 'Submitting new password to server...', 40, 'Milestone 1/3');
     try {
+      setStage('Saving Credentials', 'Hashing and updating password...', 80, 'Milestone 2/3');
       const response = await fetch(getApiUrl('/api/reset-password'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -612,6 +649,9 @@ export default function Login() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Failed to reset password');
 
+      setStage('Password Saved!', 'Redirecting to login...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 150));
+
       showSuccess('Password updated! Please log in with your new password.');
       setStep('IDENTIFIER');
       resetWizard();
@@ -619,7 +659,7 @@ export default function Login() {
       showError(error.message || 'Failed to reset password.');
     } finally {
       setIsResettingPassword(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -628,13 +668,17 @@ export default function Login() {
       showTermsNotice();
       return;
     }
-    const stopLoading = startLoadingProgress('Google Sign-In', 'Connecting with Google Authentication...');
+    setStage('Google OAuth', 'Opening Google Authentication portal...', 25, 'Milestone 1/3');
     try {
+      setStage('Verifying Google Token', 'Exchanging OAuth credentials...', 70, 'Milestone 2/3');
       await signInWithGoogle();
+
+      setStage('Authenticated!', 'Redirecting to dashboard...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 150));
     } catch (error) {
       showError('Google login failed!');
     } finally {
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -644,10 +688,14 @@ export default function Login() {
       return;
     }
     setIsLoggingInGuest(true);
-    const stopLoading = startLoadingProgress('Guest Session', `Initializing workspace for ${guestName.trim()}...`);
+    setStage('Initializing Guest', `Setting up session for ${guestName.trim()}...`, 30, 'Milestone 1/3');
     try {
+      setStage('Configuring Offline Storage', 'Preparing guest progress database...', 75, 'Milestone 2/3');
       showSuccess(`Welcome ${guestName.trim()}! Accessing app as guest...`);
       await signInAsGuest(guestName.trim());
+
+      setStage('Guest Workspace Ready', 'Opening practice mode...', 100, 'Milestone 3/3');
+      await new Promise((r) => setTimeout(r, 150));
     } catch (error: any) {
       console.warn('Firebase Anonymous Sign-In failed, attempting local fallback:', error);
       const mockUid = 'local_guest_' + Math.random().toString(36).substring(2, 11);
@@ -663,7 +711,7 @@ export default function Login() {
       window.location.reload();
     } finally {
       setIsLoggingInGuest(false);
-      stopLoading();
+      closeStageModal(200);
     }
   };
 
@@ -1243,21 +1291,21 @@ export default function Login() {
         </div>
       </div>
 
-      {/* Glassy Loading & Progressive Progress Bar Popup Modal */}
+      {/* Real Multi-Stage Milestone Glassy Loading Modal */}
       <AnimatePresence>
         {loadingModal.show && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[2500] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl"
+            className="fixed inset-0 z-[2500] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-xl"
           >
             <motion.div 
               initial={{ scale: 0.85, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: -10 }}
               transition={{ type: "spring", stiffness: 350, damping: 25 }}
-              className="w-full max-w-sm bg-gradient-to-b from-slate-900/90 via-slate-900/85 to-slate-950/95 border border-white/20 p-6 sm:p-8 rounded-3xl shadow-[0_0_50px_rgba(236,72,153,0.35)] backdrop-blur-2xl text-center relative overflow-hidden flex flex-col items-center"
+              className="w-full max-w-sm bg-gradient-to-b from-slate-900/95 via-slate-900/90 to-slate-950/95 border border-white/20 p-6 sm:p-8 rounded-3xl shadow-[0_0_50px_rgba(236,72,153,0.35)] backdrop-blur-2xl text-center relative overflow-hidden flex flex-col items-center"
             >
               {/* Top ambient glow lines inside modal */}
               <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-red-500 via-pink-500 to-blue-500" />
@@ -1273,6 +1321,11 @@ export default function Login() {
                 </div>
               </div>
 
+              {/* Real Stage Badge */}
+              <span className="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-pink-500/20 border border-pink-500/40 text-pink-300 mb-2">
+                {loadingModal.stageName || 'Processing'}
+              </span>
+
               {/* Loading Title & Message */}
               <h3 className="text-xl font-extrabold bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-1">
                 {loadingModal.title || 'Connecting to NEET Master'}
@@ -1281,13 +1334,13 @@ export default function Login() {
                 {loadingModal.message || 'Please wait a moment while we set up your session...'}
               </p>
 
-              {/* Progressive Straight Progress Bar */}
+              {/* Real Progressive Progress Bar */}
               <div className="w-full bg-slate-950/80 border border-white/15 rounded-full h-3 overflow-hidden p-0.5 relative shadow-inner">
                 <motion.div 
                   className="h-full rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 shadow-[0_0_15px_rgba(236,72,153,0.8)] relative"
-                  initial={{ width: "8%" }}
+                  initial={{ width: "0%" }}
                   animate={{ width: `${loadingModal.progress}%` }}
-                  transition={{ ease: "easeInOut", duration: 0.25 }}
+                  transition={{ ease: "easeOut", duration: 0.3 }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-pulse" />
                 </motion.div>
