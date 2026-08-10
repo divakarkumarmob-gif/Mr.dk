@@ -5,6 +5,15 @@ export interface KeyPair {
     privateKey: string; // Base64
 }
 
+export interface IdentityKeyBundle {
+    // X25519 - used for DH/ECDH (X3DH, ratchet, sealed boxes)
+    publicKey: string;
+    privateKey: string;
+    // Ed25519 - used only to SIGN the Signed PreKey (X3DH requirement)
+    signPublicKey: string;
+    signPrivateKey: string;
+}
+
 export interface EncryptedBox {
     nonce: string; // Base64
     ciphertext: string; // Base64
@@ -23,7 +32,26 @@ export async function generateKeyPair(): Promise<KeyPair> {
 }
 
 /**
- * Derive 1v1 ECDH Shared Secret using current user's private key and target user's public key
+ * Generate a full identity bundle: X25519 keypair (for DH) + Ed25519 keypair
+ * (for signing the Signed PreKey during X3DH). WhatsApp/Signal identity keys
+ * are dual-purpose in exactly this way.
+ */
+export async function generateIdentityKeyBundle(): Promise<IdentityKeyBundle> {
+    const sodium = await ensureSodium();
+    const dhKp = sodium.crypto_box_keypair();
+    const signKp = sodium.crypto_sign_keypair();
+    return {
+        publicKey: sodium.to_base64(dhKp.publicKey, sodium.base64_variants.ORIGINAL),
+        privateKey: sodium.to_base64(dhKp.privateKey, sodium.base64_variants.ORIGINAL),
+        signPublicKey: sodium.to_base64(signKp.publicKey, sodium.base64_variants.ORIGINAL),
+        signPrivateKey: sodium.to_base64(signKp.privateKey, sodium.base64_variants.ORIGINAL)
+    };
+}
+
+/**
+ * @deprecated Static shared-secret derivation offers NO forward secrecy.
+ * Replaced by X3DH (x3dh.ts) + Double Ratchet (ratchet.ts) for all new
+ * sessions. Kept only as a reference; do not use for new message encryption.
  */
 export async function deriveSharedSecret(myPrivateKeyBase64: string, targetPublicKeyBase64: string): Promise<Uint8Array> {
     if (!myPrivateKeyBase64 || !targetPublicKeyBase64 || myPrivateKeyBase64.trim() === '' || targetPublicKeyBase64.trim() === '') {

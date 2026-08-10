@@ -13,13 +13,34 @@ import { decryptLegacyXOR } from '../utils/encryption';
 import { 
     initUserE2EE, 
     fetchUserPublicKey, 
-    deriveSharedSecret, 
-    encryptPayloadWithKey, 
     decryptPayloadWithKey, 
     checkContactKeyChange,
     UserE2EEStatus,
-    EncryptedPrivateKeyBackupBlob
+    EncryptedPrivateKeyBackupBlob,
+    RatchetState,
+    ratchetEncryptPayload,
+    ratchetDecryptPayload
 } from '../utils/e2ee';
+import {
+    fetchKeyBundle,
+    initiateX3DH,
+    receiveX3DH,
+    getLocalIdentitySignPrivateKey,
+    getLocalIdentitySignPublicKey,
+    getLocalSignedPreKey,
+    getLocalOneTimePreKey,
+    consumeLocalOneTimePreKey,
+    ensureKeyBundleFresh
+} from '../utils/e2ee/x3dh';
+import {
+    initRatchetAsInitiator,
+    initRatchetAsRecipient
+} from '../utils/e2ee/ratchet';
+import {
+    loadSession,
+    saveSession,
+    directSessionChannelId
+} from '../utils/e2ee/sessionStore';
 import PinSetupModal, { PinModalMode } from './e2ee/PinSetupModal';
 import SafetyNumberModal from './e2ee/SafetyNumberModal';
 import DeviceManagementModal from './e2ee/DeviceManagementModal';
@@ -62,7 +83,14 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const [backupBlob, setBackupBlob] = useState<EncryptedPrivateKeyBackupBlob | undefined>();
 
     const [targetPublicKey, setTargetPublicKey] = useState<string | null>(null);
-    const [sharedSecret, setSharedSecret] = useState<Uint8Array | null>(null);
+    // Ratchet session state replaces the old static `sharedSecret`. Every
+    // encrypt/decrypt call advances this and the new value MUST be
+    // persisted via saveSession before it's used again - see the ref below
+    // which keeps the always-current value available to async callbacks
+    // without waiting for a re-render.
+    const [ratchetState, setRatchetState] = useState<RatchetState | null>(null);
+    const ratchetStateRef = useRef<RatchetState | null>(null);
+    const [sessionReady, setSessionReady] = useState<boolean>(false);
     const [keyChangedAlert, setKeyChangedAlert] = useState<boolean>(false);
 
     const [showSafetyModal, setShowSafetyModal] = useState<boolean>(false);
@@ -99,6 +127,73 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const chatId = [currentUid, targetUser.uid].sort().join('_direct_');
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
+    const sessionChannelId = directSessionChannelId(targetUser.uid);
+
+    // Holds the X3DH handshake header we must attach to our first OUTGOING
+    // message after initiating a new session, so the recipient can derive
+    // the same shared secret. Cleared once sent.
+    const pendingHandshakeRef = useRef<{ ephemeralPublicKey: string; usedSignedPreKeyId: number; usedOneTimePreKeyId: string | null } | null>(null);
+    // Tracks whether the currently-loaded session was one we initiated, for
+    // correct session metadata bookkeeping on save.
+    const ratchetSessionMeta = useRef<{ initiatedByMe: boolean } | null>(null);
+    // Guards against processing the same recipient-side handshake twice if
+    // multiple snapshot callbacks race.
+    const handshakeProcessedRef = useRef<boolean>(false);
+
+    const updateRatchetState = async (next: RatchetState, initiatedByMe: boolean, existingMeta?: any) => {
+        ratchetStateRef.current = next;
+        ratchetSessionMeta.current = { initiatedByMe };
+        setRatchetState(next);
+        await saveSession(currentUid, sessionChannelId, next, initiatedByMe, existingMeta);
+    };
+
+    /**
+     * RECIPIENT side of X3DH: given the handshake header carried on the
+     * sender's first message, derive the shared secret and initialize our
+     * ratchet state as a recipient. No-op if we already have a session.
+     */
+    const ensureRecipientSessionFromHandshake = async (
+        handshake: { ephemeralPublicKey: string; usedSignedPreKeyId: number; usedOneTimePreKeyId: string | null; senderIdentityPublicKey: string },
+        senderUid: string
+    ) => {
+        if (ratchetStateRef.current || handshakeProcessedRef.current) return;
+        if (!e2eeStatus?.privateKey) return;
+        handshakeProcessedRef.current = true;
+
+        try {
+            const spk = await getLocalSignedPreKey(currentUid, handshake.usedSignedPreKeyId);
+            if (!spk) {
+                console.error('Cannot establish recipient session: local signed prekey not found (may have rotated).');
+                handshakeProcessedRef.current = false;
+                return;
+            }
+            let opkPriv: string | null = null;
+            if (handshake.usedOneTimePreKeyId) {
+                const opk = await getLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
+                opkPriv = opk?.privateKey || null;
+            }
+
+            const x3dhResult = await receiveX3DH(
+                e2eeStatus.privateKey,
+                spk.privateKey,
+                opkPriv,
+                handshake.senderIdentityPublicKey,
+                handshake.ephemeralPublicKey
+            );
+
+            const newState = await initRatchetAsRecipient(x3dhResult.sharedSecret, spk.publicKey, spk.privateKey);
+            await updateRatchetState(newState, false);
+
+            if (handshake.usedOneTimePreKeyId) {
+                await consumeLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
+            }
+            setSessionReady(true);
+        } catch (err) {
+            console.error('Failed to establish recipient ratchet session from handshake:', err);
+            handshakeProcessedRef.current = false;
+        }
+    };
+
     // Initialize E2EE for Current User
     useEffect(() => {
         let isMounted = true;
@@ -116,6 +211,12 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     setPinModalMode('setup');
                     setShowPinModal(true);
                 }
+            } else if (status.identityKeySign) {
+                // Keep our published X3DH key bundle fresh (rotates signed
+                // prekey periodically, replenishes one-time prekeys).
+                ensureKeyBundleFresh(currentUid, status.publicKey!, status.identityKeySign).catch(err =>
+                    console.warn('Key bundle refresh failed (non-fatal):', err)
+                );
             }
         }).catch(err => {
             console.error("E2EE Init failed:", err);
@@ -125,31 +226,78 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         return () => { isMounted = false; };
     }, [currentUid]);
 
-    // Derive Shared Secret whenever E2EE private key & target user public key are ready
+    // Establish (or resume) the Double Ratchet session with the target user
+    // once our identity is ready. This replaces the old static ECDH
+    // shared-secret derivation with a proper X3DH handshake + ratchet init.
     useEffect(() => {
         let isMounted = true;
         if (!e2eeStatus?.privateKey || !targetUser.uid) return;
+        setSessionReady(false);
 
-        fetchUserPublicKey(targetUser.uid).then(async (pubKey) => {
-            if (!isMounted) return;
-            if (pubKey) {
-                setTargetPublicKey(pubKey);
+        (async () => {
+            // 1. Fetch target's identity public key + check for safety-number changes
+            const pubKey = await fetchUserPublicKey(targetUser.uid);
+            if (!isMounted || !pubKey) return;
+            setTargetPublicKey(pubKey);
 
-                // Check key change alert
-                const keyChangeCheck = await checkContactKeyChange(targetUser.uid, pubKey);
-                if (keyChangeCheck.hasChanged) {
-                    setKeyChangedAlert(true);
-                }
+            const keyChangeCheck = await checkContactKeyChange(targetUser.uid, pubKey);
+            if (keyChangeCheck.hasChanged) {
+                setKeyChangedAlert(true);
+                // A changed identity key invalidates any existing session -
+                // force a fresh X3DH handshake rather than risk using a
+                // session tied to a key that's no longer valid (mirrors
+                // WhatsApp's "security code changed" session reset).
+            }
 
-                // Derive ECDH shared secret
-                try {
-                    const secret = await deriveSharedSecret(e2eeStatus.privateKey!, pubKey);
-                    if (isMounted) setSharedSecret(secret);
-                } catch (e) {
-                    console.error("ECDH shared secret derivation error:", e);
+            // 2. Try to resume an existing local ratchet session first
+            if (!keyChangeCheck.hasChanged) {
+                const existing = await loadSession(currentUid, sessionChannelId);
+                if (existing && isMounted) {
+                    ratchetStateRef.current = existing.state;
+                    setRatchetState(existing.state);
+                    setSessionReady(true);
+                    return;
                 }
             }
-        });
+
+            // 3. No usable session - negotiate a new one via X3DH.
+            //    We deterministically decide who "initiates" by comparing
+            //    uids, so both sides don't simultaneously try to be the
+            //    initiator and end up with two different sessions.
+            const iAmInitiator = currentUid < targetUser.uid;
+
+            try {
+                if (iAmInitiator) {
+                    const theirBundle = await fetchKeyBundle(targetUser.uid, pubKey);
+                    if (!theirBundle) {
+                        // They haven't published a key bundle yet (e.g. haven't
+                        // completed their own PIN setup). Can't start a session yet.
+                        if (isMounted) setSessionReady(false);
+                        return;
+                    }
+                    const myIdentityPriv = e2eeStatus.privateKey!;
+                    const x3dhResult = await initiateX3DH(myIdentityPriv, theirBundle);
+                    const newState = await initRatchetAsInitiator(x3dhResult.sharedSecret, theirBundle.signedPreKey.publicKey);
+
+                    if (!isMounted) return;
+                    await updateRatchetState(newState, true);
+                    // Stash the ephemeral key + prekey ids so the FIRST message
+                    // we send can carry the X3DH handshake header the recipient
+                    // needs to derive the same secret (see handleSend).
+                    pendingHandshakeRef.current = {
+                        ephemeralPublicKey: x3dhResult.ephemeralPublicKey,
+                        usedSignedPreKeyId: x3dhResult.usedSignedPreKeyId,
+                        usedOneTimePreKeyId: x3dhResult.usedOneTimePreKeyId
+                    };
+                    setSessionReady(true);
+                }
+                // If we're the recipient, we can't proactively establish anything -
+                // we wait for their first message (which carries the X3DH handshake
+                // header) and establish the session in the incoming-message handler.
+            } catch (err) {
+                console.error('X3DH session negotiation failed:', err);
+            }
+        })();
 
         return () => { isMounted = false; };
     }, [e2eeStatus?.privateKey, targetUser.uid]);
@@ -262,20 +410,50 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     }, [chatId, currentUid, targetUser.uid]);
 
     // Subscribe to 1v1 Chat Messages Real-time Listener & Auto Mark as Read (Blue Ticks)
+    //
+    // IMPORTANT: messages MUST be decrypted sequentially (oldest first), not
+    // in parallel, because each ratchet decrypt call advances shared session
+    // state - decrypting out of order or concurrently would desync the chain.
     useEffect(() => {
         let unsubscribe = () => {};
+        let isMounted = true;
         try {
             const q = query(collection(db, 'directChats', chatId, 'messages'), orderBy('timestamp', 'asc'));
             unsubscribe = onSnapshot(q, async (snapshot) => {
-                const fetchedPromises = snapshot.docs.map(async docSnap => {
-                    const raw = { id: docSnap.id, ...docSnap.data() } as DirectMessage;
-                    if (sharedSecret) {
-                        return await decryptPayloadWithKey(raw, sharedSecret, (str) => decryptLegacyXOR(str, chatId));
-                    }
-                    return raw;
-                });
+                const fetched: DirectMessage[] = [];
 
-                const fetched = await Promise.all(fetchedPromises);
+                for (const docSnap of snapshot.docs) {
+                    const raw = { id: docSnap.id, ...docSnap.data() } as any;
+
+                    // Incoming X3DH handshake header on this message (only present
+                    // on the very first message of a new session, sent by whoever
+                    // initiated). If we don't have a session yet, establish one
+                    // as the RECIPIENT before attempting to decrypt.
+                    if (raw.x3dhHandshake && raw.senderId !== currentUid) {
+                        await ensureRecipientSessionFromHandshake(raw.x3dhHandshake, raw.senderId);
+                    }
+
+                    let processed: DirectMessage = raw;
+                    const currentState = ratchetStateRef.current;
+                    if (currentState && (raw.text?.startsWith('🔒E2EE:v2:') || raw.audioUrl?.startsWith('🔒E2EE:v2:') || raw.imageUrl?.startsWith('🔒E2EE:v2:') || raw.pollData)) {
+                        try {
+                            const result = await ratchetDecryptPayload(raw, currentState);
+                            processed = result.payload;
+                            await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
+                        } catch (e) {
+                            console.error('Ratchet decrypt failed for message', docSnap.id, e);
+                            processed = { ...raw, text: raw.text ? '[Encrypted message - Decryption failed]' : raw.text };
+                        }
+                    } else if (currentState === null && (raw.text?.startsWith('🔒E2EE:v2:'))) {
+                        // Ratchet-encrypted message but we have no session yet
+                        // (still negotiating, or peer hasn't published a bundle).
+                        processed = { ...raw, text: '[Encrypted message - session establishing...]' };
+                    }
+
+                    fetched.push(processed);
+                }
+
+                if (!isMounted) return;
 
                 // Merge with local fallback
                 const localMsgs = getLocalDirectMessages(chatId);
@@ -306,8 +484,46 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             setMessages(fallback);
         }
 
-        return () => unsubscribe();
-    }, [chatId, currentUid, sharedSecret]);
+        return () => { isMounted = false; unsubscribe(); };
+    }, [chatId, currentUid, sessionReady]);
+
+    /**
+     * Encrypts an outgoing message payload with the current ratchet session,
+     * persists the advanced ratchet state, and attaches the X3DH handshake
+     * header if this is our first message in a newly-initiated session
+     * (so the recipient can derive the same shared secret and bootstrap
+     * their side of the ratchet).
+     */
+    const encryptOutgoingPayload = async (payload: any): Promise<{ ok: true; payload: any } | { ok: false }> => {
+        const currentState = ratchetStateRef.current;
+        if (!currentState) {
+            showToast('Encryption session abhi ban rahi hai, thoda wait karo');
+            return { ok: false };
+        }
+        try {
+            const result = await ratchetEncryptPayload(payload, currentState);
+            await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
+
+            let finalPayload = result.payload;
+            if (pendingHandshakeRef.current) {
+                finalPayload = {
+                    ...finalPayload,
+                    x3dhHandshake: {
+                        ephemeralPublicKey: pendingHandshakeRef.current.ephemeralPublicKey,
+                        usedSignedPreKeyId: pendingHandshakeRef.current.usedSignedPreKeyId,
+                        usedOneTimePreKeyId: pendingHandshakeRef.current.usedOneTimePreKeyId,
+                        senderIdentityPublicKey: e2eeStatus?.publicKey || ''
+                    }
+                };
+                pendingHandshakeRef.current = null; // only needed once
+            }
+            return { ok: true, payload: finalPayload };
+        } catch (e) {
+            console.error('Ratchet encryption error:', e);
+            showToast('Encryption error, message bhej nahi paye');
+            return { ok: false };
+        }
+    };
 
     // Local Storage Fallback Helpers
     const getLocalDirectMessages = (cid: string): DirectMessage[] => {
@@ -427,7 +643,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const handleSendVoiceNote = async () => {
         if (!recordedAudioBlob) return;
 
-        if (!sharedSecret) {
+        if (!ratchetStateRef.current) {
             showToast('Encryption ready nahi hai, thoda wait karo');
             return;
         }
@@ -452,13 +668,9 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 timestamp: serverTimestamp()
             };
 
-            try {
-                payload = await encryptPayloadWithKey(payload, sharedSecret);
-            } catch (e) {
-                console.error("Encryption error for voice note:", e);
-                showToast('Encryption error, message bhej nahi paye');
-                return;
-            }
+            const encResult = await encryptOutgoingPayload(payload);
+            if (!encResult.ok) return;
+            payload = encResult.payload;
 
             const newMsg: DirectMessage = {
                 id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
@@ -523,7 +735,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         e.preventDefault();
         if (!text.trim() && !imageUrl.trim()) return;
 
-        if (!sharedSecret) {
+        if (!ratchetStateRef.current) {
             showToast('Encryption ready nahi hai, thoda wait karo');
             return;
         }
@@ -541,13 +753,9 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             timestamp: serverTimestamp()
         };
 
-        try {
-            payload = await encryptPayloadWithKey(payload, sharedSecret);
-        } catch (e) {
-            console.error("Encryption error for message:", e);
-            showToast('Encryption error, message bhej nahi paye');
-            return;
-        }
+        const encResult = await encryptOutgoingPayload(payload);
+        if (!encResult.ok) return;
+        payload = encResult.payload;
 
         const newMsg: DirectMessage = {
             id: 'dmsg_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
@@ -841,7 +1049,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                         </button>
                         <button 
                             onClick={handleSendVoiceNote}
-                            disabled={!sharedSecret}
+                            disabled={!ratchetState}
                             className="p-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg disabled:opacity-40 disabled:cursor-not-allowed"
                         >
                             <Send className="w-3.5 h-3.5" /> Send Voice Note
@@ -866,16 +1074,16 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     <button 
                         type="button"
                         onClick={startRecording}
-                        disabled={!sharedSecret}
+                        disabled={!ratchetState}
                         className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-emerald-400 disabled:opacity-40 disabled:cursor-not-allowed transition"
-                        title={sharedSecret ? "Record Voice Note" : "Encryption ready nahi hai"}
+                        title={ratchetState ? "Record Voice Note" : "Encryption ready nahi hai"}
                     >
                         <Mic className="w-5 h-5" />
                     </button>
 
                     <button 
                         type="submit"
-                        disabled={(!text.trim() && !imageUrl.trim()) || !sharedSecret}
+                        disabled={(!text.trim() && !imageUrl.trim()) || !ratchetState}
                         className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white disabled:opacity-40 disabled:cursor-not-allowed transition shadow-lg"
                     >
                         <Send className="w-5 h-5" />

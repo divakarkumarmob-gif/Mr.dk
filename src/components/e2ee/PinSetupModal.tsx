@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Shield, Lock, AlertTriangle, Key, ArrowRight, RefreshCw, CheckCircle2, X, Eye, EyeOff } from 'lucide-react';
-import { validatePinStrength, createPinBackupBlob, restorePrivateKeyFromBlob, resetUserKeysAndBackup, setLocalPrivateKey, setLocalPublicKey, generateKeyPair, EncryptedPrivateKeyBackupBlob } from '../../utils/e2ee';
+import { validatePinStrength, createPinBackupBlob, restorePrivateKeyFromBlob, resetUserKeysAndBackup, setLocalPrivateKey, setLocalPublicKey, generateIdentityKeyBundle, EncryptedPrivateKeyBackupBlob } from '../../utils/e2ee';
+import { setLocalIdentitySignKeyPair, publishKeyBundle } from '../../utils/e2ee/x3dh';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { showToast } from '../../utils/toast';
@@ -49,27 +50,39 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
 
         setLoading(true);
         try {
-            // 1. Generate keypair
-            const keyPair = await generateKeyPair();
+            // 1. Generate full identity bundle (X25519 for DH + Ed25519 for signing prekeys)
+            const identity = await generateIdentityKeyBundle();
 
-            // 2. Save locally
-            await setLocalPrivateKey(uid, keyPair.privateKey);
-            await setLocalPublicKey(uid, keyPair.publicKey);
+            // 2. Save locally (DH keypair uses the existing priv/pub key storage helpers)
+            await setLocalPrivateKey(uid, identity.privateKey);
+            await setLocalPublicKey(uid, identity.publicKey);
+            await setLocalIdentitySignKeyPair(uid, identity.signPublicKey, identity.signPrivateKey);
 
-            // 3. Create Backup Blob
-            const blob = await createPinBackupBlob(keyPair.privateKey, safePin);
+            // 3. Create Backup Blob - includes BOTH private key halves so a
+            //    PIN restore on a new device can re-derive full identity.
+            //    Session/ratchet state is intentionally NOT included (device-local only,
+            //    matches WhatsApp/Signal - a restored device starts fresh sessions).
+            const blob = await createPinBackupBlob(
+                JSON.stringify({ dh: identity.privateKey, sign: identity.signPrivateKey }),
+                safePin
+            );
 
             // 4. Update Firestore User Profile
             const userRef = doc(db, 'users', uid);
             await setDoc(userRef, {
-                publicKey: keyPair.publicKey,
+                publicKey: identity.publicKey,
+                identityKeySign: identity.signPublicKey,
                 encryptedPrivateKeyBackup: blob,
                 e2eeEnabled: true,
                 updatedAt: new Date().toISOString()
             }, { merge: true });
 
+            // 5. Publish X3DH key bundle (Signed PreKey + One-Time PreKeys) so
+            //    other users can start sessions with us.
+            await publishKeyBundle(uid, identity.signPublicKey);
+
             showToast('E2EE Security PIN setup safaltapoorvak ho gaya! 🔐');
-            onSuccess(keyPair);
+            onSuccess({ publicKey: identity.publicKey, privateKey: identity.privateKey });
         } catch (e: any) {
             console.error("PIN setup error:", e);
             setErrorMsg(e.message || 'PIN setup me error aayi.');
@@ -88,22 +101,55 @@ export default function PinSetupModal({ uid, mode, backupBlob, onSuccess, onCanc
         setLoading(true);
         setErrorMsg(null);
         try {
-            const privKey = await restorePrivateKeyFromBlob(backupBlob, pin);
-            
-            // Get public key from user profile
+            const restoredRaw = await restorePrivateKeyFromBlob(backupBlob, pin);
+
+            // Backup blob stores JSON with both DH + signing private keys (new format).
+            // Fall back to treating it as a bare DH private key if it's not JSON
+            // (handles a blob created by an older build, though those sessions
+            // won't have forward secrecy until a fresh key bundle is published).
+            let dhPrivateKey = restoredRaw;
+            let signPrivateKey: string | null = null;
+            try {
+                const parsed = JSON.parse(restoredRaw);
+                if (parsed && parsed.dh) {
+                    dhPrivateKey = parsed.dh;
+                    signPrivateKey = parsed.sign || null;
+                }
+            } catch {
+                // Legacy plain-string format, use as-is
+            }
+
+            // Get public key(s) from user profile
             const userDocRef = doc(db, 'users', uid);
             const userSnap = await getDoc(userDocRef);
             let pubKey = '';
-            if (userSnap.exists() && userSnap.data()?.publicKey) {
-                pubKey = userSnap.data().publicKey;
-                await setLocalPublicKey(uid, pubKey);
+            let signPubKey = '';
+            if (userSnap.exists()) {
+                const data = userSnap.data();
+                if (data?.publicKey) {
+                    pubKey = data.publicKey;
+                    await setLocalPublicKey(uid, pubKey);
+                }
+                if (data?.identityKeySign) {
+                    signPubKey = data.identityKeySign;
+                }
             }
-            // Save private key locally
-            await setLocalPrivateKey(uid, privKey);
-            
+            // Save private key(s) locally
+            await setLocalPrivateKey(uid, dhPrivateKey);
+            if (signPrivateKey && signPubKey) {
+                await setLocalIdentitySignKeyPair(uid, signPubKey, signPrivateKey);
+                // Refresh our published key bundle (new signed prekey + one-time prekeys)
+                // since this is effectively a new device with no prior published bundle state.
+                try {
+                    await publishKeyBundle(uid, signPubKey);
+                } catch (bundleErr) {
+                    console.warn('Could not publish key bundle after restore (will retry later):', bundleErr);
+                }
+            }
+
             // Restore complete
-            showToast('Naye device par chats restore ho gaye! 🔓');
-            onSuccess({ publicKey: pubKey, privateKey: privKey });
+            showToast('Naye device par identity restore ho gayi! 🔓 Nayi chats E2EE ke saath shuru hongi.');
+            onSuccess({ publicKey: pubKey, privateKey: dhPrivateKey });
         } catch (e: any) {
             console.error("PIN restore error:", e);
             setFailedAttempts(prev => prev + 1);

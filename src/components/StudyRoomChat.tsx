@@ -7,7 +7,7 @@ import {
     BarChart2, HelpCircle, Timer, Volume2, VolumeX, Flame, BookOpen, MessageCircle,
     Clock, Calendar, PowerOff, Trash2, ArrowDown, Plus, Check, Vote, Music
 } from 'lucide-react';
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc, setDoc } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, getDoc, setDoc, getDocs, where } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
@@ -15,16 +15,22 @@ import { decryptLegacyXOR } from '../utils/encryption';
 import { 
     initUserE2EE, 
     fetchUserPublicKey, 
-    generateRoomSymmetricKey, 
-    wrapRoomKeyForMember, 
-    unwrapRoomKeyForMember, 
-    getRoomSymmetricKey, 
-    setRoomSymmetricKey, 
-    encryptPayloadWithKey, 
-    decryptPayloadWithKey,
     ensureSodium,
     UserE2EEStatus
 } from '../utils/e2ee';
+import {
+    createSenderKeyChain,
+    getOwnSenderKeyChain,
+    buildDistributionMessage,
+    sealDistributionMessage,
+    receiveDistributionMessage,
+    getReceivedSenderKeyChain,
+    senderKeyEncrypt,
+    senderKeyDecrypt,
+    rotateSenderKey,
+    SenderKeyChainState,
+    EncryptedGroupMessage
+} from '../utils/e2ee/senderKeys';
 import PinSetupModal, { PinModalMode } from './e2ee/PinSetupModal';
 
 export type RoomMode = 'doubt_solving' | 'silent_study' | 'mcq_battle' | 'general';
@@ -94,9 +100,12 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const [messageText, setMessageText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
 
-    // E2EE Room States
+    // E2EE Room States (Sender Keys protocol)
     const [e2eeStatus, setE2eeStatus] = useState<UserE2EEStatus | null>(null);
-    const [roomSymmetricKey, setRoomSymmetricKeyBytes] = useState<Uint8Array | null>(null);
+    const [ownSenderChainReady, setOwnSenderChainReady] = useState<boolean>(false);
+    // Tracks which senders' chains we've successfully received, so we know
+    // whose messages we can currently decrypt vs. are still waiting on.
+    const [receivedFromSenders, setReceivedFromSenders] = useState<Set<string>>(new Set());
     const [showPinModal, setShowPinModal] = useState<boolean>(false);
     const [pinModalMode, setPinModalMode] = useState<PinModalMode>('setup');
 
@@ -410,7 +419,13 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         }
     };
 
-    // Initialize User E2EE & Resolve Room Symmetric Key
+    // Tracks the previous member list snapshot, to detect when someone was
+    // REMOVED (triggers a security-relevant key rotation) vs just re-renders.
+    const prevMembersRef = useRef<string[] | null>(null);
+
+    // Initialize User E2EE, establish our own sender-key chain for this room,
+    // distribute it to all current members, and fetch/decrypt any
+    // distribution messages other members have sent us.
     useEffect(() => {
         let isMounted = true;
         initUserE2EE(currentUid).then(async (status) => {
@@ -427,61 +442,170 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 }
                 return;
             }
+            if (!status.publicKey || !status.privateKey) return;
 
-            // Resolve Room Symmetric Key
             try {
-                const sodium = await ensureSodium();
-                let keyBase64 = await getRoomSymmetricKey(room.id);
+                await ensureSodium();
 
-                if (!keyBase64) {
-                    // Check wrapped keys in Firestore room document
-                    const roomRef = doc(db, 'studyRooms', room.id);
-                    const roomSnap = await getDoc(roomRef);
-                    const roomData = roomSnap.exists() ? roomSnap.data() : {};
-                    const wrappedKeys = roomData.wrappedKeys || {};
+                const currentMembers = room.members || [];
+                const prevMembers = prevMembersRef.current;
+                const someoneWasRemoved = prevMembers !== null && prevMembers.some(m => !currentMembers.includes(m));
+                prevMembersRef.current = currentMembers;
 
-                    if (wrappedKeys[currentUid] && status.publicKey && status.privateKey) {
-                        // Unwrap room key
-                        keyBase64 = await unwrapRoomKeyForMember(wrappedKeys[currentUid], status.publicKey, status.privateKey);
-                        await setRoomSymmetricKey(room.id, keyBase64);
-                    } else if (status.publicKey) {
-                        // Create or wrap room key
-                        keyBase64 = await generateRoomSymmetricKey();
-                        const wrapped = await wrapRoomKeyForMember(keyBase64, status.publicKey);
-                        await setDoc(roomRef, {
-                            wrappedKeys: { ...wrappedKeys, [currentUid]: wrapped }
-                        }, { merge: true });
-                        await setRoomSymmetricKey(room.id, keyBase64);
+                // 1. Ensure we have our own outgoing sender-key chain for this room.
+                //    If someone was removed since we last checked, rotate to a
+                //    fresh chain so they lose the ability to decrypt new messages.
+                let ownChain = await getOwnSenderKeyChain(currentUid, room.id);
+                const isFreshChain = !ownChain;
+                if (!ownChain) {
+                    ownChain = await createSenderKeyChain(currentUid, room.id);
+                } else if (someoneWasRemoved) {
+                    ownChain = await rotateSenderKey(currentUid, room.id);
+                }
+                if (isMounted) setOwnSenderChainReady(true);
+
+                // 2. Distribute our chain to every OTHER current member who
+                //    doesn't already have a copy of THIS generation, sealed
+                //    with their identity public key. Distribution docs are
+                //    per (recipient, sender, generation) so this is idempotent
+                //    and cheap to re-run on every mount/member-list change -
+                //    we always attempt it (not just on a fresh chain) so that
+                //    a newly-joined member receives our current chain too.
+                const otherMembers = currentMembers.filter(m => m !== currentUid);
+                for (const memberUid of otherMembers) {
+                    try {
+                        const distRef = doc(db, 'studyRooms', room.id, 'senderKeyDistributions', `${memberUid}_${currentUid}_${ownChain.keyGeneration}`);
+                        const existingDist = await getDoc(distRef);
+                        if (existingDist.exists()) continue; // already sent this generation to them
+
+                        const memberPubKey = await fetchUserPublicKey(memberUid);
+                        if (!memberPubKey) continue;
+                        const distMsg = buildDistributionMessage(ownChain);
+                        const sealed = await sealDistributionMessage(distMsg, memberPubKey);
+                        await setDoc(distRef, {
+                            recipientUid: memberUid,
+                            senderUid: currentUid,
+                            keyGeneration: ownChain.keyGeneration,
+                            sealed,
+                            createdAt: new Date().toISOString()
+                        });
+                    } catch (distErr) {
+                        console.warn(`Failed to distribute sender key to ${memberUid}:`, distErr);
                     }
                 }
 
-                if (keyBase64 && isMounted) {
-                    const bytes = sodium.from_base64(keyBase64, sodium.base64_variants.ORIGINAL);
-                    setRoomSymmetricKeyBytes(bytes);
+                // 3. Fetch distribution messages addressed to US and open the ones
+                //    we haven't processed yet.
+                const distCollRef = collection(db, 'studyRooms', room.id, 'senderKeyDistributions');
+                const distSnap = await getDocs(query(distCollRef, where('recipientUid', '==', currentUid)));
+
+                for (const distDoc of distSnap.docs) {
+                    const data = distDoc.data();
+                    if (!data.senderUid || data.senderUid === currentUid) continue;
+                    try {
+                        const existing = await getReceivedSenderKeyChain(currentUid, room.id, data.senderUid);
+                        if (existing && existing.keyGeneration >= data.keyGeneration) continue; // already have this or newer
+                        await receiveDistributionMessage(data.sealed, currentUid, status.publicKey, status.privateKey);
+                        if (isMounted) {
+                            setReceivedFromSenders(prev => new Set(prev).add(data.senderUid));
+                        }
+                    } catch (openErr) {
+                        console.warn(`Failed to open sender key distribution from ${data.senderUid}:`, openErr);
+                    }
                 }
             } catch (e) {
-                console.error("Room E2EE key resolution error:", e);
+                console.error("Room E2EE (Sender Keys) resolution error:", e);
             }
         });
 
         return () => { isMounted = false; };
-    }, [room.id, currentUid]);
+    }, [room.id, currentUid, (room.members || []).join(',')]);
+
+    /**
+     * Rotates our sender key and redistributes it to all current members.
+     * Call this whenever the room's membership changes (someone joins or
+     * leaves) so a removed member (or anyone holding a stale chain) can no
+     * longer decrypt new messages - this is the group-chat equivalent of
+     * post-compromise security for the 1v1 ratchet.
+     */
+    const rotateAndRedistributeSenderKey = async () => {
+        if (!e2eeStatus?.publicKey || !e2eeStatus?.privateKey) return;
+        try {
+            const newChain = await rotateSenderKey(currentUid, room.id);
+            const members = (room.members || []).filter(m => m !== currentUid);
+            for (const memberUid of members) {
+                try {
+                    const memberPubKey = await fetchUserPublicKey(memberUid);
+                    if (!memberPubKey) continue;
+                    const distMsg = buildDistributionMessage(newChain);
+                    const sealed = await sealDistributionMessage(distMsg, memberPubKey);
+                    const distRef = doc(db, 'studyRooms', room.id, 'senderKeyDistributions', `${memberUid}_${currentUid}_${newChain.keyGeneration}`);
+                    await setDoc(distRef, {
+                        recipientUid: memberUid,
+                        senderUid: currentUid,
+                        keyGeneration: newChain.keyGeneration,
+                        sealed,
+                        createdAt: new Date().toISOString()
+                    });
+                } catch (distErr) {
+                    console.warn(`Failed to redistribute rotated sender key to ${memberUid}:`, distErr);
+                }
+            }
+        } catch (e) {
+            console.error('Sender key rotation failed:', e);
+        }
+    };
 
     // Real-time Listener for Messages with Strict Chronological Timestamp Sorting
+    //
+    // Sender Keys: each message is encrypted with its senderUid's own chain.
+    // Messages from the SAME sender must be decrypted in order (their chain
+    // advances forward), so we process the whole batch sequentially rather
+    // than in parallel to avoid any risk of racing two decrypts of the same
+    // sender's chain.
     useEffect(() => {
         let unsubscribe = () => {};
         try {
             const q = query(collection(db, 'studyRooms', room.id, 'messages'), orderBy('timestamp', 'asc'));
             unsubscribe = onSnapshot(q, async (snapshot) => {
-                const fetchedPromises = snapshot.docs.map(async docSnap => {
-                    const raw = { id: docSnap.id, ...docSnap.data() } as RoomMessage;
-                    if (roomSymmetricKey) {
-                        return await decryptPayloadWithKey(raw, roomSymmetricKey, (str) => decryptLegacyXOR(str, room.id));
-                    }
-                    return raw;
-                });
+                const fetched: RoomMessage[] = [];
 
-                const fetched = await Promise.all(fetchedPromises);
+                for (const docSnap of snapshot.docs) {
+                    const raw = { id: docSnap.id, ...docSnap.data() } as any;
+                    let processed: RoomMessage = raw;
+
+                    if (raw.senderKeyMessage && raw.senderId) {
+                        try {
+                            const groupMsg: EncryptedGroupMessage = raw.senderKeyMessage;
+                            const plaintext = await senderKeyDecrypt(currentUid, groupMsg, room.id);
+                            // The plaintext is a JSON-serialized payload object
+                            // (see handleSend's encryption path below).
+                            const decryptedFields = JSON.parse(plaintext);
+                            // Poll votes are stored/updated in plaintext (raw.pollData.votes)
+                            // separately from the encrypted question/options - merge rather
+                            // than overwrite so live vote updates aren't lost.
+                            if (decryptedFields.pollData && raw.pollData) {
+                                decryptedFields.pollData = { ...raw.pollData, ...decryptedFields.pollData };
+                            }
+                            processed = { ...raw, ...decryptedFields };
+                        } catch (e: any) {
+                            const msg = e?.message || '';
+                            if (msg.includes('No sender-key chain received yet')) {
+                                processed = { ...raw, text: '[Encrypted message - waiting for sender key...]' };
+                            } else if (msg.includes('generation mismatch')) {
+                                processed = { ...raw, text: '[Encrypted message - sender key was rotated, re-syncing...]' };
+                            } else {
+                                console.error('Sender-key decrypt failed for message', docSnap.id, e);
+                                processed = { ...raw, text: '[Encrypted message - Decryption failed]' };
+                            }
+                        }
+                    } else if (raw.text || raw.imageUrl || raw.audioUrl) {
+                        // Legacy/unencrypted message shape - pass through as-is
+                        processed = raw;
+                    }
+
+                    fetched.push(processed);
+                }
 
                 const localMsgs = getLocalRoomMessages(room.id);
                 const allMap = new Map<string, RoomMessage>();
@@ -499,7 +623,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         }
 
         return () => unsubscribe();
-    }, [room.id, roomSymmetricKey]);
+    }, [room.id, ownSenderChainReady]);
 
     // Local Storage Helpers for Messages
     const getLocalRoomMessages = (roomId: string): RoomMessage[] => {
@@ -608,22 +732,24 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const handleSendVoiceNote = async () => {
         if (!recordedAudioBase64) return;
 
-        if (!roomSymmetricKey) {
+        if (!ownSenderChainReady) {
             showToast('Encryption ready nahi hai, thoda wait karo');
             return;
         }
 
         const base64Audio = recordedAudioBase64;
 
+        const fieldsToEncrypt = { audioUrl: base64Audio };
+
         let payload: any = {
             senderId: currentUid,
             senderName: currentName,
-            audioUrl: base64Audio,
             timestamp: serverTimestamp()
         };
 
         try {
-            payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+            const { message } = await senderKeyEncrypt(currentUid, room.id, JSON.stringify(fieldsToEncrypt));
+            payload.senderKeyMessage = message;
         } catch (e) {
             console.error("Voice note encryption error:", e);
             showToast('Encryption error, message bhej nahi paye');
@@ -673,7 +799,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
     const handleCreatePoll = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!roomSymmetricKey) {
+        if (!ownSenderChainReady) {
             showToast('Encryption ready nahi hai, thoda wait karo');
             return;
         }
@@ -694,12 +820,17 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         let payload: any = {
             senderId: currentUid,
             senderName: currentName,
-            pollData: pollData,
+            // votes stays plain/unencrypted since it's mutated live as
+            // members vote - only the question/options content is secret.
+            pollData: { votes: {} },
             timestamp: serverTimestamp()
         };
 
         try {
-            payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+            const { message } = await senderKeyEncrypt(currentUid, room.id, JSON.stringify({
+                pollData: { question: pollData.question, options: pollData.options, correctIdx: pollData.correctIdx }
+            }));
+            payload.senderKeyMessage = message;
         } catch (e) {
             console.error("Poll encryption error:", e);
             showToast('Encryption error, message bhej nahi paye');
@@ -780,7 +911,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             return;
         }
 
-        if (!roomSymmetricKey) {
+        if (!ownSenderChainReady) {
             showToast('Encryption ready nahi hai, thoda wait karo');
             return;
         }
@@ -791,13 +922,15 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
         let payload: any = {
             senderId: currentUid || 'user',
             senderName: currentName || 'NEET Aspirant',
-            text: textToSend || '',
-            imageUrl: imageToSend || '',
             timestamp: serverTimestamp()
         };
 
         try {
-            payload = await encryptPayloadWithKey(payload, roomSymmetricKey);
+            const { message } = await senderKeyEncrypt(currentUid, room.id, JSON.stringify({
+                text: textToSend || '',
+                imageUrl: imageToSend || ''
+            }));
+            payload.senderKeyMessage = message;
         } catch (err) {
             console.error("Message encryption error:", err);
             showToast('Encryption error, message bhej nahi paye');
@@ -854,6 +987,11 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
             const roomRef = doc(db, 'studyRooms', room.id);
             await updateDoc(roomRef, { members: arrayRemove(targetUid) });
             showToast('User removed from study room.');
+            // Rotate our own sender key immediately so the removed member's
+            // existing chain copy can't decrypt anything we send from now on.
+            // Other remaining members detect the membership change via the
+            // room-members useEffect below and rotate their own keys too.
+            await rotateAndRedistributeSenderKey();
         } catch (e) {
             setRoom(prev => ({ ...prev, members: prev.members.filter(uid => uid !== targetUid) }));
             showToast('User removed!');
@@ -872,6 +1010,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                 blockedUsers: arrayUnion(targetUid)
             });
             showToast('User blocked and removed! 🚫');
+            await rotateAndRedistributeSenderKey();
         } catch (e) {
             setRoom(prev => ({
                 ...prev,
@@ -1347,9 +1486,9 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         <button
                             type="button"
                             onClick={handleSendVoiceNote}
-                            disabled={!roomSymmetricKey}
+                            disabled={!ownSenderChainReady}
                             className="p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold hover:brightness-110 transition shadow-lg flex items-center gap-1.5 text-xs shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
-                            title={roomSymmetricKey ? "Send Voice Note" : "Encryption ready nahi hai"}
+                            title={ownSenderChainReady ? "Send Voice Note" : "Encryption ready nahi hai"}
                         >
                             <span className="hidden sm:inline">Send Voice</span>
                             <Send className="w-4.5 h-4.5" />
@@ -1388,9 +1527,9 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         <button
                             type="button"
                             onClick={startRecording}
-                            disabled={!roomSymmetricKey}
+                            disabled={!ownSenderChainReady}
                             className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-indigo-400 hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition"
-                            title={roomSymmetricKey ? "Record Voice Note" : "Encryption ready nahi hai"}
+                            title={ownSenderChainReady ? "Record Voice Note" : "Encryption ready nahi hai"}
                         >
                             <Mic className="w-5 h-5" />
                         </button>
@@ -1405,9 +1544,9 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         <button
                             type="button"
                             onClick={() => setShowPollModal(true)}
-                            disabled={!roomSymmetricKey}
+                            disabled={!ownSenderChainReady}
                             className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 disabled:opacity-40 disabled:cursor-not-allowed transition"
-                            title={roomSymmetricKey ? "Create Question Poll" : "Encryption ready nahi hai"}
+                            title={ownSenderChainReady ? "Create Question Poll" : "Encryption ready nahi hai"}
                         >
                             <BarChart2 className="w-5 h-5" />
                         </button>
@@ -1424,7 +1563,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                         {/* Send Button */}
                         <button
                             type="submit"
-                            disabled={(!messageText.trim() && !imageUrl.trim()) || !roomSymmetricKey}
+                            disabled={(!messageText.trim() && !imageUrl.trim()) || !ownSenderChainReady}
                             className="p-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed transition shadow-md"
                         >
                             <Send className="w-5 h-5" />
@@ -1548,7 +1687,7 @@ export default function StudyRoomChat({ room: initialRoom, onBack }: StudyRoomCh
                                     </button>
                                     <button
                                         type="submit"
-                                        disabled={!roomSymmetricKey}
+                                        disabled={!ownSenderChainReady}
                                         className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-xs font-bold text-white hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed transition shadow-lg flex items-center justify-center gap-2"
                                     >
                                         <BarChart2 className="w-4 h-4" />

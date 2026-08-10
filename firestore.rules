@@ -74,6 +74,24 @@ service cloud.firestore {
       match /{allSubcollections=**} {
         allow read, write: if isOwner(userId) || isAdmin();
       }
+
+      // E2EE X3DH Key Bundle (identity signing key + signed prekey).
+      // Publicly readable by any signed-in user so they can start a
+      // Double Ratchet session with this user; only the owner (or admin)
+      // can publish/update it.
+      match /e2ee/keyBundle {
+        allow read: if isSignedIn();
+        allow write: if isOwner(userId) || isAdmin();
+      }
+
+      // E2EE One-Time PreKeys (X3DH). Any signed-in user may READ a single
+      // prekey to claim it when starting a new session, and DELETE it once
+      // claimed (consumed one-time use). Only the owner may CREATE new
+      // prekeys (replenishing their own stock) or bulk-manage them.
+      match /e2ee_one_time_prekeys/{keyId} {
+        allow read, delete: if isSignedIn();
+        allow create, update: if isOwner(userId) || isAdmin();
+      }
     }
     match /users {
       allow read: if isAdmin();
@@ -132,6 +150,21 @@ service cloud.firestore {
 
       match /messages/{messageId} {
         allow read, create: if isSignedIn() && get(/databases/$(database)/documents/studyRooms/$(roomId)).data.get('members', []).hasAny([request.auth.uid]);
+      }
+
+      // E2EE Sender Key Distribution Messages (group Double Ratchet /
+      // Sender Keys protocol). Each doc is a chain key sealed for ONE
+      // specific recipient - only that recipient may read it, and only
+      // the sender who created it may write/delete it. Both must be
+      // current room members.
+      match /senderKeyDistributions/{distId} {
+        function isCurrentRoomMember() {
+          return isSignedIn() && get(/databases/$(database)/documents/studyRooms/$(roomId)).data.get('members', []).hasAny([request.auth.uid]);
+        }
+
+        allow read: if isCurrentRoomMember() && resource.data.recipientUid == request.auth.uid;
+        allow create: if isCurrentRoomMember() && request.resource.data.senderUid == request.auth.uid;
+        allow delete: if isCurrentRoomMember() && (resource.data.senderUid == request.auth.uid || isAdmin());
       }
     }
 
