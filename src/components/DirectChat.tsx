@@ -12,6 +12,7 @@ import { db, auth } from '../lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
+import { getApiUrl, authFetch } from '../utils/api';
 import { decryptLegacyXOR } from '../utils/encryption';
 import { 
     initUserE2EE, 
@@ -838,7 +839,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         let isMounted = true;
         if (!currentUid || !chatId) return () => { isMounted = false; };
         try {
-            const q = query(collection(db, 'directChats', chatId, 'messages'), orderBy('timestamp', 'asc'));
+            const q = collection(db, 'directChats', chatId, 'messages');
             unsubscribe = onSnapshot(q, async (snapshot) => {
                 const fetched: DirectMessage[] = [];
 
@@ -1299,6 +1300,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         let payload: any = {
             senderId: currentUid,
             senderName: currentName,
+            senderPublicKey: e2eeStatus?.publicKey || '',
             text: textToSend || '',
             imageUrl: imageToSend || '',
             status: initialStatus,
@@ -1345,6 +1347,17 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 readBy: [currentUid],
                 updatedAt: serverTimestamp()
             }, { merge: true });
+
+            // Trigger FCM Background Push Notification (works when recipient phone is locked / app is killed)
+            authFetch(getApiUrl('/api/send-chat-notification'), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    recipientUid: targetUser.uid,
+                    senderName: currentName || 'User',
+                    messageText: textToSend || (imageToSend ? '📷 Photo' : 'Message')
+                })
+            }).catch(err => console.warn('Failed to dispatch FCM push notification:', err));
         } catch (e) {
             console.warn("Firestore send message error:", e);
         }

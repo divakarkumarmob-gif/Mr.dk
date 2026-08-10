@@ -16,7 +16,7 @@ import { PushNotifications } from '@capacitor/push-notifications';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
 import { getDeviceInfo } from './utils/deviceInfo';
 import {auth, db, messaging, handleFirestoreError, OperationType} from './lib/firebase';
-import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp} from 'firebase/firestore'; 
+import {doc, getDoc, setDoc, getDocs, collection, query, orderBy, limit, addDoc, onSnapshot, updateDoc, arrayUnion, serverTimestamp, where} from 'firebase/firestore'; 
 import {updateUserPresence} from './services/chatService';
 import { storageService } from './lib/storageService';
 import { Bell, Home, BarChart2, FileText, User as UserIcon, Play, Book, CheckCircle2, Target, Clock, Shuffle, MessageCircle, X, Users, Sparkles } from 'lucide-react';
@@ -738,6 +738,113 @@ function AppInner() {
     
     return () => { unsubscribe(); unsubscribeNeet(); };
   }, [user]);
+
+  // Global 1v1 Direct Messages Real-time Listener & Floating Notification Toast Banner State
+  const [globalChatNotif, setGlobalChatNotif] = useState<{
+    chatId: string;
+    senderId: string;
+    senderName: string;
+    senderPhoto?: string;
+    messageText: string;
+    timestamp: number;
+  } | null>(null);
+
+  const globalInitialLoadRef = useRef<boolean>(true);
+  const previousChatsDataRef = useRef<Map<string, any>>(new Map());
+
+  useEffect(() => {
+    if (!user?.uid) return;
+    const currentUid = user.uid;
+
+    const q = query(
+      collection(db, 'directChats'),
+      where('participants', 'array-contains', currentUid)
+    );
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      if (globalInitialLoadRef.current) {
+        snapshot.docs.forEach(d => {
+          previousChatsDataRef.current.set(d.id, d.data());
+        });
+        globalInitialLoadRef.current = false;
+        return;
+      }
+
+      snapshot.docChanges().forEach(async (change) => {
+        if (change.type === 'modified' || change.type === 'added') {
+          const data = change.doc.data();
+          const prev = previousChatsDataRef.current.get(change.doc.id);
+          const lastSenderId = data.lastMessageSenderId;
+          const isNewMessage = lastSenderId && lastSenderId !== currentUid && (!prev || prev.lastMessageTimestamp !== data.lastMessageTimestamp);
+
+          previousChatsDataRef.current.set(change.doc.id, data);
+
+          if (isNewMessage) {
+            // Check if sender is muted
+            try {
+              const muteSnap = await getDoc(doc(db, 'users', currentUid, 'mutedChats', lastSenderId));
+              if (muteSnap.exists()) return;
+            } catch (e) {}
+
+            let senderName = 'New Message';
+            let senderPhoto = undefined;
+
+            try {
+              const senderSnap = await getDoc(doc(db, 'users', lastSenderId));
+              if (senderSnap.exists()) {
+                const sData = senderSnap.data();
+                senderName = sData.name || sData.displayName || 'User';
+                senderPhoto = sData.photoURL;
+              }
+            } catch (e) {}
+
+            let msgText = data.lastMessage || 'Sent a message';
+            if (msgText.startsWith('🔒E2EE:')) msgText = '🔒 Encrypted Message';
+
+            setGlobalChatNotif({
+              chatId: change.doc.id,
+              senderId: lastSenderId,
+              senderName,
+              senderPhoto,
+              messageText: msgText,
+              timestamp: Date.now()
+            });
+
+            // Trigger System Push Notification on Android / Native Mobile
+            if (Capacitor.isNativePlatform()) {
+              LocalNotifications.schedule({
+                notifications: [{
+                  title: senderName,
+                  body: msgText,
+                  id: Math.floor(Math.random() * 100000),
+                }]
+              }).catch(err => console.warn('LocalNotifications direct chat error:', err));
+            } else if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
+              try {
+                new Notification(senderName, {
+                  body: msgText,
+                  icon: senderPhoto || '/favicon.ico'
+                });
+              } catch (e) {}
+            }
+          }
+        }
+      });
+    }, (err) => {
+      console.warn("Global direct chat listener error:", err);
+    });
+
+    return () => unsubscribe();
+  }, [user?.uid]);
+
+  // Auto dismiss global floating push banner after 6s
+  useEffect(() => {
+    if (!globalChatNotif) return;
+    const timer = setTimeout(() => {
+      setGlobalChatNotif(null);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, [globalChatNotif]);
 
   // Update render logic in notifications popup
   // Find where showNotifications popup is defined (around line 1104)
@@ -2251,6 +2358,52 @@ function AppInner() {
 
   return (
     <>
+      {/* Global Floating Direct Message Notification Toast Banner */}
+      <AnimatePresence>
+        {globalChatNotif && (
+          <motion.div
+            initial={{ opacity: 0, y: -60, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -60, scale: 0.95 }}
+            onClick={() => {
+              setGlobalChatNotif(null);
+              setCurrentView('neetCommunity');
+            }}
+            className="fixed top-3 left-3 right-3 z-[99999] bg-[#0c1222]/95 border border-indigo-500/50 rounded-2xl p-3 shadow-[0_10px_30px_rgba(99,102,241,0.35)] backdrop-blur-xl flex items-center justify-between cursor-pointer active:scale-98 transition-all"
+            style={{ marginTop: 'env(safe-area-inset-top, 0px)' }}
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-indigo-400/40 bg-indigo-600/30 flex items-center justify-center font-bold text-white text-sm shrink-0">
+                {globalChatNotif.senderPhoto ? (
+                  <img src={globalChatNotif.senderPhoto} alt={globalChatNotif.senderName} className="w-full h-full object-cover" />
+                ) : (
+                  globalChatNotif.senderName.charAt(0).toUpperCase()
+                )}
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <h4 className="text-xs font-bold text-white truncate">{globalChatNotif.senderName}</h4>
+                  <span className="text-[9px] bg-indigo-500 text-white px-1.5 py-0.2 rounded font-black uppercase tracking-wider">New Message</span>
+                </div>
+                <p className="text-xs text-indigo-200/90 truncate mt-0.5">{globalChatNotif.messageText}</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="text-xs text-indigo-400 font-bold bg-indigo-500/20 px-2.5 py-1 rounded-xl border border-indigo-500/30">View Chat</span>
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setGlobalChatNotif(null);
+                }}
+                className="p-1 text-white/50 hover:text-white"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {showNeuralSolver && <NeuralSolver onClose={() => window.history.back()} />}
       <SupportModal 
         isOpen={showSupportModal} 

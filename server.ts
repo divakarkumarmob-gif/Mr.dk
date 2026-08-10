@@ -478,6 +478,76 @@ async function startServer() {
 
 
 
+  // Send 1v1 Direct Chat Push Notification via Firebase Cloud Messaging (FCM)
+  // Wakes up mobile devices even when app is closed, terminated, or screen is locked (like WhatsApp)
+  app.post("/api/send-chat-notification", requireAppCheckAndAuth, async (req: any, res: any) => {
+    try {
+      const { recipientUid, senderName, messageText } = req.body;
+      if (!recipientUid || !senderName) {
+        return res.status(400).json({ success: false, error: "Missing recipientUid or senderName" });
+      }
+
+      const dbAdmin = getFirestore();
+      const tokensSnap = await dbAdmin.collection('users').doc(recipientUid).collection('fcmTokens').get();
+
+      if (tokensSnap.empty) {
+        return res.json({ success: true, sentCount: 0, reason: "No FCM tokens registered for recipient" });
+      }
+
+      const tokens = tokensSnap.docs
+        .map(d => d.data().token)
+        .filter((t): t is string => typeof t === 'string' && t.length > 0);
+
+      if (tokens.length === 0) {
+        return res.json({ success: true, sentCount: 0 });
+      }
+
+      const payloadText = messageText || 'Sent a message';
+      const displayBody = payloadText.startsWith('🔒E2EE:') ? '🔒 New encrypted message' : payloadText;
+
+      const messagePayload = {
+        tokens: tokens,
+        notification: {
+          title: senderName,
+          body: displayBody,
+        },
+        data: {
+          type: 'directChat',
+          senderId: req.uid || '',
+          senderName: senderName,
+          messageText: displayBody,
+          click_action: 'FLUTTER_NOTIFICATION_CLICK'
+        },
+        android: {
+          priority: 'high' as const,
+          notification: {
+            sound: 'default',
+            channelId: 'default',
+            priority: 'max' as const,
+            visibility: 'public' as const,
+            defaultSound: true,
+            defaultVibrateTimings: true
+          }
+        },
+        apns: {
+          payload: {
+            aps: {
+              sound: 'default',
+              badge: 1,
+              contentAvailable: true
+            }
+          }
+        }
+      };
+
+      const response = await firebaseAdminApp.messaging().sendEachForMulticast(messagePayload);
+      res.json({ success: true, sentCount: response.successCount, failureCount: response.failureCount });
+    } catch (err: any) {
+      console.error("Error sending chat push notification via FCM:", err);
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
   // List all S3 buckets available to these AWS credentials.
   // Falls back to the single .env-configured bucket if ListBuckets isn't permitted.
   app.get("/api/s3/buckets", requireAppCheck, requireAuth, async (req: any, res: any) => {
