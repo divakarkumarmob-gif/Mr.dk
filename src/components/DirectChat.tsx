@@ -171,13 +171,46 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     /**
      * RECIPIENT side of X3DH: given the handshake header carried on the
      * sender's first message, derive the shared secret and initialize our
-     * ratchet state as a recipient. No-op if we already have a session.
+     * ratchet state as a recipient.
+     *
+     * TIE-BREAK: since either side can now initiate a brand-new session
+     * (see the negotiation useEffect above), it's possible BOTH sides
+     * simultaneously created their own session with different ephemeral
+     * keys before either message arrives. If that happens, the two sides
+     * would end up with different shared secrets and be unable to decrypt
+     * each other. To resolve this deterministically without extra
+     * round-trips: the side with the lexicographically SMALLER uid always
+     * "wins" - if we already have a self-initiated session but the
+     * incoming handshake is from a smaller-uid sender, we discard our own
+     * session and adopt theirs instead. If we're the smaller uid, we keep
+     * our own and this handshake is ignored (the other side will pick up
+     * our session via their own tie-break logic once our first message
+     * reaches them).
      */
     const ensureRecipientSessionFromHandshake = async (
         handshake: { ephemeralPublicKey: string; usedSignedPreKeyId: number; usedOneTimePreKeyId: string | null; senderIdentityPublicKey: string },
         senderUid: string
     ) => {
-        if (ratchetStateRef.current || handshakeProcessedRef.current) return;
+        const haveOwnSession = !!ratchetStateRef.current;
+        const weInitiatedOurs = ratchetSessionMeta.current?.initiatedByMe === true;
+        const theyShouldWin = senderUid < currentUid;
+
+        if (haveOwnSession) {
+            if (!weInitiatedOurs) {
+                // We already adopted a session (either resumed from storage,
+                // or already processed a handshake) - don't reprocess.
+                return;
+            }
+            if (!theyShouldWin) {
+                // We self-initiated AND we have the smaller uid - our
+                // session wins. Ignore their handshake.
+                return;
+            }
+            // Fall through: we self-initiated but they have the smaller
+            // uid, so their session should win - discard ours and adopt
+            // theirs below.
+        }
+        if (handshakeProcessedRef.current && !haveOwnSession) return;
         if (!e2eeStatus?.privateKey) return;
         handshakeProcessedRef.current = true;
 
@@ -204,6 +237,12 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
             const newState = await initRatchetAsRecipient(x3dhResult.sharedSecret, spk.publicKey, spk.privateKey);
             await updateRatchetState(newState, false);
+            // We're adopting their session as the source of truth - any
+            // handshake we were about to attach to our own next outgoing
+            // message (from a session we self-initiated) is now stale and
+            // must not be sent, or the real recipient would try to derive
+            // a shared secret from an abandoned ephemeral key.
+            pendingHandshakeRef.current = null;
 
             if (handshake.usedOneTimePreKeyId) {
                 await consumeLocalOneTimePreKey(currentUid, handshake.usedOneTimePreKeyId);
@@ -292,39 +331,42 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             }
 
             // 3. No usable session - negotiate a new one via X3DH.
-            //    We deterministically decide who "initiates" by comparing
-            //    uids, so both sides don't simultaneously try to be the
-            //    initiator and end up with two different sessions.
+            //    Normally, whichever side has the lexicographically smaller
+            //    uid acts as "initiator" so both sides don't simultaneously
+            //    negotiate two different sessions. BUT either side must be
+            //    able to send the FIRST message of a brand new conversation
+            //    - if we're the "recipient" role and the other side hasn't
+            //    messaged us yet, there's no session to passively wait for.
+            //    In that case, we initiate too: whoever the OTHER user sees
+            //    as initiator will simply resume the session we already
+            //    started (via loadSession above) instead of creating a
+            //    second one, since X3DH deterministically derives the same
+            //    shared secret regardless of who technically ran it first.
             const iAmInitiator = currentUid < targetUser.uid;
 
             try {
-                if (iAmInitiator) {
-                    const theirBundle = await fetchKeyBundle(targetUser.uid, pubKey);
-                    if (!theirBundle) {
-                        // They haven't published a key bundle yet (e.g. haven't
-                        // completed their own PIN setup). Can't start a session yet.
-                        if (isMounted) setSessionReady(false);
-                        return;
-                    }
-                    const myIdentityPriv = e2eeStatus.privateKey!;
-                    const x3dhResult = await initiateX3DH(myIdentityPriv, theirBundle);
-                    const newState = await initRatchetAsInitiator(x3dhResult.sharedSecret, theirBundle.signedPreKey.publicKey);
-
-                    if (!isMounted) return;
-                    await updateRatchetState(newState, true);
-                    // Stash the ephemeral key + prekey ids so the FIRST message
-                    // we send can carry the X3DH handshake header the recipient
-                    // needs to derive the same secret (see handleSend).
-                    pendingHandshakeRef.current = {
-                        ephemeralPublicKey: x3dhResult.ephemeralPublicKey,
-                        usedSignedPreKeyId: x3dhResult.usedSignedPreKeyId,
-                        usedOneTimePreKeyId: x3dhResult.usedOneTimePreKeyId
-                    };
-                    setSessionReady(true);
+                const theirBundle = await fetchKeyBundle(targetUser.uid, pubKey);
+                if (!theirBundle) {
+                    // They haven't published a key bundle yet (identity not
+                    // ready on their end). Can't start a session yet.
+                    if (isMounted) setSessionReady(false);
+                    return;
                 }
-                // If we're the recipient, we can't proactively establish anything -
-                // we wait for their first message (which carries the X3DH handshake
-                // header) and establish the session in the incoming-message handler.
+                const myIdentityPriv = e2eeStatus.privateKey!;
+                const x3dhResult = await initiateX3DH(myIdentityPriv, theirBundle);
+                const newState = await initRatchetAsInitiator(x3dhResult.sharedSecret, theirBundle.signedPreKey.publicKey);
+
+                if (!isMounted) return;
+                await updateRatchetState(newState, true);
+                // Stash the ephemeral key + prekey ids so the FIRST message
+                // we send can carry the X3DH handshake header the recipient
+                // needs to derive the same secret (see handleSend).
+                pendingHandshakeRef.current = {
+                    ephemeralPublicKey: x3dhResult.ephemeralPublicKey,
+                    usedSignedPreKeyId: x3dhResult.usedSignedPreKeyId,
+                    usedOneTimePreKeyId: x3dhResult.usedOneTimePreKeyId
+                };
+                setSessionReady(true);
             } catch (err) {
                 console.error('X3DH session negotiation failed:', err);
             }
@@ -939,8 +981,12 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             {/* Private 1v1 Encryption Notice */}
             <div className="px-4 py-1.5 bg-indigo-950/40 border-b border-indigo-500/20 text-center">
                 <span className="text-[10px] text-indigo-300/80 font-medium flex items-center justify-center gap-1">
-                    <Shield className="w-3 h-3 text-emerald-400" />
-                    <span>Real E2EE (X25519 + XSalsa20-Poly1305) • Active</span>
+                    <Shield className={`w-3 h-3 ${ratchetState ? 'text-emerald-400' : 'text-amber-400'}`} />
+                    <span>
+                        {ratchetState
+                            ? 'Real E2EE (X25519 + XSalsa20-Poly1305) • Active'
+                            : 'Establishing secure session...'}
+                    </span>
                 </span>
             </div>
 
