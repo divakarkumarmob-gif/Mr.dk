@@ -175,9 +175,15 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
                         const uData = userSnap.data();
                         otherName = uData.name || uData.displayName || 'NEET Aspirant';
                         otherPhoto = uData.photoURL;
-                        otherBadge = uData.userBadge || uData.role;
-                        isOnline = !!uData.online;
                         lastSeen = uData.lastSeen;
+                        const lastSeenMs = uData.lastSeen ? (
+                            typeof uData.lastSeen === 'number' ? uData.lastSeen :
+                            typeof uData.lastSeen === 'string' ? new Date(uData.lastSeen).getTime() :
+                            uData.lastSeen.toDate ? uData.lastSeen.toDate().getTime() :
+                            uData.lastSeen.seconds ? uData.lastSeen.seconds * 1000 : 0
+                        ) : 0;
+                        const isFresh = lastSeenMs > 0 && (Date.now() - lastSeenMs < 45000);
+                        isOnline = !!(uData.online && isFresh);
                     }
                 } catch (e) {}
 

@@ -7,8 +7,11 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Pressable from './Pressable';
 import PinSetupModal from './e2ee/PinSetupModal';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../lib/firebase';
+import { getUserDevices, revokeDevice, DeviceInfo } from '../utils/e2ee';
+import { removeSession } from '../utils/e2ee/sessionManager';
+import { Smartphone, Laptop, Trash2 } from 'lucide-react';
 
 export default function Profile({ user, onNavigate, onSolverClick, onLogout }: { user: FirebaseUser | null, onNavigate: (view: 'home' | 'study' | 'profile' | 'editProfile' | 'tests' | 'notes' | 'admin' | 'technicalSupport' | 'notesLibrary' | 'mindHack' | 'aiStudyPlan' | 'ncertHub' | 'schoolSearch' | 'about') => void, onSolverClick: () => void, onLogout: () => void }) {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -25,7 +28,54 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
     }, [user]);
 
     const [showPremium, setShowPremium] = useState(false);
+    const [sessions, setSessions] = useState<DeviceInfo[]>([]);
+    const [sessionsLoading, setSessionsLoading] = useState(false);
+    const [revokingSessionId, setRevokingSessionId] = useState<string | null>(null);
     const navigate = useNavigate();
+
+    // Load linked devices/sessions in realtime
+    useEffect(() => {
+        if (!user?.uid) return;
+        setSessionsLoading(true);
+        const unsub = onSnapshot(
+            collection(db, 'users', user.uid, 'sessions'),
+            async (snap) => {
+                const currentDeviceId = sessionStorage.getItem('neet_session_token');
+                const list: DeviceInfo[] = snap.docs.map(d => ({
+                    deviceId: d.id,
+                    deviceName: (d.data().userAgent || '').includes('Android') || (d.data().userAgent || '').includes('iPhone')
+                        ? 'Mobile Device' : 'Desktop/Browser',
+                    userAgent: d.data().userAgent || '',
+                    platform: d.data().deviceType || 'unknown',
+                    registeredAt: d.data().createdAt,
+                    lastActive: d.data().lastActive,
+                    isCurrent: d.id === currentDeviceId
+                }));
+                list.sort((a, b) => (b.isCurrent ? 1 : 0) - (a.isCurrent ? 1 : 0));
+                setSessions(list);
+                setSessionsLoading(false);
+            },
+            () => setSessionsLoading(false)
+        );
+        return () => unsub();
+    }, [user?.uid]);
+
+    const handleRevokeSession = async (deviceId: string, isCurrent: boolean) => {
+        if (!user?.uid) return;
+        setRevokingSessionId(deviceId);
+        try {
+            await revokeDevice(user.uid, deviceId);
+            if (isCurrent) {
+                await removeSession(user.uid);
+                await logOut().catch(console.error);
+                onLogout();
+            }
+        } catch (e) {
+            console.error('Session revoke error:', e);
+        } finally {
+            setRevokingSessionId(null);
+        }
+    };
 
     // E2EE Chat Backup status - identity is already created silently at
     // login; this only tracks whether the user has opted in to an
@@ -403,6 +453,96 @@ export default function Profile({ user, onNavigate, onSolverClick, onLogout }: {
                         <LogOut className="h-4 w-4" /> END SESSION (LOG OUT)
                     </Pressable>
                 </motion.div>
+
+                {/* Active Sessions - Glassy Transparent Panel */}
+                {user && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.25 }}
+                        className="mt-2"
+                    >
+                        <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+                                backdropFilter: 'blur(24px)',
+                                WebkitBackdropFilter: 'blur(24px)'
+                            }}
+                        >
+                            {/* Header */}
+                            <div className="px-4 pt-4 pb-3 border-b border-white/8">
+                                <div className="flex items-center gap-2">
+                                    <div className="p-1.5 rounded-lg bg-indigo-500/15 border border-indigo-500/20">
+                                        <Shield className="w-3.5 h-3.5 text-indigo-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xs font-bold text-white/90 tracking-wide">Active Sessions</h3>
+                                        <p className="text-[10px] text-white/40">Sabhi logged-in devices ({sessions.length}/2)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Sessions List */}
+                            <div className="divide-y divide-white/5">
+                                {sessionsLoading && (
+                                    <div className="px-4 py-4 text-center text-xs text-white/40 animate-pulse">Loading sessions...</div>
+                                )}
+                                {!sessionsLoading && sessions.length === 0 && (
+                                    <div className="px-4 py-4 text-center text-xs text-white/40">Koi active session nahi mili</div>
+                                )}
+                                {sessions.map((sess) => {
+                                    const isMobile = /android|iphone|ipad|mobile/i.test(sess.userAgent || '');
+                                    const isCurrentSess = sess.isCurrent;
+                                    const isRevoking = revokingSessionId === sess.deviceId;
+                                    return (
+                                        <div key={sess.deviceId} className={`flex items-center justify-between px-4 py-3 gap-3 transition-colors ${ isCurrentSess ? 'bg-indigo-500/5' : 'hover:bg-white/3' }`}>
+                                            <div className="flex items-center gap-3 min-w-0">
+                                                <div className={`shrink-0 p-2 rounded-xl border ${ isCurrentSess ? 'bg-indigo-500/15 border-indigo-500/30 text-indigo-400' : 'bg-white/5 border-white/10 text-white/50' }`}>
+                                                    {isMobile
+                                                        ? <Smartphone className="w-3.5 h-3.5" />
+                                                        : <Laptop className="w-3.5 h-3.5" />
+                                                    }
+                                                </div>
+                                                <div className="min-w-0">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <span className="text-xs font-semibold text-white/90 truncate">
+                                                            {isMobile ? '📱 Mobile Device' : '💻 Desktop/Browser'}
+                                                        </span>
+                                                        {isCurrentSess && (
+                                                            <span className="shrink-0 px-1.5 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-[9px] text-indigo-300 font-bold uppercase tracking-wider">This Device</span>
+                                                        )}
+                                                    </div>
+                                                    <p className="text-[10px] text-white/35 mt-0.5 truncate" title={sess.userAgent || ''}>
+                                                        {sess.userAgent ? sess.userAgent.substring(0, 55) + '...' : 'Unknown'}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={() => handleRevokeSession(sess.deviceId, !!isCurrentSess)}
+                                                disabled={isRevoking}
+                                                title={isCurrentSess ? 'Is device se logout ho' : 'Is device ka session revoke karo'}
+                                                className={`shrink-0 p-2 rounded-xl border transition-all active:scale-90 ${ isCurrentSess
+                                                    ? 'bg-red-500/15 border-red-500/30 text-red-400 hover:bg-red-500/25'
+                                                    : 'bg-white/5 border-white/10 text-white/40 hover:bg-red-500/15 hover:border-red-500/30 hover:text-red-400'
+                                                } disabled:opacity-40 disabled:cursor-not-allowed`}
+                                            >
+                                                {isRevoking
+                                                    ? <span className="w-3.5 h-3.5 border-2 border-current border-t-transparent rounded-full animate-spin block" />
+                                                    : <LogOut className="w-3.5 h-3.5" />
+                                                }
+                                            </button>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Footer note */}
+                            <div className="px-4 py-2.5 border-t border-white/5">
+                                <p className="text-[10px] text-white/25 text-center">Maximum 2 devices pe login allowed hai</p>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
 
             </div>
 

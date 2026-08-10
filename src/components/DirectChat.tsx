@@ -537,6 +537,15 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         };
     }, [currentUid]);
 
+    // Mark Parent Chat Read By Current User (Clears Unread Green Dot)
+    useEffect(() => {
+        if (!chatId || !currentUid) return;
+        const chatRef = doc(db, 'directChats', chatId);
+        updateDoc(chatRef, {
+            readBy: arrayUnion(currentUid)
+        }).catch(() => {});
+    }, [chatId, currentUid, messages.length]);
+
     // Blocked User State & Header Profile Modal State
     const [isTargetBlocked, setIsTargetBlocked] = useState<boolean>(false);
     const [showUserProfileModal, setShowUserProfileModal] = useState<boolean>(false);
@@ -548,8 +557,10 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         const unsubscribe = onSnapshot(targetRef, (snapshot) => {
             if (snapshot.exists()) {
                 const data = snapshot.data();
+                const lastSeenMs = getTimestampMs(data.lastSeen);
+                const isFresh = lastSeenMs > 0 && (Date.now() - lastSeenMs < 45000);
                 setPresence({
-                    isOnline: !!data.online,
+                    isOnline: !!(data.online && isFresh),
                     lastSeen: data.lastSeen
                 });
             } else {
@@ -1218,6 +1229,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     lastMessage: '🎵 Voice Note (' + (newMsg.audioDuration || 1) + 's)',
                     lastMessageSenderId: currentUid,
                     lastMessageTimestamp: serverTimestamp(),
+                    readBy: [currentUid],
                     updatedAt: serverTimestamp()
                 }, { merge: true });
             } catch (e) {
@@ -1316,6 +1328,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 lastMessage: textToSend ? (textToSend.length > 30 ? textToSend.substring(0, 30) + '...' : textToSend) : '📷 Photo',
                 lastMessageSenderId: currentUid,
                 lastMessageTimestamp: serverTimestamp(),
+                readBy: [currentUid],
                 updatedAt: serverTimestamp()
             }, { merge: true });
         } catch (e) {

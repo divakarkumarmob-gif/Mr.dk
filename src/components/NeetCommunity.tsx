@@ -188,6 +188,68 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
     // Direct Messages Inbox Page State
     const [showDirectMessagesInbox, setShowDirectMessagesInbox] = useState<boolean>(false);
 
+    // Realtime Unread Messages Green Dot Indicator State & Preferences
+    const [hasUnreadMessages, setHasUnreadMessages] = useState<boolean>(false);
+    const [isUnreadDotDisabled, setIsUnreadDotDisabled] = useState<boolean>(() => {
+        return localStorage.getItem('neet_unread_dot_disabled') === 'true';
+    });
+
+    const dmPressTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Realtime Listener for Unread Chats to Control Green Dot
+    useEffect(() => {
+        const currentUid = auth.currentUser?.uid;
+        if (!currentUid) return;
+
+        const q = query(
+            collection(db, 'directChats'),
+            where('participants', 'array-contains', currentUid)
+        );
+
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            let hasUnread = false;
+            snapshot.docs.forEach(docSnap => {
+                const data = docSnap.data();
+                if (data.lastMessageSenderId && data.lastMessageSenderId !== currentUid) {
+                    const readBy = data.readBy || [];
+                    if (!readBy.includes(currentUid)) {
+                        hasUnread = true;
+                    }
+                }
+            });
+            setHasUnreadMessages(hasUnread);
+        }, (err) => {
+            console.warn("Unread chats check error:", err);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    const handleDmPressStart = () => {
+        dmPressTimerRef.current = setTimeout(() => {
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate(40);
+            }
+            setIsUnreadDotDisabled(prev => {
+                const next = !prev;
+                localStorage.setItem('neet_unread_dot_disabled', String(next));
+                if (next) {
+                    showToast("Green dot notification system disabled 🔕");
+                } else {
+                    showToast("Green dot notification system reactivated 🔔");
+                }
+                return next;
+            });
+        }, 500);
+    };
+
+    const handleDmPressEnd = () => {
+        if (dmPressTimerRef.current) {
+            clearTimeout(dmPressTimerRef.current);
+            dmPressTimerRef.current = null;
+        }
+    };
+
     // Create Room State
     const [roomName, setRoomName] = useState<string>('');
     const [roomTopic, setRoomTopic] = useState<string>('Physics');
@@ -344,6 +406,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             }
             if (activeDirectChatUser) {
                 setActiveDirectChatUser(null);
+                setShowDirectMessagesInbox(true);
                 return true;
             }
             if (showDirectMessagesInbox) {
@@ -1119,7 +1182,15 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Render 1v1 Direct Private Chat View if active
     if (activeDirectChatUser) {
-        return <DirectChat targetUser={activeDirectChatUser} onBack={() => setActiveDirectChatUser(null)} />;
+        return (
+            <DirectChat 
+                targetUser={activeDirectChatUser} 
+                onBack={() => {
+                    setActiveDirectChatUser(null);
+                    setShowDirectMessagesInbox(true);
+                }} 
+            />
+        );
     }
 
     // Render Direct Messages Inbox Page if active
@@ -1654,14 +1725,24 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                 {/* WhatsApp-Style Glassy Direct Messages Floating Button */}
                 <button
+                    onTouchStart={handleDmPressStart}
+                    onTouchEnd={handleDmPressEnd}
+                    onMouseDown={handleDmPressStart}
+                    onMouseUp={handleDmPressEnd}
+                    onContextMenu={(e) => e.preventDefault()}
                     onClick={() => setShowDirectMessagesInbox(true)}
-                    title="Open 1v1 Direct Messages Inbox"
-                    className="relative p-3.5 rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 text-white shadow-2xl shadow-pink-500/50 hover:scale-110 transition active:scale-95 border border-white/30 backdrop-blur-md group overflow-hidden"
+                    title="Open 1v1 Direct Messages Inbox (Tap & Hold to toggle green dot system)"
+                    className="relative p-3.5 rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 text-white shadow-2xl shadow-pink-500/50 hover:scale-110 transition active:scale-95 border border-white/30 backdrop-blur-md group overflow-hidden select-none"
                 >
                     <MessageSquare className="w-6 h-6 text-white" />
-                    {/* Glowing Ping Dot Badge */}
-                    <span className="absolute top-1 right-1 w-3 h-3 rounded-full bg-pink-400 border-2 border-[#070b14] shadow-md animate-ping" />
-                    <span className="absolute top-1 right-1 w-3 h-3 rounded-full bg-pink-500 border-2 border-[#070b14] shadow-md" />
+                    
+                    {/* Realtime WhatsApp Green Unread Dot Indicator */}
+                    {hasUnreadMessages && !isUnreadDotDisabled && (
+                        <>
+                            <span className="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-[#25D366] border-2 border-[#070b14] shadow-md animate-ping" />
+                            <span className="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-[#25D366] border-2 border-[#070b14] shadow-md" />
+                        </>
+                    )}
                 </button>
 
                 <button

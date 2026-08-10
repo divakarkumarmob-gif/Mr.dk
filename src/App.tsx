@@ -36,6 +36,7 @@ import { useAuth } from './contexts/AuthContext';
 import { useRouteBackButton } from './lib/useRouteBackButton';
 import { processHardwareBackButton, useModalBackButton } from './utils/hardwareBackButton';
 import { ensureSilentIdentity } from './utils/e2ee';
+import { registerSession, watchSessionValidity, removeSession } from './utils/e2ee/sessionManager';
 
 import Login from './components/Login';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1081,6 +1082,8 @@ function AppInner() {
   const [displayedText, setDisplayedText] = useState("");
   const [backPressCount, setBackPressCount] = useState(0);
   const [showExitToast, setShowExitToast] = useState(false);
+  const [forcedLoggedOut, setForcedLoggedOut] = useState(false);
+  const sessionWatcherUnsubRef = useRef<(() => void) | null>(null);
   const [isTyping, setIsTyping] = useState(false);
   
   useEffect(() => {
@@ -1672,6 +1675,11 @@ function AppInner() {
           // Clear cached auth & subjects on logout
           localStorage.removeItem('neetmaster_cached_user');
           localStorage.removeItem('neetmaster_cached_subjects');
+          // Stop session watcher
+          if (sessionWatcherUnsubRef.current) {
+              sessionWatcherUnsubRef.current();
+              sessionWatcherUnsubRef.current = null;
+          }
       } else {
           // Silently generate this user's E2EE identity (X25519 + Ed25519
           // keypairs, X3DH key bundle) if they don't already have one -
@@ -1681,6 +1689,22 @@ function AppInner() {
           // the optional encrypted backup, handled separately in Settings).
           ensureSilentIdentity(currentUser.uid).catch(err => {
               console.error('Failed to ensure E2EE identity at login:', err);
+          });
+
+          // Register this session & start session watcher (max 2 devices)
+          registerSession(currentUser.uid).catch(err => {
+              console.warn('Session registration error:', err);
+          });
+
+          // Watch for forced logout (session evicted by a newer login)
+          if (sessionWatcherUnsubRef.current) {
+              sessionWatcherUnsubRef.current();
+          }
+          sessionWatcherUnsubRef.current = watchSessionValidity(currentUser.uid, () => {
+              setForcedLoggedOut(true);
+              setUser(null);
+              localStorage.removeItem('neetmaster_cached_user');
+              localStorage.removeItem('neetmaster_cached_subjects');
           });
 
           // Cache auth for instant startup next time
@@ -1872,6 +1896,32 @@ function AppInner() {
   // This prevents the Login page from flashing for already-logged-in users.
   if (loading) {
     return <div className="fixed inset-0 bg-[#0a0f24]" />;
+  }
+
+  // Forced logout modal — shown when this session was evicted by a newer login elsewhere
+  if (forcedLoggedOut) {
+    return (
+      <div className="fixed inset-0 bg-[#060a15] flex flex-col items-center justify-center p-6 z-[9999]">
+        <div className="w-full max-w-xs bg-[#0f1829] border border-red-500/40 rounded-3xl p-7 text-center shadow-2xl space-y-5">
+          <div className="mx-auto w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center border border-red-500/30">
+            <span className="text-3xl">🔐</span>
+          </div>
+          <div>
+            <h2 className="text-white font-bold text-lg mb-1">Session Expired</h2>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Kisi aur device par login hone ki wajah se ye session automatically logout ho gaya.<br/>
+              <span className="text-red-400 font-semibold">Max 2 devices allowed.</span>
+            </p>
+          </div>
+          <button
+            onClick={() => { setForcedLoggedOut(false); setUser(null); }}
+            className="w-full py-3 rounded-2xl bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold text-sm shadow-lg shadow-red-500/30 hover:brightness-110 transition active:scale-95"
+          >
+            Login Again
+          </button>
+        </div>
+      </div>
+    );
   }
 
   if (!user && currentView === 'home' && !showLoginFromLanding && !Capacitor.isNativePlatform()) {
