@@ -14,6 +14,7 @@ import { enableScreenshot, disableScreenshot } from '../utils/screenSecurity';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import StudyRoomChat, { StudyRoom, RoomMode } from './StudyRoomChat';
 import DirectChat, { DirectUser } from './DirectChat';
+import DirectMessagesInbox from './DirectMessagesInbox';
 import imageCompression from 'browser-image-compression';
 import { encryptMessagePayload, decryptMessagePayload, encryptText, decryptText } from '../utils/encryption';
 
@@ -74,6 +75,9 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Active 1v1 Direct Chat User State
     const [activeDirectChatUser, setActiveDirectChatUser] = useState<DirectUser | null>(null);
+
+    // Direct Messages Inbox Page State
+    const [showDirectMessagesInbox, setShowDirectMessagesInbox] = useState<boolean>(false);
 
     // Create Room State
     const [roomName, setRoomName] = useState<string>('');
@@ -233,6 +237,10 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                 setActiveDirectChatUser(null);
                 return true;
             }
+            if (showDirectMessagesInbox) {
+                setShowDirectMessagesInbox(false);
+                return true;
+            }
             if (activeRoom) {
                 setActiveRoom(null);
                 return true;
@@ -242,7 +250,7 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         });
 
         return unregister;
-    }, [longPressedPost, showReportModal, selectedUserProfile, showCreateRoomModal, showCreateModal, activeMedia, activeDirectChatUser, activeRoom, onBack]);
+    }, [longPressedPost, showReportModal, selectedUserProfile, showCreateRoomModal, showCreateModal, activeMedia, activeDirectChatUser, showDirectMessagesInbox, activeRoom, onBack]);
 
     // Real-time Firestore listener for Community Posts + Local Merge
     useEffect(() => {
@@ -1005,6 +1013,19 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
         return <DirectChat targetUser={activeDirectChatUser} onBack={() => setActiveDirectChatUser(null)} />;
     }
 
+    // Render Direct Messages Inbox Page if active
+    if (showDirectMessagesInbox) {
+        return (
+            <DirectMessagesInbox 
+                onBack={() => setShowDirectMessagesInbox(false)}
+                onSelectUser={(user) => {
+                    setShowDirectMessagesInbox(false);
+                    setActiveDirectChatUser(user);
+                }}
+            />
+        );
+    }
+
     return (
         <motion.div 
             initial={{ opacity: 0 }}
@@ -1521,6 +1542,18 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                     className="p-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-xl shadow-emerald-500/30 hover:scale-110 transition active:scale-95 border border-emerald-400/40"
                 >
                     <DoorOpen className="w-6 h-6 text-white" />
+                </button>
+
+                {/* WhatsApp-Style Glassy Direct Messages Floating Button */}
+                <button
+                    onClick={() => setShowDirectMessagesInbox(true)}
+                    title="Open 1v1 Direct Messages Inbox"
+                    className="relative p-3.5 rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-blue-600 text-white shadow-2xl shadow-pink-500/50 hover:scale-110 transition active:scale-95 border border-white/30 backdrop-blur-md group overflow-hidden"
+                >
+                    <MessageSquare className="w-6 h-6 text-white" />
+                    {/* Glowing Ping Dot Badge */}
+                    <span className="absolute top-1 right-1 w-3 h-3 rounded-full bg-pink-400 border-2 border-[#070b14] shadow-md animate-ping" />
+                    <span className="absolute top-1 right-1 w-3 h-3 rounded-full bg-pink-500 border-2 border-[#070b14] shadow-md" />
                 </button>
 
                 <button

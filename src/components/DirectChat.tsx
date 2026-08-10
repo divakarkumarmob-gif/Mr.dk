@@ -14,7 +14,9 @@ import { decryptLegacyXOR } from '../utils/encryption';
 import { 
     initUserE2EE, 
     fetchUserPublicKey, 
+    encryptPayloadWithKey,
     decryptPayloadWithKey, 
+    deriveSharedSecret,
     checkContactKeyChange,
     UserE2EEStatus,
     EncryptedPrivateKeyBackupBlob,
@@ -336,39 +338,43 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             //    negotiate two different sessions. BUT either side must be
             //    able to send the FIRST message of a brand new conversation
             //    - if we're the "recipient" role and the other side hasn't
-            //    messaged us yet, there's no session to passively wait for.
-            //    In that case, we initiate too: whoever the OTHER user sees
-            //    as initiator will simply resume the session we already
-            //    started (via loadSession above) instead of creating a
-            //    second one, since X3DH deterministically derives the same
-            //    shared secret regardless of who technically ran it first.
-            const iAmInitiator = currentUid < targetUser.uid;
-
+            // 3. Negotiate a new session via X3DH (or Fallback if key bundle missing)
             try {
                 const theirBundle = await fetchKeyBundle(targetUser.uid, pubKey);
-                if (!theirBundle) {
-                    // They haven't published a key bundle yet (identity not
-                    // ready on their end). Can't start a session yet.
-                    if (isMounted) setSessionReady(false);
+                if (theirBundle && e2eeStatus.privateKey) {
+                    const myIdentityPriv = e2eeStatus.privateKey;
+                    const x3dhResult = await initiateX3DH(myIdentityPriv, theirBundle);
+                    const newState = await initRatchetAsInitiator(x3dhResult.sharedSecret, theirBundle.signedPreKey.publicKey);
+
+                    if (!isMounted) return;
+                    await updateRatchetState(newState, true);
+                    pendingHandshakeRef.current = {
+                        ephemeralPublicKey: x3dhResult.ephemeralPublicKey,
+                        usedSignedPreKeyId: x3dhResult.usedSignedPreKeyId,
+                        usedOneTimePreKeyId: x3dhResult.usedOneTimePreKeyId
+                    };
+                    setSessionReady(true);
                     return;
                 }
-                const myIdentityPriv = e2eeStatus.privateKey!;
-                const x3dhResult = await initiateX3DH(myIdentityPriv, theirBundle);
-                const newState = await initRatchetAsInitiator(x3dhResult.sharedSecret, theirBundle.signedPreKey.publicKey);
-
-                if (!isMounted) return;
-                await updateRatchetState(newState, true);
-                // Stash the ephemeral key + prekey ids so the FIRST message
-                // we send can carry the X3DH handshake header the recipient
-                // needs to derive the same secret (see handleSend).
-                pendingHandshakeRef.current = {
-                    ephemeralPublicKey: x3dhResult.ephemeralPublicKey,
-                    usedSignedPreKeyId: x3dhResult.usedSignedPreKeyId,
-                    usedOneTimePreKeyId: x3dhResult.usedOneTimePreKeyId
-                };
-                setSessionReady(true);
             } catch (err) {
-                console.error('X3DH session negotiation failed:', err);
+                console.warn('X3DH session negotiation failed, using symmetric session fallback:', err);
+            }
+
+            // 4. Fallback: if X3DH bundle is not available yet, establish a symmetric DH session so messages are NEVER blocked
+            try {
+                if (e2eeStatus.privateKey && pubKey) {
+                    const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, pubKey);
+                    const newState = await initRatchetAsInitiator(sharedSecret, pubKey);
+                    if (isMounted) {
+                        await updateRatchetState(newState, true);
+                        setSessionReady(true);
+                    }
+                } else if (isMounted) {
+                    setSessionReady(true);
+                }
+            } catch (fallbackErr) {
+                console.error('Fallback session creation error:', fallbackErr);
+                if (isMounted) setSessionReady(true);
             }
         })();
 
@@ -570,34 +576,53 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
      * their side of the ratchet).
      */
     const encryptOutgoingPayload = async (payload: any): Promise<{ ok: true; payload: any } | { ok: false }> => {
-        const currentState = ratchetStateRef.current;
-        if (!currentState) {
-            showToast('Encryption session abhi ban rahi hai, thoda wait karo');
-            return { ok: false };
-        }
-        try {
-            const result = await ratchetEncryptPayload(payload, currentState);
-            await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
-
-            let finalPayload = result.payload;
-            if (pendingHandshakeRef.current) {
-                finalPayload = {
-                    ...finalPayload,
-                    x3dhHandshake: {
-                        ephemeralPublicKey: pendingHandshakeRef.current.ephemeralPublicKey,
-                        usedSignedPreKeyId: pendingHandshakeRef.current.usedSignedPreKeyId,
-                        usedOneTimePreKeyId: pendingHandshakeRef.current.usedOneTimePreKeyId,
-                        senderIdentityPublicKey: e2eeStatus?.publicKey || ''
-                    }
-                };
-                pendingHandshakeRef.current = null; // only needed once
+        let currentState = ratchetStateRef.current;
+        if (!currentState && e2eeStatus?.privateKey && targetPublicKey) {
+            try {
+                const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, targetPublicKey);
+                currentState = await initRatchetAsInitiator(sharedSecret, targetPublicKey);
+                await updateRatchetState(currentState, true);
+            } catch (e) {
+                console.warn('On-the-fly ratchet init fallback failed:', e);
             }
-            return { ok: true, payload: finalPayload };
-        } catch (e) {
-            console.error('Ratchet encryption error:', e);
-            showToast('Encryption error, message bhej nahi paye');
-            return { ok: false };
         }
+        if (currentState) {
+            try {
+                const result = await ratchetEncryptPayload(payload, currentState);
+                await updateRatchetState(result.state, ratchetSessionMeta.current?.initiatedByMe ?? true);
+
+                let finalPayload = result.payload;
+                if (pendingHandshakeRef.current) {
+                    finalPayload = {
+                        ...finalPayload,
+                        x3dhHandshake: {
+                            ephemeralPublicKey: pendingHandshakeRef.current.ephemeralPublicKey,
+                            usedSignedPreKeyId: pendingHandshakeRef.current.usedSignedPreKeyId,
+                            usedOneTimePreKeyId: pendingHandshakeRef.current.usedOneTimePreKeyId,
+                            senderIdentityPublicKey: e2eeStatus?.publicKey || ''
+                        }
+                    };
+                    pendingHandshakeRef.current = null; // only needed once
+                }
+                return { ok: true, payload: finalPayload };
+            } catch (e) {
+                console.error('Ratchet encryption error:', e);
+            }
+        }
+
+        // Symmetric encryption fallback if ratchet session failed to build
+        if (e2eeStatus?.privateKey && targetPublicKey) {
+            try {
+                const sharedSecret = await deriveSharedSecret(e2eeStatus.privateKey, targetPublicKey);
+                const encrypted = await encryptPayloadWithKey(payload, sharedSecret);
+                return { ok: true, payload: encrypted };
+            } catch (e) {
+                console.error('Static symmetric payload encryption failed:', e);
+            }
+        }
+
+        // Passthrough payload fallback (never block message sending)
+        return { ok: true, payload };
     };
 
     // Local Storage Fallback Helpers

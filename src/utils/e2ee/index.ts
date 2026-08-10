@@ -5,7 +5,7 @@ import { restorePrivateKeyFromBlob, EncryptedPrivateKeyBackupBlob } from './back
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { registerDeviceInFirestore } from './deviceManagement';
-import { setLocalIdentitySignKeyPair, publishKeyBundle } from './x3dh';
+import { setLocalIdentitySignKeyPair, publishKeyBundle, getLocalIdentitySignPublicKey, ensureKeyBundleFresh } from './x3dh';
 import {
     RatchetState,
     EncryptedRatchetMessage,
@@ -97,7 +97,11 @@ export async function ensureSilentIdentity(uid: string): Promise<void> {
 
         const localPrivKey = await getLocalPrivateKey(uid);
         const localPubKey = await getLocalPublicKey(uid);
+        const localSignPub = await getLocalIdentitySignPublicKey(uid);
         if (localPrivKey && localPubKey) {
+            if (localSignPub) {
+                ensureKeyBundleFresh(uid, localPubKey, localSignPub).catch(() => {});
+            }
             return; // already have an identity on this device
         }
 
