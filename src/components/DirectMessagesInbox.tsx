@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
     ArrowLeft, Search, MessageSquare, Shield, CheckCheck, Check, 
-    Circle, Sparkles, User, Image as ImageIcon, Mic, X, Filter, UserPlus
+    Circle, Sparkles, User, Image as ImageIcon, Mic, X, Filter, UserPlus,
+    Volume2, VolumeX, BellOff, Trash2, Ban, UserX, CheckCircle2, MoreVertical
 } from 'lucide-react';
-import { collection, onSnapshot, query, where, orderBy, limit, doc, getDoc, getDocs } from 'firebase/firestore';
+import { collection, onSnapshot, query, where, orderBy, limit, doc, getDoc, getDocs, deleteDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
+import { showToast } from '../utils/toast';
 import { registerBackButtonHandler } from '../utils/hardwareBackButton';
 import { DirectUser } from './DirectChat';
 
@@ -42,6 +44,91 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
 
     const currentUser = auth.currentUser;
     const currentUid = currentUser?.uid || '';
+
+    // Long Press Context Menu & Mute States
+    const [selectedChatMenu, setSelectedChatMenu] = useState<ChatConversation | null>(null);
+    const [mutedUserIds, setMutedUserIds] = useState<Set<string>>(new Set());
+
+    const chatPressTimerRef = React.useRef<NodeJS.Timeout | null>(null);
+
+    const handleChatPressStart = (chat: ChatConversation) => {
+        chatPressTimerRef.current = setTimeout(() => {
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate(35);
+            }
+            setSelectedChatMenu(chat);
+        }, 450);
+    };
+
+    const handleChatPressEnd = () => {
+        if (chatPressTimerRef.current) {
+            clearTimeout(chatPressTimerRef.current);
+            chatPressTimerRef.current = null;
+        }
+    };
+
+    // Realtime Listener for Muted Chats Subcollection
+    useEffect(() => {
+        if (!currentUid) return;
+        const mutedRef = collection(db, 'users', currentUid, 'mutedChats');
+        const unsubscribe = onSnapshot(mutedRef, (snapshot) => {
+            const set = new Set<string>();
+            snapshot.docs.forEach(d => set.add(d.id));
+            setMutedUserIds(set);
+        }, (err) => {
+            console.warn("Muted chats listener error:", err);
+        });
+        return () => unsubscribe();
+    }, [currentUid]);
+
+    // Toggle Mute / Unmute Chat Notifications
+    const handleToggleMuteChat = async (targetUid: string, targetName: string) => {
+        if (!currentUid) return;
+        const isMuted = mutedUserIds.has(targetUid);
+        const muteDocRef = doc(db, 'users', currentUid, 'mutedChats', targetUid);
+
+        try {
+            if (isMuted) {
+                await deleteDoc(muteDocRef);
+                showToast(`${targetName} unmuted 🔔`);
+            } else {
+                await setDoc(muteDocRef, { mutedAt: serverTimestamp() });
+                showToast(`${targetName} muted for notifications 🔕`);
+            }
+            setSelectedChatMenu(null);
+        } catch (e) {
+            console.error("Mute toggle error:", e);
+            showToast("Failed to update mute status");
+        }
+    };
+
+    // Block User
+    const handleBlockUserFromInbox = async (targetUid: string, targetName: string) => {
+        if (!currentUid) return;
+        try {
+            const blockRef = doc(db, 'users', currentUid, 'blockedUsers', targetUid);
+            await setDoc(blockRef, { blockedAt: serverTimestamp() });
+            showToast(`${targetName} blocked 🚫`);
+            setSelectedChatMenu(null);
+        } catch (e) {
+            console.error("Block user error:", e);
+            showToast("Failed to block user");
+        }
+    };
+
+    // Delete Chat
+    const handleDeleteChat = async (chatId: string, targetName: string) => {
+        if (!currentUid || !chatId) return;
+        try {
+            await deleteDoc(doc(db, 'directChats', chatId));
+            setConversations(prev => prev.filter(c => c.chatId !== chatId));
+            showToast(`Chat with ${targetName} deleted 🗑️`);
+            setSelectedChatMenu(null);
+        } catch (e) {
+            console.error("Delete chat error:", e);
+            showToast("Failed to delete chat");
+        }
+    };
 
     // Register Android hardware back button
     useEffect(() => {
@@ -259,10 +346,7 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
                     </button>
                     <div>
                         <h1 className="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-2">
-                            <span>1v1 Direct Messages</span>
-                            <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-pink-500/20 to-red-500/20 border border-pink-500/40 text-pink-300 text-[10px] font-extrabold uppercase">
-                                WhatsApp Glassy UI
-                            </span>
+                            <span>Chat List</span>
                         </h1>
                         <p className="text-xs text-blue-300/70 flex items-center gap-1">
                             <Shield className="w-3 h-3 text-emerald-400" />
@@ -367,13 +451,21 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
                                 key={chat.chatId}
                                 whileHover={{ scale: 1.01 }}
                                 whileTap={{ scale: 0.99 }}
+                                onTouchStart={() => handleChatPressStart(chat)}
+                                onTouchEnd={handleChatPressEnd}
+                                onMouseDown={() => handleChatPressStart(chat)}
+                                onMouseUp={handleChatPressEnd}
+                                onContextMenu={(e) => {
+                                    e.preventDefault();
+                                    setSelectedChatMenu(chat);
+                                }}
                                 onClick={() => onSelectUser({
                                     uid: chat.otherUid,
                                     name: chat.otherName,
                                     photoURL: chat.otherPhoto,
                                     badge: chat.otherBadge
                                 })}
-                                className="group relative p-3.5 rounded-2xl bg-[#0c1324]/70 hover:bg-[#111b33]/90 border border-white/10 hover:border-pink-500/40 transition-all duration-200 shadow-lg cursor-pointer backdrop-blur-xl flex items-center justify-between gap-3 overflow-hidden"
+                                className="group relative p-3.5 rounded-2xl bg-[#0c1324]/70 hover:bg-[#111b33]/90 border border-white/10 hover:border-pink-500/40 transition-all duration-200 shadow-lg cursor-pointer backdrop-blur-xl flex items-center justify-between gap-3 overflow-hidden select-none"
                             >
                                 {/* Left Side: Glowing Ambient Hover Accent Line */}
                                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-red-500 via-pink-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -397,8 +489,11 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
                                 {/* Center: User Name, Badge & Last Message Snippet */}
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center gap-2 mb-0.5">
-                                        <h3 className="text-xs sm:text-sm font-bold text-white truncate group-hover:text-pink-300 transition">
-                                            {chat.otherName}
+                                        <h3 className="text-xs sm:text-sm font-bold text-white truncate group-hover:text-pink-300 transition flex items-center gap-1.5">
+                                            <span>{chat.otherName}</span>
+                                            {mutedUserIds.has(chat.otherUid) && (
+                                                <BellOff className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                                            )}
                                         </h3>
                                         <span className="px-2 py-0.2 rounded-full bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30 shrink-0">
                                             {chat.otherBadge || 'NEET Aspirant'}
@@ -408,9 +503,9 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
                                     <div className="flex items-center gap-1 text-xs text-slate-300/80 truncate">
                                         {isMyLastMessage && (
                                             chat.lastMessageStatus === 'read' ? (
-                                                <CheckCheck className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                                                <CheckCheck className="w-3.5 h-3.5 text-[#34B7F1] shrink-0 stroke-[2.5]" />
                                             ) : (
-                                                <Check className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                                                <CheckCheck className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                                             )
                                         )}
 
@@ -517,6 +612,88 @@ export default function DirectMessagesInbox({ onBack, onSelectUser }: DirectMess
                                         </div>
                                     ))
                                 )}
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* WhatsApp Style Glassy Chat Action Popup Modal */}
+            <AnimatePresence>
+                {selectedChatMenu && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+                        onClick={() => setSelectedChatMenu(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 10 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 10 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-xs bg-[#0c1222]/95 border border-white/20 rounded-3xl p-4 shadow-2xl space-y-2 text-white backdrop-blur-xl"
+                        >
+                            <div className="flex items-center gap-3 border-b border-white/10 pb-3">
+                                <div className="w-10 h-10 rounded-xl overflow-hidden bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-300 font-bold text-sm shrink-0">
+                                    {selectedChatMenu.otherPhoto ? (
+                                        <img src={selectedChatMenu.otherPhoto} alt={selectedChatMenu.otherName} className="w-full h-full object-cover" />
+                                    ) : (
+                                        selectedChatMenu.otherName.substring(0, 1).toUpperCase()
+                                    )}
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                    <h4 className="font-bold text-sm text-white truncate">{selectedChatMenu.otherName}</h4>
+                                    <p className="text-[11px] text-slate-400 truncate">{selectedChatMenu.otherBadge || 'NEET Aspirant'}</p>
+                                </div>
+                                <button onClick={() => setSelectedChatMenu(null)} className="p-1 rounded-full text-slate-400 hover:text-white">
+                                    <X className="w-4 h-4" />
+                                </button>
+                            </div>
+
+                            <div className="space-y-1 pt-1">
+                                {/* Mute Notifications Toggle */}
+                                <button
+                                    onClick={() => handleToggleMuteChat(selectedChatMenu.otherUid, selectedChatMenu.otherName)}
+                                    className="w-full px-4 py-3 rounded-2xl hover:bg-white/10 transition flex items-center justify-between text-xs font-semibold"
+                                >
+                                    <span className="flex items-center gap-3 text-amber-300">
+                                        {mutedUserIds.has(selectedChatMenu.otherUid) ? (
+                                            <>
+                                                <Volume2 className="w-4 h-4 text-emerald-400" />
+                                                <span>Unmute Notifications</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <BellOff className="w-4 h-4 text-amber-400" />
+                                                <span>Mute Notifications</span>
+                                            </>
+                                        )}
+                                    </span>
+                                </button>
+
+                                {/* Block User */}
+                                <button
+                                    onClick={() => handleBlockUserFromInbox(selectedChatMenu.otherUid, selectedChatMenu.otherName)}
+                                    className="w-full px-4 py-3 rounded-2xl hover:bg-white/10 transition flex items-center justify-between text-xs font-semibold"
+                                >
+                                    <span className="flex items-center gap-3 text-red-300">
+                                        <Ban className="w-4 h-4 text-red-400" />
+                                        <span>Block {selectedChatMenu.otherName}</span>
+                                    </span>
+                                </button>
+
+                                {/* Delete Chat */}
+                                <button
+                                    onClick={() => handleDeleteChat(selectedChatMenu.chatId, selectedChatMenu.otherName)}
+                                    className="w-full px-4 py-3 rounded-2xl hover:bg-red-500/20 text-red-400 transition flex items-center justify-between text-xs font-bold border-t border-white/10 mt-1"
+                                >
+                                    <span className="flex items-center gap-3">
+                                        <Trash2 className="w-4 h-4 text-red-400" />
+                                        <span>Delete Chat</span>
+                                    </span>
+                                </button>
                             </div>
                         </motion.div>
                     </motion.div>

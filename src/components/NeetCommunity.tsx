@@ -6,7 +6,7 @@ import {
     Share2, UserCheck, MessageCircle, AlertCircle, FileText, Upload, Camera, Eye, 
     CornerDownRight, DoorOpen, Radio, Home, Flag, Download
 } from 'lucide-react';
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, arrayUnion, arrayRemove, deleteDoc, increment, where, getDoc } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { showToast } from '../utils/toast';
 import { saveMediaToGallery } from '../utils/saveMediaToGallery';
@@ -75,6 +75,115 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
     // Active 1v1 Direct Chat User State
     const [activeDirectChatUser, setActiveDirectChatUser] = useState<DirectUser | null>(null);
+
+    // Floating Direct Message Push Notification Banner State
+    const [chatNotification, setChatNotification] = useState<{
+        senderId: string;
+        senderName: string;
+        senderPhoto?: string;
+        senderBadge?: string;
+        messageText: string;
+        timestamp: number;
+    } | null>(null);
+
+    const initialNotifLoadRef = useRef<boolean>(true);
+    const activeChatUserRef = useRef<DirectUser | null>(null);
+    useEffect(() => {
+        activeChatUserRef.current = activeDirectChatUser;
+    }, [activeDirectChatUser]);
+
+    // Listen for Incoming 1v1 Direct Messages for Floating Push Banner
+    useEffect(() => {
+        const currentUid = auth.currentUser?.uid;
+        if (!currentUid) return;
+
+        const q = query(
+            collection(db, 'directChats'),
+            where('participants', 'array-contains', currentUid)
+        );
+
+        let previousChatData = new Map<string, any>();
+
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            if (initialNotifLoadRef.current) {
+                snapshot.docs.forEach(d => {
+                    const data = d.data();
+                    previousChatData.set(d.id, data);
+                });
+                initialNotifLoadRef.current = false;
+                return;
+            }
+
+            snapshot.docChanges().forEach(async (change) => {
+                if (change.type === 'modified' || change.type === 'added') {
+                    const data = change.doc.data();
+                    const prev = previousChatData.get(change.doc.id);
+
+                    const lastSenderId = data.lastMessageSenderId;
+                    const isNewMessage = lastSenderId && lastSenderId !== currentUid && (!prev || prev.lastMessageTimestamp !== data.lastMessageTimestamp);
+
+                    previousChatData.set(change.doc.id, data);
+
+                    if (isNewMessage && activeChatUserRef.current?.uid !== lastSenderId) {
+                        // Check if sender is muted
+                        try {
+                            const muteSnap = await getDoc(doc(db, 'users', currentUid, 'mutedChats', lastSenderId));
+                            if (muteSnap.exists()) {
+                                return; // Muted chat: skip notification
+                            }
+                        } catch (e) {}
+
+                        let senderName = 'New Message';
+                        let senderPhoto = undefined;
+                        let senderBadge = undefined;
+
+                        try {
+                            const senderSnap = await getDoc(doc(db, 'users', lastSenderId));
+                            if (senderSnap.exists()) {
+                                const sData = senderSnap.data();
+                                senderName = sData.name || sData.displayName || 'User';
+                                senderPhoto = sData.photoURL;
+                                senderBadge = sData.badge;
+                            }
+                        } catch (e) {}
+
+                        const msgText = data.lastMessage || 'Sent a message';
+
+                        setChatNotification({
+                            senderId: lastSenderId,
+                            senderName,
+                            senderPhoto,
+                            senderBadge,
+                            messageText: msgText,
+                            timestamp: Date.now()
+                        });
+
+                        if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
+                            try {
+                                new Notification(senderName, {
+                                    body: msgText,
+                                    icon: senderPhoto || '/icon.png'
+                                });
+                            } catch (e) {}
+                        }
+                    }
+                }
+            });
+        }, (err) => {
+            console.warn("Direct message notification listener error:", err);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    // Auto-dismiss floating push banner after 6s
+    useEffect(() => {
+        if (!chatNotification) return;
+        const timer = setTimeout(() => {
+            setChatNotification(null);
+        }, 6000);
+        return () => clearTimeout(timer);
+    }, [chatNotification]);
 
     // Direct Messages Inbox Page State
     const [showDirectMessagesInbox, setShowDirectMessagesInbox] = useState<boolean>(false);
@@ -1019,7 +1128,6 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
             <DirectMessagesInbox 
                 onBack={() => setShowDirectMessagesInbox(false)}
                 onSelectUser={(user) => {
-                    setShowDirectMessagesInbox(false);
                     setActiveDirectChatUser(user);
                 }}
             />
@@ -1972,29 +2080,38 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
 
                             {/* Actions: Send Message & Report User */}
                             <div className="space-y-2 pt-2 border-t border-white/10">
-                                <button
-                                    onClick={() => {
-                                        setActiveDirectChatUser({
-                                            uid: selectedUserProfile.userId,
-                                            name: selectedUserProfile.userName,
-                                            photoURL: selectedUserProfile.userPhoto,
-                                            badge: selectedUserProfile.userBadge
-                                        });
-                                        setSelectedUserProfile(null);
-                                    }}
-                                    className="w-full py-2.5 rounded-xl bg-indigo-500 font-bold text-xs text-white hover:bg-indigo-600 transition flex items-center justify-center gap-2"
-                                >
-                                    <MessageSquare className="w-4 h-4" />
-                                    <span>Send Direct Message (1v1 Private Chat)</span>
-                                </button>
+                                {selectedUserProfile.userId !== auth.currentUser?.uid ? (
+                                    <>
+                                        <button
+                                            onClick={() => {
+                                                setActiveDirectChatUser({
+                                                    uid: selectedUserProfile.userId,
+                                                    name: selectedUserProfile.userName,
+                                                    photoURL: selectedUserProfile.userPhoto,
+                                                    badge: selectedUserProfile.userBadge
+                                                });
+                                                setSelectedUserProfile(null);
+                                            }}
+                                            className="w-full py-2.5 rounded-xl bg-indigo-500 font-bold text-xs text-white hover:bg-indigo-600 transition flex items-center justify-center gap-2"
+                                        >
+                                            <MessageSquare className="w-4 h-4" />
+                                            <span>Send Direct Message (1v1 Private Chat)</span>
+                                        </button>
 
-                                <button
-                                    onClick={() => setShowReportModal(true)}
-                                    className="w-full py-2.5 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400 font-bold text-xs hover:bg-red-500/30 transition flex items-center justify-center gap-2"
-                                >
-                                    <Flag className="w-4 h-4 text-red-400" />
-                                    <span>Report User to Real App Admin</span>
-                                </button>
+                                        <button
+                                            onClick={() => setShowReportModal(true)}
+                                            className="w-full py-2.5 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400 font-bold text-xs hover:bg-red-500/30 transition flex items-center justify-center gap-2"
+                                        >
+                                            <Flag className="w-4 h-4 text-red-400" />
+                                            <span>Report User to Real App Admin</span>
+                                        </button>
+                                    </>
+                                ) : (
+                                    <div className="py-2.5 px-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold text-center flex items-center justify-center gap-1.5">
+                                        <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                                        <span>This is Your Profile</span>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     </motion.div>
@@ -2211,6 +2328,69 @@ export default function NeetCommunity({ onBack }: NeetCommunityProps) {
                                 <span>Copy Error Details to Clipboard</span>
                             </button>
                         </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Interactive Floating Incoming Direct Message Notification Banner */}
+            <AnimatePresence>
+                {chatNotification && (
+                    <motion.div
+                        initial={{ y: -100, opacity: 0, scale: 0.95 }}
+                        animate={{ y: 0, opacity: 1, scale: 1 }}
+                        exit={{ y: -100, opacity: 0, scale: 0.95 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                        onClick={() => {
+                            setActiveDirectChatUser({
+                                uid: chatNotification.senderId,
+                                name: chatNotification.senderName,
+                                photoURL: chatNotification.senderPhoto,
+                                badge: chatNotification.senderBadge
+                            });
+                            setChatNotification(null);
+                        }}
+                        className="fixed top-3 left-3 right-3 z-[100] max-w-md mx-auto cursor-pointer"
+                    >
+                        <div className="bg-[#0c1222]/95 backdrop-blur-xl border border-indigo-500/40 rounded-2xl p-3 shadow-2xl shadow-indigo-500/30 flex items-center justify-between gap-3 text-white ring-1 ring-white/10">
+                            <div className="flex items-center gap-3 min-w-0 flex-1">
+                                <div className="relative shrink-0">
+                                    <div className="w-11 h-11 rounded-full overflow-hidden border border-white/20 bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white shadow-md">
+                                        {chatNotification.senderPhoto ? (
+                                            <img src={chatNotification.senderPhoto} alt={chatNotification.senderName} className="w-full h-full object-cover" />
+                                        ) : (
+                                            chatNotification.senderName ? chatNotification.senderName.charAt(0).toUpperCase() : 'U'
+                                        )}
+                                    </div>
+                                    <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-[#25D366] border-2 border-[#0c1222]" />
+                                </div>
+
+                                <div className="min-w-0 flex-1">
+                                    <div className="flex items-center gap-1.5">
+                                        <h4 className="font-bold text-xs sm:text-sm text-white truncate">
+                                            {chatNotification.senderName}
+                                        </h4>
+                                        <span className="px-1.5 py-0.2 rounded-full bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30 shrink-0">
+                                            💬 New Message
+                                        </span>
+                                    </div>
+                                    <p className="text-xs text-white/80 truncate mt-0.5 font-medium">
+                                        {chatNotification.messageText}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-1 shrink-0">
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setChatNotification(null);
+                                    }}
+                                    className="p-1.5 rounded-full hover:bg-white/10 text-white/50 hover:text-white transition"
+                                >
+                                    <X className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -102,3 +102,25 @@ export async function revokeDevice(uid: string, deviceIdToRevoke: string): Promi
     const deviceRef = doc(db, 'users', uid, 'devices', deviceIdToRevoke);
     await deleteDoc(deviceRef);
 }
+
+/**
+ * Revokes all linked devices for a user except the current local device
+ */
+export async function revokeAllOtherDevices(uid: string): Promise<number> {
+    const currentDeviceId = await getOrCreateDeviceId();
+    const devicesRef = collection(db, 'users', uid, 'devices');
+    const snapshot = await getDocs(devicesRef);
+
+    let count = 0;
+    const deletePromises: Promise<void>[] = [];
+    snapshot.forEach(docSnap => {
+        const deviceId = docSnap.id;
+        if (deviceId !== currentDeviceId) {
+            deletePromises.push(deleteDoc(docSnap.ref));
+            count++;
+        }
+    });
+
+    await Promise.all(deletePromises);
+    return count;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Smartphone, Laptop, Trash2, ShieldCheck, RefreshCw, X, AlertCircle } from 'lucide-react';
-import { getUserDevices, revokeDevice, DeviceInfo } from '../../utils/e2ee';
+import { Smartphone, Laptop, Trash2, ShieldCheck, RefreshCw, X, AlertCircle, LogOut } from 'lucide-react';
+import { getUserDevices, revokeDevice, revokeAllOtherDevices, DeviceInfo } from '../../utils/e2ee';
 import { showToast } from '../../utils/toast';
 
 interface DeviceManagementModalProps {
@@ -16,6 +16,7 @@ export default function DeviceManagementModal({ uid, onClose }: DeviceManagement
     const [devices, setDevices] = useState<DeviceInfo[]>([]);
     const [loading, setLoading] = useState(true);
     const [revokingId, setRevokingId] = useState<string | null>(null);
+    const [isRevokingAll, setIsRevokingAll] = useState(false);
 
     const loadDevices = async () => {
         setLoading(true);
@@ -47,6 +48,30 @@ export default function DeviceManagementModal({ uid, onClose }: DeviceManagement
             showToast('Device revoke karne me error aayi.');
         } finally {
             setRevokingId(null);
+        }
+    };
+
+    const handleRevokeAllOther = async () => {
+        const otherDevicesCount = devices.filter(d => !d.isCurrent).length;
+        if (otherDevicesCount === 0) {
+            showToast('Koi doosra device linked nahi hai!');
+            return;
+        }
+
+        if (!window.confirm(`Kya aap is current device ko chhodkar baaki sabhi ${otherDevicesCount} device(s) se logout karna chahte hain?`)) {
+            return;
+        }
+
+        setIsRevokingAll(true);
+        try {
+            const count = await revokeAllOtherDevices(uid);
+            showToast(`Baaki sabhi ${count} device(s) se logout kar diya gaya! 🔒`);
+            setDevices(prev => prev.filter(d => d.isCurrent));
+        } catch (e: any) {
+            console.error("Revoke all error:", e);
+            showToast('Devices logout karne me error aayi.');
+        } finally {
+            setIsRevokingAll(false);
         }
     };
 
@@ -136,10 +161,24 @@ export default function DeviceManagementModal({ uid, onClose }: DeviceManagement
                     </div>
                 )}
 
-                <div className="mt-5 pt-3 border-t border-slate-800 flex justify-end">
+                <div className="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between gap-3">
+                    <button 
+                        onClick={handleRevokeAllOther}
+                        disabled={isRevokingAll || devices.filter(d => !d.isCurrent).length === 0}
+                        className="py-2 px-3 bg-red-500/10 hover:bg-red-500/20 text-red-300 border border-red-500/30 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                        title="Logout from all other devices except this one"
+                    >
+                        {isRevokingAll ? (
+                            <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                        ) : (
+                            <LogOut className="w-3.5 h-3.5 text-red-400" />
+                        )}
+                        <span>Logout All Other Devices</span>
+                    </button>
+
                     <button 
                         onClick={onClose}
-                        className="py-2 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold"
+                        className="py-2 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition-colors"
                     >
                         Close
                     </button>

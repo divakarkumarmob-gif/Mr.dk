@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
     ArrowLeft, Send, Image as ImageIcon, Check, CheckCheck, X, 
     Camera, Phone, Video, Shield, Sparkles, User, Circle,
-    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock, ShieldCheck, Laptop, AlertTriangle
+    Mic, MicOff, Square, Play, Pause, Trash2, Volume2, Lock, ShieldCheck, Laptop, AlertTriangle,
+    Ban, UserX, UserCheck, CheckCircle2, MoreVertical, Reply, CornerDownRight,
+    Pin, PinOff, Edit3, ChevronRight, ChevronLeft
 } from 'lucide-react';
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, updateDoc, doc, setDoc, getDoc, getDocs, deleteDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { showToast } from '../utils/toast';
@@ -55,6 +57,18 @@ export interface DirectUser {
     badge?: string;
 }
 
+export interface ReplyInfo {
+    id: string;
+    senderName: string;
+    text: string;
+}
+
+export interface PinnedMessage {
+    id: string;
+    senderName: string;
+    text: string;
+}
+
 interface DirectMessage {
     id: string;
     senderId: string;
@@ -65,6 +79,11 @@ interface DirectMessage {
     audioDuration?: number;
     status: 'sent' | 'delivered' | 'read'; // WhatsApp style ticks status
     timestamp: any;
+    isSystemNotice?: boolean;
+    systemType?: 'block' | 'unblock';
+    replyTo?: ReplyInfo;
+    isEdited?: boolean;
+    pinned?: boolean;
 }
 
 interface DirectChatProps {
@@ -77,6 +96,49 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     const [text, setText] = useState<string>('');
     const [imageUrl, setImageUrl] = useState<string>('');
     const [activeMediaUrl, setActiveMediaUrl] = useState<string | null>(null);
+
+    // Swipe to Reply & Auto-Scroll Highlight States
+    const [replyToMessage, setReplyToMessage] = useState<DirectMessage | null>(null);
+    const [highlightedMsgId, setHighlightedMsgId] = useState<string | null>(null);
+
+    // Long Press Context Menu, Edit & WhatsApp Multi-Pin States
+    const [selectedContextMenuMsg, setSelectedContextMenuMsg] = useState<DirectMessage | null>(null);
+    const [editingMsg, setEditingMsg] = useState<DirectMessage | null>(null);
+    const [editingText, setEditingText] = useState<string>('');
+    const [pinnedMessages, setPinnedMessages] = useState<PinnedMessage[]>([]);
+    const [currentPinIndex, setCurrentPinIndex] = useState<number>(0);
+
+    const msgPressTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    const handleMsgPressStart = (msg: DirectMessage) => {
+        if (msg.isSystemNotice) return;
+        msgPressTimerRef.current = setTimeout(() => {
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate(35);
+            }
+            setSelectedContextMenuMsg(msg);
+        }, 450);
+    };
+
+    const handleMsgPressEnd = () => {
+        if (msgPressTimerRef.current) {
+            clearTimeout(msgPressTimerRef.current);
+            msgPressTimerRef.current = null;
+        }
+    };
+
+    const scrollToMessage = (targetMsgId: string) => {
+        const el = document.getElementById(`msg-${targetMsgId}`);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setHighlightedMsgId(targetMsgId);
+            setTimeout(() => {
+                setHighlightedMsgId(null);
+            }, 2100);
+        } else {
+            showToast('Original message view mein nahi hai');
+        }
+    };
 
     // E2EE States
     const [e2eeStatus, setE2eeStatus] = useState<UserE2EEStatus | null>(null);
@@ -432,28 +494,52 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         return 0;
     };
 
-    // Update Current User's Own Online Presence in Firestore
+    // Update Current User's Own Online Presence in Firestore (Heartbeat + Visibility)
     useEffect(() => {
         if (!currentUid) return;
         const userRef = doc(db, 'users', currentUid);
-        setDoc(userRef, {
-            online: true,
-            lastSeen: serverTimestamp()
-        }, { merge: true }).catch(() => {});
 
-        const handleOffline = () => {
+        const setOnline = () => {
+            setDoc(userRef, {
+                online: true,
+                lastSeen: serverTimestamp()
+            }, { merge: true }).catch(() => {});
+        };
+
+        const setOffline = () => {
             setDoc(userRef, {
                 online: false,
                 lastSeen: serverTimestamp()
             }, { merge: true }).catch(() => {});
         };
 
-        window.addEventListener('beforeunload', handleOffline);
+        setOnline();
+
+        // Heartbeat every 15s to keep presence fresh
+        const heartbeatInterval = setInterval(setOnline, 15000);
+
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === 'visible') {
+                setOnline();
+            } else {
+                setOffline();
+            }
+        };
+
+        window.addEventListener('visibilitychange', handleVisibilityChange);
+        window.addEventListener('beforeunload', setOffline);
+
         return () => {
-            window.removeEventListener('beforeunload', handleOffline);
-            handleOffline();
+            clearInterval(heartbeatInterval);
+            window.removeEventListener('visibilitychange', handleVisibilityChange);
+            window.removeEventListener('beforeunload', setOffline);
+            setOffline();
         };
     }, [currentUid]);
+
+    // Blocked User State & Header Profile Modal State
+    const [isTargetBlocked, setIsTargetBlocked] = useState<boolean>(false);
+    const [showUserProfileModal, setShowUserProfileModal] = useState<boolean>(false);
 
     // Subscribe to Target User's REAL Presence Status from Firestore
     useEffect(() => {
@@ -475,6 +561,228 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
         return () => unsubscribe();
     }, [targetUser.uid]);
+
+    // Subscribe to Blocked Status for Target User from Firestore
+    useEffect(() => {
+        if (!currentUid || !targetUser.uid) return;
+        const blockRef = doc(db, 'users', currentUid, 'blockedUsers', targetUser.uid);
+        const unsubscribe = onSnapshot(blockRef, (snapshot) => {
+            setIsTargetBlocked(snapshot.exists());
+        }, (err) => {
+            console.warn("Blocked check snapshot error:", err);
+        });
+        return () => unsubscribe();
+    }, [currentUid, targetUser.uid]);
+
+    const handleBlockUser = async () => {
+        if (!currentUid || !targetUser.uid) return;
+        if (!window.confirm(`Kya aap ${targetUser.name} ko block karna chahte hain? Unke messages aap tak nahi aayenge.`)) {
+            return;
+        }
+
+        try {
+            const blockRef = doc(db, 'users', currentUid, 'blockedUsers', targetUser.uid);
+            await setDoc(blockRef, {
+                blockedAt: serverTimestamp(),
+                targetName: targetUser.name
+            });
+
+            // Insert system notice into local messages feed
+            const sysMsg: DirectMessage = {
+                id: `sys_block_${Date.now()}`,
+                senderId: 'system',
+                senderName: 'System',
+                text: 'You blocked this contact',
+                status: 'read',
+                timestamp: new Date().toISOString(),
+                isSystemNotice: true,
+                systemType: 'block'
+            };
+
+            setMessages(prev => [...prev, sysMsg]);
+            saveLocalDirectMessage(sysMsg);
+
+            showToast(`${targetUser.name} ko block kar diya gaya! 🚫`);
+            setShowUserProfileModal(false);
+        } catch (e) {
+            console.error("Block user error:", e);
+            showToast("Failed to block user. Try again.");
+        }
+    };
+
+    const handleUnblockUser = async () => {
+        if (!currentUid || !targetUser.uid) return;
+
+        try {
+            const blockRef = doc(db, 'users', currentUid, 'blockedUsers', targetUser.uid);
+            await deleteDoc(blockRef);
+
+            // Insert system notice into local messages feed
+            const sysMsg: DirectMessage = {
+                id: `sys_unblock_${Date.now()}`,
+                senderId: 'system',
+                senderName: 'System',
+                text: 'You unblocked this contact',
+                status: 'read',
+                timestamp: new Date().toISOString(),
+                isSystemNotice: true,
+                systemType: 'unblock'
+            };
+
+            setMessages(prev => [...prev, sysMsg]);
+            saveLocalDirectMessage(sysMsg);
+
+            showToast(`${targetUser.name} unblock ho gaye! ✅`);
+            setShowUserProfileModal(false);
+        } catch (e) {
+            console.error("Unblock user error:", e);
+            showToast("Failed to unblock user. Try again.");
+        }
+    };
+
+    // Realtime Listener for Pinned Messages from Parent Chat Doc
+    useEffect(() => {
+        if (!chatId) return;
+        const chatRef = doc(db, 'directChats', chatId);
+        const unsubscribe = onSnapshot(chatRef, (snapshot) => {
+            if (snapshot.exists()) {
+                const data = snapshot.data();
+                setPinnedMessages(data.pinnedMessages || []);
+            }
+        });
+        return () => unsubscribe();
+    }, [chatId]);
+
+    // Delete Message for Everyone (Both Sides)
+    const handleDeleteMessage = async (msg: DirectMessage) => {
+        if (!currentUid || !chatId) return;
+        try {
+            await deleteDoc(doc(db, 'directChats', chatId, 'messages', msg.id));
+            setMessages(prev => prev.filter(m => m.id !== msg.id));
+
+            const chatRef = doc(db, 'directChats', chatId);
+            await updateDoc(chatRef, {
+                pinnedMessages: arrayRemove({
+                    id: msg.id,
+                    senderName: msg.senderName,
+                    text: msg.text || '📷 Attachment'
+                })
+            }).catch(() => {});
+
+            showToast('Message deleted for everyone 🗑️');
+            setSelectedContextMenuMsg(null);
+        } catch (e) {
+            console.error("Delete msg error:", e);
+            showToast('Failed to delete message');
+        }
+    };
+
+    // Pin or Unpin Message (WhatsApp Multi-Pin)
+    const handleTogglePinMessage = async (msg: DirectMessage) => {
+        if (!chatId) return;
+        const isAlreadyPinned = pinnedMessages.some(p => p.id === msg.id);
+        const chatRef = doc(db, 'directChats', chatId);
+
+        const pinItem: PinnedMessage = {
+            id: msg.id,
+            senderName: msg.senderName,
+            text: msg.text || (msg.imageUrl ? '📷 Photo' : msg.audioUrl ? '🎵 Voice Note' : 'Message')
+        };
+
+        try {
+            if (isAlreadyPinned) {
+                await updateDoc(chatRef, {
+                    pinnedMessages: arrayRemove(pinItem)
+                });
+                showToast('Message unpinned 📌');
+            } else {
+                await updateDoc(chatRef, {
+                    pinnedMessages: arrayUnion(pinItem)
+                });
+                showToast('Message pinned 📌');
+            }
+            setSelectedContextMenuMsg(null);
+        } catch (e) {
+            console.error("Pin toggle error:", e);
+            showToast('Failed to pin/unpin message');
+        }
+    };
+
+    // Save Edited Message (Within 5-minute window)
+    const handleSaveEditedMessage = async () => {
+        if (!editingMsg || !editingText.trim() || !chatId) return;
+
+        const ms = getTimestampMs(editingMsg.timestamp);
+        const diffMins = (Date.now() - ms) / (1000 * 60);
+
+        if (diffMins > 5) {
+            showToast('Messages can only be edited within 5 minutes ⏱️');
+            setEditingMsg(null);
+            setSelectedContextMenuMsg(null);
+            return;
+        }
+
+        const updatedText = editingText.trim();
+
+        let payload: any = {
+            senderId: currentUid,
+            senderName: currentName,
+            text: updatedText,
+            isEdited: true,
+            status: editingMsg.status,
+            timestamp: serverTimestamp()
+        };
+
+        const encResult = await encryptOutgoingPayload(payload);
+        if (encResult.ok) payload = encResult.payload;
+
+        try {
+            await updateDoc(doc(db, 'directChats', chatId, 'messages', editingMsg.id), {
+                ...payload,
+                isEdited: true
+            });
+
+            setMessages(prev => prev.map(m => m.id === editingMsg.id ? { ...m, text: updatedText, isEdited: true } : m));
+            saveLocalDirectMessage({ ...editingMsg, text: updatedText, isEdited: true });
+
+            showToast('Message edited ✏️');
+            setEditingMsg(null);
+            setSelectedContextMenuMsg(null);
+        } catch (e) {
+            console.error("Edit msg error:", e);
+            showToast('Failed to edit message');
+        }
+    };
+
+    // Delete All Messages/Chats for Both Sides
+    const handleDeleteAllChatsBothSides = async () => {
+        if (!chatId) return;
+        const confirmDelete = window.confirm(`Kya aap ${targetUser.name} ke saath sabhi messages dono taraf se delete karna chahte hain?`);
+        if (!confirmDelete) return;
+
+        try {
+            const messagesRef = collection(db, 'directChats', chatId, 'messages');
+            const snap = await getDocs(messagesRef);
+
+            const deletePromises = snap.docs.map(d => deleteDoc(d.ref));
+            await Promise.all(deletePromises);
+
+            // Clear parent chat doc fields & pinned messages
+            const chatRef = doc(db, 'directChats', chatId);
+            await updateDoc(chatRef, {
+                lastMessage: '',
+                pinnedMessages: []
+            }).catch(() => {});
+
+            setMessages([]);
+            setPinnedMessages([]);
+            showToast('All chats deleted for both sides 🗑️');
+            setShowUserProfileModal(false);
+        } catch (e) {
+            console.error("Delete all chats error:", e);
+            showToast("Failed to delete all chats");
+        }
+    };
 
     // Ensure Parent 1v1 Chat Doc Exists in Firestore
     useEffect(() => {
@@ -853,13 +1161,20 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             const base64Audio = reader.result as string;
             const initialStatus: 'sent' | 'delivered' = presence.isOnline ? 'delivered' : 'sent';
 
+            const replyInfoData = replyToMessage ? {
+                id: replyToMessage.id,
+                senderName: replyToMessage.senderName,
+                text: replyToMessage.text || (replyToMessage.imageUrl ? '📷 Photo' : replyToMessage.audioUrl ? '🎵 Voice Note' : 'Message')
+            } : undefined;
+
             let payload: any = {
                 senderId: currentUid,
                 senderName: currentName,
                 audioUrl: base64Audio,
                 audioDuration: recordedDuration || 1,
                 status: initialStatus,
-                timestamp: serverTimestamp()
+                timestamp: serverTimestamp(),
+                ...(replyInfoData ? { replyTo: replyInfoData } : {})
             };
 
             const encResult = await encryptOutgoingPayload(payload);
@@ -876,7 +1191,8 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                 audioUrl: base64Audio,
                 audioDuration: recordedDuration || 1,
                 status: initialStatus,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                replyTo: replyInfoData
             };
 
             setMessages(prev => {
@@ -890,6 +1206,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             setRecordedAudioBlob(null);
             setRecordingTime(0);
             setRecordedDuration(0);
+            setReplyToMessage(null);
 
             showToast('Voice Note bhej diya! 🎙️');
 
@@ -947,13 +1264,20 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
         const textToSend = text.trim();
         const imageToSend = imageUrl.trim();
 
+        const replyInfoData = replyToMessage ? {
+            id: replyToMessage.id,
+            senderName: replyToMessage.senderName,
+            text: replyToMessage.text || (replyToMessage.imageUrl ? '📷 Photo' : replyToMessage.audioUrl ? '🎵 Voice Note' : 'Message')
+        } : undefined;
+
         let payload: any = {
             senderId: currentUid,
             senderName: currentName,
             text: textToSend || '',
             imageUrl: imageToSend || '',
             status: initialStatus,
-            timestamp: serverTimestamp()
+            timestamp: serverTimestamp(),
+            ...(replyInfoData ? { replyTo: replyInfoData } : {})
         };
 
         const encResult = await encryptOutgoingPayload(payload);
@@ -970,7 +1294,8 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
             text: textToSend || undefined,
             imageUrl: imageToSend || undefined,
             status: initialStatus,
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
+            replyTo: replyInfoData
         };
 
         setMessages(prev => {
@@ -981,6 +1306,7 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
 
         setText('');
         setImageUrl('');
+        setReplyToMessage(null);
 
         try {
             await setDoc(newMsgRef, payload);
@@ -998,16 +1324,30 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
     };
 
     const formatLastSeen = (lastSeen: any) => {
-        if (!lastSeen) return 'Offline';
+        if (!lastSeen) return 'offline';
         const ms = getTimestampMs(lastSeen);
-        if (!ms) return 'Offline';
+        if (!ms) return 'offline';
 
-        const diffMinutes = Math.floor((Date.now() - ms) / (1000 * 60));
-        if (diffMinutes < 1) return 'Last seen just now';
-        if (diffMinutes < 60) return `Last seen ${diffMinutes}m ago`;
-        const diffHours = Math.floor(diffMinutes / 60);
-        if (diffHours < 24) return `Last seen ${diffHours}h ago`;
-        return `Last seen ${new Date(ms).toLocaleDateString()}`;
+        const now = new Date();
+        const last = new Date(ms);
+        const diffMs = Date.now() - ms;
+        const diffMinutes = Math.floor(diffMs / (1000 * 60));
+
+        if (diffMinutes < 1) return 'last seen just now';
+        if (diffMinutes < 60) return `last seen ${diffMinutes} min ago`;
+
+        const timeStr = last.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+
+        const isToday = last.toDateString() === now.toDateString();
+        if (isToday) return `last seen today at ${timeStr}`;
+
+        const yesterday = new Date(now);
+        yesterday.setDate(now.getDate() - 1);
+        const isYesterday = last.toDateString() === yesterday.toDateString();
+        if (isYesterday) return `last seen yesterday at ${timeStr}`;
+
+        const dateStr = last.toLocaleDateString([], { day: 'numeric', month: 'short' });
+        return `last seen ${dateStr} at ${timeStr}`;
     };
 
     return (
@@ -1030,10 +1370,14 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                         <ArrowLeft className="w-5 h-5" />
                     </button>
 
-                    <div className="flex items-center gap-3">
+                    <div 
+                        onClick={() => setShowUserProfileModal(true)}
+                        className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition group"
+                        title="Click to view user profile & options"
+                    >
                         {/* Target User Avatar */}
                         <div className="relative">
-                            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white shadow-md">
+                            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white shadow-md group-hover:border-indigo-400 transition">
                                 {targetUser.photoURL ? (
                                     <img src={targetUser.photoURL} alt={targetUser.name} className="w-full h-full object-cover" />
                                 ) : (
@@ -1042,23 +1386,23 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                             </div>
                             {/* Real Online Green Dot Indicator */}
                             {presence.isOnline && (
-                                <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-[#0c1222]" />
+                                <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#25D366] border-2 border-[#0c1222]" />
                             )}
                         </div>
 
                         {/* Name & Real Presence Status */}
                         <div>
-                            <h2 className="font-bold text-sm text-white flex items-center gap-1.5">
+                            <h2 className="font-bold text-sm text-white flex items-center gap-1.5 group-hover:text-indigo-300 transition">
                                 {targetUser.name}
                             </h2>
                             <p className="text-[11px] font-semibold flex items-center gap-1">
                                 {presence.isOnline ? (
-                                    <span className="text-emerald-400 font-bold flex items-center gap-1">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                        <span>Online</span>
+                                    <span className="text-[#25D366] font-bold flex items-center gap-1">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                                        <span>online</span>
                                     </span>
                                 ) : (
-                                    <span className="text-white/40">
+                                    <span className="text-white/60">
                                         {formatLastSeen(presence.lastSeen)}
                                     </span>
                                 )}
@@ -1098,6 +1442,46 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     </button>
                 </div>
             </div>
+
+            {/* WhatsApp Pinned Messages Bar under Header */}
+            {pinnedMessages.length > 0 && (
+                <div className="bg-[#0f172a]/95 backdrop-blur-md border-b border-indigo-500/30 px-4 py-2 flex items-center justify-between shadow-md text-xs">
+                    <div 
+                        onClick={() => {
+                            const currentPin = pinnedMessages[currentPinIndex % pinnedMessages.length];
+                            if (currentPin) scrollToMessage(currentPin.id);
+                        }}
+                        className="flex items-center gap-2.5 min-w-0 flex-1 cursor-pointer hover:opacity-90 transition"
+                    >
+                        <Pin className="w-4 h-4 text-emerald-400 shrink-0 rotate-45" />
+                        <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 text-[10px] font-bold text-emerald-400">
+                                <span>Pinned message {pinnedMessages.length > 1 ? `${(currentPinIndex % pinnedMessages.length) + 1} of ${pinnedMessages.length}` : ''}</span>
+                            </div>
+                            <p className="text-white/90 text-xs truncate font-medium">
+                                {pinnedMessages[currentPinIndex % pinnedMessages.length]?.senderName}: {pinnedMessages[currentPinIndex % pinnedMessages.length]?.text}
+                            </p>
+                        </div>
+                    </div>
+
+                    {pinnedMessages.length > 1 && (
+                        <div className="flex items-center gap-1 shrink-0 ml-2">
+                            <button 
+                                onClick={() => setCurrentPinIndex(prev => (prev > 0 ? prev - 1 : pinnedMessages.length - 1))}
+                                className="p-1 rounded-full hover:bg-white/10 text-white/70 transition"
+                            >
+                                <ChevronLeft className="w-4 h-4" />
+                            </button>
+                            <button 
+                                onClick={() => setCurrentPinIndex(prev => (prev + 1) % pinnedMessages.length)}
+                                className="p-1 rounded-full hover:bg-white/10 text-white/70 transition"
+                            >
+                                <ChevronRight className="w-4 h-4" />
+                            </button>
+                        </div>
+                    )}
+                </div>
+            )}
 
             {/* Key Changed Alert Banner */}
             {keyChangedAlert && (
@@ -1145,19 +1529,76 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     </div>
                 ) : (
                     messages.map((msg) => {
+                        if (msg.isSystemNotice) {
+                            return (
+                                <div key={msg.id} className="flex justify-center my-3">
+                                    <div className={`max-w-xs px-3.5 py-1.5 rounded-full text-xs font-semibold text-center shadow-md flex items-center justify-center gap-1.5 ${
+                                        msg.systemType === 'block' 
+                                            ? 'bg-amber-500/15 border border-amber-500/30 text-amber-300' 
+                                            : 'bg-emerald-500/15 border border-emerald-500/30 text-emerald-300'
+                                    }`}>
+                                        {msg.systemType === 'block' ? (
+                                            <Ban className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                                        ) : (
+                                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        )}
+                                        <span>{msg.text}</span>
+                                    </div>
+                                </div>
+                            );
+                        }
                         const isMe = msg.senderId === currentUid;
                         return (
-                            <div 
+                            <motion.div 
                                 key={msg.id}
-                                className={`flex flex-col ${isMe ? 'items-end' : 'items-start'}`}
+                                id={`msg-${msg.id}`}
+                                drag="x"
+                                dragConstraints={isMe ? { left: -80, right: 0 } : { left: 0, right: 80 }}
+                                dragElastic={0.15}
+                                dragSnapToOrigin={true}
+                                onDragEnd={(e, info) => {
+                                    if (!isMe && info.offset.x > 45) {
+                                        setReplyToMessage(msg);
+                                    } else if (isMe && info.offset.x < -45) {
+                                        setReplyToMessage(msg);
+                                    }
+                                }}
+                                className={`flex flex-col ${isMe ? 'items-end' : 'items-start'} relative transition-all duration-300 ${
+                                    highlightedMsgId === msg.id ? 'scale-[1.03] z-20' : ''
+                                }`}
                             >
                                 <div 
-                                    className={`max-w-[80%] rounded-2xl p-3 shadow-md relative group ${
+                                    onTouchStart={() => handleMsgPressStart(msg)}
+                                    onTouchEnd={handleMsgPressEnd}
+                                    onMouseDown={() => handleMsgPressStart(msg)}
+                                    onMouseUp={handleMsgPressEnd}
+                                    onContextMenu={(e) => {
+                                        e.preventDefault();
+                                        setSelectedContextMenuMsg(msg);
+                                    }}
+                                    className={`max-w-[80%] rounded-2xl p-3 shadow-md relative group transition-all duration-300 select-none cursor-pointer ${
+                                        highlightedMsgId === msg.id ? 'ring-4 ring-emerald-400 bg-emerald-500/25 shadow-2xl shadow-emerald-500/50 animate-pulse' : ''
+                                    } ${
                                         isMe 
                                             ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-tr-none' 
                                             : 'bg-white/10 border border-white/10 text-white rounded-tl-none'
                                     }`}
                                 >
+                                    {/* Quoted Reply Box (WhatsApp Style) */}
+                                    {msg.replyTo && (
+                                        <div 
+                                            onClick={() => scrollToMessage(msg.replyTo!.id)}
+                                            className="mb-2 p-2 rounded-xl bg-black/30 border-l-4 border-emerald-400 text-xs cursor-pointer hover:bg-black/40 transition select-none"
+                                        >
+                                            <p className="font-bold text-emerald-300 text-[11px] truncate">
+                                                {msg.replyTo.senderName}
+                                            </p>
+                                            <p className="text-white/80 text-[11px] truncate mt-0.5 font-normal">
+                                                {msg.replyTo.text || '📷 Attachment / Media'}
+                                            </p>
+                                        </div>
+                                    )}
+
                                     {/* Image Attachment */}
                                     {msg.imageUrl && (
                                         <div 
@@ -1202,14 +1643,17 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                         </p>
                                     )}
 
-                                    {/* Time & WhatsApp Blue Ticks Status */}
+                                    {/* Time & WhatsApp Blue Ticks Status & Edited Label */}
                                     <div className="flex items-center justify-end gap-1 mt-1 text-[10px] opacity-70 font-medium">
+                                        {msg.isEdited && (
+                                            <span className="text-[9px] italic text-indigo-200 font-medium mr-0.5">edited</span>
+                                        )}
                                         <span>
                                             {msg.timestamp ? new Date(getTimestampMs(msg.timestamp)).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Just now'}
                                         </span>
                                         {isMe && (
                                             msg.status === 'read' ? (
-                                                <CheckCheck className="w-3.5 h-3.5 text-sky-300 font-bold" />
+                                                <CheckCheck className="w-3.5 h-3.5 text-[#34B7F1] stroke-[2.5]" />
                                             ) : msg.status === 'delivered' ? (
                                                 <CheckCheck className="w-3.5 h-3.5 text-white/70" />
                                             ) : (
@@ -1218,15 +1662,64 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                                         )}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })
                 )}
                 <div ref={messagesEndRef} />
             </div>
 
-            {/* Voice Recording Active Bar */}
-            {isRecording ? (
+            {/* WhatsApp Reply Preview Bar above Footer */}
+            <AnimatePresence>
+                {replyToMessage && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="px-3 py-2 bg-[#0c1222]/95 border-t border-white/10 flex items-center justify-between gap-3 text-xs"
+                    >
+                        <div className="flex items-center gap-2.5 min-w-0 flex-1 border-l-4 border-emerald-400 pl-2 py-0.5">
+                            <Reply className="w-4 h-4 text-emerald-400 shrink-0" />
+                            <div className="min-w-0 flex-1">
+                                <p className="font-bold text-emerald-400 text-[11px] truncate">
+                                    Replying to {replyToMessage.senderId === currentUid ? 'Yourself' : replyToMessage.senderName}
+                                </p>
+                                <p className="text-white/70 text-[11px] truncate font-normal">
+                                    {replyToMessage.text || (replyToMessage.imageUrl ? '📷 Photo' : replyToMessage.audioUrl ? '🎵 Voice Note' : 'Message')}
+                                </p>
+                            </div>
+                        </div>
+
+                        <button
+                            onClick={() => setReplyToMessage(null)}
+                            className="p-1 rounded-full bg-white/5 hover:bg-white/10 text-white/70 transition shrink-0"
+                        >
+                            <X className="w-4 h-4" />
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Footer Input Bar / WhatsApp Blocked Bar */}
+            {isTargetBlocked ? (
+                <div 
+                    className="p-3.5 bg-[#0c1222] border-t border-white/10 flex items-center justify-between gap-3 text-xs"
+                    style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 14px)' }}
+                >
+                    <div className="flex items-center gap-2 text-amber-200/90 font-medium">
+                        <Ban className="w-4 h-4 text-amber-400 shrink-0" />
+                        <span>You blocked this contact. Tap to unblock.</span>
+                    </div>
+
+                    <button 
+                        onClick={handleUnblockUser}
+                        className="py-1.5 px-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-black font-bold text-xs transition shadow-md shrink-0 flex items-center gap-1"
+                    >
+                        <UserCheck className="w-3.5 h-3.5" />
+                        <span>Unblock</span>
+                    </button>
+                </div>
+            ) : isRecording ? (
                 <div className="p-3 bg-[#0c1222] border-t border-white/10 flex items-center justify-between gap-3 animate-pulse">
                     <div className="flex items-center gap-2 text-red-400 font-bold text-sm">
                         <span className="w-3 h-3 rounded-full bg-red-500 animate-ping" />
@@ -1358,6 +1851,236 @@ export default function DirectChat({ targetUser, onBack }: DirectChatProps) {
                     onClose={() => setShowDeviceModal(false)}
                 />
             )}
+
+            {/* Target User Profile & Actions Modal (Header Click) */}
+            <AnimatePresence>
+                {showUserProfileModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                        onClick={() => setShowUserProfileModal(false)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-sm bg-[#0c1222] border border-white/15 rounded-3xl p-6 shadow-2xl text-center space-y-4 relative"
+                        >
+                            <button
+                                onClick={() => setShowUserProfileModal(false)}
+                                className="absolute top-4 right-4 p-2 rounded-full bg-white/5 hover:bg-white/10 text-white/70 transition"
+                            >
+                                <X className="w-4 h-4" />
+                            </button>
+
+                            {/* Avatar */}
+                            <div className="relative inline-block mx-auto">
+                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-indigo-500/50 bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-2xl text-white shadow-xl mx-auto">
+                                    {targetUser.photoURL ? (
+                                        <img src={targetUser.photoURL} alt={targetUser.name} className="w-full h-full object-cover" />
+                                    ) : (
+                                        targetUser.name ? targetUser.name.charAt(0).toUpperCase() : 'U'
+                                    )}
+                                </div>
+                                {presence.isOnline && (
+                                    <span className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-[#25D366] border-2 border-[#0c1222]" />
+                                )}
+                            </div>
+
+                            {/* Name & Badge */}
+                            <div>
+                                <h3 className="font-bold text-lg text-white">{targetUser.name}</h3>
+                                <p className="text-xs text-indigo-300 font-semibold mt-0.5">
+                                    {targetUser.badge || 'NEET Aspirant 🌟'}
+                                </p>
+                                <p className="text-xs text-white/60 mt-1 flex items-center justify-center gap-1">
+                                    {presence.isOnline ? (
+                                        <span className="text-[#25D366] font-bold flex items-center gap-1">
+                                            <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+                                            <span>online</span>
+                                        </span>
+                                    ) : (
+                                        <span>{formatLastSeen(presence.lastSeen)}</span>
+                                    )}
+                                </p>
+                            </div>
+
+                            {/* Action Buttons */}
+                            <div className="pt-2 border-t border-white/10 space-y-2">
+                                {isTargetBlocked ? (
+                                    <button
+                                        onClick={handleUnblockUser}
+                                        className="w-full py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-black font-bold text-xs transition flex items-center justify-center gap-2 shadow-lg"
+                                    >
+                                        <UserCheck className="w-4 h-4" />
+                                        <span>Unblock {targetUser.name}</span>
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={handleBlockUser}
+                                        className="w-full py-2.5 rounded-xl bg-red-500/20 border border-red-500/40 text-red-400 hover:bg-red-500/30 font-bold text-xs transition flex items-center justify-center gap-2"
+                                    >
+                                        <UserX className="w-4 h-4" />
+                                        <span>Block {targetUser.name}</span>
+                                    </button>
+                                )}
+
+                                {/* Delete All Chats for Both Sides */}
+                                <button
+                                    onClick={handleDeleteAllChatsBothSides}
+                                    className="w-full py-2.5 rounded-xl bg-red-600/30 border border-red-500/50 text-red-300 hover:bg-red-600/50 font-bold text-xs transition flex items-center justify-center gap-2"
+                                >
+                                    <Trash2 className="w-4 h-4 text-red-400" />
+                                    <span>Delete All Chats for Both Sides</span>
+                                </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* WhatsApp Style Glassy Context Action Menu Popup (Long Press / Right Click) */}
+            <AnimatePresence>
+                {selectedContextMenuMsg && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+                        onClick={() => setSelectedContextMenuMsg(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 10 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 10 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-xs bg-[#0c1222]/95 border border-white/20 rounded-3xl p-3 shadow-2xl space-y-1 text-white backdrop-blur-xl"
+                        >
+                            {/* Pin / Unpin Option */}
+                            <button
+                                onClick={() => handleTogglePinMessage(selectedContextMenuMsg)}
+                                className="w-full px-4 py-3 rounded-2xl hover:bg-white/10 transition flex items-center justify-between text-xs font-semibold"
+                            >
+                                <span className="flex items-center gap-3 text-white/90">
+                                    <Pin className="w-4 h-4 text-emerald-400 rotate-45" />
+                                    <span>{pinnedMessages.some(p => p.id === selectedContextMenuMsg.id) ? 'Unpin Message' : 'Pin Message'}</span>
+                                </span>
+                            </button>
+
+                            {/* Edit Option (Senders own message within 5 mins) */}
+                            {selectedContextMenuMsg.senderId === currentUid && selectedContextMenuMsg.text && (
+                                <button
+                                    onClick={() => {
+                                        const ms = getTimestampMs(selectedContextMenuMsg.timestamp);
+                                        const diffMins = (Date.now() - ms) / (1000 * 60);
+                                        if (diffMins > 5) {
+                                            showToast('Messages can only be edited within 5 minutes ⏱️');
+                                            return;
+                                        }
+                                        setEditingMsg(selectedContextMenuMsg);
+                                        setEditingText(selectedContextMenuMsg.text || '');
+                                        setSelectedContextMenuMsg(null);
+                                    }}
+                                    className="w-full px-4 py-3 rounded-2xl hover:bg-white/10 transition flex items-center justify-between text-xs font-semibold"
+                                >
+                                    <span className="flex items-center gap-3 text-indigo-300">
+                                        <Edit3 className="w-4 h-4 text-indigo-400" />
+                                        <span>Edit Message (5 min limit)</span>
+                                    </span>
+                                </button>
+                            )}
+
+                            {/* Reply Option */}
+                            <button
+                                onClick={() => {
+                                    setReplyToMessage(selectedContextMenuMsg);
+                                    setSelectedContextMenuMsg(null);
+                                }}
+                                className="w-full px-4 py-3 rounded-2xl hover:bg-white/10 transition flex items-center justify-between text-xs font-semibold"
+                            >
+                                <span className="flex items-center gap-3 text-sky-300">
+                                    <Reply className="w-4 h-4 text-sky-400" />
+                                    <span>Reply</span>
+                                </span>
+                            </button>
+
+                            {/* Delete for Everyone Option */}
+                            <button
+                                onClick={() => handleDeleteMessage(selectedContextMenuMsg)}
+                                className="w-full px-4 py-3 rounded-2xl hover:bg-red-500/20 text-red-400 transition flex items-center justify-between text-xs font-semibold border-t border-white/10 mt-1"
+                            >
+                                <span className="flex items-center gap-3 font-bold">
+                                    <Trash2 className="w-4 h-4 text-red-400" />
+                                    <span>Delete for Everyone</span>
+                                </span>
+                            </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Edit Message Modal (WhatsApp 5-minute Edit Window) */}
+            <AnimatePresence>
+                {editingMsg && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                        onClick={() => setEditingMsg(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 10 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 10 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-sm bg-[#0c1222] border border-indigo-500/30 rounded-3xl p-5 shadow-2xl space-y-4 text-white"
+                        >
+                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                                <h3 className="font-bold text-sm text-white flex items-center gap-2">
+                                    <Edit3 className="w-4 h-4 text-indigo-400" />
+                                    <span>Edit Message</span>
+                                </h3>
+                                <button onClick={() => setEditingMsg(null)} className="p-1 rounded-full bg-white/5 text-white/70">
+                                    <X className="w-4 h-4" />
+                                </button>
+                            </div>
+
+                            <div className="space-y-2">
+                                <textarea
+                                    value={editingText}
+                                    onChange={(e) => setEditingText(e.target.value)}
+                                    rows={3}
+                                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-3 text-xs text-white focus:outline-none focus:border-indigo-500 transition resize-none"
+                                    placeholder="Type edited message..."
+                                />
+                                <p className="text-[10px] text-white/50 italic">
+                                    Note: Message label me 'edited' dikhega.
+                                </p>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => setEditingMsg(null)}
+                                    className="flex-1 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 font-bold text-xs transition"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleSaveEditedMessage}
+                                    disabled={!editingText.trim()}
+                                    className="flex-1 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 font-bold text-xs text-white transition shadow-lg"
+                                >
+                                    Save Edit
+                                </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.div>
     );
 }
