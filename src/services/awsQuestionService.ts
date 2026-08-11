@@ -1,4 +1,5 @@
-import { AWS_CONFIG, getAwsQuestionUrl } from './awsConfig';
+import { AWS_CONFIG } from './awsConfig';
+import { getCloudFrontSignedUrl } from './cloudfrontService';
 
 export interface QuestionMetadata {
   question_id: string;
@@ -51,27 +52,28 @@ const memoryCache = new Map<string, { data: any; timestamp: number }>();
 
 export class AWSQuestionService {
   /**
-   * Fetches the Master Index Catalog from AWS S3
+   * Fetches the Master Index Catalog via CloudFront Signed URL
    */
   static async fetchMasterCatalog(): Promise<MasterCatalog | null> {
-    const catalogUrl = getAwsQuestionUrl('index.json');
-    
+    const cacheKey = 'index.json';
+
     // Check Cache
-    if (memoryCache.has(catalogUrl)) {
-      const cached = memoryCache.get(catalogUrl)!;
+    if (memoryCache.has(cacheKey)) {
+      const cached = memoryCache.get(cacheKey)!;
       if (Date.now() - cached.timestamp < AWS_CONFIG.CACHE_TTL_MS) {
         return cached.data;
       }
     }
 
     try {
-      const res = await fetch(catalogUrl);
-      if (!res.ok) throw new Error(`HTTP ${res.status} fetching catalog from S3`);
+      const signedUrl = await getCloudFrontSignedUrl('index.json');
+      const res = await fetch(signedUrl);
+      if (!res.ok) throw new Error(`HTTP ${res.status} fetching catalog from CloudFront`);
       const data = await res.json();
-      memoryCache.set(catalogUrl, { data, timestamp: Date.now() });
+      memoryCache.set(cacheKey, { data, timestamp: Date.now() });
       return data;
     } catch (err) {
-      console.warn("AWS S3 Master Catalog fetch error, falling back to local /json/index.json:", err);
+      console.warn("CloudFront Master Catalog fetch error, falling back to local /json/index.json:", err);
       try {
         const localRes = await fetch('/json/index.json');
         if (localRes.ok) return await localRes.json();
@@ -81,29 +83,30 @@ export class AWSQuestionService {
   }
 
   /**
-   * Fetches a specific chapter JSON chunk from AWS S3
+   * Fetches a specific chapter JSON chunk via CloudFront Signed URL
    */
   static async fetchChapterQuestions(relPath: string): Promise<QuestionItem[]> {
-    const url = getAwsQuestionUrl(relPath);
+    const cleanKey = relPath.replace(/^\/+/, '').trim();
 
     // Check Cache
-    if (memoryCache.has(url)) {
-      const cached = memoryCache.get(url)!;
+    if (memoryCache.has(cleanKey)) {
+      const cached = memoryCache.get(cleanKey)!;
       if (Date.now() - cached.timestamp < AWS_CONFIG.CACHE_TTL_MS) {
         return cached.data;
       }
     }
 
     try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status} fetching chunk from S3`);
+      const signedUrl = await getCloudFrontSignedUrl(cleanKey);
+      const res = await fetch(signedUrl);
+      if (!res.ok) throw new Error(`HTTP ${res.status} fetching chunk from CloudFront`);
       const data = await res.json();
-      memoryCache.set(url, { data, timestamp: Date.now() });
+      memoryCache.set(cleanKey, { data, timestamp: Date.now() });
       return data;
     } catch (err) {
-      console.warn(`AWS S3 fetch failed for ${relPath}, trying local fallback:`, err);
+      console.warn(`CloudFront fetch failed for ${relPath}, trying local fallback:`, err);
       try {
-        const cleanLocalPath = relPath.startsWith('json/') ? relPath : `json/${relPath}`;
+        const cleanLocalPath = cleanKey.startsWith('json/') ? cleanKey : `json/${cleanKey}`;
         const localRes = await fetch(`/${cleanLocalPath}`);
         if (localRes.ok) return await localRes.json();
       } catch (localErr) {}

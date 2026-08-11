@@ -25,6 +25,7 @@ import crypto from 'crypto';
 import textToSpeech from '@google-cloud/text-to-speech';
 import { S3Client, ListObjectsV2Command, GetObjectCommand, ListBucketsCommand, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import { getSignedUrl as getCloudFrontSignedUrl } from "@aws-sdk/cloudfront-signer";
 import multer from "multer";
 import jwt from "jsonwebtoken";
 
@@ -446,6 +447,65 @@ async function startServer() {
   });
 
   app.use("/api/", limiter);
+
+  // Endpoint to generate temporary CloudFront signed URLs for private S3 question bank objects
+  app.all('/api/cloudfront/signed-url', requireAuth, async (req: any, res: any) => {
+    try {
+      const rawKey = req.body?.key || req.body?.objectKey || (typeof req.query?.key === 'string' ? req.query.key : '') || (typeof req.query?.objectKey === 'string' ? req.query.objectKey : '');
+
+      if (!rawKey || typeof rawKey !== 'string') {
+        return res.status(400).json({ error: 'Missing object key' });
+      }
+
+      const cleanKey = rawKey.replace(/^\/+/, '').trim();
+
+      // Security check: Reject path traversal or arbitrary external URLs
+      if (!cleanKey || cleanKey.includes('..') || cleanKey.includes('\\') || cleanKey.includes('://')) {
+        return res.status(400).json({ error: 'Invalid object key' });
+      }
+
+      // Security check: Only allow expected question-data paths
+      const isAllowedKey = cleanKey === 'index.json' ||
+        cleanKey.startsWith('biology/') ||
+        cleanKey.startsWith('chemistry/') ||
+        cleanKey.startsWith('physics/');
+
+      if (!isAllowedKey) {
+        return res.status(400).json({ error: 'Object key not in allowed question bank paths' });
+      }
+
+      const domain = process.env.CLOUDFRONT_DOMAIN || 'dmb07d3fbi836.cloudfront.net';
+      const keyPairId = process.env.CLOUDFRONT_KEY_PAIR_ID;
+      const rawPrivateKey = process.env.CLOUDFRONT_PRIVATE_KEY;
+
+      if (!keyPairId || !rawPrivateKey) {
+        console.error("CloudFront signing error: CLOUDFRONT_KEY_PAIR_ID or CLOUDFRONT_PRIVATE_KEY is missing from environment variables.");
+        return res.status(500).json({ error: 'CloudFront signing is not configured on the server' });
+      }
+
+      const privateKey = rawPrivateKey.replace(/\\n/g, '\n');
+      const expiresAtMs = Date.now() + 10 * 60 * 1000; // 10 minutes expiration
+      const expiresAtIso = new Date(expiresAtMs).toISOString();
+
+      const resourceUrl = `https://${domain}/${cleanKey}`;
+
+      const signedUrl = getCloudFrontSignedUrl({
+        url: resourceUrl,
+        keyPairId: keyPairId,
+        dateLessThan: expiresAtIso,
+        privateKey: privateKey,
+      });
+
+      return res.status(200).json({
+        url: signedUrl,
+        expiresAt: expiresAtIso
+      });
+    } catch (err: any) {
+      console.error("CloudFront URL signing failed:", err);
+      return res.status(500).json({ error: 'Failed to generate signed URL', details: err?.message || String(err) });
+    }
+  });
+
 
   let s3Client: S3Client | null = null;
   function getS3Client() {
