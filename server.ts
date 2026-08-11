@@ -452,10 +452,10 @@ async function startServer() {
     if (!s3Client) {
       const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
       const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
-      const region = process.env.AWS_REGION || "ap-southeast-2";
+      const region = process.env.AWS_REGION || "ap-south-1";
 
       if (!accessKeyId || !secretAccessKey) {
-        throw new Error("AWS credentials are not configured in system environment variables.");
+        return null;
       }
 
       s3Client = new S3Client({
@@ -984,6 +984,10 @@ ${text.slice(0, 15000)}`;
       if (!bucket || typeof bucket !== 'string') return res.status(400).json({ error: "Bucket required" });
 
       const s3 = getS3Client();
+      if (!s3) {
+        return res.json({ success: true, files: [], fallback: true, message: "S3 credentials unconfigured" });
+      }
+
       const listCommand = new ListObjectsV2Command({
         Bucket: bucket,
         Prefix: prefix as string || '',
@@ -1006,8 +1010,8 @@ ${text.slice(0, 15000)}`;
 
       res.json({ success: true, files: filesWithUrl });
     } catch (error: any) {
-      console.error("AWS S3 NCERT Fetch Error:", error);
-      res.status(500).json({ success: false, error: error.message });
+      console.warn("AWS S3 NCERT Fetch Warning:", error.message);
+      res.json({ success: true, files: [], fallback: true, error: error.message });
     }
   });
 
@@ -2167,47 +2171,76 @@ Instructions:
       }
     }
 
-    // Strategy 1: AWS S3 Direct SDK Fetch (For private buckets like ncert-books-dk, user-note, etc.)
-    if (url.includes('s3') && url.includes('amazonaws.com')) {
-      try {
-        let bucket = '';
-        let key = '';
-        const parsedUrl = new URL(url);
-        const hostParts = parsedUrl.hostname.split('.');
-        if (hostParts.length >= 4 && hostParts[1] === 's3') {
-          bucket = hostParts[0];
-          key = decodeURIComponent(parsedUrl.pathname.replace(/^\/+/, ''));
-        } else if (hostParts[0] === 's3') {
-          const pathParts = parsedUrl.pathname.replace(/^\/+/, '').split('/');
-          bucket = pathParts[0];
-          key = decodeURIComponent(pathParts.slice(1).join('/'));
-        }
+    // Helper to map classic PYQ filenames to GitHub repo files
+    const getClassicPyqGithubUrl = (targetUrl: string): string | null => {
+      if (!targetUrl.includes('/classic/')) return null;
+      const filename = targetUrl.split('/').pop() || '';
+      const map: Record<string, string> = {
+        'neet_2018.pdf': 'NEET 2018.pdf',
+        'neet_2017.pdf': 'NEET 2017.pdf',
+        'neet_2016.pdf': 'NEET 2016.pdf',
+        'neet_2016_2.pdf': 'NEET 2016(2).pdf',
+        'neet_2015.pdf': 'NEET 2015.pdf',
+        're_neet_2015.pdf': 'RE-NEET 2015.pdf',
+        'neet_2014.pdf': 'NEET 2014.pdf',
+        'aipmt_2013.pdf': 'AIPMT 2013.pdf',
+        'aipmt_2012_main.pdf': 'AIPMT 2012 Main.pdf',
+        'aipmt_2012_preliminary.pdf': 'AIPMT 2012_Preliminary.pdf',
+        'aipmt_2011_main.pdf': 'AIPMT 2011 Main.pdf',
+        'aipmt_2011_preliminary.pdf': 'AIPMT 2011_Preliminary.pdf',
+        'aipmt_2010_main.pdf': 'AIPMT 2010 Main.pdf',
+        'aipmt_2010_preliminary.pdf': 'AIPMT 2010_Preliminary.pdf',
+        'aipmt_2009_main.pdf': 'AIPMT 2009_Main.pdf',
+        'aipmt_2009_preliminary.pdf': 'AIPMT 2009_Preliminary.pdf',
+        'aipmt_2008_main.pdf': 'AIPMT 2008 Main.pdf',
+        'aipmt_2008_preliminary.pdf': 'AIPMT 2008 Preliminary.pdf',
+        'aipmt_2007_main.pdf': 'AIPMT 2007 Main.pdf',
+        'aipmt_2007_preliminary.pdf': 'AIPMT 2007 Preliminary.pdf',
+        'aipmt_2006.pdf': 'AIPMT 2006.pdf',
+        'aipmt_2006_preliminary.pdf': 'AIPMT 2006_Preliminary.pdf',
+        'aipmt_2005.pdf': '2005.pdf',
+        'aiims_2013.pdf': 'AIIMS 2013.pdf',
+        'aiims_2011.pdf': 'AIIMS 2011.pdf',
+        'aiims_2010.pdf': 'AIIMS 2010.pdf',
+        'aiims_2009.pdf': 'AIIMS 2009.pdf',
+        'aiims_2008.pdf': 'AIIMS 2008.pdf',
+        'aiims_2007.pdf': 'AIIMS 2007.pdf',
+      };
+      const repoFile = map[filename] || filename.replace(/_/g, ' ');
+      return `https://raw.githubusercontent.com/divakarkumarmob-gif/NEET-PYQ-/main/${encodeURIComponent(repoFile)}`;
+    };
 
-        if (bucket && key) {
-          try {
-            const s3 = getS3Client();
-            const s3Cmd = new GetObjectCommand({ Bucket: bucket, Key: key });
-            const s3Res = await s3.send(s3Cmd);
-            if (s3Res.Body) {
-              const byteArray = await (s3Res.Body as any).transformToByteArray();
-              const buffer = Buffer.from(byteArray);
-              res.set({
-                'Content-Type': 'application/pdf',
-                'Access-Control-Allow-Origin': '*',
-                'Cache-Control': 'public, max-age=86400',
-                'Content-Disposition': 'inline',
-                'Content-Length': buffer.length.toString()
-              });
-              return res.send(buffer);
-            }
-          } catch (s3Err: any) {
-            console.warn(`[Proxy PDF] S3 SDK fetch failed for ${bucket}/${key}: ${s3Err.message}. Falling back to HTTP fetch...`);
-          }
-        }
-      } catch (urlErr) {
-        console.error("[Proxy PDF] S3 URL parse error:", urlErr);
+    // Helper to map S3 NCERT URLs to official ncert.nic.in textbook URLs
+    const getOfficialNcertUrl = (targetUrl: string): string | null => {
+      const match = targetUrl.match(/\/class-(11|12)\/([a-z]+)\/(\d+)_/i);
+      if (!match) return null;
+      const classLevel = match[1];
+      const subject = match[2].toLowerCase();
+      const chNum = parseInt(match[3], 10);
+
+      let codePrefix = '';
+      if (classLevel === '11') {
+        if (subject === 'physics') codePrefix = chNum <= 7 ? 'keph1' : 'keph2';
+        else if (subject === 'chemistry') codePrefix = chNum <= 6 ? 'kech1' : 'kech2';
+        else if (subject === 'biology') codePrefix = 'kebo1';
+      } else if (classLevel === '12') {
+        if (subject === 'physics') codePrefix = chNum <= 8 ? 'leph1' : 'leph2';
+        else if (subject === 'chemistry') codePrefix = chNum <= 5 ? 'lech1' : 'lech2';
+        else if (subject === 'biology') codePrefix = 'lebo1';
       }
-    }
+
+      if (codePrefix) {
+        let bookChNum = chNum;
+        if (codePrefix === 'keph2') bookChNum = chNum - 7;
+        if (codePrefix === 'kech2') bookChNum = chNum - 6;
+        if (codePrefix === 'leph2') bookChNum = chNum - 8;
+        if (codePrefix === 'lech2') bookChNum = chNum - 5;
+        
+        const bookChStr = bookChNum < 10 ? `0${bookChNum}` : `${bookChNum}`;
+        return `https://ncert.nic.in/textbook/pdf/${codePrefix}${bookChStr}.pdf`;
+      }
+      return null;
+    };
 
     const maxRetries = 2;
     let attempt = 0;
@@ -2307,6 +2340,51 @@ Instructions:
     while (attempt <= maxRetries) {
       try {
         let currentUrl = url;
+
+        // Try S3 SDK if credentials are initialized
+        if (attempt === 0 && url.includes('s3') && url.includes('amazonaws.com')) {
+          try {
+            const s3 = getS3Client();
+            if (s3) {
+              let bucket = '';
+              let key = '';
+              const parsedUrl = new URL(url);
+              const hostParts = parsedUrl.hostname.split('.');
+              if (hostParts.length >= 4 && hostParts[1] === 's3') {
+                bucket = hostParts[0];
+                key = decodeURIComponent(parsedUrl.pathname.replace(/^\/+/, ''));
+              }
+              if (bucket && key) {
+                const s3Res = await s3.send(new GetObjectCommand({ Bucket: bucket, Key: key }));
+                if (s3Res.Body) {
+                  const byteArray = await (s3Res.Body as any).transformToByteArray();
+                  const buffer = Buffer.from(byteArray);
+                  res.set({
+                    'Content-Type': 'application/pdf',
+                    'Access-Control-Allow-Origin': '*',
+                    'Cache-Control': 'public, max-age=86400',
+                    'Content-Disposition': 'inline',
+                    'Content-Length': buffer.length.toString()
+                  });
+                  return res.send(buffer);
+                }
+              }
+            }
+          } catch (s3Err: any) {
+            console.warn(`S3 SDK fetch failed for ${url}: ${s3Err.message}`);
+          }
+        }
+
+        // Automatic fallback resolution strategies
+        if (attempt === 0) {
+          if (url.includes('/classic/')) {
+            const githubPyqUrl = getClassicPyqGithubUrl(url);
+            if (githubPyqUrl) currentUrl = githubPyqUrl;
+          } else if (url.includes('ncert-books-dk') || url.includes('/class-11/') || url.includes('/class-12/')) {
+            const officialNcertUrl = getOfficialNcertUrl(url);
+            if (officialNcertUrl) currentUrl = officialNcertUrl;
+          }
+        }
 
         // Multi-strategy NTA URL resolution for 404 / ExamPaper / Download route variants
         if (attempt === 1 && url.includes('www.nta.ac.in/Download/QuestionPaper')) {
