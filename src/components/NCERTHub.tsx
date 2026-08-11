@@ -8,6 +8,7 @@ import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { savePdfToPublicDownloads } from '../utils/publicDownload';
 import { fetchAndCachePdf, fetchAndCacheByStableKey, getRamCachedPdf, getCachedPdf } from '../lib/pdfCache';
 import { scheduleNcertRereadNotification } from '../utils/studyNotificationEngine';
+import { getAwsPdfUrl } from '../services/awsConfig';
 
 // Simple IndexedDB wrapper for PDF storage
 const dbName = 'NCERT_OFFLINE_DB';
@@ -236,58 +237,15 @@ export default function NCERTHub({ onBack }: { onBack: () => void }) {
         console.log("Fetching online PDF for:", id);
         setIsLoadingS3(true);
         try {
-            const bucket = selectedClass === '12' ? 'class-12th' : 'class-11th';
-            const subjectFolder = selectedSubject.toLowerCase();
+            const cleanSlug = title.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+            const awsSubFolder = `class-${selectedClass}/${selectedSubject.toLowerCase()}`;
+            const s3DirectUrl = getAwsPdfUrl(awsSubFolder, `${cleanSlug}.pdf`);
 
-            // Reuse the already-fetched file list for this subject/class
-            // (populated by the useEffect above) instead of re-fetching it
-            // on every single chapter open — the list doesn't change
-            // between chapter taps within the same subject.
-            let files = s3Files;
-            if (files.length === 0) {
-                const listUrl = getApiUrl(`/api/ncert-list?bucket=${bucket}&prefix=${subjectFolder}`);
-                setNcertDebug(`fetching list url=${listUrl}`);
-                const res = await fetch(listUrl);
-                setNcertDebug(`list status=${res.status}`);
-                const data = await res.json();
-                console.log("NCERT list fetch result:", data);
-                if (data.success && Array.isArray(data.files)) {
-                    files = data.files;
-                    setS3Files(data.files);
-                } else {
-                    setNcertDebug(`list success=false: ${JSON.stringify(data)}`);
-                    return;
-                }
-            }
+            console.log("Using S3 Direct URL from ncert-books-dk:", s3DirectUrl);
+            setNcertDebug(`OK: S3 direct url=${s3DirectUrl}`);
+            setViewerUrl({ url: s3DirectUrl, title });
 
-            // Background pre-fetch chapter PDFs into RAM cache for 0ms instant first-time open
-            files.slice(0, 10).forEach((file: any) => {
-                if (file.url && file.name) {
-                    const cleanName = `${file.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`;
-                    fetchAndCachePdf(file.url, cleanName).catch(() => {});
-                }
-            });
-
-            const s3Match = findS3Match(files, chNum, title);
-            if (s3Match) {
-                console.log("Using S3 match:", s3Match);
-                // Always route through our backend proxy, even on web.
-                // Direct S3 URLs can send CORS headers that block the
-                // browser from embedding/fetching them directly
-                // (react-pdf sees this as a load error / "blocked" view).
-                const proxyUrl = await getPdfViewerUrl(s3Match.url);
-                setNcertDebug(`OK: matched "${s3Match.name}" -> proxy=${proxyUrl}`);
-                setViewerUrl({ url: proxyUrl, title });
-
-                // Cache under the stable chapter id (not the proxy URL,
-                // which can change per-session) so the RAM/disk lookup
-                // above finds it next time this exact chapter is opened.
-                fetchAndCacheByStableKey(proxyUrl, cacheKey).catch(() => {});
-            } else {
-                console.error("No matching file found on S3 for:", title);
-                setNcertDebug(`NO MATCH: chNum=${chNum} title="${title}" among ${files.length} S3 files: [${files.map((f: any) => f.name).join(', ')}]`);
-                alert("This chapter's PDF is not available on S3 yet.");
-            }
+            fetchAndCacheByStableKey(s3DirectUrl, cacheKey).catch(() => {});
         } catch (e: any) {
             console.error("Failed to fetch S3 files", e);
             setNcertDebug(`ERROR: ${e?.message || String(e)}`);
