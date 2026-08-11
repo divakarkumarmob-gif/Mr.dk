@@ -5,6 +5,7 @@ import { ChevronLeft, Download, FileText, ExternalLink, Calendar, Search } from 
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { getRamCachedPdf, getCachedPdf, fetchAndCacheByStableKey } from '../lib/pdfCache';
+import { AWS_CONFIG } from '../services/awsConfig';
 
 interface PaperLink {
     year: string;
@@ -13,35 +14,39 @@ interface PaperLink {
     description?: string;
 }
 
-const GITHUB_BASE = 'https://raw.githubusercontent.com/divakarkumarmob-gif/NEET-PYQ-/main';
+const AWS_CLASSIC_BASE = `${AWS_CONFIG.PDFS_BASE_URL}/classic`;
 
 const PAPERS_DATA: PaperLink[] = [
-    { year: '2018', title: 'NEET 2018 Question Paper', url: `${GITHUB_BASE}/NEET%202018.pdf` },
-    { year: '2017', title: 'NEET 2017 Question Paper', url: `${GITHUB_BASE}/NEET%202017.pdf` },
-    { year: '2016', title: 'NEET 2016 Question Paper (Phase 1)', url: `${GITHUB_BASE}/NEET%202016.pdf` },
-    { year: '2016', title: 'NEET 2016 Question Paper (Phase 2)', url: `${GITHUB_BASE}/NEET%202016(2).pdf` },
-    { year: '2015', title: 'NEET 2015 Question Paper', url: `${GITHUB_BASE}/NEET%202015.pdf` },
-    { year: '2015', title: 'RE-NEET 2015 Question Paper', url: `${GITHUB_BASE}/RE-NEET%202015.pdf` },
-    { year: '2014', title: 'NEET 2014 Question Paper', url: `${GITHUB_BASE}/NEET%202014.pdf` },
-    { year: '2013', title: 'AIPMT 2013 Question Paper', url: `${GITHUB_BASE}/AIPMT%202013.pdf` },
-    { year: '2012', title: 'AIPMT 2012 Main Paper', url: `${GITHUB_BASE}/AIPMT%202012%20Main.pdf` },
-    { year: '2012', title: 'AIPMT 2012 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202012_Preliminary.pdf` },
-    { year: '2011', title: 'AIPMT 2011 Main Paper', url: `${GITHUB_BASE}/AIPMT%202011%20Main.pdf` },
-    { year: '2011', title: 'AIPMT 2011 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202011_Preliminary.pdf` },
-    { year: '2010', title: 'AIPMT 2010 Main Paper', url: `${GITHUB_BASE}/AIPMT%202010%20Main.pdf` },
-    { year: '2010', title: 'AIPMT 2010 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202010_Preliminary.pdf` },
-    { year: '2009', title: 'AIPMT 2009 Main Paper', url: `${GITHUB_BASE}/AIPMT%202009_Main.pdf` },
-    { year: '2009', title: 'AIPMT 2009 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202009_Preliminary.pdf` },
-    { year: '2009', title: 'AIIMS 2009 Question Paper', url: `${GITHUB_BASE}/AIIMS%202009.pdf` },
-    { year: '2008', title: 'AIPMT 2008 Main Paper', url: `${GITHUB_BASE}/AIPMT%202008%20Main.pdf` },
-    { year: '2008', title: 'AIPMT 2008 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202008%20Preliminary.pdf` },
-    { year: '2008', title: 'AIIMS 2008 Question Paper', url: `${GITHUB_BASE}/AIIMS%202008.pdf` },
-    { year: '2007', title: 'AIPMT 2007 Main Paper', url: `${GITHUB_BASE}/AIPMT%202007%20Main.pdf` },
-    { year: '2007', title: 'AIPMT 2007 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202007%20Preliminary.pdf` },
-    { year: '2007', title: 'AIIMS 2007 Question Paper', url: `${GITHUB_BASE}/AIIMS%202007.pdf` },
-    { year: '2006', title: 'AIPMT 2006 Question Paper', url: `${GITHUB_BASE}/AIPMT%202006.pdf` },
-    { year: '2006', title: 'AIPMT 2006 Preliminary Paper', url: `${GITHUB_BASE}/AIPMT%202006_Preliminary.pdf` },
-    { year: '2005', title: 'AIPMT 2005 Question Paper', url: `${GITHUB_BASE}/2005.pdf` },
+    { year: '2018', title: 'NEET 2018 Question Paper', url: `${AWS_CLASSIC_BASE}/neet_2018.pdf` },
+    { year: '2017', title: 'NEET 2017 Question Paper', url: `${AWS_CLASSIC_BASE}/neet_2017.pdf` },
+    { year: '2016', title: 'NEET 2016 Question Paper (Phase 1)', url: `${AWS_CLASSIC_BASE}/neet_2016.pdf` },
+    { year: '2016', title: 'NEET 2016 Question Paper (Phase 2)', url: `${AWS_CLASSIC_BASE}/neet_2016_2.pdf` },
+    { year: '2015', title: 'NEET 2015 Question Paper', url: `${AWS_CLASSIC_BASE}/neet_2015.pdf` },
+    { year: '2015', title: 'RE-NEET 2015 Question Paper', url: `${AWS_CLASSIC_BASE}/re_neet_2015.pdf` },
+    { year: '2014', title: 'NEET 2014 Question Paper', url: `${AWS_CLASSIC_BASE}/neet_2014.pdf` },
+    { year: '2013', title: 'AIPMT 2013 Question Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2013.pdf` },
+    { year: '2012', title: 'AIPMT 2012 Main Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2012_main.pdf` },
+    { year: '2012', title: 'AIPMT 2012 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2012_preliminary.pdf` },
+    { year: '2011', title: 'AIPMT 2011 Main Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2011_main.pdf` },
+    { year: '2011', title: 'AIPMT 2011 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2011_preliminary.pdf` },
+    { year: '2010', title: 'AIPMT 2010 Main Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2010_main.pdf` },
+    { year: '2010', title: 'AIPMT 2010 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2010_preliminary.pdf` },
+    { year: '2009', title: 'AIPMT 2009 Main Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2009_main.pdf` },
+    { year: '2009', title: 'AIPMT 2009 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2009_preliminary.pdf` },
+    { year: '2008', title: 'AIPMT 2008 Main Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2008_main.pdf` },
+    { year: '2008', title: 'AIPMT 2008 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2008_preliminary.pdf` },
+    { year: '2007', title: 'AIPMT 2007 Main Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2007_main.pdf` },
+    { year: '2007', title: 'AIPMT 2007 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2007_preliminary.pdf` },
+    { year: '2006', title: 'AIPMT 2006 Question Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2006.pdf` },
+    { year: '2006', title: 'AIPMT 2006 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2006_preliminary.pdf` },
+    { year: '2005', title: 'AIPMT 2005 Question Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2005.pdf` },
+    { year: '2005', title: 'AIPMT 2005 Preliminary Paper', url: `${AWS_CLASSIC_BASE}/aipmt_2005_preliminary.pdf` },
+    { year: '2013', title: 'AIIMS 2013 Question Paper', url: `${AWS_CLASSIC_BASE}/aiims_2013.pdf` },
+    { year: '2011', title: 'AIIMS 2011 Question Paper', url: `${AWS_CLASSIC_BASE}/aiims_2011.pdf` },
+    { year: '2010', title: 'AIIMS 2010 Question Paper', url: `${AWS_CLASSIC_BASE}/aiims_2010.pdf` },
+    { year: '2009', title: 'AIIMS 2009 Question Paper', url: `${AWS_CLASSIC_BASE}/aiims_2009.pdf` },
+    { year: '2008', title: 'AIIMS 2008 Question Paper', url: `${AWS_CLASSIC_BASE}/aiims_2008.pdf` },
+    { year: '2007', title: 'AIIMS 2007 Question Paper', url: `${AWS_CLASSIC_BASE}/aiims_2007.pdf` }
 ];
 
 interface Props {

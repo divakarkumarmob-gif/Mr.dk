@@ -4,6 +4,7 @@ import { ArrowLeft, Search, Shuffle, CheckCircle, XCircle } from 'lucide-react';
 import { CHAPTER_DATA } from '../constants';
 import { db, auth, OperationType, handleFirestoreError } from '../lib/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';                
+import { AWSQuestionService } from '../services/awsQuestionService';
 
 // Function to fetch flashcards for a specific chapter
 const fetchFlashcards = async (chapterName: string) => {
@@ -20,43 +21,25 @@ const fetchFlashcards = async (chapterName: string) => {
         
         console.log(`Debug: chapterName=${chapterName}, subject=${subject}`);
         
-        let formattedName = chapterName.toLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_');
-        if (formattedName === "cell_the_unit_of_life") {
-            formattedName = "cell_unit_of_life";
+        let allQuestions: any[] = [];
+        const catalog = await AWSQuestionService.fetchMasterCatalog();
+        const cleanSlug = chapterName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+        let targetChapter = catalog?.chapters.find(c => c.slug === cleanSlug || c.chapter_name.toLowerCase() === chapterName.toLowerCase());
+        
+        if (!targetChapter && catalog) {
+            targetChapter = catalog.chapters.find(c => c.chapter_name.toLowerCase().includes(cleanSlug.replace(/_/g, ' ')));
         }
 
-        const encodedSubject = encodeURIComponent(subject.toLowerCase());
-        const encodedChapterDir = encodeURIComponent(chapterName.toLowerCase());
-        
-        let allQuestions: any[] = [];
-        let chunkNumber = 1;
-        
-        while (true) {
-            const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodedChapterDir}/${formattedName}_chunk${chunkNumber}.json`;
-            console.log(`Fetching flashcards chunk ${chunkNumber} from: ${url}`);
-            
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    console.log(`Failed to fetch ${url}, status: ${response.status}`);
-                    break;
+        if (targetChapter && targetChapter.files) {
+            for (const relFile of targetChapter.files) {
+                const chunkData = await AWSQuestionService.fetchChapterQuestions(relFile);
+                if (chunkData && Array.isArray(chunkData)) {
+                    allQuestions.push(...chunkData);
                 }
-                const data = await response.json();
-                
-                if (data.questions && Array.isArray(data.questions)) {
-                    allQuestions.push(...data.questions);
-                } else {
-                    break;
-                }
-                chunkNumber++;
-            } catch (e) {
-                console.error(`Error fetching ${url}:`, e);
-                break;
             }
-        }
-        
+        }    
         if (allQuestions.length === 0) {
-            throw new Error(`No flashcards found for ${chapterName} at ${encodedSubject}/${encodedChapterDir}`);
+            throw new Error(`No flashcards found for ${chapterName}`);
         }
         
         return allQuestions.map((q: any, index: number) => ({

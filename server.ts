@@ -478,6 +478,50 @@ async function startServer() {
 
 
 
+  // Extract questions from PDF text using AI
+  app.post("/api/extract-questions", requireAppCheckAndAuth, async (req: any, res: any) => {
+    try {
+      const { text, subject } = req.body;
+      if (!text) {
+        return res.status(400).json({ error: "Missing text to extract questions from" });
+      }
+
+      const prompt = `You are a NEET exam question extractor. Convert the following extracted text into a JSON array of multiple choice questions (MCQs).
+Target Subject: ${subject || 'Biology'}
+
+Output ONLY a JSON object with key "questions" containing an array of question objects:
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Question text...",
+      "options": { "A": "Option A", "B": "Option B", "C": "Option C", "D": "Option D" },
+      "correct_option": "A",
+      "explanation": "Explanation...",
+      "subject": "${subject || 'Biology'}"
+    }
+  ]
+}
+
+Text content:
+${text.slice(0, 15000)}`;
+
+      const responseText = await callAI(prompt);
+      let cleaned = responseText.trim();
+      if (cleaned.startsWith('```json')) cleaned = cleaned.slice(7);
+      if (cleaned.startsWith('```')) cleaned = cleaned.slice(3);
+      if (cleaned.endsWith('```')) cleaned = cleaned.slice(0, -3);
+      cleaned = cleaned.trim();
+
+      const parsed = JSON.parse(cleaned);
+      const questions = parsed.questions || (Array.isArray(parsed) ? parsed : []);
+      return res.json({ success: true, questions });
+    } catch (error: any) {
+      console.error("Error in /api/extract-questions:", error);
+      return res.status(500).json({ error: error.message || "Failed to extract questions" });
+    }
+  });
+
   // Send 1v1 Direct Chat Push Notification via Firebase Cloud Messaging (FCM)
   // Wakes up mobile devices even when app is closed, terminated, or screen is locked (like WhatsApp)
   app.post("/api/send-chat-notification", requireAppCheckAndAuth, async (req: any, res: any) => {

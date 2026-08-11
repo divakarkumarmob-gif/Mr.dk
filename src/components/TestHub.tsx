@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ClipboardList, Filter, ChevronRight, PlayCircle, BarChart3, BookOpen, FileText, Clock, ListOrdered, Award, PlusCircle, FlaskConical, Atom, Dna, X, Info, AlertTriangle, Tag, Loader2 } from 'lucide-react';
 import { db, auth } from '../lib/firebase';
 import { collection, query, where, getDocs, orderBy, limit, onSnapshot, doc, updateDoc } from 'firebase/firestore';
-// import { QUESTIONS } from '../data/questions';
 import PYQTestRunner from './PYQTestRunner';
 import TestResultDetail from './TestResultDetail';
 import AdvancedPDFViewer from './AdvancedPDFViewer';
 import NTAMockGenerator from './NTAMockGenerator';
 import { generateNEETPdf } from '../lib/pdfUtils';
+import { AWSQuestionService } from '../services/awsQuestionService';
+import { getAwsPdfUrl, getAwsQuestionUrl, getLatestPyqUrl } from '../services/awsConfig';
 
 
 export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { subjects: { name: string; topic: string; color: string }[], onNavigate: (view: any, params?: any) => void, setIsPYQRunning: (val: boolean) => void }) {
@@ -439,59 +440,25 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                     try {
                                         setLoading(true);
                                         let allQuestions: any[] = [];
-                                        const encodedSubject = encodeURIComponent(test.subject.toLocaleLowerCase());
                                         const chapterName = test.type;
-                                        const encodedChapterDir = encodeURIComponent(chapterName.toLocaleLowerCase());
-                                        
-                                        let chunkNumber = 1;
-                                        while (chunkNumber <= 10) {
-                                            let successfulFetch = false;
-                                            
-                                            const nameVariations = [
-                                                chapterName,
-                                                chapterName.replace(/ & /g, ' and '),
-                                                chapterName.replace(/ and /g, ' & '),
-                                                chapterName.toLocaleLowerCase()
-                                            ];
-
-                                            const urlsToTry: string[] = [];
-                                            for (const variant of nameVariations) {
-                                                urlsToTry.push(
-                                                    `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${encodeURIComponent(variant)}%20(${chunkNumber}).json`,
-                                                    `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${variant.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_')}_chunk${chunkNumber}.json`
-                                                );
-                                            }
-
-                                            let formattedName = chapterName.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_');
-                                            if (formattedName === "cell_the_unit_of_life") {
-                                                formattedName = "cell_unit_of_life";
-                                            }
-                                            urlsToTry.push(
-                                                `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodedChapterDir}/${formattedName}_chunk${chunkNumber}.json`
-                                            );
-
-                                            for (const url of urlsToTry) {
-                                                try {
-                                                    const response = await fetch(url);
-                                                    if (response.ok) {
-                                                        const data = await response.json();
-                                                        if (data) {
-                                                            const questionsArray = Array.isArray(data) ? data : data.questions;
-                                                            if (questionsArray && Array.isArray(questionsArray)) {
-                                                                allQuestions = [...allQuestions, ...questionsArray];
-                                                                successfulFetch = true;
-                                                                break;
-                                                            }
-                                                        }
-                                                    }
-                                                } catch (e) {
-                                                    // Silently ignore
-                                                }
-                                            }
-
-                                            if (!successfulFetch) break;
-                                            chunkNumber++;
-                                        }
+                                        try {
+                                             const catalog = await AWSQuestionService.fetchMasterCatalog();
+                                             const cleanSlug = chapterName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+                                             let targetChapter = catalog?.chapters.find(c => c.slug === cleanSlug || c.chapter_name.toLowerCase() === chapterName.toLowerCase());
+                                             if (!targetChapter && catalog) {
+                                                 targetChapter = catalog.chapters.find(c => c.chapter_name.toLowerCase().includes(cleanSlug.replace(/_/g, ' ')));
+                                             }
+                                             if (targetChapter && targetChapter.files) {
+                                                 for (const relFile of targetChapter.files) {
+                                                     const chunkData = await AWSQuestionService.fetchChapterQuestions(relFile);
+                                                     if (chunkData && Array.isArray(chunkData)) {
+                                                         allQuestions = [...allQuestions, ...chunkData];
+                                                     }
+                                                 }
+                                             }
+                                         } catch (e) {
+                                             console.warn("AWS S3 questions fetch error:", e);
+                                         }
 
                                         let normalizedQuestions = allQuestions.map((q: any, i: number) => {
                                             let transformedOptions = q.options;
@@ -812,27 +779,33 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                             if (!selectedYear || !selectedSubForPYQ) return alert("Please select Year and Subject");
                             
                             try {
-                                const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/${selectedYear}/NEET_${selectedYear}_${selectedSubForPYQ}.json`;
-                                const response = await fetch(url);
-                                if (!response.ok) throw new Error("Could not fetch test");
+                                const subLower = selectedSubForPYQ.toLowerCase();
+                                const awsPyqUrl = getLatestPyqUrl(selectedYear, `neet_${selectedYear}_${subLower}.json`);
+                                const fallbackUrl = getLatestPyqUrl(selectedYear, `NEET_${selectedYear}_${selectedSubForPYQ}.json`);
+                                
+                                let response = await fetch(awsPyqUrl);
+                                if (!response.ok) {
+                                    response = await fetch(fallbackUrl);
+                                }
+                                if (!response.ok) throw new Error(`Could not fetch NEET ${selectedYear} ${selectedSubForPYQ} test from AWS S3`);
                                 const data = await response.json();
                                 
-                                // Map to GitHub hosted PDF for faster access
                                 const paperMapping: Record<string, string> = {
-                                    '2024': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2024/NEET_2024.pdf',
-                                    '2023': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2023/NEET_2023.pdf',
-                                    '2022': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2022/NEET_2022.pdf',
-                                    '2021': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2021/NEET_2021.pdf',
-                                    '2020': 'https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/2020/NEET_2020.pdf'
+                                    '2025': getAwsPdfUrl('classic', 'neet_2025.pdf'),
+                                    '2024': getAwsPdfUrl('classic', 'neet_2024.pdf'),
+                                    '2023': getLatestPyqUrl('2023', `2023_${subLower}_paper_with_solutions.pdf`),
+                                    '2022': getAwsPdfUrl('classic', 'aipmt_2012_main.pdf'),
+                                    '2021': getAwsPdfUrl('classic', 'aipmt_2011_main.pdf')
                                 };
                                 
                                 setCurrentPaperUrl(paperMapping[selectedYear]);
-                                setTestTitle(`${selectedYear} (${selectedSubForPYQ})`);
-                                setPyqQuestions(data.questions || []);
+                                setTestTitle(`NEET ${selectedYear} (${selectedSubForPYQ})`);
+                                const qList = Array.isArray(data) ? data : (data.questions || []);
+                                setPyqQuestions(qList);
                                 setShowPYQOptions(false);
                                 setIsPYQRunning(true);
                             } catch (err) {
-                                alert("Error fetching test questions. Try View PDF for the full paper.");
+                                alert("Error fetching test questions from AWS S3: " + (err as Error).message);
                             }
                         }}>Fetch Test</button>
                         
@@ -845,19 +818,22 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                 setIsGeneratingPdf(true);
                                 console.log(`[PDF] Requesting PDF for ${selectedYear} - ${selectedSubForPYQ}`);
                                 try {
-                                    const url = `https://raw.githubusercontent.com/divakarkumarmob-gif/Data-upload-/main/${selectedYear}/NEET_${selectedYear}_${selectedSubForPYQ}.json`;
-                                    console.log(`[PDF] Fetching JSON from: ${url}`);
-                                    const response = await fetch(url);
+                                    const subLower = selectedSubForPYQ.toLowerCase();
+                                    const awsPyqUrl = getLatestPyqUrl(selectedYear, `neet_${selectedYear}_${subLower}.json`);
+                                    const fallbackUrl = getLatestPyqUrl(selectedYear, `NEET_${selectedYear}_${selectedSubForPYQ}.json`);
                                     
+                                    let response = await fetch(awsPyqUrl);
                                     if (!response.ok) {
-                                        console.error(`[PDF] Fetch failed with status: ${response.status}`);
-                                        throw new Error(`Could not fetch test data (${response.status})`);
+                                        response = await fetch(fallbackUrl);
+                                    }
+                                    if (!response.ok) {
+                                        throw new Error(`Could not fetch test data from AWS S3 (${response.status})`);
                                     }
                                     
                                     const data = await response.json();
-                                    console.log(`[PDF] Successfully fetched JSON. Questions: ${data.questions?.length}`);
+                                    const qList = Array.isArray(data) ? data : (data.questions || []);
                                     
-                                    if (!data.questions || data.questions.length === 0) {
+                                    if (qList.length === 0) {
                                         throw new Error("No questions found in this paper JSON.");
                                     }
 
@@ -865,10 +841,8 @@ export default function TestHub({ subjects, onNavigate, setIsPYQRunning }: { sub
                                         exam: 'NEET',
                                         year: selectedYear,
                                         subject: selectedSubForPYQ,
-                                        questions: data.questions
+                                        questions: qList
                                     }, true); 
-                                    
-                                    console.log(`[PDF] Generated Blob URL: ${pdfUrl}`);
                                     
                                     setActivePdf({
                                         url: pdfUrl,

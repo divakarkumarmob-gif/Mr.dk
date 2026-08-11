@@ -1,1 +1,0 @@
-console.log('FIREBASE_SERVICE_ACCOUNT_JSON set:', !!process.env.FIREBASE_SERVICE_ACCOUNT_JSON);

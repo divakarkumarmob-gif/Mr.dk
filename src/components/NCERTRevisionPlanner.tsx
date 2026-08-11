@@ -11,6 +11,7 @@ import { getUserPerformanceSummary, UserPerformanceSummary } from '../services/u
 import { auth } from '../lib/firebase';
 import { chatWithAI } from '../services/geminiService';
 import { showToast } from '../utils/toast';
+import { AWSQuestionService } from '../services/awsQuestionService';
 
 export interface RevisionTarget {
     id: string;
@@ -48,9 +49,9 @@ export default function NCERTRevisionPlanner() {
     const generateDailyTargets = (perf: UserPerformanceSummary | null) => {
         const weak = perf?.weakTopics || [];
         
-        const defaultPhysics = weak.find(t => t.toLowerCase().includes('optic') || t.toLowerCase().includes('motion')) || 'Optics Sign Convention';
-        const defaultChem = weak.find(t => t.toLowerCase().includes('organic') || t.toLowerCase().includes('bond')) || 'Organic Reaction Mechanisms';
-        const defaultBio = weak.find(t => t.toLowerCase().includes('photo') || t.toLowerCase().includes('genetic')) || 'Photosynthesis C3 vs C4 Pathways';
+        const defaultPhysics = weak.find(t => t.toLowerCase().includes('optic') || t.toLowerCase().includes('motion')) || 'Kinematics';
+        const defaultChem = weak.find(t => t.toLowerCase().includes('organic') || t.toLowerCase().includes('bond')) || 'Hydrocarbons';
+        const defaultBio = weak.find(t => t.toLowerCase().includes('photo') || t.toLowerCase().includes('genetic')) || 'Cell The Unit Of Life';
 
         const savedDate = localStorage.getItem('ncert_revision_date');
         const todayStr = new Date().toDateString();
@@ -68,7 +69,7 @@ export default function NCERTRevisionPlanner() {
                 id: 'target_phy_' + Date.now(),
                 subject: 'Physics',
                 topicName: defaultPhysics,
-                targetDescription: 'Review sign conventions and key formula derivations',
+                targetDescription: 'Review sign conventions & key formula derivations',
                 completed: false
             },
             {
@@ -82,7 +83,7 @@ export default function NCERTRevisionPlanner() {
                 id: 'target_bio_' + Date.now(),
                 subject: 'Biology',
                 topicName: defaultBio,
-                targetDescription: 'Master Kranz anatomy & PEP carboxylase locations',
+                targetDescription: 'Master cell organelles & organelle functions',
                 completed: false
             }
         ];
@@ -100,6 +101,22 @@ export default function NCERTRevisionPlanner() {
         setIsGenerating(true);
 
         try {
+            // Fetch real questions for chapter from AWS S3
+            const catalog = await AWSQuestionService.fetchMasterCatalog();
+            const cleanSlug = target.topicName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+            let matchChapter = catalog?.chapters.find(c => c.slug === cleanSlug || c.chapter_name.toLowerCase().includes(target.topicName.toLowerCase()));
+
+            if (matchChapter && matchChapter.files && matchChapter.files.length > 0) {
+                const s3Questions = await AWSQuestionService.fetchChapterQuestions(matchChapter.files[0]);
+                if (s3Questions && s3Questions.length > 0) {
+                    const randomQ = s3Questions[Math.floor(Math.random() * s3Questions.length)];
+                    const qText = `[AWS S3 Question - ${matchChapter.chapter_name}]\n${randomQ.question}\n\nOptions:\nA) ${randomQ.options.A}\nB) ${randomQ.options.B}\nC) ${randomQ.options.C}\nD) ${randomQ.options.D}`;
+                    setDrillQuestion(qText);
+                    setIsGenerating(false);
+                    return;
+                }
+            }
+
             const prompt = `Act as an expert NEET mentor. Generate 1 high-yield NCERT practice question for ${target.subject}: "${target.topicName}". Keep it concise and focused on high-yield NCERT points. Do not give the answer yet.`;
             const q = await chatWithAI([], prompt);
             setDrillQuestion(q);

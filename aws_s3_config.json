@@ -1,0 +1,8 @@
+{
+  "AWS_REGION": "ap-south-1",
+  "AWS_BUCKET_NAME": "your-neetmaster-s3-bucket-name",
+  "AWS_ACCESS_KEY_ID": "YOUR_AWS_ACCESS_KEY_ID_HERE",
+  "AWS_SECRET_ACCESS_KEY": "YOUR_AWS_SECRET_ACCESS_KEY_HERE",
+  "MAKE_PUBLIC_READ": true,
+  "ENABLE_GZIP_COMPRESSION": true
+}

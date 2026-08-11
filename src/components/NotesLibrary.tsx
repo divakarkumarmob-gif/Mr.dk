@@ -8,9 +8,11 @@ import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { getApiUrl, getPdfViewerUrl } from '@/utils/api';
 import { getRamCachedPdf, getCachedPdf, fetchAndCacheByStableKey } from '../lib/pdfCache';
 import { useModalBackButton } from '../utils/hardwareBackButton';
+import { getAwsPdfUrl } from '../services/awsConfig';
 
 function PDFViewer({ chapterName, onClose }: { chapterName: string, onClose: () => void }) {
-    const pdfUrl = `https://raw.githubusercontent.com/divakarkumarmob-gif/shortnotes/main/${chapterName.toLowerCase().replace(/ /g, '_')}/${chapterName.toLowerCase().replace(/ /g, '_')}.pdf`;
+    const slug = chapterName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+    const pdfUrl = getAwsPdfUrl('class-11/physics', `${slug}.pdf`);
     const [localUrl, setLocalUrl] = useState<string | null>(null);
     const [remoteViewerUrl, setRemoteViewerUrl] = useState<string | null>(null);
     const [checkedCache, setCheckedCache] = useState(false);

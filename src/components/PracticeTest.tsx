@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PYQTestRunner from './PYQTestRunner';
+import { AWSQuestionService } from '../services/awsQuestionService';
 
 export default function PracticeTest({ chapters, onBack }: { chapters: {name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}[], onBack: () => void }) {
     const [questions, setQuestions] = useState<any[]>([]);
@@ -7,69 +8,46 @@ export default function PracticeTest({ chapters, onBack }: { chapters: {name: st
 
     useEffect(() => {
         const fetchQuestionsForChapter = async (chapter: {name: string, subject: string, numQuestions: number, difficulty: 'Medium' | 'Hard'}) => {
-            const encodedSubject = chapter.subject.toLocaleLowerCase();
             const chapterName = chapter.name;
-            
             let allChunks: any[] = [];
-            let chunkNumber = 1;
-            
-            while (chunkNumber <= 10) {
-                let successfulFetch = false;
-                
-                // Try multiple name variations
-                const nameVariations = [
-                    chapterName,
-                    chapterName.replace(/ & /g, ' and '),
-                    chapterName.replace(/ and /g, ' & '),
-                    chapterName.toLocaleLowerCase()
-                ];
 
-                for (const variant of nameVariations) {
-                    const patterns = [
-                        `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${encodeURIComponent(variant)}%20(${chunkNumber}).json`,
-                        `https://raw.githubusercontent.com/divakarkumarmob-gif/class-11/main/${encodedSubject}/${encodeURIComponent(variant)}/${variant.toLocaleLowerCase().replace(/ /g, '_').replace(/:/g, '').replace(/_+/g, '_')}_chunk${chunkNumber}.json`
-                    ];
+            try {
+                const catalog = await AWSQuestionService.fetchMasterCatalog();
+                const cleanSlug = chapterName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
 
-                    for (const url of patterns) {
-                        try {
-                            const response = await fetch(url);
-                            if (response.ok) {
-                                const data = await response.json();
-                                if (data) {
-                                    const questionsArray = Array.isArray(data) ? data : data.questions;
-                                    if (questionsArray && Array.isArray(questionsArray)) {
-                                        allChunks.push(questionsArray);
-                                        successfulFetch = true;
-                                        break;
-                                    }
-                                }
-                            }
-                        } catch (e) {
-                            // Silently continue to next pattern
-                        }
-                    }
-                    if (successfulFetch) break;
+                let targetChapter = catalog?.chapters.find(c => c.slug === cleanSlug || c.chapter_name.toLowerCase() === chapterName.toLowerCase());
+
+                if (!targetChapter && catalog) {
+                    targetChapter = catalog.chapters.find(c => c.chapter_name.toLowerCase().includes(cleanSlug.replace(/_/g, ' ')));
                 }
 
-                if (!successfulFetch) break;
-                chunkNumber++;
+                if (targetChapter && targetChapter.files && targetChapter.files.length > 0) {
+                    for (const relFile of targetChapter.files) {
+                        const chunkData = await AWSQuestionService.fetchChapterQuestions(relFile);
+                        if (chunkData && Array.isArray(chunkData) && chunkData.length > 0) {
+                            allChunks.push(chunkData);
+                        }
+                    }
+                }
+            } catch (e) {
+                console.warn("Error fetching questions from AWS S3:", e);
             }
-            
+
             let allQuestions: any[] = [];
             if (chapter.difficulty === 'Hard' && allChunks.length >= 3) {
                 allQuestions = allChunks.filter((_, index) => index >= 2).flat();
             } else {
                 allQuestions = allChunks.flat();
             }
-                
+
             return allQuestions.sort(() => Math.random() - 0.5).slice(0, chapter.numQuestions).map((q: any, i: number) => {
                 let transformedOptions = q.options;
                 if (Array.isArray(q.options)) {
                     transformedOptions = {
-                        A: q.options[0] || "",
-                        B: q.options[1] || "",
-                        C: q.options[2] || "",
-                        D: q.options[3] || ""
+                        A: q.options[0] || 'N/A',
+                        B: q.options[1] || 'N/A',
+                        C: q.options[2] || 'N/A',
+                        D: q.options[3] || 'N/A'
                     };
                 }
 
@@ -90,7 +68,6 @@ export default function PracticeTest({ chapters, onBack }: { chapters: {name: st
             });
         };
 
-
         const fetchAll = async () => {
             setLoading(true);
             const allQuestions = await Promise.all(chapters.map(fetchQuestionsForChapter));
@@ -109,7 +86,7 @@ export default function PracticeTest({ chapters, onBack }: { chapters: {name: st
 
     if (loading) return <div className="text-white p-6">Connecting to test...</div>;
 
-    const testTitle = chapters.length > 1 ? "Custom Mixed" : chapters.map(c => c.name).join(', ');                
+    const testTitle = chapters.length > 1 ? "Custom Mixed" : chapters.map(c => c.name).join(', ');
 
     return <PYQTestRunner questions={questions} title={testTitle} onBack={onBack} />;
 }
