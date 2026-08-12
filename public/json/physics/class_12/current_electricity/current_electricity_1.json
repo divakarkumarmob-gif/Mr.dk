@@ -1181,10 +1181,10 @@
     },
     "question": "For the current loops shown in the figure, Kirchhoff's loop rule for the loops AHDCBA and AHDEFGA yields these equations respectively :- D C H B A G F E I 2 I 2 I 1 30 Ω 1 Ω 1 Ω 20 Ω 45 V 80 V 40 Ω I 3",
     "options": {
-      "A": "-30 I 1 -41 I 3 + 45 = 0 and -30 I 1 + 21 I 2 - 80 = 0",
+      "A": "-30 I 1 -41 I 3 + 45 = 0 I 1 + 21 I 2 - 80 = 0",
       "B": "30 I 1 -41 I 3 + 45 = 0 and 30 I 1 - 21 I 2 - 80 = 0",
-      "C": "30 I 1 + 41 I 3 - 45 = 0 and -30 I 1 + 21 I 2 + 80 = 0",
-      "D": "-30 I 1 - 41 I 3 - 45 = 0 and -30 I 1 + 21 I 2 - 80 = 0"
+      "C": "30 I 1 + 41 I 3 - 45 = 0 I 1 + 21 I 2 + 80 = 0",
+      "D": "-30 I 1 - 41 I 3 - 45 = 0 I 1 + 21 I 2 - 80 = 0"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles.",
@@ -3376,10 +3376,10 @@
     },
     "question": "For the current loops shown in the figure, Kirchhoff's loop rule for the loops AHDCBA and AHDEFGA yields these equations respectively : -",
     "options": {
-      "A": "- 30 I 1 - 41 I 3 + 45 = 0 and - 30 I 1 + 21 I 2 - 80 = 0",
+      "A": "- 30 I 1 - 41 I 3 + 45 = 0 I 1 + 21 I 2 - 80 = 0",
       "B": "30 I 1 - 41 I 3 + 45 = 0 and 30 I 1 - 21 I 2 - 80 = 0",
-      "C": "30 I 1 + 41 I 3 - 45 = 0 and - 30 I 1 + 21 I 2 + 80 = 0",
-      "D": "- 30 I 1 - 41 I 3 - 45 = 0 and - 30 I 1 + 21 I 2 - 80 = 0 CE10 - 0005 a b 50 4 20 30 16 3 2 20 15 E R 1 R 2 10A 1A i 2A 6A 2A 2A 2 \\Omega Y X 3 \\Omega 2 \\Omega 3 \\Omega 9V A 10 \\Omega 60 \\Omega R 12 V i 20 \\Omega 6 V 3 \\Omega 6 \\Omega R A 2 A A 2.5 \\Omega B 6 \\Omega 3 \\Omega 6 \\Omega D C H B A G F E I 2 I 2 I 1 30 \\Omega 1 \\Omega 1 \\Omega 20 \\Omega 45 V 80 V 40 \\Omega I 3"
+      "C": "30 I 1 + 41 I 3 - 45 = 0 I 1 + 21 I 2 + 80 = 0",
+      "D": "- 30 I 1 - 41 I 3 - 45 = 0 I 1 + 21 I 2 - 80 = 0 CE10 - 0005 a b 50 4 20 30 16 3 2 20 15 E R 1 R 2 10A 1A i 2A 6A 2A 2A 2 \\Omega Y X 3 \\Omega 2 \\Omega 3 \\Omega 9V A 10 \\Omega 60 \\Omega R 12 V i 20 \\Omega 6 V 3 \\Omega 6 \\Omega R A 2 A A 2.5 \\Omega B 6 \\Omega 3 \\Omega 6 \\Omega D C H B A G F E I 2 I 2 I 1 30 \\Omega 1 \\Omega 1 \\Omega 20 \\Omega 45 V 80 V 40 \\Omega I 3"
     },
     "correct_option": "A",
     "explanation": "In loop AHDCBA - 30 I 1 - 45 - I 3 - 40 I 3 = 0 - 30 I 1 - 41 I 3 - 45 = 0 In loop AHDCBA - 30 I 1 + 20 I 2 + 1 I 2 - 80 = 0 - 30 I 1 + 21 I 2 - 80 = 0",

@@ -179,7 +179,7 @@
     "question": "Consider the wave represented by, y = cos (500 t - 70 x) where y is in mm, x in m and t in seconds. Which of the following is/are true?",
     "options": {
       "A": "the wave is a standing wave",
-      "B": "the speed of the wave is 50/7 ms - 1",
+      "B": "the speed of the wave is 50/7",
       "C": "the frequency of oscillation is 500 × 2 \\pi Hz",
       "D": "two nearest points in the same phase have separation 20 \\pi / 7cm WM02 - 0016 -3 t"
     },
@@ -430,7 +430,7 @@
       "source": "RACE - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The equations of two waves are given by : 1 y 5sin2 (x vt)cm = \\pi - 2 y 3sin2 (x vt 1.5)cm = \\pi - + These waves are simultaneously passing through a string. The amplitude of the resulting wave is",
+    "question": "The equations of two waves are given by : 1 y 5sin2 (x vt)cm = \\ y 3sin2 (x vt 1.5)cm = \\pi - + These waves are simultaneously passing through a string. The amplitude of the resulting wave is",
     "options": {
       "A": "2 cm",
       "B": "4 cm",
@@ -959,7 +959,7 @@
       "source": "Wave Motion - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A stone dropped from the top of a tower of height 300 m high splashes into the water of a pond near the base of the tower. When is the splash heard at the top, given that the speed of sound in air is 340 m s -1 ? (g = 9.8 ms -2 )",
+    "question": "A stone dropped from the top of a tower of height 300 m high splashes into the water of a pond near the base of the tower. When is the splash heard at the top, given that the speed of sound in air is 340 m s -1 ? (g = 9.8 )",
     "options": {
       "A": "8.707 sec",
       "B": "6.28 sec",
@@ -1028,7 +1028,7 @@
       "source": "Wave Motion - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The equation of progressive wave is where x x Y 4 sin 5t 9 6   π   = π - +         and y are in cm. Which of the following statement is not true?",
+    "question": "The equation of progressive wave is where x x Y 4 sin 5t 9 6   π   = π - +         and y are in cm. Which of the following\n\nstatement is not true?",
     "options": {
       "A": "λ = 18 cm",
       "B": "amplitude = 0.04 m",
@@ -1563,7 +1563,7 @@
       "source": "Wave Motion - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "At the room temperature the velocity of sound in O 2 gas is V. Then in mixture of H 2 and O 2 gas the speed of sound at same temprature:",
+    "question": "At the room temperature the velocity of sound in O 2 gas is\n\nV. Then in mixture of H 2 and O 2 gas the speed of sound at same temprature:",
     "options": {
       "A": "will be less than V.",
       "B": "will be more than V",
@@ -1747,7 +1747,7 @@
       "source": "Wave Motion - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two plane progressive waves show destructive interference at point P. Which of the following statement is true at point P :-",
+    "question": "Two plane progressive waves show destructive interference at point P. Which of the following\n\nstatement is true at point P :-",
     "options": {
       "A": "Crest of one wave is superimposed on crest of another wave",
       "B": "Trough of one wave is superimposed on crest of another wave",

@@ -514,7 +514,7 @@
       "source": "Mole Concept - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The density of air is 0.001293 g mL -1 at NTP. Its vapour density is :-",
+    "question": "The density of air is 0.001293 g at NTP. Its vapour density is :-",
     "options": {
       "A": "143",
       "B": "14.53",
@@ -689,7 +689,7 @@
       "source": "Mole Concept - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In an organic compound of molar mass 108 g mol -1 C, H and N atoms are present in",
+    "question": "In an organic compound of molar mass 108 g C, H and N atoms are present in",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -741,7 +741,7 @@
       "source": "NCR - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which statement is correct ?",
+    "question": "Which\n\nstatement is correct ?",
     "options": {
       "A": "Solids have definite volume and definite shape",
       "B": "Liquids have definite volume but do not have definite shape",
@@ -799,7 +799,7 @@
       "D": "8 g MC08 - 0199"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) Combustion of methane, CH 4 + 2O 2 → CO 2 + 2H 2 O 1 mole CH 4 or 16 g CH 4 Produces ⎯⎯⎯⎯ → 2 × 18 = 36g H 2 O"
+    "explanation": "Ans. ( 1 ) Combustion of methane, CH 4 + 2O 2 → CO 2 + 2H 2 O 1 mole CH 4 g CH 4 Produces ⎯⎯⎯⎯ → 2 × 18 = 36g H 2 O"
   },
   {
     "type": "normal_mcq",
@@ -1040,7 +1040,7 @@
       "D": "4.79 mol/kg MC21 - 0216"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) M = 3M ⎯ → means 3 mole solute in 1 litre of solvent \\rho solution = 1.25 g/mL m = ? m = no. of moles of solute weight of solvent in kg \\rho solution = solution solution (mass) (Volume)  mass = \\rho × V ( L )  (mass) solution = 1.25g lit × 10 3 × 1 L = 1250 g  n = given mass molar mass  given mass = n × molar mass  given mass = (3mole) (58.5 g mol - 1 ) = 175.5 g Weight of solvent = 1250 - 175.5 = 1074.5g = 1.0745 kg  m = 3 moles 1.0745kg = 2.79 mol/kg"
+    "explanation": "Ans. ( 3 ) M = 3M ⎯ → means 3 mole solute in 1 litre of solvent \\rho solution = 1.25 g/mL m = ? m = no. of moles of solute weight of solvent in kg \\rho solution = solution solution (mass) (Volume)  mass = \\rho × V ( L )  (mass) solution = 1.25g lit × 10 3 × 1 L = 1250 g  n = given mass molar mass  given mass = n × molar mass  given mass = (3mole) (58.5 g ) = 175.5 g Weight of solvent = 1250 - 175.5 = 1074.5g = 1.0745 kg  m = 3 moles 1.0745kg = 2.79 mol/kg"
   },
   {
     "type": "normal_mcq",
@@ -1109,7 +1109,7 @@
       "source": "NCR - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Equal volume of all gases at the same temperature and pressu re should contain equal number of molecul es. T his statement is in accordance with:",
+    "question": "Equal volume of all gases at the same temperature and pressu re should contain equal number of molecul es. T his\n\nstatement is in accordance with:",
     "options": {
       "A": "Avogadro’s law",
       "B": "Law of multiple proportion",
@@ -1387,7 +1387,7 @@
       "source": "NCR - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Calculate the mass of sodium acetate required to make 500mL of 0.4 molar aqueous solution. (Molar mass of sodium acetate is 82 g mol - 1 )",
+    "question": "Calculate the mass of sodium acetate required to make 500mL of 0.4 molar aqueous solution. (Molar mass of sodium acetate is 82 g )",
     "options": {
       "A": "16.4 g",
       "B": "15.1 g",
@@ -1395,7 +1395,7 @@
       "D": "41.2 g MC21 - 0217"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) As, M = n given mass V(L) molar mass V(L) =   given mass = M × molar mass × V ( L ) = (0.4M) (82g mol - 1 ) 500 1000 (  ( ) )  L = (0.4 mol L - 1 ) (82g mo l - 1 ) (0.5 L) = 16.4g"
+    "explanation": "Ans. ( 1 ) As, M = n given mass V(L) molar mass V(L) =   given mass = M × molar mass × V ( L ) = (0.4M) (82g ) 500 1000 (  ( ) )  L = (0.4 mol L - 1 ) (82g mo l - 1 ) (0.5 L) = 16.4g"
   },
   {
     "type": "statement_based",
@@ -1720,7 +1720,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) N 2 converted = 80% or 7 gm = 7 × 80 100 = 5.6 gm moles of N = 5.6 14 = 0.4 mole 2 mole N requires ⎯⎯⎯ → 3 mole O 0.4 mole N ⎯ → 0.6 mole O = 0.6 × (6 × 10 23 ) = 3.6 × 10 23 atoms NEET : CHEMISTRY"
+    "explanation": "Ans. ( 2 ) N 2 converted = 80% gm = 7 × 80 100 = 5.6 gm moles of N = 5.6 14 = 0.4 mole 2 mole N requires ⎯⎯⎯ → 3 mole O 0.4 mole N ⎯ → 0.6 mole O = 0.6 × (6 × 10 23 ) = 3.6 × 10 23 atoms NEET : CHEMISTRY"
   },
   {
     "type": "normal_mcq",

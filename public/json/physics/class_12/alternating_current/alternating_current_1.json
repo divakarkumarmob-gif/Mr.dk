@@ -175,7 +175,7 @@
       "source": "Alternating Current _AC_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "If an A.C. main supply is given to be 220 V. What would be the average e.m.f. during a positive half cycle :-",
+    "question": "If an A.C. main supply is given to be 220\n\nV. What would be the average e.m.f. during a positive half cycle :-",
     "options": {
       "A": "198 V",
       "B": "386 V",
@@ -316,13 +316,13 @@
     },
     "question": "A resistance of 300 Ω and an inductance of π 1 henry are connected in series to a A.C. voltage of 20 volts and 200 Hz frequency. The phase angle between the voltage and current is :-",
     "options": {
-      "A": "tan -1       4 3",
-      "B": "tan -1       3 4",
-      "C": "tan -1       3 2",
-      "D": "tan -1       2 3"
+      "A": "      4 3",
+      "B": "      3 4",
+      "C": "      3 2",
+      "D": "      2 3"
     },
     "correct_option": "A",
-    "explanation": "At resonance, V L and V C are equal in magnitude but have 180^\\circ phase difference relative to each other. ∴ V LC = V L - V C = 0 $//(1 TARGET : 202 5 PHYSICS 202 5 HS ALTERNATING CURRENT : RACE # 02 SOLUTION"
+    "explanation": "At resonance, V L and V C are equal in magnitude but have 180^\\circ phase difference relative to each other. ∴ V LC = V L - V C = 0 $//(1 TARGET : 202 5 5 HS ALTERNATING CURRENT : RACE # 02 SOLUTION"
   },
   {
     "type": "figure_mcq",
@@ -430,7 +430,7 @@
       "source": "Alternating Current _AC_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A student connects a long air cored - coil of manganin wire to a 100 V D.C. supply and records a current of 25 amp. When the same coil is connected across 100 V. 50 Hz a.c. the current reduces to 20 A , the reactance of the coil is :-",
+    "question": "A student connects a long air cored - coil of manganin wire to a 100 V D.C. supply and records a current of 25 amp. When the same coil is connected across 100\n\nV. 50 Hz a.c. the current reduces to 20 A , the reactance of the coil is :-",
     "options": {
       "A": "4 Ω",
       "B": "3 Ω",
@@ -477,7 +477,7 @@
       "source": "Alternating Current _AC_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is ω /2 π . Which of the following statement is correct :",
+    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is ω /2 π . Which of the following\n\nstatement is correct :",
     "options": {
       "A": "For low frequency the limiting value of impedance is L.",
       "B": "For high frequency the limiting value of impedance is ω L.",
@@ -717,10 +717,10 @@
     },
     "question": "An inductance of 0.4 Henry and a resistance of 100 ohm are connected to a A.C. voltage source of 220 V and 50 Hz. Then find out the phase difference between the voltage and current flowing in the circuit :",
     "options": {
-      "A": "tan -1",
-      "B": "tan -1",
-      "C": "tan -1",
-      "D": "tan -1"
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Alternating Current principles.",
@@ -741,10 +741,10 @@
     },
     "question": "A capacitor of capacitance 100 μ F & a resistance of 100 Ω is connected in series with AC supply of 220V, 50Hz. The current leads the voltage by .......",
     "options": {
-      "A": "tan -1       π 1 2",
-      "B": "tan -1       π 1",
-      "C": "tan -1       π 2",
-      "D": "tan -1       π 4"
+      "A": "      π 1 2",
+      "B": "      π 1",
+      "C": "      π 2",
+      "D": "      π 4"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Alternating Current principles."
@@ -2139,7 +2139,7 @@
       "D": "V 1 = V 2 ≠ 0 Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 Ans 1 3 1 3 1 1 1 1 2 4 3 1 1 1"
     },
     "correct_option": "A",
-    "explanation": "At resonance, V L and V C are equal in magnitude but have 180^\\circ phase difference relative to each other. ∴ V LC = V L - V C = 0 $//(1 TARGET : 202 5 PHYSICS 202 5 HS ALTERNATING CURRENT : RACE # 02 SOLUTION",
+    "explanation": "At resonance, V L and V C are equal in magnitude but have 180^\\circ phase difference relative to each other. ∴ V LC = V L - V C = 0 $//(1 TARGET : 202 5 5 HS ALTERNATING CURRENT : RACE # 02 SOLUTION",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABFsAAABACAIAAABKnO8UAAAKRElEQVR42u3d33NU5R3H8e/Zs7vn5CwJ6sA0cQwW7ChKsNOSoMF2CJ1hqgKSX9CqRDv2pu1MvfBOL9r+A2UoSXQKBRJ+DAElihd16thEJaBYqIQkNtndQIUWhOiUbDb765w9pxc7UqshBpPsnt28X3dcQJbvQ5jzyfM8n6M4jiMAAAAF5/iJEx+cPOnXtMwvHcdRFIWxuIpt24FA4InHH9d1nWkgV7yMAAAAFJ5QOPzy4cMffHAyPHyOabjc6VOntm7dqn2eXYEs8zACAABQeHGotaUlGo0+8MCD371/OQNxuZdfeeW5555LJpOMAjmhcGoOAAAUWBxqaW4eG4tomi4imqYNDPT3nu1jMi73k82bt23bpqoqo4CwRwQAADCd3aGxsYjfrzmO4zhOIpFYtqzi/uUVDMflDh0+fPT115kDhD0iAACAae4O+f1fvpGi63p/f9/Zvn6m5GYlxcV72tp/+IOHGAWEPSIAAICbcu78+ebt2yeMQyKSTCbvu29ZWem3RITGOdeKjI01NW051nOcUYBEBAAAcBMuXLy4e9euSGR0wjgkIo7jWJZVVbXyriWLOSDjZrFYrKlpyx937KBoAcKpOQAAAJnyYblIZFTXiyZ/sFEUhaKFfLGpsfH3W7fqVHKDRAQAADCJYCh0vUphir9F13VCkdA+Bwin5gAAQP7HoRtVKUwi0z7He4okH9rnXjt6lDlA2CMCAACYkd2hLx6f03W9r+8s7XMuN2/evPb2vbTPQdgjAgAA+KLhc+cmaZb7Wo7jJJPJZcsqMu1zcK1oNPrUU020z4FEBAAA8D+maXYcPDhJs9wUQ1GmfW7evHmM1M3Gx8ebmrb0HD/BKCCcmgMAALhw8WJnZ+fZ3jPTiUPX+Xy+eDw+MNA/fO48s3UzwzCef/75nz39tEb7HEhEAABgzhocGmptaRkdvWYYgZn6Mz0ej9/v7+/v406R0D4H4dQcAACAu+NQLBabwTgkIrZtJxKJiorltM8J7XMQ9ogAAADcHYd8Pt+sPBIpiqZp7BQJ7XMQ9ogAAABcJjw83NLcPD4enaU4JCKO42TeU0T7nLi+fa6paQvtcyARAQCAuSKVSh3q6PjGRdtyky12lZVVJcXFjN3NYrEYoQgkIgAAMCdYlrVv//5QKFhUZGThy6XTacMwampqqOQmFEG4RwQAAJBbH1+40NnZ2XvmQ03TFUXJ2tf1er2JRIJKbsmHSu4XXnjh5888Q/scSEQAAKDQ/GNw8MXW1khkNDu7Q/L/d4pUVfX7/QMD/b1n+1gLl3vppZca6uuZA0hEAACgoOJQa0tLLDaehbtDk9B1nVAktM9BuEcEAACQRaFwuKW5OedxSEQy7ylaes/dLIrQPgcSEQAAQBYkk8lDHR3R6FjO49D1UHTvvfdRtCAULYBEBAAAMNtMy9q3f384HMr+3SG58Z0ir9f7ozVrCEWEIpCIAAAAZjcOtbe3v/N2t6bprvpg6XRa13VCEaEIQrMCAADALPnnxx93HjnS23tG14uyWbQtVHJLAVZy79u3n6IFkIgAAEDeGPjooxdbW6PRMfcclpv4sUlRNE2jfY5QBOHUHAAAwEwJhkKtLS3xeMzlcUhEHMehfU44PgcSEQAAwExJJJOHOjrcULRN+xyhCCQiAACArDJNc+/evcPDYV0vyqOP7TiOz+ejaIFQBBIRAADAtOLQnra2Y+++k19xKMOyrEz7XElxMUtJKILQrAAAACBT2FrJlBNk4tDuPXuO9xwrKjLc2SwnU26f6+rujkajrK+bzS8p+WtX16LyckYBYY8IAABI7oraMuEnEolk4pBhBPI3DmVyna7ra2pqbrvtVtbXzUYjkd/99jeffvYZowB7RAAAIMeGgsE/7dw5MnI1Hw/LTUhVVRHp7T0TDIVZXzcrL79j27btVHJD2CMCAACSu5a2joMHr1z5pGDikIhYluU4TkXFcooWXO7ixX9xpwgkIgAAkDOpVKp9797z588ZRkAK6zSgbdter5f2OcmbooUeRgESEQAAyHYc2tPWdrznWCHtDslE7XOEonwIRU2EIgj3iAAAgGTxNaxtbW09x94tsN2hr/L5fPF4rPvtd8bHx1l3NyspLu7q7qZ9DiQiAAAw60zLOnDgwPGeHsMw8rpZTqbWMO73+2Ox2J/feINQ5HLrHn1k2x+2BwwjnU7n8GN4PB6v18ty5DgR/eXNN1Mps+D/hwIAADkxPj5++fIln883d/7Kfr//o4GBzldfjcVi/ANwsxXf/1519SrV67VzF4o8Hs+c+u4Q9/3IRkSUHTt3xuNxEhEAAOBH4DMYiobD4V27d+d2/wFfv1I+38qVVQsWLLQsU3L35mLkSjKZFBFlT1t7IkEiAgAAmOFQdPrUqVeOHLFtm2m4mab5V1VXL1iwMGvx1XEc00zZts0TuLjglQAi4hUhmAIAAMiM1+utqKx0HOdIZyehSFy9S5A68d57NatX33LLraZpZiEO2bZ99z1LfV4vG0S5/z41zUwiAgAAwKyEosqqKhEhFLk/FL3//sm1a9cqyuy2jjmOk0jEN23+6SMP/1hVVSYvvI8IAACg4ENR1cqVDfX1Hg8PXa42GomEQkHDMGYvEV2PQ+vXPUocchW1trbWsixOMQIAAMyGdDpdvmjRLfPnDw4OckrKza5cuapr/rKystk4O5dOpzNxaMP6dYyaRAQAADDnQtGiO+/U/P5gMMg03Ozfly75fN6FCxfKjLbAmaapqmrjps3r1z3KkElEAAAAczcUlRQXB4NBdorc7PLlTz4duVpeXu71etPp9PQfkk3TLC0t/fWzz66sqmK8wj0iAACAuRyKqletamxo4E6Ry125OtLd3W3b9vRfpWXbtm2nn9yyZcnixQyWRAQAACC8DrKyqoqiBff7z7Vrb731luM409kjchwnmUzU1Tfeu3QpIyURAQAAgFCUT66NjgaDQ4ZhfOM4FI/H6uobH9uwnvspwj0iAAAAyFfa54aGhrhTJK4+PndV8/vKyspSqdRNPS3btp1IxOvqG+tqNzJGEhEAAAAmLFr4tldVQuEw03CzS5cua5q/rOz2qVdyZ4q26xs2EYdIRAAAAJAbbyOky26/feTqlZGRT5mGy0PR1Cu5bdv2eDz1DZs2PraB0ZGIAAAAMOlzmKouX37//JISKrklTyq5VVWdZKVs2zbN1C9++aua1asZmtCsAAAAAPm6y/ciUr3qIYoWJB8qubu6umzbvtFOUaZK4bGNtZUrVjAuEhEAAABuoqCZ9jnJk/a5UCgYCAS+eroqE4dq6+prN3J3SDg1BwAAAKF9Tgq3fa60tNSyrC/FoY21dfV1dTxUk4gAAADwzdvnVI+Ew8NMQ9xdtKBr/uuV3J8flqtrqCcOCafmAAAAINM5Pvdg9arv3LWEabjc306dHhoaDAQCIpJIxIlD+c6rKB5FUVhCAACAHMo8jGma9vgTTx597dXBwSErnVa5WeRWp//+ocfjueOO8vUbNhKH8t1/AYnKG90plQkJAAAAAElFTkSuQmCC"
   },
   {
@@ -2320,10 +2320,10 @@
     },
     "question": "A resistance of 300 \\Omega and an inductance of 1 \\pi henry are connected in series to a A.C. voltage of 20 volts and 200 Hz frequency. The phase angle between the voltage and current is : -",
     "options": {
-      "A": "tan - 1 4 3 (  ( ) ) ",
-      "B": "tan - 1 3 4 (  ( ) ) ",
-      "C": "tan - 1 3 2 (  ( ) ) ",
-      "D": "tan - 1 2 3 (  ( ) )  AC06 - 0012"
+      "A": "3 (  ( ) ) ",
+      "B": "4 (  ( ) ) ",
+      "C": "2 (  ( ) ) ",
+      "D": "3 (  ( ) )  AC06 - 0012"
     },
     "correct_option": "A",
     "explanation": "L 50 Q R / L 8 rad/s R 4 \\omega \\omega = =  \\Delta\\omega = = = \\Delta\\omega 0 6 1 1 50 rad/s. LC 5 80 10 - \\omega = = =   min 0 46 rad/s 2 \\Delta\\omega \\omega = \\omega - = max 0 54 rad/s 2 \\Delta\\omega \\omega = \\omega + ="
@@ -2389,7 +2389,7 @@
       "source": "Exercise I-III - Alternating Current.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is \\omega /2 \\pi . Which of the following statement is correct :",
+    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is \\omega /2 \\pi . Which of the following\n\nstatement is correct :",
     "options": {
       "A": "For low frequency the limiting value of impedance is L.",
       "B": "For high frequency the limiting value of impedance is \\omega L.",
@@ -2470,7 +2470,7 @@
       "D": "0.80 A AC06 - 0019"
     },
     "correct_option": "B",
-    "explanation": "Q = Q 0 -Rt 2L e putting Q = 0.50 Q 0 ; 0.50 Q 0 = Q 0 Rt 2L e -  Rt 2L e 2 =  Rt 2L = ln (2)  ( ) 2L t ln2 R = ( ) -3 2 12",
+    "explanation": "Q = Q 0 -L e putting Q = 0.50 Q 0 ; 0.50 Q 0 = Q 0 L e -  L e 2 =  L = ln (2)  ( ) 2L t ln2 R = ( ) -3 2 12",
     "photo": "data:image/png;base64,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"
   },
   {
@@ -2488,13 +2488,13 @@
     },
     "question": "A capacitor of capacitance 100 \\mu F & a resistance of 100 \\Omega is connected in series with AC supply of 220V, 50Hz. The current leads the voltage by",
     "options": {
-      "A": "tan - 1 1 2 (  ( ) \\pi ) ",
-      "B": "tan - 1 1 (  ( ) \\pi ) ",
-      "C": "tan - 1 2 (  ( ) \\pi ) ",
-      "D": "tan - 1 4 (  ( ) \\pi )  AC07 - 0005"
+      "A": "2 (  ( ) \\pi ) ",
+      "B": "(  ( ) \\pi ) ",
+      "C": "(  ( ) \\pi ) ",
+      "D": "(  ( ) \\pi )  AC07 - 0005"
     },
     "correct_option": "B",
-    "explanation": "C X 1 tan R RC \\phi = = \\omega 6 1 1 2 50 100 100 10 - = = \\pi \\pi    \\rho -1 1 tan (  \\phi = ( ) \\pi ) "
+    "explanation": "C X 1 tan R RC \\phi = = \\omega 6 1 1 2 50 100 100 10 - = = \\pi \\pi    \\ tan (  \\phi = ( ) \\pi ) "
   },
   {
     "type": "normal_mcq",
@@ -3290,7 +3290,7 @@
       "source": "Extra Edge - Alternating Current (1).pdf.txt",
       "class_level": "class_12"
     },
-    "question": "If frequency of alternating source is made zero then which of the following statement is true :",
+    "question": "If frequency of alternating source is made zero then which of the following\n\nstatement is true :",
     "options": {
       "A": "Current through capacitor will be zero",
       "B": "Current through resistance will be zero",

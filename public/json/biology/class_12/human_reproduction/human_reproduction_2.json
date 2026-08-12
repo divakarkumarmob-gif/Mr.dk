@@ -1879,8 +1879,8 @@
     "question": "Optimal temperature for spermatogenesis is :-",
     "options": {
       "A": "Normal body temperature",
-      "B": "43^\\circ - 45^\\circC",
-      "C": "39^\\circ - 40^\\circC",
+      "B": "43^\\^\\circC",
+      "C": "39^\\^\\circC",
       "D": "34.5 - 35^\\circC"
     },
     "correct_option": "A",
@@ -3537,7 +3537,7 @@
       "source": "Human Reproduction - Race (1).pdf.txt",
       "class_level": "class_12"
     },
-    "question": "identify the human embryonic stage shown below and select the correct option with its matching with site of occurance in a normal pregnant female. Developmental stage Site of occurrence",
+    "question": "identify the human embryonic stage shown below and\n\n**select the correct option** with its matching with site of occurance in a normal pregnant female. Developmental stage Site of occurrence",
     "options": {
       "A": "Blastocyst",
       "B": "8-celled morula",

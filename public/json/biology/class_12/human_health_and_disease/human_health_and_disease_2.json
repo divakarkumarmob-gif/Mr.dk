@@ -1139,7 +1139,7 @@
     "question": "How many of the following statements are correct about HIV/AIDS ?",
     "options": {
       "A": "Core of HIV has 2 identical molecules of dsDNA.",
-      "B": "GP120 has complementry sequence for CD-8 proteins.",
+      "B": "GP120 has complementry sequence for proteins.",
       "C": "AIDS is caused by HIV.",
       "D": "Macrophages become HIV factory after HIV infection."
     },
@@ -3317,9 +3317,9 @@
       "source": "Human Health And Disease - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which structure of HIV has complimentary sequence to CD-4 receptors ?",
+    "question": "Which structure of HIV has complimentary sequence to receptors ?",
     "options": {
-      "A": "GP-41",
+      "A": "",
       "B": "P-24",
       "C": "P-17",
       "D": "Option D"
@@ -3369,7 +3369,7 @@
       "source": "Human Health And Disease - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is correct w.r.t. benign tumor ?",
+    "question": "Which of the following\n\nstatement is correct w.r.t. benign tumor ?",
     "options": {
       "A": "It usually spreads to other parts of body.",
       "B": "It causes huge damage to the tissues concerned.",
@@ -3553,7 +3553,7 @@
       "source": "Human Health And Disease - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Mark the correctly matched options :",
+    "question": "Mark the correctly matched\n\n**options** :",
     "options": {
       "A": "A and B",
       "B": "Opium poppy -",

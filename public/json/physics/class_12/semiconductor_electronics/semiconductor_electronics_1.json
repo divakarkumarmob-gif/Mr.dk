@@ -174,7 +174,7 @@
       "source": "Exercise I-III - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is correct for p - type semiconductor",
+    "question": "Which\n\nstatement is correct for p - type semiconductor",
     "options": {
       "A": "the number of electrons in conduction band is more than the number of holes in valence band at room temperature",
       "B": "the number of holes in valence band is more than the number of electrons in conduction band at room temperature",
@@ -913,7 +913,7 @@
       "source": "Exercise I-III - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In a p - n junction the depletion layer of thickness 10 - 6 m has potential across it is 0.1 V. The average electric field is (V/m) : -",
+    "question": "In a p - n junction the depletion layer of thickness 10 - 6 m has potential across it is 0.1\n\nV. The average electric field is (V/m) : -",
     "options": {
       "A": "10 7",
       "B": "10 - 6",
@@ -2167,7 +2167,7 @@
       "source": "Extra Edge - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In half wave rectifier peak value of sinusodial signal is 10 V. Determine D.C. component at output : -",
+    "question": "In half wave rectifier peak value of sinusodial signal is 10\n\nV. Determine D.C. component at output : -",
     "options": {
       "A": "10 V 2",
       "B": "10 V \\pi",
@@ -2496,7 +2496,7 @@
       "source": "NCR - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "(2) Statement - 1 is True, Statament - 2 is True; Statement - 2 is NOT a correct explanation for Statement - I. (3) Statement - 1 is True, Statement - 2 is False. (4) Statement - 1 False, Statement - 2 is True. SC01 - 0373",
+    "question": "(2) Statement - 1 is True, Statament - 2 is True; Statement - 2 is NOT a correct explanation for Statement -\n\nI. (3) Statement - 1 is True, Statement - 2 is False. (4) Statement - 1 False, Statement - 2 is True. SC01 - 0373",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2682,7 +2682,7 @@
       "source": "NCR - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Potential drop across a forward biased p - n junction diode is 0.7 V. If a battery of 4 V is applied, calculate the minimum resistance to be put in series, for the maximum current of 5 mA in the circuit.",
+    "question": "Potential drop across a forward biased p - n junction diode is 0.7\n\nV. If a battery of 4 V is applied, calculate the minimum resistance to be put in series, for the maximum current of 5 mA in the circuit.",
     "options": {
       "A": "660Ω",
       "B": "350Ω",
@@ -2873,7 +2873,7 @@
       "source": "NCR - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In an n - type silicon, which of the following statement is true:",
+    "question": "In an n - type silicon, which of the following\n\nstatement is true:",
     "options": {
       "A": "Electrons are majority carriers and trivalent atoms are the dopants.",
       "B": "Electrons are minority carriers and pentavalent atoms are the dopants.",

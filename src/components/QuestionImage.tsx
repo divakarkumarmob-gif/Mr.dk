@@ -11,7 +11,16 @@ export default function QuestionImage({ src, alt = "Question Diagram", className
   const [isOpen, setIsOpen] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  if (!src || hasError) return null;
+  const [isInvalid, setIsInvalid] = useState(false);
+
+  if (!src || hasError || isInvalid) return null;
+
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const img = e.currentTarget;
+    if (img.naturalWidth < 35 || img.naturalHeight < 35 || (img.naturalWidth / img.naturalHeight) > 8 || (img.naturalHeight / img.naturalWidth) > 8) {
+      setIsInvalid(true);
+    }
+  };
 
   return (
     <>
@@ -23,6 +32,7 @@ export default function QuestionImage({ src, alt = "Question Diagram", className
           <img 
             src={src} 
             alt={alt} 
+            onLoad={handleImageLoad}
             onError={() => setHasError(true)}
             className="max-h-72 w-auto max-w-full object-contain mx-auto rounded-xl p-2 transition-transform duration-300 group-hover:scale-[1.02]"
           />

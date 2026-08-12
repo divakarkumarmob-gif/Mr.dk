@@ -1849,7 +1849,7 @@
     },
     "question": "What should be angular velocity of Earth so that weight of a man at equator becomes 3/5 th of its present values. (write your answer in terms of g and R).",
     "options": {
-      "A": "5 gR 2",
+      "A": "5",
       "B": "5 g 2 R",
       "C": "2 g 5 R",
       "D": "5gR"
@@ -2566,8 +2566,8 @@
     },
     "question": "The acceleration due to gravity g and mean density of earth \\rho are related by which of the following relations ? [G = gravitational constant and R = radius of earth] :",
     "options": {
-      "A": "2 4 gR 3G \\pi \\rho =",
-      "B": "3 4 gR 3G \\pi \\rho =",
+      "A": "2 4 G \\pi \\rho =",
+      "B": "3 4 G \\pi \\rho =",
       "C": "3g 4 gR \\rho = \\pi",
       "D": "3 3g 4 gR \\rho = \\pi"
     },
@@ -3286,7 +3286,7 @@
       "D": "R PLANETARY MOTION & WEIGHTLESSNESS"
     },
     "correct_option": "B",
-    "explanation": "Let a body is projected from the surface of the earth with the velocity V and reaches maximum height h. According to law of conservation of mechanical energy, we get 2 1 GMm GMm mV 0 2 R (R h) - = - + or 2 1 GM GM V 2 R (R h) - = - + As per question, e V 1 2GM V 2 2 R = = e 2GM V R   =      1 1 GM GM GM 2 2 R R (R h) (  - = - ( ) + )  GM GM GM 4R R R h - = - + 3 1 4R (R h) - = - + 3 (R + h) = 4R or 3R + 3h = 4R 3h = R or h = R 3"
+    "explanation": "Let a body is projected from the surface of the earth with the velocity V and reaches maximum height h. According to law of conservation of mechanical energy, we get 2 1 GMm GMm mV 0 2 R (R h) - = - + GM GM V 2 R (R h) - = - + As per question, e V 1 2GM V 2 2 R = = e 2GM V R   =      1 1 GM GM GM 2 2 R R (R h) (  - = - ( ) + )  GM GM GM 4R R R h - = - + 3 1 4R (R h) - = - + 3 (R + h) = 4R R + 3h = 4R 3h = R or h = R 3"
   },
   {
     "type": "normal_mcq",

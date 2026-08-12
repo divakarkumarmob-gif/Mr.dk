@@ -993,8 +993,8 @@
     "options": {
       "A": "10%",
       "B": "6%",
-      "C": "10% or 6%",
-      "D": "3% or 6%"
+      "C": "10% %",
+      "D": "3% %"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Principles Of Inheritance And Variation principles."
@@ -1607,7 +1607,7 @@
       "source": "Principles Of Inheritance And Variation - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Statement I : Colour blindness occurs in about 8 percent of female and only about 0.4 percent of males. Statement II : The genes that lead to red-green colour blindness are on the X-chromosome.",
+    "question": "Statement I : Colour blindness occurs in about 8 percent of female and only about 0.4 percent of males.\n\nStatement II : The genes that lead to red-green colour blindness are on the X-chromosome.",
     "options": {
       "A": "Both statement I and statement II are true",
       "B": "Both statement I and statement II are false",
@@ -2316,7 +2316,7 @@
       "source": "RACE - Principles Of Inheritance And Variation.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A dihybrid cross produces 6 phenotype in F2 generation then which statement is correct : -",
+    "question": "A dihybrid cross produces 6 phenotype in F2 generation then which\n\nstatement is correct : -",
     "options": {
       "A": "Both genes show dominance",
       "B": "Both genes show incomplete dominance",
@@ -2700,7 +2700,7 @@
       "source": "RACE - Principles Of Inheritance And Variation.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match the list I with list II . List I List II A. Punnett square I. Used for determining the genotype of F 1 individual B. Test cross II. Cross between plants with the same genotypes C. Selfing III. To study the inheritance of one gene D. Monohybrid cross IV. To determine the genotypes of progeny from a cross",
+    "question": "Match the list I with list II . List I List II A. Punnett square\n\nI. Used for determining the genotype of F 1 individual B. Test cross\n\nII. Cross between plants with the same genotypes C. Selfing\n\nIII. To study the inheritance of one gene D. Monohybrid cross\n\nIV. To determine the genotypes of progeny from a cross",
     "options": {
       "A": "A - I, B - II, C - III, D - IV",
       "B": "A - IV, B - I, C - II, D - III",
@@ -2727,7 +2727,7 @@
       "source": "RACE - Principles Of Inheritance And Variation.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match the list I with list II . List I List II A. Boveri I. Noted that the behaviour of chromosomes was parallel to the behaviour of genes and used chromosome movement to explain Mendel’s laws . B. Walter Sutton and Theodore Boveri II. United the knowledge of chromosomal segregation with Mendelian principles and called it the chromosomal theory of inheritance. C. Henking I II. Used the frequency of recombination between gene pairs on the same chromosome as a measure of the distance between genes and ‘mapped’ their position on the chromosome. D. Alfred Sturtevant IV. Gave the name X body",
+    "question": "Match the list I with list II . List I List II A. Boveri\n\nI. Noted that the behaviour of chromosomes was parallel to the behaviour of genes and used chromosome movement to explain Mendel’s laws . B. Walter Sutton and Theodore Boveri\n\nII. United the knowledge of chromosomal segregation with Mendelian principles and called it the chromosomal theory of inheritance. C. Henking I\n\nII. Used the frequency of recombination between gene pairs on the same chromosome as a measure of the distance between genes and ‘mapped’ their position on the chromosome. D. Alfred Sturtevant\n\nIV. Gave the name X body",
     "options": {
       "A": "A - II, B - I, C - III, D - IV",
       "B": "A - II, B - I, C - IV, D - III",

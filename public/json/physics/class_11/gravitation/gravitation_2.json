@@ -297,7 +297,7 @@
       "source": "Exercise I-III - Gravitation.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A planet is moving in an elliptical orbit. If T, U, E and L are its kinetic energy, potential energy, total energy and magnitude of angular momentum respectively, then which of the following statement is true : -",
+    "question": "A planet is moving in an elliptical orbit. If T, U, E and L are its kinetic energy, potential energy, total energy and magnitude of angular momentum respectively, then which of the following\n\nstatement is true : -",
     "options": {
       "A": "T is conserved",
       "B": "U is always positive",
@@ -441,7 +441,7 @@
       "source": "Exercise I-III - Gravitation.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two identical satellites are at the heights R and 7R from the earth's surface. Then which of the following statement is incorrect : - (R = Radius of the earth)",
+    "question": "Two identical satellites are at the heights R and 7R from the earth's surface. Then which of the following\n\nstatement is incorrect : - (R = Radius of the earth)",
     "options": {
       "A": "Ratio of total energy of both is 5",
       "B": "Ratio of kinetic energy of both is 4",
@@ -1073,8 +1073,8 @@
     "question": "Mass density of a solid sphere is ρ . Radius of the sphere is R. The gravitational field at a distance r from the centre of the sphere inside it is-",
     "options": {
       "A": "4 G r 3 ρ π",
-      "B": "2 4 Gr 3 ρ",
-      "C": "3 2 4 GR 3r ρ",
+      "B": "2 4 ρ",
+      "C": "3 2 4 r ρ",
       "D": "3 GR r ρ π"
     },
     "correct_option": "A",
@@ -2204,7 +2204,7 @@
     "options": {
       "A": "2gR",
       "B": "gR",
-      "C": "gR 2 3",
+      "C": "",
       "D": "4gR"
     },
     "correct_option": "A",
@@ -2223,7 +2223,7 @@
       "source": "Gravitation - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A particle of mass m is moving in a horizontal circle of radius R under a centripetal force equal to - 2 K r (K = constant). The total energy of the particle is :- (Potential energy at very large distance is zero)",
+    "question": "A particle of mass m is moving in a horizontal circle of radius R under a centripetal force equal K r (K = constant). The total energy of the particle is :- (Potential energy at very large distance is zero)",
     "options": {
       "A": "K R",
       "B": "K R -",
@@ -3042,7 +3042,7 @@
       "source": "Gravitation - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two identical satellites are at the heights 2R and 8R from the earth's surface. Then which of the following statement is incorrect :- (R = Radius of the earth)",
+    "question": "Two identical satellites are at the heights 2R and 8R from the earth's surface. Then which of the following\n\nstatement is incorrect :- (R = Radius of the earth)",
     "options": {
       "A": "Ratio of total energy of both is 5",
       "B": "Ratio of kinetic energy of both is 3",

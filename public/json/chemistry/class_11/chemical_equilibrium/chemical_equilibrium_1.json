@@ -272,7 +272,7 @@
       "D": "5 × 10 -5 × R -1"
     },
     "correct_option": "A",
-    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -399,7 +399,7 @@
       "D": "A"
     },
     "correct_option": "A",
-    "explanation": "2NOBr(g)  2NO(g) + Br 2 (g) t = 0 p^\\circ 0 0 p^\\circ - 0.4p^\\circ 0.4p^\\circ 0.2p^\\circ 0.6p^\\circ 0.4p^\\circ 0.2p^\\circ p T = p^\\circ + 0.2p^\\circ = 0.30 1.2 p^\\circ = 0.3 p^\\circ = 0.3 1 1.2 4 = = 0.25 atm K p = 2 2 (0.4p ) (0.2p ) (0.6p ) ^\\circ ^\\circ ^\\circ = 4 4 6 6 × × 0.2 × 0.25 = 4 9 × 0.2 × 0.25 K p = 0.2 1 90 45 = Then K p 1 for 2NO(g) + Br 2 (g)  2NOBr(g) will be = P 1 1 K 1 / 45 = = 45"
+    "explanation": "2NOBr(g)  2NO(g) + Br 2 (g) t = 0 p^\\circ 0 0 p^\\.4p^\\circ 0.4p^\\circ 0.2p^\\circ 0.6p^\\circ 0.4p^\\circ 0.2p^\\circ p T = p^\\circ + 0.2p^\\circ = 0.30 1.2 p^\\circ = 0.3 p^\\circ = 0.3 1 1.2 4 = = 0.25 atm K p = 2 2 (0.4p ) (0.2p ) (0.6p ) ^\\circ ^\\circ ^\\circ = 4 4 6 6 × × 0.2 × 0.25 = 4 9 × 0.2 × 0.25 K p = 0.2 1 90 45 = Then K p 1 for 2NO(g) + Br 2 (g)  2NOBr(g) will be = P 1 1 K 1 / 45 = = 45"
   },
   {
     "type": "normal_mcq",
@@ -493,7 +493,7 @@
       "source": "Chemical Equilibrium - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Effect of increasing temperature on equilibrium constant is given by log K 2 - log K 1 = 0 H 2.303R -∆ 2 1 1 1 T T [ ] - [ ] [ ] . Then for an endothermic reaction the false statement is:-",
+    "question": "Effect of increasing temperature on equilibrium constant is given by log K 2 - log K 1 = 0 H 2.303R -∆ 2 1 1 1 T T [ ] - [ ] [ ] . Then for an endothermic reaction the false\n\nstatement is:-",
     "options": {
       "A": "2 1 1 1 T T [ ] - [ ] [ ] = positive",
       "B": "log K 2 > log K 1",
@@ -1976,7 +1976,7 @@
       "source": "Chemical Equilibrium - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A reaction mixture containing H 2 , N 2 and NH 3 has partial pressures 2 atm, 1 atm and 3 atm respectively at 725K. If the value of K P for the reaction, N 2 (g) + 3H 2 (g)  2NH 3 (g) is 4.28 10 -5 atm -2 at 725K, in which direction the net reaction will go",
+    "question": "A reaction mixture containing H 2 , N 2 and NH 3 has partial pressures 2 atm, 1 atm and 3 atm respectively at 725K. If the value of K P for the reaction, N 2 (g) + 3H 2 (g)  2NH 3 (g) is 4.28 10 -5 at 725K, in which direction the net reaction will go",
     "options": {
       "A": "Forward",
       "B": "Backward",
@@ -2434,7 +2434,7 @@
       "D": "2"
     },
     "correct_option": "A",
-    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -2476,7 +2476,7 @@
       "source": "Chemical Equilibrium - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "K p value for C 2 H 4(g) + H 2(g)  C 2 H 6(g) is 5× 10 18 atm -1 and K p for C 2 H 2 + H 2(g)  C 2 H 4(g) is 5 × 10 26 atm -1 at 50^\\circC. Calculate K p for the reaction 2H 2(g) + C 2 H 2(g)  C 2 H 6(g)",
+    "question": "K p value for C 2 H 4(g) + H 2(g)  C 2 H 6(g) is 5× 10 18 and K p for C 2 H 2 + H 2(g)  C 2 H 4(g) is 5 × 10 26 at 50^\\circC. Calculate K p for the reaction 2H 2(g) + C 2 H 2(g)  C 2 H 6(g)",
     "options": {
       "A": "2.5 × 10 45",
       "B": "21 × 10 8",
@@ -2534,7 +2534,7 @@
       "D": "0.36 atm"
     },
     "correct_option": "A",
-    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -2559,7 +2559,7 @@
       "D": "At low pressure and high temperature"
     },
     "correct_option": "A",
-    "explanation": "2NOBr(g)  2NO(g) + Br 2 (g) t = 0 p^\\circ 0 0 p^\\circ - 0.4p^\\circ 0.4p^\\circ 0.2p^\\circ 0.6p^\\circ 0.4p^\\circ 0.2p^\\circ p T = p^\\circ + 0.2p^\\circ = 0.30 1.2 p^\\circ = 0.3 p^\\circ = 0.3 1 1.2 4 = = 0.25 atm K p = 2 2 (0.4p ) (0.2p ) (0.6p ) ^\\circ ^\\circ ^\\circ = 4 4 6 6 × × 0.2 × 0.25 = 4 9 × 0.2 × 0.25 K p = 0.2 1 90 45 = Then K p 1 for 2NO(g) + Br 2 (g)  2NOBr(g) will be = P 1 1 K 1 / 45 = = 45"
+    "explanation": "2NOBr(g)  2NO(g) + Br 2 (g) t = 0 p^\\circ 0 0 p^\\.4p^\\circ 0.4p^\\circ 0.2p^\\circ 0.6p^\\circ 0.4p^\\circ 0.2p^\\circ p T = p^\\circ + 0.2p^\\circ = 0.30 1.2 p^\\circ = 0.3 p^\\circ = 0.3 1 1.2 4 = = 0.25 atm K p = 2 2 (0.4p ) (0.2p ) (0.6p ) ^\\circ ^\\circ ^\\circ = 4 4 6 6 × × 0.2 × 0.25 = 4 9 × 0.2 × 0.25 K p = 0.2 1 90 45 = Then K p 1 for 2NO(g) + Br 2 (g)  2NOBr(g) will be = P 1 1 K 1 / 45 = = 45"
   },
   {
     "type": "normal_mcq",
@@ -3604,7 +3604,7 @@
       "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Effect of increasing temperature on equilibrium constant is given by log K 2 - log K 1 = H 2.303R -\\Delta ^\\circ 2 1 1 1 T T   -     then for an endothermic reaction the false statement is: -",
+    "question": "Effect of increasing temperature on equilibrium constant is given by log K 2 - log K 1 = H 2.303R -\\Delta ^\\circ 2 1 1 1 T T   -     then for an endothermic reaction the false\n\nstatement is: -",
     "options": {
       "A": "2 1 1 1 T T   -     = positive",
       "B": "log K 2 > log K 1",

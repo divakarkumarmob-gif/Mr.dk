@@ -20,7 +20,7 @@
       "D": "PV ="
     },
     "correct_option": "D",
-    "explanation": "PV = μRT  PV = M RT Mw O 2 M = 5gm M w = 32 gm/mole 5 PV RT 32 ="
+    "explanation": "PV = μRT  PV = M RT Mw O 2 M = 5gm M w = 32 gm/mole 5 PV ="
   },
   {
     "type": "normal_mcq",
@@ -268,10 +268,10 @@
     },
     "question": "If temperature and pressure are respectively 127^\\circC and 0.5 × 10 5 N m - 2 , the rms velocity will be : -",
     "options": {
-      "A": "400/ 3 ms - 1",
-      "B": "100 2 ms - 1",
-      "C": "100 2 /3 ms - 1",
-      "D": "50 2 3 ms - 1 TP35 - 0020"
+      "A": "400/ 3",
+      "B": "100 2",
+      "C": "100 2 /3",
+      "D": "50 2 3 TP35 - 0020"
     },
     "correct_option": "C",
     "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
@@ -849,7 +849,7 @@
       "D": "11 RT TP38 - 0010"
     },
     "correct_option": "A",
-    "explanation": "U = U 1 + U 2 1 2 1 v 2 v C T C T = \\mu +\\mu 5 3 2 RT 4 RT 2 2 =  +  = 5RT + 6RT = 11RT"
+    "explanation": "U = U 1 + U 2 1 2 1 v 2 v C T C T = \\mu +\\mu 5 3 2 =  +  = 5RT + 6RT = 11RT"
   },
   {
     "type": "normal_mcq",
@@ -987,7 +987,7 @@
       "D": "none TP41 - 0004"
     },
     "correct_option": "C",
-    "explanation": "mix V 5 3 2 R 5 R 2 2 C 5 2  +  = + mix P 7 5 2 R 5 R 2 2 C 5 2  +  = + mix mix P mix V C 39/7 1.56 C 25/7 \\gamma = = = OR 1 2 1 2 1 P 2 P mix 1 V 2 V C C C C \\mu + \\mu \\gamma = \\mu + \\mu mix 7 5 2 R 5 R 2 2 5 3 2 R 5 R 2 2  +  \\gamma =  + "
+    "explanation": "mix V 5 3 2 R 5 R 2 2 C 5 2  +  = + mix P 7 5 2 R 5 R 2 2 C 5 2  +  = + mix mix P mix V C 39/7 1.56 C 25/7 \\gamma = = = P 2 P mix 1 V 2 V C C C C \\mu + \\mu \\gamma = \\mu + \\mu mix 7 5 2 R 5 R 2 2 5 3 2 R 5 R 2 2  +  \\gamma =  + "
   },
   {
     "type": "normal_mcq",
@@ -1056,7 +1056,7 @@
       "D": "3kT/2 TP38 - 0017"
     },
     "correct_option": "A",
-    "explanation": "Mean K.E Per gram molecule = Molar K.E mole 3 E RT 2 ="
+    "explanation": "Mean K.E Per gram molecule = Molar K.E mole 3 E ="
   },
   {
     "type": "normal_mcq",
@@ -1079,7 +1079,7 @@
       "D": "If = 2"
     },
     "correct_option": "C",
-    "explanation": "V P V V 1 fR R C R C f 2 2 1 C C f fR 2 + + + \\gamma = = = =  \\gamma f - f = 2  2 f 1 = \\gamma -"
+    "explanation": "V P V V 1 fR R C R C f 2 2 1 C C f + + + \\gamma = = = =  \\gamma f - f = 2  2 f 1 = \\gamma -"
   },
   {
     "type": "normal_mcq",
@@ -1278,7 +1278,7 @@
       "source": "Exercise I-III - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is true according to kinetic theory of gases?",
+    "question": "Which of the following\n\nstatement is true according to kinetic theory of gases?",
     "options": {
       "A": "The collision between two molecules is inelastic and the time between two collisions is less than the time taken during the collision.",
       "B": "There is a force of attraction between the molecules",
@@ -1951,10 +1951,10 @@
     },
     "question": "The adiabatic Bulk modulus of a diatomic gas at atmospheric pressure is",
     "options": {
-      "A": "0 Nm - 2",
-      "B": "1 Nm - 2",
-      "C": "1.4 ×10 4 Nm - 2",
-      "D": "1.4  10 5 Nm - 2 TP47 - 0006"
+      "A": "0",
+      "B": "1",
+      "C": "1.4 ×10 4",
+      "D": "1.4  10 5 TP47 - 0006"
     },
     "correct_option": "D",
     "explanation": "5 2 7 P 10 N / m 5 \\beta = \\gamma =  = 1.4 × 10 5 N/m 2"

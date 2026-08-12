@@ -58,7 +58,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "16 $//(1 Physics : Thermal physics 95",
+    "question": "16 $//(1 Physics : Thermal",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -774,7 +774,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a thermodynamic process ∆ Q = - 50 calorie and W = -20 calorie. If the initial internal energy is -30 calorie then final internal energy will be:",
+    "question": "For a thermodynamic process ∆ Q = - 50 calorie and W = -20 calorie. If the initial internal energy calorie then final internal energy will be:",
     "options": {
       "A": "191.20 calorie",
       "B": "-60 calorie",
@@ -1054,7 +1054,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A thermodynamic system undergoes a cyclic process as shown in figure. The cycle consists of two closed loops, loop I and II. Over one complete cycle :- II I V P",
+    "question": "A thermodynamic system undergoes a cyclic process as shown in figure. The cycle consists of two closed loops, loop I and\n\nII. Over one complete cycle :- II I V P",
     "options": {
       "A": "System do positive work",
       "B": "Heat flow out of the system",
@@ -1495,10 +1495,10 @@
     },
     "question": "The adiabatic Bulk modulus of a monoatomic gas at atmospheric pressure is",
     "options": {
-      "A": "0 Nm -2",
-      "B": "1 Nm -2",
-      "C": "1.6 × 10 4 Nm -2",
-      "D": "1.6 × 10 5 Nm -2"
+      "A": "0",
+      "B": "1",
+      "C": "1.6 × 10 4",
+      "D": "1.6 × 10 5"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
@@ -1891,7 +1891,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the temperature inside freezer is -23^\\circ C, the temperature of the surroundings to which it rejects heat is :-",
+    "question": "If the temperature inside freezer ^\\circ C, the temperature of the surroundings to which it rejects heat is :-",
     "options": {
       "A": "20.7^\\circC",
       "B": "10.7^\\circC",
@@ -2124,7 +2124,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In a technical book, a temperature called Y is described. Boiling and freezing points of water are referred as 65^\\circY and -15^\\circ Y respectively. The temperature on fahrenheit scale to which a temperature -95^\\circ Y would correspond, is :-",
+    "question": "In a technical book, a temperature called Y is described. Boiling and freezing points of water are referred as 65^\\circY ^\\circ Y respectively. The temperature on fahrenheit scale to which a temperature -95^\\circ Y would correspond, is :-",
     "options": {
       "A": "-148^\\circ F",
       "B": "-158^\\circ F",
@@ -2318,7 +2318,7 @@
       "D": "5 106 $//"
     },
     "correct_option": "A",
-    "explanation": "Q = ms ice \\Delta T + mL F + ms water \\Delta T + mL V Q = (1)(0.5)(10) + (1)(80) + (1)(1)(100) + (1)(540) Q = 5 + 80 + 100 + 540 = 725 cal. or 725 × 4.18 = 3030 joule. X - Scale UFP 75^\\circ T x LFP 15^\\circ Y - Scale 125^\\circ UFP T y 25^\\circ LFP Before Heating After Heating C a F",
+    "explanation": "Q = ms ice \\Delta T + mL F + ms water \\Delta T + mL V Q = (1)(0.5)(10) + (1)(80) + (1)(1)(100) + (1)(540) Q = 5 + 80 + 100 + 540 = 725 cal. × 4.18 = 3030 joule. X - Scale UFP 75^\\circ T x LFP 15^\\circ Y - Scale 125^\\circ UFP T y 25^\\circ LFP Before Heating After Heating C a F",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
   },
   {
@@ -2342,7 +2342,7 @@
       "D": "1 2 3 3 α + α + α"
     },
     "correct_option": "B",
-    "explanation": "2kg ice at - 20^\\circC + 5 kg water at 20^\\circC Q gain = Q lost 1 2 20 M 80 5 1 20 2   +  =   M = 1 kg Water = 5 + 1 = 6 kg"
+    "explanation": "2kg ice ^\\circC + 5 kg water at 20^\\circC Q gain = Q lost 1 2 20 M 80 5 1 20 2   +  =   M = 1 kg Water = 5 + 1 = 6 kg"
   },
   {
     "type": "figure_mcq",

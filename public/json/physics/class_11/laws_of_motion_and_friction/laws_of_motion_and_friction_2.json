@@ -313,9 +313,9 @@
     },
     "question": "A mass of 6 kg is suspended by a rope of length 2 m from a ceiling. A force of 60 N is applied in horizontal direction at the mid point of the rope. What is the angle between the rope and the vertical in equilibrium : -",
     "options": {
-      "A": "tan - 1 4 5 (  ( ) ) ",
-      "B": "tan - 1 5 4 (  ( ) ) ",
-      "C": "tan - 1 5 6 (  ( ) ) ",
+      "A": "5 (  ( ) ) ",
+      "B": "4 (  ( ) ) ",
+      "C": "6 (  ( ) ) ",
       "D": "45^\\circ 7"
     },
     "correct_option": "C",
@@ -1116,12 +1116,12 @@
       "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two masses of 1 kg and 2 kg respectively are connected by a massless spring as shown in figure. A force of 20 N acts on the 2 kg mass at the instant when the 1 kg mass has an acceleration of 10 ms - 2 towards right, the acceleration of the 2 kg mass is: -",
+    "question": "Two masses of 1 kg and 2 kg respectively are connected by a massless spring as shown in figure. A force of 20 N acts on the 2 kg mass at the instant when the 1 kg mass has an acceleration of 10 towards right, the acceleration of the 2 kg mass is: -",
     "options": {
-      "A": "2 ms - 2",
-      "B": "5 ms - 2",
-      "C": "10 ms - 2",
-      "D": "20 ms - 2 CP29 - 0007 1"
+      "A": "2",
+      "B": "5",
+      "C": "10",
+      "D": "20 CP29 - 0007 1"
     },
     "correct_option": "A",
     "explanation": "If net = 0, a = 0"
@@ -1883,7 +1883,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "If i I p p p = \\Delta = - \\rho \\rho\\rho\\rho = 0 - 0.2 = - 0.2 kg ms - 1"
+    "explanation": "If i I p p p = \\Delta = - \\rho \\rho\\rho\\rho = 0 - 0.2 = - 0.2 kg"
   },
   {
     "type": "normal_mcq",
@@ -2452,10 +2452,10 @@
     },
     "question": "The force required to just move a body up an inclined plane is 3 times the force required to just prevent the body from sliding down the plane. The coefficient of friction is \\mu . The inclination \\theta of the plane is : -",
     "options": {
-      "A": "tan - 1",
-      "B": "tan - 1",
-      "C": "tan - 1",
-      "D": "tan - 1"
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
@@ -2872,7 +2872,7 @@
       "D": "v \\rho remains unchanged"
     },
     "correct_option": "A",
-    "explanation": "Impulse = F.dt ∫ = Area of F - t graph b/w 4 μ s to 16 μ s = 6 6 1 1 (200 800) 2 10 800 10 10 2 2 - - + × × + × × × = 10 -3 + 4 × 10 -3 = 5 × 10 -3 Ns ALLEN : Physics 63 BEGINNER'S BOX - 2"
+    "explanation": "Impulse = F.dt ∫ = Area of F - t graph b/w 4 μ s to 16 μ s = 6 6 1 1 (200 800) 2 10 800 10 10 2 2 - - + × × + × × × = 10 -3 + 4 × 10 -3 = 5 × 10 -3 Ns ALLEN : BEGINNER'S"
   },
   {
     "type": "normal_mcq",
@@ -3027,10 +3027,10 @@
     },
     "question": "A force acts on it for some time in the direction of motion. The force-time graph is shown in figure. The final speed of the body is :- F(N) 4 0 6.5 t (s) 4.5 4 2 2.5",
     "options": {
-      "A": "9.25 ms -1",
-      "B": "5 ms -1",
-      "C": "14.3 ms -1",
-      "D": "4.25 ms -1"
+      "A": "9.25",
+      "B": "5",
+      "C": "14.3",
+      "D": "4.25"
     },
     "correct_option": "A",
     "explanation": "60^\\circ 72 dyne = F 9 gm In horizontal direction F ma =   Fcos 60^\\circ = 9a 72 × 1 2 = 9a; a = 4 cm/s 2"
@@ -3441,9 +3441,9 @@
     },
     "question": "A mass of 6 kg is suspended by a rope of length 2 m from a ceiling. A force of 60 N is applied in horizontal direction at the mid point of the rope. What is the angle between the rope and the vertical in equilibrium :- 1m 6 kg 60 N 1m θ",
     "options": {
-      "A": "tan -1 4 5      ",
-      "B": "tan -1 5 4      ",
-      "C": "tan -1 5 6      ",
+      "A": "5      ",
+      "B": "4      ",
+      "C": "6      ",
       "D": "45^\\circ"
     },
     "correct_option": "A",

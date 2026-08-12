@@ -40,7 +40,7 @@
       "A": "In 0 e - λ t",
       "B": "A sin",
       "C": "1 2 mv 2 + 1 2 I ω 2",
-      "D": "All of the above MNNUD0146 ALLEN : Physics 75"
+      "D": "All of the above MNNUD0146 ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
@@ -106,10 +106,10 @@
     },
     "question": "The force F, on a sphere of radius 'a' moving in a medium with velocity v is given by F = 6 πη av. The dimensions of η are :-",
     "options": {
-      "A": "[ ML -1 T -1 ]",
-      "B": "[ MT -1 ]",
-      "C": "[ MLT -2 ]",
-      "D": "[ ML -3 ] MNNUD0042"
+      "A": "[ T -1 ]",
+      "B": "[ ]",
+      "C": "[ ]",
+      "D": "[ ] MNNUD0042"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
@@ -526,7 +526,7 @@
       "D": "Metre"
     },
     "correct_option": "B",
-    "explanation": "Least count = 1 MSD - 1 VSD (N-1) MSD = N(VSD) ⇒ VSD = 1 1 N   -     MSD Least count = 1MSD - 1 1 N   -     MSD = 1 N       (1mm) = 1 10N cm"
+    "explanation": "Least count = 1 VSD (N-1) MSD = N(VSD) ⇒ VSD = 1 1 N   -     MSD Least count = 1MSD - 1 1 N   -     MSD = 1 N       (1mm) = 1 10N cm"
   },
   {
     "type": "normal_mcq",
@@ -549,7 +549,7 @@
       "D": "All of these"
     },
     "correct_option": "C",
-    "explanation": " L.C. = 1 MSD - 1 VSD ∴ 0.02 = 0.1 - m n m 0.08 n ⇒ ="
+    "explanation": " L.C. = 1 VSD ∴ 0.02 = 0.1 - m n m 0.08 n ⇒ ="
   },
   {
     "type": "normal_mcq",
@@ -704,10 +704,10 @@
     },
     "question": "The dimensions of a b in the equation 2 a t P bx - = , where P is pressure, x is distance and t is time, are :-",
     "options": {
-      "A": "MT -2",
-      "B": "M 2 LT -3",
+      "A": "",
+      "B": "M 2",
       "C": "ML 3 T -1",
-      "D": "LT -3"
+      "D": ""
     },
     "correct_option": "A",
     "explanation": "[B] = [x 2 ] = [L 2 ] [U] = 1 2 1 2 2 2 A L M L T L - [ ] [ ][ ] [ ] [ ] [ ] = [ ] [ ] [ ] 7 1 2 2 A M L T - [ ] = [ ] [ ] [ ] [ ] 7 11 1 2 2 1 2 2 2 AB M L T L M L T - - [ ] [ ] [ ] = = [ ] [ ] [ ] [ ] [ ] [ ] [ ]"

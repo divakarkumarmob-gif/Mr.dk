@@ -1517,9 +1517,9 @@
     "question": "The Okazaki fragments in DNA chain growth: -",
     "options": {
       "A": "Result in transcription.",
-      "B": "Polymerize in the 3' - to - 5' direction and forms replication fork.",
+      "B": "Polymerize in the 3' - ' direction and forms replication fork.",
       "C": "Prove semi - conservative nature of DNA replication.",
-      "D": "Polymerize in the 5' - to - 3' direction and explain 3' - to - 5' DNA replication. MI06 - 0033"
+      "D": "Polymerize in the 5' - ' direction and explain 3' - ' DNA replication. MI06 - 0033"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Molecular Basis Of Inheritance principles."
@@ -2843,7 +2843,7 @@
       "source": "Exercise I-III - Molecular Basis Of Inheritance.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which one of the following statement is true for protein synthesis (translation) ?",
+    "question": "Which one of the following\n\nstatement is true for protein synthesis (translation) ?",
     "options": {
       "A": "Amino acids are directly recognized by mRNA .",
       "B": "The third base of the codon is less specific .",

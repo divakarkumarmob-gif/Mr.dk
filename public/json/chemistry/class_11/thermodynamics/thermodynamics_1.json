@@ -266,7 +266,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which statement is true for reversible process :-",
+    "question": "Which\n\nstatement is true for reversible process :-",
     "options": {
       "A": "It takes place in single step",
       "B": "Driving force is much greater than opposing force",
@@ -371,7 +371,7 @@
       "A": "Always negative",
       "B": "Always positive",
       "C": "Zero",
-      "D": "May be positive or negative ALLEN : Physical Chemistry 231"
+      "D": "May be positive or negative ALLEN : Physical"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -466,7 +466,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Heat of reaction for , CO(g) + ½ O 2 (g) → CO 2 (g) at constant V is -67.71 kCal at 17^\\circC. The heat of reaction at constant P at 17^\\circC is :-",
+    "question": "Heat of reaction for , CO(g) + ½ O 2 (g) → CO 2 (g) at constant V .71 kCal at 17^\\circC. The heat of reaction at constant P at 17^\\circC is :-",
     "options": {
       "A": "-68.0 kCal",
       "B": "+ 68.0 kCal",
@@ -518,10 +518,10 @@
     },
     "question": "The value ∆ E for this process would be:-",
     "options": {
-      "A": "37.53 kJ mol -1",
-      "B": "39.08 kJ mol -1",
-      "C": "42.19 kJ mol -1",
-      "D": "43.73 kJ mol -1"
+      "A": "37.53 kJ",
+      "B": "39.08 kJ",
+      "C": "42.19 kJ",
+      "D": "43.73 kJ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -641,7 +641,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The q v is ----------- kCal mol -1 :-",
+    "question": "The q v is ----------- kCal :-",
     "options": {
       "A": "- 27.4",
       "B": "+ 27.4",
@@ -816,12 +816,12 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If S 0 for H 2 , Cl 2 and HCl are 0.13, 0.22 and 0.19 kJ K -1 mol -1 respectively. The total change in standard entropy for the reaction H 2 + Cl 2 → 2HCl is :",
+    "question": "If S 0 for H 2 , Cl 2 and HCl are 0.13, 0.22 and 0.19 kJ K -1 respectively. The total change in standard entropy for the reaction H 2 + Cl 2 → 2HCl is :",
     "options": {
-      "A": "30 JK -1 mol -1",
-      "B": "40 JK -1 mol -1",
-      "C": "60 JK -1 mol -1",
-      "D": "20 JK -1 mol -1 ALLEN chemical thermodynamics and Energetics 232"
+      "A": "30",
+      "B": "40",
+      "C": "60",
+      "D": "20 ALLEN chemical thermodynamics and Energetics 232"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard thermodynamics principles."
@@ -891,7 +891,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the enthalpy change for the transition of liquid water to steam is 30 kJ mol -1 at 27^\\circC, the entropy change for the process would be (in J mol -1 K -1 ):-",
+    "question": "If the enthalpy change for the transition of liquid water to steam is 30 kJ at 27^\\circC, the entropy change for the process would be (in J K -1 ):-",
     "options": {
       "A": "10",
       "B": "1",
@@ -941,11 +941,11 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Calculate enthalpy of vapourization per mole of ethanol. Given ∆ S = 109.8 JK -1 mol -1 and B.pt. of ethanol is 78.5^\\circC.",
+    "question": "Calculate enthalpy of vapourization per mole of ethanol. Given ∆ S = 109.8 and B.pt. of ethanol is 78.5^\\circC.",
     "options": {
       "A": "Zero",
-      "B": "38.594 kJ mol -1",
-      "C": "3.85 kJ mol -1",
+      "B": "38.594 kJ",
+      "C": "3.85 kJ",
       "D": "Some more data is required"
     },
     "correct_option": "C",
@@ -1066,7 +1066,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a reaction at 25^\\circC enthalpy change ( ∆ H) and entropy change ( ∆ S) are -11.7 × 10 3 J mol -1 J mol -1 K -1 respectively. The reaction is :",
+    "question": "For a reaction at 25^\\circC enthalpy change ( ∆ H) and entropy change ( ∆ S) .7 × 10 3 J J K -1 respectively. The reaction is :",
     "options": {
       "A": "Spontaneous",
       "B": "Non spontaneous",
@@ -1116,7 +1116,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The temperature at which the reaction Ag 2 O(s) → 2Ag(s) + ½ O 2 (g) is at equilibrium is ........; Given ∆ H = 30.5 kJ mol -1 and ∆ S = 0.066 kJ K -1 mol -",
+    "question": "The temperature at which the reaction Ag 2 O(s) → 2Ag(s) + ½ O 2 (g) is at equilibrium is ........; Given ∆ H = 30.5 kJ and ∆ S = 0.066 kJ K -1 mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1166,7 +1166,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reaction Ag 2 O(s) → 2Ag(s) + ½ O 2 (g) the value of ∆ H = 30.56 kJ mol -1 and ∆ S = 66 JK -1 mol -",
+    "question": "For the reaction Ag 2 O(s) → 2Ag(s) + ½ O 2 (g) the value of ∆ H = 30.56 kJ and ∆ S = 66 mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1295,7 +1295,7 @@
     "options": {
       "A": "∆ G^\\circ = RT log e K P",
       "B": "- ∆ G^\\circ = RT log e K P",
-      "C": "∆ G^\\circ = RT 2  nK P",
+      "C": "∆ G^\\circ =  nK P",
       "D": "None"
     },
     "correct_option": "A",
@@ -1321,7 +1321,7 @@
       "A": "K P > 1",
       "B": "K P < 1",
       "C": "The products predominate in the equilibrium mixture",
-      "D": "None ALLEN : Physical Chemistry 233"
+      "D": "None ALLEN : Physical"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -1341,12 +1341,12 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the equilibrium constant for a reaction is 10, then the value of ∆ G 0 will be (R = 8 JK -1 mol -1 , T = 300 K)",
+    "question": "If the equilibrium constant for a reaction is 10, then the value of ∆ G 0 will be (R = 8 , T = 300 K)",
     "options": {
-      "A": "+ 5.527 kJ mol -1",
-      "B": "- 5.527 kJ mol -1",
-      "C": "+55.27 kJ mol -1",
-      "D": "- 55.27 kJ mol -1"
+      "A": "+ 5.527 kJ",
+      "B": "- 5.527 kJ",
+      "C": "+55.27 kJ",
+      "D": "- 55.27 kJ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -1391,7 +1391,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The Gibbs free energy change of a reaction at 27^\\circC is -26 kCal. and its entropy change is -60 Cals/K. ∆ H for the reaction is :-",
+    "question": "The Gibbs free energy change of a reaction at 27^\\circC kCal. and its entropy change Cals/K. ∆ H for the reaction is :-",
     "options": {
       "A": "- 44 kCal",
       "B": "- 18 kCal",
@@ -1666,7 +1666,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of a reaction at 273 K. is -3.57 KJ. what will be the enthalpy of reaction at 373 K if ∆ C p is zero :-",
+    "question": "The enthalpy of a reaction at 273 K. .57 KJ. what will be the enthalpy of reaction at 373 K if ∆ C p is zero :-",
     "options": {
       "A": "-3.57",
       "B": "Zero",
@@ -1691,7 +1691,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of formation of ammonia is -46.0 kJ mol -",
+    "question": "The enthalpy of formation of ammonia .0 kJ mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1718,10 +1718,10 @@
     },
     "question": "The enthalpy change for the reaction 2NH 3 (g) → N 2 (g) + 3H 2 (g) is :",
     "options": {
-      "A": "46.0 kJ mol -1",
-      "B": "92.0 kJ mol -1",
-      "C": "- 23.0 kJ mol -1",
-      "D": "- 92.0 kJ mol -1"
+      "A": "46.0 kJ",
+      "B": "92.0 kJ",
+      "C": "- 23.0 kJ",
+      "D": "- 92.0 kJ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -1741,7 +1741,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given that standard enthalpy of formation of CH 4 , C 2 H 4 and C 3 H 8 are -17.9, 12.5, -24.8 kCal/mol. The ∆ H for CH 4 + C 2 H 4 → C 3 H 8 is :",
+    "question": "Given that standard enthalpy of formation of CH 4 , C 2 H 4 and C 3 H 8 .9, 12.5, -24.8 kCal/mol. The ∆ H for CH 4 + C 2 H 4 → C 3 H 8 is :",
     "options": {
       "A": "- 55.2 kCal",
       "B": "- 30.2 kCal",
@@ -1766,7 +1766,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The standard molar heat of formation of ethane, CO 2 and water (  ) are respectively -21.1, -94.1 and -68.3 kCal. The standard molar heat of combustion of ethane will be",
+    "question": "The standard molar heat of formation of ethane, CO 2 and water (  ) are respectively -21.1, -94.1 .3 kCal. The standard molar heat of combustion of ethane will be",
     "options": {
       "A": "-372 kCal",
       "B": "-162 kCal",
@@ -1841,7 +1841,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "According to equation, C 6 H 6 (  ) + 15/2 O 2 (g) → 6CO 2 (g) + 3H 2 O (  ) ; ∆ H = - 3264.4 kJ mol -1 the energy evolved when 7.8 g benzene is burnt in air will be -",
+    "question": "According to equation, C 6 H 6 (  ) + 15/2 O 2 (g) → 6CO 2 (g) + 3H 2 O (  ) ; ∆ H = - 3264.4 kJ the energy evolved when 7.8 g benzene is burnt in air will be -",
     "options": {
       "A": "163.22 KJ",
       "B": "32.64 KJ",
@@ -1891,12 +1891,12 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of formation for C 2 H 4 (g), CO 2 (g) and H 2 O(  ) at 25 0 C and 1 atm. pressure are 52, -394 kJ mole -1 respectively. The enthalpy of combustion of C 2 H 4 will be:-",
+    "question": "The enthalpy of formation for C 2 H 4 (g), CO 2 (g) and H 2 O(  ) at 25 0 C and 1 atm. pressure are 52, -394 kJ respectively. The enthalpy of combustion of C 2 H 4 will be:-",
     "options": {
-      "A": "+ 1412 kJ mole -1",
-      "B": "- 1412 kJ mole -1",
-      "C": "+ 142.2 kJ mole -1",
-      "D": "- 141.2 kJ mole -1"
+      "A": "+ 1412 kJ",
+      "B": "- 1412 kJ",
+      "C": "+ 142.2 kJ",
+      "D": "- 141.2 kJ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -1941,7 +1941,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The following are the heats of reactions - (i) o f H ∆ of H 2 O (  ) = -68.3 kCal mol -1 (ii) o comb. H ∆ of C 2 H 2 = -337.2 kCal mol -1 (iii) o comb. H ∆ of C 2 H 4 = -363.7 kCal mol -1 Then heat change for the reaction C 2 H 2 + H 2 → C 2 H 4 is -",
+    "question": "The following are the heats of reactions - (i) o f H ∆ of H 2 O (  ) = -68.3 kCal (ii) o comb. H ∆ of C 2 H 2 = -337.2 kCal (iii) o comb. H ∆ of C 2 H 4 = -363.7 kCal Then heat change for the reaction C 2 H 2 + H 2 → C 2 H 4 is -",
     "options": {
       "A": "-716.1 kCal",
       "B": "+ 337.2 kCal",
@@ -1991,7 +1991,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The value of ∆ H for the combustion of C(s) is - 94.4 kCal. The heat of formation of CO 2 (g) is :-",
+    "question": "The value of ∆ H for the combustion of C(s) .4 kCal. The heat of formation of CO 2 (g) is :-",
     "options": {
       "A": "-49.5 kCal",
       "B": "-94.4 kCal",
@@ -2071,7 +2071,7 @@
       "A": "-136.8 kJ",
       "B": "-13.68 kJ",
       "C": "273.6 kJ",
-      "D": "1.368 kJ ALLEN : Physical Chemistry 235 BOND ENERGY"
+      "D": "1.368 kJ ALLEN : Physical BOND ENERGY"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -2141,7 +2141,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The bond energies of F 2 , Cl 2 , Br 2 and I 2 are 155.4, 243.6, 193.2 and 151.2 kJ mol -1 respectively. The strongest bond is :",
+    "question": "The bond energies of F 2 , Cl 2 , Br 2 and I 2 are 155.4, 243.6, 193.2 and 151.2 kJ respectively. The strongest bond is :",
     "options": {
       "A": "If - F",
       "B": "Cl - Cl",
@@ -2193,10 +2193,10 @@
     },
     "question": "Heat evolved in the reaction H 2 + Cl 2 → 2HCl is 182 kJ. Bond energies of H-H and Cl-Cl are 430 and 242 kJ/ mol respectively. The H-Cl bond energy is :",
     "options": {
-      "A": "245 kJ mol -1",
-      "B": "427 kJ mol -1",
-      "C": "336 kJ mol -1",
-      "D": "154 kJ mol -1"
+      "A": "245 kJ",
+      "B": "427 kJ",
+      "C": "336 kJ",
+      "D": "154 kJ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -2216,12 +2216,12 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy change for the reaction H 2 (g) + C 2 H 4 (g) → C 2 H 6 (g) is........... . The bond energies are, H-H = 103, C-H = 99, C-C = 80 & C = C = 145 K cal mol -1",
+    "question": "The enthalpy change for the reaction H 2 (g) + C 2 H 4 (g) → C 2 H 6 (g) is........... . The bond energies are, H-H = 103, C-H = 99, C-C = 80 & C = C = 145 K cal",
     "options": {
-      "A": "-10 kCal mol -1",
-      "B": "+10 kCal mol -1",
-      "C": "- 30 kCal mol -1",
-      "D": "+30 kCal mol -1"
+      "A": "-10 kCal",
+      "B": "+10 kCal",
+      "C": "- 30 kCal",
+      "D": "+30 kCal"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -2241,12 +2241,12 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy changes at 298 K in successive breaking of O-H bonds of water are H 2 O → H(g) + OH(g); ∆ H = 498 kJ mol -1 OH(g) → H(g) + O(g) ; ∆ H = 428 kJ mol -1 the bond enthalpy of O-H bond is",
+    "question": "The enthalpy changes at 298 K in successive breaking of O-H bonds of water are H 2 O → H(g) + OH(g); ∆ H = 498 kJ OH(g) → H(g) + O(g) ; ∆ H = 428 kJ the bond enthalpy of O-H bond is",
     "options": {
-      "A": "498 kJ mol -1",
-      "B": "428 kJ mol -1",
-      "C": "70 kJ mol -1",
-      "D": "463 kJ mol -1 SOME OTHER HEAT OF REACTIONS"
+      "A": "498 kJ",
+      "B": "428 kJ",
+      "C": "70 kJ",
+      "D": "463 kJ SOME OTHER HEAT OF REACTIONS"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -2317,7 +2317,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of combustion of yellow phosphorous and red phosphorous are - 9.91 kJ and -8.78 kJ respectively. The heat of transition of yellow phosphorous to red phosphorous is",
+    "question": "The heat of combustion of yellow phosphorous and red phosphorous .91 kJ .78 kJ respectively. The heat of transition of yellow phosphorous to red phosphorous is",
     "options": {
       "A": "-18.69 kJ",
       "B": "+1.13 kJ",
@@ -2443,7 +2443,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of reaction for A + 1 2 O 2 → AO is - 50 kCal and AO + 1 2 O 2 → AO 2 is 100 kCal. The heat of reaction for A + O 2 → AO 2 is :-",
+    "question": "The heat of reaction for A + 1 2 O 2 → AO kCal and AO + 1 2 O 2 → AO 2 is 100 kCal. The heat of reaction for A + O 2 → AO 2 is :-",
     "options": {
       "A": "-50 kCal",
       "B": "+ 50 kCal",
@@ -2468,7 +2468,7 @@
       "source": "Chemical Thermodynamics and Energetics-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "C(s) + O 2 (g) → CO 2 (g) + 94.0 kCal. CO(g) + 1 2 O 2 (g) → CO 2 (g), ∆ H = -67.7 kCal. from the above reactions find how much heat (kCal mole -1 ) would be produced in the following reaction: C(s) + 1 2 O 2 (g) → CO(g)",
+    "question": "C(s) + O 2 (g) → CO 2 (g) + 94.0 kCal. CO(g) + 1 2 O 2 (g) → CO 2 (g), ∆ H = -67.7 kCal. from the above reactions find how much heat (kCal ) would be produced in the following reaction: C(s) + 1 2 O 2 (g) → CO(g)",
     "options": {
       "A": "20.6",
       "B": "26.3",
@@ -2495,10 +2495,10 @@
     },
     "question": "The enthalpy of vaporisation of liquid water using the data: H 2 (g) + 1 2 O 2 (g) → H 2 O(  ) ; ∆ H = -285.77 kJmol -1 H 2 (g) + 1 2 O 2 (g) → H 2 O(g) ; ∆ H = -241.84 kJmol -1",
     "options": {
-      "A": "+ 43.93 kJ mol -1",
-      "B": "- 43.93 kJ mol -1",
-      "C": "+ 527.61 kJ mol -1",
-      "D": "- 527.61 kJ mol -1"
+      "A": "+ 43.93 kJ",
+      "B": "- 43.93 kJ",
+      "C": "+ 527.61 kJ",
+      "D": "- 527.61 kJ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."
@@ -2843,7 +2843,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a gaseous reaction, A(g) + 3B(g) ⎯ → 3C(g) + 3D(g) \\Delta E is 17 kCal at 27 ^\\circ C assuming R = 2 Cal K - 1 mol - 1 , the value of \\Delta H for the above reaction is:",
+    "question": "For a gaseous reaction, A(g) + 3B(g) ⎯ → 3C(g) + 3D(g) \\Delta E is 17 kCal at 27 ^\\circ C assuming R = 2 Cal K - 1 , the value of \\Delta H for the above reaction is:",
     "options": {
       "A": "15.8 Kcal",
       "B": "18.2 Kcal",
@@ -2851,7 +2851,7 @@
       "D": "16.4 Kcal TD12 - 0016"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) (g ) (g ) (g ) (g ) A 3B 3C 3D + ⎯ ⎯ → + \\Delta E = 17 kC al , T = 300K (273+27=300K) R = 2Cal K - 1 mol - 1 We know - \\Delta H = \\Delta E + \\Delta ngRT \\Delta H = 17 + ((2) × 2 × 300) × 10 - 3 = 17 + 1.2 \\Delta H = 18.2 kC al"
+    "explanation": "Ans. ( 2 ) (g ) (g ) (g ) (g ) A 3B 3C 3D + ⎯ ⎯ → + \\Delta E = 17 kC al , T = 300K (273+27=300K) R = 2Cal K - 1 We know - \\Delta H = \\Delta E + \\Delta ngRT \\Delta H = 17 + ((2) × 2 × 300) × 10 - 3 = 17 + 1.2 \\Delta H = 18.2 kC al"
   },
   {
     "type": "statement_based",
@@ -3026,7 +3026,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) Enthalpy of vaporisation ( \\Delta H vap ) and internal energy \\Delta E then - \\Delta H = \\Delta E + \\Delta ngRT For vaporisation of water H 2 O(l) ⎯ → H 2 O(g) \\Delta ng = 1 - 0 = 1 \\Delta H vap = \\Delta E + \\Delta ngRT T = 100^\\circC = 273 + 100 T = 373 K 40.63 = \\Delta E + RT \\Delta E = 40.63 - (8.314 × 373)×10 - 3  40.63 - 3.10 \\Delta E = 37.53 KJ mol - 1"
+    "explanation": "Ans. ( 1 ) Enthalpy of vaporisation ( \\Delta H vap ) and internal energy \\Delta E then - \\Delta H = \\Delta E + \\Delta ngRT For vaporisation of water H 2 O(l) ⎯ → H 2 O(g) \\Delta ng = 1 - 0 = 1 \\Delta H vap = \\Delta E + \\Delta ngRT T = 100^\\circC = 273 + 100 T = 373 K 40.63 = \\Delta E + RT \\Delta E = 40.63 - (8.314 × 373)×10 - 3  40.63 - 3.10 \\Delta E = 37.53 KJ"
   },
   {
     "type": "normal_mcq",
@@ -3045,10 +3045,10 @@
     },
     "question": "The value \\Delta E for this process would be : -",
     "options": {
-      "A": "37.53 kJ mol - 1",
-      "B": "39.08 kJ mol - 1",
-      "C": "42.19 kJ mol - 1",
-      "D": "43.73 kJ mol - 1 TD12 - 0031"
+      "A": "37.53 kJ",
+      "B": "39.08 kJ",
+      "C": "42.19 kJ",
+      "D": "43.73 kJ TD12 - 0031"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
@@ -3070,7 +3070,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reaction CO (g) + 1 2 O 2 (g) → CO 2 (g) Which one of these statement is correct at constant T and P ?",
+    "question": "For the reaction CO (g) + 1 2 O 2 (g) → CO 2 (g) Which one of these\n\nstatement is correct at constant T and P ?",
     "options": {
       "A": "\\Delta H = \\Delta E",
       "B": "\\Delta H < \\Delta E",
@@ -3078,7 +3078,7 @@
       "D": "\\Delta H is Independent of physical state of reactants TD12 - 0028"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) Co(g) + 1 2 O 2 (g) ⎯ → CO 2 (g) \\Delta H = \\Delta E + \\Delta ngRT \\Delta ng = 1 - 1 1 2 (  + ( ) )  = 1 2 - \\Delta H = \\Delta E - RT 2 \\Delta H < \\Delta E"
+    "explanation": "Ans. ( 2 ) Co(g) + 1 2 O 2 (g) ⎯ → CO 2 (g) \\Delta H = \\Delta E + \\Delta ngRT \\Delta ng = 1 - 1 1 2 (  + ( ) )  = 1 2 - \\Delta H = \\Delta E - \\Delta H < \\Delta E"
   },
   {
     "type": "normal_mcq",
@@ -3120,7 +3120,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of combustion of ethanol determined in a bomb calorimeter .48 kCal mole - 1 at 27^\\circC. What is \\Delta H at 27^\\circC for the reaction : -",
+    "question": "The heat of combustion of ethanol determined in a bomb calorimeter .48 kCal at 27^\\circC. What is \\Delta H at 27^\\circC for the reaction : -",
     "options": {
       "A": "- 335.24 kCal",
       "B": "- 671.08 kCal",
@@ -3370,15 +3370,15 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If S ^\\circ for H 2 , Cl 2 and HCl are 0.13, 0.22 and 0.19 kJ K - 1 mol - 1 respectively. The total change in standard entropy for the reaction H 2 + Cl 2 ⎯ → 2HCl is :",
+    "question": "If S ^\\circ for H 2 , Cl 2 and HCl are 0.13, 0.22 and 0.19 kJ K - 1 respectively. The total change in standard entropy for the reaction H 2 + Cl 2 ⎯ → 2HCl is :",
     "options": {
-      "A": "30 JK - 1 mol - 1",
-      "B": "40 JK - 1 mol - 1",
-      "C": "60 JK - 1 mol - 1",
-      "D": "20 JK - 1 mol - 1 TD18 - 0006"
+      "A": "30",
+      "B": "40",
+      "C": "60",
+      "D": "20 TD18 - 0006"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) H 2 (g) + Cl 2 (g) ⎯ → 2HCl 0 0 0 reaction Product reac tan t S S S \\Delta = -   2 2 0 0 0 0 HCl H Cl S 2 S - S S     \\Delta =  +         0 S 2 0.19 - 0.13 0.22 \\Delta =  + 0 reaction S \\Delta = 0.03 KJ K - 1 mol - 1 = 30 J K - 1 mol - 1 thermodynamics"
+    "explanation": "Ans. ( 1 ) H 2 (g) + Cl 2 (g) ⎯ → 2HCl 0 0 0 reaction Product reac tan t S S S \\Delta = -   2 2 0 0 0 0 HCl H Cl S 2 S - S S     \\Delta =  +         0 S 2 0.19 - 0.13 0.22 \\Delta =  + 0 reaction S \\Delta = 0.03 KJ K - 1 = 30 J K - 1 thermodynamics"
   },
   {
     "type": "normal_mcq",
@@ -3420,15 +3420,15 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of vaporisation of per mole of ethanol (B.pt. = 79.5 ^\\circ C and \\Delta S = 109.8 JK - 1 mol - 1 ) is : -",
+    "question": "The enthalpy of vaporisation of per mole of ethanol (B.pt. = 79.5 ^\\circ C and \\Delta S = 109.8 ) is : -",
     "options": {
-      "A": "27.35 kJ mol - 1",
-      "B": "32.19 kJ mol - 1",
-      "C": "38.70 kJ mol - 1",
-      "D": "42.37 kJ mol - 1 TD19 - 0011"
+      "A": "27.35 kJ",
+      "B": "32.19 kJ",
+      "C": "38.70 kJ",
+      "D": "42.37 kJ TD19 - 0011"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) \\Delta H vap = ? B.pt. (T) = 79.5^\\circC \\Delta S = 109.8JK - 1 mol - 1 = 273 + 79.5 T = 352.5K We know - vap vap H S T \\Delta \\Delta = 109.8 ×"
+    "explanation": "Ans. ( 3 ) \\Delta H vap = ? B.pt. (T) = 79.5^\\circC \\Delta S = 109.8JK - 1 = 273 + 79.5 T = 352.5K We know - vap vap H S T \\Delta \\Delta = 109.8 ×"
   },
   {
     "type": "normal_mcq",
@@ -3447,13 +3447,13 @@
     },
     "question": "5 mole of an ideal gas expand reversibly from a volume of 8 dm 3 to 80dm 3 at a temperature of 27 ^\\circ C. The change in entropy is : -",
     "options": {
-      "A": "41.57 JK - 1",
-      "B": "- 95.73 JK - 1",
-      "C": "95.73 JK - 1",
-      "D": "- 41.57 JK - 1 TD20 - 0005 NEET : Chemistry"
+      "A": "41.57",
+      "B": "- 95.73",
+      "C": "95.73",
+      "D": "- 41.57 TD20 - 0005 NEET : Chemistry"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) n = 5 mol, V 1 = 8dm 3 T = 27^\\circC V 2 = 80 dm 3 T = 300 K \\Delta S for isothermal - 2 1 V S nR ln V (  \\Delta = ( ) )  3 3 80dm S 5 8.314 ln 8dm (  \\Delta =   ( ) )  \\Delta S = 2.303 × 5 × 8.314 × 1 \\Delta S = 95.73 JK - 1"
+    "explanation": "Ans. ( 3 ) n = 5 mol, V 1 = 8dm 3 T = 27^\\circC V 2 = 80 dm 3 T = 300 K \\Delta S for isothermal - 2 1 V S nR ln V (  \\Delta = ( ) )  3 3 80dm S 5 8.314 ln 8dm (  \\Delta =   ( ) )  \\Delta S = 2.303 × 5 × 8.314 × 1 \\Delta S = 95.73"
   },
   {
     "type": "normal_mcq",
@@ -3470,7 +3470,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Calculate the entropy of Br 2 (g) in the reaction H 2 (g) + Br 2 (g) → 2HBr(g), \\Delta S^\\circ =20.1 JK - 1 given, entropy of H 2 and HBr is 130.6 and 198.5 J mol - 1 K -",
+    "question": "Calculate the entropy of Br 2 (g) in the reaction H 2 (g) + Br 2 (g) → 2HBr(g), \\Delta S^\\circ =20.1 given, entropy of H 2 and HBr is 130.6 and 198.5 J K -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3478,7 +3478,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) H 2 (g) + Br 2 (g) → 2HBr(g) \\Delta S 0 = 20.1JK - 1 2 0 H S = 130.6 J mol - 1 K - 1 , 0 HBr S = 198.5 J mol - 1 K - 1 2 2 0 0 0 0 HBr H Br S 2S S S     \\Delta = - +     20.1 = [2×198.5] - [130.6+ 2 0 Br S ] 2 0 Br S = 246.3 JK - 1 mol - 1"
+    "explanation": "Ans. ( 1 ) H 2 (g) + Br 2 (g) → 2HBr(g) \\Delta S 0 = 20.1JK - 1 2 0 H S = 130.6 J K - 1 , 0 HBr S = 198.5 J K - 1 2 2 0 0 0 0 HBr H Br S 2S S S     \\Delta = - +     20.1 = [2×198.5] - [130.6+ 2 0 Br S ] 2 0 Br S = 246.3"
   },
   {
     "type": "normal_mcq",
@@ -3570,7 +3570,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a reaction at 25 ^\\circ C enthalpy change ( \\Delta H) and entropy change ( \\Delta S) are - 11.7 × 10 3 J mol - 1 J mol - 1 K - 1 respectively. The reaction is :",
+    "question": "For a reaction at 25 ^\\circ C enthalpy change ( \\Delta H) and entropy change ( \\Delta S) .7 × 10 3 J J K - 1 respectively. The reaction is :",
     "options": {
       "A": "Spontaneous",
       "B": "Non spontaneous",
@@ -3578,7 +3578,7 @@
       "D": "Can't say anything TD23 - 0016"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) \\Delta H = - 11.7 × 10 3 J mol - 1 \\Delta S = - 105 J mol - 1 K - 1 T = 25^\\circC = 25 + 273 = 298 K We know - \\Delta G = \\Delta H - T \\Delta S \\Delta G = - 11.7 × 10 3 - (298) ( - 105) - 11700 + 31290 \\Delta G = 19590 J mol - 1 K - 1 \\Delta G > 0 NEET : Chemistry"
+    "explanation": "Ans. ( 2 ) \\Delta H = - 11.7 × 10 3 J \\Delta S = - 105 J K - 1 T = 25^\\circC = 25 + 273 = 298 K We know - \\Delta G = \\Delta H - T \\Delta S \\Delta G = - 11.7 × 10 3 - (298) ( - 105) - 11700 + 31290 \\Delta G = 19590 J K - 1 \\Delta G > 0 NEET : Chemistry"
   },
   {
     "type": "normal_mcq",
@@ -3620,7 +3620,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The temperature at which the reaction Ag 2 O(s) ⎯ → 2Ag(s) + ½ O 2 (g) is at equilibrium is ........; Given \\Delta H = 30.5 kJ mol - 1 and \\Delta S = 0.066 k JK - 1 mol -",
+    "question": "The temperature at which the reaction Ag 2 O(s) ⎯ → 2Ag(s) + ½ O 2 (g) is at equilibrium is ........; Given \\Delta H = 30.5 kJ and \\Delta S = 0.066 k mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3628,7 +3628,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) For equilibrium ( \\Delta G = 0) \\Delta H = T \\Delta S 30.5 KJ mol - 1 = T × 0.066 KJ mol - 1 T = 462.12 K"
+    "explanation": "Ans. ( 1 ) For equilibrium ( \\Delta G = 0) \\Delta H = T \\Delta S 30.5 KJ = T × 0.066 KJ T = 462.12 K"
   },
   {
     "type": "normal_mcq",
@@ -3695,7 +3695,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reaction A(s) ⎯ → B(s) + C(g) the value of \\Delta H = 30.56 kJ mol - 1 and \\Delta S = 66 JK - 1 mol -",
+    "question": "For the reaction A(s) ⎯ → B(s) + C(g) the value of \\Delta H = 30.56 kJ and \\Delta S = 66 mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3703,7 +3703,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) \\Delta H = 30.56 KJ mol - 1 \\Delta S = 66 JK - 1 mol - 1 \\Delta G = 0 \\Delta H = T \\Delta S 30.56 × 10 3 = T × 66 3 30.56 10 T 463K 66  = ="
+    "explanation": "Ans. ( 3 ) \\Delta H = 30.56 KJ \\Delta S = 66 \\Delta G = 0 \\Delta H = T \\Delta S 30.56 × 10 3 = T × 66 3 30.56 10 T 463K 66  = ="
   },
   {
     "type": "normal_mcq",
@@ -3720,7 +3720,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For hypothetical reversible reaction 1 2 A 2 (g) + 3 2 B 2 (g) ⎯ → AB 3 (g); \\Delta H = - 20 kJ if standard entropies of A 2 , B 2 and AB 3 are 60, 40 and 50 JK - 1 mole - 1 respectively. The above reaction will be in equilibrium at : -",
+    "question": "For hypothetical reversible reaction 1 2 A 2 (g) + 3 2 B 2 (g) ⎯ → AB 3 (g); \\Delta H = - 20 kJ if standard entropies of A 2 , B 2 and AB 3 are 60, 40 and 50 respectively. The above reaction will be in equilibrium at : -",
     "options": {
       "A": "400 K",
       "B": "500 K",
@@ -3728,7 +3728,7 @@
       "D": "200 K TD23 - 0015"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) 2 2 3 1 3 A (g) B (g) AB (g) 2 2 + → \\Delta H = - 20KJ 2 0 A S = 60, 2 0 B S =40, 3 0 AB S =50 For equilibrium - \\Delta G = 0 \\Delta H 0 = T \\Delta S 0 0 0 0 product reactan t S S S     \\Delta = -       3 2 2 0 0 0 0 AB A B 1 3 S S S S 2 2     \\Delta = - +         0 60 3 S 50 40 2 2   \\Delta = - +      \\Delta S 0 = - = - 40 JK - 1 mol - 1 \\Delta H = T \\Delta S - 20 × 10 3 = T × ( - 40) T = 20000 40 = 500 K"
+    "explanation": "Ans. ( 2 ) 2 2 3 1 3 A (g) B (g) AB (g) 2 2 + → \\Delta H = - 20KJ 2 0 A S = 60, 2 0 B S =40, 3 0 AB S =50 For equilibrium - \\Delta G = 0 \\Delta H 0 = T \\Delta S 0 0 0 0 product reactan t S S S     \\Delta = -       3 2 2 0 0 0 0 AB A B 1 3 S S S S 2 2     \\Delta = - +         0 60 3 S 50 40 2 2   \\Delta = - +      \\Delta S 0 = - = - 40 \\Delta H = T \\Delta S - 20 × 10 3 = T × ( - 40) T = 20000 40 = 500 K"
   },
   {
     "type": "normal_mcq",
@@ -3753,6 +3753,6 @@
       "D": "None of these TD23 - 0010"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) Ice melting at 1 atm, 283K Ice force at 273K or 0^\\circC, at 283 K, it starts melting itself. This process is spontaneous."
+    "explanation": "Ans. ( 3 ) Ice melting at 1 atm, 283K Ice force at 273K ^\\circC, at 283 K, it starts melting itself. This process is spontaneous."
   }
 ]

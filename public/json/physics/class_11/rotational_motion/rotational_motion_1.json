@@ -334,7 +334,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The M.I. of a thin rod of length ℓ about the perpendicular axis through its centre is I. The M.I. of the square structure made by four such rods about a perpendicular axis to the plane and through the centre will be : -",
+    "question": "The M.I. of a thin rod of length ℓ about the perpendicular axis through its centre is\n\nI. The M.I. of the square structure made by four such rods about a perpendicular axis to the plane and through the centre will be : -",
     "options": {
       "A": "4I",
       "B": "8I",
@@ -495,7 +495,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Three thin uniform rods each of mass M and length L are placed along the three axis of a cartesian coordinate system with one end of each rod at the origin. The M. I. of the system about z - axis is",
+    "question": "Three thin uniform rods each of mass M and length L are placed along the three axis of a cartesian coordinate system with one end of each rod at the origin. The M.\n\nI. of the system about z - axis is",
     "options": {
       "A": "2 ML 3",
       "B": "2 2ML 3",
@@ -1334,7 +1334,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "given, K 1 = K 2  2 2 1 2 1 2 L L 2I 2I =  2 2 1 2 L L 2 9 2 1 =    2 1 2 2 L 9 1 L = or 1 2 L 3 L 1 ="
+    "explanation": "given, K 1 = K 2  2 2 1 2 1 2 L L 2I 2I =  2 2 1 2 L L 2 9 2 1 =    2 1 2 2 L 9 1 L = L 3 L 1 ="
   },
   {
     "type": "normal_mcq",
@@ -1441,7 +1441,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rotational kinetic en e rgy of a body is K rot and its moment of inertia is I. The angular momentum of body is",
+    "question": "The rotational kinetic en e rgy of a body is K rot and its moment of inertia is\n\nI. The angular momentum of body is",
     "options": {
       "A": "IK rot",
       "B": "rot 2 IK",
@@ -1564,7 +1564,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "\\omega 1 = 2 10 \\pi = 5 \\pi rad/s. By conservation of Angular momentum I 1 \\omega 1 = I 2 \\omega 2  100 5 \\pi (  ( ) )  = [100 + 50(2) 2 ] \\omega  \\omega = 15 \\pi or 2 30 \\pi"
+    "explanation": "\\omega 1 = 2 10 \\pi = 5 \\pi rad/s. By conservation of Angular momentum I 1 \\omega 1 = I 2 \\omega 2  100 5 \\pi (  ( ) )  = [100 + 50(2) 2 ] \\omega  \\omega = 15 \\pi \\pi"
   },
   {
     "type": "normal_mcq",
@@ -2162,7 +2162,7 @@
       "D": "2 2 2 R K R +"
     },
     "correct_option": "C",
-    "explanation": "Total energy = 2 2 2 1 K mv 1 2 R   +     Rotational energy 2 1 I 2 \\omega = or 2 2 2 1 K mv 2 R      "
+    "explanation": "Total energy = 2 2 2 1 K mv 1 2 R   +     Rotational energy 2 1 I 2 \\omega = K mv 2 R      "
   },
   {
     "type": "normal_mcq",
@@ -2545,7 +2545,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A sphere and a disc of same radii and mass are rolling on an inclined plane without slipping. a s & a d are acceleration and g is acceleration due to gravity. Then which statement is correct ?",
+    "question": "A sphere and a disc of same radii and mass are rolling on an inclined plane without slipping. a s & a d are acceleration and g is acceleration due to gravity. Then which\n\nstatement is correct ?",
     "options": {
       "A": "a s > a d > g",
       "B": "g > a s > a d",

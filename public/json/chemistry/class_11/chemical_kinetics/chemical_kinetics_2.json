@@ -14,7 +14,7 @@
       "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rate constant (K) for the reaction 2A + B → product, was found to be 2.57 × 10 - 5 L mol - 1 s - 1 after 15 s, 2.60 × 10 - 5 L mol - 1 s - 1 after 30 s and 2.55 × 10 - 5 L mol - 1 s - 1 after 50 s. The order of reaction is",
+    "question": "The rate constant (K) for the reaction 2A + B → product, was found to be 2.57 × 10 - 5 L s - 1 after 15 s, 2.60 × 10 - 5 L s - 1 after 30 s and 2.55 × 10 - 5 L s - 1 after 50 s. The order of reaction is",
     "options": {
       "A": "2",
       "B": "3",
@@ -22,7 +22,7 @@
       "D": "1 CK15 - 0003"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) 2A + B ⎯ → product t k 15 sec 2.57×10 - 5 L mol - 1 s - 1 30 sec 2.60×10 - 5 L mol - 1 s - 1 50 sec 2.55×10 - 5 L mol - 1 s - 1 General unit of K = L n - 1 mol 1 - n time - 1 On comparing power of mol : 1 - n = - 1 n = 2"
+    "explanation": "Ans. ( 1 ) 2A + B ⎯ → product t k 15 sec 2.57×10 - 5 L s - 1 30 sec 2.60×10 - 5 L s - 1 50 sec 2.55×10 - 5 L s - 1 General unit of K = L n - 1 mol 1 - n On comparing power of mol : 1 - n = - 1 n = 2"
   },
   {
     "type": "normal_mcq",
@@ -47,7 +47,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) Given, 2 nd order, K = 8 × 10 - 5 M - 1 min - 1 [A] 0 = 1M, [A] t = 0.5M, t ? Kt = - t 0 1 1 [A] [A] 8×10 - 5 × t = - t 0 1 1 [A] [A] =1 t =  -5 1 8 10 = 1.25 × 10 4 min"
+    "explanation": "Ans. ( 3 ) Given, 2 nd order, K = 8 × 10 - 5 M - 1 [A] 0 = 1M, [A] t = 0.5M, t ? Kt = - t 0 1 1 [A] [A] 8×10 - 5 × t = - t 0 1 1 [A] [A] =1 t =  -5 1 8 10 = 1.25 × 10 4 min"
   },
   {
     "type": "normal_mcq",
@@ -189,7 +189,7 @@
       "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If energy change ( \\Delta H) during the reaction is - 20 kJ, then the activation energy for the reverse reaction is : -",
+    "question": "If energy change ( \\Delta H) during the reaction kJ, then the activation energy for the reverse reaction is : -",
     "options": {
       "A": "10 kJ",
       "B": "20 kJ",
@@ -244,7 +244,7 @@
       "A": "a E nK nA RT = - \\lambda\\lambda",
       "B": "a E /RT Ke A - =",
       "C": "a E logK log A 2.303 RT = -",
-      "D": "a E /RT 1 K A e - - = CK24 - 0125"
+      "D": "a E / K A e - - = CK24 - 0125"
     },
     "correct_option": "A",
     "explanation": "Ans. (1) K = - Ea RT Ae"
@@ -447,7 +447,7 @@
       "D": "2.88 × 10 - 3 s - 1 CK12 - 0230"
     },
     "correct_option": "C",
-    "explanation": "Ans. (1) 1 2 t = 480 sec (1 st order) 1 2 t = 0.693 K K = 0.693 480 K = 1.44 × 10 - 3 sec - 1"
+    "explanation": "Ans. (1) 1 2 t = 480 sec (1 st order) 1 2 t = 0.693 K K = 0.693 480 K = 1.44 × 10 - 3"
   },
   {
     "type": "normal_mcq",
@@ -547,7 +547,7 @@
       "D": "6.65 atm s - 1 CK12 - 0255"
     },
     "correct_option": "C",
-    "explanation": "Ans. (3) N 2 O 5 ⎯ ⎯ → N 2 O 4 + 1 2 O 2 t = 0 11MM O O t = 20s 114 - x x x 2  114 + x 2 = 133  x = 38 mm r = = x 38 t 20 r = 1.9 mm sec - 1 r = 1.9 760 =2.5×10 - 3 atm sec - 1"
+    "explanation": "Ans. (3) N 2 O 5 ⎯ ⎯ → N 2 O 4 + 1 2 O 2 t = 0 11MM O O t = 20s 114 - x x x 2  114 + x 2 = 133  x = 38 mm r = = x 38 t 20 r = 1.9 mm r = 1.9 760 =2.5×10 - 3 atm"
   },
   {
     "type": "normal_mcq",
@@ -691,13 +691,13 @@
     },
     "question": "For the reaction A→ B, the concentration of reactant changes from 0.05 to 0.03 in 30 sec, calculate average rate of reaction.",
     "options": {
-      "A": "6.6 × 10 - 4 MS - 1",
-      "B": "3.2 × 10 - 3 MS - 1",
-      "C": "0.5 × 10 - 5 MS - 1",
-      "D": "6.3 × 10 - 7 MS - 1 CK01 - 0342"
+      "A": "6.6 × 10 - 4",
+      "B": "3.2 × 10 - 3",
+      "C": "0.5 × 10 - 5",
+      "D": "6.3 × 10 - 7 CK01 - 0342"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) A → B C 1 = 0.05 C 2 = 0.03 \\Delta t = 30 sec Average rate of reaction = 2 1 C C t - \\Delta = 0.03 0.05 30 - (  - ( ) )  = 0.02 30 = 6.6 × 10 - 4 MS - 1"
+    "explanation": "Ans. ( 1 ) A → B C 1 = 0.05 C 2 = 0.03 \\Delta t = 30 sec Average rate of reaction = 2 1 C C t - \\Delta = 0.03 0.05 30 - (  - ( ) )  = 0.02 30 = 6.6 × 10 - 4"
   },
   {
     "type": "normal_mcq",
@@ -972,7 +972,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) A → B C 1 = 0.05 C 2 = 0.03 \\Delta t = 30 sec Average rate of reaction = 2 1 C C t - \\Delta = 0.03 0.05 30 - (  - ( ) )  = 0.02 30 = 6.6 × 10 - 4 MS - 1"
+    "explanation": "Ans. ( 1 ) A → B C 1 = 0.05 C 2 = 0.03 \\Delta t = 30 sec Average rate of reaction = 2 1 C C t - \\Delta = 0.03 0.05 30 - (  - ( ) )  = 0.02 30 = 6.6 × 10 - 4"
   },
   {
     "type": "normal_mcq",
@@ -1014,7 +1014,7 @@
       "source": "NCR - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rate of reaction quadruples when temperature charges from 273 to 293K. If initial rate is 3.2×10 2 MS - 1 , final rate is -",
+    "question": "The rate of reaction quadruples when temperature charges from 273 to 293K. If initial rate is 3.2×10 2 , final rate is -",
     "options": {
       "A": "6.4×10 2",
       "B": "7.8×10 2",
@@ -1214,7 +1214,7 @@
       "source": "NCR - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "91 KJ mol - 1 (2) 78.32 KJ mol - 1 (3) 30.07 KJ mol - 1 (4) 92.37 KJ mol - 1 CK07 - 0115",
+    "question": "91 KJ (2) 78.32 KJ (3) 30.07 KJ (4) 92.37 KJ CK07 - 0115",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1241,13 +1241,13 @@
     },
     "question": "The initial concentration of N 2 O 5 in 1 st order reaction - 2 5 2 2 1 N O (g) 2NO (g) O (g) 2 ⎯⎯ → + was 4×10 - 2 M at 328K, The concentration of N 2 O 5 after 60 min was 0.2×10 - 2 M, Calculate rate constant (k) = ?",
     "options": {
-      "A": "0.049 min - 1",
-      "B": "0.375 min - 1",
-      "C": "0.125 min - 1",
-      "D": "0.278 min - 1 CK04 - 0339"
+      "A": "0.049",
+      "B": "0.375",
+      "C": "0.125",
+      "D": "0.278 CK04 - 0339"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) K = 2.303 a log t a x (  ( ) - )  K = 2 2 2.303 4 10 M log 60 0.2 10 M - - (   ( )  )  K = 2.303 log(20) 60 K = 2.303 1.30 60  = 0.049 min - 1 chemical kinetics"
+    "explanation": "Ans. ( 1 ) K = 2.303 a log t a x (  ( ) - )  K = 2 2 2.303 4 10 M log 60 0.2 10 M - - (   ( )  )  K = 2.303 log(20) 60 K = 2.303 1.30 60  = 0.049 chemical kinetics"
   },
   {
     "type": "normal_mcq",
@@ -1498,7 +1498,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "Ans. (2) [ mol/L ] 1 - n Time - 1 [mol/L] 1 - 3 Time - 1 [mol/L] - 2 Time - 1"
+    "explanation": "Ans. (2) [ mol/L ] 1 - n [mol/L] 1 - 3 [mol/L] - 2"
   },
   {
     "type": "normal_mcq",
@@ -1590,12 +1590,12 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Under the same reaction conditions, initial concentration is 1.386 mol dm - 3 of a substance becomes half in 40 seconds and 20 seconds through first order and zero order kinetics, respectively. Ratio 1 0 k k (  ( ) )  of the rate constants for first order (k 1 ) and zero order (k 0 ) of the reactions is",
+    "question": "Under the same reaction conditions, initial concentration is 1.386 mol of a substance becomes half in 40 seconds and 20 seconds through first order and zero order kinetics, respectively. Ratio 1 0 k k (  ( ) )  of the rate constants for first order (k 1 ) and zero order (k 0 ) of the reactions is",
     "options": {
-      "A": "0.5 mol - 1 dm 3",
-      "B": "1.0 mol dm - 3",
-      "C": "2.0 mol - 1 dm 3",
-      "D": "0.1 mol dm - 3 CK12 - 0044"
+      "A": "0.5 dm 3",
+      "B": "1.0 mol",
+      "C": "2.0 dm 3",
+      "D": "0.1 mol CK12 - 0044"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
@@ -1715,7 +1715,7 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reaction of H 2 with I 2 , the rate constant is 2.5×10 - 4 dm 3 mol - 1 s - 1 at 327^\\circC and 1.0 dm 3 mol - 1 s - 1 at 527^\\circC. The activation energy for the reaction, in kJ mol - 1 is (R=8.314 JK - 1 mol - 1 )?",
+    "question": "For the reaction of H 2 with I 2 , the rate constant is 2.5×10 - 4 dm 3 s - 1 at 327^\\circC and 1.0 dm 3 s - 1 at 527^\\circC. The activation energy for the reaction, in kJ is (R=8.314 )?",
     "options": {
       "A": "59",
       "B": "72",
@@ -1723,7 +1723,7 @@
       "D": "166 CK21 - 0024"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) Rate constant K 1 = 2.5 × 10 - 4 dm 3 mol - 1 s - 1 T 1 (at 327^\\circC or 600 R) Rate constant K 2 = 1dm 3 mol - 1 s - 1 T 2 (at 527^\\circC or 800 K.) we know log a 2 1 1 2 E K 1 1 K 2.303R T T (  (  = - ( ) ( ) )  )  log a 4 E 1 1 1 2.5 10 2.303R 600 800 - (  (  = - ( ) ( )  )  )  4 a E 10 800 600 2.5 2.303R 800 600 (  - (  = ( ) ( )  )  )  log (4000) = a E 1 2.303R 2400  log 4 + log 1000 = a E 1 2.303R 2400  3.6020 = a E 1 2.303R 2400  E a = 1 (3.6020) (2.303) (8.314) (2400) kJmol 1000 - E a = 165.52 E a ≃ 166 kJ mol - 1"
+    "explanation": "Ans. ( 4 ) Rate constant K 1 = 2.5 × 10 - 4 dm 3 s - 1 T 1 (at 327^\\circC R) Rate constant K 2 = 1dm 3 s - 1 T 2 (at 527^\\circC K.) we know log a 2 1 1 2 E K 1 1 K 2.303R T T (  (  = - ( ) ( ) )  )  log a 4 E 1 1 1 2.5 10 2.303R 600 800 - (  (  = - ( ) ( )  )  )  4 a E 10 800 600 2.5 2.303R 800 600 (  - (  = ( ) ( )  )  )  log (4000) = a E 1 2.303R 2400  log 4 + log 1000 = a E 1 2.303R 2400  3.6020 = a E 1 2.303R 2400  E a = 1 (3.6020) (2.303) (8.314) (2400) kJmol 1000 - E a = 165.52 E a ≃ 166 kJ"
   },
   {
     "type": "normal_mcq",
@@ -1840,7 +1840,7 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The following results were obtained during kinetic studies of the reaction; 2A + B ⎯ → Products Experiment [A] [B] Initial rate of reaction (in mol L - 1 ) (in mol L - 1 ) (in mol L - 1 min - 1 ) I. 0.10 0.20 6.93×10 - 3 II. 0.10 0.25 6.93×10 - 3 III. 0.20 0.30 1.386×10 - 2 The time (in minutes) required to consume half of A is",
+    "question": "The following results were obtained during kinetic studies of the reaction; 2A + B ⎯ → Products Experiment [A] [B] Initial rate of reaction (in mol L - 1 ) (in mol L - 1 ) (in mol L - 1 )\n\nI. 0.10 0.20 6.93×10 - 3\n\nII. 0.10 0.25 6.93×10 - 3\n\nIII. 0.20 0.30 1.386×10 - 2 The time (in minutes) required to consume half of A is",
     "options": {
       "A": "5",
       "B": "10",
@@ -1890,7 +1890,7 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the noN\\cdot stoichiometric reaction, 2A + B → C + D, the following kinetic data were obtained in three separate experiments, all at 298K Initial Initial Initial rate of concentration concentration formation of C [A] [B] ( mol L - 1 s - 1 ) I. 0.1 M 0.1 M 1.2 × 10 - 3 II. 0.1 M 0.2 M 1.2 × 10 - 3 III. 0.2 M 0.1 M 2.4 × 10 - 3 The rate law for the formation of C is",
+    "question": "For the noN\\cdot stoichiometric reaction, 2A + B → C + D, the following kinetic data were obtained in three separate experiments, all at 298K Initial Initial Initial rate of concentration concentration formation of C [A] [B] ( mol L - 1 s - 1 )\n\nI. 0.1 M 0.1 M 1.2 × 10 - 3\n\nII. 0.1 M 0.2 M 1.2 × 10 - 3\n\nIII. 0.2 M 0.1 M 2.4 × 10 - 3 The rate law for the formation of C is",
     "options": {
       "A": "dC k[A][B] dt =",
       "B": "2 dC k[A] [B] dt =",
@@ -1915,12 +1915,12 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rate of a reaction doubles when its temperature changes from 300K to 310K. Activation energy of such a reaction will be (R = 8.314 JK - 1 mol - 1 and log 2 = 0.301)",
+    "question": "The rate of a reaction doubles when its temperature changes from 300K to 310K. Activation energy of such a reaction will be (R = 8.314 and log 2 = 0.301)",
     "options": {
-      "A": "53.6 KJ mol - 1",
-      "B": "48.6 KJ mol - 1",
-      "C": "58.6 KJ mol - 1",
-      "D": "60.5 KJ mol - 1 CK21 - 0023 E a I"
+      "A": "53.6 KJ",
+      "B": "48.6 KJ",
+      "C": "58.6 KJ",
+      "D": "60.5 KJ CK21 - 0023 E a I"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 1 ) temperature T 1 = 300 K T 2 = 310 K Rate of reaction double. log a 2 1 1 2 E k 1 1 k 2.303R T T (  (  = - ( ) ( ) )  )  log(2) = a E 1 1 2.303R 300 310 (  - ( ) )  0.3010 = a E 10 2.303R (8.314) 300 310 (  ( )  )  E a = 0.3010 2.303 8.314 300 310 10 1000      kJ/mol = 53.6 kJ /mol"
@@ -1967,13 +1967,13 @@
     },
     "question": "For a first order reaction, A → P, the temperature (T) dependent are constant (k) was found to follow the equation: 2000 log k 6.0 T = + the pre - exponential factor A and the activation energy E a , respectively, are",
     "options": {
-      "A": "1.0 × 10 6 s - 1 and 9.2 KJ mol - 1",
-      "B": "6.0 s - 1 and 16.6 KJ mol - 1",
-      "C": "1.0 × 10 6 s - 1 and 16.6 KJ mol - 1",
-      "D": "1.0 × 10 6 s - 1 and - 38.3 KJ mol - 1 CK24 - 0020"
+      "A": "1.0 × 10 6 s - 1 and 9.2 KJ",
+      "B": "6.0 s - 1 and 16.6 KJ",
+      "C": "1.0 × 10 6 s - 1 and 16.6 KJ",
+      "D": "1.0 × 10 6 s - 1 .3 KJ CK24 - 0020"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) A ⎯ → P first order reaction k = a E /RT Ae - in k = in ( ) a E /RT Ae - in k = in A - a E RT 2.303 log 10 k = 2.303 log A - a E RT log k = log A - a E 2.303 RT On comparing Log K = 2000 T + 6 2000 = - a E 2.303 R 6 = log A a E 38.3 kJ / mol = - 6 -1 A 10 s ="
+    "explanation": "Ans. ( 4 ) A ⎯ → P first order reaction k = a E /RT Ae - in k = in ( ) a E /RT Ae - in k = in A - a E .303 log 10 k = 2.303 log A - a E RT log k = log A - a E 2.303 RT On comparing Log K = 2000 T + 6 2000 = - a E 2.303 R 6 = log A a E 38.3 kJ / mol = - 6 -1 A 10 s ="
   },
   {
     "type": "statement_based",

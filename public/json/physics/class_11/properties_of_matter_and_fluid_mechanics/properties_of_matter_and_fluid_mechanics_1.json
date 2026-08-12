@@ -44,7 +44,7 @@
       "D": "0.4"
     },
     "correct_option": "B",
-    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5 ms - 1"
+    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5"
   },
   {
     "type": "normal_mcq",
@@ -67,7 +67,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5 ms - 1"
+    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5"
   },
   {
     "type": "normal_mcq",
@@ -82,15 +82,15 @@
       "source": "RACE - Properties Of Matter And Fluid Mechanics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the liquid flows inside the tube with a speed of 0.15m min - 1 , the speed with which the liquid is ejected through the holes is : -",
+    "question": "If the liquid flows inside the tube with a speed of 0.15m , the speed with which the liquid is ejected through the holes is : -",
     "options": {
-      "A": "50 ms - 1",
-      "B": "5 ms - 1",
-      "C": "0.05 ms - 1",
-      "D": "0.5 ms - 1"
+      "A": "50",
+      "B": "5",
+      "C": "0.05",
+      "D": "0.5"
     },
     "correct_option": "B",
-    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5 ms - 1"
+    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5"
   },
   {
     "type": "normal_mcq",
@@ -205,7 +205,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "R = n 1/3 r  R = (64) 1/3 r = 4r v T  r 2  T v' 1.5 = 2 R r (  ( ) )  = 16 v' T = 16 × 1.5 = 24 ms - 1"
+    "explanation": "R = n 1/3 r  R = (64) 1/3 r = 4r v T  r 2  T v' 1.5 = 2 R r (  ( ) )  = 16 v' T = 16 × 1.5 = 24"
   },
   {
     "type": "normal_mcq",
@@ -222,10 +222,10 @@
     },
     "question": "If these drops coalesce to form a big spherical drop, then terminal velocity of big drop is : -",
     "options": {
-      "A": "8 ms - 1",
-      "B": "16 ms - 1",
-      "C": "24 ms - 1",
-      "D": "32 ms - 1"
+      "A": "8",
+      "B": "16",
+      "C": "24",
+      "D": "32"
     },
     "correct_option": "D",
     "explanation": "Rate of flow Q = Av v = Q A = 4 200 0.5 10  = 4 × 10 - 2 cm/s = 0.4 mm/s"
@@ -274,7 +274,7 @@
       "D": "0.70N"
     },
     "correct_option": "B",
-    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5 ms - 1"
+    "explanation": "A 1 v 1 = A 2 v 2 (8 × 10 - 4 ) 0.15 60 (  ( ) )  = (40 × 10 - 8 )(v) v = 5"
   },
   {
     "type": "normal_mcq",
@@ -497,7 +497,7 @@
       "source": "RACE - Properties Of Matter And Fluid Mechanics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Figure shows a container filled with a liquid of density \\rho . Four points A, B, C and D lie on the diametrically opposite points of a circle as shown. Points A and C lie on vertical line and points B and D lie on horizontal line. The incorrect statement is (p A , p B , p C , p D are absolute pressure at the respective points) : -",
+    "question": "Figure shows a container filled with a liquid of density \\rho . Four points A, B, C and D lie on the diametrically opposite points of a circle as shown. Points A and C lie on vertical line and points B and D lie on horizontal line. The incorrect\n\nstatement is (p A , p B , p C , p D are absolute pressure at the respective points) : -",
     "options": {
       "A": "p D = p B",
       "B": "p A < p B = p D < p C",
@@ -808,7 +808,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "|F| =  A v h \\Delta \\Delta : 0.1 = 5 × 10 - 3 × 0 .2 × -3 v .25 10  v 0.025m / s = or 3 v 25 10 m / s - = ",
+    "explanation": "|F| =  A v h \\Delta \\Delta : 0.1 = 5 × 10 - 3 × 0 .2 × -3 v .25 10  v 0.025m / s = v 25 10 m / s - = ",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
   },
   {
@@ -1149,10 +1149,10 @@
     },
     "question": "The rubber cord of a catapult has cross-section area 1 mm 2 and a total unstretched length 10 cm. It is stretched to 12 cm and then released to project a partical of mass 5 g. Calculate the velocity of projection (Y for rubber is 5 × 10 8 N/m 2 )",
     "options": {
-      "A": "5 ms -1",
-      "B": "10 ms -1",
-      "C": "20 ms -1",
-      "D": "40 ms -1"
+      "A": "5",
+      "B": "10",
+      "C": "20",
+      "D": "40"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
@@ -1175,7 +1175,7 @@
       "A": "When the mass is at the highest point",
       "B": "When the mass is at the lowest point",
       "C": "When the wire is horizontal",
-      "D": "At an angle of cos -1"
+      "D": "At an angle of"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
@@ -1356,10 +1356,10 @@
     },
     "question": "If the longitudinal strain is 2%, then the energy stored in the wire per unit volume is :-",
     "options": {
-      "A": "0.5 × 10 6 Jm -3",
-      "B": "10 6 Jm -3",
-      "C": "2 × 10 6 Jm -3",
-      "D": "4 × 10 6 Jm -3"
+      "A": "0.5 × 10 6",
+      "B": "10 6",
+      "C": "2 × 10 6",
+      "D": "4 × 10 6"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
@@ -1381,7 +1381,7 @@
     "options": {
       "A": "2 × 10 9 N-m -2",
       "B": "4 × 10 9 N-m -2",
-      "C": "2 × 10 8 Nm -2",
+      "C": "2 × 10 8",
       "D": "4 × 10 8 N-m -2"
     },
     "correct_option": "A",
@@ -1795,7 +1795,7 @@
       "source": "NCR - Properties Of Matter And Fluid Mechanics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Calculate the approximate change in density of water in a lake at a depth of 400 m below the surface. The density of water at the surface is 1030 kg/m 3 and compressibility of water is 0.5 × 10 - 9 kg - 1 /m 3",
+    "question": "Calculate the approximate change in density of water in a lake at a depth of 400 m below the surface. The density of water at the surface is 1030 kg/m 3 and compressibility of water is 0.5 × 10 - 9 /m 3",
     "options": {
       "A": "2 kg/m 3",
       "B": "5 kg/m 3",
@@ -2308,7 +2308,7 @@
     },
     "question": "Dimensional formula of specific gravity is",
     "options": {
-      "A": "[M 0 LT - 2 ]",
+      "A": "[M 0 ]",
       "B": "[M 0 L 0 T 0 ]",
       "C": "[M 1 L 1 T - 2 ]",
       "D": "[M 1 L 0 T - 2 ] FL50 - 0005 3"
@@ -2732,7 +2732,7 @@
       "D": "none of these"
     },
     "correct_option": "A",
-    "explanation": "h = 5 3 P (3 1) 10 g 10 10 \\Delta -  = \\rho  = 20 m (  Pressure diff. between bottom & top of tank = 3 atm - 1 atm) v = 2gh = 2 10 20 400   = ms - 1"
+    "explanation": "h = 5 3 P (3 1) 10 g 10 10 \\Delta -  = \\rho  = 20 m (  Pressure diff. between bottom & top of tank = 3 atm) v = 2gh = 2 10 20 400   ="
   },
   {
     "type": "normal_mcq",
@@ -2755,7 +2755,7 @@
       "D": "2.3 m/s FL49 - 0008"
     },
     "correct_option": "C",
-    "explanation": "v T = ( ) A w 2 g 2 r 9 \\rho - \\rho  \\lambda = ( ) ( ) 3 3 2 3 4 2.7 10 10 10 2 10 9 8 10 - -  -     = 4.6 ms - 1 R 2 2 R 1 1 (R 2 > R 1 ) Exercise - I NEET : Extra Edge [ Physics ]"
+    "explanation": "v T = ( ) A w 2 g 2 r 9 \\rho - \\rho  \\lambda = ( ) ( ) 3 3 2 3 4 2.7 10 10 10 2 10 9 8 10 - -  -     = 4.6 R 2 2 R 1 1 (R 2 > R 1 ) Exercise - I NEET : Extra Edge [ Physics ]"
   },
   {
     "type": "normal_mcq",

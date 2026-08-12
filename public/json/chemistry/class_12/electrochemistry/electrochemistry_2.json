@@ -122,7 +122,7 @@
       "D": "- 192 KJ/mol EC05 - 0084"
     },
     "correct_option": "B",
-    "explanation": "Ans. (2 ) n in the equation is 2, (due to exchange of 2e¯ in the reaction.) F = 96487 C mol - 1 and 0 (cell) E = 1.1 V as, 0 0 r (cell) G nFE \\Delta = - \\Delta r G 0 = - 2 × 96487 × 1.1 = - 21227 1.4 J mol - 1 = - 212.27 kJ mol - 1"
+    "explanation": "Ans. (2 ) n in the equation is 2, (due to exchange of 2e¯ in the reaction.) F = 96487 C and 0 (cell) E = 1.1 V as, 0 0 r (cell) G nFE \\Delta = - \\Delta r G 0 = - 2 × 96487 × 1.1 = - 21227 1.4 J = - 212.27 kJ"
   },
   {
     "type": "normal_mcq",
@@ -240,12 +240,12 @@
       "source": "NCR - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "0 m  for NaCl, HCl and NaA c are 126.4, 425.9 and 91.0 S cm 2 mol - 1 respectively. Calculate  0 for HAc.",
+    "question": "0 m  for NaCl, HCl and NaA c are 126.4, 425.9 and 91.0 S cm 2 respectively. Calculate  0 for HAc.",
     "options": {
-      "A": "295.6 S cm 2 mol - 1",
-      "B": "385.2 S cm 2 mol - 1",
-      "C": "390.5 S cm 2 mol - 1",
-      "D": "405.28 S cm 2 mol - 1 EC08 - 0081 1"
+      "A": "295.6 S cm 2",
+      "B": "385.2 S cm 2",
+      "C": "390.5 S cm 2",
+      "D": "405.28 S cm 2 EC08 - 0081 1"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) E (cell) = 2 0 cell 2 RT Mg E In 2F Ag + + - = 3.17 V - 2 0.059V 0.130 log 2 (0.0001) = 3.17 V - 0.21 V = 2.96 V"
@@ -423,7 +423,7 @@
       "D": "Fe < Zn < Cu < Al < Mg EC09 - 0178 1"
     },
     "correct_option": "B",
-    "explanation": "Ans. (2 ) n in the equation is 2, (due to exchange of 2e¯ in the reaction.) F = 96487 C mol - 1 and 0 (cell) E = 1.1 V as, 0 0 r (cell) G nFE \\Delta = - \\Delta r G 0 = - 2 × 96487 × 1.1 = - 21227 1.4 J mol - 1 = - 212.27 kJ mol - 1"
+    "explanation": "Ans. (2 ) n in the equation is 2, (due to exchange of 2e¯ in the reaction.) F = 96487 C and 0 (cell) E = 1.1 V as, 0 0 r (cell) G nFE \\Delta = - \\Delta r G 0 = - 2 × 96487 × 1.1 = - 21227 1.4 J = - 212.27 kJ"
   },
   {
     "type": "normal_mcq",
@@ -642,13 +642,13 @@
     },
     "question": "For the cell reaction, Mg(s) + 2Ag + (aq)   Mg 2+ (aq) + 2Ag(s), o cell E is 3.17 V at 298 K. The value of E cell , \\Delta Gº and Q at Ag + and Mg 2+ concentrations of 0.001 M and 0.02 M respectively are : -",
     "options": {
-      "A": "3.04 V, - 605.8 kJ mol - 1 , 20000",
-      "B": "3.04 V, 611.8 kJ mol - 1 , 20000",
-      "C": "3.13 V, - 604 kJ mol - 1 , 20",
+      "A": "3.04 V, - 605.8 kJ , 20000",
+      "B": "3.04 V, 611.8 kJ , 20000",
+      "C": "3.13 V, - 604 kJ , 20",
       "D": "3.04 V, - 611.8 kJ, 20000 EC19 - 0012"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ cell - 2 2 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - -  E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt \\Delta G^\\circ = - nF E^\\circ cell = - 2 × 96500 × 3.17 = - 611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
+    "explanation": "Ans. ( 4 ) Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - -  E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt \\Delta G^\\circ = - nF E^\\circ cell = - 2 × 96500 × 3.17 = - 611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
   },
   {
     "type": "normal_mcq",
@@ -692,13 +692,13 @@
     },
     "question": "The electrical resistance of a column of 0.05 mole/litre NaOH solution of diameter 1 cm and length 50 cm is 5.55 × 10 3 ohm. Calculate its molar conductivity : -",
     "options": {
-      "A": "229.6 Scm 2 mol - 1",
-      "B": "119.5 Scm 2 mol - 1",
-      "C": "190.2 Scm 2 mol - 1",
+      "A": "229.6 Scm 2",
+      "B": "119.5 Scm 2",
+      "C": "190.2 Scm 2",
       "D": "None of these EC02 - 0044"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) diameter = 2r r = 1 2  0.5 cm Area (A) = \\pi r 2  3.14 × (0.5) 2  0.785 cm 2 Molar conductivity (  m ) = 1000 M  (  m ) = 1 1000 A R M (    ( ) )  \\lambda = 3 50 1 1000 0.785 5.55 10 0.05     229.65 cm 2 mol eq - 1"
+    "explanation": "Ans. ( 1 ) diameter = 2r r = 1 2  0.5 cm Area (A) = \\pi r 2  3.14 × (0.5) 2  0.785 cm 2 Molar conductivity (  m ) = 1000 M  (  m ) = 1 1000 A R M (    ( ) )  \\lambda = 3 50 1 1000 0.785 5.55 10 0.05     229.65 cm 2 mol"
   },
   {
     "type": "normal_mcq",
@@ -766,7 +766,7 @@
       "source": "RACE - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The k = 4.95 × 10 - 5 S cm - 1 for a 0.00099 M solution. Calculate the degree of dissociation of acetic acid, if M   for acetic acid is 400 S cm 2 mol -",
+    "question": "The k = 4.95 × 10 - 5 S for a 0.00099 M solution. Calculate the degree of dissociation of acetic acid, if M   for acetic acid is 400 S cm 2 mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -791,12 +791,12 @@
       "source": "RACE - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Value of  m  for SrCl 2 in water at 25º from the following data : Conc. (mol/L) 0.25 1  m ( \\Omega - 1 cm 2 mol - 1 ) 260 250",
+    "question": "Value of  m  for SrCl 2 in water at 25º from the following data : Conc. (mol/L) 0.25 1  m ( \\Omega - 1 cm 2 ) 260 250",
     "options": {
       "A": "270",
       "B": "260",
       "C": "250",
-      "D": "255 EC03 - 0026 ClO 3 0.50 V ClO 0.40 V 1 2 Cl 2 1.36 V Cl - 0.88 V Eº - NEET : CHEMISTRY"
+      "D": "255 EC03 - 0026 ClO 3 0.50 V ClO 0.40 V 1 2 Cl 2 1.36 V .88 V Eº - NEET : CHEMISTRY"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 1 ) According to debye huckel onsagar equation  C =   - b C 260 =   - b 0.25 ...(1) 250 =   - b 1 ...(2) eq n (1) - eq n (2) than 10 = 0.5 b b = 20 on putting value in eq n (1) 260 =   - 20 × 0.5   = 270 NEET : CHEMISTRY"
@@ -916,7 +916,7 @@
       "source": "RACE - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The anodic half - cell of lead - acid battery is recharged usi n g electricity of 0.05 Faraday. The amount of PbSO 4 electrolysed in g during the process is (Molar mass of PbSO 4 = 303g mol - 1 )",
+    "question": "The anodic half - cell of lead - acid battery is recharged usi n g electricity of 0.05 Faraday. The amount of PbSO 4 electrolysed in g during the process is (Molar mass of PbSO 4 = 303g )",
     "options": {
       "A": "11.4",
       "B": "7.6",
@@ -1041,7 +1041,7 @@
       "source": "RACE - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The standard reduction potential values of three metallic cations, X, Y, Z are 0.52, - 3.03 and - 1.18 V respectively. The order of reducing power of the corresponding metals is .",
+    "question": "The standard reduction potential values of three metallic cations, X, Y, Z are 0.52, - 3.03 .18 V respectively. The order of reducing power of the corresponding metals is .",
     "options": {
       "A": "Y > Z > X",
       "B": "X > Y > Z",

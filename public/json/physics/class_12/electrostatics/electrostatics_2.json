@@ -89,7 +89,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "For charge, which placed at point P : - F net = 0 F 1 = F 2 ( ) ( ) ( ) ( ) 2 2 k 9e q k 16e (q) x 70 x = -  x = 30 cm from 9e or 40 cm from 16e.",
+    "explanation": "For charge, which placed at point P : - F net = 0 F 1 = F 2 ( ) ( ) ( ) ( ) 2 2 k 9e q k 16e (q) x 70 x = -  x = 30 cm from 9e cm from 16e.",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
   },
   {
@@ -105,7 +105,7 @@
       "source": "Exercise I-III - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two point charges of + 2 \\mu C and + 6 \\mu C repel each other with a force of 12 N. If each is given an additional charge of - 4 \\mu C, then force will become: -",
+    "question": "Two point charges of + 2 \\mu C and + 6 \\mu C repel each other with a force of 12 N. If each is given an additional charge \\mu C, then force will become: -",
     "options": {
       "A": "4 N",
       "B": "60 N",
@@ -174,7 +174,7 @@
       "source": "Exercise I-III - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "identify the wrong statement in the following : - Coulomb's law correctly describes the electric force that.",
+    "question": "identify the wrong\n\nstatement in the following : - Coulomb's law correctly describes the electric force that.",
     "options": {
       "A": "binds the electrons of an atom to it's nucleus",
       "B": "binds the protons and neutrons in the nucleus of an atom",
@@ -246,8 +246,8 @@
     },
     "question": "The electric field in a certain region is given by 3 K ˆ E ( )i x → = . The dimensions of K are : -",
     "options": {
-      "A": "MLT - 3 A - 1",
-      "B": "ML - 2 T - 3 A - 1",
+      "A": "A - 1",
+      "B": "T - 3 A - 1",
       "C": "ML 4 T - 3 A - 1",
       "D": "M^\\circL^\\circT^\\circA^\\circ EL38 - 0013"
     },
@@ -346,7 +346,7 @@
       "D": "1 2 k R \\lambda \\lambda EL13 - 0002"
     },
     "correct_option": "B",
-    "explanation": "V dipole = 2 kpcos r \\theta at axis ( \\theta = 0^\\circ or 180^\\circ) V Axis = 2 kp r  = 9 6 2 9 10 4 10 2 -     = 3 9 10 V   A → Correct R → False.  V = 2 0 p 4 r  \\pi"
+    "explanation": "V dipole = 2 kpcos r \\theta at axis ( \\theta = 0^\\circ ^\\circ) V Axis = 2 kp r  = 9 6 2 9 10 4 10 2 -     = 3 9 10 V   A → Correct R → False.  V = 2 0 p 4 r  \\pi"
   },
   {
     "type": "normal_mcq",
@@ -616,7 +616,7 @@
       "source": "Exercise I-III - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is true? (i) A ring of radius R carries a uniformly distributed charge +Q. A point charge - q is placed on the axis of the ring at a distance 2R from its centre and released. The particle executes simple harmonic motion along the axis of the ring. (ii) Electrons move from a region of higher potential to that of lower potential",
+    "question": "Which\n\nstatement is true? (i) A ring of radius R carries a uniformly distributed charge +Q. A point charge - q is placed on the axis of the ring at a distance 2R from its centre and released. The particle executes simple harmonic motion along the axis of the ring. (ii) Electrons move from a region of higher potential to that of lower potential",
     "options": {
       "A": "only",
       "B": "only",
@@ -736,7 +736,7 @@
       "source": "Exercise I-III - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A charge of 10 esu is placed at a distance of 2 cm from a charge of 40 esu and 4 cm from another charge of - 20 esu. The potential energy of the charge 10 esu is : - (in ergs)",
+    "question": "A charge of 10 esu is placed at a distance of 2 cm from a charge of 40 esu and 4 cm from another charge esu. The potential energy of the charge 10 esu is : - (in ergs)",
     "options": {
       "A": "87.5",
       "B": "112.5",
@@ -814,7 +814,7 @@
       "D": "ML 4 2qE \\pi EL38 - 0012"
     },
     "correct_option": "A",
-    "explanation": "I \\alpha = - pE sin \\theta for small angle sin \\theta ≃ \\theta I \\alpha = - pE \\theta \\alpha = pE - I (  \\theta ( ) )  = - \\omega 2 \\theta Hence \\omega = pE I T = I 2 pE \\pi 2 ML /2 ML 2 2 qLE 2qE = \\pi = \\pi 10 esu 40 esu - 20 esu 2cm 2cm A B C  EF  +q L - q E electrostatics"
+    "explanation": "I \\alpha = - pE sin \\theta for small angle sin \\theta ≃ \\theta I \\alpha = - pE \\theta \\alpha = pE - I (  \\theta ( ) )  = - \\omega 2 \\theta Hence \\omega = pE I T = I 2 pE \\pi 2 ML /2 ML 2 2 qLE 2qE = \\pi = \\pi 10 esu 40 esu 2cm 2cm A B C  EF  +q L - q E electrostatics"
   },
   {
     "type": "normal_mcq",
@@ -1247,10 +1247,10 @@
     },
     "question": "velocity of the ball at point A is: -",
     "options": {
-      "A": "16.7 ms - 1",
-      "B": "16.7 cms - 1",
-      "C": "2.8 ms - 1",
-      "D": "2.8 cms - 1 EL24 - 0044"
+      "A": "16.7",
+      "B": "16.7",
+      "C": "2.8",
+      "D": "2.8 EL24 - 0044"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard electrostatics principles."
@@ -1510,7 +1510,7 @@
       "D": "d 3d 2 - EL04 - 0327"
     },
     "correct_option": "B",
-    "explanation": "Let a charge 2q be placed at P, at a distance ℓ from A where charge q is placed, as shown in figure. The charge 2q will not experience any force, when force of repulsion on it due to q is balanced by force of attraction on it due to - 3q at B where AB = d. or 2 2 0 0 (2q)(q) (2q)( 3q) 4 4 ( d) - = \\pi \\pi + \\lambda\\lambda (ℓ + d) 2 = 3ℓ 2 or 2ℓ 2 - 2ℓd - d 2 = 0 2 2 2d 4d 8d d 3d 4 2 2  + = =  \\lambda d 3d 2  = \\lambda"
+    "explanation": "Let a charge 2q be placed at P, at a distance ℓ from A where charge q is placed, as shown in figure. The charge 2q will not experience any force, when force of repulsion on it due to q is balanced by force of attraction on it due to - 3q at B where AB = d. (2q)(q) (2q)( 3q) 4 4 ( d) - = \\pi \\pi + \\lambda\\lambda (ℓ + d) 2 = 3ℓ 2 ℓ 2 - 2ℓd - d 2 = 0 2 2 2d 4d 8d d 3d 4 2 2  + = =  \\lambda d 3d 2  = \\lambda"
   },
   {
     "type": "normal_mcq",
@@ -1556,7 +1556,7 @@
       "D": "- 1/4 EL04 - 0329"
     },
     "correct_option": "D",
-    "explanation": "For the system to be in equilibrium, net force on q = 0 or 2 2 0 0 Qq qq 0 4 x 4 (2x) + = \\pi \\pi or q Q 1 Q or 4 q 4 - = = - 1",
+    "explanation": "For the system to be in equilibrium, net force on q = 0 Qq qq 0 4 x 4 (2x) + = \\pi \\pi or q Q 1 Q q 4 - = = - 1",
     "photo": "data:image/png;base64,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"
   },
   {
@@ -1649,7 +1649,7 @@
       "D": "0.515 × 10 4 N m 2 C - 1 EL10 - 0135"
     },
     "correct_option": "B",
-    "explanation": "Here, r = 10 cm = 0.1 m E = 5 × 10 5 N C - 1 As the angle between the plane sheet and the electric field is 60º, angle made by the normal to the plane sheet and the electric field is θ = 90^\\circ - 60^\\circ = 30^\\circ ϕ E = ES cosθ = E × πr 2 cosθ = 5 × 10 5 × 3.14 × (0.1) 2 cos30^\\circ = 1.36 × 10 4 Nm 2 C - 1"
+    "explanation": "Here, r = 10 cm = 0.1 m E = 5 × 10 5 N C - 1 As the angle between the plane sheet and the electric field is 60º, angle made by the normal to the plane sheet and the electric field is θ = 90^\\^\\circ = 30^\\circ ϕ E = ES cosθ = E × πr 2 cosθ = 5 × 10 5 × 3.14 × (0.1) 2 cos30^\\circ = 1.36 × 10 4 Nm 2 C - 1"
   },
   {
     "type": "normal_mcq",
@@ -1667,7 +1667,7 @@
     "question": "A uniform electric field E = 2 × 10 3 N C - 1 is acting along the positive x - axis. The flux of this field through a square of 10 cm on a side whose plane is parallel to the yz plane is :",
     "options": {
       "A": "20 N C - 1 m 2",
-      "B": "30 NC - 1 m 2",
+      "B": "30 m 2",
       "C": "10 N C - 1 m 2",
       "D": "40 N C - 1 m 2 EL10 - 0134"
     },
@@ -1695,7 +1695,7 @@
       "D": "4.6 × 10 5 N C - 1 EL28 - 0036"
     },
     "correct_option": "C",
-    "explanation": "Here, q = \\pm 20 μC = \\pm20 × 10 - 6 C or 2a = 10 mm = 10 × 10 - 3 m r = OP = 10 cm = 10 × 10 - 2 m p \\lambda = q × 2a = 20 × 10 - 6 × 10 × 10 - 3 m = 2 × 10 - 7 m The electric field along BP, 2 2 2 0 2pr E 4 (r a ) = \\pi - \\lambda As a << r, 7 9 3 2 3 0 2 p 2 2 10 9 10 E 4 r (10 10 ) - -     = = \\pi  \\lambda \\lambda = 3.6 × 10 6 N C - 1 2q q - 3 q B A P d \\lambda R x R 2 A O B P 20 C - \\mu 20 C + \\mu E \\lambda electrostatics NEET : NCR [Physics]"
+    "explanation": "Here, q = \\pm 20 μC = \\pm20 × 10 - 6 C a = 10 mm = 10 × 10 - 3 m r = OP = 10 cm = 10 × 10 - 2 m p \\lambda = q × 2a = 20 × 10 - 6 × 10 × 10 - 3 m = 2 × 10 - 7 m The electric field along BP, 2 2 2 0 2pr E 4 (r a ) = \\pi - \\lambda As a << r, 7 9 3 2 3 0 2 p 2 2 10 9 10 E 4 r (10 10 ) - -     = = \\pi  \\lambda \\lambda = 3.6 × 10 6 N C - 1 2q q - 3 q B A P d \\lambda R x R 2 A O B P 20 C - \\mu 20 C + \\mu E \\lambda electrostatics NEET : NCR [Physics]"
   },
   {
     "type": "normal_mcq",
@@ -2049,7 +2049,7 @@
       "source": "NCR - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The electric potential at a point in free space due to a charge Q coulomb is Q × 10 11 V. The electric field at that point is :",
+    "question": "The electric potential at a point in free space due to a charge Q coulomb is Q × 10 11\n\nV. The electric field at that point is :",
     "options": {
       "A": "12πε 0 Q × 10 22 V m - 1",
       "B": "4πε 0 Q × 10 22 V m - 1",
@@ -2057,7 +2057,7 @@
       "D": "4πε 0 Q × 10 20 V m - 1 ES34 - 0041"
     },
     "correct_option": "B",
-    "explanation": "Here, V = 11 0 Q Q 10 4 r =  \\pi ∴ 4πε 0 r = 10 - 11 ...(i) Now, E = 0 0 2 2 11 2 0 0 Q 4 4 Q Q 4 r (4 r) (10 ) -  \\pi \\pi = = \\pi \\pi (Using (i)) = 4πε 0 Q × 10 22 Vm - 1"
+    "explanation": "Here, V = 11 0 Q Q 10 4 r =  \\pi ∴ 4πε 0 r = 10 - 11 ...(i) Now, E = 0 0 2 2 11 2 0 0 Q 4 4 Q Q 4 r (4 r) (10 ) -  \\pi \\pi = = \\pi \\pi (Using (i)) = 4πε 0 Q × 10 22"
   },
   {
     "type": "figure_mcq",
@@ -2189,7 +2189,7 @@
       "source": "NCR - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is true about the relation between electric field and potential?",
+    "question": "Which of the following\n\nstatement is true about the relation between electric field and potential?",
     "options": {
       "A": "Electric field is in the direction in which the potential decreases steepest.",
       "B": "Magnitude of electric field is given by the change in the magnitude of potential per unit displacement normal to the equipotential surface at that point.",
@@ -2373,7 +2373,7 @@
       "source": "NCR - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Find the correct options regarding Equipotential surface for given charge distribution : -",
+    "question": "Find the correct\n\n**options** regarding Equipotential surface for given charge distribution : -",
     "options": {
       "D": "All of these EL25 - 0026",
       "A": "Option A",
@@ -2696,7 +2696,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "If the charge on the particle is 40 μC and the initial velocity is 200 ms - 1 , how much distance it will travel before coming to the rest momentarily :",
+    "question": "If the charge on the particle is 40 μC and the initial velocity is 200 , how much distance it will travel before coming to the rest momentarily :",
     "options": {
       "A": "1 m",
       "B": "5 m",
@@ -2742,7 +2742,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Three point charges of magnitude 5 C, \\mu 0.16μC and 0.3 C \\mu are located at the vertices A, B, C of a right angled triangle whose sides are AB = 3cm, BC 3 2 = cm and CA = 3 cm and point A is the right angle corner. Charge at point A experiences _______ N of electrostatic force due to the other two charges. EL04 - 0042",
+    "question": "Three point charges of magnitude 5 C, \\mu 0.16μC and 0.3 C \\mu are located at the vertices A, B, C of a right angled triangle whose sides are AB = 3cm, = cm and CA = 3 cm and point A is the right angle corner. Charge at point A experiences _______ N of electrostatic force due to the other two charges. EL04 - 0042",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2790,8 +2790,8 @@
     },
     "question": "A uniform electric field E = (8m/e) V/m is created between two parallel plates of length 1m as shown in figure, (where m = mass of electron and e = charge of electron). An electron enters the field symmetrically between the plates with a speed of 2m/s. The angle of the deviation ( \\theta ) of the path of the electron as it comes out of the field will be ……….",
     "options": {
-      "A": "tan - 1",
-      "B": "tan - 1",
+      "A": "",
+      "B": "",
       "C": "Option C",
       "D": "Option D"
     },
@@ -3326,7 +3326,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The electric field inside the cylindrical volume at a distance 0 2 x  = \\rho m from its axis is ______ Vm - 1 EL38 - 0029",
+    "question": "The electric field inside the cylindrical volume at a distance 0 2 x  = \\rho m from its axis is ______ EL38 - 0029",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3349,7 +3349,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Given below are two statements. Statement I : Electric potential is constant within and at the surface of each conductor. Statement II : Electric field just outside a charged conductor is perpendicular to the surface of the conductor at every point. In the light of the above statements, choose the most appropriate answer from the options give n below.",
+    "question": "Given below are two statements.\n\nStatement I : Electric potential is constant within and at the surface of each conductor.\n\nStatement II : Electric field just outside a charged conductor is perpendicular to the surface of the conductor at every point. In the light of the above statements, choose the most appropriate answer from the\n\n**options** give n below.",
     "options": {
       "A": "Both statement I and statement II are correct",
       "B": "Both statement I and statement II are incorrect",

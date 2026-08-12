@@ -91,7 +91,7 @@
     },
     "question": "Calculate energy of one mole of photons of radiation whose frequency i s 5 × 10 14 H z .",
     "options": {
-      "A": "199.51 J mol - 1",
+      "A": "199.51 J",
       "B": "199.51 kJ/mol",
       "C": "199.51 × 10 3 kJ/mol",
       "D": "None of these AS07 - 0400"
@@ -114,7 +114,7 @@
       "source": "NCR - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "What w ill be the wavelength of a ball of ma ss 0.1 kg moving with a velocity of 10 ms - 1 ?",
+    "question": "What w ill be the wavelength of a ball of ma ss 0.1 kg moving with a velocity of 10 ?",
     "options": {
       "A": "6.626 × 10 34 m",
       "B": "6.626 × 10 36 m",
@@ -415,7 +415,7 @@
       "source": "NCR - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is not correct about the characteristics of cathode rays ?",
+    "question": "Which of the following\n\nstatement is not correct about the characteristics of cathode rays ?",
     "options": {
       "A": "They start from the cathode and move towards the anode",
       "B": "They travel in straight line in the absence of an external electrical or magnetic field.",
@@ -673,7 +673,7 @@
       "D": "3.40 × 10 23 AS11 - 0034"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) nhC E = \\lambda 26 10 n 20 10 60 6000 10 - -   =  10 1 Joule 1watt s 60 Joule 60W s 1A 10 cm -   =       =     ^\\circ =   n  18 × 10 19 Photons per second. For 10 hours n = 18 × 10 19 × 10 × 60 × 60 n = 6.48 × 10 24 photons or 6.50 × 10 24 photons"
+    "explanation": "Ans. ( 1 ) nhC E = \\lambda 26 10 n 20 10 60 6000 10 - -   =  10 1 Joule 1watt s 60 Joule 60W s 1A 10 cm -   =       =     ^\\circ =   n  18 × 10 19 Photons per second. For 10 hours n = 18 × 10 19 × 10 × 60 × 60 n = 6.48 × 10 24 photons .50 × 10 24 photons"
   },
   {
     "type": "normal_mcq",
@@ -690,7 +690,7 @@
       "source": "RACE - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the total energy of an electron in a hydrogen atom in an exc i ted state is - 3.4 eV, then the de - broglie wavelength of the electron is : -",
+    "question": "If the total energy of an electron in a hydrogen atom in an exc i ted state .4 eV, then the de - broglie wavelength of the electron is : -",
     "options": {
       "A": "7.2 × 10 - 10 m",
       "B": "3 × 10 - 10 m",
@@ -698,7 +698,7 @@
       "D": "9.3 × 10 - 12 m AS35 - 0005"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) If TE of H - atom is - 3.4 eV 2 2 z 3.4 13.6 n - = -  (z = 1) n 2 = 4 n 2 = Now de - broglie wavelength h mv \\lambda = 2 \\pi r = n \\lambda 34 31 6 6.626 10 1 9.1 10 2.188 10 2 - -  \\lambda =     After solving 10 7.2 10 m - \\lambda = "
+    "explanation": "Ans. ( 1 ) If TE of H - atom .4 eV 2 2 z 3.4 13.6 n - = -  (z = 1) n 2 = 4 n 2 = Now de - broglie wavelength h mv \\lambda = 2 \\pi r = n \\lambda 34 31 6 6.626 10 1 9.1 10 2.188 10 2 - -  \\lambda =     After solving 10 7.2 10 m - \\lambda = "
   },
   {
     "type": "normal_mcq",
@@ -740,12 +740,12 @@
       "source": "RACE - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The specific charge of a proton is 9.6 × 10 7 C kg - 1 , then for an \\alpha - particle it will be -",
+    "question": "The specific charge of a proton is 9.6 × 10 7 C , then for an \\alpha - particle it will be -",
     "options": {
-      "A": "2.4 × 10 7 C kg - 1",
-      "B": "4.8 × 10 7 C kg - 1",
-      "C": "19.2 × 10 7 C kg - 1",
-      "D": "38.4 × 10 7 C kg - 1 AS01 - 0090"
+      "A": "2.4 × 10 7 C",
+      "B": "4.8 × 10 7 C",
+      "C": "19.2 × 10 7 C",
+      "D": "38.4 × 10 7 C AS01 - 0090"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) ( ) particle e / m Proton e m 2 \\alpha- (  = ( ) )  7 9.6 10 2  = 7 Particle e C 4.8 10 m kg \\alpha- (  =  ( ) )  NEET : CHEMISTRY"
@@ -890,7 +890,7 @@
       "source": "RACE - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Energy required for the process is : He + (g) ⎯ → He +2 (g) + e - The ionisation energy for the H - atom in the ground state is 2.18 × 10 - 18 J atom - 1",
+    "question": "Energy required for the process is : He + (g) ⎯ → He +2 (g) + e - The ionisation energy for the H - atom in the ground state is 2.18 × 10 - 18 J",
     "options": {
       "A": "9.12 × 10 - 18 J",
       "B": "8.72 × 10 - 18 J",
@@ -1050,7 +1050,7 @@
       "D": "1 AS08 - 0044"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) Circumference of 4 th orbit = 2 \\pi r 4 and angular momentum m  r 4 = 4h 2 \\pi ...(i) de - broglie wavelength \\lambda = h m  & m  = h \\lambda ...(ii) therefore from eq.(1) and (ii) h \\lambda r 4 = 4h 2 \\pi or 2 \\pi r 4 = 4 \\lambda and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
+    "explanation": "Ans. ( 2 ) Circumference of 4 th orbit = 2 \\pi r 4 and angular momentum m  r 4 = 4h 2 \\pi ...(i) de - broglie wavelength \\lambda = h m  & m  = h \\lambda ...(ii) therefore from eq.(1) and (ii) h \\lambda r 4 = 4h 2 \\pi \\pi r 4 = 4 \\lambda and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
   },
   {
     "type": "normal_mcq",
@@ -1077,7 +1077,7 @@
       "D": "6.42 × 10 - 28 AS16 - 0009"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) \\Delta v = 1 cms - 1 \\Delta x = ? \\Delta x = h 4 m v \\pi  \\Delta = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - -     = 5.25 × 10 - 30 m"
+    "explanation": "Ans. ( 1 ) \\Delta v = 1 \\Delta x = ? \\Delta x = h 4 m v \\pi  \\Delta = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - -     = 5.25 × 10 - 30 m"
   },
   {
     "type": "normal_mcq",
@@ -1319,7 +1319,7 @@
       "source": "RACE - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the ionization energy of He + is 19.6×10 - 18 J atom - 1 , then calculate the energy of first stationary state of Li 2+ .",
+    "question": "If the ionization energy of He + is 19.6×10 - 18 J , then calculate the energy of first stationary state of Li 2+ .",
     "options": {
       "A": "- 1.1 × 10 - 17 J/atom",
       "B": "- 1.1 × 10 - 18 J/atom",
@@ -1402,6 +1402,6 @@
       "D": "2.2 × 10 - 6 cm AS14 - 0028"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) Given, nh mvr 2 = \\pi  nh 2 \\pi = 4.2178 × 10 - 34 or 34 34 4.2178 10 2 3.14 n 6.625 10 - -    =  = 4 Thus, H 2 2 1 2 1 1 1 R n n   = -   \\lambda   The transition spectral line for 4th to 3rd shell is 2 2 1 1 1 109678 3 4   = -   \\lambda   \\lambda = 1.8 × 10 - 4 cm"
+    "explanation": "Ans. ( 1 ) Given, nh mvr 2 = \\pi  nh 2 \\pi = 4.2178 × 10 - 34 .2178 10 2 3.14 n 6.625 10 - -    =  = 4 Thus, H 2 2 1 2 1 1 1 R n n   = -   \\lambda   The transition spectral line for 4th to 3rd shell is 2 2 1 1 1 109678 3 4   = -   \\lambda   \\lambda = 1.8 × 10 - 4 cm"
   }
 ]

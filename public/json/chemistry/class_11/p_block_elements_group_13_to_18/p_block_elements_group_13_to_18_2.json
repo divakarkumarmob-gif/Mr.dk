@@ -41,7 +41,7 @@
       "source": "Complete P-block - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Consider  → +H 2 SO 4 -H 2 O  → -O B ←  +O A E -H O 2 D +O F C If A is H 2 SO 4 then incorrect statement is :-",
+    "question": "Consider  → +H 2 SO 4 -H 2 O  → -O B ←  +O A E -H O 2 D +O F C If A is H 2 SO 4 then incorrect\n\nstatement is :-",
     "options": {
       "A": "Hydrolysis of E produces H 2 O 2",
       "B": "D has maximum oxidation state of S",
@@ -199,7 +199,7 @@
       "D": "- 2 PB12 - 0004"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 1 ) HNO 3 NO N 2 1 1 4 NH /Cl + - +5 +2 0 Here nitrogen have - ve OS of - 3"
+    "explanation": "Ans. ( 1 ) HNO 3 NO N 2 1 1 4 NH /Cl + - +5 +2 0 Here nitrogen have - ve OS"
   },
   {
     "type": "normal_mcq",
@@ -274,7 +274,7 @@
       "D": "Elemental boron PB16 - 0005"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) In borax based test different coloured meta borates has been formed from which we can identify metal ions. Ex. → Cu(BO 2 ) 2 → Blue Bead ↓ Copper Meta Borate"
+    "explanation": "Ans. ( 3 ) In borax based test different coloured meta borates has been formed from which we can identify metal ions. Ex. → Cu( ) 2 → Blue Bead ↓ Copper Meta Borate"
   },
   {
     "type": "normal_mcq",
@@ -299,7 +299,7 @@
       "D": "Its monobasic nat u re PB17 - 0006"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) Boric acid H 3 BO 3 [B(OH) 3 ] Polymerises due to hydrogen bonding."
+    "explanation": "Ans. ( 1 ) Boric acid H 3 [B(OH) 3 ] Polymerises due to hydrogen bonding."
   },
   {
     "type": "normal_mcq",
@@ -343,7 +343,7 @@
     },
     "question": "From B 2 H 6 all the following can be prepared except :",
     "options": {
-      "A": "H 3 BO 3",
+      "A": "H 3",
       "B": "B 2",
       "C": "B 2",
       "D": "NaBH 4 PB15 - 0002"
@@ -493,7 +493,7 @@
       "source": "Exercise I-III - p-Block Elements - Group 13 To 18.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Wrong statement is",
+    "question": "Wrong\n\nstatement is",
     "options": {
       "A": "Boric acid is weak monobasic acid",
       "B": "Boric acid is a protic acid",
@@ -678,7 +678,7 @@
       "D": "NH 3 PB25 - 0008 5"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 BO 3 + 3HCl"
+    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 + 3HCl"
   },
   {
     "type": "normal_mcq",
@@ -928,7 +928,7 @@
       "D": "Na 2 SiO 3 PB13 - 0004 6"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 BO 3 + 3HCl"
+    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 + 3HCl"
   },
   {
     "type": "normal_mcq",
@@ -1178,7 +1178,7 @@
       "D": "Reaction of ozone with litmus paper. PB30 - 0004 8"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 BO 3 + 3HCl"
+    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 + 3HCl"
   },
   {
     "type": "normal_mcq",
@@ -1253,7 +1253,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 BO 3 + 3HCl"
+    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 + 3HCl"
   },
   {
     "type": "statement_based",
@@ -1378,7 +1378,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 BO 3 + 3HCl"
+    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 + 3HCl"
   },
   {
     "type": "normal_mcq",
@@ -1478,7 +1478,7 @@
       "D": "None PB42 - 0008 HALOGEN FAMILY AND INERT GASES 10"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 BO 3 + 3HCl"
+    "explanation": "Ans. ( 1 ) BCl 3 + 3H 2 O ⎯ → H 3 + 3HCl"
   },
   {
     "type": "normal_mcq",
@@ -2377,7 +2377,7 @@
     "options": {
       "A": "+ 1 and +2",
       "B": "+2 and +3",
-      "C": "+1 and - 1",
+      "C": "+1",
       "D": "+ 1 and + 3 PB03 - 0434 Exercise - I"
     },
     "correct_option": "D",
@@ -3099,7 +3099,7 @@
       "D": "None of these PB02 - 0554"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) 3O 2 → 2O 3 ; \\Delta H (298K) = +142 kJ mol - 1 Since the formation of ozone from oxygen is an endothermic process, it is necessary to use a silent electrical discharge in its preparation to prevent its decomposition."
+    "explanation": "Ans. ( 2 ) 3O 2 → 2O 3 ; \\Delta H (298K) = +142 kJ Since the formation of ozone from oxygen is an endothermic process, it is necessary to use a silent electrical discharge in its preparation to prevent its decomposition."
   },
   {
     "type": "normal_mcq",
@@ -3276,7 +3276,7 @@
       "D": "Diborane"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) O rthoboric acid - (H 3 BO 3 ) B orax - Na 2 B 4 O 7 ·10H 2 O K ernite - Na 2 B 4 O 7 ·4H 2 O Diborane - B 2 H 6"
+    "explanation": "Ans. ( 1 ) O rthoboric acid - (H 3 ) B orax - Na 2 B 4 O 7 ·10H 2 O K ernite - Na 2 B 4 O 7 ·4H 2 O Diborane - B 2 H 6"
   },
   {
     "type": "assertion_reason",

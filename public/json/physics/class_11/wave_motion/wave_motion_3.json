@@ -177,10 +177,10 @@
     },
     "question": "The speed of sound in helium (He) at the same temperature will be: (assume both gases to be ideal)",
     "options": {
-      "A": "460 10 ms -1",
-      "B": "360 5 ms -1",
-      "C": "650 ms -1",
-      "D": "330 ms -1"
+      "A": "460 10",
+      "B": "360 5",
+      "C": "650",
+      "D": "330"
     },
     "correct_option": "B",
     "explanation": "Total length of string \\lambda = \\lambda 1 + \\lambda 2 + \\lambda 3 But frequency  1 length so 1 2 3 1 1 1 1 n n n n = + +"
@@ -247,7 +247,7 @@
     "question": "Consider the wave represented by, y = 25 sin (20t + 5x) where y is in mm, x in m and t in seconds. Which of the following is/are true ?",
     "options": {
       "A": "the wave is a standing wave",
-      "B": "the speed of the wave is 4 ms -1",
+      "B": "the speed of the wave is 4",
       "C": "the frequency of oscillation is 500 × 2 π Hz",
       "D": "two nearest points in the same phase have separation 40 π cm"
     },

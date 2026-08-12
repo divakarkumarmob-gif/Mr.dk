@@ -159,7 +159,7 @@
       "D": "12 cm from + q"
     },
     "correct_option": "A",
-    "explanation": "If elec = 1 2 2 kq q r F grav = 1 2 2 Gm m r $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "If elec = 1 2 2 kq q r F grav = 1 2 2 Gm m r $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -174,7 +174,7 @@
       "source": "Electrostatics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two balls carrying charges +7 μC and -5 μC attract each other with a force F. If a charge -2 μC is added to both, the force between them will be :-",
+    "question": "Two balls carrying charges +7 μC μC attract each other with a force F. If a charge -2 μC is added to both, the force between them will be :-",
     "options": {
       "A": "F",
       "B": "If 2",
@@ -220,7 +220,7 @@
       "source": "Electrostatics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two point charges of + 2 μ C and + 6 μ C repel each other with a force of 12 N. If each is given an additional charge of - 4 μ C, then force will become:-",
+    "question": "Two point charges of + 2 μ C and + 6 μ C repel each other with a force of 12 N. If each is given an additional charge μ C, then force will become:-",
     "options": {
       "A": "4 N",
       "B": "60 N",
@@ -594,9 +594,9 @@
     },
     "question": "Two small identical spheres, each of mass 1 g and carrying same charge 10 -9 C are suspended by threads of equal lengths. If the distance between the centres of the spheres is 0.3 cm in equilibrium then the inclination of the thread with the vertical will be :-",
     "options": {
-      "A": "tan -1",
-      "B": "tan -1",
-      "C": "tan -1",
+      "A": "",
+      "B": "",
+      "C": "",
       "D": "Option D"
     },
     "correct_option": "A",
@@ -877,7 +877,7 @@
       "D": "2 29"
     },
     "correct_option": "A",
-    "explanation": "qE = mg (12e) E = ( ) 1/3 3 9e E 4 r g r 3 g [ ]   ρ π ⇒ = [ ]   ρπ   [ ] [ ] ⇒ r = 1/3 19 4 3 9 1.6 10 2.55 10 1.26 10 3.14 9.8 - [ ] × × × × [ ] × × × [ ] ⇒ r = 10 - 6 m or 1 μ m"
+    "explanation": "qE = mg (12e) E = ( ) 1/3 3 9e E 4 r g r 3 g [ ]   ρ π ⇒ = [ ]   ρπ   [ ] [ ] ⇒ r = 1/3 19 4 3 9 1.6 10 2.55 10 1.26 10 3.14 9.8 - [ ] × × × × [ ] × × × [ ] ⇒ r = 10 - 6 m μ m"
   },
   {
     "type": "normal_mcq",
@@ -1124,7 +1124,7 @@
       "source": "Electrostatics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A solid conducting sphere having a charge Q is surrounded by an uncharged concentric conducting spherical shell. Let the potential difference between the surface of the solid sphere and the outer surface of the shell be V. If the shell is now given a charge -3Q the new potential difference between the same two surfaces is :-",
+    "question": "A solid conducting sphere having a charge Q is surrounded by an uncharged concentric conducting spherical shell. Let the potential difference between the surface of the solid sphere and the outer surface of the shell be\n\nV. If the shell is now given a charge -3Q the new potential difference between the same two surfaces is :-",
     "options": {
       "A": "V",
       "B": "2V",
@@ -1494,7 +1494,7 @@
       "source": "Electrostatics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "As shown in figure, on bringing a charge Q from point A to B and from B to C, the work done are 2 joules and - 3 joules respectively. The work done in bringing the charge from C to A will be",
+    "question": "As shown in figure, on bringing a charge Q from point A to B and from B to C, the work done are 2 joules joules respectively. The work done in bringing the charge from C to A will be",
     "options": {
       "A": "- 1 joule",
       "B": "1 joule",
@@ -1774,8 +1774,8 @@
     },
     "question": "For a dipole q = 2 × 10 -6 C ; d = 0.01m; find the maximum torque on the dipole if E = 5 × 10 5 N/C :-",
     "options": {
-      "A": "1 × 10 -3 Nm -1",
-      "B": "10 × 10 -3 Nm -1",
+      "A": "1 × 10 -3",
+      "B": "10 × 10 -3",
       "C": "10 × 10 -3 Nm",
       "D": "1 × 10 -4 Nm $//"
     },
@@ -2012,7 +2012,7 @@
       "D": "10 -20 C NEET"
     },
     "correct_option": "A",
-    "explanation": "If elec = 1 2 2 kq q r F grav = 1 2 2 Gm m r $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "If elec = 1 2 2 kq q r F grav = 1 2 2 Gm m r $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -2892,7 +2892,7 @@
       "D": "Newton's law of gravitation"
     },
     "correct_option": "A",
-    "explanation": "If elec = 1 2 2 kq q r F grav = 1 2 2 Gm m r $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "If elec = 1 2 2 kq q r F grav = 1 2 2 Gm m r $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -3331,7 +3331,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "qE = mg (12e) E = ( ) 1/3 3 9e E 4 r g r 3 g [ ]   ρ π ⇒ = [ ]   ρπ   [ ] [ ] ⇒ r = 1/3 19 4 3 9 1.6 10 2.55 10 1.26 10 3.14 9.8 - [ ] × × × × [ ] × × × [ ] ⇒ r = 10 - 6 m or 1 μ m",
+    "explanation": "qE = mg (12e) E = ( ) 1/3 3 9e E 4 r g r 3 g [ ]   ρ π ⇒ = [ ]   ρπ   [ ] [ ] ⇒ r = 1/3 19 4 3 9 1.6 10 2.55 10 1.26 10 3.14 9.8 - [ ] × × × × [ ] × × × [ ] ⇒ r = 10 - 6 m μ m",
     "assertion": "A and the other is labelled as",
     "reason": "R. Assertion"
   },
@@ -3372,7 +3372,7 @@
       "source": "Electrostatics_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match List-I with List-II List - I (Application of Gauss Law) List - II (Value of |E|) A. Field inside thin shell I. 0 ˆ n 2 r λ πε B. Field outside thin shell II. 2 0 q ˆ r 4 R πε C. Field of thin shell at the surface III. 2 0 q ˆ r 4 r πε D. Field due to long charged wire IV. Zero (Here symbols have their usual meaning and R is the radius of thin shell) Choose the correct answer from the options given below :",
+    "question": "Match List-I with List-II List - I (Application of Gauss Law) List - II (Value of |E|) A. Field inside thin shell\n\nI. 0 ˆ n 2 r λ πε B. Field outside thin shell\n\nII. 2 0 q ˆ r 4 R πε C. Field of thin shell at the surface\n\nIII. 2 0 q ˆ r 4 r πε D. Field due to long charged wire\n\nIV. Zero (Here symbols have their usual meaning and R is the radius of thin shell) Choose the correct answer from the\n\n**options** given below :",
     "options": {
       "A": "A-I, B-II, C-III, D-IV",
       "B": "A-IV, B-III, C-II, D-I",
@@ -3395,7 +3395,7 @@
       "source": "Electrostatics_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two identical rectangular plane sheets A and B each of surface charge density ε 0 Cm -2 are placed parallel to each other as shown in figure. The electric field at the mid point P will be : P 5 mm A B",
+    "question": "Two identical rectangular plane sheets A and B each of surface charge density ε 0 are placed parallel to each other as shown in figure. The electric field at the mid point P will be : P 5 mm A B",
     "options": {
       "A": "1 N C -1",
       "B": "0.5 N C -1",

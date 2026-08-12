@@ -669,7 +669,7 @@
       "D": "8V MO06 - 0017 MATTER WAVES"
     },
     "correct_option": "D",
-    "explanation": "(K.E.) max = h  - \\phi = 4 eV - 2 eV K.E. = 2 eV; V = 2 volt"
+    "explanation": "(K.E.) max = h  - \\phi = 4 eV K.E. = 2 eV; V = 2 volt"
   },
   {
     "type": "normal_mcq",
@@ -991,7 +991,7 @@
       "D": "2 2 0 v h 1 c m v - \\lambda = MO10 - 0013"
     },
     "correct_option": "D",
-    "explanation": "In option (1) charge is not conserved i.e. (5 + 2  7 + 1)  not possible In (2) this reaction is possible only at very high temperature (or 23 11 Na is a very stable isotope and given nuclear reaction is very difficult) In (3) & (4)  is emitted with \\beta - so option (4) is also wrong so correct answer is (3)"
+    "explanation": "In option (1) charge is not conserved i.e. (5 + 2  7 + 1)  not possible In (2) this reaction is possible only at very high temperature ( Na is a very stable isotope and given nuclear reaction is very difficult) In (3) & (4)  is emitted with \\beta - so option (4) is also wrong so correct answer is (3)"
   },
   {
     "type": "normal_mcq",
@@ -1903,7 +1903,7 @@
       "source": "Modern Physics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The ground state energy of hydrogen atom is -13.6eV. When its electron is in the first excited state, its excitation energy is:-",
+    "question": "The ground state energy of hydrogen atom .6eV. When its electron is in the first excited state, its excitation energy is:-",
     "options": {
       "A": "10.2 eV",
       "B": "0",
@@ -1995,7 +1995,7 @@
       "source": "Modern Physics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The energy of a hydrogen atom in the ground state is -13.6 eV. The energy of a He + ion in the first excited state will be :-",
+    "question": "The energy of a hydrogen atom in the ground state .6 eV. The energy of a He + ion in the first excited state will be :-",
     "options": {
       "A": "-6.8 eV",
       "B": "-13.6eV",
@@ -2095,7 +2095,7 @@
       "D": "7 29 EXERCISE-I"
     },
     "correct_option": "A",
-    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ or 0 hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
+    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
   },
   {
     "type": "normal_mcq",
@@ -2317,7 +2317,7 @@
       "source": "Modern Physics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The total energy of an electron in an atom in an orbit is -3.4 eV. Its kinetic and potential energies are, respectively:",
+    "question": "The total energy of an electron in an atom in an orbit .4 eV. Its kinetic and potential energies are, respectively:",
     "options": {
       "A": "-3.4 eV, -3.4 eV",
       "B": "-3.4 eV, -6.8 eV",
@@ -2555,7 +2555,7 @@
       "D": "2 λ"
     },
     "correct_option": "A",
-    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ or 0 hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
+    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
   },
   {
     "type": "normal_mcq",
@@ -2593,7 +2593,7 @@
       "source": "Modern Physics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The ground state energy of hydrogen atom is -13.6 eV. The energy needed to ionize hydrogen atom from its second excited state will be :",
+    "question": "The ground state energy of hydrogen atom .6 eV. The energy needed to ionize hydrogen atom from its second excited state will be :",
     "options": {
       "A": "13.6 eV",
       "B": "6.8 eV",
@@ -2916,7 +2916,7 @@
       "source": "Modern Physics - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Assuming the specific charge of the electron to be 1.8 × 10 11 C kg -1 , the value of stopping potential (in volt) will be :-",
+    "question": "Assuming the specific charge of the electron to be 1.8 × 10 11 C , the value of stopping potential (in volt) will be :-",
     "options": {
       "A": "2",
       "B": "3",
@@ -3063,7 +3063,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ or 0 hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
+    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
   },
   {
     "type": "figure_mcq",
@@ -3271,7 +3271,7 @@
       "D": "1 c"
     },
     "correct_option": "A",
-    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",

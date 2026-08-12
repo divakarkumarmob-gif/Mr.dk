@@ -794,7 +794,7 @@
       "A": "- - - - 5' CATTAG 3' 3' GATAAC 5'",
       "B": "- - - - 5' GATACC 3' 3' CCTAAG 5'",
       "C": "- - - - 5' GAATTC 3' 3' CTTAAG 5'",
-      "D": "- - - - 5' CCAATG 3' 3' GAATCC 5' ALLEN : Biology 31 VECTOR"
+      "D": "- - - - 5' CCAATG 3' 3' GAATCC 5' ALLEN : VECTOR"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Biotechnology_ Principles And Processes principles."
@@ -1040,7 +1040,7 @@
       "source": "Biotechnology Principles and processes_EX Eng.pdf_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which one of the given options correctly identifies its certain component(s)? Cla I Hind III EcoR I Pvu I Pst I amp R tet R P BR 322 ori rop BamH I Sal I Pvu II",
+    "question": "Which one of the given\n\n**options** correctly identifies its certain component(s)? Cla I Hind III EcoR I Pvu I Pst I amp R tet R P BR 322 ori rop BamH I Sal I Pvu II",
     "options": {
       "A": "Hind III, ECoRI-selectable markers",
       "B": "amp R , tet R -antibiotic resistance genes",
@@ -1345,7 +1345,7 @@
       "A": "It is isolated from a virus",
       "B": "It remains active at high temperature",
       "C": "It is used to ligate introduced DNA in recipient cells",
-      "D": "It serves as a selectable marker ALLEN : Biology 33"
+      "D": "It serves as a selectable marker ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Biotechnology_ Principles And Processes principles."
@@ -1365,7 +1365,7 @@
       "source": "Biotechnology Principles and processes_EX Eng.pdf_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The figure below shows three steps (A,B, C) of Polymerase Chain Reaction (PCR). Select the option giving correct identification together with what it represents? 5' 5' 3' 5' 5' 3' 5' 3' 3' 3' 3' 3' 5' 3' 3' 5' 3' 5' 5' 5' A C B dsDNA Region to be amplified Options :",
+    "question": "The figure below shows three steps (A,B, C) of Polymerase Chain Reaction (PCR). Select the option giving correct identification together with what it represents? 5' 5' 3' 5' 5' 3' 5' 3' 3' 3' 3' 3' 5' 3' 3' 5' 3' 5' 5' 5' A C B dsDNA Region to be amplified\n\n**Options** :",
     "options": {
       "A": "C-Extension in the presence of heat stable DNA polymerase",
       "B": "A-Annealing with two sets of primers",
@@ -1821,7 +1821,7 @@
       "A": "as sequences from where replication starts",
       "B": "to keep the cultures free of infection",
       "C": "as selectable markers",
-      "D": "to select healthy vectors ALLEN : Biology 35"
+      "D": "to select healthy vectors ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Biotechnology_ Principles And Processes principles."
@@ -2093,9 +2093,9 @@
     },
     "question": "Given below is a typical agarose gel in which electrophoresis had occurred. In this agarose gel -",
     "options": {
-      "A": "Lane - 1 shows migration of digested DNA fragments",
-      "B": "Only Lane - 4 shows migration of digested DNA fragments",
-      "C": "Lane - 2 to 4 shows migration of digested set of DNA fragments",
+      "A": "shows migration of digested DNA fragments",
+      "B": "Only shows migration of digested DNA fragments",
+      "C": "to 4 shows migration of digested set of DNA fragments",
       "D": "Wells are always placed towards positive electrode during electrophoresis"
     },
     "correct_option": "A",
@@ -2209,7 +2209,7 @@
       "source": "Biotechnology_ Principles And Applications - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Statement I : If one wants to recover many copies of the target DNA, it should be closed in a vector whose origin support high copy number. Statement II : Origin of replications is responsible for controlling the copy number of the linked DNA.",
+    "question": "Statement I : If one wants to recover many copies of the target DNA, it should be closed in a vector whose origin support high copy number.\n\nStatement II : Origin of replications is responsible for controlling the copy number of the linked DNA.",
     "options": {
       "A": "Both statement I and statement II are true",
       "B": "Both statement I and statement II are false",

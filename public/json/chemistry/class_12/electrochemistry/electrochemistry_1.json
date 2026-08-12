@@ -139,7 +139,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The specific conductances in ohm -1 cm -1 of four electrolytes P, Q, R and S are given in brackets : P (5.0 × 10 -5 ) Q (7.0 × 10 -8 ) R (1.0 × 10 -10 ) S (9.2 × 10 -3 ) The one that offers highest resistance to the passage of electric current is",
+    "question": "The specific conductances in of four electrolytes P, Q, R and S are given in brackets : P (5.0 × 10 -5 ) Q (7.0 × 10 -8 ) R (1.0 × 10 -10 ) S (9.2 × 10 -3 ) The one that offers highest resistance to the passage of electric current is",
     "options": {
       "A": "P",
       "B": "S",
@@ -147,7 +147,7 @@
       "D": "Q"
     },
     "correct_option": "D",
-    "explanation": "H + + e - → 1 2 H 2 (g) (1 atm) At 1 atm pressure E red = E^\\circ red - 1/2 0.0591 (1) log 1 1 E red = E^\\circ red = 0 At 100 atm pressure 1/2 1 0 red red 0.0591 (100) E E log 1 1 = - 1 0 red red E E = - 0.0591 1 red E = 0 - 0.0591 ⇒ - 0.0591"
+    "explanation": "H + + e - → 1 2 H 2 (g) (1 atm) At 1 atm pressure E red = E^\\circ /2 0.0591 (1) log 1 1 E red = E^\\circ red = 0 At 100 atm pressure 1/2 1 0 red red 0.0591 (100) E E log 1 1 = - 1 0 red red E E = - 0.0591 1 red E = 0 - 0.0591 ⇒ - 0.0591"
   },
   {
     "type": "normal_mcq",
@@ -172,7 +172,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ cell - 2 2 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - - × E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt ∆ G^\\circ = - nF E^\\circ cell = -2 × 96500 × 3.17 = -611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
+    "explanation": "Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - - × E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt ∆ G^\\circ = - nF E^\\circ cell = -2 × 96500 × 3.17 = -611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
   },
   {
     "type": "normal_mcq",
@@ -191,10 +191,10 @@
     },
     "question": "Molar conductivity of the same solution will be :",
     "options": {
-      "A": "1.061 × 10 -4 S cm 2 mol -1",
-      "B": "1.061 S cm 2 mol -1",
-      "C": "10.61 S cm 2 mol -1",
-      "D": "106.1 S cm 2 mol -1"
+      "A": "1.061 × 10 -4 S cm 2",
+      "B": "1.061 S cm 2",
+      "C": "10.61 S cm 2",
+      "D": "106.1 S cm 2"
     },
     "correct_option": "B",
     "explanation": "Initial equivalent of Cr +3 = M × V × V.F. ⇒ 0.2 × 250 1000 × 3 ⇒ 0.15 Final equivalent of Cr +3 = 0.1 × 250 1000 × 3 ⇒ 0.075 Left equivalent of Cr +3 = 0.15 - 0.075 ⇒ 0.075 w = equivalent weight I t 96500 × × 0.075 = 96.5 t 96500 × t = 75 sec."
@@ -216,7 +216,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is not correct :-",
+    "question": "Which\n\nstatement is not correct :-",
     "options": {
       "A": "Conductance of an electrolytic solution increases with dilution",
       "B": "Conductance of an electrolytic solution decreases with dilution",
@@ -224,7 +224,7 @@
       "D": "Equivalent conductivity of an electrolytic solution increases with dilution."
     },
     "correct_option": "A",
-    "explanation": "Cu +2 + 2e - → Cu E red = E^\\circ red - 2 0.0591 1 log 2 [Cu ] + on increasing [Cu +2 ] ↑ E red ↑ therefore order of S.R.P. Q > R > S > P"
+    "explanation": "Cu +2 + 2e - → Cu E red = E^\\circ .0591 1 log 2 [Cu ] + on increasing [Cu +2 ] ↑ E red ↑ therefore order of S.R.P. Q > R > S > P"
   },
   {
     "type": "normal_mcq",
@@ -268,10 +268,10 @@
     },
     "question": "The equivalent conductivity of solution is :-",
     "options": {
-      "A": "314.28 mho cm 2 eq -1",
-      "B": "3.14 mho cm 2 eq -1",
-      "C": "314.28 mho -1 cm 2 eq -1",
-      "D": "3.14 mho -1 cm 2 eq -1"
+      "A": "314.28 mho cm 2",
+      "B": "3.14 mho cm 2",
+      "C": "314.28 cm 2",
+      "D": "3.14 cm 2"
     },
     "correct_option": "B",
     "explanation": "Initial equivalent of Cr +3 = M × V × V.F. ⇒ 0.2 × 250 1000 × 3 ⇒ 0.15 Final equivalent of Cr +3 = 0.1 × 250 1000 × 3 ⇒ 0.075 Left equivalent of Cr +3 = 0.15 - 0.075 ⇒ 0.075 w = equivalent weight I t 96500 × × 0.075 = 96.5 t 96500 × t = 75 sec."
@@ -316,7 +316,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The specific conductance of a 0.01 M solution of KCl is 0.0014 ohm -1 cm -1 at 25^\\circ C. Its equivalent conductivity (cm 2 ohm -1 eq -1 ) is :-",
+    "question": "The specific conductance of a 0.01 M solution of KCl is 0.0014 at 25^\\circ C. Its equivalent conductivity (cm 2 ) is :-",
     "options": {
       "A": "140",
       "B": "14",
@@ -366,7 +366,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "At infinite dilution, the equivalent conductivity of CH 3 COONa, HCl and CH 3 COOH are 91, 426 and 391 mho cm 2 eq -1 respectively at 25 ^\\circC. The equivalent conductivity of NaCl at infinite dilution will be :",
+    "question": "At infinite dilution, the equivalent conductivity of CH 3 COONa, HCl and CH 3 COOH are 91, 426 and 391 mho cm 2 respectively at 25 ^\\circC. The equivalent conductivity of NaCl at infinite dilution will be :",
     "options": {
       "A": "126",
       "B": "209",
@@ -391,7 +391,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For HCl solution at 25 ^\\circC, equivalent conductivity at infinite dilution is 425 ohm -1 cm 2 eq -",
+    "question": "For HCl solution at 25 ^\\circC, equivalent conductivity at infinite dilution is 425 cm 2 eq -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -416,7 +416,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The specific conductance of a solution of HCl is 3.825 ohm -1 cm -",
+    "question": "The specific conductance of a solution of HCl is 3.825 cm -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -466,7 +466,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The molar conductivities 0 NaOAc ∧ and 0 HCl ∧ at infinite dilution in water at 25^\\circC are 91.0 and 426.2 S cm 2 mol -1 respectively. To calculate 0 HOAc ∧ the additional value required is :",
+    "question": "The molar conductivities 0 NaOAc ∧ and 0 HCl ∧ at infinite dilution in water at 25^\\circC are 91.0 and 426.2 S cm 2 respectively. To calculate 0 HOAc ∧ the additional value required is :",
     "options": {
       "A": "0 NaCl ∧",
       "B": "2 0 H O ∧",
@@ -491,12 +491,12 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The molar conductivity of AgNO 3 , AgCl and NaCl at infinite dilution are 116.5, 121.6 and 110.3 S cm 2 mol -1 respectively. The molar conductivity of NaNO 3 is :",
+    "question": "The molar conductivity of AgNO 3 , AgCl and NaCl at infinite dilution are 116.5, 121.6 and 110.3 S cm 2 respectively. The molar conductivity of NaNO 3 is :",
     "options": {
-      "A": "111.4 S cm 2 mol -1",
-      "B": "105.2 S cm 2 mol -1",
-      "C": "130.6 S cm 2 mol -1",
-      "D": "150.2 S cm 2 mol -1"
+      "A": "111.4 S cm 2",
+      "B": "105.2 S cm 2",
+      "C": "130.6 S cm 2",
+      "D": "150.2 S cm 2"
     },
     "correct_option": "A",
     "explanation": "M ∞ Λ = k 1000 M × ⇒ 5 5 4.95 10 1000 99 10 - - × × × = 50 ⇒ α = C ∞ Λ Λ = 50 400 = 0.125"
@@ -650,7 +650,7 @@
       "D": "It contains a metallic conductor which does not adsorb hydrogen. $//"
     },
     "correct_option": "D",
-    "explanation": "Given K a = 25 × 10 -6 M = C = 0.01 Λ C = 19.6 S.cm 2 eq -1 for weak acid K a = c α 2 but α = C ∞ Λ Λ α = a K C a c k C ∞ Λ = Λ 6 25 10 19.6 0.01 - ∞ × = Λ Λ ∞ = 392 S cm 2 eq -1"
+    "explanation": "Given K a = 25 × 10 -6 M = C = 0.01 Λ C = 19.6 S.cm 2 for weak acid K a = c α 2 but α = C ∞ Λ Λ α = a K C a c k C ∞ Λ = Λ 6 25 10 19.6 0.01 - ∞ × = Λ Λ ∞ = 392 S cm 2"
   },
   {
     "type": "normal_mcq",
@@ -667,7 +667,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "E^\\circ for the half cell Zn 2+ | Zn is -0.76 V. E.M.F. of the cell Zn | Zn 2+ (1M) || 2H + (1M) | H 2 (1 atm) is :",
+    "question": "E^\\circ for the half cell Zn 2+ | Zn .76\n\nV. E.M.F. of the cell Zn | Zn 2+ (1M) || 2H + (1M) | H 2 (1 atm) is :",
     "options": {
       "A": "-0.76 V",
       "B": "+0.76 V",
@@ -945,7 +945,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The standard reduction potential at 25 ^\\circC of Li + / Li, Ba 2+ / Ba, Na + / Na and Mg 2+ / Mg are -3.05 V, -2.73 V, -2.71 V and -2.37 V respectively. Which one of the following is the strongest oxidising agent ?",
+    "question": "The standard reduction potential at 25 ^\\circC of Li + / Li, Ba 2+ / Ba, Na + / Na and Mg 2+ / Mg .05 V, -2.73 V, -2.71 V .37 V respectively. Which one of the following is the strongest oxidising agent ?",
     "options": {
       "A": "Na +",
       "B": "Li +",
@@ -995,7 +995,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The standard electrode potential of Zn, Ag and Cu electrodes are -0.76 V, 0.80 V and 0.34 V respectively, then :",
+    "question": "The standard electrode potential of Zn, Ag and Cu electrodes .76 V, 0.80 V and 0.34 V respectively, then :",
     "options": {
       "A": "Ag can oxidise Zn and Cu",
       "B": "Ag can reduce Zn 2+ and Cu 2+",
@@ -1320,7 +1320,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "E^\\circ for the reaction Fe + Zn 2+ → Zn + Fe 2+ is -0.35 V. The given cell reaction is :",
+    "question": "E^\\circ for the reaction Fe + Zn 2+ → Zn + Fe 2+ .35\n\nV. The given cell reaction is :",
     "options": {
       "A": "spontaneous",
       "B": "noN\\cdot spontaneous",
@@ -1370,7 +1370,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The standard electrode potential (E^\\circ) for OCl - /Cl - and Cl - / ½Cl 2 respectively are 0.94 V and -1.36 V. The E^\\circ value of OCl - / 1 2 Cl 2 will be :",
+    "question": "The standard electrode potential (E^\\circ) for OCl - /Cl - and Cl - / ½Cl 2 respectively are 0.94 V .36\n\nV. The E^\\circ value of OCl - / 1 2 Cl 2 will be :",
     "options": {
       "A": "-2.20 V",
       "B": "-0.42 V",
@@ -1670,7 +1670,7 @@
       "source": "Electrochemistry - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "On passing 10800 C through electrolytic solution, 2.977 g of metal (atomic mass 106.4 g mol -1 ) was deposited, the charge on the metal cation is -",
+    "question": "On passing 10800 C through electrolytic solution, 2.977 g of metal (atomic mass 106.4 g ) was deposited, the charge on the metal cation is -",
     "options": {
       "A": "+4",
       "B": "+3",
@@ -2153,7 +2153,7 @@
       "D": "- 0.0591 V"
     },
     "correct_option": "A",
-    "explanation": "H + + e - → 1 2 H 2 (g) (1 atm) At 1 atm pressure E red = E^\\circ red - 1/2 0.0591 (1) log 1 1 E red = E^\\circ red = 0 At 100 atm pressure 1/2 1 0 red red 0.0591 (100) E E log 1 1 = - 1 0 red red E E = - 0.0591 1 red E = 0 - 0.0591 ⇒ - 0.0591"
+    "explanation": "H + + e - → 1 2 H 2 (g) (1 atm) At 1 atm pressure E red = E^\\circ /2 0.0591 (1) log 1 1 E red = E^\\circ red = 0 At 100 atm pressure 1/2 1 0 red red 0.0591 (100) E E log 1 1 = - 1 0 red red E E = - 0.0591 1 red E = 0 - 0.0591 ⇒ - 0.0591"
   },
   {
     "type": "normal_mcq",
@@ -2172,13 +2172,13 @@
     },
     "question": "For the cell reaction, Mg(s) + 2Ag + (aq)     Mg 2+ (aq) + 2Ag(s), o cell E is 3.17 V at 298 K. The value of E cell , ∆ G^\\circ and Q at Ag + and Mg 2+ concentrations of 0.001 M and 0.02 M respectively are :-",
     "options": {
-      "A": "3.04 V, - 605.8 kJ mol -1 , 20000",
-      "B": "3.04 V, 611.8 kJ mol -1 , 20000",
-      "C": "3.13 V, - 604 kJ mol -1 , 20",
+      "A": "3.04 V, - 605.8 kJ , 20000",
+      "B": "3.04 V, 611.8 kJ , 20000",
+      "C": "3.13 V, - 604 kJ , 20",
       "D": "3.04 V, - 611.8 kJ, 20000"
     },
     "correct_option": "A",
-    "explanation": "Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ cell - 2 2 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - - × E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt ∆ G^\\circ = - nF E^\\circ cell = -2 × 96500 × 3.17 = -611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
+    "explanation": "Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - - × E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt ∆ G^\\circ = - nF E^\\circ cell = -2 × 96500 × 3.17 = -611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
   },
   {
     "type": "normal_mcq",
@@ -2203,7 +2203,7 @@
       "D": "P > Q > R > S"
     },
     "correct_option": "A",
-    "explanation": "Cu +2 + 2e - → Cu E red = E^\\circ red - 2 0.0591 1 log 2 [Cu ] + on increasing [Cu +2 ] ↑ E red ↑ therefore order of S.R.P. Q > R > S > P"
+    "explanation": "Cu +2 + 2e - → Cu E red = E^\\circ .0591 1 log 2 [Cu ] + on increasing [Cu +2 ] ↑ E red ↑ therefore order of S.R.P. Q > R > S > P"
   },
   {
     "type": "normal_mcq",
@@ -2370,7 +2370,7 @@
       "source": "Electrochemistry - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The E^\\circ in the given diagram is :- ClO 3 0.50 V ClO - 0.40 V 1 2 Cl 2 1.36 V Cl - 0.88 V E^\\circ -",
+    "question": "The E^\\circ in the given diagram is :- ClO 3 0.50 V .40 V 1 2 Cl 2 1.36 V .88 V E^\\circ -",
     "options": {
       "A": "0.5 V",
       "B": "0.63 V",
@@ -2421,7 +2421,7 @@
       "source": "Electrochemistry - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The k = 4.95 × 10 -5 S cm -1 for a 0.00099 M solution. Calculate the degree of dissociation of acetic acid, if M ∞ Λ for acetic acid is 400 S cm 2 mol -1 :-",
+    "question": "The k = 4.95 × 10 -5 S for a 0.00099 M solution. Calculate the degree of dissociation of acetic acid, if M ∞ Λ for acetic acid is 400 S cm 2 :-",
     "options": {
       "A": "7",
       "B": "0.125",
@@ -2446,7 +2446,7 @@
       "source": "Electrochemistry - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Value of Λ m ∞ for SrCl 2 in water at 25º from the following data : Conc. (mol/L) 0.25 1 Λ m ( Ω -1 cm 2 mol -1 ) 260 250",
+    "question": "Value of Λ m ∞ for SrCl 2 in water at 25º from the following data : Conc. (mol/L) 0.25 1 Λ m ( Ω -1 cm 2 ) 260 250",
     "options": {
       "A": "270",
       "B": "260",
@@ -2579,7 +2579,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Given K a = 25 × 10 -6 M = C = 0.01 Λ C = 19.6 S.cm 2 eq -1 for weak acid K a = c α 2 but α = C ∞ Λ Λ α = a K C a c k C ∞ Λ = Λ 6 25 10 19.6 0.01 - ∞ × = Λ Λ ∞ = 392 S cm 2 eq -1"
+    "explanation": "Given K a = 25 × 10 -6 M = C = 0.01 Λ C = 19.6 S.cm 2 for weak acid K a = c α 2 but α = C ∞ Λ Λ α = a K C a c k C ∞ Λ = Λ 6 25 10 19.6 0.01 - ∞ × = Λ Λ ∞ = 392 S cm 2"
   },
   {
     "type": "normal_mcq",
@@ -2596,7 +2596,7 @@
       "source": "Electrochemistry - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The equivalent conductance of the electrolyte at infinite dilution (in S cm 2 eq -1 ) will be :-",
+    "question": "The equivalent conductance of the electrolyte at infinite dilution (in S cm 2 ) will be :-",
     "options": {
       "A": "250",
       "B": "196",
@@ -2671,15 +2671,15 @@
       "source": "Electrochemistry_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The resistance of conductivity cell containing 0.001M KCl solution is is 1500 Ω . If conductivity of 0.001M KCl solution is 0.146 × 10 -3 S. cm -1 , what is the cell constant :",
+    "question": "The resistance of conductivity cell containing 0.001M KCl solution is is 1500 Ω . If conductivity of 0.001M KCl solution is 0.146 × 10 -3 S. , what is the cell constant :",
     "options": {
-      "A": "0.438 cm -1",
-      "B": "0.219 cm -1",
-      "C": "0.657 cm -1",
-      "D": "0.832 cm -1"
+      "A": "0.438",
+      "B": "0.219",
+      "C": "0.657",
+      "D": "0.832"
     },
     "correct_option": "A",
-    "explanation": "Cu +2 + 2e - → Cu E red = E^\\circ red - 2 0.0591 1 log 2 [Cu ] + on increasing [Cu +2 ] ↑ E red ↑ therefore order of S.R.P. Q > R > S > P"
+    "explanation": "Cu +2 + 2e - → Cu E red = E^\\circ .0591 1 log 2 [Cu ] + on increasing [Cu +2 ] ↑ E red ↑ therefore order of S.R.P. Q > R > S > P"
   },
   {
     "type": "normal_mcq",
@@ -2798,10 +2798,10 @@
     },
     "question": "Molar conductance of the same solution will be :",
     "options": {
-      "A": "1.061 × 10 - 4 S cm 2 mol - 1",
-      "B": "1.061 S cm 2 mol - 1",
-      "C": "10.61 S cm 2 mol - 1",
-      "D": "106.1 S cm 2 mol - 1 EC03 - 0003"
+      "A": "1.061 × 10 - 4 S cm 2",
+      "B": "1.061 S cm 2",
+      "C": "10.61 S cm 2",
+      "D": "106.1 S cm 2 EC03 - 0003"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 3 ) Strong electrolytes are those for which degree of dissociation ( \\alpha ) is 100% at any concentration."
@@ -2823,10 +2823,10 @@
     },
     "question": "The equivalent conductance of solution is : -",
     "options": {
-      "A": "314.28 mho cm 2 eq - 1",
-      "B": "3.14 mho cm 2 eq - 1",
-      "C": "314.28 mho - 1 cm 2 eq - 1",
-      "D": "3.14 mho - 1 cm 2 eq - 1 EC04 - 0003"
+      "A": "314.28 mho cm 2",
+      "B": "3.14 mho cm 2",
+      "C": "314.28 cm 2",
+      "D": "3.14 cm 2 EC04 - 0003"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 3 ) Strong electrolytes are those for which degree of dissociation ( \\alpha ) is 100% at any concentration."
@@ -2846,7 +2846,7 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The specific conductance of a 0.01 M solution of KCl is 0.0014 ohm - 1 cm - 1 at 25^\\circ C. Its equivalent conductance (cm 2 ohm - 1 eq - 1 ) is : -",
+    "question": "The specific conductance of a 0.01 M solution of KCl is 0.0014 at 25^\\circ C. Its equivalent conductance (cm 2 ) is : -",
     "options": {
       "A": "140",
       "B": "14",
@@ -2871,7 +2871,7 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "At infinite dilution, the equivalent conductances of CH 3 COONa, HCl and CH 3 COOH are 91, 426 and 391 mho cm 2 eq - 1 respectively at 25^\\circC. The eq. conductance of NaCl at infinite dilution will be :",
+    "question": "At infinite dilution, the equivalent conductances of CH 3 COONa, HCl and CH 3 COOH are 91, 426 and 391 mho cm 2 respectively at 25^\\circC. The eq. conductance of NaCl at infinite dilution will be :",
     "options": {
       "A": "126",
       "B": "209",
@@ -2896,7 +2896,7 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For HCl solution at 25^\\circC, equivalent conductance at infinite dilution is 425 ohm - 1 cm 2 eq -",
+    "question": "For HCl solution at 25^\\circC, equivalent conductance at infinite dilution is 425 cm 2 eq -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2921,15 +2921,15 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The molar conductance of AgNO 3 , AgCl and NaCl at infinite dilution are 116.5, 121.6 and 110.3 S cm 2 mol - 1 respectively. The molar conductance of NaNO 3 is :",
+    "question": "The molar conductance of AgNO 3 , AgCl and NaCl at infinite dilution are 116.5, 121.6 and 110.3 S cm 2 respectively. The molar conductance of NaNO 3 is :",
     "options": {
-      "A": "111.4 S cm 2 mol - 1",
-      "B": "105.2 S cm 2 mol - 1",
-      "C": "130.6 S cm 2 mol - 1",
-      "D": "150.2 S cm 2 mol - 1 EC03 - 0004"
+      "A": "111.4 S cm 2",
+      "B": "105.2 S cm 2",
+      "C": "130.6 S cm 2",
+      "D": "150.2 S cm 2 EC03 - 0004"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) 3 3 o o o M NaNO M Na M NO + -  =  +  = 3 o o o M NaCl M AgNO M AgCl  +  -  = 110.3 + 116.5 - 121.6 = 105.2 S cm 2 mol - 1"
+    "explanation": "Ans. ( 2 ) 3 3 o o o M NaNO M Na M NO + -  =  +  = 3 o o o M NaCl M AgNO M AgCl  +  -  = 110.3 + 116.5 - 121.6 = 105.2 S cm 2"
   },
   {
     "type": "normal_mcq",
@@ -2946,7 +2946,7 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The conductivity of a saturated solution of BaSO 4 is 3.06 × 10 - 6 ohm - 1 cm - 1 and its molar conductance is 1.53 ohm - 1 cm 2 mol -",
+    "question": "The conductivity of a saturated solution of BaSO 4 is 3.06 × 10 - 6 and its molar conductance is 1.53 cm 2 mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2996,7 +2996,7 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "E^\\circ for the half cell Zn 2+ | Zn is - 0.76 V. E.M.F. of the cell Zn | Zn 2+ (1M) || H + (1M) | H 2 (1 atm) is :",
+    "question": "E^\\circ for the half cell Zn 2+ | Zn .76\n\nV. E.M.F. of the cell Zn | Zn 2+ (1M) || H + (1M) | H 2 (1 atm) is :",
     "options": {
       "A": "- 0.76 V",
       "B": "+0.76 V",
@@ -3146,7 +3146,7 @@
       "source": "Exercise I-III - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The standard electrode potential (E^\\circ) for OCl - /Cl - and Cl - / ½ Cl 2 respectively are 0.94 V and - 1.36 V. The E^\\circ value of OCl - / ½ Cl 2 will be :",
+    "question": "The standard electrode potential (E^\\circ) for OCl - /Cl - and Cl - / ½ Cl 2 respectively are 0.94 V .36\n\nV. The E^\\circ value of OCl - / ½ Cl 2 will be :",
     "options": {
       "A": "- 2.20 V",
       "B": "- 0.42 V",
@@ -3396,7 +3396,7 @@
       "source": "Extra Edge - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Standard electrode potential of three metals A, B and C are - 1.5V, 0.8V and - 2.7V respectively. The reducing power of these metals will be : -",
+    "question": "Standard electrode potential of three metals A, B and C .5V, 0.8V .7V respectively. The reducing power of these metals will be : -",
     "options": {
       "A": "B > C > A",
       "B": "B > A > C",
@@ -3504,7 +3504,7 @@
       "D": "10 +7 EC15 - 0129 Exercise - I electrochemistry electrochemistry"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) 2H + (aq) + 2e - ⎯ → H 2 (g) E = E^\\circ - 2 H 2 P .303 8.314 298 log 2 96500 [H ] +     O = O - 2 H 2 P .303 8.314 298 log 2 96500 [H ] +     - = 2 H 14 P 1 10 pH 2 = 10 - 14 atm"
+    "explanation": "Ans. ( 1 ) 2H + (aq) + 2e - ⎯ → H 2 (g) E = E^\\ H 2 P .303 8.314 298 log 2 96500 [H ] +     O = O - 2 H 2 P .303 8.314 298 log 2 96500 [H ] +     - = 2 H 14 P 1 10 pH 2 = 10 - 14 atm"
   },
   {
     "type": "normal_mcq",
@@ -3546,12 +3546,12 @@
       "source": "Extra Edge - Electrochemistry.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The molar conductivity of a 0.1 mol/dm 3 solution of KNO 3 with electrolytic conductivity of 4 × 10 - 3 Scm - 1 at 298 K is : -",
+    "question": "The molar conductivity of a 0.1 mol/dm 3 solution of KNO 3 with electrolytic conductivity of 4 × 10 - 3 at 298 K is : -",
     "options": {
-      "A": "11.52 Scm 2 mol - 1",
-      "B": "20 Scm 2 mol - 1",
-      "C": "40 Scm 2 mol - 1",
-      "D": "13.48 Scm 2 mol - 1 EC03 - 0130"
+      "A": "11.52 Scm 2",
+      "B": "20 Scm 2",
+      "C": "40 Scm 2",
+      "D": "13.48 Scm 2 EC03 - 0130"
     },
     "correct_option": "C",
     "explanation": "Ans. ( 3 ) m  = 3 1 3 3 K 4 10 Scm C 0.1 mol 10 cm - - - -  =  = 40 Scm 2 mol¯¹"

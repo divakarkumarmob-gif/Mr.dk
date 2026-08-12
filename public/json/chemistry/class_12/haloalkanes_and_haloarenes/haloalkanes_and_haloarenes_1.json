@@ -1624,7 +1624,7 @@
       "C": "Option C"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo pent - 2 - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl pent - 1 - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl but - 2 - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl pent - 2 - ene C C 1 5"
+    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl - ene C C 1 5"
   },
   {
     "type": "normal_mcq",
@@ -1774,7 +1774,7 @@
       "D": "Both"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo pent - 2 - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl pent - 1 - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl but - 2 - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl pent - 2 - ene C C 1 5"
+    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl - ene C C 1 5"
   },
   {
     "type": "normal_mcq",
@@ -1999,7 +1999,7 @@
       "D": "Intermediate anion is formed HD04 - 0536 2"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo pent - 2 - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl pent - 1 - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl but - 2 - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl pent - 2 - ene C C 1 5"
+    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl - ene C C 1 5"
   },
   {
     "type": "statement_based",
@@ -2101,7 +2101,7 @@
       "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Incorrect statement is/are is",
+    "question": "Incorrect\n\nstatement is/are is",
     "options": {
       "A": "Grignard reagent should be prepared under anhydrous conditions",
       "B": "In Butyl bromide reacted with KCN gives sec. butyl cyanide",
@@ -2702,7 +2702,7 @@
       "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is true for the major product obtained in the given reaction : -  (major product) : -",
+    "question": "Which of the following\n\nstatement is true for the major product obtained in the given reaction : -  (major product) : -",
     "options": {
       "A": "Reacts with AgNO 3",
       "B": "Is used as an an a e sthetic",
@@ -2855,7 +2855,7 @@
       "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Statement - II : Ethyne is formed from geminal dibromo ethane by using one equivalent of alcoholic KOH. In the light of the above statements, choose the most appropriate answer from the options given below:",
+    "question": "Statement - II : Ethyne is formed from geminal dibromo ethane by using one equivalent of alcoholic KOH. In the light of the above statements, choose the most appropriate answer from the\n\n**options** given below:",
     "options": {
       "A": "Statement - I and Statement - II both are correct.",
       "B": "Statement - I and II both are incorrect.",

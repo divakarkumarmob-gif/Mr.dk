@@ -944,9 +944,9 @@
     },
     "question": "The IUPAC name for the compound is : -",
     "options": {
-      "A": "2 - Acetyl prop - 1 - ene",
-      "B": "Pent - 1 - en - 4 - one",
-      "C": "Pent - 4 - en - 2 - one",
+      "A": "2 - Acetyl - ene",
+      "B": "- - one",
+      "C": "- - one",
       "D": "Formyl propene NC11 - 0008"
     },
     "correct_option": "C",
@@ -998,7 +998,7 @@
     "options": {
       "A": "CH 3 CH 2 CONH 2 Propanamide",
       "B": "CH 3 CH 2 COOCH 3 Methyl propanoate",
-      "C": "2 - Methyl pent - 3 - ene",
+      "C": "2 - Methyl - ene",
       "D": "2 - Ethoxy butane NC09 - 0013 4"
     },
     "correct_option": "A",
@@ -1083,7 +1083,7 @@
       "D": "All are correct NC13 - 0003"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) 1 - Chloro - 3 - ethyl - 2 - methylcyclopentane CH 2 = C - CH 3 2 1 CH 3 - CH 2 - C ≡ C - CH 3 5 4 3 2 1 CH 3 - CH = C ⎯ ⎯ CH 2 - CH 3 COOH 4 3 1 2 CH 3 - C - NH 2 O CH 3 - C - Cl O Ethanamide Etha noyl chloride CH 3 - CH 2 - CH 2 - C - COOH OHC - C - CH 2 - CH 3 CH 2 - C = CH - C - NH 2 NH 2 OCH 3 O 4 3 2 1 CH 3 - CH 2 - NH - CH 3 O  CH 3 - C - CH 2 - CH=CH 2 O 1 2 3 4 5 Pent - 4 - en - 2 - one CH 3 - CH 2 - C - COOH CH 2 CH 3 - CH - CH = CH - CH 3 5 4 3 2 1 CH 3 O O O H 1 1 2 NC - CH 2 - CH 2 - CH 2 - C - Cl 1 4 3 O 2 Cl - C - O - C 2 H 5 O Chloro Ethyl CH 2 - CN CH - CN CH 2 - CN C Cl O Cl C 2 H 5 CH 3 1 2 3 4 5 NEET : Chemistry"
+    "explanation": "Ans. ( 2 ) 1 - Chloro - 3 - ethyl - 2 - methylcyclopentane CH 2 = C - CH 3 2 1 CH 3 - CH 2 - C ≡ C - CH 3 5 4 3 2 1 CH 3 - CH = C ⎯ ⎯ CH 2 - CH 3 COOH 4 3 1 2 CH 3 - C - NH 2 O CH 3 - C - Cl O Ethanamide Etha noyl chloride CH 3 - CH 2 - CH 2 - C - COOH OHC - C - CH 2 - CH 3 CH 2 - C = CH - C - NH 2 NH 2 OCH 3 O 4 3 2 1 CH 3 - CH 2 - NH - CH 3 O  CH 3 - C - CH 2 - CH=CH 2 O 1 2 3 4 5 - - one CH 3 - CH 2 - C - COOH CH 2 CH 3 - CH - CH = CH - CH 3 5 4 3 2 1 CH 3 O O O H 1 1 2 NC - CH 2 - CH 2 - CH 2 - C - Cl 1 4 3 O 2 Cl - C - O - C 2 H 5 O Chloro Ethyl CH 2 - CN CH - CN CH 2 - CN C Cl O Cl C 2 H 5 CH 3 1 2 3 4 5 NEET : Chemistry"
   },
   {
     "type": "normal_mcq",
@@ -1131,13 +1131,13 @@
     },
     "question": "IUPAC name for following compound",
     "options": {
-      "A": "Hex - 1 - en - 5 - yn - 4 - ol",
-      "B": "Hex - 5 - en - 1 - yn - 3 - ol",
-      "C": "4 - Hydroxyhex - 1 - en - 5 - yne",
-      "D": "3 - Hydroxyhex - 5 - en - 1 - yne NC09 - 0353"
+      "A": "- - - ol",
+      "B": "- - - ol",
+      "C": "4 - Hydroxyhex - 1 - - yne",
+      "D": "3 - Hydroxyhex - 5 - - yne NC09 - 0353"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) Hex - 5 - en - 1 - yn - 3 - ol"
+    "explanation": "Ans. ( 2 ) - - - ol"
   },
   {
     "type": "normal_mcq",
@@ -1214,7 +1214,7 @@
     "options": {
       "A": "4 - Cyanohex - 2 - one",
       "B": "2 - Ethyl - 4 - oxopentanenitrile",
-      "C": "2 - Oxo - 4 - cyanohexane",
+      "C": "2 - - cyanohexane",
       "D": "2 - Oxo - hexane - 4 - nitrile NC12 - 0387 CH 3 Cl NO 2 CH 2 =CH - CH 2 - CH - C  CH OH CH 2 - COOH CH - OH CH - COOH CH 2 - COOH CH 3 C 2 H 5 Cl Br CH 3 Cl CH 2 =CH - C - CH 2 - C  CH CH 2 CH 3 - C - CH 2 - CH - CH 2 - CH 3 O CN Exercise - I classification and Nomenclature NEET : Extra Edge [ Chemistry ]"
     },
     "correct_option": "B",
@@ -1240,12 +1240,12 @@
     "question": "The IUPAC name of the compound",
     "options": {
       "A": "3 - Amino - 2 - ethyl - 3 - ethenylhexanal",
-      "B": "3 - Amino - 2 - ethyl - 3 - propylpent - 4 - en - 1 - al",
+      "B": "3 - Amino - 2 - ethyl - 3 - propylpent - 4 - - al",
       "C": "2 - Ethyl - 3 - amino - 3 - propylpent - 4 - enal",
-      "D": "4 - Propyl - 3 - oxo - 5 - hexen - 4 - amine NC12 - 0256"
+      "D": "4 - Propyl - 3 - - hexen - 4 - amine NC12 - 0256"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) 3 - Amino - 2 - ethyl - 3 - propylpent - 4 - en - 1 - al"
+    "explanation": "Ans. ( 2 ) 3 - Amino - 2 - ethyl - 3 - propylpent - 4 - - al"
   },
   {
     "type": "normal_mcq",
@@ -1426,7 +1426,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+    "explanation": "Single  Double  + 1 \\pi Triple  + 2 \\pi"
   },
   {
     "type": "normal_mcq",
@@ -1443,7 +1443,7 @@
       "source": "NCR - Classification And Nomenclature.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Bond line n o t at ion of pent - 4 - yn - 2 - ol is NC05 - 1256",
+    "question": "Bond line n o t at ion of - - ol is NC05 - 1256",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1451,7 +1451,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+    "explanation": "IUPAC name - - - ol M.F. - C 5 H 8 O Structure - Bond line -"
   },
   {
     "type": "normal_mcq",
@@ -1680,7 +1680,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+    "explanation": "Single  Double  + 1 \\pi Triple  + 2 \\pi"
   },
   {
     "type": "normal_mcq",
@@ -1705,7 +1705,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+    "explanation": "IUPAC name - - - ol M.F. - C 5 H 8 O Structure - Bond line -"
   },
   {
     "type": "normal_mcq",
@@ -1749,7 +1749,7 @@
       "source": "NCR - Classification And Nomenclature.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "CH  C - CH=CH - CH 2 - CH=CH 2 is name d a s hepta - 3,6 - dien - 1 - yne NC04 - 0611 1",
+    "question": "CH  C - CH=CH - CH 2 - CH=CH 2 is name d a s hepta - 3,6 - - yne NC04 - 0611 1",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1801,7 +1801,7 @@
       "source": "NCR - Classification And Nomenclature.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "But - 2 - en - 3 - amine is correct IUPAC name NC05 - 1254",
+    "question": "- - amine is correct IUPAC name NC05 - 1254",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2894,9 +2894,9 @@
     },
     "question": "The IUPAC name for the compound is :- O",
     "options": {
-      "A": "2-Acetyl prop-1-ene",
-      "B": "Pent-1-en-4-one",
-      "C": "Pent-4-en-2-one",
+      "A": "2-Acetyl -ene",
+      "B": "--one",
+      "C": "--one",
       "D": "Formyl propene"
     },
     "correct_option": "A",
@@ -3000,10 +3000,10 @@
     },
     "question": "The IUPAC name of the compound OH CH 3 is",
     "options": {
-      "A": "2-Methyl cyclopent-1-en-2-ol",
-      "B": "3-Methyl cyclopent-2-en-1-ol",
-      "C": "2-Methyl cyclopent-2-en-1-ol",
-      "D": "3-Methyl cyclopent-1-en-2-ol"
+      "A": "2-Methyl cyclopent-1--ol",
+      "B": "3-Methyl cyclopent-2--ol",
+      "C": "2-Methyl cyclopent-2--ol",
+      "D": "3-Methyl cyclopent-1--ol"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification And Nomenclature principles."
@@ -3420,7 +3420,7 @@
       "D": "CH 3 -CH-CH-CH 2 -CH 3 CN CN"
     },
     "correct_option": "A",
-    "explanation": "(a) CH 3 - CH - CH - CH - CH 3 CH 2 OH CH 3 CH 3 4 2 1 5 6 3 3, 4 - Dimethyl hexan - 2 - ol (b) CH 2 = CH - CH - CH 2 - CN 5 4 3 2 1 OH 3 - Hydroxy pent - 4 - enenitrile (c) CH 3 - C - C 3 2 CH 3 CH 2 - CH 3 4 5 1 CH 3 CH 3 CH 3 2,2,3,3 - Tetramethyl pentane. (d) CH 3 - CH - CH - CH 2 - CH 3 CN CN 3 2 1 4 2 - Ethyl - 3 - Methyl butane - 1, 4 - dinitrile (e) 3 2 1 4 5 6 CH 3 - CH 2 - CH - CH 2 - CHO C ≡ C - CH 3 3 - Ethyl hex - 4 - ynal (f) Cl - C - CH 2 - CH Br Br Cl Cl 1 2 3 3,3 - Dibromo - 1,1,1 - trichloro propane (g) CH 2 = CH - CH - C ≡ CH CH 3 1 2 3 4 5 In symmetrical condition double bond is given priority to triple bond 3 - Methyl Pent - 1 - en - 4 - yne (h) 4 2 3 1 5 6 5 - methyl hex - 2 - yne (i) 4 3 2 O 1 OH OH 2-Hydroxy butanoic acid (j) CH 3 CH 3 CH 2 - CH 3 1 2 2 - Ethyl -1, 1-dimethyl cyclo propane"
+    "explanation": "(a) CH 3 - CH - CH - CH - CH 3 CH 2 OH CH 3 CH 3 4 2 1 5 6 3 3, 4 - Dimethyl hexan - 2 - ol (b) CH 2 = CH - CH - CH 2 - CN 5 4 3 2 1 OH 3 - Hydroxy - enenitrile (c) CH 3 - C - C 3 2 CH 3 CH 2 - CH 3 4 5 1 CH 3 CH 3 CH 3 2,2,3,3 - Tetramethyl pentane. (d) CH 3 - CH - CH - CH 2 - CH 3 CN CN 3 2 1 4 2 - Ethyl - 3 - Methyl butane - 1, 4 - dinitrile (e) 3 2 1 4 5 6 CH 3 - CH 2 - CH - CH 2 - CHO C ≡ C - CH 3 3 - Ethyl - ynal (f) Cl - C - CH 2 - CH Br Br Cl Cl 1 2 3 3,3 - Dibromo - 1,1,1 - trichloro propane (g) CH 2 = CH - CH - C ≡ CH CH 3 1 2 3 4 5 In symmetrical condition double bond is given priority to triple bond 3 - Methyl - - yne (h) 4 2 3 1 5 6 5 - methyl - yne (i) 4 3 2 O 1 OH OH 2-Hydroxy butanoic acid (j) CH 3 CH 3 CH 2 - CH 3 1 2 2 - Ethyl -1, 1-dimethyl cyclo propane"
   },
   {
     "type": "normal_mcq",

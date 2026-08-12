@@ -47,7 +47,7 @@
       "D": "None"
     },
     "correct_option": "D",
-    "explanation": "I 2 + KI → KI 3 In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
+    "explanation": "I 2 + KI → In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
   },
   {
     "type": "normal_mcq",
@@ -725,7 +725,7 @@
       "D": "Tetrahedral"
     },
     "correct_option": "A",
-    "explanation": "(i) NO 3 - > NH 3 > NH 2 - (B.A. order) sp 2 sp 3 sp 3 1 l.p. 2 l.p. (ii) In (CH 3 ) 3 B hybridisation of carbon is sp 3 (non planar) (iii) NH 4 Cl → NH 4 + Cl - in NH 4 + hyb. of N is sp 3 (iv) BF 3 = BCl 3 = BBr 3 = BI 3 all have same bond angle. $//(1 TARGET : 202 5 INORGANIC CHEMISTRY 202 5 HS"
+    "explanation": "(i) NO 3 - > NH 3 > NH 2 - (B.A. order) sp 2 sp 3 sp 3 1 l.p. 2 l.p. (ii) In (CH 3 ) 3 B hybridisation of carbon is sp 3 (non planar) (iii) NH 4 Cl → NH 4 + Cl - in NH 4 + hyb. of N is sp 3 (iv) BF 3 = BCl 3 = BBr 3 = BI 3 all have same bond angle. $//(1 TARGET : 202 5 INORGANIC 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -825,7 +825,7 @@
       "D": "T shape, irregular octahedral"
     },
     "correct_option": "A",
-    "explanation": "4 BCl - 4 ICl - sp 3 sp 3 d 2 l.p. = 0 l.p. = 2 tetrahedral square planar"
+    "explanation": "4 ICl - sp 3 sp 3 d 2 l.p. = 0 l.p. = 2 tetrahedral square planar"
   },
   {
     "type": "normal_mcq",
@@ -1521,7 +1521,7 @@
       "source": "Chemical Bonding - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In the protonation of NH 3 molecule, following statement is true:-",
+    "question": "In the protonation of NH 3 molecule, following\n\nstatement is true:-",
     "options": {
       "A": "A covalent bond is formed",
       "B": "Hydrogen bond is formed",
@@ -1548,7 +1548,7 @@
       "source": "Chemical Bonding - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which statement is correct:-",
+    "question": "Which\n\nstatement is correct:-",
     "options": {
       "A": "All the compounds having polar bonds, have dipole moment",
       "B": "SO 2 is non-polar",
@@ -1584,7 +1584,7 @@
       "D": "2 3 NH  Correct answer is:-"
     },
     "correct_option": "A",
-    "explanation": "In 'S' atom, G.S. = no. of unpaired e - = 2 (E.S) I = no. of unpaired e - = 4 (E.S) II = no. of unpaired e - = 6(SO 3 ) SH 6 not possible In 'I' atom G.S. = no. of unpaired e - =1 (E.S) I = no. of unpaired e - =3 (E.S) II = no. of unpaired e - =5 (E.S) III = no. of unpaired e - =7"
+    "explanation": "In 'S' atom, G.S. = no. of unpaired e - = 2 (E.S) I = no. of unpaired e - = 4 (E.S) II = no. of unpaired e - = 6(SO 3 ) not possible In 'I' atom G.S. = no. of unpaired e - =1 (E.S) I = no. of unpaired e - =3 (E.S) II = no. of unpaired e - =5 (E.S) III = no. of unpaired e - =7"
   },
   {
     "type": "normal_mcq",
@@ -2501,7 +2501,7 @@
       "source": "Chemical Bonding - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "One of the resonating structure of -2 4 SO is O O-S-O .. : : : .. .. O .. : .. .. Which set of average formal charge on oxygen and bond order is correct",
+    "question": "One of the resonating structure SO is O O-S-O .. : : : .. .. O .. : .. .. Which set of average formal charge on oxygen and bond order is correct",
     "options": {
       "A": "-0.5 and 1.5",
       "B": "-1.5 and 3",
@@ -3186,7 +3186,7 @@
       "D": "[KHF] + and F 2"
     },
     "correct_option": "D",
-    "explanation": "I 2 + KI → KI 3 In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
+    "explanation": "I 2 + KI → In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
   },
   {
     "type": "normal_mcq",

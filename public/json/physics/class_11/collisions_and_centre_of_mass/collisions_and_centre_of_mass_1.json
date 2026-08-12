@@ -656,7 +656,7 @@
       "source": "Collisions and Centre of Mass - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is correct :-",
+    "question": "Which of the following\n\nstatement is correct :-",
     "options": {
       "A": "Kinetic energy of a system can be changed without changing its momentum.",
       "B": "Kinetic energy of a system cannot be changed without changing its momentum.",
@@ -2427,7 +2427,7 @@
       "source": "Collisions and Centre of Mass - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A shell at rest at the origin explodes into three fragments of masses 1 kg, 2 kg and m kg. The 1 kg and 2 kg pieces fly off with speeds of 5 ms -1 along x-axis and 6ms -1 along y-axis respectively. If the m kg piece flies off with a speed of 6.5 ms -1 , the total mass of the shell must be :-",
+    "question": "A shell at rest at the origin explodes into three fragments of masses 1 kg, 2 kg and m kg. The 1 kg and 2 kg pieces fly off with speeds of 5 along x-axis and 6ms -1 along y-axis respectively. If the m kg piece flies off with a speed of 6.5 , the total mass of the shell must be :-",
     "options": {
       "A": "4 kg",
       "B": "5 kg",
@@ -2703,7 +2703,7 @@
       "source": "Collisions and Centre of Mass - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A bullet of mass 0.02 kg travelling horizontally with velocity 250 ms -1 strikes a block of wood of mass 0.23 kg which rests on a rough horizontal surface. After the impact, the block and bullet move together and come to rest after travelling a distance of 40m. The coefficient of sliding friction of the rough surface is :- (g = 9.8 ms -2 )",
+    "question": "A bullet of mass 0.02 kg travelling horizontally with velocity 250 strikes a block of wood of mass 0.23 kg which rests on a rough horizontal surface. After the impact, the block and bullet move together and come to rest after travelling a distance of 40m. The coefficient of sliding friction of the rough surface is :- (g = 9.8 )",
     "options": {
       "A": "0.75",
       "B": "0.61",
@@ -3378,7 +3378,7 @@
       "D": "2 1 m m CM10 - 0008"
     },
     "correct_option": "C",
-    "explanation": "According to the law of conservation of momentum 1 1 2 2 1 1 2 2 m u m u m v m v + = + \\rho\\rho\\rho\\rho ...(i) Here 1 2 u , u \\rho\\rho = Initial velocities of m 1 and m 2 1 2 v , v \\rho\\rho = Final velocities of m 1 and m 2 Change in velocity of m 1 = 1 1 v u - \\rho\\rho Change in velocity of m 2 = 2 2 v u - \\rho\\rho 1 1 1 1 2 2 2 2 m v m u m v m u - = - + \\rho\\rho\\rho\\rho or ( ) ( ) 1 1 1 2 2 2 m v u m v u - = - + \\rho\\rho\\rho\\rho or 1 1 2 2 2 1 v u m v u m - = - + \\rho\\rho \\rho\\rho  1 2 2 1 changes in velocity of m m changes in velocity of m m ="
+    "explanation": "According to the law of conservation of momentum 1 1 2 2 1 1 2 2 m u m u m v m v + = + \\rho\\rho\\rho\\rho ...(i) Here 1 2 u , u \\rho\\rho = Initial velocities of m 1 and m 2 1 2 v , v \\rho\\rho = Final velocities of m 1 and m 2 Change in velocity of m 1 = 1 1 v u - \\rho\\rho Change in velocity of m 2 = 2 2 v u - \\rho\\rho 1 1 1 1 2 2 2 2 m v m u m v m u - = - + \\rho\\rho\\rho\\rho or ( ) ( ) 1 1 1 2 2 2 m v u m v u - = - + \\rho\\rho\\rho\\rho v u m v u m - = - + \\rho\\rho \\rho\\rho  1 2 2 1 changes in velocity of m m changes in velocity of m m ="
   },
   {
     "type": "normal_mcq",

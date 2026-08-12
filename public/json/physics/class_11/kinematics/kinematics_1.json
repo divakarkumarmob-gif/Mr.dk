@@ -135,7 +135,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "u = 0 v = v t = n a = (  ( ) )  v n distance covered in last ‘t’ seconds. S = vt - 1 2 at 2 = v(2) - 1 2 × v n × (2) 2 = 2v - 2v n = 2v   -     1 1 n"
+    "explanation": "u = 0 v = v t = n a = (  ( ) )  v n distance covered in last ‘t’ seconds. S = at 2 = v(2) - 1 2 × v n × (2) 2 = 2v - 2v n = 2v   -     1 1 n"
   },
   {
     "type": "normal_mcq",
@@ -196,7 +196,7 @@
       "source": "RACE - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A particle is moving in a straight line such that its velocity is increasing at 5 ms - 1 per meter. The acceleration of the particle is _____ ms - 2 at a point where its velocity is 20 ms -",
+    "question": "A particle is moving in a straight line such that its velocity is increasing at 5 per meter. The acceleration of the particle is _____ at a point where its velocity is 20 ms -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -348,7 +348,7 @@
       "source": "RACE - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A body projected vertically upwards, reaches a height of 180 m. Find out [g = 10 ms - 2 ] (i) initial velocity of body (ii) time taken by body to reach its maximum height (iii) the time for which the body remains in air (iv) height of the body from the ground after 8 sec. (v) velocity of body at t = 8 sec (vi) the time at which the body reach the height of 100 m (vii) A man at height of 135 m from ground tries to catch the body but he misses. After how much time from now he will be able to catch the body again?",
+    "question": "A body projected vertically upwards, reaches a height of 180 m. Find out [g = 10 ] (i) initial velocity of body (ii) time taken by body to reach its maximum height (iii) the time for which the body remains in air (iv) height of the body from the ground after 8 sec. (v) velocity of body at t = 8 sec (vi) the time at which the body reach the height of 100 m (vii) A man at height of 135 m from ground tries to catch the body but he misses. After how much time from now he will be able to catch the body again?",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -356,7 +356,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "2 0 v 2g = h (i) =   = 0 v 2 10 180 60 m/s (ii) t = 0 v g = 6 s (iii) T = 2t = 12 s (iv) h = (60) 8 - 1 2 g(8) 2 = 160 m (v) v \\rho = u \\rho + at \\rho = 60 - (10) (8) = - 20 m/s = 20m/s downward (vi) 100 = 60t -   2 1 10 t 2  After solving t = 2 sec or 10 sec (vii) We have to find time to travel O to A. Let t be the time between O and A. from top - most point distance travelled (h-y) y h = (180 - 135) = 45 m   = = 1 2 45 t 3sec g t = 2t 1 = 6 sec"
+    "explanation": "2 0 v 2g = h (i) =   = 0 v 2 10 180 60 m/s (ii) t = 0 v g = 6 s (iii) T = 2t = 12 s (iv) h = (60) 8 - 1 2 g(8) 2 = 160 m (v) v \\rho = u \\rho + at \\rho = 60 - (10) (8) = - 20 m/s = 20m/s downward (vi) 100 = 60t -   2 1 10 t 2  After solving t = 2 sec sec (vii) We have to find time to travel O to A. Let t be the time between O and A. from top - most point distance travelled (h-y) y h = (180 - 135) = 45 m   = = 1 2 45 t 3sec g t = 2t 1 = 6 sec"
   },
   {
     "type": "normal_mcq",
@@ -371,7 +371,7 @@
       "source": "RACE - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A particle is projected vertically upwards from the earth. It crosses the same point at t = 2 sec and t = 8 sec. Find out [g = 10 ms - 2 ] (i) the time for which particle remains in air (ii) initial velocity of particle (iii) maximum height attained by the particle (iv) height of the particle at t = 2 sec and t = 8 sec from earth",
+    "question": "A particle is projected vertically upwards from the earth. It crosses the same point at t = 2 sec and t = 8 sec. Find out [g = 10 ] (i) the time for which particle remains in air (ii) initial velocity of particle (iii) maximum height attained by the particle (iv) height of the particle at t = 2 sec and t = 8 sec from earth",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -394,7 +394,7 @@
       "source": "RACE - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A body is dropped from the top of a tower and it covers a 80 m distance in last two seconds of its journey. Find out [g = 10 ms - 2 ] (i) height of the tower (ii) time taken by body to reach the ground (iii) the velocity of body when it hits the ground x t  t t x x 0 t  t x  t -  t x t  -   0 0 - 2 - 4 - 6 2 4 6 8 2 4 6 8 10 time (s) v(ms - 1 ) 1",
+    "question": "A body is dropped from the top of a tower and it covers a 80 m distance in last two seconds of its journey. Find out [g = 10 ] (i) height of the tower (ii) time taken by body to reach the ground (iii) the velocity of body when it hits the ground x t  t t x x 0 t  t x  t -  t x t  -   0 0 - 2 - 4 - 6 2 4 6 8 2 4 6 8 10 time (s) v( ) 1",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -509,7 +509,7 @@
       "source": "RACE - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A ball is thrown vertically upwards with a velocity of 19.6 ms - 1 from the top of a tower. The ball strikes the ground after 6 s. The height from the ground up to which the ball can rise will be k m. 5 (  ( ) )  The value of k is ….. (use g = 9.8 m/s 2 )",
+    "question": "A ball is thrown vertically upwards with a velocity of 19.6 from the top of a tower. The ball strikes the ground after 6 s. The height from the ground up to which the ball can rise will be k m. 5 (  ( ) )  The value of k is ….. (use g = 9.8 m/s 2 )",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -601,7 +601,7 @@
       "source": "RACE - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A tennis ball is dropped on to the floor from a height of 9.8 m. It rebounds to a height 5.0 m. Ball comes in contact with the floor for 0.2s. The average acceleration during contact is ____ 2 ms - . [Given g = 10 ms - 2 ] - 100 m/s - 200 m/s v 10s 20s t - 100 m/s - 200 m/s v 10s 20s t +100 m/s - 100 m/s v 10s 20s t - 100 m/s v 10s 20s t +100 m/s NEET : PHYSICS",
+    "question": "A tennis ball is dropped on to the floor from a height of 9.8 m. It rebounds to a height 5.0 m. Ball comes in contact with the floor for 0.2s. The average acceleration during contact is ____ 2 ms - . [Given g = 10 ] - 100 m/s - 200 m/s v 10s 20s t - 100 m/s - 200 m/s v 10s 20s t +100 m/s - 100 m/s v 10s 20s t - 100 m/s v 10s 20s t +100 m/s NEET : PHYSICS",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -885,7 +885,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "u = 0 v = v t = n a = (  ( ) )  v n distance covered in last ‘t’ seconds. S = vt - 1 2 at 2 = v(2) - 1 2 × v n × (2) 2 = 2v - 2v n = 2v   -     1 1 n"
+    "explanation": "u = 0 v = v t = n a = (  ( ) )  v n distance covered in last ‘t’ seconds. S = at 2 = v(2) - 1 2 × v n × (2) 2 = 2v - 2v n = 2v   -     1 1 n"
   },
   {
     "type": "normal_mcq",
@@ -1360,7 +1360,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Variation of quantity P with quantity Q is plotted in given figure, describes motion of particle in a straight line. Then which of the following statement is wrong :",
+    "question": "Variation of quantity P with quantity Q is plotted in given figure, describes motion of particle in a straight line. Then which of the following\n\nstatement is wrong :",
     "options": {
       "A": "Quantity Q may represent time",
       "B": "Quantity P is velocity if motion is uniform",
@@ -1475,12 +1475,12 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The relative speed of ball B w.r.t. ball A at any instant of time when both the balls will be in air (Take g = 10 ms - 2 )",
+    "question": "The relative speed of ball B w.r.t. ball A at any instant of time when both the balls will be in air (Take g = 10 )",
     "options": {
       "A": "0",
-      "B": "10 ms - 1",
-      "C": "25 ms - 1",
-      "D": "50 ms - 1 1"
+      "B": "10",
+      "C": "25",
+      "D": "50"
     },
     "correct_option": "A",
     "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
@@ -1521,7 +1521,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two particles A and B are moving on a straight line with the same speed. Which of the following statement is/are correct for the relative motion of the two particles :",
+    "question": "Two particles A and B are moving on a straight line with the same speed. Which of the following\n\nstatement is/are correct for the relative motion of the two particles :",
     "options": {
       "A": "The relative velocity AB v \\rho or BA v \\rho is zero vector only if they are moving in the same direction",
       "B": "If the particles are moving in opposite direction, the magnitude of BA v \\rho or AB v \\rho is twice than the magnitude of velocity of A or that of B.",
@@ -1567,7 +1567,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is/are Incorrect? (I) For motion involving change in direction along the straight line, displacement may decrease. (II) Direction of acceleration is same as direction of velocity. (III) Average speed is, in general greater than or equal to the magnitude of the average velocity. (IV) Equation of motion is valid only in one dimensional uniform accelerated motion",
+    "question": "Which of the following\n\nstatement is/are Incorrect? (I) For motion involving change in direction along the straight line, displacement may decrease. (II) Direction of acceleration is same as direction of velocity. (III) Average speed is, in general greater than or equal to the magnitude of the average velocity. (IV) Equation of motion is valid only in one dimensional uniform accelerated motion",
     "options": {
       "A": "only I",
       "B": "only IV",
@@ -1659,7 +1659,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is correct -",
+    "question": "Which of the following\n\nstatement is correct -",
     "options": {
       "A": "Direction of velocity at any point on path is tangential to the path",
       "B": "Direction of average velocity is along direction of motion during that interval",
@@ -1843,7 +1843,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A car is moving along a straight line OP as shown in the figure. It moves from O to P in 18 s and returns from P to Q in 6s and Q to O in 10 s. Which of the following statement is correct regarding the motion of the car? (1) The average speed of the car in going from O to P and come back to Q is 20 ms -",
+    "question": "A car is moving along a straight line OP as shown in the figure. It moves from O to P in 18 s and returns from P to Q in 6s and Q to O in 10 s. Which of the following\n\nstatement is correct regarding the motion of the car? (1) The average speed of the car in going from O to P and come back to Q is 20 ms -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1961,12 +1961,12 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The remaining distance is covered with a speed of 4.0 ms - 1 for half the time and 5.0 ms - 1 for the other half of the time. The average speed during the motion is :",
+    "question": "The remaining distance is covered with a speed of 4.0 for half the time and 5.0 for the other half of the time. The average speed during the motion is :",
     "options": {
-      "A": "4.0 ms - 1",
-      "B": "6.0 ms - 1",
-      "C": "3.8 ms - 1",
-      "D": "2.4 ms - 1 3"
+      "A": "4.0",
+      "B": "6.0",
+      "C": "3.8",
+      "D": "2.4"
     },
     "correct_option": "A",
     "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
@@ -2585,8 +2585,8 @@
     "question": "The angle of projection, for which the horizontal range and the maximum height of a projectile and equal is : -",
     "options": {
       "A": "45^\\circ",
-      "B": "\\theta = tan - 1",
-      "C": "\\theta = tan - 1",
+      "B": "\\theta =",
+      "C": "\\theta =",
       "D": "Option D"
     },
     "correct_option": "B",
@@ -2927,7 +2927,7 @@
       "source": "Extra Edge - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A projectile is projected with initial velocity (5i 12j) +  m/s. If g = 10 ms - 2 , then horizontal range is :",
+    "question": "A projectile is projected with initial velocity (5i 12j) +  m/s. If g = 10 , then horizontal range is :",
     "options": {
       "A": "4.8 metre",
       "B": "9.6 metre",

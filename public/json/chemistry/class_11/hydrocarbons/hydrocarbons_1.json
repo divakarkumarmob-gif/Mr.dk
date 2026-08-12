@@ -178,7 +178,7 @@
       "D": "LiAlH 4"
     },
     "correct_option": "A",
-    "explanation": "COOH HO .. .. +M HNO 3 H 2 SO 4 COOH HO +M NO 2 OCH 3 H 3 C +M HNO 3 H 2 SO 4 OCH 3 H 3 C NO 2 .. .. $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS HNO 3 O C O +M H 2 SO 4 C O O NO 2 E ⊕ attack in most activated ring at most activated site, and at the place where minimum steric hinderance."
+    "explanation": "COOH HO .. .. +M HNO 3 H 2 SO 4 COOH HO +M NO 2 OCH 3 H 3 C +M HNO 3 H 2 SO 4 OCH 3 H 3 C NO 2 .. .. $//(1 TARGET : 202 5 ORGANIC 5 HS HNO 3 O C O +M H 2 SO 4 C O O NO 2 E ⊕ attack in most activated ring at most activated site, and at the place where minimum steric hinderance."
   },
   {
     "type": "normal_mcq",
@@ -1103,8 +1103,8 @@
     "options": {
       "A": "3-ethyl-3-pentene",
       "B": "3-ethylidene pentane",
-      "C": "3-ethyl pent-2-ene",
-      "D": "1,1-diethyl prop-1-ene"
+      "C": "3-ethyl -ene",
+      "D": "1,1-diethyl -ene"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
@@ -1778,7 +1778,7 @@
     "options": {
       "A": "1 - butene",
       "B": "Trans - 2 - butene",
-      "C": "Cis - 2 - butene",
+      "C": "- butene",
       "D": "Propene HC19 - 0003"
     },
     "correct_option": "B",
@@ -1807,7 +1807,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) Op tion - 1,3,4 are Reso. stable. + V 2 O 5 OH 300^\\circC 400 - 500^\\circC O O O CH 2 HCl CH 3  CH 3 Cl (1) CH 3 CH 3  (4) CH 3  CH 3 Cl 3 \\alpha H 4 \\alpha H CH 3 CH 3  CH 3 Cl (2) CH  CH (i)NaNH 2 /NH 3  CH  C Na Θ CH 3 CH 2 Br (SN 2 ) CH 3 CH 2 - C  CH (1 - Butyne) CH 3 CH 2 - C  C Na Θ  (i )NaNH 2 /NH 3 CH 3 CH 2 Br CH 3 CH 2 - C  C - CH 2 CH 3 Hex - 3 - yne + NO 2 Conc. H 2 SO 4 + Con. HNO 3 E + =NO 2  CH 2 = C = O H Br +  -   +  - CH 2 = C Br O H CH 3 - C - Br O Tautomer CH 3 - CH 2 - CH 2 - Br - HBr \\beta \\alpha (Elimination) CH 3 - CH=CH 2 Br HBr - HBr CH 3 - CH 2 - CH 2 - OH HBr  CH 3 - CH 2 - CH 2 CH 3 - CH - CH 3  CH 3 - CH=CH 2 H F  Θ 0^\\circC H  E  E.S.R. Cl (3) (4) Br CH=CH 2 (1) Cl (2) CH 2 =CH - Cl CH 3 Friedel - Crafts reaction R - X AlCl 3 R  hydrocarbons"
+    "explanation": "Ans. ( 2 ) Op ,3,4 are Reso. stable. + V 2 O 5 OH 300^\\circC 400 - 500^\\circC O O O CH 2 HCl CH 3  CH 3 Cl (1) CH 3 CH 3  (4) CH 3  CH 3 Cl 3 \\alpha H 4 \\alpha H CH 3 CH 3  CH 3 Cl (2) CH  CH (i)NaNH 2 /NH 3  CH  C Na Θ CH 3 CH 2 Br (SN 2 ) CH 3 CH 2 - C  CH (1 - Butyne) CH 3 CH 2 - C  C Na Θ  (i )NaNH 2 /NH 3 CH 3 CH 2 Br CH 3 CH 2 - C  C - CH 2 CH 3 - yne + NO 2 Conc. H 2 SO 4 + Con. HNO 3 E + =NO 2  CH 2 = C = O H Br +  -   +  - CH 2 = C Br O H CH 3 - C - Br O Tautomer CH 3 - CH 2 - CH 2 - Br - HBr \\beta \\alpha (Elimination) CH 3 - CH=CH 2 Br HBr - HBr CH 3 - CH 2 - CH 2 - OH HBr  CH 3 - CH 2 - CH 2 CH 3 - CH - CH 3  CH 3 - CH=CH 2 H F  Θ 0^\\circC H  E  E.S.R. Cl (3) (4) Br CH=CH 2 (1) Cl (2) CH 2 =CH - Cl CH 3 Friedel - Crafts reaction R - X AlCl 3 R  hydrocarbons"
   },
   {
     "type": "normal_mcq",
@@ -1828,10 +1828,10 @@
     },
     "question": "Which of the following is the IUPAC name of A.",
     "options": {
-      "A": "But - 1 - ene",
-      "B": "But - 2 - ene",
-      "C": "Pent - 2 - ene",
-      "D": "But - 2 - yne HC46 - 0009 EXERCISE - I NEET : Chemistry"
+      "A": "- ene",
+      "B": "- ene",
+      "C": "- ene",
+      "D": "- yne HC46 - 0009 EXERCISE - I NEET : Chemistry"
     },
     "correct_option": "D",
     "explanation": "Ans. ( 4 ) CH 3 CH 3 - CH - CH 2 - CH 3 2 - Methyl butane CH 3 CH 3 - CH - CH 3 2,2 - Dimethyl propane CH 3 b > c > d > a 309.1 300.9 282.5 261 CH 3 +H CH 3 CH 3 - M NO 2 - M of two group CH 3 NO 2 NO 2 CH 3 Toluene Benzene Con. HNO 3 + con. H 2 SO 4 NO 2 E + = NO 2 E.S.R  Con. HNO 3 + con. H 2 SO 4 NO 2 E + = NO 2 E.S.R  H HSO 4 ,  Θ OH - NO 2 Acid Base Substrate H + CH 2 =CH 2  CH 2 - CH 3  E   attack on Benzene (ESR mech) CH 2 CH 3 - O - C - NO 2 O  - NO 2 - O - C - O +M ring activate  O/P - attack ring deactivate - M effect CH 3 NO 2 Nitration CH 3 NO 2 NO 2 (p - nitro toluene) ortho attack with respect to - CH 3 group H  / \\Delta CH 3 Rearrange \\Delta  OH CH 3 CH 3 CH 3  CH 3 CH 3 CH 3 CH 3 NEET : Chemistry"
@@ -1854,12 +1854,12 @@
     "question": "The molecules having dipole moment are : -",
     "options": {
       "A": "2,2 - dimethylpropane",
-      "B": "trans pent - 2 - ene",
-      "C": "cis - hex - 3 - ene",
+      "B": "trans - ene",
+      "C": "cis - - ene",
       "D": "2 and 3 HC50 - 0003"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 2 ) More resonating structure When E  attack on 2 nd or 5 th position So Maxi electron density on 2 nd and 5 th position."
+    "explanation": "Ans. ( 2 ) More resonating structure When E  attack on 2 nd th position So Maxi electron density on 2 nd and 5 th position."
   },
   {
     "type": "normal_mcq",
@@ -3525,7 +3525,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Dehydration reaction is reversible controlled by thermodynamics, so more stable product is major (alkene) from (1) and (2) O same product formed, so now compare stability of carbocation formed. $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS O < O (Stability) (1) O < O (Reactivity) OH OH (2)"
+    "explanation": "Dehydration reaction is reversible controlled by thermodynamics, so more stable product is major (alkene) from (1) and (2) O same product formed, so now compare stability of carbocation formed. $//(1 TARGET : 202 5 ORGANIC 5 HS O < O (Stability) (1) O < O (Reactivity) OH OH (2)"
   },
   {
     "type": "normal_mcq",
@@ -3542,7 +3542,7 @@
       "source": "Hydrocarbon - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following yield But-2-ene on dehydration with con. H 2 SO 4 ?",
+    "question": "Which of the following yield -ene on dehydration with con. H 2 SO 4 ?",
     "options": {
       "A": "2-Methyl-2-butanol",
       "B": "2-Propanol",

@@ -472,12 +472,12 @@
       "source": "Laws of Motion and Friction - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two masses of 1 kg and 2 kg respectively are connected by a massless spring as shown in figure. A force of 20 N acts on the 2 kg mass at the instant when the 1 kg mass has an acceleration of 10 ms -2 towards right, the acceleration of the 2 kg mass is:- 1kg 2kg 20N",
+    "question": "Two masses of 1 kg and 2 kg respectively are connected by a massless spring as shown in figure. A force of 20 N acts on the 2 kg mass at the instant when the 1 kg mass has an acceleration of 10 towards right, the acceleration of the 2 kg mass is:- 1kg 2kg 20N",
     "options": {
-      "A": "2 ms -2",
-      "B": "5 ms -2",
-      "C": "10 ms -2",
-      "D": "20 ms -2 $//"
+      "A": "2",
+      "B": "5",
+      "C": "10",
+      "D": "20 $//"
     },
     "correct_option": "A",
     "explanation": "1 kg T T = 1 × 10 = 10 N 2 kg T 20N a 20 - T = 2 × a a = 20 10 2 - = 5 m/s 2"
@@ -756,7 +756,7 @@
       "D": "44.8 N"
     },
     "correct_option": "A",
-    "explanation": "If = ma - 50 = 20 × a a = 2 5 ms 2 - - v u at = + 15 = 5 t 2 ; t = 6 sec"
+    "explanation": "If = = 20 × a a = 2 5 ms 2 - - v u at = + 15 = 5 t 2 ; t = 6 sec"
   },
   {
     "type": "figure_mcq",
@@ -960,7 +960,7 @@
       "A": "never",
       "B": "10 s",
       "C": "2 s",
-      "D": "15 s MNNNL0012 ALLEN : Physics 239"
+      "D": "15 s MNNNL0012 ALLEN :"
     },
     "correct_option": "A",
     "explanation": "If 3 4 ˆ ˆ a i j m 5 5 = = - +   v u at = +    3 4 ˆ ˆ ˆ ˆ v 6i 12j i j t 5 5   = - + - +      3t 4t ˆ ˆ v 6 i 12 j 5 5     = - + -          To have a velocity along y-axis, its x-component must be zero. t = 10 sec"

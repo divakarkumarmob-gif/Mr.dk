@@ -44,7 +44,7 @@
       "A": "Na + , H 3 O + , NH 4 +",
       "B": "CO 3 -2 , NO 3 - , HCO 3 -",
       "C": "P -3 , HCl, C 2 H 6 , PH 3",
-      "D": "In -3 , O -2 , F"
+      "D": ", O -2 , F"
     },
     "correct_option": "C",
     "explanation": "r (n+1) - r n = r (n-1) ⇒ 2 2 2 (n 1) n (n 1) 0.529 Å 0.529 Å 0.529 Å Z Z Z + - × - × = × ⇒ (n+1) 2 - n 2 = (n-1) 2 ⇒ (n 2 + 2n + 1) - n 2 = n 2 - 2n + 1 ⇒ 2n = n 2 - 2n ⇒ n 2 = 4n ⇒ n = 4"
@@ -322,7 +322,7 @@
       "D": "The 2+"
     },
     "correct_option": "A",
-    "explanation": "∆ x × ∆ p  h 4 π Since ∆ x = ∆ p therefore, ( ∆ p) 2 = h 4 π or ∆ p = m ∆ν = h 4 π and ∆ v = 1 h 2m π $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "∆ x × ∆ p  h 4 π Since ∆ x = ∆ p therefore, ( ∆ p) 2 = h 4 π or ∆ p = m ∆ν = h 4 π and ∆ v = 1 h 2m π $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -347,7 +347,7 @@
       "D": "decreases by 25%"
     },
     "correct_option": "A",
-    "explanation": "Circumference of 4 th orbit = 2 π r 4 and angular momentum m ν r 4 = 4h 2 π ...(i) de-broglie wavelength λ = h m ν & m ν = h λ ...(ii) therefore from eq.(1) and (ii) h λ r 4 = 4h 2 π or 2 π r 4 = 4 λ and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
+    "explanation": "Circumference of 4 th orbit = 2 π r 4 and angular momentum m ν r 4 = 4h 2 π ...(i) de-broglie wavelength λ = h m ν & m ν = h λ ...(ii) therefore from eq.(1) and (ii) h λ r 4 = 4h 2 π π r 4 = 4 λ and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
   },
   {
     "type": "normal_mcq",
@@ -372,7 +372,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "∆ v = 1 cms -1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
+    "explanation": "∆ v = 1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
   },
   {
     "type": "normal_mcq",
@@ -539,7 +539,7 @@
       "source": "Atomic Structure - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Potential energy is - 27.2 eV in second orbit of He + then calculate, double of total energy in first excited state of Hydrogen atom :-",
+    "question": "Potential energy .2 eV in second orbit of He + then calculate, double of total energy in first excited state of Hydrogen atom :-",
     "options": {
       "A": "- 13.6 eV",
       "B": "- 54.4 eV",
@@ -639,7 +639,7 @@
       "source": "Atomic Structure - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The energy of an e - in an orbit in a hydrogen atom is given by 2 constant E n = - (KJ mol -1 ) which of the following properties represents the ''constant\" in the above relation:-",
+    "question": "The energy of an e - in an orbit in a hydrogen atom is given by 2 constant E n = - (KJ ) which of the following properties represents the ''constant\" in the above relation:-",
     "options": {
       "A": "Electron affinity",
       "B": "Ionisation energy",
@@ -689,7 +689,7 @@
       "source": "Atomic Structure - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the potential energy (PE) of hydrogen electron is -3.02eV then in which of the following excited level is electron present :-",
+    "question": "If the potential energy (PE) of hydrogen electron .02eV then in which of the following excited level is electron present :-",
     "options": {
       "A": "1 st",
       "B": "2 nd",
@@ -822,7 +822,7 @@
       "D": "9/4"
     },
     "correct_option": "A",
-    "explanation": "From h p λ = λ e = λ photon ⇒ h mv = 5200 × 10 -10 m ⇒ 34 31 10 6.6 10 Js v 9.1 10 kg 5200 10 m - - - × = × × × = 1400 ms -1"
+    "explanation": "From h p λ = λ e = λ photon ⇒ h mv = 5200 × 10 -10 m ⇒ 34 31 10 6.6 10 Js v 9.1 10 kg 5200 10 m - - - × = × × × = 1400"
   },
   {
     "type": "normal_mcq",
@@ -847,7 +847,7 @@
       "D": "12.75 eV"
     },
     "correct_option": "A",
-    "explanation": "Given, nh mvr 2 = π ∴ nh 2 π = 4.2178 × 10 -34 or 34 34 4.2178 10 2 3.14 n 6.625 10 - - × × × = × = 4 Thus, H 2 2 1 2 1 1 1 R n n [ ] = - [ ] λ [ ] The transition spectral line for 4 th to 3 rd shell is 2 2 1 1 1 109678 3 4 [ ] = - [ ] λ [ ] λ = 1.8 × 10 -4 cm"
+    "explanation": "Given, nh mvr 2 = π ∴ nh 2 π = 4.2178 × 10 -34 .2178 10 2 3.14 n 6.625 10 - - × × × = × = 4 Thus, H 2 2 1 2 1 1 1 R n n [ ] = - [ ] λ [ ] The transition spectral line for 4 th to 3 rd shell is 2 2 1 1 1 109678 3 4 [ ] = - [ ] λ [ ] λ = 1.8 × 10 -4 cm"
   },
   {
     "type": "normal_mcq",
@@ -1193,10 +1193,10 @@
     },
     "question": "What is the wave number of first line of Balmer series of Li 2+ ion :-",
     "options": {
-      "A": "15200 cm -1",
+      "A": "15200",
       "B": "13680000 m -1",
-      "C": "76000 cm -1",
-      "D": "13680 cm -1"
+      "C": "76000",
+      "D": "13680"
     },
     "correct_option": "B",
     "explanation": "Ionisation energy of He ⊕ ion = E ∞ - E 1 = 0 - (-21.8 × 10 -18 × 4 1 ) = 8.72 × 10 -18 J"
@@ -1544,9 +1544,9 @@
     },
     "question": "The first emission line in the H-atom spectrum in the Balmer series will have wave number :-",
     "options": {
-      "A": "5R 36 cm -1",
-      "B": "3 R 4 cm -1",
-      "C": "7R 144 cm -1",
+      "A": "5R 36",
+      "B": "3 R 4",
+      "C": "7R 144",
       "D": "9 R 400 m -"
     },
     "correct_option": "A",
@@ -2636,7 +2636,7 @@
       "D": "11"
     },
     "correct_option": "A",
-    "explanation": "∆ v = 1 cms -1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
+    "explanation": "∆ v = 1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
   },
   {
     "type": "normal_mcq",
@@ -2706,7 +2706,7 @@
     "question": "The frequency of light for 1.0 Å wavelength is:-",
     "options": {
       "A": "3 × 10 18 Hz",
-      "B": "3 × 10 18 sec -1",
+      "B": "3 × 10 18",
       "C": "3 × 10 18 Cycles per sec",
       "D": "All of the above"
     },
@@ -2911,7 +2911,7 @@
       "D": "2P z , 3P z"
     },
     "correct_option": "A",
-    "explanation": "∆ x × ∆ p  h 4 π Since ∆ x = ∆ p therefore, ( ∆ p) 2 = h 4 π or ∆ p = m ∆ν = h 4 π and ∆ v = 1 h 2m π $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "∆ x × ∆ p  h 4 π Since ∆ x = ∆ p therefore, ( ∆ p) 2 = h 4 π or ∆ p = m ∆ν = h 4 π and ∆ v = 1 h 2m π $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -2928,7 +2928,7 @@
       "source": "Atomic Structure - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the total energy of an electron in a hydrogen atom in an exicted state is -3.4 eV, then the de- broglie wavelength of the electron is :-",
+    "question": "If the total energy of an electron in a hydrogen atom in an exicted state .4 eV, then the de- broglie wavelength of the electron is :-",
     "options": {
       "A": "6.65 × 10 -10 m",
       "B": "3 × 10 -10 m",
@@ -2936,7 +2936,7 @@
       "D": "9.3 × 10 -12 m"
     },
     "correct_option": "A",
-    "explanation": "Circumference of 4 th orbit = 2 π r 4 and angular momentum m ν r 4 = 4h 2 π ...(i) de-broglie wavelength λ = h m ν & m ν = h λ ...(ii) therefore from eq.(1) and (ii) h λ r 4 = 4h 2 π or 2 π r 4 = 4 λ and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
+    "explanation": "Circumference of 4 th orbit = 2 π r 4 and angular momentum m ν r 4 = 4h 2 π ...(i) de-broglie wavelength λ = h m ν & m ν = h λ ...(ii) therefore from eq.(1) and (ii) h λ r 4 = 4h 2 π π r 4 = 4 λ and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
   },
   {
     "type": "normal_mcq",
@@ -2961,7 +2961,7 @@
       "D": "10 -40 m $//"
     },
     "correct_option": "A",
-    "explanation": "∆ v = 1 cms -1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
+    "explanation": "∆ v = 1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
   },
   {
     "type": "normal_mcq",
@@ -3386,7 +3386,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "From h p λ = λ e = λ photon ⇒ h mv = 5200 × 10 -10 m ⇒ 34 31 10 6.6 10 Js v 9.1 10 kg 5200 10 m - - - × = × × × = 1400 ms -1"
+    "explanation": "From h p λ = λ e = λ photon ⇒ h mv = 5200 × 10 -10 m ⇒ 34 31 10 6.6 10 Js v 9.1 10 kg 5200 10 m - - - × = × × × = 1400"
   },
   {
     "type": "normal_mcq",
@@ -3411,7 +3411,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Given, nh mvr 2 = π ∴ nh 2 π = 4.2178 × 10 -34 or 34 34 4.2178 10 2 3.14 n 6.625 10 - - × × × = × = 4 Thus, H 2 2 1 2 1 1 1 R n n [ ] = - [ ] λ [ ] The transition spectral line for 4 th to 3 rd shell is 2 2 1 1 1 109678 3 4 [ ] = - [ ] λ [ ] λ = 1.8 × 10 -4 cm"
+    "explanation": "Given, nh mvr 2 = π ∴ nh 2 π = 4.2178 × 10 -34 .2178 10 2 3.14 n 6.625 10 - - × × × = × = 4 Thus, H 2 2 1 2 1 1 1 R n n [ ] = - [ ] λ [ ] The transition spectral line for 4 th to 3 rd shell is 2 2 1 1 1 109678 3 4 [ ] = - [ ] λ [ ] λ = 1.8 × 10 -4 cm"
   },
   {
     "type": "normal_mcq",
@@ -3436,7 +3436,7 @@
       "D": "NO, CN - , N 2 , O 2 -"
     },
     "correct_option": "A",
-    "explanation": "Number of radial nodes = (n - l - 1) In given graph 2 radial nodes are present and graph starts from origin so orbital is (s) i.e. l = 0 n - 0 - 1 = 2 n = 3 so orbital is 3s $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "Number of radial nodes = (n - l - 1) In given graph 2 radial nodes are present and graph starts from origin so orbital is (s) i.e. l = 0 n - 0 - 1 = 2 n = 3 so orbital is 3s $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -3453,12 +3453,12 @@
       "source": "Atomic Structure - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The specific charge of a proton is 9.6 × 10 7 C kg -1 , then for an α -particle it will be -",
+    "question": "The specific charge of a proton is 9.6 × 10 7 C , then for an α -particle it will be -",
     "options": {
-      "A": "2.4 × 10 7 C kg -1",
-      "B": "4.8 × 10 7 C kg -1",
-      "C": "19.2 × 10 7 C kg -1",
-      "D": "38.4 × 10 7 C kg -1"
+      "A": "2.4 × 10 7 C",
+      "B": "4.8 × 10 7 C",
+      "C": "19.2 × 10 7 C",
+      "D": "38.4 × 10 7 C"
     },
     "correct_option": "A",
     "explanation": "Number of radial 1s 2s 2p x 2p y 2p z nodes for 0 1 0 0 0 Number of angular 0 0 1 1 1 nodes total nodes = 4"
@@ -3578,7 +3578,7 @@
       "source": "Atomic Structure - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The ionisation potential of hydrogen atom is 13.6 V. The energy required to remove an electron from the n = 2 state of hydrogen atom is.",
+    "question": "The ionisation potential of hydrogen atom is 13.6\n\nV. The energy required to remove an electron from the n = 2 state of hydrogen atom is.",
     "options": {
       "A": "27.2 V",
       "B": "13.6 V",

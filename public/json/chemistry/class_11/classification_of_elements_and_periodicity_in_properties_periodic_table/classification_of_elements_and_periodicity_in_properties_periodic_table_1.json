@@ -191,7 +191,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is wrong : -",
+    "question": "Which of the following\n\nstatement is wrong : -",
     "options": {
       "A": "4 th period contains 18 elements",
       "B": "3 rd period contains 18 elements",
@@ -295,7 +295,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which statement is wrong for the long form of periodic table : -",
+    "question": "Which\n\nstatement is wrong for the long form of periodic table : -",
     "options": {
       "A": "Number of periods are 7 and groups 18",
       "B": "No. of valence shell electrons in a period are same",
@@ -705,7 +705,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is wrong for the transition elements : -",
+    "question": "Which of the following\n\nstatement is wrong for the transition elements : -",
     "options": {
       "A": "Transition elements are placed from 3 rd to 6 th period.",
       "B": "Last electron enters in",
@@ -809,7 +809,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "True statement is : -",
+    "question": "True\n\nstatement is : -",
     "options": {
       "A": "All the transuranic elements are synthetic elements",
       "B": "Elements of third group are called bridge elements",
@@ -862,9 +862,9 @@
     },
     "question": "Elements having ns 2 np 6 valence shell electronic configuration lies in : -",
     "options": {
-      "A": "Z ero group and 1 st - 7 th period",
-      "B": "18 th group and 2 nd - 7 th period",
-      "C": "18 th group and 1 st - 6 th period",
+      "A": "Z ero group and 1 th period",
+      "B": "18 th group and 2 th period",
+      "C": "18 th group and 1 th period",
       "D": "All are correct PT04 - 0026"
     },
     "correct_option": "B",
@@ -990,7 +990,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is not correct for given electronic configuration 1s 2 2s 2 2p 6 3s 2 3p 6 3d 10 4s 2 4p 6 4d 10 4f 14 5s 2 5p 6 5d 10 6s 2",
+    "question": "Which of the following\n\nstatement is not correct for given electronic configuration 1s 2 2s 2 2p 6 3s 2 3p 6 3d 10 4s 2 4p 6 4d 10 4f 14 5s 2 5p 6 5d 10 6s 2",
     "options": {
       "A": "It belongs to IIB group and 6 th period",
       "B": "It is liquid at room temperature",
@@ -1018,7 +1018,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which statement is false: -",
+    "question": "Which\n\nstatement is false: -",
     "options": {
       "A": "Screening effect increases down the group",
       "B": "Z eff decreases down the group",
@@ -1126,7 +1126,7 @@
       "D": "Pd > Pt > Ni PT08 - 0014"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) G roup - 4"
+    "explanation": "Ans. ( 1 ) G"
   },
   {
     "type": "normal_mcq",
@@ -1497,7 +1497,7 @@
       "source": "Exercise I-III - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Incorrect statement is : -",
+    "question": "Incorrect\n\nstatement is : -",
     "options": {
       "A": "Atomic size  Z eff",
       "B": "Atomic size  N egative charge",
@@ -1552,7 +1552,7 @@
       "A": "Br - > S - 2 > Cl - > N - 3",
       "B": "In 3 - > S - 2 > Cl - > Br -",
       "C": "Br - > Cl - > S - 2 > N - 3",
-      "D": "In - 3 > Cl - > S - 2 > Br - PT10 - 0009"
+      "D": "> Cl - > S - 2 > Br - PT10 - 0009"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 1 )"
@@ -1574,10 +1574,10 @@
     },
     "question": "Which of the following sequence is correct for decreasing order of ionic radius : -",
     "options": {
-      "A": "Se - 2 , I - , Br - , O - 2 , F -",
-      "B": "I - , Se - 2 , O - 2 , Br - , F -",
-      "C": "Se - 2 , I - , Br - , F - , O - 2",
-      "D": "I - , Se - 2 , Br - , O - 2 , F - PT10 - 0008"
+      "A": ", I - , Br - , O - 2 , F -",
+      "B": "I - , , O - 2 , Br - , F -",
+      "C": ", I - , Br - , F - , O - 2",
+      "D": "I - , , Br - , O - 2 , F - PT10 - 0008"
     },
     "correct_option": "D",
     "explanation": "Ans. ( 4 ) I¯ > Se¯² > Br¯ > O¯² > F¯¹ : Correct order"
@@ -2081,7 +2081,7 @@
     "options": {
       "A": "Na + , Mg +2",
       "B": "Mg +2 , N - 3",
-      "C": "In - 3 , Mg +2",
+      "C": ", Mg +2",
       "D": "O - 2 , N - 3 PT12 - 0018"
     },
     "correct_option": "C",
@@ -3441,7 +3441,7 @@
       "source": "Extra Edge - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The correct values of ionization enthalpies (in kJ mol - 1 ) of Si, P, Cl and S respectively are: -",
+    "question": "The correct values of ionization enthalpies (in kJ ) of Si, P, Cl and S respectively are: -",
     "options": {
       "A": "786, 1012, 999, 1256",
       "B": "1012, 786, 999, 1256",
@@ -3757,7 +3757,7 @@
       "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given below is the graph shown between \\Delta i H (Ionisation enthalpy) and atomic number (z). \\Delta i H ( KJ mol - 1 ) K Na Li x y z identify the elements which are at the peaks of the curve.",
+    "question": "Given below is the graph shown between \\Delta i H (Ionisation enthalpy) and atomic number (z). \\Delta i H ( KJ ) K Na Li x y z identify the elements which are at the peaks of the curve.",
     "options": {
       "A": "Alkali metals",
       "B": "Alkaline earth metals",

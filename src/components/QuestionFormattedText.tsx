@@ -13,14 +13,13 @@ interface QuestionFormattedTextProps {
 export default function QuestionFormattedText({ text, className = '', inline = false }: QuestionFormattedTextProps) {
   if (!text) return null;
 
-  // Pre-process text to standardize math delimiters
-  // Convert \( ... \) to $ ... $ and \[ ... \] to $$ ... $$
+  // Auto-format Statement Questions (I., II., III., IV., V., Statement I, Statement II) onto clean separate lines
   let processedText = text
     .replace(/\\\(|\\\)/g, '$')
-    .replace(/\\\[|\\\]/g, '$$');
-
-  // Handle common plain-text math patterns like 10^2 -> $10^2$ if not inside $
-  // Keep intact if Markdown already contains math
+    .replace(/\\\[|\\\]/g, '$$')
+    .replace(/\s+(I\.|II\.|III\.|IV\.|V\.|VI\.|VII\.|VIII\.)\s+/g, '\n\n$1 ')
+    .replace(/\s+(Statement\s+[I|V|X\d]+:?)/gi, '\n\n$1')
+    .replace(/\s+(Options:?|Select the correct option:?)/gi, '\n\n**$1**');
 
   if (inline) {
     return (
@@ -39,12 +38,12 @@ export default function QuestionFormattedText({ text, className = '', inline = f
   }
 
   return (
-    <div className={`markdown-body text-gray-900 leading-relaxed ${className}`}>
+    <div className={`markdown-body text-gray-900 leading-relaxed whitespace-pre-line ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkMath]}
         rehypePlugins={[rehypeKatex]}
         components={{
-          p: ({ children }) => <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>,
+          p: ({ children }) => <p className="mb-3 last:mb-0 leading-relaxed">{children}</p>,
         }}
       >
         {processedText}

@@ -587,7 +587,7 @@
       "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two particles of equal mass have velocities 1 ˆ v 2i = \\rho ms - 1 and 2 ˆ v 2j = \\rho ms -",
+    "question": "Two particles of equal mass have velocities 1 ˆ v 2i = \\rho and 2 ˆ v 2j = \\rho ms -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -610,7 +610,7 @@
       "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "First particle has an acceleration ( ) 1 ˆ ˆ a 3i 3j = + \\rho ms - 2 while the acceleration of the other particles is zero then COM of both particles moves in a path of: -",
+    "question": "First particle has an acceleration ( ) 1 ˆ ˆ a 3i 3j = + \\rho while the acceleration of the other particles is zero then COM of both particles moves in a path of: -",
     "options": {
       "A": "straight line",
       "B": "parabola",
@@ -702,12 +702,12 @@
       "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The bob A of a pendulum of mass m released from horizontal to the vertical hits another bob B of the same mass at rest on a table as shown in figure. If the length of the pendulum is 1m, what is the speed with which bob B starts moving. (Neglect the size of the bobs and assume the collision to be elastic) (Take g = 10 ms - 2 ) :",
+    "question": "The bob A of a pendulum of mass m released from horizontal to the vertical hits another bob B of the same mass at rest on a table as shown in figure. If the length of the pendulum is 1m, what is the speed with which bob B starts moving. (Neglect the size of the bobs and assume the collision to be elastic) (Take g = 10 ) :",
     "options": {
-      "A": "4.47 ms - 1",
-      "B": "5.47 ms - 1",
-      "C": "6.47 ms - 1",
-      "D": "3.47 ms - 1 CM10 - 0113 1"
+      "A": "4.47",
+      "B": "5.47",
+      "C": "6.47",
+      "D": "3.47 CM10 - 0113 1"
     },
     "correct_option": "B",
     "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
@@ -725,7 +725,7 @@
       "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A spherical ball A of mass 4 kg, moving along a straight line strike another spherical ball B of mass 1 kg at rest. After the collision, A and B move with velocities v 1 ms - 1 a v 2 ms - 1 respectively making angles of 30^\\circ and 60^\\circ with respect to the original direction of motion of A. The ratio 1 2 v v will be : -",
+    "question": "A spherical ball A of mass 4 kg, moving along a straight line strike another spherical ball B of mass 1 kg at rest. After the collision, A and B move with velocities v 1 a v 2 respectively making angles of 30^\\circ and 60^\\circ with respect to the original direction of motion of A. The ratio 1 2 v v will be : -",
     "options": {
       "A": "3 4",
       "B": "4 3",
@@ -733,7 +733,7 @@
       "D": "3 CM14 - 0014 1"
     },
     "correct_option": "D",
-    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
   },
   {
     "type": "normal_mcq",
@@ -1009,7 +1009,7 @@
       "D": "mLcos m M \\theta + CM05 - 0221 2"
     },
     "correct_option": "D",
-    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
   },
   {
     "type": "normal_mcq",
@@ -1216,7 +1216,7 @@
       "D": "Both statements are false 3"
     },
     "correct_option": "D",
-    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
   },
   {
     "type": "normal_mcq",
@@ -1285,7 +1285,7 @@
       "D": "if the stick has a shape such that if it’s centre of mass is located at some point on it and not outside it. CM10 - 0114 3"
     },
     "correct_option": "D",
-    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
   },
   {
     "type": "normal_mcq",
@@ -1553,7 +1553,7 @@
       "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two billiard balls of mass 0.05 kg each moving in opposite directions with 10 ms - 1 collide and rebound with the same speed. If the time duration of contact is t = 0.005 s, then what is the force exerted on the ball due to each other?",
+    "question": "Two billiard balls of mass 0.05 kg each moving in opposite directions with 10 collide and rebound with the same speed. If the time duration of contact is t = 0.005 s, then what is the force exerted on the ball due to each other?",
     "options": {
       "A": "100 N",
       "B": "200 N",

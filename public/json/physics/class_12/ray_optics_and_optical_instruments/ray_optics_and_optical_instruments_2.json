@@ -61,10 +61,10 @@
     },
     "question": "If the refractive index of water is 4 3 and that of glass slab is 5 3 , then the critical angle of incidence for which a light ray tending to go from glass to water is totally reflected is : -",
     "options": {
-      "A": "sin - 1 3 4 (  ( ) ) ",
-      "B": "sin - 1 3 5 (  ( ) ) ",
-      "C": "sin - 1 2 3 (  ( ) ) ",
-      "D": "sin - 1 4 5 (  ( ) )  RO22 - 0016 1"
+      "A": "4 (  ( ) ) ",
+      "B": "5 (  ( ) ) ",
+      "C": "3 (  ( ) ) ",
+      "D": "5 (  ( ) )  RO22 - 0016 1"
     },
     "correct_option": "C",
     "explanation": "- = - v f u f u - = - - - v 10 20 10 ( 20) v =  20 10 30 or v = 20 3 cm v is (+) ve, so, virtual image"
@@ -113,7 +113,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "Ist method \\mu \\theta = = \\theta = \\mu R c c d 3 3 2 sin sin 2 2 \\theta c = 60^\\circ r = 90^\\circ - \\theta c = 90^\\circ - 60^\\circ r = 30^\\circ Now, 1 × sini = 2 × sin(30^\\circ) i = 45^\\circ IInd method sin i = - 2 2 1 2 n n = ( ) (  - ( ) ( ) )  2 2 3 2 2 = 1 2  = ^\\circ i 45",
+    "explanation": "Ist method \\mu \\theta = = \\theta = \\mu R c c d 3 3 2 sin sin 2 2 \\theta c = 60^\\circ r = 90^\\circ - \\theta c = 90^\\^\\circ r = 30^\\circ Now, 1 × sini = 2 × sin(30^\\circ) i = 45^\\circ IInd method sin i = - 2 2 1 2 n n = ( ) (  - ( ) ( ) )  2 2 3 2 2 = 1 2  = ^\\circ i 45",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAADWCAIAAAACQXbBAAAAs0lEQVR42u3OAQ0AAAgDILV/55vjGyRgk0ybm0LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSzekHUosEqYKlJ7EAAAAASUVORK5CYII="
   },
   {
@@ -485,7 +485,7 @@
       "D": "30^\\circ RO24 - 0006 3"
     },
     "correct_option": "B",
-    "explanation": "  = i 1 + i 2 - A 30^\\circ = 60^\\circ + i 2 - 30^\\circ i 2 = 0^\\circ Means, emergent ray goes along the normal & it will make angle with the second face of the prism is \\theta = 90^\\circ - 0^\\circ = 90^\\circ 20 cm 20 cm 1 2 3 20 cm 30 cm μ = 1.5 O u 10 cm R=10 cm μ = 1 A B \\theta \\theta r = 90^\\circ B i A 3"
+    "explanation": "  = i 1 + i 2 - A 30^\\circ = 60^\\circ + i 2 - 30^\\circ i 2 = 0^\\circ Means, emergent ray goes along the normal & it will make angle with the second face of the prism is \\theta = 90^\\^\\circ = 90^\\circ 20 cm 20 cm 1 2 3 20 cm 30 cm μ = 1.5 O u 10 cm R=10 cm μ = 1 A B \\theta \\theta r = 90^\\circ B i A 3"
   },
   {
     "type": "normal_mcq",
@@ -823,7 +823,7 @@
       "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The difference of speed of light in the two media A and B (v A - v B ) is 2.6 × 10 7 m/s. If the refractive index of medium B is 1.47, then the ratio of refractive index of medium B to medium A is : (Given : speed of light in vacuum c = 3 × 10 8 ms - 1 )",
+    "question": "The difference of speed of light in the two media A and B (v A - v B ) is 2.6 × 10 7 m/s. If the refractive index of medium B is 1.47, then the ratio of refractive index of medium B to medium A is : (Given : speed of light in vacuum c = 3 × 10 8 )",
     "options": {
       "A": "1.303",
       "B": "1.318",
@@ -924,7 +924,7 @@
       "D": "1 3 sin 4 - (  \\theta  ( ) )  RO22 - 0020"
     },
     "correct_option": "D",
-    "explanation": "sin i c =  = =  10 d r 10 d r C n 1.5 10 n C 2 10 i sin i c = 3 4 Your Target is to secure Good Rank in = sin - 1 (  ( ) )  3 4 for T I R \\theta > i c \\theta > sin - 1 (  ( ) )  3 4"
+    "explanation": "sin i c =  = =  10 d r 10 d r C n 1.5 10 n C 2 10 i sin i c = 3 4 Your Target is to secure Good Rank in = (  ( ) )  3 4 for T I R \\theta > i c \\theta > (  ( ) )  3 4"
   },
   {
     "type": "normal_mcq",
@@ -962,7 +962,7 @@
       "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Light travels in two media M 1 and M 2 with speeds 1.5 × 10 8 ms - 1 and 2.0 × 10 8 ms - 1 respectively. The critical angle between them is:",
+    "question": "Light travels in two media M 1 and M 2 with speeds 1.5 × 10 8 and 2.0 × 10 8 respectively. The critical angle between them is:",
     "options": {
       "A": "1 3 tan 7 - (  ( ) ) ",
       "B": "1 2 tan 3 - (  ( ) ) ",
@@ -1102,7 +1102,7 @@
       "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The light rays from an object have been reflected towards an observer from a standard flat mirror, the image observed by the observer is : - A. Real B. Erect C. Smaller in size then object D. Laterally inverted Choose the most appropriate answer from the options given below :",
+    "question": "The light rays from an object have been reflected towards an observer from a standard flat mirror, the image observed by the observer is : - A. Real B. Erect C. Smaller in size then object D. Laterally inverted Choose the most appropriate answer from the\n\n**options** given below :",
     "options": {
       "A": "B and D only",
       "B": "B and C only",
@@ -1241,7 +1241,7 @@
       "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A ray of light travelling in air have wavelength λ , frequency n, velocity V and intensity I. If this ray enters into water than these parameters are λ ' , n', v' and I' respectively. Which relation is correct from following-",
+    "question": "A ray of light travelling in air have wavelength λ , frequency n, velocity V and intensity\n\nI. If this ray enters into water than these parameters are λ ' , n', v' and I' respectively. Which relation is correct from following-",
     "options": {
       "A": "λ = λ '",
       "B": "In = n'",
@@ -1523,7 +1523,7 @@
       "A": "If ' = f, f \" = 2f",
       "B": "If ' = 2f, f \" = f",
       "C": "If ' = f, f \" = f",
-      "D": "If ' = 2f, f \" = 2f ALLEN : Physics 51"
+      "D": "If ' = 2f, f \" = 2f ALLEN :"
     },
     "correct_option": "A",
     "explanation": "f' f or f\" f\"=2f f'=f 1 2 (μ 1) f R   = -     R f 2(μ 1) = - R f ' 2(μ 1) = - R f \" μ 1 = - ∴ f' = f & f\" = 2f",
@@ -1660,9 +1660,9 @@
     "question": "If the achromatic combination of these two lenses in contact is a convex lens of focal length 60 cm then the focal lengths of the component lenses are",
     "options": {
       "A": "- 20 cm and 25 cm",
-      "B": "20 cm and - 25 cm",
+      "B": "20 cm cm",
       "C": "- 15 cm and 40 cm",
-      "D": "15 cm and - 20 cm"
+      "D": "15 cm cm"
     },
     "correct_option": "D",
     "explanation": "From mirror equation 1 v + 1 u = 1 f ⇒ 1 v + 1 f / 2 - = 1 f ⇒ v = f 3 and m = - v u = - f / 3 f / 2 - = 2 3 so image will be virtual, erect and smaller than object"
@@ -1680,7 +1680,7 @@
       "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two lenses of focal length + 10 cm and - 15 cm when put in contact behave like a convex lens. They will have zero longitudinal chromatic aberration if their dispersive powers are in the ratio",
+    "question": "Two lenses of focal length + 10 cm cm when put in contact behave like a convex lens. They will have zero longitudinal chromatic aberration if their dispersive powers are in the ratio",
     "options": {
       "A": "+ 3/2",
       "B": "+ 2/3",
@@ -1826,7 +1826,7 @@
       "D": "O"
     },
     "correct_option": "A",
-    "explanation": "R = -36 cm, f = -18 cm m = f -18 -18 f - u -18 - (-27) 9 = = = -2 (inverted) m = -v u ⇒ -2 = -v -27 ⇒ v= -54 cm (Real image) m = i 0 h h ⇒ h i = m × h 0 ⇒ h i = -2 × 2.5 = -5 cm BEGINNER'S BOX - 2",
+    "explanation": "R = -36 cm, f = -18 cm m = f -18 -18 f - u -18 - (-27) 9 = = = -2 (inverted) m = -v u ⇒ -2 = -v -27 ⇒ v= -54 cm (Real image) m = i 0 h h ⇒ h i = m × h 0 ⇒ h i = -2 × 2.5 = -5 cm BEGINNER'S",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAAA0CAIAAACrXVuoAAAAd0lEQVR42u3SQQ0AAAjEMMC/50MFCY9WwrJOUnBmJMBhOAwchsNwGDgMh+EwcBgOA4fhMBwGDsNhOAwchsNwGDgMh4HDcBgOA4fhMBwGDsNhOAwchsPAYTgMh4HDcBgOA4fhMBwGDsNh4DAchsPAYTgMh4HDeGkB/HsDZSLJYrwAAAAASUVORK5CYII="
   },
   {

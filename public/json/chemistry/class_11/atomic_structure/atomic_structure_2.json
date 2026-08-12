@@ -189,7 +189,7 @@
       "source": "Atomic Structure - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If I.P. of H atom is 16 V. What is the value of first excitation potential :-",
+    "question": "If I.P. of H atom is 16\n\nV. What is the value of first excitation potential :-",
     "options": {
       "A": "10·2 V",
       "B": "12 V",
@@ -1268,10 +1268,10 @@
     },
     "question": "The energy of one mole photons of radiation having frequency 5.01 × 10 14 Hz is :",
     "options": {
-      "A": "160 KJ mol - 1",
-      "B": "180 KJ mol - 1",
-      "C": "200 KJ mol - 1",
-      "D": "220 KJ mol - 1 AS07 - 0002 BOHR'S ATOMIC MODEL"
+      "A": "160 KJ",
+      "B": "180 KJ",
+      "C": "200 KJ",
+      "D": "220 KJ AS07 - 0002 BOHR'S ATOMIC MODEL"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 3 ) E = h  E = 6.626 × 10¯³⁴ × 5.01 × 10¹⁴ Thus the energy of 1 mole E = 33.19 × 10¯²⁰ × 6.023 ×10 23 = 200 KJ/mole"
@@ -1541,7 +1541,7 @@
       "source": "Exercise I-III - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In a hydrogen atom, if energy of an electron in ground state is - 13.6 eV, then energy in the 2 nd excited state is : -",
+    "question": "In a hydrogen atom, if energy of an electron in ground state .6 eV, then energy in the 2 nd excited state is : -",
     "options": {
       "A": "- 1.51 eV",
       "B": "- 3.4 eV",
@@ -1692,7 +1692,7 @@
       "source": "Exercise I-III - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the potential energy (PE) of electron of hydrogen atom is - 3.02 eV then in which of the following excited level is electron present : -",
+    "question": "If the potential energy (PE) of electron of hydrogen atom .02 eV then in which of the following excited level is electron present : -",
     "options": {
       "A": "1 st",
       "B": "2 nd",
@@ -2070,10 +2070,10 @@
     },
     "question": "The limiting line in Balmer series will have a frequency of : -",
     "options": {
-      "A": "3.65 × 10 14 sec - 1",
-      "B": "3.29 × 10 15 sec - 1",
-      "C": "8.22 × 10 14 sec - 1",
-      "D": "- 8.22 × 10 14 sec - 1 AS14 - 0011"
+      "A": "3.65 × 10 14",
+      "B": "3.29 × 10 15",
+      "C": "8.22 × 10 14",
+      "D": "- 8.22 × 10 14 AS14 - 0011"
     },
     "correct_option": "C",
     "explanation": "Ans. ( 3 )  = c R Z 2 2 2 1 2 1 1 n n   -      = 3 × 10 8 × 1.1 × 10 7 × (1) 2 2 2 1 1 2   -       = 8.22 × 10 14 s ec¯¹ NEET : Chemistry"
@@ -2424,7 +2424,7 @@
       "source": "Exercise I-III - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Calculate the uncertainty in the position of an electron (mass 9.1 × 10 - 28 g) moving with a velocity of 3 × 10 4 cm sec - 1 , if the uncertainty in velocity is 0.011% ?",
+    "question": "Calculate the uncertainty in the position of an electron (mass 9.1 × 10 - 28 g) moving with a velocity of 3 × 10 4 cm , if the uncertainty in velocity is 0.011% ?",
     "options": {
       "A": "1.92 cm",
       "B": "7.68 cm",
@@ -2728,7 +2728,7 @@
       "source": "Exercise I-III - Atomic Structure.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which statement is not correct for n = 5, m =",
+    "question": "Which\n\nstatement is not correct for n = 5, m =",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3316,7 +3316,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 2 ) 2 2 1 1 2 2 2 2 2 1 E Z n E Z n =  18 2 2 2 2 2 ( 19.6 10 ) 2 1 E 3 1 - -  =  E 2 = - 4.41 × 10 - 17 J atom - 1"
+    "explanation": "Ans. ( 2 ) 2 2 1 1 2 2 2 2 2 1 E Z n E Z n =  18 2 2 2 2 2 ( 19.6 10 ) 2 1 E 3 1 - -  =  E 2 = - 4.41 × 10 - 17 J"
   },
   {
     "type": "normal_mcq",
@@ -3335,13 +3335,13 @@
     },
     "question": "The energy of first stationary state (n =1) of Li +2 is : -",
     "options": {
-      "A": "4.41 × 10 - 16 J atom - 1",
-      "B": "- 4.41 × 10 - 17 J atom - 1",
-      "C": "- 2.20 × 10 - 15 J atom - 1",
-      "D": "8.82 × 10 - 17 J atom - 1 AS12 - 0029"
+      "A": "4.41 × 10 - 16 J",
+      "B": "- 4.41 × 10 - 17 J",
+      "C": "- 2.20 × 10 - 15 J",
+      "D": "8.82 × 10 - 17 J AS12 - 0029"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 2 ) 2 2 1 1 2 2 2 2 2 1 E Z n E Z n =  18 2 2 2 2 2 ( 19.6 10 ) 2 1 E 3 1 - -  =  E 2 = - 4.41 × 10 - 17 J atom - 1"
+    "explanation": "Ans. ( 2 ) 2 2 1 1 2 2 2 2 2 1 E Z n E Z n =  18 2 2 2 2 2 ( 19.6 10 ) 2 1 E 3 1 - -  =  E 2 = - 4.41 × 10 - 17 J"
   },
   {
     "type": "normal_mcq",
@@ -3743,7 +3743,7 @@
       "D": "15 8 10 9  AS09 - 0365"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 2 ) 2 2 1 1 2 2 2 2 2 1 E Z n E Z n =  18 2 2 2 2 2 ( 19.6 10 ) 2 1 E 3 1 - -  =  E 2 = - 4.41 × 10 - 17 J atom - 1"
+    "explanation": "Ans. ( 2 ) 2 2 1 1 2 2 2 2 2 1 E Z n E Z n =  18 2 2 2 2 2 ( 19.6 10 ) 2 1 E 3 1 - -  =  E 2 = - 4.41 × 10 - 17 J"
   },
   {
     "type": "normal_mcq",

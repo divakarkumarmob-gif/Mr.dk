@@ -622,7 +622,7 @@
     "question": "Which of the following actinide element does not found in nature ?",
     "options": {
       "A": "Th 90",
-      "B": "Pa 91",
+      "B": "",
       "C": "U 92",
       "D": "Lr 103"
     },
@@ -2633,7 +2633,7 @@
       "D": "[Ni"
     },
     "correct_option": "A",
-    "explanation": "(1) [Fe(CN) 6 ] 3- EAN = 35 [Fe(NH 3 ) 6 ] 3+ EAN = 35 (2) [Cr(NH 3 ) 6 ] 3+ EAN = 33 [Cr(CN) 6 ] 3- EAN = 33 (3) [FeF 6 ] 3- EAN = 35 [Fe(CN) 6 ] 3- EAN = 35 (4) [Ni(CO) 4 ] EAN = 36 [Ni(CN) 4 ] 2- EAN = 34 $//(1 TARGET : 202 5 INORGANIC CHEMISTRY 202 5 HS"
+    "explanation": "(1) [Fe(CN) 6 ] 3- EAN = 35 [Fe(NH 3 ) 6 ] 3+ EAN = 35 (2) [Cr(NH 3 ) 6 ] 3+ EAN = 33 [Cr(CN) 6 ] 3- EAN = 33 (3) [FeF 6 ] 3- EAN = 35 [Fe(CN) 6 ] 3- EAN = 35 (4) [Ni(CO) 4 ] EAN = 36 [Ni(CN) 4 ] 2- EAN = 34 $//(1 TARGET : 202 5 INORGANIC 5 HS"
   },
   {
     "type": "normal_mcq",

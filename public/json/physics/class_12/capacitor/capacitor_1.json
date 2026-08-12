@@ -251,7 +251,7 @@
       "D": "a decrease in the energy of the system if Q 1 R 2 ≠ Q 2 R 1"
     },
     "correct_option": "A",
-    "explanation": "Zero charge appearing on capacitor B. Becuase circuit is not complete. 2 3 1 3 1 2 B A V $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "Zero charge appearing on capacitor B. Becuase circuit is not complete. 2 3 1 3 1 2 B A V $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -638,7 +638,7 @@
       "source": "Capacitor - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A parallel plate capacitor is charged by a battery. After charging the capacitor, battery is disconnected and distance between the plates is decreased then which of the following statement is correct ?",
+    "question": "A parallel plate capacitor is charged by a battery. After charging the capacitor, battery is disconnected and distance between the plates is decreased then which of the following\n\nstatement is correct ?",
     "options": {
       "A": "electric field does not remain constant",
       "B": "potential difference is increased",
@@ -1336,7 +1336,7 @@
       "source": "Capacitor - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Three capacitors of capacitances 3 μ F, 10 μ F and 15 μ F are connected in series to a voltage source of 100 V. The charge on 15 μ F is :",
+    "question": "Three capacitors of capacitances 3 μ F, 10 μ F and 15 μ F are connected in series to a voltage source of 100\n\nV. The charge on 15 μ F is :",
     "options": {
       "A": "50 μ C",
       "B": "160 μ C",
@@ -1568,7 +1568,7 @@
       "source": "Capacitor - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A capacitor of 0.2 μ F capacitance is charged to 600 V. After removing the battery, it is connected with a 1.0 μ F capacitor in parallel, then the potential difference across each capacitor will become :",
+    "question": "A capacitor of 0.2 μ F capacitance is charged to 600\n\nV. After removing the battery, it is connected with a 1.0 μ F capacitor in parallel, then the potential difference across each capacitor will become :",
     "options": {
       "A": "300 V",
       "B": "600 V",
@@ -1823,7 +1823,7 @@
       "source": "Capacitor - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A 40 μF capacitor in a defibrillator is charged to 3000 V. The energy stored in the capacitor is sent through the patient during a pulse of duration 2 ms. The power delivered to the patient is :",
+    "question": "A 40 μF capacitor in a defibrillator is charged to 3000\n\nV. The energy stored in the capacitor is sent through the patient during a pulse of duration 2 ms. The power delivered to the patient is :",
     "options": {
       "A": "45 kW",
       "B": "90 kW",
@@ -2134,7 +2134,7 @@
       "D": "2 q"
     },
     "correct_option": "A",
-    "explanation": "Zero charge appearing on capacitor B. Becuase circuit is not complete. 2 3 1 3 1 2 B A V $//(1 TARGET : 202 5 PHYSICS 202 5 HS",
+    "explanation": "Zero charge appearing on capacitor B. Becuase circuit is not complete. 2 3 1 3 1 2 B A V $//(1 TARGET : 202 5 5 HS",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
   },
   {
@@ -2387,10 +2387,10 @@
     },
     "question": "The value of the electric field in the region between the plates is :",
     "options": {
-      "A": "2.1 NC - 1",
-      "B": "21.6 NC - 1",
-      "C": "72 NC - 1",
-      "D": "8.4 NC - 1 CP02 - 0016"
+      "A": "2.1",
+      "B": "21.6",
+      "C": "72",
+      "D": "8.4 CP02 - 0016"
     },
     "correct_option": "A",
     "explanation": "Charge on capacitor = Charge of positive plate or negative plate. Net charge on capacitor = 0"
@@ -2667,7 +2667,7 @@
       "source": "Exercise I-III - Capacitor.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A circuit has a section AB as shown in the figure with E = 10 V, C 1 = 1.0 \\mu F, C 2 = 2.0 \\mu F and the potential difference V A - V B = 5 V. The voltage across C 1 is :",
+    "question": "A circuit has a section AB as shown in the figure with E = 10 V, C 1 = 1.0 \\mu F, C 2 = 2.0 \\mu F and the potential difference V A - V B = 5\n\nV. The voltage across C 1 is :",
     "options": {
       "A": "Zero",
       "B": "5 V",
@@ -2949,7 +2949,7 @@
       "source": "Exercise I-III - Capacitor.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Three capacitors of capacitances 3 \\mu F, 10 \\mu F and 15 \\mu F are connected in series to a voltage source of 100 V. The charge on 15 \\mu F is :",
+    "question": "Three capacitors of capacitances 3 \\mu F, 10 \\mu F and 15 \\mu F are connected in series to a voltage source of 100\n\nV. The charge on 15 \\mu F is :",
     "options": {
       "A": "50 \\mu C",
       "B": "160 \\mu C",
@@ -3159,7 +3159,7 @@
       "source": "Exercise I-III - Capacitor.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A capacitor of 0.2 \\mu F capacitance is charged to 600 V. After removing the battery, it is connected with a 1.0 \\mu F capacitor in parallel, then the potential difference across each capacitor will become :",
+    "question": "A capacitor of 0.2 \\mu F capacitance is charged to 600\n\nV. After removing the battery, it is connected with a 1.0 \\mu F capacitor in parallel, then the potential difference across each capacitor will become :",
     "options": {
       "A": "300 V",
       "B": "600 V",
@@ -3343,7 +3343,7 @@
       "source": "Extra Edge - Capacitor.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A 3 \\mu F capacitor is charged to a potential of 300 V and 2 \\mu F capacitor is charged to 200 V. The capacitors are then connected in parallel with plates of opposite polarities joined together. What amount of charge will flow, when the plates are so connected?",
+    "question": "A 3 \\mu F capacitor is charged to a potential of 300 V and 2 \\mu F capacitor is charged to 200\n\nV. The capacitors are then connected in parallel with plates of opposite polarities joined together. What amount of charge will flow, when the plates are so connected?",
     "options": {
       "A": "1300 \\mu C",
       "B": "800 \\mu C",
@@ -3436,7 +3436,7 @@
       "source": "Extra Edge - Capacitor.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "An air capacitor of capacity C = 10 \\mu F is connected to a constant voltage battery of 12 V. Now the space between the plates is filled with a liquid of dielectric constant",
+    "question": "An air capacitor of capacity C = 10 \\mu F is connected to a constant voltage battery of 12\n\nV. Now the space between the plates is filled with a liquid of dielectric constant",
     "options": {
       "A": "Option A",
       "B": "Option B",

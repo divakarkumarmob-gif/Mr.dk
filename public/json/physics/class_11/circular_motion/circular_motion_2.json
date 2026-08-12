@@ -271,7 +271,7 @@
       "A": "3gr",
       "B": "2gr",
       "C": "gr",
-      "D": "gr 2 CR13 - 0002 P 1m O A h D C 2R E B D O B C A m Circular Motion"
+      "D": "CR13 - 0002 P 1m O A h D C 2R E B D O B C A m Circular Motion"
     },
     "correct_option": "C",
     "explanation": "2 mv mg r = \\rho v gr ="
@@ -497,7 +497,7 @@
       "source": "NCR - Circular Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "What is approximately the centripetal acceleration (in units of acceleration due to gravity on earth, g = 10 ms - 2 ) of an air - craft flying at a speed of 400 ms - 1 through a circular arc of radius 0.6 km?",
+    "question": "What is approximately the centripetal acceleration (in units of acceleration due to gravity on earth, g = 10 ) of an air - craft flying at a speed of 400 through a circular arc of radius 0.6 km?",
     "options": {
       "A": "26.7",
       "B": "16.9",
@@ -566,12 +566,12 @@
       "source": "NCR - Circular Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A cyclist starts from centre O of a circular park of radius 1 km and moves along the path OPRQO as shown in figure. If he maintains constant speed of 10 ms - 1 , what is his acceleration at point R?",
+    "question": "A cyclist starts from centre O of a circular park of radius 1 km and moves along the path OPRQO as shown in figure. If he maintains constant speed of 10 , what is his acceleration at point R?",
     "options": {
-      "A": "10 ms - 2",
-      "B": "0.1 ms - 2",
-      "C": "0.01 ms - 2",
-      "D": "1 ms - 2 CR01 - 1786"
+      "A": "10",
+      "B": "0.1",
+      "C": "0.01",
+      "D": "1 CR01 - 1786"
     },
     "correct_option": "B",
     "explanation": "NCERT - XI, Pg. # 81 If v = const. then a t = 0 2 2 C V 100 a 0.1m /s R 1000m = = =",
@@ -659,7 +659,7 @@
       "source": "NCR - Circular Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A body of mass 1 kg is rotating in a vertical circle of radius 1 m with critical speed. What will be the difference in its kinetic energy at the top and bottom of the circle? (g = 10 ms - 2 )",
+    "question": "A body of mass 1 kg is rotating in a vertical circle of radius 1 m with critical speed. What will be the difference in its kinetic energy at the top and bottom of the circle? (g = 10 )",
     "options": {
       "A": "10 J",
       "B": "20 J",
@@ -754,10 +754,10 @@
     },
     "question": "When its tangential linear velocity is 30 m/s, the total acceleration will be :",
     "options": {
-      "A": "5.4 ms - 2",
-      "B": "3.9 ms - 2",
-      "C": "2.8 ms - 2",
-      "D": "2.1 ms - 2 CR01 - 0424 1"
+      "A": "5.4",
+      "B": "3.9",
+      "C": "2.8",
+      "D": "2.1 CR01 - 0424 1"
     },
     "correct_option": "B",
     "explanation": "NCERT - XI, Pg. # 81 For a particle moving is a circle with constant angular speed velocity vector is always tangential to the circle and the acceleration vector always points towards the centre of circular path and along the radius of the circle. Since, tangential vector is p erpendicular to radial vector, therefore velocity vector will be perpendicular to the acceleration vector, but in this case acceleration vector is not tangential to the circle."
@@ -1236,7 +1236,7 @@
       "source": "RACE - Circular Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The maximum velocity (in ms - 1 ) with which a car driver must traverse a flat curve of radius 150 m and coefficient of friction 0.6 to avoid skidding is : - (g = 10 m/s 2 )",
+    "question": "The maximum velocity (in ) with which a car driver must traverse a flat curve of radius 150 m and coefficient of friction 0.6 to avoid skidding is : - (g = 10 m/s 2 )",
     "options": {
       "A": "60",
       "B": "30",

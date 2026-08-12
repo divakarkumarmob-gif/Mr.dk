@@ -1022,7 +1022,7 @@
       "D": "None of above IE14 - 0005"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) For anionic hydrolysis, (WA + SB) type salt, pH = 7 + 1 2 pK a + 1 2 log C or 1 2 pK w + 1 2 pK a + 1 2 log C"
+    "explanation": "Ans. ( 3 ) For anionic hydrolysis, (WA + SB) type salt, pH = 7 + 1 2 pK a + 1 2 log C pK w + 1 2 pK a + 1 2 log C"
   },
   {
     "type": "normal_mcq",

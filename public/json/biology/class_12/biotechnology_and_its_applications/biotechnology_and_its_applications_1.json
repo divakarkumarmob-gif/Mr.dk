@@ -494,7 +494,7 @@
       "A": "Bacterial blights",
       "B": "Bollworms",
       "C": "Nematodes",
-      "D": "White rusts ALLEN : Biology 77"
+      "D": "White rusts ALLEN :"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Biotechnology And Its Applications principles."
@@ -971,7 +971,7 @@
       "A": "Fish",
       "B": "Mice",
       "C": "Cow",
-      "D": "Pig ALLEN : Biology 79"
+      "D": "Pig ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Biotechnology And Its Applications principles."
@@ -3294,7 +3294,7 @@
       "source": "Biotechnology_ Principles And Applications - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which one of the given options correctly identifies its certain component(s)? Cla I Hind III EcoR I Pvu I Pst I amp R tet R P BR 322 ori rop BamH I Sal I Pvu II",
+    "question": "Which one of the given\n\n**options** correctly identifies its certain component(s)? Cla I Hind III EcoR I Pvu I Pst I amp R tet R P BR 322 ori rop BamH I Sal I Pvu II",
     "options": {
       "A": "Hind III, ECoRI-selectable markers",
       "B": "amp R , tet R -antibiotic resistance genes",
@@ -3369,7 +3369,7 @@
       "source": "Biotechnology_ Principles And Applications - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The figure below shows three steps (A,B, C) of Polymerase Chain Reaction (PCR). Select the option giving correct identification together with what it represents? 5' 5' 3' 5' 5' 3' 5' 3' 3' 3' 3' 3' 5' 3' 3' 5' 3' 5' 5' 5' A C B dsDNA Region to be amplified Options :",
+    "question": "The figure below shows three steps (A,B, C) of Polymerase Chain Reaction (PCR). Select the option giving correct identification together with what it represents? 5' 5' 3' 5' 5' 3' 5' 3' 3' 3' 3' 3' 5' 3' 3' 5' 3' 5' 5' 5' A C B dsDNA Region to be amplified\n\n**Options** :",
     "options": {
       "A": "C-Extension in the presence of heat stable DNA polymerase",
       "B": "A-Annealing with two sets of primers",

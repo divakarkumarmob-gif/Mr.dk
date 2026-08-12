@@ -939,7 +939,7 @@
       "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Four structures are given in options",
+    "question": "Four structures are given in\n\n**options**",
     "options": {
       "A": "to",
       "D": ". Examine them and select the aromatic structures.",
@@ -2717,9 +2717,9 @@
     },
     "question": "The IUPAC name for the compound is :- O",
     "options": {
-      "A": "2-Acetyl prop-1-ene",
-      "B": "Pent-1-en-4-one",
-      "C": "Pent-4-en-2-one",
+      "A": "2-Acetyl -ene",
+      "B": "--one",
+      "C": "--one",
       "D": "Formyl propene"
     },
     "correct_option": "A",
@@ -2852,7 +2852,7 @@
     "options": {
       "A": "CH 3 CH 2 CONH 2 Propanamide",
       "B": "CH 3 CH 2 COOCH 3 Methyl propanoate",
-      "C": "CH 3 -CH-CH=CH-CH 3 CH 3 2-Methyl pent-3-ene",
+      "C": "CH 3 -CH-CH=CH-CH 3 CH 3 2-Methyl -ene",
       "D": "CH 3 CH 2 -O-CH-CH 3 CH 2 -CH 3 2-Ethoxy butane"
     },
     "correct_option": "A",
@@ -2877,10 +2877,10 @@
     },
     "question": "The IUPAC name of the compound OH CH 3 is",
     "options": {
-      "A": "2-Methyl cyclopent-1-en-2-ol",
-      "B": "3-Methyl cyclopent-2-en-1-ol",
-      "C": "2-Methyl cyclopent-2-en-1-ol",
-      "D": "3-Methyl cyclopent-1-en-2-ol"
+      "A": "2-Methyl cyclopent-1--ol",
+      "B": "3-Methyl cyclopent-2--ol",
+      "C": "2-Methyl cyclopent-2--ol",
+      "D": "3-Methyl cyclopent-1--ol"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
@@ -3174,7 +3174,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+    "explanation": "Single  Double  + 1 \\pi Triple  + 2 \\pi"
   },
   {
     "type": "normal_mcq",
@@ -3191,7 +3191,7 @@
       "source": "NCR - General Organic Chemistry.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Bond line n o t at ion of pent - 4 - yn - 2 - ol is NC05 - 1256",
+    "question": "Bond line n o t at ion of - - ol is NC05 - 1256",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3199,7 +3199,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+    "explanation": "IUPAC name - - - ol M.F. - C 5 H 8 O Structure - Bond line -"
   },
   {
     "type": "normal_mcq",
@@ -3428,7 +3428,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+    "explanation": "Single  Double  + 1 \\pi Triple  + 2 \\pi"
   },
   {
     "type": "normal_mcq",
@@ -3453,7 +3453,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+    "explanation": "IUPAC name - - - ol M.F. - C 5 H 8 O Structure - Bond line -"
   },
   {
     "type": "normal_mcq",
@@ -3497,7 +3497,7 @@
       "source": "NCR - General Organic Chemistry.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "CH  C - CH=CH - CH 2 - CH=CH 2 is name d a s hepta - 3,6 - dien - 1 - yne NC04 - 0611 1",
+    "question": "CH  C - CH=CH - CH 2 - CH=CH 2 is name d a s hepta - 3,6 - - yne NC04 - 0611 1",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3549,7 +3549,7 @@
       "source": "NCR - General Organic Chemistry.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "But - 2 - en - 3 - amine is correct IUPAC name NC05 - 1254",
+    "question": "- - amine is correct IUPAC name NC05 - 1254",
     "options": {
       "A": "Option A",
       "B": "Option B",

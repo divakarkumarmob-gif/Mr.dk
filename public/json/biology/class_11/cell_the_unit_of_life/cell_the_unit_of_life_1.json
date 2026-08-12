@@ -544,7 +544,7 @@
       "A": "Lysosome",
       "B": "Ribosome",
       "C": "mitochondria",
-      "D": "chloroplast ALLEN : Biology 169"
+      "D": "chloroplast ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Cell_ The Unit Of Life principles."
@@ -1043,7 +1043,7 @@
       "source": "Cell-The unit of life-EX-Eng.pdf.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is incorrect about chloroplast :-",
+    "question": "Which of the following\n\nstatement is incorrect about chloroplast :-",
     "options": {
       "A": "chloroplast is double membrane bound cell organelle",
       "B": "Stroma acts as site for dark reaction of photosynthesis",
@@ -1173,7 +1173,7 @@
       "A": "If 0 -F 1 particles",
       "B": "Ribosomes",
       "C": "DNA",
-      "D": "Lysosomes ALLEN : Biology 171"
+      "D": "Lysosomes ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Cell_ The Unit Of Life principles."
@@ -1848,7 +1848,7 @@
       "A": "A ribosome with several subunits",
       "B": "Ribosomes attached to each other in a linear arrangement",
       "C": "Several ribosomes attached to a single mRNA",
-      "D": "Many ribosomes attached to a strand of endoplasmic reticulum ALLEN : Biology 173"
+      "D": "Many ribosomes attached to a strand of endoplasmic reticulum ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Cell_ The Unit Of Life principles."
@@ -2745,10 +2745,10 @@
     },
     "question": "At which pH lysosomal enzymes become active ?",
     "options": {
-      "A": "pH - 5",
-      "B": "pH - 7",
-      "C": "pH - 8",
-      "D": "pH - 10 CL14 - 0004"
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": "CL14 - 0004"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Cell_ The Unit Of Life principles."
@@ -3143,7 +3143,7 @@
       "source": "Exercise I-III - Cell_ The Unit Of Life.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The cristae increase the surface area for ATP production. (1) Both statements are true, and Statement 2 is the correct explanation of Statement",
+    "question": "The cristae increase the surface area for ATP production. (1) Both statements are true, and\n\nStatement 2 is the correct explanation of Statement",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3168,7 +3168,7 @@
       "source": "Exercise I-III - Cell_ The Unit Of Life.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "(2) Both statements are true, but Statement 2 is not the correct explanat ion of Statement",
+    "question": "(2) Both statements are true, but\n\nStatement 2 is not the correct explanat ion of Statement",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3193,7 +3193,7 @@
       "source": "Exercise I-III - Cell_ The Unit Of Life.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "(3) Statement 1 is true, but Statement 2 is false . (4) Statement 1 is false, but Statement 2 is true . CL17 - 0095",
+    "question": "(3)\n\nStatement 1 is true, but\n\nStatement 2 is false . (4)\n\nStatement 1 is false, but\n\nStatement 2 is true . CL17 - 0095",
     "options": {
       "A": "Option A",
       "B": "Option B",

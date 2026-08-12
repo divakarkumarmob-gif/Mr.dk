@@ -1738,7 +1738,7 @@
       "source": "RACE - Current Electricity.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For a cylindrical conductor of given cross section. A. The drift velocity of electrons decreases with the increase in the temperature of conductor. B. The drift velocity is inversely proportional to the area of cross - section of given conductor. C. The drift velocity does not depend on the applied potential difference to the conductor. D. The drift velocity of electron is inversely proportional to the length of the conductor. E. The drift velocity increases with the increase in the temperature of conductor. Choose the correct answer from the options given below:",
+    "question": "For a cylindrical conductor of given cross section. A. The drift velocity of electrons decreases with the increase in the temperature of conductor. B. The drift velocity is inversely proportional to the area of cross - section of given conductor. C. The drift velocity does not depend on the applied potential difference to the conductor. D. The drift velocity of electron is inversely proportional to the length of the conductor. E. The drift velocity increases with the increase in the temperature of conductor. Choose the correct answer from the\n\n**options** given below:",
     "options": {
       "A": "A and B",
       "B": "A , B and D",
@@ -2329,7 +2329,7 @@
       "D": "Option D"
     },
     "correct_option": "D",
-    "explanation": "H = i 2 Rt 300 = 2 2 × R × 15 300 R 5 60  = = \\Omega Now, for i = 3A, t = 10s, R = 5 \\Omega H = 3 2 × 5 × 10 = 450 J"
+    "explanation": "H = i 2 = 2 2 × R × 15 300 R 5 60  = = \\Omega Now, for i = 3A, t = 10s, R = 5 \\Omega H = 3 2 × 5 × 10 = 450 J"
   },
   {
     "type": "figure_mcq",

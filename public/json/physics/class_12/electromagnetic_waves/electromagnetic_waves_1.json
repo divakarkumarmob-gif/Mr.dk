@@ -204,7 +204,7 @@
       "D": "mesosphere"
     },
     "correct_option": "C",
-    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -250,7 +250,7 @@
       "D": "very high frequency band"
     },
     "correct_option": "A",
-    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L or 1 2 I I = 2 1 L L = 1 4"
+    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L I I = 2 1 L L = 1 4"
   },
   {
     "type": "normal_mcq",
@@ -495,7 +495,7 @@
       "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is false for the properties of electromagnetic waves ?",
+    "question": "Which of the following\n\nstatement is false for the properties of electromagnetic waves ?",
     "options": {
       "A": "These waves do not require any material medium for propagation",
       "B": "Both electric and magnetic field vectors attain the maxima and minima at the same place and same time",
@@ -522,7 +522,7 @@
     "options": {
       "A": "[L 1/2 T -1/2 ]",
       "B": "[L -1 T]",
-      "C": "[LT -1 ]",
+      "C": "[ ]",
       "D": "[L -1/2 T 1/2 ]"
     },
     "correct_option": "A",
@@ -587,7 +587,7 @@
       "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The electric field associated with an e.m. wave in vacuum is given by = \\rho E 40 cos (kz - 6 × 10 8 t), where E, z and t are in volt/m, meter and seconds respectively. The value of wave vector k is :",
+    "question": "The electric field associated with an e.m. wave in vacuum is given by = \\rho E 40 cos ( × 10 8 t), where E, z and t are in volt/m, meter and seconds respectively. The value of wave vector k is :",
     "options": {
       "A": "6m -1",
       "B": "3m -1",
@@ -633,7 +633,7 @@
       "source": "Exercise I-III - Electromagnetic Waves.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The wave function (in S.I. units) for an electromagnetic wave is given as - 3 6 14 (x,t) 10 sin (3 10 x 9 10 t)  = \\pi  -  The speed of the wave is -",
+    "question": "The wave function (in S.I. units) for an electromagnetic wave is given 14 (x,t) 10 sin (3 10 x 9 10 t)  = \\pi  -  The speed of the wave is -",
     "options": {
       "A": "9 × 10 14 m/s",
       "B": "3 × 10 8 m/s",
@@ -1509,7 +1509,7 @@
       "source": "NCR - Electromagnetic Waves.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A : - wavelength of microwaves is greater than that of UV rays B : - wavelength of infrared rays is lesser than that of UV rays C : - wavelength of microwaves is lesser than that of infrared rays D : - Gamma Rays has shortest wavelength in the electromagnetic spectrum Choose correct option from the given options",
+    "question": "A : - wavelength of microwaves is greater than that of UV rays B : - wavelength of infrared rays is lesser than that of UV rays C : - wavelength of microwaves is lesser than that of infrared rays D : - Gamma Rays has shortest wavelength in the electromagnetic spectrum Choose correct option from the given\n\n**options**",
     "options": {
       "A": "A & B are true",
       "B": "B & C are true",
@@ -1718,10 +1718,10 @@
     },
     "question": "The electric field in an electromagnetic wave is given by 1 E 56.5sin (t x / c)NC - = \\omega - . Find the intensity of the wave if it is propagating along x - axis in the free space. (Given - - -  =  12 2 1 2 0 8.85 10 C N m )",
     "options": {
-      "A": "5.65 Wm - 2",
-      "B": "4.24 Wm - 2",
-      "C": "1.9 × 10 - 7 Wm - 2",
-      "D": "56.5 Wm - 2 EW04 - 0006"
+      "A": "5.65",
+      "B": "4.24",
+      "C": "1.9 × 10 - 7",
+      "D": "56.5 EW04 - 0006"
     },
     "correct_option": "B",
     "explanation": "2 0 0 1 I E c 2 =  12 2 8 1 I (8.85 10 )(56.5) (3 10 ) 2 - =     = 4.24 Wm -"
@@ -1793,7 +1793,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "E y = 540 sin \\pi × 10 4 (x - ct) Vm - 1 E 0 = 540 Vm - 1 B 0 = 0 E C = 7 8 540 18 10 T 3 10 - =  "
+    "explanation": "E y = 540 sin \\pi × 10 4 (x - ct) E 0 = 540 B 0 = 0 E C = 7 8 540 18 10 T 3 10 - =  "
   },
   {
     "type": "normal_mcq",
@@ -1808,7 +1808,7 @@
       "source": "RACE - Electromagnetic Waves.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Then, the peak value of magnetic field of wave will be (Given c = 3 × 10 8 ms - 1 )",
+    "question": "Then, the peak value of magnetic field of wave will be (Given c = 3 × 10 8 )",
     "options": {
       "A": "18 × 10 - 7 T",
       "B": "54 × 10 - 7 T",

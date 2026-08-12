@@ -431,12 +431,12 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A scooter going due east at 10 ms - 1 turns in right side through an angle of 90^\\circ. If the speed of the scooter remains unchanged in taking this turn, the change in the velocity of the scooter is : -",
+    "question": "A scooter going due east at 10 turns in right side through an angle of 90^\\circ. If the speed of the scooter remains unchanged in taking this turn, the change in the velocity of the scooter is : -",
     "options": {
-      "A": "20.0 ms - 1 in south - west direction",
+      "A": "20.0 in south - west direction",
       "B": "Zero",
-      "C": "10.0 ms - 1 in south - east direction",
-      "D": "14.14 ms - 1 in south - west direction"
+      "C": "10.0 in south - east direction",
+      "D": "14.14 in south - west direction"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
@@ -454,7 +454,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A person is moving in a circle of radius r with constant speed V. The change in velocity in moving from A to B is",
+    "question": "A person is moving in a circle of radius r with constant speed\n\nV. The change in velocity in moving from A to B is",
     "options": {
       "A": "2V cos 40^\\circ",
       "B": "2V sin 40^\\circ",
@@ -983,7 +983,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Where x and y are measured in metre and t in second. At t = 2s, the velocity of the particle (in ms - 1 ) is :",
+    "question": "Where x and y are measured in metre and t in second. At t = 2s, the velocity of the particle (in ) is :",
     "options": {
       "A": "ˆ ˆ 2i 4j -",
       "B": "ˆ ˆ 2i 4j +",
@@ -1627,7 +1627,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A body starts from rest and with a uniform acceleration of 5 ms - 2 for 5 seconds. During the next 10 seconds it moves with uniform velocity. T he total distance travelled by the body is : -",
+    "question": "A body starts from rest and with a uniform acceleration of 5 for 5 seconds. During the next 10 seconds it moves with uniform velocity. T he total distance travelled by the body is : -",
     "options": {
       "A": "100 m",
       "B": "312.5 m",
@@ -2225,7 +2225,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A particle is thrown vertically upward. Its velocity at half of the maximum height is 10m/s. The maximum height attained by it is (g=10 ms - 2 ) : -",
+    "question": "A particle is thrown vertically upward. Its velocity at half of the maximum height is 10m/s. The maximum height attained by it is (g=10 ) : -",
     "options": {
       "A": "8m",
       "B": "20m",
@@ -2413,7 +2413,7 @@
     "options": {
       "A": "ut",
       "B": "1 2 gt 2",
-      "C": "ut - 1 2 gt 2",
+      "C": "gt 2",
       "D": "Option D"
     },
     "correct_option": "B",
@@ -3285,10 +3285,10 @@
     },
     "question": "The velocity versus time curve of a moving particle is as shown in the following figure. The maximum acceleration is",
     "options": {
-      "A": "1 m sec - 2",
-      "B": "2 m sec - 2",
-      "C": "3 m sec - 2",
-      "D": "4 m sec - 2"
+      "A": "1 m",
+      "B": "2 m",
+      "C": "3 m",
+      "D": "4 m"
     },
     "correct_option": "D",
     "explanation": "acceleration will be maximum when slope will be maximum 2 max 60 20 40 a 4 m / s 40 30 10 - = = = -"
@@ -3375,7 +3375,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following options is correct for the object having a straight line motion represented by the following graph : -",
+    "question": "Which of the following\n\n**options** is correct for the object having a straight line motion represented by the following graph : -",
     "options": {
       "A": "The object moves with constantly increasing velocity from O to A and then it moves with constant velocity.",
       "B": "velocity of the object increases uniformly",

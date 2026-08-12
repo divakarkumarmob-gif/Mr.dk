@@ -845,7 +845,7 @@
       "A": "45^\\circ",
       "B": "60^\\circ",
       "C": "30^\\circ",
-      "D": "tan - 1"
+      "D": ""
     },
     "correct_option": "C",
     "explanation": "For vertical motion 2 2 y y v u 2g(h) = - ( ) ( )( ) 2 2 y 2 u 2 10 0.4 = - y u 2 3 = ∵ x y ˆ ˆ u (u )i (u )j = + \\rho ∴ ˆ ˆ u 6i 2 3j = + \\rho 2 3 1 tan 30 6 3 \\theta = =  \\theta = ^\\circ"
@@ -1139,7 +1139,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Three projectiles A, B and C are thrown from the same point in the same plane. Their trajectories are shown in the figure. Which of the following statement is incorrect?",
+    "question": "Three projectiles A, B and C are thrown from the same point in the same plane. Their trajectories are shown in the figure. Which of the following\n\nstatement is incorrect?",
     "options": {
       "A": "The time of flight is the same for all the three",
       "B": "The launch speed is same for all the three",
@@ -1555,13 +1555,13 @@
     },
     "question": "A projectile have range double as compare to its maximum height attained. The angle of projection from horizontal is -",
     "options": {
-      "A": "tan - 1",
-      "B": "tan - 1",
+      "A": "",
+      "B": "",
       "C": "Option C",
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "R = 2H 4 tan 2 2 \\theta = = \\theta = tan - 1 (2)"
+    "explanation": "R = 2H 4 tan 2 2 \\theta = = \\theta = (2)"
   },
   {
     "type": "normal_mcq",
@@ -1906,7 +1906,7 @@
       "D": "1 2 1 Rg sin 2 v - (  ( ) ) "
     },
     "correct_option": "D",
-    "explanation": "2 v sin2 R g \\theta =  2 gR sin2 v \\theta =  1 2 gR 2 sin v - \\theta =  1 2 1 gR sin 2 v - \\theta ="
+    "explanation": "2 v sin2 R g \\theta =  2 gR sin2 v \\theta =  1 2 sin v - \\theta =  1 2 1 gR sin 2 v - \\theta ="
   },
   {
     "type": "normal_mcq",
@@ -2910,7 +2910,7 @@
       "source": "Exercise I-III - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A train 200 m long crosses a bridge 300 m long. It enters the bridge with a speed of 30 ms - 1 and leaves it with a speed of 50 ms -",
+    "question": "A train 200 m long crosses a bridge 300 m long. It enters the bridge with a speed of 30 and leaves it with a speed of 50 ms -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2958,10 +2958,10 @@
     },
     "question": "Two cars get closer by 8 m in every second while travelling in the opposite directions. They get closer by 0.8 m in every second while travelling in the same direction. What are the speeds of the two cars?",
     "options": {
-      "A": "4 ms - 1 and 4.4 ms - 1",
-      "B": "4.4 ms - 1 and 3.6 ms - 1",
-      "C": "4 ms - 1 and 3.6 ms - 1",
-      "D": "4 ms - 1 and 3 ms - 1"
+      "A": "4 and 4.4",
+      "B": "4.4 and 3.6",
+      "C": "4 and 3.6",
+      "D": "4 and 3"
     },
     "correct_option": "B",
     "explanation": "For opposite direction v 1 + v 2 = 8 ...(1) For same direction v 1 - v 2 = 0.8 ...(2) From (1) & (2) v 1 = 4.4 m/s & v 2 = 3.6 m/s"
@@ -3102,7 +3102,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "For cycle 96 + s = 20 × t for bus s = 1 2 at 2 = 1 2 × 2 × t 2 = t 2 ∴ 96 + t 2 = 20 t  t 2 - 20t + 96 = 0 (t - 8) (t - 12) = 0  t = 8 s or 12 s cyclist over takes bus in 8 s Note : At t = 12s, bus overtakes cyclist."
+    "explanation": "For cycle 96 + s = 20 × t for bus s = 1 2 at 2 = 1 2 × 2 × t 2 = t 2 ∴ 96 + t 2 = 20 t  t 2 - 20t + 96 = 0 (t - 8) (t - 12) = 0  t = 8 s s cyclist over takes bus in 8 s Note : At t = 12s, bus overtakes cyclist."
   },
   {
     "type": "normal_mcq",
@@ -3234,9 +3234,9 @@
     },
     "question": "While sitting on a tree branch 20m above the ground, you drop a walnut. When the walnut has fallen 5m, you throws a second walnut straight down. What initial speed must you give the second walnut if they are both to reach the ground at the same time? (g=10ms - 2 )",
     "options": {
-      "A": "5 ms - 1",
-      "B": "10 ms - 1",
-      "C": "15 ms - 1",
+      "A": "5",
+      "B": "10",
+      "C": "15",
       "D": "None of these"
     },
     "correct_option": "C",
@@ -3263,7 +3263,7 @@
       "D": "2g H"
     },
     "correct_option": "B",
-    "explanation": "Let the two bodies A and B respectively meet at a time t, at a height H 2 from the ground. Using S = ut + 1 2 at 2 For a body A, u = v 0 , a = - g, S = H 2  H 2 = v 0 t - 1 2 gt 2 … (i) For a body B, u = 0, a = +g, S = H 2 ∴ 2 H 1 gt 2 2 = Equating equations (i) and (ii), we get v 0 t - 1 2 gt 2 = 1 2 gt 2 v 0 t = gt 2 or t = 0 v g Substituting the value of t is equation (i), we get 2 2 2 0 0 0 0 0 v v v v H 1 1 v g 2 g 2 g g 2 g (  (  =  - = - ( ) ( ) )  )  2 0 v H 1 2 2 g = or 2 0 v gH = 0 v gH = Alternate solution: - U AB = U A - U B = v 0 - 0 = v 0 a AB = a A - a B = - g - ( - g) = 0, S AB = H ∴ AB AB 0 S H t U v = = , for body B : - S = 1/2 gt 2  2 0 2 0 H 1 H g v gH 2 2 v =   ="
+    "explanation": "Let the two bodies A and B respectively meet at a time t, at a height H 2 from the ground. Using S = ut + 1 2 at 2 For a body A, u = v 0 , a = - g, S = H 2  H 2 = v 0 t - 1 2 gt 2 … (i) For a body B, u = 0, a = +g, S = H 2 ∴ 2 H 1 gt 2 2 = Equating equations (i) and (ii), we get v 0 t - 1 2 gt 2 = 1 2 gt 2 v 0 t = gt 2 or t = 0 v g Substituting the value of t is equation (i), we get 2 2 2 0 0 0 0 0 v v v v H 1 1 v g 2 g 2 g g 2 g (  (  =  - = - ( ) ( ) )  )  2 0 v H 1 2 2 g = v gH = 0 v gH = Alternate solution: - U AB = U A - U B = v 0 - 0 = v 0 a AB = a A - a B = - g - ( - g) = 0, S AB = H ∴ AB AB 0 S H t U v = = , for body B : - S = 1/2 gt 2  2 0 2 0 H 1 H g v gH 2 2 v =   ="
   },
   {
     "type": "normal_mcq",
@@ -3443,7 +3443,7 @@
     "options": {
       "A": "1 2 tan 3 - (  ( ) ) ",
       "B": "1 3 tan 2 - (  ( ) ) ",
-      "C": "tan - 1",
+      "C": "",
       "D": "Option D"
     },
     "correct_option": "B",

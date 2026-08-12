@@ -1170,7 +1170,7 @@
       "source": "AMINES - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "NH 2 NaNO 2 HCl A HBF 4 B NaNO 2 Cu, ∆ C Sn+HCl D Which statement is correct",
+    "question": "NH 2 NaNO 2 HCl A HBF 4 B NaNO 2 Cu, ∆ C Sn+HCl D Which\n\nstatement is correct",
     "options": {
       "A": "A given orange color with phenol",
       "B": "B is fluorobenzene",
@@ -1822,7 +1822,7 @@
       "source": "Extra Edge - Amines.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Given below are two statements : Statement I : - NHCOCH 3 group is also o/p - directing like - NH 2 group but it is less activating than - NH 2 group. Statement II : Lone pair of nitrogen in - NHCOCH 3 group is in resonance with carbonyl group. In the light of the above statements, choose the most appropriate answer from the options given below :",
+    "question": "Given below are two statements :\n\nStatement I : - NHCOCH 3 group is also o/p - directing like - NH 2 group but it is less activating than - NH 2 group.\n\nStatement II : Lone pair of nitrogen in - NHCOCH 3 group is in resonance with carbonyl group. In the light of the above statements, choose the most appropriate answer from the\n\n**options** given below :",
     "options": {
       "A": "Statement I is correct but statement II is incorrect.",
       "B": "Both statement I and statement II are correct.",
@@ -2493,7 +2493,7 @@
       "source": "NCR - Amines.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Statement - I : - The conversion of primary Aliphatic amine into diazonium salt is know n as diazo t ization. Statement - II : - Benzene diazonium salt is stable i n cold or at 0^\\circ - 5^\\circC",
+    "question": "Statement - I : - The conversion of primary Aliphatic amine into diazonium salt is know n as diazo t ization. Statement - II : - Benzene diazonium salt is stable i n cold or at 0^\\^\\circC",
     "options": {
       "A": "Both Statement I and Statement II are true.",
       "B": "Both Statement I and Statement II are false.",
@@ -2623,7 +2623,7 @@
       "source": "NCR - Amines.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is NOT correct for p - toluenesulphonyl chloride ?",
+    "question": "Which\n\nstatement is NOT correct for p - toluenesulphonyl chloride ?",
     "options": {
       "A": "It is known as Hinsberg’s reagent.",
       "B": "It is used to distinguish primary and secondary amines.",
@@ -2898,14 +2898,14 @@
       "source": "RACE - Amines.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "(1) (2) (3) (4) AM14 - 0005 A NH 2 NaNO 2 HCl 0^\\circ - 5^\\circC ? CuCN KCN NO 2 CN NO 2 NC NO 2 CN NO 2 NC NO 2 NEET : CHEMISTRY",
+    "question": "(1) (2) (3) (4) AM14 - 0005 A NH 2 NaNO 2 HCl 0^\\^\\circC ? CuCN KCN NO 2 CN NO 2 NC NO 2 CN NO 2 NC NO 2 NEET : CHEMISTRY",
     "options": {
-      "D": "AM14 - 0005 A NH 2 NaNO 2 HCl 0^\\circ - 5^\\circC ? CuCN KCN NO 2 CN NO 2 NC NO 2 CN NO 2 NC NO 2 NEET : CHEMISTRY",
+      "D": "AM14 - 0005 A NH 2 NaNO 2 HCl 0^\\^\\circC ? CuCN KCN NO 2 CN NO 2 NC NO 2 CN NO 2 NC NO 2 NEET : CHEMISTRY",
       "A": "Option A",
       "B": "Option B",
       "C": "Option C"
     },
     "correct_option": "A",
-    "explanation": "Ans. (1) NH 2 NaNO 2 + HCl 0^\\circ - 5^\\circC CuCN KCN N 2 Cl + CN N O 2 N O 2 N O 2"
+    "explanation": "Ans. (1) NH 2 NaNO 2 + HCl 0^\\^\\circC CuCN KCN N 2 Cl + CN N O 2 N O 2 N O 2"
   }
 ]

@@ -137,7 +137,7 @@
       "D": "A 4"
     },
     "correct_option": "A",
-    "explanation": "Q = ms ice \\Delta T + mL F + ms water \\Delta T + mL V Q = (1)(0.5)(10) + (1)(80) + (1)(1)(100) + (1)(540) Q = 5 + 80 + 100 + 540 = 725 cal. or 725 × 4.18 = 3030 joule. X - Scale UFP 75^\\circ T x LFP 15^\\circ Y - Scale 125^\\circ UFP T y 25^\\circ LFP Before Heating After Heating C a F"
+    "explanation": "Q = ms ice \\Delta T + mL F + ms water \\Delta T + mL V Q = (1)(0.5)(10) + (1)(80) + (1)(1)(100) + (1)(540) Q = 5 + 80 + 100 + 540 = 725 cal. × 4.18 = 3030 joule. X - Scale UFP 75^\\circ T x LFP 15^\\circ Y - Scale 125^\\circ UFP T y 25^\\circ LFP Before Heating After Heating C a F"
   },
   {
     "type": "normal_mcq",
@@ -160,7 +160,7 @@
       "D": "1.2 × 10 -5 /^\\circC"
     },
     "correct_option": "C",
-    "explanation": "2kg ice at - 20^\\circC + 5 kg water at 20^\\circC Q gain = Q lost 1 2 20 M 80 5 1 20 2   +  =   M = 1 kg Water = 5 + 1 = 6 kg"
+    "explanation": "2kg ice ^\\circC + 5 kg water at 20^\\circC Q gain = Q lost 1 2 20 M 80 5 1 20 2   +  =   M = 1 kg Water = 5 + 1 = 6 kg"
   },
   {
     "type": "normal_mcq",
@@ -229,7 +229,7 @@
       "D": "10 5 N"
     },
     "correct_option": "A",
-    "explanation": "at 1kg ice at - 10 ^\\circC + 4.4 kg of water at 30 ^\\circC Heat gain = Heat loss 1 1000 10 1000 80 1000 2   +  + (T - 0) = 4.4 × 1000 × 1 × (30 - T)  5.4 T = 4.4 × 30 - 85  T = 8.7 ^\\circC"
+    "explanation": "at 1kg ice ^\\circC + 4.4 kg of water at 30 ^\\circC Heat gain = Heat loss 1 1000 10 1000 80 1000 2   +  + (T - 0) = 4.4 × 1000 × 1 × (30 - T)  5.4 T = 4.4 × 30 - 85  T = 8.7 ^\\circC"
   },
   {
     "type": "figure_mcq",
@@ -337,7 +337,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The amount of heat required in converting 2 g ice at -10 0 C into steam at 100 0 C will be :-",
+    "question": "The amount of heat required in converting 2 g ice C into steam at 100 0 C will be :-",
     "options": {
       "A": "3028 J",
       "B": "6061 J",
@@ -594,10 +594,10 @@
     },
     "question": "The latent heat of vapourazation of the substance is: temperature (^\\circC) time (min) → 5 0 10 15 20 25 30 35 40 45 50 25 50 75 100 125 150 175 200 225 250",
     "options": {
-      "A": "630 kJ kg -1",
-      "B": "126 kJ kg -1",
-      "C": "84 kJ kg -1",
-      "D": "12.6 kJ kg -1"
+      "A": "630 kJ",
+      "B": "126 kJ",
+      "C": "84 kJ",
+      "D": "12.6 kJ"
     },
     "correct_option": "C",
     "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
@@ -615,7 +615,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Figure shows the temperature variation when heat is added continuously to a specimen of ice (20 g) at -20^\\circC at constant rate. (Specific heat of ice = 0.53 cal/g ^\\circC and L ice = 80 cal/g, L water = 540 cal/g) 0 -20 Q 1 Q 2 Q 3 Q 4 100 Q(cal) Temp. (^\\circC) Column-I Column-II",
+    "question": "Figure shows the temperature variation when heat is added continuously to a specimen of ice (20 g) ^\\circC at constant rate. (Specific heat of ice = 0.53 cal/g ^\\circC and L ice = 80 cal/g, L water = 540 cal/g) 0 -20 Q 1 Q 2 Q 3 Q 4 100 Q(cal) Temp. (^\\circC) Column-I Column-II",
     "options": {
       "A": "Value of Q 1",
       "B": "Value of Q 2",
@@ -623,7 +623,7 @@
       "D": "Value of Q 4"
     },
     "correct_option": "A",
-    "explanation": "\\Delta \\Delta Q t = same So ( ) ( ) KA 20 10 2KA 10 - - \\theta = \\lambda\\lambda  2 \\theta =10  \\theta = 5 ^\\circC Thermal Physics 10 cm 10 cm 20^\\circC 100^\\circC T",
+    "explanation": "\\Delta \\Delta Q t = same So ( ) ( ) KA 20 10 2KA 10 - - \\theta = \\lambda\\lambda  2 \\theta =10  \\theta = 5 ^\\circC Thermal cm 10 cm 20^\\circC 100^\\circC T",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
   },
   {
@@ -686,7 +686,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "10 kg of ice at - 10^\\circC is mixed with 40 kg of water at 45^\\circC. The final temperature of mixture is : (specific heat of ice = 2100 J/kg-k)",
+    "question": "10 kg of ice ^\\circC is mixed with 40 kg of water at 45^\\circC. The final temperature of mixture is : (specific heat of ice = 2100 J/kg-k)",
     "options": {
       "A": "19^\\circC",
       "B": "17^\\circC",
@@ -732,7 +732,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "4 kg ice at - 20^\\circC is mixed with 10 kg water at 20^\\circC. Then final amount of water in the mixture would be; [Given specific heat of ice = 0.5 cal/g^\\circC, Specific heat of water = 1 cal/g^\\circC, Latent heat of fusion for ice = 80 cal/g.]",
+    "question": "4 kg ice ^\\circC is mixed with 10 kg water at 20^\\circC. Then final amount of water in the mixture would be; [Given specific heat of ice = 0.5 cal/g^\\circC, Specific heat of water = 1 cal/g^\\circC, Latent heat of fusion for ice = 80 cal/g.]",
     "options": {
       "A": "12 kg",
       "B": "10 kg",
@@ -1309,7 +1309,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A slab of stone of area 0.36 m 2 and thickness 0.1 m is exposed on the lower surface to steam at 100^\\circC. A block of ice at 0^\\circC rests on the upper surface of the slab. In one hour 4.8 kg of ice is melted. The thermal conductivity of slab is : (Given latent heat of fusion of ice 3.36 × 10 5 J kg -1 )",
+    "question": "A slab of stone of area 0.36 m 2 and thickness 0.1 m is exposed on the lower surface to steam at 100^\\circC. A block of ice at 0^\\circC rests on the upper surface of the slab. In one hour 4.8 kg of ice is melted. The thermal conductivity of slab is : (Given latent heat of fusion of ice 3.36 × 10 5 J )",
     "options": {
       "A": "2.05 J/m/s/^\\circC",
       "B": "1.02 J/m/s/^\\circC",
@@ -1679,7 +1679,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A black body, at a temperature of 227^\\circC radiates heat at a rate of 7 cal cm -2 s -",
+    "question": "A black body, at a temperature of 227^\\circC radiates heat at a rate of 7 cal s -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2009,7 +2009,7 @@
       "D": "θ O t T $//"
     },
     "correct_option": "A",
-    "explanation": "PV = \\mu RT  RT P V \\mu = PV 2/3 = C  2/3 RT V C V \\mu  = TV - 1/3 = C  1/3 T V  T   V ",
+    "explanation": "PV = \\mu RT  RT P V \\mu = PV 2/3 = C  2/3 RT V C V \\mu  = /3 = C  1/3 T V  T   V ",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
   },
   {
@@ -2890,7 +2890,7 @@
       "D": "P 2 < P 1"
     },
     "correct_option": "A",
-    "explanation": "U = U 1 + U 2 1 2 1 v 2 v C T C T = \\mu +\\mu 5 3 2 RT 4 RT 2 2 =  +  = 5RT + 6RT = 11RT",
+    "explanation": "U = U 1 + U 2 1 2 1 v 2 v C T C T = \\mu +\\mu 5 3 2 =  +  = 5RT + 6RT = 11RT",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABGAAAABACAIAAADaj5bbAAAKLUlEQVR42u3d6XMUZQLH8ad7ju5MEoQtEsIVS0SCm0lgd4HdFVCON+IZ8CC4hGFfrUuJVVCyJX/DmhRvpASrMBeEECiOV5prcqFUAYIL0VJrQQQLEJQjc/R093TviylZil0hQJJ5ZvL9vKQohF9j1fx4nv6N4rquAAAAyF5nzp5ta2tLJBIej4c0pOU4Tm5u7hurVum6ThpIIy8RAACALPbztWvbt207d+67ru6eZDJJIJI7fuxYTU2NpmlEgXRRiQAAAGSrZDK5f//+S5cujh9f8MLzz+fl5ZGJ5Fr27t24cWMikSAKUJAAAACGuB3t3NXU3RXW9RzLsnRdX7J4MR0pUzqSYRhEAQoSAADAULaj9rZPcnICqR+hI2VWR6quqSEHUJAAAACGrB21tX6ckxNQFOXWj1uWFQgE5s2dQ0Ty2/r++z29veQAChIAAMDDtqPGnbvaWj8OBHJvb0dCCEVRTNMsKCicVV5GUJKzbDsUCvX2HSYKjDCFmW8AAJA1Ll661NLS8vnxY5qm39GObuf3+8+f//7EyS9isRihySwQCGzevHltKMSuHShIAAAA98eyrH++917/6VP5+WPu+ZP9fn88Hg+HwzcHBohOcq+9+irb3xBcsQMAABg827Z3Ne3+9puvB9OOhBCmaeq6vpjNBsH2N0BBAgAAWdeOGnfuam/7xO/X7uvESdO0pUuW0JEyoiO98847fNUvKEgAAACDakcd7a3/u8owmI6Uk5OzeNEiTfOTpOSa9+w5eOgQOYCCBAAAcPd2tPPB2pEQQlEUy7Ly8vKCpaWEKb9/bNrErh0oSAAAAL/ajhoaGzva2x6sHYnb3kcqKZnJ9rf8bg4MVFWt7jv8KVFAsGIHAABwx2fl2tra48eO6nrOw7SjW0dJPp/v3LnvvvjXKba/BdvfoCABAACIjPoW0R07dvR0dw1ys26Q/H5/LBbrDIcjkQghC7a/IbhiBwAAkAntqLGx8XBf79C2IyFEIpHQdX0J298iM3btNmzYYBgGUYCCBAAARnU7amho6Oxoz8kJDPkvriiKbdt0pEyxd9++6upqcgAFCQAAjOp2FO7seMhVhntufwcCgXlz5xC4/LZu3drT20sOoCABAADa0XBRFMU0zYKCwvKyILHL/7ciFAqx/Q0KEgAAoB0N83/RsoLBMra/5ReNRquqVtORQEECAACjqB3V19ePZDsSv2w2PPnkb//8pz8GAgGegsxisVhV1ept27cnEgnSgGDmGwAAZH076gp3jnA7Emx/i4zc/q6urtZ1nSggOEECAABZ2Y7q6urS2I6EEKZpsmsnMmf7u7qmhhwgOEECAADZ2o66u8JpbEcpruumzpFa21oTCZNHIzOf19u0e/fTCxcSBQQnSAAAgHYkhmfXLrX9HSwt5dGwawcKEgAAwMh+xrUsedrR7b+rGTNK2LUT7NqBggQAACBG8D5bfUODbO1I/LJrV1oapCOJDNm1oyOBggQAAESmnx3tP3Cgp7tLwnaUYhgG299sf0Mw0gAAADAC7ai2rq67K5ybmydnOxK/nHFpmhaLxbq6um4ODPDgJLfy9de3bNni8XiIAoITJAAAkEHt6KPa2p7uLsnbkRBCUZTU9veiRYvY/pZf8549Bw4eJAdQkAAAQIa1o96ebmlv1v3f33MgEJg3dw6PT36bNm3ifSRQkAAAAO1IDPc5UkFBIZsN8otEImw2gIIEAAAygOM4dfX1vT3d8t+s+7V2x66dYNcOFCQAAADxoAsHt29EfXbkSGrRO3P/RIZhlJYGy8uCPFw6EihIAAAA4n5vpt06KTpx8uTupiZdz8nEs6M7OlIwWDZ7VjlTaRnRkVrb2llyBjPfAABASHUzbeeupt6eblVVs6ZU+Hy+mzdv9PYdjkQiPGLJbX733Q0bNpADKEgAACD9TNNMrTJk6HtHd6Fp2uXLlzrDXTxlyXk8nubm5qcXLiQKCK7YAQCAtLejw329eXn5WdaOhBCJRKKgoJD3keSXTCZDoVBvXx9RgIIEAADS2R9S7SijVxnEvW4PBoNldCT5RaPRqqoqOhIEV+wAAEC6NO9pObB/X37+mKwfotA0rb//9KnT/Tx0yQUCgYaGhoULFhAFKEgAAGBEffnVV9s++MB1XVUdFXdYdF0/ceLzEye/4NHL35Fqa+vmz3/KdZz0fjb2er2j5P8OqQvSJ62tpmll3w1gAAAgmwsXzpum6fV6R8m/z6qqatv2vr0t/V9+xdOXvs1qyyuWF06Y4CST6SxIPp/X4+EAI10s2xZCKNs//DAej1OQAACAGP4V7NH2kUNVVdd1jx09evDQIT71yu8Pv/9dcfGjlmWK9H2NMk9BpPUlyVRN9SeTSQoSAADAkHMcR1GUp+bPP3/+++OfnyAQyZ3u7x8zZsz48QXJETxHMs2E4zhCCD6Qp12qoHqFoKcCAAAM40cuy7KeXfbc9evX/33mLIEIqQ8QzE8/+2zRM8+MHTvOsqyRqdCPT39C1zTOjmRgWpYQQvmottYwDAorAACAGM6X76PRaNOunXQk+Y195JGlS5d6PB7btsXw7oxH5sydt27dOp/XS+yC70ECAAAYPWzbzs3NXfXGXx6f9hhpSO76jRudnZ2O43iHs7cYRry4+NHKykraEQUJAACAjgSpXbt+vaOjw3Ecn883HL9+LBadPHnKW+vXTygsJG3ZeCoqKmzb5oodAACAGP4XTnRdn1FScvXKj1ev/kQgQuKv+o0bxsWLF6dMmeIZ0t1t13UTCWPGjJK/vfnmxKIioqYgAQAAjPaO5Pf7Z82erSriDO8jyc0wjAs//DBt2jSv1zsks8+u6xpGvGL5ijWh0LixY0lYcMUOAAAAjuO4rrtg4dPTH59GGpKLRCLhcDh11+4hz5FSZ0crXnlteUWFrmlkS0ECAADAfzuSz+dbWbmK95HEqHkfKR6PPbvs+ZdfepFIKUgAAAC4UzKZzMvLY7MhszrSA+/apTbrnntuGWFSkAAAACDYtcumjjTIu3au66Z+pmHEi4om/n3dujH5+SRJQQIAAAAdKXs6km3bHo9HDG4KT1GUeDxWVDRx/dtvT540iQwpSAAAABhUR6pc9caTM0tIQ/6OdOTIEVVVVVUdzAlSPB6bPv0J2pFg5hsAAADiPre/y8rLf/7p6qXLlwlEZgORyNWrV4qLi+++/Z1qRy+9vPyva9f+Ztw4chOcIAEAAOC+OpKqqi+8+BJ37eR3+ccrnZ2dd9n+dl3XNBMVy1e8+soKXddJjIIEAAAA8QC7dryPJLJi+zsWi5aVlVdUVBAUBQkAAADi4d9HoiNl7q6dYcQnTpy0srJS5R0WChIAAADYtRvN349kGPHCwgmsMlCQAAAAwDnSKO1I7e3truuqqhqPxwoLJ7y1fv3UKVNIJnMptXX1hhFnxQ4AAEAqPp8vGo227Gn++ptvFUXhvpa0ko5TXhYsKZlZVFRUtWZN8dSpZJLR/gNS+ttTuX1kjwAAAABJRU5ErkJggg=="
   },
   {
@@ -2906,7 +2906,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A balloon contains 500 m 3 of helium at 27 0 C and 1 atmosphere pressure. The volume of the helium at -33 0 C temperature and 0.5 atmosphere pressure will be-",
+    "question": "A balloon contains 500 m 3 of helium at 27 0 C and 1 atmosphere pressure. The volume of the helium C temperature and 0.5 atmosphere pressure will be-",
     "options": {
       "A": "500 m 3",
       "B": "700 m 3",
@@ -2983,7 +2983,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "mix V 5 3 2 R 5 R 2 2 C 5 2  +  = + mix P 7 5 2 R 5 R 2 2 C 5 2  +  = + mix mix P mix V C 39/7 1.56 C 25/7 \\gamma = = = OR 1 2 1 2 1 P 2 P mix 1 V 2 V C C C C \\mu + \\mu \\gamma = \\mu + \\mu mix 7 5 2 R 5 R 2 2 5 3 2 R 5 R 2 2  +  \\gamma =  + "
+    "explanation": "mix V 5 3 2 R 5 R 2 2 C 5 2  +  = + mix P 7 5 2 R 5 R 2 2 C 5 2  +  = + mix mix P mix V C 39/7 1.56 C 25/7 \\gamma = = = P 2 P mix 1 V 2 V C C C C \\mu + \\mu \\gamma = \\mu + \\mu mix 7 5 2 R 5 R 2 2 5 3 2 R 5 R 2 2  +  \\gamma =  + "
   },
   {
     "type": "normal_mcq",
@@ -3075,7 +3075,7 @@
       "D": "1 atm"
     },
     "correct_option": "A",
-    "explanation": "Mean K.E Per gram molecule = Molar K.E mole 3 E RT 2 ="
+    "explanation": "Mean K.E Per gram molecule = Molar K.E mole 3 E ="
   },
   {
     "type": "normal_mcq",
@@ -3098,7 +3098,7 @@
       "D": "0.14 moles"
     },
     "correct_option": "A",
-    "explanation": "V P V V 1 fR R C R C f 2 2 1 C C f fR 2 + + + \\gamma = = = =  \\gamma f - f = 2  2 f 1 = \\gamma -"
+    "explanation": "V P V V 1 fR R C R C f 2 2 1 C C f + + + \\gamma = = = =  \\gamma f - f = 2  2 f 1 = \\gamma -"
   },
   {
     "type": "normal_mcq",

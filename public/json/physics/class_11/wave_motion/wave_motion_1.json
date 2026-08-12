@@ -196,7 +196,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The equation of progressive wave is t x Y 4sin 5 9 6   \\pi (  = \\pi - +   ( ) )    where x and y are in cm. Which of the following statement is true?",
+    "question": "The equation of progressive wave is t x Y 4sin 5 9 6   \\pi (  = \\pi - +   ( ) )    where x and y are in cm. Which of the following\n\nstatement is true?",
     "options": {
       "A": "\\lambda = 18 cm",
       "B": "amplitude = 0.04 cm",
@@ -658,7 +658,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "At the room temperature the velocity of sound in O 2 gas is V. Then in mixture of H 2 and O 2 gas the speed of sound at same temperature :",
+    "question": "At the room temperature the velocity of sound in O 2 gas is\n\nV. Then in mixture of H 2 and O 2 gas the speed of sound at same temperature :",
     "options": {
       "A": "will be less than V",
       "B": "will be more than V",
@@ -934,7 +934,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "velocity of sound in medium is V. If the density of the medium is doubled, what will be the new velocity of sound?",
+    "question": "velocity of sound in medium is\n\nV. If the density of the medium is doubled, what will be the new velocity of sound?",
     "options": {
       "A": "2V",
       "B": "V",
@@ -1431,7 +1431,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two plane progressive waves shows destructive interference at point P. Which of the following statement is true at point P : -",
+    "question": "Two plane progressive waves shows destructive interference at point P. Which of the following\n\nstatement is true at point P : -",
     "options": {
       "A": "Crest of one wave is superimposed on crest of another wave",
       "B": "Trough of one wave is superimposed on crest of another wave",
@@ -2479,7 +2479,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A pipe is closed from one end and open from another end then which statement is true?",
+    "question": "A pipe is closed from one end and open from another end then which\n\nstatement is true?",
     "options": {
       "A": "Node is formed slightly above the open end.",
       "B": "Node is formed slightly below the open end.",
@@ -2824,7 +2824,7 @@
       "source": "Extra Edge - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Length of a sonometer wire is either 95 cm or 100 cm, in both the cases a tuning fork produces 4 beats. Then the frequency of tuning fork is -",
+    "question": "Length of a sonometer wire is either 95 cm cm, in both the cases a tuning fork produces 4 beats. Then the frequency of tuning fork is -",
     "options": {
       "A": "152",
       "B": "156",
@@ -2971,7 +2971,7 @@
       "D": "440 m/s WM36 - 0007"
     },
     "correct_option": "A",
-    "explanation": "W RT 1 V V M M \\omega \\gamma =  \\alpha"
+    "explanation": "W V V M M \\omega \\gamma =  \\alpha"
   },
   {
     "type": "normal_mcq",
@@ -3431,7 +3431,7 @@
       "D": "different amplitudes WM14 - 0074 2"
     },
     "correct_option": "A",
-    "explanation": "W RT 1 V V M M \\omega \\gamma =  \\alpha"
+    "explanation": "W V V M M \\omega \\gamma =  \\alpha"
   },
   {
     "type": "normal_mcq",
@@ -3473,7 +3473,7 @@
     "options": {
       "A": "[L]",
       "B": "[L - 1 ]",
-      "C": "[LT - 1 ]",
+      "C": "[ ]",
       "D": "[T - 1 ] WM32 - 0006 2"
     },
     "correct_option": "A",

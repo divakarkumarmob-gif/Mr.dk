@@ -251,7 +251,7 @@
       "D": "+13.2 mV"
     },
     "correct_option": "A",
-    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -297,7 +297,7 @@
       "D": "160 × 10 -3 C"
     },
     "correct_option": "A",
-    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L or 1 2 I I = 2 1 L L = 1 4"
+    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L I I = 2 1 L L = 1 4"
   },
   {
     "type": "normal_mcq",
@@ -451,7 +451,7 @@
       "source": "Electromagnetic Induction and EM Waves - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "An aluminium ring B faces an electromagnet A. The current I through A can be altered. Then which of the following statement is correct :- B A A I",
+    "question": "An aluminium ring B faces an electromagnet A. The current I through A can be altered. Then which of the following\n\nstatement is correct :- B A A I",
     "options": {
       "A": "If I decreases A will repel B",
       "B": "Whether I increases or decreases, B will not experience any force",
@@ -661,7 +661,7 @@
       "source": "Electromagnetic Induction and EM Waves - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is correct from following -",
+    "question": "Which\n\nstatement is correct from following -",
     "options": {
       "A": "Inductor store energy in the form of magnetic field",
       "B": "Capacitor store energy in the form of electric field",
@@ -1010,7 +1010,7 @@
       "source": "Electromagnetic Induction and EM Waves - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "When a current changes from 2A to 4A in 0.05 sec. in a coil, induced emf is 8 V. The self inductance of coil is :-",
+    "question": "When a current changes from 2A to 4A in 0.05 sec. in a coil, induced emf is 8\n\nV. The self inductance of coil is :-",
     "options": {
       "A": "0.1 H",
       "B": "0.2 H",
@@ -2477,7 +2477,7 @@
       "D": "9.99 × 10 -7 T in"
     },
     "correct_option": "A",
-    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -2523,7 +2523,7 @@
       "D": "B \\rho"
     },
     "correct_option": "A",
-    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L or 1 2 I I = 2 1 L L = 1 4"
+    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L I I = 2 1 L L = 1 4"
   },
   {
     "type": "normal_mcq",
@@ -2816,7 +2816,7 @@
       "source": "Exercise I-III - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "An aluminium ring B faces an electromagnet A. The current I through A can be altered. Then which of the following statement is correct : -",
+    "question": "An aluminium ring B faces an electromagnet A. The current I through A can be altered. Then which of the following\n\nstatement is correct : -",
     "options": {
       "A": "If I decreases A will repel B",
       "B": "Whether I increases or decreases, B will not experience any force",

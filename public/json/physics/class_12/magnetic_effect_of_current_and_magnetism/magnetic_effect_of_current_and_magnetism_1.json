@@ -252,7 +252,7 @@
       "D": "2 \\pi × 10 - 6 T MF04 - 0015"
     },
     "correct_option": "A",
-    "explanation": "If = eB 2 m \\pi 11 2 1.76 10 3.57 10 f 2 3.14 -    =  Hz f = 10 9 Hz or 1 GHz"
+    "explanation": "If = eB 2 m \\pi 11 2 1.76 10 3.57 10 f 2 3.14 -    =  Hz f = 10 9 Hz GHz"
   },
   {
     "type": "normal_mcq",
@@ -382,7 +382,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is not true; magnetic field at the centre of current carrying loop : -",
+    "question": "Which of the following\n\nstatement is not true; magnetic field at the centre of current carrying loop : -",
     "options": {
       "A": "proportional to current",
       "B": "inversely proportional to radius",
@@ -660,7 +660,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For the hollow thin cylindrical current carrying pipe which statement is correct : -",
+    "question": "For the hollow thin cylindrical current carrying pipe which\n\nstatement is correct : -",
     "options": {
       "A": "magnetic field inside the pipe is not zero",
       "B": "magnetic field outside the pipe is zero",
@@ -1028,7 +1028,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential difference V. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is : -",
+    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential difference\n\nV. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is : -",
     "options": {
       "A": "2 1 2 r r (  ( ) ) ",
       "B": "2 2 1 r r (  ( ) ) ",
@@ -1374,7 +1374,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A very long straight wire carries a current I. At the instant when a charge +Q at point P has velocity v , as shown, the magnetic force on the charge is: -",
+    "question": "A very long straight wire carries a current\n\nI. At the instant when a charge +Q at point P has velocity v , as shown, the magnetic force on the charge is: -",
     "options": {
       "A": "along ox",
       "B": "opposite to oy",
@@ -1490,7 +1490,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current I. The direction of force on PQ will be: -",
+    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current\n\nI. The direction of force on PQ will be: -",
     "options": {
       "A": "towards right",
       "B": "towards left",
@@ -2504,7 +2504,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "If the magnetic susceptibility of a magnetic material is - 0.004 then its nature will be : -",
+    "question": "If the magnetic susceptibility of a magnetic material .004 then its nature will be : -",
     "options": {
       "A": "Diamagnetic",
       "B": "Paramagnetic",
@@ -2573,7 +2573,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The magnetic susceptibility of a paramagnetic material at - 73^\\circC is 0.0075 then its value ^\\circC will be : -",
+    "question": "The magnetic susceptibility of a paramagnetic material ^\\circC is 0.0075 then its value ^\\circC will be : -",
     "options": {
       "A": "0.0045",
       "B": "0.0030",
@@ -2895,7 +2895,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is true :",
+    "question": "Which\n\nstatement is true :",
     "options": {
       "A": "atomic magnetic dipole moment of diamagnet is zero",
       "B": "atomic magnetic dipole moment of para - magnet is zero",

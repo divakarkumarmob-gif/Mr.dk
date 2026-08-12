@@ -39,7 +39,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In the formation of sulphur trioxide by the contact process 2SO 2 (g) + O 2 (g) → 2SO 3 (g); the rate of reaction is expressed as - 2 d [O ] dt =2.5 × 10 -4 mol L -1 s -1 The rate of disappearance of (SO 2 ) will be",
+    "question": "In the formation of sulphur trioxide by the contact process 2SO 2 (g) + O 2 (g) → 2SO 3 (g); the rate of reaction is expressed d [O ] dt =2.5 × 10 -4 mol L -1 s -1 The rate of disappearance of (SO 2 ) will be",
     "options": {
       "A": "5 × 10 -4 mol L -1 s -1",
       "B": "-2.25 × 10 -4 mol L -1 s -1",
@@ -91,7 +91,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is correct for a reaction X + 2Y → Product (P)",
+    "question": "Which of the following\n\nstatement is correct for a reaction X + 2Y → Product (P)",
     "options": {
       "A": "The rate of disappearance of X = twice the rate of disappearance of Y.",
       "B": "The rate of disappearance of X= 1 2 rate of appearance of product",
@@ -141,12 +141,12 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Rate of formation of SO 3 according to the reaction 2SO 2 +O 2 → 2SO 3 is 1.6 × 10 -3 kg L -1 min -1 Hence rate of decomposition of SO 2 is :-",
+    "question": "Rate of formation of SO 3 according to the reaction 2SO 2 +O 2 → 2SO 3 is 1.6 × 10 -3 kg L -1 Hence rate of decomposition of SO 2 is :-",
     "options": {
-      "A": "1.6 × 10 -3 kg L -1 min -1",
-      "B": "8.0 × 10 -4 kg L -1 min -1",
-      "C": "3.2 × 10 -3 kg L -1 min -1",
-      "D": "1.28 × 10 -3 kg L -1 min -1"
+      "A": "1.6 × 10 -3 kg L -1",
+      "B": "8.0 × 10 -4 kg L -1",
+      "C": "3.2 × 10 -3 kg L -1",
+      "D": "1.28 × 10 -3 kg L -1"
     },
     "correct_option": "B",
     "explanation": "A + 2B → C + D initally 0.6 0.8 At time t 0.6 - x 0.8 - 2x x x given x = 0.2 At time t P A = 0.6 - 0.2 = 0.4 P B = 0.8 - 0.4 = 0.4 r initial = k[P A ] [P B ] 2 r t = k[P A ] [P B ] t 2 2 t 2 initial r k[0.4][0.4] 0.4 0.4 0.4 1 r 0.6 0.8 0.8 6 k[0.6][0.8] × × = = = × ×"
@@ -299,7 +299,7 @@
       "D": "1 27 times"
     },
     "correct_option": "A",
-    "explanation": "K I = 0.693 0.693 40 40 = K O = 1.386 0.693 2 20 20 = × I O K 1 K 2 = = 0.5 mol -1 dm 3"
+    "explanation": "K I = 0.693 0.693 40 40 = K O = 1.386 0.693 2 20 20 = × I O K 1 K 2 = = 0.5 dm 3"
   },
   {
     "type": "normal_mcq",
@@ -324,7 +324,7 @@
       "D": "13 12"
     },
     "correct_option": "A",
-    "explanation": "2 1 T T k k = (μ) ∆ T/10 1 -3 T 10 k = (μ) 20/10 = 4 1 T k = -3 10 4 = 2.5 × 10 -4 min -1"
+    "explanation": "2 1 T T k k = (μ) ∆ T/10 1 -3 T 10 k = (μ) 20/10 = 4 1 T k = -3 10 4 = 2.5 × 10 -4"
   },
   {
     "type": "normal_mcq",
@@ -349,7 +349,7 @@
       "D": "Rate = K"
     },
     "correct_option": "A",
-    "explanation": "From first experiment 0.1 = K [0.2] 2 K = 2.5 r = 2.5 [0.6] 2 In exp. II = 1.8 M s -1 $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "From first experiment 0.1 = K [0.2] 2 K = 2.5 r = 2.5 [0.6] 2 In exp. II = 1.8 M s -1 $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -424,7 +424,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "(1 n) (1 n) 0 C C - - - = (n - 1) kt put n = 3 2 2 0 C C - - - = 2 kt concentration i.e. = mol \\lambda 2 mol -       \\lambda = K × second k = \\lambda 2 mol -2 sec -1"
+    "explanation": "(1 n) (1 n) 0 C C - - - = (n - 1) kt put n = 3 2 2 0 C C - - - = 2 kt concentration i.e. = mol \\lambda 2 mol -       \\lambda = K × second k = \\lambda 2"
   },
   {
     "type": "normal_mcq",
@@ -441,7 +441,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Select the rate law that corresponds to data shown for the following reaction 2A+B → C+D :- Exp. [A] [B] Initial rate (mol L -1 min -1 )",
+    "question": "Select the rate law that corresponds to data shown for the following reaction 2A+B → C+D :- Exp. [A] [B] Initial rate (mol L -1 )",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -449,7 +449,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "t 1/2 = 0.693 K 60 = 0.693 K K = 0.693 60 min -1 Kt = 2.303 log 0 0 a a x - 0.693 60 × t = 2.303 log 8 7 t = 11.56 minutes"
+    "explanation": "t 1/2 = 0.693 K 60 = 0.693 K K = 0.693 60 Kt = 2.303 log 0 0 a a x - 0.693 60 × t = 2.303 log 8 7 t = 11.56 minutes"
   },
   {
     "type": "normal_mcq",
@@ -466,7 +466,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a hypothetical reaction ; A + B → C the following data were obtained in three different experiments :- [A] [B] Rate of reaction (mol L -1 ) (mol L -1 ) (mol L -1 min -1 ) 0.01 0.01 1.0 × 10 - 4 0.01 0.03 9.0 × 10 - 4 0.03 0.03 2.70 × 10 - 3 The rate law will be :-",
+    "question": "For a hypothetical reaction ; A + B → C the following data were obtained in three different experiments :- [A] [B] Rate of reaction (mol L -1 ) (mol L -1 ) (mol L -1 ) 0.01 0.01 1.0 × 10 - 4 0.01 0.03 9.0 × 10 - 4 0.03 0.03 2.70 × 10 - 3 The rate law will be :-",
     "options": {
       "A": "r = K[A] 2 [B]",
       "B": "r = K[A][B] 2",
@@ -549,7 +549,7 @@
       "D": "Rate = K[A] 2 [B]^\\circ"
     },
     "correct_option": "A",
-    "explanation": "2A → B + 5C pressure 80mm 0 0 (t = 0) At 't' (80-x) x 2 5x 2 ⇒ P total = x 5x (80 x) 2 2 - + + = 100 mm x = 10 mm 2 A ( p) ∆ = x = 10 2 A p 10 r t 5 ∆ = = ∆ = 2 mm min -1"
+    "explanation": "2A → B + 5C pressure 80mm 0 0 (t = 0) At 't' (80-x) x 2 5x 2 ⇒ P total = x 5x (80 x) 2 2 - + + = 100 mm x = 10 mm 2 A ( p) ∆ = x = 10 2 A p 10 r t 5 ∆ = = ∆ = 2 mm"
   },
   {
     "type": "normal_mcq",
@@ -574,7 +574,7 @@
       "D": "Rate = K[A] 2 [B] 2"
     },
     "correct_option": "A",
-    "explanation": "According to Arrhenius equation, k = A. a E / RT e - (Catalyst absent) k' = A a E '/ RT e - (Catalyst present) Given ' a E = 4.15 kJ mol -1 ' a a (E E )/ RT k ' e k - ∴ = Given k' = 2.718k = ek Hence ' a a (E E )/ RT e e - = or ' a a E E 1 RT - = or ' a a E E RT = + = 4.15 + 8.3 × 500 × 10 -3 = 8.3 kJ mol -"
+    "explanation": "According to Arrhenius equation, k = A. a E / RT e - (Catalyst absent) k' = A a E '/ RT e - (Catalyst present) Given ' a E = 4.15 kJ ' a a (E E )/ RT k ' e k - ∴ = Given k' = 2.718k = ek Hence ' a a (E E )/ RT e e - = or ' a a E E 1 RT - = or ' a a E E RT = + = 4.15 + 8.3 × 500 × 10 -3 = 8.3 kJ mol -"
   },
   {
     "type": "statement_based",
@@ -743,7 +743,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Then which one of the following statement is false :-",
+    "question": "Then which one of the following\n\nstatement is false :-",
     "options": {
       "A": "If [B] is kept constant while [A] is doubled, the reaction will proceed twice as fast",
       "B": "If [A] is kept constant while [B] is reduced to one quarter, the rate will be halved",
@@ -1296,10 +1296,10 @@
     },
     "question": "In a first order reaction, the concentration of the reactant is decreased from 1.0 M to 0.25 M in 20 min. The rate constant of the reaction would be-",
     "options": {
-      "A": "10 min -1",
-      "B": "6.931 min -1",
-      "C": "0.6931 min -1",
-      "D": "0.06931 min -1"
+      "A": "10",
+      "B": "6.931",
+      "C": "0.6931",
+      "D": "0.06931"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
@@ -1772,7 +1772,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is not correct for the reaction whose rate is r = k (rate constant)",
+    "question": "Which of the following\n\nstatement is not correct for the reaction whose rate is r = k (rate constant)",
     "options": {
       "A": "rate of reaction is independent of concentration of reactant",
       "B": "t 1/2 of reaction does not depend upon concentration of reactant",
@@ -1876,7 +1876,7 @@
     "options": {
       "A": "Half life of a first order reaction is independent of initial concentration",
       "B": "Rate of reaction is constant for first order reaction",
-      "C": "Unit of K for second order reaction is mol -1 L s -1",
+      "C": "Unit of K for second order reaction is L s -1",
       "D": "Half life of zero order is proportional to initial concentration $//"
     },
     "correct_option": "A",
@@ -1922,7 +1922,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rate constant of a zero order reaction is 0.2 mol dm -3 h -",
+    "question": "The rate constant of a zero order reaction is 0.2 mol h -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1974,10 +1974,10 @@
     },
     "question": "Then its initial concentration would be :-",
     "options": {
-      "A": "6.05 mol dm -3",
-      "B": "0.15 mol dm -3",
-      "C": "0.25 mol dm -3",
-      "D": "4.00 mol dm -3"
+      "A": "6.05 mol",
+      "B": "0.15 mol",
+      "C": "0.25 mol",
+      "D": "4.00 mol"
     },
     "correct_option": "B",
     "explanation": "K 1 = 2.303 100 log t 10 ; K 2 = 2.303 100 log 2t 1 1 2 K 2 log10 K log100 = = 1"
@@ -2051,8 +2051,8 @@
     "options": {
       "A": "4 s -1",
       "B": "20 s -1",
-      "C": "4 lit. mol -1 min. -1",
-      "D": "0.034 min -1"
+      "C": "4 lit. min. -1",
+      "D": "0.034"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
@@ -2076,7 +2076,7 @@
     "options": {
       "A": "t completion = finite",
       "B": "t 1/2 ∝ 1 a",
-      "C": "Unit of K is mole lit -1 s -1",
+      "C": "Unit of K is mole s -1",
       "D": "t 1/2 × K = constant"
     },
     "correct_option": "A",
@@ -2400,7 +2400,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rate constant, the activation energy and the frequency factor of a chemical reaction at 25 0 C are 3 × 10 -4 s -1 ; 104.4 kJ mol -1 and 6.0 × 10 14 s -1 respectively, the value of the rate constant as T → ∞ is.",
+    "question": "The rate constant, the activation energy and the frequency factor of a chemical reaction at 25 0 C are 3 × 10 -4 s -1 ; 104.4 kJ and 6.0 × 10 14 s -1 respectively, the value of the rate constant as T → ∞ is.",
     "options": {
       "A": "2 × 10 8 s -1",
       "B": "6 × 10 14 s -1",
@@ -2625,7 +2625,7 @@
       "source": "Chemical Kinetics - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If energy change ( ∆ H) during the reaction is - 20 kJ, then the activation energy for the reverse reaction is :-",
+    "question": "If energy change ( ∆ H) during the reaction kJ, then the activation energy for the reverse reaction is :-",
     "options": {
       "A": "10 kJ",
       "B": "20 kJ",
@@ -3100,15 +3100,15 @@
       "source": "Chemical Kinetics - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Under the same reaction conditions, initial concentration is 1.386 mol dm -3 of a substance becomes half in 40 seconds and 20 seconds through first order and zero order kinetics, respectively. Ratio l 0 k k       of the rate constants for first order (k 1 ) and zero order (k 0 ) of the reactions is",
+    "question": "Under the same reaction conditions, initial concentration is 1.386 mol of a substance becomes half in 40 seconds and 20 seconds through first order and zero order kinetics, respectively. Ratio l 0 k k       of the rate constants for first order (k 1 ) and zero order (k 0 ) of the reactions is",
     "options": {
-      "A": "0.5 mol -1 dm 3",
-      "B": "1.0 mol dm -3",
-      "C": "2.0 mol -1 dm 3",
-      "D": "0.1 mol dm -3"
+      "A": "0.5 dm 3",
+      "B": "1.0 mol",
+      "C": "2.0 dm 3",
+      "D": "0.1 mol"
     },
     "correct_option": "A",
-    "explanation": "K I = 0.693 0.693 40 40 = K O = 1.386 0.693 2 20 20 = × I O K 1 K 2 = = 0.5 mol -1 dm 3"
+    "explanation": "K I = 0.693 0.693 40 40 = K O = 1.386 0.693 2 20 20 = × I O K 1 K 2 = = 0.5 dm 3"
   },
   {
     "type": "normal_mcq",
@@ -3133,7 +3133,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "2 1 T T k k = (μ) ∆ T/10 1 -3 T 10 k = (μ) 20/10 = 4 1 T k = -3 10 4 = 2.5 × 10 -4 min -1"
+    "explanation": "2 1 T T k k = (μ) ∆ T/10 1 -3 T 10 k = (μ) 20/10 = 4 1 T k = -3 10 4 = 2.5 × 10 -4"
   },
   {
     "type": "normal_mcq",
@@ -3175,7 +3175,7 @@
       "source": "Chemical Kinetics - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "What is the rate constant (in min -1 ) at 17^\\circC for this reaction ?",
+    "question": "What is the rate constant (in ) at 17^\\circC for this reaction ?",
     "options": {
       "A": "10 -3",
       "B": "5 × 10 -4",
@@ -3200,7 +3200,7 @@
       "source": "Chemical Kinetics - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Consider a chemical reaction involving compounds A and B, which is found to be first order in A and second order in B. At what rate will the reaction occur in experiment 2 ? Experiment Rate (Ms -1 ) Initial [A] Initial [B] 1 0.10 1.0 M 0.20 M 2 ? 2.0 M 0.60 M",
+    "question": "Consider a chemical reaction involving compounds A and B, which is found to be first order in A and second order in B. At what rate will the reaction occur in experiment 2 ? Experiment Rate ( ) Initial [A] Initial [B] 1 0.10 1.0 M 0.20 M 2 ? 2.0 M 0.60 M",
     "options": {
       "A": "1.8 M s -1",
       "B": "0.20 M s -1",
@@ -3208,7 +3208,7 @@
       "D": "0.36 M s -1"
     },
     "correct_option": "A",
-    "explanation": "From first experiment 0.1 = K [0.2] 2 K = 2.5 r = 2.5 [0.6] 2 In exp. II = 1.8 M s -1 $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+    "explanation": "From first experiment 0.1 = K [0.2] 2 K = 2.5 r = 2.5 [0.6] 2 In exp. II = 1.8 M s -1 $//(1 TARGET : 202 5 PHYSICAL 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -3327,13 +3327,13 @@
     },
     "question": "A certain reaction obeys the rate equation (in the integrated form) [ ] [ ] (1-n) (1-n) 0 C - C = (n - 1) kt where n is the order of the reaction; C 0 the initial concentration and C, the concentration after time t. What is the unit of k for n = 3 :-",
     "options": {
-      "A": "sec -1",
-      "B": "litre mol -1 sec -1",
-      "C": "mol litre -1 sec -1",
-      "D": "litre 2 mol -2 sec -1"
+      "A": "",
+      "B": "litre",
+      "C": "mol litre -1",
+      "D": "litre 2"
     },
     "correct_option": "A",
-    "explanation": "(1 n) (1 n) 0 C C - - - = (n - 1) kt put n = 3 2 2 0 C C - - - = 2 kt concentration i.e. = mol \\lambda 2 mol -       \\lambda = K × second k = \\lambda 2 mol -2 sec -1"
+    "explanation": "(1 n) (1 n) 0 C C - - - = (n - 1) kt put n = 3 2 2 0 C C - - - = 2 kt concentration i.e. = mol \\lambda 2 mol -       \\lambda = K × second k = \\lambda 2"
   },
   {
     "type": "normal_mcq",
@@ -3358,7 +3358,7 @@
       "D": "11.6 minutes $//"
     },
     "correct_option": "A",
-    "explanation": "t 1/2 = 0.693 K 60 = 0.693 K K = 0.693 60 min -1 Kt = 2.303 log 0 0 a a x - 0.693 60 × t = 2.303 log 8 7 t = 11.56 minutes"
+    "explanation": "t 1/2 = 0.693 K 60 = 0.693 K K = 0.693 60 Kt = 2.303 log 0 0 a a x - 0.693 60 × t = 2.303 log 8 7 t = 11.56 minutes"
   },
   {
     "type": "normal_mcq",
@@ -3452,13 +3452,13 @@
     },
     "question": "A gaseous reaction, 2A(g) → B(g) + 5C(g) shows increase in pressure from 80 mm to 100 mm in 5 minutes. The rate of disappearance of A is :-",
     "options": {
-      "A": "4 mm min -1",
-      "B": "8 mm min -1",
-      "C": "16 mm min -1",
-      "D": "2 mm min -1"
+      "A": "4 mm",
+      "B": "8 mm",
+      "C": "16 mm",
+      "D": "2 mm"
     },
     "correct_option": "A",
-    "explanation": "2A → B + 5C pressure 80mm 0 0 (t = 0) At 't' (80-x) x 2 5x 2 ⇒ P total = x 5x (80 x) 2 2 - + + = 100 mm x = 10 mm 2 A ( p) ∆ = x = 10 2 A p 10 r t 5 ∆ = = ∆ = 2 mm min -1"
+    "explanation": "2A → B + 5C pressure 80mm 0 0 (t = 0) At 't' (80-x) x 2 5x 2 ⇒ P total = x 5x (80 x) 2 2 - + + = 100 mm x = 10 mm 2 A ( p) ∆ = x = 10 2 A p 10 r t 5 ∆ = = ∆ = 2 mm"
   },
   {
     "type": "normal_mcq",
@@ -3483,7 +3483,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "According to Arrhenius equation, k = A. a E / RT e - (Catalyst absent) k' = A a E '/ RT e - (Catalyst present) Given ' a E = 4.15 kJ mol -1 ' a a (E E )/ RT k ' e k - ∴ = Given k' = 2.718k = ek Hence ' a a (E E )/ RT e e - = or ' a a E E 1 RT - = or ' a a E E RT = + = 4.15 + 8.3 × 500 × 10 -3 = 8.3 kJ mol -"
+    "explanation": "According to Arrhenius equation, k = A. a E / RT e - (Catalyst absent) k' = A a E '/ RT e - (Catalyst present) Given ' a E = 4.15 kJ ' a a (E E )/ RT k ' e k - ∴ = Given k' = 2.718k = ek Hence ' a a (E E )/ RT e e - = or ' a a E E 1 RT - = or ' a a E E RT = + = 4.15 + 8.3 × 500 × 10 -3 = 8.3 kJ mol -"
   },
   {
     "type": "normal_mcq",
@@ -3580,7 +3580,7 @@
       "A": "1 and 0",
       "B": "1 and 1",
       "C": "0 and 1",
-      "D": "None ALLEN : Physical Chemistry 25"
+      "D": "None ALLEN : Physical"
     },
     "correct_option": "A",
     "explanation": "A(g) → 2B(g) + C(g) Initial pressure : 0.5 0 0 Pressure after 2 hrs.: 0.5 - p 2p p Total pressure after 2 hours = 0.5 - p + 2p + p = 0.5 + 2p Given that : 0.5 + 2p = 0.7 or p = 0.1 Pressure of A after 2 hours = 0.5 - p = 0.5 - 0.1 = 0.4 Units of rate constant suggest that it is a first order reaction. Rate of reaction after 2 hours = k[A] = 10 -3 × 0.4 = 4 × 10 -4 atm s -1"
@@ -3650,7 +3650,7 @@
       "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a hypothetical reaction ; A + B → C the following data were obtained in three different experiments : - [A] ( mol L - 1 ) [B] ( mol L - 1 ) Rate of reaction (Mol L - 1 min - 1 )",
+    "question": "For a hypothetical reaction ; A + B → C the following data were obtained in three different experiments : - [A] ( mol L - 1 ) [B] ( mol L - 1 ) Rate of reaction (Mol L - 1 )",
     "options": {
       "A": "Option A",
       "B": "Option B",

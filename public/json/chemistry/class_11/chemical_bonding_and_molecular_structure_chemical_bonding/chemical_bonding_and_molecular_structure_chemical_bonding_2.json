@@ -116,7 +116,7 @@
       "source": "Chemical Bonding - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is not correct from the point of view of molecular orbital theory?",
+    "question": "Which of the following\n\nstatement is not correct from the point of view of molecular orbital theory?",
     "options": {
       "A": "Be 2 is not a stable molecule",
       "B": "The 2 is not stable but 2 He + is expected to exist",
@@ -149,7 +149,7 @@
       "D": "66%"
     },
     "correct_option": "A",
-    "explanation": "I 2 + KI → KI 3 In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
+    "explanation": "I 2 + KI → In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
   },
   {
     "type": "normal_mcq",
@@ -243,7 +243,7 @@
       "source": "Chemical Bonding - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is correct, if %s-character of a hybrid orbital decreases",
+    "question": "Which of the following\n\nstatement is correct, if %s-character of a hybrid orbital decreases",
     "options": {
       "A": "The bond angle decreases",
       "B": "The bond strength increases",
@@ -521,7 +521,7 @@
     "question": "Which compound is formed in 2 nd excited state?",
     "options": {
       "A": "PCl 5",
-      "B": "SH 6",
+      "B": "",
       "C": "SO 3",
       "D": "IF 7"
     },
@@ -801,7 +801,7 @@
       "D": "Covalent character = LiF < LiCl < LiBr < LiI"
     },
     "correct_option": "A",
-    "explanation": "(i) NO 3 - > NH 3 > NH 2 - (B.A. order) sp 2 sp 3 sp 3 1 l.p. 2 l.p. (ii) In (CH 3 ) 3 B hybridisation of carbon is sp 3 (non planar) (iii) NH 4 Cl → NH 4 + Cl - in NH 4 + hyb. of N is sp 3 (iv) BF 3 = BCl 3 = BBr 3 = BI 3 all have same bond angle. $//(1 TARGET : 202 5 INORGANIC CHEMISTRY 202 5 HS"
+    "explanation": "(i) NO 3 - > NH 3 > NH 2 - (B.A. order) sp 2 sp 3 sp 3 1 l.p. 2 l.p. (ii) In (CH 3 ) 3 B hybridisation of carbon is sp 3 (non planar) (iii) NH 4 Cl → NH 4 + Cl - in NH 4 + hyb. of N is sp 3 (iv) BF 3 = BCl 3 = BBr 3 = BI 3 all have same bond angle. $//(1 TARGET : 202 5 INORGANIC 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -901,7 +901,7 @@
       "D": "NH 4 Cl"
     },
     "correct_option": "A",
-    "explanation": "4 BCl - 4 ICl - sp 3 sp 3 d 2 l.p. = 0 l.p. = 2 tetrahedral square planar"
+    "explanation": "4 ICl - sp 3 sp 3 d 2 l.p. = 0 l.p. = 2 tetrahedral square planar"
   },
   {
     "type": "normal_mcq",
@@ -1353,7 +1353,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "I 2 + KI → KI 3 In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
+    "explanation": "I 2 + KI → In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
   },
   {
     "type": "normal_mcq",
@@ -1470,7 +1470,7 @@
       "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "One of the resonating structure of -2 4 SO is Which set of average formal charge on oxygen and bond order is correct",
+    "question": "One of the resonating structure SO is Which set of average formal charge on oxygen and bond order is correct",
     "options": {
       "A": "- 0.5 and 1.5",
       "B": "- 1.5 and 3",
@@ -2251,7 +2251,7 @@
       "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is correct about the octet theory.",
+    "question": "Which of the following\n\nstatement is correct about the octet theory.",
     "options": {
       "A": "It is based upon the chemical inertness of noble gases with exceptions like XeF 2 , KrF 2 etc.",
       "B": "This theory does not account for the shape of molecules.",
@@ -3213,7 +3213,7 @@
       "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The correct order of bond enthalpy (kJ mol - 1 ) is :",
+    "question": "The correct order of bond enthalpy (kJ ) is :",
     "options": {
       "A": "Si - Si > C - C > SN\\cdot sn > Ge - Ge",
       "B": "Si - Si > C - C > Ge - Ge > SN\\cdot sn",
@@ -3346,7 +3346,7 @@
       "D": "XeO 3 CB06 - 0127"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) O S O O C O • • O - Si O - | O - | O - (2, 2, 4) H N H BA = 107^\\circ H H N H H  H BA = 109^\\circ28’ H N H BA « 109^\\circ28’ + - Cl B Cl Cl Cl Tetrahedral Cl I Cl Square planar - - Cl Cl O Xe F F see - saw O O I F F see - saw O Cl - F F F T - Shape \\mu  0 Xe F Square planar \\mu  0 F F F \\mu =0 Xe - F is polar bond 3s 3p 3d S : [Ne]2s 2 3p 4 S : Excited State 3s 4 vacan t orbitals 3p 3d 1s - 1s > 2p - 2p > 2s - 2p Size factor Directional character KI 3 → K + + Contains dative bond I 3 - B : - 1s 2 2s 2 2p 1 PCl 5 → sp 3 d d z 2 B A B B see - saw B O S O sp 2 O 1 P \\pi - P \\pi 2 P \\pi - d \\pi NEET : CHEMISTRY"
+    "explanation": "Ans. ( 3 ) O S O O C O • • O - Si O - | O - | O - (2, 2, 4) H N H BA = 107^\\circ H H N H H  H BA = 109^\\circ28’ H N H BA « 109^\\circ28’ + - Cl B Cl Cl Cl Tetrahedral Cl I Cl Square planar - - Cl Cl O Xe F F see - saw O O I F F see - saw O Cl - F F F T - Shape \\mu  0 Xe F Square planar \\mu  0 F F F \\mu =0 Xe - F is polar bond 3s 3p 3d S : [Ne]2s 2 3p 4 S : Excited State 3s 4 vacan t orbitals 3p 3d 1s - 1s > 2p - 2p > 2s - 2p Size factor Directional character → K + + Contains dative bond I 3 - B : - 1s 2 2s 2 2p 1 PCl 5 → sp 3 d d z 2 B A B B see - saw B O S O sp 2 O 1 P \\pi - P \\pi 2 P \\pi - d \\pi NEET : CHEMISTRY"
   },
   {
     "type": "normal_mcq",
@@ -3673,7 +3673,7 @@
       "D": "O 2 - < O 2 < O 2 +"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) BO 2 1.33 1.5"
+    "explanation": "Ans. ( 2 ) .33 1.5"
   },
   {
     "type": "normal_mcq",

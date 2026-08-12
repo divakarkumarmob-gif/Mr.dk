@@ -273,7 +273,7 @@
       "D": "60 degree/s"
     },
     "correct_option": "A",
-    "explanation": "At A N A mg N A = mg At B N B mg N B - mg = 2 mV R N B = mg + 2 mV R At C N C mg mg - N C = 2 mV R N C = mg - 2 mV R N B > N A > N C $//(1"
+    "explanation": "At A N A mg N A = mg At B N B mg N B - mg = 2 mV R N B = mg + 2 mV R At C N C mg mg - N C = 2 mV R N C = mV R N B > N A > N C $//(1"
   },
   {
     "type": "normal_mcq",
@@ -818,7 +818,7 @@
       "source": "Circular Motion - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two moving particles 'P' and 'Q' are 10 m apart at a certain instant. The velocity of P is 8 m/s making an angle 30^\\circ with line joining P and Q and velocity of Q is 6 m/s making an angle 30^\\circ with PQ as shown in figure. Then the angular speed of P with respect to Q is - 30^\\circ 30^\\circ 8m/s P Q 6m/s 10m",
+    "question": "Two moving particles 'P' and 'Q' are 10 m apart at a certain instant. The velocity of P is 8 m/s making an angle 30^\\circ with line joining P and Q and velocity of Q is 6 m/s making an angle 30^\\circ with PQ as shown in figure. Then the angular speed of P with respect to Q ^\\circ 30^\\circ 8m/s P Q 6m/s 10m",
     "options": {
       "A": "0 rad/s",
       "B": "0.1 rad/s",
@@ -1723,7 +1723,7 @@
       "A": "3gr",
       "B": "2gr",
       "C": "gr",
-      "D": "gr 2"
+      "D": ""
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles.",
@@ -2137,8 +2137,8 @@
     "options": {
       "A": "along the radius",
       "B": "inclined to radius at 1 1/2 4 2 2 1 sin v 1 a r - θ = [ ] + [ ] [ ]",
-      "C": "inclined to radius at θ = cos -1 2 ar v",
-      "D": "inclined to radius at θ = tan -1 2 v ar"
+      "C": "inclined to radius at θ = ar v",
+      "D": "inclined to radius at θ = v ar"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles."
@@ -2256,7 +2256,7 @@
       "D": "none of the above"
     },
     "correct_option": "A",
-    "explanation": "At A N A mg N A = mg At B N B mg N B - mg = 2 mV R N B = mg + 2 mV R At C N C mg mg - N C = 2 mV R N C = mg - 2 mV R N B > N A > N C $//(1"
+    "explanation": "At A N A mg N A = mg At B N B mg N B - mg = 2 mV R N B = mg + 2 mV R At C N C mg mg - N C = 2 mV R N C = mV R N B > N A > N C $//(1"
   },
   {
     "type": "normal_mcq",
@@ -2317,7 +2317,7 @@
       "source": "Circular Motion - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The maximum velocity (in ms -1 ) with which a car driver must traverse a flat curved path of radius 100 m and coefficient of friction 0.4 to avoid skidding is :- (g = 10 m/s 2 )",
+    "question": "The maximum velocity (in ) with which a car driver must traverse a flat curved path of radius 100 m and coefficient of friction 0.4 to avoid skidding is :- (g = 10 m/s 2 )",
     "options": {
       "A": "60",
       "B": "20",
@@ -3181,7 +3181,7 @@
       "D": "0.1 rad/s CR04 - 0031"
     },
     "correct_option": "A",
-    "explanation": "T = m \\omega 2 r 2 max max -3 T 100 mr 100 10 0.1 \\omega = =    \\omega max = 100 rad/s"
+    "explanation": "T = m \\omega 2 r 2 max T 100 mr 100 10 0.1 \\omega = =    \\omega max = 100 rad/s"
   },
   {
     "type": "normal_mcq",

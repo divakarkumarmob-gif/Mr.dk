@@ -66,7 +66,7 @@
       "D": "U 9"
     },
     "correct_option": "C",
-    "explanation": "2 2 1 U Kx U x 2 =   or 2 2 U ' x ' 3 9 U ' 9U U x 1 (  (  = = =  = ( ) ( ) )  ) ",
+    "explanation": "2 2 1 U Kx U x 2 =   U ' x ' 3 9 U ' 9U U x 1 (  (  = = =  = ( ) ( ) )  ) ",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAkCAIAAACfaVRCAAAAMElEQVR42u3OMQEAAAgDILV/5xnB0wcS0Enq1dQ3AwMDAwMDAwMDAwMDAwMDA4PbAkLtA0U9gvpsAAAAAElFTkSuQmCC"
   },
   {
@@ -401,7 +401,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "U 1 = U 2 2 2 1 1 2 2 1 1 K x K x 2 2 =  2 2 1 2 2 1 F F 2K 2K = 2 1 1 2 2 2 F K K F = or 1 1 2 2 F K F K =",
+    "explanation": "U 1 = U 2 2 2 1 1 2 2 1 1 K x K x 2 2 =  2 2 1 2 2 1 F F 2K 2K = 2 1 1 2 2 2 F K K F = F K F K =",
     "photo": "data:image/png;base64,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"
   },
   {
@@ -1611,9 +1611,9 @@
     },
     "question": "The time period of an oscillating body executing SHM is 0.05 sec and its amplitude is 20 cm. The maximum velocity of particle is :",
     "options": {
-      "A": "16 π ms -1",
-      "B": "2 π ms -1",
-      "C": "3.1 ms -1",
+      "A": "16 π",
+      "B": "2 π",
+      "C": "3.1",
       "D": "8 π m/s"
     },
     "correct_option": "A",
@@ -1703,10 +1703,10 @@
     },
     "question": "From the given displacement time graph of an oscillating particle, find the maximum velocity of the particle X(in m) 0.2 1 2 3 4 t (in sec) - 0.2",
     "options": {
-      "A": "2 ms -1",
-      "B": "π ms -1",
-      "C": "0.2 π ms -1",
-      "D": "π/ 2 ms -1"
+      "A": "2",
+      "B": "π",
+      "C": "0.2 π",
+      "D": "π/ 2"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Calculated based on Simple Harmonic Motion formulas (x = A*sin(omega*t + phi), T = 2*pi*sqrt(m/k) or T = 2*pi*sqrt(L/g), Vmax = A*omega).",
@@ -2309,7 +2309,7 @@
       "source": "Oscillations - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Spring of spring constant 1200 Nm -1 is mounted on a smooth frictionless surface and attached to a block of mass 3 kg. Block is pulled 2 cm to the right and released. The angular frequency of oscillation is",
+    "question": "Spring of spring constant 1200 is mounted on a smooth frictionless surface and attached to a block of mass 3 kg. Block is pulled 2 cm to the right and released. The angular frequency of oscillation is",
     "options": {
       "A": "5 rad/s",
       "B": "30 rad/s",
@@ -2596,7 +2596,7 @@
       "source": "Oscillations - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Molten wax of mass m drops on a block of mass M, which is oscillating on a frictionless table as shown. Select the correct statements. M m (I) If the collision takes place at extreme position, amplitude does not change (II) If the collision takes place at mean position, amplitude decreases (III) If the collision takes place at mean position, time period increases (IV) If the collision takes place at extreme position, time period increases Options :-",
+    "question": "Molten wax of mass m drops on a block of mass M, which is oscillating on a frictionless table as shown. Select the correct statements. M m (I) If the collision takes place at extreme position, amplitude does not change (II) If the collision takes place at mean position, amplitude decreases (III) If the collision takes place at mean position, time period increases (IV) If the collision takes place at extreme position, time period increases\n\n**Options** :-",
     "options": {
       "A": "Only",
       "B": "Only",

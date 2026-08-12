@@ -59,7 +59,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A hollow metal sphere of radius 5 cm is charged such that the potential on its surface is 10 V. The potential at the centre of the sphere is",
+    "question": "A hollow metal sphere of radius 5 cm is charged such that the potential on its surface is 10\n\nV. The potential at the centre of the sphere is",
     "options": {
       "A": "0 V",
       "B": "10 V",
@@ -224,10 +224,10 @@
     },
     "question": "If the electric potential at any point (x, y, z)m in space is given by V = 3x 2 volt. The electric field at the point (1, 0, 3) m will be :",
     "options": {
-      "A": "3 Vm - 1 , directed along positive x - axis.",
-      "B": "3 Vm - 1 , directed along negative x - axis.",
-      "C": "6 Vm - 1 , directed along positive x - axis.",
-      "D": "6 Vm - 1 , directed along negative x - axis. EL26 - 0028"
+      "A": "3 , directed along positive x - axis.",
+      "B": "3 , directed along negative x - axis.",
+      "C": "6 , directed along positive x - axis.",
+      "D": "6 , directed along negative x - axis. EL26 - 0028"
     },
     "correct_option": "D",
     "explanation": "Distance travelled by particle before stopping 2 2 2 6 6 5 V v m (200) 100 10 S 0.5m 2a 2qE 2 40 10 10 - -   =   =   "
@@ -501,7 +501,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Given below are two statements : Statement - I : A point charge is brought in an electric field. The value of electric field at a point near to the charge may increase if the charge is positive. Statement - II : An electric dipole is placed in a non - uniform electric field. The net electric force on the dipole will not be zero. Choose the correct answer from the options given below :",
+    "question": "Given below are two statements : Statement - I : A point charge is brought in an electric field. The value of electric field at a point near to the charge may increase if the charge is positive. Statement - II : An electric dipole is placed in a non - uniform electric field. The net electric force on the dipole will not be zero. Choose the correct answer from the\n\n**options** given below :",
     "options": {
       "A": "Both statement - I and statement - II are true.",
       "B": "Both statement - I and statement - I I are false.",
@@ -524,7 +524,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two electric dipoles of dipole moments 1.2 × 10 - 30 cm and 2.4 × 10 - 30 cm are placed in two differen t uniform electric fields of strengths 5 × 10 4 NC - 1 and 15 × 10 4 NC - 1 respectively. The ratio of maximum torque experienced by the electric dipoles will be",
+    "question": "Two electric dipoles of dipole moments 1.2 × 10 - 30 cm and 2.4 × 10 - 30 cm are placed in two differen t uniform electric fields of strengths 5 × 10 4 and 15 × 10 4 respectively. The ratio of maximum torque experienced by the electric dipoles will be",
     "options": {
       "A": "Option A",
       "B": "Option B",

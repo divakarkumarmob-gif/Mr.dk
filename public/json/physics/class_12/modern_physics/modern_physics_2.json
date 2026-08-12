@@ -388,7 +388,7 @@
       "A": "0.49 Å",
       "B": "0.29 Å",
       "C": "0.19 Å",
-      "D": "0.39 Å ALLEN : Physics 131"
+      "D": "0.39 Å ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
@@ -825,7 +825,7 @@
       "A": "m 3 = 1 2 m m -",
       "B": "m 3 <",
       "C": "m 3 >",
-      "D": "m 3 = m 1 + m 2 ALLEN : Physics 157"
+      "D": "m 3 = m 1 + m 2 ALLEN :"
     },
     "correct_option": "A",
     "explanation": "eV 0 = 0 hc hc - λ λ as λ ↓ V 0 ↑"
@@ -920,7 +920,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ or 0 hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
+    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
   },
   {
     "type": "normal_mcq",
@@ -1127,7 +1127,7 @@
       "D": "2 He 4 ALLEN Modern Physics - II 158"
     },
     "correct_option": "A",
-    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -1188,7 +1188,7 @@
       "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For the given reaction, the particle X is - 6 C 11 → 5 B 11 + β + + X",
+    "question": "For the given reaction, the particle X C 11 → 5 B 11 + β + + X",
     "options": {
       "A": "Neutron",
       "B": "Anti neutrino",
@@ -1469,7 +1469,7 @@
       "A": "25.8 MeV",
       "B": "23.6 MeV",
       "C": "19.2 MeV",
-      "D": "30.2 MeV ALLEN : Physics 159 + A C B + + + + + + + RADIOACTIVITY"
+      "D": "30.2 MeV ALLEN : + A C B + + + + + + + RADIOACTIVITY"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
@@ -1832,7 +1832,7 @@
       "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Given below are two statements : Statement I : Atoms are electrically neutral as they contain equal number of positive and negative charges. Statement II : Atoms of each element are stable and emit their characteristic spectrum. In the light of the above statements, choose the most appropriate answer from the options given below :",
+    "question": "Given below are two statements :\n\nStatement I : Atoms are electrically neutral as they contain equal number of positive and negative charges.\n\nStatement II : Atoms of each element are stable and emit their characteristic spectrum. In the light of the above statements, choose the most appropriate answer from the\n\n**options** given below :",
     "options": {
       "A": "Both Statement I and Statement II are correct.",
       "B": "Both Statement I and Statement II are incorrect.",
@@ -1858,7 +1858,7 @@
       "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match List I with List II. List I List II (Spectral Lines of (Wavelengths (nm)) Hydrogen for transitions from) A. n 2 = 3 to n 1 = 2 I. 410.2 B. n 2 = 4 to n 1 = 2 II. 434.1 C. n 2 = 5 to n 1 = 2 III. 656.3 D. n 2 = 6 to n 1 = 2 IV. 486.1 Choose the correct answer from the options given below :",
+    "question": "Match List I with List\n\nII. List I List II (Spectral Lines of (Wavelengths (nm)) Hydrogen for transitions from) A. n 2 = 3 to n 1 = 2\n\nI. 410.2 B. n 2 = 4 to n 1 = 2\n\nII. 434.1 C. n 2 = 5 to n 1 = 2\n\nIII. 656.3 D. n 2 = 6 to n 1 = 2\n\nIV. 486.1 Choose the correct answer from the\n\n**options** given below :",
     "options": {
       "A": "A-II, B-I, C-IV, D-III",
       "B": "A-III, B-IV, C-II, D-I",
@@ -1881,7 +1881,7 @@
       "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match List-I with List-II . List-I (Series) List-II (Wave number in cm -1 ) A. Balmer series I.   -     2 2 1 1 R 1 n B. Lyman series II.   -     2 2 1 1 R 4 n C. Brackett series III.   -     2 2 1 1 R 5 n D. Pfund series IV.   -     2 2 1 1 R 2 n Choose the correct answer from the options given below :",
+    "question": "Match List-I with List-II . List-I (Series) List-II (Wave number in ) A. Balmer series\n\nI.   -     2 2 1 1 R 1 n B. Lyman series\n\nII.   -     2 2 1 1 R 4 n C. Brackett series\n\nIII.   -     2 2 1 1 R 5 n D. Pfund series\n\nIV.   -     2 2 1 1 R 2 n Choose the correct answer from the\n\n**options** given below :",
     "options": {
       "A": "A-II, B-III, C-IV, D-I",
       "B": "A-IV, B-I, C-II, D-III",
@@ -1959,7 +1959,7 @@
       "D": "π 2 heB m"
     },
     "correct_option": "A",
-    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -2574,7 +2574,7 @@
       "source": "NCR - Modern Physics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Nuclear forces acting between two nucleons inside nucleus , then incorrect statement is : (1) Has saturation property (2) Is short ranged which explains the constancy is BE/A in the range 30 < A <",
+    "question": "Nuclear forces acting between two nucleons inside nucleus , then incorrect\n\nstatement is : (1) Has saturation property (2) Is short ranged which explains the constancy is BE/A in the range 30 < A <",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2620,7 +2620,7 @@
       "source": "NCR - Modern Physics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In a thermonuclear fusion, which statement is incorrect :",
+    "question": "In a thermonuclear fusion, which\n\nstatement is incorrect :",
     "options": {
       "A": "Energy is provided by raising the temperature",
       "B": "Energy must be provided to overcome columbic repulsion between approaching positively charged nuclei.",
@@ -2643,7 +2643,7 @@
       "source": "NCR - Modern Physics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is incorrect for a nuclear reaction",
+    "question": "Which of the following\n\nstatement is incorrect for a nuclear reaction",
     "options": {
       "A": "If nuclei with less total binding energy transform to nuclei with greater binding energy, there will be a net energy release.",
       "B": "Nuclear reactions are not balanced in the same way as chemical reactions",

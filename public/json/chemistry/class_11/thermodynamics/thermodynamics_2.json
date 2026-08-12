@@ -89,15 +89,15 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the equilibrium constant for a reaction is 10, then the value of \\Delta G ^\\circ will be (R = 8JK - 1 mol - 1 , T = 300 K)",
+    "question": "If the equilibrium constant for a reaction is 10, then the value of \\Delta G ^\\circ will be (R = 8JK - 1 , T = 300 K)",
     "options": {
-      "A": "+5.527 kJ mol - 1",
-      "B": "- 5.527 kJ mol - 1",
-      "C": "+55.27 kJ mol - 1",
-      "D": "- 55.27 kJ mol - 1 TD24 - 0003"
+      "A": "+5.527 kJ",
+      "B": "- 5.527 kJ",
+      "C": "+55.27 kJ",
+      "D": "- 55.27 kJ TD24 - 0003"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) K p = 10 \\Delta G 0 = - RTlnK p R = 8 JK - 1 mol - 1 \\Delta G 0 = - 8 × 300 × ln(10) T = 300K \\Delta G 0 = - 5.527 KJ mol - 1"
+    "explanation": "Ans. ( 2 ) K p = 10 \\Delta G 0 = - RTlnK p R = 8 \\Delta G 0 = - 8 × 300 × ln(10) T = 300K \\Delta G 0 = - 5.527 KJ"
   },
   {
     "type": "normal_mcq",
@@ -164,7 +164,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The Gibbs free energy change of a reaction at 27^\\circC is - 26 kCal and its entropy change is - 60 Cal K -",
+    "question": "The Gibbs free energy change of a reaction at 27^\\circC kCal and its entropy change Cal K -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -490,7 +490,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of a reaction at 273 K is - 3.57 kJ. what will be the enthalpy of reaction at 373 K if \\Delta C p = zero : -",
+    "question": "The enthalpy of a reaction at 273 K .57 kJ. what will be the enthalpy of reaction at 373 K if \\Delta C p = zero : -",
     "options": {
       "A": "- 3.57 kJ",
       "B": "Zero",
@@ -517,7 +517,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reactions, (i) H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) + x kJ (ii) H 2 (g) + Cl 2 (g) ⎯ → 2HCl ( 𝓁 ) + y kJ Which one of the following statement is correct :",
+    "question": "For the reactions, (i) H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) + x kJ (ii) H 2 (g) + Cl 2 (g) ⎯ → 2HCl ( 𝓁 ) + y kJ Which one of the following\n\nstatement is correct :",
     "options": {
       "A": "x > y",
       "B": "x < y",
@@ -617,7 +617,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given enthalpy of formation of CO 2 (g) and CaO(s) are - 94.0 kJ kJ respectively and the enthalpy of the reaction : CaCO 3 (s) ⎯ → CaO(s) + CO 2 (g) is 42 kJ. The enthalpy of formation of CaCO 3 (s) is",
+    "question": "Given enthalpy of formation of CO 2 (g) and CaO(s) .0 kJ kJ respectively and the enthalpy of the reaction : CaCO 3 (s) ⎯ → CaO(s) + CO 2 (g) is 42 kJ. The enthalpy of formation of CaCO 3 (s) is",
     "options": {
       "A": "- 42 KJ",
       "B": "- 202 KJ",
@@ -642,7 +642,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given that standard enthalpy of formation of CH 4 , C 2 H 4 and C 3 H 8 are - 17.9, 12.5, - 24.8 kCal mol -",
+    "question": "Given that standard enthalpy of formation of CH 4 , C 2 H 4 and C 3 H 8 .9, 12.5, - 24.8 kCal mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -692,7 +692,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The o f H \\Delta for CO 2(g) , CO (g) and H 2 O (g) .5, - 110.5 .8 kJ mol - 1 respectively the standard enthalpy change (in kJ) for the reaction CO 2(g) +H 2 (g) → CO (g) + H 2 O (g) is -",
+    "question": "The o f H \\Delta for CO 2(g) , CO (g) and H 2 O (g) .5, - 110.5 .8 kJ respectively the standard enthalpy change (in kJ) for the reaction CO 2(g) +H 2 (g) → CO (g) + H 2 O (g) is -",
     "options": {
       "A": "524.1",
       "B": "41.2",
@@ -742,12 +742,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The standard heat of formation of CS 2 ( 𝓁 ) will be; given that the standard heat of combustion of carbon (s), sulphur(s) and CS 2 ( 𝓁 ) .3, - 293.72 .76 kJ mol - 1 respectively is",
+    "question": "The standard heat of formation of CS 2 ( 𝓁 ) will be; given that the standard heat of combustion of carbon (s), sulphur(s) and CS 2 ( 𝓁 ) .3, - 293.72 .76 kJ respectively is",
     "options": {
-      "A": "- 128.02 kJ mole - 1",
-      "B": "+12.802 kJ mol - 1",
-      "C": "+128.02 kJ mol - 1",
-      "D": "- 12.802 kJ mol - 1 TC05 - 0020 10"
+      "A": "- 128.02 kJ",
+      "B": "+12.802 kJ",
+      "C": "+128.02 kJ",
+      "D": "- 12.802 kJ TC05 - 0020 10"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
@@ -767,7 +767,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of combustion of CH 4 (g) , C (s) and H 2 (g) at 25^\\circC .4 K Cal, - 94.0 K Cal and - 68.4 K Cal respectively, the heat of formation of CH 4 will be -",
+    "question": "The heat of combustion of CH 4 (g) , C (s) and H 2 (g) at 25^\\circC .4 K Cal, - 94.0 K Cal .4 K Cal respectively, the heat of formation of CH 4 will be -",
     "options": {
       "A": "+54.4 K Cal",
       "B": "- 18.4 K Cal",
@@ -792,7 +792,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The standard heats of formation of NO 2 (g) and N 2 O 4 (g) are 8.0 and 2.0 kCal mol - 1 respectively the heat of dimerization of NO 2 in kCal is",
+    "question": "The standard heats of formation of NO 2 (g) and N 2 O 4 (g) are 8.0 and 2.0 kCal respectively the heat of dimerization of NO 2 in kCal is",
     "options": {
       "A": "10.0",
       "B": "- 6.0",
@@ -842,7 +842,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "According to equation, C 6 H 6 ( 𝓁 ) + 15/2 O 2 (g) → 6 CO 2 (g) + 3H 2 O ( 𝓁 ) ; \\Delta H = - 3264.4 kJ mol - 1 the energy evolved when 7.8 g benzene is burnt in air will be -",
+    "question": "According to equation, C 6 H 6 ( 𝓁 ) + 15/2 O 2 (g) → 6 CO 2 (g) + 3H 2 O ( 𝓁 ) ; \\Delta H = - 3264.4 kJ the energy evolved when 7.8 g benzene is burnt in air will be -",
     "options": {
       "A": "163.22 kJ",
       "B": "32.64 kJ",
@@ -867,7 +867,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given standard enthalpy of formation of CO ( - 110 kJ mol - 1 ) and CO 2 ( - 394 kJ mol - 1 ). The heat of combustion when one mole of graphite burns is",
+    "question": "Given standard enthalpy of formation of CO ( - 110 kJ ) and CO 2 ( - 394 kJ ). The heat of combustion when one mole of graphite burns is",
     "options": {
       "A": "- 110 kJ",
       "B": "- 284 kJ",
@@ -893,12 +893,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of formation for C 2 H 4 (g), CO 2 (g) and H 2 O ( 𝓁 ) at 25 ^\\circ C and 1 atm. pressure are 52, - 394 kJ mole - 1 respectively. The enthalpy of combustion of C 2 H 4 will be: -",
+    "question": "The enthalpy of formation for C 2 H 4 (g), CO 2 (g) and H 2 O ( 𝓁 ) at 25 ^\\circ C and 1 atm. pressure are 52, - 394 kJ respectively. The enthalpy of combustion of C 2 H 4 will be: -",
     "options": {
-      "A": "+1412 kJ mole - 1",
-      "B": "- 1412 kJ mole - 1",
-      "C": "+142.2 kJ mole - 1",
-      "D": "- 141.2 kJ mole - 1 TC07 - 0007 11"
+      "A": "+1412 kJ",
+      "B": "- 1412 kJ",
+      "C": "+142.2 kJ",
+      "D": "- 141.2 kJ TC07 - 0007 11"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 4 ) Intensive quantities are those which is independent from the mass of the matter. Extensive are those which depend on the mass of the matter. Enthalpy, Volume are Extensive quantity temperature, refractive index are intensive."
@@ -918,12 +918,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The combustion of one mole of benzene takes place at 298 K and 1 atm. After combustion, CO 2 (g) and H 2 O( 𝓁 ) are produced and 3267.0 kJ of heat is liberated. Calculate the standard enthalpy of formation, \\Delta f H ^\\circ of benzene. Standard enthalpies of formation of CO 2 (g) and H 2 O( 𝓁 ) .5 kJ mol - 1 .83 kJ mol - 1 respectively.",
+    "question": "The combustion of one mole of benzene takes place at 298 K and 1 atm. After combustion, CO 2 (g) and H 2 O( 𝓁 ) are produced and 3267.0 kJ of heat is liberated. Calculate the standard enthalpy of formation, \\Delta f H ^\\circ of benzene. Standard enthalpies of formation of CO 2 (g) and H 2 O( 𝓁 ) .5 kJ .83 kJ respectively.",
     "options": {
-      "A": "48.51 kJ mol - 1",
-      "B": "- 48.51 kJ mol - 1",
-      "C": "- 97.02 kJ mol - 1",
-      "D": "97.02 kJ mol - 1 TC07 - 0009 11"
+      "A": "48.51 kJ",
+      "B": "- 48.51 kJ",
+      "C": "- 97.02 kJ",
+      "D": "97.02 kJ TC07 - 0009 11"
     },
     "correct_option": "D",
     "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property."
@@ -968,7 +968,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A person requires 2870 kCal of energy to lead normal daily life. If heat of combustion of cane sugar kCal mol - 1 , then his daily consumption of sugar is :",
+    "question": "A person requires 2870 kCal of energy to lead normal daily life. If heat of combustion of cane sugar kCal , then his daily consumption of sugar is :",
     "options": {
       "A": "728 g",
       "B": "0.728 g",
@@ -993,7 +993,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The following are the heats of reactions - (i) o f H \\Delta of H 2 O ( 𝓁 ) = - 68.3 kCal mol - 1 (ii) o comb. H \\Delta of C 2 H 2 = - 337.2 kCal mol - 1 (iii) o comb. H \\Delta of C 2 H 4 = - 363.7 kCal mol - 1 Then heat change for the reaction C 2 H 2 + H 2 → C 2 H 4 is -",
+    "question": "The following are the heats of reactions - (i) o f H \\Delta of H 2 O ( 𝓁 ) = - 68.3 kCal (ii) o comb. H \\Delta of C 2 H 2 = - 337.2 kCal (iii) o comb. H \\Delta of C 2 H 4 = - 363.7 kCal Then heat change for the reaction C 2 H 2 + H 2 → C 2 H 4 is -",
     "options": {
       "A": "- 716.1 kCal",
       "B": "+ 337.2 kCal",
@@ -1018,7 +1018,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The value of \\Delta H for the combustion of C(s) is - 94.4 kCal. The heat of formation of CO 2 (g) is : -",
+    "question": "The value of \\Delta H for the combustion of C(s) .4 kCal. The heat of formation of CO 2 (g) is : -",
     "options": {
       "A": "- 49.5 kCal",
       "B": "- 94.4 kCal",
@@ -1068,7 +1068,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Heat of formation of CO 2 is - 94.0 kCal. What would be the quantity of heat liberated, when 3 g of graphite is burnt in excess of oxygen: -",
+    "question": "Heat of formation of CO 2 .0 kCal. What would be the quantity of heat liberated, when 3 g of graphite is burnt in excess of oxygen: -",
     "options": {
       "A": "23.5 kCal",
       "B": "2.35 kCal",
@@ -1146,10 +1146,10 @@
     },
     "question": "Heat of neutralisation of a strong dibasic acid in dilute solution by NaOH is nearly :",
     "options": {
-      "A": "- 27.4 kCal eq - 1",
-      "B": "- 13.7 kCal eq - 1",
-      "C": "13.7 kCal eq - 1",
-      "D": "- 13.7 kCal mol - 1 TC10 - 0009 12"
+      "A": "- 27.4 kCal",
+      "B": "- 13.7 kCal",
+      "C": "13.7 kCal",
+      "D": "- 13.7 kCal TC10 - 0009 12"
     },
     "correct_option": "C",
     "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
@@ -1194,7 +1194,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of neutralization of HCl by NaOH is - 55.9 kJ mol -",
+    "question": "The heat of neutralization of HCl by NaOH .9 kJ mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1219,7 +1219,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If the heat of neutralization of HCN by NaOH is - 12.1 kJ mol -",
+    "question": "If the heat of neutralization of HCN by NaOH .1 kJ mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1346,10 +1346,10 @@
     },
     "question": "The heat of hydrogenation of cyclohexene is: -",
     "options": {
-      "A": "- 121 kJ mol - 1",
-      "B": "121 kJ mol - 1",
-      "C": "- 242 kJ mol - 1",
-      "D": "242 kJ mol - 1 TC13 - 0006 BOND ENERGY/RESONANCE ENERGY 13"
+      "A": "- 121 kJ",
+      "B": "121 kJ",
+      "C": "- 242 kJ",
+      "D": "242 kJ TC13 - 0006 BOND ENERGY/RESONANCE ENERGY 13"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
@@ -1369,12 +1369,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Heat evolved in the reaction H 2 + Cl 2 ⎯ → 2HCl is 182 kJ. Bond energies of H - H and Cl - Cl are 430 and 242 kJ mol - 1 respectively. The H - Cl bond energy is :",
+    "question": "Heat evolved in the reaction H 2 + Cl 2 ⎯ → 2HCl is 182 kJ. Bond energies of H - H and Cl - Cl are 430 and 242 kJ respectively. The H - Cl bond energy is :",
     "options": {
-      "A": "245 kJ mol - 1",
-      "B": "427 kJ mol - 1",
-      "C": "336 kJ mol - 1",
-      "D": "154 kJ mol - 1 TC16 - 0009 13"
+      "A": "245 kJ",
+      "B": "427 kJ",
+      "C": "336 kJ",
+      "D": "154 kJ TC16 - 0009 13"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
@@ -1394,12 +1394,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy change for the reaction H 2 (g) + C 2 H 4 (g) → C 2 H 6 (g) is ............ The bond energies are in kCal mol - 1 H - H = 103, C - H = 99, C - C = 80 & C = C =145",
+    "question": "The enthalpy change for the reaction H 2 (g) + C 2 H 4 (g) → C 2 H 6 (g) is ............ The bond energies are in kCal H - H = 103, C - H = 99, C - C = 80 & C = C =145",
     "options": {
-      "A": "- 10 kCal mol - 1",
-      "B": "+10 kCal mol - 1",
-      "C": "- 30 kCal mol - 1",
-      "D": "+30 kCal mol - 1 TC16 - 0002 1"
+      "A": "- 10 kCal",
+      "B": "+10 kCal",
+      "C": "- 30 kCal",
+      "D": "+30 kCal TC16 - 0002 1"
     },
     "correct_option": "C",
     "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
@@ -1419,7 +1419,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Bond dissociation enthalpies of H 2 (g) and N 2 (g) are 436.0 kJ mol - 1 and 941.8 kJ mol - 1 respectively and enthalpy of formation of NH 3 (g) is - 46 kJ mol -",
+    "question": "Bond dissociation enthalpies of H 2 (g) and N 2 (g) are 436.0 kJ and 941.8 kJ respectively and enthalpy of formation of NH 3 (g) kJ mol -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1427,7 +1427,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 3 ) 2 x ( s ) + 2y (s) ⎯ → 2 C ( l ) + D (g) q p = - 28 kC al mol - 1 q v = ? q p = q v + \\Delta ngRT - 28 = q v + (1) × 2 × 300 q v = - 28 - 0.6 = - 28.6 kC al mol - 1"
+    "explanation": "Ans. ( 3 ) 2 x ( s ) + 2y (s) ⎯ → 2 C ( l ) + D (g) q p = - 28 kC al q v = ? q p = q v + \\Delta = q v + (1) × 2 × 300 q v = - 28 - 0.6 = - 28.6 kC al"
   },
   {
     "type": "normal_mcq",
@@ -1446,10 +1446,10 @@
     },
     "question": "What is enthalpy of atomization of NH 3 (g) ?",
     "options": {
-      "A": "390.3 kJ mol - 1",
-      "B": "1170.9 kJ mol - 1",
-      "C": "590 kJ mol - 1",
-      "D": "720 kJ mol - 1 TC16 - 0006 14"
+      "A": "390.3 kJ",
+      "B": "1170.9 kJ",
+      "C": "590 kJ",
+      "D": "720 kJ TC16 - 0006 14"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
@@ -1471,10 +1471,10 @@
     },
     "question": "From the reactions : C(s) + 2H 2 (g) → CH 4 (g) \\Delta H = - X kcal C(g) + 4H(g) → CH 4 (g), \\Delta H = - X 1 kcal CH 4 (g) → CH 3 (g) + H(g) \\Delta H = + Y kcal Bond energy of C - H bond is -",
     "options": {
-      "A": "X 4 kCal mol - 1",
-      "B": "Y kCal mol - 1",
-      "C": "1 X 4 kCal mol - 1",
-      "D": "X 1 kCal mol - 1 TC16 - 0011 thermodynamics 14"
+      "A": "X 4 kCal",
+      "B": "Y kCal",
+      "C": "1 X 4 kCal",
+      "D": "X 1 kCal TC16 - 0011 thermodynamics 14"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
@@ -1494,12 +1494,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy changes at 298 K in successive breaking of O - H bonds of water are H 2 O ⎯ → H(g) + OH(g) ; \\Delta H = 498 kJ mol - 1 OH(g) ⎯ → H(g) + O(g) ; \\Delta H = 428 kJmol - 1 the bond enthalpy of O - H bond is",
+    "question": "The enthalpy changes at 298 K in successive breaking of O - H bonds of water are H 2 O ⎯ → H(g) + OH(g) ; \\Delta H = 498 kJ OH(g) ⎯ → H(g) + O(g) ; \\Delta H = 428 kJmol - 1 the bond enthalpy of O - H bond is",
     "options": {
-      "A": "498 kJ mol - 1",
-      "B": "428 kJ mol - 1",
-      "C": "70 kJ mol - 1",
-      "D": "463 kJ mol - 1 TC16 - 0008 14"
+      "A": "498 kJ",
+      "B": "428 kJ",
+      "C": "70 kJ",
+      "D": "463 kJ TC16 - 0008 14"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
@@ -1519,12 +1519,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If o f H \\Delta of ICl (g) , Cl (g) , and I (g) is 17.57, 121.34 and 106.96 J mol - 1 respectively. Then bond dissociation energy of ICl bond is -",
+    "question": "If o f H \\Delta of ICl (g) , Cl (g) , and I (g) is 17.57, 121.34 and 106.96 J respectively. Then bond dissociation energy of ICl bond is -",
     "options": {
-      "A": "35.15 J mol - 1",
-      "B": "106.69 J mol - 1",
-      "C": "210.73 J mol - 1",
-      "D": "420.9 J mol - 1 TC06 - 0004 14"
+      "A": "35.15 J",
+      "B": "106.69 J",
+      "C": "210.73 J",
+      "D": "420.9 J TC06 - 0004 14"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 3 ) Thermo flask is made up of insulating material, so there is no exchange of heat, so it is an example of isolated system."
@@ -1995,7 +1995,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "C(s) + O 2 (g) → CO 2 (g) + 94.0 kCal CO(g) + 1 2 O 2 (g) → CO 2 (g), \\Delta H = - 67.7 kCal from the above reactions find how much heat (kCal mole - 1 ) would be produced in the following reaction : C(s) + 1 2 O 2 (g) → CO(g)",
+    "question": "C(s) + O 2 (g) → CO 2 (g) + 94.0 kCal CO(g) + 1 2 O 2 (g) → CO 2 (g), \\Delta H = - 67.7 kCal from the above reactions find how much heat (kCal ) would be produced in the following reaction : C(s) + 1 2 O 2 (g) → CO(g)",
     "options": {
       "A": "20.6",
       "B": "26.3",
@@ -2020,12 +2020,12 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy of vapourisation of liquid water using the data : H 2 (g) + 1 2 O 2 (g) → H 2 O( 𝓁 ) ; \\Delta H = - 285.77 kJ mol - 1 H 2 (g) + 1 2 O 2 (g) → H 2 O(g) ; \\Delta H = - 241.84 kJ mol - 1",
+    "question": "The enthalpy of vapourisation of liquid water using the data : H 2 (g) + 1 2 O 2 (g) → H 2 O( 𝓁 ) ; \\Delta H = - 285.77 kJ H 2 (g) + 1 2 O 2 (g) → H 2 O(g) ; \\Delta H = - 241.84 kJ",
     "options": {
-      "A": "+43.93 kJ mol - 1",
-      "B": "- 43.93 kJ mol - 1",
-      "C": "+527.61 kJ mol - 1",
-      "D": "- 527.61 kJ mol - 1 TC11 - 0001 16"
+      "A": "+43.93 kJ",
+      "B": "- 43.93 kJ",
+      "C": "+527.61 kJ",
+      "D": "- 527.61 kJ TC11 - 0001 16"
     },
     "correct_option": "D",
     "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property."
@@ -2070,7 +2070,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of solution of anhydrous CuSO 4 and CuSO 4 .5H 2 O are - 15.89 and 2.80 kCal mol - 1 respectively. What will be the heat of hydration of anhydrous CuSO 4 ?",
+    "question": "The heat of solution of anhydrous CuSO 4 and CuSO 4 .5H 2 O .89 and 2.80 kCal respectively. What will be the heat of hydration of anhydrous CuSO 4 ?",
     "options": {
       "A": "- 18.69 kCal",
       "B": "18.69 kCal",
@@ -2128,7 +2128,7 @@
       "D": "Decreases by 30 kJ TD06 - 0095"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 2 ) \\Delta U = q + w  20 kJ - 10 kJ = 10 kJ"
+    "explanation": "Ans. ( 2 ) \\Delta U = q + w  20 kJ = 10 kJ"
   },
   {
     "type": "normal_mcq",
@@ -2245,7 +2245,7 @@
       "source": "Extra Edge - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "\\Delta U^\\circ of combustion of methane is - X kJ mol - 1 The value of \\Delta H^\\circ is (T = 25^\\circC) : -",
+    "question": "\\Delta U^\\circ of combustion of methane is - X kJ The value of \\Delta H^\\circ is (T = 25^\\circC) : -",
     "options": {
       "A": "- X - 596R",
       "B": "- X+596R",
@@ -2436,7 +2436,7 @@
       "source": "Extra Edge - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The standard enthalpies of formation of CO, NO 2 and CO 2 .5 kJ mol - 1 , - 33.2 kJ mol - 1 .5 kJ mol - 1 respectively. The standard enthalpy of the reaction is : - 4CO(g) + 2NO 2 (g) → 4CO 2 (g) + N 2 (g) is",
+    "question": "The standard enthalpies of formation of CO, NO 2 and CO 2 .5 kJ , - 33.2 kJ .5 kJ respectively. The standard enthalpy of the reaction is : - 4CO(g) + 2NO 2 (g) → 4CO 2 (g) + N 2 (g) is",
     "options": {
       "A": "- 1065.6 kJ",
       "B": "- 200 kJ",
@@ -2461,15 +2461,15 @@
       "source": "Extra Edge - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "18 g of water is taken to prepare the tea. Find out the internal energy of vaporisation at 100^\\circC. ( \\Delta vap H for water at 373 K is 40.66 kJ mol - 1 )",
+    "question": "18 g of water is taken to prepare the tea. Find out the internal energy of vaporisation at 100^\\circC. ( \\Delta vap H for water at 373 K is 40.66 kJ )",
     "options": {
-      "A": "37.56 kJ mol - 1",
-      "B": "- 37.56 kJ mol - 1",
-      "C": "43.76 kJ mol - 1",
-      "D": "- 43.76 kJ mol - 1 TD12 - 0140"
+      "A": "37.56 kJ",
+      "B": "- 37.56 kJ",
+      "C": "43.76 kJ",
+      "D": "- 43.76 kJ TD12 - 0140"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) 18g water = 1 mol water H 2 O( \\lambda )  H 2 O(g) \\Delta H = \\Delta E + \\Delta n g RT 40.66 = \\Delta E + 1 8.314 373 1000   \\Delta E = 40.66 - 3.1 \\Delta E = + 37.56 KJ"
+    "explanation": "Ans. ( 1 ) 18g water = 1 mol water H 2 O( \\lambda )  H 2 O(g) \\Delta H = \\Delta E + \\Delta n g .66 = \\Delta E + 1 8.314 373 1000   \\Delta E = 40.66 - 3.1 \\Delta E = + 37.56 KJ"
   },
   {
     "type": "normal_mcq",
@@ -2619,7 +2619,7 @@
       "D": "25 TD07 - 0099 2"
     },
     "correct_option": "C",
-    "explanation": "Ans. ( 2 ) \\Delta U = q + w  20 kJ - 10 kJ = 10 kJ"
+    "explanation": "Ans. ( 2 ) \\Delta U = q + w  20 kJ = 10 kJ"
   },
   {
     "type": "normal_mcq",
@@ -2786,15 +2786,15 @@
       "source": "NCR - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If water vapour is assumed to be a perfect gas, molar enthalpy change for vaporisations of 1 mole water at 1 bar & 100^\\circC is 41 k J mol - 1 , calculate the internal energy change, when 1 mol of water is vapourised at 1 bar pressure & 100^\\circC.",
+    "question": "If water vapour is assumed to be a perfect gas, molar enthalpy change for vaporisations of 1 mole water at 1 bar & 100^\\circC is 41 k J , calculate the internal energy change, when 1 mol of water is vapourised at 1 bar pressure & 100^\\circC.",
     "options": {
-      "A": "37.9 J mol - 1",
-      "B": "37.9 k J mol - 1",
-      "C": "59.7 k J mol - 1",
-      "D": "23.4 J mol - 1 TD11 - 0062"
+      "A": "37.9 J",
+      "B": "37.9 k J",
+      "C": "59.7 k J",
+      "D": "23.4 J TD11 - 0062"
     },
     "correct_option": "B",
-    "explanation": "Ans. (2) H 2 O( ℓ ) ⎯ → H 2 O(g) \\Delta H = \\Delta U + \\Delta ngRT \\Delta ng = 1 \\Delta H = \\Delta U + RT \\Delta U = \\Delta H - RT = 41 - 8.3 373 1000  = 37.904 kJ mol - 1"
+    "explanation": "Ans. (2) H 2 O( ℓ ) ⎯ → H 2 O(g) \\Delta H = \\Delta U + \\Delta ngRT \\Delta ng = 1 \\Delta H = \\Delta U + RT \\Delta U = \\Delta H - RT = 41 - 8.3 373 1000  = 37.904 kJ"
   },
   {
     "type": "normal_mcq",
@@ -2811,7 +2811,7 @@
       "source": "NCR - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The enthalpy & ent r opy changes for the re action : Br 2 ( ℓ ) + Cl 2 (g) ⎯ → 2BrCl(g) Are 30 kJ mol - 1 & 105 Jk - 1 mol - 1 respectively. The temperature at which the reaction will be in equilibrium is :",
+    "question": "The enthalpy & ent r opy changes for the re action : Br 2 ( ℓ ) + Cl 2 (g) ⎯ → 2BrCl(g) Are 30 kJ & 105 respectively. The temperature at which the reaction will be in equilibrium is :",
     "options": {
       "A": "285.7 K",
       "B": "273.4 K",
@@ -3189,7 +3189,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given the following entropy values (in JK - 1 mol - 1 ) at 298 K and 1 atm: H 2 (g) :130.6, Cl 2 (g): 223.0 and HCl(g) : 186.",
+    "question": "Given the following entropy values (in ) at 298 K and 1 atm: H 2 (g) :130.6, Cl 2 (g): 223.0 and HCl(g) : 186.",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3214,7 +3214,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The entropy change (in JK - 1 mol - 1 ) for the reaction H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) is",
+    "question": "The entropy change (in ) for the reaction H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) is",
     "options": {
       "A": "+ 540.3",
       "B": "727.0",
@@ -3239,7 +3239,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Standard heat of combustion of C(s), H 2 (g) and CH 4 (g) are - 94, - 68 kCal/mol. then \\Delta H^\\circ for C(s) + 2H 2 (g) → CH 4 (g) is : -",
+    "question": "Standard heat of combustion of C(s), H 2 (g) and CH 4 (g) , - 68 kCal/mol. then \\Delta H^\\circ for C(s) + 2H 2 (g) → CH 4 (g) is : -",
     "options": {
       "A": "- 17 kCal",
       "B": "- 111 kCal",
@@ -3364,7 +3364,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If at 298 K the bond energies of C - H, C - C, C = C and H - H bonds are respectively 414, 347, 615 and 435 kJ mol - 1 , the value of enthalpy change for the reaction H 2 C = CH 2 (g) + H 2 (g) → H 3 C - CH 3 (g) at 298K will be : -",
+    "question": "If at 298 K the bond energies of C - H, C - C, C = C and H - H bonds are respectively 414, 347, 615 and 435 kJ , the value of enthalpy change for the reaction H 2 C = CH 2 (g) + H 2 (g) → H 3 C - CH 3 (g) at 298K will be : -",
     "options": {
       "A": "+ 125 kJ",
       "B": "- 125 kJ",
@@ -3414,7 +3414,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The \\Delta H f 0 for CO 2 (g), CO(g) and H 2 O(g) - 393.5, - 110.5 .8kJ mol - 1 respectively. The standard enthalpy change (in kJ) for the reaction CO 2 (g) + H 2 (g) → CO(g) + H 2 O(g) is",
+    "question": "The \\Delta H f 0 for CO 2 (g), CO(g) and H 2 O(g) - 393.5, - 110.5 .8kJ respectively. The standard enthalpy change (in kJ) for the reaction CO 2 (g) + H 2 (g) → CO(g) + H 2 O(g) is",
     "options": {
       "A": "524.1",
       "B": "41.2",
@@ -3714,7 +3714,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The heat of combustion of ethanol in a bomb calorimeter .48 k c al mol - 1 at 25 0 C. What is \\Delta E at 25 0 C for the reaction ?",
+    "question": "The heat of combustion of ethanol in a bomb calorimeter .48 k c al at 25 0 C. What is \\Delta E at 25 0 C for the reaction ?",
     "options": {
       "A": "- 269.24 k c al",
       "B": "- 469.28 k c al",

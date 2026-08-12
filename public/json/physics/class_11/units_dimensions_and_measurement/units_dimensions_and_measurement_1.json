@@ -219,7 +219,7 @@
       "source": "Exercise I-III - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In kg - 1 is the unit of : -",
+    "question": "In is the unit of : -",
     "options": {
       "A": "velocity",
       "B": "energy",
@@ -227,7 +227,7 @@
       "D": "force UD02 - 0005 1"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -457,7 +457,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -474,10 +474,10 @@
     },
     "question": "Its value in CGS system : -",
     "options": {
-      "A": "1 gcm - 3",
-      "B": "0.1 gcm - 3",
-      "C": "10 gcm - 3",
-      "D": "100 gcm - 3 UD04 - 0005 2"
+      "A": "1",
+      "B": "0.1",
+      "C": "10",
+      "D": "100 UD04 - 0005 2"
     },
     "correct_option": "C",
     "explanation": "Kilogram is a unit"
@@ -636,7 +636,7 @@
     "question": "Dimensions of relative density is",
     "options": {
       "A": "kg m - 3",
-      "B": "[ML - 3 ]",
+      "B": "[ ]",
       "C": "dimensionless",
       "D": "[M 2 L - 6 ] UN04 - 0001 2"
     },
@@ -710,7 +710,7 @@
       "D": "energy UD03 - 0009 3"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -940,7 +940,7 @@
       "D": "has dimensions [T 2 ] UD05 - 0018 4"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -955,7 +955,7 @@
       "source": "Exercise I-III - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Given the force F = Pt - 1 + Qt. Here t is time. The unit of P is same as that of : -",
+    "question": "Given the force F = + Qt. Here t is time. The unit of P is same as that of : -",
     "options": {
       "A": "displacement",
       "B": "velocity",
@@ -980,10 +980,10 @@
     },
     "question": "The force F, on a sphere of radius 'a' moving in a medium with velocity v is given by F = 6 \\pi  av. The dimensions of  are : -",
     "options": {
-      "A": "[ ML - 1 T - 1 ]",
-      "B": "[ MT - 1 ]",
-      "C": "[ MLT - 2 ]",
-      "D": "[ ML - 3 ] UD05 - 0017 4"
+      "A": "[ T - 1 ]",
+      "B": "[ ]",
+      "C": "[ ]",
+      "D": "[ ] UD05 - 0017 4"
     },
     "correct_option": "D",
     "explanation": "Density is a derived quantity Density = Mass Volume"
@@ -1006,7 +1006,7 @@
       "A": "M o L o T o",
       "B": "M o L o T - 1",
       "C": "M o L - 1 T o",
-      "D": "M o LT - 1 UD05 - 0019 4"
+      "D": "M o UD05 - 0019 4"
     },
     "correct_option": "C",
     "explanation": "Kilogram is a unit"
@@ -1118,8 +1118,8 @@
     },
     "question": "The equation dv dt = AT - Bv is describing the rate of change of velocity of a body falling from rest in a resisting medium. The dimensions of A and B are : -",
     "options": {
-      "A": "LT - 3 , T",
-      "B": "LT - 3 , T - 1",
+      "A": ", T",
+      "B": ", T - 1",
       "C": "LT, T",
       "D": "LT, T - 1 UD05 - 0013 4"
     },
@@ -1141,10 +1141,10 @@
     },
     "question": "If y represents distance and x - represents time, dimensions of 2 2 d y dx are : -",
     "options": {
-      "A": "LT - 1",
+      "A": "",
       "B": "L 2 T 2",
       "C": "L 2 T - 1",
-      "D": "LT - 2 UD05 - 0014 5"
+      "D": "UD05 - 0014 5"
     },
     "correct_option": "A",
     "explanation": "2 m F Ma Kg sec = = "
@@ -1165,12 +1165,12 @@
     "question": "If energy (E), velocity (v) and force (F), be taken as fundamental quantities, then what are the dimensions of mass : -",
     "options": {
       "A": "EV 2",
-      "B": "EV - 2",
-      "C": "FV - 1",
-      "D": "FV - 2 UD06 - 0003 5"
+      "B": "",
+      "C": "",
+      "D": "UD06 - 0003 5"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -1404,7 +1404,7 @@
       "D": "4 UD10 - 0003 6"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -1634,7 +1634,7 @@
       "D": "4% UD13 - 0019 7"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "figure_mcq",
@@ -1888,7 +1888,7 @@
       "D": "19 UN13 - 0001 8"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -2141,7 +2141,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "0 9 cm L.C. = 1 MSD - 1 VSD = 0.1 -"
+    "explanation": "0 9 cm L.C. = 1 VSD = 0.1 -"
   },
   {
     "type": "normal_mcq",
@@ -2294,7 +2294,7 @@
       "source": "Extra Edge - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The units of three physical quantities x, y and z are gcm 2 s - 5 , gs - 1 and cms - 2 respectively. The relation among the units of x, y and z is",
+    "question": "The units of three physical quantities x, y and z are gcm 2 s - 5 , and respectively. The relation among the units of x, y and z is",
     "options": {
       "A": "z = x 2 y",
       "B": "y 2 = xz",
@@ -2455,7 +2455,7 @@
       "source": "NCR - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In the following given options, which of the two base units have not been included in the S.I. system.",
+    "question": "In the following given\n\n**options**, which of the two base units have not been included in the S.I. system.",
     "options": {
       "A": "mole, candela",
       "B": "radian, steradian",
@@ -2763,7 +2763,7 @@
       "source": "NCR - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If we have two quantities A and BC 2 such that the dimensional formula of A is [M 0 LT - 2 ] and for B is [M 0 L 1 T 0 ]. Then which of the following case is possible",
+    "question": "If we have two quantities A and such that the dimensional formula of A is [M 0 ] and for B is [M 0 L 1 T 0 ]. Then which of the following case is possible",
     "options": {
       "A": "Given quantities can be added as well as multiplied irrespective of dimension of C",
       "B": "Given quantities can be added only if dimension of C is [T - 1 ] and multiplied for any dimension of C",
@@ -2840,7 +2840,7 @@
       "D": "velocity UD01 - 0776"
     },
     "correct_option": "C",
-    "explanation": "I Intensity of EM wave c Speed of light = Energy 1 Area time speed =     - -       =             2 2 2 1 ML T I c L T LT - -     =       1 2 I ML T c Dimension of pressure is = 1 2 2 ML T Force Area L -     =     = [ML - 1 T - 2 ]"
+    "explanation": "I Intensity of EM wave c Speed of light = Energy 1 Area time speed =     - -       =             2 2 2 1 ML T I c L T LT - -     =       1 2 I ML T c Dimension of pressure is = 1 2 2 ML T Force Area L -     =     = [ T - 2 ]"
   },
   {
     "type": "normal_mcq",
@@ -2855,7 +2855,7 @@
       "source": "RACE - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Match List I with List II List List II A. Young's Modulus (Y) I. [M L - 1 T - 1 ] B. Co - efficient of Viscosity (  ) II. [M L 2 T - 1 ] C. Planck's Constant (h) III. [M L - 1 T - 2 ] D. Work Function ( \\phi ) IV. [M L 2 T - 2 ] Choose the correct answer from the options given below:",
+    "question": "Match List I with List II List List II A. Young's Modulus (Y)\n\nI. [M L - 1 T - 1 ] B. Co - efficient of Viscosity (  )\n\nII. [M L 2 T - 1 ] C. Planck's Constant (h)\n\nIII. [M L - 1 T - 2 ] D. Work Function ( \\phi )\n\nIV. [M L 2 T - 2 ] Choose the correct answer from the\n\n**options** given below:",
     "options": {
       "A": "A - II, B - III, C - IV, D - I",
       "B": "A - III, B - I, C - II, D - IV",
@@ -2863,7 +2863,7 @@
       "D": "A - I, B - II, C - III, D - IV UD03 - 0018"
     },
     "correct_option": "B",
-    "explanation": "2 2 Stress F / A [MLT ] Y Strain / [L ] - = = = \\Delta \\lambda\\lambda = [ML - 1 T - 2 ] F = 6 \\pi  rv   = F 6 rv \\pi 2 1 1 1 [MLT ] [ ] [ML T ] [L][LT ] - - - -  = = E = h   2 2 1 E [ML T ] h [T ] - - = =  = [ML 2 T - 1 ] Work function has same dimension as that of energy, so [ \\phi ] = [ML 2 T - 2 ]"
+    "explanation": "2 2 Stress F / A [MLT ] Y Strain / [L ] - = = = \\Delta \\lambda\\lambda = [ T - 2 ] F = 6 \\pi  rv   = F 6 rv \\pi 2 1 1 1 [MLT ] [ ] [ML T ] [L][LT ] - - - -  = = E = h   2 2 1 E [ML T ] h [T ] - - = =  = [ML 2 T - 1 ] Work function has same dimension as that of energy, so [ \\phi ] = [ML 2 T - 2 ]"
   },
   {
     "type": "normal_mcq",
@@ -2878,7 +2878,7 @@
       "source": "RACE - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Match List I with List II : List - I (Physical Quantity) List - II (Dimensional Formula) A Pressure gradient I 0 2 2 M L T -     B Energy density II 1 1 2 M L T - -     C Electric Field III 1 2 2 M L T - -     D Latent heat IV 1 1 3 1 M L T A - -     Choose the correct answer from the options given below:",
+    "question": "Match List I with List II : List - I (Physical Quantity) List - II (Dimensional Formula) A Pressure gradient I 0 2 2 M L T -     B Energy density II 1 1 2 M L T - -     C Electric Field III 1 2 2 M L T - -     D Latent heat IV 1 1 3 1 M L T A - -     Choose the correct answer from the\n\n**options** given below:",
     "options": {
       "A": "A - III, B - II, C - I, D - IV",
       "B": "A - II, B - III, C - IV, D - I",
@@ -2951,11 +2951,11 @@
     "options": {
       "A": "[M 0 L - 1 T 0 ]",
       "B": "[ML 0 T - 2 ]",
-      "C": "[MLT - 2 ]",
+      "C": "[ ]",
       "D": "[ML 2 T - 2 ] UD05 - 0104"
     },
     "correct_option": "C",
-    "explanation": "(  \\alpha = ( ) \\beta \\beta )  e kT P log x = \\beta kT 1 x  - \\beta = = 2 2 kT ML T x L (  = ( ) )  \\lambda 1 E kT 2 As P is dimensionless  [ \\alpha ] = [ \\beta ] = [MLT - 2 ]"
+    "explanation": "(  \\alpha = ( ) \\beta \\beta )  e kT P log x = \\beta kT 1 x  - \\beta = = 2 2 kT ML T x L (  = ( ) )  \\lambda 1 E kT 2 As P is dimensionless  [ \\alpha ] = [ \\beta ] = [ ]"
   },
   {
     "type": "normal_mcq",
@@ -3302,7 +3302,7 @@
       "D": "- 1 N 1 UD14 - 0005 2"
     },
     "correct_option": "C",
-    "explanation": "Least count = 1 MSD - 1 VSD (N - 1) MSD = N(VSD)  VSD = (  - ( ) )  1 1 N MSD Least count = 1MSD - (  - ( ) )  1 1 N MSD = (  ( ) )  1 N (1mm) = 1 10N cm"
+    "explanation": "Least count = 1 VSD (N - 1) MSD = N(VSD)  VSD = (  - ( ) )  1 1 N MSD Least count = 1MSD - (  - ( ) )  1 1 N MSD = (  ( ) )  1 N (1mm) = 1 10N cm"
   },
   {
     "type": "normal_mcq",
@@ -3325,7 +3325,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "2 2 Stress F / A [MLT ] Y Strain / [L ] - = = = \\Delta \\lambda\\lambda = [ML - 1 T - 2 ] F = 6 \\pi  rv   = F 6 rv \\pi 2 1 1 1 [MLT ] [ ] [ML T ] [L][LT ] - - - -  = = E = h   2 2 1 E [ML T ] h [T ] - - = =  = [ML 2 T - 1 ] Work function has same dimension as that of energy, so [ \\phi ] = [ML 2 T - 2 ]"
+    "explanation": "2 2 Stress F / A [MLT ] Y Strain / [L ] - = = = \\Delta \\lambda\\lambda = [ T - 2 ] F = 6 \\pi  rv   = F 6 rv \\pi 2 1 1 1 [MLT ] [ ] [ML T ] [L][LT ] - - - -  = = E = h   2 2 1 E [ML T ] h [T ] - - = =  = [ML 2 T - 1 ] Work function has same dimension as that of energy, so [ \\phi ] = [ML 2 T - 2 ]"
   },
   {
     "type": "normal_mcq",
@@ -3441,7 +3441,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "(  \\alpha = ( ) \\beta \\beta )  e kT P log x = \\beta kT 1 x  - \\beta = = 2 2 kT ML T x L (  = ( ) )  \\lambda 1 E kT 2 As P is dimensionless  [ \\alpha ] = [ \\beta ] = [MLT - 2 ]"
+    "explanation": "(  \\alpha = ( ) \\beta \\beta )  e kT P log x = \\beta kT 1 x  - \\beta = = 2 2 kT ML T x L (  = ( ) )  \\lambda 1 E kT 2 As P is dimensionless  [ \\alpha ] = [ \\beta ] = [ ]"
   },
   {
     "type": "normal_mcq",

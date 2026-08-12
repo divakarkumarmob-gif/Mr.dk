@@ -2119,7 +2119,7 @@
       "A": "Cytochrome C oxidase",
       "B": "Succinate dehydrogenase",
       "C": "NADH dehydrogenase",
-      "D": "Cytochrome bc 1 CR08 - 0064"
+      "D": "Cytochrome CR08 - 0064"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Respiration In Plants principles."
@@ -2139,7 +2139,7 @@
       "source": "RACE - Respiration In Plants.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Choose correct answers regarding mitochondrial ETS from the following options for question",
+    "question": "Choose correct answers regarding mitochondrial ETS from the following\n\n**options** for question",
     "options": {
       "A": "a = UQ, b = complex - II",
       "B": "a = Cytc, b = complex - IV",

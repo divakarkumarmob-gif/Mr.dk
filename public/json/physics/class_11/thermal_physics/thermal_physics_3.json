@@ -655,7 +655,7 @@
       "source": "NCR - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is correct.",
+    "question": "Which of the following\n\nstatement is correct.",
     "options": {
       "A": "If heat is added to a system, its temperature must increase.",
       "B": "If positive work is done by a system in a thermodynamic process, its volume must increase.",
@@ -1056,7 +1056,7 @@
       "D": "temperature HT21 - 0004 4"
     },
     "correct_option": "A",
-    "explanation": "rms 3KT v m = and at constant volume P  T t = 0 t = 50^\\circC t = 0 sec T = 49.9^\\circC Thermal Physics 3"
+    "explanation": "rms 3KT v m = and at constant volume P  T t = 0 t = 50^\\circC t = 0 sec T = 49.9^\\circC Thermal"
   },
   {
     "type": "normal_mcq",
@@ -1326,7 +1326,7 @@
       "D": "K.E. of random motion in some cases and K.E. orderly motion in other HT41 - 0006"
     },
     "correct_option": "A",
-    "explanation": "rms 3KT v m = and at constant volume P  T t = 0 t = 50^\\circC t = 0 sec T = 49.9^\\circC Thermal Physics 3"
+    "explanation": "rms 3KT v m = and at constant volume P  T t = 0 t = 50^\\circC t = 0 sec T = 49.9^\\circC Thermal"
   },
   {
     "type": "normal_mcq",
@@ -1598,7 +1598,7 @@
       "source": "RACE - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A block of ice at - 12^\\circC is slowly heated and converted into steam at 100^\\circC. Which of the following curves best represents the event?",
+    "question": "A block of ice ^\\circC is slowly heated and converted into steam at 100^\\circC. Which of the following curves best represents the event?",
     "options": {
       "D": "TP11 - 0021",
       "A": "Option A",
@@ -1629,7 +1629,7 @@
       "D": "20 g TP04 - 0021"
     },
     "correct_option": "B",
-    "explanation": "Heat liberated by water to attain 0^\\circC = 10 × 1 × 40 = 400 cal Amount of ice melted = 400 80 = 5 g ∴ Total amount of water = 10 + 5 = 15 g Ice at - 12^\\circC T increase Ice at 0^\\circC T constant water at 0^\\circC T increase water at 100^\\circC T = constant steam at 100^\\circC NEET : PHYSICS"
+    "explanation": "Heat liberated by water to attain 0^\\circC = 10 × 1 × 40 = 400 cal Amount of ice melted = 400 80 = 5 g ∴ Total amount of water = 10 + 5 = 15 g Ice ^\\circC T increase Ice at 0^\\circC T constant water at 0^\\circC T increase water at 100^\\circC T = constant steam at 100^\\circC NEET : PHYSICS"
   },
   {
     "type": "normal_mcq",
@@ -1644,7 +1644,7 @@
       "source": "RACE - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A 10 g ice cube is dropped into 45 g of water kept in a glass. If the water was initially at a temperature of 28^\\circC and the temperature of ice - 15^\\circC, find the final temperature (in ^\\circC) of water. (Specific heat of ice = 0.5 cal/g - ^\\circC and L = 80 cal/g)",
+    "question": "A 10 g ice cube is dropped into 45 g of water kept in a glass. If the water was initially at a temperature of 28^\\circC and the temperature of ^\\circC, find the final temperature (in ^\\circC) of water. (Specific heat of ice = 0.5 cal/g - ^\\circC and L = 80 cal/g)",
     "options": {
       "A": "14",
       "B": "7",
@@ -1691,7 +1691,7 @@
       "source": "RACE - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Ice at - 20^\\circC mixed with 200g water at 25^\\circC. If temperature of mixture is 10^\\circC then mass of ice is -",
+    "question": "Ice ^\\circC mixed with 200g water at 25^\\circC. If temperature of mixture is 10^\\circC then mass of ice is -",
     "options": {
       "A": "30 gm",
       "B": "20 gm",
@@ -2164,7 +2164,7 @@
       "D": "0 0 5P V 2 TP38 - 0026"
     },
     "correct_option": "A",
-    "explanation": "=  = (  + ( ) )  0 0 0 0 3 0 0 P P P V P = T 2 2R V 1 V ∴ Translational kinetic energy = = = 0 0 0 0 P V 3P V 3 3R RT 2 2 2R 4"
+    "explanation": "=  = (  + ( ) )  0 0 0 0 3 0 0 P P P V P = T 2 2R V 1 V ∴ Translational kinetic energy = = = 0 0 0 0 P V 3P V 3 3R R 4"
   },
   {
     "type": "normal_mcq",
@@ -2437,7 +2437,7 @@
       "source": "RACE - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "According to kinetic theory of gases, A. The motion of the gas molecules freezes at 0 ^\\circ C B. The mean free path of gas molecules decreases if the density of molecules is increased. C. The mean free path of gas molecules increases if temperature is increased keeping pressure constant. D. Average kinetic energy per molecule per degree of freedom is B 3 k T 2 (for monoatomic gases) Choose the most appropriate answer from the options given below:",
+    "question": "According to kinetic theory of gases, A. The motion of the gas molecules freezes at 0 ^\\circ C B. The mean free path of gas molecules decreases if the density of molecules is increased. C. The mean free path of gas molecules increases if temperature is increased keeping pressure constant. D. Average kinetic energy per molecule per degree of freedom is B 3 k T 2 (for monoatomic gases) Choose the most appropriate answer from the\n\n**options** given below:",
     "options": {
       "A": "A and C only",
       "B": "B and C only",
@@ -2724,7 +2724,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "P v C 2 1 1.4 C F = + =  F = 5 By conservation of energy   2 F 1 nR T nm v 2 2 \\Delta = \\Delta T = 2 2 mv Mv FR 5R ="
+    "explanation": "P v C 2 1 1.4 C F = + =  F = 5 By conservation of energy   2 F 1 nR T nm v 2 2 \\Delta = \\Delta T = 2 2 mv Mv R ="
   },
   {
     "type": "normal_mcq",
@@ -2948,7 +2948,7 @@
       "source": "RACE - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Match List I with List II : List I List II A. Isothermal Process I. Work done by the gas decreases internal energy B. Adiabatic Process II. No change in internal energy C. Isochoric Process III. The heat absorbed goes partly to increase internal energy and partly to do work D. Isobaric Process IV. No work is done on or by the gas :",
+    "question": "Match List I with List II : List I List II A. Isothermal Process\n\nI. Work done by the gas decreases internal energy B. Adiabatic Process\n\nII. No change in internal energy C. Isochoric Process\n\nIII. The heat absorbed goes partly to increase internal energy and partly to do work D. Isobaric Process\n\nIV. No work is done on or by the gas :",
     "options": {
       "A": "A - II, B - I, C - III, D - IV",
       "B": "A - II, B - I, C - IV, D - III",
@@ -2971,7 +2971,7 @@
       "source": "RACE - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Heat is given to an ideal gas in an isothermal process. A. Internal energy of the gas will decrease. B. Internal energy of the gas will increase. C. Internal energy of the gas will not change. D. The gas will do positive work. E. The gas will do negative work. Choose the correct answer from the options given below :",
+    "question": "Heat is given to an ideal gas in an isothermal process. A. Internal energy of the gas will decrease. B. Internal energy of the gas will increase. C. Internal energy of the gas will not change. D. The gas will do positive work. E. The gas will do negative work. Choose the correct answer from the\n\n**options** given below :",
     "options": {
       "A": "A and E only",
       "B": "B and D only",
@@ -2994,7 +2994,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "(a) 1 2 N 3 N 2 = ; (b) 0.947 BEGINNER'S BOX-6",
+    "question": "(a) 1 2 N 3 N 2 = ; (b) 0.947 BEGINNER'S",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3063,7 +3063,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "(a) 1 2 E 1 E 1 = (  T = same for both); (b) v rms = 70.9 1.33 39.9 1 = BEGINNER'S BOX-7",
+    "question": "(a) 1 2 E 1 E 1 = (  T = same for both); (b) v rms = 70.9 1.33 39.9 1 = BEGINNER'S",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3155,7 +3155,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "4.16 J/cal BEGINNER'S BOX-8",
+    "question": "4.16 J/cal BEGINNER'S",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3247,7 +3247,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "1152.6 joule. BEGINNER'S BOX-9",
+    "question": "1152.6 joule. BEGINNER'S",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -3270,7 +3270,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "126 watt. $//(1 Physics : Thermal physics 75 EXERCISE-I (Conceptual Questions) Build Up Your Understanding temperature & temperature SCALE",
+    "question": "126 watt. $//(1 Physics : Thermal EXERCISE-I (Conceptual Questions) Build Up Your Understanding temperature & temperature SCALE",
     "options": {
       "A": "Option A",
       "B": "Option B",

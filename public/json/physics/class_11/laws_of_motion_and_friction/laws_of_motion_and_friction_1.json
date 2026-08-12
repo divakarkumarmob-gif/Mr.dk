@@ -20,7 +20,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg ms - 1"
+    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg"
   },
   {
     "type": "figure_mcq",
@@ -173,7 +173,7 @@
       "source": "RACE - Laws Of Motion And Friction.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "An object of mass 5 kg is thrown vertically upwards from the ground. The air resistance produces a constant retarding force of 10 N throughout the motion. The ratio of time of ascent to the time of descent will be equal to : [Use g = 10 ms - 2 ] ( 1 )",
+    "question": "An object of mass 5 kg is thrown vertically upwards from the ground. The air resistance produces a constant retarding force of 10 N throughout the motion. The ratio of time of ascent to the time of descent will be equal to : [Use g = 10 ] ( 1 )",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -196,7 +196,7 @@
       "source": "RACE - Laws Of Motion And Friction.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A block of metal weighing 2 kg is resting on a frictionless plane (as shown in figure). It is struck by a jet releasing water at a rate of 1 kgs - 1 and at a speed of 10 ms -",
+    "question": "A block of metal weighing 2 kg is resting on a frictionless plane (as shown in figure). It is struck by a jet releasing water at a rate of 1 and at a speed of 10 ms -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -219,7 +219,7 @@
       "source": "RACE - Laws Of Motion And Friction.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Then, the initial acceleration of the block, in ms - 2 , will be :",
+    "question": "Then, the initial acceleration of the block, in , will be :",
     "options": {
       "A": "3",
       "B": "6",
@@ -227,7 +227,7 @@
       "D": "4"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg ms - 1"
+    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg"
   },
   {
     "type": "normal_mcq",
@@ -265,7 +265,7 @@
       "source": "RACE - Laws Of Motion And Friction.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In two different experiments, an object of mass 5 kg moving with a speed of 25 ms - 1 hits two different walls and comes to rest within (i) 3 second, (ii) 5 seconds, respectively. Choose the correct option out of the following :",
+    "question": "In two different experiments, an object of mass 5 kg moving with a speed of 25 hits two different walls and comes to rest within (i) 3 second, (ii) 5 seconds, respectively. Choose the correct option out of the following :",
     "options": {
       "A": "Impulse and average force acting on the object will be same for both the cases.",
       "B": "Impulse will be same for both the cases but the average force will be different.",
@@ -342,7 +342,7 @@
       "D": "a and b"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg ms - 1"
+    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg"
   },
   {
     "type": "figure_mcq",
@@ -572,7 +572,7 @@
       "C": "Option C"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg ms - 1"
+    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg"
   },
   {
     "type": "normal_mcq",
@@ -802,7 +802,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg ms - 1"
+    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg"
   },
   {
     "type": "figure_mcq",
@@ -917,7 +917,7 @@
       "D": "None of these 3"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg ms - 1"
+    "explanation": "Change in momentum = Impulse = = + \\int \\int 3 2 1 Fdt (12t 3t )dt =   + = 3 2 3 1 6t t 74 kg"
   },
   {
     "type": "figure_mcq",
@@ -1001,7 +1001,7 @@
       "source": "RACE - Laws Of Motion And Friction.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A block of mass 5 kg is placed at rest on a table of rough surface. Now, if a force of 30N is applied in the direction parallel to surface of the table, the block slides through a distance of 50 m in an interval of time 10s. Coefficient of kinetic friction is (given, g = 10 ms - 2 ):",
+    "question": "A block of mass 5 kg is placed at rest on a table of rough surface. Now, if a force of 30N is applied in the direction parallel to surface of the table, the block slides through a distance of 50 m in an interval of time 10s. Coefficient of kinetic friction is (given, g = 10 ):",
     "options": {
       "A": "0.60",
       "B": "0.75",
@@ -1397,7 +1397,7 @@
       "A": "Inertia of A > inertia of B.",
       "B": "Inertia of B > inertia of A.",
       "C": "Inertia of A = inertia of B.",
-      "D": "Either 1 st , 2 nd or 3 rd depending upon the shape of body."
+      "D": "Either 1 st , 2 nd rd depending upon the shape of body."
     },
     "correct_option": "C",
     "explanation": "Inertia of body depends on mass. not on velocity. Hence option (3)"
@@ -1423,7 +1423,7 @@
       "D": "Option D"
     },
     "correct_option": "C",
-    "explanation": "Impulse 2 3 2 0 F.dt (4t 3t 2t 10)dt = = - + + ∫ ∫ 2 4 3 2 0 4t 3t 2t 10t 4 3 2 [ ] = - + + [ ] [ ] 2 4 3 2 0 t t t 10t [ ] = - + + [ ] = 32 kgms -1"
+    "explanation": "Impulse 2 3 2 0 F.dt (4t 3t 2t 10)dt = = - + + ∫ ∫ 2 4 3 2 0 4t 3t 2t 10t 4 3 2 [ ] = - + + [ ] [ ] 2 4 3 2 0 t t t 10t [ ] = - + + [ ] = 32"
   },
   {
     "type": "normal_mcq",
@@ -1446,7 +1446,7 @@
       "D": "Option D"
     },
     "correct_option": "B",
-    "explanation": "Change in momentum = Impulse 3 2 2 F.dt (6t 4t)dt = = - ∫ ∫ 3 3 2 2 6t 4t 3 2 [ ] = - [ ] [ ] 3 3 2 2 2t 2t [ ] = - [ ] = 28 kgms -1"
+    "explanation": "Change in momentum = Impulse 3 2 2 F.dt (6t 4t)dt = = - ∫ ∫ 3 3 2 2 6t 4t 3 2 [ ] = - [ ] [ ] 3 3 2 2 2t 2t [ ] = - [ ] = 28"
   },
   {
     "type": "figure_mcq",
@@ -1630,7 +1630,7 @@
       "D": "Zero"
     },
     "correct_option": "B",
-    "explanation": "If ∆ t = change in momentum |200(0.5)| = |0 - mv| ⇒ mv = 100 kg ms -1 Hence option (2)"
+    "explanation": "If ∆ t = change in momentum |200(0.5)| = |0 - mv| ⇒ mv = 100 kg Hence option (2)"
   },
   {
     "type": "normal_mcq",
@@ -1760,7 +1760,7 @@
       "source": "Laws of Motion and Friction - Race (1).pdf.txt",
       "class_level": "class_11"
     },
-    "question": "If impulse I varies with time t as I(kg ms -1 ) = 20 t 2 - 20t. The change in momentum is minimum at :-",
+    "question": "If impulse I varies with time t as I(kg ) = 20 t 2 - 20t. The change in momentum is minimum at :-",
     "options": {
       "A": "t = 2 s",
       "B": "t = 1 s",
@@ -2820,10 +2820,10 @@
     },
     "question": "A force acts on it for some time in the direction of motion. The force - time graph is shown in figure. The final speed of the body is : -",
     "options": {
-      "A": "9.25 ms - 1",
-      "B": "5 ms - 1",
-      "C": "14.3 ms - 1",
-      "D": "4.25 ms - 1 3"
+      "A": "9.25",
+      "B": "5",
+      "C": "14.3",
+      "D": "4.25"
     },
     "correct_option": "A",
     "explanation": "Newton's I law."

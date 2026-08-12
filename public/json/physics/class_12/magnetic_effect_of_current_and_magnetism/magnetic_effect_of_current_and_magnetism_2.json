@@ -159,7 +159,7 @@
       "D": "μ π 0 2 "
     },
     "correct_option": "A",
-    "explanation": "If a wire of length l is bent in the form of a circle of radius r then 2 π r = l ⇒ r 2 = π l 2 r 2 2 2 π π = = = π π l l = π 2 m i = 2 A r Magnetic field due to straight wire (shall be taken as infinite wire ) 0 0 1 2 2i 2 2 B · 4 d 4 1 10 - μ μ × = = × π π × also magnetic field due to circular loop 0 0 2 2 i 2 2 B · · 4 r 4 / 2 μ μ π π× = = π π π ⇒ 2 1 B 1 B 50 = $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "If a wire of length l is bent in the form of a circle of radius r then 2 π r = l ⇒ r 2 = π l 2 r 2 2 2 π π = = = π π l l = π 2 m i = 2 A r Magnetic field due to straight wire (shall be taken as infinite wire ) 0 0 1 2 2i 2 2 B · 4 d 4 1 10 - μ μ × = = × π π × also magnetic field due to circular loop 0 0 2 2 i 2 2 B · · 4 r 4 / 2 μ μ π π× = = π π π ⇒ 2 1 B 1 B 50 = $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -291,7 +291,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For the hollow thin cylinderical current carrying pipe which statement is correct :-",
+    "question": "For the hollow thin cylinderical current carrying pipe which\n\nstatement is correct :-",
     "options": {
       "A": "magnetic field inside the pipe is not zero",
       "B": "magnetic field outside the pipe is zero",
@@ -429,7 +429,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential differene V. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is :-",
+    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential differene\n\nV. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is :-",
     "options": {
       "A": "      2 1 2 r r",
       "B": "      2 2 1 r r",
@@ -567,7 +567,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A very long straight wire carries a current I. At the instant when a charge +Q at point P has velocity v \\rho , as shown, the magnetic force on the charge is:- Q P v I y x O",
+    "question": "A very long straight wire carries a current\n\nI. At the instant when a charge +Q at point P has velocity v \\rho , as shown, the magnetic force on the charge is:- Q P v I y x O",
     "options": {
       "A": "along ox",
       "B": "opposite to oy",
@@ -619,7 +619,7 @@
       "A": "angle between v \\rho and B \\rho is necessary 90^\\circ",
       "B": "angle between v \\rho and B \\rho can have at value other than 90^\\circ",
       "C": "angle between v \\rho and B \\rho can have at value other than zero and 180^\\circ",
-      "D": "angle between v \\rho and B \\rho is either zero or 180^\\circ"
+      "D": "angle between v \\rho and B \\rho is either zero ^\\circ"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
@@ -637,7 +637,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current I. The direction of force on PQ will be:- I \\lambda Y X i P Q",
+    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current\n\nI. The direction of force on PQ will be:- I \\lambda Y X i P Q",
     "options": {
       "A": "towards right",
       "B": "towards left",
@@ -1039,7 +1039,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "If a wire of length l is bent in the form of a circle of radius r then 2 π r = l ⇒ r 2 = π l 2 r 2 2 2 π π = = = π π l l = π 2 m i = 2 A r Magnetic field due to straight wire (shall be taken as infinite wire ) 0 0 1 2 2i 2 2 B · 4 d 4 1 10 - μ μ × = = × π π × also magnetic field due to circular loop 0 0 2 2 i 2 2 B · · 4 r 4 / 2 μ μ π π× = = π π π ⇒ 2 1 B 1 B 50 = $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+    "explanation": "If a wire of length l is bent in the form of a circle of radius r then 2 π r = l ⇒ r 2 = π l 2 r 2 2 2 π π = = = π π l l = π 2 m i = 2 A r Magnetic field due to straight wire (shall be taken as infinite wire ) 0 0 1 2 2i 2 2 B · 4 d 4 1 10 - μ μ × = = × π π × also magnetic field due to circular loop 0 0 2 2 i 2 2 B · · 4 r 4 / 2 μ μ π π× = = π π π ⇒ 2 1 B 1 B 50 = $//(1 TARGET : 202 5 5 HS"
   },
   {
     "type": "normal_mcq",
@@ -1670,7 +1670,7 @@
       "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which statement is wrong for Lorentz force?",
+    "question": "Which\n\nstatement is wrong for Lorentz force?",
     "options": {
       "A": "electric magnetic F F F = + \\rho\\rho\\rho",
       "B": "The magnetic force is zero if charge is not moving",
@@ -1693,7 +1693,7 @@
       "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is wrong for electric field & magnetic field.",
+    "question": "Which of the following\n\nstatement is wrong for electric field & magnetic field.",
     "options": {
       "A": "Both are long range.",
       "B": "The principle of superposition applies to both fields",
@@ -2484,7 +2484,7 @@
       "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A massless square loop, of wire of resistance 10 \\Omega . supporting a mass of 1 g. hangs vertically with one of its sides in a uniform magnetic field of 10 3 G, directed outwards in the shaded region. A dc voltage V is applied to the loop. For what value of V. the magnetic force will exactly balance the weight of the supporting mass of 1g? (If sides of the loop = 10 cm, g = 10 ms - 2 )",
+    "question": "A massless square loop, of wire of resistance 10 \\Omega . supporting a mass of 1 g. hangs vertically with one of its sides in a uniform magnetic field of 10 3 G, directed outwards in the shaded region. A dc voltage V is applied to the loop. For what value of\n\nV. the magnetic force will exactly balance the weight of the supporting mass of 1g? (If sides of the loop = 10 cm, g = 10 )",
     "options": {
       "A": "1 V 10",
       "B": "100 V",
@@ -2700,7 +2700,7 @@
       "D": "3 cm MF06 - 0035"
     },
     "correct_option": "A",
-    "explanation": "For no force on wire C, force on wire C due to wire D= force on wire C due to wire B ( ) \\mu \\mu        =   \\pi \\pi - 0 0 2 15 5 2 5 10 4 x 4 15 x l l  x = 9 cm.",
+    "explanation": "For no force on wire C, force on wire C due to wire D= force on wire C due to wire B ( ) \\mu \\mu        =   \\pi \\ 2 15 5 2 5 10 4 x 4 15 x l l  x = 9 cm.",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
   },
   {
@@ -2856,7 +2856,7 @@
       "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A small circular flexible loop of wire of radius R carries a current I. It is placed in a uniform magnetic field B. The tension in the loop will be doubled, if : -",
+    "question": "A small circular flexible loop of wire of radius R carries a current\n\nI. It is placed in a uniform magnetic field B. The tension in the loop will be doubled, if : -",
     "options": {
       "A": "I is doubled",
       "B": "B is doubled",

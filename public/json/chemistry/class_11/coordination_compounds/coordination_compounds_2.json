@@ -73,7 +73,7 @@
       "D": "Purple CC06 - 0819"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 1 ) Yellow [Co(NH 3 ) 6 ] 3+ 3Cl - 1:3 electrolyte Purple [CoCl(NH 3 ) 5 ] 2+ 2Cl - 1:2 electrolyte Green [CoCl 2 (NH 3 ) 4 ] + Cl - 1:1 electrolyte Violet [CoCl 2 (NH 3 ) 4 ] + Cl - 1:1 electrolyte"
+    "explanation": "Ans. ( 1 ) Yellow [Co(NH 3 ) 6 ] 3+ 3Cl - 1:3 electrolyte Purple [CoCl(NH 3 ) 5 ] 2+ 2Cl - 1:2 electrolyte Green [CoCl 2 (NH 3 ) 4 ] + :1 electrolyte Violet [CoCl 2 (NH 3 ) 4 ] + :1 electrolyte"
   },
   {
     "type": "normal_mcq",
@@ -2844,7 +2844,7 @@
     "question": "Which of the following complex show maximum numbers of stereo isomers is ?",
     "options": {
       "A": "  3 2 4 PtCl",
-      "B": "  2 2 CuBr Cl -2",
+      "B": "  2 2 CuBr",
       "C": "  3 2 2 Cr",
       "D": "  2 4 3 Co"
     },

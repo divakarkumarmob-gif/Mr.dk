@@ -82,7 +82,7 @@
       "source": "RACE - Oscillations.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The length of a seconds pendulum at a height h = 2R from earth surface will be : (Given : R = Radius of earth and acceleration due to gravity at the surface of earth g = \\pi  ms - 2 )",
+    "question": "The length of a seconds pendulum at a height h = 2R from earth surface will be : (Given : R = Radius of earth and acceleration due to gravity at the surface of earth g = \\pi  )",
     "options": {
       "A": "2 m 9",
       "B": "4 m 9",
@@ -606,7 +606,7 @@
       "D": "The angular acceleration when the bob is in momentary rest"
     },
     "correct_option": "A",
-    "explanation": "(a) T = 2 \\pi g \\lambda = 2 \\pi -  2 40 10 10 = \\pi  = 2 2 4 3.14 10 10 = 1.26s (b) sin (0.04 × \\pi 180 ) = 0 A 40  A 0 = 40 sin (   ( ) \\pi )  180 0.04  = 0 A 1.6 cm (c) Angular velocity = \\omega \\theta - \\theta 2 2 0 = ( ) ( ) \\pi - 2 2 2 0.04 0.02 1.26 = \\pi 2",
+    "explanation": "(a) T = 2 \\pi g \\lambda = 2 \\pi -  2 40 10 10 = \\pi  = 2 2 4 3.14 10 10 = 1.26s (b) sin (0.04 × \\pi 180 ) = 0 A 40  A 0 = 40 sin (   ( ) \\pi )  180 0.04  = 0 A 1.6 cm (c) Angular velocity = \\omega \\theta - \\theta 2 2 0 = ( ) ( ) \\ 2 0.04 0.02 1.26 = \\pi 2",
     "photo": "data:image/png;base64,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"
   },
   {
@@ -884,10 +884,10 @@
     },
     "question": "The displacement of a particle executing SHM is given by y = 10 sin 6t 3 π   +     where y is in meter and t is in second. The initial displacement and initial velocity of the particle are respectively :-",
     "options": {
-      "A": "5 3 m and 30 ms -1",
-      "B": "15 m and 5 3 ms -1",
-      "C": "15 3 m and 30 ms -1",
-      "D": "10 3 2 m and 15 ms -1"
+      "A": "5 3 m and 30",
+      "B": "15 m and 5 3",
+      "C": "15 3 m and 30",
+      "D": "10 3 2 m and 15"
     },
     "correct_option": "A",
     "explanation": "dx v dt = = -10 (2 π ) sin (2 π t + 2 π ) At t = 1 6 v = -20 π sin o 90 3 π   +     = - 20 π cos 3 π Magnitude of velocity = 20 π 1 2 = 10 π ⇒ v = 31.4 cm/s"
@@ -1120,7 +1120,7 @@
       "D": "ratio of their maximum accelerations is 1"
     },
     "correct_option": "A",
-    "explanation": "Given ω 2 A = 35.28, ω = 4.2 (4.2) 2 A = 35.28 ⇒ A = 2m $//(1 TARGET : 202 5 PHYSICS 202 5 HS Oscillations (Energy & Spring Pendulum) : RACE # 02 solutions"
+    "explanation": "Given ω 2 A = 35.28, ω = 4.2 (4.2) 2 A = 35.28 ⇒ A = 2m $//(1 TARGET : 202 5 5 HS Oscillations (Energy & Spring Pendulum) : RACE # 02 solutions"
   },
   {
     "type": "normal_mcq",
@@ -1509,13 +1509,13 @@
     },
     "question": "When an automobile of mass 4000kg is placed on its suspension system then it sags by 20 cm. Force constant of each shock absorber of this 4 - wheeler, is",
     "options": {
-      "A": "2 × 10 5 Nm - 1",
-      "B": "4 × 10 5 Nm - 1",
-      "C": "5 × 10 4 Nm - 1",
-      "D": "2 × 10 4 Nm - 1 0 1 2 3 4 5 6 7 time"
+      "A": "2 × 10 5",
+      "B": "4 × 10 5",
+      "C": "5 × 10 4",
+      "D": "2 × 10 4 1 2 3 4 5 6 7 time"
     },
     "correct_option": "C",
-    "explanation": "In equilibrium mg = kx 0 0 mg k x = As weight balanced by each wheel , mg = 4000g 4 1000g 1000 10 100 k 20cm 20    = =  k = 5 × 10 4 Nm - 1"
+    "explanation": "In equilibrium mg = kx 0 0 mg k x = As weight balanced by each wheel , mg = 4000g 4 1000g 1000 10 100 k 20cm 20    = =  k = 5 × 10 4"
   },
   {
     "type": "figure_mcq",
@@ -1843,7 +1843,7 @@
       "D": "1 T 8 Exercise - I"
     },
     "correct_option": "D",
-    "explanation": "Given KE at 1 P KE 2 =  at O equilibrium position is designated by O  displacement OP = y velocity at 2 2 P v a y  = \\omega - velocity at O = Peak velocity = \\omega a 2 2 2 2 2 1 1 m a m (a y ) 2 2 2 (  \\omega  \\omega - = ( ) )  or 2 2 2 a a y 2 - = Exercise - I Oscillations"
+    "explanation": "Given KE at 1 P KE 2 =  at O equilibrium position is designated by O  displacement OP = y velocity at 2 2 P v a y  = \\omega - velocity at O = Peak velocity = \\omega a 2 2 2 2 2 1 1 m a m (a y ) 2 2 2 (  \\omega  \\omega - = ( ) )  a a y 2 - = Exercise - I Oscillations"
   },
   {
     "type": "normal_mcq",
@@ -1935,7 +1935,7 @@
       "D": "2 \\pi k"
     },
     "correct_option": "A",
-    "explanation": "Particle (2) move in - ve x direction at mean position the phase angle becomes \\pi so phase difference between the two particle is \\pi - 0 = \\pi"
+    "explanation": "Particle (2) move in - ve x direction at mean position the phase angle becomes \\pi so phase difference between the two particle is \\ = \\pi"
   },
   {
     "type": "normal_mcq",
@@ -2395,7 +2395,7 @@
       "D": "v 0 3 /2"
     },
     "correct_option": "A",
-    "explanation": "Particle (2) move in - ve x direction at mean position the phase angle becomes \\pi so phase difference between the two particle is \\pi - 0 = \\pi"
+    "explanation": "Particle (2) move in - ve x direction at mean position the phase angle becomes \\pi so phase difference between the two particle is \\ = \\pi"
   },
   {
     "type": "normal_mcq",
@@ -2571,7 +2571,7 @@
       "source": "Exercise I-III - Oscillations.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following statement is incorrect for an object executing S.H.M.:",
+    "question": "Which of the following\n\nstatement is incorrect for an object executing S.H.M.:",
     "options": {
       "A": "The value of acceleration is maximum at the extreme points",
       "B": "The total work done for completing one oscillation is zero.",
@@ -2622,9 +2622,9 @@
     },
     "question": "The time period of an oscillating body executing SHM is 0.05 sec and its amplitude is 40 cm. The maximum velocity of particle is :",
     "options": {
-      "A": "16 \\pi ms - 1",
-      "B": "2 \\pi ms - 1",
-      "C": "3.1 ms - 1",
+      "A": "16 \\pi",
+      "B": "2 \\pi",
+      "C": "3.1",
       "D": "4 \\pi m/s"
     },
     "correct_option": "A",
@@ -2651,7 +2651,7 @@
       "D": "10 2 cm"
     },
     "correct_option": "C",
-    "explanation": "2 2 V A x = \\omega - V max = 100 = A \\omega 50 = 10 2 100 x - 100 = 10 \\omega 25 = 100 - x 2 \\omega = 10 x 2 = 75 = 5 cm OR 100 = 50 cos \\omega t 1 cos t 2 \\omega =  3 sin t 2 \\omega = so x = Asin \\omega t x 5 3 cm ="
+    "explanation": "2 2 V A x = \\omega - V max = 100 = A \\omega 50 = 10 2 100 x - 100 = 10 \\omega 25 = 100 - x 2 \\omega = 10 x 2 = 75 = 5 cm = 50 cos \\omega t 1 cos t 2 \\omega =  3 sin t 2 \\omega = so x = Asin \\omega t x 5 3 cm ="
   },
   {
     "type": "figure_mcq",
@@ -2736,7 +2736,7 @@
       "source": "Exercise I-III - Oscillations.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a particle executing simple harmonic motion which of the following statement is not correct:",
+    "question": "For a particle executing simple harmonic motion which of the following\n\nstatement is not correct:",
     "options": {
       "A": "The total energy of particle always remains the same",
       "B": "The restoring force is always directed towards a fix point.",
@@ -3261,7 +3261,7 @@
       "D": "3E/4"
     },
     "correct_option": "D",
-    "explanation": "E = 1 2 m \\omega 2 A 2 K.E. = 1 2 m \\omega 2 (A 2 - x 2 ) A x 2 = 2 2 2 1 A m A 2 4 (  = \\omega - ( ) )  (K.E.) = 2 2 1 3E m A 2 4 (  \\omega = ( ) )  OR 1 sin t 2 \\omega =  3 cos t 2 \\omega = KE = E 0 cos 2 \\omega t"
+    "explanation": "E = 1 2 m \\omega 2 A 2 K.E. = 1 2 m \\omega 2 (A 2 - x 2 ) A x 2 = 2 2 2 1 A m A 2 4 (  = \\omega - ( ) )  (K.E.) = 2 2 1 3E m A 2 4 (  \\omega = ( ) )  sin t 2 \\omega =  3 cos t 2 \\omega = KE = E 0 cos 2 \\omega t"
   },
   {
     "type": "normal_mcq",

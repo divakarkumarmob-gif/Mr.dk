@@ -246,7 +246,7 @@
       "A": "Serum globulins",
       "B": "Fibrinogin in plasma",
       "C": "Serum albumins",
-      "D": "Haemocytes ALLEN : Biology 167"
+      "D": "Haemocytes ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Human Health And Disease principles."
@@ -292,7 +292,7 @@
       "source": "Human health and Diseases_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "How many statements are correct about acquired immunity? (I) Acquired immunity is specific immunity (II) On second exposure of antigen this immunity shows an anamnestic response. (III) T and B lymphocytes are responsible for acquired immunity. (IV) It can differentiate between self and noN\\cdot self cells. Options :",
+    "question": "How many statements are correct about acquired immunity? (I) Acquired immunity is specific immunity (II) On second exposure of antigen this immunity shows an anamnestic response. (III) T and B lymphocytes are responsible for acquired immunity. (IV) It can differentiate between self and noN\\cdot self cells.\n\n**Options** :",
     "options": {
       "A": "2",
       "B": "3",
@@ -770,7 +770,7 @@
       "A": "ELISA",
       "B": "MRI",
       "C": "Ultra sound",
-      "D": "WIDAL ALLEN : Biology 171"
+      "D": "WIDAL ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Human Health And Disease principles."
@@ -1173,7 +1173,7 @@
       "A": "Unexplained absence from school/college",
       "B": "Improvement in academic performance",
       "C": "Change in sleeping & eating habits",
-      "D": "Fluctuations in weight & appetite ALLEN : Biology 173"
+      "D": "Fluctuations in weight & appetite ALLEN :"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Human Health And Disease principles."
@@ -1347,7 +1347,7 @@
       "source": "RACE - Human Health And Disease.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In which one of the following options examples are incorrectly matched with their particular type of immunity ? Examples Type of immunity",
+    "question": "In which one of the following\n\n**options** examples are incorrectly matched with their particular type of immunity ? Examples Type of immunity",
     "options": {
       "A": "Saliva in mouth and tears in eyes Physiological barrier",
       "B": "Skin, HCl in stomach and mucus coating Physical barrier",
@@ -1526,7 +1526,7 @@
       "source": "RACE - Human Health And Disease.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following statement is correct?",
+    "question": "Which of the following\n\nstatement is correct?",
     "options": {
       "A": "Health is affected by genetic disorders, life style and infections.",
       "B": "Balanced diet personal hygiene and regular exercise are very important to maintain good health.",
