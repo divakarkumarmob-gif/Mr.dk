@@ -1,0 +1,3766 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_001",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(i) 26 Fe 54 , 26 Fe 56 , 26 Fe 57 , 26 Fe 58",
+    "options": {
+      "A": "Isotope",
+      "B": "Isotone",
+      "C": "Isodiapher",
+      "D": "Isobar"
+    },
+    "correct_option": "B",
+    "explanation": "Ionisation energy of He ⊕ ion = E ∞ - E 1 = 0 - (-21.8 × 10 -18 × 4 1 ) = 8.72 × 10 -18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_002",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select iso electronic set :-",
+    "options": {
+      "A": "Na + , H 3 O + , NH 4 +",
+      "B": "CO 3 -2 , NO 3 - , HCO 3 -",
+      "C": "P -3 , HCl, C 2 H 6 , PH 3",
+      "D": "In -3 , O -2 , F"
+    },
+    "correct_option": "C",
+    "explanation": "r (n+1) - r n = r (n-1) ⇒ 2 2 2 (n 1) n (n 1) 0.529 Å 0.529 Å 0.529 Å Z Z Z + - × - × = × ⇒ (n+1) 2 - n 2 = (n-1) 2 ⇒ (n 2 + 2n + 1) - n 2 = n 2 - 2n + 1 ⇒ 2n = n 2 - 2n ⇒ n 2 = 4n ⇒ n = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_003",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the table of atomic masses were established with the oxygen atom and assigned value of 200, then the mass of carbon atom would be, approximately:-",
+    "options": {
+      "A": "24",
+      "B": "150",
+      "C": "50",
+      "D": "112"
+    },
+    "correct_option": "D",
+    "explanation": "Potential energy of electron = - Nuclear charge × charge on electron Radius of orbit Ze 6e r × = - 2 6Ze r = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_004",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relative abundance of two rubidium isotopes of atomic weights 85 and 87 are 75% and 25% respectively. The average atomic wt. of rubidium is:-",
+    "options": {
+      "A": "75.5",
+      "B": "85.5",
+      "C": "86.5",
+      "D": "87.5"
+    },
+    "correct_option": "D",
+    "explanation": "de Broglie wavelength λ = h 2mqV V = Potential by which charged particles are accelerated ∴ 3 Be P + λ λ = 3 3 p p Be Be 2m q V 2m q V + + = p p p p m q 9m 3q × = 1 27 [  V is same] therefore ratio 3 p Be : + λ λ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_005",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of specific charge of a proton and an α -particle is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ionisation energy of ion = E ∞ - E 1 = 217.6 eV therefore E 1 = -217.6 eV = -13.6 × 2 2 Z 1 ∴ Z 2 = 217.6 13.6 = 16 and Z = 4 thus in beryllium (Z = 4) ion no. of neutrons = 9 - 4 = 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_006",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an atom 27 13 Al number of protons is (a) electron is (b) and neutron is (c). Hence ratio will be [in order c : b : a] (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Energy of 1 photon = hc λ = 34 8 10 6.62 10 3 10 5893 10 - - × × × × = 3.37 × 10 -19 J Total energy emitted by sodium lamp = 60 Watt = 60 J/sec ∴ Number of photon emitted in 1 sec = 19 60 3.37 10 - × and in 10 hours Total no. of emitted photons = 19 10 3600 60 3.37 10 - × × × = 6.4 × 10 24"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_007",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The charge on the atom containing 17 protons, 18 neutrons and 18 electrons is :-",
+    "options": {
+      "A": "+1",
+      "B": "-2",
+      "C": "-1",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "Distance between 3 rd and 2 nd orbit of H atom = r 3 - r 2 = 0.529 × 10 -8 2 2 3 2 1 1   -     cm. = 5 × 0.529 × 10 -8 = 2.646 × 10 -8 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_008",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Atomic weight of Ne is 20.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "wavelength of ( ) e λ  = velocity of e  ( ν ) ∴ λ = ν = h m ν or ν 2 = h m and ν = h m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_009",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ne is mixture of Ne 20 and Ne 22 , Relative abundance of heavier isotope is :-",
+    "options": {
+      "A": "90",
+      "B": "20",
+      "C": "40",
+      "D": "10"
+    },
+    "correct_option": "C",
+    "explanation": "r (n+1) - r n = r (n-1) ⇒ 2 2 2 (n 1) n (n 1) 0.529 Å 0.529 Å 0.529 Å Z Z Z + - × - × = × ⇒ (n+1) 2 - n 2 = (n-1) 2 ⇒ (n 2 + 2n + 1) - n 2 = n 2 - 2n + 1 ⇒ 2n = n 2 - 2n ⇒ n 2 = 4n ⇒ n = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_010",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The sum of number of neutrons and protons in one of the isotopes of hydrogen is :-",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "In = 4 n = 3 n = 2 n = 1 visible region (2 lines) ultraviolet region (3 lines)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_011",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of protons, neutrons & electrons in the element 89 Y 231 is :-",
+    "options": {
+      "A": "89, 231, 89",
+      "B": "89, 89, 242",
+      "C": "89, 142, 89",
+      "D": "89, 71, 89"
+    },
+    "correct_option": "A",
+    "explanation": "Spherical node is not present for 1s orbital"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_012",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Atoms 6 C 13 and 8 O 17 are related to each other as:-",
+    "options": {
+      "A": "Isotones",
+      "B": "Isoelectronic",
+      "C": "Isodiaphers",
+      "D": "Isosters"
+    },
+    "correct_option": "A",
+    "explanation": "Angular momentum is integral multiple of h 2 π in succesive orbits."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_013",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The e/m ratio is maximum for :-",
+    "options": {
+      "A": "D +",
+      "B": "The +",
+      "C": "H +",
+      "D": "The 2+"
+    },
+    "correct_option": "A",
+    "explanation": "∆ x × ∆ p  h 4 π Since ∆ x = ∆ p therefore, ( ∆ p) 2 = h 4 π or ∆ p = m ∆ν = h 4 π and ∆ v = 1 h 2m π $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_014",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Let mass of electron is half, mass of proton is two times and mass of neutron is three fourth of orignal. The find out new atomic wt. of O 16 atom :-",
+    "options": {
+      "A": "increases by 37.5%",
+      "B": "Remain constant",
+      "C": "increases by 12.5%",
+      "D": "decreases by 25%"
+    },
+    "correct_option": "A",
+    "explanation": "Circumference of 4 th orbit = 2 π r 4 and angular momentum m ν r 4 = 4h 2 π ...(i) de-broglie wavelength λ = h m ν & m ν = h λ ...(ii) therefore from eq.(1) and (ii) h λ r 4 = 4h 2 π or 2 π r 4 = 4 λ and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_015",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Naturally occurring boron has two isotopes whose atomic weights are 10.00 (I) and 11.00 (II). Atomic weight of natural boron is 10.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "∆ v = 1 cms -1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_016",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The percentage of isotopes (I) and (II) respectively is :-",
+    "options": {
+      "A": "20 and 80",
+      "B": "10 and 20",
+      "C": "15 and 75",
+      "D": "30 and 70 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_017",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In 7 N 14 if mass attributed to electron were doubled & the mass attributed to protons were halved, the atomic mass would become approximately :-",
+    "options": {
+      "A": "Halved",
+      "B": "Doubled",
+      "C": "Reduced by 25%",
+      "D": "Remain same BOHR'S ATOMIC MODEL"
+    },
+    "correct_option": "A",
+    "explanation": "E 1 (for H) = -13.6 × 1 1 and E 2 (for Be +3 ) = -13.6 × 2 2 4 2 therefore, 1 2 E 13.6 1 E 13.6 4 4 - = = - ×"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_018",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of the radii of two Bohr orbit's of H-atoms is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "wavelength of 4 th line of Balmer series λ 4 = H 1 1 1 R 4 36   -     = 912 × 9 2 Å and wavelength of 5 th line of Balmer series λ 5 = H 1 1 1 R 4 49   -     = 912 196 45 × Å therefore λ 4 - λ 5 = 912 9 196 2 45   -     = 131.7Å"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_019",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 what would be their nomenclature :-",
+    "options": {
+      "A": "K & L",
+      "B": "L & K",
+      "C": "In & L",
+      "D": "2 & 3 both"
+    },
+    "correct_option": "D",
+    "explanation": "de Broglie wavelength λ = h 2mqV V = Potential by which charged particles are accelerated ∴ 3 Be P + λ λ = 3 3 p p Be Be 2m q V 2m q V + + = p p p p m q 9m 3q × = 1 27 [  V is same] therefore ratio 3 p Be : + λ λ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_020",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The Bohr orbit radius for the hydrogen atom (n = 1) is approximately 0.530 Å. The radius for the first excited state (n = 2) will be :-",
+    "options": {
+      "A": "0.13 Å",
+      "B": "1.06 Å",
+      "C": "4.77 Å",
+      "D": "2.12 Å"
+    },
+    "correct_option": "A",
+    "explanation": "In H-atom r i - r f = 7 × 0.529 Å therefore 0.529 × n i 2 - 0.529 n f 2 = 7 × 0.529 or n i 2 - n f 2 = 7 thus the electronic transition is from 4 th orbit to 3 rd orbit"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_021",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of radius of first orbit in hydrogen to the radius of first orbit in deuterium will be :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "De-broglie wavelength λ = h mv 31 ball e ball e m v h 9.1 10 m v h 0.91 - λ × = × = λ   ∴ λ ball : e λ  = 10 -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_022",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Potential energy is - 27.2 eV in second orbit of He + then calculate, double of total energy in first excited state of Hydrogen atom :-",
+    "options": {
+      "A": "- 13.6 eV",
+      "B": "- 54.4 eV",
+      "C": "- 6.8 eV",
+      "D": "- 27.2 eV"
+    },
+    "correct_option": "A",
+    "explanation": "Circumference of orbit 2 π r = n λ and for 4 th orbit 2 π r 4 = 4 λ = 5.32 nm therefore λ = 5.32 4 = 1.33 nm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_023",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Going from K-shell to N-shell in case of H- atom:-",
+    "options": {
+      "A": "K. E. decreases",
+      "B": "Total energy decreases",
+      "C": "Potential energy decreases",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "In H-atom ionisation energy is less than 1 eV is for n = 4 (E 4 = -0.85 eV) on wards. therefore minimum value of n ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_024",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Angular momentum in 2 nd Bohr orbit of H-atom is x. Then find out angular momentum in Ist excited state of Li +2 :-",
+    "options": {
+      "A": "3x",
+      "B": "9x",
+      "C": "x 2",
+      "D": "x"
+    },
+    "correct_option": "A",
+    "explanation": "(n - 1)d subshell has higher energy than ns subshell for example 5d subshell has higher energy than 6s subshell."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_025",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Angular momentum for P-shell electron :-",
+    "options": {
+      "A": "3h π",
+      "B": "Zero",
+      "C": "2 h 2 π",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "An orbital can be represented by using three quantum numbers n, \\lambda and m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_026",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The energy of an e - in an orbit in a hydrogen atom is given by 2 constant E n = - (KJ mol -1 ) which of the following properties represents the ''constant\" in the above relation:-",
+    "options": {
+      "A": "Electron affinity",
+      "B": "Ionisation energy",
+      "C": "Electronegativity",
+      "D": "Bond energy"
+    },
+    "correct_option": "A",
+    "explanation": "∆ E 1 = 2 1 n n E E - ∆ E 2 = 3 2 n n E E - ∆ E 3 = 3 1 n n E E - therefore ∆ E 3 = ∆ E 1 + ∆ E 2 and ν 3 = ν 1 + ν 2 (  E ∝ ν ) and also 3 1 2 ν = ν + ν 1 E or E   ∝ ∝ ν   λ    $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY HS 202 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_027",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following electron transition will require the largest amount of energy in a hydrogen atom:-",
+    "options": {
+      "A": "From n = 1 to n = 2",
+      "B": "From n = 2 to n = 3",
+      "C": "From n = ∞ to n = 1",
+      "D": "From n = 3 to n = 5"
+    },
+    "correct_option": "A",
+    "explanation": "Electronic config. of Cr = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 4s 1 for electrons with n + m = 3 in Cr there are 3 possibilities. (i) n = 2, m = +1 ⇒ for two 2p electrons (ii) n = 3, m = 0 ⇒ for two 3s electrons + two 3p electrons + one 3d electron. (iii) n = 4, m = -1 ⇒ no electron of this type therefore totally 7 electrons are in Cr with n + m = 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_028",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the potential energy (PE) of hydrogen electron is -3.02eV then in which of the following excited level is electron present :-",
+    "options": {
+      "A": "1 st",
+      "B": "2 nd",
+      "C": "3 rd",
+      "D": "4 th"
+    },
+    "correct_option": "A",
+    "explanation": "λ = A A B A B B h P P h ; h P P P λ = = λ = ∴ λ B = 8 A A A B A P 5 10 P P P / 2 - λ × × × = ∴ λ B = 10 -7 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_029",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The radiation of low frequency will be emitted in which transition of hydrogen atom :-",
+    "options": {
+      "A": "In = 1 to n = 4",
+      "B": "In = 2 to n = 5",
+      "C": "In = 3 to n = 1",
+      "D": "In = 5 to n = 2"
+    },
+    "correct_option": "B",
+    "explanation": "In 2 + n 1 = 4 .....(i) and n 2 2 - n 1 2 = 8 ....(ii) therefore n 2 = 4 - n 1 and from equation (ii) (4 - n 1 ) 2 - n 1 2 = 8 16 - 8n 1 + n 1 2 - n 1 2 = 8 or n 1 = 1 and n 2 = 4 - 1 = 3 λ = 2 H H 2 2 1 2 1 1 1 1 1 1 R 4 R Z 1 9 n n =     × - × -           ∴ λ = H 9 32 R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_030",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ionisation potential of a singly ionised helium ion is equivalent to :-",
+    "options": {
+      "A": "Kinetic Energy of first orbit",
+      "B": "Energy of last orbit",
+      "C": "Average energy in orbits",
+      "D": "Maximum energy in orbits"
+    },
+    "correct_option": "A",
+    "explanation": "I.E. He + = -E 1(H) × Z 2 ⇒ 19.6 × 10 -18 J = -E 1(H) × Z 2 ⇒ E 1(H) = 18 19.6 10 J 4 - - × = -4.9 × 10 -18 J  E ∝ -Z 2 ∴ 2 2 2 (H) H 2 (Li ) Li E Z E Z + + = ⇒ 18 4.9 10 J ? - - × = 2 2 1 3 ⇒ ? = -44.1 × 10 -18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_031",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A single electron orbits a stationary nucleus (z = 5). The energy required to excite the electron from the third to the fourth Bohr orbit will be :-",
+    "options": {
+      "A": "4.5 eV",
+      "B": "8.53 eV",
+      "C": "25 eV",
+      "D": "16.53 eV $//"
+    },
+    "correct_option": "A",
+    "explanation": "2 H 2 2 1 2 1 1 R CZ n n     υ = -       n 1 = 2, n 2 = 4 υ = 1.09 × 10 7 × 3 × 10 8 × 1 1 2 2 1 1 2 4   -     υ = 6.15 × 10 14 Hz"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_032",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ionisation energy for the H- atom is 13.6 eV, then the required energy in eV to excite it from the ground state to next higher state will be :- ( in eV)",
+    "options": {
+      "A": "3.4",
+      "B": "10.2",
+      "C": "12.1",
+      "D": "1.5"
+    },
+    "correct_option": "A",
+    "explanation": "h 2 m K.E. λ = × × 34 31 25 6.6 10 2 9.1 10 kg 4.55 10 - - - × = × × × × = 7.25 × 10 -7 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_033",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of energies of hydrogen atom for first and second excited state is :-",
+    "options": {
+      "A": "4/1",
+      "B": "1/4",
+      "C": "4/9",
+      "D": "9/4"
+    },
+    "correct_option": "A",
+    "explanation": "From h p λ = λ e = λ photon ⇒ h mv = 5200 × 10 -10 m ⇒ 34 31 10 6.6 10 Js v 9.1 10 kg 5200 10 m - - - × = × × × = 1400 ms -1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_034",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a hydrogen atom (ionisation energy 13.6 eV), an electron jumps from third excited state to first excited state. The energy of photon emitted in the process is :-",
+    "options": {
+      "A": "1.89 eV",
+      "B": "2.55 eV",
+      "C": "12.09 eV",
+      "D": "12.75 eV"
+    },
+    "correct_option": "A",
+    "explanation": "Given, nh mvr 2 = π ∴ nh 2 π = 4.2178 × 10 -34 or 34 34 4.2178 10 2 3.14 n 6.625 10 - - × × × = × = 4 Thus, H 2 2 1 2 1 1 1 R n n [ ] = - [ ] λ [ ] The transition spectral line for 4 th to 3 rd shell is 2 2 1 1 1 109678 3 4 [ ] = - [ ] λ [ ] λ = 1.8 × 10 -4 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_035",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the value of E n = -34.84 then to which of the following values does 'n' correspond:-",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "C",
+    "explanation": "r (n+1) - r n = r (n-1) ⇒ 2 2 2 (n 1) n (n 1) 0.529 Å 0.529 Å 0.529 Å Z Z Z + - × - × = × ⇒ (n+1) 2 - n 2 = (n-1) 2 ⇒ (n 2 + 2n + 1) - n 2 = n 2 - 2n + 1 ⇒ 2n = n 2 - 2n ⇒ n 2 = 4n ⇒ n = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_036",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of the difference in energy between the first and second Bohr orbit to that between second and third Bohr orbit in H-atom is :-",
+    "options": {
+      "A": "4/9",
+      "B": "1/3",
+      "C": "27/5",
+      "D": "1/2"
+    },
+    "correct_option": "A",
+    "explanation": "Number of radial 1s 2s 2p x 2p y 2p z nodes for 0 1 0 0 0 Number of angular 0 0 1 1 1 nodes total nodes = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_037",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of potential energy and total energy of an electron in a Bohr orbit of hydrogen like species is:-",
+    "options": {
+      "A": "2",
+      "B": "-2",
+      "C": "1",
+      "D": "-1"
+    },
+    "correct_option": "A",
+    "explanation": "For 3p x and 3p y both n and l are identical. $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_038",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not a correct order of energy for 1, 2 nd & 3 rd orbit in an atom ?",
+    "options": {
+      "A": "E 1 > E 2 > E 3",
+      "D": "'1' & '3' both",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_039",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For any H like system, the ratio of velocities of electron in I, II & III orbits i.e. V",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_040",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match the following :-",
+    "options": {
+      "A": "Energy of ground",
+      "B": "Potential energy of",
+      "C": "Kinetic energy of II",
+      "D": "Ionisation potential"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_041",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is correct for any H like species :-",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_042",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which transition, one quantum of energy is emmited :-",
+    "options": {
+      "A": "In = 4 → n = 2",
+      "B": "In = 3 → n = 1",
+      "C": "In = 4 → n = 1",
+      "D": "All of them"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_043",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of minimum frequency of Lyman & Balmer series will be :-",
+    "options": {
+      "A": "1.25",
+      "B": "0.25",
+      "C": "5.4",
+      "D": "10"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_044",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In H-atom, electron transits from 6 th orbit to 2 nd orbit in multi steps. Then total spectral lines (without Balmer series) will be :-",
+    "options": {
+      "A": "6",
+      "B": "10",
+      "C": "4",
+      "D": "0"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_045",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which transition emits photon of maximum frequency :-",
+    "options": {
+      "A": "second spectral line of Balmer series",
+      "B": "second spectral line of Paschen series",
+      "C": "fifth spectral line of Humphery series",
+      "D": "first spectral line of Lymen series $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_046",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following species will give a series of spectral lines similar to that of Mg 2+ :-",
+    "options": {
+      "A": "Al 3+",
+      "B": "Na",
+      "C": "Mg +",
+      "D": "If"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_047",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The wave number of first line of Balmer series of hydrogen atom is 15200 cm -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_048",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the wave number of first line of Balmer series of Li 2+ ion :-",
+    "options": {
+      "A": "15200 cm -1",
+      "B": "13680000 m -1",
+      "C": "76000 cm -1",
+      "D": "13680 cm -1"
+    },
+    "correct_option": "B",
+    "explanation": "Ionisation energy of He ⊕ ion = E ∞ - E 1 = 0 - (-21.8 × 10 -18 × 4 1 ) = 8.72 × 10 -18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_049",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A certain electronic transition from an excited state to ground state of the H atom in one or more step gives rise to three lines in the ultra violet region of the spectrum. How many lines does this transition produce in the infrared region of the spectrum :-",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_050",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of minimum wavelengths of Lyman & Balmer series will be :-",
+    "options": {
+      "A": "1.25",
+      "B": "0.25",
+      "C": "5",
+      "D": "10"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_051",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The transition of electron in H-atom that will emit maximum energy is :-",
+    "options": {
+      "A": "In 3 → n 2",
+      "B": "In 4 → n 3",
+      "C": "In 5 → n 4",
+      "D": "All have same energy"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_052",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that in the H- atom the transition energy for n = 1 to n = 2, Rydberg states is 10.2eV. The energy for the same transition in Be 3+ is :-",
+    "options": {
+      "A": "20.4 eV",
+      "B": "163.2 eV",
+      "C": "30.6 eV",
+      "D": "40.8 eV"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_053",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When an electron in H- atom jumps from n = 4 to n = 1, ultra violet light is emitted. If the transition corresponds to n = 4 to n = 2, which of the following colours will be emitted :-",
+    "options": {
+      "A": "Ultra violet",
+      "B": "Green",
+      "C": "Infra red",
+      "D": "No colour"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_054",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four lowest energy levels of H- atoms are shown in the figure. The number of emission lines could be :-",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_055",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the above problem, the number of absorption lines could be :-",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_056",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find out ratio of following for photon ( ν max. ) Lyman : ( ν max ) Brakett (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_057",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of wavelengths of first line of Lyman series in Li +2 and first line of Lyman series in deuterium ( 1 H 2 ) is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_058",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The wavelength of first line of the Lyman series for hydrogen is 1210 A^\\circ. The wavelength for the first line of this series for a 10 time ionised sodium atom (z = 11) will be :-",
+    "options": {
+      "A": "1000 A^\\circ",
+      "B": "100 A^\\circ",
+      "C": "10 A^\\circ",
+      "D": "1 A^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_059",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A certain electronic transition from an excited state to the ground state of the H atom in one or more steps gives rise to four lines in the ultra violet region of the spectrum, how many lines does this transition produce in the infrared region of the spectrum :-",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_060",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an electronic transition atom cannot emit :-",
+    "options": {
+      "A": "Visible light",
+      "B": "γ - rays",
+      "C": "Infra red light",
+      "D": "Ultra violet light"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_061",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the shortest wavelength of Lyman series of H atom is x, then the wavelength of I st line of Balmer series of H atom will be :-",
+    "options": {
+      "A": "9x 5",
+      "B": "36x 5",
+      "C": "5x 9",
+      "D": "5x 36 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_062",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The first emission line in the H-atom spectrum in the Balmer series will have wave number :-",
+    "options": {
+      "A": "5R 36 cm -1",
+      "B": "3 R 4 cm -1",
+      "C": "7R 144 cm -1",
+      "D": "9 R 400 m -"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_063",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 9.9 eV energy is supplied to H atom, the no. of spectral lines emitted is equal to :-",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3 De-Broglie CONCEPT, HEISENBERG UNCERTAINITY PRINCIPLE"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_064",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "No. of waves in fourth orbit :-",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "0",
+      "D": "1"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_065",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "NCERT_Direct"
+      ],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The uncertainity in position of an electron & helium atom are same. If the uncertainity in momentum for the electron is 32 × 10 5 g cm s -1 , then the uncertainity in momentum of helium atom will be",
+    "options": {
+      "A": "32 × 10 5 g cm s -1",
+      "B": "16 × 10 5 g cm s -1",
+      "C": "8 × 10 5 g cm s -1",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_066",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the ratio of the de-Broglie wave lengths for electrons accelerated through 200 volts and 50 volts :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_067",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a valid Bohr orbit, its circumfrence should be",
+    "options": {
+      "A": "= n λ",
+      "B": "=",
+      "C": "> n λ",
+      "D": "< n λ"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_068",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "NCERT_Direct"
+      ],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heisenberg's Uncertainty principle is not valid for",
+    "options": {
+      "A": "Moving electron",
+      "B": "Motor car",
+      "C": "Stationary particles",
+      "D": "2 & 3 both QUANTUM NUMBER, RULES FOR FILLING OF ORBITALS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_069",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If n = 3, then which value of ' \\lambda ' is correct :-",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "All of them"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_070",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In Phosphorus atom find out the no. of paired electrons for \\lambda = 1 and m = 0 :-",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "2",
+      "D": "0"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_071",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an atom, for how many electrons, the quantum numbers will be, n = 3, \\lambda = 2, m = + 2, s = + 1 2 :-",
+    "options": {
+      "A": "18",
+      "B": "6",
+      "C": "24",
+      "D": "1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_072",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four quantum numbers of unpaired electrons of chlorine are:- n l m s",
+    "options": {
+      "A": "3 2 0 + 1 2",
+      "B": "3 1 0 + 1 2",
+      "C": "3 1 +1 0",
+      "D": "3 0 -1 + 1 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_073",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Energy of atomic orbitals in a particular shell is in order:-",
+    "options": {
+      "A": "s < p < d < f",
+      "B": "s > p > d > f",
+      "C": "p < d < f < s",
+      "D": "If > d > s > p"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_074",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Spin angular momentum for electron :-",
+    "options": {
+      "A": "s",
+      "B": "2s",
+      "C": "s",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_075",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An electron is in one of 4d orbital. Which of the following orbital quantum number value is not possible :-",
+    "options": {
+      "A": "In = 4",
+      "B": "\\lambda = 1",
+      "C": "m = 1",
+      "D": "m = 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_076",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A neutral atom of an element has 2K, 8L, 11 M and 2N electrons. The number of s-electron in the atom are",
+    "options": {
+      "A": "2",
+      "B": "8",
+      "C": "10",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_077",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum number of electrons in a p-orbital with n = 6 and m = 0 can be :-",
+    "options": {
+      "A": "14",
+      "B": "6",
+      "C": "2",
+      "D": "10 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_078",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If \\lambda = 3 then type of subshell and number of orbital is :-",
+    "options": {
+      "A": "3p, 3",
+      "B": "4f, 14",
+      "C": "5f, 7",
+      "D": "3d, 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_079",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total values of m for n = 4 are -",
+    "options": {
+      "A": "4",
+      "B": "8",
+      "C": "16",
+      "D": "32"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_080",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Any nf-orbital can accomodate upto :-",
+    "options": {
+      "A": "14 electron",
+      "B": "Six electrons",
+      "C": "Two electrons with parallel spin",
+      "D": "Two electrons with opposite spin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_081",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "n, \\lambda and m values of an electron in 3p y orbital are :-",
+    "options": {
+      "A": "In = 3 ; \\lambda = 1 and m = 1",
+      "B": "In = 3 ; \\lambda = 1 and m = -1",
+      "C": "Both 1 and 2 are correct",
+      "D": "None of these"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_082",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which orbital is represented by the complete wave function 420 ψ :-",
+    "options": {
+      "A": "4d",
+      "B": "3d",
+      "C": "4p",
+      "D": "4s"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_083",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When the value of principal quantum number n is 3, the permitted value of azimuthal quantum numbers \\lambda and magnetic quantum numbers 'm' are:-",
+    "options": {
+      "A": "m 0 0 1 1, 0, 1 2 2, 1, 0, - 1, - 2 + - + + \\lambda",
+      "B": "m 0 1 2 2, 1, 2 3 3, 3, 2, 1, - 2, 3 + - + + + - \\lambda",
+      "C": "m 0 0 1 1 2 3 2 0, 1, 2 2 3, 2, 1, - 2, 3 + + - \\lambda",
+      "D": "m 1 0, 1 2 0, 1, 2 3 0, 1, 2, 3 \\lambda"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_084",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "36 Kr has the electronic configuration ( 18 Ar) 4s 2 3d 10 4p",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_085",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The 39 th electron will go into which one of the following sub-levels :-",
+    "options": {
+      "A": "4f",
+      "B": "4d",
+      "C": "3p",
+      "D": "5s"
+    },
+    "correct_option": "B",
+    "explanation": "Energy of 1 photon = hc λ = 34 8 10 6.62 10 3 10 5893 10 - - × × × × = 3.37 × 10 -19 J Total energy emitted by sodium lamp = 60 Watt = 60 J/sec ∴ Number of photon emitted in 1 sec = 19 60 3.37 10 - × and in 10 hours Total no. of emitted photons = 19 10 3600 60 3.37 10 - × × × = 6.4 × 10 24"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_086",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The atomic number of an element is 17, the number of orbitals containing electron pairs in the valency shell is:-",
+    "options": {
+      "A": "8",
+      "B": "2",
+      "C": "3",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_087",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total spin resulting from a d 9 configuration is:-",
+    "options": {
+      "A": "1 2",
+      "B": "2",
+      "C": "1",
+      "D": "3 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_088",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The explanation for the presence of three unpaired electrons in the nitrogen atom can be given by:-",
+    "options": {
+      "A": "Pauli's exclusion principle",
+      "B": "Hund's rule",
+      "C": "Aufbau's principle",
+      "D": "Uncertainty principle"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_089",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In and \\lambda values of an orbital 'A' are 3 and 2, of another orbital 'B' are 5 and",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_090",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "No. of all subshells of n + \\lambda = 7 is:-",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "6",
+      "D": "7"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_091",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Electronic configuration has violated :-",
+    "options": {
+      "A": "Hund's rule",
+      "B": "Pauli's principle",
+      "C": "Aufbau principle",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_092",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A transition metal 'X' has a configuration [Ar] 3d 5 in its + 3 oxidation state. Its atomic number is:-",
+    "options": {
+      "A": "22",
+      "B": "26",
+      "C": "28",
+      "D": "19"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_093",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sum of the paired electrons present in the orbital with \\lambda = 2 in all the species Fe 2+ , Co 2+ and Ni +2 are:-",
+    "options": {
+      "A": "9",
+      "B": "12",
+      "C": "6",
+      "D": "15 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_094",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The quantum number of 20th electron of Fe(Z = 26) would be :-",
+    "options": {
+      "A": "3, 2, - 2, - ½",
+      "B": "3, 2, 0, ½",
+      "C": "4, 0, 0, + ½",
+      "D": "4, 1, - 1, + ½"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_095",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following transition neither shows absorption nor emission of energy in case of Hydrogen atom :-",
+    "options": {
+      "A": "3p x → 3s",
+      "B": "3d xy → 3d yz",
+      "C": "3s → 3d xy",
+      "D": "All the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_096",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The atomic number of the element having maximum number of unpaired 3p electrons is (in ground state) :-",
+    "options": {
+      "A": "15",
+      "B": "10",
+      "C": "12",
+      "D": "8"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_097",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one represents ground state configuration?",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_098",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which orbitlal has two angular nodal planes :-",
+    "options": {
+      "A": "s",
+      "B": "p",
+      "C": "d",
+      "D": "If"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_099",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For H atom, the energy required for the removal of electron from various sub-shells is given as under:- 3s 3p 3d E 1 E 2 E 3 0 0 0 n= ∞ The order of the energies would be :-",
+    "options": {
+      "A": "E 1 > E 2 > E 3",
+      "B": "E 3 > E 2 > E 1",
+      "C": "E 1 = E 2 = E 3",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_100",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an atom having 2K, 8L, 8M and 2N electrons, the number of electrons with m = 0; S = 1 2 + are",
+    "options": {
+      "A": "6",
+      "B": "2",
+      "C": "8",
+      "D": "16"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_101",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of electrons in the M-shell of the element with atomic number 24 is :-",
+    "options": {
+      "A": "24",
+      "B": "12",
+      "C": "8",
+      "D": "13"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_102",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An orbital with \\lambda = 0 is symmetrical about the :-",
+    "options": {
+      "A": "x-axis only",
+      "B": "y-axis only",
+      "C": "z-axis only",
+      "D": "The nucleus EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_103",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The triad of nuclei that is isotonic :-",
+    "options": {
+      "A": "14 6 C , 15 7 N , 17 9 F",
+      "B": "14 6 C , 14 7 N , 17 9 F",
+      "C": "13 6 C , 14 7 N , 19 9 F",
+      "D": "14 6 C , 14 7 N , 19 9 F"
+    },
+    "correct_option": "A",
+    "explanation": "Ionisation energy of He ⊕ ion = E ∞ - E 1 = 0 - (-21.8 × 10 -18 × 4 1 ) = 8.72 × 10 -18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_104",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For Al +3 ion, if atomic number (Z) = 13 and number of neutrons is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "r (n+1) - r n = r (n-1) ⇒ 2 2 2 (n 1) n (n 1) 0.529 Å 0.529 Å 0.529 Å Z Z Z + - × - × = × ⇒ (n+1) 2 - n 2 = (n-1) 2 ⇒ (n 2 + 2n + 1) - n 2 = n 2 - 2n + 1 ⇒ 2n = n 2 - 2n ⇒ n 2 = 4n ⇒ n = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_105",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Then the number of electrons in it will be :-",
+    "options": {
+      "A": "13",
+      "B": "12",
+      "C": "10",
+      "D": "11"
+    },
+    "correct_option": "A",
+    "explanation": "∆ v = 1 cms -1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_106",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "X + , Y 2+ and Z - are isoelectronic with CO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Potential energy of electron = - Nuclear charge × charge on electron Radius of orbit Ze 6e r × = - 2 6Ze r = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_107",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Increasing order of protons in X + , Y 2+ and Z - is :",
+    "options": {
+      "A": "X + = Y 2+ = Z -",
+      "B": "X + < Y 2+ < Z -",
+      "C": "Z - < X + < Y 2+",
+      "D": "Y 2+ < X + < Z -"
+    },
+    "correct_option": "A",
+    "explanation": "r (n+1) - r n = r (n-1) ⇒ 2 2 2 (n 1) n (n 1) 0.529 Å 0.529 Å 0.529 Å Z Z Z + - × - × = × ⇒ (n+1) 2 - n 2 = (n-1) 2 ⇒ (n 2 + 2n + 1) - n 2 = n 2 - 2n + 1 ⇒ 2n = n 2 - 2n ⇒ n 2 = 4n ⇒ n = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_108",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The frequency of light for 1.0 Å wavelength is:-",
+    "options": {
+      "A": "3 × 10 18 Hz",
+      "B": "3 × 10 18 sec -1",
+      "C": "3 × 10 18 Cycles per sec",
+      "D": "All of the above"
+    },
+    "correct_option": "A",
+    "explanation": "de Broglie wavelength λ = h 2mqV V = Potential by which charged particles are accelerated ∴ 3 Be P + λ λ = 3 3 p p Be Be 2m q V 2m q V + + = p p p p m q 9m 3q × = 1 27 [  V is same] therefore ratio 3 p Be : + λ λ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_109",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of photons emitted in 10 hours by a 60 W sodium lamp ( λ of photon = 6000 Å)",
+    "options": {
+      "A": "6.50 × 10 24",
+      "B": "6.40 × 10 23",
+      "C": "8.40 × 10 23",
+      "D": "3.40 × 10 23"
+    },
+    "correct_option": "A",
+    "explanation": "Ionisation energy of ion = E ∞ - E 1 = 217.6 eV therefore E 1 = -217.6 eV = -13.6 × 2 2 Z 1 ∴ Z 2 = 217.6 13.6 = 16 and Z = 4 thus in beryllium (Z = 4) ion no. of neutrons = 9 - 4 = 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_110",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The radius of which of the following orbit is same as that of the first Bohr’s orbit of hydrogen atom.",
+    "options": {
+      "A": "The +",
+      "B": "Li 2+",
+      "C": "Li 2+",
+      "D": "Be 3+"
+    },
+    "correct_option": "A",
+    "explanation": "Energy of 1 photon = hc λ = 34 8 10 6.62 10 3 10 5893 10 - - × × × × = 3.37 × 10 -19 J Total energy emitted by sodium lamp = 60 Watt = 60 J/sec ∴ Number of photon emitted in 1 sec = 19 60 3.37 10 - × and in 10 hours Total no. of emitted photons = 19 10 3600 60 3.37 10 - × × × = 6.4 × 10 24"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_111",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The energy needed to excite an electron of hydrogen atom from its ground state to its third excited state is :-",
+    "options": {
+      "A": "12.1 eV",
+      "B": "10.2 eV",
+      "C": "0.85 eV",
+      "D": "12.75 eV"
+    },
+    "correct_option": "A",
+    "explanation": "Distance between 3 rd and 2 nd orbit of H atom = r 3 - r 2 = 0.529 × 10 -8 2 2 3 2 1 1   -     cm. = 5 × 0.529 × 10 -8 = 2.646 × 10 -8 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_112",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following transitions will the wavelength be minimum ?",
+    "options": {
+      "A": "In = 6 to n = 4",
+      "B": "In = 4 to n = 2",
+      "C": "In = 3 to n = 1",
+      "D": "In = 2 to n = 1"
+    },
+    "correct_option": "A",
+    "explanation": "wavelength of ( ) e λ  = velocity of e  ( ν ) ∴ λ = ν = h m ν or ν 2 = h m and ν = h m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_113",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The first emission line of Balmer series in He + -spectrum has the wave no. (R-Rydberg constant)",
+    "options": {
+      "A": "3R 4",
+      "B": "20R 36",
+      "C": "5R 36",
+      "D": "R 6"
+    },
+    "correct_option": "A",
+    "explanation": "In = 4 n = 3 n = 2 n = 1 visible region (2 lines) ultraviolet region (3 lines)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_114",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hydrogen atom electron is excited to n = 4 state, in the spectrum of emitted radiation, number of lines in the ultravoilet and visible regions are respectively:-",
+    "options": {
+      "A": "3, 1",
+      "B": "1, 3",
+      "C": "2, 3",
+      "D": "3, 2"
+    },
+    "correct_option": "A",
+    "explanation": "Spherical node is not present for 1s orbital"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_115",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total spin in Ni +2 ion :-",
+    "options": {
+      "A": "\\pm 5 2",
+      "B": "\\pm 3 2",
+      "C": "\\pm 1 2",
+      "D": "\\pm 1"
+    },
+    "correct_option": "A",
+    "explanation": "Angular momentum is integral multiple of h 2 π in succesive orbits."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_116",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following pairs is the probability of finding the electron in only xy - plane is zero for both orbitals ?",
+    "options": {
+      "A": "3d yz , 2 2 x y 4d -",
+      "B": "2P z , 3 2 z d",
+      "C": "4d zx , 3P z",
+      "D": "2P z , 3P z"
+    },
+    "correct_option": "A",
+    "explanation": "∆ x × ∆ p  h 4 π Since ∆ x = ∆ p therefore, ( ∆ p) 2 = h 4 π or ∆ p = m ∆ν = h 4 π and ∆ v = 1 h 2m π $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_117",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the total energy of an electron in a hydrogen atom in an exicted state is -3.4 eV, then the de- broglie wavelength of the electron is :-",
+    "options": {
+      "A": "6.65 × 10 -10 m",
+      "B": "3 × 10 -10 m",
+      "C": "5 × 10 -9 m",
+      "D": "9.3 × 10 -12 m"
+    },
+    "correct_option": "A",
+    "explanation": "Circumference of 4 th orbit = 2 π r 4 and angular momentum m ν r 4 = 4h 2 π ...(i) de-broglie wavelength λ = h m ν & m ν = h λ ...(ii) therefore from eq.(1) and (ii) h λ r 4 = 4h 2 π or 2 π r 4 = 4 λ and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_118",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The wavelength associated with a gold ball weighing 200 g and moving at a speed of 5 m/h is of the order of :-",
+    "options": {
+      "A": "10 -1 m",
+      "B": "10 -20 m",
+      "C": "10 -30 m",
+      "D": "10 -40 m $//"
+    },
+    "correct_option": "A",
+    "explanation": "∆ v = 1 cms -1 ∆ x = ? ∆ x = h 4 m v π × ∆ = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - - × × × × = 5.25 × 10 -30 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_119",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Magnetic moment of X +3 ion of 3d series is 35 B.M. What is the atomic number of X +3 ?",
+    "options": {
+      "A": "24",
+      "B": "25",
+      "C": "26",
+      "D": "27"
+    },
+    "correct_option": "A",
+    "explanation": "E 1 (for H) = -13.6 × 1 1 and E 2 (for Be +3 ) = -13.6 × 2 2 4 2 therefore, 1 2 E 13.6 1 E 13.6 4 4 - = = - ×"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_120",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which orbit would be the first to have 'h' subshell:-",
+    "options": {
+      "A": "3 rd",
+      "B": "4 th",
+      "C": "5 th",
+      "D": "6 th"
+    },
+    "correct_option": "A",
+    "explanation": "Ionisation energy of Li +2 ion =0- 2 2 3 13.6 1   ×     = 122.4 eV and Ionisation energy of H atom = 0 - 2 2 1 13.6 1   ×     = 13.6 eV ∴ I.E. (of Li +2 ) = 9 × I.E. (of H)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_121",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What are the values of the orbital angular momentum of an electron in the orbitals 1s, 3s, 3d, and 2p :-",
+    "options": {
+      "A": "0, 0, 6  , 2 ",
+      "B": "1, 1, 6  , 2 ",
+      "C": "0, 1, 6  , 3 ",
+      "D": "0, 0, 20  , 6 "
+    },
+    "correct_option": "A",
+    "explanation": "wavelength of 4 th line of Balmer series λ 4 = H 1 1 1 R 4 36   -     = 912 × 9 2 Å and wavelength of 5 th line of Balmer series λ 5 = H 1 1 1 R 4 49   -     = 912 196 45 × Å therefore λ 4 - λ 5 = 912 9 196 2 45   -     = 131.7Å"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_122",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "There is no difference between a 2p and 3p orbital regarding ?",
+    "options": {
+      "A": "Shape",
+      "B": "Size",
+      "C": "Energy",
+      "D": "Value of n"
+    },
+    "correct_option": "A",
+    "explanation": "In H-atom r i - r f = 7 × 0.529 Å therefore 0.529 × n i 2 - 0.529 n f 2 = 7 × 0.529 or n i 2 - n f 2 = 7 thus the electronic transition is from 4 th orbit to 3 rd orbit"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_123",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The energy corresponding to second line of Balmer series for hydrogen atom will be :-",
+    "options": {
+      "A": "12.1 eV",
+      "B": "1.89 eV",
+      "C": "2.55 eV",
+      "D": "13.6 eV"
+    },
+    "correct_option": "A",
+    "explanation": "De-broglie wavelength λ = h mv 31 ball e ball e m v h 9.1 10 m v h 0.91 - λ × = × = λ   ∴ λ ball : e λ  = 10 -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_124",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the velocity of an electron in I st orbit of H is V, then what will be the velocity in 4 th orbit of Be +3 :-",
+    "options": {
+      "A": "V",
+      "B": "V 4",
+      "C": "16 V",
+      "D": "4 V"
+    },
+    "correct_option": "A",
+    "explanation": "Circumference of orbit 2 π r = n λ and for 4 th orbit 2 π r 4 = 4 λ = 5.32 nm therefore λ = 5.32 4 = 1.33 nm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_125",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Magnetic moments of V (Z = 23), Cr (Z = 24), Mn (Z = 25) are x, y, z. Hence :-",
+    "options": {
+      "A": "x = y = z",
+      "B": "x < y < z",
+      "C": "x < z < y",
+      "D": "z < y < x"
+    },
+    "correct_option": "A",
+    "explanation": "In H-atom ionisation energy is less than 1 eV is for n = 4 (E 4 = -0.85 eV) on wards. therefore minimum value of n ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_126",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The wavelength of the radiation emitted when an electron falls from Bohr's orbit 4 to 2 in H atom is",
+    "options": {
+      "A": "972 nm",
+      "B": "486 nm",
+      "C": "243 nm",
+      "D": "182 nm"
+    },
+    "correct_option": "A",
+    "explanation": "(n - 1)d subshell has higher energy than ns subshell for example 5d subshell has higher energy than 6s subshell."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_127",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to Bohr's atomic model",
+    "options": {
+      "A": "Electron in an atom of hydrogen can have only certain values of angular momentum",
+      "B": "Electrons have particle as well as wave character",
+      "C": "Atomic spectrum of an element should contain only five lines",
+      "D": "All the above statements are incorrect"
+    },
+    "correct_option": "A",
+    "explanation": "An orbital can be represented by using three quantum numbers n, \\lambda and m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_128",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A subshell with n = 6, \\lambda = 2 can accommodate a maximum of",
+    "options": {
+      "A": "12 electron",
+      "B": "36 electron",
+      "C": "10 electron",
+      "D": "72 electron"
+    },
+    "correct_option": "A",
+    "explanation": "∆ E 1 = 2 1 n n E E - ∆ E 2 = 3 2 n n E E - ∆ E 3 = 3 1 n n E E - therefore ∆ E 3 = ∆ E 1 + ∆ E 2 and ν 3 = ν 1 + ν 2 (  E ∝ ν ) and also 3 1 2 ν = ν + ν 1 E or E   ∝ ∝ ν   λ    $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY HS 202 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_129",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to Aufbau principle, the 19 th electron in an atom goes into the :-",
+    "options": {
+      "A": "4s-orbital",
+      "B": "3d-orbital",
+      "C": "4p-orbital",
+      "D": "3p-orbital"
+    },
+    "correct_option": "A",
+    "explanation": "Electronic config. of Cr = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 4s 1 for electrons with n + m = 3 in Cr there are 3 possibilities. (i) n = 2, m = +1 ⇒ for two 2p electrons (ii) n = 3, m = 0 ⇒ for two 3s electrons + two 3p electrons + one 3d electron. (iii) n = 4, m = -1 ⇒ no electron of this type therefore totally 7 electrons are in Cr with n + m = 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_130",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the d-orbitals lies in the xy-plane ?",
+    "options": {
+      "A": "d xy only",
+      "B": "d xz only",
+      "C": "2 z d only",
+      "D": "d xy and 2 z d"
+    },
+    "correct_option": "A",
+    "explanation": "λ = A A B A B B h P P h ; h P P P λ = = λ = ∴ λ B = 8 A A A B A P 5 10 P P P / 2 - λ × × × = ∴ λ B = 10 -7 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_131",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following sub-shells is not permitted ?",
+    "options": {
+      "A": "4f",
+      "B": "4d",
+      "C": "3s",
+      "D": "4g"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 + n 1 = 4 .....(i) and n 2 2 - n 1 2 = 8 ....(ii) therefore n 2 = 4 - n 1 and from equation (ii) (4 - n 1 ) 2 - n 1 2 = 8 16 - 8n 1 + n 1 2 - n 1 2 = 8 or n 1 = 1 and n 2 = 4 - 1 = 3 λ = 2 H H 2 2 1 2 1 1 1 1 1 1 R 4 R Z 1 9 n n =     × - × -           ∴ λ = H 9 32 R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_132",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of the radii of first orbit of H, He + and Li 2+ is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "I.E. He + = -E 1(H) × Z 2 ⇒ 19.6 × 10 -18 J = -E 1(H) × Z 2 ⇒ E 1(H) = 18 19.6 10 J 4 - - × = -4.9 × 10 -18 J  E ∝ -Z 2 ∴ 2 2 2 (H) H 2 (Li ) Li E Z E Z + + = ⇒ 18 4.9 10 J ? - - × = 2 2 1 3 ⇒ ? = -44.1 × 10 -18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_133",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The line with smallest wavelength in the Balmer series in the hydrogen spectrum will have the frequency :-",
+    "options": {
+      "A": "8.22 × 10 14 s -1",
+      "B": "3.29 × 10 15 s -1",
+      "C": "7.22 × 10 16 s -1",
+      "D": "8.05 × 10 13 s -1 $//"
+    },
+    "correct_option": "A",
+    "explanation": "2 H 2 2 1 2 1 1 R CZ n n     υ = -       n 1 = 2, n 2 = 4 υ = 1.09 × 10 7 × 3 × 10 8 × 1 1 2 2 1 1 2 4   -     υ = 6.15 × 10 14 Hz"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_134",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ionization energy of hydrgen atom is 13.6 eV. The ionization energy of Li 2+ would be :-",
+    "options": {
+      "A": "13.6 eV",
+      "B": "27.2 eV",
+      "C": "40.8 eV",
+      "D": "122.4 eV"
+    },
+    "correct_option": "A",
+    "explanation": "h 2 m K.E. λ = × × 34 31 25 6.6 10 2 9.1 10 kg 4.55 10 - - - × = × × × × = 7.25 × 10 -7 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_135",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The two particles A and B have de Broglie wavelengths 1 nm and 5 nm respectively. if mass of A is four times the mass of B, the ratio of kinetic energies of A and B would be :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "From h p λ = λ e = λ photon ⇒ h mv = 5200 × 10 -10 m ⇒ 34 31 10 6.6 10 Js v 9.1 10 kg 5200 10 m - - - × = × × × = 1400 ms -1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_136",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For an element, if atomic number (Z) and mass number",
+    "options": {
+      "A": "29, 63, 29",
+      "B": "29, 29, 63",
+      "C": "29, 34, 29",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Given, nh mvr 2 = π ∴ nh 2 π = 4.2178 × 10 -34 or 34 34 4.2178 10 2 3.14 n 6.625 10 - - × × × = × = 4 Thus, H 2 2 1 2 1 1 1 R n n [ ] = - [ ] λ [ ] The transition spectral line for 4 th to 3 rd shell is 2 2 1 1 1 109678 3 4 [ ] = - [ ] λ [ ] λ = 1.8 × 10 -4 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_137",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following groups which represents the collection of isoelectronic species ?",
+    "options": {
+      "A": "NO + , C 2 2- , O 2 - , CO",
+      "B": "In 2 , C 2 2- , CO, NO",
+      "C": "CO, NO + , CN - , C 2 2-",
+      "D": "NO, CN - , N 2 , O 2 -"
+    },
+    "correct_option": "A",
+    "explanation": "Number of radial nodes = (n - l - 1) In given graph 2 radial nodes are present and graph starts from origin so orbital is (s) i.e. l = 0 n - 0 - 1 = 2 n = 3 so orbital is 3s $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_138",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The specific charge of a proton is 9.6 × 10 7 C kg -1 , then for an α -particle it will be -",
+    "options": {
+      "A": "2.4 × 10 7 C kg -1",
+      "B": "4.8 × 10 7 C kg -1",
+      "C": "19.2 × 10 7 C kg -1",
+      "D": "38.4 × 10 7 C kg -1"
+    },
+    "correct_option": "A",
+    "explanation": "Number of radial 1s 2s 2p x 2p y 2p z nodes for 0 1 0 0 0 Number of angular 0 0 1 1 1 nodes total nodes = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_139",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It is known that an atom contains protons, neutrons and almost electrons. If the mass of neutron is assumed to half of its original value where as that of proton is assumed to be twice of its original value then the atomic mass of 14 7 N will be :-",
+    "options": {
+      "A": "same",
+      "B": "25 % more",
+      "C": "14.28 % more",
+      "D": "28.5 % less"
+    },
+    "correct_option": "A",
+    "explanation": "For 3p x and 3p y both n and l are identical. $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_140",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A photon having wavelength 700 nm has energy :-",
+    "options": {
+      "A": "1.77 eV",
+      "B": "2.47 eV",
+      "C": "700 eV",
+      "D": "3.57 eV"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_141",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In hydrogen atom the energy difference between the states n = 2 and n = 3 is E eV. The ionisation energy of H atom is -",
+    "options": {
+      "A": "3.2 E",
+      "B": "5.6 E",
+      "C": "7.2 E",
+      "D": "13.2 E"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_atomic_structure_142",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement (regarding an atom of H) is correct -",
+    "options": {
+      "A": "Kinetic energy of the electron is maximum in the first orbit",
+      "B": "Potential energy of the electron is maximum in the first orbit",
+      "C": "Radius of the second orbit is two times the radius of the first orbit",
+      "D": "Various energy levels are equally spaced"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_143",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ionisation potential of hydrogen atom is 13.6 V. The energy required to remove an electron from the n = 2 state of hydrogen atom is.",
+    "options": {
+      "A": "27.2 V",
+      "B": "13.6 V",
+      "C": "6.8 V",
+      "D": "3.4 V"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_144",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When the electron of a hydrogen atom jumps from the n = 4 to the n = 1 state, the number of all possible spectral lines emitted is :-",
+    "options": {
+      "A": "15",
+      "B": "6",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_145",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An electron in an atom jumps in such a way that its kinetic energy changes from x to x",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_146",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The change in potential energy will be :-",
+    "options": {
+      "A": "+ 3 2 x",
+      "B": "- 3 8 x",
+      "C": "+ 3 4 x",
+      "D": "- 3 4 x $//"
+    },
+    "correct_option": "A",
+    "explanation": "de Broglie wavelength λ = h 2mqV V = Potential by which charged particles are accelerated ∴ 3 Be P + λ λ = 3 3 p p Be Be 2m q V 2m q V + + = p p p p m q 9m 3q × = 1 27 [  V is same] therefore ratio 3 p Be : + λ λ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_147",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which oribital notation does not have spherical node :-",
+    "options": {
+      "A": "In = 2, \\lambda = 0",
+      "B": "In = 3, \\lambda = 1",
+      "C": "In = 3, \\lambda = 0",
+      "D": "In = 1, \\lambda = 0"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_148",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In how many elements does the last electron have the quantum number of n = 4 and \\lambda = 1?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "8",
+      "D": "10"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_149",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For principle quantum number n = 4, the total number of orbitals having \\lambda = 3 is :-",
+    "options": {
+      "A": "3",
+      "B": "7",
+      "C": "5",
+      "D": "9"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_150",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Atomic Structure - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Choose the wrong one on the basis of bohr theory :-",
+    "options": {
+      "A": "Radius of an orbit ∝ 2 n z",
+      "B": "velocity of e - ∝ z n",
+      "C": "Energy of e - in an orbit ∝ 2 2 n z",
+      "D": "mvr ∝ n"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Atomic Structure principles."
+  }
+]

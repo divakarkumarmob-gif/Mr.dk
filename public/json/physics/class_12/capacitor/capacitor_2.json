@@ -1,0 +1,1110 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "Extra Edge - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a capacitor of capacitance 20 \\mu F the distance between the plates is 2 mm. If a dielectric slab of width 1 mm and dielectric constant 2 is inserted between the plates, then the new capacitance will be :",
+    "options": {
+      "A": "22 \\mu F",
+      "B": "26.6 \\mu F",
+      "C": "52.2 \\mu F",
+      "D": "13 \\mu F CP11 - 0107 5 \\mu F A B C 10 \\mu F 10 \\mu F 10 \\mu F k V C C C C Exercise - I Capacitor NEET : Extra Edge [ Physics ]"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "Extra Edge - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the distance between plates of a capacitor having capacity C & charge Q is doubled then the work done will be :",
+    "options": {
+      "A": "Q 2 /4C",
+      "B": "Q 2 /2C",
+      "C": "Q 2 /C",
+      "D": "2Q 2 /C CP07 - 0088"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "Extra Edge - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A slab of copper of thickness d 2 is introduced between the plates of a parallel plate capacitor where d is the separation between its two plates. If the capacitance of the capacitor without the copper slab is C and with copper slab is C' then C' C is : -",
+    "options": {
+      "A": "2",
+      "B": "2",
+      "C": "1",
+      "D": "1 2 CP11 - 0088"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "Extra Edge - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two parallel plates of the same metal and same area are placed between the plates of a parallel plate capacitor of capacity C, If the thickness of each plate is equal to 1 5 th of the distance between the plates of the original capacitor then the capacity of the new capacitor is : -",
+    "options": {
+      "A": "5 C 3",
+      "B": "3 C 5",
+      "C": "3 C 10",
+      "D": "10 C 3 CP11 - 0106"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "Extra Edge - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A network of four capacitors of capacity equal to C 1 = C, C 2 = 2C, C 3 = 3C and C 4 = 4C are connected to a battery as shown in the figure. The ratio of the charges on C 2 and C 4 is : -",
+    "options": {
+      "A": "7 4",
+      "B": "22 3",
+      "C": "3 22",
+      "D": "4 7 CP05 - 0268"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Capacitor principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "Extra Edge - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two capacitors, 3μF and 4 μF, are individually charged across a 6 V battery. After being disconnected from the battery, they are connected together with the negative plate of one connected to the positive plate of the other. What is the final total energy stored?",
+    "options": {
+      "A": "1.26 × 10 - 4 J",
+      "B": "2.57 × 10 - 4 J",
+      "C": "1.26 × 10 - 6 J",
+      "D": "2.57 × 10 - 6 J CP06 - 0119 Exercise - I"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A conductor with a positive charge -",
+    "options": {
+      "A": "Is always at positive potential",
+      "B": "Is always at zero potential",
+      "C": "Is always at negative potential",
+      "D": "May be +ve, zero or - ve potential ES05 - 0409"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A metallic sphere is given some charge. Electric energy is stored.",
+    "options": {
+      "A": "Only inside the sphere",
+      "B": "Only outside the sphere",
+      "C": "Both inside and outside",
+      "D": "Neither inside nor outside ES05 - 0410"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The maximum electric field that a dielectric medium of a capacitor can withstand without break down is called its",
+    "options": {
+      "A": "Polarisation",
+      "B": "Capacitance",
+      "C": "Dielectric strength",
+      "D": "None of these CP01 - 0899"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If dielectric constant and dielectric strength be denoted by k & x respectively, then a material suitable for use as a dielectric in a capacitor must have",
+    "options": {
+      "A": "high k & high x",
+      "B": "high k & low x",
+      "C": "low k & high x",
+      "D": "low k & low x CP01 - 0904"
+    },
+    "correct_option": "A",
+    "explanation": "The material suitable for use as dielectric [ to withstand high External electric field ] must have high dielectric strength x and high dielectric constant k. [T o get more polarised charge]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A parallel plate capacitor has a uniform electric field E (V m - 1 ) in the space between the plates. If the distance between the plates is d(m) and area of each plate is A (m 2 ) the energy (Joule) stored in the capacitor, is :",
+    "options": {
+      "A": "2 0 1 E 2 ",
+      "B": "∈ 0 EAd",
+      "C": "2 0 1 E Ad 2 ",
+      "D": "E 2 Ad/ ∈ 0 CP29 - 0103"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 2 0 0 A 1 1 1 U CV (Ed) E Ad 2 2 d 2  (  = = =  ( ) )  0 A c (v Ed) d  (  = = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two metal spheres of radii R and 2R having s a me charge density σ, are brought in contact then charge densities becomes : -",
+    "options": {
+      "A": "2 , 3 3  ",
+      "B": "2 , 3 3  ",
+      "C": "5 5 , 3 6  ",
+      "D": "5 5 , 6 3   CP01 - 0900"
+    },
+    "correct_option": "C",
+    "explanation": "q sys = σ × 4πR 2 + σ × 4π(2R) 2 = 20σπR 2 2 2 1 R 20 q' 20 R R R 2R 3 =  \\pi = \\pi + 2 2 40 q' R 3 = \\pi 2 2 l 1 1 2 1 q 20 R 5 q' (S 4 R ) s 3 3 4 R \\pi = = =  = \\pi \\pi 2 5 6  =  2 2 2 2 2 q /s & s 4 (2R)    = = \\pi   "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A capacitor of capacitance C 1 is charged to a potential V and then connected in parallel to an uncharged capacitor of capacitance C",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "When a charged capacitor of capacitance C 1 is connected in parallel to an uncharged capacitor of capacitance C 2 , the charge is shared between them till both attain the common potential which is given by, common potential 1 2 1 1 1 2 1 2 1 2 q q C V 0 C V C C C C C C + + = = = + + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The final potential difference across each capacitor will be : -",
+    "options": {
+      "A": "1 1 2 C V C C +",
+      "B": "2 1 2 C V C C +",
+      "C": "2 1 C 1 V C (  + ( ) ) ",
+      "D": "2 1 C 1 V C (  - ( ) )  CP02 - 0334"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identical capacitors are joined in parallel, charged to a potential V, separated and then connected in series, the positive plate of one is connected to the negative of the other. Which of the following is true ?",
+    "options": {
+      "A": "The charges on the free plated connected together are destroyed.",
+      "B": "The energy stored in the system increases.",
+      "C": "The potential difference between the free plates is 2 V.",
+      "D": "The potential difference remains constant. CP02 - 0480"
+    },
+    "correct_option": "C",
+    "explanation": "When the two capacitors charged to same potential are connected in series, then total potential difference V' = V 1 + V 2 = V + V = 2V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identical capacitors have the same capacitance C. One of them is charged to potential V 1 and the other to V",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "( ) 2 1 2 1 2 1 2 C C 1 U V V 2 C C \\Delta = - +   ( ) 2 1 2 1 CC U V V 2 C C \\Delta = - + = 2 1 2 C (V V ) 4 -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The negative ends of the capacitors are connected together. When the positive ends are also connected, the decreases in energy of the combine system is : -",
+    "options": {
+      "A": "2 2 1 2 C",
+      "B": "2 2 1 2 C",
+      "C": "2 1 2 C",
+      "D": "2 1 2 C"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two spherical conductors A and B of radii a and b (b > a) are placed concentrically in air. A is given a charge +Q while B is earthed. Then the equivalent capacitance of the system is : -",
+    "options": {
+      "A": "0 ab 4 b a (  \\pi ( ) - ) ",
+      "B": "4πε 0",
+      "C": "4πε 0 b",
+      "D": "4πε 0 2 b b a (  ( ) - )  CP01 - 0901"
+    },
+    "correct_option": "A",
+    "explanation": "E = 0 for r < a E = 0 for r > b potential of outer sphere = 0 potential of inner sphere is V 1 1 0 0 0 Q Q Q b a V 4 a 4 b 4 ab - - (  = + = ( ) \\pi \\pi \\pi )  V = V 1 - V 2 = V 1 - 0 0 Q ab C 4 V b a (  = = \\pi ( ) - ) "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A sheet of aluminium foil of negligible thickness is placed between the plates of a capacitor of capacitance C as shown in the figure then capacitance of capacitor becomes",
+    "options": {
+      "A": "2C",
+      "B": "C",
+      "C": "C/2",
+      "D": "zero CP02 - 0479"
+    },
+    "correct_option": "B",
+    "explanation": "0 A C t d t k  = - + 0 A C d  = same",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Three condensers C 1 , C 2 and C 3 are connected to a 100 volt D.C. source as shown in the figure (Fig.). If the charges stored on the plates of C 1 , C 2 and C 3 are q a , q b and q c , q d and q e , q f respectively, then : -",
+    "options": {
+      "A": "q b + q d + q f = 100 9 coulomb",
+      "B": "q b + q d + q f = 0",
+      "C": "q b = q d = q f",
+      "D": "q a + q c + q e = 50 Coulomb CP02 - 0335"
+    },
+    "correct_option": "C",
+    "explanation": "Charge flow in series is same on all three capacitors. 6 4 eq 2 2 q C V 10 100 10 C 3 3 - - = =   =  C 1 C 2 K v=0 V 1 - Q +Q a b Capacitor NEET : NCR [Physics]",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A parallel plate capacitor after charging is kept connected to a battery and the plates are pulled apart with the help of insulating handles. Now which of the following quantities will decrease ?",
+    "options": {
+      "A": "Charge",
+      "B": "Capacitance",
+      "C": "Energy stored",
+      "D": "All of these CP02 - 0481"
+    },
+    "correct_option": "D",
+    "explanation": "V = const 0 A C d  = if d ↑C↓ q = CV C ↓ so q ↓ 2 1 U CV 2 = C ↓ so q ↓"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An isolated metal sphere of radius R is charged upto potential V. Energy stored in the electric field associated with the charged sphere can be given by",
+    "options": {
+      "A": "2πε 0 RV 2",
+      "B": "2 0 2 RV \\pi",
+      "C": "4πε 0 RV 2",
+      "D": "πε 0 RV 2 CP03 - 0261"
+    },
+    "correct_option": "A",
+    "explanation": "U = 1 2 (4π  0 R)V 2 , C = 4π  0 R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A capacitor of capacitance 2μF is charged by a battery. The battery is removed and another uncharged capacitor of capacitance 6μF is connected i n parallel. The total electrostatic energy of resulting system : -",
+    "options": {
+      "A": "Decreases",
+      "B": "Remains the same",
+      "C": "Increases",
+      "D": "None of these CP13 - 0073"
+    },
+    "correct_option": "A",
+    "explanation": "2 i 6 q U 2 2 10 - =   2 2 i f 6 6 U q q 1 U 4 4 2 8 10 2 2 10 - - = =  =    "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The figure gives the electric potential V as a function of distance through five regions on x - axis. Which of the following is true for the electric field E in these regions : -",
+    "options": {
+      "A": "E 1 > E 2 > E 3 > E 4 > E 5",
+      "B": "E 1 = E 3 = E 5 and E 2 < E 4",
+      "C": "E 2 = E 4 = E 5 and E 1 < E 3",
+      "D": "E 1 < E 2 < E 3 < E 4 < E 5 CP01 - 0905"
+    },
+    "correct_option": "B",
+    "explanation": "Electric field in the region 1, 3 and 5 is zero i.e. E 1 = E 3 = E 5 Slope of the line BC < Slope of the line DE i.e. E 2 < E 4",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 2μF condenser is charged upto 200V and then battery is removed. On combining this with another uncharged condenser in parallel, the potential differences between two plates are found to be 40V. The capacity of second condenser is: -",
+    "options": {
+      "A": "2μF",
+      "B": "4μF",
+      "C": "8μF",
+      "D": "16μF CP02 - 0336 B b Q A a Foil d/2 d/2 a b c d e f 100V - + C 1 = 2 \\mu F C 2 = 2 \\mu F C 3 = 2 \\mu F V 1 2 3 4 5 x Capacitor"
+    },
+    "correct_option": "C",
+    "explanation": "net net q V C = ⇒ (2)(200) 40 2 C = + ⇒ C = 8μF"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A capacitor is connected with a cell if distance between plates is halved then force of attraction between the plates : -",
+    "options": {
+      "A": "Remains same",
+      "B": "Becomes 8 times",
+      "C": "Becomes 4 times",
+      "D": "Becomes 2 times CP02 - 0482"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 2 0 0 Q C V F 2A 2A = =   1 C d  ⇒ F ∝ 2 1 d"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A condenser of capacity C 1 is charged to a potential V",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 2 1 2 1 2 C C 1 U (V V ) 2 C C (  \\Delta = - ( ) + )  V 2 = 0, V 1 = V 0 2 0 1 0 1 U C V 2 = 2 0 1 2 C U (U ) C C (  \\Delta = ( ) + ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electrostatic energy stored in it is U",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "It is connected to another uncharged capacitor C 2 in parallel. The energy dissipated in the process is :",
+    "options": {
+      "A": "2 0 1 2 C U C C +",
+      "B": "1 0 1 2 C U C C +",
+      "C": "1 2 0 1 2 C C U C C (  - ( ) + ) ",
+      "D": "1 2 0 1 2 C C U 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a system of two conductors separated by an insulator forms a capacitor, then in the formula of Q = CV, V indicates",
+    "options": {
+      "A": "V 1 -",
+      "B": "V 1 - V 2",
+      "C": "1 2 1 2 V V V V +",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Meaning of “fringing of the field” term in reference of capacitors is",
+    "options": {
+      "A": "bending of field lines from the centre of plates of capacitors",
+      "B": "bending of field lines from the edges of plates of capacitors",
+      "C": "bending of field lines from the centre & edges of plates of capacitors",
+      "D": "bending of field lines from only above of centre of plates of capacitors CP29 - 0104"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_capacitor_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "NCR - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the column: - Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Electric susceptibility",
+      "B": "Dielectric strength",
+      "C": "Capacitance",
+      "D": "Electric potential energy density"
+    },
+    "correct_option": "A",
+    "explanation": "(a) Electric susceptibility ( ) e 0 0 3 0 P p 1 p E Vol 4 r  =  =  \\pi  e Dimensionless  = (b) E max = Dielectric strength  E max = 1 1 3 1 F M L T A Q - -     =       (c) Capacitance = C = q q V W / q =  2 2 2 1 2 2 q A T C W M L T -   = =      1 2 4 2 C M L T A - - = (d) E.P.E.D. = u E = U Vol. 1 2 2 1 1 2 E 3 M L T u M L T L - - -  = = D C B V A 1 2 3 4 5 E"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Consider the following arrangement of four plates interconnected as follows. Each plate has the area A and the plate separation is d. Here plates 1 and 3 are interconnected. Find the equivalent capacitance between a and b :",
+    "options": {
+      "A": "0 A 3 2 d ",
+      "B": "0 A 2 3 d ",
+      "C": "0 3 A d ",
+      "D": "0 A 1 3 d  CP06 - 0013"
+    },
+    "correct_option": "B",
+    "explanation": "circuit can be redrawn as where 0 A C d  = & C eff = 0 A 2C 2 3 3 d  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit shown in the figure, C = 6 \\mu F. The charge stored in the capacitor of capacity C is:",
+    "options": {
+      "A": "zero",
+      "B": "90 \\mu C",
+      "C": "40 \\mu C",
+      "D": "60 \\mu C CP12 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "Series connection Q = C eq V = 20C 3 C = 6 μF Q = 40 μC",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the circuit shown in the figure, the charge on 4 \\mu F capacitor is : -",
+    "options": {
+      "A": "30 \\mu C",
+      "B": "40 \\mu C",
+      "C": "24 \\mu C",
+      "D": "54 \\mu C CP10 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "4μF 4 6 Q (10)μC 4 6  (  = ( ) + )  Q 4μF = 24 μC",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the charge on a capacitor is increased by 2 C, the energy stored in it increases by 44%. The original charge on the capacitor is (in C) :",
+    "options": {
+      "A": "10",
+      "B": "20",
+      "C": "30",
+      "D": "40 CP02 - 0046"
+    },
+    "correct_option": "A",
+    "explanation": "U  q 2  q f = 1.2 q q f - q = 2  1.2 q - q = 2 q = 10"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The equivalent capacitance between points A and B in below shown figure will be _____μF. CP05 - 0047",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Two capacitors are short circuited Finally equivalent capacitance 24 8 24 8 6 F 24 8 32   = = = \\mu +",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A force of 10N acts on a charged particle placed between two plates of a charged capacitor. If one plate of capacitor is removed, then the force acting on that particle will be :",
+    "options": {
+      "A": "5 N",
+      "B": "10 N",
+      "C": "20 N",
+      "D": "Zero CP02 - 0047"
+    },
+    "correct_option": "A",
+    "explanation": "-Q + - + + + - - - E 0 0 10 (  = = = = ( )   )  Q qQ F qE q N A A Now, when one plate is removed. + + + + + + + Q 2 Q 2 E ’ q 0 ' 2 Q E A =  0 ' 5 2 = = =  Qq F qE N A"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identical capacitors A and B shown in the given circuit are joined in series with a battery. If a dielectric slab of dielectric constant K is slipped between the plates of capacitors B and battery remains connected, then the energy of capacitor A will : -",
+    "options": {
+      "A": "decrease",
+      "B": "increase",
+      "C": "remain the same",
+      "D": "be zero since circuit will not work CP11 - 0024"
+    },
+    "correct_option": "B",
+    "explanation": "Capacity of system increases so charge on A increase. Therefore, the energy of capacitor A will increase",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The capacity of a parallel plate air capacitor is 10 \\mu F. As shown in the figure this capacitor is divided into two equal parts, these parts are filled by media of dielectric constants K 1 =2 and K 2 =4, capacity of this arrangement will be:",
+    "options": {
+      "A": "20 \\mu F",
+      "B": "30 \\mu F",
+      "C": "10 \\mu F",
+      "D": "40 \\mu F CP08 - 0019 1 2 3 4 a b 10V C 2C 4 F \\mu 1 F \\mu 5 F \\mu 3 F \\mu 10V + - A B + - K d K 1 K 2 b a A/2 A/2 A B 8 \\mu F 8 \\mu F 8 \\mu F 8 \\mu F 8 \\mu F 8 \\mu F NEET : PHYSICS"
+    },
+    "correct_option": "B",
+    "explanation": "1 0 2 0 A A K K 2 2 C d d (  (    ( ) ( ) )  )  = + C = 30 μF",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find out amount of charge on capacitor shown in circuit.",
+    "options": {
+      "A": "0μC",
+      "B": "30μC",
+      "C": "10μC",
+      "D": "25μC CP15 - 0013"
+    },
+    "correct_option": "C",
+    "explanation": "Current in 2 \\Omega is 1 amp. Potential difference across capacitor is 2 volt Q = CV = 10 μC",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABG8AAABBCAIAAADg2B7zAAAJ/UlEQVR42u3da1BU9xnH8eec3bO7ZykImXSiqPV+w0sCamYajUZAzUWlisZ7Z6pVUIE3qTM1r9N3NTMRX5Smb5qoEVBxAbXexc6kM5qo8VLfOBVNBM2Lcmfv5/TFNnbGIoLAcg77/bxlYIbnzGH2x//5P49imqYAFtDU3PzbrVvu3bvndruphsUFAoGFC9/5/Z49I9PTqQYAAEhYCmkKVtDS2lpYsP38hYuUwhZmzZwxdeq0lJSUouLi9BEjKAgAAEhMKiWAFaJUwfZtRCm7SEtNnTJlqmEYjY0N+0tLGxobqQkAACBNAXEVOxeNnUpduHiJgtglSuXm5iqKYpqmx6M3NjaU7ttHoAIAAEKnHyA0+OH5XnklLTcnV0QikYj87w6Vf/jwEcUlJdyhAgAAwtkUQIMfuoxSOdk5z0QpEfF49MePGzmhAgAApCkgTppbWgq2b6PBz15RSlGUcDj8/1/1ePRHj34oLy/nrBsAAJCmABnQu1Ii8odPPiFK2avBLxalVLXrPxpeb9LN724c9/koFwAAIE0BA0JRFBHxVdd8eeAA1bBdg19s+MTznqzL5a46drTqOIEKAAAwhQIYAO3t7WVlZX/cuzcajVIN6xs3dszs2XNUVQ2Hw7EkLC86ewyFgvPmv52Xl/fzV1+lgAAAgDQFSD+OnaDBT2w1DN00TcMwevWNHR3t6ekji0tKRo0cSRkBAABpCiBKSWKOnXhmgl8PBQL+114bXlRcPHrUKIoJAACEe1NAH/dKEaUSJEqJiMejP3nyeH9p6Q+PHlFPAABAmgJY0csw9F4Hqn2fffaooYGqAgAA0hTQa4FgcEdhAVHKjsPQezJ24oWBqrGxofzwYYOOYgAAQJoCeuvQoUPnzl+gDvYaht4vUSomKelnt27drKqq4oomAAAQplAAPVddU7tzR2Gobw1jiH+DX39FKflpbLrf35n3q5WrVq7s358MAAAwuJyUAAMXpQoKtrNXKsGjlIgoiqLrXt/xKhEhUAEAAKHTD+iGYRiVR44SpezC7Xa9OXduz1f09iVQVVQe8fv91BwAAAidfoB0NcHvdx995KuuphRik1Op+fPmu93uOERf0zQDAf+4ceO3bN36i9GjKT4AACBNAazotXeDn6qqoVAobg14fn9nbLEvgQoAAAidfgBRyo7SUlMH7q5UN3Td++OPT0r37WOxLwAAIE0h0cWONwPBYGHBdqKUjaJUbm5u31f0Sh8W+x7+6ivDMHgWAACANIXEFTvWOHToECt67RilBmvCntebdOfO7aPHqljsCwAAuDcFYa8Ue6WIUtL7PVTLluetXp2vMjYdAAAI+6bAXilYmK7r2dnZVohS8tPY9Noan4gQqAAAgNDpB0mku1JEKdt54/VZTqfTClHqaaDyePTaGl9l5RFa/gAAgNDpB0mYFb1Hj1WVlBQTpWzBpWmZmW9MnDips7NTsdgpUKzl7733l+XlrfDqOg8LAACQpiCs6IVY5q7UggULdF0PhUJi1dPOYDAwZszY32zZMnbMGB4ZAAAgTWFoam5pKdi+7eKlOkpho7ETcV7RKy+72Hf48BF7Pv44ddiwWMRSuEwFAACEe1MYKmJ7pYhStpvgZ/0oZZqmrnsfP270+apjd6iIUgAAgDSFIeXgwYOs6GUYugzY4jJd9144f7aiopLFvgAAQOj0w1Diq67ZtXMHe6WIUhKXoRRrP1yjqvzHBwAACPumYHvHfdU7dhQywU/YKyXx2EN16mStoigfrllNoAIAAEKnH8Tmp1JEKWGvVHwD1ckTNRWVR2j5AwAApCnYO0oVFhYQpezizblzxo+fYP2xEz0JVCdqq8u5QwUAAEhTIEohPlFq8uQpFlzR+3KByutNOnWylkAFAACYQgGbaW1r+3NZ2d5PPyVK2UJKcnJWVmZ6+shAIDCUfq/YYt9fvjVv08aNSUlJPGgAAECagg3s3r37r198QR3EPhP8HA5HMBgcemuaTNNsb29bvGTprzdvZigFAAAQOv1gcVXHfV8eOEAd7DUMfUhGKRFRFCU5OeXihfOHy8tp+QMAAKQpiMXvSu3cuYOPreyVshSPRz918gSBCgAACPumwNgJSH/slVq4cKFhGOFwWFXVId+46/HoJ2prDMNYt3at08mfLwAAMMgUX3VNKBSiEIPaxSQiEolEW1tbTNMcxOMFTdMe1Nf/qayMKGUXi3NzFi9ZGgwGE+NN+e89z3A4nJGRkZaWJiLc/AQAAIMi1izjPP23U21trVzsTnCmaWqa6/vvH16/8R3VsItZM2fMm/92JBIZ2g1+zwQqEXG5XHfv3qXfDwAADKJIOCwiTl3XYz1CVCSRaZr28OGDm7duUwobRan81Ws0TYtGo4N7pDkoaPMDAABigX/yOgOBQCDgVxQl0T6NWT7euBwOR9w+mD58+ODK1W9o8LNjlHr6MgMAACDemerK1auRSIRCWCnmqk1NTWfPnG5ubnK53HE4laqvv//Nt9eIUrbg0rRFi955a978p1EKAAAA8RcOh9nea13/un9/f2lpU9O/3W7PgEaptrbWc+fOh8Jham59brdr/br1GdNnhEJB3lwAAIBBT1Ncl7Ko8ePGFRUXp6amhULBgYtSHR3tdZf/TpSyUZSalpERDAaIUgAAAML2XnQfqIpLSoYNSx2IQBWLUhcv1XV0dFBqW/jg/Q8yps9gnwEAAABpCj0NVLuKioYNS+3fu21EKdt5fdbMzKysgTuoBAAAAGlqCJo4YcLGTZtCoWB/bdchSokNJ/ityl+tqioNfgAAAKQp9E5WVtbSd9/z+zv7/mGaKGXfYegsqwUAACBNofcPSVHWrV27ZOm7nZ0dfQlURCm775UCAACApTgpgS04HI4N69ebppw5fcrrTVJV9SV+Qnt726W6y0QpohQAAABIUwkXqDZuWO9yuc6eOR2NRjVN69X3GoZx5epVopRdzM7KXL4ijygFAABgZWzvtZ/bd+785fPPW1tbXC639KzBr7297euv/9HU3Ez1xA57pfJX5c+YOdMwDF5PAAAAYXsv+tGM6dN3FRUlJ6e8cF62aZqxu1KX6i4TpcQ+e6Uys2ZHo1GiFAAAgDCFAv1u0sSJsUDV/R4ql8vF2Amx4V6pYDBAKQAAAEhTGCiTJ02K7aF63gkGE/yEvVIAAAAgTaFLc2bPzs5Z3OXY9NhdKaIUe6UAAABAmkJXD09VN27ckJ2T+0ygcjqdnEoxDB0AAACkKXRHczo3bdq0KDvnaaBSVTUUCl28VNfZ2Ul9iFIAAAAQ9k2hm0C1efNmRVEunD+n615N065d+5ZTKbHNhMaMlavyHQ5HbMgmAAAAbCF2O4N9U0NEOBKpqKi4cf16ff39f969qyoKNbH062eapmlmTJu2bPkKTdMiEU6lAAAA7CQSCYvIfwCn4va7oMPN+AAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The time constant of the given circuit is :",
+    "options": {
+      "A": "3RC 5",
+      "B": "6RC 5",
+      "C": "5RC 6",
+      "D": "None of the above CP15 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "\\tau = Req C 6R 6RC C 5 5 (  = = ( ) ) ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two capacitors having capacitance C 1 and C 2 respectively are connected as shown in figure. Initially, capacitor C 1 is charged to a potential difference V volt by a battery. The battery is then removed and the charged capacitor C 1 is now connected to uncharged capacitor C 2 by closing the switch S. The amount of charge on the capacitor C 2 , after equilibrium is : S C 1 C 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Charge on capacitor C 2 =   2 1 2 total total 1 2 C C V C Q C C C  = + = 1 2 1 2 C C V C C +",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two capacitors, each having capacitance 40 \\mu F are connected in series. The space between one of the capacitors is filled with dielectric material of dielectric constant K such that the equivalen t capacitance of the system became 24 \\mu F . The value of K will be:",
+    "options": {
+      "A": "1.5",
+      "B": "2.5",
+      "C": "1.2",
+      "D": "3 CP08 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "C C → KC ( ) eq C KC KC C C KC K 1 = = + + K40 24 K 1 = +   K 1 5 =  b a 1 2 3 4 (1,3) 4 b a 2 NEET : PHYSICS"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A parallel plate capacitor has two layers of dielectric as shown in figure. This capacitor is connected across a battery. The graph which shows the variation of electric field (E) and distance (x) from left plate : -",
+    "options": {
+      "D": "CP11 - 0026 6V, 0.5 \\Omega 2 \\Omega 5 \\Omega 5μF 3 \\Omega R R 3R C",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "0 E E K = 0 1 E E 2 = and 0 2 E E 4 =",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A parallel plate capacitor filled with a medium of dielectric constant 10, is connected across a battery and is charged. The dielectric slab is replaced by another slab of dielectric constant",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 E (KC)v 2   % change  2 2 2 1 2 1 2 1 1 1 1 K CV K CV K K 2 2 100 1 K K CV 2 - - =  15 10 100 50% 10 -   ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_capacitor_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Capacitor",
+      "chapter_name": "Capacitor",
+      "language": "en",
+      "source": "RACE - Capacitor.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Then the energy of capacitor will :",
+    "options": {
+      "A": "increase by 50%",
+      "B": "decrease by 15%",
+      "C": "increase by 25%",
+      "D": "increase by 33% CP11 - 0025"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 E (KC)v 2   % change  2 2 2 1 2 1 2 1 1 1 1 K CV K CV K K 2 2 100 1 K K CV 2 - - =  15 10 100 50% 10 -   ="
+  }
+]

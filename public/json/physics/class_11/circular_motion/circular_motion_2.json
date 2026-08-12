@@ -1,0 +1,1365 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone of mass 1 kg is tied to the end of a string of 1 m length. It is whirled in a vertical circle. If the velocity of the stone at the top be 4 m/s. What is the tension in the string (at that instant) ?",
+    "options": {
+      "A": "6 N",
+      "B": "16 N",
+      "C": "5 N",
+      "D": "10 N CR10 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "2 mv T mg = -  = 2 1 (4) 1 10 6N 1  -  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a vertical circle of radius (r), at what point in its path a particle may have tension equal to zero : -",
+    "options": {
+      "A": "highest point",
+      "B": "lowest point",
+      "C": "at any point",
+      "D": "at a point horizontal from the centre of radius CR10 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "At highest point minimum possible value of tension is zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A weightless thread can withstand tension upto 30 N. A stone of mass 0.5 kg is tied to it and is revolved in a circular path of radius 2m in a vertical plane. If g = 10 m/s 2 , then the maximum angular velocity of the stone can be : -",
+    "options": {
+      "A": "5 rad/s",
+      "B": "30 rad/s",
+      "C": "60 rad/s",
+      "D": "10 rad/s CR10 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "T mg 30 0.5 10 mr 0.5 2 - -  \\omega = =  = 5 rad/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body tied to a string of length L is revolved in a vertical circle with minimum velocity, when the body reaches the upper most point the string breaks and the body moves under the influence of the gravitational field of earth along a parabolic path. The horizontal range AC of the body will be : -",
+    "options": {
+      "A": "x = L",
+      "B": "x = 2L",
+      "C": "x= 2 2 L",
+      "D": "x= 2 L CR10 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "For looping the loop minimum velocity at top point v = gL time taken by particle 2h 2 2L L t 2 g g g  = = =  horizontal range x = vt = L gL 2 g  = 2L"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving in a vertical circle the tension in the string when passing through two position at angle 30 ^\\circ and 60 ^\\circ from vertical from lowest position are T 1 and T 2 respectively then : -",
+    "options": {
+      "A": "T 1 = T 2",
+      "B": "T 1 > T 2",
+      "C": "T 1 < T 2",
+      "D": "T 1 \\ge T 2 CR10 - 0008 O L L m L O P v A C x"
+    },
+    "correct_option": "B",
+    "explanation": "T = 2 mv r + mg cos \\theta as \\theta increases cos \\theta and v both decreases hence for \\theta = 60^\\circ , T will be less i.e., T 1 > T 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body crosses the topmost point of a vertical circle with critical speed. What will be its centripetal acceleration when the string is horizontal : -",
+    "options": {
+      "A": "g",
+      "B": "2g",
+      "C": "3g",
+      "D": "6g CR11 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "2 C v 3gr a r r = = a C = 3g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Stone tied at one end of light string is whirled round a vertical circle. If the difference between the maximum and minimum tension experienced by the string wire is 2 kg wt, then the mass of the stone must be : -",
+    "options": {
+      "A": "1 kg",
+      "B": "6 kg",
+      "C": "1/3 kg",
+      "D": "2 kg CR10 - 0015"
+    },
+    "correct_option": "C",
+    "explanation": "2 max mv m T mg mg 5gr 6mg r r = + = +  = T min = 0 T max - T min = 6mg  6mg = 2g 1 m kg 3 = \\theta \\theta T mg mr \\omega 2 a c mgsin \\theta \\theta v mgcos \\theta mg \\theta \\lambda sin60^\\circ v h 60^\\circ u \\lambda T min =0 T max mg v=0 L T L mg T \\theta \\theta mgcos \\theta v mg T \\theta \\theta mgcos \\theta v mg T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A mass tied to a string moves in a vertical circle with a uniform speed of 5 m/s as shown. At the point P the string breaks. The mass will reach a height above P of nearly (g = 10 m/s 2 ) : -",
+    "options": {
+      "A": "1 m",
+      "B": "0.5 m",
+      "C": "1.75 m",
+      "D": "1.25 m CR10 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "Acc to COME at point P KE of stone = PE gained by stone. 1 m 2 (5) 2 = m × 10 × h 25 h 1.25m 20 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the overbridge is concave instead of being convex, then the reaction on the road at the lowest position will be : -",
+    "options": {
+      "A": "2 mv mg r +",
+      "B": "2 mv mg r -",
+      "C": "2 2 m v g r",
+      "D": "2 v g r CR11 - 0013"
+    },
+    "correct_option": "A",
+    "explanation": "2 mv N mg r = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A frictionless track ABCDE ends in a circular loop of radius R. A body slides down the track from point A which is at a height h = 5 cm. Maximum value of R for the body to successfully complete the loop is : -",
+    "options": {
+      "A": "5 cm.",
+      "B": "2 cm.",
+      "C": "10 3 cm.",
+      "D": "15 4 cm. CR11 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "1 m(5Rg) mgh 2 = 5R h 2 = 2 R h 5 =  = 2 cm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle of mass m is performing vertical circular motion (see figure). If the average speed of the particle is increased, then at which point maximum breaking possibility of the string : -",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D CR10 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "At position B tension is maximum ; T = mg + 2 mv r",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone tide with a string is moving in a vertical circle of radius 'r'. Its minimum velocity at the highest point of the circle will be : -",
+    "options": {
+      "A": "3gr",
+      "B": "2gr",
+      "C": "gr",
+      "D": "gr 2 CR13 - 0002 P 1m O A h D C 2R E B D O B C A m Circular Motion"
+    },
+    "correct_option": "C",
+    "explanation": "2 mv mg r = \\rho v gr ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone of mass 0.2 kg is tied to one end of a thread of length 0.1 m whirled in a vertical circle. When the stone is at the lowest point of circle, tension in thread is 52N, then velocity of the stone will be : -",
+    "options": {
+      "A": "4 m/s",
+      "B": "5 m/s",
+      "C": "6 m/s",
+      "D": "7 m/s CR10 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "T - mg = 2 mv r \\rho 52 - 2 = 2 0.2v 0.1 \\rho v = 5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Exercise I-III - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A suspended simple pendulum of length \\lambda is making an angle \\theta with the vertical. On releasing, its velocity at lowest point will be : -",
+    "options": {
+      "A": "2g",
+      "B": "2g sin \\theta",
+      "C": "2g",
+      "D": "2g CR10 - 0014 EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": " 2 1 mg (1 cos ) mv 2 - \\theta =  v 2g (1 cos ) = - \\theta  Exercise - II ( Previous Years Questions)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Extra Edge - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wheel has a constant angular acceleration of 3.0 rad/s 2 , During a certain 4.0 s interval, it turns through an angle of 120 rad. Assuming that at t = 0, angular speed \\omega 0 = 3 rad/s , how long, is motion before the start of this 4.0 second interval?",
+    "options": {
+      "A": "7 sec.",
+      "B": "9 sec.",
+      "C": "4 sec.",
+      "D": "10 sec. CR01 - 1663"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Extra Edge - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Keeping the banking angle of the road constant, the maximum safe speed of passing vehicles is to be increased by 10%. The radius of curvature of the road will have to be changed from 20 m to : -",
+    "options": {
+      "A": "16 m",
+      "B": "18 m",
+      "C": "24.20 m",
+      "D": "30.5 m CR02 - 1314"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Extra Edge - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three identical particles are joined together by a thread as shown in figure. All the three particles are moving in a horizontal plane. If the velocity of the outermost particle is v 0 , then the ratio of tensions in the three sections of the string is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Extra Edge - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A mass m is attached to the end of a rod of length ℓ . The mass goes around a verticle circular path with the other end hinged at the centre. What should be the minimum velocity of mass at the bottom of the circle so that the mass completes the circle?",
+    "options": {
+      "A": "4g \\lambda",
+      "B": "3g \\lambda",
+      "C": "5g \\lambda",
+      "D": "g \\lambda CR02 - 1315"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "Extra Edge - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is tied to a string of length ‘ \\lambda ’ and is whirled in a vertical circle with the other end of the string as the centre. At a certain instant of time, the stone is at its lowest position and has a speed ‘u’. The magnitude of the change in velocity as it reaches a position where the string i s horizontal (g being acceleration due to gravity) is : -",
+    "options": {
+      "A": "2 u g - \\lambda",
+      "B": "u - 2 u 2g - \\lambda",
+      "C": "2g \\lambda",
+      "D": "2 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The earth (mass = 6 × 10 24 kg) revolves around the sun with an angular velocity of 2 × 10 - 7 radian/sec in a circular orbit of radius 1.5 × 10 8 km. The force exerted by the sun, on the earth is : -",
+    "options": {
+      "A": "6 × 10 19 N",
+      "B": "18 × 10 25 N",
+      "C": "36 × 10 21 N",
+      "D": "27 × 10 39 N CR01 - 1791"
+    },
+    "correct_option": "C",
+    "explanation": "NCERT - XI, Pg. # 81 F = Mω 2 R"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_circular_motion_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is false for a particle moving in a circle with a constant angular speed -",
+    "options": {
+      "A": "The velocity vector is tangential to the circle",
+      "B": "The acceleration vector is tangential to the circle",
+      "C": "The acceleration vector points towards the centre of the circle",
+      "D": "The velocity and acceleration vectors are perpendicular to each other CR01 - 0279"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 For a particle moving is a circle with constant angular speed velocity vector is always tangential to the circle and the acceleration vector always points towards the centre of circular path and along the radius of the circle. Since, tangential vector is p erpendicular to radial vector, therefore velocity vector will be perpendicular to the acceleration vector, but in this case acceleration vector is not tangential to the circle."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is approximately the centripetal acceleration (in units of acceleration due to gravity on earth, g = 10 ms - 2 ) of an air - craft flying at a speed of 400 ms - 1 through a circular arc of radius 0.6 km?",
+    "options": {
+      "A": "26.7",
+      "B": "16.9",
+      "C": "13.5",
+      "D": "30.2 CR01 - 1789"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 81 2 2 C (400) 400 400 800 a m /s 0.6km 600 3  = = = a C = 266.67 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass M is situated on a smooth horizontal frictionless table. A thread tied to the block passes through a hole in the table and carries a mass m at its other end. If the length of the thread above the table is ℓ, what should be the value of m so that it may remain suspended at a constant height and the block M moves in a circular path with an angular velocity ω on the table?",
+    "options": {
+      "A": "2 M g \\omega \\lambda",
+      "B": "2 M 3g \\omega \\lambda",
+      "C": "2 M 5g \\omega \\lambda",
+      "D": "2 2M g \\omega \\lambda CR06 - 0553"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 104 mg = Mω 2 ℓ 2 M m g \\omega = \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is projected with velocity just to complete the loop. At position P the speed of particle is : -",
+    "options": {
+      "A": "5gr",
+      "B": "3gr",
+      "C": "2gr",
+      "D": "4gr NE07 - 0038"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 122 Using work Energy theorem : W g + W N = ΔK.E. 2 2 1 1 mgR mv m( 5gR ) 2 2  - = - V 3gR ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cyclist starts from centre O of a circular park of radius 1 km and moves along the path OPRQO as shown in figure. If he maintains constant speed of 10 ms - 1 , what is his acceleration at point R?",
+    "options": {
+      "A": "10 ms - 2",
+      "B": "0.1 ms - 2",
+      "C": "0.01 ms - 2",
+      "D": "1 ms - 2 CR01 - 1786"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 If v = const. then a t = 0 2 2 C V 100 a 0.1m /s R 1000m = = =",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle tied with a string moves in a vertical circular path. If X 1 and X 2 are the extreme left and right positions of the particle on the path, whereas Y 1 and Y 2 the extreme upper and lower positions, then the tension(s) in the string at the position(s) .",
+    "options": {
+      "A": "X 1 is greater than that at X 2",
+      "B": "Y 2 is greater than that at Y 1",
+      "C": "Y 1 and Y 2 are the same",
+      "D": "Y 1 , Y 2 , X 1 and X 2 are equal CR04 - 0513"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 122 Net force towards centre = centripetal force T - mg cos \\theta = m r   At point C : θ = 180^\\circ 2 m T mg r   + = 2 mv mg T r  = - 2 m or mg r  \\le . 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A motor cycle is going on an over bridge of radius 'R'. The dirver maintains a constant speed. As the motor cycle is ascending on the overbridge, the normal force on it.",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "Remains the same",
+      "D": "Fluctuates erratically CR20 - 0106 m M \\omega \\lambda r P O Q R P O Circular Motion NEET : NCR [Physics]"
+    },
+    "correct_option": "A",
+    "explanation": "Mg cosθ - N = 2 mv R N = mg cosθ - 2 mv R As motor cyclist goes up, θ decreases and normal increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of equal masses are revolving in circular paths of radii r 1 and r 2 respectively with the same time period. The ratio of their centripetal force is :",
+    "options": {
+      "A": "r 1 /r 2",
+      "B": "2 1 r / r",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 104 As, T 1 = T 2 Hence, 1 2 1 1 1 2 2 2 2 r 2 r r or r \\pi \\pi  = =    2 2 1 1 2 1 2 2 2 1 2 1 2 F m r r F r r m (    =  =  ( )   )  2 1 2 1 2 1 2 r r r r r r (  =  = ( ) )  1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 1 kg is rotating in a vertical circle of radius 1 m with critical speed. What will be the difference in its kinetic energy at the top and bottom of the circle? (g = 10 ms - 2 )",
+    "options": {
+      "A": "10 J",
+      "B": "20 J",
+      "C": "30 J",
+      "D": "50 J CR20 - 0109 1"
+    },
+    "correct_option": "D",
+    "explanation": "NCERT - XI, Pg. # 122 velocity at the top is gr and that at the bottom is 5gr . Hence, required difference in kinetic energy 1 M[5gr gr] 2Mgr 2 = - = = 2 × 10 × 1 × 1 = 20 J. 1"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two moving particles 'P' and 'Q' are 10 m apart at an certain instant. The velocity of P is 8 m/s making an angle 30^\\circ with line joining P and Q and velocity of Q is 6 m/s making an angle 30^\\circ with PQ as shown in figure. Then the angular speed of P with respect to Q is -",
+    "options": {
+      "A": "0 rad/s",
+      "B": "0.1 rad/s",
+      "C": "0.4 rad/s",
+      "D": "0.7 rad/s CR01 - 0096 1"
+    },
+    "correct_option": "C",
+    "explanation": "NCERT - XI, Pg. # 81 F = Mω 2 R",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A heavy small sized sphere is suspended by a string of length ℓ. The sphere rotates uniformly in a horizontal circle with the string making an angle θ with the vertical. Then the time period of this conical pendulum is :",
+    "options": {
+      "A": "T 2 g = \\pi \\lambda",
+      "B": "sin T 2 g \\theta = \\pi \\lambda",
+      "C": "cos T 2 g \\theta = \\pi \\lambda",
+      "D": "T 2 g cos = \\pi \\theta \\lambda CR06 - 0554 1"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 For a particle moving is a circle with constant angular speed velocity vector is always tangential to the circle and the acceleration vector always points towards the centre of circular path and along the radius of the circle. Since, tangential vector is p erpendicular to radial vector, therefore velocity vector will be perpendicular to the acceleration vector, but in this case acceleration vector is not tangential to the circle."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body moves in a circular path of radius r = 450 m with tangential acceleration a t = 2 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 81 2 2 C (400) 400 400 800 a m /s 0.6km 600 3  = = = a C = 266.67 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When its tangential linear velocity is 30 m/s, the total acceleration will be :",
+    "options": {
+      "A": "5.4 ms - 2",
+      "B": "3.9 ms - 2",
+      "C": "2.8 ms - 2",
+      "D": "2.1 ms - 2 CR01 - 0424 1"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 For a particle moving is a circle with constant angular speed velocity vector is always tangential to the circle and the acceleration vector always points towards the centre of circular path and along the radius of the circle. Since, tangential vector is p erpendicular to radial vector, therefore velocity vector will be perpendicular to the acceleration vector, but in this case acceleration vector is not tangential to the circle."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 4 kg is being rotated with 120 rev per minute in a horizontal circular path of radius 2 m \\pi . Its kinetic energy is :",
+    "options": {
+      "A": "2 J",
+      "B": "32 J",
+      "C": "80 J",
+      "D": "128 J CR01 - 1788 1"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 104 mg = Mω 2 ℓ 2 M m g \\omega = \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A mass m slides from rest down the surface of a frictionless hemispherical bowl of radius r from the highest point A. The velocity of mass when it reaches the bottom is :",
+    "options": {
+      "A": "2gr",
+      "B": "mgr",
+      "C": "2mgr",
+      "D": "gr CR11 - 0185 1"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 122 Using work Energy theorem : W g + W N = ΔK.E. 2 2 1 1 mgR mv m( 5gR ) 2 2  - = - V 3gR ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle crosses the topmost point C of a vertical circle with critical speed; then the ratio of velocities at point A, B and C is : (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 If v = const. then a t = 0 2 2 C V 100 a 0.1m /s R 1000m = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle of mass m is being circulated on a vertical circle of radius r. If the speed of particle at the highest point be υ, then :",
+    "options": {
+      "A": "m mg r   =",
+      "B": "m mg r   ",
+      "C": "m mg r   \\le",
+      "D": "m mg r   \\ge CR20 - 0108 30^\\circ P Q 30^\\circ 6m/s 10m 8m/s A O A B C O 90^\\circ Circular Motion 1"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 122 Net force towards centre = centripetal force T - mg cos \\theta = m r   At point C : θ = 180^\\circ 2 m T mg r   + = 2 mv mg T r  = - 2 m or mg r  \\le . 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car is moving in a circular horizontal track of radius 10 m with a constant speed of 10 m/s. A bob is suspended from the roof of the car by a light rigid rod of length 1.00 m. The angle made by the rod with the vertical is:",
+    "options": {
+      "A": "zero",
+      "B": "30^\\circ",
+      "C": "45^\\circ",
+      "D": "60^\\circ CR06 - 0555"
+    },
+    "correct_option": "A",
+    "explanation": "Mg cosθ - N = 2 mv R N = mg cosθ - 2 mv R As motor cyclist goes up, θ decreases and normal increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A point mass m is suspended from a light thread of length ℓ, fixed at O, is whirled in a horizontal circle at constant speed as shown. For a frame, stationary with respect to the mass, the forces on the mass are :",
+    "options": {
+      "D": "CR06 - 0455 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Circular Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle of mass m is tied to a string of length L and whirled into a horizontal plane. If the tension in the string is T, then the speed of the particle will be: -",
+    "options": {
+      "A": "T m \\lambda",
+      "B": "2T m \\lambda",
+      "C": "3T m \\lambda",
+      "D": "T m \\lambda CR06 - 0556 2"
+    },
+    "correct_option": "D",
+    "explanation": "NCERT - XI, Pg. # 122 velocity at the top is gr and that at the bottom is 5gr . Hence, required difference in kinetic energy 1 M[5gr gr] 2Mgr 2 = - = = 2 × 10 × 1 × 1 = 20 J. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A coin placed on a rotating turntable just slips if it is placed at a distance of 4 cm from the centre. If the angular velocity of the turntable is doubled, it will just slip at a distance of",
+    "options": {
+      "A": "1 cm",
+      "B": "2 cm",
+      "C": "4 cm",
+      "D": "8 cm CR03 - 0475 2"
+    },
+    "correct_option": "C",
+    "explanation": "NCERT - XI, Pg. # 81 F = Mω 2 R"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car moves at a constant speed on a road as shown in figure. The normal force by the road on the car is N A and N A when it is at points A & B respectively.",
+    "options": {
+      "A": "In A = N B",
+      "B": "In A > N B",
+      "C": "In A < N B",
+      "D": "insufficient information CR04 - 0515 2"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 For a particle moving is a circle with constant angular speed velocity vector is always tangential to the circle and the acceleration vector always points towards the centre of circular path and along the radius of the circle. Since, tangential vector is p erpendicular to radial vector, therefore velocity vector will be perpendicular to the acceleration vector, but in this case acceleration vector is not tangential to the circle.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a particle moves in a circle with a uniform speed",
+    "options": {
+      "A": "it’s velocity and acceleration are both constant.",
+      "B": "it’s velocity is constant but acceleration changes.",
+      "C": "it’s acceleration is constant but velocity changes.",
+      "D": "it’s velocity and acceleration both change CR01 - 1790 2"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 81 2 2 C (400) 400 400 800 a m /s 0.6km 600 3  = = = a C = 266.67 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A circular road of radius 50m has the angle of banking equal to 30^\\circ. At what speed should a vehicle go on this road so that friction is not used",
+    "options": {
+      "A": "22 m/s",
+      "B": "17 m/s",
+      "C": "10 m/s",
+      "D": "None of these CR08 - 0263 2"
+    },
+    "correct_option": "A",
+    "explanation": "NCERT - XI, Pg. # 104 mg = Mω 2 ℓ 2 M m g \\omega = \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object follows a curved path. The following quantities may remain constant during the motion.",
+    "options": {
+      "A": "speed",
+      "B": "velocity",
+      "C": "acceleration",
+      "D": "magnitude of acceleration"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 122 Using work Energy theorem : W g + W N = ΔK.E. 2 2 1 1 mgR mv m( 5gR ) 2 2  - = - V 3gR ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person applies a constant force F \\lambda on a particle of mass m and finds that the particle moves in a circle of radius r with a uniform speed v as seen from an inertial frame of reference.",
+    "options": {
+      "A": "This is not possible.",
+      "B": "There are other forces on the particle.",
+      "C": "The resultant of the other forces is 2 mv r toward the center.",
+      "D": "The resultant of the other forces varies is magnitude as well as in direction."
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 81 If v = const. then a t = 0 2 2 C V 100 a 0.1m /s R 1000m = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "NCR - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The position vector of a particle in a circular motion about the origin sweeps out equal area is equal time. It’s",
+    "options": {
+      "A": "velocity remains constant",
+      "B": "speed remains constant",
+      "C": "acceleration remains constant",
+      "D": "tangential acceleration remain s constant"
+    },
+    "correct_option": "B",
+    "explanation": "NCERT - XI, Pg. # 122 Net force towards centre = centripetal force T - mg cos \\theta = m r   At point C : θ = 180^\\circ 2 m T mg r   + = 2 mv mg T r  = - 2 m or mg r  \\le . 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a r and a t represents radial and tangential acceleration, the motion of a particle will be circular if : - (i) a r = 0 and a t = 0 (ii) a r = 0 but a t  0 (iii) a r  0 but a t = 0 (iv) a r  0 and a t  0",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "For motion to be circular a r must be non zero, a t may or may not be zero. a r  0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A motor car is travelling at 60 m/s on a circular road of radius 1200 m. I ts speed is increasing at the rate of 4 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "a t = 4m/s 2 a c = 2 2 v 3m / s r = a net = 2 2 t c a a + = 5m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of a particle moving in a circle slows down at a rate of 3 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Total acceleration 2 2 c t a a a = +  = 2 2 2 v 3 r (  + ( ) )  = 2 2 2 12 3 r (  + ( ) )   r = 36m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At some instant the magnitude of the total acceleration is 5 m/s 2 and the particle's speed is 12 m/s. The radius of circle will be :",
+    "options": {
+      "A": "12 m",
+      "B": "24 m",
+      "C": "36 m",
+      "D": "48 m CP29 - 0121"
+    },
+    "correct_option": "B",
+    "explanation": "A t \\alpha \\omega = \\Delta C 2 t t \\beta \\alpha \\omega = = \\Delta \\Delta C A 2 \\omega = \\omega A C 1 2 \\omega = \\omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moves along a circle with speed v = at. The total acceleration of the particle at a time when it has traced 1/8th of the circumference is : -",
+    "options": {
+      "A": "v 8a",
+      "B": "2 2a 4 + \\pi",
+      "C": "a",
+      "D": "2 a 4 2 + \\pi CR03 - 0644"
+    },
+    "correct_option": "D",
+    "explanation": "t dv a a dt = = 2 2 2 0 a 2 a 2 0 2 R 8 2R \\pi \\pi ( (  \\omega = \\omega + \\alpha\\theta = + = ( )( ) ) )   2 c a a R 2 \\pi = \\omega = 2 2 net t c a a a = + 2 net a a 4 2 = + \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A spaceman during training period is rotated in a seat at the end of a horizontal arm of length 5 m. If he can withstand acceleration upto 9 g, then what is the maximum number of revolutions per second permissible? (Take g = 10 m/s 2 )",
+    "options": {
+      "A": "13.5 rev/s",
+      "B": "1.35 rev/s",
+      "C": "0.675 rev/s",
+      "D": "6.75 rev/s CR03 - 0044"
+    },
+    "correct_option": "C",
+    "explanation": "a c = 9g (2 \\pi n)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum velocity (in ms - 1 ) with which a car driver must traverse a flat curve of radius 150 m and coefficient of friction 0.6 to avoid skidding is : - (g = 10 m/s 2 )",
+    "options": {
+      "A": "60",
+      "B": "30",
+      "C": "15",
+      "D": "25 CR04 - 0743"
+    },
+    "correct_option": "B",
+    "explanation": "v max. = ( )( ) ( ) Rg 0.6 150 10 30m / s \\mu = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 2 kg stone at the end of a string 1 m long is whirled in a vertical circle. At some point its speed is 4m/s. The tension of the string is 51.6 newton. At this instant the stone is : -",
+    "options": {
+      "A": "at the top of the circle",
+      "B": "at the bottom of the circle",
+      "C": "half way down",
+      "D": "none of these CR10 - 0050 1"
+    },
+    "correct_option": "B",
+    "explanation": "T - mg cos \\theta = 2 mv \\lambda  51.6 - 2 g cos \\theta = ( ) 2 2 4 1  cos \\theta = 1  \\theta = 0^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A vehicle is moving on a track with constant speed as shown in Fig. The normal reaction between tyre's and road is : -",
+    "options": {
+      "A": "maximum at A",
+      "B": "maximum at B",
+      "C": "maximum at C",
+      "D": "same at A,B and C CR11 - 0025 1"
+    },
+    "correct_option": "C",
+    "explanation": "For motion to be circular a r must be non zero, a t may or may not be zero. a r  0",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone tide to a string of length L is whirled in a vertical circle with the other end of the string at the centre. At a certain instant of time, the stone is at its lowest position and has a speed u. The magnitude of change in its velocity, as it reaches a position where the string is horizontal, is 2 x(u gL) - . The value of x is",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "5 CR11 - 0027 1"
+    },
+    "correct_option": "B",
+    "explanation": "A t \\alpha \\omega = \\Delta C 2 t t \\beta \\alpha \\omega = = \\Delta \\Delta C A 2 \\omega = \\omega A C 1 2 \\omega = \\omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is moving with constant speed, in a circle of radius 10 m. The body completes one revolution in 4 s. At the end of 3rd second, the displacement of body (in m) from its starting point is:",
+    "options": {
+      "A": "30",
+      "B": "15 π",
+      "C": "5 π",
+      "D": "10 √ 2 CR11 - 0028 1"
+    },
+    "correct_option": "C",
+    "explanation": "a t = 4m/s 2 a c = 2 2 v 3m / s r = a net = 2 2 t c a a + = 5m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_circular_motion_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Circular Motion",
+      "chapter_name": "Circular Motion",
+      "language": "en",
+      "source": "RACE - Circular Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone tied to 180 cm long string at its end is making 28 revolutions in horizontal circle in every minute. The magnitude of acceleration of stone is 2 1936 ms . x - The value of x ________. 22 Take 7 (  \\pi = ( ) )  CR11 - 0275",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Total acceleration 2 2 c t a a a = +  = 2 2 2 v 3 r (  + ( ) )  = 2 2 2 12 3 r (  + ( ) )   r = 36m"
+  }
+]

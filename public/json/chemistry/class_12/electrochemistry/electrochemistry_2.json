@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_151",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electrons flow from Cu to Zn i n D aniel l cell when : -",
+    "options": {
+      "A": "E ext < 1.1V",
+      "B": "E ext > 1.1",
+      "C": "E ext = 1.1V",
+      "D": "All of these EC02 - 0517"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E ext > 1.1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_152",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is electrode Potential for standard hydrogen electrode at al l temp erature ?",
+    "options": {
+      "A": "0",
+      "B": "+1.1",
+      "C": "- 1.1",
+      "D": "2.4 EC09 - 0175"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 0 SHE E 0 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_153",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What does the negative value of E 0 represents ?",
+    "options": {
+      "A": "Strong reducing agent then H + /H 2 couple",
+      "B": "Strong oxidising agent then H + /H 2 couple",
+      "C": "Weak reducing agent then H + /H 2 couple",
+      "D": "In one of these EC09 - 0174"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Strong reducing agent then H + /H 2 couple"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_154",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Calculate the equilibrium constant of the reaction : Cu(s) + 2Ag + (aq) → Cu 2+ (aq) + 2Ag(s) 0 (cell) E 0.46V =",
+    "options": {
+      "A": "3.19 × 10 16",
+      "B": "3.92 × 10 15",
+      "C": "4.01 × 10 11",
+      "D": "3.92 × 10 17 EC41 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 0 (cell) 0.059V E 2 = log K c = 0.46 V log K c = 0.46 V 2 0.059V  = 15.6 K c = 3.92 × 10 15"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_155",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The standard electrode potential for Daniel cell is 1.1V. calculate the standard Gibbs energy for the reaction : Zn(s) + Cu 2+ (aq) → Zn 2+ (aq) + Cu(s)",
+    "options": {
+      "A": "- 219 KJ/mol",
+      "B": "- 212.27 KJ/mol",
+      "C": "- 201.92 KJ/mol",
+      "D": "- 192 KJ/mol EC05 - 0084"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2 ) n in the equation is 2, (due to exchange of 2e¯ in the reaction.) F = 96487 C mol - 1 and 0 (cell) E = 1.1 V as, 0 0 r (cell) G nFE \\Delta = - \\Delta r G 0 = - 2 × 96487 × 1.1 = - 21227 1.4 J mol - 1 = - 212.27 kJ mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_156",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The value of specific conductance and molar conductance on dilution respectively : -",
+    "options": {
+      "A": "Increases, Decreases",
+      "B": "Decreases, Increases",
+      "C": "Decreases, Decreases",
+      "D": "Increases, Increases EC05 - 0132"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Decreases, Increases"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_157",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A and B respectively are : -",
+    "options": {
+      "A": "HCN, NaCl",
+      "B": "KCl, NaCl",
+      "C": "KCl, CH 3 COOH",
+      "D": "CH 3 COOH, HCN EC42 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A → Strong electrolyte (KCl) B → Weak e lectrolyte (CH 3 COOH)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_158",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For which of the following electrolyte limiting molar conductance can be obtained by the following graph -",
+    "options": {
+      "A": "KCl",
+      "B": "CH 3 COOH",
+      "C": "HCN",
+      "D": "NH 4 OH EC10 - 0071"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Graph represents for strong electrolyte KCl → Strong electrolyte (salt)",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_159",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Limiting molar conductivity of an electrolyte can be represented as : -",
+    "options": {
+      "A": "C ations individual contribution",
+      "B": "A nions individual contribution",
+      "C": "Sum of cations and anions individual contribution",
+      "D": "In one of these EC42 - 0009 B A  m C 1/2  m C 1/2 electrochemistry electrochemistry 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Sum of cations and anions individual contribution (Kohlrausch’s law) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_160",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "0 m  for NaCl, HCl and NaA c are 126.4, 425.9 and 91.0 S cm 2 mol - 1 respectively. Calculate  0 for HAc.",
+    "options": {
+      "A": "295.6 S cm 2 mol - 1",
+      "B": "385.2 S cm 2 mol - 1",
+      "C": "390.5 S cm 2 mol - 1",
+      "D": "405.28 S cm 2 mol - 1 EC08 - 0081 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E (cell) = 2 0 cell 2 RT Mg E In 2F Ag + + - = 3.17 V - 2 0.059V 0.130 log 2 (0.0001) = 3.17 V - 0.21 V = 2.96 V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_161",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The conductivity of 0.001028 mol L - 1 acetic acid is 4.95 × 10 - 5 S cm -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E ext > 1.1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_162",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Calculate its dissociation constant if 0 m  for acetic acid is 390.5 S cm 2 mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) E cell = 0 (at equilibrium) 0 cell eq 2.303RT E log K nF ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_163",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) 1.68 × 10 - 4 mol L - 1 (2) 1.86 × 10 - 5 mol L - 1 (3) 4.56 × 10 - 6 mol L - 1 (4) 1.78 × 10 - 5 mol L - 1 EC09 - 0176 1",
+    "options": {
+      "A": "1.68 × 10 - 4 mol L - 1",
+      "B": "1.86 × 10 - 5 mol L - 1",
+      "C": "4.56 × 10 - 6 mol L - 1",
+      "D": "1.78 × 10 - 5 mol L - 1 EC09 - 0176 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) E cell = 0 (at equilibrium) 0 cell eq 2.303RT E log K nF ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_164",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A solution of CuSO 4 is electrolysed for 10 minutes with a current of 1.5 amperes. What is the mass of copper deposited at the cathode?",
+    "options": {
+      "A": "0.38 g",
+      "B": "0.456 g",
+      "C": "0.2938 g",
+      "D": "0.598 g EC01 - 0512 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 0 SHE E 0 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_165",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Galvanic cells that are designed to convent the energy of combustion of methane into electrical energy are called : -",
+    "options": {
+      "A": "Primary cell",
+      "B": "Secondary cell",
+      "C": "Fuel cell",
+      "D": "Mercury cell EC07 - 0079 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Strong reducing agent then H + /H 2 couple"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_166",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which of the following cell reactants are continuously supplied from external source ?",
+    "options": {
+      "A": "Primary cells",
+      "B": "If uel cells",
+      "C": "Lead st o rage battery",
+      "D": "Mercury cell EC07 - 0080 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 0 (cell) 0.059V E 2 = log K c = 0.46 V log K c = 0.46 V 2 0.059V  = 15.6 K c = 3.92 × 10 15"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_167",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following metals in the order in which they displace each other from the solution of their salts. Al, Cu, Fe, Mg and Zn",
+    "options": {
+      "A": "Al < Cu < Fe < Mg < Zn",
+      "B": "Cu < Fe < Zn < Al < Mg",
+      "C": "Mg < Cu < Fe < Zn < Al",
+      "D": "Fe < Zn < Cu < Al < Mg EC09 - 0178 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2 ) n in the equation is 2, (due to exchange of 2e¯ in the reaction.) F = 96487 C mol - 1 and 0 (cell) E = 1.1 V as, 0 0 r (cell) G nFE \\Delta = - \\Delta r G 0 = - 2 × 96487 × 1.1 = - 21227 1.4 J mol - 1 = - 212.27 kJ mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_168",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given the standard electrode potentials, K + /K = - 2.93V, Ag + /Ag = 0.80V, Hg 2+ /Hg = 0.79V Mg 2+ /Mg = - 2.37 V, Cr 3+ /Cr = - 0.74V Arrange these metals in their increasing order of reducing power.",
+    "options": {
+      "A": "K > C r > Hg > Ag > Mg",
+      "B": "K > Hg > Ag > Cr > Mg",
+      "C": "K > Mg > Cr > Hg > Ag",
+      "D": "K > Mg > Cr > Ag > Hg EC09 - 0177 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Decreases, Increases"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_169",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Calculate the emf with the help of Nernst equation at 298 K: Mg(s) | Mg 2+ (0.001M) || Cu 2+ (0.0001 M) | Cu(s) 2 0 Mg/Mg E 2.37 V + = 2 0 Cu/Cu E 0.34V + = -",
+    "options": {
+      "A": "5.75 V",
+      "B": "2.68 V",
+      "C": "1.68 V",
+      "D": "3.42 V EC15 - 0136"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A → Strong electrolyte (KCl) B → Weak e lectrolyte (CH 3 COOH)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_170",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the button cells widely used in watches and other devices the following reaction takes place: Zn(s) + Ag 2 O(s) + H 2 O(l) → Zn 2+ (aq) + 2Ag(s) + 2OH - (aq) Determine ∆ r G 0 and E 0 for the reaction. 0 Ag /Ag E 0.80V + = 2 0 H O/OH E 0.46V - = - 2 0 Zn/Zn E 0.76V + =",
+    "options": {
+      "A": "2.057 V & - 513 KJ",
+      "B": "1.104 V & - 21 4 KJ",
+      "C": "4.057 V & - 613 KJ",
+      "D": "none of the above CK05 - 0164 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2) 0 0 0 cell cathode anode E E E = - At anode : - Zn(s) → Zn 2+ + 2e - At cathode : - Ag 2 O + H 2 O + 2e - → 2Ag + 2OH -  0 cathode E = 0.80 - 0.4 6 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_171",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How much charge is required for the reduction of 1 mol of Al 3+ to Al ? (1) 6.257 × 10 7 C (2)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) E cell = 0 (at equilibrium) 0 cell eq 2.303RT E log K nF ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_172",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "895 × 10 7 C (4) none of the above EC01 - 0513 NEET : NCR [ Chemistry ] 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E (cell) = 2 0 cell 2 RT Mg E In 2F Ag + + - = 3.17 V - 2 0.059V 0.130 log 2 (0.0001) = 3.17 V - 0.21 V = 2.96 V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_173",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How much electricity in terms of Faraday is required to produce 20.0 g of Ca from molten CaCl 2 ?",
+    "options": {
+      "A": "1F",
+      "B": "2F",
+      "C": "0.5F",
+      "D": "3F EC46 - 0004 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E (cell) = 2 0 cell 2 RT Mg E In 2F Ag + + - = 3.17 V - 2 0.059V 0.130 log 2 (0.0001) = 3.17 V - 0.21 V = 2.96 V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_174",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How much electricity is required in coulomb for the oxidation of 1 mol of H 2 O to O 2 ?",
+    "options": {
+      "A": "2.73 × 10 5 C",
+      "B": "1.93 × 10 5 C",
+      "C": "2.73 × 10 7 C",
+      "D": "1.93 × 10 7 C EC01 - 0511"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E ext > 1.1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_175",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Efficiency of the following cell is 84%. A(s) + B 2+ (aq)   A 2+ (aq) + B(s); \\Delta H^\\circ = - 285 kJ Then the standard electrode potential of the cell will be : -",
+    "options": {
+      "A": "1.20 V",
+      "B": "2.40 V",
+      "C": "1.10 V",
+      "D": "1.24 V EC16 - 0010"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) % efficiency of a cell = G H \\Delta \\Delta × 100 84 = cell nFE H - \\Delta × 100 84 = cell 3 2 96500 E 100 285 10 -    -  E cell = 1.24 volt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_176",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the cell reaction, Mg(s) + 2Ag + (aq)   Mg 2+ (aq) + 2Ag(s), o cell E is 3.17 V at 298 K. The value of E cell , \\Delta Gº and Q at Ag + and Mg 2+ concentrations of 0.001 M and 0.02 M respectively are : -",
+    "options": {
+      "A": "3.04 V, - 605.8 kJ mol - 1 , 20000",
+      "B": "3.04 V, 611.8 kJ mol - 1 , 20000",
+      "C": "3.13 V, - 604 kJ mol - 1 , 20",
+      "D": "3.04 V, - 611.8 kJ, 20000 EC19 - 0012"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mg(s) + 2Ag + (aq)  Mg +2 (aq) + 2Ag(s) E cell = E^\\circ cell - 2 2 0.0591 [Mg ] log n [Ag ] + + E cell = 3.17 - 2 3 2 0.0591 (2 10 ) log 2 (10 ) - -  E cell = 3.17 - 0.0591 2 × 4.3 = 3.17 - 0.129 = 3.04 volt \\Delta G^\\circ = - nF E^\\circ cell = - 2 × 96500 × 3.17 = - 611.8 kJ Q = 2+ + 2 [Mg ] [Ag ] = 20000 Q = 20000"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_177",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Salts of A (at wt. 7), B (at wt. 27) and C( at wt. 48) were electrolysed under identical conditions using the same quantity of electricity. It was found that when 2.1 g of A was deposited, the weights of B and C deposited were 2.7 g and 7.2 g. The valencies of A, B and C are respectively : -",
+    "options": {
+      "A": "3, 1 and 2",
+      "B": "1, 3 and 2",
+      "C": "3, 1 and 3",
+      "D": "2, 3 and 2 EC25 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Same quantity of electricity deposit equal equivalents at electrodes. / evolved Equivalents of A = Equivalent of B = Equivalents of C 2.1 2.7 7.2 7 27 48 x y z = = 0.3x = 0.1y = 0.15z x, y, z valencies of A, B, C x = 1 y = 3 z = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_178",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electrical resistance of a column of 0.05 mole/litre NaOH solution of diameter 1 cm and length 50 cm is 5.55 × 10 3 ohm. Calculate its molar conductivity : -",
+    "options": {
+      "A": "229.6 Scm 2 mol - 1",
+      "B": "119.5 Scm 2 mol - 1",
+      "C": "190.2 Scm 2 mol - 1",
+      "D": "None of these EC02 - 0044"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) diameter = 2r r = 1 2  0.5 cm Area (A) = \\pi r 2  3.14 × (0.5) 2  0.785 cm 2 Molar conductivity (  m ) = 1000 M  (  m ) = 1 1000 A R M (    ( ) )  \\lambda = 3 50 1 1000 0.785 5.55 10 0.05     229.65 cm 2 mol eq - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_179",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A cell in which the following reaction takes place : - Mg (s) + 2Ag + (0.0001 M) → Mg +2 (0.120 M) + 2Ag(s) if o cell E = 3.17 volt then calculate E cell",
+    "options": {
+      "A": "2.0 volt",
+      "B": "2.96 volt",
+      "C": "3.50 volt",
+      "D": "3.17 volt EC15 - 0041"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) According to nernst equation E cell = E^\\circ cell = 2 2 0.0591 (Mg ) log n (Ag ) + + E cell = 3.17 - 0.0591 2 log 4 2 (0.120) (10 ) - E cell = 2.96 volt"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_180",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The E ^\\circ in the given diagram is : -",
+    "options": {
+      "A": "0.5",
+      "B": "0.63",
+      "C": "0.7",
+      "D": "0.8 EC20 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 3 5 ClO - + ⎯ → 1 ClO - + n 1 = 4 o 1 E 0.50 = 0 1 G \\Delta 1 ClO - + ⎯ → 2 0 1 Cl 2 n 2 = 1 o 2 E 0.40 = 0 2 G \\Delta 2 0 1 Cl 2 ⎯ → 1 Cl - - n 3 = 1 o 3 E 1.36 = 0 3 G \\Delta 3 5 ClO - + ⎯ → 1 Cl - - n = 6 E o = ? 0 4 G \\Delta = ? \\Delta G ^\\circ = 0 0 0 1 2 3 G G G \\Delta + \\Delta + \\Delta nE ^\\circ = n 1 E 1 0 + n 2 E 2 0 + n 3 E 3 0 E ^\\circ = 4 0.50 1 0.40 1 1.36 6  +  +   0.63 volt",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_181",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The k = 4.95 × 10 - 5 S cm - 1 for a 0.00099 M solution. Calculate the degree of dissociation of acetic acid, if M   for acetic acid is 400 S cm 2 mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) M   = k 1000 M   5 5 4.95 10 1000 99 10 - -    =    \\alpha = C    = 50 400 = 0.125"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_182",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Value of  m  for SrCl 2 in water at 25º from the following data : Conc. (mol/L) 0.25 1  m ( \\Omega - 1 cm 2 mol - 1 ) 260 250",
+    "options": {
+      "A": "270",
+      "B": "260",
+      "C": "250",
+      "D": "255 EC03 - 0026 ClO 3 0.50 V ClO 0.40 V 1 2 Cl 2 1.36 V Cl - 0.88 V Eº - NEET : CHEMISTRY"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) According to debye huckel onsagar equation  C =   - b C 260 =   - b 0.25 ...(1) 250 =   - b 1 ...(2) eq n (1) - eq n (2) than 10 = 0.5 b b = 20 on putting value in eq n (1) 260 =   - 20 × 0.5   = 270 NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_183",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given, Co 3+ + e - ⎯ → Co 2+ ; E^\\circ = +1.81 V Pb 4+ + 2e - ⎯ → Pb 2+ ; E^\\circ = +1.67 V Ce 4+ + e - ⎯ → Ce 3+ ; E^\\circ = +1.61 V Bi 3+ + 3e - ⎯ → Bi ; E^\\circ = +0.20 V Oxidising power of the species will increases in the order",
+    "options": {
+      "A": "Ce 4+ < Pb 4+ < Bi 3+ < Co 3+",
+      "B": "Bi 3+ < Ce 4+ < Pb 4+ < Co 3+",
+      "C": "Co 3+ < Ce 4+ < Bi 3+ < Pb 4+",
+      "D": "Co 3+ < Pb 4+ < Ce 4+ < Bi 3+ EC12 - 0019"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ( SRP  ) oxidising power  Bi 3+ < Ce 4+ < Pb 4+ < CO 3+ 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_184",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Calculate the standard cell potential (in V) of the cell in which following reaction takes place Fe 2+ (aq) + Ag + (aq) ⎯ → Fe 3+ (aq) + Ag(s) Given that, 0 Ag /Ag E xV + = 2 0 Fe /Fe E yV + = 3 0 Fe /Fe E zV + =",
+    "options": {
+      "A": "x + 2y - 3z",
+      "B": "x - y",
+      "C": "x+y - z",
+      "D": "x - z EC12 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard electrochemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_185",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given, that 2 2 2 8 4 S O /SO E 2.05 - -  = ; 2 Br /Br E 1.09V,   = + ; 3 Au /Au E 1.4V +  = + The strongest oxidising agent is",
+    "options": {
+      "A": "Au 3+",
+      "B": "O 2",
+      "C": "Br 2 EC12 - 0021",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) SRP  Oxidising power  S 2 O 8 ²¯ / SO 4 ²¯ has higher SRP value. =SRP of cathode - SRP of anode. = Fe +2 + 2e¯ ⎯ → Fe E^\\circ = y V = - nFE^\\circ = - 2Fy Fe 3+ + 3e¯ ⎯ → Fe E^\\circ = z V = - nFE^\\circ = - 3Fz ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ Fe 3+ + e¯ ⎯ → Fe 2+ - 1F = - 3 Fz + 2Fy = 3z - 2y = x - (3z - 2y) = x + 2y - 3z NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_186",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Consider the following reduction processes : Zn 2+ + 2e - ⎯ → Zn(s); E^\\circ = - 0.76 V Ca 2+ + 2e - ⎯ → Ca(s); E^\\circ = - 2.87 V Mg 2+ + 2e - ⎯ → Mg(s); E^\\circ = - 2.36 V Ni 2+ + 2e - ⎯ → Ni(s); E^\\circ = - 0.25 V The reducing power of the metals increases in the order",
+    "options": {
+      "A": "Zn < Mg < Ni < Ca",
+      "B": "Ni < Zn < Mg < Ca",
+      "C": "Ca < Zn < Mg < Ni",
+      "D": "Ca < Mg < Zn < Ni EC12 - 0017 NEET : CHEMISTRY"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) SRP  Reducing power  Ni < Zn < Mg < Ca"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_187",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The anodic half - cell of lead - acid battery is recharged usi n g electricity of 0.05 Faraday. The amount of PbSO 4 electrolysed in g during the process is (Molar mass of PbSO 4 = 303g mol - 1 )",
+    "options": {
+      "A": "11.4",
+      "B": "7.6",
+      "C": "15.2",
+      "D": "22.8 EC24 - 0028"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) A t anode Pb(s) + SO 4 ²¯ ⎯ → PbSO 4 (s) + 2e¯ For 2 mole of e¯ → 1 mole PbSO 4 produced. 1 mole of e¯ → 1 2 mole PbSO 4 0.05 mole of e¯ → 0.05 2 mole PbSO 4 Mass of PbSO 4 = 0.05 2 ×303 = 7.575 gm ≃ 7.6 gm."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_188",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the following electrochemical cell at 298K Pt(s)|H 2 (g, 1bar)|H + (aq, 1M) || M 4+ (aq), M 2+ (aq)|Pt(s) E cell = 0.092V when 2 x 4 M (aq) 10 M (aq) + +     =     Given : 4 2 0 M /M RT E 0.151V;2.303 0.059V F + + = = The value of x is",
+    "options": {
+      "A": "- 2",
+      "B": "- 1",
+      "C": "1",
+      "D": "2 EC15 - 0042"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Pt(s)|H 2 (g, 1bar)|H + (aq, 1M)||M 4+ (aq), M 2+ (aq)|Pt(s) H 2 (g) + M 4+ (aq) → 2H + (aq) + M 2+ (aq) ( 1bar ) ( 1M ) E cell = o cell 0.059 E n - log Q c E cell = 0.151 - 2 2 2 4 H 0.059 [M ][H ] log 2 [M ] P + + + (  ( ) ( )  )  0.092 = 0.151 - 2 4 0.059 [M ] log 2 [M ] + + (  ( ) )  - 0.059 = - 2 4 0.059 [M ] log 2 [M ] + + log 2 4 [M ] [M ] + + =2 2 2 4 [M ] 10 [M ] + + = = 10 x  x 2 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_189",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two Faraday of electricity is passed through a solution of CuSO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) At cathode Cu 2+ + 2e¯ → Cu 2 Faraday means 2mole of e¯ 2 mole of e¯ requires for 1 mole of Cu (63.5gm)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_190",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The mass copper deposited at the cathode is (at. mass of Cu = 63.5 u)",
+    "options": {
+      "A": "0 g",
+      "B": "63.5 g",
+      "C": "2 g",
+      "D": "127 g EC24 - 0031"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) At hig her concentration. Oxidation of SO 4 ²¯ ion takes place. 2 SO 4 ²¯ ⎯ → S 2 O 8 ²¯ + 2e¯"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_191",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Saturated solution of KNO 3 is used to make 'salt - bridge' because",
+    "options": {
+      "A": "velocity of K + is greater than that of NO 3 -",
+      "B": "velocity of NO 3 - is greater than that of K +",
+      "C": "velocities of both K + and NO 3 - are nearly the same",
+      "D": "KNO 3 is highly soluble in water CK05 - 0025"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Saturated solution of KNO 3 is used because velocities of both K + and NO 3 ¯ are nearly same."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_192",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The standard reduction potential values of three metallic cations, X, Y, Z are 0.52, - 3.03 and - 1.18 V respectively. The order of reducing power of the corresponding metals is .",
+    "options": {
+      "A": "Y > Z > X",
+      "B": "X > Y > Z",
+      "C": "Z > Y > X",
+      "D": "Z > X > Y EC12 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reducing power  SOP or  1 SRP SRP  Reducing power  Y > Z > X"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_193",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The standard reduction potentials E^\\circ, for the half reactions are as Zn = Zn 2+ + 2e - , E^\\circ = +0.76 V Fe = Fe 2+ + 2e - , E^\\circ = 0.41 V The emf for the cell reaction, Fe 2+ + Zn ⎯ → Zn 2+ + Fe is",
+    "options": {
+      "A": "- 0.35 V",
+      "B": "+0.35 V",
+      "C": "+1.17 V",
+      "D": "- 1.17 V EC11 - 0013"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Fe 2+ + Zn → Zn +2 + Fe o cell E = SRP cathode - SRP of anode of = - 0.41 + 0.76 = 0.35"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_194",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reaction, 2 1 H (g) AgCl(s) H (aq) Cl (aq) Ag(s) 2 + - + + +   occurs in the galvanic cell with representation :",
+    "options": {
+      "A": "Ag|AgCl",
+      "B": "Pt|H 2",
+      "C": "Pt|H 2",
+      "D": "Pt|H 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 1 2 H 2 (g) + AgCl(s) \\lambda H + (aq) + Cl¯(aq) + Ag(s) At anode: 1 2 H 2 (g) \\lambda H + (aq) + e¯ At cathode AgCl(s) + e¯ \\lambda Ag(s) + Cl¯(aq) Pt|H 2 (g), HCl(Solution)||AgCl(s)|Ag"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electrochemistry_195",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Electrochemistry",
+      "chapter_name": "Electrochemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Electrochemistry.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Faraday's laws of electrolysis are related to the",
+    "options": {
+      "A": "atomic number of the cation",
+      "B": "atomic number of the anion",
+      "C": "equivalent weight of the electrolyte",
+      "D": "speed of the cation EC24 - 0032"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) y’ l w f l ct ly i l t t equivalent weight of the electrolyte."
+  }
+]

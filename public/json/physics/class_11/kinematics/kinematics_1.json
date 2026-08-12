@@ -1,0 +1,3469 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-001",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man covered following displacements. Find the net displacement of the person (i) 25 m west (ii) 20 m 30^\\circ east of south (iii) 5 3m south (iv) 10 m east (v) 10 m 60^\\circ north of west",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= - 1 ˆ s 25i \\rho = - 2 ˆ ˆ s 10i 10 3 j \\rho = - 3 ˆ s 5 3 j \\rho = 4 ˆ s 10i \\rho = - + 5 ˆ ˆ s 5i 5 3j \\rho \\Sigma = - - \\hat{i} ˆ s 10i 10 3j \\rho = s 20m \\rho & tan \\theta = 3 \\theta = 60^\\circ south of west"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-002",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person moves towards north with uniform speed of 15 m/s and cover 16 m. After this he moves towards east and covers 6 m and finally covers 8 m distance with same speed in south. Find out (i) Distance travelled by person (ii) displacement of person (iii) Average velocity of person",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(i) 30 m, 53^\\circ, N of E (ii) 10 m, (iii) 5 m/s 53^\\circ, N of E Distance = 16 + 6 + 8 = 30 displacement = + = 2 2 6 8 10 \\theta = = 8 4 tan 6 3 ∴ \\theta = 53^\\circ, N of E time = 30 15 = 2 sec.   = displacement 10 v time 2 \\rho = 5 m/s, 53^\\circ, N of E"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-003",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving with constant speed v on a circular path of 'r' radius when it has moved by angle 60^\\circ, Find (i) displacement of particle (ii) Average velocity (iii) Average acceleration",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(i) s = 2r sin \\theta /2 s = 2r sin ^\\circ (  ( ) )  60 2 = 2r × 1 2 = r (ii) d = arc = \\theta r d = \\pi r 3 time = \\theta   =     dist. r speed v t = \\pi r 3v <v> = (  = = ( ) \\pi \\pi )  (  ( ) )  s r 3v r t 3v   \\theta (  \\Delta = - \\Delta = ( )   )    2 1 v v v , | v | 2v sin 2 \\rho\\rho\\rho\\rho \\rho \\theta \\Delta   = = \\Delta 2v sin v 2 | a | t t \\rho \\rho ^\\circ = = = = \\pi \\pi (  ( ) )  2 60 2v sin v v 3v 2 r t t r 3v"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-004",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man travels half time of its journey with speed of 5 m/s and for remaining half time he moves half of its total distance travelled, with speed of 3 m/s and remaining half distance with speed of 6 m/s. Find out the average speed of the man?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": " = = + 2 3 0 2 3 2v v v 4 m / s v v <v> = +   1 0 v v 2 = 4.5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-005",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car is moving with a velocity of 10 m/s. Suddenly driver sees a child at a distance of 30 m and he applies the brakes, it produced a uniform retardation in car and car stops in 5 second. Find (mass of car = 1000 kg) (i) the stopping distance of car (ii) will the car hit the child (iii) the retardation in car (iv) resistive force on car",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "(i) 25 m (ii) No (iii) 2m/s 2 (iv) 2000 N u = 10 m/s t = 5 s v = 0 s = ? (i) s = + (  ( ) )  v u t 2 s = +       10 0 5 2 = 25 m (ii) No (iii) Retardation = - - = = 2 u v 10 2ms t 5 (iv) F = m a \\rho = 1000 × | - 2| = 2000 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-006",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle starts from rest and moves with uniform acceleration. After n th second its velocity is v then how much distance is travelled by it in last 2 second?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "u = 0 v = v t = n a = (  ( ) )  v n distance covered in last ‘t’ seconds. S = vt - 1 2 at 2 = v(2) - 1 2 × v n × (2) 2 = 2v - 2v n = 2v   -     1 1 n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-007",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car starts from rest and moves with uniform acceleration for time t then it moves with uniform speed of 60 km/h for time 8t, finally it moves with uniform retardation for time 3t and comes to rest. Find the average speed of car in its total journey.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "50 km/hr 6 8 8 6 16 s \\theta v 1 v 2 v 3 a = a 1 a = 0 a = a 2 t 8t 3t 0 v v 0 1 = v t & a 2 = v 3t [by I equation of motion) (since distance is always positive) d = + + 2 2 1 2 v v v(8t) 2a |2a | = + + vt 3vt 8vt 2 2 d = 10 vt <v> = 10vt 12t = 5 6 × 60 = 50 km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-008",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two buses P and Q start from a point at the same time and move in a straight line and their positions are represented by ( ) 2 P X t t t = \\alpha + \\beta and ( ) 2 Q X t ft t = - . At what time, both the buses have same velocity ?",
+    "options": {
+      "A": "If 1 \\alpha - + \\beta",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "( ) 2 P X t t t = \\alpha + \\beta 2 Q X ft t = - ( ) P V t 2 t = \\alpha + \\beta Q V f 2t = - P Q V V = 2 t f 2t \\alpha + \\beta = - f t 2 2 - \\alpha = \\beta +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-009",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving in a straight line such that its velocity is increasing at 5 ms - 1 per meter. The acceleration of the particle is _____ ms - 2 at a point where its velocity is 20 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "dv ds = 5 a = dv v ds = 20 × 5 = 100 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-010",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A NCC parade is going at a uniform speed of 9 km/h under a mango tree on which a monkey is sitting at a height of 19.6 m. At any particular instant, the monkey drops a mango. A cadet will receive the mango whose distance from the tree at time of drop is : (Given g = 9.8 m/s 2 )",
+    "options": {
+      "A": "5 m",
+      "B": "10 m",
+      "C": "19.8 m",
+      "D": "24.5 m NEET : PHYSICS"
+    },
+    "correct_option": "A",
+    "explanation": "Monkey t = 0 Vt t t = ⎯⎯ → Time taken by mango 2n g = 2 19.6 9.8  = = 2 second Distance = vt 5 9 2 18 =   = 5m"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-011",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity time graph of a body moving in a straight line is shown in figure. The ratio of displacement to distance travelled by the body in time 0 to 10s is",
+    "options": {
+      "A": "1:1",
+      "B": "1:4",
+      "C": "1:2",
+      "D": "1:3"
+    },
+    "correct_option": "D",
+    "explanation": "displacement area 16 8 16 8 = \\Sigma = - + - =16 m Distance= area \\Sigma = 48 m displacement 1 Dis tan ce 3 ="
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "meet-phy8-012",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match Column - I with Column - II : Column - I (x - t graphs) Column - II (v - t graphs) A. I. B. II. C. III. D. IV. Choose the correct answer from the options given below:",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "A - II B - IV, C - III, D - I",
+      "B": "A - I. B - II, C - III, D - IV",
+      "C": "A - II B - III, C - IV, D - I",
+      "D": "A - I, B - III. C - IV, D - II"
+    },
+    "correct_option": "A",
+    "explanation": "dx slope 0 dt = \\ge always increasing (A - II) dx dx 0; and at t 0 dt dt  →  → (B - IV) dx 0 dt  for first half dx 0 dt  for second half. (C - III) dx constant dt = (D - I)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-013",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is thrown vertically upwards and takes 5 seconds to reach maximum height. The distance travelled by the body will be same in : -",
+    "options": {
+      "A": "1 st and 10 th second",
+      "B": "2 nd and 8 th second",
+      "C": "4 st and 6 th second",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "= = = = = st th nd th rd th th th th th 1 10 2 9 3 8 4 7 5 6 S S S S S S S S S S So answer will be option (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-014",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped from a height h above ground. Neglect the air resistance, its velocity (v) varies with its height (y) above the ground as : -",
+    "options": {
+      "A": "- 2g",
+      "B": "2gh",
+      "C": "2gy",
+      "D": "+ 2g"
+    },
+    "correct_option": "A",
+    "explanation": "v 2 = 2as v 2 = 2g(h - y) v = - 2g(h y)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-015",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body projected vertically upwards, reaches a height of 180 m. Find out [g = 10 ms - 2 ] (i) initial velocity of body (ii) time taken by body to reach its maximum height (iii) the time for which the body remains in air (iv) height of the body from the ground after 8 sec. (v) velocity of body at t = 8 sec (vi) the time at which the body reach the height of 100 m (vii) A man at height of 135 m from ground tries to catch the body but he misses. After how much time from now he will be able to catch the body again?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 0 v 2g = h (i) =   = 0 v 2 10 180 60 m/s (ii) t = 0 v g = 6 s (iii) T = 2t = 12 s (iv) h = (60) 8 - 1 2 g(8) 2 = 160 m (v) v \\rho = u \\rho + at \\rho = 60 - (10) (8) = - 20 m/s = 20m/s downward (vi) 100 = 60t -   2 1 10 t 2  After solving t = 2 sec or 10 sec (vii) We have to find time to travel O to A. Let t be the time between O and A. from top - most point distance travelled (h-y) y h = (180 - 135) = 45 m   = = 1 2 45 t 3sec g t = 2t 1 = 6 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-016",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is projected vertically upwards from the earth. It crosses the same point at t = 2 sec and t = 8 sec. Find out [g = 10 ms - 2 ] (i) the time for which particle remains in air (ii) initial velocity of particle (iii) maximum height attained by the particle (iv) height of the particle at t = 2 sec and t = 8 sec from earth",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) 10 sec (ii) 50 m/s (iii) 125 m (iv) 80 m (i) t = + 2 8 2 = 5s T = 2t = 10 sec (ii) u = gt = 50 m/s (iii) h = 2 u 2g = 125 m (iv) h at t = 2 sec h = 50 × 2 - 1 2 × 10 × 2 2 = 80 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-017",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is dropped from the top of a tower and it covers a 80 m distance in last two seconds of its journey. Find out [g = 10 ms - 2 ] (i) height of the tower (ii) time taken by body to reach the ground (iii) the velocity of body when it hits the ground x t  t t x x 0 t  t x  t -  t x t  -   0 0 - 2 - 4 - 6 2 4 6 8 2 4 6 8 10 time (s) v(ms - 1 ) 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 g(t + 2) 2 - 1 2 gt 2 = 80 m t 2 + 4 + 4t - t 2 = 16  t = 3 sec (i) h = 1 2 g(3 + 2) 2 = 125 m (ii) t = 3 + 2 = 5 sec (iii) v = g(t + 2) = 50 m/s 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-018",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water drops are falling from a tap at regular time intervals. When the fifth drop is near to fall from tap the first drop is at ground. If the tap is fixed at height H from ground then find out (i) the height of the second drop from ground (ii) distance between the second and third drop (iii) velocity of third drop",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "( ) 2 P X t t t = \\alpha + \\beta 2 Q X ft t = - ( ) P V t 2 t = \\alpha + \\beta Q V f 2t = - P Q V V = 2 t f 2t \\alpha + \\beta = - f t 2 2 - \\alpha = \\beta +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-019",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the top of a tower, a ball is thrown vertically upward which reaches the ground in 6 s. A second ball thrown vertically downward from the same position with the same speed reaches the ground in 1.5 s. A third ball released, from the rest from the same location, will reach the ground in _____ s.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Let height of tower be h and speed of projection in first two cases be u. For case - I : 2 nd equation = + 2 1 s ut at 2 ( ) ( )  = - + 1 h u 6 g 6 2 H = - 6u + 18 g … (i) For case - II : ( ) ( )  = + 1 h u 1.5 g 1.5 2 = + 2.25g h 1.5u 2 … (ii) Multiplying equation (ii) by 4 we get 4h = 6u + 4.5 g … (iii) equation (i) + equation (iii) we get 5h = 22.5g h = 4.5g … (iv) For case - III : = + 2 1 h 0 gt 2 … (v) Using equation (4) & equation (5) = 2 1 4.5g gt 2 t 2 = 9  t = 3s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-020",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a ball is dropped into a lake from a height 4.9 m above the water level, it hits the water with a velocity v and then sinks to the bottom with the constant velocity v. It reaches the bottom of the lake 4.0 s after it is dropped. The approximate depth of the lake is :",
+    "options": {
+      "A": "19.6 m",
+      "B": "29.4 m",
+      "C": "39.2 m",
+      "D": "73.5 m 2"
+    },
+    "correct_option": "B",
+    "explanation": "V 2 = 2 × 9.8 × 4.9 V = 9.8 m/s Depth = distance travelled in 3 seconds = 9.8 × 3 = 29.4 m 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-021",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bullet is shot vertically downwards with an initial velocity of 100 m/s from a certain height. Within 10 s, the bullet reaches the ground and instantaneously comes to rest due to the perfectly inelastic collision. The velocity - time curve for total time t = 20 s will be : (Take g = 10 m/s 2 )",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "= - 1 ˆ s 25i \\rho = - 2 ˆ ˆ s 10i 10 3 j \\rho = - 3 ˆ s 5 3 j \\rho = 4 ˆ s 10i \\rho = - + 5 ˆ ˆ s 5i 5 3j \\rho \\Sigma = - - \\hat{i} ˆ s 10i 10 3j \\rho = s 20m \\rho & tan \\theta = 3 \\theta = 60^\\circ south of west"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-022",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown vertically upwards with a velocity of 19.6 ms - 1 from the top of a tower. The ball strikes the ground after 6 s. The height from the ground up to which the ball can rise will be k m. 5 (  ( ) )  The value of k is ….. (use g = 9.8 m/s 2 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "a u 19.6 t 2s g 9.8 = = = max d 2h t 6 2s g = - = max 16 9.8 392 h 2 5   = = 80 m, 2s t 7x 5x 3x x I II III IV V NEET : PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-023",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A juggler throws balls vertically upwards with same initial velocity in air. When the first ball reaches its highest position, he throws the next ball. Assuming the juggler throws n balls per second, the maximum height the balls can reach is",
+    "options": {
+      "A": "g/2n",
+      "B": "g/n",
+      "C": "2gn",
+      "D": "g/2n 2"
+    },
+    "correct_option": "D",
+    "explanation": "Time taken by ball to reach highest point = u g frequency of throw = g n u = g u n  = 2 2 max g u n H 2g 2g (  ( ) )  = = 2 g 2n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-024",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is released from a height h. If t 1 and t 2 be the time required to complete first half and second half of the distance respectively. Then, choose the correct relation between t 1 and t",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "For first h 2 2 1 h 1 gt 2 2 = For total height h ( ) 2 1 2 1 h g t t 2 = + 1 1 2 t 1 t t 2 = + 2 1 t 1 2 t + = 1 2 t 1 t 2 1 = - ( ) 2 1 t 2 1 t = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-025",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "( 1 ) ( ) 1 2 t 2 t = ( 2 ) ( ) 1 2 t 2 1 t = - ( 3 ) ( ) 2 1 t 2 1 t = + ( 4 ) ( ) 2 1 t 2 1 t = -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(i) 30 m, 53^\\circ, N of E (ii) 10 m, (iii) 5 m/s 53^\\circ, N of E Distance = 16 + 6 + 8 = 30 displacement = + = 2 2 6 8 10 \\theta = = 8 4 tan 6 3 ∴ \\theta = 53^\\circ, N of E time = 30 15 = 2 sec.   = displacement 10 v time 2 \\rho = 5 m/s, 53^\\circ, N of E"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-026",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tennis ball is dropped on to the floor from a height of 9.8 m. It rebounds to a height 5.0 m. Ball comes in contact with the floor for 0.2s. The average acceleration during contact is ____ 2 ms - . [Given g = 10 ms - 2 ] - 100 m/s - 200 m/s v 10s 20s t - 100 m/s - 200 m/s v 10s 20s t +100 m/s - 100 m/s v 10s 20s t - 100 m/s v 10s 20s t +100 m/s NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "i i v 2gh = 2 10 9.8 =    14m / s =  f f v 2gh = 2 10 5 =    = 10 m/s  avg a \\rho = 2 v 24 120 m / s t 0.2 \\Delta = = \\Delta \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-027",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is projected from ground in such a way that after 10 seconds of projection it lands on ground 500 m away from the point of projection. Find out : - (i) angle of projection (ii) velocity of projection (iii) velocity of ball after 5 seconds",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) \\theta = 45^\\circ (ii) 50 2 m/s (iii) 50 m/s (i) Given T = \\theta 2usin g = 10 ...(i) R = \\theta 2 u sin2 g = 500 ...(ii) Squaring (i ) & then dividing by (ii)  \\theta = \\theta 2 4sin 1 g sin2 5 \\theta =  \\theta \\theta 2 4sin 1 10 2sin cos 5 tan \\theta = 1 \\theta = 45^\\circ (ii) from (i) u = 50 2 m/s (iii) v \\rho = (u sin \\theta - gt) \\hat{j} + u cos \\theta \\hat{i} and at t = 5 sec v \\rho = 50 m/s or = ˆ v 50i \\rho m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-028",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is projected at an angle of 45^\\circ with horizontal with velocity of 40 2 m/s. Find out (i) Maximum height attained by body (ii) Time of flight (iii) Horizontal range (iv) velocity at maximum height (v) The ratio of Kinetic energy to potential energy at highest point (vi) The path equation of projectile, assuming point of projection as origin and consider x and y are horizontal and vertical distance in meter (vii) The horizontal distance covered by body in 2 seconds (viii) The vertical distance covered by body in 2 second",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) 80 m (ii) 8 sec (iii) 320 m (iv) 40 m/s (v)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-029",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown from a corner of room of length 20 m and height 5 m such that the ball moves along the length of room just touching the ceiling and drops on the other corner. Find out (i) Angle of projection (ii) velocity of projection (iii) Time of flight",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) 45^\\circ (ii) 10 2 m/s (iii) 2 sec From previous question observation here R is 4 times of H. So \\theta = 45^\\circ R = 20 m   = 2 o u sin2 45 20 g 2 = 20g  u = - 1 10 2 ms T =   ^\\circ = 1 2 10 2 2u sin 45 2 g 10 = 2 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-030",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hunter aims his gun and fires a bullet directly towards a monkey sitting on a distance tree. At the instant the bullet leaves the barrel of the gun, the monkey drops from the tree : (i) Will the bullet hit the aim? (ii) What Path of bullet will be appeared to monkey? (iii) If monkey does not drop from the tree will bullet hit the aim?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) Yes (ii) It would be straight line as relative acceleration is zero (iii) Will miss by 1/2 gt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-031",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle of mass 50 g is projected horizontally from the top of a tower of height 50 m with a velocity 20 m/s. If g = 10 m/s 2 , then find the: - (take downward as positive y direction)",
+    "options": {
+      "A": "velocity at the instant t = 2 s",
+      "B": "Position at the instant t = 3 s",
+      "C": "velocity just before hitting the ground",
+      "D": "Change in velocity in 2 s 3"
+    },
+    "correct_option": "A",
+    "explanation": "(i) = + = + x ˆ ˆ ˆ ˆ v (gt)j (u )i 20j 20i \\rho  = |v| 20 2 \\rho m/s (ii) x = u x t x = 20 × 3 = 60 m y = 2 1 gt 2 y = 1 2 × 10 (3) 2 = 45 m + = + 2 2 2 2 x y 45 60 = 15 × 5 = 75 m away. (iii) Time taken to reach the ground = ( ) = = 2H 2 50 10 g 10 s V elocity = ( ) + 2 2 x u gT = ( ) ( ) + 2 2 20 10 10 = + 400 1000 = = 1400 37.4m/s (iv) \\Delta = v at \\rho \\rho = 20 m/s 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-032",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is projected from the ground at an angle of 45^\\circ with the horizontal. Its velocity after 2s is 20 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= - 1 ˆ s 25i \\rho = - 2 ˆ ˆ s 10i 10 3 j \\rho = - 3 ˆ s 5 3 j \\rho = 4 ˆ s 10i \\rho = - + 5 ˆ ˆ s 5i 5 3j \\rho \\Sigma = - - \\hat{i} ˆ s 10i 10 3j \\rho = s 20m \\rho & tan \\theta = 3 \\theta = 60^\\circ south of west"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-033",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum height reached by the body during its motion is _______m. (use g = 10ms - 2 ) 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= - 1 ˆ s 25i \\rho = - 2 ˆ ˆ s 10i 10 3 j \\rho = - 3 ˆ s 5 3 j \\rho = 4 ˆ s 10i \\rho = - + 5 ˆ ˆ s 5i 5 3j \\rho \\Sigma = - - \\hat{i} ˆ s 10i 10 3j \\rho = s 20m \\rho & tan \\theta = 3 \\theta = 60^\\circ south of west"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-034",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two projectile thrown at 30^\\circ and 45^\\circ with the horizontal respectively, reach the maximum height in same time. The ratio of their initial velocities is ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(i) 30 m, 53^\\circ, N of E (ii) 10 m, (iii) 5 m/s 53^\\circ, N of E Distance = 16 + 6 + 8 = 30 displacement = + = 2 2 6 8 10 \\theta = = 8 4 tan 6 3 ∴ \\theta = 53^\\circ, N of E time = 30 15 = 2 sec.   = displacement 10 v time 2 \\rho = 5 m/s, 53^\\circ, N of E"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-035",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the initial velocity in horizontal direction of a projectile is unit vector \\hat{i} and the equation of trajectory is ( ) y 5x 1 x = - . The y component vector of the initial velocity is _____ \\hat{j} (Take g = 2 10m / s ) 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(i) s = 2r sin \\theta /2 s = 2r sin ^\\circ (  ( ) )  60 2 = 2r × 1 2 = r (ii) d = arc = \\theta r d = \\pi r 3 time = \\theta   =     dist. r speed v t = \\pi r 3v <v> = (  = = ( ) \\pi \\pi )  (  ( ) )  s r 3v r t 3v   \\theta (  \\Delta = - \\Delta = ( )   )    2 1 v v v , | v | 2v sin 2 \\rho\\rho\\rho\\rho \\rho \\theta \\Delta   = = \\Delta 2v sin v 2 | a | t t \\rho \\rho ^\\circ = = = = \\pi \\pi (  ( ) )  2 60 2v sin v v 3v 2 r t t r 3v"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-036",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 10 kg is projected at an angle of 45^\\circ with the horizontal. The trajectory of the body is observed to pass through a point (20, 10). If T is the time of flight, then its momentum vector, at time T t 2 = , is _________ [Take g = 10 m/s 2 ]",
+    "options": {
+      "A": "ˆ ˆ 100i",
+      "B": "ˆ ˆ 100 2 i",
+      "C": "ˆ ˆ 100 i",
+      "D": "ˆ ˆ 100 2 i"
+    },
+    "correct_option": "D",
+    "explanation": " = = + 2 3 0 2 3 2v v v 4 m / s v v <v> = +   1 0 v v 2 = 4.5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-037",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At time t = 0 a particle starts travelling from a height 7z  cm in a plane keeping z coordinate constant. At any instant of time it’s position along the  x and  y directions are defined as 3t and 5t 3 respectively. At t = 1s acceleration of the particle will be",
+    "options": {
+      "A": " 30y -",
+      "B": " 30y",
+      "C": "  3x 15y +",
+      "D": "  3x 15y 7z + +  3"
+    },
+    "correct_option": "B",
+    "explanation": "(i) 25 m (ii) No (iii) 2m/s 2 (iv) 2000 N u = 10 m/s t = 5 s v = 0 s = ? (i) s = + (  ( ) )  v u t 2 s = +       10 0 5 2 = 25 m (ii) No (iii) Retardation = - - = = 2 u v 10 2ms t 5 (iv) F = m a \\rho = 1000 × | - 2| = 2000 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-038",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object is projected in the air with initial velocity u at an angle \\theta . The projectile motion is such that the horizontal range R, is maximum. Another object is projected in the air with a horizontal range half of the range of first object. The initial velocity remains same in both the case. The value of the angle of project ion, at which the second object is projected, will be _______degree. 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "u = 0 v = v t = n a = (  ( ) )  v n distance covered in last ‘t’ seconds. S = vt - 1 2 at 2 = v(2) - 1 2 × v n × (2) 2 = 2v - 2v n = 2v   -     1 1 n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-039",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The initial speed of a projectile fired from ground is u. At the highest point during its motion, the speed of projectile is 3 u. 2 The time of flight of the projectile is:",
+    "options": {
+      "A": "u 2g",
+      "B": "u g",
+      "C": "2u g",
+      "D": "3u g 3"
+    },
+    "correct_option": "B",
+    "explanation": "50 km/hr 6 8 8 6 16 s \\theta v 1 v 2 v 3 a = a 1 a = 0 a = a 2 t 8t 3t 0 v v 0 1 = v t & a 2 = v 3t [by I equation of motion) (since distance is always positive) d = + + 2 2 1 2 v v v(8t) 2a |2a | = + + vt 3vt 8vt 2 2 d = 10 vt <v> = 10vt 12t = 5 6 × 60 = 50 km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-040",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "L 1 metre long train is moving with a velocity of v 1 m/s and another L 2 metre long train is moving with a velocity of v 2 m/s in opposite direction. Find out (i) The time taken by two train to cross each other (ii) Distance travel by the each train during the crossing.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "( ) 2 P X t t t = \\alpha + \\beta 2 Q X ft t = - ( ) P V t 2 t = \\alpha + \\beta Q V f 2t = - P Q V V = 2 t f 2t \\alpha + \\beta = - f t 2 2 - \\alpha = \\beta +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-041",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car is moving with a speed of 25 km/h in East and car driver observes that a bus is moving with a speed of 25 3 km/h in the north what will be actual velocity of bus. 4",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "From previous formula = - b ˆ ˆ 25 3j v 25i \\rho = +  = b b ˆ ˆ v 25 3j 25i v 50 km / hr \\rho\\rho \\theta = = ^\\circ 25 3 tan 60 25 North of East 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-042",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The wind is blowing in south with velocity of 4 km/h and observer is travelling with velocity of 4 3 km/h in east. Find out the velocity of wind appeared to observer. 4",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) = - = - - wo w o ˆ ˆ v v v 4j 4 3i \\rho\\rho\\rho = - -  = wo ˆ ˆ 4 3i 4j v 8 km / hr \\rho \\theta = = 4 1 tan 4 3 3 \\theta = 30^\\circ = wo v 10km / hr \\rho 30^\\circ S of W 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-043",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Rain is falling vertically downwards with a velocity of 2 m/s. A person is running to the North with a velocity of 2 3 m/s. Find out the velocity and direction of rain as appeared to the person. 4",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= - 1 ˆ s 25i \\rho = - 2 ˆ ˆ s 10i 10 3 j \\rho = - 3 ˆ s 5 3 j \\rho = 4 ˆ s 10i \\rho = - + 5 ˆ ˆ s 5i 5 3j \\rho \\Sigma = - - \\hat{i} ˆ s 10i 10 3j \\rho = s 20m \\rho & tan \\theta = 3 \\theta = 60^\\circ south of west"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-044",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure shows two ships moving in x - y plane with velocities V A and V B . The ships move such that B always remains north of A. The ratio A B V V is equal to: -",
+    "options": {
+      "A": "cos \\theta",
+      "B": "sin \\theta",
+      "C": "sec \\theta",
+      "D": "cosec \\theta 4"
+    },
+    "correct_option": "C",
+    "explanation": "(i) 30 m, 53^\\circ, N of E (ii) 10 m, (iii) 5 m/s 53^\\circ, N of E Distance = 16 + 6 + 8 = 30 displacement = + = 2 2 6 8 10 \\theta = = 8 4 tan 6 3 ∴ \\theta = 53^\\circ, N of E time = 30 15 = 2 sec.   = displacement 10 v time 2 \\rho = 5 m/s, 53^\\circ, N of E"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-045",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A girl standing on road holds her umbrella at 45 ^\\circ with the vertical to keep the rain away. If she starts running without umbrella with a speed of 1 15 2kmh - , the rain drops hit her head vertically. The speed of rain drops with respect to the moving girl is :",
+    "options": {
+      "A": "1 30kmh -",
+      "B": "1 25 kmh 2 -",
+      "C": "1 30 kmh 2 -",
+      "D": "1 25kmh - 4"
+    },
+    "correct_option": "C",
+    "explanation": "(i) s = 2r sin \\theta /2 s = 2r sin ^\\circ (  ( ) )  60 2 = 2r × 1 2 = r (ii) d = arc = \\theta r d = \\pi r 3 time = \\theta   =     dist. r speed v t = \\pi r 3v <v> = (  = = ( ) \\pi \\pi )  (  ( ) )  s r 3v r t 3v   \\theta (  \\Delta = - \\Delta = ( )   )    2 1 v v v , | v | 2v sin 2 \\rho\\rho\\rho\\rho \\rho \\theta \\Delta   = = \\Delta 2v sin v 2 | a | t t \\rho \\rho ^\\circ = = = = \\pi \\pi (  ( ) )  2 60 2v sin v v 3v 2 r t t r 3v"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-046",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of a swimmer is 4 km h - 1 in still water. If the swimmer makes his strokes normal to the flow of river of width 1 km, he reaches a point 750 m down the stream on the opposite bank. The speed of the river water is _______km h -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": " = = + 2 3 0 2 3 2v v v 4 m / s v v <v> = +   1 0 v v 2 = 4.5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-047",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "RACE - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "y V B \\theta B A V A x W E N S NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= - 1 ˆ s 25i \\rho = - 2 ˆ ˆ s 10i 10 3 j \\rho = - 3 ˆ s 5 3 j \\rho = 4 ˆ s 10i \\rho = - + 5 ˆ ˆ s 5i 5 3j \\rho \\Sigma = - - \\hat{i} ˆ s 10i 10 3j \\rho = s 20m \\rho & tan \\theta = 3 \\theta = 60^\\circ south of west"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-048",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The location of a particle is changed. What can we say about the displacement & distance covered by the particle?",
+    "options": {
+      "A": "Both cannot be zero",
+      "B": "One of the two may be zero",
+      "C": "Both must be zero",
+      "D": "Both must be equal"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-049",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving in influence of constant acceleration. It's path may be :",
+    "options": {
+      "A": "Circle",
+      "B": "Hyperbola",
+      "C": "Parabola",
+      "D": "Ellipse"
+    },
+    "correct_option": "C",
+    "explanation": "In projectile motion, acceleration is constant and trajectory is parabolic."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-050",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement(s) is/are wrong :",
+    "options": {
+      "A": "Only C",
+      "B": "A body can have zero velocity & uniform acceleration",
+      "C": "A body can have constant velocity & uniform acceleration",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "→ If direction changes with constant speed then acceleration can change. → If an object is projected upward then at maximum height it's velocity is zero but acceleration due to gravity acts. → If velocity is constant then acceleration is zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-051",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a moving object, the numerical value of the ratio of magnitude of instantaneous velocity to instantaneous speed is :",
+    "options": {
+      "A": "Always less than 1",
+      "B": "Always equal to 1",
+      "C": "Always more than 1",
+      "D": "Equal to or less than one"
+    },
+    "correct_option": "B",
+    "explanation": "At any instant, the magnitude of velocity abd speed will be equal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-052",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies of masses 1kg & 10 kg are dropped simultaneously from the top of a tower. On the surface of earth :",
+    "options": {
+      "A": "Heavier will reach first",
+      "B": "Lighter will reach first",
+      "C": "Both will reach simultaneously",
+      "D": "Any one will reach first"
+    },
+    "correct_option": "C",
+    "explanation": "2H t g = ⇒ It doesn't depend on mass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-053",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is thrown upward & reaches it's maximum height. At this position :",
+    "options": {
+      "A": "It's velocity is zero & it's acceleration is also zero",
+      "B": "It's velocity is zero but it's acceleration is maximum",
+      "C": "It's acceleration is minimum",
+      "D": "It's velocity is zero & it's acceleration is non zero due to gravity"
+    },
+    "correct_option": "D",
+    "explanation": "As body moves upward it's velocity decreases & at maximum height point it's velocity becomes zero but acceleration due to gravity act's downward."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-054",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Mark the correct statement :",
+    "options": {
+      "A": "If velocity & acceleration have opposite sign, then speed of particle will increase",
+      "B": "If velocity is zero at a instant, then acceleration of particle will be zero at that instant",
+      "C": "If velocity is zero in a time interval then acceleration is not equal to zero at any instant within the time interval",
+      "D": "A particle moves along x - axis. If it's x - coordinate & velocity have opposite sign then the particle will move towards origin"
+    },
+    "correct_option": "D",
+    "explanation": "In projectile and circular motion and are not in same direction. In one dimensional motion v \\rho & a \\rho may have same direction. 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-055",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is wrong about a ball thrown vertically up :",
+    "options": {
+      "A": "It is moving with constant acceleration",
+      "B": "It may have different velocities at the same position",
+      "C": "It may have two positions at the same time",
+      "D": "The angular momentum of particle about point of projection remain conserved"
+    },
+    "correct_option": "A",
+    "explanation": "A particle can not have two positions at same time."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-056",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is nature of acceleration between t = 18 s to t = 20 s in below diagram",
+    "options": {
+      "A": "Positive",
+      "B": "Negative",
+      "C": "Zero",
+      "D": "None of these"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-057",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the given graph which of following physical quantities changes their sign?",
+    "options": {
+      "A": "and",
+      "B": "velocity",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Motion of the object with negative acceleration. Between O to t 1 it moves in positive x - direction. Between t 1 to t 2 it moves in opposite direction."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-058",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of following graph represents displacement - time of an object under free fall. Neglect air resistance.",
+    "options": {
+      "D": "1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-059",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Variation of quantity P with quantity Q is plotted in given figure, describes motion of particle in a straight line. Then which of the following statement is wrong :",
+    "options": {
+      "A": "Quantity Q may represent time",
+      "B": "Quantity P is velocity if motion is uniform",
+      "C": "Quantity P may be displacement if motion is uniform",
+      "D": "Quantity P may be velocity if motion is uniformly accelerated 1"
+    },
+    "correct_option": "C",
+    "explanation": "In projectile motion, acceleration is constant and trajectory is parabolic."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-060",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped from a building of height 45m. Simultaneously another ball is thrown up with a speed of 40 m/s. Calculate the magnitude of relative velocity of the balls when both balls are in air :",
+    "options": {
+      "A": "0 m/s",
+      "B": "20 m/s",
+      "C": "40 m/s",
+      "D": "60 m/s 1"
+    },
+    "correct_option": "A",
+    "explanation": "→ If direction changes with constant speed then acceleration can change. → If an object is projected upward then at maximum height it's velocity is zero but acceleration due to gravity acts. → If velocity is constant then acceleration is zero."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-061",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "displacement - time curve of two objects A & B is shown in the figure. Find relative velocity of B with respect to A .",
+    "options": {
+      "A": "- 15 m/s",
+      "B": "- 10 m/s",
+      "C": "15 m/s",
+      "D": "10 m/s 1"
+    },
+    "correct_option": "B",
+    "explanation": "At any instant, the magnitude of velocity abd speed will be equal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-062",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A lift coming from 8 th floor is just about to reach 4 th floor and stops on 4 th floor. Taking ground as origin and taking upward direction as positive for all quantities, which of following is correct?",
+    "options": {
+      "A": "x < 0, v < 0, a < 0",
+      "B": "x > 0, v < 0, a < 0",
+      "C": "x > 0, v < 0, a > 0",
+      "D": "x > 0, v > 0, a < 0"
+    },
+    "correct_option": "C",
+    "explanation": "2H t g = ⇒ It doesn't depend on mass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-063",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball A is dropped from a building of height 45 m. Simultaneously another identical ball B is thrown up with a speed 50 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "At any time t velocity of ball A, A v gt = - \\rho velocity of ball B, B v 50 gt = - \\rho velocity of b w.r.t. A BA B A v v v (50 gt) ( gt) = - = - - - \\rho\\rho\\rho ⇒ 1 BA v 50ms - = \\rho Kinematics NEET : NCR [Physics]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-064",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relative speed of ball B w.r.t. ball A at any instant of time when both the balls will be in air (Take g = 10 ms - 2 )",
+    "options": {
+      "A": "0",
+      "B": "10 ms - 1",
+      "C": "25 ms - 1",
+      "D": "50 ms - 1 1"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-065",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two objects are moving on straight line with non - zero velocities in opposite directions, then magnitude of relative velocity will be",
+    "options": {
+      "A": "Equal to individual velocity",
+      "B": "Less than individual velocities",
+      "C": "Greater than magnitude of individual velocities",
+      "D": "Greater or equal to magnitude of individual velocities. 1"
+    },
+    "correct_option": "D",
+    "explanation": "In projectile and circular motion and are not in same direction. In one dimensional motion v \\rho & a \\rho may have same direction. 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-066",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles A and B are moving on a straight line with the same speed. Which of the following statement is/are correct for the relative motion of the two particles :",
+    "options": {
+      "A": "The relative velocity AB v \\rho or BA v \\rho is zero vector only if they are moving in the same direction",
+      "B": "If the particles are moving in opposite direction, the magnitude of BA v \\rho or AB v \\rho is twice than the magnitude of velocity of A or that of B.",
+      "C": "The magnitude of relative velocity AB v \\rho or BA v \\rho is always zero",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "A particle can not have two positions at same time."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-067",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relation u v v 2 + = \\rho\\rho \\rho is valid for",
+    "options": {
+      "A": "Constant acceleration only",
+      "B": "Non - uniform acceleration only",
+      "C": "Uniform motion only",
+      "D": "Uniform and non - uniform acceleration both y t y t y t y t x"
+    },
+    "correct_option": "A",
+    "explanation": "0 v v v 2 + = \\rho is valid for constant acceleration only. 0 x 1 v v t (at)t t 2 =  + \\rho 0 2v at v 2 + = \\rho 0 0 0 2v (v v ) v v v 2 2 + - + =  \\rho"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-068",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is/are Incorrect? (I) For motion involving change in direction along the straight line, displacement may decrease. (II) Direction of acceleration is same as direction of velocity. (III) Average speed is, in general greater than or equal to the magnitude of the average velocity. (IV) Equation of motion is valid only in one dimensional uniform accelerated motion",
+    "options": {
+      "A": "only I",
+      "B": "only IV",
+      "C": "II, IV",
+      "D": "I, III, IV"
+    },
+    "correct_option": "C",
+    "explanation": "change in velocity a time = \\rho direction of a \\rho = direction of change in velocity Equation of motion is valid for uniform acceleration. It may be in both x and y direction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-069",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person standing on the ground throws a stone upwards, then the path of the stone as seen by the person in a train moving on a straight horizontal track with constant speed -",
+    "options": {
+      "A": "Circular",
+      "B": "Parabolic",
+      "C": "Straight line",
+      "D": "Ellipse"
+    },
+    "correct_option": "B",
+    "explanation": "As the train is moving, so the person in the train observe the path of the stone as parabolic path, because according to him the stone has both horizontal and vertical velocities. Horizontal component is due to relative motion w.r.t. train and vertical co mponent is provided by the person on ground."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-070",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy tries to cross the river and want to reach at the exactly opposite point on the other bank then what is the necessary relation between v b and v r : - v b → velocity of boy in still water ; v r → velocity of river",
+    "options": {
+      "A": "v b < v r",
+      "B": "v b = v r",
+      "C": "v b > v r",
+      "D": "None of these 2"
+    },
+    "correct_option": "C",
+    "explanation": "For the boy to reach at point B from point A : → v b sin θ = v r v b cos θ has to be non - zero for the displacement along the y - direction. So, r b v v sin = \\theta here, θ has to be less than 90^\\circ, so sin θ < 1 for θ < 90^\\circ hence, v b > v r 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-071",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A marble 'A' is dropped vertically. Another identical marble 'B' is projected horizontally from the same point at the same instant then - (If friction of air considered as negligible)",
+    "options": {
+      "A": "A will reach the ground earlier than B",
+      "B": "B will reach the ground earlier than A",
+      "C": "Both A and B will reach the ground at the same instant",
+      "D": "None of these 2"
+    },
+    "correct_option": "A",
+    "explanation": "→ If direction changes with constant speed then acceleration can change. → If an object is projected upward then at maximum height it's velocity is zero but acceleration due to gravity acts. → If velocity is constant then acceleration is zero."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-072",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct -",
+    "options": {
+      "A": "Direction of velocity at any point on path is tangential to the path",
+      "B": "Direction of average velocity is along direction of motion during that interval",
+      "C": "Direction of motion is always along direction of acceleration",
+      "D": "A particle may undergo 2 - dimensional motion even if acceleration & velocity remain in same direction 2"
+    },
+    "correct_option": "B",
+    "explanation": "At any instant, the magnitude of velocity abd speed will be equal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-073",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following examples average speed is greater than the magnitude of average velocity.",
+    "options": {
+      "A": "Projectile motion",
+      "B": "Circular motion",
+      "C": "Planetary motion",
+      "D": "All of the above 2"
+    },
+    "correct_option": "C",
+    "explanation": "2H t g = ⇒ It doesn't depend on mass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-074",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For projectile motion",
+    "options": {
+      "A": "acceleration must be constant",
+      "B": "Initial momentum and force must be noncollinear",
+      "C": "velocity, must vary with time",
+      "D": "All of the above 2"
+    },
+    "correct_option": "D",
+    "explanation": "As body moves upward it's velocity decreases & at maximum height point it's velocity becomes zero but acceleration due to gravity act's downward."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-075",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If v \\rho and a \\rho represent velocity and acceleration respectively, then ˆ ˆ v a = may remains applicable in -",
+    "options": {
+      "A": "1 - Dimensional motion",
+      "B": "Projectile motion",
+      "C": "Circular motion",
+      "D": "None of the above 2"
+    },
+    "correct_option": "D",
+    "explanation": "In projectile and circular motion and are not in same direction. In one dimensional motion v \\rho & a \\rho may have same direction. 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-076",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following sets of factors will affect the horizontal distance covered by an athlete in a long - jump event.",
+    "options": {
+      "A": "Speed before he jumps and his weight",
+      "B": "The direction in which he leaps and the initial speed",
+      "C": "The force with which he pushes the ground and his speed",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "A particle can not have two positions at same time."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-077",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is projected at some angle from surface, when it return to surface then it's change in momentum will be : -",
+    "options": {
+      "A": "acceleration due to gravity × time of flight",
+      "B": "weight of ball × half of time of flight",
+      "C": "weight of ball × time of flight",
+      "D": "weight of ball × range"
+    },
+    "correct_option": "C",
+    "explanation": "Change in momentum of the ball = m u sin θ - ( - m u sin θ) = 2m u sin θ = 2usin mg g \\theta = weight × total time of flight 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-078",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile is projected with speed u at an angle 2θ from horizontal, speed of projectile at the instant when it subtend angle θ from horizontal is : -",
+    "options": {
+      "A": "u cos2 2 \\theta",
+      "B": "u",
+      "C": "u cos θ",
+      "D": "u"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-079",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a ground to ground projectile motion tangential acceleration at the topmost point P of the trajectory is : -",
+    "options": {
+      "A": "g",
+      "B": "gcosθ",
+      "C": "0",
+      "D": "None of these 3"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-080",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car is moving along a straight line OP as shown in the figure. It moves from O to P in 18 s and returns from P to Q in 6s and Q to O in 10 s. Which of the following statement is correct regarding the motion of the car? (1) The average speed of the car in going from O to P and come back to Q is 20 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "In projectile motion, acceleration is constant and trajectory is parabolic.",
+    "statements": {
+      "S": "Which of"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-081",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(2) The average velocity of the car in going from O to P and come back to Q is 20 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-082",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(3) The average speed of the car in going from O to P and come back to O is 20 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-083",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(4) The average velocity of the car in going from O to P and come back to O is 20 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-084",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body moving along a straight line travels one fourth of the total distance with a speed of 3.0 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "→ If direction changes with constant speed then acceleration can change. → If an object is projected upward then at maximum height it's velocity is zero but acceleration due to gravity acts. → If velocity is constant then acceleration is zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-085",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The remaining distance is covered with a speed of 4.0 ms - 1 for half the time and 5.0 ms - 1 for the other half of the time. The average speed during the motion is :",
+    "options": {
+      "A": "4.0 ms - 1",
+      "B": "6.0 ms - 1",
+      "C": "3.8 ms - 1",
+      "D": "2.4 ms - 1 3"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-086",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy walks on a straight road from his home to a market 2.5 km with a speed of 5 km h -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "At any instant, the magnitude of velocity abd speed will be equal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-087",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Finding the market closed he instantly turns and walks back with a speed of 7.5 km h -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-088",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the average speed and average velocity of the boy between t = 0 to t = 50 min?",
+    "options": {
+      "A": "0, 0",
+      "B": "6 km h - 1 , 0",
+      "C": "0, 6 km h - 1",
+      "D": "6 km h - 1 , 6 km h - 1 3"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-089",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Speedometer of a car measures",
+    "options": {
+      "A": "Average speed",
+      "B": "Average velocity",
+      "C": "Instantaneous speed",
+      "D": "Instantaneous velocity 3"
+    },
+    "correct_option": "C",
+    "explanation": "2H t g = ⇒ It doesn't depend on mass."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-090",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The position - time (x - t) graphs for two children A and B returning from their school O to their homes P and Q respectively are as shown in the figure. Choose the incorrect statement regarding these graphs.",
+    "options": {
+      "A": "A lives closer to the school than B.",
+      "B": "A starts from the school earlier than B.",
+      "C": "A walks faster than B.",
+      "D": "A and B reach home at different time. 3"
+    },
+    "correct_option": "D",
+    "explanation": "As body moves upward it's velocity decreases & at maximum height point it's velocity becomes zero but acceleration due to gravity act's downward."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-091",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following graphs cannot possibly represent one dimensional motion of a particle? (i) (ii) (iii) (iv)",
+    "options": {
+      "D": "All four 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "In projectile and circular motion and are not in same direction. In one dimensional motion v \\rho & a \\rho may have same direction. 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-092",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body sliding on a smooth inclined plane requires 4 seconds to reach the bottom, starting from rest at the top. How much time does it take to cover one - fourth the distance starting from rest at the top?",
+    "options": {
+      "A": "1 s",
+      "B": "4 s",
+      "C": "2 s",
+      "D": "16 s v 0 P \\theta O Q P 240m 360m 0m t Q B P A O x x t x t t Speed Total path length t NEET : NCR [Physics]"
+    },
+    "correct_option": "A",
+    "explanation": "A particle can not have two positions at same time."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-093",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement time graph of a moving object is a straight line. Then,",
+    "options": {
+      "A": "Its acceleration may be uniform",
+      "B": "lts velocity may be uniform",
+      "C": "Its acceleration may be variable",
+      "D": "Both its velocity and acceleration may be uniform 4"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-094",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the displacement of an object is zero, then what can we say about its distance covered?",
+    "options": {
+      "A": "It is negative",
+      "B": "It is must be zero",
+      "C": "It cannot be zero",
+      "D": "It may or may not be zero 4"
+    },
+    "correct_option": "A",
+    "explanation": "V cos θ = U cos (2θ) U cos2 V cos \\theta = \\theta 2 U[2cos 1] V cos \\theta - = \\theta = U[2 cos θ - sec θ] In projectile motion, horizontal component of velocity remains constant. v r \\theta v b B A a ሬ Ԧ v ሬ Ԧ a ሬ Ԧ v ሬ Ԧ Kinematics 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-095",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following changes when a particle is moving with uniform velocity?",
+    "options": {
+      "A": "Speed",
+      "B": "velocity",
+      "C": "acceleration",
+      "D": "Position vectors 4"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-096",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance travelled by an object is directly proportional to the time taken. Its acceleration",
+    "options": {
+      "A": "Increases",
+      "B": "decreases",
+      "C": "becomes zero",
+      "D": "remains constant 4"
+    },
+    "correct_option": "C",
+    "explanation": "In projectile motion, acceleration is constant and trajectory is parabolic."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-097",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance travelled by an object is directly proportional to the time taken, its speed",
+    "options": {
+      "A": "Increases",
+      "B": "decreases",
+      "C": "becomes zero",
+      "D": "remains constant 4"
+    },
+    "correct_option": "A",
+    "explanation": "→ If direction changes with constant speed then acceleration can change. → If an object is projected upward then at maximum height it's velocity is zero but acceleration due to gravity acts. → If velocity is constant then acceleration is zero."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-098",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the velocity - time graph of an object is a straight line sloping downwards, the body has",
+    "options": {
+      "A": "zero acceleration",
+      "B": "positive acceleration",
+      "C": "constant acceleration",
+      "D": "negative acceleration 4"
+    },
+    "correct_option": "B",
+    "explanation": "At any instant, the magnitude of velocity abd speed will be equal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-099",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If s represent distance and S represent displacement, then |S| s is",
+    "options": {
+      "A": "> 1",
+      "B": "< 1",
+      "C": "= 1",
+      "D": "≤ 1 4"
+    },
+    "correct_option": "C",
+    "explanation": "2H t g = ⇒ It doesn't depend on mass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-100",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a body is dropped from a tower, then there is an increase in its",
+    "options": {
+      "A": "mass",
+      "B": "velocity",
+      "C": "acceleration",
+      "D": "potential energy 4"
+    },
+    "correct_option": "D",
+    "explanation": "As body moves upward it's velocity decreases & at maximum height point it's velocity becomes zero but acceleration due to gravity act's downward."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-101",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the displacement - time graph of an object is parallel to the time - axis, then it represents that the object is : -",
+    "options": {
+      "A": "at rest",
+      "B": "in uniform motion",
+      "C": "in acceleration motion",
+      "D": "none of the above"
+    },
+    "correct_option": "D",
+    "explanation": "In projectile and circular motion and are not in same direction. In one dimensional motion v \\rho & a \\rho may have same direction. 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-102",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity - time graph of motion of an object starting from rest with uniform acceleration is a straight line",
+    "options": {
+      "A": "parallel to time axis",
+      "B": "parallel to velocity axis",
+      "C": "passing through origin",
+      "D": "none of the above"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-103",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the displacement of a given body is found to be directly proportional to the cube of the time elapsed, then the magnitude of the acceleration of the body is",
+    "options": {
+      "A": "zero",
+      "B": "constant but not zero",
+      "C": "increasing with time",
+      "D": "decreasing with time 5"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-104",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The acceleration of a moving object can be found from",
+    "options": {
+      "A": "area under displacement - time graph",
+      "B": "slope of displacement - time graph",
+      "C": "area under velocity - time graph",
+      "D": "slope of velocity - time graph 5"
+    },
+    "correct_option": "A",
+    "explanation": "V cos θ = U cos (2θ) U cos2 V cos \\theta = \\theta 2 U[2cos 1] V cos \\theta - = \\theta = U[2 cos θ - sec θ] In projectile motion, horizontal component of velocity remains constant. v r \\theta v b B A a ሬ Ԧ v ሬ Ԧ a ሬ Ԧ v ሬ Ԧ Kinematics 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-105",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles start from rest simultaneously and are equally accelerated. Throughout the motion the relative velocity of one w.r.t. other is : -",
+    "options": {
+      "A": "zero",
+      "B": "non - zero and directed parallel to acceleration",
+      "C": "non - zero and directed opposite to acceleration",
+      "D": "directed perpendicular to the acceleration Kinematics 5"
+    },
+    "correct_option": "A",
+    "explanation": "displacement will be zero when initial & final point is same. Distance can not be zero if location is changed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-106",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relative velocity of a particle moving with a velocity V w.r.t. itself is",
+    "options": {
+      "A": "V",
+      "B": "- V",
+      "C": "zero",
+      "D": "None of the above 5"
+    },
+    "correct_option": "C",
+    "explanation": "In projectile motion, acceleration is constant and trajectory is parabolic."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-107",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is thrown upward and it rises to a height of 100m. The relative velocity of the stone w.r.t. the earth will be maximum at.",
+    "options": {
+      "A": "the ground",
+      "B": "a height of 50m",
+      "C": "a height of 5m",
+      "D": "the highest point 5"
+    },
+    "correct_option": "A",
+    "explanation": "→ If direction changes with constant speed then acceleration can change. → If an object is projected upward then at maximum height it's velocity is zero but acceleration due to gravity acts. → If velocity is constant then acceleration is zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-108",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles are moving with velocities V 1 & V",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "At any instant, the magnitude of velocity abd speed will be equal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-109",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Their relative velocity is maximum when the angle between their velocities",
+    "options": {
+      "A": "zero",
+      "B": "\\pi /2",
+      "C": "\\pi",
+      "D": "\\pi /4 5"
+    },
+    "correct_option": "C",
+    "explanation": "In projectile motion, acceleration is constant and trajectory is parabolic."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-110",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body makes a displacement of 4m due East from a point 0 and then makes displacement of 3m due North. Its resultant displacement from O.",
+    "options": {
+      "A": "7m",
+      "B": "1m",
+      "C": "5m",
+      "D": "1.2m VE01 - 0476"
+    },
+    "correct_option": "C",
+    "explanation": "2H t g = ⇒ It doesn't depend on mass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-111",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total flight requires a time that is?",
+    "options": {
+      "A": "four time the time necessary to reach the maximum height",
+      "B": "thrice the time necessary to reach the maximum height",
+      "C": "equal to the time necessary to reach the maximum height",
+      "D": "twice the time necessary to reach the maximum height"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-112",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The angle of projection, for which the horizontal range and the maximum height of a projectile and equal is : -",
+    "options": {
+      "A": "45^\\circ",
+      "B": "\\theta = tan - 1",
+      "C": "\\theta = tan - 1",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-113",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For an object thrown at 45^\\circ to horizontal, the maximum height (H) and horizontal range (R) are related as",
+    "options": {
+      "A": "R = 16 H",
+      "B": "R = 8H",
+      "C": "R = 4H",
+      "D": "R = 2H"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-114",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bullets are fired horizontally with different velocities from the same height. Which will reach the ground first?",
+    "options": {
+      "A": "Slower one",
+      "B": "Faster one",
+      "C": "Both will reach simultaneously",
+      "D": "It cannot be predicted 6"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-115",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "NCR - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At the top of the trajectory of a projectile, the acceleration is",
+    "options": {
+      "A": "maximum",
+      "B": "minimum",
+      "C": "zero",
+      "D": "g"
+    },
+    "correct_option": "A",
+    "explanation": "V cos θ = U cos (2θ) U cos2 V cos \\theta = \\theta 2 U[2cos 1] V cos \\theta - = \\theta = U[2 cos θ - sec θ] In projectile motion, horizontal component of velocity remains constant. v r \\theta v b B A a ሬ Ԧ v ሬ Ԧ a ሬ Ԧ v ሬ Ԧ Kinematics 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-116",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a straight line motion the distance travelled is proportional to the square root of the time taken. The acceleration of the particle is proportional to : -",
+    "options": {
+      "A": "v",
+      "B": "v 2",
+      "C": "v 3",
+      "D": "v"
+    },
+    "correct_option": "B",
+    "explanation": "s t  s = kt 1/2 1 2 ds k v t dt 2 - = =  1 2 v t -  ( ) 3 3 1 2 2 2 dv k d k 1 k a t t t dt 2 dt 2 2 4 - - - (  = = = - = - ( ) )  ( ) 3 3 1 3 2 2 a t a t a v - -     "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-117",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man throws balls with the same speed vertically upwards one after the other at an interval of 2 seconds. What should be the speed of the throw so that more than two balls are in the sky at any time? (Given g = 9.8 m/s 2 )",
+    "options": {
+      "A": "More than 19.6 m/s.",
+      "B": "At least 9.8 m/s.",
+      "C": "Any speed less than 19.6 m/s.",
+      "D": "Only with speed 19.6 m/s."
+    },
+    "correct_option": "A",
+    "explanation": "Time of flight for first ball must be more than 4 sec, T > 4 sec  2u 4 g   u 2 g   u > 2g  u > 2 × 9.8  u > 19.6 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-118",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car is moving with speed u. Driver of the car sees red traffic light. His reaction time is t, then find out the distance travelled by the car after the instant when the driver decided to apply brakes. Assume uniform retardation ‘a’ after applying brakes.",
+    "options": {
+      "A": "2 u ut a +",
+      "B": "2 u ut 2a +",
+      "C": "2 u 2ut a +",
+      "D": "2 u 2ut 2a +"
+    },
+    "correct_option": "A",
+    "explanation": "During the reaction time, the car will move with constant speed. So, S 1 = ut The distance covered by the car after brakes are applied, 2 2 2 2 0 u u S 2a 2a - = = - So Total distance travelled = 2 1 2 u S S ut 2a + = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-119",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three different objects of masses m 1 , m 2 and m 3 are allowed to fall from rest and from the same point 'O' along three different frictionless paths. The speeds of the three objects on reaching the ground, will be in the ratio of : - (1) 1 2 3 m : m : m (2) 1 2 3 m :2m :3m (3)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "v 2 = 2as v 2gh = [does not depend upon mass]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-120",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is thrown vertically upwards. If air resistance is to be taken into account, then the time during which the body rises is",
+    "options": {
+      "A": "Equal to the time of fall",
+      "B": "Less than the time of fall",
+      "C": "Greater than the time of fall",
+      "D": "Twice the time of fall"
+    },
+    "correct_option": "A",
+    "explanation": "Let the initial velocity of ball be u Time of rise 1 u t g a = + and height reached 2 u 2(g a) = + Time of fall t 2 is given by 2 2 2 1 u (g a)t 2 2(g a) - = + 2 u u g a t (g a) g a (g a)(g a) +  = = + - + - 2 1 t t   because 1 1 g a g a  + -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-121",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is projected upwards. The times corresponding to height h while ascending and while descending are t 1 and t 2 respectively. The velocity of projection will be :",
+    "options": {
+      "A": "gt 1",
+      "B": "gt 2",
+      "C": "g",
+      "D": "1 2 g"
+    },
+    "correct_option": "A",
+    "explanation": "Time of flight = (t 1 + t 2 ) = 2v g (v = velocity of projection) 1 2 g(t t ) v 2 +  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-122",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is dropped from the top of a tower. The distance covered by it in the last one second is equal to that covered by it in the first three seconds. Find the height of the tower.",
+    "options": {
+      "A": "115 m",
+      "B": "125 m",
+      "C": "135 m",
+      "D": "145 m"
+    },
+    "correct_option": "B",
+    "explanation": "Let time of fall be ‘n’ 2 1 1 g(2n 1) g(3) 2 2 - = n 5sec  = Height of tower 2 1 g(5) 125m 2 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-123",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An elevator is accelerating upward at a rate of 6 ft/sec 2 when a bolt from its ceiling falls to the floor of the lift (Distance = 19 feet). The time (in seconds) taken by the falling bolt to hit the floor is (take g = 32 ft/ sec 2 )",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "2 2",
+      "D": "1 2 2"
+    },
+    "correct_option": "C",
+    "explanation": "Effective acceleration in ascending lift = (g + a) 2h 2 19 t g a 32 6  = = + + 2 19 t 1sec 38  = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-124",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown straight up with velocity at t = 0 and returns to earth at t = t",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "acceleration during the motion of the ball is constant. Hence, v - t curve is a straight line with negative slope ( - g) and positive intercept."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-125",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which graph shows the correct motion?",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "s t  s = kt 1/2 1 2 ds k v t dt 2 - = =  1 2 v t -  ( ) 3 3 1 2 2 2 dv k d k 1 k a t t t dt 2 dt 2 2 4 - - - (  = = = - = - ( ) )  ( ) 3 3 1 3 2 2 a t a t a v - -     "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-126",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bomb is fired from a cannon with a velocity of 1000 m/s making an angle of 30^\\circ with the horizontal. What is the time taken by the bomb to reach at the highest point -",
+    "options": {
+      "A": "11 sec",
+      "B": "23 sec",
+      "C": "38 sec",
+      "D": "50 sec t 1 v t t 1 v t t v t 1 t v t 1 Exercise - I Kinematics NEET : Extra Edge [ Physics ]"
+    },
+    "correct_option": "C",
+    "explanation": "usin 1000sin30 t g 10 \\theta ^\\circ = = t = 50 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-127",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile is projected with initial velocity (5i 12j) +  m/s. If g = 10 ms - 2 , then horizontal range is :",
+    "options": {
+      "A": "4.8 metre",
+      "B": "9.6 metre",
+      "C": "19.2 metre",
+      "D": "12 metre"
+    },
+    "correct_option": "D",
+    "explanation": "ˆ ˆ v 5i 12j = + \\rho ucos 5  \\theta = and usin 12 \\theta = ( )( ) 2 usin ucos 2 5 12 R 12m g 10 \\theta \\theta   = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-128",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies of masses 100 kg and 50 kg are projected horizontally from same height with speeds 40 m/s and 20 m/s, simultaneously. The ratio of time taken by both the bodies to reach the ground is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For vertical motion 2 y 1 H (u T) g(T) 2 = + Here 'H' & 'u y ' same for both bodies so time will be same. 1 2 T 1 T 1 = u u pward motion downward motion u =0 a' = g+a a' = g - a Exercise - I NEET : Extra Edge [ Physics ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-129",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is projected from the top of a tower at an angle 60^\\circ with the vertical. What happens to the vertical component of its velocity?",
+    "options": {
+      "A": "Increases continuously",
+      "B": "Decreases continuously",
+      "C": "Remains unchanged",
+      "D": "First decreases and then increases"
+    },
+    "correct_option": "D",
+    "explanation": "As acceleration due to gravity acts against the motion up to the highest point, hence vertical component of the velocity first decrease. But during downward motion, acceleration due to gravity acts in the direction of motion; hence vertical component of velocity then starts increasing."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-130",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man walks on a straight road from his home to a market 2.5 km away with a speed of 5 km/h. Finding the market closed, he instantly turns and walks back home with a speed of 7.5 km/h. The average speed of the man over the interval of time 0 to 40 min is equal to",
+    "options": {
+      "A": "5 km/h",
+      "B": "25/4 km/h",
+      "C": "30/4 km/h",
+      "D": "45/8 km/h"
+    },
+    "correct_option": "D",
+    "explanation": "Average speed = Total distance covered Total time taken For onwards journey to market, t 1 = Distance speed = 2.5 5 = 0.5 h = 1 2 h = 30 min For backwards journey from market, Time left = (40 - 30) = 10 min distance = velocity × time = 7.5 10 60  = 1.25 km Average speed = 2.5 1.25 40/60 + = 3.75 60 40  km/h = 375 6 45 4 100 8  =  km/h"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-131",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A train is moving towards east and a car is along north, both with same speed. The observed direction of car to the passenger in the train is: -",
+    "options": {
+      "A": "North - east direction",
+      "B": "North - west direction",
+      "C": "South - east direction",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Train ˆ v vi = \\rho Car ˆ v vj = \\rho velocity of car relative to train rel ˆ ˆ v vj vi = - \\rho North - West direction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-132",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is thrown upwards and it rises to a height of 100 m. The relative velocity of the stone with respect to earth will be maximum at height: -",
+    "options": {
+      "A": "100 m",
+      "B": "50 m",
+      "C": "Ground",
+      "D": "25 m"
+    },
+    "correct_option": "C",
+    "explanation": "at TOP V = 0 ∴ V stone w.r.t earth is max. at ground"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-133",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If rain is falling at some angle from vertical and has horizontal velocity 2 m/s in east direction. With what velocity a man must move on the horizontal surface so that rain will appear vertical to him : -",
+    "options": {
+      "A": "4 m/s in east direction",
+      "B": "2 m/s in east direction",
+      "C": "2 m/s in west direction",
+      "D": "2 m/s in a circular path"
+    },
+    "correct_option": "B",
+    "explanation": "If man has horizontal velocity equal to horizontal component of rain velocity, then relative velocity in horizontal direction becomes zero, so rain will appear vertically."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-134",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy is running on a levelled road with velocity (u) with a long hollow tube in his hand. Water is falling vertically downwards with velocity (v). At what angle to the vertical, should he incline the tube so that the water drops enters without touching it s side :",
+    "options": {
+      "A": "1 v tan u - (  ( ) ) ",
+      "B": "1 v sin u - (  ( ) ) ",
+      "C": "1 u tan v - (  ( ) ) ",
+      "D": "1 v cos u - (  ( ) ) "
+    },
+    "correct_option": "C",
+    "explanation": "rm r m v v v = - \\rho\\rho\\rho rm ˆ ˆ v vj ui  = - - \\rho u tan v  \\theta = 1 u tan v - (   \\theta = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-135",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A river is flowing at the rate of 8 km/h. A swimmer swims across the river with a velocity of 10 km/h w.r.t. water. The resultant velocity of the man will be in (km/h): -",
+    "options": {
+      "A": "117",
+      "B": "340",
+      "C": "164",
+      "D": "3 40"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 res P r v v v 164 = + = \\rho km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-136",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Extra Edge - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man wishes to swim across a river 0.5 km wide. If he can swim at the rate of 2 km/h in still water and the river flows at the rate of 1 km/h. The angle made by the direction (w.r.t. the flow of the river) along which he should swim so as to reach a point exactly opposite his starting point, should be :",
+    "options": {
+      "A": "60^\\circ",
+      "B": "120^\\circ",
+      "C": "135^\\circ",
+      "D": "90^\\circ Exercise - I"
+    },
+    "correct_option": "C",
+    "explanation": "R v 1 sin 45 v 2 \\theta = =  \\theta = ^\\circ Angle with river flow = 90 + 45 = 135^\\circ N E S W (N) (W) ˆ vi - ˆ vj T OP v = 0 u u v v m \\theta \\theta m ˆ V ui = \\rho\\rho\\rho r ˆ V vj = - \\rho\\rho\\rho Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-137",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If displacement of a particle is zero, the distance covered :",
+    "options": {
+      "A": "must be zero",
+      "B": "may or may not be zero",
+      "C": "cannot be zero",
+      "D": "depends upon the particle"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity = ˆ ˆ (15i 2) 5j 8 ˆ ˆ 3i 4j 2 8  +  = + + v 5 m/s = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-138",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the distance covered is zero, the displacement :",
+    "options": {
+      "A": "must be zero",
+      "B": "may or may not be zero",
+      "C": "cannot be zero",
+      "D": "depends upon the particle"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-139",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The location of a particle is changed. What can we say about the displacement and distance covered by the particle :",
+    "options": {
+      "A": "Both cannot be zero",
+      "B": "One of the two may be zero",
+      "C": "Both must be zero",
+      "D": "If one is positive, the other is negative and vice - versa"
+    },
+    "correct_option": "A",
+    "explanation": ".......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-140",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The numerical ratio of distance to the displacement covered is always : -",
+    "options": {
+      "A": "less than one",
+      "B": "equal to one",
+      "C": "equal to or less than one",
+      "D": "equal to or greater than one"
+    },
+    "correct_option": "A",
+    "explanation": "displacement ≤ distance"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-141",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Milkha S ingh can cover one round of a circular park in 40 second, After 1 minute and 40 second, he will cover a distance and displ a cement respectively (R = Radius of circle): -",
+    "options": {
+      "A": "Zero, Zero",
+      "B": "4 \\pi R, R",
+      "C": "5 \\pi R, 2R",
+      "D": "6 \\pi R, 2R"
+    },
+    "correct_option": "C",
+    "explanation": "Total time = 100 sec. distance = 2 \\pi R + 2 \\pi R + \\pi R = 5 \\pi R displacement = 2R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-142",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hall has the dimensions 10 m × 10 m × 10 m. A fly starting at one corner ends up at a diagonally opposite corner. The magnitude of its displacement is nearly",
+    "options": {
+      "A": "5 3 m",
+      "B": "10 3 m",
+      "C": "20 3 m",
+      "D": "30 3 m"
+    },
+    "correct_option": "A",
+    "explanation": "displacement (diagonal of cube) 2 2 2 (10) (10) (10) 10 3 m = + + ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-143",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ant is scramping on the stairs as shown in the figure. There are '4' stairs and each stair has width of 12 cm and height of 5 cm. The distance travelled by the ant to scramp the stairs is : -",
+    "options": {
+      "A": "52 cm",
+      "B": "68 cm",
+      "C": "48 cm",
+      "D": "20 cm"
+    },
+    "correct_option": "B",
+    "explanation": "distance = 5 × 4 + 12 × 4 = 68 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-144",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An insect starts climbing a conical birthday hat of radius 5 cm at base. It starts from point A and reaches point B, taking spiral path on the hat. Find out its displacement if height is 12 cm: -",
+    "options": {
+      "A": "12 cm",
+      "B": "8 cm",
+      "C": "13 cm",
+      "D": "25 cm"
+    },
+    "correct_option": "C",
+    "explanation": "displacement 2 2 S (12) (5) = + S = 13 cm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-145",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three particles P, Q and R are situated at point A on the circular path of radius 10 m. All three particles move along different paths and reach point B as shown in figure. Then the ratio of distance traversed by particles P and R is :",
+    "options": {
+      "A": "3 4",
+      "B": "3 1",
+      "C": "3 4 \\pi",
+      "D": "3 \\pi 12 5 A B 5 cm 12cm Q O A B R P Exercise - I"
+    },
+    "correct_option": "A",
+    "explanation": "P R 3 R s 3 2 R s 1 2 \\pi = = \\pi"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-146",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body moves along the curved path of a semi circle . Calculate the ratio of distance to displacement: (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Distance = \\pi R displacement = 2R Distance 11 displacement 7 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-147",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Distance travelled by the tip of minute hand of length 10 cm in 100 sec is",
+    "options": {
+      "A": "m 180 \\pi",
+      "B": "m 360 \\pi",
+      "C": "m 1200 \\pi",
+      "D": "3 m 2160 \\pi"
+    },
+    "correct_option": "A",
+    "explanation": "Distance = 2 R 100 3600 \\pi  2 10 100 m 3600 100 180 \\pi \\pi =  = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-148",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a particle moves from point P(2, 3, 5) to point Q(3, 4, 5). Its displacement vector be : -",
+    "options": {
+      "A": "ˆ ˆ \\hat{i} j 10k + +",
+      "B": "ˆ ˆ \\hat{i} j 5k + +",
+      "C": "ˆ \\hat{i} j +",
+      "D": "ˆ ˆ ˆ 2i 4j 6k + +"
+    },
+    "correct_option": "A",
+    "explanation": "ˆ ˆ ˆ S (3 2)i (4 3)j (5 5)k = - + - + - \\rho ˆ ˆ S i j = + \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-149",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man walks 30 m towards north, then 20 m towards east and the last 30 2 m towards south - east. The displacement from origin is :",
+    "options": {
+      "A": "10 m towards west",
+      "B": "50 m towards east",
+      "C": "60 2 m towards north west",
+      "D": "60 2 m towards east north"
+    },
+    "correct_option": "B",
+    "explanation": "1 2 3 d d d d = + + \\rho\\rho\\rho\\rho ˆ \\hat{i} \\hat{j} ˆ d 30j 20i 30 2 2 (  - = + + ( ) ( ) )  \\rho ˆ ˆ ˆ ˆ d 30j 20i 30i 30j = + + - \\rho ˆ d 50i = + \\rho d 50m = \\rho towards east"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-150",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person walks 80 m east, then turns right through angle 143^\\circ walks further 50 m and stops. His position relative to the starting point is",
+    "options": {
+      "A": "50 m, 53^\\circ east of south",
+      "B": "50 m, 53^\\circ south of east",
+      "C": "30 m, 37^\\circ south of east",
+      "D": "30 m, 53^\\circ south of east"
+    },
+    "correct_option": "A",
+    "explanation": "1 ˆ d 80i = \\rho 2 ˆ ˆ d 30j 40i = - - \\rho Position from starting point 1 2 d d d = + \\rho\\rho\\rho ˆ ˆ d 40i 30j = - \\rho 2 2 d 40 30 50 m = + = \\rho 40 4 tan 30 3 (  (  \\theta = - = - ( ) ( ) )  )  \\theta = 53^\\circ east of south"
+  }
+]

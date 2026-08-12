@@ -1,0 +1,464 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_301",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a given medium find intensity ratio I 1 :I 2 for the shown waves :- t 1 2 y 4 1 (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Amplitude becomes double Hence it becomes = 0.5 and frequency becomes half hence \\omega becomes = \\pi (half) and travelling in opposite direction with same speed so K will also become half v const. K \\omega   = =      y = 0.5 cos ( \\pi t + \\pi x)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_302",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The diagram below shows the propagation of a wave. Which points are in phase ? A B C D E O",
+    "options": {
+      "A": "A, B",
+      "B": "B, C",
+      "C": "B, D",
+      "D": "E, B"
+    },
+    "correct_option": "D",
+    "explanation": "v max = A \\omega v max = 3 × 10 = 30 units",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_303",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The transverse displacement of a stretched string which is connected between two rigid supports is given by y = 0.06 sin 2 x 80 t 5 π   - π     where x and y are in metre and t in sec. Length of string is 1.5 m and its mass is 3 × 10 -2 kg. Then tension in string will be :-",
+    "options": {
+      "A": "600 N",
+      "B": "400 N",
+      "C": "800 N",
+      "D": "200 N"
+    },
+    "correct_option": "C",
+    "explanation": "6 v 2 units k 3 \\omega = = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_304",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The figure shows four progressive waves A, B, C & D. It can be concluded from the figure that with respect to wave A :- ω t= π/2 ω t= π ω t= 3 π /2 ω t B A C y",
+    "options": {
+      "A": "the wave C is ahead by a phase angle of π /2 & the wave B lags behind by a phase angle π /2",
+      "B": "the wave C lags behind by a phase angle of π /2 & the wave B is ahead by a phase angle of π /2",
+      "C": "the wave C is ahead by a phase angle of π & the wave B lags behind by the phase angle of π",
+      "D": "the wave C lags behind by a phase angle of π & the wave B is ahead by a phase angle of π"
+    },
+    "correct_option": "B",
+    "explanation": "Wave is a disturbance, which carries energy and momentum without transport of mass of matter.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_305",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When the temperature of an ideal gas is increased by 600 K, the velocity of sound in the gas becomes 3 times the initial velocity in it. The initial temperature of the gas is .",
+    "options": {
+      "A": "-73^\\circ C",
+      "B": "27^\\circC",
+      "C": "127^\\circC",
+      "D": "327^\\circC $//"
+    },
+    "correct_option": "B",
+    "explanation": "For closed pipe, v f n m 1,3,5,..... 4 (  = = ( ) )  \\lambda For n = 1, f 1 = v 4 (  ( ) )  \\lambda n = 1, 3, 5….. For n = 1, f 1 = v 320 80Hz 4 4 1 = =  \\lambda For n = 3, f 3 = 3f 1 = 240 Hz For n = 5, f 5 = 5f 1 = 400 Hz Wave Motion OR L = 1m = 100 cm v = 320 m/s fundament freq. v f 4 = \\lambda = 320 4 1  = 80 Hz 3 rd harmonic = 3 × 80 = 240 Hz 5 th harmonic = 5 × 80 = 400 Hz"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_306",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is/are correct :-",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "y 1 = a sin \\omega t , y 2 = a cos \\omega t = a sin( \\omega t + 2 \\pi )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_307",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of sound in oxygen (O 2 ) at a certain temperature is 460 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Distance between two consecutive crests is 5 m which is equal to \\lambda = 5m, freq. n = 2 Hz v = n \\lambda = 10 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_308",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of sound in helium (He) at the same temperature will be: (assume both gases to be ideal)",
+    "options": {
+      "A": "460 10 ms -1",
+      "B": "360 5 ms -1",
+      "C": "650 ms -1",
+      "D": "330 ms -1"
+    },
+    "correct_option": "B",
+    "explanation": "Total length of string \\lambda = \\lambda 1 + \\lambda 2 + \\lambda 3 But frequency  1 length so 1 2 3 1 1 1 1 n n n n = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_309",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How far does the sound travel in air when a tuning fork of frequency 560 Hz makes 30 vibrations ? Given speed of sound in air = 336 m/s.",
+    "options": {
+      "A": "36 m",
+      "B": "18 m",
+      "C": "72 m",
+      "D": "9 m"
+    },
+    "correct_option": "B",
+    "explanation": "\\omega = 2 \\pi n \\omega  n (2 \\pi = const) \\omega  1 \\lambda 1  = \\lambda  \\omega  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_310",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ultrasonic, infrasonic and audio waves travel through a medium with speeds V u , V i and V a respectively then :-",
+    "options": {
+      "A": "V u , V i and V a are equal",
+      "B": "V u > V a >V i",
+      "C": "V u < V a <V i",
+      "D": "V a < V u and V u ≈ V i"
+    },
+    "correct_option": "A",
+    "explanation": "Interference is obtained by coherent waves superposition. A and C has same frequency."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_311",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the wave represented by, y = 25 sin (20t + 5x) where y is in mm, x in m and t in seconds. Which of the following is/are true ?",
+    "options": {
+      "A": "the wave is a standing wave",
+      "B": "the speed of the wave is 4 ms -1",
+      "C": "the frequency of oscillation is 500 × 2 π Hz",
+      "D": "two nearest points in the same phase have separation 40 π cm"
+    },
+    "correct_option": "B",
+    "explanation": "v = 10 n = 100  \\lambda = 10 100 = 0.1 m = 10 cm 2.5 2 2 10 2 \\Delta\\phi \\Delta\\lambda \\Delta\\phi \\pi =  =  \\Delta\\phi = \\pi \\lambda \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_312",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The frequency of man's voice is 150 Hz and its wavelength is 1 m. If the wavelength of a child's voice is 1.5 m, then the frequency of the child's voice in same medium is :-",
+    "options": {
+      "A": "100 Hz",
+      "B": "150 Hz",
+      "C": "400 Hz",
+      "D": "450 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "At the upper end - v 2.5 10 =  = 5 m/s at a point 0.5 m distance from bottom - v 0.5 10 =  = 5 = 2.24 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_313",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A light pointer fixed to one prong of a tuning fork touches a vertical plate. The fork is set vibrating and the plate is allowed to fall freely. Sixteen complete oscillations of fork are counted when the plate falls through 10 cm. What is the frequency of the tuning fork ?",
+    "options": {
+      "A": "112 Hz",
+      "B": "56 Hz",
+      "C": "8/7 Hz",
+      "D": "7/8 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "2 T T T 0.04 v 2 K 0.04 0.50 \\pi (  ( ) \\omega )  =  =  = \\pi \\mu \\mu (  ( ) )   0.50 0.50 T 0.04 0.04 0.04  =  T= 50 4 × 0.5 = 6.25 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_314",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the density of air at NTP is 1.293kg/m 3 and γ = 1.41, then the velocity of sound in air at NTP is :",
+    "options": {
+      "A": "102.3 m/s",
+      "B": "252.3 m/s",
+      "C": "332.3m/s",
+      "D": "432.3 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "v wave = k \\omega v particle = A \\omega On comparing v w  = 2m/s , v w2 = 3m/s , v w3 = 11 m / s 5 v p1 = 12cm/s , v p2 = 36cm/s , v p3 = 44cm/s \\omega v ത x"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_wave_motion_315",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is correct ?",
+    "options": {
+      "A": "Both sound and light waves in air are electromagnetic",
+      "B": "Both sound and light waves in air are transverse",
+      "C": "Sound waves in air are faster while light waves slower",
+      "D": "Sound waves in air are longitudinal while light waves transverse $//"
+    },
+    "correct_option": "D",
+    "explanation": "from fig. A is moving down & B is moving up and the phase at A is greater the phase at B."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_316",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two waves are represented by : y 1 = a sin t 6 π   ω +     and y 2 = a cos ω t What will be their resultant amplitude ?",
+    "options": {
+      "A": "a",
+      "B": "2 a",
+      "C": "3 a",
+      "D": "2a"
+    },
+    "correct_option": "C",
+    "explanation": "v = k \\omega = 30 1 = 30 m/s d = 1.3 × 10 - 4 kg/m, v 2 d = T then T = 1.17 × 10 - 1 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_317",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A small piece of cork in a ripple tank oscillates up and down as ripples pass it. If the ripples travelling at 0.3 m/s have a wavelength of 1.5 π cm and the cork vibrates with an amplitude of 5 mm, the maximum velocity of the cork is:-",
+    "options": {
+      "A": "20 cm/s",
+      "B": "20 m/s",
+      "C": "0.02 m/s",
+      "D": "200 cm/s"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_318",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the equation of a progressive wave is given by : t x y 4 sin 5 9 6 π [ ] = π - + [ ] [ ] where x, y are in meter is t in second. Then, which of the following is correct ?",
+    "options": {
+      "A": "υ = 5 cm/s",
+      "B": "λ = 18 m",
+      "C": "A = 0.04 cm",
+      "D": "If = 50 Hz"
+    },
+    "correct_option": "B",
+    "explanation": "2 O w RT v V M \\gamma = = ( ) 2 2 H O w mix RT v M + \\gamma = (M w ) mix < M w so 2 2 2 H O O v V + "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_319",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The phase difference between two points separated by 0.8 m in a wave of frequency 120 Hz is 0.5 π . The wave velocity is :-",
+    "options": {
+      "A": "144 m/s",
+      "B": "256 m/s",
+      "C": "384 m/s",
+      "D": "720 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "E v = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_320",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "You have learnt that a travelling wave in one dimension is represented by a function y = f(x, t) where x and t must appear in the combination x - vt or x + vt, i.e. y = F (x \\pm vt). Is the converse true? Examine if the following functions for y can possibly represent a travelling wave:",
+    "options": {
+      "B": "log [",
+      "C": "exp [-",
+      "D": "1/",
+      "A": "Option A"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 2 1 I va I n a 2 = \\rho \\omega  "
+  }
+]

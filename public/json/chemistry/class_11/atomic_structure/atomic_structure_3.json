@@ -1,0 +1,1407 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_301",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A dye absorbs a photon of wavelen g th \\lambda and re - emits the same energy into two photons of wavelengths \\lambda 1 and \\lambda 2 respectively. The wavelength \\lambda is related with \\lambda 1 and \\lambda 2 is : -",
+    "options": {
+      "A": "1 2 1 2 \\lambda + \\lambda \\lambda = \\lambda \\lambda",
+      "B": "1 2 1 2 \\lambda \\lambda \\lambda = \\lambda + \\lambda",
+      "C": "2 2 1 2 1 2 \\lambda \\lambda \\lambda = \\lambda + \\lambda",
+      "D": "1 2 2 1 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Orbital angular momentum = h ( 1) 2 + \\pi \\lambda\\lambda = h 6 2 \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_302",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the sum of number of protons, neutrons and electrons in 80 35 Br .",
+    "options": {
+      "A": "45",
+      "B": "80",
+      "C": "85",
+      "D": "115 AS01 - 0079"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) 80 35 Br no. of proton = Z = 35 no. of e - = Z = 35 no. of neutron = A - Z = 80 - 35=45 Sum = p + e - + n = 35 + 35 + 45 =115"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_303",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate frequency of yellow radiation having wavelength 5800 Å",
+    "options": {
+      "A": "5.172 × 10 18 s - 1",
+      "B": "5.172 × 10 14 s - 1",
+      "C": "5.172 × 10 19 s - 1",
+      "D": "5.172 × 10 16 s - 1 AS10 - 0385"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) c  = \\lambda c = 3 × 10 8 m/s \\lambda = 5800Å = 5800 × 10 - 10 m 8 8 3 10 58 10 -   =  = 0.05172 × 10 16 = 5.172 × 10 14 s - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_304",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate energy of one mole of photons of radiation whose frequency i s 5 × 10 14 H z .",
+    "options": {
+      "A": "199.51 J mol - 1",
+      "B": "199.51 kJ/mol",
+      "C": "199.51 × 10 3 kJ/mol",
+      "D": "None of these AS07 - 0400"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) E = ?, n = 1mol = 6.022 × 10 23 ,  = 5 × 10 14 H z E = nh  E = 6.023 × 10 23 × 6.62 × 10 - 34 × 5 × 10 14 E = 199.51 KJ/mol"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_305",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What w ill be the wavelength of a ball of ma ss 0.1 kg moving with a velocity of 10 ms - 1 ?",
+    "options": {
+      "A": "6.626 × 10 34 m",
+      "B": "6.626 × 10 36 m",
+      "C": "6.626 × 10 - 3 4 m",
+      "D": "6.626 × 10 - 36 m AS01 - 0725"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) 34 34 h 6.62 10 6.62 10 mv 0.1 10 - -  \\lambda = = =  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_306",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the ma ss of a photon with wavelength 3.313 Å .",
+    "options": {
+      "A": "1.5 × 10 - 29 kg",
+      "B": "0.6 6 × 10 - 30 kg",
+      "C": "6.6 × 10 - 29 kg",
+      "D": "6.6 × 10 - 3 3 kg AS06 - 0287"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) \\lambda = h mv In vac u um the speed of light c = 3 × 10 8 m /s m = h v \\lambda = 34 10 8 6.626 10 3.313 10 3 10 - -     = 6.66 × 10 - 3 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_307",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "NCERT_Direct"
+      ],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A golf ball has a ma ss of 10g, and a speed of 50m/s. I f the speed can be measured with an accuracy of 2%, calculate the uncertainty in the position.",
+    "options": {
+      "A": "0.527 × 10 - 34 m",
+      "B": "5.27 × 10 - 33 m",
+      "C": "5.27 × 10 - 34 m",
+      "D": "52.7 × 10 - 34 m AS05 - 0189"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) mass(m)=10g, = 10 1000 k g  10 - 2 k g, v = 50m/s h x v 4 m \\Delta  \\Delta = \\pi v 100 2% v \\Delta  = 34 2 0.527 10 x 10 v - -  \\Delta =  \\Delta 2 2 v v 50 1 100 100 \\Delta =  =  = \\Delta x = 0.527 × 10 - 32 m \\Delta x = 5.27 × 10 - 33 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_308",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match the following species with their corresponding ground state electronic configuration. Atom/Ion Electronic configuration ( i ) Cu",
+    "options": {
+      "A": "1s 2 2s 2 2p 6 3s 2 3p 6 3d 10",
+      "B": "1s 2 2s 2 2p 6 3s 2 3p 6 3d 10 4s 2",
+      "C": "1s 2 2s 2 2p 6 3s 2 3p 6 3d 10 4s 1",
+      "D": "1s 2 2s 2 2p 6 3s 2 3p 6 3d 9"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) 29 Cu = 1s 2 2s 2 2p 6 3s 2 3p 6 4s 1 3d 10 (Exception) Cu +2 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 9 Cr +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 3 Zn +2 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 10",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_309",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following pairs, the ions are isoelectronic ?",
+    "options": {
+      "A": "Na + , M g 2+",
+      "B": "Al 3+ , O¯",
+      "C": "Na + , O",
+      "D": "In 3 - , Cl¯ AS10 - 0386 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Isoelectronic → same e - in different element ( 1) Na + Mg +2 ↓ ↓ 10e - 10e - (2) Al +3 O - ↓ ↓ 10e - 9e - (3) Na + O ↓ ↓ 10e - 8e - (4) N - 3 Cl - ↓ ↓ 10e - 18e - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_310",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pair of ions having same electronic configuration is :",
+    "options": {
+      "A": "Cr 3+ , Fe 3+",
+      "B": "Fe 3+ , M n 2+",
+      "C": "Fe 3+ , C o 3+",
+      "D": "S c 3+ , Cr 3+ AS10 - 0017 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) (1) Cr +3 , Fe +3 Cr +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 3 Fe +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 (2) Fe +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 Mn +2 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 (3) Fe +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 Co +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 6 (4) Sc +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 Cr +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 3 1",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_311",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the number of photons of light with a wavelength of 4000pm that provide 1J of energy ?",
+    "options": {
+      "A": "2 × 10 17",
+      "B": "2 × 10 16",
+      "C": "2 × 10 19",
+      "D": "2 × 10 1 5 AS10 - 0018 Atomic Structure Atomic Structure 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) 80 35 Br no. of proton = Z = 35 no. of e - = Z = 35 no. of neutron = A - Z = 80 - 35=45 Sum = p + e - + n = 35 + 35 + 45 =115"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_atomic_structure_312",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the items of column I and column II configuration. Column - I Column - II (i) r n",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "2 3 z n ",
+      "B": "2 n z ",
+      "C": "z n ",
+      "D": "3 2 n z "
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) c  = \\lambda c = 3 × 10 8 m/s \\lambda = 5800Å = 5800 × 10 - 10 m 8 8 3 10 58 10 -   =  = 0.05172 × 10 16 = 5.172 × 10 14 s - 1",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_313",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two atoms are said to be i sodiaphers if.",
+    "options": {
+      "A": "T hey have same atomic number but different mas s number",
+      "B": "T hey have same number of neutrons but different number of electrons",
+      "C": "T hey have same difference of the number of neutrons and protons.",
+      "D": "Sum of the number of protons and neutrons i s same but the number of protons i s different. AS10 - 0019 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) E = ?, n = 1mol = 6.022 × 10 23 ,  = 5 × 10 14 H z E = nh  E = 6.023 × 10 23 × 6.62 × 10 - 34 × 5 × 10 14 E = 199.51 KJ/mol"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_314",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the atomic number of the element whose outermost electronic configuration is 3d 6 ?",
+    "options": {
+      "A": "27",
+      "B": "25",
+      "C": "26",
+      "D": "24 AS10 - 0020 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) 34 34 h 6.62 10 6.62 10 mv 0.1 10 - -  \\lambda = = =  ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABG8AAABBCAIAAADg2B7zAAAJ2UlEQVR42u3dTWwU9xnH8We8M7vr3bUrDjayi0uamEotL2mpMOE1hrZpGgcwtlEDDTbHEhWQEAdIrxzSQ80FQ5pLIH4jFAJUAcza6xdsEKEJiaG8GbUNTQ+liRLA652ZndmdHpwiQnjx++54v58jEiCe8WF+/P/z/BTHcQQAACBTJRKJU+FwX1+fpmki4jiOoiiMJT0lk8lgMLhu7Vq/3880kA5URgAAADI5SjU1N3d1dl682PvpzX8xEFf46MMPa2trfT4fo0DKZTECAACQyVGqrTXs9Xrnzv1pKBRiJq7w50OHtm7dapomowBpCgAAIDVRqrGpOXyqJTs7kEwmVVVdvmwZgYpABZCmAAAAnhyl2lpPBQLBwV+xbdvv9xOoCFQAaQoAAOCRLNtuam5uDbdkZwfuXzhhWRaBikAFkKYAAAAe6cSJky0nTwQCwQd29ymKcu+EKjcnZ/BXGJcrApVhGIwCpCkAAIDxdb2v71TLyW9HKfnmCVVpaWluTg7b0t0SqP5YW8sckBIKfVMAACBD9N24Ubd7dzQaHayWehTHcTRNMwyjs7Pzbn8/c0t/mqo2HziwdMkSRgHSFAAAwBizbft0d/fRI0ei0X6v98k9RYOByjTNCx9f+OyzfzPA9BcMBrdv376hpoYeKpCmAAAAxjJKNTQ2tYZbAoGgx+MZ+m/0eDyJRCLc2hqNRhmjK6ypqqLYF8J3UwAAAGMYpSJt4VAoZ1hRSkQSiQQ9VMKWP4A0BQAAMjVKNUbawo9ZO/HEPyE7O/tny5cTqAhUAGkKAABkCsuy6hsaIm2tI45S8v+16QQqAhVAmgIAABnk/eMn2lrDo4lSIuI4juM48XicYl/XBapt27YlEglGAdIUAADA8Fy9di18qmWUUUq+1UNFoHKRdw8ePHrsGHOAsNMPAABg6K5dv163e3csFnt8r9QIqKpqGEZ7Rwdb/lwhFArt3//OksWLGAWEsykAAIAhRqmBgeiYRykRsSwrOzubEyq3iEaj69e/2t1zhlGANAUAAPAEFy9d2lNXNzAQHUpFr4xoKYVlWYFAYH7JvOHuW0dKxGKx9etfDbe2MQpw0w8AAODhLNs+ePBgeySiKIqqquP913k8nv7+uz1nznLlzy1qqqt37txJsS9IUwAAAA9Gqfr6+vZIWyAQzMqaoKs3mqbpus43VC5SVVm5a9cuAhVIUwAAAF+Lx+MNjY0d7ZEx3OAnLKWYpNZUVdXW1hKoIHw3BQAAICLvHz8+yopeGfXa9NycHB6E0EMF0hQAAICLXLl6tTUcDgZDEx+lRERRFNu2/X5/aWkpW/6EHioIN/0AAADcE6X21NXpuj4ey9CHznEcTdO48if0UEE4mwIAAHBPlIrFBlIbpeT+E6rnl/p8Xh6N0EMF0hQAAED6R6lx6pWSEX1DFQrlzJ41i6cj7umhIlCBNAUAADLLJ7296RalRERRlHg8Xlw848fPzqHYl2JfCN9NAQAApBXLspoPvNvZEcnK8kxARa+MtIfq7t073T1n+IZKKPYFaQoAACAdJJPJt/ft62iPpGqDH8W+QrEvINz0AwAALvTB+fNdnR3pH6VEJB6PD/ZQsTbdLQ4dPkwPFUhTAABgcrp85UpjQ4PP50//KCX3bfkjUAk9VBBu+gEAAKQ0Su2pqzMMI+XL0GWYPVRer5crf0IPFYSzKQAAAKKUDO+EyrIsv9+/rLSUHiqhhwqkKQAAgIn0t8uX99TV6XrMdVHqHtu2g8EgPVRCDxVIUwAAABMcpQzDSKteKRnRUooZM37w7JzZPFMCFUhTAAAAExSlTNP0eifDHbl4PD5z5qw5szmhIlBB2EIBAAAg49cr1RaJHD1yxDRN917weyiv13vz5qe9Fy/FYjEedPoLBAI7duyoqa72+/1MA6QpAADgAmfOnt1TtzsQCHo8nsn3r/P5fAMDA2z5c5EtW7b8/vXXmQNIUwAAQNL/gt+be/eapjkpo9QgVVUNwyBQuYWmqk3Nzc8vXcooIHw3BQAA0n6Dnz6Jo5SIUOzrLpZt19TUdPf0MAoIZ1MAACA9fdLb++bevaZpaNrkr2ZyHEfTtFhsINLebppxnr644Ruq+vr6JYsXMwp8I03959atZDLJIAAAQApbbm/fvv2XY8d0XVcn19qJx/N5vV1dnR+c/ys/A24JVG+88Yfi4mcsy0ptFPf5fJqmcSgiqf4/ERFR/vTWW4ZhKIrCRAAAgKR0311WVlZGvSB6PJ5oNHqguenv//gnPwBu8dz8kry8/ETCZhQZzjAMEVHe3rePNAUAACAp2kgxMDDQ3NRIoBLXbGX0LlywIC8v37btFJ6K8Paecqb5dZrabxg6zwMAAIBAhfQMVI7jxOPmvZNb0pRwNgUAAIB7gSoWi3Wf7jrd3cMH7a7g1bSSknmFhd+dgEDlOI5lxRcuWlxYWMinUpJOyzlFRGUQAAAAKX8t8/l8L5WtyMvLP/zeewSq9Be3rI8ufJyfP1VVVcuyxu9kwnEcw9Cr1vx6xctljF3omwIAAMBDX5pN05hXUlJZUTG567YmDV3XO7s6k8mkNm6LKIlSab7QjzQFAAAg6fRduzmvZP4Lv/g5o3CFL7/8KhKJJJNJVVWJUpJhvQ6kKQAAgLQTj5vzn1tQ/MzTjMIVr9Rf3b49HoFq8KyyonINUUq46QcAAIChv0Z7vd5X1q575unvMw1XXPe6P1CNVWGarsde/FXZqpUrGDJpCgAAAMOQSCSCweDadb8hULnFvUCladroA5Vh6NOnP1VW9hKDJU0BAABARrDlj0Dl3kA1yihVUFC48bXXckIhpkqaAgAAAIEqgwKVbdsj3sqo67GCgsJNmzcXFhQwT9IUAAAARhuoXlm7buaPfsg03BKozp07pyhKVlbWsD6+chxH12PFxTOIUu7iKS8vt217/BrHAAAAMGLJZNLr9c6aPfs7ubk3btwYqyUHGD/90egXX3xeVFSkqupQipgVRRlchr5yVfmGDRumTJnCDIWzKQAAAIxVoBKRBQsX0UPlFrf++3lHR8cQ16YPnkqVr66srKjw+/1MjzQFAAAAGdtN3IM9VHxDJW5bSvH4temDvVLlqyvKV61kaKQpAAAAjGMPFUspJtnadF2PvfDLF1eXl/PdDWkKAAAAQg8Vhrg23TD0adOKXi4rI0qRpgAAACATtuWPQOW6QPXA2nTD0PPzp/5248bc3FymRJoCAAAAPVR4eKBqa2u7/7LfYJTatHnz94qKmA9pCgAAAJxQ4ZFu37nT13c9EAiIiK7H8vOn/m7TpqJp05iM2yn79r9jGDqXNQEAANxF07RoNHrs6JFr164nksksXufS3ty5P5k+/amCgoL11dWcSk0O/wOMpwfZZYZ49QAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_315",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of angular nodes and radial nodes in 4f orbital are",
+    "options": {
+      "A": "3 and 0, respectively",
+      "B": "4 and 0, respectively",
+      "C": "0 and 3, respectively",
+      "D": "0 and 4, respectively AS10 - 0021 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) \\lambda = h mv In vac u um the speed of light c = 3 × 10 8 m /s m = h v \\lambda = 34 10 8 6.626 10 3.313 10 3 10 - -     = 6.66 × 10 - 3 3"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_atomic_structure_316",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is not correct about the characteristics of cathode rays ?",
+    "options": {
+      "A": "They start from the cathode and move towards the anode",
+      "B": "They travel in straight line in the absence of an external electrical or magnetic field.",
+      "C": "Characteristics of cathode rays do not depend upon the material of electrodes in cathode ray tube.",
+      "D": "Characteristics of cathode rays depend upon the nature of gas present in the cathode ray tube. AS01 - 0081 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) mass(m)=10g, = 10 1000 k g  10 - 2 k g, v = 50m/s h x v 4 m \\Delta  \\Delta = \\pi v 100 2% v \\Delta  = 34 2 0.527 10 x 10 v - -  \\Delta =  \\Delta 2 2 v v 50 1 100 100 \\Delta =  =  = \\Delta x = 0.527 × 10 - 32 m \\Delta x = 5.27 × 10 - 33 m"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_atomic_structure_317",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements concerning the quantum numbers are correct?",
+    "options": {
+      "A": "Angular quantum number does not determine the three dimensional shape of the orbital.",
+      "B": "The principal quantum number determines the orientation and energy of the orbital.",
+      "C": "M agnetic quantum number determines the size of the orbital.",
+      "D": "Spin quantum number of an electron determines the orientation of the spin of electron relative to the chosen axis. AS09 - 0021 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) 29 Cu = 1s 2 2s 2 2p 6 3s 2 3p 6 4s 1 3d 10 (Exception) Cu +2 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 9 Cr +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 3 Zn +2 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_318",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many electrons in an atom may have the following quantum number s n = 4, m s = - 1 2 ?",
+    "options": {
+      "A": "2",
+      "B": "14",
+      "C": "16",
+      "D": "10 AS09 - 0022 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (A) is true (as per theory) (R) is false path of e - in atom is not clearly defined."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_atomic_structure_319",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is a correct statement ?",
+    "options": {
+      "A": "The volume of the nucleus is about 10 15 times the volume of the atom.",
+      "B": "The volume of the nucleus is about 10 10 times the volume of the atom.",
+      "C": "The volume of the atom is about 10 15 times the volume of the nucleus.",
+      "D": "The volume of the atom is about 10 10 times the volume of the nucleus. AS02 - 0036 NEET : NCR [ Chemistry ] 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Isoelectronic → same e - in different element ( 1) Na + Mg +2 ↓ ↓ 10e - 10e - (2) Al +3 O - ↓ ↓ 10e - 9e - (3) Na + O ↓ ↓ 10e - 8e - (4) N - 3 Cl - ↓ ↓ 10e - 18e - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_320",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not correct ?",
+    "options": {
+      "A": "On increasing radius, total energy of e - increases.",
+      "B": "On increasing radius, P.E. of e - decreases.",
+      "C": "O n increasing radius, K.E. of e - decreases.",
+      "D": "On increasing radius, P.E. of e - Increases. AS35 - 0029"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) (1) Cr +3 , Fe +3 Cr +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 3 Fe +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 (2) Fe +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 Mn +2 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 (3) Fe +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 Co +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 6 (4) Sc +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 Cr +3 = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 3 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_321",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not a correct relationship ? (1) \\Delta x. \\Delta p h 4 \\ge \\pi (2) \\Delta x. \\Delta  h 4 m \\ge \\pi (3) \\Delta E × \\Delta t h",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) h E t 4 x \\Delta  \\Delta \\ge \\pi\\Delta ( as per theory )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_322",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "x \\ge \\pi \\Delta (4) F × \\Delta t × \\Delta x h 4 \\ge \\pi AS05 - 0001",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) 34 34 h 6.62 10 6.62 10 mv 0.1 10 - -  \\lambda = = =  "
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_atomic_structure_323",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is an incorrect statement ?",
+    "options": {
+      "A": "Isotopes do not have the same value of e/m.",
+      "B": "Isobars do not have the same value of e/m.",
+      "C": "Isotopes do not have same chemical property but they have different physical property.",
+      "D": "Isobars do not have the same chemical and physical property. AS10 - 0387"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Isotope → Same atomic no., different mass no. Isotope do not have same chemical property but different physical property."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_324",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following sets of quantum numbers is possible ?",
+    "options": {
+      "A": "In = 0, l = 0, m \\lambda = 0, m s = + 1 2",
+      "B": "In = 1, l = 1, m \\lambda = 0, m s = - 1 2",
+      "C": "In = 2 , l = 1, m \\lambda = 0, m s = - 1 2",
+      "D": "In = 1 , l = 1, m \\lambda = 0, m s = + 1 2 AS09 - 0023"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) n > \\lambda (n is always greater than \\lambda )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_325",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the number of electrons in the species , H 2 + , H 2 and O 2 + respectively.",
+    "options": {
+      "A": "0, 2, 15",
+      "B": "1, 2, 15",
+      "C": "1, 2, 16",
+      "D": "0, 2, 16 AS10 - 0388"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Number of e - = Z - charge 2 H + = 2 - 1 = 1 H 2 = 2 - 0 = 2 2 O + = 16 - 1 = 15"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_326",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of photons emitted in 10 hours by a 60 W sodium lamp \\lambda of photon = 6000 Å",
+    "options": {
+      "A": "6.50 × 10 24",
+      "B": "6.40 × 10 23",
+      "C": "8.40 × 10 23",
+      "D": "3.40 × 10 23 AS11 - 0034"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) nhC E = \\lambda 26 10 n 20 10 60 6000 10 - -   =  10 1 Joule 1watt s 60 Joule 60W s 1A 10 cm -   =       =     ^\\circ =   n  18 × 10 19 Photons per second. For 10 hours n = 18 × 10 19 × 10 × 60 × 60 n = 6.48 × 10 24 photons or 6.50 × 10 24 photons"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_327",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the total energy of an electron in a hydrogen atom in an exc i ted state is - 3.4 eV, then the de - broglie wavelength of the electron is : -",
+    "options": {
+      "A": "7.2 × 10 - 10 m",
+      "B": "3 × 10 - 10 m",
+      "C": "5 × 10 - 9 m",
+      "D": "9.3 × 10 - 12 m AS35 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) If TE of H - atom is - 3.4 eV 2 2 z 3.4 13.6 n - = -  (z = 1) n 2 = 4 n 2 = Now de - broglie wavelength h mv \\lambda = 2 \\pi r = n \\lambda 34 31 6 6.626 10 1 9.1 10 2.188 10 2 - -  \\lambda =     After solving 10 7.2 10 m - \\lambda = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_328",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the velocity of an electron in I st orbit of H is V, then what will be the velocity in 4 th orbit of Be +",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 1 1 2 2 1 2 Vn z n Vn n z =  ( ) 3 2 Be V 1 4 Vn 1 4 + =  ( ) 3 2 Be Vn V + ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_329",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The specific charge of a proton is 9.6 × 10 7 C kg - 1 , then for an \\alpha - particle it will be -",
+    "options": {
+      "A": "2.4 × 10 7 C kg - 1",
+      "B": "4.8 × 10 7 C kg - 1",
+      "C": "19.2 × 10 7 C kg - 1",
+      "D": "38.4 × 10 7 C kg - 1 AS01 - 0090"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ( ) particle e / m Proton e m 2 \\alpha- (  = ( ) )  7 9.6 10 2  = 7 Particle e C 4.8 10 m kg \\alpha- (  =  ( ) )  NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_330",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In hydrogen atom the energy difference between the states n = 2 and n = 3 is E eV. The ionisation potential of H atom is -",
+    "options": {
+      "A": "3.2 E",
+      "B": "5.6 E",
+      "C": "7.2 E",
+      "D": "13.2 E AS35 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) ( ) ( ) ( ) 2 3 2 2 2 1 1 E E 13.6 1 3 2     - = -  -     ....(1) I.E. = E  - E 1 = - 13.6 × (1) 2 ( ) ( ) 2 2 1 1 1     -      ....(2) eq. (1) ÷ eq. (2) E 5 I.E. 36 = I.E. 7.2 E ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_331",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which orbital notation does not have spherical node : -",
+    "options": {
+      "A": "In = 2, \\lambda = 0",
+      "B": "In = 3, \\lambda = 1",
+      "C": "In = 3, \\lambda = 0",
+      "D": "In = 1, \\lambda = 0 AS38 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Check option by the formula spherical node = n - - 1 \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_332",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Five valence electrons of 15 P are labelled as If the spin quantum numbers of B and Z is + 1 2 , the group of electron with three of the quantum number (n, l , m) same are.",
+    "options": {
+      "A": "AB, XYZ, BY",
+      "B": "AB",
+      "C": "XYZ, AZ",
+      "D": "AB, XYZ AS18 - 0059"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 3s, Electrons have same value of n, \\lambda , m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_333",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The I.P. of an atom is 16 eV. What is the value of first excitation potential : -",
+    "options": {
+      "A": "10·2 eV",
+      "B": "12 eV",
+      "C": "14 eV",
+      "D": "16 eV AS12 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (I.P.) x = ( - E 1 ) x 16 = - (E 1 ) x 1 E 16 = - E 2 = ? From ratio ( ) 1 2 2 2 n 1 2 1 2 2 2 n 1 2 E z n z z E n z =  = ( ) ( ) 2 2 2 2 16 E 4 - = E 2 = - 4 eV Now first Excitation Potential = E 2 - E 1 = - 4 - ( - 16) = 12 eV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_334",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A dye absorbs a photon of wavelength \\lambda and re - emits the same energy into two photons of wavelengths \\lambda 1 and \\lambda 2 respectively. The wavelength \\lambda is related with \\lambda 1 and \\lambda 2 as : -",
+    "options": {
+      "A": "1 2 1 2 \\lambda + \\lambda \\lambda = \\lambda \\lambda",
+      "B": "1 2 1 2 \\lambda \\lambda \\lambda = \\lambda + \\lambda",
+      "C": "2 2 1 2 1 2 \\lambda \\lambda \\lambda = \\lambda + \\lambda",
+      "D": "1 2 2 1 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E = E 1 + E 2 1 2 hc hc hc = + \\lambda \\lambda \\lambda 1 2 hc 1 1 hc   = +   \\lambda \\lambda \\lambda   1 2 1 1 1 = + \\lambda \\lambda \\lambda 1 2 1 2 \\lambda \\lambda \\lambda = \\lambda + \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_335",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Energy required for the process is : He + (g) ⎯ → He +2 (g) + e - The ionisation energy for the H - atom in the ground state is 2.18 × 10 - 18 J atom - 1",
+    "options": {
+      "A": "9.12 × 10 - 18 J",
+      "B": "8.72 × 10 - 18 J",
+      "C": "4.72 × 10 - 20 J",
+      "D": "7.82 × 10 - 16 J AS12 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Ionisation energy of He  ion = E  - E 1 = 0 - ( - 21.8 × 10 - 18 × 4 1 ) = 8.72 × 10 - 18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_336",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When an electron of mass 6m and charge 6e moves with a velocity of 7v around the nuclear charge Ze in a circular orbit of radius 'r'. The potential energy of the electron will be: -",
+    "options": {
+      "A": "2 Ze r -",
+      "B": "2 Ze r +",
+      "C": "2 6Ze r -",
+      "D": "2 4 2 2 2 2 me Z n h \\pi - AS11 - 0039 AB 3s X 3p Y Z NEET : CHEMISTRY"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Potential energy of electron = - Nuclear charge × charge on electron Radius of orbit Ze 6e r  = - 2 6Ze r = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_337",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A single electron in an ion has ionisation energy equal to 217.6 eV. What is the total number of neutrons present in that ion is : -",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "9 AS12 - 0015"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Ionisation energy of ion = E  - E 1 = 217.6 eV therefore E 1 = - 217.6 eV = - 13.6 × 2 2 Z 1  Z 2 = 217.6 13.6 = 16 and Z = 4 thus in beryllium (Z = 4) ion no. of neutrons = 9 - 4 = 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_338",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How fast is an electron moving if it has a wavelength equal to the distance it travels in one second ?",
+    "options": {
+      "A": "h m",
+      "B": "m h",
+      "C": "h P",
+      "D": "h 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) wavelength of e¯ ( \\lambda ) = velocity of e ¯ ( v )  \\lambda = v = h mv or v 2 = h m and v = h m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_339",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The difference in angular momentum associated with the electron in two successive orbits of hydrogen atom is : -",
+    "options": {
+      "A": "h \\pi",
+      "B": "h 2 \\pi",
+      "C": "h 2",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Angular momentum is integral multiple of h 2 \\pi in successive orbits. NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_340",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "NCERT_Direct"
+      ],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If uncertainties in the measurement of position and momentum are equal, uncertainty in the measurement of velocity.",
+    "options": {
+      "A": "1 h m \\pi",
+      "B": "1 h 2m \\pi",
+      "C": "h \\pi",
+      "D": "None of these AS16 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\Delta x × \\Delta p  h 4 \\pi Since \\Delta x = \\Delta p therefore, ( \\Delta p) 2 = h 4 \\pi or \\Delta p = m \\Delta  = h 4 \\pi and \\Delta v = 1 2m h \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_341",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find out the number of waves made by a Bohr electron in one complete revolution in its fourth orbit.",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "2",
+      "D": "1 AS08 - 0044"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Circumference of 4 th orbit = 2 \\pi r 4 and angular momentum m  r 4 = 4h 2 \\pi ...(i) de - broglie wavelength \\lambda = h m  & m  = h \\lambda ...(ii) therefore from eq.(1) and (ii) h \\lambda r 4 = 4h 2 \\pi or 2 \\pi r 4 = 4 \\lambda and circumference of 4 th orbit is equal to 4 times to wavelength of electron."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_342",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [
+        "NCERT_Direct"
+      ],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a 1.00 g body is travelling along the x - axis at 100 cm s - 1 within 1 cm s - 1 , what is the theoretical uncertainty in its position (in meter)",
+    "options": {
+      "A": "5.25 × 10 - 30",
+      "B": "6 × 10 - 10",
+      "C": "10 × 10 - 8",
+      "D": "6.42 × 10 - 28 AS16 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) \\Delta v = 1 cms - 1 \\Delta x = ? \\Delta x = h 4 m v \\pi  \\Delta = 34 3 2 1 6.626 10 Js 4 3.14 10 kg 10 ms - - - -     = 5.25 × 10 - 30 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_343",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The amount of energy required to remove electron from a Li +2 ion in its ground state is how many times greater than the amount of energy needed to remove the electron from an H atom in its ground state ?",
+    "options": {
+      "A": "9",
+      "B": "6",
+      "C": "4",
+      "D": "5 AS12 - 0013"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Ionisation energy of Li +2 ion = 0 - 2 2 3 13.6 1 (   ( ) )  = 122.4 eV and Ionisation energy of H atom = 0 - 2 2 1 13.6 1 (   ( ) )  = 13.6 eV  I.E. (of Li +2 ) = 9 × I.E. (of H)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_344",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the difference in wavelengths of the 4 th and 5 th lines of the Balmer series in the spectrum of atomic hydrogen : -",
+    "options": {
+      "A": "131 Å",
+      "B": "520 Å",
+      "C": "390 Å",
+      "D": "262 Å AS14 - 0027"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) wavelength of 4 th line of Balmer series \\lambda 4 = H 1 1 1 R 4 36 (  - ( ) )  = 912 × 9 2 Å and wavelength of 5 th line of Balmer series \\lambda 5 = H 1 1 1 R 4 49 (  - ( ) )  = 912 196 45  Å therefore \\lambda 4 - \\lambda 5 = 912 9 196 2 45 (  - ( ) )  = 131.7Å"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_345",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a certain electronic transition in the hydrogen atom from an initial state (i) to a final state (f) the difference in the orbit radius (r i - r f ) is seven times the Bohr radius. identify the transition : -",
+    "options": {
+      "A": "4 → 1",
+      "B": "4 → 2",
+      "C": "4 → 3",
+      "D": "3 → 1 AS09 - 0044"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In H - atom r i - r f = 7 × 0.529 Å therefore 0.529 × n i 2 - 0.529 n f 2 = 7 × 0.529 or n i 2 - n f 2 = 7 thus the electronic transition is from 4 th orbit to 3 rd orbit"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_346",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hydrogen atom in an excited state is ionised by the absorption of radiation with a photon energy of 1 eV. What is the minimum value of n for excited state of the atom : -",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4 AS12 - 0011"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) In H - atom ionisation energy is less than 1 eV is for n = 4 (E 4 = - 0.85 eV) on wards. therefore minimum value of n ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_atomic_structure_347",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements regarding an orbital is correct : -",
+    "options": {
+      "A": "An orbital is a definite trajectory around the nucleus in which electron can move",
+      "B": "An orbital always has spherical trajectory",
+      "C": "It is the region around the nucleus where there is 90% to 95% probability of finding all electrons in an atom",
+      "D": "An orbital is characterised by the three distinct quantum numbers n, \\lambda and m AS18 - 0060"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) An orbital can be represented by using three quantum numbers n, \\lambda and m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_348",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "following transitions occuring in hydrogen atoms (n 1 < n 2 < n 3 ) n 1 orbit 1 ⎯ ⎯ → n 2 orbit n 2 orbit 2 ⎯ ⎯ → n 3 orbit n 1 orbit 3 ⎯ ⎯ → n 3 orbit Which of the following relation is not correct?",
+    "options": {
+      "A": "\\lambda 3 = \\lambda 1 + \\lambda 2",
+      "B": "3 1 2  =  + ",
+      "C": "3 1 2  =  + ",
+      "D": "\\Delta E 3 = \\Delta E 1 + \\Delta E 2 AS11 - 0037 NEET : CHEMISTRY"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) \\Delta E 1 = 2 1 n n E E - \\Delta E 2 = 3 2 n n E E - \\Delta E 3 = 3 1 n n E E - therefore \\Delta E 3 = \\Delta E 1 + \\Delta E 2 and  3 =  1 +  2 (  E   ) and also 3 1 2  =  +  1 E or E (     ( ) \\lambda )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_349",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In Cr atom, the number of electrons having n + m = 3 are : -",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8 AS18 - 0057"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Electronic config. of Cr = 1s 2 2s 2 2p 6 3s 2 3p 6 3d 5 4s 1 for electrons with n + m = 3 in Cr there are 3 possibilities. (i) n = 2, m = +1  for two 2p electrons (ii) n = 3, m = 0  for two 3s electrons + two 3p electrons + one 3d electron. (iii) n = 4, m = - 1  no electron of this type therefore totally 7 electrons are in Cr with n + m = 3 NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_350",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles A and B are in motion, wavelength related to particle A is 5 × 10 - 8 m. If the momentum of particle B is half of A then what will be the wavelength of B : -",
+    "options": {
+      "A": "2.5 × 10 - 8 m",
+      "B": "1.25 × 10 - 8 m",
+      "C": "1 × 10 - 7 m",
+      "D": "1 × 10 - 8 m AS01 - 0089"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) \\lambda = h P ; A A B B h P h P \\lambda = \\lambda = = B A P P  \\lambda B = A A B P P \\lambda  = 8 A A 5 10 P P / 2 -    \\lambda B = 10 - 7 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_351",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of (n 2 + n 1 ) and 2 2 2 1 (n n ) - for He  ion in atomic spectrum are 4 and 8 respectively. The wavelength of emi t ted photon on transition of electron from n 2 to n 1 is : -",
+    "options": {
+      "A": "H 32 R 9",
+      "B": "H 9 R 32",
+      "C": "H 9 32 R",
+      "D": "H 32 9 R AS14 - 0030"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) n 2 + n 1 = 4 .....(i) and n 2 2 - n 1 2 = 8 ....(ii) therefore n 2 = 4 - n 1 and from equation (ii) (4 - n 1 ) 2 - n 1 2 = 8 16 - 8n 1 + n 1 2 - n 1 2 = 8 or n 1 = 1 and n 2 = 4 - 1 = 3 \\lambda = 2 H H 2 2 1 2 1 1 1 1 1 1 R 4 R Z 1 9 n n = (  (   -  - ( ) ( ) ( ) )  )   \\lambda = H 9 32R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_352",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the ionization energy of He + is 19.6×10 - 18 J atom - 1 , then calculate the energy of first stationary state of Li 2+ .",
+    "options": {
+      "A": "- 1.1 × 10 - 17 J/atom",
+      "B": "- 1.1 × 10 - 18 J/atom",
+      "C": "- 4.41 × 10 - 17 J/atom",
+      "D": "- 4.41 × 10 - 18 J/atom SO11 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) I.E. (SES) = - E 1(H) × Z 2  19.6 × 10 - 18 J = - E 1(H) × Z 2  E 1(H) = 18 19.6 10 J 4 - -  = - 4.9 × 10 - 18 J  E  - Z 2  2 2 2 (H) H 2 (Li ) Li E Z E Z + + =  18 4.9 10 J ? - -  = 2 2 1 3  ? = - 44.1 × 10 - 18 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_353",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the frequency of a photon emitted during a transition from n = 4 state to the n = 2 state in the hydrogen atom ?",
+    "options": {
+      "A": "6.15 × 10 11 Hz",
+      "B": "6.15 × 10 14 Hz",
+      "C": "3.12 × 10 7 Hz",
+      "D": "1.23 × 10 9 Hz AS35 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 H 2 2 1 2 1 1 R CZ n n    = -     n 1 = 2, n 2 = 4  = 1.09 × 10 7 × 3 × 10 8 × 1 1 2 2 1 1 2 4   -      = 6.15 × 10 14 Hz"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_354",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A moving electron has 4.55 × 10 - 25 Joules of kinetic energy. Calculate its wavelength (m e = 9.1 × 10 - 31 Kg)",
+    "options": {
+      "A": "2.55 × 10 - 6 m",
+      "B": "3.57 × 10 - 5 m",
+      "C": "1.45 × 10 - 4 m",
+      "D": "7.25 × 10 - 7 m AS01 - 0088"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) h 2 m K.E. \\lambda =   34 31 25 6.6 10 2 9.1 10 kg 4.55 10 - - -  =     = 7.25 × 10 - 7 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_atomic_structure_355",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Atomic Structure",
+      "chapter_name": "Atomic Structure",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Atomic Structure.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The angular momentum of an electron is a Bohr's orbit of H atom is 4.2178 × 10 - 34 kg - m 2 /sec. Calculate the wavelength of spectral line emitted when electron falls from this level to next lower level.",
+    "options": {
+      "A": "1.8 × 10 - 4 cm",
+      "B": "2.8 × 10 - 5 cm",
+      "C": "4.6 × 10 - 4 cm",
+      "D": "2.2 × 10 - 6 cm AS14 - 0028"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Given, nh mvr 2 = \\pi  nh 2 \\pi = 4.2178 × 10 - 34 or 34 34 4.2178 10 2 3.14 n 6.625 10 - -    =  = 4 Thus, H 2 2 1 2 1 1 1 R n n   = -   \\lambda   The transition spectral line for 4th to 3rd shell is 2 2 1 1 1 109678 3 4   = -   \\lambda   \\lambda = 1.8 × 10 - 4 cm"
+  }
+]

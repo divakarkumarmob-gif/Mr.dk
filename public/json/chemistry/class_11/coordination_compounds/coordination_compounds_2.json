@@ -1,0 +1,2954 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_151",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the correct electronic configuration of the central atom in K 4 [Fe(CN) 6 ] based on crystal field theory.",
+    "options": {
+      "A": "4 2 2g t eg",
+      "B": "6 0 2g t eg",
+      "C": "3 3 2 e t",
+      "D": "4 2 2 e t CC06 - 0816 coordination Compounds 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CN - → Strong field ligand so pairing will occur. 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_152",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in de creasing order of the absorbed wavelength ?",
+    "options": {
+      "A": "[Co",
+      "B": "[Cu",
+      "C": "[Cu",
+      "D": "All will have equal wavelength CC06 - 0817 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) (A) (B) coordination C ompounds NEET : NCR [ Chemistry ] (C) (D) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_153",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compound [Co(NH 3 ) 5 (H 2 O)] +3 absorb blue green color than its complementary color will be -",
+    "options": {
+      "A": "Red",
+      "B": "Voilet",
+      "C": "Yellow",
+      "D": "Purple CC06 - 0819"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Yellow [Co(NH 3 ) 6 ] 3+ 3Cl - 1:3 electrolyte Purple [CoCl(NH 3 ) 5 ] 2+ 2Cl - 1:2 electrolyte Green [CoCl 2 (NH 3 ) 4 ] + Cl - 1:1 electrolyte Violet [CoCl 2 (NH 3 ) 4 ] + Cl - 1:1 electrolyte"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_154",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of unpaired electron of ‘Pt’ ion and the geometry of the complex [Pt(CN) 4 ] -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Predict the number of unpaired electrons in the square planar [Pt(CN) 4 ] 2 - ion. [ Pt(CN) 4 ] - 2 Oxidation state of ‘Pt’ x + 4( - 1) = - 2 [x = +2] CN - → Strong field ligand so pairing will occur hence there will be no unpaired electron and hybridization will be dsp 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_155",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 0, octahedral (2) 2, tetrahedral (3) 0, square planar (4) 2, pentagonal bipyramidal CC06 - 0809",
+    "options": {
+      "A": "0, octahedral",
+      "B": "2, tetrahedral",
+      "C": "0, square planar",
+      "D": "2, pentagonal bipyramidal CC06 - 0809"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_156",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Decacarbonyldimanganese(0) is made up of -",
+    "options": {
+      "A": "2 Tetrahedral Mn",
+      "B": "2 Square pyramidal Mn",
+      "C": "2 Sqaure planar Mn",
+      "D": "2 Pentagonal bipyramidal Mn"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Decacarbonyldimanganese(0) is made up of two square pyramidal Mn(CO) 5 units joined by a Mn - Mn bond. Octacarbonyldicobalt(0) has a Co - Co bond bridged by two CO groups . 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_157",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following carbonyls will have the strongest C - O bond ?",
+    "options": {
+      "A": "[Fe",
+      "B": "[Mn",
+      "C": "[Cr",
+      "D": "[V"
+    },
+    "correct_option": "D",
+    "explanation": "The ions/groups bound by the secondary linkages to the metal have characteristic spatial arrangements corresponding to different coordination numbers."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_158",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hardness of water is estimated simple titration with -",
+    "options": {
+      "A": "Na [ EDTA ]",
+      "B": "Na 2 [ EDTA ]",
+      "C": "Na 3 [ EDTA ]",
+      "D": "Na 4 [ EDTA ] CC07 - 0712 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [Fe(C 2 O 4 ) 3 ] 3 - , the coordination number of Fe is 6 and oxidation number of ‘Fe’ x + 2( - 3) = - 3 x = +3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_159",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a coordination compound of cobalt ?",
+    "options": {
+      "A": "Vitamin B 12",
+      "B": "Cyanocobalamine",
+      "C": "Anti - pernicious an a emia factor",
+      "D": "Both"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [NiCl 2 (PPh 3 ) 2 ] is named as dichloridobis (triphenylphosphine)nickel(II)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_160",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(Ph 3 P) 3 RhCl used as Wilkinson catalyst in -",
+    "options": {
+      "A": "Deacons process",
+      "B": "Contact process",
+      "C": "Ostwald’s process",
+      "D": "Hydrogenation of alkenes CC07 - 0714 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [Co(H 2 NCH 2 CH 2 NH 2 ) 3 ] 2 (SO 4 ) 3 is named as: tris(ethane - 1,2 - diamine)cobalt (III) sulphate"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_161",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The complex formed in black and white photography is -",
+    "options": {
+      "A": "[",
+      "B": "[Au",
+      "C": "[Pt",
+      "D": "[Hg"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ( A ) Tetraamminediaquacobalt (III) chloride → [Co(H 2 O) 2 (NH 3 ) 4 ]Cl 3 ( B ) Amminebromidochloridonitrito - N - platinate (II) → [PtCl 2 (en) 2 ] (NO 3 ) 2 ( C ) Tris(ethane - 1,2 - diamine) chromium( III) chloride → [Pt(NH 3 )BrCl(NO 2 ) ] ¯ ( D ) Dichloridobis(ethane - 1,2 - diamine) P latinum (IV) nitrate → [Cr(en) 3 ]Cl 3",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_162",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Excess of copper and iron are removed by chelating ligand ( s ) _____",
+    "options": {
+      "A": "D - penicillamine",
+      "B": "D esferriox a m ine B",
+      "C": "Chlorophyll",
+      "D": "Both A & B CC07 - 0716 3"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_163",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compound used in the treatment of lead pois o ning ?",
+    "options": {
+      "A": "Cis platin",
+      "B": "EDTA",
+      "C": "D - Penicillamine",
+      "D": "Trans platin CC07 - 0717"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) (A) (B) coordination C ompounds NEET : NCR [ Chemistry ] (C) (D) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_164",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a limitation of the crystal field theory ?",
+    "options": {
+      "A": "It assumes that ligands are point charges.",
+      "B": "It does not take into account the covalent character of bonding between ligand and the central atom.",
+      "C": "Formation of structures, colour and magnetic properties can be explained by the crystal field theory.",
+      "D": "All of the above are limitations of crystal field theory. CC06 - 0818"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) The crystal field model is successful in explaining the formation, structures, colour and magnetic properties of coordination compounds to a large extent. However, from the assumptions that the ligands are point charges, it follows that anionic ligands should exert the greatest splitting effect. The anionic ligands actually are found at the low end of the spectrochemical series. Further, it does not take into account the covalent character of bonding between the ligand and the central atom."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_165",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In how many compounds that are given below the moles of AgCl precipitated per mole the compounds with excess AgNO 3 will be (i) PdCl 2 .4NH 3 , (ii) NiCl 2 .6H 2 O, (iii) Potash Alum, (iv) K 4 [Fe(CN) 6 ]",
+    "options": {
+      "A": "2 compou n ds",
+      "B": "3 compounds",
+      "C": "No such compound",
+      "D": "1 compound CC03 - 0511"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Formula Moles of AgCl precipitated per mole of the compounds with excess AgNO 3 (i) PdCl 2 .4NH 3 2 (ii) NiCl 2 .6H 2 O 2 (iii) PtCl 4 .2HCl 0 (iv) CoCl 3 .4NH 3 1 (v) PtCl 2 .2NH 3 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_166",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The primary and secondary valencies of cobalt respectively in [Co(NH 3 ) 5 Cl]Cl 2 are:",
+    "options": {
+      "A": "3 and 5",
+      "B": "2 and 6",
+      "C": "2 and 8",
+      "D": "3 and 6 CC05 - 0185"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_167",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ammoniacal metal salt solution gives a brilliant red precipitate on addition of dimethylglyoxime. The metal ion is :",
+    "options": {
+      "A": "Cu 2+",
+      "B": "Co 2+",
+      "C": "Fe 2+",
+      "D": "Ni 2+ CC02 - 0071"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_168",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The d - electronic configuration of [CoCl 4 ] 2 - in tetrahedral crystal field is e m t 2 n . Sum of 'm' and 'number of unpaired electrons is.",
+    "options": {
+      "A": "4",
+      "B": "7",
+      "C": "8",
+      "D": "5 CC08 - 0146"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_169",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The hybridization and magnetic behaviour of cobalt ion in 3 3 6 [Co(NH ) ] + complex, respectively is",
+    "options": {
+      "A": "sp 3 d 2 and diamagnetic",
+      "B": "d 2 sp 3 and paramagnetic",
+      "C": "d 2 sp 3 and diamagnetic",
+      "D": "sp 3 d 2 and paramagnetic CC07 - 0107"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_170",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of paramagnetic species from the following is_____. [Ni(CN) 4 ] 2 - , [Ni(CO) 4 ], [NiCl 4 ] 2 - [Fe(CN) 6 ] 4 - , [Cu(NH 3 ) 4 ] 2+ [Fe(CN) 6 ] 3 - and [Fe(H 2 O) 6 ] 2+",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4 CC07 - 0110"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_171",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct order of ligand field strength?",
+    "options": {
+      "A": "2 2 3 2 4 CO en NH C O S - -    ",
+      "B": "2 2 2 4 3 S C O NH en CO - -    ",
+      "C": "2 2 3 2 4 NH en CO S C O - -    ",
+      "D": "2 2 3 2 4 S NH en CO C O - -     CC08 - 0147"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_172",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the complex has highest paramagnetic nature ?",
+    "options": {
+      "A": "[Ni",
+      "B": "[Fe",
+      "C": "[Cu",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_173",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of spin only magnetic moment of the following complex ions is: (Given At. No. Fe: 26, Co:27)",
+    "options": {
+      "A": "3 3 3 6 6 2 4 3 [FeF ] [CoF ] [Co",
+      "B": "3 3 3 2 4 3 6 6 [Co",
+      "C": "3 3 3 6 2 4 3 6 [FeF ] [Co",
+      "D": "3 3 3 6 6 2 4 3 [CoF ] [FeF ] [Co"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_coordination_compounds_174",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The set of correct statements is: (i) Manganese exhibits +7 oxidation state in its oxide. (ii) Ruthenium and Osmium exhibit +8 oxidation in their oxides. (iii)Sc shows +4 oxidation state which is oxidizing in nature. (iv) Cr shows oxidising nature in +6 oxidation state.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1",
+    "statements": {
+      "S": "(iii)"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_175",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Highest oxidation state of Mn is exhibited in Mn 2 O",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Mn 2 O 7 → 7 Mn - O - Mn → Brid e Mn is sp 3 Hybrid ised s o tetrahedral. 1"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_coordination_compounds_176",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct statements about Mn 2 O 7 are",
+    "options": {
+      "A": "Mn is tetrahedrally surrounded by oxygen atoms",
+      "B": "Mn is octahedrally surrounded by oxygen atoms",
+      "C": "Contains Mn - O - Mn bridge",
+      "D": "Contains Mn - Mn bond. Choose the correct answer from the options given below"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_177",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solution of FeCl 3 when treated with K 4 [Fe(CN) 6 ] gives a prussiun blue precipitate due to the formation of",
+    "options": {
+      "A": "K[Fe 2",
+      "B": "Fe[Fe",
+      "C": "Fe 3 [Fe",
+      "D": "Fe 4 [Fe"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_178",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are the example of double salt? (A) FeSO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_179",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(NH 4 ) 2 SO 4 .6H 2 O (B) CuSO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_180",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Al 2 (SO 4 ) 3 .24H 2 O (D) Fe(CN)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_181",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4KCN Choose the correct answer.",
+    "options": {
+      "A": "A and C only",
+      "B": "A and B only",
+      "C": "A, B and D only",
+      "D": "B and D only CC03 - 0035 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_182",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complex will show largest splitting of d - orbitals?",
+    "options": {
+      "A": "[Fe",
+      "B": "[FeF 6 ] 3 -",
+      "C": "[Fe",
+      "D": "[Fe"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_183",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The complex cation which has two isomers is:",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Co",
+      "D": "[Co"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_184",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the charge on the complex ? [Cr(C 2 O 4 ) 2 (H 2 O) 2 ] formed by Cr(III)",
+    "options": {
+      "A": "+3",
+      "B": "+1",
+      "C": "+2",
+      "D": "- 1 CC08 - 0151 1"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard coordination Compounds principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_185",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A complex of platinum, ammonia and chloride produces four ions per molecule in the solution. The structure consistent with the observation is : -",
+    "options": {
+      "A": "[Pt",
+      "B": "[Pt",
+      "C": "[Pt",
+      "D": "[Pt"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_186",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many moles of AgCl would be obtained, when Co(NH 3 ) 5 Cl 3 is treated with excess of AgNO 3 ?",
+    "options": {
+      "A": "1 mol",
+      "B": "2 mol",
+      "C": "3 mol",
+      "D": "No ppt is formed CC02 - 0074 1"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_187",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complex can not show isomerism",
+    "options": {
+      "A": "and",
+      "B": "[Co",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_188",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following, metal carbonyls, the C - O bond is strongest in : -",
+    "options": {
+      "A": "[Mn",
+      "B": "[Cr",
+      "C": "[V",
+      "D": "[Ti"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_189",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following metal carbonyls, in the C - O bond order is lowest in ?",
+    "options": {
+      "A": "[Mn",
+      "B": "[Fe",
+      "C": "[Cr",
+      "D": "[V"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) M - C - O - ve char e on M ↑ M - C BO ↑  C - O BO↓ (due to back bonding) [V(CO) 6 ] - h as lowest bond order of CO . 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_190",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are bidentate monovalent anion ligands ?",
+    "options": {
+      "A": "Acetylacetonato",
+      "B": "Oxalato ion",
+      "C": "Dimethylglyoximato Select the correct answer : -",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard coordination Compounds principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_191",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Diethylenetriamine is : -",
+    "options": {
+      "A": "Chelating agent",
+      "B": "Tridentate neutral molecule",
+      "C": "Tridentate monoanion",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_192",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total number of isomers in [Pt(NH 3 ) 2 (CN) 2 ] is: -",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "8 CC11 - 0050 2"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_193",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following name is impossible?",
+    "options": {
+      "A": "Potassium tetrafluoridoxido chromate",
+      "B": "Barium tetrafluoridochromate",
+      "C": "Dichlorobis",
+      "D": "All are impossible CC04 - 0102 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_194",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The formula of sodium nitroprusside is : -",
+    "options": {
+      "A": "Na 4 [Fe",
+      "B": "Na 2 [Fe",
+      "C": "NaFe[Fe",
+      "D": "Na 2 [Fe"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_195",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The formula of complex tris (ethylenediamine) cobalt (III) sulphate is : -",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Co",
+      "D": "[Co"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_196",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of following pairs of name and formula of complexes, is not correct ?",
+    "options": {
+      "A": "Tetraamminecopper",
+      "B": "Diamminesilver",
+      "C": "Potassiumhexacyanidoferrate",
+      "D": "Potassiumamminepentachloridoplatinate"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_197",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Complex ion [CuCl 2 (NH 2 CONH 2 ) 2 ] is named as: -",
+    "options": {
+      "A": "dichloro bis",
+      "B": "bis",
+      "C": "dichloro bis",
+      "D": "bis"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_198",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Trioxalatoaluminate (III) and tetrafluoro - borate(III) ions are : -",
+    "options": {
+      "A": "[Al",
+      "B": "[Al",
+      "C": "[Al",
+      "D": "[Al"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_199",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the EAN of central atom in the following complexes : - (i) [Cr(CO) 6 ] (ii) [Fe(  5 - C 5 H 5 ) 2 ]",
+    "options": {
+      "A": "29,37",
+      "B": "36,36",
+      "C": "36,27",
+      "D": "27,36 CC05 - 0197 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) [Cr( CO) 6 ] EAN = [At . no. - O . S . + 2 × No of L . P . ] EAN = 24 - 0 + 2 × 6 = 24 + 12 = 36 ( ) 5 5 5 2 Fe C H    -   EAN = 26 - 2 + 2 × 6 = 26 + 10 = 36"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_200",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In sodium nitroprusside, The oxidation number coordination No. and effective atomic number of iron are respectively : -",
+    "options": {
+      "A": "+3, 6, 36",
+      "B": "+2, 6, 36",
+      "C": "+3, 3, 36",
+      "D": "6, +3, 35 CC05 - 0188 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_201",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In Tollen's reagent [Ag(NH 3 ) 2 ] +",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_202",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The oxidation number coordination number and effective atomic number of central metal ion are respectively : - [Atomic number of Ag = 47]",
+    "options": {
+      "A": "+1, 2, 50",
+      "B": "+1, 2, 51",
+      "C": "+2, 1, 50",
+      "D": "+1, 1, 50 CC05 - 0190 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_203",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The effective atomic no. of Co(CO) 4 is 35 and hence is less stable. It attains stability by : -",
+    "options": {
+      "A": "oxidation of Co",
+      "B": "Reduction of Co",
+      "C": "dimerization",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_204",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following shows maximum molar conductance ?",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Co",
+      "D": "[Co"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_205",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A coordination complex has the formula PtCl 4 .2KCl. Electrical conductance measurements indicate the presence of three ion in one formula unit. Treatment with AgNO 3 produces no precipitate of AgCl. What is the coordination no. of Pt in this complex : -",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "4",
+      "D": "3 CC05 - 0195 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_206",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complexes produces three moles of Silver chloride when its one mole is treated with excess of Silver nitrate ?",
+    "options": {
+      "A": "[Cr",
+      "B": "[Cr",
+      "C": "[Cr",
+      "D": "[Cr"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_207",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Concentrated H 2 SO 4 will not dehydrate the following complex : -",
+    "options": {
+      "A": "[Cr",
+      "B": "[Cr",
+      "C": "[Cr",
+      "D": "All of these CC03 - 0036 3"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_208",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On adding AgNO 3 solution to a solution of [Pt(NH 3 ) 3 Cl 3 ]Cl. The percentage of total chloride ion precipitated is : -",
+    "options": {
+      "A": "100",
+      "B": "75",
+      "C": "50",
+      "D": "25 CC05 - 0192 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_209",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of the complex compound Co(NH 3 ) 5 Cl 3 gives 3 moles of ion on dissolution in water. One mole of the same complex reacts with two moles of AgNO 3 solution to yield two moles of AgCl(s). The formula of the complex is : -",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Co",
+      "D": "[Co"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_coordination_compounds_210",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the correct statement for the complexes [Cr(H 2 O) 6 ]Cl 3 and [Cr(H 2 O) 5 Cl]Cl 2 .H 2 O (1) They can be differentiated by amount of precipitation. (2) They can be diff e rentiated by electrical conductance measurement method. (3) They can be differentiated by heating with conc. H 2 SO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [C r(H 2 O) 6 ] Cl 3 → It can precipitate upto 3 mole Cl → Total 4 ions i.e. [Cr(H 2 O) 5 ] - 3 + 3Cl - → It cannot be dehydrated by c onc. H 2 SO 4 [ Cr(H 2 O) 5 Cl ] Cl 2 .H 2 O → Only 2 mole Cl can be precipitated → Total 3 ions → [Cr(H 2 O) 5 Cl] - 2 + 2Cl - → It can be d ehydrate d by s o me amount."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_211",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(4) All of these CC13 - 0018 4",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_212",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select incorrect match for [M(H 2 O) 6 ] 2+ complex : - Metal ions Electronic configuration FCSE",
+    "options": {
+      "A": "Mn 2+ 3 2 2g g t e 0 \\Delta 0",
+      "B": "V 2+ 3 0 2g g t e - 1.2 \\Delta 0",
+      "C": "Ni 2+ 6 2 2g g t e - 1.6 \\Delta 0",
+      "D": "Ti 2+ 2 0 2g g t e - 0.8 \\Delta 0 CC08 - 0122 4"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_213",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is non - conducting?",
+    "options": {
+      "A": "CoCl 3 .6NH 3",
+      "B": "CoCl 3 .5NH 3",
+      "C": "CoCl 3 .4NH 3",
+      "D": "CoCl 3 .3NH 3 CC12 - 0108 4"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_214",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "following Sidgwick's rule of EAN, Fe(CO) x will be : -",
+    "options": {
+      "A": "x = 4",
+      "B": "x = 3",
+      "C": "x = 5",
+      "D": "x = 6 CC05 - 0194 4"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_215",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following cannot show linkage isomerism ?",
+    "options": {
+      "A": "- 2 NO",
+      "D": "NH 3 CC09 - 0067 4",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_216",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The complexes [Pt(NH 3 ) 4 ][PtCl 6 ] and [Pt(NH 3 ) 4 Cl 2 ] [PtCl 4 ] are : -",
+    "options": {
+      "A": "Linkage isomers",
+      "B": "Optical isomers",
+      "C": "Co - ordination isomers",
+      "D": "Ionisation isomers CC11 - 0053 4"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_217",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "[Co(NH 3 ) 5 NO 2 ] Cl 2 and [Co(NH 3 ) 5 ONO]Cl 2 are related to each other as : -",
+    "options": {
+      "A": "Geometrical isomers",
+      "B": "Linkage isomers",
+      "C": "coordination isomers",
+      "D": "ionisation isomers CC09 - 0062 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_218",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The no. of geometrical isomers of [Co(NH 3 ) 3 (NO 3 ) 3 ] are : -",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "3",
+      "D": "4 CC10 - 0039 4"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_219",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of following isomers of [M(NH 3 ) 2 Cl 2 ] would react with silver oxalate Ag 2 (C 2 O 4 )?",
+    "options": {
+      "C": "Both",
+      "D": "None CC13 - 0016 4",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_220",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complex will follow EAN rule ?",
+    "options": {
+      "A": "[Mn",
+      "B": "[Mn",
+      "C": "[Fe",
+      "D": "[Co"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_221",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the geometrical isomers of the following: -",
+    "options": {
+      "A": "I with III",
+      "B": "II with IV",
+      "C": "I with II",
+      "D": "None of these CC10 - 0038 SCN CN M Cl Cl H N 3 H N 3 M Cl Cl H N 3 H N 3 Cl Cl"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard coordination Compounds principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_222",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following isomerism is/are not shown by the complex [CoCl 2 (OH) 2 (NH 3 ) 2 ]Br?",
+    "options": {
+      "A": "Ionization",
+      "B": "Linkage",
+      "C": "Ge o metrical",
+      "D": "Optical CC09 - 0065 5"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_coordination_compounds_223",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three arrangements are shown for the complex [Co(en)(NH 3 ) 2 Cl 2 ] + pick up the correct statement: - (I) (II) (III)",
+    "options": {
+      "A": "II and III are optical isomers",
+      "B": "I & III are optical isomers",
+      "C": "I & II are geometrical isomers",
+      "D": "II & III are geometrical isomers CC10 - 0040 5"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt",
+    "statements": {
+      "T": "- (I) (II) (III)"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_224",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which kind of isomerism is exhibited by octahedral [Co(NH 3 ) 4 Br 2 ]Cl ?",
+    "options": {
+      "A": "Geometrical & ionization",
+      "B": "Geometrical & optical",
+      "C": "Optical & ionization",
+      "D": "Geometrical only CC10 - 0042 5"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_225",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has an optical isomer?",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Co",
+      "D": "[Co"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_226",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following pairs represents linkage isomers ?",
+    "options": {
+      "A": "[Pd",
+      "B": "[Co",
+      "C": "[PtCl 2",
+      "D": "[Cu"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_227",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complexes show geometrical as well as optical isomerism ? (i) [Cr(ox) 3 ] 3 - (ii) [Rh(en) 2 Cl 2 ] + (iii) [Co(NH 3 ) 2 Cl 2 (en)] + Select the correct code",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_228",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total No. of possible isomers of the compound [Cu II (NH 3 ) 4 ][Pt II Cl 4 ] are : -",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "4",
+      "D": "6 CC11 - 0052 5"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_229",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of geometrical isomers for octahedral [Co(NH 3 ) 2 Cl 4 ] - , square planar [AuCl 2 Br 2 ] - respectively are : -",
+    "options": {
+      "A": "4, 2",
+      "B": "2, 2",
+      "C": "3, 2",
+      "D": "2, 3 CC10 - 0044 5"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_230",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many isomers are possible for the complex ion [Cr(NH 3 ) 3 Cl 3 ] ?",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "4",
+      "D": "5 CC11 - 0049"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_231",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "[Pt(NH 3 )(NH 2 OH)(NO 2 )(Py)] + will form how many geometrical isomers : -",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "0",
+      "D": "5 CC10 - 0041 6"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_232",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "isomerism exhibited by [Cr(NH 3 ) 2 (H 2 O) 2 Cl 2 ] + are : -",
+    "options": {
+      "A": "Ionisation, optical",
+      "B": "Hydrate, optical",
+      "C": "Geometrical, optical",
+      "D": "Coordinate, geometrical CC10 - 0043 Cl H N 3 en Co Cl NH 3 Cl NH 3 en Co Cl NH 3 Cl NH 3 Co Cl en NH 3 6"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_233",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is true for the complex Co(NO 2 )(Cl) 2 .5NH 3 (Co is in + 3 oxidation state)",
+    "options": {
+      "A": "It shows ionisation isomerism",
+      "B": "It forms inner orbital complex",
+      "C": "It is diamagnetic",
+      "D": "All CC08 - 0155 6"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_234",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total No. of isomers possible for the complex [Co(en) 2 Cl 2 ] is : -",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5 CC11 - 0048 6"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_235",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The complex [Pt(NH 3 ) 4 ] 2+ has structure : -",
+    "options": {
+      "A": "Square planer",
+      "B": "Tetrahedral",
+      "C": "Pyramidal",
+      "D": "Pentagonal CC07 - 0111 6"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_236",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In complexes most stability is shown by: -",
+    "options": {
+      "A": "[Fe",
+      "B": "[Fe",
+      "C": "[Fe",
+      "D": "[FeCl 6 ] 3 - CC04 - 0103 6"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_237",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not correctly matched?",
+    "options": {
+      "A": "[Fe",
+      "B": "[Fe",
+      "C": "[Fe",
+      "D": "[ZnCl 2"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_coordination_compounds_238",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The complex [Fe(H 2 O) 5 NO] 2+ is formed in Brown ring test for nitrates select correct statement for the complex ?",
+    "options": {
+      "A": "Hybridisation of Fe is sp 3 d 2",
+      "B": "Fe and NO has +1 oxidation state",
+      "C": "It has spin only magnetic moment of 3.87 B.M.",
+      "D": "All are correct CC08 - 0153 6"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_coordination_compounds_239",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which are the correct statements ?",
+    "options": {
+      "A": "[Ag",
+      "B": "NiCl 4 2 - , 3 4 VO - and 4 MnO - have tetrahedral geometry",
+      "C": "[Cu",
+      "D": "All the correct CC07 - 0112"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_240",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is/are inner orbital complex as well as paramagnetic with magnetic moment equal to 3.8 ( approx. ) ?",
+    "options": {
+      "A": "[Co",
+      "B": "[Cr",
+      "C": "[Fe",
+      "D": "[Zn"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard coordination Compounds principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_241",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [
+        "Oxidation_State"
+      ],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Na 2 S + Na 2 [Fe(CN) 5 NO] → Na 4 [Fe(CN) 5 NOS]. Oxidation number of Fe in reactant (complex) and product (complex) are : -",
+    "options": {
+      "A": "2, 1",
+      "B": "2, 2",
+      "C": "2, 3",
+      "D": "3, 3 CC05 - 0198 7"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_242",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are square planar complexes ? (i) [AuCl 4 ] - (ii) [PtCl 4 ] 2 - (iii) [Mn(Br) 4 ] 2 - (iv) [Cu(NH 3 ) 4 ] 2+ Select the correct answer using the codes given below : -",
+    "options": {
+      "A": "i and ii only",
+      "B": "ii and iii only",
+      "C": "ii and iv only",
+      "D": "i, ii, and iv only CC07 - 0118 7"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_243",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The crystal field - splitting for Cr 3+ ion in octahedral field changes for I Θ , H 2 O, NH 3 , CN Θ and the increasing order is : -",
+    "options": {
+      "A": "I Θ < H 2 O < NH 3 < CN Θ",
+      "B": "CN Θ < I - < H 2 O < NH 3",
+      "C": "CN Θ < NH 3 < H 2 O < I Θ",
+      "D": "NH 3 < H 2 O < I Θ < CN Θ CC08 - 0162 7"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_244",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a high spin complex?",
+    "options": {
+      "A": "[Co",
+      "B": "[Fe",
+      "C": "[Ni",
+      "D": "[FeF 6 ] 3 - CC08 - 0150 7"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_245",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which has maximum paramagnetic nature?",
+    "options": {
+      "A": "[Cu",
+      "B": "[Cu",
+      "C": "[Mn",
+      "D": "[Fe"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_246",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order of CFSE is incorrect?",
+    "options": {
+      "A": "[Cr",
+      "B": "[PtF 4 ] 2 - > [PdF 4 ] 2 - > [NiF 4 ] 2 -",
+      "C": "[Ni",
+      "D": "[Co"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_247",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is/are inner orbital complex as well as diamagnetic in nature ? [ Atomic no. → Cr=24, Mn=25, Fe=26, Co=27 ]",
+    "options": {
+      "A": "[Zn",
+      "B": "[Ni",
+      "C": "[Cr",
+      "D": "[Co"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_248",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is/are correct about [Cu(NH 3 ) 4 ]SO 4 ?",
+    "options": {
+      "A": "It is a Tetrahedral complex",
+      "B": "It is paramagentic with one unpaired electron in the d - subshell",
+      "C": "It gives white precipitate with BaCl 2",
+      "D": "Its aqueous solution does not conduct electricity. CC07 - 0120 7"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_249",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The hybridisation of [CoF 6 ] 3 - & [Co(C 2 O 4 ) 3 ] 3 - are: -",
+    "options": {
+      "A": "Both sp 3 d 2",
+      "B": "Both d 2 sp 3",
+      "C": "sp 3 d 2 and d 2 sp 3",
+      "D": "d 2 sp 3 and sp 3 d 2 CC07 - 0114"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_250",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complex compounds does not exhibits cis - trans isomerism ?",
+    "options": {
+      "A": "[PtCl 2",
+      "B": "[PdCl 2 BrI]",
+      "C": "[Pt",
+      "D": "[Pt"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_251",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct?",
+    "options": {
+      "A": "Ti",
+      "B": "[Cr",
+      "C": "K 3 [VF 6 ] is colourless",
+      "D": "[Ni"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_252",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not a \\pi - bonded organo metallic complex ?",
+    "options": {
+      "A": "Zeise's salt",
+      "B": "ferrocene",
+      "C": "bis",
+      "D": "Tetraethyl lead CC13 - 0019 8"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_253",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is wrong about the compound ? K[Pt(  2 - C 2 H 4 )Cl 3 ]",
+    "options": {
+      "A": "It is called zeise's salt",
+      "B": "It is \\pi bonded complex",
+      "C": "Oxidation number of Pt is + 4",
+      "D": "Four ligands surrounds the platinum atom CC08 - 0152 8"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_254",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order is not correct?",
+    "options": {
+      "A": "[Cr",
+      "B": "[Co",
+      "C": "[Ni",
+      "D": "[Ni"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_255",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct for zeise's salt ?",
+    "options": {
+      "A": "The complex ion is square planar",
+      "B": "The CMI, Pt is in + 2 oxidation state",
+      "C": "H 2 C=CH 2 Molecule is perpendicular to the PtCl 3 plane",
+      "D": "All of these CC04 - 0106 8"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_256",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following aquated metal ions has the highest paramagnetism ?",
+    "options": {
+      "A": "[Cr",
+      "B": "[Fe",
+      "C": "[Cu",
+      "D": "[Zn"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_257",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "coordination isomerism is possible in : -",
+    "options": {
+      "A": "[Ag",
+      "B": "[Pt",
+      "C": "[Pt",
+      "D": "[Pt"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_258",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which amongst the following metal carbonyls are inner orbital complex with diamagnetic property ? (i) Ni(CO) 4 (ii) Fe(CO) 5 (iii) V(CO) 6 (iv) Cr(CO) 6 Select the correct code : -",
+    "options": {
+      "A": "I & II",
+      "B": "II, III & IV",
+      "C": "I, II, & IV CC08 - 0164",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mn +7 → Mn 2 O 7 → Oxide Ru & O s → 8 Cr +6 i s strong oxidising agent Sc cannot show +4 O .S. and Sc +3 is stable 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_259",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Crystal field stablisation energy for high spin d 4 octahedral complex is : -",
+    "options": {
+      "A": "- 1.8 \\Delta 0",
+      "B": "- 0.6 \\Delta 0",
+      "C": "- 1.2 \\Delta 0",
+      "D": "- 1.6 + P CC08 - 0165 9"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard coordination Compounds principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_260",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is an oxidising agent?",
+    "options": {
+      "A": "[Mn 2",
+      "B": "[Fe",
+      "C": "[Mn",
+      "D": "[Fe 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Co(NH 3 ) 5 Cl]Cl 2 Primary valency tells us about O . S . & charge → O.S. of Co is +3 so primary valency is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_261",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Species which represent maximum stability?",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Ni",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [ Ni(dmg) 2 ] → Rosy red ppt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_262",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the crystal field stablisation energy value of d 5 configuration for tetrahedral complex ?",
+    "options": {
+      "A": "0.4 \\Delta t",
+      "B": "0",
+      "C": "t 2 5 - \\Delta",
+      "D": "t 12 5 \\Delta CC08 - 0160 9"
+    },
+    "correct_option": "B",
+    "explanation": "Se condary valency tells us about coordination number → 6",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABG8AAABBCAIAAADg2B7zAAAJ/UlEQVR42u3da1BU9xnH8eec3bO7ZykImXSiqPV+w0sCamYajUZAzUWlisZ7Z6pVUIE3qTM1r9N3NTMRX5Smb5qoEVBxAbXexc6kM5qo8VLfOBVNBM2Lcmfv5/TFNnbGIoLAcg77/bxlYIbnzGH2x//5P49imqYAFtDU3PzbrVvu3bvndruphsUFAoGFC9/5/Z49I9PTqQYAAEhYCmkKVtDS2lpYsP38hYuUwhZmzZwxdeq0lJSUouLi9BEjKAgAAEhMKiWAFaJUwfZtRCm7SEtNnTJlqmEYjY0N+0tLGxobqQkAACBNAXEVOxeNnUpduHiJgtglSuXm5iqKYpqmx6M3NjaU7ttHoAIAAEKnHyA0+OH5XnklLTcnV0QikYj87w6Vf/jwEcUlJdyhAgAAwtkUQIMfuoxSOdk5z0QpEfF49MePGzmhAgAApCkgTppbWgq2b6PBz15RSlGUcDj8/1/1ePRHj34oLy/nrBsAAJCmABnQu1Ii8odPPiFK2avBLxalVLXrPxpeb9LN724c9/koFwAAIE0BA0JRFBHxVdd8eeAA1bBdg19s+MTznqzL5a46drTqOIEKAAAwhQIYAO3t7WVlZX/cuzcajVIN6xs3dszs2XNUVQ2Hw7EkLC86ewyFgvPmv52Xl/fzV1+lgAAAgDQFSD+OnaDBT2w1DN00TcMwevWNHR3t6ekji0tKRo0cSRkBAABpCiBKSWKOnXhmgl8PBQL+114bXlRcPHrUKIoJAACEe1NAH/dKEaUSJEqJiMejP3nyeH9p6Q+PHlFPAABAmgJY0csw9F4Hqn2fffaooYGqAgAA0hTQa4FgcEdhAVHKjsPQezJ24oWBqrGxofzwYYOOYgAAQJoCeuvQoUPnzl+gDvYaht4vUSomKelnt27drKqq4oomAAAQplAAPVddU7tzR2Gobw1jiH+DX39FKflpbLrf35n3q5WrVq7s358MAAAwuJyUAAMXpQoKtrNXKsGjlIgoiqLrXt/xKhEhUAEAAKHTD+iGYRiVR44SpezC7Xa9OXduz1f09iVQVVQe8fv91BwAAAidfoB0NcHvdx995KuuphRik1Op+fPmu93uOERf0zQDAf+4ceO3bN36i9GjKT4AACBNAazotXeDn6qqoVAobg14fn9nbLEvgQoAAAidfgBRyo7SUlMH7q5UN3Td++OPT0r37WOxLwAAIE0h0cWONwPBYGHBdqKUjaJUbm5u31f0Sh8W+x7+6ivDMHgWAACANIXEFTvWOHToECt67RilBmvCntebdOfO7aPHqljsCwAAuDcFYa8Ue6WIUtL7PVTLluetXp2vMjYdAAAI+6bAXilYmK7r2dnZVohS8tPY9Noan4gQqAAAgNDpB0mku1JEKdt54/VZTqfTClHqaaDyePTaGl9l5RFa/gAAgNDpB0mYFb1Hj1WVlBQTpWzBpWmZmW9MnDips7NTsdgpUKzl7733l+XlrfDqOg8LAACQpiCs6IVY5q7UggULdF0PhUJi1dPOYDAwZszY32zZMnbMGB4ZAAAgTWFoam5pKdi+7eKlOkpho7ETcV7RKy+72Hf48BF7Pv44ddiwWMRSuEwFAACEe1MYKmJ7pYhStpvgZ/0oZZqmrnsfP270+apjd6iIUgAAgDSFIeXgwYOs6GUYugzY4jJd9144f7aiopLFvgAAQOj0w1Diq67ZtXMHe6WIUhKXoRRrP1yjqvzHBwAACPumYHvHfdU7dhQywU/YKyXx2EN16mStoigfrllNoAIAAEKnH8Tmp1JEKWGvVHwD1ckTNRWVR2j5AwAApCnYO0oVFhYQpezizblzxo+fYP2xEz0JVCdqq8u5QwUAAEhTIEohPlFq8uQpFlzR+3KByutNOnWylkAFAACYQgGbaW1r+3NZ2d5PPyVK2UJKcnJWVmZ6+shAIDCUfq/YYt9fvjVv08aNSUlJPGgAAECagg3s3r37r198QR3EPhP8HA5HMBgcemuaTNNsb29bvGTprzdvZigFAAAQOv1gcVXHfV8eOEAd7DUMfUhGKRFRFCU5OeXihfOHy8tp+QMAAKQpiMXvSu3cuYOPreyVshSPRz918gSBCgAACPumwNgJSH/slVq4cKFhGOFwWFXVId+46/HoJ2prDMNYt3at08mfLwAAMMgUX3VNKBSiEIPaxSQiEolEW1tbTNMcxOMFTdMe1Nf/qayMKGUXi3NzFi9ZGgwGE+NN+e89z3A4nJGRkZaWJiLc/AQAAIMi1izjPP23U21trVzsTnCmaWqa6/vvH16/8R3VsItZM2fMm/92JBIZ2g1+zwQqEXG5XHfv3qXfDwAADKJIOCwiTl3XYz1CVCSRaZr28OGDm7duUwobRan81Ws0TYtGo4N7pDkoaPMDAABigX/yOgOBQCDgVxQl0T6NWT7euBwOR9w+mD58+ODK1W9o8LNjlHr6MgMAACDemerK1auRSIRCWCnmqk1NTWfPnG5ubnK53HE4laqvv//Nt9eIUrbg0rRFi955a978p1EKAAAA8RcOh9nea13/un9/f2lpU9O/3W7PgEaptrbWc+fOh8Jham59brdr/br1GdNnhEJB3lwAAIBBT1Ncl7Ko8ePGFRUXp6amhULBgYtSHR3tdZf/TpSyUZSalpERDAaIUgAAAML2XnQfqIpLSoYNSx2IQBWLUhcv1XV0dFBqW/jg/Q8yps9gnwEAAABpCj0NVLuKioYNS+3fu21EKdt5fdbMzKysgTuoBAAAAGlqCJo4YcLGTZtCoWB/bdchSokNJ/ityl+tqioNfgAAAKQp9E5WVtbSd9/z+zv7/mGaKGXfYegsqwUAACBNofcPSVHWrV27ZOm7nZ0dfQlURCm775UCAACApTgpgS04HI4N69ebppw5fcrrTVJV9SV+Qnt726W6y0QpohQAAABIUwkXqDZuWO9yuc6eOR2NRjVN69X3GoZx5epVopRdzM7KXL4ijygFAABgZWzvtZ/bd+785fPPW1tbXC639KzBr7297euv/9HU3Ez1xA57pfJX5c+YOdMwDF5PAAAAYXsv+tGM6dN3FRUlJ6e8cF62aZqxu1KX6i4TpcQ+e6Uys2ZHo1GiFAAAgDCFAv1u0sSJsUDV/R4ql8vF2Amx4V6pYDBAKQAAAEhTGCiTJ02K7aF63gkGE/yEvVIAAAAgTaFLc2bPzs5Z3OXY9NhdKaIUe6UAAABAmkJXD09VN27ckJ2T+0ygcjqdnEoxDB0AAACkKXRHczo3bdq0KDvnaaBSVTUUCl28VNfZ2Ul9iFIAAAAQ9k2hm0C1efNmRVEunD+n615N065d+5ZTKbHNhMaMlavyHQ5HbMgmAAAAbCF2O4N9U0NEOBKpqKi4cf16ff39f969qyoKNbH062eapmlmTJu2bPkKTdMiEU6lAAAA7CQSCYvIfwCn4va7oMPN+AAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_263",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complex show maximum numbers of stereo isomers is ?",
+    "options": {
+      "A": "  3 2 4 PtCl",
+      "B": "  2 2 CuBr Cl -2",
+      "C": "  3 2 2 Cr",
+      "D": "  2 4 3 Co"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [ Co(NH 3 ) 6 ] +3 Co → 3d 7 4s 2 ; NH 3 → SFL Co +3 → 3d 6 → d 2 sp 3 → Inner orbital complex → Dia magnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_264",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 'Pt' complex of NH 3 and chlorine produces four ions per molecule in the solution is : -",
+    "options": {
+      "A": "[Pt",
+      "B": "[Pt",
+      "C": "[Pt",
+      "D": "[Pt"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) [Ni(CN) 4 ] - 2 (coordination number = 4) CN¯ → SFL so p airing occurs Ni +2 → 3d 8 ter pair d sp iama netic [Ni(C O ) 4 ] → Ni → 3d 8 4s 2 [Ni(Cl) 4 ] - 2 ; Cl¯ → WFL Ni +2 → CN = 4 Ni +2 → 3d 8 No pairing and so paramagnetic [ Fe (CN) 6 ] 4 - CN - → SFL 3d Fe Pairin occurs → iama netic → INNER ORBITAL COMPLEX → d 2 sp 3 Hybrid. [ Cu (NH 3 ) 4 ] +2 Cu +2 → Always paramagnetic i rrespective of SFL and WFL [ Fe (CN) 6 ] - 3 C.N. = 6 ; CN¯ → SFL Fe +3 → 3d 5 ter pair in 1 unpaired e¯ and so paramagnetic [ Fe ( H 2 O ) 6 ] 2+ ; H 2 O → WFL No pair ing and so Paramagnetic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_265",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The most stable complex ion is : -",
+    "options": {
+      "A": "[Fe",
+      "B": "[Cu",
+      "C": "[Fe",
+      "D": "[Ni"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ligand field strength: - 2- 2- 2 4 3 S <C O <NH <en<CO    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_266",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following complex is example of strongest reducing agent ?",
+    "options": {
+      "A": "[Co",
+      "B": "[Co",
+      "C": "[Ag",
+      "D": "[Cu"
+    },
+    "correct_option": "B",
+    "explanation": "( 2 ) [Fe(H 2 O) 6 ] 2+ ; H 2 O → WFL No of unpaired e¯ = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_coordination_compounds_267",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Coordination Compounds",
+      "chapter_name": "Coordination Compounds",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Coordination Compounds.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pair of compound which is planar : -",
+    "options": {
+      "A": "[Ni",
+      "B": "[NiCl 4 ] - 4 , [Ni",
+      "C": "[PtCl 4 ] - 2 , [Ni",
+      "D": "[Ni"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) [ FeF 6 ] - 3 ; F¯ → WFL so n o pair ing Fe +3 → 5 unpaired e - [ CoF 6 ] 3 - ; Co +3 → 3d 6 Co 3+ → 4 unpaired e - [Co(C 2 O 4 ) 3 ] +3 Co +3 → SFL → Pairing occurs and so Diamagnetic [FeF 6 ] - 3 > [CoF 6 ] 3 - > [Co(C 2 O 4 ) 3 ] 3 - NEET : CHEMISTRY"
+  }
+]

@@ -1,0 +1,2868 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_001",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is correct",
+    "options": {
+      "A": "2RX + 2Na wurtz reaction ⎯⎯⎯⎯⎯⎯ → R - R + 2NaX",
+      "D": "All of these HD01 - 0026",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_002",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which halide is not obtained from following reaction ?",
+    "options": {
+      "D": "All HD10 - 0002",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_003",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following compounds in decreasing order of reactivity in S N 1 reaction: -",
+    "options": {
+      "A": "Ph - CH 2 - Cl",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) (a) 2 Ph-CH  (b) Resonance Aromatic (c) (d) b > a > c > d"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_004",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following undergoes nucleophilic substitution by S N 1 mechanism at fastest rate :",
+    "options": {
+      "A": "CH 3 - CH 2 - Cl",
+      "D": "HD03 - 0031",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_005",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The oxidation of CHCl 3 by air, gives -",
+    "options": {
+      "A": "HCOOH",
+      "B": "CH 3 OH",
+      "C": "COCl 2",
+      "D": "CCl 4 HD13 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Chloroform is slowly oxidised by air is the presence of light to an extremely p o is o no us gas, carbonyl chloride also known as p h o s g e ne."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_006",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is not two step reaction ?",
+    "options": {
+      "D": "All of the above HD10 - 0003",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) This reaction follow S N 2 mechanism, involve one step reaction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_007",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction gives elimination as a major product",
+    "options": {
+      "A": "⎯ →",
+      "B": "CH 3 - CH 2 - Br + NaCN DMSO ⎯⎯⎯ →",
+      "C": "CH 3 - CH 2 - Br + NaI Dryacetone ⎯⎯⎯⎯ →",
+      "D": "⎯ → HD21 - 0003 wurtz - fittig X + Na + R - X reaction R + NaX Fittig reaction X +2Na +2NaX 2 OH + H - Br Br Br Br Cl Cl CH 3 - C - CH 2 - Cl CH 3 CH 3 CH 3 CH - Cl CH 3 CH 2 - Cl Cl Cl ⎯ ⎯ ⎯ → NaOH \\Delta Ph - CH - CH 3 + H 2 O ⎯ → Cl CH 3 - CH 2 - CH 2 - Cl + KSH ⎯ ⎯ → DMSO + - CH 3 - C - ONa + CH 3 - Br CH 3 CH 3  ⊝ CH 3 - C - Br + CH 3 ONa CH 3 CH 3  ⊝ EXERCISE - I NEET : Chemistry"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) CH 3 - CH 2 - Br + NaCN DMSO ⎯⎯⎯ → CH 3 - CH 2 - CN (S N 2 ) CH 3 - CH 2 - Br + NaI Dryacetone ⎯⎯⎯⎯⎯ → CH 3 - CH 2 - I (S N 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_008",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a haloalkane with \\beta - hydrogen is heated with alcoholic solution of KOH the product and the type of mechanism is -",
+    "options": {
+      "A": "Alcohol, S N 1",
+      "B": "Alkene, \\alpha - elimination",
+      "C": "Alcohol, S N 2",
+      "D": "Alkene, \\beta - elimination HD21 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_009",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Hydrolysis of optically active 2 - bromobutane gives -",
+    "options": {
+      "D": "- butan - 2 - ol",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_010",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 CCl 3 2 Cl Fe ⎯⎯ → X In the above reaction X is",
+    "options": {
+      "D": "None of these HD15 - 0008",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_011",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which gives S N 2 product as a major product ?",
+    "options": {
+      "A": "CH 3 - CH 2 - CH 2 - Cl + NaI dry acetone ⎯⎯⎯ →",
+      "D": "HD08 - 0006 1",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) CH 3 - CH 2 - CH 2 - Cl + NaI dry acetone ⎯⎯⎯→ CH 3 - CH 2 - CH 2 - I Finkelstein reaction is a type of S N 2 reaction that involves the exchange of halide ion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_012",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Product A and B respectively are",
+    "options": {
+      "B": "both A and B",
+      "D": "HD21 - 0002",
+      "A": "Option A",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) (a) 2 Ph-CH  (b) Resonance Aromatic (c) (d) b > a > c > d"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_013",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction product is wrong (major) product",
+    "options": {
+      "B": "CH 3 CH 2 CH 2 Br NaI dry Acetone ⎯⎯⎯⎯ → CH 3 CH 2 CH 2 I",
+      "C": "Zn",
+      "D": "CH 3 CH 2 CHCl 2 2",
+      "A": "Option A"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_014",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The correct reaction is -",
+    "options": {
+      "D": "All of these HD15 - 0011",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_015",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 - CH 2 - CH = CH 2 + H - Br 2 2 R O \\Delta ⎯⎯ ⎯ → A aq. KOH \\Delta ⎯⎯⎯ → B ?",
+    "options": {
+      "B": "CH 3 - CH 2 - CH 2 - CH 2 - OH",
+      "C": "CH 3 - CH 2 - CH = CH 2",
+      "D": "HD13 - 0005",
+      "A": "Option A"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_016",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The incorrect reaction is -",
+    "options": {
+      "D": "HD16 - 0014",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )  High temperature required"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_017",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following undergoes hydrolysis most easily",
+    "options": {
+      "D": "HD16 - 0012 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) SnAr  M M - +  H H - +  I I - +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_018",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": ": - Rate of reaction is maximum if G is : -",
+    "options": {
+      "A": "- OCH 3",
+      "B": "- CH 3",
+      "C": "- NO 2",
+      "D": "- H HD15 - 0010 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_019",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 - CH 2 - CH 2 - Cl + CH 3 MgBr ⎯ → ?",
+    "options": {
+      "A": "CH 3 - CH 2 - CH 2 - CH 3",
+      "C": "CH 3 - CH 2 - CH 2 - CH 2 - CH 2 - CH 3",
+      "D": "CH 4 HD10 - 0006 2",
+      "B": "Option B"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_020",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In RMgX, C - Mg bond is -",
+    "options": {
+      "A": "Non polar covalent",
+      "B": "Polar covalent",
+      "C": "Ionic",
+      "D": "Coordinate HD11 - 0001 Cl c onc. HNO 3 NO 2 c onc. H 2 SO 4 Cl Anhyd. AlCl 3 + CH 3 Cl Cl CH 3 Cl Anhyd. AlCl 3 + CH 3 CO Cl Cl COCH 3 Cl CH 3 - CH 2 - CH - CH 3 OH CH 3 - C = CH 2 CH 3"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_021",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When alkyl magnesium halide reacts with R' - NH 2, the product is",
+    "options": {
+      "A": "R - R",
+      "B": "R - H",
+      "C": "R 2 NH",
+      "D": "R - X HD25 - 0003 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_022",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is used as insecticide",
+    "options": {
+      "A": "D.D.T.",
+      "B": "Chloretone",
+      "C": "CHCl 3",
+      "D": "All of them HD23 - 0007 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) (a) 2 Ph-CH  (b) Resonance Aromatic (c) (d) b > a > c > d"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_023",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect match is -",
+    "options": {
+      "A": "Iodoform - Antiseptic",
+      "B": "Pyrene - Fire extinguisher",
+      "C": "Freon 12 - aerosol propellants",
+      "D": "DDT - Fat insoluble HD23 - 0006 EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_024",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The relative reactivity of following halides towards S N 2 reaction follows the order : - P Q R S",
+    "options": {
+      "A": "Q > S > R > P",
+      "B": "P > S > R > Q",
+      "C": "S > R > Q > P",
+      "D": "P > R > S > Q HD06 - 0169"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity order for S N 2 reaction  stability of transition state  1 Steric Hinderance . O Cl > Cl > Cl > Cl (P) (R) (S) (Q) 1^\\circ RX 2 ^\\circ RX 3 ^\\circ RX"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_025",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Rate of S N 1 reaction is : -",
+    "options": {
+      "A": "S > Q > R > P",
+      "B": "S > R > P > Q",
+      "C": "P > Q > R > S",
+      "D": "S > R > Q > P HD03 - 0726"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Rate of S N 1 reaction  stability of carbocation. CH 2 (Q) CH 2 - CH 2 (R) CH (S) CH 3 > > > Br (P) Resonance + 3 \\alpha H    2 \\alpha H Resonance stable partially double bond character Resonance"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_026",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reactivity order of S N 1 is : -",
+    "options": {
+      "A": "P > Q > R > S",
+      "B": "R > Q > P > S",
+      "C": "Q > P > R > S",
+      "D": "Q > P > S > R HD03 - 0111"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Reactivity order for S N 1 increases due to hetero atom at \\alpha position which increases stability of carbocation by back bonding. H 3 C - NH - CH 2 > H 3 C - O - CH 2 > CH 2 (P) (Q) (R) (S) >   Quality Reso. (Back Bonding) Quality Reso.   More Resonance Resonance"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_027",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The most probable product in the following reaction is : -",
+    "options": {
+      "D": "HD18 - 0282",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Anti elimination"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_028",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Product What is correct about product ?",
+    "options": {
+      "A": "Diastereomeric pair",
+      "B": "Enantiomeric pair",
+      "C": "Single stereoisomer",
+      "D": "Meso form of compound HD06 - 0176"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_029",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the major product obtained in the following reaction ?",
+    "options": {
+      "D": "HD21 - 0124 Exercise - I haloalkanes and haloarenes O Cl ; Cl ; Cl ; Cl Br",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) CH 2 - Br Br NH 3 EtOH CH 2 - NH 2 Br Reso. S table partially double bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_030",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Among the following alkyl bromide correct order of S N 1 reactivity is: (I) (II) (III) (IV)",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "IV > II > III > I",
+      "C": "IV > III > II > I",
+      "D": "II > IV > III > I HD03 - 0724 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Order for S N 1 reactivity  stability of carbocation. (IV)  More Reso nance > Me Resonance (II)  > Me 4 \\alpha H Me (III)  > Me (I)  2 \\alpha H 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_031",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound undergoes hydrolysis most easily ?",
+    "options": {
+      "D": "HD16 - 0199 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Hydrolysis of aryl halide increases as - M group increases at ortho/para position. SnAr  M| H| I M| H| I - - - + + + 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_032",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The correct order for E2 reaction with alc. KOH will be: - (i) (ii) (iii)",
+    "options": {
+      "A": "i > ii > iii",
+      "B": "iii > ii > i",
+      "C": "ii > i > iii",
+      "D": "iii > i > ii HD18 - 0286 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity order for S N 2 reaction  stability of transition state  1 Steric Hinderance . O Cl > Cl > Cl > Cl (P) (R) (S) (Q) 1^\\circ RX 2 ^\\circ RX 3 ^\\circ RX"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_033",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound is most reactive toward S N 2 displacement?",
+    "options": {
+      "A": "CH 3 CH 2 CH 2 CH 2 - Cl",
+      "D": "HD06 - 0178 1",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Rate of S N 1 reaction  stability of carbocation. CH 2 (Q) CH 2 - CH 2 (R) CH (S) CH 3 > > > Br (P) Resonance + 3 \\alpha H    2 \\alpha H Resonance stable partially double bond character Resonance"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_034",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following will give racemised product in C 2 H 5 OH?",
+    "options": {
+      "D": "HD03 - 0730 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) + Mg F Br Dry e ther (1 eq.) MgBr F Mo re B.L. → Less B.L. → Reactivity order of halide with Mg I > Br > Cl > F"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_035",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following group in order of their nucleophilic strength: -",
+    "options": {
+      "A": "CH 3 - O ⊝",
+      "B": "CH 3 CH 2 - S ⊝",
+      "C": "CH 3 - O - CH 2 - O ⊝",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Reactivity order for S N 1 increases due to hetero atom at \\alpha position which increases stability of carbocation by back bonding. H 3 C - NH - CH 2 > H 3 C - O - CH 2 > CH 2 (P) (Q) (R) (S) >   Quality Reso. (Back Bonding) Quality Reso.   More Resonance Resonance"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_036",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following molecule would have a carbon halogen bond most susceptible to nucleophilic substitution?",
+    "options": {
+      "A": "2 - Flourobutane",
+      "B": "2 - Chlorobutane",
+      "C": "2 - Bromobutane",
+      "D": "2 - Iodobutane HD01 - 0559 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Anti elimination"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_037",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound is used as refrigerant?",
+    "options": {
+      "A": "Urea",
+      "B": "Acrolein",
+      "C": "CCl 2 F 2",
+      "D": "HD23 - 0047 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_038",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following compounds for their reactivity toward nucleophilic substitution with HBr?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) CH 2 - Br Br NH 3 EtOH CH 2 - NH 2 Br Reso. S table partially double bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_039",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reaction occur most rapidly?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity for alcohol 3^\\circ > 2^\\circ > 1^\\circ Reactivity for hydrogen halide HI > HBr > HCl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_040",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "This reaction followed by : -",
+    "options": {
+      "A": "S N 1 path",
+      "B": "S N 2 path",
+      "C": "E1 path",
+      "D": "S N AE path HD03 - 0728"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Cl Aq. Acetone Rearrange S N 1   OH ⊝ OH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_041",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction is least feasible ?",
+    "options": {
+      "D": "HD16 - 0202 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Cl Not reaction NaOH \\Delta O CH 3 3 O CH - -   Group is activating group hence reaction is not feasible. SnAE  M| H| I M| H| I - - - + + + 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_042",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following in order of their leaving group tendency ?",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "I >III > II > IV",
+      "C": "I > II > IV > III",
+      "D": "I > IV > III > II HD01 - 0558"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) + Mg F Br Dry e ther (1 eq.) MgBr F Mo re B.L. → Less B.L. → Reactivity order of halide with Mg I > Br > Cl > F"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_043",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The addition of HBr to 1 - butene gives mixture of products A, B and C.",
+    "options": {
+      "C": "CH 3 - CH 2 - CH 2 - CH 2 - Br The mixture consists of : -",
+      "A": "B as major, A and C as minor products",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) A and B as a major product C is minor product haloalkanes and haloarenes"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_044",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In S N 1 the first step involves the formation of",
+    "options": {
+      "A": "free radical",
+      "B": "carbanion",
+      "C": "carbocation",
+      "D": "carbene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_045",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "To form alkane isonitrile, alkyl halide is reacted with:",
+    "options": {
+      "A": "KCN",
+      "B": "AgCN",
+      "C": "NaCN",
+      "D": "NH 4 CN"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_046",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Alkyl fluorides are synthesised by",
+    "options": {
+      "A": "Finkelstein reaction",
+      "B": "Swart reaction",
+      "C": "Kolbe reaction",
+      "D": "Wurtz reaction"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_047",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The products of reaction of alcoholic silver nitrite with ethyl bromide are",
+    "options": {
+      "A": "Ethane",
+      "B": "Ethene",
+      "C": "Ethyl alcohol",
+      "D": "Nitro ethane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_048",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reaction, CH 3 Br + OH - → CH 3 OH + Br - obeys the mechanism",
+    "options": {
+      "A": "S N 1",
+      "B": "S N 2",
+      "C": "E 1",
+      "D": "E 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_049",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The given reaction is an example of C 2 H 5 Br + KCN(aq.) → C 2 H 5 CN + KBr",
+    "options": {
+      "A": "Elimination",
+      "B": "Nucleophilic substitution",
+      "C": "Electrophilic substitution",
+      "D": "Redox change"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_050",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An alkyl halide may be converted into an alcohol by",
+    "options": {
+      "A": "Addition",
+      "B": "Substitution",
+      "C": "Dehydrohalogenation",
+      "D": "Elimination"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_051",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Compound is most reactive towards NaOH in",
+    "options": {
+      "A": "CH 3 Cl",
+      "B": "CH 2 =CHCl",
+      "C": "C 6 H 5 Cl",
+      "D": "C 6 H 5 CH 2 Cl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_052",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Most stable carbocation formed from (CH 3 ) 3 C-Br, (C 6 H 5 ) 3 CBr,(C 6 H 5 ) 2 CHBr and C 6 H 5 CH 2 Br would be",
+    "options": {
+      "A": "C 6 H 5 2 C H ⊕",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_053",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "S N 1 reaction on an optically active substrate having only one chiral centre which is also reaction centre, gives :-",
+    "options": {
+      "A": "Retention in configuration",
+      "B": "Inversion in configuration",
+      "C": "Partially racemised product",
+      "D": "Complete racemised product"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_054",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The hydrolysis of alkyl halides by aqueous NaOH is best termed as",
+    "options": {
+      "A": "electrophilic substitution reaction",
+      "B": "electrophilic addition reaction",
+      "C": "nucleophilic addition reaction",
+      "D": "nucleophilic substitution reaction"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_055",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The least reactive chlorine is present in",
+    "options": {
+      "A": "Methyl chloride",
+      "B": "Allyl chloride",
+      "C": "Ethyl chloride",
+      "D": "Vinyl chloride"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_056",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following compounds in the increasing order of their S N 2 reactivity? CH 3 -C-X, CH 3 -CH-X, CH 3 -CH 2 -X, CH 3 -X CH 3 CH 3 CH 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_057",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH ≡ CH 3 CH MgBr  → A (gas) + B, B 3 CH I -  → C. C is :",
+    "options": {
+      "A": "CH 4",
+      "B": "CH 3 -CH 3",
+      "C": "CH ≡ C-CH 3",
+      "D": "CH 3 -C ≡ C-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_058",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following has the highest boiling point",
+    "options": {
+      "A": "CH 3 CH 2 I",
+      "B": "CH 3 Cl",
+      "C": "CH 3 I",
+      "D": "CH 3 Br"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_059",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The purity of CHCl 3 can be checked by",
+    "options": {
+      "A": "treating CHCl 3 by NaOH",
+      "B": "treating CHCl 3 by HCl",
+      "C": "treating CHCl 3 with aq. AgNO 3",
+      "D": "treating CHCl 3 by C 2 H 5 -OH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_060",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cl G NaOH ∆ & pressure :- Rate of reaction is maximum if G is :-",
+    "options": {
+      "A": "-OCH 3",
+      "B": "-CH 3",
+      "C": "-NO 2",
+      "D": "-H"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_061",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a haloalkane with β -hydrogen is heated with alcoholic solution of KOH the product and the type of mechanism is-",
+    "options": {
+      "A": "Alcohol, S N 1",
+      "B": "Alkene, α -elimination",
+      "C": "Alcohol, S N 2",
+      "D": "Alkene, β -elimination"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_062",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "Halogen Derivative-Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cl Conc. H 2 SO 4 Q (major)",
+    "options": {
+      "A": "Cl SO 3 H",
+      "B": "Cl SO 3 H",
+      "C": "Cl SO 3 H",
+      "D": "Cl SO 3 H Cl SO 3 H +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_063",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is not an aryl chloride ?",
+    "options": {
+      "D": "All HD08 - 0151",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Arylic halide  Organic compound in which one or more H atoms, directly bonded to an aromatic ring are replaced by a Halide. non aromatic ring "
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_064",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is true statement ?",
+    "options": {
+      "D": "All HD08 - 0147",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Vinylic → CH 2 = CH―X Allylic → CH 2 = CH―CH 2 ―X  sp³ carbon attached with C = C X sp³ A llylic Halide X V in ylic H alide s p² CH 2 ― X Benzylic H alide"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_065",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is 4 - Bromo - 3 - Methylpent - 2 - ene ?",
+    "options": {
+      "D": "NC05 - 1263",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo pent - 2 - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl pent - 1 - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl but - 2 - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl pent - 2 - ene C C 1 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_066",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "W hich is/are 2^\\circ halide",
+    "options": {
+      "B": "CH 2 =CH - Cl",
+      "A": "Option A",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a) CH 2 = CH - CH - C l CH 3 2^\\circC (b) (c) Ph - CH - Ph C l 2^\\circC (d) C l 2 ^\\circ C (e) C l 3^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_067",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) (2) (3) (4) HC05 - 0294 Cl Cl CH 3 Cl X is allylic halide X is vinylic halide CH 2 - X is Benzylic Halide H H Br CH 3 H CH 3 CH 3 H Br H H CH 3 H Br H H CH 3 CH 3 H Br CH 3 H CH 3 CH 2 = CH - CH - C l CH 3 Ph - CH - Ph Cl Cl Cl CH 2 - C=CH 2 H + HBr peroxide ? CH - CH=CH 2 Br CH 2 - C=CH 2 Br CH 2 - CH - CH 3 Br CH 2 - CH 2 - CH 2 - Br C = C - CH 3 C H 3 + HCl ? C H 3 CH - C - CH 3 C H 3 C H 3 C l C = C - CH 2 - Cl C H 3 C H 3 C - CH - CH 3 C H 3 C H 3 C l C = C - CH 3 C H 2 - Cl C H 3 haloalkanes and haloarenes NEET : NCR [Chemistry]",
+    "options": {
+      "D": "HC05 - 0294 Cl Cl CH 3 Cl X is allylic halide X is vinylic halide CH 2 - X is Benzylic Halide H H Br CH 3 H CH 3 CH 3 H Br H H CH 3 H Br H H CH 3 CH 3 H Br CH 3 H CH 3 CH 2 = CH - CH - C l CH 3 Ph - CH - Ph Cl Cl Cl CH 2 - C=CH 2 H + HBr peroxide ? CH - CH=CH 2 Br CH 2 - C=CH 2 Br CH 2 - CH - CH 3 Br CH 2 - CH 2 - CH 2 - Br C = C - CH 3 C H 3 + HCl ? C H 3 CH - C - CH 3 C H 3 C H 3 C l C = C - CH 2 - Cl C H 3 C H 3 C - CH - CH 3 C H 3 C H 3 C l C = C - CH 3 C H 2 - Cl C H 3 haloalkanes and haloarenes NEET : NCR [Chemistry]",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C = C ― C H 3 C H 3 H Cl C H 3 ( EAR ) C - C ― C H 3 C H 3 C H 3 C l"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_068",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is not correct method to obtain halide",
+    "options": {
+      "D": "HD04 - 0528",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (1) (2) + SO Cl 2 OH Cl S N 2 M ech. (3) + NaBr No Reaction OH (2^\\circ Alcohol) (4) + KI OH H 3 PO 3 I ( NSR Mech. ) haloalkanes and haloarenes NEET : NCR [ Chemistry ]"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_069",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect statement about the following reaction ? (CH 3 ) 2 CH - CH 2 - CH 3 + Br 2 hv ⎯⎯ →",
+    "options": {
+      "A": "Major product is",
+      "B": "Total structural monobromo derivative obtained are 4",
+      "C": "Reaction is free radical substitution",
+      "D": "None HD02 - 0180"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_070",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction gives aryl halide as a major product ?",
+    "options": {
+      "D": "HD04 - 0530 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (1) OH + SO Cl 2 No Reaction (2) Cl + NaI No Reaction (3) C H 3 + Cl 2 h  CH 2 - Cl (4) Cu 2 Cl 2 HCl N 2 Cl Cl ( Sandmeyer Reaction ) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_071",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction does not give cyanide",
+    "options": {
+      "A": "CH 3 - CH 2 - Cl + KCN ⎯ →",
+      "B": "Ph - CH 2 - OH + NaCN ⎯ →",
+      "C": "Ph - CH 2 - Cl + AgCN ⎯ →",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo pent - 2 - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl pent - 1 - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl but - 2 - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl pent - 2 - ene C C 1 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_072",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reaction of Haloalkane with AgCN gives isocyanide as the major product not cyanide due to -",
+    "options": {
+      "A": "C - N bond is more stable than C - C bond",
+      "B": "AgCN is mainly covalent and carbon is free to donate electron pair",
+      "C": "AgCN is mainly ionic and carbon is free to donate electron pair",
+      "D": "AgCN is mainly covalent bond and nitrogen is free to donate electron pair HD04 - 0529 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a) CH 2 = CH - CH - C l CH 3 2^\\circC (b) (c) Ph - CH - Ph C l 2^\\circC (d) C l 2 ^\\circ C (e) C l 3^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_073",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Most reactive towards S N 2 is",
+    "options": {
+      "D": "HD04 - 0533 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) CH 2 - C H =CH 2 HBr + peroxide (FRAR Mech.) CH 2 - CH 2 - CH 2 Br Anti M.K. Rule"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_074",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect statement about following reaction is Cl Ph - CH - Ph + H 2 O KOH OH Ph - CH - Ph",
+    "options": {
+      "A": "It occurs in two steps",
+      "B": "Reaction is Biomolecule substitution",
+      "C": "Rate of reaction depends on concentration of only one reactant that is halide.",
+      "D": "Reaction intermediate is carbocation. HD04 - 0532 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C = C ― C H 3 C H 3 H Cl C H 3 ( EAR ) C - C ― C H 3 C H 3 C H 3 C l"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_075",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is an example of pure inversion",
+    "options": {
+      "D": "All HD04 - 0534 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (1) (2) + SO Cl 2 OH Cl S N 2 M ech. (3) + NaBr No Reaction OH (2^\\circ Alcohol) (4) + KI OH H 3 PO 3 I ( NSR Mech. ) haloalkanes and haloarenes NEET : NCR [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_076",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is the example of racemization process?",
+    "options": {
+      "A": "Ph - CH 2 - Cl + H 2 O ⎯ →",
+      "C": "CH 3 - CH 2 - CH=CH 2 + HCl ⎯ →",
+      "D": "+ O H ⎯ → CH 3 - CH - D Cl HD04 - 0535",
+      "B": "Option B"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_077",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which can give only one alkene when heated with KOH ?",
+    "options": {
+      "A": "2 - Bromopentane",
+      "B": "2 - Bromo - 2 - methyl propane",
+      "C": "2 - Bromo - 3 - methyl butane",
+      "D": "Neopentyl bromide HD01 - 0317 2"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard haloalkanes And haloarenes principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_078",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Correct statement regarding Grignard reagent",
+    "options": {
+      "A": "Carbon - magnesium bond is highly polar covalent bond",
+      "B": "Carbon - magnesium bond is ionic bond",
+      "C": "It reacts with Na in aq. medium to give alkane as a major product.",
+      "D": "It reacts with ethyl chloride to give ethene as a major product. HD04 - 0537 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Arylic halide  Organic compound in which one or more H atoms, directly bonded to an aromatic ring are replaced by a Halide. non aromatic ring "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_079",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aryl halide is less reactive than aliphatic halide towards NSR due to -",
+    "options": {
+      "A": "The electron pairs on halogen are in conjugation with \\pi bond of ring.",
+      "B": "Electron rich nucleophile does not attack easily on electron rich arenes.",
+      "C": "The sp 2 C of ring holds the electron pair of C - X bond more tightly.",
+      "D": "All HD04 - 0538 Cl Cl CH 3 CH 2 - Cl Cl CH 3 + H - Cl CH 2 - CH 3 CH 2 - OH H + H 2 O CH 2 - CH 3 CH 3 Cl H + OH D CH 3 Cl H Cl Ph - CH - CH 3 + H 2 O ⎯ → CH 3 CH 3 - CH - CH - CH 3 +"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Vinylic → CH 2 = CH―X Allylic → CH 2 = CH―CH 2 ―X  sp³ carbon attached with C = C X sp³ A llylic Halide X V in ylic H alide s p² CH 2 ― X Benzylic H alide"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_080",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect statement about above reaction is",
+    "options": {
+      "A": "Reaction is nucleophilic substitution.",
+      "B": "Presence of electron withdrawing group increases reactivity of haloarenes.",
+      "C": "The effect is pronounced when - NO 2 is introduced at meta position.",
+      "D": "Intermediate anion is formed HD04 - 0536 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (1) H H Br CH 3 H CH 3 1 2 3 4 C 5 4 - Bromo pent - 2 - ene (2) CH 3 H Br CH 3 ― CH 2 H H 1 2 3 4 C 5 3 - Bromo - 2 - methyl pent - 1 - ene C C (3) CH 3 H Br H H C H 3 2 3 4 C 4 - Bromo - 3 - methyl but - 2 - ene C C 1 (4) CH 3 H Br C H 3 H C H 3 2 3 4 C 4 - Bromo - 3 - methyl pent - 2 - ene C C 1 5"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_081",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : In nucleophilic substitution of haloarenes - NO 2 at ortho and para increases stability of intermediate anion, compared to - NO 2 at meta position. Statement - II : - M of - NO 2 is observed at ortho and para position not at meta position.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. HD04 - 0539 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a) CH 2 = CH - CH - C l CH 3 2^\\circC (b) (c) Ph - CH - Ph C l 2^\\circC (d) C l 2 ^\\circ C (e) C l 3^\\circC"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_082",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : haloarenes gives NSR at high temperature but 2,4,6 trinitro haloarene gives NSR at low warm. Reason : A nucleophil e can attack easily when - M group is attached to ring.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. HD04 - 0540 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) CH 2 - C H =CH 2 HBr + peroxide (FRAR Mech.) CH 2 - CH 2 - CH 2 Br Anti M.K. Rule",
+    "assertion": "Haloarenes gives NSR at high temperature but 2,4,6 trinitro haloarene gives NSR at low warm.",
+    "reason": "A nucleophil e can attack easily when – M group is attached to ring."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_083",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Cl is deactivating group but i f Haloarene is nitrated then major product is para nitro haloarene not meta. Reason : Reactivity is controlled by the stronger inductive effect of halogen ( - I > +M) and direct ion influence is controlled by resonance effect.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. HD04 - 0541 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C = C ― C H 3 C H 3 H Cl C H 3 ( EAR ) C - C ― C H 3 C H 3 C H 3 C l",
+    "assertion": "Cl is deactivating group but i f Haloarene is nitrated then major product is para nitro haloarene not meta.",
+    "reason": "Reactivity is controlled by the stronger inductive effect of halogen ( – I > +M) and direct ion influence is controlled by resonance effect."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_084",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect statement is/are is",
+    "options": {
+      "A": "Grignard reagent should be prepared under anhydrous conditions",
+      "B": "In Butyl bromide reacted with KCN gives sec. butyl cyanide",
+      "C": "Out of C 6 H 5 - CHCl - C 6 H 5 and C 6 H 5 - CH 2 - Cl , C 6 H 5 - CHCl - C 6 H 5 is easily hydrolysed.",
+      "D": "Alkyl halides are polar but immisible with water. HD08 - 0152 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (1) (2) + SO Cl 2 OH Cl S N 2 M ech. (3) + NaBr No Reaction OH (2^\\circ Alcohol) (4) + KI OH H 3 PO 3 I ( NSR Mech. ) haloalkanes and haloarenes NEET : NCR [ Chemistry ]"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_085",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Ph - CH 2 - Cl gives racemic mixture on hydrolysis. Reason : Reaction follows via S N",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Assertion : - Ph - CH 2 - Cl gives racemic mixture on hydrolysis. It is a False statement, because for racemic mixture the compound must contain atleast one chiral unit and Ph - CH 2 - Cl 2 N H O (S 1) ⎯⎯⎯ → Ph - CH 2 - OH (No chiral unit present) Reason : - Reaction follows via S N",
+    "assertion": "Ph – CH 2 – Cl gives racemic mixture on hydrolysis.",
+    "reason": "Reaction follows via S N"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_086",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion. (2) Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion. (3) Assertion is true but Reason is false. (4) Both Assertion and Reason are false. HD04 - 0544 Cl (1) OH (2) H OH Br C CH 3 H C 2 H 5 C 2 H 5 C CH 3 Br H haloalkanes and haloarenes 3",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. HD04 - 0544 Cl"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Vinylic → CH 2 = CH―X Allylic → CH 2 = CH―CH 2 ―X  sp³ carbon attached with C = C X sp³ A llylic Halide X V in ylic H alide s p² CH 2 ― X Benzylic H alide",
+    "assertion": "and",
+    "reason": "are true and the Reason is a correct explanation of the Assertion. (2) Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion. (3) Assertion is true but Reason is false. (4) Both Assertion and Reason are false. HD04 - 0544 Cl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_087",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Decreasing order towards S N 1 reaction for the following compounds is:",
+    "options": {
+      "A": "a > c > d > b",
+      "B": "a > b > c > d",
+      "C": "b > d > c > a",
+      "D": "d > b > c > a HD04 - 0543 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) CH 2 CH 3 Br 2 /hv or U . V . light NO 2  F.R.S.R. CH 2 - CH 2 - Br NO 2 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_088",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In S N 2 reactions on asymmetric centres",
+    "options": {
+      "A": "inversion of configuration occurs because nucleophile attacks from the back - side of leaving group",
+      "B": "retention of configuration occurs because nucleophile attacks from the front side of leaving group",
+      "C": "both retention and inversion occur in equal proportions. It means a racemic mixture is produced",
+      "D": "the chiral centre becomes achiral HD04 - 0542"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Arylic halide  Organic compound in which one or more H atoms, directly bonded to an aromatic ring are replaced by a Halide. non aromatic ring "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_089",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The order of reactivity of the following alkyl halides for a S N 2 reaction is -",
+    "options": {
+      "A": "RF > RCl > R - Br > R - I",
+      "B": "R - F > R - Br > R - Cl > R - I",
+      "C": "R - Cl > R - Br > R - F > R - I",
+      "D": "R - I > R - Br > R - Cl > R - F HD06 - 0038"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Order of reactivity for S N 2 is decided by leaving group tendency. L.G. = I ¯ > Br ¯ > Cl ¯ > F¯  R - I > R - Br > R - Cl > R - F"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_090",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following is most reactive for S N 1 reaction :",
+    "options": {
+      "A": "-",
+      "B": "-",
+      "C": "-",
+      "D": "- HD03 - 0125"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity towards S N 1 reaction  stability of C  1 > 4 > 3 > 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_091",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Among the bromides given below, the order of reactivity of S N 1 reaction is - (I) (II) (III)",
+    "options": {
+      "A": "III > I > II",
+      "B": "III > II > I",
+      "C": "II > III > I",
+      "D": "II > I > III HD03 - 0127"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity towards S N 1  stability of C  3 > 1 > 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_092",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Compare rate of S N",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reactivity for S N 1  stability of C  2 > 1 > 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_093",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reactivity order for S N 1 reaction (I) (II) (III) (IV) -",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "II > III > IV > I",
+      "C": "IV > III > II > I",
+      "D": "III > IV > II > I HD03 - 0126"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reactivity for S N 1  stability of C  2 > 3 > 4 > 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_094",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following undergoes fastest reaction with aqueous NaOH solution",
+    "options": {
+      "A": "- -",
+      "B": "- -",
+      "C": "- -",
+      "D": "- - HD21 - 0019"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity of S N 1 reaction  Stability of carbocation ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_095",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Under identical conditions, solvolysis of which of the following substrate would lead to maximum racemisation : -",
+    "options": {
+      "D": "HD09 - 0028 NEET : CHEMISTRY",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) for S N 1 reaction  stability of C  Maximum racemisation = option (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_096",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following alcohols is most reactive towards substitution with HBr ?",
+    "options": {
+      "D": "HD09 - 0027",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) for S N 1 reaction  stability of C  Most reactive = option (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_097",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Consider the following bromides : - The correct order of S N 1 reactivity is",
+    "options": {
+      "A": "A > B > C",
+      "B": "B > C > A",
+      "C": "B > A > C",
+      "D": "C > B > A HD03 - 0128"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) for S N 1 Reactivity  stability of carbocation. B > C > A"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_098",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Of the following statements which are true for S N 1 reaction.",
+    "options": {
+      "A": "Tertiary alkyl halides react faster than secondary.",
+      "B": "The absolute conf i guration of the product is opposite to that of the reactant when an optical active substrate is used.",
+      "C": "The reaction shows first order kinetics.",
+      "D": "The rate of reaction depends markedly on the nucleophilicity of the nucleophile."
+    },
+    "correct_option": "A",
+    "explanation": "For S N 1 (a) Reactivity 3^\\circ > 2^\\circ > 1^\\circ alkyl halide (b) Racemisation occur in product (c) 1 st order kinetic (d) R ate of reaction depends only reaction, not depend on nucleophile (e) Two step mechanism (f) C arbocation intermediate (g) Rate  [Alkyl Halide] (h) R ate of reaction depends on the nature of the leaving group Ph - C - Ph ,  OCH 3 Ph - C - Ph ,  NO 2 Ph - C - Ph  CH 3 Ph - C - Ph , CN  Quality resonance , , Less resonance Aromatic   O   O  Non aromatic , ,    Aromatic Anti aromatic  , , CH 3  , CH 2 CH 3  CH - CH 3  | CH 3 3 \\alpha H 2 \\alpha H 1 \\alpha H H - C - CH 3 ,  OCH 3 H - C - CH 3 ,  NO 2 CH 3 - C H,  D - C - CH 3  | D  , , NO 2  , O CH 3  Br  CH 2 CH 2 CH 2 CH 2  , Me 2 \\alpha H  , Me Resonance  Me 5 \\alpha H Me NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_099",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Product. Product .................is : -",
+    "options": {
+      "D": "HD06 - 0039",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_100",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reaction is feasible ?",
+    "options": {
+      "D": "HD09 - 0031 NEET : CHEMISTRY",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Option 1, 2, 4 resonance stable"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_101",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The structure of the major product formed in the following reaction is :",
+    "options": {
+      "D": "HD09 - 0032",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_102",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following on heating with aqueous KOH, produces acetaldehyde?",
+    "options": {
+      "A": "CH 2 ClCH 2 Cl",
+      "B": "CH 3 CHCl 2",
+      "C": "CH 3 COCl",
+      "D": "CH 3 CH 2 Cl HD09 - 0033"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_103",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "R - OH Reagent ⎯⎯⎯ → R - Cl Which of the following reagents can be used for this reaction.",
+    "options": {
+      "A": "HCl/ZnCl 2",
+      "B": "NaCl",
+      "C": "PCl 3",
+      "D": "PCl 5"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a) Lucas reagent → Anhy. ZnCl 2 + HCl ✓ (b) NaCl  (c) PCl 3 ✓ (d) PCl 5 ✓ (e) SOCl 2 (NSR mechanism) ✓"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_104",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "R - OH 2 SOCl Pyridine ⎯⎯⎯ → R - Cl + SO 2 + HCl This reaction follows which of the following mechanisms ?",
+    "options": {
+      "A": "S N 1",
+      "B": "S N 2",
+      "C": "E 1",
+      "D": "E 2 HD21 - 0022"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_105",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the column - I and column - II and select the correct answer : Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "D": " \\Delta",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CH 3 CH 3 H H Br D NaOH, DMSO S N 2 (Inversion product) CH 3 CH 3 H OH H D CH 2 - Br + KSH ⎯ → Br Br CH 2 - SH •• Resonance stable Leaving group Cl + AlCl 4 - Cl Resonance stable Cl AlCl 3 C l OH NaOH High temperature (S N Ar mechanism) C l OH NaOH OMe •• •• OMe + M Least feasible Br - > CH 3 - C - O ⊝ > Ph - O ⊝ > CH 3 - CH 2 - O ⊝ ؙ || O C l NaCN DMF (S N 2 mechanism) I  Resonance stable C N I CH 2 - CH 2 | Cl | Cl aq. KOH/ \\Delta CH 2 - CH 2 | OH | OH CH 3 - CH Cl aq. KOH/ \\Delta Cl CH 3 - CH OH OH (unstable) - H 2 O CH 3 - CHO CH 3 - C - Cl || O aq. KOH/ \\Delta CH 3 - C - OH || O CH 3 CH 2 Cl aq. KOH/ \\Delta CH 3 CH 2 OH ROH reagent R - Cl ROH SOCl 2 Pyridine (S N 2 mechanism) R - Cl + SO 2 + HCl Cl OH a lc KOH (a) (r) S N 2 Cl aq. KOH (b) ( s ) E 2 Cl H 2 O (c) ( q ) S N 1 OH OH H  / \\Delta (d) (p) E 1 NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_106",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify the set of reagents/reaction conditions 'X' and 'Y' in the following set of transformations : - CH 3 - CH 2 - CH 2 Br X ⎯⎯ → Product Y ⎯⎯ → - -",
+    "options": {
+      "A": "X = dilute aqueous NaOH, 20^\\circC, Y = Br 2 /acetic acid, 20^\\circC",
+      "B": "X = concentrated alcoholic NaOH, 80^\\circC; Y = HBr/CHCl 3 , 20^\\circC",
+      "C": "X = dilute aqueous NaOH 20^\\circ, Y = Br 2 /CHCl 3 , 0^\\circC",
+      "D": "X = concentrated alcoholic NaOH, 80^\\circC; Y = Br 2 /CHCl 3 , 0^\\circC HD21 - 0020"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_107",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is true for the major product obtained in the given reaction : -  (major product) : -",
+    "options": {
+      "A": "Reacts with AgNO 3",
+      "B": "Is used as an an a e sthetic",
+      "C": "Has zero dipole moment",
+      "D": "All HD13 - 0015"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_108",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is a feasible substitution ?",
+    "options": {
+      "A": "R - Br 2 2 Hg F ⎯⎯⎯ →",
+      "B": "R - Br NaI acetone ⎯⎯⎯ →",
+      "C": "R - Cl AgF ⎯⎯ →",
+      "D": "All of these HD09 - 0030"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_109",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is best Nucleophile ?",
+    "options": {
+      "A": "-",
+      "B": "- -",
+      "C": "-",
+      "D": "HD02 - 0063"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Nucleophilicity (I) in period Nu ⊝ and basicity same (III) I f same donar atom Nu ⊝  basicity (IV) Nu ⊝  1 steric crowding"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_110",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Correct statement about S N 2 reaction is",
+    "options": {
+      "A": "- →",
+      "B": "- → S N 2 order → a > b",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) For S N 2 1^\\circ > 2^\\circ > 3^\\circ  S N 2 order = a > b 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_111",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is appropriate set of reactants for the preparation of 1 - Methoxy - 4 - nitrobenzene",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity of S N 1 reaction  Stability of carbocation ."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_112",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements: Statement - I : Ethyne is formed from dibromoethane by using alcoholic KOH followed by NaNH",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Stat (1) ✓ Geminal dibromo ethane Stat (2)  CH 2 - CH 2 alc. KOH Br Br - KBr - H 2 O HC=CH 2 Br NaNH 2 HC ≡ CH H - C - C - H alc. KOH H Br (one eq.) H - C=C - H H H Br Br",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_haloalkanes_and_haloarenes_113",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Haloalkanes And Haloarenes",
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Haloalkanes And Haloarenes.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - II : Ethyne is formed from geminal dibromo ethane by using one equivalent of alcoholic KOH. In the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "Statement - I and Statement - II both are correct.",
+      "B": "Statement - I and II both are incorrect.",
+      "C": "Statement - I is correct but Statement - II is incorrect.",
+      "D": "Statement - I is incorrect but Statement - II is correct. HC53 - 0003 Br + CH 3 - ONa NO 2 ONa + CH 3 - Br NO 2 OCH 3 H 2 SO 4 HNO 3 NEET : CHEMISTRY"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity towards S N 1 reaction  stability of C  1 > 4 > 3 > 2"
+  }
+]

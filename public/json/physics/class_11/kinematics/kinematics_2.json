@@ -1,0 +1,3457 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A drunkard is walking along a straight road. He takes 5 steps forward and 3 steps backward, followed by 5 steps forward and 3 steps backward and so on. Each step is one meter long and takes one second. There is a pit on the road 13 meters away from the sta rting point. T he drunkard will fall into the pit after :",
+    "options": {
+      "A": "29 s",
+      "B": "21 s",
+      "C": "37s",
+      "D": "31 s SPEED & velocity, AVERAGE SPEED & AVERAGE velocity"
+    },
+    "correct_option": "A",
+    "explanation": "1 cycle = 5 step forward & 3 step backward then net displacement in 1 cycle = (+5) + ( - 3) = +2m Net displacement in 4 cycle = 8 m So, he will fall down in the pit after completing 4 cycles & 5 forward steps. Total time = 4(5 + 3) + 5(1) = 37 sec."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A train covers the first half of the distance between two stations with a speed of 30 km/h and the other half with 70 km/h. Then its average speed is :",
+    "options": {
+      "A": "50 km/h",
+      "B": "48 km/h",
+      "C": "42 km/h",
+      "D": "100 km/h"
+    },
+    "correct_option": "C",
+    "explanation": "1 2 avg 1 1 2v v 2 30 70 v 42km / h v v 30 70   = = = + +"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the correct statements from the following. S1 . Average velocity is path length divided by time interval. S2. In general, average speed \\ge |average velocity| S3. A particle moving in a given direction with a non - zero velocity can have zero speed. S4. The magnitude of average velocity is the average speed.",
+    "options": {
+      "A": "S 1",
+      "B": "S 2",
+      "C": "S 3",
+      "D": "S 4"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity displacement Time interval = A particle moving in a given direction with non - zero velocity cannot have zero speed. In general, average speed is not equal to magnitude of average velocity. However, it can be so if the motion is along a straight line without change in direction.",
+    "statements": {
+      "2": "In gene",
+      "3": "A",
+      "4": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The magnitude of average velocity is equal to the average speed when a particle moves :",
+    "options": {
+      "A": "on a curved path",
+      "B": "in the same direction",
+      "C": "with constant acceleration",
+      "D": "with constant retardation"
+    },
+    "correct_option": "A",
+    "explanation": "velocity of car at t = 4 sec is v = u + at v = 0 + 5 (4) = 20 m/s At t = 6 sec acceleration due to gravity ∴ a = g = 10 m/s 2 v x = 20 m/s (due to car) v y = u + a (t - 4) = 0 + g (2) (downward) = 20 m/s (downward) 2 2 2 2 x y v v v 20 20 20 2 m/s = + = + ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man walks for some time 't' with velocity (v) due east. Then he walks for same time 't' with velocity (v) due north. The average speed of the man is :",
+    "options": {
+      "A": "2v",
+      "B": "2 v",
+      "C": "v",
+      "D": "v 2"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 avg d d vt vt v 2t 2t + + = = v avg = v"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car travels a distance d on a straight road in two hours and then returns to the starting point in next three hours. Its average speed and average velocity is :",
+    "options": {
+      "A": "d , 0 5",
+      "B": "2d 5 , 0",
+      "C": "5d d , 6 5",
+      "D": "none of these Kinematics"
+    },
+    "correct_option": "B",
+    "explanation": "Average speed = total distance total time = 2d 2d 2 3 5 = + 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moves in the east direction with 15 m/s for 2 sec then northwards with 5 m/s for 8 sec. Average velocity of the particle is : -",
+    "options": {
+      "A": "1 m/s",
+      "B": "5 m/s",
+      "C": "7 m/s",
+      "D": "10 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "( ) = + - nth a S u 2n 1 2 ( ) = + - a 0 2n 1 2 ( )  - nth S 2n 1 h 20 m/s 80 m/s WINDOW 1.5 m u v  S 1st , S 2nd , S 3rd , S 4th = [2(1) - 1] : [2(2) - 1] : [2(3) - 1] : [2(4) - 1] ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man walks on an equilateral triangle along path ABC with constant speed then the ratio of average speed and magnitude of average velocity for A to C : -",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "1 2",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Let the constant speed is V, then average speed = V average velocity = a V 2a 2 V = average speed V 2 average velocity V /2 1 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car runs at constant speed on a circular track of radius 10 m taking 6.28s on each lap (i.e. round). The average speed and average velocity for half lap is :",
+    "options": {
+      "A": "velocity 20/ \\pi m/s, speed 10 m/s",
+      "B": "velocity zero, speed 10 m/s",
+      "C": "velocity zero, speed zero",
+      "D": "velocity 10 m/s, speed zero"
+    },
+    "correct_option": "A",
+    "explanation": "Average speed = Total distance R 10 m / s Total time 3.14 \\pi = = Average velocity = Total displacement 2R 20 Total time 3.14 = = \\pi m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moves in straight line in same direction for 20 sec. with velocity 3 m/s and then moves with velocity 4 m/s for another 20 sec. and finally moves with velocity 5 m/s for next 20 sec. What is the average velocity of the particle?",
+    "options": {
+      "A": "3 m/s",
+      "B": "4 m/s",
+      "C": "5 m/s",
+      "D": "Zero"
+    },
+    "correct_option": "B",
+    "explanation": "Average velocity 3 20 4 20 5 20 20 20 20  +  +  = + + = 240 60 = 4 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object travels 10 km at a speed of 100 m/s and another 10 km at 50 m/s. The average speed over the whole distance is : -",
+    "options": {
+      "A": "75 m/s",
+      "B": "55 m/s",
+      "C": "66.7 m/s",
+      "D": "33.3 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "1 10 1000 t 100  = = 100 sec. 2 10 1000 t 50  = = 200 sec. Avg. speed = Total distance Total time = 10000+10000 300 = 66.66 ≃ 66.7 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body has speed V, 2V and 3V in first 1/3 part of total travelled distance S, second 1/3 part of S and third 1/3 part of S respectively. Its average speed will be : -",
+    "options": {
+      "A": "V",
+      "B": "2V",
+      "C": "18 V 11",
+      "D": "11 V 18"
+    },
+    "correct_option": "A",
+    "explanation": "Average speed 1 2 3 1 2 2 3 1 3 3V V V V V V V V V = + + 2 2 2 3 V 2V 3V 18 V 11 2V 6V 3V    = = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body covers one - third of the time with a velocity v 1 the second one - third of the time with a velocity v  , and the last one - third of the time with a velocity v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 3 avg v t v t v t v 3t + + = 1 2 3 avg v v v v 3 + + ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The average velocity is :",
+    "options": {
+      "A": "1 2 3 v v v 3 + +",
+      "B": "1 2 3 1 2 2 3 3 1 3v v v v v v v v v + +",
+      "C": "1 2 2 3 3 1 v v v v v v 3 + +",
+      "D": "1 2 3 v v v 3"
+    },
+    "correct_option": "A",
+    "explanation": ".......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a car cover 2/5 th of total distance with v 1 speed and 3/5 th distance with v 2 speed then the average speed is : -",
+    "options": {
+      "A": "1 2 1 v v 2",
+      "B": "1 2 v v 2 +",
+      "C": "1 2 1 2 2v v v v + +",
+      "D": "1 2 1 2 5v v 3v 2v +"
+    },
+    "correct_option": "A",
+    "explanation": "Average speed = 1 2 S 2S 3S 5 5 V V + 1 2 1 2 1 2 5V V 5 2 3 3V 2V V V = = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moving in a straight line covers half the distance with speed of 10 m/s. The other half of the distance is covered in two equal time intervals with speed of 4.5 m/s and 7.5 m/s respectively. The average speed of the particle during this motion i s :",
+    "options": {
+      "A": "8.0 m/s",
+      "B": "12.0 m/s",
+      "C": "10.0 m/s",
+      "D": "7.5 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "Average speed in last half = 4.5 7.5 2 + = 6 m/s Average speed in total journey = 2 10 6 10 6   + = 7.5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A point object traverses half the distance with velocity ",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "for second half v avg = 1 2 v v 2 + for total v avg = 1 2 0 1 2 0 v v 2(v ) 2 v v v 2 + (  ( ) )  + + 0 1 2 avg 0 1 2 2v (v v ) v 2v v v + = + + 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The remaining part of the distance is covered with velocity  1 for the half time and with velocity  2 for the rest half. The average velocity of the object for the whole journey is",
+    "options": {
+      "A": "2  1",
+      "B": "2 ",
+      "C": "2  0",
+      "D": "2  2"
+    },
+    "correct_option": "A",
+    "explanation": "For same range \\theta 1 + \\theta 2 = 90^\\circ 1 rad 30 6 \\pi \\theta = = ^\\circ  \\theta 2 = 90^\\circ - \\theta 1 = 60^\\circ 2 2 2 1 u sin 30 u 1 u y 2g 2g 4 8g  ^\\circ  = = =  2 2 2 2 2 1 u sin 60 u 3 3u y 3y 2g 2g 4 8g ^\\circ  = = = = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A scooter going due east at 10 ms - 1 turns in right side through an angle of 90^\\circ. If the speed of the scooter remains unchanged in taking this turn, the change in the velocity of the scooter is : -",
+    "options": {
+      "A": "20.0 ms - 1 in south - west direction",
+      "B": "Zero",
+      "C": "10.0 ms - 1 in south - east direction",
+      "D": "14.14 ms - 1 in south - west direction"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person is moving in a circle of radius r with constant speed V. The change in velocity in moving from A to B is",
+    "options": {
+      "A": "2V cos 40^\\circ",
+      "B": "2V sin 40^\\circ",
+      "C": "2V cos 20^\\circ",
+      "D": "2V sin 20^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "V 2V sin 2 \\theta \\Delta = 40 V 2V sin 2 ^\\circ \\Delta = \\Delta V = 2V sin20^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An insect crawls a distance of 4m along north in 10 s and then a distance of 3m along east in 5 s. The average velocity of the insect is : -",
+    "options": {
+      "A": "7 m / s 15",
+      "B": "1 m / s 5",
+      "C": "1 m / s 3",
+      "D": "4 m / s 5 acceleration, AVERAGE acceleration & APPLICATION OF CALCULUS"
+    },
+    "correct_option": "C",
+    "explanation": "avg ˆ ˆ 4j 3i V m / s 10 5 + = + \\rho avg 4 3 ˆ ˆ V j i m / s 15 15 (  = + ( ) )  \\rho avg 1 V m / s 3 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The position x of a particle varies with time (t) as x = at 2 - bt",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "x = at 2 - bt 3 v = dx dt = 2at - 3bt 2 = 0  t = 2a 3b"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity at time t of the particle will be equal to zero, where t is equal to :",
+    "options": {
+      "A": "2a 3b",
+      "B": "a b",
+      "C": "a 3b",
+      "D": "a 2b"
+    },
+    "correct_option": "A",
+    "explanation": ".......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If x denotes displacement in time t and x = a sint, then acceleration is :",
+    "options": {
+      "A": "a cos t",
+      "B": "- a cos t",
+      "C": "a sin t",
+      "D": "- a sin t"
+    },
+    "correct_option": "D",
+    "explanation": "x = asint v = dx dt = acost  a = dv dt = - asint"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The motion of a particle is described by the equation x = a + bt 2 where a = 15 cm and b = 3 cm/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "x = a + bt 2 , dx v 2bt dt = = dv a 2b dt = = = 2 × 3 cm/s 2 = 6 cm/s 2 A B C v 0 C' t v 1 t v 2 Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Its acceleration at time 3 sec will be : -",
+    "options": {
+      "A": "36 cm/s 2",
+      "B": "18 cm/s 2",
+      "C": "6 cm/s 2",
+      "D": "32 cm/s 2"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Equation of displacement for a particle is s = 3t 3 + 7t 2 + 14t + 8 m. Its acceleration at time t = 2 sec is : -",
+    "options": {
+      "A": "10 m/s 2",
+      "B": "16 m/s 2",
+      "C": "25 m/s 2",
+      "D": "50 m/s 2"
+    },
+    "correct_option": "D",
+    "explanation": "s = 3t 3 + 7t 2 + 14t + 8 v = ds dt = 9t 2 + 14t + 14 a = dv dt = 18t + 14 at t = 2 a = 50 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is moving according to the equation x = at 2 + bt - c. Then its instantaneous speed is given by : -",
+    "options": {
+      "A": "a + 2b + 3ct",
+      "B": "a + 2bt - 3ct 2",
+      "C": "2b - 6ct",
+      "D": "2at + b"
+    },
+    "correct_option": "D",
+    "explanation": "dx v 2at b dt = = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relation t x 3 = + describes the position of a particle where x is in meters and t is in seconds. The acceleration of particle is : -",
+    "options": {
+      "A": "2 m/s 2",
+      "B": "4 m/s 2",
+      "C": "5 m/s 2",
+      "D": "zero"
+    },
+    "correct_option": "A",
+    "explanation": "t x 3 x t 3 = +  = - x = (t - 3) 2 = t 2 - 6t + 9 v = dx dt = 2t - 6  dv a dt = = 2 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement of a particle is given by y = a + bt + ct",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "y = a + bt + ct 3 v = dy dt = b + 3ct 2 at t = 0 v = b a = dv dt = 6ct at t = 0 a = 0 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The initial velocity and acceleration are respectively :",
+    "options": {
+      "A": "b, 0",
+      "B": "- b, 2c",
+      "C": "b, 2c",
+      "D": "2c, - 4d"
+    },
+    "correct_option": "A",
+    "explanation": ".......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Equation of a particle moving along the x axis is x = u(t - 2) + a(t - 2) 2",
+    "options": {
+      "A": "the initial velocity of the particle is u",
+      "B": "the acceleration of the particle is a",
+      "C": "the acceleration of the particle is 2a",
+      "D": "at t = 2 particle is not at origin"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If for a particle position x  t then : -",
+    "options": {
+      "A": "velocity is constant",
+      "B": "acceleration is non zero",
+      "C": "acceleration is variable",
+      "D": "In one of these 40^\\circ O A B Kinematics"
+    },
+    "correct_option": "A",
+    "explanation": "x = kt v = dx dt = k (constant)  a = dv dt = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of a body depends on time according to the equation = 20 + 0.1t. The body has :",
+    "options": {
+      "A": "uniform acceleration",
+      "B": "uniform retardation",
+      "C": "non - uniform acceleration",
+      "D": "zero acceleration"
+    },
+    "correct_option": "A",
+    "explanation": "v = 20 + 0.1 t a = dv dt = 0.1 it is uniform acceleration."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following relations representing velocity of a particle describes motion with constant acceleration ?",
+    "options": {
+      "A": "v = 6 - 7 t",
+      "B": "v = 3t 2 + 5t 3 + 7",
+      "C": "v = 9t 2 + 8",
+      "D": "v = 4t - 2 + 3t - 1"
+    },
+    "correct_option": "A",
+    "explanation": "acceleration = dv dt , It is the first derivative where t terms can only yield a constant value. v = 6 - 7t dv a dt = = - 7"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following equations represents the motion of a body moving with constant finite velocity? in these equations, y denotes the displacement in time t and p, q and r are arbitary constants :",
+    "options": {
+      "A": "y =",
+      "B": "y = p + tqr",
+      "C": "y =",
+      "D": "y ="
+    },
+    "correct_option": "B",
+    "explanation": "velocity = dy dt It is the first derivative where t terms can only yield a constant value."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement of a particle starting from rest (at t=0) is given by s = 6t 2 - t 3 The time when the particle will attain zero acceleration is :",
+    "options": {
+      "A": "2s",
+      "B": "8s",
+      "C": "12s",
+      "D": "16s"
+    },
+    "correct_option": "A",
+    "explanation": "s = 6t 2 - t 3 v = 12t - 3t 2 a = 12 - 6t = 0  t = 2 sec."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement of a particle varies with time according to the relation x = bt k [1 e ] b - - . Then the velocity of the particle is :",
+    "options": {
+      "A": "k",
+      "B": "2 bt k b e -",
+      "C": "kbe - bt",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "dx v dt = bt bt d k ke d k d k v e dt b b dt b dt b - -   (    = - = - ( )     )      bt d k v e dt b -   = -      v = k(e - bt )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moves along a straight line such that its displacement at any time t is given by s = t 3 - 6t 2 + 3t + 4 metres. The displacement when the acceleration is zero is :",
+    "options": {
+      "A": "3 m",
+      "B": "- 12",
+      "C": "42 m",
+      "D": "- 6 m"
+    },
+    "correct_option": "D",
+    "explanation": "s = t 3 - 6t 2 + 3t + 4 v = 2 ds 3t 12t 3 dt = - + a = dv dt = 6t - 12 If a = 0 Þ t = 2 s = 2 3 - 6(2) 2 + 3(2) + 4 = 8 - 24 + 6 + 4 = - 6m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "displacement x of a particle is related to time t as x = at + bt 2 - ct 3 where a, b and c are constants. The velocity of the particle when its acceleration is zero is given by : -",
+    "options": {
+      "A": "a + 2 b c",
+      "B": "a + 2 b 2c",
+      "C": "a + 2 b 3c",
+      "D": "a + 2 b 4c"
+    },
+    "correct_option": "C",
+    "explanation": "x = at + bt 2 - ct 3 v = dx dt = a + 2bt - 3ct 2 acceleration a' = 2b - 6ct if a' = 0 then t = b 3c So at t = b 3c V = a + 2b × b 3c - 3c × 2 2 b 9c V = a + 2 2 2b b 3c 3c - V = a + 2 b 3c"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moves along the curve y = 2 x",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "x dx v t dt = = At t = 2 sec. v x = 2 m/s 4 3 y dy d t t v dt dt 8 2 (  = = = ( ) )  At t = 2 sec. v y = 4 m/s ˆ ˆ v (2i 4j) m/s = + \\rho 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Here x varies with time as x = 2 t",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Where x and y are measured in metre and t in second. At t = 2s, the velocity of the particle (in ms - 1 ) is :",
+    "options": {
+      "A": "ˆ ˆ 2i 4j -",
+      "B": "ˆ ˆ 2i 4j +",
+      "C": "ˆ ˆ 4i 2j +",
+      "D": "ˆ ˆ 4i 2j -"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity - time relation of an electron starting from rest is given by u = kt, where k = 2 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance traversed in 4 sec is :",
+    "options": {
+      "A": "9m",
+      "B": "16 m",
+      "C": "27 m",
+      "D": "36 m"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The initial velocity of a particle is u (at t = 0) and the acceleration is given by f = at",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "2 dv f at dt = = v t 3 3 2 u 0 at at d v at dt v u v u 3 3  =  - =  = + \\int \\int"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following relations is valid?",
+    "options": {
+      "A": "v = u + at 2",
+      "B": "2 at v u 2 = +",
+      "C": "3 at v u 3 = +",
+      "D": "v = u + at"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving with a velocity of 10m/s towards east. After 20 s its velocity changes to 10m/s towards north. Its average accel e ration is: -",
+    "options": {
+      "A": "zero",
+      "B": "2 m/s 2 towards N - W",
+      "C": "1 2 m/s 2 towards N - E",
+      "D": "1 2 m/s 2 towards N - W"
+    },
+    "correct_option": "D",
+    "explanation": "acceleration ˆ ˆ v 10j 10i a t 20 \\Delta - = = \\Delta \\rho \\rho m/s 2 = ˆ \\hat{i} j 2 - + (west - north) 1 1 1 a 4 4 2 = + = \\rho m/s 2 (north - west)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Starting from rest, the acceleration of a particle is a = 2(t - 1)m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "a = 2t - 2 v 5 0 0 dv (2t 2)dt = - \\int \\int   5 5 2 0 0 V t 2 t   = -   V = 25 - 10 = 15 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of the particle at t = 5 s is : -",
+    "options": {
+      "A": "15 m/s",
+      "B": "25 m/s",
+      "C": "5 m/s",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the velocity of a particle is (10 + 2t 2 ) m/s, then the average acceleration of the particle between 2s and 5s is : -",
+    "options": {
+      "A": "2m/s 2",
+      "B": "4m/s 2",
+      "C": "12m/s 2",
+      "D": "14m/s 2"
+    },
+    "correct_option": "D",
+    "explanation": "V = (10 + 2t 2 ) m/s 2 1 avg 2 1 V V a t t - = - at t = 2 sec, v 1 = 18 m/s at t = 5 sec, v 2 = 60 m/s 2 avg 60 18 a 14 m / s 5 2 - = = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If velocity of a particle is given by v = (3t 2 + 2)m/s, then average velocity in the interval 0 \\le t \\le 2sec: -",
+    "options": {
+      "A": "6 m/s",
+      "B": "8 m/s",
+      "C": "3 m/s",
+      "D": "4 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "V = (3t 2 + 2) m/s S = (t 3 + 2t) m at t = 0  S 1 = 0 at t = 2  S 2 = 12 m 2 1 avg 2 1 S S 12 0 v 6 m / s t t 2 0 - - = = = - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle located at x = 0 at time t = 0, starts moving along the positive x - direction with a velocity 'v' which varies as v x = \\alpha , then velocity of particle varies with time as : ( \\alpha is a constant)",
+    "options": {
+      "A": "v  t",
+      "B": "v  t 2",
+      "C": "v  t",
+      "D": "v = constant"
+    },
+    "correct_option": "A",
+    "explanation": "dx dx v x x dt dt x = \\alpha  = \\alpha  = \\alpha Integrating, x t 1/2 x 0 t 0 x dx dt - = = = \\alpha \\int \\int 2 x t x t /2 = \\alpha  = \\alpha Put this value of x in the original given eq n . ( ) 2 v x .t /2 t /2 = \\alpha = \\alpha \\alpha = \\alpha v t  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the velocity of a particle is given by v = (180 - 16x) 1/2 m/s, then its acceleration will be: -",
+    "options": {
+      "A": "Zero",
+      "B": "8 m/s 2",
+      "C": "- 8 m/s 2",
+      "D": "4 m/s 2"
+    },
+    "correct_option": "C",
+    "explanation": "v = (180 - 16x) 1/2 (v)dv a dx = \\rho ( ) ( ) 1/2 1/2 d a 180 16x 180 16x dx = -  -   1/2 1/2 1 (180 16x) a 0 16 2 (180 16x)   - = -   -   = - 8 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The acceleration of a particle moving in a straight line varies with its displacement as a = 2S +",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "a = 2s + 1 (v)dv ds = 2s + 1 v(dv) = (2s + 1)ds v s 0 0 vdv (2s 1)ds = + \\int \\int  2 2 v 2s s 2 2 (  = + ( ) )   v 2s(s 1) = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "velocity of the particle is zero at zero displacement. The relation between velocity and displacement is : -",
+    "options": {
+      "A": "v = S",
+      "B": "v 2S",
+      "C": "v S",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity = ˆ ˆ (15i 2) 5j 8 ˆ ˆ 3i 4j 2 8  +  = + + v 5 m/s = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The position vector of a particle is given as ( ) ( ) 2 2 ˆ ˆ r t 4t 6 i t j = - + + . The time after which the velocity vector and acceleration vector becomes perpendicular to each other is equal to: -",
+    "options": {
+      "A": "1 sec.",
+      "B": "2 sec.",
+      "C": "1.5 sec.",
+      "D": "5 sec."
+    },
+    "correct_option": "A",
+    "explanation": "2 2 ˆ ˆ r (t 4t 6)i (t )j = - + + \\rho dr ˆ ˆ v (2t 4)i (2t)j dt = = - + \\rho \\rho dv ˆ ˆ a 2i 2j dt = = + \\rho \\rho For v a ⊥ \\rho \\rho v a 0  = \\rho \\rho 4t - 8 + 4t = 0 t = 1 sec. 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At any instant of time acceleration and velocity of a particle are given by ˆ ˆ a i j = + & ˆ ˆ v 6i 8j = + , then rate of change of speed (component of acceleration along velocity) at the same instant will be: -",
+    "options": {
+      "A": "ˆ ˆ",
+      "B": "ˆ ˆ 6i 8j 25 +",
+      "C": "7 ˆ ˆ",
+      "D": "7 ˆ ˆ"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a body starts from rest, the time in which it covers a particular displacement with uniform acceleration is :",
+    "options": {
+      "A": "inversely proportional to the square root of the displacement",
+      "B": "inversely proportional to the displacement",
+      "C": "directly proportional to the displacement",
+      "D": "directly proportional to the square root of the displacement"
+    },
+    "correct_option": "D",
+    "explanation": "2 1 s ut at 2 = + u = 0 2 1 s at 2 = 2 2s t a = t s "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body at rest is imparted motion to move in a straight line. I t is then obstructed by an opposite force, then:",
+    "options": {
+      "A": "the body may necessarily change direction",
+      "B": "the body is sure to slow down",
+      "C": "the body will necessarily continue to move in the same direction at the same speed",
+      "D": "none of the above."
+    },
+    "correct_option": "B",
+    "explanation": "As force is opposite to velocity so body will be retarded and slow down."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a car at rest accelerates uniformly to a speed of 144 km/h in 40 seconds, it covers a distance of :",
+    "options": {
+      "A": "200 m",
+      "B": "800 m",
+      "C": "1440 m",
+      "D": "2980 m Kinematics"
+    },
+    "correct_option": "B",
+    "explanation": "5 v 144 18 =  = 40 m/s 40 0 a 40 - = = 1m/s 2 2 1 1 s at 1 40 40 2 2 = =    = 800 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a car at rest accelerates uniformly and attains a speed of 54 km/h in 10s, then it covers a distance of",
+    "options": {
+      "A": "75 m",
+      "B": "100 m",
+      "C": "200 m",
+      "D": "400 m"
+    },
+    "correct_option": "A",
+    "explanation": "u v 0 15 s t 10 75 m 2 2 + + (  (  =  =  = ( ) ( ) )  ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a train travelling at 72 km/h is to be brought to rest in a distance of 100 m, then its retardation should be :",
+    "options": {
+      "A": "20 m/s 2",
+      "B": "2 m/s 2",
+      "C": "10 m/s 2",
+      "D": "1 m/s 2"
+    },
+    "correct_option": "B",
+    "explanation": "u = 72 km/h = 20 m/s; v = 0 ; S = 100 m a = 2 2 v u 2s - = - 2 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Initially a body is at rest. If its acceleration is 5ms - 2 then the distance travelled in the 5 th second is : -",
+    "options": {
+      "A": "86.6 m",
+      "B": "87.5 m",
+      "C": "88 m",
+      "D": "22.5 m"
+    },
+    "correct_option": "D",
+    "explanation": "( ) 5 45 S 0 2 5 1 22.5m 2 2 = +  - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car starts from rest travelling with constant acceleration. If distance covered by it in 10 th second of its journey is 19m, what will be the acceleration of car?",
+    "options": {
+      "A": "4 m/s 2",
+      "B": "3 m/s 2",
+      "C": "2 m/s 2",
+      "D": "1 m/s 2"
+    },
+    "correct_option": "C",
+    "explanation": "th n a S U (2n 1) 2 = + - a 19 0 (2 10 1) 2 = +  - a = 2 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car starts from rest and moves with constant acceleration. The ratio of the distance covered in the n th second to that covered in n seconds is : -",
+    "options": {
+      "A": "2 2 1 n n -",
+      "B": "2 2 1 n n +",
+      "C": "2 2 1 n n -",
+      "D": "2 2 1 n n +"
+    },
+    "correct_option": "C",
+    "explanation": "th n 2 n a 0 (2n 1) S 2 1 S 0 an 2 + - = + th n 2 n S 2 1 S n n = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body starts from rest. What is the ratio of the distance travelled by the body during the 4th and 5th second?",
+    "options": {
+      "A": "7 5",
+      "B": "5 7",
+      "C": "7 9",
+      "D": "3 7"
+    },
+    "correct_option": "C",
+    "explanation": "th rd 4 5 S 2 4 1 7 S 2 5 1 9  - = =  - 7"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car moving with a velocity of 10 m/s can be stopped by the application of a constant force F in a distance of 20m. If the velocity of the car is 40 m/s. It can be stopped by this force in :",
+    "options": {
+      "A": "20 3 m",
+      "B": "320 m",
+      "C": "60 m",
+      "D": "180 m"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car moving with a speed of 40 km/h can be stopped by applying brakes after at least 2m. If the same car is moving with a speed of 120 km/h., what is the minimum stopping distance?",
+    "options": {
+      "A": "2 m",
+      "B": "4 m",
+      "C": "6 m",
+      "D": "18 m"
+    },
+    "correct_option": "D",
+    "explanation": "2 u s 2a = so s  u 2 So if speed is tripled, stopping distance will be nine times i.e. 9 × 2 m = 18 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity acquired by a body moving with uniform acceleration is 30 m/s in 2 seconds and 50 m/s in 4 seconds. The initial velocity is :",
+    "options": {
+      "A": "zero",
+      "B": "2 m/s",
+      "C": "4 m/s",
+      "D": "10 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "u + 2a = 30 u + 4a = 50  a = 10 m/s 2 , u = 10 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body starts from rest and with a uniform acceleration of 5 ms - 2 for 5 seconds. During the next 10 seconds it moves with uniform velocity. T he total distance travelled by the body is : -",
+    "options": {
+      "A": "100 m",
+      "B": "312.5 m",
+      "C": "500 m",
+      "D": "625 m"
+    },
+    "correct_option": "B",
+    "explanation": "2 1 1 125 s 5 (5) m 2 2 =   = v = 0 + 5(5) = 25 m/s s 2 = 25 × 10 = 250 m Total distance travelled = s 1 + s 2 = 312.5 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of a particle moving with constant acceleration at an instant t 0 is 10 m/s. After 5 seconds of that instant the velocity of the particle is 20m/s. The velocity at 2 second before t 0 is :",
+    "options": {
+      "A": "8 m/s",
+      "B": "4 m/s",
+      "C": "6 m/s",
+      "D": "7 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "2 20 10 a 2m / s 5 - = = for 2 seconds before t 0 10 = v + 2(2) v = 10 - (2)(2) = 6 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bullet moving with a velocity of 200 cm/s penetrates a wooden block and comes to rest after traversing 4 cm inside it. What velocity is needed for travelling distance of 9 cm in same block : -",
+    "options": {
+      "A": "100 cm/s",
+      "B": "136.2 cm/s",
+      "C": "300 cm/s",
+      "D": "250 cm/s"
+    },
+    "correct_option": "C",
+    "explanation": "Retardation remains same in both situations 2 2 0 (200) 0 V 2 4 2 9 - - =   V = 300 cm/s"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following four statements is true?",
+    "options": {
+      "A": "A body can have zero velocity and still be accelerated",
+      "B": "A body can have a constant velocity and still have a varying speed",
+      "C": "A body cannot have a constant speed if it has a varying velocity",
+      "D": "The direction of the velocity of a body cannot change when its acceleration is constant."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If an iron ball and a wooden ball of same radii are released from a height h in vacuum then time taken by both of them to reach ground will be :",
+    "options": {
+      "A": "unequal",
+      "B": "exactly equal",
+      "C": "roughly equal",
+      "D": "zero"
+    },
+    "correct_option": "B",
+    "explanation": "Time of free fall does not depend on mass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three different objects of masses m 1 , m 2 and m 3 are allowed to fall from rest and from the same point 'O' along three different frictionless paths. The speeds of the three objects on reaching the ground, will be in the ratio of : - (1) m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "v 2 = 2as v 2gh = [does not depend upon mass]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body dropped from a tower reaches the ground in 5s. The height of the tower is about :",
+    "options": {
+      "A": "80 m",
+      "B": "125 m",
+      "C": "160 m",
+      "D": "40 m"
+    },
+    "correct_option": "B",
+    "explanation": "2 2 1 1 h gt 10 5 125 m 2 2 = =   = 8"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone falls freely such that the distance covered by it in the last second of its motion is equal to the distance covered by it in the first 3 seconds. It remained in air for : -",
+    "options": {
+      "A": "2 s",
+      "B": "3 s",
+      "C": "5 s",
+      "D": "6 s"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body dropped from the top of a tower covers 5x distance in the last second of its fall. The time of fall is if x is the distance covered in first second of its fall -",
+    "options": {
+      "A": "2 sec",
+      "B": "4 sec.",
+      "C": "3 sec.",
+      "D": "50 7 (  ( ) )  sec"
+    },
+    "correct_option": "C",
+    "explanation": "( ) 2 1 1 x g 1 g 2 2 = = ( ) g 5x 2n 1 2 = - ( ) g g 5 2n 1 2 2  = - n = 3 sec. u = O v B A C s 1 s 2 t = O t = 5sec t = 15sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object is dropped vertically down on earth. The change in its speed after falling through a distance 2d from its highest point is",
+    "options": {
+      "A": "mgd",
+      "B": "2gd",
+      "C": "2 gd",
+      "D": "mg 2 d"
+    },
+    "correct_option": "C",
+    "explanation": "v 2 = u 2 + 2as v 2 = 2g(2d) v = 2 gd"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bullet enters in a thick wooden wall with speed u. If the bullet penetrates a distance 's' into the wood then retardation of the bullet is :",
+    "options": {
+      "A": "2 u s",
+      "B": "2 u 2s",
+      "C": "2 u 4s",
+      "D": "2 2u s"
+    },
+    "correct_option": "B",
+    "explanation": "use v 2 = u 2 - 2as  0 = u 2 - 2as  2 u a 2s ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body dropped from the top of a tower covers a distance 9x in the last second of its journey, where x is the distance covered in first second. How much time does it take to reach the ground?",
+    "options": {
+      "A": "3s",
+      "B": "4s",
+      "C": "5s",
+      "D": "6s"
+    },
+    "correct_option": "C",
+    "explanation": "Distance covered in 1 st sec is x = 1 2 g (1) 2 = g 2 Let it falls for n sec then last sec is n th sec.  9x = 0 + g 2 (2n - 1)  9 × g 2 = g 2 (2n - 1)  2n = 10  n = 5 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is dropped into a well in which the level of water is h below the top of the well. If v is velocity of sound, the time T after which the splash is heard is given by.",
+    "options": {
+      "A": "2h T v =",
+      "B": "2h h T g v = +",
+      "C": "2h h T v g = +",
+      "D": "h 2h T 2g v = +"
+    },
+    "correct_option": "B",
+    "explanation": "Time taken by stone to go down 1 2h t g = Time taken by sound to come up 2 h t v =  T = t 1 + t 2 = 2h h g v +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is released from the top of a tower of height H metres. It takes t time to reach the ground. Where is the body t 3 time after the release :",
+    "options": {
+      "A": "At H 2 metres from ground",
+      "B": "At H 4 metres from ground",
+      "C": "At 8H 9 metres from the ground",
+      "D": "At H 9 metres from the ground Kinematics"
+    },
+    "correct_option": "C",
+    "explanation": "2 1 H gt 2 = h = 1 2 g 2 t 3 (  ( ) )  = H 9 from releasing point so distance from the ground = H - H/9 = 8H/9"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body falling from height 'h' takes t 1 time to reach the ground. The time taken to cover the first th 1 4 (  ( ) )  of the height is :",
+    "options": {
+      "A": "t 2 = 1 t 2",
+      "B": "t 1 = 2 t 2",
+      "C": "t 2 = 1 t 2",
+      "D": "None of these"
+    },
+    "correct_option": "C",
+    "explanation": "2 1 1 h 0 gt 2 = +  1 2h t g = 2 2 2 2 h 1 2 h 0 gt t 4 2 g 4 = +  =   1 2 t 2 h 1 2h t g 4 2 g 2 =  = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is dropped from a certain height which can reach the ground in 5 seconds. It is stopped after 3 seconds of its fall and is again released. The total time taken by the stone to reach the ground will be :",
+    "options": {
+      "A": "6 s",
+      "B": "6.5 s",
+      "C": "7 s",
+      "D": "7.5 s"
+    },
+    "correct_option": "C",
+    "explanation": "Total height to fall ( ) 2 2 1 1 h gt 10 5 125m 2 2 = =   = In first 3 sec. ( ) 2 2 1 1 1 1 s gt 10 3 45 m 2 2 = =   = Now remaining height to fall  s 2 = h - s 1 = 125 - 45 = 80 m 2 2 2s 2 80 t 4 g 10  = = = sec t = t 1 + t 2 = 3 + 4 = 7 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body released from a height falls freely towards earth. Another body is released from the same point exactly two second later. The separation between them two seconds after the release of the second body is : -",
+    "options": {
+      "A": "9.8 m",
+      "B": "49 m",
+      "C": "58.8 m",
+      "D": "19.6 m"
+    },
+    "correct_option": "C",
+    "explanation": "Separation = S 1 - S 2 = 1 2 g(4) 2 - 1 2 g(2) 2 = 12 g 2 = 58.8 m 9"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two balls are dropped from different heights at different instants. Second ball is dropped 2 seconds after the first ball. If both balls reach the ground simultaneously after 5 seconds of dropping the first ball, then the difference between the initial heights of the two balls will be: (g=9.8m/s 2 )",
+    "options": {
+      "A": "58.8 m",
+      "B": "78.4 m",
+      "C": "98.0 m",
+      "D": "117.6 m"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is released from the top of a tower of height H m. After 2sec it is stopped and then instantaneously released. What will be its height from ground after next 2sec : -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "In first 2 sec the distance travelled is h 1 = 0 + 1 2 (10) (2) 2 = 20 m After stopped & released the distance travelled in next 2 sec h 2 = 0 + 1 2 10 (2) 2 = 20 m So height from ground = (H - 40)m u=O d u=O S 1 S 2 3sec u=O Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of the distances traversed, in successive intervals of time by a body falling from rest, are (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "( ) th n a S u 2n 1 2 = + - u = 0 and a = g (const.) th n S  (2n - 1) (here n = 1,2,3.....) D"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "............ (4) None of these",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "1 2 3 d d d d = + + \\rho\\rho\\rho\\rho ˆ \\hat{i} \\hat{j} ˆ d 30j 20i 30 2 2 (  - = + + ( ) ( ) )  \\rho ˆ ˆ ˆ ˆ d 30j 20i 30i 30j = + + - \\rho ˆ d 50i = + \\rho d 50m = \\rho towards east"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is dropped from a certain height. The time taken by it to fall through successive distances of 1 km each will be : (1) all equal, being equal to 2 g second. (2) in the ratio of the square roots of the integers",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "2 1 2h h gt t 2 g =  = \\rho  t I km ; t II km ; t III km ;.... = ( ) ( )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3 (3) in the ratio of the difference in the square roots of the integers, i.e., 1,,( 2 1),( 3 2),( 4 3) - - - ....... (4) in the ratio of the reciprocals of the square roots of the integers, ie., 1 1 1 , , ..... 1 2 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Drops of water fall from the roof of a building 27m high at regular intervals of time. When the first drop reaches the ground, at the same instant fourth drop begins to fall. What are the distances of the second and third drops from the roof?",
+    "options": {
+      "A": "6 m and 12 m",
+      "B": "6 m and 3 m",
+      "C": "12 m and 3 m",
+      "D": "8 m and 2 m"
+    },
+    "correct_option": "C",
+    "explanation": "By galileo's law of odd number x + 3x + 5x = 27m x = 3 m Position of 2 nd drop from top x + 3x = 4x = 12m Position of 3 rd drop from top x = 3 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water drops fall at regular intervals from a tap 6 m above the ground. The third drop is leaving the tap at the instant the first drop touches the ground. How far above the ground is the second drop at that instant?",
+    "options": {
+      "A": "1.25 m",
+      "B": "2.50 m",
+      "C": "3.75 m",
+      "D": "4.5 m"
+    },
+    "correct_option": "D",
+    "explanation": "By galileo's law of odd number x + 3x = 6m 4x = 6 x = 6 4 = 1.5m Height of 2 nd drop from ground = 3x = 3 × 6 4 = 4.5m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four marbles are dropped from the top of a tower one after the other with an interval of one second. The first one reaches the ground after 4 seconds. When the first one reaches the ground the distances between the first and second, the second and third an d the third and forth will be respectively : -",
+    "options": {
+      "A": "35 m, 25 m and 15 m",
+      "B": "30 m, 20 m and 10 m",
+      "C": "20 m, 10 m and 5 m",
+      "D": "40 m, 30 m and 20 m"
+    },
+    "correct_option": "A",
+    "explanation": "S 1 = 1 2 g(4) 2 S 1 = 80 m S 2 = 1 2 g(3) 2 = 45 m S 3 = 1 2 g(2) 2 = 20 m S 4 = 1 2 g(1) 2 = 5 m S 1 - S 2 = 80 - 45 = 35 m S 2 - S 3 = 45 - 20 = 25 m S 3 - S 4 = 20 - 5 = 15 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is thrown vertically upward. Its velocity at half of the maximum height is 10m/s. The maximum height attained by it is (g=10 ms - 2 ) : -",
+    "options": {
+      "A": "8m",
+      "B": "20m",
+      "C": "10m",
+      "D": "16m"
+    },
+    "correct_option": "C",
+    "explanation": "v 2 = u 2 - 2g h 2 0 = (10) 2 - 10h h = 10 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown upward with a velocity of 50 m/s. It will reach the ground after : -",
+    "options": {
+      "A": "10 s",
+      "B": "20 s",
+      "C": "5 s",
+      "D": "40 s"
+    },
+    "correct_option": "A",
+    "explanation": "T = 2u 2 50 g 10  = = 10 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies are thrown vertically upwards with their initial speeds in the ratio",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "∵ Height 2 u H 2g = H  u 2 2 1 2 2 H (2u) 4 H 9 (3u) = = ∵ Time 2u T g = T  u 1 2 T 2u 2 T 3u 3 (  = = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of the maximum heights reached by them and the ratio of time taken by them to return back to the ground respectively are : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": ".......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is thrown from the ground upward with velocity 40 m/s. Calculate maximum height: -",
+    "options": {
+      "A": "40 m",
+      "B": "80 m",
+      "C": "160 m",
+      "D": "8 m"
+    },
+    "correct_option": "B",
+    "explanation": "2 max . u 40 40 H 2g 2 10  = =  H max. = 80 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a ball is thrown vertically upwards with 40 m/s. its velocity after three seconds will be :",
+    "options": {
+      "A": "10 m/s",
+      "B": "20 m/s",
+      "C": "30 m/s",
+      "D": "40 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at, v = 40 - 10(3) = 10 m/s."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a ball is thrown vertically up with velocity v 0 , it reaches a maximum height 'h'. If one wishes to double the maximum height then the ball should be thrown with velocity -",
+    "options": {
+      "A": "2 v 0",
+      "B": "3v 0",
+      "C": "9v 0",
+      "D": "3/2v 0"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 2 1 2 2 2 1 1 1 0 u h 2h u 2g h h u v 2g =  = 2 2 2 0 2 0 u 2v u 2v =  = t = 0 1km 2km 3km 4km 1 2 t 1 g = 2 2 t 2 g = 3 2 t 3 g = 4 2 t 4 g = I k m 2 t 1 g = ( ) I I k m 2 t 2 1 g = - ( ) I I I k m 2 t 3 2 g = - ( ) I V k m 2 t 4 3 g = - v=O h 10m/s h/2 O 4 th x O 3 rd O 2 nd O 1 st 3x 5x 6m 3 rd drop 2 nd drop 1 st drop x 3x"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "With what speed should a body be thrown upwards so that the distances traversed in 7th second and 8th second are equal?",
+    "options": {
+      "A": "58.4 m/s",
+      "B": "49 m/s",
+      "C": "98 m/s",
+      "D": "68.6 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "It is only possible when 7 th sec is the last second for its ascending motion and 8 th sec is first second of its descending motion, which is clear from figure.  0 = u - gt so u = gt = 9.8 × 7 = 68.6 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a ball is thrown vertically upwards with speed u, the distance covered during the last ‘t’ seconds of its ascent is : -",
+    "options": {
+      "A": "ut",
+      "B": "1 2 gt 2",
+      "C": "ut - 1 2 gt 2",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Distance covered in last t second of ascent = distance covered in first t second of descent = 0 + 2 2 1 1 gt gt 2 2 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body thrown vertically upwards with an initial velocity u reaches maximum height in 6 seconds. The ratio of the distance travelled by the body in the first second and the seventh second is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Distance travelled in 1 st second during upward motion = distance travelled in last second during downward motion. st 1 g 11g S (2 6 1) 2 2 =  - = th 2 7 1 g S g(1) 2 2 = = st th 1 7 S 11 S 1 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown vertically upwards with velocity 600 m/s. Calculate distance travelled in last 2 sec of its upward motion : -",
+    "options": {
+      "A": "20 m",
+      "B": "30 m",
+      "C": "10 m",
+      "D": "25 m"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 S gt 2 = ( ) 2 1 S g 2 20m 2 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is projected vertically up at t = 0 with a velocity of 98 m/s. Another body is projected from the same point with same velocity after 4 seconds. Both bodies will meet at t =",
+    "options": {
+      "A": "6 s",
+      "B": "8 s",
+      "C": "10 s",
+      "D": "12 s"
+    },
+    "correct_option": "D",
+    "explanation": "S 1 = S 2 98(t) - 1 2 (9.8)t 2 = 98(t - 4) - 1 2 (9.8) (t - 4) 2 10t - 2 t 2 = 10(t - 4) - 1 2 (t - 4) 2  4t - 48 = 0  t = 48 4 = 12s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown vertically upwards. The ball was observed at a height h twice with a time interval \\Delta t. The initial velocity of the ball is",
+    "options": {
+      "A": "2 8gh",
+      "B": "2 g t 2gh 2 \\Delta (  + ( ) ) ",
+      "C": "2 8gh",
+      "D": "2gh"
+    },
+    "correct_option": "B",
+    "explanation": "For distance 'S' time should be \\Delta t/2 2 1 t S g 2 2 \\Delta (  = ( ) )  For total height (h + S) = 2 u 2g u 2g(h S) = + 2 1 t 2g h g 2 2 (  \\Delta (  = + ( ) ( ) ( ) )  )  2 g t 2gh 2 \\Delta (  = + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown vertically upwards. Assuming the air resistance to be constant and considerable : -",
+    "options": {
+      "A": "the time of ascent > the time of descent",
+      "B": "the time of ascent < the time of descent",
+      "C": "the time of ascent > the time of descent",
+      "D": "the time of ascent = the time of descent"
+    },
+    "correct_option": "B",
+    "explanation": "Let retardation due to air resistance = a then for upward journey net retardation = (g + a)  asc 2h t g a = + and for downward journey net acceleration = (g - a)  desc 2h t g a = -  t asc < t desc"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is thrown up vertically with a speed 'v 1 ', in air. It takes time t 1 in upward journey and t 2 (> t 1 ) in the downward journey and returns to the starting point with a speed v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "There is loss of kinetic energy during the motion so it is clear that v 1 > v 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is thrown upwards from ground. It experiences a constant resistance force which produces a retardation of 2 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "ascent descent t g a t g a - = + 10 2 2 10 2 3 - = = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of time of ascent to the time of descent is (g = 10 m/s 2 ): -",
+    "options": {
+      "A": "1",
+      "B": "2 3",
+      "C": "2 3",
+      "D": "3 2"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is thrown straight upward with a speed of 20 m/s from a tower 200 m high. The speed with which it strikes the ground is approximately (g = 9.8 m/s 2 )",
+    "options": {
+      "A": "60 m/s",
+      "B": "65 m/s",
+      "C": "70 m/s",
+      "D": "75 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "∵ v 2 = u 2 + 2g(H) v 2 = (20) 2 + 2(9.8) (200) v = 4320 v 65 m / s \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A balloon is at a height of 81 m and is ascending upwards with a velocity of 12 m/s. A body of 2 kg weight is dropped from it. If g = 10 m/s 2 , the body will reach the surface of the earth in: -",
+    "options": {
+      "A": "1.5 s",
+      "B": "4.025 s",
+      "C": "5.4 s",
+      "D": "6.75 s"
+    },
+    "correct_option": "C",
+    "explanation": "h = 81 m h = - ut + 1 2 gt 2 81 = - 12(t) + 1 2 (10) t 2 5t 2 - 12t - 81 = 0 t = 5.4 sec top point h g a t 2 t 1 a g ground top point 8 th sec 7 th sec v f = O S h Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown vertically upwards from the top of a tower with velocity 4.9 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "S = ut + 1 2 at 2 - h = 4.9 × 3 - 1 2 × 9.8× (3) 2 h = 29.4 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It strikes the pond near the base of the tower after 3 seconds. The height of the tower is : -",
+    "options": {
+      "A": "73.5 m",
+      "B": "44.1 m",
+      "C": "29.4 m",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity = ˆ ˆ (15i 2) 5j 8 ˆ ˆ 3i 4j 2 8  +  = + + v 5 m/s = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is thrown upwards with a speed 'u' from the top of the tower reaches the ground with a velocity '3u'. The height of the tower is: -",
+    "options": {
+      "A": "2 3u g",
+      "B": "2 4u g",
+      "C": "2 6u g",
+      "D": "2 9u g"
+    },
+    "correct_option": "B",
+    "explanation": "V 2 = u 2 + 2as ( - 3u) 2 = u 2 + 2 ( - g) ( - h) h = 2 4u g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body dropped from a height h, strikes the ground with velocity 3 m/s. Another body of same mass is thrown downward from the height h with an initial velocity of 4 m/s. Find the final velocity with which it strikes the ground",
+    "options": {
+      "A": "3 m/s",
+      "B": "4 m/s",
+      "C": "5 m/s",
+      "D": "12 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "Because acceleration remains same in both cases, then : 2 2 2 2 (3) (O) V ( 4) 2h 2h - - - = V = 5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From a building two balls A and B are thrown such that A is thrown upwards and B downwards (both vertically) with same speed. If V A and V B are their respective velocities on reaching the ground then : -",
+    "options": {
+      "A": "V B > V A",
+      "B": "V A = V B",
+      "C": "V A > V B",
+      "D": "None of these"
+    },
+    "correct_option": "B",
+    "explanation": "Taking upward direction as negative and downward direction positive. For A : 2 2 A V ( u) 2gh = - + 2 A V u 2gh = + For B : 2 2 B V u 2gh = + 2 B V u 2gh = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone falls from a balloon that is descending at a uniform rate of 10 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Initial velocity of stone u = 10 m/s downwards  displacement h = ut + 1 2 gt 2 = 10 × 10 + 1 2 × 10 × (10) 2 = 100 + 500 = 600 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement of the stone from the point of release after 10 seconds is : (g = 10 m/s 2 )",
+    "options": {
+      "A": "490 m",
+      "B": "510 m",
+      "C": "600 m",
+      "D": "725 m"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity = ˆ ˆ (15i 2) 5j 8 ˆ ˆ 3i 4j 2 8  +  = + + v 5 m/s = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A parachutist after bailing out falls 50 m without friction. When parachute opens, it decelerates at 2 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Speed after fall of 50 m V 2g(50) 980 = = After parachute opens (3) 2 = ( ) 2 980 - 2(2)(S) S = 971 4 = 242.75 m So total height 242.75 + 50 ≃ 293 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reaches the ground with a speed of 3 m/s. At what approximate height, did he bail out?",
+    "options": {
+      "A": "293 m",
+      "B": "111 m",
+      "C": "91 m",
+      "D": "182 m"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A rocket is fired vertically from the ground. It moves upwards with a constant acceleration 20 m/s 2 for 30 sec after which the fuel is finished. After what time from the instant of firing the rocket will attain the maximum height? (Take g = 10 m/s 2 )",
+    "options": {
+      "A": "90 s",
+      "B": "45 s",
+      "C": "60 s",
+      "D": "75 s GRAPHICAL ANALYSIS"
+    },
+    "correct_option": "A",
+    "explanation": "velocity at the time when fuel is finished : - V = U + at = 0 + 20 × 30 V = 600 m/s Now, the time taken by the rocket to reach at max. height after this instant : - 0 = 600 - 10 × t t = 60 sec. The total time taken by the rocket to reach at max. height = 30 + 60 = 90 sec. 12"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity - time graph of an object is shown. The distance during the interval 0 to t 4 is : -",
+    "options": {
+      "A": "Area A + Area B +Area C +Area D +Area E",
+      "B": "Area A + Area C - Area B - Area D",
+      "C": "Area A + Area B + Area C + Area D",
+      "D": "Area A + Area C + Area E - Area B +Area D A B C D E t 5 t 4 t 3 t 2  t 0 t 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure below shows the acceleration - time graph of a one dimensional motion. Which of the following characteristics of the particle is represented by the shaded area?",
+    "options": {
+      "A": "change in velocity",
+      "B": "change in position",
+      "C": "change in momentum",
+      "D": "velocity"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Fig. shows the displacement of a particle moving along x - axis as a function of time. The velocity of the particle is zero at : -",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement - time graph of a moving particle is shown. The instantaneous velocity of the particle is positive at the point :",
+    "options": {
+      "A": "D",
+      "B": "F",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_option": "C",
+    "explanation": "Slope of displacement - time graph gives instantaneous velocity."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-280",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person walks along an east - west street and a graph of his displacement from home is shown in figure. His average speed for the whole time interval is",
+    "options": {
+      "A": "0",
+      "B": "23 m/s",
+      "C": "8 m/s",
+      "D": "None of these"
+    },
+    "correct_option": "C",
+    "explanation": "Avg. speed = Total distance Total time 40+40+40+40 = 20 = 8 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-281",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving in a straight line y=3x. Its velocity time graph is shown in figure. Its speed is minimum at t =.............",
+    "options": {
+      "A": "2s",
+      "B": "4s",
+      "C": "6s",
+      "D": "8s"
+    },
+    "correct_option": "B",
+    "explanation": "Speed at t = 4 sec. is zero and it is the minimum value."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-282",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement - time graph for two particles A and B are straight lines inclined at angles of 30^\\circ and 60 ^\\circ with the time axis. The ratio of velocity of particle A & B (V A : V B ) is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "A B 1 V tan30 1 3 V tan60 3 3 ^\\circ = = = ^\\circ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-283",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following curves do not represent motion in one dimension : -",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-284",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following displacement - time graphs shows a realistic situation for a body in motion ?",
+    "options": {
+      "D": "a O t D B A C time displacement D E F C time displacement 3 6 9 0 12 15 t",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Particle cannot have different displacements at same time"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-285",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following velocity - time graphs represent uniformly accelerated motion ?",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Uniformly accelerated motion  constant acceleration"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-286",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The fig. shows the position time graph of a particle moving on a straight line path. What is the magnitude of average speed of the particle over 10 seconds ?",
+    "options": {
+      "A": "2 m/s",
+      "B": "4 m/s",
+      "C": "6 m/s",
+      "D": "8 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "Avg. speed = Total distance Total time (60-10)+(40-10) = 8 m/ s 10 ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-287",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the following velocity time graph of a body the distance travelled by the body and its displacement during 5 seconds in metres will be :",
+    "options": {
+      "A": "75, 75",
+      "B": "110, 70",
+      "C": "110, 110",
+      "D": "110, 40"
+    },
+    "correct_option": "B",
+    "explanation": "distance = 1 2 (40 + 20) × 2 + (20 × 1) + 1 2 (20 × 1) + 1 2 (40 × 1) = 110 m u h V A h u V B displacement = 1 2 (40 + 20) × 2 + (20 × 1) + 1 2 (20 × 1) - 1 2 (40 × 1) = 70 m"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-288",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The v - t graph of linear motion of a particle starts its motion from origin is shown in adjoining figure. The distance of particle from origin after 8 sec. is : -",
+    "options": {
+      "A": "18 meters",
+      "B": "16 meters",
+      "C": "8 meters",
+      "D": "6 meters"
+    },
+    "correct_option": "D",
+    "explanation": "Let particle is moving along x - axis then, distance travelled in first 4 sec. = 1 2 (4 + 2) × 4 = 12 m distance travelled in next 4 sec. (along - x axis) = 1 2 (4 + 2) × 2 = 6 m distance of particle from origin = 12 - 6 = 6 m"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-289",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle moves according to given velocity - time graph. Then the ratio of distance travelled in last 4 seconds and 9 seconds is : -",
+    "options": {
+      "A": "1 4",
+      "B": "2 5",
+      "C": "1 8",
+      "D": "4 11"
+    },
+    "correct_option": "B",
+    "explanation": "1 4 10 distance in last 4 sec. 2 2 = 1 distance in 9 sec. 5 (8 2) 10 2   = + "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-290",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity - time graph of a body moving in a straight line is shown in the figure. The displacement and distance travelled by the body in 6 s are, respectively : -",
+    "options": {
+      "A": "8 m, 16 m",
+      "B": "16 m, 8 m",
+      "C": "16 m, 16 m",
+      "D": "8 m, 8m t v v t t v t v 2 4 6 40 60 0 8 10 10 20 30 t"
+    },
+    "correct_option": "A",
+    "explanation": "displacement = 2 × 4 - 2 × 2 + 2 × 2 = 8 m distance = 2 × 4 + 2 × 2 + 2 × 2 = 16 m"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-291",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The variation of velocity of a particle moving along a straight line is illustrated in the figure. The distance transversed by the particle in 3 seconds is",
+    "options": {
+      "A": "60 m",
+      "B": "45 m",
+      "C": "55 m",
+      "D": "30 m"
+    },
+    "correct_option": "B",
+    "explanation": "Distance travelled in 3 sec = area under the curve = area of \\Delta AOH + area of rectangle ABGH + area of \\Delta BCC' + area of rectangle C' CFG 20 1 10 1 20 1 10 1 45m 2 2   = +  + +  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-292",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "velocity - time (v - t) graph for a moving object is shown in the figure. Total displacement of the object during the time interval when there is zero acceleration is: -",
+    "options": {
+      "A": "60 m",
+      "B": "50 m",
+      "C": "30 m",
+      "D": "40 m"
+    },
+    "correct_option": "D",
+    "explanation": "Distance = area under v - t curve = 20 × 1 + (60 - 40) × 1 = 40 m"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-293",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity versus time curve of a moving particle is as shown in the following figure. The maximum acceleration is",
+    "options": {
+      "A": "1 m sec - 2",
+      "B": "2 m sec - 2",
+      "C": "3 m sec - 2",
+      "D": "4 m sec - 2"
+    },
+    "correct_option": "D",
+    "explanation": "acceleration will be maximum when slope will be maximum 2 max 60 20 40 a 4 m / s 40 30 10 - = = = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-294",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the average acceleration of the block from time t=2 sec to t=4 sec.",
+    "options": {
+      "A": "5 m/s 2",
+      "B": "10 m/s 2",
+      "C": "- 5 m/s 2",
+      "D": "- 10 m/s 2"
+    },
+    "correct_option": "C",
+    "explanation": "2 1 avg 2 1 V V 0 10 a t t 4 2 - - = = - - a avg = - 5 m/s 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-295",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle starts from rest. Its acceleration at time t = 0 is 5 m/s 2 which varies with time as shown in the figure. The maximum speed of the particle will be :",
+    "options": {
+      "A": "7.5 m/s",
+      "B": "15 m/s",
+      "C": "20 m/s",
+      "D": "37.5 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "Area under a - t graph gives the change in velocity during given time interval.  \\Delta V = 1 2 × 5 × 8 = 20 m/s Since initial velocity = 0  Maximum speed of the particle = 20 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-296",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle starts from rest, its acceleration - time graph is shown in figure. Find out velocity at t = 4 sec",
+    "options": {
+      "A": "20 m/s",
+      "B": "30 m/s",
+      "C": "40 m/s",
+      "D": "None of these"
+    },
+    "correct_option": "B",
+    "explanation": "Area under the acceleration - time graph = change in velocity 1 2 (4 + 2) × 10 = v - 0 v = 30 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-297",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following options is correct for the object having a straight line motion represented by the following graph : -",
+    "options": {
+      "A": "The object moves with constantly increasing velocity from O to A and then it moves with constant velocity.",
+      "B": "velocity of the object increases uniformly",
+      "C": "Average velocity is zero",
+      "D": "The graph shown is impossible C' H G F E t"
+    },
+    "correct_option": "C",
+    "explanation": "because the displacement is zero, hence the average velocity is also zero."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-298",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the motion of a particle acceleration - time graph is shown in figure. The velocity time curve for the duration of 0 - 4 seconds is :",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "from 0 - 2s a = +ve  slope of v - t curve =+ve from 2 - 4s a = - ve  Slope of v - t curve = - ve Hence correct option (1)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-299",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "acceleration - time graph of a body initially at rest is shown. The corresponding velocity - time graph of the same body is : -",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-300",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The given graph shows the variation of velocity with displacement. Which one of the graph given below correctly represents the variation of acceleration with displacement : -",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "v = - 3x + 30 dv dx = - 3 ∵ vdv a ( 3x 30)( 3) dx = = - + - a = 9x - 90 {equation of straight line} when x = 0 ; a = - 90 & when a = 0 ; x = 10 14"
+  }
+]

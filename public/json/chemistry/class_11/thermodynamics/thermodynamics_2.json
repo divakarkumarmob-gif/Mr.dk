@@ -1,0 +1,3777 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_151",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction A + B ⎯ → C + D + q is found to have a positive entropy change, the reaction will be -",
+    "options": {
+      "A": "Possible at high temperature",
+      "B": "Possible only at low temperature",
+      "C": "Not possible at any temperature",
+      "D": "Possible at any temperature TD23 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) A + B ⎯ → C + D + q (Exothermic reaction) \\Delta S = +ve, \\Delta H = - ve \\Delta G = \\Delta H - T \\Delta S ↓ ↓ - ve +ve Which means at any temperature \\Delta G < 0 So reaction is spontaneous."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_152",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "equilibrium constant of a reaction is related to :",
+    "options": {
+      "A": "Standard free energy change \\Delta G ^\\circ",
+      "B": "Free energy change \\Delta G",
+      "C": "Entropy change",
+      "D": "None TD24 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) We know \\Delta G = \\Delta G 0 + RTlnQ At equilibrium \\Delta G = 0, Q = K eq \\Delta G 0 = - RTln K eq Standard free energy change \\Delta G 0 is related so K eq ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_153",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If \\Delta G ^\\circ > 0 for a reaction then :",
+    "options": {
+      "A": "K P > 1",
+      "B": "K P < 1",
+      "C": "The products predominate in the equilibrium mixture",
+      "D": "None TD24 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\Delta G 0 > 0 We know \\Delta G 0 = - RTlnK p For \\Delta G 0 > 0 l n K p < 0 K p < 1 thermodynamics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_154",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the equilibrium constant for a reaction is 10, then the value of \\Delta G ^\\circ will be (R = 8JK - 1 mol - 1 , T = 300 K)",
+    "options": {
+      "A": "+5.527 kJ mol - 1",
+      "B": "- 5.527 kJ mol - 1",
+      "C": "+55.27 kJ mol - 1",
+      "D": "- 55.27 kJ mol - 1 TD24 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) K p = 10 \\Delta G 0 = - RTlnK p R = 8 JK - 1 mol - 1 \\Delta G 0 = - 8 × 300 × ln(10) T = 300K \\Delta G 0 = - 5.527 KJ mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_155",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The process of evaporation of a liquid is accompanied by :",
+    "options": {
+      "A": "Increase in enthalpy",
+      "B": "Decrease in free energy",
+      "C": "Increase in entropy",
+      "D": "All TD24 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Evaporation of liquid H 2 O( l ) ⎯ → H 2 O(g) (Endothermic reaction) \\Delta S = +ve (liquid to gas conversion) Free energy change ( \\Delta G) decreases \\Delta G = \\Delta H - T \\Delta S↑ \\Delta G decreases"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_156",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the process, CO 2 (s) ⎯ → CO 2 (g) :",
+    "options": {
+      "A": "Both \\Delta H and \\Delta S are +ve",
+      "B": "\\Delta H is negative and \\Delta S is +ve",
+      "C": "\\Delta H is +ve and \\Delta S is - ve",
+      "D": "Both \\Delta H and \\Delta S are - ve TD24 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) CO 2 (s) ⎯ → CO 2 (g) Endothermic process ( \\Delta H = +ve) Entropy will increase due to solid to gas conversion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_157",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The Gibbs free energy change of a reaction at 27^\\circC is - 26 kCal and its entropy change is - 60 Cal K -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) \\Delta G = - 26 kC al, \\Delta S = - 60 C al K - 1 \\Delta H = ? T = 27^\\circC = 300 K We know - \\Delta G = \\Delta H - T \\Delta S - 26 × 10 3 = \\Delta H - (300) ( - 60) \\Delta H = - 26000 - 18000 \\Delta H = - 44 kC al"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_158",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\\Delta H for the reaction is : -",
+    "options": {
+      "A": "- 44 kCal",
+      "B": "- 18 kCal",
+      "C": "34 kCal",
+      "D": "- 24 kCal TD21 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_159",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following reaction is expected never to be spontaneous : -",
+    "options": {
+      "A": "2O 3",
+      "B": "Mg",
+      "C": "Br 2",
+      "D": "2Ag"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) For spontaneous ly \\Delta G < 0 (i) \\Delta G = \\Delta H - T \\Delta S ↓ ↓ - ve +ve \\Delta G < 0 (always spontaneous) (ii) \\Delta G = \\Delta H - T \\Delta S ↓ ↓ - ve - ve Can be spontaneous when \\Delta H > T \\Delta S (iii) \\Delta G = \\Delta H - T \\Delta S ↓ ↓ + ve + ve Spontaneous when T \\Delta S > \\Delta H (iv) \\Delta G = \\Delta H - T \\Delta S ↓ ↓ +ve - ve \\Delta G > 0 (always non spontaneous)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_160",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The formation of water from H 2 (g) and O 2 (g) is an exothermic process because :",
+    "options": {
+      "A": "The chemical energy of H 2",
+      "B": "The chemical energy of H 2",
+      "C": "The temperature of H 2",
+      "D": "The temperature of H 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Formation of water H 2 (g) + O 2 (g) ⎯ → H 2 O( l ) \\Delta H < 0 H P - H R < 0 H P < H R chemical energy of H 2 & O 2 is more than that of water."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_161",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which plot represents for an exothermic reaction:",
+    "options": {
+      "D": "TC01 - 0006",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In Exothermic Reaction \\Delta H < 0 H P < H R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_162",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is not applicable for a thermochemical equation :",
+    "options": {
+      "A": "It tells about physical state of reactants and products",
+      "B": "It tells whether the reaction is spontaneous",
+      "C": "It tells whether the reaction is exothermic or endothermic",
+      "D": "It tells about the allotropic form"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Thermochemical equation tells the physical state doesn’t tell about the spontaneous ly."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_163",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy changes of formation of the gaseous oxide of nitrogen (N 2 O and NO) are positive because of :",
+    "options": {
+      "A": "The high bond energy of the nitrogen molecule",
+      "B": "The high electron affinity of oxygen atoms",
+      "C": "The high electron affinity of nitrogen atoms",
+      "D": "The tendency of oxygen to form O 2 - TC06 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) High bond energy of nitrogen molecule. (As per theory)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_164",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\\Delta H for transition of carbon from diamond form to graphite form .5 Cal. This suggests that :",
+    "options": {
+      "A": "Graphite is chemically different from diamond",
+      "B": "Graphite is as stable as diamond",
+      "C": "Graphite is more stable than diamond",
+      "D": "Diamond is more stable than graphite TC11 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Diamond → Graphite \\Delta H = - 453.5 Cal Diamond releases heat to make graphite so energy of graphite is Low. So graphite is more stable than diamond.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANEAAAAvCAIAAADywLjRAAAAbklEQVR42u3SQREAAAjDMMC/5+GCD4mEXjtJwaGRAM/hOfAcngPP4TnwHJ7Dc+A5PAeew3PgOTyH58BzeA48h+fAc3gOz4Hn8Bx4Ds+B5/AceA7P4TnwHJ4Dz+E58Byew3PgOTwHnsNz4Dk8x1sLN9QDW6OwcyYAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_165",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following values of heat of formation indicates that the product is least stable",
+    "options": {
+      "A": "- 94 kCal",
+      "B": "- 231.6 kCal",
+      "C": "+21.4 kCal",
+      "D": "+64.8 kCal TC05 - 0012"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Max. Energy, least stability 64.8 kC al"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_166",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat of formation, o f H \\Delta of an explosive compound like NCl 3 is -",
+    "options": {
+      "A": "Positive",
+      "B": "Negative",
+      "C": "Zero",
+      "D": "Positive or negative TC05 - 0016"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Explosive compound NCl 3 so, formation energy is +ve reaction is endothermic. NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_167",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to the following reaction C(s) + 1/2 O 2 (g) → CO(g), \\Delta H = - 26.4 kCal",
+    "options": {
+      "A": "CO is an endothermic compound",
+      "B": "CO is an exothermic compound",
+      "C": "The reaction is endothermic",
+      "D": "None of the above TC07 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) C(s) + 1 2 O 2 (g) ⎯ → CO(g) \\Delta H = - 26.4 k C al CO is exothermic compound, \\Delta H = - ve"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_168",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the reaction 3O 2 → 2O 3 ; \\Delta H = + Ve, from the reaction, we can say that : -",
+    "options": {
+      "A": "Ozone is more stable then oxygen",
+      "B": "Ozone is less stable then oxygen and ozone decomposes forming oxygen readily",
+      "C": "Oxygen is less stable than ozone and oxygen decomposes forming ozone readily",
+      "D": "None of the above TC05 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 3O 2 → 2O 3 \\Delta H = +ve Energy of O 3 > Energy of O 2 Stability of O 3 < Stability of O 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_169",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the reaction P(White) → P(Red) ; \\Delta H = - 18.4 kJ, it follows that : -",
+    "options": {
+      "A": "Red P is readily formed from white P",
+      "B": "White P is readily formed from red P",
+      "C": "White P can not be converted to red P",
+      "D": "White P can be converted into red P and red P is more stable TC02 - 0012 R P H Progress in reaction R P H Progress in reaction R P H Progress in reaction R P H Progress in reaction thermodynamics FACTORS AFFECTING HEAT OF REACTION"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) P(White) → P(Red) \\Delta H = - ve Energy of P(Red) < Energy of P(White) Stability of P(Red) > Stability of P(White)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_170",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy of a reaction at 273 K is - 3.57 kJ. what will be the enthalpy of reaction at 373 K if \\Delta C p = zero : -",
+    "options": {
+      "A": "- 3.57 kJ",
+      "B": "Zero",
+      "C": "- 3.57 × 373 273 kJ",
+      "D": "- 375 kJ TC02 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2 1 p 2 1 H H C T T \\Delta - \\Delta \\Delta = - 2 1 H H O 100K \\Delta - \\Delta = \\Delta H 2 = \\Delta H 1 = - 3.57 KJ"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermodynamics_171",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reactions, (i) H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) + x kJ (ii) H 2 (g) + Cl 2 (g) ⎯ → 2HCl ( 𝓁 ) + y kJ Which one of the following statement is correct :",
+    "options": {
+      "A": "x > y",
+      "B": "x < y",
+      "C": "x = y",
+      "D": "More data required TC02 - 0011 HEAT OF FORMATION"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) From 2 nd reaction HCl( l ) → HCl(g) by giving some heat so some heat is used to convert HCl(l) into HCl(g) due to which heat evolved in reaction is less. X < y"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_172",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Since the enthalpy of formation of the elements in their standard states is taken to be zero. The heat of formation ( \\Delta H f ) of compounds :",
+    "options": {
+      "A": "Is always negative",
+      "B": "Is always positive",
+      "C": "Is zero",
+      "D": "May be positive or negative TC05 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) ( \\Delta H f ) Compound can be +ve or - ve \\Delta H f (element) = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_173",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reaction H 2 ( g ) + I 2 (g) ⎯ → 2HI; \\Delta H = 12.40 kCal. According to this, heat of formation of HI will be -",
+    "options": {
+      "A": "12.40 kCal",
+      "B": "- 12.40 kCal",
+      "C": "- 6.20 kCal",
+      "D": "6.20 kCal TC05 - 0006 9"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) H 2 (s) + I 2 (g) ⎯ → 2HI, …(1) \\Delta H = 12.4 k C al \\Delta H f (HI)  2 2 1 1 H I HI 2 2 + ⎯⎯ → …(2) So reaction (2) = 1 12.4 6.2kCal 2 2  = 9"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_174",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following equations respresents standard heat of formation of CH 4 ?",
+    "options": {
+      "A": "C",
+      "B": "C",
+      "C": "C",
+      "D": "C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_175",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given enthalpy of formation of CO 2 (g) and CaO(s) are - 94.0 kJ kJ respectively and the enthalpy of the reaction : CaCO 3 (s) ⎯ → CaO(s) + CO 2 (g) is 42 kJ. The enthalpy of formation of CaCO 3 (s) is",
+    "options": {
+      "A": "- 42 KJ",
+      "B": "- 202 KJ",
+      "C": "+202 KJ",
+      "D": "- 288KJ TC05 - 0015 10"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_176",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that standard enthalpy of formation of CH 4 , C 2 H 4 and C 3 H 8 are - 17.9, 12.5, - 24.8 kCal mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_177",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The \\Delta H for CH 4 + C 2 H 4 → C 3 H 8 is :",
+    "options": {
+      "A": "- 55.2 kCal",
+      "B": "- 30.2 kCal",
+      "C": "55.2 kCal",
+      "D": "- 19.4 kCal TC05 - 0010 10"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_178",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The o f H \\Delta for CO 2(g) , CO (g) and H 2 O (g) .5, - 110.5 .8 kJ mol - 1 respectively the standard enthalpy change (in kJ) for the reaction CO 2(g) +H 2 (g) → CO (g) + H 2 O (g) is -",
+    "options": {
+      "A": "524.1",
+      "B": "41.2",
+      "C": "- 262.5",
+      "D": "- 41.2 TC05 - 0008 10"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Intensive quantities are those which is independent from the mass of the matter. Extensive are those which depend on the mass of the matter. Enthalpy, Volume are Extensive quantity temperature, refractive index are intensive."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_179",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpies of combustion of carbon and carbon monoxide .5 kJ kJ, respectively the enthalpy of formation of carbon monoxide is :",
+    "options": {
+      "A": "- 676.5 kJ",
+      "B": "- 110.5 kJ",
+      "C": "110.5 kJ",
+      "D": "676.5 kJ TC05 - 0007 10"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_180",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The standard heat of formation of CS 2 ( 𝓁 ) will be; given that the standard heat of combustion of carbon (s), sulphur(s) and CS 2 ( 𝓁 ) .3, - 293.72 .76 kJ mol - 1 respectively is",
+    "options": {
+      "A": "- 128.02 kJ mole - 1",
+      "B": "+12.802 kJ mol - 1",
+      "C": "+128.02 kJ mol - 1",
+      "D": "- 12.802 kJ mol - 1 TC05 - 0020 10"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_181",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat of combustion of CH 4 (g) , C (s) and H 2 (g) at 25^\\circC .4 K Cal, - 94.0 K Cal and - 68.4 K Cal respectively, the heat of formation of CH 4 will be -",
+    "options": {
+      "A": "+54.4 K Cal",
+      "B": "- 18.4 K Cal",
+      "C": "- 375.2 K Cal",
+      "D": "+212.8 K Cal TC05 - 0017 10"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_182",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The standard heats of formation of NO 2 (g) and N 2 O 4 (g) are 8.0 and 2.0 kCal mol - 1 respectively the heat of dimerization of NO 2 in kCal is",
+    "options": {
+      "A": "10.0",
+      "B": "- 6.0",
+      "C": "- 12.0",
+      "D": "- 14.0 TC05 - 0019 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_183",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "M is a metal that forms an oxide M 2 O 1 2 M 2 O → M + 1 4 O 2 \\Delta H = 120 kCal When a sample of metal M reacts with one mole of oxygen what will be the \\Delta H in that case",
+    "options": {
+      "A": "240 kCal",
+      "B": "- 240 kCal",
+      "C": "480 kCal",
+      "D": "- 480 kCal TC05 - 0014 HEAT OF COMBUSTION 11"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) The quantities which doesn’t depend on mass of the matter in intensive, boiling point, EMF of cell, p H doesn’t depend upon mass of matter,"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_184",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to equation, C 6 H 6 ( 𝓁 ) + 15/2 O 2 (g) → 6 CO 2 (g) + 3H 2 O ( 𝓁 ) ; \\Delta H = - 3264.4 kJ mol - 1 the energy evolved when 7.8 g benzene is burnt in air will be -",
+    "options": {
+      "A": "163.22 kJ",
+      "B": "32.64 kJ",
+      "C": "3.264 kJ",
+      "D": "326.4 kJ TC07 - 0008 11"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_185",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given standard enthalpy of formation of CO ( - 110 kJ mol - 1 ) and CO 2 ( - 394 kJ mol - 1 ). The heat of combustion when one mole of graphite burns is",
+    "options": {
+      "A": "- 110 kJ",
+      "B": "- 284 kJ",
+      "C": "- 394 kJ",
+      "D": "- 504 kJ TC07 - 0016 11"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Thermo flask is made up of insulating material, so there is no exchange of heat, so it is an example of isolated system.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAAAxCAIAAADC93tAAAAAc0lEQVR42u3SQREAAAjDMMC/5yEAAXwSCb12koInIwH+w3/gP/wH/sN/4D/8B/7Df+A//Af+w3/gP/wH/sN/4D/8B/7Df+A//Af+w3/4D/yH/8B/+A/8h//Af/gP/If/wH/4D/yH/8B/+A/8h//Af/gPjgUOYANfh9XUagAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_186",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy of formation for C 2 H 4 (g), CO 2 (g) and H 2 O ( 𝓁 ) at 25 ^\\circ C and 1 atm. pressure are 52, - 394 kJ mole - 1 respectively. The enthalpy of combustion of C 2 H 4 will be: -",
+    "options": {
+      "A": "+1412 kJ mole - 1",
+      "B": "- 1412 kJ mole - 1",
+      "C": "+142.2 kJ mole - 1",
+      "D": "- 141.2 kJ mole - 1 TC07 - 0007 11"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Intensive quantities are those which is independent from the mass of the matter. Extensive are those which depend on the mass of the matter. Enthalpy, Volume are Extensive quantity temperature, refractive index are intensive."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_187",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The combustion of one mole of benzene takes place at 298 K and 1 atm. After combustion, CO 2 (g) and H 2 O( 𝓁 ) are produced and 3267.0 kJ of heat is liberated. Calculate the standard enthalpy of formation, \\Delta f H ^\\circ of benzene. Standard enthalpies of formation of CO 2 (g) and H 2 O( 𝓁 ) .5 kJ mol - 1 .83 kJ mol - 1 respectively.",
+    "options": {
+      "A": "48.51 kJ mol - 1",
+      "B": "- 48.51 kJ mol - 1",
+      "C": "- 97.02 kJ mol - 1",
+      "D": "97.02 kJ mol - 1 TC07 - 0009 11"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_188",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat evolved during the combustion of 112 litre of water gas at STP (mixture of equal volume of H 2 and CO) is : Given H 2 (g) + ½ O 2 (g) → H 2 O (g) ; \\Delta H = - 241.8 kJ CO(g) + ½ O 2 (g) → CO 2 (g) ; \\Delta H = - 283 kJ",
+    "options": {
+      "A": "241.8 kJ",
+      "B": "283 kJ",
+      "C": "1312 kJ",
+      "D": "1586 kJ TC07 - 0013 11"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_189",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person requires 2870 kCal of energy to lead normal daily life. If heat of combustion of cane sugar kCal mol - 1 , then his daily consumption of sugar is :",
+    "options": {
+      "A": "728 g",
+      "B": "0.728 g",
+      "C": "342 g",
+      "D": "0.342 g TC07 - 0010 thermodynamics 11"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_190",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following are the heats of reactions - (i) o f H \\Delta of H 2 O ( 𝓁 ) = - 68.3 kCal mol - 1 (ii) o comb. H \\Delta of C 2 H 2 = - 337.2 kCal mol - 1 (iii) o comb. H \\Delta of C 2 H 4 = - 363.7 kCal mol - 1 Then heat change for the reaction C 2 H 2 + H 2 → C 2 H 4 is -",
+    "options": {
+      "A": "- 716.1 kCal",
+      "B": "+ 337.2 kCal",
+      "C": "- 41.8 kCal",
+      "D": "- 579.5 kCal TC07 - 0014 11"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_191",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of \\Delta H for the combustion of C(s) is - 94.4 kCal. The heat of formation of CO 2 (g) is : -",
+    "options": {
+      "A": "- 49.5 kCal",
+      "B": "- 94.4 kCal",
+      "C": "- 188.0 kCal",
+      "D": "More data required TC07 - 0006 12"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Work done by system W = - 8J Heat is supplied q = 40J From 1 st Law - \\Delta U = q + W \\Delta U = 40 - 8 \\Delta U = 32J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_192",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If C 6 H 12 O 6 (s) + 9O 2 (g) → 6CO 2 (g) + 6H 2 O(g); \\Delta H = - 680 kCal The weight of CO 2 (g) produced when 170 kCal of heat is evolved in the combustion of glucose is: -",
+    "options": {
+      "A": "265 g",
+      "B": "66 g",
+      "C": "11 g",
+      "D": "64 g TC07 - 0015 12"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_193",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat of formation of CO 2 is - 94.0 kCal. What would be the quantity of heat liberated, when 3 g of graphite is burnt in excess of oxygen: -",
+    "options": {
+      "A": "23.5 kCal",
+      "B": "2.35 kCal",
+      "C": "94.0 kCal",
+      "D": "31.3 kCal TC07 - 0018 HEAT OF NEUTRALIZATION 12"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Intensive quantities are those which is independent from the mass of the matter. Extensive are those which depend on the mass of the matter. Enthalpy, Volume are Extensive quantity temperature, refractive index are intensive.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALcAAAA2CAIAAAAK4J+1AAAAdklEQVR42u3SAQ0AAAjDMMC/5+MAA7QSlnWSgtNIgEtwCS7BJbgEl+AScAkuwSW4BJfgElyCS8AluASX4BJcgktwCbgEl+ASXIJLcAkuwSXgElyCS3AJLsEluARcgktwCS7BJbgEl+AScAkuwSW4BJfgElzCawuskwNpIJrdBAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_194",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The amount of heat liberated when one mole of NH 4 OH reacts with one mole of HCl is",
+    "options": {
+      "A": "13.7 kCal",
+      "B": "More than 13.7 kCal",
+      "C": "Less than 13.7 kCal",
+      "D": "Cannot be predicted TC10 - 0014 12"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_195",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If H + + OH - = H 2 O + 13.7 kCal , then heat of complete neutralisation of one gram mole of H 2 SO 4 with strong base will be :",
+    "options": {
+      "A": "- 13.7 kcal",
+      "B": "- 27.4 kcal",
+      "C": "- 6.85 kcal",
+      "D": "- 3.425 kCal TC10 - 0013 12"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_196",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat of neutralisation of a strong dibasic acid in dilute solution by NaOH is nearly :",
+    "options": {
+      "A": "- 27.4 kCal eq - 1",
+      "B": "- 13.7 kCal eq - 1",
+      "C": "13.7 kCal eq - 1",
+      "D": "- 13.7 kCal mol - 1 TC10 - 0009 12"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_197",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The temperature of a 5 ml of strong acid increases by 5 ^\\circ C when 5 ml of a strong base is added to it. If 10 ml of each are mixed temperature should increase by :",
+    "options": {
+      "A": "5 ^\\circ C",
+      "B": "10 ^\\circ C",
+      "C": "15 ^\\circ C",
+      "D": "Cannot be known TC10 - 0010 12"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_198",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat of neutralization of HCl by NaOH is - 55.9 kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_199",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the heat of neutralization of HCN by NaOH is - 12.1 kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_200",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The energy of dissociation of HCN is",
+    "options": {
+      "A": "- 43.8 kJ",
+      "B": "43.8 kJ",
+      "C": "68 kJ",
+      "D": "- 68 kJ TC10 - 0008 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_201",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If water is formed from H + ions and OH - the heat exchange during the reaction :",
+    "options": {
+      "A": "- 13.7 kCal",
+      "B": "13.7 kCal",
+      "C": "- 63.4 kCal",
+      "D": "More data required TC10 - 0011 13"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CaCO 3 (s) ⎯ → CaO(s) + CO 2 (g) T = 977^\\circC T = 977+273 = 125 0K \\Delta H = 174 KJ/mol \\Delta H = \\Delta E + \\Delta ngRT 174 KJ/mol = \\Delta E + [(1) × 8.314×1250] × 10 - 3 \\Delta E = 174 - 10.39 \\Delta E = 163.6 KJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_202",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The change in the enthalpy of NaOH + HCl ⎯ → NaCl + H 2 O is called :",
+    "options": {
+      "A": "Heat of neutralisation",
+      "B": "Heat of reaction",
+      "C": "Heat of hydration",
+      "D": "Heat of solution TC10 - 0012 HEAT OF HYDROGENATION 13"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_203",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy of combustion of cyclohexane, cyclohexene and H 2 are respectively - 3920, - 3800 kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Thermo flask is made up of insulating material, so there is no exchange of heat, so it is an example of isolated system."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_204",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat of hydrogenation of cyclohexene is: -",
+    "options": {
+      "A": "- 121 kJ mol - 1",
+      "B": "121 kJ mol - 1",
+      "C": "- 242 kJ mol - 1",
+      "D": "242 kJ mol - 1 TC13 - 0006 BOND ENERGY/RESONANCE ENERGY 13"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_205",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat evolved in the reaction H 2 + Cl 2 ⎯ → 2HCl is 182 kJ. Bond energies of H - H and Cl - Cl are 430 and 242 kJ mol - 1 respectively. The H - Cl bond energy is :",
+    "options": {
+      "A": "245 kJ mol - 1",
+      "B": "427 kJ mol - 1",
+      "C": "336 kJ mol - 1",
+      "D": "154 kJ mol - 1 TC16 - 0009 13"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_206",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy change for the reaction H 2 (g) + C 2 H 4 (g) → C 2 H 6 (g) is ............ The bond energies are in kCal mol - 1 H - H = 103, C - H = 99, C - C = 80 & C = C =145",
+    "options": {
+      "A": "- 10 kCal mol - 1",
+      "B": "+10 kCal mol - 1",
+      "C": "- 30 kCal mol - 1",
+      "D": "+30 kCal mol - 1 TC16 - 0002 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_207",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Bond dissociation enthalpies of H 2 (g) and N 2 (g) are 436.0 kJ mol - 1 and 941.8 kJ mol - 1 respectively and enthalpy of formation of NH 3 (g) is - 46 kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 2 x ( s ) + 2y (s) ⎯ → 2 C ( l ) + D (g) q p = - 28 kC al mol - 1 q v = ? q p = q v + \\Delta ngRT - 28 = q v + (1) × 2 × 300 q v = - 28 - 0.6 = - 28.6 kC al mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_208",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is enthalpy of atomization of NH 3 (g) ?",
+    "options": {
+      "A": "390.3 kJ mol - 1",
+      "B": "1170.9 kJ mol - 1",
+      "C": "590 kJ mol - 1",
+      "D": "720 kJ mol - 1 TC16 - 0006 14"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_209",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the reactions : C(s) + 2H 2 (g) → CH 4 (g) \\Delta H = - X kcal C(g) + 4H(g) → CH 4 (g), \\Delta H = - X 1 kcal CH 4 (g) → CH 3 (g) + H(g) \\Delta H = + Y kcal Bond energy of C - H bond is -",
+    "options": {
+      "A": "X 4 kCal mol - 1",
+      "B": "Y kCal mol - 1",
+      "C": "1 X 4 kCal mol - 1",
+      "D": "X 1 kCal mol - 1 TC16 - 0011 thermodynamics 14"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_210",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy changes at 298 K in successive breaking of O - H bonds of water are H 2 O ⎯ → H(g) + OH(g) ; \\Delta H = 498 kJ mol - 1 OH(g) ⎯ → H(g) + O(g) ; \\Delta H = 428 kJmol - 1 the bond enthalpy of O - H bond is",
+    "options": {
+      "A": "498 kJ mol - 1",
+      "B": "428 kJ mol - 1",
+      "C": "70 kJ mol - 1",
+      "D": "463 kJ mol - 1 TC16 - 0008 14"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_211",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If o f H \\Delta of ICl (g) , Cl (g) , and I (g) is 17.57, 121.34 and 106.96 J mol - 1 respectively. Then bond dissociation energy of ICl bond is -",
+    "options": {
+      "A": "35.15 J mol - 1",
+      "B": "106.69 J mol - 1",
+      "C": "210.73 J mol - 1",
+      "D": "420.9 J mol - 1 TC06 - 0004 14"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Thermo flask is made up of insulating material, so there is no exchange of heat, so it is an example of isolated system."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_212",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat of dissociation of benzene to elements is 5535 kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Intensive quantities are those which is independent from the mass of the matter. Extensive are those which depend on the mass of the matter. Enthalpy, Volume are Extensive quantity temperature, refractive index are intensive."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_213",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The bond enthalpies of C - C, C=C and C - H are 347.3, 615.0 and 416.2 kJ respectively. Magnitude of resonance energy of benzene is",
+    "options": {
+      "A": "1.51 kJ",
+      "B": "15.1 kJ",
+      "C": "151 kJ",
+      "D": "1511 kJ TC18 - 0001 SOME OTHER HEAT OF REACTIONS 14"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_214",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cl 2 (g) ⎯ → 2Cl(g), In this process value of \\Delta H will be -",
+    "options": {
+      "A": "Positive",
+      "B": "Negative",
+      "C": "Zero",
+      "D": "Nothing can be predicted TC02 - 0013 14"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_215",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The magnitude of heat of solution ..... on addition of solvent to solution",
+    "options": {
+      "A": "Decreases",
+      "B": "Increases",
+      "C": "Remains constant",
+      "D": "Increases or decreases TC12 - 0003 14"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_216",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If H 2 (g) ⎯ → 2H(g) ; \\Delta H = 104 kCal, than heat of atomisation of hydrogen is :",
+    "options": {
+      "A": "52 kCal",
+      "B": "104 kCal",
+      "C": "208 kCal",
+      "D": "None of these TC14 - 0001 14"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_217",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "S (rhombic) + O 2(g) ⎯ → SO 2(g) ; \\Delta H = - 297.5 kJ S (monoclinic) + O 2 (g) ⎯ → SO 2 ; \\Delta H = - 300 kJ The data can predict that -",
+    "options": {
+      "A": "Rhombic sulphur is yellow in colour",
+      "B": "Monoclinic sulphur has metallic lusture.",
+      "C": "Monoclinic sulphur is more stable",
+      "D": "\\Delta H transition of S R to S M is endothermic TC11 - 0004 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_218",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2CO (g) + O 2(g) ⎯ → 2CO 2(g) + X kJ In the above equation X kJ refers to :",
+    "options": {
+      "A": "Heat of formation of CO 2",
+      "B": "Heat of vapourisation",
+      "C": "Heat of reaction",
+      "D": "Heat of sublimation TC02 - 0015 15"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_219",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\\Delta H for the reaction, I (g) + I (g) → I 2 (g) will be: -",
+    "options": {
+      "A": "Zero",
+      "B": "- ve",
+      "C": "+ve",
+      "D": " TC02 - 0016 15"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_220",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that : A(s) TK ⎯⎯ → A( 𝓁 ) ; \\Delta H = x, A( 𝓁 ) TK ⎯⎯ → A(g) ; \\Delta H = y Calculate enthalpy of sublimation at 'T' K : -",
+    "options": {
+      "A": "x + y",
+      "B": "x - y",
+      "C": "x or y",
+      "D": "-"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Thermo flask is made up of insulating material, so there is no exchange of heat, so it is an example of isolated system."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_221",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the thermochemical reactions, C(graphite) + ½ O 2 ⎯ → CO ; \\Delta H = - 110.5 kJ CO + ½ O 2 ⎯ → CO 2 ; \\Delta H = - 283.2 kJ the heat of reaction of C(graphite) +O 2 ⎯ → CO 2 is :",
+    "options": {
+      "A": "393.7 kJ",
+      "B": "- 393.7 kJ",
+      "C": "- 172.7 kJ",
+      "D": "+172.7 kJ TC02 - 0019 15"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAA2CAIAAACa8+Z6AAAAZklEQVR42u3RMQEAAAjDMMC/5yEDjlRC00lKvxsLIAkSJEESJEiCJEiQBAmSIAkSJEESJEiCJEiQBAmSIAkSJEESJEiCBEmQBAmSIAkSJEESJEiCBEmQBAmSIAkSJEGCJEiCBEmXLX6CA2lLd2eGAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_222",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If H 2 + ½ O 2 ⎯ → H 2 O ; \\Delta H = - 68.39 kCal K + H 2 O + water ⎯ → KOH(aq) + ½ H 2 ; \\Delta H = - 48.0 kCal KOH + water ⎯ → KOH (aq) \\Delta H = - 14.0 kCal the heat of formation of KOH is -",
+    "options": {
+      "A": "- 68.39 + 48 - 14.0",
+      "B": "- 68.39 - 48.0 +14.0",
+      "C": "+68.39 - 48.0 + 14.0",
+      "D": "+ 68.39 + 48.0 - 14.0 TC05 - 0027 15"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_223",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given C(s) + O 2 (g) ⎯ → CO 2 (g) + 94.2 kCal H 2 (g) + ½ O 2 (g) ⎯ → H 2 O ( 𝓁 ) + 68.3 kCal CH 4 (g) + 2O 2 (g) ⎯ → CO 2 (g) + 2H 2 O ( 𝓁 ) +210.8 kCal The heat of formation of methane in Kcal will be",
+    "options": {
+      "A": "- 45.9",
+      "B": "- 47.8",
+      "C": "- 20.0",
+      "D": "- 47.3 TC05 - 0025 15"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_224",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If, H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) ; \\Delta H ^\\circ = - 44 kCal 2Na(s) + 2HCl(g) ⎯ → 2NaCl(s) + H 2 (g); \\Delta H ^\\circ = - 152 kCal Then, Na(s) + 0.5 Cl 2 (g) ⎯ → NaCl(s) ; \\Delta H ^\\circ = ?",
+    "options": {
+      "A": "108 kCal",
+      "B": "196 kCal",
+      "C": "- 98 kCal",
+      "D": "54 kCal TC15 - 0003 15"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_225",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(i) S(s) + 3/2 O 2 (g) → SO 3 (g) + 2x kCal (ii) SO 2 (g) + ½ O 2 (g) → SO 3 (g) + y kCal Calculate the heat of formation of SO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Heat supplied at constant pressure. q p = \\Delta H (Enthalpy change) Heat supplied at constant volume q v = \\Delta E (Internal energy change) \\Delta H, \\Delta E, Enthalpy all are state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_226",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) (2x + y) (2) - (2x - y) (3) x + y (4) 2x / y TC05 - 0021 1",
+    "options": {
+      "B": "-",
+      "C": "x + y",
+      "D": "2x / y TC05 - 0021 1",
+      "A": "Option A"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Thermo flask is made up of insulating material, so there is no exchange of heat, so it is an example of isolated system."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_227",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If S + O 2 ⎯ → SO 2 ; \\Delta H = - 298.2 kJ SO 2 + ½ O 2 ⎯ → SO 3 ; \\Delta H = - 98.7 kJ SO 3 + H 2 O ⎯ → H 2 SO 4 ; \\Delta H = - 130.2 kJ H 2 + ½ O 2 ⎯ → H 2 O ; \\Delta H = - 287.3 kJ Then the enthalpy of formation of H 2 SO 4 at 298 K is -",
+    "options": {
+      "A": "- 814.4 kJ",
+      "B": "- 650.3 kJ",
+      "C": "- 320.5 kJ",
+      "D": "- 433.5 kJ TC05 - 0024 16"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (i) Solid → Liquid (entropy increases) \\Delta S = +ve (ii) Expansion of gas (S↑ = \\Delta S = +ve) (iii) Crystal dissolve (in dissolution S↑) (iv) Polymerisation (In polymerisation, mole decreases, S↓ \\Delta S = - ve)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_228",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that : Zn + ½ O 2 → ZnO + 84000 Cal Hg + ½ O 2 → HgO + 21700 Cal The heat of reaction ( \\Delta H) for, Zn + HgO → ZnO + Hg is : -",
+    "options": {
+      "A": "105700 Cal",
+      "B": "62300 Cal",
+      "C": "- 105700 Cal",
+      "D": "- 62300 Cal TC02 - 0020 16"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( \\Delta H g ) CO 2 = - 94KJ \\Delta H f (CaO)) = - 152 KJ C + O 2 + CO 2 … (1) Ca + 1 2 O 2 ⎯ → CaO ... (2) CaCO 3 (s) → CaO(s) + CO 2 (g)  \\Delta H = 42 KJ …(3) \\Delta H f (CaCO 3 ) → Ca + C + 3 2 O 2 → CaCO 3 (1) + (2) - (3) \\Delta H = - 94 - 152 = 42 \\Delta H  - 288 KJ 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_229",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that - 2C(s) + 2O 2 (g) → 2CO 2 (g) \\Delta H = - 787 kJ H 2 (g) + 1 2 O 2 (g) → H 2 O( 𝓁 ) \\Delta H = - 286 kJ C 2 H 2 (g) + 5 2 O 2 (g) → 2CO 2 (g) + H 2 O( 𝓁 ) \\Delta H = - 1310 kJ Heat of formation of acetylene is : -",
+    "options": {
+      "A": "+1802 kJ",
+      "B": "- 1802 kJ",
+      "C": "- 800 kJ",
+      "D": "+237 kJ TC05 - 0026 thermodynamics 16"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It is the branch of science which deals with the energy changes taking place in all physical and chemical process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_230",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "C(s) + O 2 (g) → CO 2 (g) + 94.0 kCal CO(g) + 1 2 O 2 (g) → CO 2 (g), \\Delta H = - 67.7 kCal from the above reactions find how much heat (kCal mole - 1 ) would be produced in the following reaction : C(s) + 1 2 O 2 (g) → CO(g)",
+    "options": {
+      "A": "20.6",
+      "B": "26.3",
+      "C": "44.2",
+      "D": "161.6 TC02 - 0017 16"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Intensive quantities are those which is independent from the mass of the matter. Extensive are those which depend on the mass of the matter. Enthalpy, Volume are Extensive quantity temperature, refractive index are intensive."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_231",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy of vapourisation of liquid water using the data : H 2 (g) + 1 2 O 2 (g) → H 2 O( 𝓁 ) ; \\Delta H = - 285.77 kJ mol - 1 H 2 (g) + 1 2 O 2 (g) → H 2 O(g) ; \\Delta H = - 241.84 kJ mol - 1",
+    "options": {
+      "A": "+43.93 kJ mol - 1",
+      "B": "- 43.93 kJ mol - 1",
+      "C": "+527.61 kJ mol - 1",
+      "D": "- 527.61 kJ mol - 1 TC11 - 0001 16"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass, Energy, Enthalpy all are extensive property."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_232",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "H 2 (g)+ 1 2 O 2 (g) → H 2 O ( 𝓁 ) ; \\Delta H 298K = - 68.32kCal. Heat of vapourisation of water at 1 atm and 25 ^\\circ C is 10.52 kCal . The standard heat of formation (in kCal) of 1 mole of water vapour at 25 ^\\circ C is",
+    "options": {
+      "A": "10.52",
+      "B": "- 78.84",
+      "C": "+57.80",
+      "D": "- 57.80 TC05 - 0023 16"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In adiabatic process, q = 0 We know from 1 st Law - \\Delta U = q + W \\Delta U = W q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_233",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat of solution of anhydrous CuSO 4 and CuSO 4 .5H 2 O are - 15.89 and 2.80 kCal mol - 1 respectively. What will be the heat of hydration of anhydrous CuSO 4 ?",
+    "options": {
+      "A": "- 18.69 kCal",
+      "B": "18.69 kCal",
+      "C": "- 28.96 kCal",
+      "D": "28.96 kCal TC12 - 0004 16"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In adiabatic process, work is independent of path \\Delta U = q + W (q=0) \\Delta U = W Internal energy is state function, depends only upon initial and final state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_234",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following expressions is true: -",
+    "options": {
+      "A": "o f H",
+      "B": "o f H \\Delta",
+      "C": "o f H \\Delta",
+      "D": "o f H \\Delta"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In adia batic process, q = 0 From 1 st Law \\Delta U = q + W \\Delta U = W We know → \\Delta U = nC V \\Delta T W = nC V \\Delta T When gas is compressed, work is positive, which means, temperature will increase. So final temperature will be higher than initial temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_235",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A system absorb 20 kJ heat and does 10 kJ work then internal energy of system will be -",
+    "options": {
+      "A": "Decreases by 10 kJ",
+      "B": "Increases by 10 kJ",
+      "C": "Increases by 30 kJ",
+      "D": "Decreases by 30 kJ TD06 - 0095"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) \\Delta U = q + w  20 kJ - 10 kJ = 10 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_236",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three moles of an ideal gas expanded spontaneously in to vacuum. Then which is correct?",
+    "options": {
+      "A": "W = 0, \\Delta G = 0",
+      "B": "W = 0, \\Delta G < 0",
+      "C": "W = 0, \\Delta G > 0",
+      "D": "W  0, \\Delta G = 0 TD22 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) In Vacuum for S pontaneous w = 0 \\Delta G < 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_237",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is like state function",
+    "options": {
+      "A": "q + w,",
+      "B": "q",
+      "C": "w",
+      "D": "heat in isobaric process"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (a) q + w = \\Delta U → state function (b & c) q and w are path function. (d) q p = \\Delta H → state function (e) w = \\Delta U → state function"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_238",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following reaction : -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) ( ) ( ) ( ) 1 3 2 g 2 g 1 1 H Cl HCl ; H X kJmol 2 2 - + → \\Delta = - \\lambda Heat of formation is defined for 1 mol product when it is formed from elements present in their standard state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_239",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following reactions are given : CH 4(g) +2O 2(g) → CO 2(g) +2H 2 O (g) ; \\Delta H = - x ...",
+    "options": {
+      "A": "x + y + z",
+      "B": "H 2",
+      "C": "Calculate the heat of formation of CH 4 ?",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C(s) + 2H 2 (g) ⎯ → CH 4 (g), \\Delta H f (CH 4 ) \\Delta H f (CH 4 ) = (2) + 2 × (3) - (1) = - y + 2( - z ) - ( - x)  x - y - 2z"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_240",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\\Delta U^\\circ of combustion of methane is - X kJ mol - 1 The value of \\Delta H^\\circ is (T = 25^\\circC) : -",
+    "options": {
+      "A": "- X - 596R",
+      "B": "- X+596R",
+      "C": "X+596R",
+      "D": "X - 596R TC07 - 0187"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 1 ) CH 4 (g) + 2O 2 (g) ⎯ → CO 2 (g) + 2H 2 O( \\lambda ) \\Delta H^\\circ = \\Delta U^\\circ + \\Delta n g RT \\Delta H^\\circ = - X + ( - 2) R × 298 \\Delta H^\\circ = - X - 596 R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_241",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "During adiabatic expansion of ideal gas, which is correct ?",
+    "options": {
+      "A": "temperature increases",
+      "B": "q = 0",
+      "C": "temperature remain constant",
+      "D": "\\Delta E = 0 TC06 - 0073"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) In adiabatic process there is no heat exchange. So, q = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_242",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Enthalpy change for the reaction 2N (g) + 6H (g) → 2NH 3(g) kJ The dissociation energy of N - H bond is",
+    "options": {
+      "A": "+450 kJ",
+      "B": "- 450 kJ",
+      "C": "+150 kJ",
+      "D": "- 150kJ TC17 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) \\Delta H rxn = - 900 = - 6 BE. (N - H) B.E. (N - H) = 150 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_243",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which relation is incorrect : -",
+    "options": {
+      "A": "\\Delta G = - T \\Delta S T",
+      "B": "\\Delta G^\\circ = - 2.303 RT log K",
+      "C": "\\Delta H = \\Delta U+ \\Delta n g RT",
+      "D": "w useful = \\Delta H TD24 - 0042"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) w useful = - \\Delta G"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_244",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 mol of an ideal gas at 27^\\circC expands isothermally and reversibly from a volume of 4L to 40 L. The work for this process (in kJ) is: -",
+    "options": {
+      "A": "w = - 28.72 kJ",
+      "B": "w = - 11.488 kJ",
+      "C": "w = - 5.736 kJ",
+      "D": "w = - 4.988 kJ TD06 - 0096"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) W = - 2.303 nRT log 2 1 V V = - 40 2.303 2 8.314 300log 4 KJ 1000    W = - 11.488 KJ"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_thermodynamics_245",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column : - Column - I Column - II A Adiabatic process P q = 0 B Isothermal process Q \\Delta H = 0 C Isoenthalpic process R \\Delta T = 0 D Isoentropic process S \\Delta S = 0",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "A → P, B → S, C → Q, D → R",
+      "B": "A → Q, B → P, C → S, D → R",
+      "C": "A → P, B → R, C → Q, D → S",
+      "D": "A → P, B → R, C → S, D → Q TD05 - 0301 Exercise - I thermodynamics NEET : Extra Edge [ Chemistry ]"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 3 ) Adiabatic process → q = 0 Isothermal process → \\Delta T = 0 Isoenthalpic process → \\Delta H = 0 Isoentropic process → \\Delta S = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_246",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 4 + 2 3 1 O CH OH ; H ve 2 → \\Delta = - If enthalpy of combustion of CH 4 and CH 3 OH is - x & - y respectively which relation is correct?",
+    "options": {
+      "A": "x > y",
+      "B": "x < y",
+      "C": "x = y",
+      "D": "x \\ge y TC07 - 0185"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 1 ) \\Delta H R = ( \\Delta H C ) R - ( \\Delta H C ) P - ve = - x - ( - y) - ve = - x + y  x > y"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_247",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The standard enthalpies of formation of CO, NO 2 and CO 2 .5 kJ mol - 1 , - 33.2 kJ mol - 1 .5 kJ mol - 1 respectively. The standard enthalpy of the reaction is : - 4CO(g) + 2NO 2 (g) → 4CO 2 (g) + N 2 (g) is",
+    "options": {
+      "A": "- 1065.6 kJ",
+      "B": "- 200 kJ",
+      "C": "- 700 kJ",
+      "D": "850 kJ TC06 - 0072"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) \\Delta H rxn = 4 × ( - 393.5) - 4x( - 110.5) - 2×( - 33.2) \\Delta H rxn = - 1065.5 KJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_248",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "18 g of water is taken to prepare the tea. Find out the internal energy of vaporisation at 100^\\circC. ( \\Delta vap H for water at 373 K is 40.66 kJ mol - 1 )",
+    "options": {
+      "A": "37.56 kJ mol - 1",
+      "B": "- 37.56 kJ mol - 1",
+      "C": "43.76 kJ mol - 1",
+      "D": "- 43.76 kJ mol - 1 TD12 - 0140"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 18g water = 1 mol water H 2 O( \\lambda )  H 2 O(g) \\Delta H = \\Delta E + \\Delta n g RT 40.66 = \\Delta E + 1 8.314 373 1000   \\Delta E = 40.66 - 3.1 \\Delta E = + 37.56 KJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_249",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among the following is an extensive property of the system ?",
+    "options": {
+      "A": "temperature",
+      "B": "volume",
+      "C": "refractive index",
+      "D": "viscosity TD03 - 0255"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Extensive property d epend on amount of matter like volume."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_250",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Na(s) → Na(g), the heat of reaction is called as",
+    "options": {
+      "A": "Heat of vaporisation",
+      "B": "Heat of atomisation",
+      "C": "Heat of sublimation",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) As per Theory"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_251",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following condition regarding a chemical process ensures spontaneity at all temp. ?",
+    "options": {
+      "A": "\\Delta H < 0, \\Delta S > 0",
+      "B": "\\Delta H > 0, \\Delta S < 0",
+      "C": "\\Delta H < 0, \\Delta S < 0",
+      "D": "\\Delta H > 0, \\Delta S > 0 TD23 - 0104"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) As per Theory"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_252",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction occur spontaneously. If",
+    "options": {
+      "A": "T \\Delta S = \\Delta H and both \\Delta H and \\Delta S are positive",
+      "B": "T \\Delta S > \\Delta H and both \\Delta H and \\Delta S are positive",
+      "C": "T \\Delta S > \\Delta H and both \\Delta H and \\Delta S are negative",
+      "D": "T \\Delta S = \\Delta H and \\Delta H is positive and \\Delta S is negative TD23 - 0097"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\Delta G < 0 \\Delta H < T \\Delta S"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_253",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 moles of an ideal gas is expanded isothermally and reversibly from 1 L to 10 L. Find the enthalpy change in kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) At isothermal condition \\Delta T = 0 So, \\Delta H = nC p , m \\Delta T = 0 (for ideal gas) 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_254",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 0 (2) 11.7 (3) - 11.7 (4) 25 TD07 - 0099 2",
+    "options": {
+      "A": "0",
+      "B": "11.7",
+      "C": "- 11.7",
+      "D": "25 TD07 - 0099 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) \\Delta U = q + w  20 kJ - 10 kJ = 10 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_255",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following endothermic process is/are spontaneous ?",
+    "options": {
+      "A": "Melting of ice",
+      "B": "Evaporation of water",
+      "C": "Heat of combustion",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) As per Theory Exercise - I NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_256",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction. C(s) + O 2 (g) → CO 2 (g)",
+    "options": {
+      "A": "\\Delta H > \\Delta U",
+      "B": "\\Delta H < \\Delta U",
+      "C": "\\Delta H = \\Delta U",
+      "D": "None of these TD12 - 0144"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Here \\Delta ng = 1 - 1 = 0 So that \\Delta H = \\Delta U + \\Delta ng RT \\Delta H = \\Delta U"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_257",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For 1 mol Ideal gas C P & C V are related as :",
+    "options": {
+      "A": "C P - C V = R",
+      "B": "C P + C V = R",
+      "C": "C P - C V = RT",
+      "D": "C V - C P = R TD13 - 0079"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) For an Ideal GAS C P - C V = R (for 1 mol)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_258",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Considering entropy ( S ) as the criteria for the spontaneity of any process is :",
+    "options": {
+      "A": "\\Delta S system + \\Delta S surrounding > 0",
+      "B": "\\Delta S system - \\Delta S surrounding < 0",
+      "C": "\\Delta S system > 0",
+      "D": "\\Delta S surrounding > 0 TD20 - 0023"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) For spo ntaneous process \\Delta S total > 0 \\Delta S system + \\Delta S surrounding > 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_259",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "I f Liquids A & B form an Ideal solution :",
+    "options": {
+      "A": "T he entropy of mixing is zero.",
+      "B": "T he free energy of mixing is zero.",
+      "C": "T he free energy as well as the entropy of mixing are zero.",
+      "D": "T he enthalpy of mixing is zero. TD13 - 0080"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) I f liquid A & B form an Ideal solution \\Delta H mix = 0 \\Delta S mix > 0 \\Delta G mix < 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_260",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3 Litre of an Ideal gas at a pressure of 0.1 atm expands isotherm all y at 25^\\circC into a vacuum until its total volume is 10L. How much heat is absorbed & how much work is done in the expansion ?",
+    "options": {
+      "A": "0.7",
+      "B": "1",
+      "C": "0",
+      "D": "None of these TD06 - 0202"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) We have q= - w = P ext (10 - 3) In Vac u um (P=0) = 0 × 7 = 0 w = 0 No work is done No heat is absorbed."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_261",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If water vapour is assumed to be a perfect gas, molar enthalpy change for vaporisations of 1 mole water at 1 bar & 100^\\circC is 41 k J mol - 1 , calculate the internal energy change, when 1 mol of water is vapourised at 1 bar pressure & 100^\\circC.",
+    "options": {
+      "A": "37.9 J mol - 1",
+      "B": "37.9 k J mol - 1",
+      "C": "59.7 k J mol - 1",
+      "D": "23.4 J mol - 1 TD11 - 0062"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) H 2 O( ℓ ) ⎯ → H 2 O(g) \\Delta H = \\Delta U + \\Delta ngRT \\Delta ng = 1 \\Delta H = \\Delta U + RT \\Delta U = \\Delta H - RT = 41 - 8.3 373 1000  = 37.904 kJ mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_262",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy & ent r opy changes for the re action : Br 2 ( ℓ ) + Cl 2 (g) ⎯ → 2BrCl(g) Are 30 kJ mol - 1 & 105 Jk - 1 mol - 1 respectively. The temperature at which the reaction will be in equilibrium is :",
+    "options": {
+      "A": "285.7 K",
+      "B": "273.4 K",
+      "C": "450.9 K",
+      "D": "300.1 K TD24 - 0047"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) For equilibrium \\Delta G = 0 \\Delta G = \\Delta H - T \\Delta S = 0 T = H 300 1000 S 105 \\Delta  = \\Delta =285.7 k"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_263",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction. 2Br(g) ⎯ → Br 2 (g) the value of \\Delta H & \\Delta S respectively are :",
+    "options": {
+      "A": "\\Delta H = 0 ; \\Delta S = - ve",
+      "B": "\\Delta H = 0 ; \\Delta S = 0",
+      "C": "\\Delta H = - ve ; \\Delta S = - ve",
+      "D": "\\Delta H = +ve ; \\Delta S = +ve TD21 - 0089 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Reaction is exothermic. So ; \\Delta H = - ve \\Delta ng < 0  \\Delta S = - ve (as moles of gas is  ) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_264",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among the following is not a state function ?",
+    "options": {
+      "A": "Internal energy",
+      "B": "Free energy",
+      "C": "Work",
+      "D": "Enthalpy TD02 - 0435 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Isolated system is the system where no excha ng e of energy & ma t ter take place b/w system & surroundi ng."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_265",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The enthalpy of formation of all elements in their standard state is:",
+    "options": {
+      "A": "Unity",
+      "B": "Zero",
+      "C": "Less than zero",
+      "D": "Different for each element TC05 - 0175"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Here \\Delta ng = 1 - 1 = 0 So that \\Delta H = \\Delta U + \\Delta ng RT \\Delta H = \\Delta U"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_266",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "thermodynamics is not concerned about :",
+    "options": {
+      "A": "Energy changes involved in a chemical reaction.",
+      "B": "The extent to which a chemical reaction proceeds.",
+      "C": "The rate at which a reaction proceeds",
+      "D": "The feasibility of a chemical reaction TD01 - 0731"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Rate of reaction is predicted in chemical kinetics."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_267",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is open system:",
+    "options": {
+      "A": "Animal & plants",
+      "B": "A fridge",
+      "C": "A solar cooker",
+      "D": "None of these TD01 - 0732 thermodynamics NEET : NCR [ Chemistry ]"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) O pen system is system which c an exchange matter & energy with surrounding like animal and plants ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_268",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work d one during expansion of a gas from a volume of 2dm 3 to 4dm 3 against a constant external pressure of 1 atm is :",
+    "options": {
+      "A": "- 202.6 J",
+      "B": "+ 202.6 J",
+      "C": "- 304 J",
+      "D": "- 6 J TD05 - 0316"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) W = - Pext. \\Delta V = - 1 atm (4 - 2) = - 2 L - atm = - 202.6J (1 L - atm = 101.3 J)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_269",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In adiabatic process, which of the following is true ?",
+    "options": {
+      "A": "q = +w",
+      "B": "- \\Delta E = - w",
+      "C": "p \\Delta V = 0",
+      "D": "q = \\Delta E TD06 - 0203"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) \\Delta E = q +w For adiabatic process q = 0 \\Delta E = w - \\Delta E = - w"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_270",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an isochoric pr oce s s, the increase in internal energy is:",
+    "options": {
+      "A": "Equal to the heat absorbed",
+      "B": "Equal to heat evolved",
+      "C": "Equal to the work done",
+      "D": "Equal to zero TD03 - 0169"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) \\Delta E = q +w In isochoric w = 0 (as \\Delta V = 0) \\Delta E = q \\Delta E = nCv \\Delta T = q  \\Delta E = +v = q Increase in internal energy = heat absorbed by system thermodynamics NEET : NCR [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_271",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At constant temperature for the reaction : C 4 H 10(g) + 13 2 O 2(g) → 4CO 2(g) + 5H 2 O ( ℓ ) \\Delta E - \\Delta H is ?",
+    "options": {
+      "A": "+ RT",
+      "B": "- RT",
+      "C": "+ 7 2 RT",
+      "D": "- 3RT TD11 - 0063"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) \\Delta H = \\Delta E + \\Delta ng RT \\Delta E - \\Delta H = - \\Delta ng RT \\Delta E - \\Delta H = - 7 2 - (  ( ) )  RT = 7 2 RT"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_272",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a liquid vaporizes ;",
+    "options": {
+      "A": "In o increase in enthalpy",
+      "B": "I ncrease in enthalpy",
+      "C": "D ecrease in enthalpy",
+      "D": "A nything can happen TD11 - 0064"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) H 2 O( \\lambda ) → H 2 O(g) Energy is absorbed so increase in enthalpy (as \\Delta H = +ve) ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_273",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the given reaction : N 2 (g) + 3H 2 (g) → 2NH 3 (g) \\Delta H = 4kJ The \\Delta H is specifically called :",
+    "options": {
+      "A": "Heat of formation of NH 3",
+      "B": "Heat of combustion",
+      "C": "Heat of reaction",
+      "D": "Heat of Hydrogenation TC02 - 0165 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) As per theory 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermodynamics_274",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given below are two statements : Statement - I : natural processes are irreversible & spontaneous process. Statement - II : Decrease in enthalpy is a contributory factor for spontaneity.",
+    "options": {
+      "A": "Both statement - I and II are incorrect.",
+      "B": "Statement - I is correct & statement - II is incorrect.",
+      "C": "Statement - I is incorrect but statement - II is correct.",
+      "D": "Both statement - I & II are correct. TD20 - 0024 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Isolated system is the system where no excha ng e of energy & ma t ter take place b/w system & surroundi ng.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_275",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following correct option for free expansion of an ideal gas under adiabatic condition ?",
+    "options": {
+      "A": "q = 0 ; \\Delta T ≠ 0 ; w = 0",
+      "B": "q ≠ 0 ; \\Delta T = 0 ; w = 0",
+      "C": "q = 0 ; \\Delta T = 0 ; w = 0",
+      "D": "q = 0 ; \\Delta T < 0 ; w ≠ 0 TD09 - 0044"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Here \\Delta ng = 1 - 1 = 0 So that \\Delta H = \\Delta U + \\Delta ng RT \\Delta H = \\Delta U"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_276",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Entropy means measurement of degree of :",
+    "options": {
+      "A": "Disordness",
+      "B": "Randomness",
+      "C": "Orderness",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) As per theory"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_277",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given the following entropy values (in JK - 1 mol - 1 ) at 298 K and 1 atm: H 2 (g) :130.6, Cl 2 (g): 223.0 and HCl(g) : 186.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) ( ) ( ) ( ) 2 g 2 g g H Cl 2HCl ; S = ? S 130.6 223.0 186.7 per mol 130.6 223.0 2(186.7) 373.4 + → \\Delta    → → \\Delta S = \\Sigma S products - \\Sigma S Reactants = 373.4 - (130.6 + 223) \\Delta S = 19.8"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_278",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The entropy change (in JK - 1 mol - 1 ) for the reaction H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) is",
+    "options": {
+      "A": "+ 540.3",
+      "B": "727.0",
+      "C": "- 166.9",
+      "D": "19.8 TD18 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 2 2 3 3 H C CH H H C CH = + → - \\Delta H = ? 4[C - H] + 1[C = C] + 1 [H - H] → 6[C - H] + 1[C - C] 4(414) + (615) + (435) → 6(414) + 1(347) \\Delta H = \\Sigma (B.E.) R - \\Sigma (B.E.) P \\Delta H = - 125 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_279",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Standard heat of combustion of C(s), H 2 (g) and CH 4 (g) are - 94, - 68 kCal/mol. then \\Delta H^\\circ for C(s) + 2H 2 (g) → CH 4 (g) is : -",
+    "options": {
+      "A": "- 17 kCal",
+      "B": "- 111 kCal",
+      "C": "- 170 kCal",
+      "D": "- 85 kCal TD07 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ( ) ( ) ( ) S 2 g 4 g C C 2H CH ; H = ? H - 94 -68 -213 - 94 2(-68) -213 + → \\Delta    \\Delta \\Delta H = \\Sigma ( \\Delta H C ) Reactant - \\Sigma ( \\Delta H C ) Product \\Delta H = [ - 94 - 136] + 213 = - 17 kCal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_280",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Considering entropy (S) as a thermodynamic parameter, the criteria for the spontaneity of any process is : -",
+    "options": {
+      "A": "\\Delta S system - \\Delta S surroundings > 0",
+      "B": "\\Delta S system > 0 only",
+      "C": "\\Delta S surroundings > 0 only",
+      "D": "\\Delta S system + \\Delta S surroundings > 0 TD23 - 0024"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) \\Delta S t o t al > 0 \\Delta S system + \\Delta S surrounding > 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_281",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following has \\Delta S^\\circ greater than zero : -",
+    "options": {
+      "A": "CaO",
+      "B": "NaCl",
+      "C": "NaNO 3",
+      "D": "In 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) NaNO 3 (s)  Na + (aq.) + NO 3 - (aq.) (Solid is converting in to aqu eous solution)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_282",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The bond dissociation energies of H 2 , Cl 2 and HCl are 104, 58 and 103 kCal respectively. The enthalpy of formation of HCl is : -",
+    "options": {
+      "A": "+ 44 kCal",
+      "B": "+ 22 kCal",
+      "C": "- 22 kCal",
+      "D": "- 44 kCal TC05 - 0037"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 2 2 1 1 H Cl HCl H ? 2 2 + → \\Delta =   ( )   1 1 H H Cl Cl H Cl 2 2 - + - → - ( ) 1 104 2 ( ) 1 58 2 103 52 29 103 \\Delta H = \\Sigma (B.E.) R - \\Sigma (B.E.) P = (52 + 29) - 103 \\Delta H = - 22 kCal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_283",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The internal energy change when a system goes from state A to B is 40 kJ/mol. If the system goes from A to B by a reversible path and returns to state A by an irreversible path what would be the net change in internal energy :",
+    "options": {
+      "A": "< 40 kJ",
+      "B": "Zero",
+      "C": "40 kJ",
+      "D": "> 40 kJ TD06 - 0019"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Internal Energy It is a sta t e function \\Delta E or \\Delta U = E final - E initial \\Delta E or \\Delta U = 40 - 40 Hence \\Delta U = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_284",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If at 298 K the bond energies of C - H, C - C, C = C and H - H bonds are respectively 414, 347, 615 and 435 kJ mol - 1 , the value of enthalpy change for the reaction H 2 C = CH 2 (g) + H 2 (g) → H 3 C - CH 3 (g) at 298K will be : -",
+    "options": {
+      "A": "+ 125 kJ",
+      "B": "- 125 kJ",
+      "C": "+ 250 kJ",
+      "D": "- 250 kJ TC16 - 0015"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 2 2 3 3 H C CH H H C CH = + → - \\Delta H = ? 4[C - H] + 1[C = C] + 1 [H - H] → 6[C - H] + 1[C - C] 4(414) + (615) + (435) → 6(414) + 1(347) \\Delta H = \\Sigma (B.E.) R - \\Sigma (B.E.) P \\Delta H = - 125 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_285",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The free energy change for the following reactions are given below C 2 H 2 (g) + 5 2 O 2 (g) → 2CO 2 (g) + H 2 O( \\lambda )  \\Delta G^\\circ = - 1234 kJ C(s) + O 2 (g) → CO 2 (g) ; \\Delta G^\\circ = - 394 kJ H 2 (g) + 1 2 O 2 (g) → H 2 O( \\lambda ) ; \\Delta G^\\circ = - 237 kJ What is the standard free energy change for the reaction H 2 (g) + 2C(s) → C 2 H 2 (g) : -",
+    "options": {
+      "A": "- 209 kJ",
+      "B": "- 2259 kJ",
+      "C": "+ 2259 kJ",
+      "D": "209 kJ TC07 - 0028"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) H 2(g) + 2C (S) → C 2 H 2(g) According to Hess l a w Target Eq. = Eq.(3) + 2Eq.(2) - Eq.(1) 0 0 0 0 3 2 1 G G 2 G G \\Delta = \\Delta + \\Delta - \\Delta = - 237 + 2( - 394) - ( - 1234) = 209 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_286",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The \\Delta H f 0 for CO 2 (g), CO(g) and H 2 O(g) - 393.5, - 110.5 .8kJ mol - 1 respectively. The standard enthalpy change (in kJ) for the reaction CO 2 (g) + H 2 (g) → CO(g) + H 2 O(g) is",
+    "options": {
+      "A": "524.1",
+      "B": "41.2",
+      "C": "- 262.5",
+      "D": "- 41.2 TC05 - 0038"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CO 2 + H 2 → CO + H 2 O ; \\Delta H = ?     \\Delta H f - 393.5 0 - 110.5 - 241.8 \\Delta H = \\Sigma ( \\Delta H f ) P - \\Sigma ( \\Delta H f ) R = ( - 110.5 - 241.8) - ( - 393.5) \\Delta H = 41.2 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_287",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat required to raise the temperature of 1 mol of a gas of a substance by 1^\\circC is called : -",
+    "options": {
+      "A": "Specific heat",
+      "B": "Molar heat capacity",
+      "C": "Enthalpy",
+      "D": "Internal energy TD13 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Moler heat capacity (as per theory) ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_288",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is intensive property : -",
+    "options": {
+      "A": "Mass",
+      "B": "Mass/volume",
+      "C": "Volume",
+      "D": "None TD03 - 0024 NEET : CHEMISTRY"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Density = mass volume Ratio of two extensive property is a n intensive property"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_289",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is correct about \\Delta G : -",
+    "options": {
+      "A": "\\Delta G = \\Delta H - T \\Delta S",
+      "B": "At equilibrium \\Delta G^\\circ = 0",
+      "C": "At equilibrium \\Delta G = - RT log e k",
+      "D": "\\Delta G = \\Delta G^\\circ + RT log e k TD21 - 0016"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) \\Delta G = \\Delta H - T \\Delta S"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_290",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\\Delta E = 0, for which process: -",
+    "options": {
+      "A": "Cyclic process",
+      "B": "Isobaric process",
+      "C": "Ioschoric process",
+      "D": "Adiabatic process TD02 - 0033"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) For cyclic process as E 2 = E 1 so, \\Delta E = E 2 - E 1 = 0"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermodynamics_291",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements are true : -",
+    "options": {
+      "A": "Work is a state function",
+      "B": "temperature is a state function",
+      "C": "Entropy is path function",
+      "D": "Heat is a state function TD02 - 0034"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) temperature is a state function."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_292",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is true for spontaneous process : -",
+    "options": {
+      "A": "\\Delta G > 0",
+      "B": "\\Delta G < 0",
+      "C": "\\Delta G = 0",
+      "D": "\\Delta G = T \\Delta S TD23 - 0025"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) For spontaneous process \\Delta G < 0 NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_293",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which reaction \\Delta S is negative : -",
+    "options": {
+      "A": "H 2 O",
+      "B": "H 2 O",
+      "C": "H 2 O",
+      "D": "H 2 O"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) H 2 O (g) → H 2 O (s) For this process randomness decreases as S gas > S solid"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_294",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following value of heat of formation indicates that the product is least stable",
+    "options": {
+      "A": "- 100 k c al",
+      "B": "- 200 k c al",
+      "C": "+20 k c al",
+      "D": "+60 k c al TC05 - 0039"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) For this \\Delta H = +60 k c al means reactant absorb heat. So heat of product is more and thermal stability is less."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_295",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Enthalpy change for rea c tion 1/2 H 2 (g) + 1/2Cl 2 (g) → HCl(g) is called: -",
+    "options": {
+      "A": "Enthalpy of combustion",
+      "B": "Enthalpy of solution",
+      "C": "Enthalpy of formation",
+      "D": "Enthalpy of fusion TC05 - 0040"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) ( ) ( ) ( ) 2 g 2 g g 1 1 H Cl HCl 2 2 + → ; Heat of formatio n is defined for formation of 1 mol product which is formed from element present in their present in their standard state."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_296",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction PCl 5 (g) → PCl 3 (g) + Cl 2 (g)",
+    "options": {
+      "A": "\\Delta H = \\Delta E",
+      "B": "\\Delta H > \\Delta E",
+      "C": "\\Delta H < \\Delta E",
+      "D": "None TD12 - 0044"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\Delta n g = 2 - 1 = 1 \\Delta n g > 0 So , \\Delta H > \\Delta E (as \\Delta H = \\Delta E + \\Delta n g RT)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_297",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an adiabatic expansion of an ideal gas -",
+    "options": {
+      "A": "W = - \\Delta E",
+      "B": "W = \\Delta E",
+      "C": "\\Delta E = 0",
+      "D": "W = 0 TD09 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) In an adiabatic expansion of an ideal gas. q = 0 \\Delta E = q + w \\Delta E = w"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_298",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat of combustion of ethanol in a bomb calorimeter .48 k c al mol - 1 at 25 0 C. What is \\Delta E at 25 0 C for the reaction ?",
+    "options": {
+      "A": "- 269.24 k c al",
+      "B": "- 469.28 k c al",
+      "C": "- 670.48 k c al",
+      "D": "+770.48 k c al TC07 - 0029"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Heat of reaction in \"Bomb calorimeter\" \\Delta E = - 670.48 kCal/mol (as q v = \\Delta E)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_299",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4S(s) + 6O 2 ⎯ → 4SO 3 (g).; \\Delta H for this reaction .2 kJ. The enthalpy of formation of sulphur trioxide is -",
+    "options": {
+      "A": "- 395.8 kJ",
+      "B": "395.8 kJ",
+      "C": "495.5 kJ",
+      "D": "595.5 kJ TC05 - 0041"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 4S (s) + 6O 2 → 4SO 3(g) ; \\Delta H = - 1583.2 kJ Heat of formation of SO 3 2 3 3 S O SO 2 + → ; f H 1583.2 H 4 4 \\Delta - \\Delta = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermodynamics_300",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermodynamics",
+      "chapter_name": "Thermodynamics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Thermodynamics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The heat change for the reaction C(s) + 2S(s) ⎯ → CS 2 ( ℓ ) is called the heat of",
+    "options": {
+      "A": "Reaction",
+      "B": "Fusion",
+      "C": "Formation",
+      "D": "Combustion TC05 - 0042"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) ( ) ( ) (s) S 2 C 2S CS + → l ; Heat of formatio n"
+  }
+]

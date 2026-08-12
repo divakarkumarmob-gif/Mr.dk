@@ -1,0 +1,3803 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_151",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On the basis of concept of ionic potential ( \\phi ), the tendency to form covalent bond in a group :",
+    "options": {
+      "A": "increases",
+      "B": "decreases",
+      "C": "remains unchanged",
+      "D": "shows erratic change $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_152",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ionic conductances of hydrated M + ions are in the order -",
+    "options": {
+      "A": "Li +",
+      "B": "Li +",
+      "C": "Li +",
+      "D": "Li +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_153",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "MgBr 2 and MgI 2 are soluble in acetone because of",
+    "options": {
+      "A": "Their ionic nature",
+      "B": "Their covalent nature",
+      "C": "Their co-ordinate nature",
+      "D": "None is correct"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_154",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is ionic -",
+    "options": {
+      "A": "AlCl 3",
+      "B": "AlF 3",
+      "C": "AlBr 3",
+      "D": "SnCl 4 EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_155",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is not correct from the point of view of molecular orbital theory?",
+    "options": {
+      "A": "Be 2 is not a stable molecule",
+      "B": "The 2 is not stable but 2 He + is expected to exist",
+      "C": "Bond strength of N 2 is maximum amongst the homonuclear diatomic molecules",
+      "D": "The order of energies of molecular orbitals in F 2 molecule is 2px 2py 2pz π = π < σ"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_156",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two hybrid orbitals have a bond angle of 120º. The percentage of p character in the hybrid orbital is nearly:-",
+    "options": {
+      "A": "25%",
+      "B": "33%",
+      "C": "50%",
+      "D": "66%"
+    },
+    "correct_option": "A",
+    "explanation": "I 2 + KI → KI 3 In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_157",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A molecule XY 2 contains two σ , two π bond and one lone pair of electron in the valence shell of X. The arrangement of lone pair as well as bond pair is :",
+    "options": {
+      "A": "Square pyramidal",
+      "B": "Linear",
+      "C": "Trigonal planar",
+      "D": "Unpredictable"
+    },
+    "correct_option": "A",
+    "explanation": "Species No. of unpaired O 2 2 O 2 + 1 O 2 - 1 O 2 -2 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_158",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The molecule which contain σ bonds, π bonds and lone pairs in",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_159",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In CO 2 , SO 2 , SiO 2 each central atom is covalently bonded with :-",
+    "options": {
+      "A": "2,2,4 oxygen atoms respectively",
+      "B": "2,2,2 oxygen atoms respectively",
+      "C": "2,4,4 oxygen atoms respectively",
+      "D": "4,4,4 oxygen atoms respectively"
+    },
+    "correct_option": "A",
+    "explanation": "Bond angle 120^\\circ means sp 2 hybridisation % p character is nearly 66%."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_160",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct, if %s-character of a hybrid orbital decreases",
+    "options": {
+      "A": "The bond angle decreases",
+      "B": "The bond strength increases",
+      "C": "The bond length decreases",
+      "D": "Size of orbital decreases"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_161",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect order of bond angle is :-",
+    "options": {
+      "A": "NH 3 > PH 3 > AsH 3",
+      "B": "H 2 O > H 2 S > H 2 Se",
+      "C": "BCl 3 > AlCl 3 > GaCl 3",
+      "D": "NO 2 + > NO 2 > NO 2 -"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_162",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of bond angle is :-",
+    "options": {
+      "A": "CH 3 + > CH 3 ¯ > CH 4",
+      "B": "BeCl 2 > BF 3 < CF 4",
+      "C": "NH 4 + > NH 3 > NH 2 ¯",
+      "D": "OF 2 > OCl 2 > OBr 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_163",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which pair both are not isostructural ?",
+    "options": {
+      "A": "BH 4 - & AlH 4 -",
+      "B": "NH 4 + & PH 4 +",
+      "C": "PCl 6 - & SiF 6 -2",
+      "D": "BCl 4 - & ICl 4 -"
+    },
+    "correct_option": "A",
+    "explanation": "Solubility of ionic compound depends upon lattice energy or hydration energy and not explained by polarisation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_164",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following set does not have sp 3 d hybridization ?",
+    "options": {
+      "A": "PF 5 & BrF 3",
+      "B": "ICl 2 + & XeF 6",
+      "C": "XeF 2 & I 3 -",
+      "D": "AsF 4 - & SCl 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_165",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select in which both have see-saw shape ?",
+    "options": {
+      "A": "XeO 2 F 2 , SiF 4",
+      "B": "XeO 2 F 2 , SF 4",
+      "C": "TeCl 4 , ICl 4 ¯",
+      "D": "BrO 3 F, XeOF 2"
+    },
+    "correct_option": "A",
+    "explanation": "2 l.p. 1 σ = [ ] [ ] = [ ] hybridisation : sp 2 ; so trigonal planar"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_166",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which type of molecule, the dipole moment may be nonzero (L → Lone pair) ?",
+    "options": {
+      "A": "AB 2 L 2",
+      "B": "AB 2 L 3",
+      "C": "AB 4 L 2",
+      "D": "AB 4 $//"
+    },
+    "correct_option": "A",
+    "explanation": "(1) N C C N ≡ - ≡   (2) C C-H C-H H-C H-C H C H (3) N ≡ C C C ≡ N C ≡ N C ≡ N (4) O C C C O = = = =    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_167",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following molecule is planar as well as polar ?",
+    "options": {
+      "A": "PCl 3",
+      "B": "H 2 O 2",
+      "C": "3 ClF",
+      "D": "XeO 3 F 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_168",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following specie is non polar with presence of polar bond and lone pair of electron on central atom.",
+    "options": {
+      "A": "CO 2",
+      "B": "SO 3",
+      "C": "XeF 4",
+      "D": "CF 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_169",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total no. of vacant orbitals in valence shell of sulphur when it undergoes formation of SF 4 :-",
+    "options": {
+      "A": "5",
+      "B": "4",
+      "C": "3",
+      "D": "2"
+    },
+    "correct_option": "A",
+    "explanation": "(i) Boiling point of H 2 O 2 is greater than H 2 O (due to H-bonding) (ii) Number of hydrogen bond in ethylene glycol is lesser than glycerol. (iii) o-nitrophenol has low boiling point than para nitrophenol. (iv) In ice each oxygen atom bonded with four hydrogen atom, two hydrogen covelently bonded and another two hydrogen bonded with H-bond."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_170",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of overlapping strength is:-",
+    "options": {
+      "A": "2s - 2s > 2p - 2p > 2s - 2p",
+      "B": "1s - 1s > 2p - 2p > 2s - 2p",
+      "C": "1s - 1s < 2s - 2s < 3s - 3s",
+      "D": "3s - 3s > 3s - 3p > 3p - 3p"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_171",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which compound is formed in 2 nd excited state?",
+    "options": {
+      "A": "PCl 5",
+      "B": "SH 6",
+      "C": "SO 3",
+      "D": "IF 7"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_172",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following element never form compound in ground state ?",
+    "options": {
+      "A": "N",
+      "B": "B",
+      "C": "C",
+      "D": "P"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_173",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following pair have same hybridisation ?",
+    "options": {
+      "A": "ClO 4 - & ClO 2 -",
+      "B": "SF 4 & CCl 4",
+      "C": "BF 3 & NF 3",
+      "D": "CO 2 & SO 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_174",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which orbital is not involved in the formation of PCl 5 molecule ?",
+    "options": {
+      "A": "s",
+      "B": "2 z d",
+      "C": "2 2 x y d -",
+      "D": "p z"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_175",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Shape of molecule having 4-bond pair and one lone pair is :-",
+    "options": {
+      "A": "Trigonal bipyramidal",
+      "B": "T-Shape",
+      "C": "Folded square",
+      "D": "Square planar"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 + = 2 π bonds and 1/2 σ bond (due to MOT)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_176",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following molecule has both p π -p π and p π -d π bonds",
+    "options": {
+      "A": "XeO 2 F 2",
+      "B": "SO 2 Cl 2",
+      "C": "SO 3",
+      "D": "XeO 3"
+    },
+    "correct_option": "A",
+    "explanation": "HO P O OH S OH H 3 PO 4 3 OH HO OH O O 2 OH H 2 SO 4 HNO 3 HO N O HCl O OH No OH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_177",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Intramolecular hydrogen bonding is not present in :-",
+    "options": {
+      "A": "p-fluoro phenol",
+      "B": "Chloral hydrate",
+      "C": "o-nitro phenol",
+      "D": "o-fluoro phenol"
+    },
+    "correct_option": "A",
+    "explanation": "SF 4 → see saw shape CCl 4 tetrahedral; no l.p. at central atom & all terminal atoms are same, so all bond angles are same. CHCl 3 , hybridisation sp 3 but all terminal atoms are not same. XeF 6 hybridisation sp 3 d 3 (all bond angles are not same) - Capped octahedral."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_178",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "London Dispersion force is mainly present between :-",
+    "options": {
+      "A": "Polar + Polar molecules",
+      "B": "Nonpolar + Non-polar molecules",
+      "C": "Polar + Nonpolar molecules",
+      "D": "Ionic"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_179",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following vanderwaal force is maximum in :-",
+    "options": {
+      "A": "HBr",
+      "B": "H 2",
+      "C": "HCl",
+      "D": "HI"
+    },
+    "correct_option": "A",
+    "explanation": "SiO 2 ⇒ ---O-Si-O--- O O No resonance (all single bond)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_180",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct order of decreasing lattice energy is :-",
+    "options": {
+      "A": "CaO > MgBr 2 > CsI",
+      "B": "MgBr 2 > CaO > CsI",
+      "C": "CsI > MgBr 2 > CaO",
+      "D": "CsI > CaO > MgBr 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_181",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following set do all the three compounds have bonds that are mainly ionic?",
+    "options": {
+      "A": "NaCl, NCl 3 , CCl 4",
+      "B": "CsBr, BaBr 2 , SrO",
+      "C": "CsF, BF 3 , NH 3",
+      "D": "Al 2 O 3 , CaO, SO 2"
+    },
+    "correct_option": "A",
+    "explanation": "(i) ClF 3 sp 3 d hybridisation with 2 l.p., so 'T' shape (ii) In SF 4 due to l.p.-b.p. repulsion equatorial bond angle is less than 120^\\circ. (iii) In [ICl 4 ] - sp 3 d 2 hyb. with two l.p. shape - square planar, bond angle 90^\\circ (iv) In XeF 2 sp 3 d hybridisation with 3 l.p., shape - linear"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_182",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order is incorrect ?",
+    "options": {
+      "A": "Ionic character = MCl < MCl 2 < MCl 3",
+      "B": "Polarizibility = F¯ < Cl¯ < Br¯ < I¯",
+      "C": "Polarising power = Na + < Ca +2 < Mg +2 < Al +3",
+      "D": "Covalent character = LiF < LiCl < LiBr < LiI"
+    },
+    "correct_option": "A",
+    "explanation": "(i) NO 3 - > NH 3 > NH 2 - (B.A. order) sp 2 sp 3 sp 3 1 l.p. 2 l.p. (ii) In (CH 3 ) 3 B hybridisation of carbon is sp 3 (non planar) (iii) NH 4 Cl → NH 4 + Cl - in NH 4 + hyb. of N is sp 3 (iv) BF 3 = BCl 3 = BBr 3 = BI 3 all have same bond angle. $//(1 TARGET : 202 5 INORGANIC CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_183",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order is not correct ?",
+    "options": {
+      "A": "CrO < Cr 2 O 3 < CrO 3",
+      "B": "ZnO > ZnS",
+      "C": "BeCl 2 > MgCl 2 > CaCl 2 > SrCl 2 > BaCl 2",
+      "D": "KCl < AgCl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_184",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order is incorrect for thermal stability ?",
+    "options": {
+      "A": "BeO > MgO > CaO",
+      "B": "NH 3 < H 2 O < HF",
+      "C": "HF < HCl < HBr < HI",
+      "D": "Li 2 SO 4 < Na 2 SO 4 < K 2 SO 4 < Rb 2 SO 4 < Cs 2 SO 4"
+    },
+    "correct_option": "A",
+    "explanation": "I 3 - = sp 3 d I I I ¯ b.p. = 2, l.p. =3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_185",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following solubility order is not correct ?",
+    "options": {
+      "A": "MgF 2 < CaF 2 < SrF 2 < BaF 2",
+      "B": "Be",
+      "C": "Li 2 O < Na 2 O < K 2 O < Rb 2 O < Cs 2 O",
+      "D": "CsF < CsCl < CsBr < CsI"
+    },
+    "correct_option": "A",
+    "explanation": "O=C=C=C=O [3 carbon atoms present linearly]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_186",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound has ionic bond, π -bond, co-ordinate bond and covalent bond ?",
+    "options": {
+      "A": "Na 2 CO 3",
+      "B": "NaNO 3",
+      "C": "KNO 2",
+      "D": "NH 4 Cl"
+    },
+    "correct_option": "A",
+    "explanation": "4 BCl - 4 ICl - sp 3 sp 3 d 2 l.p. = 0 l.p. = 2 tetrahedral square planar"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_187",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which has highest lattice energy ?",
+    "options": {
+      "A": "Al 2 O 3",
+      "B": "TiC",
+      "C": "CaF 2",
+      "D": "NaF"
+    },
+    "correct_option": "A",
+    "explanation": "SiF 4 Si F F F F Sp 3 all bond lengths are equal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_188",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following will be most covalent?",
+    "options": {
+      "A": "NaCl",
+      "B": "Na 2 S",
+      "C": "MgCl 2",
+      "D": "MgS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_189",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound on thermal decomposition yields a basic as well as acidic oxides?",
+    "options": {
+      "A": "Ca",
+      "B": "Ba",
+      "C": "K 2 CO 3",
+      "D": "MgCO 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_190",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ionic mobility of Li + (aq) is less than Na + (aq) and K + (aq) because :-",
+    "options": {
+      "A": "ionisation potential of lithium is low",
+      "B": "charge density of Li + is low",
+      "C": "high hydration tendency of Li +",
+      "D": "Li + keeps two electrons"
+    },
+    "correct_option": "A",
+    "explanation": "NO 3 - and CO 3 -2 (both belongs to 2 nd period)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_191",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the metal carbonates is thermally most stable ?",
+    "options": {
+      "A": "MgCO 3",
+      "B": "BaCO 3",
+      "C": "SrCO 3",
+      "D": "K 2 CO 3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_192",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following halides has the maximum covalent character?",
+    "options": {
+      "A": "LiI",
+      "B": "NaI",
+      "C": "KI",
+      "D": "CsI"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_193",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Magnesium oxide can be obtained by heating :-",
+    "options": {
+      "A": "MgCO 3",
+      "B": "Mg",
+      "C": "Mg",
+      "D": "All"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_194",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound gives paramagnetic gas on heating ?",
+    "options": {
+      "A": "LiNO 3",
+      "B": "NaHCO 3",
+      "C": "K 2 SO 4",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "All bond lengths in sp 3 d hybridisation are not same (non equivalent)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_195",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following can not be explained on the basis of polarisation ?",
+    "options": {
+      "A": "Ag 2 S is much less soluble than Ag 2 O",
+      "B": "BeCO 3 is thermally less stable than BaCO 3",
+      "C": "BaCO 3 is less soluble than MgCO 3",
+      "D": "Melting point of AlCl 3 is much less than that of NaCl."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_196",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The incorrect order of bond angle :-",
+    "options": {
+      "A": "2 2 3 3 CO CO CH ¯ - > >",
+      "B": "2 3 2 NO NO NO + - - > >",
+      "C": "XeF 2 > XeO 3 > XeO 4",
+      "D": "PH 3 > AsH 3 > SbH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_197",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following molecule has two lone pairs and bond angle < 109^\\circ28' ?",
+    "options": {
+      "A": "SF 2",
+      "B": "KrF 4",
+      "C": "4 ICl -",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_198",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following conversions involve change in both hybridisation & shape :-",
+    "options": {
+      "A": "CH 4 → C 2 H 6",
+      "B": "NH 3 → NH 4 +",
+      "C": "BF 3 → BF 4 -",
+      "D": "H 2 O → H 3 O +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_199",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following compound all the bond angles are equal :-",
+    "options": {
+      "A": "SF 4",
+      "B": "CCl 4",
+      "C": "CHCl 3",
+      "D": "XeF 6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_200",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following do not exhibit resonance ?",
+    "options": {
+      "A": "CO 3 -2",
+      "B": "ClO 3 -",
+      "C": "PH 3",
+      "D": "SO 3 -2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_201",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The incorrect statement regarding chloral hydrate CCl 3 CH(OH) 2 is :-",
+    "options": {
+      "A": "It exhibits intramolecular hydrogen bonding",
+      "B": "It has 9 lone pair and 9 bond pair",
+      "C": "It is stable inspite of coexistence of two-OH groups on a carbon atom",
+      "D": "Compound is non-planar and polar"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_202",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not correctly match between given species and type of overlapping ? (1) XeO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_203",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three (d π -p π ) bonds (2) H 2 SO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Species No. of unpaired O 2 2 O 2 + 1 O 2 - 1 O 2 -2 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_204",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two (d π -p π ) bonds (4) HClO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "I 2 + KI → KI 3 In I 3 - hyb. is sp 3 d with 3 lone pair so shape is linear."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_205",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Bonding - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which hybridisation, resulting all orbitals are NOT equivalent ?",
+    "options": {
+      "A": "sp 3",
+      "B": "sp 3 d",
+      "C": "sp 3 d 2",
+      "D": "sp 2 Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Ans 4 4 3 4 1 1 3 3 4 2 2 1 3 3 2 Que. 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Ans 2 3 1 2 1 3 3 3 1 2 4 1 2 1 3 Que. 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 Ans 3 4 2 2 4 4 3 4 1 4 1 3 3 4 3 Que. 46 47 48 49 50 Ans 2 3 2 3 2"
+    },
+    "correct_option": "A",
+    "explanation": "(I) Cl Cl Cl 1,3,5-trichlorobenzene (II) Cl Cl Cl 1,2,4-trichlorobenzene (III) C l Cl Cl Cl 1,2,3,4-tetrachloro benzene (IV) C l Cl P-dichloro benzene Dipole moment order = III > II > I = IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_206",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hybridisation in XeF 2 , XeO 2 F 2 is sp 3 d. But shape will be respectively: -",
+    "options": {
+      "A": "T, 'V' shape",
+      "B": "Linear , See - Saw",
+      "C": "Both have T shape",
+      "D": "T shape, irregular octahedral CB05 - 0015"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 3 ) C 2  12e - 2 2 2 2 2 2 x y 1s *1s 2s s 2p 2p         \\pi = \\pi Net 2 \\pi - bonds Bond Order = 2.0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_207",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following set, the value of bond order will be 2.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2 O +  15e¯ NO  15e¯ 2 NO +  13 e ¯ CN  13 e ¯ Species having total e¯ 13 and 15 have bond order = 2.5 and paramagnetic."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_208",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following group of molecules have 2 1 2 bond order: -",
+    "options": {
+      "A": "In 2 - 2 , O 2 - 2 , CO",
+      "B": "In 2 + , O 2 + , NO",
+      "C": "C 2 - 2 , BN, O 2",
+      "D": "CN - , NO + , O 2 +2 CB18 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 N +  13e¯ 2 O +  15e¯ NO  15e¯ All species have bond order = 2.5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_209",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One of the resonating structure of -2 4 SO is Which set of average formal charge on oxygen and bond order is correct",
+    "options": {
+      "A": "- 0.5 and 1.5",
+      "B": "- 1.5 and 3",
+      "C": "- 2 and 3",
+      "D": "- 1.5 and 1.5 CB09 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Average formal charge = 2 4 - = - 0.5 Average bond order = 6 4 = 1.5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_210",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Choose the compound from each of the following pairs that has the more solubility in water : -",
+    "options": {
+      "A": "BeSO 4 , CsOH, AgI",
+      "B": "LiOH, CsOH",
+      "C": "AgCl, AgI",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (I) Solubility for groups If common ion is large like 2 4 SO - then solubility decreases down the group. If common ion is small like OH¯ then solubility increases down the group. (II) Solubility of d & p - block compounds 1 Solubility Polarisation (Covalent character) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_211",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following halides has the highest melting point -",
+    "options": {
+      "A": "NaCl",
+      "B": "NaI",
+      "C": "NaBr",
+      "D": "NaF CB24 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_212",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following does not give an oxide on heating -",
+    "options": {
+      "A": "MgCO 3",
+      "B": "Li 2 CO 3",
+      "C": "ZnCO 3",
+      "D": "K 2 CO 3 CB29 - 0001 chemical Bonding and Molecular Structure - chemical Bonding"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Carbonates of group I - A do not decompose except Li 2 CO"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_213",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following forms metal oxide on heating",
+    "options": {
+      "A": "Na 2 CO 3",
+      "B": "Li 2 CO 3",
+      "C": "K 2 SO 4",
+      "D": "NaHCO 3 CB29 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) Li 2 CO 3 decompose on heating due to high \\phi of Li."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_214",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the carbonate will not give oxide on heating.",
+    "options": {
+      "A": "Na 2 CO 3",
+      "B": "CaCO 3",
+      "C": "Li 2 CO 3",
+      "D": "BaCO 3 CB29 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 1 ) Na 2 CO 3 will not decompose on heating due to low \\phi value of Na."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_215",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Bonding And Molecular Structure _ Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound is ionic -",
+    "options": {
+      "A": "AlCl 3",
+      "B": "AlF 3",
+      "C": "AlBr 3",
+      "D": "SnCl 4 CB20 - 0004 EXERCISE - I"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 2 ) AlF 3 is ionic due to small size of anion (F¯). Exercise - II ( Previous Year Questions )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_216",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Determine the incorrect order of bond angle?",
+    "options": {
+      "A": "NH 3 < NF 3 < NCl 3",
+      "B": "OF 2 < OH 2 < OCl 2",
+      "C": "SF 2 < SCl 2 < SBr 2 < SI 2",
+      "D": "ClO 2 > 1 2 ClO - > OCl 2 CB07 - 0382"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 1 ) NH 3 Bond Angle → 107^\\circ NF 3 Bond Angle → 101.1 ^\\circ NCl 3 Bond Angle → 107.1 ^\\circ  Correct order → NCl 3 > NH 3 > NF 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_217",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "There are some species given below : -",
+    "options": {
+      "A": "2 O +",
+      "B": "CO",
+      "C": "B 2",
+      "D": "2 O -"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) (a) 2 O + (d) 2 O - (i) 2 N - (f) 2 He + ↓ ↓ ↓ ↓ 2.5 1.5 2.5 0.5 4 species have fractional bond order."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_218",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct order of N - O bond length is",
+    "options": {
+      "A": "NO 3 - > NO 2 + > NO 2 -",
+      "B": "NO 3 - > NO 2 - > NO 2 +",
+      "C": "NO 2 + > NO 3 - > NO 2 -",
+      "D": "NO 2 - > NO 3 - > NO 2 + CB09 - 0285"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Bond order = Total no.of bondsparticipating in resonance Total no.of resonating structure 1 Bond order Bondlength  2 NO + O N 0 + = = Bond order 2 NO + = 2 2 NO - Bond order of 2 2 1 NO 1.5 2 - + = = 3 NO - Bond order of 3 2 1 1 NO 1.33 3 - + + = = 3 2 2 B.L. NO NO NO - - + =  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_219",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following have same bond order: - (I) CO (II) CN - (III) O 2 + (IV) NO +",
+    "options": {
+      "A": "I, II, III",
+      "B": "I, II, IV",
+      "C": "I, III, IV",
+      "D": "II, III, IV CB18 - 0114"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (I) CO (II) CN - (III) O 2 + (IV) NO + ↓ ↓ ↓ ↓ 3 3 2.5 3 I, II, IV will have same bond order = 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_220",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct stability order of N 2 and its given ions is",
+    "options": {
+      "A": "In 2 > N 2 + > N 2 - > N 2 2 -",
+      "B": "In 2 - > N 2 + > N 2 > N 2 2 -",
+      "C": "In 2 + > N 2 - > N 2 > N 2 2 -",
+      "D": "In 2 > N 2 + = N 2 - > N 2 2 - CB18 - 0246"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 1 ) A ccording to bond order of the following molecules. N 2  3, N 2 +  2.5, N 2 -  2.5, N 2 2 -  2 B.O. Bond stability  W hen bond order is same → No. of electrons in ABMO is inversely proportional to stability."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_221",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of lone pair on central atom in XeF 2 molecule to the total lone pairs is; (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Total lone pairs = 9 lone pairs on central atom ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_222",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following molecule is polar and non - planar",
+    "options": {
+      "A": "XeF 4",
+      "B": "XeF 5 -",
+      "C": "CH 2 F 2",
+      "D": "ClF 3 CB06 - 0528"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) CH 2 F 2  due to high electronegativity difference between Fluorine and Hydrogen polarisation will take place."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_223",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Dipole moment of NH 3 is more than NF 3 because",
+    "options": {
+      "A": "In - F bond is more polar than N - H bond",
+      "B": "NH 3 is pyramidal while NF 3 is planar",
+      "C": "In NH 3 orbital dipole due to lone pair is in the same direction as the resultant dipole moment of N - H bonds while in NF 3 orbital dipole due to lone pair is in opposite direction of the resultant dipole moment of N - F bonds",
+      "D": "None of these CB10 - 0332"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) → In NF 3 , orbital resultant is in opposite direction due to lone pair .  D ipole moment is almost negligible → 0.24D → In NH 3 resultant is in same di rection . D.M. = 1.46D.  NH 3 > NF 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_224",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is polar",
+    "options": {
+      "A": "p - dichlorobenzene",
+      "B": "o - dichlorobenzene",
+      "C": "boron tri fluoride",
+      "D": "xenon tetra fluoride CB11 - 0155"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) Xe F F Cl Cl NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_225",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following attraction is strongest?",
+    "options": {
+      "A": "Cl - H - Cl",
+      "B": "CHCI 3 CHCl 3",
+      "C": "H 2 O CCl 4",
+      "D": "CB15 - 0054"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Ion - dipole force This attraction is strongest due to presence of charge on the Cl - ion, it would have largest attraction force with dipole."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_226",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : The magnitude of H - bonding depends on the physical state of compound. Statement - II : Hydrogen bonding have strong influence on the structure and properties of the compound.",
+    "options": {
+      "A": "Statement I is correct, Statement II is incorrect.",
+      "B": "Statement I is incorrect, Statement II is correct.",
+      "C": "Both statement are incorrect.",
+      "D": "Both statement is correct. CB12 - 0346 Exercise - I chemical Bonding and Molecular Structure - chemical Bonding NEET : Extra Edge [ Chemistry ]"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) The magnitude of H - bonding depends on the physical state of the compound. It is maximum in the solid state and minimum in the gaseous state. Thus, the hydrogen bonds have strong influence on the structure and properties of the compounds."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_227",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a best representation of the H - bond?",
+    "options": {
+      "D": "CB13 - 0354",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) NH 3 is stronger lewis base than H 2 O and H 2 O has more acidic hydrogen available."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_228",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following carbonate is maximum stable to heat?",
+    "options": {
+      "A": "CaCO 3",
+      "B": "Li 2 CO 3",
+      "C": "Na 2 CO 3",
+      "D": "BaCO 3 CB21 - 0026"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Na 2 CO 3 is max imum stable to heat because it does not decompose on heating."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_229",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following molecule/ion all the bonds are not equal?",
+    "options": {
+      "A": "XeF 4",
+      "B": "BF 4 -",
+      "C": "C 2 H 4",
+      "D": "SiF 4 CB07 - 0385"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In C 2 H 4 all the bonds are not equal as There are 4  bond s and 1 \\pi bond."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_230",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The incorrect order of solubility in water : -",
+    "options": {
+      "A": "Ca",
+      "B": "Li 2 CO 3 < Na 2 CO 3 < K 2 CO 3",
+      "C": "AgF<AgCl<AgBr",
+      "D": "BaSO 4 < MgSO 4 CB25 - 0047"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In the silver halides rate of covalent character increases down the group. therefor e order will be : AgF > AgCl > AgBr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_231",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The hybridisation of P in phosphate ion 3 4 (PO ) - is the same as in:",
+    "options": {
+      "A": "4 I in ICI -",
+      "B": "S in SO 3",
+      "C": "3 N in NO -",
+      "D": "2 3 S in SO - CB05 - 0507"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 3 4 (PO ) -  Hybridisation involved in this molecule is sp 3  2 3 S in SO - Here Hybridisation is also → sp 3 I in 4 ICI - → sp 3 d 2 S in SO 3 → sp 2 N in 3 NO - → sp 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_232",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has regular tetrahedral shape.",
+    "options": {
+      "A": "4 BF -",
+      "B": "XeF 4",
+      "C": "SF 4",
+      "D": "4 ClF - CB06 - 0638"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 4 BF - i s sp 3 h ybrid ised . Ther efore , shape will be regular Tetrahedral."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_233",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct sequence of decrease in bond angles of following hydrides is:",
+    "options": {
+      "A": "NH 3 > PH 3 > AsH 3 > SbH 3",
+      "B": "SbH 3 > AsH 3 > PH 3 > SbH 3",
+      "C": "SbH 3 > AsH 3 > PH 3 > NH 3",
+      "D": "PH 3 > NH 3 > AsH 3 > SbH 3 CB07 - 0383"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) NH 3 > PH 3 > AsH 3 > SbH 3 NH 3 has B.A. = 109^\\circ28 ' But in PH 3 , AsH 3 , SbH 3 d orbital s are available for bonding and hence overlapping occurs with 90^\\circ bond angle."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_234",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compare F ⎯ Î ⎯ O and F axial ⎯ Î ⎯ F axial bond angle in IOF 3 molecule:",
+    "options": {
+      "A": "If ⎯ Î ⎯ O > F axial ⎯ Î ⎯ F axial",
+      "B": "If axial ⎯ Î ⎯ F axial > F ⎯ Î ⎯ O",
+      "C": "If axial ⎯ Î ⎯ F axial = F ⎯ Î ⎯ O",
+      "D": "None of these CB07 - 0384"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) In case of I OF 3 molecule c e ntr a l atom is attached to four other atoms. Therefore, i t will have a see - sa w geometry i n which one pair of ligands will be associated with approx imate 180^\\circ and other will be at 120^\\circ ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_235",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order of energies of molecular orbitals of N 2 is correct?",
+    "options": {
+      "A": "y z x y * * 2p 2p 2p 2p",
+      "B": "y z x y * * 2p 2p 2p 2p",
+      "C": "y z x y * * 2p 2p 2p 2p",
+      "D": "y z x y * * 2p 2p 2p 2p"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Correct order → y z x y * * 2p 2p 2p 2p ( ) ( ) ( ) ( ) \\pi    \\pi  \\pi  Molecular orbitals of molecules B 2 , N 2 , C 2 has z 2p  energy level higher than y 2p \\pi / x 2p \\pi chemical Bonding and Molecular Structure - chemical Bonding"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_236",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements does not agree with Lewis dot structure concept -",
+    "options": {
+      "A": "Each bond is formed as a result of sharing of an e - pair between the atoms.",
+      "B": "Each combining atom contributes atleast one e - to the shared pair",
+      "C": "The combining atoms attains the outer most shell halogen configurations as a result of sharing of e -",
+      "D": "All statements are correct CB01 - 0955"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) The Lewis dot structures can be written for other molecules also, in which the combining atoms may be identical or different. The important conditions being that: Each bond is formed as a result of sharing of an electron pair between the atoms. Each combining atom contributes at least one electron to the shared pair. The combining atoms attain the outer - shell noble gas configurations as a result of the sharing of electrons"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_237",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find correct set of formal charge on marked oxygen respectively.",
+    "options": {
+      "A": "+1, +1, +1",
+      "B": "+1, - 1, 0",
+      "C": "+1, 0, - 1",
+      "D": "0, +1, - 1 CB01 - 0956"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) 1 st Oxygen 1 6 2- (6) 1 2 - = + 2 nd Oxygen 1 6 4 - (4) 0 2 - = 3 rd Oxygen 1 6 6 - (2) 1 2 - = -"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_238",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - PF 5 , SF 6 , H 2 SO 4 are considered as hypervalent molecules Reason : - There are 10, 12, 12 electrons around P, S & S in PF 5 , SF 6 and H 2 SO 4 molecules respectively.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CB01 - 0958"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (A) and (R) is correct and (R) is correct explanation of (A).",
+    "assertion": "- PF 5 , SF 6 , H 2 SO 4 are considered as hypervalent molecules",
+    "reason": "- There are 10, 12, 12 electrons around P, S & S in PF 5 , SF 6 and H 2 SO 4 molecules respectively."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_239",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sulphur dichloride -",
+    "options": {
+      "A": "Is a hyper valent molecule",
+      "B": "Is a hypo valent molecule",
+      "C": "Obeys octet rule",
+      "D": "None of the above CB01 - 0364"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In sulphur dichloride, the S atom has an octet of electrons around it."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_240",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct about the octet theory.",
+    "options": {
+      "A": "It is based upon the chemical inertness of noble gases with exceptions like XeF 2 , KrF 2 etc.",
+      "B": "This theory does not account for the shape of molecules.",
+      "C": "It does not explain relative stability of the molecules.",
+      "D": "All of the above CB01 - 0957"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4) It is clear that octet rule is based upon the chemical inertness of noble gases. However, some noble gases (for example xenon and krypton) also combine with oxygen and fluorine to form a number of compounds like XeF 2 , KrF 2 , XeOF 2 etc. • This theory does not account for the shape of molecules. • It does not explain the relative stability of the molecules"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_241",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ionic bond forms more easily between elements with comparatively.",
+    "options": {
+      "A": "Low I.E. & high negative value of EGE",
+      "B": "High I.E. & high negative value of EGE",
+      "C": "High I.E. & low negative value of EGE",
+      "D": "Low I.E. & low negative value of EGE CB12 - 0426"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1) Obviously ionic bonds will be formed more easily between elements with comparatively low ionization enthalpies and elements with comparatively high negative value of electron gain enthalpy."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_242",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the correct order of bond length in following",
+    "options": {
+      "A": "O - H > C - H",
+      "B": "O - H < C - H",
+      "C": "O - H = C - H",
+      "D": "cannot be compared CB03 - 0853"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2) O - H  96 C - H  107"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_243",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compare bond length in following -",
+    "options": {
+      "A": "C - N < C = N < C  N",
+      "B": "C - N < C = N > C  N",
+      "C": "C - N > C = N > C  N",
+      "D": "C  N < C - N < C = N CB03 - 0852"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3) C - N  143 C = N  138 C  N  116"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_244",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has identical bond orders ?",
+    "options": {
+      "A": "If 2 , O 2 - 2",
+      "B": "CO, N 2",
+      "C": "NO + , CO",
+      "D": "All of these CB03 - 0854"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4) Isoelectronic molecules and ions have identical bond orders; for example, F 2 and O 2 2 - have bond order"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_245",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which structure represents structure of O 3 molecule more accurately.",
+    "options": {
+      "D": "All of the above CB01 - 0377 O O O 1 3 2 O O O O O O O O O chemical Bonding and Molecular Structure - chemical Bonding NEET : NCR [ Chemistry ]",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3) ( III ) structure represents the structure of O 3 more accurately"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_246",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - HCl being covalent molecule contain certain percentage of ionic char acter. Reason : - In rea lity no bond or a compound is either completely covalent or ionic.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CB04 - 0629"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (A) and (R) both are correct and (R) is correct explan ation of (A) In reality no bond or a compound is either completely covalent or ionic. Even in case of covalent bond between two hydrogen atoms, there is some ionic character.",
+    "assertion": "- HCl being covalent molecule contain certain percentage of ionic char acter.",
+    "reason": "- In rea lity no bond or a compound is either completely covalent or ionic."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_247",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In case of polyatomic molecule dipole moment depends on -",
+    "options": {
+      "A": "Bond dipoles",
+      "B": "Spatial arrangement of various bonds in the molecules.",
+      "C": "Both A & B",
+      "D": "None of the above CB04 - 0630"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3) In case of polyatomic molecules the dipole moment not only depend upon the individual dipole moments of bonds known as bond dipoles but also on the spatial arrangement of various bonds in the molecule."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_248",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Dipole moment in case of BeF 2 is zero. Reason : - Two equal bond dipoles point in opposite directions and cancel effect of each other.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CB04 - 0444"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (A) and (R) is correct and (R) is correct explan ation of (A) The dipole moment in case of BeF 2 is zero. This is because the two equal bond dipoles point in opposite directions and cancel the effect of each other",
+    "assertion": "- Dipole moment in case of BeF 2 is zero.",
+    "reason": "- Two equal bond dipoles point in opposite directions and cancel effect of each other."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_249",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the incorrect statements -",
+    "options": {
+      "A": "S maller the size of the cation and larger the size of the anion, greater the ionic character of the covalent bond.",
+      "B": "G reater the charge on the cation, greater the ionic character of the covalent bond.",
+      "C": "For cations of same size & charge , the one with electronic configuration",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4) The smaller the size of the cation and the larger the size of the anion, the greater the covalent character of an ionic bond. The greater the charge on the cation, the greater the covalent character of the ionic bond. For cations of the same size and charge, the one with electronic configuration (n - 1) d n ns o i.e. transition metals is more polarising than the one with a noble gas configuration ns 2 np 6 i.e. alkali and alkaline earth metal cations . 1"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_250",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column - Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "AB",
+      "B": "AB 2",
+      "C": "AB 3",
+      "D": "AB 4"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1) Obviously ionic bonds will be formed more easily between elements with comparatively low ionization enthalpies and elements with comparatively high negative value of electron gain enthalpy."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_251",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compare the dipole moment of following molecules -",
+    "options": {
+      "A": "H 2 O < H 2 S < CO 2",
+      "B": "HF < HCl < H - Br",
+      "C": "NH 3 > NF 3 > BF 3",
+      "D": "CH 4 > CHCl 3 > CCl 4 CB04 - 0271 chemical Bonding and Molecular Structure - chemical Bonding 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2) O - H  96 C - H  107"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_252",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find incorrect statement about VSEPR theory? ( i ) The shape of molecule depends upon the no. of valence shell e - pairs (bonded or non - bonded) around the central atom. ( ii ) Pairs of e - in the valence shell repel one another since their electron clouds are negatively charge. ( iii ) These pairs of electrons tend to occupy such positions in shape that maximize repulsion. ( iv ) VSEPR model is not applicable to any such structure w here 2 or more resonance structure can represent a molecule.",
+    "options": {
+      "D": "All are incorrect CB03 - 0303 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4) Isoelectronic molecules and ions have identical bond orders; for example, F 2 and O 2 2 - have bond order"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_253",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect order of bond angles -",
+    "options": {
+      "A": "BeCl 2 > BF 3",
+      "B": "BF 3 > CH 4",
+      "C": "CH 4 > BF 3",
+      "D": "CH 4 < BeCl 2 CB03 - 0304"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3) CH 4 > BF 3 (109.5^\\circ) (120^\\circ)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_254",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find correct order of the following molecules in increasing order of lone pairs on central atom -",
+    "options": {
+      "A": "NH 3 < H 2 O",
+      "B": "SF 4 < SO 2",
+      "C": "ClF 3 < BrF 5",
+      "D": "XeF 4 < NF 3 CB01 - 0378"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1) NH 3 < H 2 O ( 1 LP ) ( 2 LP )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_255",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following set represents positive overlap.",
+    "options": {
+      "A": "- + p z z + - p z",
+      "D": "All sets are correct CB02 - 0007",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) chemical Bonding and Molecular Structure - chemical Bonding"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_256",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among the following is not a salient features of hybridisation ?",
+    "options": {
+      "A": "The number of hybrid orbital is equal to the number of atomic orbitals that gets hybridized.",
+      "B": "These hybrid orbitals are always equivalent in energy and shape.",
+      "C": "The hybrid orbitals are more effective in forming stable bond than pure atomic orbitals.",
+      "D": "The hybrid orbitals are directed in space to have maximum repulsion between electron pairs. CB02 - 0335"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_257",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following types of hybridization also termed as diagonal hybridization.",
+    "options": {
+      "A": "sp",
+      "B": "sp 2",
+      "C": "sp 3 d 2",
+      "D": "sp 3 d CB02 - 0336 NEET : NCR [ Chemistry ]"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) sp hybridisation also known as diagonal hybridisation."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_258",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Axial bonds have been found to be slightly longer and hence slightly weaker the equatorial bonds - Reason : - Axial bond pairs suffer more repulsive interaction from equatorial bonds.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CB02 - 0542"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ( A ) and ( R ) both correct and (R) is correct explan ation of (A) As the axial bond pairs suffer more repulsive interaction from the equatorial bond pairs, therefore axial bonds have been found to be slightly longer and hence slightly weaker than the equatorial bonds .",
+    "assertion": "- Axial bonds have been found to be slightly longer and hence slightly weaker the equatorial bonds -",
+    "reason": "- Axial bond pairs suffer more repulsive interaction from equatorial bonds."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_259",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - PCl 5 molecules is more reactive. Reason : - In PCl 5 axial bond suffer more repulsion interaction from equatorial bond pairs.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CB02 - 0337"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) PCl 5 molecule more reactive.",
+    "assertion": "- PCl 5 molecules is more reactive.",
+    "reason": "- In PCl 5 axial bond suffer more repulsion interaction from equatorial bond pairs."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_260",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which the following statements is/are incorrect regarding molecular orbital theory -",
+    "options": {
+      "A": "The electrons are present in various atomic orbitals.",
+      "B": "The atomic orbitals are of comparable energies.",
+      "C": "e - is influenced by 2 or more nuclei",
+      "D": "The bonding molecular orbital has higher energy than anti B.M.O."
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) (i) The electrons in a molecule are present in the various molecular orbitals (ii) The atomic orbitals are of comparable energies (iii) A molecular orbital e - is influenced by two or more nuclei ( i v) The bonding molecular orbital has lower energy"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_261",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following relation represent a stable molecule in respect of MOT ?",
+    "options": {
+      "A": "In b > N a",
+      "B": "In a < N b",
+      "C": "In b = N a",
+      "D": "None of these CB13 - 0337"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) A positive bond order (i.e., N b > N a ) means a stable molecule while a negative (i.e., N b <N a ) or zero (i.e., N b = N a ) bond order means an unstable molecule."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_262",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of bond order is -",
+    "options": {
+      "A": "H 2 > He 2 > Li 2",
+      "B": "The 2 > H 2 > C 2",
+      "C": "O 2 > Li 2 > He 2",
+      "D": "Li 2 > O 2 > C 2 CB13 - 0508"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Bond order of H 2 = - - = = b a N N 2 0 1 2 2 Bond order of He 2 = 1 2 (2 - 2) = 0 Bond order of Li 2 = 1 2 (4 - 2) ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_263",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the correct valence electronic configuration for the following molecule - (1) B",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) sp mixing occurs in case of B 2 so \\pi 2p will be filled first followed by  2p .",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_264",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "- ( ) ( ) ( ) ( ) ( ) 2 2 4 4 2 * * 2s 2s 2p 2p 2p    \\pi \\pi (3) N",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) 1 st Oxygen 1 6 2- (6) 1 2 - = + 2 nd Oxygen 1 6 4 - (4) 0 2 - = 3 rd Oxygen 1 6 6 - (2) 1 2 - = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_265",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "- ( ) ( ) ( ) ( )   \\pi  1 4 2 1 * 2s 2s 2p 2p (4) C",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) 1 st Oxygen 1 6 2- (6) 1 2 - = + 2 nd Oxygen 1 6 4 - (4) 0 2 - = 3 rd Oxygen 1 6 6 - (2) 1 2 - = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_266",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "- ( ) ( ) ( )   \\pi 2 4 2 * 2s 2s 2p CB13 - 0509",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) 1 st Oxygen 1 6 2- (6) 1 2 - = + 2 nd Oxygen 1 6 4 - (4) 0 2 - = 3 rd Oxygen 1 6 6 - (2) 1 2 - = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_267",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which type of bond is represent in dotted line",
+    "options": {
+      "A": "Coordinate bond",
+      "B": "Inter molecular H bond ing",
+      "C": "Intra molecular H bond ing",
+      "D": "Metallic bond CB06 - 0708"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_268",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The electrovalence is equal to",
+    "options": {
+      "A": "Number of e - of ion",
+      "B": "Number of p + of ion",
+      "C": "Number of n 0 of ion",
+      "D": "Number of unit charge an ion CB12 - 0428 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) The electrovalence is thus equal to the number of unit charge(s) on the ion. 3"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_269",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following statements which is incorrect -",
+    "options": {
+      "A": "The orbitals present in the valence shell of the atom are hybridized.",
+      "B": "The orbitals undergoing hybridization should have almost equal energy.",
+      "C": "Promotion of e - is an essential condition prior to hybridization.",
+      "D": "Filled orbitals of valence shell can take part in hybridisation. CB02 - 0338 chemical Bonding and Molecular Structure - chemical Bonding 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (A) and (R) is correct and (R) is correct explanation of (A)."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_270",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - The repulsion between the nuclei of an ABMO is high. Reason : - There is nodal plane between the nuclei in ABMO",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CH19 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) In sulphur dichloride, the S atom has an octet of electrons around it.",
+    "assertion": "- The repulsion between the nuclei of an ABMO is high.",
+    "reason": "- There is nodal plane between the nuclei in ABMO"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_271",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Order of Covalent bond; A. KF > KI; LiF > KF B. KF < KI; LiF > KF C. SnCl 4 > SnCl 2 ; CuCl > NaCl D. LiF > KF; CuCl < NaCl E. KF < KI; CuCl > NaCl",
+    "options": {
+      "A": "C, E only",
+      "B": "B, C only",
+      "C": "B, C, E only",
+      "D": "A, B only CB20 - 0029"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Order covalent character : (B) KF < KI (covalent), LiF > KF (C) SnCl 4 > SnCl 2 (according to Fajan’s rule ) (E) CuCl > NaCl (Ionic i n nature )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_272",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the number of unpaired electron(s) in the highest occupied molecular orbital of the following species : N",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2 N 14e - , 2 N 13e + - , 2 O 16e - , 2 O 15e + - N 2   1s 2  *1s 2  2s 2  *2s 2 \\pi 2px 2 = \\pi 2py 2  2pz 2 2 N +   1s 2  *1s 2  2s 2  *2s 2 \\pi 2px 2 = \\pi 2py 2  2pz 1 O 2   1s 2  *1s 2  2s 2  *2s 2 \\pi 2pz 2 \\pi 2px 2 = \\pi 2py 2 \\pi *2px 1 = \\pi *2py 1 2 O +   1s 2  *1s 2  2s 2  *2s 2 \\pi 2pz 2 \\pi 2px 2 = \\pi 2py 2 \\pi *2px 1 = \\pi *2py 0 So , unpaired electrons in HOMO are [O, 1, 2, 1]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_273",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total number of lone pairs of electrons on oxygen atoms of ozone is",
+    "options": {
+      "A": "6",
+      "B": "4",
+      "C": "5",
+      "D": "2 CB08 - 0029"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Ozone (O 3 ) Total lone pair of electrons on oxygen atoms are  6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_274",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The shape of XeOF 2 is",
+    "options": {
+      "A": "Trigonal planar",
+      "B": "Trigonal pyramidal",
+      "C": "T - shaped",
+      "D": "Square planar CH28 - 0037"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_275",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Amongst the following, the number of species having the linear shape is . 2 3 3 2 3 2 2 2 2 XeF ,I , C O , I , CO , SO , BeCl and BCl + - Θ",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "2",
+      "D": "5 CB06 - 0119"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) XeF 2  C 3 O 2 → O = C = C = C = O ( l inear) 3 I +  3 I -  CO 2  O = C = O (Linear) SO 2  BeCl 2  Cl - Be - Cl (Linear) 2 BCl -  (bent) Total 5 linear structures"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_276",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to MO theory the bond orders for O 2 2 - , CO and NO + respectively, are",
+    "options": {
+      "A": "1, 3 and 3",
+      "B": "1, 3 and 2",
+      "C": "1, 2 and 3",
+      "D": "2, 3 and 3 CB18 - 0043"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2 2 O - , CO, NO + 18e - , 14 e - , 14 e - B.O. → [1 3 3]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_277",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct order of bond enthalpy (kJ mol - 1 ) is :",
+    "options": {
+      "A": "Si - Si > C - C > SN\\cdot sn > Ge - Ge",
+      "B": "Si - Si > C - C > Ge - Ge > SN\\cdot sn",
+      "C": "C - C > Si - Si > SN\\cdot sn > Ge - Ge",
+      "D": "C - C > Si - Si > Ge - Ge > SN\\cdot sn CB18 - 0044"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Bond enthalpy order will be → C - C > Si - Si > Ge - Ge > Sn - Sn"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_278",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A molecule XY 2 contains two  , two \\pi bond and one lone pair of electron in the valence shell of X. The arrangement of lone pair as well as bond pair is :",
+    "options": {
+      "A": "Square pyramidal",
+      "B": "Linear",
+      "C": "Trigonal planar",
+      "D": "Unpredictable CB06 - 0120"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) XY 2 2  bonds 2 \\pi bonds 1 lone pair Example → Hybridisation [2 + 1] → sp 2 Geometry → Triagonal planner Shape → Angular O O O • • • • • • • • • • • • F Xe = O F (t - shape) F Xe • • • • • • F (linear) I I I (bent) + I I I (Linear) • • O S O (angular) • • • • • • Cl B Cl • • - O S O (SO 2 molecule) • • NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_279",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select in which both have sea - saw shape ?",
+    "options": {
+      "A": "XeO 2 F 2 , SiF 4",
+      "B": "XeO 2 F 2 , IO 2 F 2 ¯",
+      "C": "TeCl 4 , ICl 4 ¯",
+      "D": "BrO 3 F, XeOF 2 CB06 - 0123"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_280",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total no. of vacant orbitals in valence shell of sulphur when it undergoes formation of SF",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 2 ) SF 4 S : [Ne]2s 2 3p 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_281",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of extent strength of overlapping is : -",
+    "options": {
+      "A": "2s - 2s > 2p - 2p > 2s - 2p",
+      "B": "1s - 1s > 2p - 2p > 2s - 2p",
+      "C": "1s - 1s < 2s - 2s < 3s - 3s",
+      "D": "3s - 3s > 3s - 3p > 3p - 3p CB04 - 0072"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_282",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following molecule has both p \\pi - p \\pi and p \\pi - d \\pi bonds",
+    "options": {
+      "A": "XeO 2 F 2",
+      "B": "SO 2 Cl 2",
+      "C": "SO 3",
+      "D": "XeO 3 CB06 - 0127"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) O S O O C O • • O - Si O - | O - | O - (2, 2, 4) H N H BA = 107^\\circ H H N H H  H BA = 109^\\circ28’ H N H BA « 109^\\circ28’ + - Cl B Cl Cl Cl Tetrahedral Cl I Cl Square planar - - Cl Cl O Xe F F see - saw O O I F F see - saw O Cl - F F F T - Shape \\mu  0 Xe F Square planar \\mu  0 F F F \\mu =0 Xe - F is polar bond 3s 3p 3d S : [Ne]2s 2 3p 4 S : Excited State 3s 4 vacan t orbitals 3p 3d 1s - 1s > 2p - 2p > 2s - 2p Size factor Directional character KI 3 → K + + Contains dative bond I 3 - B : - 1s 2 2s 2 2p 1 PCl 5 → sp 3 d d z 2 B A B B see - saw B O S O sp 2 O 1 P \\pi - P \\pi 2 P \\pi - d \\pi NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_283",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following Van der waals force is maximum in : -",
+    "options": {
+      "A": "HBr",
+      "B": "LiBr",
+      "C": "LiCl",
+      "D": "AgBr CB15 - 0012"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) depends on molecular weight"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_284",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct expected order of decreasing lattice energy is : -",
+    "options": {
+      "A": "CaO > MgBr 2 > CsI",
+      "B": "MgBr 2 > CaO > CsI",
+      "C": "CsI > MgBr 2 > CaO",
+      "D": "CsI > CaO > MgBr 2 CB30 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 1 2 q q LE r "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_285",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which show highest lattice energy ?",
+    "options": {
+      "A": "Al 2 O 3",
+      "B": "TiC",
+      "C": "CaF 2",
+      "D": "NaF CB30 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 1 2 q q LE r "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_286",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not correctly matched between given species and type of overlapping ? (1) XeO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_287",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three (d \\pi - p \\pi ) bonds (2) H 2 SO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Ozone (O 3 ) Total lone pair of electrons on oxygen atoms are  6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_288",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two (d \\pi - p \\pi ) bonds (3) SO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_289",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two (d \\pi - p \\pi ) bonds (4) HClO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2 N 14e - , 2 N 13e + - , 2 O 16e - , 2 O 15e + - N 2   1s 2  *1s 2  2s 2  *2s 2 \\pi 2px 2 = \\pi 2py 2  2pz 2 2 N +   1s 2  *1s 2  2s 2  *2s 2 \\pi 2px 2 = \\pi 2py 2  2pz 1 O 2   1s 2  *1s 2  2s 2  *2s 2 \\pi 2pz 2 \\pi 2px 2 = \\pi 2py 2 \\pi *2px 1 = \\pi *2py 1 2 O +   1s 2  *1s 2  2s 2  *2s 2 \\pi 2pz 2 \\pi 2px 2 = \\pi 2py 2 \\pi *2px 1 = \\pi *2py 0 So , unpaired electrons in HOMO are [O, 1, 2, 1]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_290",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three (d \\pi - p \\pi ) bonds CB06 - 0131",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_291",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following pair of species are iso structural ?",
+    "options": {
+      "A": "ICl 2 - & I 3 +",
+      "B": "NO 2 & CO 2",
+      "C": "XeF 4 , ICl 4 -",
+      "D": "SO 3 - 2 , ClO 4 - CB06 - 0073"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_292",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following pairs of species have largest difference in spin only magnetic moment ?",
+    "options": {
+      "A": "2 2 O ,O +",
+      "B": "2 2 2 O ,O -",
+      "C": "2 2 2 O ,O + -",
+      "D": "2 2 O ,O - + CB18 - 0045"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) No. of unpaired e¯ O 2 → 2 2 O + → 1 2 O - → 1 2 2 O - → 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_293",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In 4 ICl Θ , shape is square planar. The number of bond pair - lone pair repulsion at 90^\\circ are: -",
+    "options": {
+      "A": "6",
+      "B": "4",
+      "C": "12",
+      "D": "8 CB06 - 0132"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_294",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following set of molecules have same shape but different hybridisation ?",
+    "options": {
+      "A": "XeO 4 , SF 4",
+      "B": "XeO 3 , BrF 3",
+      "C": "H 2 O, SnCl 2",
+      "D": "3 3 I , I - + CB05 - 0093"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Sp 3 Sp 2 OH F Inter H - Bonding F S F F Kr F F F Cl I Cl Cl Cl Cl S Cl Cl Cl Symmetric al molecule O S O sp 2 1 P \\pi - P \\pi 1 P \\pi - d \\pi F Xe F F F Cl I Cl Cl Cl - Cl I Cl Cl Cl - b.p. - l.p. repulsion = 8 H O H Cl Sn Cl NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_295",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order of Bond strength is not correct ?",
+    "options": {
+      "A": "Diamond < Graphite",
+      "B": "SO 2 > SO 3 - 2 > SO 4 - 2",
+      "C": "CO 3 - 2 < HCO 2 -",
+      "D": "O 2 - < O 2 < O 2 +"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) BO 2 1.33 1.5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_296",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following does not contain 4 PX + type cation in solid phase ? (X=halogen atom)",
+    "options": {
+      "A": "PF 5",
+      "B": "PCl 5",
+      "C": "PBr 5",
+      "D": "None of these CB28 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) PF 5 do not split into ions PCl 5 → (PCl 4 ) + (PC l 6 ) - PBr 5 → (PBr 4 ) + Br -"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_297",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is incorrect?",
+    "options": {
+      "A": "C ℓ F 3 has T - shape",
+      "B": "In SF 4 , F - S - F equatorial bond angle is less than 120^\\circ",
+      "C": "In [IC ℓ 4 ] - , C ℓ - I - C ℓ bond angle is 109^\\circ",
+      "D": "Shape of XeF 2 molecule is linear CB06 - 0134"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_298",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the correct option : -",
+    "options": {
+      "A": "NO 3 - > NH 3 > NH 2 -",
+      "C": "In NH 4 Cl, ‘N’ atom is in sp 3 d Hybridisation",
+      "D": "BF 3 < BCl 3 < BBr 3 < BI 3",
+      "B": "Option B"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Repulsion order \\lambda .p. - \\lambda .p. > \\lambda .p. - B.P. > B.P. - B.P."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_299",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following molecules no. of lone pairs and bond pairs on central atom are not equal ?",
+    "options": {
+      "A": "H 2 O",
+      "B": "3 I -",
+      "C": "O 2 F 2",
+      "D": "SCl 2 CB06 - 0136"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_bonding_and_molecular_structure_chemical_bonding_300",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of carbon atom present linearly in C 3 O",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) O = C = C = C = O"
+  }
+]

@@ -1,0 +1,3467 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of state for 5g of oxygen at a pressure P and temperature T occupying a volume V, will be : - (where R is the gas constant)",
+    "options": {
+      "A": "PV = 5 RT",
+      "B": "PV =",
+      "C": "PV =",
+      "D": "PV ="
+    },
+    "correct_option": "D",
+    "explanation": "PV = μRT  PV = M RT Mw O 2 M = 5gm M w = 32 gm/mole 5 PV RT 32 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In kinetic theory of gases, it is assumed that molecules : -",
+    "options": {
+      "A": "Have same mass but can have different volume",
+      "B": "Have same volume but masses can be different",
+      "C": "Have both mass and volume different",
+      "D": "Have same mass but negligible volume TP29 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "Have same mass but negligible volume. (Point mass)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of an ideal gas is V at pressure P and temperature T. The mass of each molecule of the gas in m. The density of gas will be : - (K is Boltzmann's constant)",
+    "options": {
+      "A": "mKT",
+      "B": "Pm / KT",
+      "C": "P / KTV",
+      "D": "P / KT TP34 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "w P RT M = \\rho w PM RT \\rho = M w = mN A Pm kT \\rho = A R k N ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The thermodynamic variables of a jar filled with gas A are P, V and T and another jar B filled with another gas are 2P, V/4 and 2T, where the symbols have their usual meaning. The ratio of the number of molecules of jar A to those of jar B is : (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 1 1 1 1 1 2 2 2 2 1 2 2 2 2 P V N kT N P V T P V N T P V N kT  =    =    =  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 TP34 - 0015 PV V PV V PV V PV V Thermal P hysics",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At N.T.P. volume of a gas is changed to one fourth volume, at constant temperature then the new pressure will be :",
+    "options": {
+      "A": "2 atm.",
+      "B": "5 3 2 atm.",
+      "C": "4 atm.",
+      "D": "1 atm. TP30 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "At constant temperature  P 1 V 1 = P 2 V 2  PV = P"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the correct relation in given P - V diagram:",
+    "options": {
+      "A": "T 1 = T 2",
+      "B": "T 1 > T 2",
+      "C": "T 1 < T 2",
+      "D": "T 1 T 2 TP34 - 0018"
+    },
+    "correct_option": "C",
+    "explanation": "At point 1 and point 2 Let V = constant (P  T) so P 2 > P 1 T 2 > T 1",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Simple behaviour under all conditions of real gas is governed by the equation : -",
+    "options": {
+      "A": "PV = μRT",
+      "B": "2 a P",
+      "C": "PV = constant",
+      "D": "PV \\gamma = constant TP34 - 0009 VARIOUS SPEEDS, DEGREE OF FREEDOM, SPECIFIC HEAT CAPACITIES OF GASES AND MEAN FREE PATH"
+    },
+    "correct_option": "B",
+    "explanation": "Real gas equation for μ = 1 mole gas 2 a P (V b) RT V (  + - = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square velocity of the molecules of an ideal gas is : -",
+    "options": {
+      "A": "w RT / M",
+      "B": "w 3RT / M",
+      "C": "w 3RTM",
+      "D": "w RT /3M TP35 - 0008"
+    },
+    "correct_option": "B",
+    "explanation": "rms w 3RT v M ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At constant pressure hydrogen is having temperature of 327^\\circ C. Till what temperature it is to be cooled so that the rms velocity of its molecules becomes half of the earlier value : -",
+    "options": {
+      "A": "- 123^\\circC",
+      "B": "123^\\circC",
+      "C": "- 100^\\circC",
+      "D": "0^\\circC TP35 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "rms v T   2 1 1 2 2 2 v T T v = 2 v 600 v / 2 T (  = ( ) )  600 T 4 = = 150 K = - 123 ^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rms velocity of gas molecules of a given amount of a gas at 27^\\circC and 1.0 × 10 5 N m - 2 pressure is 200 m sec -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "rms v T  (Does not depend on pressure) 1 2 2 rms 1 rms 2 rms v T 200 300 v T v 400 =  = 2 rms 400 v 3 = m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If temperature and pressure are respectively 127^\\circC and 0.5 × 10 5 N m - 2 , the rms velocity will be : -",
+    "options": {
+      "A": "400/ 3 ms - 1",
+      "B": "100 2 ms - 1",
+      "C": "100 2 /3 ms - 1",
+      "D": "50 2 3 ms - 1 TP35 - 0020"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two containers of same volume are filled with atomic Hydrogen and Helium respectively at 1 and 2 atm pressure. If the temperature of both specimen are same then average speed < C H > for hydrogen atoms will be -",
+    "options": {
+      "A": "H C = 2 He C",
+      "B": "H C = He C",
+      "C": "H C = 2 He C",
+      "D": "H C = He C 2 TP35 - 0026"
+    },
+    "correct_option": "C",
+    "explanation": "average speed < C >  w 1 M H He C 4 C 1   =   < C H > = 2< C He > PV V P V P 2 P 1 2 1 T 2 T 1 V = constant"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The r.m.s. speed of a gas molecule is 300 m/s. Calculate the r.m.s. speed if the molecular weight is doubled while the temperature is halved -",
+    "options": {
+      "A": "300 m/s",
+      "B": "150 m/s",
+      "C": "600 m/s",
+      "D": "75 m/s TP35 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "rms w T v M  w w (T /2) 1 T v ' (2M ) 2 M   Hence v rms become half"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square velocity of hydrogen molecules at 300 K is 1930 m/s. Then the r.m.s. velocity of oxygen molecules at 1200 K will be :",
+    "options": {
+      "A": "482.5 m/s",
+      "B": "965.0 m/s",
+      "C": "1930 m/s",
+      "D": "3860 m/s TP35 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "w T v M  2 1 w 1 1 2 2 w M v T v T M =  2 1930 300 32 v 1200 2 =  2 2 1930 1930 4 2 v V =  = V 2 = 1930 2 = 965 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rms velocity of H 2 is 2 × 10 3 m /s. What will be the rms velocity of O 2 molecules at the same temperature : -",
+    "options": {
+      "A": "10 3 m/s",
+      "B": "500 m/s",
+      "C": "0.5 × 10 4 m/s",
+      "D": "3 × 10 3 m/s TP35 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "r.m.s. w 1 v M   ( ) ( ) 2 2 r.m.s. O r.m.s. H v 2 1 v 32 4 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The temperature at which root mean square velocity of molecules of helium is equal to root mean square velocity of hydrogen at N.T.P is -",
+    "options": {
+      "A": "273 ^\\circ C",
+      "B": "273 K",
+      "C": "546 ^\\circ C",
+      "D": "844 K TP35 - 0025"
+    },
+    "correct_option": "A",
+    "explanation": "v rms = same \\rho T  M w He 4 T 273 2 =  = 546 K = 273^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the pressure of a gas is doubled at constant temperature, then the mean square velocity will become : -",
+    "options": {
+      "A": "No change",
+      "B": "double",
+      "C": "Four times",
+      "D": "None of the above TP35 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Any speed depends on temperature and molecular weight only so if temp e rature constant then mean square velocity will also constant."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reason for the absence of atmosphere on moon is that the :",
+    "options": {
+      "A": "Value of v rms of the molecules of gas is more than the value of escape velocity",
+      "B": "Value of v rms of gas is less than escape velocity",
+      "C": "Value of v rms is negligible",
+      "D": "None of the above TP35 - 0013 V P T 2 T 1"
+    },
+    "correct_option": "A",
+    "explanation": "Value of v rms of the molecules of gas is more than escape velocity."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speeds of 5 molecules of a gas (in arbitrary units) are as follows 2, 3, 4, 5,",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "2 2 2 2 2 1 2 3 4 5 r.m.s v v v v v v 5 + + + + = = 2 2 2 2 2 2 3 4 5 6 5 + + + + = 4.24 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square speed for these molecules is -",
+    "options": {
+      "A": "2.91",
+      "B": "3.52",
+      "C": "4.00",
+      "D": "4.24 TP35 - 0022"
+    },
+    "correct_option": "B",
+    "explanation": "Pyrometer is used to measure a temperature of sun by using radiation"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square speed of the molecules of a gas is :",
+    "options": {
+      "A": "Independent of its pressure but directly proportional to its Kelvin temperature",
+      "B": "Directly proportional to the square roots of both its pressure and its Kelvin temperature",
+      "C": "Independent of its pressure but directly proportional to the square root of its Kelvin temperature",
+      "D": "Directly proportional to both its pressure and its Kelvin temperature TP35 - 0016"
+    },
+    "correct_option": "C",
+    "explanation": "Independent of its pressure but directly proportional to the square root of its kelvin temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At 0 ^\\circ C temperature root mean square speed of which of the following gases will be maximum: -",
+    "options": {
+      "A": "H 2",
+      "B": "In 2",
+      "C": "O 2",
+      "D": "SO 2 TP35 - 0015"
+    },
+    "correct_option": "A",
+    "explanation": "rms w 1 v M "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square speed of hydrogen molecules of an ideal hydrogen gas kept in a gas chamber is 3180 m/s. The pressure of the hydrogen gas is : - (Density of hydrogen gas = 8.99 × 10 - 2 Kg/m 3 , 1 atmosphere = 1 .01 × 10 5 N/m 2 )",
+    "options": {
+      "A": "1.0 atmosphere",
+      "B": "1.5 atmosphere",
+      "C": "2.0 atmosphere",
+      "D": "3.0 atmosphere TP35 - 0004"
+    },
+    "correct_option": "D",
+    "explanation": "( ) 2 2 2 rms 1 1 P v 8.99 10 3180 3 3 - = \\rho =    5 2 3 10 N / m =  = 3 atm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the rms velocity of molecules of a gas in a container is doubled then the pressure will: -",
+    "options": {
+      "A": "Become four times",
+      "B": "Also get doubled",
+      "C": "Be same",
+      "D": "Become one half TP35 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "2 rms 1 M P v 3 V (  = ( ) )  P(pressure)  v 2 rms pressure become four times"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square velocity of a gas molecule of mass m at a given temperature is proportional to -",
+    "options": {
+      "A": "m 0",
+      "B": "m",
+      "C": "m",
+      "D": "1 m TP35 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "rms w 3RT 3kT v M m = = rms 1 v m  m → mass of molecule"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "v rms , v av and v mp are root mean square, average and most probable speeds of molecules of a gas obeying Maxwell's velocity distribution. Which of the following statements is correct",
+    "options": {
+      "A": "v rms < v av < v mp",
+      "B": "v rms > v av > v mp",
+      "C": "v mp < v rms < v av",
+      "D": "v mp > v rms > v av TP35 - 0024"
+    },
+    "correct_option": "B",
+    "explanation": "rms 3P P P v 3 1.71 = = = \\rho \\rho \\rho avg 8 P P v 1.59 = = \\pi \\rho \\rho mp 2P P v 1.41 = = \\rho \\rho for a given gas P and \\rho = constant v rms > v avg > v mp"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the r.m.s. velocity of hydrogen becomes equal to the escape velocity from the earth surface, then the temperature of hydrogen gas would be -",
+    "options": {
+      "A": "1060 K",
+      "B": "5030 K",
+      "C": "8270 K",
+      "D": "10 4 K TP35 - 0017"
+    },
+    "correct_option": "D",
+    "explanation": "( ) ( ) 2 rms es H earth v v =  w 3RT M = 11.2 × 10 3 m/s  3 3 8.314 T 2 10 -    = 125 × 10 6  T  10 4 K"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure exerted by a gas in P",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "2 rms 1 mN P v 3 V (  = ( ) )  m → mass of molecule."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the mass of molecules becomes half and their velocities become double, then pressure will become",
+    "options": {
+      "A": "0 P 2",
+      "B": "P 0",
+      "C": "2P 0",
+      "D": "4P 0 TP35 - 0027"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square (rms) speed of oxygen molecules O 2 at a certain temperature T (absolute) is v. If the temperature is doubled and oxygen gas dissociates into atomic oxygen. The rms speed :",
+    "options": {
+      "A": "becomes v/ 2",
+      "B": "remains v",
+      "C": "becomes 2v",
+      "D": "becomes 2v TP35 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "rms w T v M  than w w M v ' T ' v M T =  w w M 2T v ' v M 2 T =   v' = 2v"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the root mean square speed of hydrogen molecules is equal to root mean square speed of oxygen molecules at 47 ^\\circ C, the temperature of hydrogen is -",
+    "options": {
+      "A": "20 K",
+      "B": "47 K",
+      "C": "50 K",
+      "D": "94 K TP35 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "v rms = same \\rho T  M w ( ) ( ) 2 2 2 2 w O O H w H M T T M =  2 H 2 T 320 32 =  = 20 K Thermal Physics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square and most probable speed of the molecules in a gas are :",
+    "options": {
+      "A": "same",
+      "B": "different",
+      "C": "cannot say",
+      "D": "depends on nature of the gas TP35 - 0023 Thermal P hysics"
+    },
+    "correct_option": "B",
+    "explanation": "v rms > v mp so different. rms 3P P v 1.73 = = \\rho \\rho mp 2P P v 1.41 = = \\rho \\rho For given gas P, \\rho are constant"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to Maxwell's law of distribution of velocities of molecules, the most probable velocity is : -",
+    "options": {
+      "A": "greater than the mean speed",
+      "B": "equal to the mean speed",
+      "C": "equal to the root mean square speed",
+      "D": "less than the root mean square speed TP35 - 0018"
+    },
+    "correct_option": "D",
+    "explanation": "v rms > v avg > v mp"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of average translational kinetic energy to rotational kinetic energy of a diatomic molecule at temperature T is",
+    "options": {
+      "A": "3",
+      "B": "7/5",
+      "C": "5/3",
+      "D": "3/2 TP38 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "We know that total K.E = f kT 2 f → degree of freedom for diatomic gas f = f T + f R f T =3 f R =2 (K.E) T = T f 3 kT kT 2 2 = (K.E) R = R f 2 kT kT 2 2 = ( ) ( ) T R K.E 3 K.E 2 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For hydrogen gas c P - c V = a and for oxygen gas c P - c V = b then the relation between a and b is (where c P & c V are gram specific heats)",
+    "options": {
+      "A": "a = 16 b",
+      "B": "b = 16 a",
+      "C": "a = b",
+      "D": "None of these TP40 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "gram specific heat difference is p v w R c c r M (  - = = ( ) )  for H 2 c p - c v = a = ( ) ( ) w 2 R M H 2 2 = for O 2 c p - c v = b = ( ) ( ) w 2 R M O 32 32 = R R a ; b 2 32 = = a = 16b"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas mixture consists of 2 moles of oxygen and 4 moles of argon at temperature T. Neglecting all vibrational modes, the total internal energy of the system is",
+    "options": {
+      "A": "4 RT",
+      "B": "15 RT",
+      "C": "9 RT",
+      "D": "11 RT TP38 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "U = U 1 + U 2 1 2 1 v 2 v C T C T = \\mu +\\mu 5 3 2 RT 4 RT 2 2 =  +  = 5RT + 6RT = 11RT"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The average kinetic energy of a gas molecule at 27 ^\\circ C is 6.21 × 10 - 21 J. Its average kinetic energy at 227 ^\\circ C will be",
+    "options": {
+      "A": "52.2 × 10 - 21 J",
+      "B": "5.22 × 10 - 21 J",
+      "C": "10.35 × 10 - 21 J",
+      "D": "11.35 × 10 - 21 J TP38 - 0018"
+    },
+    "correct_option": "C",
+    "explanation": "E  T 1 1 2 2 E T E T =  21 2 6.21 10 300 E 500 -  = E 2 = 5 3 × 6.21 × 10 - 21 = 10.35 × 10 - 21 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two containers A and B contain molecular gas at same temperature with masses of molecules are m A and m B , then relation of momentum P A and P B will be -",
+    "options": {
+      "A": "P A = P B",
+      "B": "P A = 1/2 A B m m (  ( ) )  P B",
+      "C": "P A = 1/2 B A m m (  ( ) )  P B",
+      "D": "P A = A B m m (  ( ) )  P B TP35 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "At same temperature rms 3kT v m = so A B A B v m m v = A A A A B B B B B A P m v m m P m v m m = =  \\rho 1 2 A A B B m P P m (  = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cylinder of 200 litre capacity is containing H",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "T E 2 P 3 V = P = 5 3 2 1.52 10 3 200 10 -    = 5 × 10 5 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total translational kinetic energy of molecules is 1.52 × 10 5 J. The pressure of H 2 in the cylinder will be in N m -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "5 C (F 32) 9 = - 5 C F 9 \\Delta = \\Delta 9 F 25 45 F 5 \\Delta =  = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equivalent molar mass of the mixture is",
+    "options": {
+      "A": "6g",
+      "B": "13g 7",
+      "C": "18g 7",
+      "D": "24g 7 TP41 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "1 1 2 2 mix 1 2 M M 5 4 2 2 24 M g 7 7 \\mu + \\mu  +  = = = \\mu + \\mu"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equivalent value of \\gamma in the above question is",
+    "options": {
+      "A": "1.59",
+      "B": "1.53",
+      "C": "1.56",
+      "D": "none TP41 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "mix V 5 3 2 R 5 R 2 2 C 5 2  +  = + mix P 7 5 2 R 5 R 2 2 C 5 2  +  = + mix mix P mix V C 39/7 1.56 C 25/7 \\gamma = = = OR 1 2 1 2 1 P 2 P mix 1 V 2 V C C C C \\mu + \\mu \\gamma = \\mu + \\mu mix 7 5 2 R 5 R 2 2 5 3 2 R 5 R 2 2  +  \\gamma =  + "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two monoatomic ideal gas at temperature T 1 and T 2 are mixed. There is no loss of energy. If the mass of molecules of the two gases are m 1 and m 2 and number of their molecules are n 1 and n 2 respectively, then temperature of the mixture will be :",
+    "options": {
+      "A": "1 2 1 2 T T n n + +",
+      "B": "1 2 1 2 T T n n +",
+      "C": "2 1 1 2 1 2 n T n T n n + +",
+      "D": "1 1 2 2 1 2 n T n T n n + + TP41 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "E mix = E 1 + E 2 1 2 mix 1 1 2 2 (n n )fRT n fRT n fRT 2 2 2 + = + 1 1 2 2 mix 1 2 n T n T T n n + = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total kinetic energy of 1 mole of N 2 at 27 ^\\circ C will be approximately : -",
+    "options": {
+      "A": "1500 J",
+      "B": "1500 calorie",
+      "C": "1500 kilo calorie",
+      "D": "1500 erg. TP38 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Total K.E = 5 2 \\mu RT for 1 mole = 5 2 RT = 5 2 × 2 × 300 = 1500 cal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Mean kinetic energy (or average energy) per gm. molecule of a monoatomic gas is given by:",
+    "options": {
+      "A": "3RT/2",
+      "B": "kT/2",
+      "C": "RT/3",
+      "D": "3kT/2 TP38 - 0017"
+    },
+    "correct_option": "A",
+    "explanation": "Mean K.E Per gram molecule = Molar K.E mole 3 E RT 2 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Relation between the ratio of specific heats ( \\gamma ) of gas and degree of freedom 'f' will be",
+    "options": {
+      "A": "\\gamma = f + 2",
+      "B": "1 1 1 f 2 = + \\gamma",
+      "C": "If = 2 /",
+      "D": "If = 2"
+    },
+    "correct_option": "C",
+    "explanation": "V P V V 1 fR R C R C f 2 2 1 C C f fR 2 + + + \\gamma = = = =  \\gamma f - f = 2  2 f 1 = \\gamma -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Relation between pressure (P) and energy density (E) of an ideal gas is -",
+    "options": {
+      "A": "P = 2E 3",
+      "B": "P = 3E 2",
+      "C": "P = 3E 5",
+      "D": "P = E TP38 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "T 3 E PV 2 = T E 3 P V 2 = T E E V = energy density 2 P E 3 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On mixing 1 g mole of a monoatomic with 1 g mole of a diatomic gas the specific heat of mixture at constant volume will be : -",
+    "options": {
+      "A": "R",
+      "B": "3/2 R",
+      "C": "2R",
+      "D": "5/2R TP41 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "1 2 mix 1 V 2 V V 1 2 C C C \\mu + \\mu = \\mu + \\mu"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Absolute zero temperature is one at which -",
+    "options": {
+      "A": "All liquids convert into solid",
+      "B": "All gases convert to solid",
+      "C": "All matter is in solid state",
+      "D": "The K.E. of molecules becomes zero TP38 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "Absolute zero temperature is one at which motion of molecules freeze. Hence K.E. of a molecules become zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "This gas is made up of molecules which are :",
+    "options": {
+      "A": "Diatomic",
+      "B": "Mixture of diatomic and polyatomic molecules",
+      "C": "Monoatomic",
+      "D": "Polyatomic TP37 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "4 1 2 2 E E 546 E E 273 (  = = ( ) )  2 E E 16 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the total number of H 2 molecules is double that of the O 2 molecules then ratio of total kinetic energies of H 2 to that of O 2 at 300 K is: (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Total K.E = f NkT 2 Total K.E  N (no. of gas molecule)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At which of the following temperature any gas has average molecular kinetic energy double that of at 20 ^\\circ C",
+    "options": {
+      "A": "40 ^\\circ C",
+      "B": "80 ^\\circ C",
+      "C": "313 ^\\circ C",
+      "D": "586 ^\\circ C TP38 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "KE  T 1 1 2 2 E T E T = T 2 = 2 × 293 T 2 = 586 K = 313^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When temperature is increased from 0^\\circC to 273^\\circC, what will be the ratio of final to initial the average kinetic energy of molecules?",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "4",
+      "D": "2 TP38 - 0015"
+    },
+    "correct_option": "D",
+    "explanation": "Avg. Kinetic Energy = 3 kT 2  Avg. K.E  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The kinetic energy associated with per degree of freedom of a molecule is -",
+    "options": {
+      "A": "1 2 MC 2 rms",
+      "B": "kT",
+      "C": "kT/2",
+      "D": "3kT/2 TP38 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "K.E associated with per degree of freedom of a molecule is 1 kT 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is true according to kinetic theory of gases?",
+    "options": {
+      "A": "The collision between two molecules is inelastic and the time between two collisions is less than the time taken during the collision.",
+      "B": "There is a force of attraction between the molecules",
+      "C": "All the molecules of a gas move with same velocity",
+      "D": "The average of the distances travelled between two successive collisions is mean free path. TP29 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "The average of distances travelled between two successive collisions is mean free path."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Gas exerts pressure on the walls of container because the molecules -",
+    "options": {
+      "A": "Are loosing their Kinetic energy",
+      "B": "Are getting stuck to the walls",
+      "C": "Are transferring their momentum to walls",
+      "D": "Are accelerated towards walls. TP29 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "The molecules are transferring their momentum to the wall."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a diatomic gas, change in internal energy for unit change in temperature at constant pressure and volume is U 1 and U 2 respectively then U",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta U = \\mu C v \\Delta T (always) = 1 2 = \\mu R \\Delta T, \\Delta T = same  1 2 U 1 U 1 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The specific heat of an ideal gas depends on temperature is -",
+    "options": {
+      "A": "1 T",
+      "B": "T",
+      "C": "T",
+      "D": "Does not depends on temperature TP39 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "specific heat of an ideal gas is independent on temperature"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The specific heat of a gas :",
+    "options": {
+      "A": "Has only two value Cp and Cv",
+      "B": "Has a unique value at a given temperature",
+      "C": "Can have any value between 0 and ",
+      "D": "Depends upon the mass of the gas TP58 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Can have any value between 0 to  because it depends on temperature and process."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "22 g of CO 2 at 27 ^\\circ C is mixed with 16 g of O 2 at 37 ^\\circ C. The temperature of the mixture is : - (At room temperature, degrees of freedom of CO 2 = 7 and degrees of freedom of O 2 = 5)",
+    "options": {
+      "A": "31.16 ^\\circ C",
+      "B": "27 ^\\circ C",
+      "C": "37 ^\\circ C",
+      "D": "30 ^\\circ C TP41 - 0003 Thermal P hysics"
+    },
+    "correct_option": "A",
+    "explanation": "Use T mix = 1 1 1 2 2 2 1 1 2 2 f T f T f f \\mu + \\mu \\mu + \\mu"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At 27 ^\\circ C temperature, the kinetic energy of an ideal gas is E",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "E  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the temperature is increased to 327 ^\\circ C, then kinetic energy would be",
+    "options": {
+      "A": "2 E 1",
+      "B": "1 1 E 2",
+      "C": "1 2E",
+      "D": "1 1 E 2 TP38 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Oxygen and hydrogen gases are at temperature T. Then average K.E of each molecule of oxygen gas is equal to how many times of average K.E. of each molecule of hydrogen gas : -",
+    "options": {
+      "A": "16 times",
+      "B": "8 times",
+      "C": "Equal",
+      "D": "1/16 times TP38 - 0012"
+    },
+    "correct_option": "C",
+    "explanation": "K.E  T  T = absolute temperature"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The average energy of the molecules of a monoatomic gas at temperature T is : - (K = Boltzmann constant)",
+    "options": {
+      "A": "1 2 kT",
+      "B": "kT",
+      "C": "3 2 kT",
+      "D": "5 2 kT TP38 - 0011"
+    },
+    "correct_option": "C",
+    "explanation": "(K.E) avg = f kT 2 [for monoatomic gas f = 3] (K.E) avg = 3 kT 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A diatomic molecule has",
+    "options": {
+      "A": "1 degree of freedom",
+      "B": "3 degree of freedom",
+      "C": "5 degree of freedom",
+      "D": "6 degree of freedom TP37 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "A diatomic molecule has 5 degree of freedom."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two moles of monoatomic gas are mixed with 1 mole of a diatomic gas. Then \\gamma for the mixture is:",
+    "options": {
+      "A": "1.4",
+      "B": "1.55",
+      "C": "1.62",
+      "D": "1.67 TP41 - 0006 ZEROTH AND FIRST LAW OF thermodynamics, HEAT, WORK AND INTERNAL ENERGY"
+    },
+    "correct_option": "B",
+    "explanation": "1 2 1 2 1 P 2 P Pmix mi x V mix 1 V 2 V C C C C C C \\mu + \\mu \\gamma = = \\mu + \\mu \\gamma mix = 1.55"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The first law of thermodynamics is based on: -",
+    "options": {
+      "A": "Law of conservation of energy",
+      "B": "Law of conservation of mechanical energy",
+      "C": "Law of conservation of gravitational P.E.",
+      "D": "None of the above TP52 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "1st law of thermodynamics is based on law of conservation of energy."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a process, 500 calories of heat is given to a system and at the same time 100 joules of work is done on the system. The increase in the internal energy of the system is : -",
+    "options": {
+      "A": "40 calories",
+      "B": "1993 joules",
+      "C": "2193 joules",
+      "D": "82 calories TP52 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Q = 500 cal = 500 × 4.18 = 2093 J W = - 100 J \\Delta U = Q - W ≃ 2193 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a thermodynamic process pressure of a fixed mass of a gas is changed in such a manner that the gas releases 20 joules of heat and 8 joules of work was done on the gas. If the initial internal energy of the gas was 30 joules, then the final internal ener gy will be: -",
+    "options": {
+      "A": "2 J",
+      "B": "42 J",
+      "C": "18 J",
+      "D": "58 J TP52 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Given Q = - 20 J, W = - 8 J \\Delta U = U f - U i So, Q = \\Delta U + W - 20 = U f - U i - 8 - 20 = U f - 30 - 8  U f = 18 joule"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 kg of a gas does 20 kJ of work and receives 16 kJ of heat when it is expanded between two states. A second kind of expansion can be found between the same initial and final state which requires a heat input of 9 kJ. The work done by the gas in the second expansion is :",
+    "options": {
+      "A": "32 kJ",
+      "B": "5 kJ",
+      "C": "- 4 kJ",
+      "D": "13 kJ TP52 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "Q 1 = \\Delta U 1 + W 1 Q 1 = 16 - 20 = - 4 kJ Q 2 = \\Delta U 2 + W 2 W 2 = Q 2 - \\Delta U 2 (  \\Delta U 1 = \\Delta U 2 ) = 9 - ( - 4) = 13 kJ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "As shown in the figure the amount of heat absorbed along the path ABC is 90J and the amount of work done by the system is 30 J. If the amount of work done along the path ADC is 20 J then amount of heat absorbed will be : -",
+    "options": {
+      "A": "80 J",
+      "B": "90 J",
+      "C": "110 J",
+      "D": "120 J TP57 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "Q ABC = 90 J and W ABC = 30 J  \\Delta U = 90 - 30 = 60 J if W ADC = 20 J Q ADC = \\Delta U ADC + W ADC = 60 J + 20 J = 80 J",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a cyclic process shown on the P - V diagram, the magnitude of the work done is :",
+    "options": {
+      "A": "2 2 1 P P 2 - (  \\pi ( ) ) ",
+      "B": "2 2 1 V V 2 - (  \\pi ( ) ) ",
+      "C": "4 \\pi",
+      "D": "\\pi"
+    },
+    "correct_option": "C",
+    "explanation": "W = Area of ellipse 2 1 2 1 P P V V W 2 2 - - (  (  = \\pi ( ) ( ) )  ) ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work by an ideal monoatomic gas along the cyclic path LMNOL is",
+    "options": {
+      "A": "PV",
+      "B": "2PV",
+      "C": "3 PV",
+      "D": "4 PV TP57 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "W = Area of LMNOL = PV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a gas C v = 4.96 cal/mole K, the increase in internal energy of 2 mole gas in heating from 340 K to 342 K will be : -",
+    "options": {
+      "A": "27.80 cal",
+      "B": "19.84 cal",
+      "C": "13.90 cal",
+      "D": "9.92 cal TP38 - 0019"
+    },
+    "correct_option": "B",
+    "explanation": "\\Delta U = \\mu C V \\Delta T = 2 × 4.96 × 2 = 19.84 cal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a system changes from one to another state the value of work done : -",
+    "options": {
+      "A": "Depends on the force acting on the system",
+      "B": "Depends on the nature of material present in a system",
+      "C": "Does not depend on the path",
+      "D": "Depends on the path TP44 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Work done always depends on path."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A system is taken along the paths A and B as shown. If the amounts of heat given in these processes are Q A and Q B and change in internal energy are \\Delta U A and \\Delta U B respectively then : -",
+    "options": {
+      "A": "Q A = Q B ; \\Delta U A < \\Delta U B",
+      "B": "Q A \\ge Q B ; \\Delta U A = \\Delta U B",
+      "C": "Q A < Q B ; \\Delta U A > \\Delta U B",
+      "D": "Q A > Q B ; \\Delta U A = \\Delta U B TP38 - 0021"
+    },
+    "correct_option": "D",
+    "explanation": "Change in internal energy is same and W A > W B So, Q A > Q B Thermal Physics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the heat of 110 J is added to a gaseous system and change in internal energy is 40 J, then the amount of external work done is :",
+    "options": {
+      "A": "180 J",
+      "B": "70 J",
+      "C": "110 J",
+      "D": "30 J TP52 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "FLOT Q = W + \\Delta U Q = +110 J \\Delta U = +40 J 110 = 40 + W W = + 70 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If amount of heat supplied is Q, work done is W and change in internal energy is mC V dT, then relation among them is. (C v = gram specific heat)",
+    "options": {
+      "A": "mC V dT = Q + W",
+      "B": "Q = W + mC V dT",
+      "C": "Q + mC V dT = W",
+      "D": "None of these. TP52 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "According to FLOT : - Q = W + \\Delta U \\Delta U = mC V \\Delta T Q = W + mC v \\Delta T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work done by a gas taken through the closed process ABCA is",
+    "options": {
+      "A": "6P 0 V 0",
+      "B": "4P 0 V 0",
+      "C": "P 0 V 0",
+      "D": "zero TP57 - 0009 CYCLIC, ISOCHORIC, ISOBARIC, ISOTHERMAL, ADIABATIC AND POLYTROPIC PROCESS"
+    },
+    "correct_option": "A",
+    "explanation": "0 0 0 0 1 W 4P 3V 6P V 2 =   ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the diagrams (i) to (iv) of variation of volume with changing pressure is shown. A gas is taken along the path ABCDA. The change in internal energy of the gas will be: - (i ) (ii) (iii) (iv)",
+    "options": {
+      "A": "Positive in all cases",
+      "B": "Positive in cases",
+      "C": "Negative in cases",
+      "D": "Zero in all the four cases TP57 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "For cyclic process \\Delta U = U f - U i =  Zero in all the four cases.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The temperature of 5 moles of a gas which was held at constant volume was changed from 100 ^\\circ C to 120 ^\\circ C. The change in internal energy was found to be 80 joules. The total heat capacity of the gas at constant volume will be equal to: -",
+    "options": {
+      "A": "8 J/K",
+      "B": "0.8 J/K",
+      "C": "4.0 J/K",
+      "D": "0.4 J/K TP44 - 0003 M N L O V 2 V 2P 3 P P V A B i f P V A B C 5P 0 P 0 2 V 0 5V 0 V P A B D C V P V P A B D C A B D C V P V P A B D C Thermal P hysics"
+    },
+    "correct_option": "C",
+    "explanation": "Heat capacity = Q T \\Delta At constant volume W = 0 Q = \\Delta U = 80 J Heat capacity = 80 20 = 4 J/K"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Monoatomic, diatomic and triatomic gases whose initial volume and pressure are same, are compressed till their volume become half the initial volume.",
+    "options": {
+      "A": "If the compression is adiabatic then monoatomic gas will have maximum final pressure.",
+      "B": "If the compression is adiabatic then triatomic gas will have maximum final pressure.",
+      "C": "If the compression is adiabatic then their final pressure will be same.",
+      "D": "If the compression is isothermal then their final pressure will be different. TP47 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 1 2 V P P V \\gamma (  = ( ) )  V 1 = V and V 2 = V/2 Hence P 2 = P 1 (2) \\gamma \\gamma  P 2  As \\gamma Mono > \\gamma Dia > \\gamma Tri then P Mono > P Dia > P Tri"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following graphs correctly represents the variation of \\beta = - (dV/dP)/V with P for an ideal gas at constant temperature?",
+    "options": {
+      "D": "TP47 - 0001",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "At constant temperature PV = constant On differentiation VdP + PdV = 0 dP P dV V = -  dV V dP P = - dV 1 dP V P (  - ( ) )  \\beta = = 1 P \\beta = Hence 1 P \\beta ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The adiabatic Bulk modulus of a diatomic gas at atmospheric pressure is",
+    "options": {
+      "A": "0 Nm - 2",
+      "B": "1 Nm - 2",
+      "C": "1.4 ×10 4 Nm - 2",
+      "D": "1.4  10 5 Nm - 2 TP47 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "5 2 7 P 10 N / m 5 \\beta = \\gamma =  = 1.4 × 10 5 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A given quantity of an ideal gas is at pressure P and absolute temperature T. The isothermal bulk modulus of the gas is :",
+    "options": {
+      "A": "2P/3",
+      "B": "P",
+      "C": "3P/2",
+      "D": "2P TP47 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "\\beta = P (for isothermal)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "P - V plots for two gases during adiabatic processes are shown in the figure. Plots 1 and 2 should correspond respectively to",
+    "options": {
+      "A": "The and O 2",
+      "B": "O 2 and He",
+      "C": "The and Ar",
+      "D": "O 2 and N 2 TP47 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "Slope adiabatic  \\gamma Slope of 1 < Slope of 2 \\gamma 1 < \\gamma 2 and \\gamma mono > \\gamma dia So, 2 is monoatomic & 1 is diatomic",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For an adiabatic expansion of a perfect gas, the value of \\Delta P/P is equal to: -",
+    "options": {
+      "A": "- \\gamma \\Delta V/V",
+      "B": "- \\Delta V/V",
+      "C": "- \\gamma \\Delta V/V",
+      "D": "- \\gamma 2 \\Delta V/V TP47 - 0013"
+    },
+    "correct_option": "C",
+    "explanation": "For adiabatic P P P V V V P V \\Delta \\Delta \\Delta = -\\gamma  = -\\gamma \\Delta"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas at 27 ^\\circ C is compressed adiabatically to 8/27 of its original volume. If \\gamma = 5/3 , then the rise in temperature is: -",
+    "options": {
+      "A": "450 K",
+      "B": "375 K",
+      "C": "675 K",
+      "D": "405 K TP46 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "TV \\gamma - 1 = constant 1 2 1 1 2 T V T V \\gamma- (  = ( ) )  5 1 2/3 2 3 2 2 T 27 27 3 9 300 8 8 4 2 - (  (  = = = = ( ) ( ) )  )  2 9 T 300 675 K 4 =  = \\Delta T = T 2 - T 1 = 675 - 300 = 375 K"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For monoatomic gas the relation between pressure of a gas and temperature T is given by P  T C . Then value of C will be: (For adiabatic process)",
+    "options": {
+      "A": "5 3",
+      "B": "2 5",
+      "C": "3 5",
+      "D": "5 2 TP46 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "For adiabatic process P 1 - \\gamma T \\gamma = constant 1 1 P T T -\\gamma \\gamma (  (  ( ) ( ) -\\gamma \\gamma- )  )    as per question P  T C on comparing 5/3 5 C 1 5/3 1 2 \\gamma = = = \\gamma - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas for which \\gamma = 5/3 is heated at constant pressure. The percentage of total heat given that will be used for external work is :",
+    "options": {
+      "A": "40%",
+      "B": "30%",
+      "C": "60%",
+      "D": "20% TP46 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "P p W R T R R 2 100% 40% 5 Q C T C 5 R 2 \\mu \\Delta = = = =  = \\mu \\Delta"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the figure no heat exchange between the gas and the surroundings will take place, if the gas is taken along curve: (curves are isothermal and adiabatic)",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D TP47 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "B → Adiabatic → 1 P V \\gamma  V  P  (more steep) A → Isothermal → 1 P V  V  P  (less steep) (C, D) → positive slope",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the following figures, four curves A, B, C, D are shown the curves are : -",
+    "options": {
+      "A": "Isothermal for A and B while adiabatic for C and D",
+      "B": "Isothermal for A and C while adiabatic for B and D",
+      "C": "Isothermal for A and D",
+      "D": "Adiabatic for A and C while isothermal for B and D TP47 - 0007 \\beta P \\beta P \\beta P \\beta P P V 1 2 A B D C Volume Pressure Volume Volume Pressure Pressure"
+    },
+    "correct_option": "B",
+    "explanation": "Slope of adiabatic = \\gamma (Slope of isothermal) Isothermal for A and C while adiabatic for B and D",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Equal volumes of a perfect gas are compressed to half of their initial volumes. The first is brought about by isothermal process and the second by adiabatic process then :",
+    "options": {
+      "A": "Both temperature and pressure will increase in the isothermal process.",
+      "B": "In the isothermal process, the temperature will decrease and pressure will increases",
+      "C": "Both temperature and pressure will increase in adiabatic process",
+      "D": "In the adiabatic process, the temperature will decrease and pressure will increase TP47 - 0016"
+    },
+    "correct_option": "C",
+    "explanation": "In isothermal process T = constant, \\Delta T=0 But V  , P  In adiabatic process (P, V, T) are variable, P V V/2 Mono Dia Tri/poly V V V AD P IT 2 1 V/2 \\beta P ( ) V , W ve, U ve Temp  = - \\Delta = +  V  , P  Option (3) is correct"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A vessel contains an ideal monoatomic gas which expands at constant pressure, when heat Q is given to it. Then the work done in expansion is :",
+    "options": {
+      "A": "Q",
+      "B": "3 5 Q",
+      "C": "2 5 Q",
+      "D": "2 3 Q TP65 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "P P W R T R R 2 5 Q C T C 5 R 2 \\mu \\Delta = = = = \\mu \\Delta 2 W Q 5 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of an ideal gas at temperature T 1 expends according to the law 2 P V = a (constant). The work done by the gas till temperature of gas becomes T 2 is :",
+    "options": {
+      "A": "1 2 R",
+      "B": "1 3 R",
+      "C": "1 4 R",
+      "D": "1 5 R"
+    },
+    "correct_option": "B",
+    "explanation": "For polytropic process R T W 1 x \\mu \\Delta = - Here x = - 2 2 1 R(T T ) W 1 ( 2) \\mu - = - - 2 1 1 W R(T T ) 3 == -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When an ideal diatomic gas is heated at constant pressure, the fraction of the heat energy supplied which increases the internal energy of the gas is -",
+    "options": {
+      "A": "2/5",
+      "B": "3/5",
+      "C": "3/7",
+      "D": "5/7 TP47 - 0011"
+    },
+    "correct_option": "D",
+    "explanation": "V V P P P C dT C dU 1 5 Q C dT C 7 \\mu = = = = \\Delta \\mu \\gamma 7 5 (  \\gamma = ( ) )  \\lambda for diatomic gas"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pressure - temperature relationship for an ideal gas undergoing adiabatic change is ( \\gamma = C p /C v )",
+    "options": {
+      "A": "PT \\gamma = constant",
+      "B": "1 PT - +\\gamma = constant",
+      "C": "1 PT T \\gamma- \\gamma = constant",
+      "D": "1 P T -\\gamma \\gamma = constant TP46 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "Adiabatic relation between pressure and temperature. P (1 - \\gamma ) T \\gamma = constant"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of internal energy in an adiabatic process : -",
+    "options": {
+      "A": "Remains unchanged",
+      "B": "Only increases",
+      "C": "Only diminishes",
+      "D": "May diminish and may also increase TP40 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "PV \\gamma = constant  RT V V \\gamma \\mu = constant TV \\gamma - 1 = constant If V   T  U  or V   T  U  May decrease and may also increase"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of an ideal monoatomic gas is heated at a constant pressure of one atmosphere from 0^\\circC to 100^\\circC. Then the change in the internal energy is",
+    "options": {
+      "A": "20.80 × 10 2 J",
+      "B": "12.48 × 10 2 J",
+      "C": "832 × 10 2 J",
+      "D": "6.25 × 10 2 J TP38 - 0022"
+    },
+    "correct_option": "B",
+    "explanation": "\\Delta U = \\mu C V \\Delta T = 1 × 3 2 R × 100 \\Delta U = 1 × 3 2 × 8.31 × 1 00= 12.48 × 10 2 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The specific heat of a gas at constant pressure is more than that of the same gas at constant volume because : -",
+    "options": {
+      "A": "Work is done in the expansion of gas at constant pressure",
+      "B": "Work is done in the expansion of the gas at constant volume",
+      "C": "The molecular attraction increase under constant pressure",
+      "D": "The vibration of molecules increases under constant pressure TP44 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "V = constant P = constant W = 0 W  0 (Q) V = ( \\Delta U) V + 0 (Q) P = ( \\Delta U) P + (W) P So (Q) P > (Q) V μCp \\Delta T > μC v \\Delta T C P > C V Work is done in the expansion of the gas at constant pressure. So option (1) is correct"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a gas is adiabatically compressed then it's temperature increase because : -",
+    "options": {
+      "A": "Work done is zero",
+      "B": "Internal energy is increased",
+      "C": "Heat is supplied to it",
+      "D": "No change in pressure TP55 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "In adiabatic process \\Delta Q = 0 \\Delta U + \\Delta W = 0 \\Delta U = - \\Delta W When gas adiabaticaly compressed, then V  \\Delta V = - ve, So \\Delta W = - ve \\Delta U = +ve  U  μC v (T f - T i ) > 0 T f > T i hence temperature "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Air is filled in a tube of the wheel of a car at 27^\\circC and 2 atm pressure if the tube is suddenly bursts, the final temperature of air will be : - ( \\gamma = 1.5, 2 1/3 = 1.251)",
+    "options": {
+      "A": "- 33^\\circ C",
+      "B": "0^\\circ C",
+      "C": "21.6^\\circ C",
+      "D": "240^\\circ C TP46 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 1 1 1 2 T T P P \\gamma \\gamma \\gamma- \\gamma- = 1 2 2 1 1 P T T P \\gamma- \\gamma (  =  ( ) )  0.5 1.5 2 1 3 1 1 T 300 300 2 2 (  =  =  ( ) )  T 2 = 240 K = - 33^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Specific heat of a gas undergoing adiabatic change is :",
+    "options": {
+      "A": "Zero",
+      "B": "Infinite",
+      "C": "Positive",
+      "D": "Negative TP46 - 0002 Thermal P hysics"
+    },
+    "correct_option": "A",
+    "explanation": "Q C T \\Delta = \\mu\\Delta for adiabatic \\Delta Q = 0 C AD = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A quantity of air ( \\gamma = 1.4) at 27^\\circC is compressed suddenly, the temperature of the air system will :",
+    "options": {
+      "A": "If all",
+      "B": "Rise",
+      "C": "Remain unchanged",
+      "D": "First rise and then fall TP46 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Gas suddenly compressed (V  ) so W = - ve and Q = 0 (for adiabatic) U ve \\Delta = + (temperature increase)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas specimen in one vessel is expended isothermally to double its volume and a similar specimen in the second vessel is expanded adiabatically the same extent, then:",
+    "options": {
+      "A": "In the second vessel, both pressure and work done are more",
+      "B": "In the second vessel, pressure in more, but the work done is less.",
+      "C": "In the first vessel, both pressure & work done are more.",
+      "D": "In the first vessel, pressure is more, but work done is less TP47 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "P 1 > P 2 , final pressure in vessel (1) is more than vessel (2) $W_1 / W_2$  W Area  so, In first vessel, both pressure and work done are more."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If an ideal gas is compressed during isothermal process then : -",
+    "options": {
+      "A": "No work is done against gas",
+      "B": "heat is rejected by gas",
+      "C": "It's internal energy will increase",
+      "D": "Pressure does not change TP45 - 0001"
+    },
+    "correct_option": "B",
+    "explanation": "Heat is rejected by gas Q = W (for isothermal process \\Delta U = 0) when gas compressed V  , \\Delta V = - ve W = - ve Q = - ve (heat rejected)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Graphs between P - V diagram for isothermal and adiabatic processes are drawn the relation between their slopes will be : -",
+    "options": {
+      "A": "Slope of adiabatic curve = \\gamma",
+      "B": "Slope of isothermal curve = \\gamma",
+      "C": "Slope of isothermal curve = slope of adiabatic curve",
+      "D": "Slope of adiabatic curve = \\gamma 2"
+    },
+    "correct_option": "A",
+    "explanation": "(slope) AD = - P V \\gamma (slope) AD = P V (  \\gamma - ( ) )  (slope) AD = \\gamma (slope) IT",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas is taken round the cycle ABCA. In the cycle the amount of work done involved is: -",
+    "options": {
+      "A": "12 P 1 V 1",
+      "B": "6 P 1 V 1",
+      "C": "3 P 1 V 1",
+      "D": "P 1 V 1 TP57 - 0015"
+    },
+    "correct_option": "C",
+    "explanation": "Work done in cyclic process is area enclosed. 1 Area W BH 2 = = ABCD 1 1 1 1 1 W (3V - V )(4P - P ) 2 = W ABCD = 3P 1 V 1 V 2V P V P P 1 P 2 Isothermal (vessel - 1) Adiabatic (vessel - 2 ) Thermal Physics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole ideal gas is compressed adiabatically at 27^\\circC. Its temperature becomes 102^\\circC. The work done in this process will be : - ( \\gamma = 1.5)",
+    "options": {
+      "A": "- 625 J",
+      "B": "625 J",
+      "C": "1245 J",
+      "D": "- 1245 J TP48 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "2 1 R(T T ) W 1 \\mu - = - \\gamma - W = (1)(8.3)(102 27) 1.5 1 - - - = - 1245 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an isometric change :",
+    "options": {
+      "A": "Q dU  =",
+      "B": "W dU  =",
+      "C": "Q W dU  +  =",
+      "D": "None of these TP56 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "According to FLOT  Q =  W + dU Isometric V = Constant \\Delta V = 0  Q = dU"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of a gas expands by 0.25 m 3 at a constant pressure of 10 3 N/m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "W = P \\Delta V = 10 3 × 0.25 W = 250 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work done is equal to",
+    "options": {
+      "A": "2.5 erg",
+      "B": "250 J",
+      "C": "250 W",
+      "D": "250 N TP44 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "5 C (F 32) 9 = - 5 C F 9 \\Delta = \\Delta 9 F 25 45 F 5 \\Delta =  = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The process in which the heat given to a system is completely transformed into work is for ideal gas : -",
+    "options": {
+      "A": "Isobaric process",
+      "B": "Isometric process",
+      "C": "Isothermal process",
+      "D": "Adiabatic process TP45 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Q = W, when \\Delta U = 0, T = constant (isothermal process)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of a poly - atomic gas 4 3 (  \\gamma = ( ) )  compressed adiabatically to th 1 8 of the original volume. If the original pressure of the gas is P 0 the new pressure will be: -",
+    "options": {
+      "A": "8 P 0",
+      "B": "16 P 0",
+      "C": "6 P 0",
+      "D": "2 P 0 TP46 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "P 1 V 1 \\gamma = P 2 V 2 \\gamma  1 2 1 2 V P P V \\gamma (  =  ( ) )  P 2 = 4 3 0 V P V 8 (   ( ) )  = 16 P 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "During isothermal, isobaric and adiabatic processes, work done for same change in volume will be maximum for : -",
+    "options": {
+      "A": "Isothermal",
+      "B": "Isobaric",
+      "C": "Adiabatic",
+      "D": "None of the above TP47 - 0004 P 1 4P 1 C B 3 V 1 V 1 A P V P B A C V"
+    },
+    "correct_option": "B",
+    "explanation": "Work equals to area under the P - V graph or curve and V - axis."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an adiabatic process the quantity which remains constant is : -",
+    "options": {
+      "A": "temperature",
+      "B": "Pressure",
+      "C": "Total heat content of the system",
+      "D": "Volume TP46 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "In adiabatic process Q = 0 Total heat content of the system remain constant."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Graph of isometric process is : -",
+    "options": {
+      "D": "TP47 - 0008",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Isometric V = constant P  T",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas undergoes an adiabatic change in volume (V) with pressure (P). Then : -",
+    "options": {
+      "A": "P \\gamma V = constant",
+      "B": "PV \\gamma = constant",
+      "D": "PV = constant TP46 - 0008",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Adiabatic equation in terms of P, V PV \\gamma = constant"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "300 calories of heat is supplied to raise the temperature of 50 gm of air from 20^\\circC to 30^\\circC without any change in its volume. Change in internal energy per gram of air is",
+    "options": {
+      "A": "zero",
+      "B": "0.6 calories",
+      "C": "1.2 calories",
+      "D": "6.0 calories TP53 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "\\Delta U = Q - W = 300 - 0 ; V = constant ; W = 0 Change in internal energy per gram = \\Delta U/M = 300 50 = 6 cal/g"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas is expanded from volume V 1 to volume V 2 in three processes, shown in the figure. If U A , U B, U C and U D represent the internal energies of the gas in state A,B ,C and D respectively, the which of the following is not correct",
+    "options": {
+      "A": "U B - U A > 0",
+      "B": "U C - U A = 0",
+      "C": "U D - U A <0",
+      "D": "U B = U C = U D TP47 - 0015"
+    },
+    "correct_option": "D",
+    "explanation": "T B > T A = T C > T D  U = \\mu C V T U B > U A = U C > U D  U  T",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A closed container is fully insulated from outside. One half of it is filled with an ideal gas X separated by a plate P from the other half Y which contains a vacuum as shown in figure. When P is removed, X moves into Y. Which of the following statements is correct?",
+    "options": {
+      "A": "No work is done by X",
+      "B": "X decreases in temperature",
+      "C": "X increases in internal energy",
+      "D": "X doubles in pressure TP44 - 0002 SECOND LAW OF THE THERMODYNMAMICS, HEAT ENGINES AND REFRIGERATORS"
+    },
+    "correct_option": "A",
+    "explanation": "Free expansion as P ext = 0  W = 0",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to the second law of thermodynamics:",
+    "options": {
+      "A": "heat energy cannot be completely converted to work",
+      "B": "work cannot be completely converted to heat energy",
+      "C": "for all cyclic processes we have dQ/T < 0",
+      "D": "the reason all heat engine efficiencies are less than 100% is friction, which is unavoidable TP61 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Heat cannot be converted in 100% work, but reverse is true."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\"Heat cannot flow by itself from a body at lower temperature to a body at higher temperature\" is a statement or consequence of :",
+    "options": {
+      "A": "second law of thermodynamics",
+      "B": "conservation of momentum",
+      "C": "conservation of mass",
+      "D": "first law of thermodynamics TP61 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "Heat can't flow from the body at lower temperature to body at higher temperature is a consequences of second law of thermodynamics."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Carnot engine takes 3 × 10 6 cal of heat from reservoir at 627^\\circC and gives it to a sink at 27^\\circC. Then work done by the engine is",
+    "options": {
+      "A": "4.2 × 10 6 J",
+      "B": "8.4 × 10 6 J",
+      "C": "16.8 × 10 6 J",
+      "D": "zero TP62 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "2 1 T W 1 T Q  = - = 6 300 W 1 900 3 10 - =  6 2 W 3 3 10 =  W = 2 × 10 6 cal = 2 × 4.2 × 10 6 J = 8.4 × 10 6 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reversible refrigerator operates between a low temperature reservoir at T C and a high temperature reservoir at T H . Its coefficient of performance is given by :",
+    "options": {
+      "B": "T C /",
+      "D": "T H /",
+      "A": "Option A",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "COP = C H C T T - T"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the given graph the isothermal curves are : -",
+    "options": {
+      "A": "AB and CD",
+      "B": "AB and AD",
+      "C": "AD and BC",
+      "D": "BC and CD TP57 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "(slope) adiabatic = \\gamma (slope) isothermal BC, DA → adiabatic AB, CD → isothermal",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the above question, the curve for which the heat is absorbed from the surroundings is : -",
+    "options": {
+      "A": "AB",
+      "B": "BC",
+      "C": "CD",
+      "D": "DA TP57 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Exchange of heat take place in isothermal process A → B \\Delta U = 0 (T=constant) W = +ve (V  ) Q = W =+ve (Heat absorbed) C → D \\Delta U = 0 (T = constant) W = - ve (V  ) Q = - ve (Heat rejected)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Carnot engine shows efficiency of 40% on taking energy at 500 K. To increase the efficiency to 50%, at what temperature it should take energy?",
+    "options": {
+      "A": "400 K",
+      "B": "700 K",
+      "C": "600 K",
+      "D": "800 K TP62 - 0016"
+    },
+    "correct_option": "C",
+    "explanation": "2 1 T 1 T  = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_280",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the system takes 100 cal. heat, and releases 80 cal to sink, if source temperature is 127^\\circC find the sink temperature : -",
+    "options": {
+      "A": "47^\\circ C",
+      "B": "127^\\circ C",
+      "C": "67^\\circ C",
+      "D": "107^\\circ C TP62 - 0015"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 1 1 Q T 1 1 Q T  = - = - \\rho 2 2 1 1 T Q T Q = \\rho 2 T 80 400 100 = \\rho T 2 = 320 K = 47 ^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_281",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Carnot engine working between 300 K and 600 K has work output of 800 J per cycle. The amount of heat energy supplied to the engine from source per cycle will be :",
+    "options": {
+      "A": "800 J",
+      "B": "1600 J",
+      "C": "1200 J",
+      "D": "900 J TP62 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "1 2 1 1 T T Work done W Heat supplied Q T - = = \\rho 1 800 600 300 Q 600 - = \\rho Q 1 = 1600 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_282",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas heat engine operates in Carnot cycle between 227^\\circC and 127^\\circC. It absorbs 6 × 10 4 cal of heat at higher temperature. Then amount of heat converted to work is :",
+    "options": {
+      "A": "2.4 × 10 4 cal",
+      "B": "6 × 10 4 cal",
+      "C": "1.2 × 10 4 cal",
+      "D": "4.8 × 10 4 cal TP62 - 0018"
+    },
+    "correct_option": "C",
+    "explanation": "1 2 1 1 T T W Q T - = 4 W 500 400 500 6 10 - =  \\rho W = 1.2 × 10 4 cal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_283",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Exercise I-III - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A refrigerator works between temperature - 10^\\circC & 27^\\circC, the coefficient of performance is :",
+    "options": {
+      "A": "7.1",
+      "B": "1",
+      "C": "8.1",
+      "D": "15.47 TP63 - 0001 P A D B C V EXERCISE - I"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 2 T COP T T = - T 1 = 300 K , T 2 = 263 K 263 COP 7.1 300 263 = = - P T Exercise - II ( Previous Year Questions )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_284",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two rods one of aluminium of length ℓ 1 having coefficient of linear expansion \\alpha a , and other steel of length ℓ 2 having coefficient of linear expansion \\alpha s are joined end to end. The expansion in both the rods is same on variation of temperature. Then the value of 1 1 2 + \\lambda \\lambda\\lambda is",
+    "options": {
+      "A": "s a s \\alpha \\alpha + \\alpha",
+      "B": "s a s \\alpha \\alpha - \\alpha",
+      "C": "a s s \\alpha + \\alpha \\alpha",
+      "D": "None of these TP01 - 0075"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_285",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas is expanding such that PT 2 = constant. The coefficient of volume expansion of the gas is :",
+    "options": {
+      "A": "1 T",
+      "B": "2 T",
+      "C": "3 T",
+      "D": "4 T HT03 - 0260"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_286",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "50 g of ice at 0^\\circ C is mixed with 50 g of water at 100^\\circ C. The final temperature of mixture is : -",
+    "options": {
+      "A": "0^\\circ C",
+      "B": "Between 0^\\circC to 20^\\circC",
+      "C": "20^\\circC",
+      "D": "Above 20^\\circC BM01 - 1147"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_287",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere, a cube and a thin circular plate all made of same substance and all have same mass. These are heated to 200^\\circC and then placed in a room, then the :",
+    "options": {
+      "A": "temperature of sphere drops to room temperature at last.",
+      "B": "temperature of cube drops to room temperature at last",
+      "C": "temperature of thin circular plate drops to room temperature at last",
+      "D": "temperature of all the three drops to room temperature at the same time BM01 - 1150"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_288",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A slab consists of two parallel layers of copper and brass of the same thickness and having thermal conductivities in the ratio",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_289",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the free face of brass is at 100^\\circC and that of copper at 0^\\circC, the temperature of interface is -",
+    "options": {
+      "A": "80^\\circC",
+      "B": "20^\\circC",
+      "C": "60^\\circC",
+      "D": "40^\\circC HT03 - 0265"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_290",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Out of the metal balls of same diameter one is solid and other is hollow. Both are heated to the same temperature at 300^\\circC and then allowed to cool in the same surroundings then rate of loss of heat will be:",
+    "options": {
+      "A": "More for hollow sphere",
+      "B": "More for solid sphere",
+      "C": "Same for both",
+      "D": "None of the above HT03 - 0266"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_291",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The spectral emissive power E \\lambda for a body at temperature T 1 is plotted against the wavelength and area under the curve is found to be A. At a different temperature T 2 , the area is found to be 9A. Then \\lambda 1 / \\lambda 2 =",
+    "options": {
+      "A": "3",
+      "B": "1/3",
+      "C": "1 3",
+      "D": "3 BM01 - 1149"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_292",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider a gas with density \\rho and c as the root mean square velocity of its molecules contained in a volume. If the system moves as whole with velocity v, then the pressure exerted by the gas is",
+    "options": {
+      "A": "1 3 \\rho 2",
+      "B": "1 3 \\rho",
+      "C": "1 3 \\rho",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_293",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Air is filled at 60 ^\\circ C in a vessel of open mouth. The vessel is heated to a temperature T so that 1/4 th part of air escapes. The value of T is",
+    "options": {
+      "A": "80 ^\\circ C",
+      "B": "444 ^\\circ C",
+      "C": "333 ^\\circ C",
+      "D": "171 ^\\circ C HT03 - 0262"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_294",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Root mean square velocity for a certain di - atomic gas at room temperature 27 ^\\circ C is found to be 1930 m/s. The gas is -",
+    "options": {
+      "A": "H 2",
+      "B": "O 2",
+      "C": "If 2",
+      "D": "Cl 2 HT03 - 0102"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_295",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas has volume V and pressure P. The total translational kinetic energy of all the molecules of the gas is: -",
+    "options": {
+      "A": "3 2 PV only if the gas is monoatomic.",
+      "B": "3 2 PV only if the gas is diatomic.",
+      "C": "> 3 2 PV if the gas is diatomic.",
+      "D": "3 2 PV in all cases. BM01 - 1148"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_296",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following are the P - V diagrams for cyclic processes for a gas. In which of these processes heat is released by the gas ?",
+    "options": {
+      "D": "TP01 - 0071",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABGAAAABACAIAAADaj5bbAAAKLUlEQVR42u3d6XMUZQLH8ad7ju5MEoQtEsIVS0SCm0lgd4HdFVCON+IZ8CC4hGFfrUuJVVCyJX/DmhRvpASrMBeEECiOV5prcqFUAYIL0VJrQQQLEJQjc/R093TviylZil0hQJJ5ZvL9vKQohF9j1fx4nv6N4rquAAAAyF5nzp5ta2tLJBIej4c0pOU4Tm5u7hurVum6ThpIIy8RAACALPbztWvbt207d+67ru6eZDJJIJI7fuxYTU2NpmlEgXRRiQAAAGSrZDK5f//+S5cujh9f8MLzz+fl5ZGJ5Fr27t24cWMikSAKUJAAAACGuB3t3NXU3RXW9RzLsnRdX7J4MR0pUzqSYRhEAQoSAADAULaj9rZPcnICqR+hI2VWR6quqSEHUJAAAACGrB21tX6ckxNQFOXWj1uWFQgE5s2dQ0Ty2/r++z29veQAChIAAMDDtqPGnbvaWj8OBHJvb0dCCEVRTNMsKCicVV5GUJKzbDsUCvX2HSYKjDCFmW8AAJA1Ll661NLS8vnxY5qm39GObuf3+8+f//7EyS9isRihySwQCGzevHltKMSuHShIAAAA98eyrH++917/6VP5+WPu+ZP9fn88Hg+HwzcHBohOcq+9+irb3xBcsQMAABg827Z3Ne3+9puvB9OOhBCmaeq6vpjNBsH2N0BBAgAAWdeOGnfuam/7xO/X7uvESdO0pUuW0JEyoiO98847fNUvKEgAAACDakcd7a3/u8owmI6Uk5OzeNEiTfOTpOSa9+w5eOgQOYCCBAAAcPd2tPPB2pEQQlEUy7Ly8vKCpaWEKb9/bNrErh0oSAAAAL/ajhoaGzva2x6sHYnb3kcqKZnJ9rf8bg4MVFWt7jv8KVFAsGIHAABwx2fl2tra48eO6nrOw7SjW0dJPp/v3LnvvvjXKba/BdvfoCABAACIjPoW0R07dvR0dw1ys26Q/H5/LBbrDIcjkQghC7a/IbhiBwAAkAntqLGx8XBf79C2IyFEIpHQdX0J298iM3btNmzYYBgGUYCCBAAARnU7amho6Oxoz8kJDPkvriiKbdt0pEyxd9++6upqcgAFCQAAjOp2FO7seMhVhntufwcCgXlz5xC4/LZu3drT20sOoCABAADa0XBRFMU0zYKCwvKyILHL/7ciFAqx/Q0KEgAAoB0N83/RsoLBMra/5ReNRquqVtORQEECAACjqB3V19ePZDsSv2w2PPnkb//8pz8GAgGegsxisVhV1ept27cnEgnSgGDmGwAAZH076gp3jnA7Emx/i4zc/q6urtZ1nSggOEECAABZ2Y7q6urS2I6EEKZpsmsnMmf7u7qmhhwgOEECAADZ2o66u8JpbEcpruumzpFa21oTCZNHIzOf19u0e/fTCxcSBQQnSAAAgHYkhmfXLrX9HSwt5dGwawcKEgAAwMh+xrUsedrR7b+rGTNK2LUT7NqBggQAACBG8D5bfUODbO1I/LJrV1oapCOJDNm1oyOBggQAAESmnx3tP3Cgp7tLwnaUYhgG299sf0Mw0gAAADAC7ai2rq67K5ybmydnOxK/nHFpmhaLxbq6um4ODPDgJLfy9de3bNni8XiIAoITJAAAkEHt6KPa2p7uLsnbkRBCUZTU9veiRYvY/pZf8549Bw4eJAdQkAAAQIa1o96ebmlv1v3f33MgEJg3dw6PT36bNm3ifSRQkAAAAO1IDPc5UkFBIZsN8otEImw2gIIEAAAygOM4dfX1vT3d8t+s+7V2x66dYNcOFCQAAADxoAsHt29EfXbkSGrRO3P/RIZhlJYGy8uCPFw6EihIAAAA4n5vpt06KTpx8uTupiZdz8nEs6M7OlIwWDZ7VjlTaRnRkVrb2llyBjPfAABASHUzbeeupt6eblVVs6ZU+Hy+mzdv9PYdjkQiPGLJbX733Q0bNpADKEgAACD9TNNMrTJk6HtHd6Fp2uXLlzrDXTxlyXk8nubm5qcXLiQKCK7YAQCAtLejw329eXn5WdaOhBCJRKKgoJD3keSXTCZDoVBvXx9RgIIEAADS2R9S7SijVxnEvW4PBoNldCT5RaPRqqoqOhIEV+wAAEC6NO9pObB/X37+mKwfotA0rb//9KnT/Tx0yQUCgYaGhoULFhAFKEgAAGBEffnVV9s++MB1XVUdFXdYdF0/ceLzEye/4NHL35Fqa+vmz3/KdZz0fjb2er2j5P8OqQvSJ62tpmll3w1gAAAgmwsXzpum6fV6R8m/z6qqatv2vr0t/V9+xdOXvs1qyyuWF06Y4CST6SxIPp/X4+EAI10s2xZCKNs//DAej1OQAACAGP4V7NH2kUNVVdd1jx09evDQIT71yu8Pv/9dcfGjlmWK9H2NMk9BpPUlyVRN9SeTSQoSAADAkHMcR1GUp+bPP3/+++OfnyAQyZ3u7x8zZsz48QXJETxHMs2E4zhCCD6Qp12qoHqFoKcCAAAM40cuy7KeXfbc9evX/33mLIEIqQ8QzE8/+2zRM8+MHTvOsqyRqdCPT39C1zTOjmRgWpYQQvmottYwDAorAACAGM6X76PRaNOunXQk+Y195JGlS5d6PB7btsXw7oxH5sydt27dOp/XS+yC70ECAAAYPWzbzs3NXfXGXx6f9hhpSO76jRudnZ2O43iHs7cYRry4+NHKykraEQUJAACAjgSpXbt+vaOjw3Ecn883HL9+LBadPHnKW+vXTygsJG3ZeCoqKmzb5oodAACAGP4XTnRdn1FScvXKj1ev/kQgQuKv+o0bxsWLF6dMmeIZ0t1t13UTCWPGjJK/vfnmxKIioqYgAQAAjPaO5Pf7Z82erSriDO8jyc0wjAs//DBt2jSv1zsks8+u6xpGvGL5ijWh0LixY0lYcMUOAAAAjuO4rrtg4dPTH59GGpKLRCLhcDh11+4hz5FSZ0crXnlteUWFrmlkS0ECAADAfzuSz+dbWbmK95HEqHkfKR6PPbvs+ZdfepFIKUgAAAC4UzKZzMvLY7MhszrSA+/apTbrnntuGWFSkAAAACDYtcumjjTIu3au66Z+pmHEi4om/n3dujH5+SRJQQIAAAAdKXs6km3bHo9HDG4KT1GUeDxWVDRx/dtvT540iQwpSAAAABhUR6pc9caTM0tIQ/6OdOTIEVVVVVUdzAlSPB6bPv0J2pFg5hsAAADiPre/y8rLf/7p6qXLlwlEZgORyNWrV4qLi+++/Z1qRy+9vPyva9f+Ztw4chOcIAEAAOC+OpKqqi+8+BJ37eR3+ccrnZ2dd9n+dl3XNBMVy1e8+soKXddJjIIEAAAA8QC7dryPJLJi+zsWi5aVlVdUVBAUBQkAAADi4d9HoiNl7q6dYcQnTpy0srJS5R0WChIAAADYtRvN349kGPHCwgmsMlCQAAAAwDnSKO1I7e3truuqqhqPxwoLJ7y1fv3UKVNIJnMptXX1hhFnxQ4AAEAqPp8vGo227Gn++ptvFUXhvpa0ko5TXhYsKZlZVFRUtWZN8dSpZJLR/gNS+ttTuX1kjwAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_297",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas is taken through the cycle A → B → C → A, as shown in the figure. If the net heat supplied to the gas in the cycle is 5J, the work done by the gas in the process C → A is",
+    "options": {
+      "A": "- 5J",
+      "B": "- 10 J",
+      "C": "- 15 J",
+      "D": "- 20 J HT03 - 0263"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_298",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The molar specific heat under constant pressure of oxygen is C P = 7.03 cal /mol K. The quantity of heat required to raise the temperature from 10 ^\\circ C to 20 ^\\circ C of 5 moles of oxygen under constant volume will approximately be : -",
+    "options": {
+      "A": "25 cal",
+      "B": "50 cal",
+      "C": "250 cal",
+      "D": "500 cal HT03 - 0264"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_299",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Extra Edge - Thermal Physics (1).pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the ratio of specific heat of a gas at constant pressure to that at constant volume is \\gamma , the change in internal energy of a mass of gas, when the volume changes from V to 2 V at constant pressure P, is : -",
+    "options": {
+      "A": "R/",
+      "B": "PV",
+      "C": "PV/",
+      "D": "\\gamma PV/"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_300",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following relation is correct for temperature 50^\\circ F, 50^\\circ C, 50 K",
+    "options": {
+      "A": "50^\\circ F > 50^\\circ C > 50 K",
+      "B": "50^\\circ F = 50^\\circ C = 50 K",
+      "C": "50^\\circ C > 50^\\circ F > 50 K",
+      "D": "50^\\circ C > 50 K > 50^\\circ C HT70 - 0016"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = ="
+  }
+]

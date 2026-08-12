@@ -1,0 +1,1955 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_151",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CaC 2 2 H O  → A Red hot Fe tube  → B; B is",
+    "options": {
+      "B": "CH 3",
+      "C": "D D D D D D",
+      "D": "CD 3 $//",
+      "A": "Option A"
+    },
+    "correct_option": "A",
+    "explanation": "Ph-CH=CH-Ph 2 4 Cl CCl (Antiaddition)  → Cl Ph - H C - H Cl C - Ph Cl Cl H H Ph - C - - Ph C 2NaNH 2 ( - 2HCl ) ( anti elimination ) Ph - C ≡ C - Ph ( Partial hydrogenation ) H 2 +Pd BaSO 4 Ph Ph H H ( Cis - product )"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_152",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct for the given compounds ? CH 3 - CH = CH 2 CH 3 - C ≡ CH",
+    "options": {
+      "A": "is more reactive than",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "AgNO 3 + NH 4 OH H 3 C - CH 2 - C ≡ C - H H 3 C - CH 2 - C ≡ C - Ag White ppt Tollen's reagent Cu 2 Cl 2 +NH 4 OH H 3 C-CH 2 -C ≡ C-H H 3 C-CH 2 -C ≡ C-Cu Red ppt Na H 3 C-CH 2 -C ≡ C-H H 3 C-CH 2 -C ≡ CNa + H 2 ↑ 1 2  ⊕"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_153",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Birch reduction is observed in",
+    "options": {
+      "A": "CH 3 -CH=CH-CH 3",
+      "B": "HC ≡ CH",
+      "C": "H 3 C-C ≡ CH",
+      "D": "H 3 C-C ≡ C-CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ph - C=C - CH 3 OH H Ph - C - CH 2 - CH 3 O Ph - C ≡ C - CH 3 Hg +2 dil. H 2 SO 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_154",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "But-1-yne and But-2-yne can be distinguished by :",
+    "options": {
+      "A": "Br 2 /CCl 4",
+      "B": "KMnO 4 / O H Θ aq.",
+      "D": "All",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - CH 2 - CH 2 Br concentrated A \\lambda c.NaOH 80^\\circC ( Elimination ) CH 3 - CH = CH 2 +H Br HBr CHCl 3 ,20^\\circC ( EAR ) H 3 C - CH - CH 3 Br H 3 C - CH - CH 3 B r"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_155",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Give products of the following reactions :-",
+    "options": {
+      "A": "CH 2 =CH 2",
+      "B": "CH 3 -C=CH 2 CH 3",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(a) CH 3 -CH=CH 2 CCl 4 (EAR) CH 3 -CH-CH 3 carbocation ⊕ CH 3 -CH-CH 3 Br HBr Br (b) CH 3 -CH=CH 2 Allylic carbon NBS Allylic Bromination (FRSR) CH 2 -CH=CH 2 Br (c) CH 3 -CH=CH 2 ⊕ Br Cyclic bromonium ion (antiaddition) Br CH 3 -CH-CH 2 Br Br Br-Br CCl 4 (EAR) CH 3 -CH-CH 2 (d) CH 3 -CH=CH 2 HBr EAR CH 3 -CH-CH 3 H 3 O ⊕ CH 3 -CH-CH 3 OH Br a s b r c q d p - [ ] [ ] - [ ] [ ] - [ ] - [ ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_156",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Kolbe's electrolysis A  → propyne. A will be",
+    "options": {
+      "A": "CH 3 -CH 2 -CH 2 -COOK",
+      "B": "CH 2 -- CH - CH 3 COOK COOK",
+      "C": "CH = C - CH 3 COOK COOK",
+      "D": "CH 2 -- CH = CH 2 COOK"
+    },
+    "correct_option": "A",
+    "explanation": "Product of following rxn (a) CH 2 = CH 2 O O 3 2 (i) O (ii) Zn/H O  → 2HCHO (Reductive ozonolysis) (b) CH 3 -C=CH 2 CH 3 O O (i) O 3 (ii) Zn/H 2 O (Reductive Ozonolysis) CH 3 -C=O+HCHO CH 3 (c) CH 3 -C ≡ C-CH 3 O O (i) O 3 H 2 O 2 CH 3 -C-C-CH 3 +[O] O O (Oxidative Ozonolysis) CH 3 -C-OH + HO-C-CH 3 O O (ii) H 2 O (d) O O O O O O OH OH (Oxidative Ozonolysis) (i) O 3 (ii) H 2 O H 2 O 2 (e) CH 3 -CH = C = CH-CH 3 O O O O (i) O 3 (ii) Zn/H 2 O CH 3 -CH=O+O=C=O+ O=CH-CH 3 (Reductive Ozonolysis) (f) O O CH 2 (i) O 3 (ii) Zn/H 2 O O + HCHO (Reductive Ozonolysis) $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS (g) O O O O O O O O O O O O H H H H H H Ozonolysis ∆ (Reductive ozonolysis) CHO CHO 3 (Glyoxal) (h) (Xylene) CH 3 CH 3 O O O O O O Ozonolysis ∆ CH 3 CH 3 H H H H O O O O O O CH 3 C=O C=O C=O C=O H H H 1 2 CH 3 CH 3 O O O O O O Ozonolysis ∆ H H H H CH 3 CH 3 O O O O O O CH 3 C=O C=O C=O C=O H 3 C H H 2 1 Note :- Total 3 types of product 2 CH 3 - C - C - H + 3H - C - C - H + 1CH 3 - C - C - CH 3 O O O O O O ( Reductive Ozonolysis ) (i) CH 3 -C = CH 2 CH 3 O O KMnO 4 ∆ CH 3 -C=O CH 3 Ketone + H-C-H [O] O H-C-OH [O] O HO-C-OH (H 2 CO 3 ) O H 2 O+CO 2 ↑ (j) CH 3 -CH = CH-CH 3 O O KMnO 4 ∆ 2CH 3 -C-H [O] O 2CH 3 -C-OH O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_157",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) Br Br (X)NaNH 2 CH 3 -C ≡ C-CH 3 (b) Cl Ph (Y)NaNH 2 Cl Ph-C ≡ CNa + - If X and Y are moles used then sum of [X+Y=] is :- (1) 3 (2) 4 (3) 2 (4) 5 $//(1 202 6 E TARGET : 202 6 NURTURE COURSE Que. 1 2 3 4 5 6 7 8 9 10 Ans 3 2 3 2 2 3 2 1 3 3 Que. 11 12 14 15 16 17 18 19 20 21 Ans 4 1 4 2 2 3 2 4 4 2 Que. 23 24 25 26 27 29 30 Ans 1 1 1 4 3 3 4",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Back product determination. (a) C=O O =C remove 'O' and join double bond C=C CH 3 CH 3 CH 3 CH 3 CH 3 CH 3 CH 3 CH 3 (b) H H H H C O O C C O O C (b) H 2 C=O O=C=O O=CH 2 H 2 C=C=CH 2 (c) CH 3 CH 3 CH 3 H C=O O=C CH 3 CH 3 CH 3 H C=C $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_158",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 - CH 2 - CH 2 - Cl + H - Cl Zn ⎯⎯ → ?",
+    "options": {
+      "B": "CH 3 - CH 2 - CH 3",
+      "C": "CH 3 - CH=CH 2",
+      "D": "HC01 - 0394",
+      "A": "Option A"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reduction of alkyl halide into alkyne by Zn dust/HCl CH 3 - CH 2 - CH 2 - Cl + H - Cl Zn ⎯⎯ → CH 3 - CH 2 - CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_159",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "products. Which is not obtained in product ?",
+    "options": {
+      "A": "CH 3 - CH 3",
+      "D": "HC02 - 0054",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Wurtz reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_160",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sodium salt of which acid gives propane on decarboxylation ?",
+    "options": {
+      "A": "CH 3 - CH 2 - CH 2 - COONa",
+      "B": "CH 3 - CH 2 - COONa",
+      "D": "Both",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Soda lime decarboxylation (1) (2) ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_161",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sodium salt of which acid will be needed for the preparation of butane by electrolysis?",
+    "options": {
+      "A": "Ethanoic acid",
+      "B": "Propan oic acid",
+      "C": "Pentanoic acid",
+      "D": "Butanoic acid HC02 - 0057"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CH 3 - C H 2 - COO Na Sodium p rop an oate Electr olysis CH 3 - CH 2 + C O 2 2 CH 3 - CH 2 CH 3 - CH 2 - CH 2 - CH 3 Butan e"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_162",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange following in decreasing order of their boiling points.",
+    "options": {
+      "A": "In - butane",
+      "B": "2 - methyl butane",
+      "C": "In - pentane",
+      "D": "2,2 - dimethyl propane"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) mol.wt BP Branching  C > B > D > A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_163",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange following hydrogen halides in order of their decreasing reactivity with propene ?",
+    "options": {
+      "A": "HCl > HBr > HI",
+      "B": "HBr > HI > HCl",
+      "C": "HI > HBr > HCl",
+      "D": "HCl > HI > HBr HC05 - 0283"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) HI > HBr > HCl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_164",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkene on ozonolysis give a mixture of ketones only ?",
+    "options": {
+      "A": "CH 3 - CH=CH - CH 3",
+      "D": "CH 3 - CH=CH - CH 2 - CH 2 - CH 3 HC05 - 0284 1",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_165",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange these halogens F 2 , Cl 2 , Br 2 , I 2 in order of their increasing reactivity with alkanes.",
+    "options": {
+      "A": "I 2 < Br 2 < Cl 2 < F 2",
+      "B": "Br 2 < Cl 2 < F 2 < I 2",
+      "C": "If 2 < Cl 2 < Br 2 < I 2",
+      "D": "Br 2 < I 2 < Cl 2 < F 2 HC03 - 0149 CH 3 - CH - CH 3 Cl CH 3 - CH 2 - CH Cl Cl CH 3 - Cl + Na Cl dry ether CH 3 CH 3 - CH - COONa CH 3 COOK ? electrolysis COOK C CH 3 CH 3 CH 3 - CH - CH=CH 2 CH 3 hydrocarbons hydrocarbons 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity order for halogen F 2 > Cl 2 > Br 2 > I 2 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_166",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Methane reacts with steam at 1273K in the presence of Ni catalyst to form : -",
+    "options": {
+      "A": "CO 2",
+      "B": "CO",
+      "C": "CH 3 OH",
+      "D": "None HC03 - 0150 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4) Reduction of A lkyne / Alkene"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_167",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The increasing order of reduction of alkyl halides with zinc and dilute HCl is : -",
+    "options": {
+      "A": "R - Cl < R - I < R - Br",
+      "B": "R - Cl < R - Br < R - I",
+      "C": "R - I < R - Br < R - Cl",
+      "D": "R - Br < R - I < R - Cl HC02 - 0058 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reduction of alkyl halide into alkyne by Zn dust/HCl CH 3 - CH 2 - CH 2 - Cl + H - Cl Zn ⎯⎯ → CH 3 - CH 2 - CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_168",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following oxidation reaction of methane is suitable example of incomplete carbocation reaction ?",
+    "options": {
+      "A": "4",
+      "B": "4",
+      "C": "3 2",
+      "D": "All of these HC03 - 0151 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Wurtz reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_169",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which reaction is suitable to obtained n pentane only in good yield ?",
+    "options": {
+      "D": "HC02 - 0059 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Soda lime decarboxylation (1) (2) ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_170",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From which of the following reaction methane can be obtained ?",
+    "options": {
+      "D": "HC02 - 0015 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_hydrocarbons_171",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Iodination of alkane is reversible. Reason : - H - I, formed in this reaction, work as an acid.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. HC03 - 0152 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CH 3 - C H 2 - COO Na Sodium p rop an oate Electr olysis CH 3 - CH 2 + C O 2 2 CH 3 - CH 2 CH 3 - CH 2 - CH 2 - CH 3 Butan e",
+    "assertion": "- Iodination of alkane is reversible.",
+    "reason": "- H - I, formed in this reaction, work as an acid."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_172",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which chain propagation step gives major products in the following reaction ?",
+    "options": {
+      "D": "HC03 - 0153 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) mol.wt BP Branching  C > B > D > A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_173",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The by product obtained and the step in which by product is obtained -",
+    "options": {
+      "A": "Ethane, chain propagation",
+      "B": "Butane, chain propagation",
+      "C": "Ethyl chloride, Chain propagation",
+      "D": "Butane, Chain termination step. HC03 - 0154 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_174",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which alkane is used to obtain toluene by aromatization reaction ?",
+    "options": {
+      "A": "Iso heptane",
+      "B": "3 - Methyl hexane",
+      "C": "1 - Chloro heptane",
+      "D": "Heptane HC03 - 0156 CH 3 - CH 2 - Cl + CH 3 - CH 2 - CH 2 - Cl Na dry ether CH 3 - CH 2 - CH 2 - CH 2 - COONa Na OH CaO/ \\Delta CH 3 - CH 2 - CH 2 - CH - COONa Na OH CaO/ \\Delta CH 3 CH 3 - CH 2 - COONa + CH 3 - CH 2 - CH 2 - COONa electrolysis CH 3 - Cl + Na dry ether CH 3 - CH 2 - COONa electrolysis CH 3 - Cl + Ph - Cl dry ether CH 3 - Cl Zn/HCl CH 4 + Cl 2 hv CH 3 + Cl 2 CH 3 - Cl + Cl CH 2 - Cl + Cl 2 CH 3 + H - Cl CH 3 - CH - CH 2 - CH 3 + Br CH 3 CH 3 - C - CH 2 - CH 3 CH 3 Br CH 3 - CH - CH - CH 3 CH 3 Br CH 3 - C - CH 2 - CH 3 CH 3 CH 3 - CH - CH - CH 3 CH 3 CH 3 - CH 3 + Cl 2 hv NEET : NCR [Chemistry] 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity order for halogen F 2 > Cl 2 > Br 2 > I 2 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_175",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which reaction product does not show GI ?",
+    "options": {
+      "D": "HC01 - 0395 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4) Reduction of A lkyne / Alkene"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_176",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which reaction gives two different structural product's",
+    "options": {
+      "D": "CH 3 - C = C - C H 3 + H - Br C H 3 H 3 C HC05 - 0293 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reduction of alkyl halide into alkyne by Zn dust/HCl CH 3 - CH 2 - CH 2 - Cl + H - Cl Zn ⎯⎯ → CH 3 - CH 2 - CH 3"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_hydrocarbons_177",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Peroxide effect is not observed in addition of H - I. Reason : - H - I bond is weaker than H - Br and iodine free radicals combine to form I 2 instead of addition to double.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. HC05 - 0289 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Wurtz reaction",
+    "assertion": "- Peroxide effect is not observed in addition of H – I.",
+    "reason": "- H – I bond is weaker than H – Br and iodine free radicals combine to form I 2 instead of addition to double."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_178",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) Br (2) (3) (4) HC05 - 0288 2",
+    "options": {
+      "A": "Br",
+      "D": "HC05 - 0288 2",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_179",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which gives acetic acid on ozonolysis without zinc ?",
+    "options": {
+      "C": "CH 3 - CH=CH - CH 3",
+      "D": "All of them HC05 - 0287 2",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CH 3 - C H 2 - COO Na Sodium p rop an oate Electr olysis CH 3 - CH 2 + C O 2 2 CH 3 - CH 2 CH 3 - CH 2 - CH 2 - CH 3 Butan e"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_180",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which reaction alkyne is not obtained as major product?",
+    "options": {
+      "A": "- - -",
+      "B": "- - - \\Delta",
+      "C": "- -",
+      "D": "- HC06 - 0004 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) mol.wt BP Branching  C > B > D > A"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_181",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : 1 - Alkyne and other alkyne can be differentiated by NaNH 2 Statement - II : 1 - ky e does ’t e t with NaOH.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. HC07 - 0078"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) HI > HBr > HCl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_182",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Addition of H - Br on 1 - Butyne gives.",
+    "options": {
+      "A": "Gem. dihalide",
+      "B": "Vicinal dihalide",
+      "C": "Isolated dihalide",
+      "D": "M ono halide HC07 - 0077 + D 2 Ni/ \\Delta CH 3 - C  C - CH 3 Na/liq NH 3 + H 2 Ni/ \\Delta CH 3 - C  C - CH 3 BaSO 4 /Pd H 2 / \\Delta + HCl CH 3 - CH=CH - CH 3 + H - Br R 2 O 2 \\Delta CH 3 - CH = CH 2 + H - Cl + H 2 O H  + H - Br R 2 O 2 \\Delta hydrocarbons 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Hydrocarbon s 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_183",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is an example of Non benzenoid?",
+    "options": {
+      "D": "NC01 - 1741 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity order for halogen F 2 > Cl 2 > Br 2 > I 2 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_184",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not aromatic ?",
+    "options": {
+      "D": "GC02 - 0320 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4) Reduction of A lkyne / Alkene"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_hydrocarbons_185",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Reaction of 1 - Chloropropane and benzene gives isopropyl benzene not n propyl benzene Reason : - Reaction occurs via rearrangement in carbocation.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. AH01 - 0306 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reduction of alkyl halide into alkyne by Zn dust/HCl CH 3 - CH 2 - CH 2 - Cl + H - Cl Zn ⎯⎯ → CH 3 - CH 2 - CH 3",
+    "assertion": "- Reaction of 1 – Chloropropane and benzene gives isopropyl benzene not n propyl benzene",
+    "reason": "- Reaction occurs via rearrangement in carbocation."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_186",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : - NO 2 on Benzene is meta directing group. Statement - II : The electron density on - O and - P is decreased and at meta is increased.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. AH01 - 0077 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Soda lime decarboxylation (1) (2) ( 3 )",
+    "statements": {
+      "P": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_187",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is aromatic ?",
+    "options": {
+      "D": "GC02 - 0321 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_188",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The structure of reactant which gives H - CHO, CH 3 - CHO and CH 3 - COCH 2 - CHO on ozonolysis ?",
+    "options": {
+      "D": "Both",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CH 3 - C H 2 - COO Na Sodium p rop an oate Electr olysis CH 3 - CH 2 + C O 2 2 CH 3 - CH 2 CH 3 - CH 2 - CH 2 - CH 3 Butan e"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_189",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which gives 1 mole of CO 2 and 2 moles of CH 3 - COOH on oxidation with acidic KMnO 4 ?",
+    "options": {
+      "A": "CH 3 - CH=CH - CH 3",
+      "B": "- -",
+      "C": "CH 3 - CH=C=CH - CH 3",
+      "D": "HC05 - 0292"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) mol.wt BP Branching  C > B > D > A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_190",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which gives one moles of C H O - CHO, and two moles of CH 3 - C O - CHO on ozonolysis ?",
+    "options": {
+      "D": "All of them HC05 - 0286 CH 3 - C - CH 2 - CH CH 2 CH - CH 3 CH 3 - C - CH 2 - CH = CH 2 CH - CH 3 CH 3 - C - CH 2 - CH =CH - CH 3 CH - CH 3 NEET : NCR [Chemistry]",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1) - - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_191",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The structure of alkene which on hydrogenation give 2 - methyl pentane ?",
+    "options": {
+      "D": "All of them HC05 - 0104 4",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4) All 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_192",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct reactivity order towards an electrophile ? (I) (II) (III) (IV)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity order for halogen F 2 > Cl 2 > Br 2 > I 2 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_193",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Dinitr ation of chlorobenzene gives ?",
+    "options": {
+      "D": "AH01 - 0394",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4) Reduction of A lkyne / Alkene"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_194",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given below are two statements, one is labelled as Assertion",
+    "options": {
+      "A": "A is true but R is false.",
+      "B": "A is false but R is true.",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Assertion - A : Benzene is more stable than cyclohexatriene (True) Reason - R : Delocalised \\pi - e cloud lies B.M.O so more attracted by nuclei of carbon atom."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_195",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given below are two statements: Statement - I : Peroxide effect is not observed in addition of HCl & HI Statement - II : HCl bond is stronger than HBr bond and H - I bond is weaker than H - Br bond. In the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "Both Statement - I and Statement - II are correct.",
+      "B": "Statement - I is correct but Statement - II is incorrect.",
+      "C": "Statement - I is incorrect but Statement - II is correct.",
+      "D": "Statement - I and II both are incorrect. HC05 - 0105 CH 2 =C - CH 2 - CH 2 - CH 3 CH 3 CH 3 - C=CH - CH 2 - CH 3 CH 3 CH 3 - CH - CH=CH 2 - CH 3 CH 3 hydrocarbons"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) HBr + H 2 O 2 → Peroxide effect HCl/HI + H 2 O 2 → No peroxide effect H Br H Cl H I B.L.  NEET : NCR [ Chemistry ]",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_196",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction Product B is :",
+    "options": {
+      "D": "AH01 - 0395",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_197",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reaction of : with HBr gives :",
+    "options": {
+      "D": "HC05 - 0291",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) CH 3 Cl/AlCl 3 CH 3 (F.C.R) + Cl 2 /FeCl 3 CH 3 Cl + CH 3 Cl H  CH 3 - CH = CH - - OH CH 3 - CH 2 - CH -  - OH (+M) Br ⊝ CH 3 - CH 2 - CH - - OH Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_198",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following compound in reactivity order towards EAS (Electrophilic aromatic substitution) reaction ?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) In general, electron releasing groups activate the benzene ring towards electrophilic substitution.  Order towards EAS "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_199",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reactivity order of the following alkenes for hydrochlorination (HCl) is CH 2 = CH - Cl (CH 3 ) 2 C = CH 2 (I) (II) CH 2 = CH - CHO (III)",
+    "options": {
+      "A": "I > II > III",
+      "B": "II > III > I",
+      "C": "II > I > III",
+      "D": "III > I > II HC23 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) (I) (II) (III)  Reactivity order for hydrohalogenation  II > I > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_200",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following compounds in decreasing order of reactivity for EAR : - (I) CH 2 =CH 2 (II) CH 3 - CH=CH 2 (III) Ph 2 C=CH - CH 3 (IV) CH 2 =CH - CHO",
+    "options": {
+      "A": "IV > I > II > III",
+      "B": "III > II > I > IV",
+      "C": "II > III > I > IV",
+      "D": "II > III > IV > I HC19 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Generally electron reducing groups increase reactivity for E.A.R. So, reactivity order "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_201",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The decreasing order of bond dissociation energy of C - H bond in given compound is : -",
+    "options": {
+      "A": "CH 3 - H",
+      "B": "CH 3 - CH 2 - H",
+      "C": "CH 2 =CH - CH 2 - H",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Stability of radical  1 bond dissociation energy  stability order  C > B > A > D  BDE  D > A > B > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_202",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the product of following reaction ? Product",
+    "options": {
+      "B": "-",
+      "D": "- HC56 - 0001",
+      "A": "Option A",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) -  - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_203",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A and B respectively are : - ",
+    "options": {
+      "A": ",",
+      "B": ",",
+      "C": ",",
+      "D": ", AH04 - 0019"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_204",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What are the major product of following reaction ? (i) (ii) - - (iii) AH14 - 0005",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) (ii) (iii)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_205",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 - Bromo - 3 - chloro cyclobutane on reaction with 2 - equivalent of sodium in ether gives",
+    "options": {
+      "D": "HC01 - 0037 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_206",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkane is synthesised from single alkyl halide by wurtz reaction: -",
+    "options": {
+      "D": "HC01 - 0039",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Stability of radical  1 bond dissociation energy  stability order  C > B > A > D  BDE  D > A > B > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_207",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the hydrocarbon which on ozonolysis gives : - (a) Only acetone (b) 1 equivalent of propanal + 1 equivalent of formaldehyde (c) 1 equivalent of acetone + 1 equivalent of acetaldehyde HC46 - 0018 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(a) - - (b) CH 3 CH 2 CH=CH 2 (c) - - 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_208",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CaC 2 2 D O ⎯⎯ → A Red hot Cu tube ⎯⎯⎯ → B; B is",
+    "options": {
+      "D": "HC63 - 0003 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Reactivity towards Cl 2 /h  \\alpha stability of free radical  order "
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_209",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct for the given compounds ?",
+    "options": {
+      "A": "is more reactive than",
+      "B": "CH 3 - C  CH",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) (I) (II) (III)  Reactivity order for hydrohalogenation  II > I > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_210",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Kolbe's electrolysis ⎯⎯⎯⎯⎯⎯⎯ → propyne will be",
+    "options": {
+      "A": "CH 3 - CH 2 - CH 2 - COOK",
+      "B": "- -",
+      "C": "-",
+      "D": "HC53 - 0002 NEET : CHEMISTRY"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_211",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) CH 3 - C C - CH 3 (b) - If X and Y are moles used then sum of [X + Y =] is : - (1) 3 (2) 4 (3) 2 (4) 5 HC15 - 0004",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) (a) - - - a - - a - - e (b) a - e a - a y = 3 mole x + y = 5 mole"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_212",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CaC 2 2 H O ⎯⎯ → A Red hot Cu tube ⎯⎯⎯ → B; B is",
+    "options": {
+      "D": "HC63 - 0002",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 3 ) a e t t e ety ene en ene ( ) ( )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_213",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ph - CH=CH - Ph 2 4 Cl CCl ⎯⎯→ X 2 2NaNH ⎯⎯⎯ → Y 2 4 H Pd BaSO + ⎯⎯⎯ → Z Product Z is",
+    "options": {
+      "C": "-",
+      "D": "Ph - C C - Ph HC26 - 0004 3",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) In general, electron releasing groups activate the benzene ring towards electrophilic substitution.  Order towards EAS "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_214",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following, the compound which has highest boiling point is : -",
+    "options": {
+      "D": "HC13 - 0002 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Reactivity towards Cl 2 /h  \\alpha stability of free radical  order "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_215",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3CH 3 - C CH Red hot Cu tube ⎯⎯⎯ → ?",
+    "options": {
+      "D": "HC63 - 0004 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) (I) (II) (III)  Reactivity order for hydrohalogenation  II > I > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_216",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reactivity order of the following compounds for hydrochlorination (HCl) is (I) CH 2 = CH - Cl (II) (CH 3 ) 2 C = CH 2 (III) CH 2 = CH - CHO",
+    "options": {
+      "A": "I > II > III",
+      "B": "II > III > I",
+      "C": "II > I > III",
+      "D": "III > I > II HC23 - 0004 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Generally electron reducing groups increase reactivity for E.A.R. So, reactivity order "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_217",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "? Which of the following product will not be obtained : -",
+    "options": {
+      "D": "Both",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_218",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the chain propagation steps in the free radical chlorination of methane : -",
+    "options": {
+      "A": "2 Cl 2Cl • ⎯ ⎯ →",
+      "B": "4 3 Cl CH CH Cl H • • + ⎯ ⎯ → +",
+      "C": "4 3 Cl CH CH HCl • • + ⎯ ⎯ → +",
+      "D": "2 H Cl HCl Cl • • + ⎯ ⎯ → +"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (a) h 2 Cl 2Cl •  ⎯⎯ → (initiation) (b) 4 3 Cl CH CH Cl H • • + ⎯ ⎯ → + (displacement) (c) 4 3 Cl CH CH HCl • • + ⎯ ⎯ → + (Propagation) (d) 2 H Cl HCl Cl • • + ⎯ ⎯ → + (displacement) (e) 3 2 3 CH Cl CH Cl Cl • • + ⎯ ⎯ → - + (Propagation)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_219",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hydrocarbon X (V.D. = 35) forms only one monochloro substitution product, X is : -",
+    "options": {
+      "A": "Neopentane",
+      "B": "Cyclopentane",
+      "C": "Pent - 1 - ene",
+      "D": "In - pentane HC08 - 0032"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Molecular wt of hydrocarbon = 2 × V .D = 70 (1) - - (2) (One monochloro product) (3) Mw = 70 (2 Monochloro product ) (4) Mw = 72"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_220",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Toluene reacts with 1 mol of Cl 2 in the presence of light to give : -",
+    "options": {
+      "A": "Benzyl chloride",
+      "B": "Benzoyl chloride",
+      "C": "p - chlorotoluene",
+      "D": "o - chlorotoluene AH10 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Free radicle substitution (Benzylic substitution)  ene en y e 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_221",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given reaction mainly proceeds through -",
+    "options": {
+      "A": "E 1",
+      "B": "S N 1",
+      "C": "S N 2",
+      "D": "E 2 HC14 - 0009 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Generally electron reducing groups increase reactivity for E.A.R. So, reactivity order "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_222",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In E 2 elimination some compounds follow Hoffmann rule which means",
+    "options": {
+      "A": "The double bond goes to the most substituted position",
+      "B": "The compound is resistant to elimination",
+      "C": "No double bond is formed",
+      "D": "The double bond goes mainly toward the least substituted carbon. HC14 - 0010 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_223",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Maximum dehydration takes place that of -",
+    "options": {
+      "D": "HC16 - 0007 4",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_224",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is maximum reactive towards hydrogenation ?",
+    "options": {
+      "D": "HC08 - 0031",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Stability of radical  1 bond dissociation energy  stability order  C > B > A > D  BDE  D > A > B > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_225",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "‘ ’ : + HF \\Delta X Major product",
+    "options": {
+      "D": "AH01 - 0040",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_226",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The compounds 1 - butyne and 2 - butyne can be distinguished by using (1) Bromine water (2) alk. KMnO 4 (cold) ’ t (4) Chlorine gas HC62 - 0006 C l CH 3 ONa in CH 3 OH/ \\Delta HNO 3 H 2 SO 4 ? O O OH COOH O O O O 2 N O O O 2 N NEET : CHEMISTRY",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Terminal and non terminal alkynes can be d e ent ate y en’s ea ent 1 - Butyne ✓ 2 - Butyne "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_227",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The end product (Q) in the following sequence of reactions is",
+    "options": {
+      "D": "AH04 - 0020",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Cl 2 /FeCl 3 P Na/ether Cl Q"
+  }
+]

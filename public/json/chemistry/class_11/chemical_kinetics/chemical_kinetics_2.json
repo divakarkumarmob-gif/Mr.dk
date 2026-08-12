@@ -1,0 +1,2053 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_151",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant (K) for the reaction 2A + B → product, was found to be 2.57 × 10 - 5 L mol - 1 s - 1 after 15 s, 2.60 × 10 - 5 L mol - 1 s - 1 after 30 s and 2.55 × 10 - 5 L mol - 1 s - 1 after 50 s. The order of reaction is",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "Zero",
+      "D": "1 CK15 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2A + B ⎯ → product t k 15 sec 2.57×10 - 5 L mol - 1 s - 1 30 sec 2.60×10 - 5 L mol - 1 s - 1 50 sec 2.55×10 - 5 L mol - 1 s - 1 General unit of K = L n - 1 mol 1 - n time - 1 On comparing power of mol : 1 - n = - 1 n = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_152",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant for a second order reaction is 8 × 10 - 5 M - 1 min -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Given, 2 nd order, K = 8 × 10 - 5 M - 1 min - 1 [A] 0 = 1M, [A] t = 0.5M, t ? Kt = - t 0 1 1 [A] [A] 8×10 - 5 × t = - t 0 1 1 [A] [A] =1 t =  -5 1 8 10 = 1.25 × 10 4 min"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_153",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How long will it take a 1M solution to be reduced to 0.5 M.",
+    "options": {
+      "A": "8.665 × 10 3 min",
+      "B": "8 × 10 - 3 min",
+      "C": "1.25 × 10 4 min",
+      "D": "4 × 10 - 5 min CK15 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) N 2 (g) + 3H 2 (g) ⎯ → 2NH 3 (g) = = rod roa rate S.C. of reactent S.C. of product - - + = = = 3 2 2 d(NH ) d(N ) d(H ) dt dt dt rate 1 3 2 - = = - = + 3 2 2 d[NH ] d[N ] d[H 1 1 rate dt 3 dt 2 dt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_154",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "This is decomposed 50% in t minutes at 4 mol L - 1 , n and t are respectively",
+    "options": {
+      "A": "0, 20 min.",
+      "B": "1, 10 min.",
+      "C": "1, 20 min.",
+      "D": "0, 5 min. CK16 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) N 2 (g) + 3H 2 (g) ⎯ → 2NH 3 (g) = = rod roa rate S.C. of reactent S.C. of product - - + = = = 3 2 2 d(NH ) d(N ) d(H ) dt dt dt rate 1 3 2 - = = - = + 3 2 2 d[NH ] d[N ] d[H 1 1 rate dt 3 dt 2 dt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_155",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hydrolysis of ester in alkaline medium is : -",
+    "options": {
+      "A": "First order reaction",
+      "B": "Second order reaction",
+      "C": "Zero order reaction",
+      "D": "Third order reaction CK10 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Hydrolysis of ester in alkaline medium RCOOR’ + NaOH ⎯ → RCOONa + R’OH Rate = K[RCOOR’] [NaOH] Order = 2, Molecularity = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_156",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that k is the rate constant of any reaction at temp erature T then the value of T lim log k → is :",
+    "options": {
+      "A": "A  2 .303",
+      "B": "A",
+      "C": "2.303 A",
+      "D": "log A CK21 - 0010"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) = - a E log K log A 2.303RT When T→  , → 1 0 T , log K → log A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_157",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For an endothermic reaction where \\Delta H represents the enthalpy of the reaction in kJ/mol ; the minimum value for the energy of activation will be",
+    "options": {
+      "A": "Less than \\Delta H",
+      "B": "Zero",
+      "C": "More than \\Delta H",
+      "D": "Equal to \\Delta H CK21 - 0014"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Given : Endothermic reaction In endothermic reaction activation energy (E a ) is always greater than \\Delta H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_158",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If energy change ( \\Delta H) during the reaction is - 20 kJ, then the activation energy for the reverse reaction is : -",
+    "options": {
+      "A": "10 kJ",
+      "B": "20 kJ",
+      "C": "50 kJ",
+      "D": "- 30 kJ CK21 - 0013"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) N 2 (g) + 3H 2 (g) ⎯ → 2NH 3 (g) = = rod roa rate S.C. of reactent S.C. of product - - + = = = 3 2 2 d(NH ) d(N ) d(H ) dt dt dt rate 1 3 2 - = = - = + 3 2 2 d[NH ] d[N ] d[H 1 1 rate dt 3 dt 2 dt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_159",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following rate law expression represent zero order reaction : -",
+    "options": {
+      "A": "K = [A] 3/2 [B] - 1 [C] 1/2",
+      "B": "K = [A] ^\\circ [B] 2",
+      "C": "K = [A] 1/2 [B] 1/2 [C] - 1",
+      "D": "K = [A] 2 [B] 1 CK09 - 0108"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (3) r = K[A] 1/2 [B] 1/2 [C] - 1 n = 1 2 + 1 2 - 1 n = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_160",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct expression for Arrhenius equation: -",
+    "options": {
+      "A": "a E nK nA RT = - \\lambda\\lambda",
+      "B": "a E /RT Ke A - =",
+      "C": "a E logK log A 2.303 RT = -",
+      "D": "a E /RT 1 K A e - - = CK24 - 0125"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) K = - Ea RT Ae"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_161",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For every 10^\\circC increase in temperature, the rate becomes twice. If the temperature increases from 10^\\circC to 100^\\circC then rate increases .... times : -",
+    "options": {
+      "A": "400",
+      "B": "512",
+      "C": "112",
+      "D": "614 CK22 - 0050"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) K 2 = K 1 (m) \\Delta T/10 = K 1 (2) 90/10 = K 1 × (2) 9 = 512K 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_162",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant for zero order reaction is 3 × 10 - 2 mol L - 1 s -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (2) A 0 - A t = Kt A 0 - 0.5 = 3× 10 - 2 × 25 A 0 - 0.5 + 0.75 = 1.25M"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_163",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "After 25 sec, if the concentration of reactant is 0.5M then initial concentration of the reactant is : -",
+    "options": {
+      "A": "1 M",
+      "B": "1.25 M",
+      "C": "0.5 M",
+      "D": "0.75 CK11 - 0118"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (3) r = K[A] 1/2 [B] 1/2 [C] - 1 n = 1 2 + 1 2 - 1 n = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_164",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a reaction ( ) ( ) ( ) 2 g 2 g 3 g N 3H 2NH + → rate of appearance of NH 3 is 2.5 × 10 - 4 mol L - 1 s - 1 then rate of reaction and rate of disappearance of H 2 respectively is : - (in mol L - 1 s - 1 )",
+    "options": {
+      "A": "3.75 × 10 - 4 , 1.25 × 10 - 4",
+      "B": "1.25 × 10 - 4 , 2.5 × 10 - 4",
+      "C": "1.25 × 10 - 4 , 3.75 × 10 - 4",
+      "D": "5 × 10 - 4 , 3.75 × 10 - 4 CK04 - 0330"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) ROR = - - = = 3 2 2 d[NH ] d[N ] d[H ] dt 3dt 2dt ROR = 3 d[NH ] 2dt 4 4 2.5 10 ROR 1.25 10 2 - -  = =  - = 3 2 d[NH ] d[H ] 3 dt 2 dt = 3 2 × 2.5× 10 - 4 = 3.75×10 - 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_165",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the order of the reaction with respect to A and B : - A B Rate (mol/L) (mol/L) (mol L - 1 s - 1 ) 0.05 0.05 1.2× 10 - 3 0.10 0.05 2.4 × 10 - 3 0.05 0.10 1.2 × 10 - 3",
+    "options": {
+      "A": "1 and 0",
+      "B": "1 and 1",
+      "C": "0 and 1",
+      "D": "none of these CK05 - 0154"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) - -   3 3 Exp(1) 1.2 10 Exp(2) 2.4 10 = x y x y K(0.05) (0.05) K(0.10) (0.05) (  = = ( ) )  x 1 1 (x 1) 2 2 - -   3 3 Exp(1) 1.2 10 Exp(3) 1.2 10 = x y x y K(0.05) (0.05) K(0.05) (0.10) 1 = y 1 y 0 2 (  = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_166",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a reaction rate = K[A] 1/2 [B]",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) r = K (4) 1/2 (2) 2 r = 2 × 2 × 2  8 times"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_167",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If concentration of A and B are increased by factor of 4 and 2 respectively then rate is changed by the factor of : -",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "8",
+      "D": "None of these CK05 - 0156"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) K = - Ea RT Ae"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_168",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant for first order reaction whose half life is 480 sec. : -",
+    "options": {
+      "A": "1.44 × 10 - 3 s - 1",
+      "B": "1.44 s - 1",
+      "C": "0.72 × 10 - 3 s - 1",
+      "D": "2.88 × 10 - 3 s - 1 CK12 - 0230"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (1) 1 2 t = 480 sec (1 st order) 1 2 t = 0.693 K K = 0.693 480 K = 1.44 × 10 - 3 sec - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_169",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The half - life of a first order reaction is 6 hour . How long will it take for the concentration of reactant to change from 0.8 M to 0.25 M?",
+    "options": {
+      "A": "1.07 hour",
+      "B": "5.1 hour",
+      "C": "2.7 hour",
+      "D": "10.0 6 hour CK12 - 0249"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) 1 2 t = 6 hour t = 0 t A 2.303 log k A = 2.303 0.8 6 hour log 0.693 0.25 (   ( ) )  = (19.939) log 3.2 = 19.939 × 0.505  t = 10.07 hours"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_170",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is the correct expression for Arrhenius equation?",
+    "options": {
+      "A": "a 2 1 1 2 E K 1 1 ln K R T T (  = - ( ) ) ",
+      "B": "a 2 1 2 1 2 1 E K T T log K 2.303 T T (  = ( ) - ) ",
+      "C": "a 2 1 1 2 E K 1 1 ln K 2.303R T T (  = - ( ) ) ",
+      "D": "a 2 2 1 1 1 2 E K T T K 2.303R T T - (  = ( ) )  CK24 - 0126 Exercise - I chemical kinetics NEET : Extra Edge [ Chemistry ]"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) As per theory"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_171",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction, 2N 2 O 5 → 4NO 2 + O 2 rate and rate constant are 1.02 × 10 - 4 M s - 1 and 3.4 × 10 - 5 s - 1 respectively, the concentration of N 2 O 5 , at that time will be",
+    "options": {
+      "A": "1.732 M",
+      "B": "3M",
+      "C": "1.02 × 10 - 4 M",
+      "D": "3.5 × 10 5 M CK12 - 0253"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) r = k[N 2 O 5 ] 1 1.02 × 10 - 4 = 3.4 × 10 - 5 [N 2 O 5 ]  [N 2 O 5 ] = - -  =  4 5 1.02 10 3M 3.4 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_172",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction N 2 O 5 (g) → N 2 O 4 (g) + ½O 2 (g) initial pressure is 114 mmHg and after 20 seconds the pressure of reaction mixture becomes 133 mmHg then the average rate of reaction will be",
+    "options": {
+      "A": "1.9 atm s - 1",
+      "B": "8.75 × 10 - 3 atm s - 1",
+      "C": "2.5 × 10 - 3 atm s - 1",
+      "D": "6.65 atm s - 1 CK12 - 0255"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) N 2 O 5 ⎯ ⎯ → N 2 O 4 + 1 2 O 2 t = 0 11MM O O t = 20s 114 - x x x 2  114 + x 2 = 133  x = 38 mm r = = x 38 t 20 r = 1.9 mm sec - 1 r = 1.9 760 =2.5×10 - 3 atm sec - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_173",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate of reaction is expressed         1 d C 1 d D 1 d A d B 2 dt 3 dt 4 dt dt - + = - = + = the reaction is",
+    "options": {
+      "A": "4A + B → 2C + 3D",
+      "B": "B + 3D → 4A + 2C",
+      "C": "A + B → C + D",
+      "D": "B + D → A + C CK47 - 0023"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) As per theory"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_174",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Rate constant for first order reaction is 5.78 × 10 - 5 s -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) - (   =  ( )  )  5 0 t A 2.303 5.78 10 log 10 3600 A A 0 = 8A  A t = 0 A 8 = 12.5% (A 0 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_175",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What percentage of initial reactant will react in 10 hours?",
+    "options": {
+      "A": "12.5%",
+      "B": "25%",
+      "C": "87.5%",
+      "D": "75% CK12 - 0250"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (3) r = K[A] 1/2 [B] 1/2 [C] - 1 n = 1 2 + 1 2 - 1 n = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_176",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a first order reaction -",
+    "options": {
+      "A": "T he degree of dissociation is equal to e - kt",
+      "B": "A plot of reciprocal concentration of the reactant vs time gives a straight line",
+      "C": "T he time taken for the completion of 75% reaction is thrice the t 1/2 of the reaction",
+      "D": "T he pre - exponential factor in the Arrhenius equation has the dimension of time, T - 1 CK12 - 0251 Exercise - I"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) As per theory Exercise - I NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_177",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a first order reaction, t 99% = y × t 99.90% , Find value of y.",
+    "options": {
+      "A": "1 3",
+      "B": "2 3",
+      "C": "3",
+      "D": "4 3 CK04 - 0336"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 0 99% t A 2.303 t log K A =  (log100 = 2) = 2.303 100 2.303 log 2 K 1 K   ...(1) 99.9% 2.303 100 2.303 t log 3 K 0.1 K =   …(2)  ( = 3) 99% 99.9 t 2 t 3 = y = 2 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_178",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction A→ B, the concentration of reactant changes from 0.05 to 0.03 in 30 sec, calculate average rate of reaction.",
+    "options": {
+      "A": "6.6 × 10 - 4 MS - 1",
+      "B": "3.2 × 10 - 3 MS - 1",
+      "C": "0.5 × 10 - 5 MS - 1",
+      "D": "6.3 × 10 - 7 MS - 1 CK01 - 0342"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) A → B C 1 = 0.05 C 2 = 0.03 \\Delta t = 30 sec Average rate of reaction = 2 1 C C t - \\Delta = 0.03 0.05 30 - (  - ( ) )  = 0.02 30 = 6.6 × 10 - 4 MS - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_179",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a reaction 2A + B → C + 3D, Rate = K[A] 1 [B] 1 if conc entration of A is doubled and B will be 1 4 times find change in rate ?",
+    "options": {
+      "A": "doubled",
+      "B": "half",
+      "C": "1 3 time",
+      "D": "1 4 time CK01 - 0341"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2A + B ⎯ → C + 3D r = K[A] 1 [B] 1 A = double r ' = K[2A] 1 1 B 4       B = 1 4 times r ' = 1 2 K[A] 1 [B] 1 1 r' r 2 = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_180",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It takes 20 min to decompose BaCO 3 to 1 4 of its initial amount, If the decomposition is a 1 st order reaction calculate the rate constant of the reaction. (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) K = 2.303 100 log 20 100 25 - = 2.303 100 log 20 75 = 2.303 4 log 20 3 = 2.303 0.12 20  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_181",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of rate constant of a pseudo 1 st order reaction.",
+    "options": {
+      "A": "D epends on the concentration of reactant present in excess.",
+      "B": "D epend on the concentration of reactant present in a small amount.",
+      "C": "Independent of concentration of reactant.",
+      "D": "D epends only on temperature. CK04 - 0337"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Depends on the concentration of reactant present in smaller amount."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_182",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Write rate equation for the reaction 2A+B→C if order of reaction is zero.",
+    "options": {
+      "A": "r =K[A][B]",
+      "B": "r =K[A] 2 [B]",
+      "C": "r =K[A][B] 2",
+      "D": "r =K[A] 0 [B] 0 CK03 - 0090"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 2A + B → C (For zero order) r  [A] 0 [B] 0 r = K[A] 0 [B] 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_183",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Can molecularity of any reaction be equal to zero ?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "C an be Yes or No",
+      "D": "None of these CK49 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Molecularity of any reaction can never be equal zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_184",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate of a catalyst to change",
+    "options": {
+      "A": "Gibbs energy of reaction",
+      "B": "Enthalpy of reaction",
+      "C": "Activation energy of reaction",
+      "D": "Equation constant CK10 - 0052"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) On l owering the activation energy , the reaction becomes fast."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_185",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For reaction A + B → product, Rate L a w is given by 1/2 1 r K[A] [B] = , what is order of reaction.",
+    "options": {
+      "A": "2",
+      "B": "3 2",
+      "C": "1",
+      "D": "2.5 CK02 - 0080 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) A + B → Product     1 1 2 r K A B = order = 1 3 1 2 2 + = 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_186",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a 1 st order reaction, find the rate constant i f half - life is 200 s. : -",
+    "options": {
+      "A": "3.4 × 10 - 3 s - 1",
+      "B": "1.2 × 10 - 5 s - 1",
+      "C": "4.2 × 10 - 2 s - 1",
+      "D": "2.7 × 10 - 2 s - 1 CK04 - 0341 1"
+    },
+    "correct_option": "A",
+    "explanation": "0 144"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_187",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 1 st order reaction takes 40 min for 30% decomposition calculate t 1/2 = ? (1) 84.3 min (2) 7",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 0 99% t A 2.303 t log K A =  (log100 = 2) = 2.303 100 2.303 log 2 K 1 K   ...(1) 99.9% 2.303 100 2.303 t log 3 K 0.1 K =   …(2)  ( = 3) 99% 99.9 t 2 t 3 = y = 2 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_188",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "32 min (3) 45.3 min (4) 42 min CK04 - 0340 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Depends on the concentration of reactant present in smaller amount."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_189",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant of a reaction at 500K & 700K are 0.03 s - 1 and 0.09 s -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) A → B C 1 = 0.05 C 2 = 0.03 \\Delta t = 30 sec Average rate of reaction = 2 1 C C t - \\Delta = 0.03 0.05 30 - (  - ( ) )  = 0.02 30 = 6.6 × 10 - 4 MS - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_190",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate value of Ea.",
+    "options": {
+      "A": "15987.13",
+      "B": "913.2",
+      "C": "459.53",
+      "D": "784.5 CK04 - 0342 chemical kinetics NEET : NCR [ Chemistry ] 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 0 99% t A 2.303 t log K A =  (log100 = 2) = 2.303 100 2.303 log 2 K 1 K   ...(1) 99.9% 2.303 100 2.303 t log 3 K 0.1 K =   …(2)  ( = 3) 99% 99.9 t 2 t 3 = y = 2 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_191",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate of reaction quadruples when temperature charges from 273 to 293K. If initial rate is 3.2×10 2 MS - 1 , final rate is -",
+    "options": {
+      "A": "6.4×10 2",
+      "B": "7.8×10 2",
+      "C": "9.5×10 2",
+      "D": "12.8×10 2 CK09 - 0110 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2A + B ⎯ → C + 3D r = K[A] 1 [B] 1 A = double r ' = K[2A] 1 1 B 4       B = 1 4 times r ' = 1 2 K[A] 1 [B] 1 1 r' r 2 = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_192",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant for 1 st order reaction is 70s -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) K = 2.303 100 log 20 100 25 - = 2.303 100 log 20 75 = 2.303 4 log 20 3 = 2.303 0.12 20  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_193",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How much time it take to reduce initial concentration of reactant to its th 1 12 value ?",
+    "options": {
+      "A": "0.055",
+      "B": "0.095",
+      "C": "0.035",
+      "D": "0.015 CK04 - 0344 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 0 99% t A 2.303 t log K A =  (log100 = 2) = 2.303 100 2.303 log 2 K 1 K   ...(1) 99.9% 2.303 100 2.303 t log 3 K 0.1 K =   …(2)  ( = 3) 99% 99.9 t 2 t 3 = y = 2 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_194",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction is 1 st order in A and 2 nd order in B. How is the rate affected on increasing the concentration of B three times ?",
+    "options": {
+      "A": "6 time",
+      "B": "8 time",
+      "C": "9 time",
+      "D": "4 time CK14 - 0099 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Depends on the concentration of reactant present in smaller amount."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_195",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction is 1 st order in A and 2 nd order in B, W rite differential rate equation for it.",
+    "options": {
+      "A": "r =K[A][B]",
+      "B": "r =K[A] 1/2 [B]",
+      "C": "r =K[A][B] 2",
+      "D": "r =K[A] 2 [B] CK02 - 0083 1"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 2A + B → C (For zero order) r  [A] 0 [B] 0 r = K[A] 0 [B] 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_196",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant for 1 st order decomposition of H 2 O 2 is given by the following equation : - logK = 15 - 3.75 × 10 4 / T Ea, for this reaction will be : (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Molecularity of any reaction can never be equal zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_197",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "80 1 × 10 4 (2) 675928 (3) 536428 (4) 975001 CK07 - 0114 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_198",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The time required for 10% completion of 1 st order reaction at 298 is equal to that required to 25% completion at 318K. If value of A is 2.8×10 10 s -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) On l owering the activation energy , the reaction becomes fast."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_199",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "91 KJ mol - 1 (2) 78.32 KJ mol - 1 (3) 30.07 KJ mol - 1 (4) 92.37 KJ mol - 1 CK07 - 0115",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_200",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The initial concentration of N 2 O 5 in 1 st order reaction - 2 5 2 2 1 N O (g) 2NO (g) O (g) 2 ⎯⎯ → + was 4×10 - 2 M at 328K, The concentration of N 2 O 5 after 60 min was 0.2×10 - 2 M, Calculate rate constant (k) = ?",
+    "options": {
+      "A": "0.049 min - 1",
+      "B": "0.375 min - 1",
+      "C": "0.125 min - 1",
+      "D": "0.278 min - 1 CK04 - 0339"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) K = 2.303 a log t a x (  ( ) - )  K = 2 2 2.303 4 10 M log 60 0.2 10 M - - (   ( )  )  K = 2.303 log(20) 60 K = 2.303 1.30 60  = 0.049 min - 1 chemical kinetics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_201",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In presence of catalyst, heat evolved or absorbed during reaction on -",
+    "options": {
+      "A": "D ecreases",
+      "B": "I ncreases",
+      "C": "Remains unchanged",
+      "D": "M ay increase or decrease CK21 - 0066"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Catalyst will only lower the required activation e nergy for the reaction. So the n e t change in enthalpy is zero."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_202",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of following statements is incorrect about the collision theory of chemical reaction ?",
+    "options": {
+      "A": "The collision of atoms or molecules possessing sufficient threshold energy results into product formation.",
+      "B": "Molecules should collide with sufficient threshold energy and power.",
+      "C": "It considers reacting molecules or atom to be hard spheres and ignores their structural features.",
+      "D": "A number of effective collisions determine the rate of reaction. CK08 - 0054"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) The collision of atoms or molecules possessing sufficient threshold energy results into product formation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_203",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Rate Law can be determined from the balanced chemical equation if -",
+    "options": {
+      "A": "The reverse reaction is involved",
+      "B": "Any of the reactant is in excess",
+      "C": "It is an elementary reactions",
+      "D": "It is a sequence of elementary reaction. CK01 - 0343 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) For an elementary reaction molecularity & order are same."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_204",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An El e mentary reaction is given below - A + B ⎯ → 2P + 7Q Find the order of reaction",
+    "options": {
+      "A": "1",
+      "B": "1.5",
+      "C": "2",
+      "D": "zero CK02 - 0081 chemical kinetics 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2A + B ⎯ → C + 3D r = K[A] 1 [B] 1 A = double r ' = K[2A] 1 1 B 4       B = 1 4 times r ' = 1 2 K[A] 1 [B] 1 1 r' r 2 = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_205",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider a reaction A ⎯ → B with K = 2.5 × 10 - 2 s - 1 , calculate the concentration of 'A' remaining after 200s, i f initial concentration of A is 1 mol L - 1",
+    "options": {
+      "A": "6.2 × 10 - 5",
+      "B": "6.7 × 10 - 3",
+      "C": "5.3 × 10 - 2",
+      "D": "4.7 × 10 - 2 CK04 - 0343"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) K = 2.303 100 log 20 100 25 - = 2.303 100 log 20 75 = 2.303 4 log 20 3 = 2.303 0.12 20  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_206",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Molecularity of a reaction can be.",
+    "options": {
+      "A": "Zero",
+      "B": "- 2",
+      "C": "1",
+      "D": "0.5 CK02 - 0082"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_207",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Activation energy is :",
+    "options": {
+      "A": "Always equal to energy of product molecules",
+      "B": "The energy difference between activated complex and the energy of reactant molecules.",
+      "C": "Always Equal to energy of reactant molecules.",
+      "D": "Summation of threshold energy and energy of product molecules CK08 - 0055"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) The energy difference between activated complex and the energy of reactant molecules."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_208",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following statements",
+    "options": {
+      "A": "Order of reaction is an experimental quantity",
+      "B": "Order of reaction can be zero o r fraction.",
+      "C": "Order is applicable to elementary as well as complex reaction.",
+      "D": "For complex reaction, molecularity of the slowest step is same as the order of the overall reaction. If slowest step does not contain any intermediate. The correct Statements is/are"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) ( a ) Order of reaction is an experimental quantity ( b ) Order of reaction can be zero of fraction. ( c ) Order is applicable to elementary as well as complex reaction. ( d ) For complex reaction, molecularity of the slowest step is same as the order of the overall reaction. If slowest step does not contain any intermediate."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_209",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The slope between log (a - x) vs t graph for 1 st order reaction is : -",
+    "options": {
+      "A": "- K",
+      "B": "- 2.303 K",
+      "C": "K 2.303",
+      "D": "K 2.303 - CK07 - 0113"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) log (a - x) = K log a t 2.303 -",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_210",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For 3 rd order reaction, unit of rate constant (K) is given by : -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) [ mol/L ] 1 - n Time - 1 [mol/L] 1 - 3 Time - 1 [mol/L] - 2 Time - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_211",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In gaseous reaction it is important for the understanding of the upper atmosphere H 2 O and O react bimolecularly to form two OH radicals. \\Delta H for this reaction is 72 kJ at 500 K and E a is 77 kJ, then E a for the bimolecular recombination of two OH radicals to form H 2 O and O is : -",
+    "options": {
+      "A": "3 kJ",
+      "B": "4 kJ",
+      "C": "5 kJ",
+      "D": "7 kJ CK21 - 0019"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) H 2 O + O   2OH \\Delta H = 72 kJ \\Delta H = E a.f - E a,b 72 = 77 - E a,b E a,b = 77 - 72 = 5 kJ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_212",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following mechanism has been proposed for the exothermic catalyzed complex reaction. A + B Fast   IAB 1 k ⎯⎯ → AB + I 2 k ⎯⎯ → P + A If k 1 is much smaller than k",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) For exothermic reaction \\Delta H = - ve H P - H R = - ve PE product - PE reactant = - ve A + B fast   IAB 1 K ⎯⎯ → AB + I 2 K ⎯⎯ → P + A for fast reversible reaction has low activation energy for second and third (K 1 << K 2 ) IAB 1 K ⎯⎯ → AB has more activation energy compare to AB + I 2 K ⎯⎯ → P + A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_213",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction takes place in three steps with individual rate constant and activation energy as follows - 1 2 3 1 a 2 a 3 a Rate cons tant Activation energy Step 1 k E 180kJ / mol Step 2 k E 80kJ / mol Step 3 k E 50kJ / mol = = = If overall rate constant, (k) = 2/3 l 2 3 k k k (  ( ) )  , then overall activation energy of the reaction will be:",
+    "options": {
+      "A": "140 kJ/mol",
+      "B": "150 kJ/mol",
+      "C": "130 kJ/mol",
+      "D": "120 kJ/mol CK21 - 0021"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) a -E /RT e = a a 1 2 a 3 2/3 E /RT E /RT E /RT e e e - - -        E a = 3  1 2 3 a a a E E E + -     = 3  [180 + 80 - 50] = 140 kJ/mol"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_214",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Under the same reaction conditions, initial concentration is 1.386 mol dm - 3 of a substance becomes half in 40 seconds and 20 seconds through first order and zero order kinetics, respectively. Ratio 1 0 k k (  ( ) )  of the rate constants for first order (k 1 ) and zero order (k 0 ) of the reactions is",
+    "options": {
+      "A": "0.5 mol - 1 dm 3",
+      "B": "1.0 mol dm - 3",
+      "C": "2.0 mol - 1 dm 3",
+      "D": "0.1 mol dm - 3 CK12 - 0044"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_215",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solution of N 2 O 5 in CCl 4 yields 5 mL of O 2 by decomposition after 20 minutes from the start of the experiment and 10 mL of O 2 after a very long time. The decomposition obeys first order kinetics. What volume of O 2 would have evolved, 40 minutes after the start",
+    "options": {
+      "A": "7.5 mL",
+      "B": "7.25 mL",
+      "C": "1.5 mL",
+      "D": "6 mL CK12 - 0045"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_216",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 CK12 - 0051 NEET : CHEMISTRY",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_217",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A certain reaction obeys the rate equation (in the integrated form)     (1-n) (1-n) 0 C - C = (n - 1) kt where n is the order of the reaction; C 0 the initial concentration and C, the concentration after time t. What is the unit of k for n =",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_218",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the following reaction; xA ⎯ → yB 10 10 d[A] d[B] log log 0.3010 dt dt     = +         A and B respectively can be",
+    "options": {
+      "A": "In - butane and iso - butane",
+      "B": "C 2 H 2 and C 6 H 6",
+      "C": "C 2 H 4 and C 4 H 8",
+      "D": "In 2 O 4 and NO 2 CK16 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 10 10 d[A] d[B] log log log2 dt dt     = +         10 10 d[A] d[B] log log 2 dt dt     =          d[A] d[B] 2 dt dt = 1 d[A] d[B] 2 dt dt = 2A ⎯ → B which is true for 2C 2 H 4 ⎯ → C 4 H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_219",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction of H 2 with I 2 , the rate constant is 2.5×10 - 4 dm 3 mol - 1 s - 1 at 327^\\circC and 1.0 dm 3 mol - 1 s - 1 at 527^\\circC. The activation energy for the reaction, in kJ mol - 1 is (R=8.314 JK - 1 mol - 1 )?",
+    "options": {
+      "A": "59",
+      "B": "72",
+      "C": "150",
+      "D": "166 CK21 - 0024"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rate constant K 1 = 2.5 × 10 - 4 dm 3 mol - 1 s - 1 T 1 (at 327^\\circC or 600 R) Rate constant K 2 = 1dm 3 mol - 1 s - 1 T 2 (at 527^\\circC or 800 K.) we know log a 2 1 1 2 E K 1 1 K 2.303R T T (  (  = - ( ) ( ) )  )  log a 4 E 1 1 1 2.5 10 2.303R 600 800 - (  (  = - ( ) ( )  )  )  4 a E 10 800 600 2.5 2.303R 800 600 (  - (  = ( ) ( )  )  )  log (4000) = a E 1 2.303R 2400  log 4 + log 1000 = a E 1 2.303R 2400  3.6020 = a E 1 2.303R 2400  E a = 1 (3.6020) (2.303) (8.314) (2400) kJmol 1000 - E a = 165.52 E a ≃ 166 kJ mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_220",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The given plots represent the variation of the concentration of a reaction R with time for two different reactions (i) and (ii). The respective orders of the reactions are .",
+    "options": {
+      "A": "1, 1",
+      "B": "0, 2",
+      "C": "0, 1",
+      "D": "1, 0 CK11 - 0022 time"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) time (i) ln[R] time (ii) [R] for zero order [A] t = [A] 0 e - kt [A] t = [A] 0 - kt Above graph above graph Follows first follows zero Order integrated order integrated Rate law. Rate law."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_221",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction, 2A + B ⎯ → C, the values of initial rate at different reactant concentrations are given in the table below. The rate law for the reaction is . [A] (mol L - 1 ) [B] (mol L - 1 ) Initial rate (mol L - 1 s - 1 ) 0.05 0.05 0.045 0.10 0.05 0.090 0.20 0.10 0.72",
+    "options": {
+      "A": "rate = k[A][B] 2",
+      "B": "rate = k[A] 2 [B] 2",
+      "C": "rate = k[A][B]",
+      "D": "rate = k[A] 2 [B] CK06 - 0022"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2A + B ⎯ → C Rate = k [A] x [B] y For given experiments. 0.045 = k (0.05) x (0.05) y …(1) 0.090 = k (0.10) x (0.05) y …(2) 0.72 = k (0.2) x (0.10) y …(3) (1) (2) x y x y 0.045 k(0.05) (0.05) 0.09 k(0.10) (0.05) = x 1 1 2 2 (  = ( ) )  x 1 = (2) (3) x y x y 0.009 k(0.1) (0.05) 0.72 k(0.2) (0.10) = ( ) ( ) 1 y 1 0.1 1 1 8 2 0.2 (  = ( ) )  y 1 1 4 2 (  = ( ) )  2 y 1 1 2 2 (  (  = ( ) ( ) )  )  y 2 = Rate = k [A] 1 [B] 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_222",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reaction, 2 X → B is a zeroth order reaction. If the initial concentration of X is 0.2 M, the half - life is 6 hr. When the initial concentration of X is 0.5 M, the time required to reach its final concentration of 0.2 M will be",
+    "options": {
+      "A": "7.2 h",
+      "B": "18.0 h",
+      "C": "12.0 h",
+      "D": "9.0 h CK11 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2x ⎯ → B For zero order reaction. Half life = 0 [x] 2k initial conc. = [X] 0 [X] = 0.2 M half life = 0 [x] 2k 6hr = 0.2 2k k = 1 0.1 hr 6 - [x] t = [x] 0 - kt Þ 0.2 = 0.5 - 0.1 t 6 t = 18 h"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_223",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the given plots for a reaction obeying Arrhenius equation (0^\\circC < T < 300^\\circC): (k and E 0 are rate constant and activation energy, respectively) Choose the correct option.",
+    "options": {
+      "A": "Both I and II are wrong",
+      "B": "Both I and II are correct",
+      "C": "I is wrong but II is right",
+      "D": "I is right but II is wrong CK22 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) K = a E /RT Ae - Arrhenius equation K and E a K  or  T Exponentially decreases Both graph are correct. 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_224",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following results were obtained during kinetic studies of the reaction; 2A + B ⎯ → Products Experiment [A] [B] Initial rate of reaction (in mol L - 1 ) (in mol L - 1 ) (in mol L - 1 min - 1 ) I. 0.10 0.20 6.93×10 - 3 II. 0.10 0.25 6.93×10 - 3 III. 0.20 0.30 1.386×10 - 2 The time (in minutes) required to consume half of A is",
+    "options": {
+      "A": "5",
+      "B": "10",
+      "C": "100",
+      "D": "1 CK06 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard chemical kinetics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_225",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Higher order (>3) reactions are rare due to",
+    "options": {
+      "A": "low probability of simultaneous collision of all the reacting species",
+      "B": "increase in entropy and activation energy as more molecules are invol v ed",
+      "C": "shifting of equilibrium towards reactan t s due to elastic collisions",
+      "D": "loss of active species on collision CK16 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Order than 3 is low probability of simultaneous collision of all the reacting species."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_226",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the noN\\cdot stoichiometric reaction, 2A + B → C + D, the following kinetic data were obtained in three separate experiments, all at 298K Initial Initial Initial rate of concentration concentration formation of C [A] [B] ( mol L - 1 s - 1 ) I. 0.1 M 0.1 M 1.2 × 10 - 3 II. 0.1 M 0.2 M 1.2 × 10 - 3 III. 0.2 M 0.1 M 2.4 × 10 - 3 The rate law for the formation of C is",
+    "options": {
+      "A": "dC k[A][B] dt =",
+      "B": "2 dC k[A] [B] dt =",
+      "C": "2 dC k[A][B] dt =",
+      "D": "dC k[A] dt = CK06 - 0020"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 2A + B ⎯ → C + D Rate  [A] x [B] y Rate = k [A] x [B] y From experiments 1.2 × 10 - 3 = k [0.1] x [0.1] y …(1) 1.2 × 10 - 3 = k [0.1] x [0.2] y …(2) 2.4 × 10 - 2 = k [0.2] x [0.1] y …(3) Eq. (1) (2) 3 x y 3 x y 1.2 10 k [0.1] [0.1) 1.2 10 k [0.1] [0.2] - -  =  1 = y 1 2 (  ( ) )  y 0 = Eq. (1) (3) 3 x y 3 x y 1.2 10 k [0.1] [0.1) 2.4 10 k [0.2] [0.1] - -  =  x 1 1 2 2 (  = ( ) )  x 1 = Rate = k [A] 1 [B] 0 ROR = d[c] dt = k [A] [B]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_227",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate of a reaction doubles when its temperature changes from 300K to 310K. Activation energy of such a reaction will be (R = 8.314 JK - 1 mol - 1 and log 2 = 0.301)",
+    "options": {
+      "A": "53.6 KJ mol - 1",
+      "B": "48.6 KJ mol - 1",
+      "C": "58.6 KJ mol - 1",
+      "D": "60.5 KJ mol - 1 CK21 - 0023 E a I"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) temperature T 1 = 300 K T 2 = 310 K Rate of reaction double. log a 2 1 1 2 E k 1 1 k 2.303R T T (  (  = - ( ) ( ) )  )  log(2) = a E 1 1 2.303R 300 310 (  - ( ) )  0.3010 = a E 10 2.303R (8.314) 300 310 (  ( )  )  E a = 0.3010 2.303 8.314 300 310 10 1000      kJ/mol = 53.6 kJ /mol"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_228",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plots showing the variation of the rate constant (k) with temperature (T) are given below. The plot that follows Arrhenius equations is .",
+    "options": {
+      "D": "CK22 - 0016",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) k = a E /RT Ae - in k = in A - a E RT on T  k  exponentially T k"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_229",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a first order reaction, A → P, the temperature (T) dependent are constant (k) was found to follow the equation: 2000 log k 6.0 T = + the pre - exponential factor A and the activation energy E a , respectively, are",
+    "options": {
+      "A": "1.0 × 10 6 s - 1 and 9.2 KJ mol - 1",
+      "B": "6.0 s - 1 and 16.6 KJ mol - 1",
+      "C": "1.0 × 10 6 s - 1 and 16.6 KJ mol - 1",
+      "D": "1.0 × 10 6 s - 1 and - 38.3 KJ mol - 1 CK24 - 0020"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) A ⎯ → P first order reaction k = a E /RT Ae - in k = in ( ) a E /RT Ae - in k = in A - a E RT 2.303 log 10 k = 2.303 log A - a E RT log k = log A - a E 2.303 RT On comparing Log K = 2000 T + 6 2000 = - a E 2.303 R 6 = log A a E 38.3 kJ / mol = - 6 -1 A 10 s ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_230",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following statement(s) is incorrect about order of reaction ?",
+    "options": {
+      "A": "Order of reaction is determined experimentally",
+      "B": "Order of reaction is equal to sum of the power of concentration terms in differential rate law",
+      "C": "It is not affected with stoichiometric coefficient of the reactants",
+      "D": "Order cannot be fractional CK09 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Order can be fraction, negative."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_231",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the chemical reaction, N 2 (g) + 3H 2 (g) ⎯ → 2NH 3 (g) The rate of this reaction can be expressed in terms of time derivatives of conc e ntration of N 2 (g), H 2 (g) or NH 3 (g), identify the correct relationship amongst the rate expressions.",
+    "options": {
+      "A": "3 2 2 d[NH ] d[N ] d[H ] 1 1 Rate dt 3 dt 2 dt = - = - =",
+      "B": "3 2 2 d[NH ] d[N ] d[H ] Rate 3 2 dt dt dt = - = - =",
+      "C": "3 2 2 d[NH ] d[N ] d[H ] 1 1 Rate dt 3 dt 2 dt = = =",
+      "D": "3 2 2 d[NH ] d[N ] d[H ] Rate dt dt dt = - = - = CK03 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) N 2 (g) + 3H 2 (g) ⎯ → 2NH 3 (g) Rate = - 3 2 2 d[NH ] d[N ] d[H ] 1 1 dt 3 dt 2 dt = - ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_kinetics_232",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Kinetics",
+      "chapter_name": "Chemical Kinetics",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Chemical Kinetics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A catalyst is a substance which",
+    "options": {
+      "A": "increases the equilibrium concentration of the product",
+      "B": "changes the e quilibrium constant of the reaction",
+      "C": "shortens the time to reach equilibrium",
+      "D": "supplies energy to the reaction CK23 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Catalyst shortens the time to reach equilibrium."
+  }
+]

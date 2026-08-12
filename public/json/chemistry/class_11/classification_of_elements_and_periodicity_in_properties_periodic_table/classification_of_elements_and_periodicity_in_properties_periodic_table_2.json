@@ -1,0 +1,3290 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_151",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following inert gases in decreasing order of E lectron G ain E nthalpy.",
+    "options": {
+      "A": "The > Ne > Ar = Kr > Xe > Rn",
+      "B": "Ne > Ar = Kr > Xe > Rn > He",
+      "C": "Ne > Kr > Ar > Xe > He > Rn",
+      "D": "Rn > Ne > Kr > Ar > Xe > He PT04 - 0880"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Correct order  Ne > Ar = Kr > Xe > Rn > He"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_152",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Group - 17 elements (the halogens) have very high negative electron gain enthalpies. Reason : - Because they can attain stable noble gas electronic configurations by picking up an electron",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. PT04 - 0881"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) G roup 17 elements (the halogens) have very high negative electron gain enthalpies because they can attain stable noble gas electronic configurations by picking up an electron.",
+    "assertion": "- Group - 17 elements (the halogens) have very high negative electron gain enthalpies.",
+    "reason": "- Because they can attain stable noble gas electronic configurations by picking up an electron",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_153",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion: - Noble gases have large positive electron gain enthalpies. Reason : - The electron has to enter the next higher principal quantum level leading to a very unstable electronic configuration.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. PT04 - 0882 classification of E lements and Periodicity in Properties - Periodic Table"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) N oble gases have large positive electron gain enthalpies because the electron has to enter the next higher principal quantum level leading to a very unstable electronic configuration. 16 Ans. ( 1 ) E lectron gain enthalpy of Oxygen or F luorine is less negative than that of the succeeding element. This is because when an electron is added to Oxygen or F luorine , the added electron goes to the smaller n = 2 quantum level and suffers significant repulsion from the other electrons present in this level. For n = 3 (S or Cl), the added electron occupies a larger region of space and the electron - electron repulsion is much less.",
+    "assertion": "- Noble gases have large positive electron gain enthalpies.",
+    "reason": "- The electron has to enter the next higher principal quantum level leading to a very unstable electronic configuration.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_154",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - E lectron G ain E nthalpy of Oxygen or Fluorine is less negative than that of succeeding element. Reason : - The added electron goes to smaller n = 2 quantum level and suffers significant repulsion from the other electron present in this level.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. PT04 - 0883"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles.",
+    "assertion": "- E lectron G ain E nthalpy of Oxygen or Fluorine is less negative than that of succeeding element.",
+    "reason": "- The added electron goes to smaller n = 2 quantum level and suffers significant repulsion from the other electron present in this level."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_155",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in decreasing order of electron gain enthalpy P, S, Cl, F",
+    "options": {
+      "A": "F, Cl, S, P",
+      "B": "P, S, Cl, F",
+      "C": "Cl, F, S, P",
+      "D": "F, S, P, Cl PT04 - 0884"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Correct order  Cl > F > S > P"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_156",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "E nergy is released when an electron is added to an atom, the electron affinity is taken as .",
+    "options": {
+      "A": "Zero",
+      "B": "Negative",
+      "C": "Positive",
+      "D": "can’t be predicted PT04 - 0885"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Depending on the element, the process of adding an electron to the atom can be either endothermic or exothermic. For many elements energy is released when an electron is added to the atom and the electron gain enthalpy is negative."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_157",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : - Electronegativity of a given element is not a measurable quantity. Statement - II : - It does provide the means of predicting the nature of force that holds a pair of atoms together.",
+    "options": {
+      "A": "Statement I is correct but statement II is incorrect.",
+      "B": "Statement I is incorrect but statement II is correct",
+      "C": "Both statement I and II are correct.",
+      "D": "Both statement I and II are incorrect. PT04 - 0886"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) I t is not a measurable quantity, it does provide a means of predicting the nature of force that holds a pair of atoms together"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_158",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The valenc y of representative elements is usually .",
+    "options": {
+      "A": "and",
+      "B": "Equal to eight minus the number of outermost electrons.",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Group 1 2 13 14 15 16 17 18 No. of valence e - 1 2 3 4 5 6 7 8 Valence 1 2 3 4 3,5 2,6 1,7 0,8"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_159",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Li thium and Be ryllium is more similar with M agnesium and Al uminium due to -",
+    "options": {
+      "A": "Diagonal relationship",
+      "B": "Horizontal relationship",
+      "C": "Vertical relationship",
+      "D": "None of these PT01 - 1043"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) T he behaviour of lithium and beryllium is more similar with the second element of the following group i.e., magnesium and aluminium, respectively. This sort of similarity is commonly referred to as diagonal relationship in the periodic properties."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_160",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reasons for different chemical behaviour of the first member of a group of elements in the s and p block",
+    "options": {
+      "A": "Small size",
+      "B": "Large charge to size ratio",
+      "C": "High electronegativity",
+      "D": "All of the above PT06 - 0568"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) The anomalous behaviour is attributed to their small size, large charge/radius ratio and high electronegativity of the elements."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_161",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Size of ionic radius of Fluoride ion (F - ) is 136 pm th e n atomic radius of ‘F’ will be -",
+    "options": {
+      "A": "180 pm",
+      "B": "146 pm",
+      "C": "64 pm",
+      "D": "250 pm PT02 - 0699"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Size of parent atom is always smaller than its respective anion. F¯ → F + e¯ Z eff  → size "
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_162",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assertion : - Anion with greater negative charge will have larger radius. Reason : - The net repulsion of e - will out weigh the nuclear charge.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. PT02 - 0690 NEET : NCR [ Chemistry ]"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Radius  -ve charge +ve charge Z eff = Z -  ( As  increases Z eff decreases.)",
+    "assertion": "- Anion with greater negative charge will have larger radius.",
+    "reason": "- The net repulsion of e – will out weigh the nuclear charge."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_163",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following species will have largest and smallest size respectively Mg, Mg +2 , Al, Al +3",
+    "options": {
+      "A": "Mg, Al +3",
+      "B": "Mg, Mg +2",
+      "C": "Al, Al +3",
+      "D": "Mg +2 , Al +3 PT02 - 0700"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) For isoelectronic species as positive charge increases size decreases.  Mg 2+ > Al 3+ (Size) On moving left to right in periodic table size decreases because Z eff increases.  Mg > Al (Size) Overall order : Mg > Al > Mg 2+ > Al 3+"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_164",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Electronegativity is -",
+    "options": {
+      "A": "and",
+      "B": "Inversely related to metallic properties.",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) E.N.  Z eff Metallic properties  eff 1 Z Non - m etallic properties  Z ef f"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_165",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which are correct match :-",
+    "options": {
+      "A": "Eka silicon - Be",
+      "B": "Eka aluminium - Ga",
+      "C": "Eka manganese - Tc",
+      "D": "Eka scandium - B"
+    },
+    "correct_option": "A",
+    "explanation": "22 21 B A C IIIB IVB VB 4 th 5 th 6 th 7 th 23 21 39 57 18 18 22 40 72 18 32 23 41 73 18 32 105 32 A = 40, B = 57, C = 105"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_166",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Atomic no. is the base of :-",
+    "options": {
+      "A": "Lothar meyer curve",
+      "B": "Newland octave rule",
+      "C": "Modern periodic table",
+      "D": "Dobereiner triad rule"
+    },
+    "correct_option": "A",
+    "explanation": "Lanthanum belongs to d block, 1 st lanthanoid is Ce (58)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_167",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the Dobereiner's triad all three element have same:-",
+    "options": {
+      "A": "Electronic configuration",
+      "B": "Properties",
+      "C": "Number of shells",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_168",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following type of elements were introduced in Moseley periodic table :-",
+    "options": {
+      "A": "Transition elements",
+      "B": "Transuranic elements",
+      "C": "Inert gases elements",
+      "D": "Lanthanides"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_169",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "IUPAC name of the element placed just after actinide series :-",
+    "options": {
+      "A": "Unniltrium",
+      "B": "Unnilpentium",
+      "C": "Unnilquadium",
+      "D": "Ununbium"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_170",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which pair of successive elements follows increasing order of atomic weight in mendeleev's periodic table",
+    "options": {
+      "A": "Argon and potassium",
+      "B": "Lithium and Beryllium",
+      "C": "Cobalt and nickel",
+      "D": "Tellurium and iodine"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_171",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is false :-",
+    "options": {
+      "A": "Elements of ns 2 np 6 electronic configuration lies in 1 st to 7 th period",
+      "B": "Typical elements lies in 3 rd period",
+      "C": "The seventh period will accommodate thirty two elements",
+      "D": "Boron and silicon are diagonally related"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_172",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The elements which occupy the peaks of the atomic volume curve are :-",
+    "options": {
+      "A": "Fe, Co, Ni",
+      "B": "Cl, Br, l",
+      "C": "K, Rb, Cs",
+      "D": "Ne, Ar, Kr PERIOD, GROUP AND BLOCK"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_173",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In 6th period of the modern periodic table, electronic energy levels are in the order of :-",
+    "options": {
+      "A": "6s, 4f, 5d, 6p",
+      "B": "6s, 6p, 4f, 5d",
+      "C": "4f, 5d, 6s, 6p",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_174",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Atomic number 15, 33, 51 represents the following family :-",
+    "options": {
+      "A": "Carbon family",
+      "B": "Nitrogen family",
+      "C": "Oxygen family",
+      "D": "None $//"
+    },
+    "correct_option": "A",
+    "explanation": "Li + & Mg 2+ [ due to diagonal relationship]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_175",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4d 3 5s 2 configuration belongs to which group :-",
+    "options": {
+      "A": "IIA",
+      "B": "IIB",
+      "C": "V B",
+      "D": "III B"
+    },
+    "correct_option": "A",
+    "explanation": "(i) 4 5 1 3 4 2 S Cl 3P 3P IE e e 3p 3p IE < ↓ - ↓ - > (ii) 2 3 2 1 2 1 6 3 P Mg 3s 3p 3s IE 2e 2e 3s 3p 2p IE - - > ↓ ↓ < (iii) Al Ga ≈ or Al > Ga (size almost same due to transition contraction) Al < Ga (IE) (iv) 2 1 2 2 1 2 2 1 2 B C 2s 2p 2s 2p IE e e 2s 2s 2p IE - < ↓ - ↓ >",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_176",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following match is correct :-",
+    "options": {
+      "A": "Last natural element - Uub",
+      "B": "General electronic configuration of IA group -ns 2",
+      "C": "Inert gas elements lies in 2 nd - 6 th period",
+      "D": "Typical elements - 3 rd period elements"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_177",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Transition elements are -",
+    "options": {
+      "A": "Alkali metals",
+      "B": "Metals of A-subgroups",
+      "C": "Metals of p-block",
+      "D": "Metals of B-subgroups"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_178",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Zinc and copper have similarity in their :-",
+    "options": {
+      "A": "Group number",
+      "B": "Electronic configuration",
+      "C": "Number of electron present in their 'd' sub shells",
+      "D": "Both are transition metals"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_179",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The formula for effective nuclear charge is (if  is screening constant)",
+    "options": {
+      "A": "Z - ",
+      "B": "Z + ",
+      "C": "Z  ",
+      "D": "Z "
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_180",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) M - (g)  M (g) (b) M (g)  M + (g) (c) M + (g)  M +2 (g) (d) M +2 (g)  M +3 (g) Minimum and maximum I.P. would be of :- (1) a, d (2) b, c (3) c, d (4) d, a",
+    "options": {
+      "A": "M -",
+      "B": "M",
+      "C": "M +",
+      "D": "M +2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_181",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct set of decreasing order of electronegativity is :-",
+    "options": {
+      "A": "Li, H, Na",
+      "B": "Na, H, Li",
+      "C": "H, Li, Na",
+      "D": "Li, Na, H"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_182",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of electronegativity of N, P, C and Si is :-",
+    "options": {
+      "A": "In < P < C < Si",
+      "B": "In > C > Si > P",
+      "C": "In = P > C = Si",
+      "D": "In > C > P > Si"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_183",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Electronegativity of the following elements increases in the order.",
+    "options": {
+      "A": "O, N, S, P",
+      "B": "P, S, N, O",
+      "C": "P, N, S, O",
+      "D": "S, P, N, O"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_184",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not correctly matched?",
+    "options": {
+      "A": "d-block element :",
+      "B": "p-block element : ns 2 np 1-6",
+      "C": "s-block element :",
+      "D": "Representative element : ns 0-2 np 1-5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_185",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following satement is not correct?",
+    "options": {
+      "A": "In 6 th period there are 18 elements in which atleast one e - is present in 5d subshell.",
+      "B": "Electronegativity of 'S' → H 2 SO 3 < H 2 SO 4",
+      "C": "Metallic character → P < Be < Mg",
+      "D": "Zn, Cd, Hg belongs to d-Block transition series."
+    },
+    "correct_option": "A",
+    "explanation": "Till 7 th period = 118 element (total magic no. addition) 8 th period = 50 9 th period = 50 10 th period = 72 Total = 290 elements"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_186",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is not correct?",
+    "options": {
+      "A": "Inert gases have a different number of outermost electrons then their group number",
+      "B": "In the sixth period the orbitals being filled are 6s, 4f, 5d, 6p",
+      "C": "Zn, Cd, Hg are non transition elements",
+      "D": "O -2 has the same no. of e - s in its outermost as well as penultimate shell"
+    },
+    "correct_option": "A",
+    "explanation": "22 21 B A C IIIB IVB VB 4 th 5 th 6 th 7 th 23 21 39 57 18 18 22 40 72 18 32 23 41 73 18 32 105 32 A = 40, B = 57, C = 105"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_187",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An element whose IUPAC name is ununtrium (UUT) belongs to :-",
+    "options": {
+      "A": "s-block",
+      "B": "p-block",
+      "C": "d-block",
+      "D": "ƒ-block"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_188",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "As per slater, if Z eff of sodium is 'x' then Z eff of calcium would be :-",
+    "options": {
+      "A": "x + 0.35",
+      "B": "x + 0.65",
+      "C": "x - 0.35",
+      "D": "x - 0.65"
+    },
+    "correct_option": "A",
+    "explanation": "(i) Group number of inert gas = zero group th group (ii) ( ) ( ) - - = ns n 2 f n 1 d np n 6 6s 4f 5d 6p (iii) 2 nd transition series = Y to Ag (iv) O -2 = 2 2 6 1s 2s 2p 2e 8e - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_189",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Lanthanoid contraction will not have any influence when we compare size of :-",
+    "options": {
+      "A": "Zr & Hf",
+      "B": "Y & La",
+      "C": "Mo & W",
+      "D": "Tc & Re"
+    },
+    "correct_option": "A",
+    "explanation": "3d series = 10 elements (21 to 30)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_190",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which one of the following pairs the radius of the second specie is greater than that of the first ?",
+    "options": {
+      "A": "O -2 , N -3",
+      "B": "Na, Mg",
+      "C": "Al, Be",
+      "D": "Li + , Be +2"
+    },
+    "correct_option": "A",
+    "explanation": "Lanthanum belongs to d block, 1 st lanthanoid is Ce (58)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_191",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pair of smallest and largest size species among Mg, Al, Mg +2 , Al +3 is :-",
+    "options": {
+      "A": "Mg +2 , Mg",
+      "B": "Al +3 , Mg",
+      "C": "Mg +2 , Al",
+      "D": "Al +3 , Al"
+    },
+    "correct_option": "A",
+    "explanation": "6th period all 32 elements contain 4d electrons because in 6 th period electron filled in 5d subshell. It means 4d already filled."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_192",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which pair the first atom or ion is not larger than the second :-",
+    "options": {
+      "A": "N, F",
+      "B": "Cl¯, Cl",
+      "C": "O, S",
+      "D": "Fe 2+ , Fe 3+"
+    },
+    "correct_option": "A",
+    "explanation": "IV period : 4s 3d 4P no. of orbital = 9 (one orbital occupy 3 electron) then no. of elements = 9 × 3 = 27"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_193",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following statement is incorrect ?",
+    "options": {
+      "A": "Greater is nuclear charge, greater is the electron gain enthalpy",
+      "B": "Nitrogen has almost zero electron affinity",
+      "C": "Electron gain enthalpy decreases from fluorine to iodine in the group",
+      "D": "Chlorine has highest electron gain enthalpy in periodic table"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_194",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following properties decreases from fluorine to iodine ?",
+    "options": {
+      "A": "Electronegativity",
+      "B": "Electron Affinity",
+      "C": "Ionisation energy",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_195",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is incorrect ?",
+    "options": {
+      "A": "The second ionization energy of sulphur is greater than that of chlorine",
+      "B": "The third ionization energy of phosphorus is greater than that of magnesium",
+      "C": "The first ionization energy of aluminium is less than that of gallium",
+      "D": "The second ionization energy for boron is greater than that of carbon $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_196",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The second ionisation energy is maximum for :",
+    "options": {
+      "A": "Boron",
+      "B": "Beryllium",
+      "C": "Magnesium",
+      "D": "Aluminium"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_197",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the ground state, electronic configuration of the elements given below, pick up the one with highest value of second ionization energy :",
+    "options": {
+      "A": "1s 2 2s 2 2p 6 3s 2",
+      "B": "1s 2 2s 2 2p 6 3s 1",
+      "C": "1s 2 2s 2 2p 6",
+      "D": "1s 2 2s 2 2p 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_198",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An element has successive ionization enthalpies as 940 (first), 2080, 3090, 4140, 7030, 7870, 26000 and 29500 kJ mol -1 , Then which group of the periodic table does this element belong ?",
+    "options": {
+      "A": "14",
+      "B": "15",
+      "C": "16",
+      "D": "17"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_199",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The incorrect statement among the following is :-",
+    "options": {
+      "A": "The first ionisation energy of calcium is more than first ionisation energy of galium",
+      "B": "The second ionisation energy of copper is greater than that of potassium",
+      "C": "The third ionisation energy of Mg is greater than the third ionisation energy of Al",
+      "D": "The IE 1 of Mg + is less than the IE 1 of Na +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_200",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is not correct 23 A B C",
+    "options": {
+      "A": "Atomic number of A, B, C are 40,57, 105 respectively",
+      "B": "Group number of A, B, C are IV B, III B and V B respectively",
+      "C": "Period number of A, B, C are, 4 th , 5 th and 6 th respectively",
+      "D": "C is a radioactive element"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_201",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following order/option is incorrect? (1) Total number of 'p' subshell electrons in liquid non metal is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "0.65 ( ↑ ) Na Mg Z eff x x+0.65 constant Ca [x+0.65]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_202",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(2) Total transition elements = 40 (3) Number of total '1s' subshell e - ⇒ Mg = Cr = He (4) Inert gases can be considered as non-metals",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_203",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following statement is incorrect in context to ionization enthalpy?",
+    "options": {
+      "A": "Ionization enthalpy increases for each successive electron removal.",
+      "B": "The greatest increase in ionization enthalpy is experienced on removal of electron from core noble gas configuration.",
+      "C": "End of valence electrons is marked by a big jump in ionization enthalpy.",
+      "D": "Removal of electron from orbitals bearing lower n value is easier than from orbital having higher n value."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_204",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "IP 1 , IP 2 , IP 3 , IP 4 and IP 5 for an element is 7.1, 14.3, 34.5, 46.8 and 162.2 eV respectively then element is :-",
+    "options": {
+      "A": "Na",
+      "B": "Si",
+      "C": "F",
+      "D": "Ca"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_205",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which process required maximum energy ?",
+    "options": {
+      "A": "Na",
+      "B": "Al +3",
+      "C": "Al +2",
+      "D": "Na +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_206",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "To which of the following atom, the addition of electron is most difficult ?",
+    "options": {
+      "A": "Radon",
+      "B": "Nitrogen",
+      "C": "Oxygen",
+      "D": "Radium $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_207",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The element having very high ionization enthalpy but zero electron affinity is :-",
+    "options": {
+      "A": "H",
+      "B": "F",
+      "C": "He",
+      "D": "Be"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_208",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following option is correct regarding following process ? (i) Cl E.A.  → Cl - (ii) Cl - I.E. → Cl (iii) Cl I.E. → Cl + (iv) Cl + I.E. → Cl +2",
+    "options": {
+      "A": "|I.E. of process",
+      "B": "|I.E. of process",
+      "C": "|I.E. of process",
+      "D": "|I.E. of process"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_209",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select process having exothermic step:",
+    "options": {
+      "A": "S -",
+      "B": "O",
+      "C": "N",
+      "D": "Al 2+"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_210",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Electron affinity of :",
+    "options": {
+      "A": "carbon is greater than oxygen",
+      "B": "sulphur is lesser than oxygen",
+      "C": "iodine is higher than bromine",
+      "D": "bromine is lesser than chlorine"
+    },
+    "correct_option": "A",
+    "explanation": "Li + & Mg 2+ [ due to diagonal relationship]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_211",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An atom with high electronegativity generally has:-",
+    "options": {
+      "A": "tendency to form +ve ions",
+      "B": "high ionisation potential",
+      "C": "large atomic size",
+      "D": "low electron affinity"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_212",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which two elements are in same period as well as in same group of long form of periodic table?",
+    "options": {
+      "A": "Z = 23, Z = 31",
+      "B": "Z = 65, Z = 66",
+      "C": "Z = 52, Z = 87",
+      "D": "Z = 58, Z = 46"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_213",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the incorrect option ?",
+    "options": {
+      "A": "HOCl < HClO 2 < HClO 3 < HClO 4",
+      "B": "P < S < Cl",
+      "C": "Fe < I < H",
+      "D": "Li < Al < S < Cl < O < N < F"
+    },
+    "correct_option": "A",
+    "explanation": "Atomic Number = 78 (Element - Platinum) as per e - configuration (3d 10 + 4d 10 + 5d 9 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_214",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total number of d-electrons in 46 Pd would be:-",
+    "options": {
+      "A": "10",
+      "B": "18",
+      "C": "20",
+      "D": "19"
+    },
+    "correct_option": "A",
+    "explanation": "(i) N > F (ii) Cl - > Cl (iii) O < S (iv) Fe +2 > Fe +3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_215",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Suppose an orbital may accomodate 3 electrons then the total number of elements in 4 th period:-",
+    "options": {
+      "A": "18",
+      "B": "27",
+      "C": "12",
+      "D": "45"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_216",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following fact is not explained by lanthanoid contraction ?",
+    "options": {
+      "A": "I.E. - Ag < Au",
+      "B": "I.E. - Hg > Cd",
+      "C": "Size - Hf  Zr",
+      "D": "Size - Y > La"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_217",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following property regularly increase from C to F ?",
+    "options": {
+      "A": "I.P.",
+      "B": "E.A.",
+      "C": "Shielding Constant",
+      "D": "All of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Ge > Br > C > F"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_218",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the correct statements among the following :-",
+    "options": {
+      "A": "As per slater effective nuclear charge for nitrogen is 3.90",
+      "B": "IP of Ne is more than Ne +",
+      "C": "Order of electronegativity- P < S < Br",
+      "D": "Order of acidic strength- H 2 S < H 2 Se <H 2 Te"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_219",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "C 39 A D E B On the basis of given part of periodic table, incorrect statement is :",
+    "options": {
+      "A": "A is an alkaline earth metal",
+      "B": "Atomic number of B is 103 which belongs to III B group",
+      "C": "Atomic number, group no. and period number of D are 72,IVB and 6 th respectively",
+      "D": "C is a transuranic element"
+    },
+    "correct_option": "A",
+    "explanation": "(i) 4 5 1 3 4 2 S Cl 3P 3P IE e e 3p 3p IE < ↓ - ↓ - > (ii) 2 3 2 1 2 1 6 3 P Mg 3s 3p 3s IE 2e 2e 3s 3p 2p IE - - > ↓ ↓ < (iii) Al Ga ≈ or Al > Ga (size almost same due to transition contraction) Al < Ga (IE) (iv) 2 1 2 2 1 2 2 1 2 B C 2s 2p 2s 2p IE e e 2s 2s 2p IE - < ↓ - ↓ >"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_220",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total number of elements of 5th period which have one or more than one 5d electrons :-",
+    "options": {
+      "A": "10",
+      "B": "16",
+      "C": "30",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_221",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following diagrams shows correct change in the polarity of bond ?",
+    "options": {
+      "A": "O - H S - H Cl - H F - H Decrease Decrease Decrease Increase",
+      "B": "O - H S - H Cl - H F - H Decrease Decrease Increase Decrease",
+      "C": "O - H S - H Cl - H F - H Increase Decrease Decrease Increase",
+      "D": "O - H S - H Cl - H F - H Decrease Decrease Increase Increase"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_222",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The first ionisation enthalpies of four consecutive elements present in the second period of the periodic table are 8.3, 11.3, 14.5 and 13.6 eV respectively. Which one of the following is the first ionisation enthalpy of nitrogen ?",
+    "options": {
+      "A": "13.6",
+      "B": "14.5",
+      "C": "11.3",
+      "D": "8.3"
+    },
+    "correct_option": "A",
+    "explanation": "1s 2 2s 2 2p 6 3s 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_223",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If atomic number of an inert gas is Z then an element with which of the following atomic number will has highest I.E. :-",
+    "options": {
+      "A": "Z - 2",
+      "B": "Z - 1",
+      "C": "Z + 1",
+      "D": "Z + 2"
+    },
+    "correct_option": "A",
+    "explanation": "I II III IV V VI VII VIII 940 2080 3090 4140 7030 7870 16000 19500 IE IE IE IE IE IE IE IE     Biggest jump between IP VI and IP VII so valence electron is 6 thus it belongs to group"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_224",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which option is correct match ?",
+    "options": {
+      "A": "La = 6 th period, IIIA group, d-Block",
+      "B": "Ga = 7 th period, IIIB group, f-Block",
+      "C": "Tc = 5 th period, VIIB group, d-Block",
+      "D": "Ra = 7 th period, IIB group, s-Block $//"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) 1 II e e 2 (g) g g IE IE M M M - - + +  →  → ( ) ( ) 2 (g) g (g) g 2 M M 2e ...(5) M M e ...(3) IE of M = 5-3 + - + - → + → + - - - - - - - - - - - → $//(1 TARGET : 202 5 INORGANIC CHEMISTRY 202 5 HS 48 to 53 ( ) 1 2 3 large jump 1 large jump 1 large jump 1 IE IE IE P 300 549 920 Non metal Q 99 734 1100 V.S.e 1 (IA) R 118 1091 1652 V.S.e 1 (IA) S 176 347 1848 V.S.e 2 (IIA) T 497 947 1500 (Noble Gas) - - - ] ] ] ] → ] → ] ] → ] ] ] (V.S.e -1 = Valence electron)"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_225",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the incorrect statement(s) :-",
+    "options": {
+      "A": "In general more the ionisation energy more will be electronegativity",
+      "B": "Electronegativity increases means metallic character increases",
+      "C": "In general lower will be the ionisation energy, higher will be reducing property",
+      "D": "Cl has higher electron affinity than F MATCH THE COLUMN TYPE QUESTIONS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_226",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column correctly ? (Column I) atomic no. (Column II) symbol",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "105",
+      "B": "113",
+      "C": "90",
+      "D": "118"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_227",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Column I Column II (A) Rare earth metals (P) S , As (B) Diagonal relationship (Q) Be, Al (C) Main group elements (R) Ce, Pr",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_228",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Periodic Table - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Column - I Column - II (A) Electron affinity (P) Depends upon effective nuclear charge (B) Ionisation potential (Q) Depends upon shielding constant (C) Electronegativity (R) Depends upon half filled and fully filled electronic configuration Que. 1 2 3 4 5 6 7 8 9 10 Ans 4 1 4 4 1 2 2 2 1 2 Que. 11 12 13 14 15 16 17 18 19 20 Ans 3 3 4 2 3 1 2 3 2 3 Que. 21 22 23 24 25 26 27 28 29 30 Ans 2 4 2 2 1 3 1 2 4 2 Que. 31 32 33 34 35 36 37 38 39 40 Ans 2 4 3 3 2 4 3 2 3 2 Que. 41 42 43 44 45 46 47 48 Ans. 1 4 4 2 2 3 2 3 Que. Ans. 50 A-P,Q,R ; B-P,Q,R ; C-P,Q",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_229",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct increasing order of the ionic radii is",
+    "options": {
+      "A": "Cl - < Ca 2+ < K + < S 2 -",
+      "B": "K + < S 2 - < Ca 2+ < Cl -",
+      "C": "S 2 - < Cl - < Ca 2+ < K +",
+      "D": "Ca 2+ < K + < Cl - < S 2 - PT10 - 0038"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rad ius  ve ve - + [ Ca 2+ < K + < Cl - < S 2 - ]"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_230",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given below are two statements: Statement I : The decrease in first ionization enthalpy from B to Al is much larger than that from Al to Ga. Statement II : The d orbitals in Ga are completely filled. In the light of the above statements, choose the most appropriate answer from the options given below",
+    "options": {
+      "A": "Statement I is incorrect but statement II is correct.",
+      "B": "Both the statements I and II are correct",
+      "C": "Statement I is correct but statement II is incorrect",
+      "D": "Both the statements I and II are incorrect PT15 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) B > Tl > Ga > Al > In (First I.E.) d - orbital in Ga is completely filled.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_231",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given below are two statements : one is labelled as Assertion",
+    "options": {
+      "A": "and",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) On going from left to right in a period I.E. (increases) In 3d series of elements successive filling of d - orbitals takes place."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_232",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total number of acidic oxides among N 2 O 3 , NO 2 , N 2 O, Cl 2 O 7 , SO 2 , CO, CaO, Na 2 O and NO is.",
+    "options": {
+      "A": "6",
+      "B": "3",
+      "C": "5",
+      "D": "4 PT21 - 0021"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Total acidic oxides are → 4 [N 2 O 3 , SO 2 , Cl 2 O 7 , NO 2 ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_233",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In elements, the incoming electron occupies which subshell after (n - 1)d subshell : -",
+    "options": {
+      "A": "np",
+      "B": "ns",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ns (n - 2)f (n - 1)d np"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_234",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which two elements are in same period as well as in same group of periodic table ?",
+    "options": {
+      "A": "Z = 23, Z = 31",
+      "B": "Z = 65, Z = 66",
+      "C": "Z = 52, Z = 87",
+      "D": "Z = 58, Z = 46 PT04 - 0105"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) z = 65 & z = 66 Belongs to same group and same period ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_235",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Total number of elements of 6th period which have one or more than one 4d electrons : -",
+    "options": {
+      "A": "10",
+      "B": "16",
+      "C": "32",
+      "D": "Zero PT02 - 0068"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_236",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Suppose an orbital may accomodate 3 electrons then the number of elements in IV period : -",
+    "options": {
+      "A": "18",
+      "B": "27",
+      "C": "12",
+      "D": "45 PT03 - 0085 1"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_237",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following fact is not explainable by lanthanoid contraction ?",
+    "options": {
+      "A": "I.E. of Ag < Au",
+      "B": "I.E. I of Hg > Cd",
+      "C": "Size of Hf  Zr",
+      "D": "Size of Y < La PT09 - 0010 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ns (n - 2)f (n - 1)d np"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_238",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following property gradually increases from C to F ?",
+    "options": {
+      "A": "I.P",
+      "B": "E.A.",
+      "C": "Shielding Constant",
+      "D": "All of these PT06 - 0075 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) z = 65 & z = 66 Belongs to same group and same period ."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_239",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the correct statements of the following: -",
+    "options": {
+      "A": "Effective nuclear charge for nitrogen is 3.90",
+      "B": "IP of Ne is more than Na +",
+      "C": "Order of electronegativity - sp > sp 2 > sp 3",
+      "D": "Order of acidic character - NH 3 < PH 3 < AsH 3"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) a . Effective nuclear charge for nitrogen is - (Zeff = z -  ) 2 2 3 n 1 n N : 1s 2s 2p -   Zeff = 7 - 3.1  = 4×0.35+2×0.85 [Zeff = 3.9] = 1.4 + 1.7 = 3.1 c . order of E.N. → sp > sp 2 > sp 3 % s character  E.N. d . NH 3 < PH 3 < AsH 3 O n going from top to bottom acidic character increases. 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_240",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which statement is/are incorrect ?",
+    "options": {
+      "A": "In alkali metals in a group, from top to bottom increase in size is maximum from Na to K",
+      "B": "Addition of e - in P atom will be exothermic",
+      "C": "IP of F is greater than its EA value",
+      "D": "Reaction O -"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rad ius  ve ve - + [ Ca 2+ < K + < Cl - < S 2 - ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_241",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to Slater's rule, the set of elements that shows incorrect order of Z eff are : -",
+    "options": {
+      "A": "Al > Mg",
+      "B": "Na < Al",
+      "C": "K > Na",
+      "D": "Sc < Ti PT06 - 0076 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) B > Tl > Ga > Al > In (First I.E.) d - orbital in Ga is completely filled."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_242",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pair of smallest and largest species of radii among Mg, Al, Mg +2 , Al +3 is : -",
+    "options": {
+      "A": "Mg +2 , Mg",
+      "B": "Al +3 , Mg",
+      "C": "Mg +2 , Al",
+      "D": "Al +3 , Al PT10 - 0040 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A, B & C 4 th , 5 th , 6 th period"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_243",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The order of basic character of given oxides is: -",
+    "options": {
+      "A": "Na 2 O > MgO > Al 2 O 3 > Cl 2 O 7",
+      "B": "MgO > Al 2 O 3 > Cl 2 O 7 > Na 2 O",
+      "C": "Al 2 O 3 > MgO > Cl 2 O 7 > Na 2 O",
+      "D": "Cl 2 O 7 > Na 2 O > MgO > Al 2 O 3 PT21 - 0022 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ns (n - 2)f (n - 1)d np"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_244",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of Ionic radii : -",
+    "options": {
+      "A": "Ti 4+ < Mn 7+",
+      "B": "Cr +6 > Cr 3+",
+      "C": "K + > Cl -",
+      "D": "P 3+ > P +5 PT10 - 0041 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) z = 65 & z = 66 Belongs to same group and same period ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_245",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which two are closest to one another in size ?",
+    "options": {
+      "A": "Li + and Na +",
+      "B": "Be +2 and Mg +2",
+      "C": "Be +2 and Li +",
+      "D": "Li + and Mg +2 PT10 - 0042"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) IE 1 of O < IE 1 of N (correct statement) O  1 s 2 2s 2 2p 4 N  1s 2 2s 2 2p 3 (Half filled)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_246",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect order of radius is : -",
+    "options": {
+      "A": "Sr +2 < Rb + < Br - < Se - 2",
+      "B": "Ni > Cu > Zn",
+      "C": "Co > Co +2 > Co +3 > Co +4",
+      "D": "Ba +2 < Cs + < Se - 2 < As - 3 PT10 - 0043 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rad ius  ve ve - + [ Ca 2+ < K + < Cl - < S 2 - ]"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_247",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following statements is incorrect ?",
+    "options": {
+      "A": "Greater the nuclear charge, greater is the electron gain enthalpy",
+      "B": "Nitrogen has almost zero electron affinity",
+      "C": "Electron gain enthalpy decreases from fluorine to iodine in the group",
+      "D": "Chlorine has highest electron gain enthalpy PT16 - 0014 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) B > Tl > Ga > Al > In (First I.E.) d - orbital in Ga is completely filled."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_248",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following properties among halogens decrease(s) from fluorine to iodine ?",
+    "options": {
+      "A": "Electronegativity",
+      "B": "Bond energy",
+      "C": "Ionisation energy",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) On going from left to right in a period I.E. (increases) In 3d series of elements successive filling of d - orbitals takes place."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_249",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is incorrect ?",
+    "options": {
+      "A": "The second ionization energy of sulphur is greater than that of chlorine",
+      "B": "The second ionization energy of m agnesium is greater than that of s odium.",
+      "C": "The first ionization energy of aluminium is less than as that of gallium",
+      "D": "The second ionization energy for boron is greater than that of carbon PT13 - 0022 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Total acidic oxides are → 4 [N 2 O 3 , SO 2 , Cl 2 O 7 , NO 2 ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_250",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of first ionisation energy is: -",
+    "options": {
+      "A": "C > N > O",
+      "B": "Mg > Al > P",
+      "C": "Li < Be < N",
+      "D": "T ℓ > B > In PT13 - 0023 3"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A, B & C 4 th , 5 th , 6 th period"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_251",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An element has successive ionization enthalpies as 940 (first), 2080, 3090, 4140, 7030, 7870, 16000 and 19500 kJ mol -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) z = 65 & z = 66 Belongs to same group and same period ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_252",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "To which group of the periodic table does this element belong ?",
+    "options": {
+      "A": "14",
+      "B": "15",
+      "C": "16",
+      "D": "17 PT12 - 0049"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rad ius  ve ve - + [ Ca 2+ < K + < Cl - < S 2 - ]"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_253",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Read the following statements: (I) Atomic size of following pair are almost same Fe, Co; Al, Ga ; Zr, Hf (II) E.A. order of Li, Be, B, C, N, O is Be < N < B < Li < C < O (III) Ionisation energy of Al < Ga & Zr < Hf (IV) Ionic radius O - 2 < F - < Na + < Mg +2 Select the correct statements(s)",
+    "options": {
+      "A": "I, III, IV",
+      "B": "I, II, III",
+      "C": "II, III, IV",
+      "D": "All of the above PT10 - 0044"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) ve charg e Ionic radius ve charg e -  +",
+    "statements": {
+      "S": "(I) A"
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_254",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The first ionisation energy of first atom is greater than that of second atom, whereas reverse order is true for their second ionisation energy. Which set of elements is not in accordance to above statement ?",
+    "options": {
+      "A": "C, B",
+      "B": "P, S",
+      "C": "B, Be",
+      "D": "Mg, Na PT13 - 0024 4"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) IE order [B < Be] Full filled configuration"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_255",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order by electron affinity for the following element is : -",
+    "options": {
+      "A": "If > Cl > O > S",
+      "B": "Cl > F > S > O",
+      "C": "Cl > F > O > S",
+      "D": "If > Cl > S > O PT15 - 0015 4"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) EN of nitrogen in all nitrogen compounds is not 3."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_256",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following Incorrect statements(s) among the following is/are ?",
+    "options": {
+      "A": "The first ionisation energy of calcium is more than first ionisation energy of Gallium",
+      "B": "The first ionisation energy of potassium is greater than that of neon",
+      "C": "The third ionisation energy of Mg is greater than the third ionisation energy of Al",
+      "D": "The IE 1 of Mg + is less than the IE 1 of Na + PT12 - 0305 4"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rad ius  ve ve - + [ Ca 2+ < K + < Cl - < S 2 - ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_257",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the incorrect second ionisation energy order from following option : -",
+    "options": {
+      "A": "Al > Mg",
+      "B": "Te > Sb",
+      "C": "Fe > Fe +",
+      "D": "In > Sr PT13 - 0025 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) B > Tl > Ga > Al > In (First I.E.) d - orbital in Ga is completely filled."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_258",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If I.E. of Na, Mg and Si are respectively 496, 737 and 786 kJ mol - then I.E. of A \\lambda in KJ mol - would be : -",
+    "options": {
+      "A": "575",
+      "B": "760",
+      "C": "390",
+      "D": "1120 PT11 - 0029 4"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Total acidic oxides are → 4 [N 2 O 3 , SO 2 , Cl 2 O 7 , NO 2 ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_259",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of metallic character is : -",
+    "options": {
+      "A": "P < Si < Be < Mg < Na",
+      "B": "Si < P < Be < Na < Mg",
+      "C": "P < Si < Mg < Be < Na",
+      "D": "Si < P < Mg < Na < Be PT20 - 0012 4"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A, B & C 4 th , 5 th , 6 th period"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_260",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following statements is incorrect in relation to ionization enthalpy?",
+    "options": {
+      "A": "Ionization enthalpy increases for the removing each successive electron.",
+      "B": "The greatest increase in ionization enthalpy is experienced on removal of electron from core noble gas configuration.",
+      "C": "End of valence electrons is marked by a big jump in ionization enthalpy.",
+      "D": "Removal of electron from orbitals bearing lower n value is easier than from orbital having higher n value. PT11 - 0032 4"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ns (n - 2)f (n - 1)d np"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_261",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which process requires maximum energy ?",
+    "options": {
+      "A": "Na",
+      "B": "Al +3",
+      "C": "Al +2",
+      "D": "Na +"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 3 4 (g) (g) Al Al e + + - ⎯ ⎯ → + Requires maximum energy."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_262",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Amongst the following the incorrect order is: -",
+    "options": {
+      "A": "IE 1",
+      "B": "IE 1",
+      "C": "IE 2",
+      "D": "IE 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Mg → 1s 2 2s 2 2p 6 3s 2 For 2 nd I.E. → 1s 2 2s 2 2p 6 3s 1 one e - is to be removed. Na → 1s 2 2s 2 2p 6 3s 1 For 2 nd I.E. → 1s 1 2s 2 2p 6 2 nd I.E. [Na > Mg] due to presence of full filled orbitals. 5"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_263",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct?",
+    "options": {
+      "A": "Number of e - in",
+      "B": "6 th period contains 10 elements which have one or more 6d electrons",
+      "C": "In the 8 th period, subshell used will be 8s, 5g, 6f, 7d, 8p",
+      "D": "B oth"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) EN of nitrogen in all nitrogen compounds is not 3."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_264",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The increasing order of electron affinity of the electronic configurations of element is: - (I) 1s 2 2s 2 2p 6 3s 2 3p 5 (II) 1s 2 2s 2 2p 3 (III) 1s 2 2s 2 2p 5 (IV) 1s 2 2s 2 2p 6 3s 1",
+    "options": {
+      "A": "II < IV < III < I",
+      "B": "I < II < III < IV",
+      "C": "I < III < II < IV",
+      "D": "IV < III < II < I PT16 - 0015 5"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Rad ius  ve ve - + [ Ca 2+ < K + < Cl - < S 2 - ]",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHAAAABBCAIAAAA2fcSWAAAby0lEQVR42u3dyXNU1/k38HPuPXe+3S0hGgmJwYB5CYMMIiJgJKM4jl/8ZpF9VqnKHxIcO6aSSjnOKouUnaRcYZWVK6HKBMRg5plQiQOJjSsYgYSQerzzcN7FE/rHDwOFiJAa/P0sTrkQ7ka3W1330XPO9+FSSgYwV6SUSZIIIRRFYYylaZrnOWNM1/U9e/bs2bNnYmJCCKGqapZlvu/bto2LNo/SNFVVlV4sKSXnXEoppazX61u3bv3Rj340MjKS53mz2bRtWwjBGMuyTFVVxlgcx7quM8bq9XqxWMTFBAAAgOeSwCWAuZTnua7rSZJEUWRZFmMsDMNisfinP/3pj3/849GjRzVNK5VKWZblea4oyuTkJC7a/BbAYRgqiuK6Lufc87wsy0zTXL9+veu658+fD8NwaGioWCzmee55nmVZ9MLR/0sPgmoKAAAAUFABzA7OeZZlmqYJIRqNRqFQMAzj9OnTP//5z69evZokieM4URQ1m01FUdCemneKoiiKommaqqphGIZh2NHRsXz58v7+fsuyrl27dufOHcuyhoaGqKmoKAo1sui1bjWpAAAAAJ7b+1ts+QM2tx2PKIpM08zzPEkSwzBOnTq1a9euY8eOua7rui79hdbuMlyxedeqpmhf3/r16/v7+7u6uur1epIkUsrOzs4dO3Zs377dNE3GWJqmnHNVVfM8T9OUXkqUVQAAAMDQoQKYFaZpthpQ586de+eddw4dOrRo0SJFUZrNZhRFuq7btp1lWRAEdCwH5rcG9n2/2WwWCoV169Z94xvfKJVKlUolCALHcRRFuXnz5tGjR13X3bJlC+dcURQ6Gqdpmq7rrYYVAAAAAEOHCmBWbtDpP06cOPHWW2/t37+/t7fXMAzf933fF0IYhhFFUZZljuPgcs27JEnCMHQcp7+/f9OmTbZtVyoV6i4yxlRVlVI2m82+vr7h4eFXXnlF0zTGWBzHqqrSV1FQAQAAAEOHCoDNUiiF53mapl24cOGdd975y1/+4jiO4zj1el1RFMdxNE3jnAdBIKU0TbPRaOCizS+qptasWfPiiy9qmtZoNIIgKBaLmqZR3WsYhhBibGzs0KFD9Dc7OjqEEHmeU7gI5xydRgAAAGDoUAH89ygJ/ezZs7t37z5w4IDjOJZl3blzZ8GCBaqqNpvNOI4LhYIQIooidDZYe7QTV61aNTg42NnZOTU1labpggULqG2laRqdeSsUCrqu37lzZ9GiRTt37ty8eTP1qaiEptA/AAAAABRUALMwb2r//v1vv/322bNn+/r6OOfT09PFYjEIAlw0Nt9pfpzzPM/plaJQkHq9PjQ0NDAwoCiK53mqquq6nmXZI153y7J27tz5yiuvsLujqGjFfCoAAAB4Pu+jcAmAPbV5UxQswe7uHKNq6he/+MX58+cXL14shKhWq4wxVFPtwPO8VsmUpmkURaqqDg0NvfDCC0KIVl4fxU48oqCqVqtHjhw5ceKElJIeStd1qtPkXQzzqQAAAAAFFQB7jHlTdA6KoiZOnz799ttvHz9+nPby3b59O45jy7LiOMYVY22wtU9VVc55FEVhGLquu2rVqoGBgXK5TKehqIt1b0X0wMexbfv27dsff/zxkSNH0jQVQsRx3OqAEbziAAAAwBBKAfDogopy3qhNwRi7ePHirl27zp49u3jxYsbY1NRUnueO41C+Nq7YvHNdV1GUMAw9z3McZ/Xq1f39/YqixHFMe/zoZUqSJM/zh4VM0MjmYrFYq9X27dvHGBsZGaE3gJSSdv1Rv4vOyGE+FQAAADB0qADYw+dNhWFoGEZr3lRfX5+u69VqNc/zRYsWqapar9cpgBvm9wyVqqpRFHme57ru+vXr16xZUywWPc8Lw5DaU3TCSkpJR6EeSFXVWq2WJElnZ6fv+wcPHjx58mTrKbIsS5JEURT9Llx5AAAAYAilAGCPPW/KsqxqtUo7/VRVDcOQSq9H5BzAHNA0LY5j3/cty9qwYQPNm6pWq5RiT4em6ByUEIJaTA98nCzLTNNMkkRVVU3T6vX6okWLRkZGtm3bhvlUAAAAwNChAmCPHUrRbDajKDp58iTNm7Jt23Gc6enpPM8LhYKiKLVajTFm23aSJLhi8179pmna0dGxYcOGdevWua6bJAlt19R1XVVV6k1RbOMjqt88z13X1TSt2WzmeW6a5vj4+L59+y5cuEABJEII2vuXpunDqjIAAAAAhg4VMMybetC8qYULFwZBEMexpmmGYdAeMAoqwEWb3zNvjLGVK1cODg4uWLCgUqnked7V1dVoNLiqsFzGaSIUVehanmZBFJq6ITnjkt23Gpre9D2VK4Zl5mkWp4nCOFN4R7H0f9/Y+c2BzULTOGOSMYn5VAAAAICCCoCOxNChGnov5XlOO/oOHTr0k5/85MiRI93d3bqu12q1YrGIZhR7puZNSc5yxhT2364szw3L+n87dw6/skNhLExiU9PTLNVUgflUAAAAgC1/8LXubKiqmmWZ7/t0m07ncEZHR3/5y19eunRp+fLltm37vq9pGqop9kzNm+Lqfz4f8v96TfO8Wq0eOnLk+InjGZO6psdZqqgC86kAAAAABRV8ramqSgkEtm03m02KIjhz5sybb775ySefUPNqeno6TVPHcVBQsedl3tQTPK9lWRMTE/+ZT5WlQhVxgvlUAAAAwDCHChjmTQkhOOemaTLGzp07t3v37mPHji1fvlwIMTExkWVZoVCgs1K4YuzZmTeVyYfOm2IzTxFUVbVYLFar1Y8//pjRfCoN86kAAACAoUMFX3eO49Tr9SiKhBCnT5/evXv3oUOHenp6NE2jYLfu7m5N0xqNBlVc8BzMm3qC563VanEcd3Z2ep43Ojp64sQJzKcCAAAAhlAKAMo2UBTl5MmTu3bt2r9//5IlS2jGVJ7nuq5zzmmzH45RsWdq3pSqiTRN89l43iiKTNNM05TObtXr9e7u7pGRkeFtL2M+FQAAADB0qOBri+IokiQ5fvw4Te91Xdc0zVqtJqUsFoucc/pvx3Ewd4g9L/OmnqDqdl1XCNFsNmn4L+ZTAQAAAEOHCoASri9cuPDmm28eOHBgwYIFpmmOjY11dXXled5qTFHpJaXE6KG2nTdFQRQUMaJpWpZlQRQahpHP0pY/z/MURbEsi94Y1BDrKnXs3Llz8+bN9Cah0gtvEgAAAEBBBc8bStNujZxijEkpwzCkeVO7du06evRoT0+PYRjVatVxnFlsbgB7ok4UnYaisL7W6ORqtTo0NLR582ZqFrWiIB5Yw0j+P7nnT0keJ7Ztv/HGGyMjI4yxKIoMw0iShCo6zKcCAAAAhi1/wJ6j4zd5nnueR/frnudRNfXuu+9eunRp2bJlrXlT2LLF2iDOPgzDMAyFELquJ0kShiHnvDVvinb6UZtoFsMnnkC1Wj18+PCxY8fyPDcMI01TeqdhPhUAAACgoILn6gad7nQdx2k0GvQnZ8+epd4UTRNqzZvCNKF2SPNTFIXCyuM4DsPQcZyVK1du2rSpXC7TaaVWoB/FiswX27YnJyf37dt35MiRJEmEEFEUYT4VAAAAMMyhAvZ8nb2hm13GmGEYnPOzZ8/+7Gc/O3r06LJly1RVvX37tpSyVCph3hRrjy1/982bWrNmTX9/P9VXdE5J13U6NJXneesIE5vztqcQgnaKtuZTGYaB+VQAAADA0KGC54xlWZ7nJUmi6/rx48d37959+PDh3t5eXder1aqUsru7WwiBeVPtUwOHYdhsNguFQn9//7p162gGFMXZU9E770khQoh6vZ6maWdnp+/7Bw8exHwqAAAAQCgFsOe16UF34SdOnPjxj388Ojq6ZMkSTdN830/T1DAM2hZIA2FxjIrN9xbNOI6DILBtu7+/f2BgwHGcarVKh6bu3eynKIoQ4oEhInMQSiGT1DRNihak4qpcLo+MjAwNDWE+FQAAADB0qIA9R/Omms1mEATHjh376U9/Ojo6WigUTNOk3tS986Zs28b03jZ5yWje1Nq1a23bDsOQTsHdO29KVdXZnTf1BFV6oVDQNK3ZbFIoBeZTAQAAAEOHCp4/jUajUCicOXPmrbfeOnz4cFdXl2EYX375ZblcTpIkjmPOOZ2tStO0FXgNbP5CKRhjK1as+OY3v9nZ2Tk9PZ1lWVdXl+d5qiZYLtM8U7kidC1LUi/wbdOSnHHJ7lufdlqFrRvNZpNzbppmmqatUryrqwvzqQAAAAAFFTx7WretreE/rXlTH3300a9+9aszZ844jmPbdhRFraM4wOavDSWEoB1x1MARQmiaVqlUtm/f/tJLL3HOad6UYRhZljGF54wpjD3m+rSpD/n48X2/s7Pze9/73tDQkJQyz3NVVWlnYJZlmqZJKektyjmvVCqdnZ14MwAAAABDyh+wNuhseJ5HwWuUVa3rummaJ0+e/OCDDy5duuS6bhRFtFOrUqlQIBvMY6hDlmVxHFNIOiWMN5vNzZs39/b20nhcCk/nnEvOqPzNH3udx++rWq0eOHAgCILt27fbtt2aT8XuRm60phWjmgIAAACcoYL2ukenMikIAspJn5qa2rt377lz58Iw7OrqsiyL7mjR3mRtED6RZRltmeOc+77PGFu4cOHGjRsXLlxIR48o1OHZ+r46OjqEEOPj41euXBkfH6e3JSX+tb6XVvYJ3ocAAACAggraRZIkVE01Gg1KLBgbG/v973+/Z8+eKIoMw6hUKnSD3mw20Z5ibRC9qCiKZVmUlReGYblcppZOlmVBECRJQqEOVHc9K98XbSg1TXNiYuLAgQNXr15ljFH5RN8LFVTUkcPYXwAAAGDY8gdtQtO0NE1931dV1XGcsbGx999//ze/+c3U1FR3d3eapmEYOo6jqqrv+5ZltbZgwbxobYSr1WpZli1dunT9+vWrVq2q1Wr00lCPkUoRRajPSk0Vx7EQQtf1er1++fJlVVVd1+3r62uVW3QqrJWojncCAAAAMIRSAGubJhVFq42Pj//617/+8MMPr1+/vnz58iiKWjfoWZbRFCOEUrD57lAJIXzfD8Nw6dKl3/rWt5YuXZrnOZUcQojWeFwpJVO4qqptVQGrD//4aUW9U3L62rVrv//97y9cuJAxlud5GIZUUOE9AAAAACiogLVhyt/t27fff//9Dz744ObNm11dXVmWTU9PCyFc16VUdF3XMW+qTQb4MsbK5fL69etffPFFIUStVtM0rVVN0c+4lDLJUiHEM1FQJUlimmYYhqqqWpY1OTnJOd+4ceMbb7yxbNkyOk/VOkLGGGulqwMAAACgoIL55Pu+bdvVavXDDz987733xsbGenp6GGNZllHudhRFnHMquhRFQU01v0zTrFQqCxcu3L59+6pVq4IgCILAsqw0TRVFyfOcosZN05RShnH0rHSoKJ+Q+p/Uhcvz3PO8LVu2DA8Pr1y58t5fAbTmbgEAAACgoGJfwy1brV1zdAd5760hjTqlVD02V5v9giB477333n333SiKurq6oiiiW3O8WGxeoxfjOLYsS1GURqMhhLBtO47jqamptWvX9vf3l8vl1iiqe6Pw/tebjc9/Hvrjb/ljD+mgvvDCC6+//vratWsZY2EYcs5pEhfeJAAAAMCefm7WvalscRxrmibuvbO/70Yfl2wuyypKuKYdd3R3SENLdV2XUvq+nyQJpUHM1jNSLUddpjRNDcPQNO3GjRu//e1vf/e736Vp2tPTE4ZhFEWFQgFBaqwNRoTV63VVVW3b5pzX6/UgCFavXr1ixYpyuUwtHXrPJEnywLNtsv3Ouylyxp9it27dunz5smVZ3d3dhmGgNwUAAABz5r5bLEVROOf8D3/4A93N53lOd9gEHYm5fFVawdatlyCOY/oSnYQJgiDLMtu2Z+t1oRQ1KSVN6dV1nXZV/fOf/9y7d++1a9fK5bJt25Re/dV3D7A5PyuV53kQBLquu67baDSiKCqXyz/4wQ+WLFlSKpUoIZ1aWL7vP6KgeqY7VJzzZrNpWVZvb2+pVKJfB4RhaJom3iQAAADAnvKOoSiKTNOk0omGsi5cuFBcvnyZeiOtw+uKomCL1zzWV4RO29MOLgrWo6/Sn8zKE1mWlSRJo9GwbbtUKk1OTl69evXixYtJkvT29gohKpUKpVCEYYiXZn7RdlDXdYUQjUaj0WisXLlyZGSkp6eHfqrpR5h6U3meP69b4BzHkVImSTIxMTE5OdmaSYXPKwAAAJiDG3WKFaD8ZBoHunz5ckHDMelvUKVFrStspGFztdnvvlKK/oTG7FCrKkkS6lOlaarr+mw9b5qmUspCoaDreq1W+/zzz69cuaJpGt2wKopimmYcx1EU2bYdBAFeLDbf6YuqqgZB0Gg0ent7h4eHBwYGhBB00I5zTgOp7q3Av/Ix0Fra5oNphn8/CAL6TumHha6JruvYkgoAAABzcD9GczKpeqLhLsViUdC+L2pJ3bvlD2eo5rKmav1+vbX9kjZ3OY6jaVqSJFmWCSFoV95sPannebquF4vFWq12+fLlf/3rX57nOY5DlVscx7quq6qapilNoIJ5/42I7/txHHd3d3/7298eHBykmbZxHEspaSgTNTBbWertv+WPzfBjhj7C6FumT60wDGn/Kt4kAAAAwJ7yjiGqo7Isu3c4jfjhD3/4wAgKFFRzWezS1aY6liIi/vznP09MTFQqFdd1afsfbfqarS1/lmXRxsIwDG/cuHH9+vUgCEqlUq1Ws23btu0kSSi3hHL/ZqszBuy/mDfFOV+2bNng4ODmzZsdx/E8TwhBTcXWiTt6Iz2ww/wchFLU63X6FQNdE+pQtSpJAAAAAPaUf8dNt+6KolAjREopVq5c+eDz6yio2Jzu+rv3DjjLMs/zPvnkk3//+9+cc8dxwjCkW8bZGmDqeR6dofriiy8+/fTT6elpSocrl8sTExOqqhYKhTRNgyAwTdNxHMybYvN9CJJSSTZu3Lhjxw4hRL1eLxaLnucpQmVZHsaRwrhuGlyyKIkVxiVnXLL/tbZbe+ruv+f+f+fDV13XTdvSkzRKYillJnPGmGboUsrHfASsWLFixYoVK9YnWzVV5EyqXOGqYuhGmmcyy1VNYGtfmwrD8NSpU6Ojo7dv3+7o6GCMBUFA1ZRhGFEUJUlCKfhSStu2fd9/WBlNpRrtJGwd1qKU7c8///zcuXPT09OlUkkIUavV7k3Wh/aZNzU2NrZ+/fodO3a89NJLdKSNdoEyheeMKYw95tqeHv/fjxUrVqxYsWLFOo9rJqXKeZrnpq77YcilXLdhAwqq9pUkydmzZ0dHR2/duqVpGu3UpCP4rSlSvu+naeq6Lnv4VrEgCBRFsW27daafgvuuXLly5cqVWq3WOjWHdMd2KKjo0Fpr3pTneUEQrFixYvv27QMDA7ThzTRNzrkfBkIIvGAAAAAAbK52ltGuP13XwzCUUm7YsAFRfm0qTVNN07Zu3fryyy/39fVRcAUdfKLTTVQsUVLFo4dE0RZP2jFIORNxHFOm35dffpkkCVVoaZpi2FSb/JRScSuEoBSKnp6eHTt2bNq0qaenhw7U0VdxuQAAAADmHTpUbYqC9XRdj6Lo4sWLBw8eHBsbKxQKtCWM8gkMw2gFjDziddR1nU5DGYbhOE6tVhsbGztz5kwYhhTITqkGaZpSFiQu/rwfdqRS2fO81rypjRs3CiFovG8rwiRnUkqJDhUAAAAAQ4cK7mMYBk2gMk1zYGBg69atixcvrlaraZqqqko7vqIoollSj4g1bw0molht3/evX7/+17/+lVIoXNfVNI0epDWRDNh8Rz5+dd4U5S56nkc/xtSlfF6n9wIAAAA8Q1BQtS8auRvHsWEYr7766muvvbZo0aJareZ5HmOM9um1JrqyR85CzbLMcZwsyz777LO///3v4+PjpVLpvnk+NMsIl521x7ypMAzvnTdFcYuFQoEx1nrVaBgCAAAAAKCgAvbVM1Ts7t6/JElUVd2yZctrr722ZMkSyqLgnOu6rigK7f17xA069SVrtdq1a9c+/fTTyclJXddpoHOapvRE9Ndw2VkbzJuiaXHLli37zne+Q/OmWlPIWl1EGsGE4UsAAAAAKKiAPSLtjTFWKBSo8tE0bdu2bcPDw4sWLUqSREpJw3bjOH7Elj/a16eq6tjY2N/+9rdbt24pikIDfBVFMQwjz/M0Tel8ThiGuPLtMG9K13WaN1Uqler1uuM4QgjaBCilNE2ToikQyQgAAADAEEoBbObzqfbv3z85OdnZ2amqahRFhmG0MvqyLKNKTL1rVuZN3Tt3mH3ljBYeZ6aPQ+UrxYp4nteaNzU1NbVy5crXX399YGCAzkpRz+qBjy/5/8zGBQAAAAA2H6EUiHR7xpimOTQ0pOv6gQMHxsfHDcMQQkRRROl8URRpmlYqlRqNhu/7pVIpy7KrV69euXIliiLXdWnzmGVZbOZhCTMqJPA4j34cOhpHX3VdN03TZrOZ5/nq1auHh4fXrl1LoYtU9+Z5PtN/DwAAAADMDRRU7JlLgaP5VL7vnzp1anJyMk1Ty7KazSZF+UkpaVZvsVhUFOWzzz6jeVO2bbuuS8GApmnO9PjNwzqZM+1w4nHY3RTHPM89z7Ntu1gs1uv1NE07OztffvnlwcHBjo6OO3fu0MG2h7WnAAAAAAAFFcwY7ejTdX14eNhxnNHR0Zs3b+q6rut6kiSWZfm+Pz09vWTJEsuyLly4cOnSpTAMbdumQ1mKotAuwZk+78Pu6WcaNIfHYfeET1C2RL1ebzabfX19g4ODmzZtEkLU63VFUSjRno7P4bgUAAAAAAoqmAWapjWbTcYYzafyPO/EiRM3btwol8s0kIpzXi6XhRBXrlw5duxYFEWO41BSHBVUFJI+06bHbDVJ8Djsbpa9pmmu6/q+PzU11dvbOzQ0tHXrVtu2K5UK55wGT1E1hQBGAAAAABRUwGZry5/rulLKOI5N03z11Vdt2967d+/k5KTruowxx3E0TfvHP/5x+vTpJEmKxWKWZVEUUcA61VQUDzgrZ4To7BYeZ6aPQ2EhNG+qr6/vu9/97rZt2+g4nKZpjuNIKRuNhhCCjjyipgIAAABAQQWzIIoiy7I457RtT9f1LVu2xHG8f/9+ak/5vv/FF19cvHixUqkUi0XGWJIkFBZHXRQpJY3xnZWCAY/zZI9jGIbv+zRvamhoaHBwsNWbosiQOI4ppDGO4yzLZlrgAQAAAMBcFlQ5YwrWZ2FlmqYFQWAYRqFQSJKEMiq2bdvGGDt48GClUrl9+/bBgwcbjUZvb2/rBl3Xdbovp9S4IAjYzAfOsoek1eFxnuBxwjCMoqirq2twcHBwcJAxNjEx0dXVVa/XkyRpNpuc80KhEEVRs9k0TZM9eOjBf5LT8bOBFStWrFixYsU6B2t273353ZVLmeHiPEMF1cNmMUspz58//9FHH507d46aG1JKIQTCDNqW7/sjIyNbtmyRUlJ2BedPMhdO8v9UVlixYsWKFStWrFif6soUrjAeJbFlmEmWZkn64v9Z/f8BzGCrTqlSLAoAAAAASUVORK5CYII="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_265",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is/are correct ?",
+    "options": {
+      "A": "Van der Waals' radius of iodine is more than its covalent radius.",
+      "B": "All isoelectronic ions of corresponding elements belong to the same period of the periodic table",
+      "C": "The electron affinity of fluorine is greater than that of chlorine.",
+      "D": "IE 2 of N - atom is higher than that of O - atom PT07 - 0028 5"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) On going from left to right in a period I.E. (increases) In 3d series of elements successive filling of d - orbitals takes place."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_266",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Highest electron affinity observe in : -",
+    "options": {
+      "A": "2s 2 2p 5",
+      "B": "2s 2 2p 4",
+      "C": "2s 2 2p 3",
+      "D": "2s 2 2p 1 PT16 - 0017 5"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Total acidic oxides are → 4 [N 2 O 3 , SO 2 , Cl 2 O 7 , NO 2 ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_267",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following EA order is not correct",
+    "options": {
+      "A": "In < P < O < S",
+      "B": "Cl > O > N > C",
+      "C": "Ne < P < Si < S",
+      "D": "B < C < Si < S PT15 - 0016"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ns (n - 2)f (n - 1)d np"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_268",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is/are correct about electronegativity order of the following elements ?",
+    "options": {
+      "A": "P > Si",
+      "B": "C > N",
+      "C": "C > Br",
+      "D": "Sr > Ca PT20 - 0014 6"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) P Si E.N. → 2.1 1.8 So, [P > Si] EN order"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_269",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which order is correct ?",
+    "options": {
+      "A": "In < O",
+      "B": "O > N",
+      "C": "Zn < Mn",
+      "D": "Al > B"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) B > Tl > Ga > Al > In (First I.E.) d - orbital in Ga is completely filled."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_270",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "p - block elements of 6 th period are represented as : -",
+    "options": {
+      "A": "[Xe] 4f 14 5d 10 6p 1 - 6",
+      "B": "[Xe] 5f 14 6d 10 6p 1 - 6",
+      "C": "[Kr] 5f 14 5d 10 6p 1 - 6",
+      "D": "[Xe] 4f 0 5d 10 6p 1 - 6 PT04 - 0107 6"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) On going from left to right in a period I.E. (increases) In 3d series of elements successive filling of d - orbitals takes place."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_271",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct atomic size is : -",
+    "options": {
+      "A": "Li > I > F < Cl < Br",
+      "B": "I > Li > F < Cl > Br",
+      "C": "I > Br > Cl > F > Li",
+      "D": "Li > F < I < Br > Cl PT08 - 0035 6"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Total acidic oxides are → 4 [N 2 O 3 , SO 2 , Cl 2 O 7 , NO 2 ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_272",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following valence electron experiences maximum effective nuclear charge?",
+    "options": {
+      "A": "4s 1",
+      "B": "4p 1",
+      "C": "3d 1",
+      "D": "2p 3 PT06 - 0077 6"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A, B & C 4 th , 5 th , 6 th period"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_273",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect order of IP is : -",
+    "options": {
+      "A": "Cu + > Zn +",
+      "B": "Cu < Zn",
+      "C": "Tl < Al",
+      "D": "Pd > Ag PT12 - 0052"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ns (n - 2)f (n - 1)d np"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_274",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Lowest I st IP is of : -",
+    "options": {
+      "A": "Pb",
+      "B": "Si",
+      "C": "Sn",
+      "D": "C PT13 - 0028"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard classification Of Elements And Periodicity In Properties - Periodic Table principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_275",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of following radius order is not correct?",
+    "options": {
+      "A": "Ti < Zr  Hf",
+      "B": "Sc < Y  La",
+      "C": "B < Al  Ga < In  Tl",
+      "D": "O < N < S < P PT09 - 0083"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Sc < Y < La (No Lanthanoid contraction)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_276",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of EA is : -",
+    "options": {
+      "A": "Cl > O > N > C",
+      "B": "Cl > O > C > N",
+      "C": "Cl > N > C > O",
+      "D": "Cl > C > O > N PT15 - 0017 7"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Cl has greatest EA in the entire periodic table. Cl > O > C > N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_classification_of_elements_and_periodicity_in_properties_periodic_table_277",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Classification Of Elements And Periodicity In Properties - Periodic Table.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "To which of the following atom, the attachment of electron is most difficult ?",
+    "options": {
+      "A": "Radon",
+      "B": "Nitrogen",
+      "C": "Oxygen",
+      "D": "Radium PT16 - 0018 7"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) EN of nitrogen in all nitrogen compounds is not 3."
+  }
+]

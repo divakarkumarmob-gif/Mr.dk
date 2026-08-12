@@ -65,25 +65,33 @@ export class AWSQuestionService {
       }
     }
 
+    // 1. Check Local Workspace /json/ First (Primary Fresh Source)
+    try {
+      const localRes = await fetch('/json/index.json');
+      if (localRes.ok) {
+        const data = await localRes.json();
+        memoryCache.set(cacheKey, { data, timestamp: Date.now() });
+        return data;
+      }
+    } catch (localErr) {}
+
+    // 2. Fallback to CloudFront
     try {
       const signedUrl = await getCloudFrontSignedUrl('index.json');
       const res = await fetch(signedUrl);
-      if (!res.ok) throw new Error(`HTTP ${res.status} fetching catalog from CloudFront`);
-      const data = await res.json();
-      memoryCache.set(cacheKey, { data, timestamp: Date.now() });
-      return data;
+      if (res.ok) {
+        const data = await res.json();
+        memoryCache.set(cacheKey, { data, timestamp: Date.now() });
+        return data;
+      }
     } catch (err) {
-      console.warn("CloudFront Master Catalog fetch error, falling back to local /json/index.json:", err);
-      try {
-        const localRes = await fetch('/json/index.json');
-        if (localRes.ok) return await localRes.json();
-      } catch (localErr) {}
-      return null;
+      console.warn("Master Catalog fetch error:", err);
     }
+    return null;
   }
 
   /**
-   * Fetches a specific chapter JSON chunk via CloudFront Signed URL
+   * Fetches a specific chapter JSON chunk via Local Workspace /json/ or CloudFront
    */
   static async fetchChapterQuestions(relPath: string): Promise<QuestionItem[]> {
     const cleanKey = relPath.replace(/^\/+/, '').trim();
@@ -96,22 +104,30 @@ export class AWSQuestionService {
       }
     }
 
+    // 1. Try Local Workspace /json/ First
+    try {
+      const cleanLocalPath = cleanKey.startsWith('json/') ? cleanKey : `json/${cleanKey}`;
+      const localRes = await fetch(`/${cleanLocalPath}`);
+      if (localRes.ok) {
+        const data = await localRes.json();
+        memoryCache.set(cleanKey, { data, timestamp: Date.now() });
+        return data;
+      }
+    } catch (localErr) {}
+
+    // 2. Fallback to CloudFront
     try {
       const signedUrl = await getCloudFrontSignedUrl(cleanKey);
       const res = await fetch(signedUrl);
-      if (!res.ok) throw new Error(`HTTP ${res.status} fetching chunk from CloudFront`);
-      const data = await res.json();
-      memoryCache.set(cleanKey, { data, timestamp: Date.now() });
-      return data;
+      if (res.ok) {
+        const data = await res.json();
+        memoryCache.set(cleanKey, { data, timestamp: Date.now() });
+        return data;
+      }
     } catch (err) {
-      console.warn(`CloudFront fetch failed for ${relPath}, trying local fallback:`, err);
-      try {
-        const cleanLocalPath = cleanKey.startsWith('json/') ? cleanKey : `json/${cleanKey}`;
-        const localRes = await fetch(`/${cleanLocalPath}`);
-        if (localRes.ok) return await localRes.json();
-      } catch (localErr) {}
-      return [];
+      console.warn(`Fetch failed for ${relPath}:`, err);
     }
+    return [];
   }
 
   /**

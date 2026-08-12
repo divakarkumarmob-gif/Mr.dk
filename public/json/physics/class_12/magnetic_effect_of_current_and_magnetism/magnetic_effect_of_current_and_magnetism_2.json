@@ -1,0 +1,3008 @@
+[
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Extra Edge - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statements is incorrect about hysteresis : -",
+    "options": {
+      "A": "This effect is common to all ferromagnetic substances",
+      "B": "The hysteresis loop area is proportional to the thermal energy developed per unit volume of the material",
+      "C": "The hysteresis loop area is independent of the thermal energy developed per unit volume of the material",
+      "D": "The shape of the hysteresis loop is characteristic of the material MF36 - 0016 Exercise - I"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A stationary magnet does not intereact with :-",
+    "options": {
+      "A": "iron rod",
+      "B": "moving charge",
+      "C": "moving magnet",
+      "D": "stationary charge"
+    },
+    "correct_option": "B",
+    "explanation": "B z = 0 B x = ( ) 0 I \\hat{j} 2 a μ π & B y = ( ) 0 I \\hat{i} 2 a μ - π so B = ( ) 0 I ˆ \\hat{j} i 2 a μ - π"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "following is square shape loop, whose one arm BC produces magnetic field B at the centre of coil. The resultant magnetic field due to all the arms will be :-",
+    "options": {
+      "A": "4B",
+      "B": "B/2",
+      "C": "B",
+      "D": "2B"
+    },
+    "correct_option": "A",
+    "explanation": "I 2 y I 1 x x y P (x, y) Let the point be (x, y) so B x = ( ) 0 1 I \\hat{k} 2 y μ π & B y = ( ) 0 2 I \\hat{k} 2 x μ - π If B p = 0 then 1 2 I I y x - = 0 ⇒ y = 1 2 I x I      "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wire is parallel to one arm of a square current carrying loop, which also carries current. Now at any point A within the coil the magnetic field will be :- i A i",
+    "options": {
+      "A": "less than the magnetic field produced due to loop only.",
+      "B": "more than the magnetic field produced due to loop only.",
+      "C": "equal to the earlier.",
+      "D": "zero"
+    },
+    "correct_option": "A",
+    "explanation": "B = 0 I 1 1 1 2R 2 2 3 μ θ   [ ] - +   [ ] π   [ ] = 0 I 5 6 4 R μ θ     π  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Magnetic field at point O will be :- O R I",
+    "options": {
+      "A": "⊗ 0 μ I 2R",
+      "B": " 0 μ I 2R",
+      "C": "  - ⊗     π 0 μ I 1 1 2R",
+      "D": "  +     π  0 μ I 1 1 2R"
+    },
+    "correct_option": "A",
+    "explanation": "0 μ I B 2 r = π ⇒ 1 2 2 1 B r B r = ⇒ 8 2 10 12 B 4 - = ⇒ B 2 = 3.33 × 10 -9 Tesla"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A and B are two concentric circular loop carrying current i 1 and i 2 as shown in figure. If ratio of their radii is 1:2 and ratio of the flux densities at the centre O due to A and B is 1:3 then the value of 1 2 i i will be :- B A O i 1 i 2",
+    "options": {
+      "A": "1 2",
+      "B": "1 3",
+      "C": "1 4",
+      "D": "1 6 - + i i O C B $//"
+    },
+    "correct_option": "A",
+    "explanation": "Magnetic field at the centre of a circuit loop will be zero, if wire is uniform.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the given current distribution the magnetic field at point, 'P' is :- 5m 2.5m 2.5A 5A P",
+    "options": {
+      "A": "μ π 0 4 ",
+      "B": "μ ⊗ π 0",
+      "C": "μ ⊗ π 0 2",
+      "D": "μ π 0 2 "
+    },
+    "correct_option": "A",
+    "explanation": "If a wire of length l is bent in the form of a circle of radius r then 2 π r = l ⇒ r 2 = π l 2 r 2 2 2 π π = = = π π l l = π 2 m i = 2 A r Magnetic field due to straight wire (shall be taken as infinite wire ) 0 0 1 2 2i 2 2 B · 4 d 4 1 10 - μ μ × = = × π π × also magnetic field due to circular loop 0 0 2 2 i 2 2 B · · 4 r 4 / 2 μ μ π π× = = π π π ⇒ 2 1 B 1 B 50 = $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two infinite long parallel wires carry equal currents in same direction. The magnetic field at a mid point in between the two wire is :-",
+    "options": {
+      "A": "Twice the magnetic field produced due to each of the wires",
+      "B": "Half of the magnetic field produced due to each of the wires",
+      "C": "Square of the magnetic field produced due to each of the wires",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "The magnetic field at due to the loop is equal to the vector sum of the magnetic fields produced by loops ABCDA and AFEBA as shown in the figure. Magnetic field due to loop ABCDA will be along \\hat{i} and due to loop AFEBA, along \\hat{k} . Magnitude of magnetic field due to both the loops will be equal. Therefore, direction of resultant magnetic field at P will be ( ) 1 ˆ \\hat{i} k 2 + . C D A B P(a,0,a) E F k \\hat{i} \\hat{j} ˆ $//(1 HS 202 5 TARGET : 202 5 PHYSICS MAGNETIC EFFECT OF CURRENT AND MAGNETISM : RACE # 02 SOLUTION"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "π ampere current is flowing through a long straight wire. Due to this a field of 5 × 10 -5 T produced, then distance of the point from the axis of the wire is :-",
+    "options": {
+      "A": "10 4 μ 0 m",
+      "B": "10 5 μ 0 m",
+      "C": "10 6 μ 0 m",
+      "D": "10 8 μ 0 m"
+    },
+    "correct_option": "A",
+    "explanation": "T 1 = T 1 2 m 4 4 qB π   =     T 1 = 27 19 3 1.65 10 2 1.6 10 100 10 - - - π × × × × × = 1.62 × 10 -7"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two concentric circular loops of radii 0·08m and 0·1m carries current such that magnetic field at the centre is zero. If the current in the outer loop is 8A clockwise, current in the inner loop is :-",
+    "options": {
+      "A": "6·4 A anticlockwise",
+      "B": "6·4 A clockwise",
+      "C": "8A anticlockwise",
+      "D": "3·2 A clockwise"
+    },
+    "correct_option": "A",
+    "explanation": "given qB v m < \\lambda mv qB < \\lambda so R < \\lambda so The particle will not enter in region III"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the shown figure magnetic field at point A will be :- I A R",
+    "options": {
+      "A": "μ π 0 I 4",
+      "B": "μ 0 I 4R",
+      "C": "μ π 0 I 4 R",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "Tension generated in circular loop T = IBR",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The wire in the figure carries a current i and consists of a circular arc of radius R and central angle π 2 rad, and two straight sections whose extensions intersect the centre C of the arc. The magnetic field \\rho B that the current produces at C is :- i i i R C",
+    "options": {
+      "A": "= \\rho 0 μ i B 8R into the plane of the figure",
+      "B": "= \\rho 0 μ i B 8R out of the plane of the figure",
+      "C": "= π \\rho 0 μ i B 8 R into the plane of the figure",
+      "D": "= π \\rho 0 μ i B 8 R out of the plane of the figure AMPERE'S LAW"
+    },
+    "correct_option": "A",
+    "explanation": "For wire 1 & 3 B is same & current is in opposite direction so forces will cancel each other 3 2 4 1 F 4 F 2 x x= \\lambda i x=0 y B → F Net = F 2 - F 4 & 1 3 F F O + = \\rho \\rho \\rho F Net = i B 0 (1 + \\lambda \\lambda ) \\lambda - i B 0 (1+ 0 \\lambda ) \\lambda F Net = 2iB 0 \\lambda - iB 0 \\lambda F Net = iB 0 \\lambda in +x direction",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the hollow thin cylinderical current carrying pipe which statement is correct :-",
+    "options": {
+      "A": "magnetic field inside the pipe is not zero",
+      "B": "magnetic field outside the pipe is zero",
+      "C": "electric field outside the pipe is zero",
+      "D": "electric field on the surface of pipe is zero"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A current of 1/4 π ampere is flowing through a toroid. It has 1000 number of turn per meter then value of magnetic field (in Wb/m 2 ) along its axis is :-",
+    "options": {
+      "A": "10 -2",
+      "B": "10 -3",
+      "C": "10 -4",
+      "D": "10 -7"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An another solenoid having having 100 turns/cm and carries i 3 current, then magnetic field at its axis will be :-",
+    "options": {
+      "A": "1.05 × 10 -4 Wb/m 2",
+      "B": "1.05 × 10 -2 Wb/m 2",
+      "C": "1.05 × 10 -5 Wb/m 2",
+      "D": "1.05 × 10 -3 Wb/m 2 MAGNETIC FORCE & MOVING CHARGE IN MAGNETIC FIELD"
+    },
+    "correct_option": "A",
+    "explanation": "I 2 y I 1 x x y P (x, y) Let the point be (x, y) so B x = ( ) 0 1 I \\hat{k} 2 y μ π & B y = ( ) 0 2 I \\hat{k} 2 x μ - π If B p = 0 then 1 2 I I y x - = 0 ⇒ y = 1 2 I x I      "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton and an alpha particle are separately projected in a region where a uniform magnetic field exists. The initial velocities are perpendicular to the direction of magnetic field. If both the particles move along circles of equal radii, the ratio of momentum of proton to alpha particle ρ α       P P is :-",
+    "options": {
+      "A": "1",
+      "B": "1/2",
+      "C": "2",
+      "D": "1/4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cathode rays are moving between the poles of a magnet. Due to the effect of magnetic field of magnet :- N S",
+    "options": {
+      "A": "velocity of rays increases",
+      "B": "velocity of rays decreases",
+      "C": "rays deflected towards south pole",
+      "D": "rays deflected in upward direction and perpendicular to the plane of the paper"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When α and β rays are subjected to a magnetic field which is perpendicular to the direction of their motion, with their same speed. The curvature of path of both the particles are :-",
+    "options": {
+      "A": "equal",
+      "B": "more for α particles",
+      "C": "more for β particles",
+      "D": "none $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential differene V. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is :-",
+    "options": {
+      "A": "      2 1 2 r r",
+      "B": "      2 2 1 r r",
+      "C": "      1 2 r r",
+      "D": "      2 1 r r"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An α -particle experiences a force of 3.84× 10 -14 N when its moves perpendicular to magnetic field of 0.2 Wb/m 2 then speed of the α - particle is :-",
+    "options": {
+      "A": "6.0 × 10 5 m/s",
+      "B": "5.0 × 10 5 m/s",
+      "C": "1.2 × 10 6 m/s",
+      "D": "3.8 × 10 6 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A charge having q/m equal to 10 8 C/kg and with velocity 3 × 10 5 m/s enters into a uniform magnetic field B = 0.3 tesla at an angle 30 0 with direction of field. Then radius will be :-",
+    "options": {
+      "A": "0.01 cm",
+      "B": "0.5 cm",
+      "C": "1 cm",
+      "D": "2 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electron of kinetic energy of 7.2 × 10 -18 J is revolving on circular path in magnetic field 9 × 10 -5 Wb/m 2 then radius of its circular path is:-",
+    "options": {
+      "A": "1.25 cm.",
+      "B": "2.5 m.",
+      "C": "2.5 cm.",
+      "D": "25.0 cm. $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton, deutron and an α -particle are accelerated by same potential, enter in uniform magnetic field perpendicularly. Ratio of radii of circular path respectively :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton and an α -particle moving with the same velocity enters into a uniform magnetic field which is acting normal to the plane of their motion. The ratio of the radii of the circular paths described by the proton and α -particle respectively :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A very long straight wire carries a current I. At the instant when a charge +Q at point P has velocity v \\rho , as shown, the magnetic force on the charge is:- Q P v I y x O",
+    "options": {
+      "A": "along ox",
+      "B": "opposite to oy",
+      "C": "along oy",
+      "D": "opposite to ox LORENTZ FORCE & MOTION OF CHARGED PARTICALS IN B"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In Thomson mass spectrograph E \\rho ⊥ B \\rho then the velocity of undeflected electron beam will be :-",
+    "options": {
+      "A": "|E| |B| \\rho \\rho",
+      "B": "E \\rho × B \\rho",
+      "C": "|B| |E| \\rho \\rho",
+      "D": "2 2 E B"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a charged particle moving with velocity v \\rho is subjected to a magnetic field of induction B \\rho , the force on it is non-zero. This implies the",
+    "options": {
+      "A": "angle between v \\rho and B \\rho is necessary 90^\\circ",
+      "B": "angle between v \\rho and B \\rho can have at value other than 90^\\circ",
+      "C": "angle between v \\rho and B \\rho can have at value other than zero and 180^\\circ",
+      "D": "angle between v \\rho and B \\rho is either zero or 180^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current I. The direction of force on PQ will be:- I \\lambda Y X i P Q",
+    "options": {
+      "A": "towards right",
+      "B": "towards left",
+      "C": "upwards",
+      "D": "downwards"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A current carrying wire AC is placed in uniform transverse magnetic field then the force on wire AC :- ⊗ A I=3A B=10T C 8cm 6cm",
+    "options": {
+      "A": "3N",
+      "B": "4.2N",
+      "C": "6N",
+      "D": "4N"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "P, Q and R long parallel straight wires in air, carrying currents as shown. The direction of resultant force on R is :- P Q R 6A 4A 2A r r",
+    "options": {
+      "A": "towards left",
+      "B": "towards right",
+      "C": "the same as that of current in Q",
+      "D": "perpendicular to plane of paper"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The wire is parallel to one of the sides of the loop and is in the plane of the loop as shown in the figure. Then the current loop will :- i 1 i 2",
+    "options": {
+      "A": "move away from the wire",
+      "B": "move towards the wire.",
+      "C": "remain stationary.",
+      "D": "rotate about an axis parallel to the wire."
+    },
+    "correct_option": "A",
+    "explanation": "I 2 y I 1 x x y P (x, y) Let the point be (x, y) so B x = ( ) 0 1 I \\hat{k} 2 y μ π & B y = ( ) 0 2 I \\hat{k} 2 x μ - π If B p = 0 then 1 2 I I y x - = 0 ⇒ y = 1 2 I x I      ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electron is moving in a circle of radius 5.1 × 10 -11 m. at a frequency of 6.8 × 10 15 revolution/sec. The equivalent current is approximately :-",
+    "options": {
+      "A": "5.1 × 10 -3 A",
+      "B": "6.8 × 10 -3 A",
+      "C": "1.1 × 10 -3 A",
+      "D": "2.2 × 10 -3 A"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "To protect a sensitive instrument from external megnetic jerks, it should be placed in a container made of :-",
+    "options": {
+      "A": "Nonmagnetic substance",
+      "B": "Diamagnetic substance",
+      "C": "Paramagnetic substance",
+      "D": "Ferromagnetic substance"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The liquid in the watch glass in the following figure is - N S",
+    "options": {
+      "A": "Ferromagnetic",
+      "B": "Paramagnetic",
+      "C": "Diamagnetic",
+      "D": "Nonmagnetic"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Magnetic suceptibility of a diamagnetic substance varies with absolute temperature as :-",
+    "options": {
+      "A": "directly proportional to T",
+      "B": "inversely proportional to T",
+      "C": "remains unchanged with T",
+      "D": "exponential decrease with T"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Same current I is flowing in three infinitely long wire along positive x, y and z-directions. The magnetic field at a point (0, 0, - a) would be :-",
+    "options": {
+      "A": "0 μ I ˆ ˆ",
+      "B": "0 μ I ˆ ˆ",
+      "C": "0 μ I ˆ ˆ",
+      "D": "0 μ I ˆ ˆ ˆ"
+    },
+    "correct_option": "A",
+    "explanation": "B z = 0 B x = ( ) 0 I \\hat{j} 2 a μ π & B y = ( ) 0 I \\hat{i} 2 a μ - π so B = ( ) 0 I ˆ \\hat{j} i 2 a μ - π"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two long straight wires are placed along x-axis and y-axis. They carry current I 1 and I 2 respectively. The equation of locus of zero magnetic induction in the magnetic field produced by them is :-",
+    "options": {
+      "A": "y = x",
+      "B": "y = 2 1 I x I      ",
+      "C": "y = 1 2 I x I      ",
+      "D": "y ="
+    },
+    "correct_option": "A",
+    "explanation": "I 2 y I 1 x x y P (x, y) Let the point be (x, y) so B x = ( ) 0 1 I \\hat{k} 2 y μ π & B y = ( ) 0 2 I \\hat{k} 2 x μ - π If B p = 0 then 1 2 I I y x - = 0 ⇒ y = 1 2 I x I      "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Magnetic field at P due to given structure is :- R θ I I P R R I",
+    "options": {
+      "A": "0 μ I 4 2R   θ   π  ",
+      "B": "0 μ 6I 4 5R θ π",
+      "C": "0 μ 5I 4 6R   θ   π  ",
+      "D": "0 μ 2I 4 R   θ   π  "
+    },
+    "correct_option": "A",
+    "explanation": "B = 0 I 1 1 1 2R 2 2 3 μ θ   [ ] - +   [ ] π   [ ] = 0 I 5 6 4 R μ θ     π  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic induction at the point O, if the wire carries a current i, is :- i R O x z i y i",
+    "options": {
+      "A": "0 μ i 2R",
+      "B": "0 μ i 2 R π",
+      "C": "2 1/2 0 μ i",
+      "D": "4 R π + π"
+    },
+    "correct_option": "C",
+    "explanation": "B due to straight wire portion = ( ) 0 I ˆ 2 j 4 R μ × - π B due to semicircle = ( ) 0 I \\hat{k} 4R μ - B Net = 0 2 I 4 1 4R μ + π = 2 0 I 4 4 R μ π + π"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field at the point O of a loop with current i, whose shape is illustrated below is :- b a O i b",
+    "options": {
+      "A": "0 μ i 3 2 4 2a b [ ] π + [ ] π [ ]",
+      "B": "0 2 μ i 2 b b 4 [ ] + [ ] [ ] π",
+      "C": "0 2 μ i 1 1 a b 2 [ ] + [ ] [ ] π",
+      "D": "0 μ i 1 1 4 a b [ ] + [ ] π [ ]"
+    },
+    "correct_option": "A",
+    "explanation": "B 1 = B 4 = 0 B 2 = B 3 = 0 i 4 b μ π sin 45^\\circ b b (1) (2) (3) (4) i O a (5) & B 5 = 0 i 3 2a 4 μ [ ] ⊗ [ ] [ ] B net = B 2 + B 3 + B 5 so B Net = 0 0 i 3 i 8a 2 2 b μ μ + ⊗ π"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An infinitely long straight conductor is bent into the shape as shown in the figure. It carries a current of i ampere and the radius of the circular loop is r metre. Then the magnetic induction at its centre will be r i",
+    "options": {
+      "A": "2 r π - π",
+      "B": "0 μ I",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "The given shape is equivalent to the following diagram The field at O due to straight part of conductor is 0 1 μ I B 2 r = π  . The field at O due to circular coil is 0 2 μ I B 2r = ⊗ . B 2 > B 1 i i 2 r O 1 i.e. B = B 2 - B 1 = 0 μ I ( 1) 2 r π - π",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic induction at a point P which is distant 4 cm from a long current carrying wire is 10 -8 Tesla. Magnetic induction at a distance 12 cm from the same current carrying wire would be",
+    "options": {
+      "A": "3.33 × 10 -9 Tesla",
+      "B": "1.11 × 10 -4 Tesla",
+      "C": "3 × 10 -3 Tesla",
+      "D": "9 × 10 -2 Tesla"
+    },
+    "correct_option": "C",
+    "explanation": "0 μ I B 2 r = π ⇒ 1 2 2 1 B r B r = ⇒ 8 2 10 12 B 4 - = ⇒ B 2 = 3.33 × 10 -9 Tesla"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two concentric circular coils of ten turns each are situated in the same plane. Their radii are 20 and 40 cm and they carry respectively 0.2 and 0.3 ampere current in opposite direction. The magnetic field in weber/m 2 at the centre is",
+    "options": {
+      "A": "0 35 4 μ",
+      "B": "0 80 μ",
+      "C": "0 7 80 μ",
+      "D": "0 5 4 μ $//"
+    },
+    "correct_option": "A",
+    "explanation": "Two coils carrying current in opposite direction, hence net magnetic field at centre will be difference of the two fields. i.e. 0 1 2 net 1 2 N i i B 2 r r [ ] μ = - [ ] [ ] 0 0 10 0.2 0.3 5 2 0.2 0.4 4 μ [ ] = - = μ [ ] [ ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A cell is connected between two points of a uniformly thick circular conductor. The magnetic field at the centre of the loop will be (Here i 1 and i 2 are the currents flowing in the two parts of the circular conductor of radius ‘ a’ And has the usual meaning)",
+    "options": {
+      "A": "Zero",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Magnetic field at the centre of a circuit loop will be zero, if wire is uniform."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A straight wire of length ( π 2 ) metre is carrying a current of 2 A and the magnetic field due to it is measured at a point distant 1 cm from it. If the wire is to be bent into a circle and is to carry the same current as before, the ratio of the magnetic field at its centre to that obtained in the first case would be (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If a wire of length l is bent in the form of a circle of radius r then 2 π r = l ⇒ r 2 = π l 2 r 2 2 2 π π = = = π π l l = π 2 m i = 2 A r Magnetic field due to straight wire (shall be taken as infinite wire ) 0 0 1 2 2i 2 2 B · 4 d 4 1 10 - μ μ × = = × π π × also magnetic field due to circular loop 0 0 2 2 i 2 2 B · · 4 r 4 / 2 μ μ π π× = = π π π ⇒ 2 1 B 1 B 50 = $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field at the centre of coil of n turns, bent in the form of a square of side 2 l, carrying current i, is",
+    "options": {
+      "A": "0 2 ni l μ π",
+      "B": "0 2 ni 2 l μ π",
+      "C": "0 2 ni 4 l μ π",
+      "D": "0 2 ni l μ π"
+    },
+    "correct_option": "A",
+    "explanation": "Magnetic field due to one side of the square at centre O 0 1 2i sin 45 B · 4 a / 2 μ ^\\circ = π ⇒ 0 1 2 2 i B · 4 a μ = π Hence magnetic field at centre due to all side 0 1 (2 2 i) B 4B a μ = = π Magnetic field due to n turns 0 0 net 2 2 ni 2 2ni B nB a (2 ) μ μ = = = π π \\lambda = 0 2 ni μ π \\lambda (  a = 2 \\lambda )"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "Magnetic Effect of Current and Magnetism - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A non-planar loop of conducting wire carrying a current I is placed as shown in the figure. Each of the straight sections of the loop is of length 2 a. The magnetic field due to this loop at the point P ( a,0 ,a) points in the direction z y x i 2a",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "The magnetic field at due to the loop is equal to the vector sum of the magnetic fields produced by loops ABCDA and AFEBA as shown in the figure. Magnetic field due to loop ABCDA will be along \\hat{i} and due to loop AFEBA, along \\hat{k} . Magnitude of magnetic field due to both the loops will be equal. Therefore, direction of resultant magnetic field at P will be ( ) 1 ˆ \\hat{i} k 2 + . C D A B P(a,0,a) E F k \\hat{i} \\hat{j} ˆ $//(1 HS 202 5 TARGET : 202 5 PHYSICS MAGNETIC EFFECT OF CURRENT AND MAGNETISM : RACE # 02 SOLUTION",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A vertical wire carries a current upwards. The magnetic field at a point due north of the wire is directed",
+    "options": {
+      "A": "upward",
+      "B": "due south",
+      "C": "due west",
+      "D": "due east MG49 - 0017"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Pick out the Wrong statement :",
+    "options": {
+      "A": "The gain in the K.E. of the electron moving at right angles to the magnetic field is zero.",
+      "B": "When an electron is shot at right angles to the electric field, it traces a parabolic path.",
+      "C": "An electron moving in the direction of the electric field gains K.E.",
+      "D": "An electron at rest experiences no force in uniform and constant magnetic field MG47 - 0028"
+    },
+    "correct_option": "C",
+    "explanation": "(A) Wrong : magnetic field lines can never emanate from a point, over any closed surface, the net flux of B must always be zero. (B) Wrong : magnetic field lines can never crosses each other (C) Right : magnetic field lines completely confined within a Toroid. Fig. (D) is wrong because field lines due to solenoid at it's ends and outside cannot be so completely straight and confined."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A field line is shown in fig. This field cannot represent: -",
+    "options": {
+      "A": "Magnetic field",
+      "B": "electrostatic field",
+      "C": "Induced electric field",
+      "D": "All of these MG47 - 0029"
+    },
+    "correct_option": "B",
+    "explanation": "electrostatics field lines never form close loop",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wire carrying a current I is shaped as shown. Section AB is a quarter circle of radius r. The magnetic field at C is directed",
+    "options": {
+      "A": "along the bisector of the angle ACB, away from AB",
+      "B": "along the bisector of the angle ACB, towards AB",
+      "C": "perpendicular to the plane of the paper, directed into the paper",
+      "D": "at an angle 4 \\pi to the plane of the paper MG49 - 0018"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If E and B denote electric and magnetic fields respectively, which of the following is dimensionless?",
+    "options": {
+      "A": "0 0 E B \\mu ",
+      "B": "0 0 E B \\mu ",
+      "C": "2 0 0 B E (  \\mu  ( ) ) ",
+      "D": "0 0 E B \\mu   MG47 - 0030"
+    },
+    "correct_option": "A",
+    "explanation": "E c B = & 0 0 1 c \\mu  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Dia - magnetic property of material can be explained by : -",
+    "options": {
+      "A": "Lenz's law",
+      "B": "Faraday law",
+      "C": "Ampere's law",
+      "D": "Gauss's law MG43 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "Electrons in an atom orbiting around nucleus posses orbital angular momentum, these orbital electrons are equivalent to current carrying loop and thus possess orbital magnetic moment. The magnetic moment of single atom of diamagnetic material is zero. Whe n magnetic field is applied, those electrons having orbital magnetic moment in the direction of field slow down and those in the opposite direction speed up. This happen due to induced current in accordance with Lenz's law."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic moment produced in a substance of 1 gm is 6 × 10 - 7 A × m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If its density is 5 gm/cm 3 , then the intensity of magnetisation in A/m will be: -",
+    "options": {
+      "A": "8.3 × 10 6",
+      "B": "3.0",
+      "C": "1.2 × 10 - 7",
+      "D": "3 × 10 - 6 MG41 - 0010"
+    },
+    "correct_option": "C",
+    "explanation": "(A) Wrong : magnetic field lines can never emanate from a point, over any closed surface, the net flux of B must always be zero. (B) Wrong : magnetic field lines can never crosses each other (C) Right : magnetic field lines completely confined within a Toroid. Fig. (D) is wrong because field lines due to solenoid at it's ends and outside cannot be so completely straight and confined."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Superconducting material is : -",
+    "options": {
+      "A": "Diamagnetic",
+      "B": "Perfect diamagnetic",
+      "C": "Paramagnetic",
+      "D": "Ferromagnetic MG43 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a superconductor is placed near a bar magnet then : -",
+    "options": {
+      "A": "It repels the magnet",
+      "B": "It attracts the magnet",
+      "C": "Neither repels nor attracted",
+      "D": "Some time repels and some time attracts MG43 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "A superconductor is perfectly diamagnetic material so, it moves from strong field to weak field ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ferromagnetic material is placed in an external magnetic field. The magnetic domains:",
+    "options": {
+      "A": "increase in size",
+      "B": "decrease in size",
+      "C": "may increase or decrease in size",
+      "D": "have no relation with the field MG43 - 0012"
+    },
+    "correct_option": "C",
+    "explanation": "When ferromagnetic substance is placed in external magnetic field, the size of domain lying in the direction of external magnetic field increases while size of domain lying in the opposite direction of field decreases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If magnetic monopoles existed, how would the Gauss's law of magnetism be modified? (Here q m is the monopole magnetic charge enclosed by surface S)",
+    "options": {
+      "A": "m 0 q B.dS = \\mu \\int \\rho \\rho \\rho",
+      "B": "m B.dS q = \\int \\rho \\rho \\rho",
+      "C": "0 m B.dS q = \\mu \\int \\rho \\rho \\rho",
+      "D": "2 0 m B.dS q = \\mu \\int \\rho \\rho \\rho MG43 - 0013 r A C B I Magnetic Effect of Current and Magnetism Magnetic Effect of Current and Magnetism"
+    },
+    "correct_option": "C",
+    "explanation": "Gauss theorem for electric field 0 q E.dS =  \\int \\rho \\rho \\rho By comparing electric field and magnetic field m E B,q q   \\rho\\rho 0 0 0 0 1 1 4 4 \\mu    \\mu \\pi \\pi  0 m B.dS q = \\mu \\int \\rho \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An irregular closed loop carrying a current has a shape such that the entire loop cannot lie in a single plane. If this is placed in a uniform magnetic field, the force acting on the loop :",
+    "options": {
+      "A": "must be zero",
+      "B": "can never be zero",
+      "C": "may be zero",
+      "D": "will be zero only for one particular direction of the magnetic field MF21 - 0025"
+    },
+    "correct_option": "A",
+    "explanation": "Net force on current carrying loop placed in uniform magnetic field is always zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Universal property of all substance is: -",
+    "options": {
+      "A": "Diamagnetism",
+      "B": "Paramagnetism",
+      "C": "Ferromagnetism",
+      "D": "All of above MG43 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Path of a charged particle moving in a uniform magnetic field cannot be a :",
+    "options": {
+      "A": "Straight line",
+      "B": "Circle",
+      "C": "Parabola",
+      "D": "Helix MF14 - 0110"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Material suitable for making electromagnet should have : -",
+    "options": {
+      "A": "High retentivity and High coercivity",
+      "B": "Low retentivity and Low coercivity",
+      "C": "High retentivity and Low coercivity",
+      "D": "Low retentivity and High coercivity MG45 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Magnetic field lines represent the direction : -",
+    "options": {
+      "A": "and",
+      "B": "Along which moving charge particle experiences a force",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For paramagnetic materials : -",
+    "options": {
+      "A": " is positive at all temperature",
+      "B": " is negative at all temperature",
+      "C": " may be positive or negative",
+      "D": " does not depend on temperature MG43 - 0015"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statements are correct?",
+    "options": {
+      "A": "Magnetic field lines can be entirely confined within the core of a toroid",
+      "B": "Magnetic field lines can be entirely confined within the core of a solenoid",
+      "C": "a bar magnet exert a torque on itself due to its own field.",
+      "D": "a system can have magnetic moment even though its net charge is zero."
+    },
+    "correct_option": "B",
+    "explanation": "Magnetic lines form closed loops around a current carrying wire. The geometry of a straight solenoid is such a that magnetic lines cannot loop around circular wires without spilling over to the outside of solenoid . The toroid have geometry such that magnetic lines can loop around electric wires without spilling over to the outside. There is no force or torque on an element due to the field produced by that element itself An atom of ferromagnetic and paramagnetic material have non - zero magnetic moment while their net charge is zero."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "For the given uses select the correct magnetic material : - Column - I Column - II (p) Electromagnet",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "A B B",
+      "B": "B B A",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "The hysteresis curve of large area has high coercivity & high coercivity which is used in permanent magnet, curve of small area has low coercivity & low remanence which is suitable for electromagnet & transformer ."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The hysteresis curve for a material is shown in figure. Then for the material retentivity , coercivity and saturation magnetic field will be respectively: -",
+    "options": {
+      "A": "90 A/m, 1.2 T, 1.5 T",
+      "B": "1.5T, 90 A/m, 1.2 T",
+      "C": "1.2T, 90 A/m, 1.5 T",
+      "D": "90 A/m, 1.5 T, 1.2 T MG45 - 0006 H B ext H B B Net"
+    },
+    "correct_option": "C",
+    "explanation": "From graph at point 'b', H = 0 so retentivity = 1.2T at point 'c', B = 0 so coercivity = 90 A/m at point 'a' saturation magnetic field = 1.5T 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the incorrect statement : -",
+    "options": {
+      "A": "When a bar magnet of dipole moment M \\rho is placed in a uniform magnetic field B \\rho the torque on it is M B  \\rho\\rho",
+      "B": "Gauss's law for magnetism states that the net magnetic flux through any closed surface is zero",
+      "C": "For diamagnetic materials magnetic susceptibility is positive whereas for paramagnetic materials is negative",
+      "D": "Magnetisation of a paramagnetic material is inversely proportional to the absolute temperature T. MG47 - 0036"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Many of the diagrams given in figure, show magnetic field lines (thick lines in the figure). Point out which one is/are correct : -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When will the field lines be completely expelled (  = magnetic susceptibility)",
+    "options": {
+      "A": " = - 1 and \\mu r = 0",
+      "B": "- 1 \\le  and \\mu r >> 1",
+      "C": " \\le 1 and \\mu r << 1",
+      "D": " = 1 and \\mu r = 1 MG43 - 0016"
+    },
+    "correct_option": "A",
+    "explanation": "The field lines are completely expelled [for super conductors] when  = - 1 and \\mu r = 0"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which statement is wrong for Lorentz force?",
+    "options": {
+      "A": "electric magnetic F F F = + \\rho\\rho\\rho",
+      "B": "The magnetic force is zero if charge is not moving",
+      "C": "It depends on V \\rho & B \\rho only",
+      "D": "Force on a negative charge is opposite to that on a positive charge MF17 - 0047"
+    },
+    "correct_option": "C",
+    "explanation": "Because it also depends on charge"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is wrong for electric field & magnetic field.",
+    "options": {
+      "A": "Both are long range.",
+      "B": "The principle of superposition applies to both fields",
+      "C": "Both fields are along the displacement vector joining the source and the field point.",
+      "D": "The electrostatic field is produced by a scalar source & magnetic field produced by a vector source. MG47 - 0035"
+    },
+    "correct_option": "C",
+    "explanation": "Because the magnetic field is perpendicular to the plane containing the displacement vector r \\rho and the current element Id \\lambda ."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Choose correct statement for magnetic field line due to current carrying coil.",
+    "options": {
+      "A": "The direction of the field is given by right hand palm rule.",
+      "B": "Current carrying not behave as magnetic dipole",
+      "C": "Field lines are in the form of closed loops",
+      "D": "For ‘N’ turns , magnetic field B = 0 NI 4R \\mu MG46 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "It forms closed loops."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ampere’s circuital law can be derived from.",
+    "options": {
+      "A": "Gauss’s law",
+      "B": "Coulomb’s law",
+      "C": "Biot savart law",
+      "D": "None of them MF08 - 0031"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field due to current carrying coil of magnetic moment ‘m’ on the axis of the coil [x > > R].",
+    "options": {
+      "A": "0 2 m B 4 x \\mu = \\pi",
+      "B": "0 2 2m B 4 x \\mu = \\pi",
+      "C": "0 3 m B 4 x \\mu = \\pi",
+      "D": "0 3 2m B 4 x \\mu = \\pi MG46 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A current carrying circular loop is located in a uniform external magnetic field in which orientation, the flux of the total field [external field + field produced by the loop] is maximum.",
+    "options": {
+      "A": "When angle between area vector and external magnetic field is 90^\\circ",
+      "B": "When angle between area vector and external magnetic field is 0^\\circ",
+      "C": "When angle between area vector and external magnetic field is 150^\\circ",
+      "D": "When angle between area vector and external magnetic field is 120^\\circ MG47 - 0033 Magnetic Effect of Current and Magnetism"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In given diagram, work done to move the electron in direction of magnetic field will be",
+    "options": {
+      "A": "W F d =  \\rho \\rho",
+      "B": "W M B =  \\rho\\rho",
+      "C": "W 0 =",
+      "D": "W qvB = \\rho MF26 - 0076 3"
+    },
+    "correct_option": "C",
+    "explanation": "( ) m F q v B v ||B =  \\rho \\rho \\rho F m = 0 , So w = 0",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two parallel wires are carrying electric currents of equal magnitude and in the same direction they exert.",
+    "options": {
+      "A": "An attractive force on each other",
+      "B": "A repulsive force on each other",
+      "C": "No force on each other",
+      "D": "A rotational torque on each other MG44 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A long hollow tube is carrying an electric current along its length distributed uniformly on its circumference. The magnetic field: -",
+    "options": {
+      "A": "increases linearly from the axis of the surface",
+      "B": "is constant inside the tube",
+      "C": "is zero only on the axis",
+      "D": "is zero just out - side the tube MF10 - 0041"
+    },
+    "correct_option": "B",
+    "explanation": "B is zero everywhere inside the tube and maximum at the surface. Magnetic Effect of Current and Magnetism NEET : NCR [Physics]"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the magnetic field produced by a finitely long current carrying wire. Select wrong statement: -",
+    "options": {
+      "A": "the lines of force will be concentric circles with centres on the wire",
+      "B": "There can be two points in the same plane where magnetic fields are same.",
+      "C": "There can be large number of points where the magnetic field is same.",
+      "D": "The magnetic field at a point is inversely proportional to the distance of the point from the wire. MG42 - 0018"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles.",
+    "statements": {
+      "T": "-"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The ratio of the energy density of magnetic field in the middle region of a solenoid to that in end region is: - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "The expression of magnetic energy density is 2 0 B 2 \\mu . The magnitude of magnetic field at end region is half that of at middle region. Hence the ratio of magnetic field energy densities at middle region to the end region is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field at the mid point of BC has magnitude.",
+    "options": {
+      "A": "0 I 8 d \\mu \\pi",
+      "B": "0 I 4 d \\mu \\pi",
+      "C": "0 I 2 d \\mu \\pi",
+      "D": "0 I d \\mu \\pi MG49 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "At the midpoint BC, B = 2× ( ) 0 I d 4 2 \\mu \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Magnetic field at the centre of a circular loop of area ‘A’ is ‘B’. The magnetic moment of the loop is: -",
+    "options": {
+      "A": "2 0 BA \\mu \\pi",
+      "B": "0 BA A \\mu",
+      "C": "0 BA A \\mu \\pi",
+      "D": "0 2BA A \\mu \\pi MF26 - 0075"
+    },
+    "correct_option": "D",
+    "explanation": "Let r be the radius of the circular loop 2 A A r or r  = \\pi = \\pi Magnetic field at the centre of the loop is 0 0 0 I I 2B A B or I 2r A 2 \\mu \\mu = = = \\mu \\pi \\pi So magnetic moment 0 0 0 2B A 2BA A M IA A = =  = \\mu \\pi \\mu \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Gauss law of magnetism is: -",
+    "options": {
+      "A": "Net electric flux through any closed surface is zero",
+      "B": "Net magnetic flux through any surface is zero",
+      "C": "Net electric flux through any closed surface is",
+      "D": "Net magnetic flux through any closed surface is zero MF24 - 0039"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field at the point O of a loop with current i, whose shape is illustrated below is : -",
+    "options": {
+      "A": "  \\pi +   \\pi   0 μ i 3 2 4 2a b",
+      "B": "  +   \\pi   0 2 μ i 2 b b 4",
+      "C": "  +   \\pi   0 2 μ i 1 1 a b 2",
+      "D": "  +   \\pi   0 μ i 1 1 4 a b MF06 - 0031"
+    },
+    "correct_option": "A",
+    "explanation": "B 1 = B 4 = 0 B 2 = B 3 = \\mu \\pi 0 i 4 b sin 45^\\circ  & B 5 = \\mu        0 i 3 2a 4 B net = B 2 + B 3 + B 5 so B Net = \\mu \\mu +  \\pi 0 0 i 3 i 8a 2 2 b"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A cell is connected between two points of a uniformly thick circular conductor. The magnetic field at the centre of the loop will be (Here i 1 and i 2 are the currents flowing in the two parts of the circular conductor of radius ‘ a ’ a nd \\mu 0 has the usual meaning)",
+    "options": {
+      "A": "Zero",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Magnetic field at the centre of a circuit loop will be zero, if wire is uniform."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A non - planar loop of conducting wire carrying a current I is placed as shown in the figure. Each of the straight sections of the loop is of length 2 a . The magnetic field due to this loop at the point P ( a, 0 ,a) points in the direction .",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "The magnetic field at P(a,0,a) due to the loop is equal to the vector sum of the magnetic fields produced by loops ABCDA and AFEBA as shown in the figure. Magnetic field due to loop ABCDA will be along \\hat{i} and due to loop AFEBA , along \\hat{k} . Magnitude of magnetic field due to both the loops will be equal. Therefore, direction of resultant magnetic field at P will be ( ) + 1 ˆ ˆ 2 i k .",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two long current carrying conductors are placed parallel to each other at a distance of 8 cm between them. The magnitude of magnetic field produced at mid - point between the two conductors due to current flowing in them is 300 \\mu T. The equal current flowing in the two conductors is :",
+    "options": {
+      "A": "30A in the same direction.",
+      "B": "30A in the opposite direction.",
+      "C": "60A in the opposite direction.",
+      "D": "300A in the opposite direction. MF04 - 0029"
+    },
+    "correct_option": "B",
+    "explanation": "I O 4cm 4cm B at O = 2 \\mu \\pi 0 I 2 r - -  \\pi  \\pi  7 2 2 4 10 I 2 4 10 =3×10 - 4 T I = 30A in opp. Direction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two charged particles, having same kinetic energy, are allowed to pass through a uniform magnetic field perpendicular to the direction of motion. If the ratio of radii of their circular paths is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Radius of circular path 2mk R qB = 2mk q RB = 1 1 2 2 2 1 q m R 9 5 5 q m R 4 6 4 =  =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "5 and their respective masses ratio is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "I O 4cm 4cm B at O = 2 \\mu \\pi 0 I 2 r - -  \\pi  \\pi  7 2 2 4 10 I 2 4 10 =3×10 - 4 T I = 30A in opp. Direction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Then, the r atio of their charges will be: ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Magnetic field at the centre of a circuit loop will be zero, if wire is uniform."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric current in a circular coil of 2 turns produces a magnetic induction B 1 at its centre. The coil is unwound and is rewound into a circular coil of 5 turns and the same current produces a magnetic induction B 2 at its centre. The ratio of 2 1 B B is :",
+    "options": {
+      "A": "5 2",
+      "B": "25 4",
+      "C": "5 4",
+      "D": "25 2 MF05 - 0024 b a O i z y x i 2 a NEET : PHYSICS"
+    },
+    "correct_option": "B",
+    "explanation": "B = 0 N i 2R \\mu B 1 = 1 0 1 N i 2R \\mu For N 2 = 5 Radius of coil = R 2 = 1 1 2 N R N  B 2 = 2 0 2 N i R \\mu 2 2 1 2 2 1 1 2 1 1 B N R N N · B N R N N = =  ; 2 1 B 25 B 4 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A charge particle is moving in a uniform magnetic field ( ) ˆ ˆ 2i 3j T + . If it has an acceleration of ( ) 2 ˆ \\hat{i} 4j m/s \\alpha - , then the value of \\alpha will be",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "12",
+      "D": "2 MF14 - 0035"
+    },
+    "correct_option": "B",
+    "explanation": "As ( ) F q v B =  \\rho\\rho \\rho ( ) q a v B m =  \\rho \\rho \\rho So, a &B are ⊥ \\rho \\rho to each other Hence, a.B 0 = \\rho \\rho ( ) ( ) ˆ ˆ ˆ \\hat{i} 4j . 2i 3j 0 \\alpha - + = ( ) ( )( ) 2 4 3 0 \\alpha + - = 12 6 2 \\alpha =  \\alpha = C D A B P ( a, 0, a ) E F k \\hat{j} \\hat{i} ˆ NEET : PHYSICS"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A triangular shaped wire carrying 10A current is placed in a uniform magnetic field of 0.5T, as shown in figure. The magnetic force on segment CD is (Given BC = CD = BD = 5 cm). Magnetic field 5 cm 5 cm 5 cm A B D E C",
+    "options": {
+      "A": "0.126 N",
+      "B": "0.312 N",
+      "C": "0.216 N",
+      "D": "0.245 N MF19 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "= \\rho M eff F (CD) BI = 0.5×(10) × (5 sin60 ×10 - 2 ) = 0.216 N",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field at the center of current carrying circular loop is B",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "B 1 B 2 \\mu = 0 1 I B 2R ( ) \\mu \\mu (  = = = ( ) )  + 2 0 0 1 2 3/2 2 2 IR I B 1 B 8 2R 8 2 R 3R = 1 2 B 8 B 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field at a distance of 3 times radius of the given circular loop from the center on its axis is B",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "- =  =  = \\pi 8 0 1 2 2 1 2 μ I B r 10 12 B 2 r B r B 4 -  =  9 2 B 3.33 10 Tesla"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The value of B 1 /B 2 will be ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "B 1 = B 4 = 0 B 2 = B 3 = \\mu \\pi 0 i 4 b sin 45^\\circ  & B 5 = \\mu        0 i 3 2a 4 B net = B 2 + B 3 + B 5 so B Net = \\mu \\mu +  \\pi 0 0 i 3 i 8a 2 2 b"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wire X of length 50 cm carrying a current of 2 A is placed parallel to a long wire Y of length 5 m. The wire Y carries a current of 3 A. The distance between two wires is 5 cm and currents flow in the same direction. The force acting on the wire Y is : X 2A 3A 5cm Y",
+    "options": {
+      "A": "1.2 × 10 - 5 N directed towards wire X.",
+      "B": "1.2 × 10 - 4 N directed away from wire X.",
+      "C": "1.2 × 10 - 4 N directed towards wire X.",
+      "D": "2.4 × 10 - 5 N directed towards wire X. MF20 - 0015"
+    },
+    "correct_option": "A",
+    "explanation": "Force of interaction = I 1 \\lambda 1 B 12 0 1 2 1 I I 2 r \\mu = \\pi \\rho 7 2 4 10 6 0.5 2 5 10 - - \\pi    = \\pi   = 1.2 × 10 - 5 towards X"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A charge particle of 2 \\mu C accelerated by a potential difference of 100V enters a region of uniform magnetic field of magnitude 4 mT at right angle to the direction of field. The charge particle completes semicircle of radius 3 cm inside magnetic field. The mass of the charge part icle is_____ × 10 - 18 kg. MF14 - 0037",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 mv 2km r q B r = = ,m = qB qB 2k × × × × × × × × × × × × 3 cm - - - -         =   3 3 12 6 1 3 2 2 4 10 4 10 10 100 100 m 2 (100) 10 = 144 × 10 - 18 kg"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two long straight wires P and Q carrying equal current 10A each were kept parallel to each other at 5 cm distance. Magnitude of magnetic force experienced by 10 cm length of wire P is F",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Force per unit length between two parallel straight wires = 0 1 2 μ i i 2 d \\pi  F 2 = 8F 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If distance between wires is halved and currents on them are doubled, force F 2 on 10 cm length of wire P will be :",
+    "options": {
+      "A": "8 F 1",
+      "B": "10 F 1",
+      "C": "If 1 /8",
+      "D": "If 1 /10 MF20 - 0016"
+    },
+    "correct_option": "A",
+    "explanation": "- =  =  = \\pi 8 0 1 2 2 1 2 μ I B r 10 12 B 2 r B r B 4 -  =  9 2 B 3.33 10 Tesla"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A circular loop of radius r is carrying current 1 A. The ratio of magnetic field at the centre of circular loop and at a distance r from the center of the loop on its axis is : (1) 1:3 2 (2) 3 2 :2 (3) 2 2 :1 (4)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Magnetic field due to current carrying circular loop on its axis is given as 2 0 2 2 3/2 Ir 2(r x ) \\mu + At centre, x = 0, 0 1 I B 2r \\mu = At x = r, 0 2 I B 2 2 2r \\mu =  1 2 B 2 2 B ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A single current carrying loop of wire carrying current I flowing in anticlockwise direction seen from +ve z direction and lying in xy plane in shown in figure. The plot of \\hat{j} component of magnetic field (By) at a distance ‘a’ (less than radius of the coil) and on yz plane vs z coordinate look like",
+    "options": {
+      "D": "MF07 - 0015 NEET : PHYSICS",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "B y = 0 in plane of coil B y is opposite of each other in - z and +z positions.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnitude of magnetic induction at mid - point O due to current arrangement as shown in Fig will be : E I T B O I A a a C",
+    "options": {
+      "A": "0 I 2 a \\mu \\pi",
+      "B": "0",
+      "C": "0 I 4 a \\mu \\pi",
+      "D": "0 I a \\mu \\pi MF06 - 0034"
+    },
+    "correct_option": "D",
+    "explanation": "Magnetic field due to current in BC and ET are outward at point ‘O’ 0 0 0 0 0 i i i i B 4 r 4 r 2 r a \\mu \\mu \\mu \\mu = + = = \\pi \\pi \\pi \\pi",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric current in a circular coil of four turns produces a magnetic induction 32 T at its centre. The coil is unwound and is rewound into a circular coil of single turn, the magnetic induction at the centre of the coil by the same current will be :",
+    "options": {
+      "A": "8T",
+      "B": "4T",
+      "C": "2T",
+      "D": "16T MF05 - 0027"
+    },
+    "correct_option": "C",
+    "explanation": "\\mu =  0 i B 4 2R \\mu = 0 i B' 2R' R’ = 4R \\mu = 0 i B' 8R = B' 1 B 16 B’ = 2T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A massless square loop, of wire of resistance 10 \\Omega . supporting a mass of 1 g. hangs vertically with one of its sides in a uniform magnetic field of 10 3 G, directed outwards in the shaded region. A dc voltage V is applied to the loop. For what value of V. the magnetic force will exactly balance the weight of the supporting mass of 1g? (If sides of the loop = 10 cm, g = 10 ms - 2 )",
+    "options": {
+      "A": "1 V 10",
+      "B": "100 V",
+      "C": "1 V",
+      "D": "10 V MG47 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "If m = mg  ILB = mg  V LB mg R (  = ( ) )   mgR V LB = 3 2 3 4 (1 10 kg)(10 m / s )(10 ) (0.1m)(10 10 T) - -  \\Omega =  10 V = \\mu \\pi = = \\mu (  \\pi ( ) )  2 0 1 2 0 2 (10) F 1 2 (5cm) (20) F 8 5cm 2 2 NEET : PHYSICS"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "As shown in the figure, a current of 2A flowing in an equilateral triangle of side 4 3cm . The magnetic field at the centroid O of the triangle is : (Neglect the effect of earth’s magnetic field.)",
+    "options": {
+      "A": "4 4 3 10 T - ",
+      "B": "5 4 3 10 T - ",
+      "C": "4 3 10 T - ",
+      "D": "5 3 3 10 T -  MF06 - 0033"
+    },
+    "correct_option": "D",
+    "explanation": "d tan60 2 3 ^\\circ = d = 2 cm 0 i B 3 sin 60 2 d \\mu =  ^\\circ \\pi 7 2 2 10 2 3 3 2 2 10 - -   =    5 3 3 10 - = ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A long conducting wire having a current I flowing through it, is bent into a circular coil of N turns. Then it is bent into a circular coil of n turns. The magnetic field is calculated at the centre of coils in both the cases. The ratio of the magnetic fi eld in first case to that of second case is: (1) N : n (2) n",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Let the length of wire is l, thus the radius of first coil 𝐑 𝟏 = 𝐥 𝟐𝛑𝐍 and the radius of second coil 𝐑 𝟐 = 𝐥 𝟐𝛑𝐧 So 𝐁 𝟏 = 𝛍 𝟎 𝐍𝐢 𝟐𝐥 𝟐𝛑𝐍 = 𝛍 𝟎 𝐍 𝟐 𝛑𝐢 𝐥 a nd 𝐁 𝟐 = 𝛍 𝟎 𝐧𝐢 𝟐𝐥 𝟐𝛑𝐧 = 𝛍 𝟎 𝐧 𝟐 𝛑𝐢 𝐥 So 𝐁 𝟏 𝐁 𝟐 = 𝐍 𝟐 𝐧 𝟐"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton (mass m and charge + e ) and an \\alpha - particle (mass 4 m and charge +2 e ) are projected with the same kinetic energy at right angles to the uniform magnetic field. Which one of the following statements will be true",
+    "options": {
+      "A": "The \\alpha - particle will be bent in a circular path with a small radius that for the proton",
+      "B": "The radius of the path of the \\alpha - particle will be greater than that of the proton",
+      "C": "The \\alpha - particle and the proton will be bent in a circular path with the same radius",
+      "D": "The \\alpha - particle and the proton will go through the field in a straight line MF14 - 0039"
+    },
+    "correct_option": "C",
+    "explanation": "= 2mK r qB i.e. r  m q Here kinetic energy K and B are same. \\alpha \\alpha \\alpha  = = = p p p p p p p m m r 2q q . . 1 r q 4m q m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electron is moving with a speed of 10 8 m/s perpendicular to a uniform magnetic field of intensity B . Suddenly intensity of the magnetic field is reduced to B /",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": " 1 r B i.e . =  =  1 2 1 2 2 1 1 r B B r r r B B / 2 = 2 r"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The radius of the path becomes from the original value of r",
+    "options": {
+      "A": "No change",
+      "B": "Reduces to r / 2",
+      "C": "Increases to 2 r",
+      "D": "Stops moving MF14 - 0040 NEET : PHYSICS"
+    },
+    "correct_option": "A",
+    "explanation": "B 1 = B 4 = 0 B 2 = B 3 = \\mu \\pi 0 i 4 b sin 45^\\circ  & B 5 = \\mu        0 i 3 2a 4 B net = B 2 + B 3 + B 5 so B Net = \\mu \\mu +  \\pi 0 0 i 3 i 8a 2 2 b"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton and an \\alpha - particle enter a uniform magnetic field perpendicularly with the same speed. If proton takes 25 \\mu sec to make 5 revolutions, then the periodic time for the \\alpha - particle would be",
+    "options": {
+      "A": "50 \\mu sec",
+      "B": "25 \\mu sec",
+      "C": "10 \\mu sec",
+      "D": "5 \\mu sec MF14 - 0041"
+    },
+    "correct_option": "C",
+    "explanation": "Time period of proton = = \\mu p 25 T 5 sec 5 By using \\alpha \\alpha \\alpha \\pi =  =  =  p p p p p p p q 4m q T m 2 m T qB T m q m 2q  T \\alpha = 2T p = 10 \\mu sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a particle of charge 10 - 12 C moving along the ˆ x direction with a velocity 10 5 m/s experiences a force of 10 - 10 N in ˆ y direction due to magnetic field, then the minimum magnetic field is",
+    "options": {
+      "A": "6.25 × 10 3 T in ˆ z direction",
+      "B": "10 - 15 T in ˆ z direction",
+      "C": "6.25 × 10 - 3 T in ˆ z direction",
+      "D": "10 - 3 T in ˆ z direction MF13 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "= \\theta  = \\theta F F qvBsin B qv sin = min F B qv (when \\theta = 90 o ) - - -  = = =  10 3 min 12 5 F 10 B 10 qv 10 10 Tesla in ˆ z direction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "3 A of current is flowing in a linear conductor having a length of 40 cm . The conductor is placed in a magnetic field of strength 500 gauss and makes an angle of 30^\\circ with the direction of the field. It experiences a force of magnitude",
+    "options": {
+      "A": "3 × 10 4 N",
+      "B": "3 × 10 2 N",
+      "C": "3 × 10 - 2 N",
+      "D": "3 × 10 - 4 N MF19 - 0011"
+    },
+    "correct_option": "C",
+    "explanation": "If Bilsin = \\theta = 500×10 - 4 ×3×(40×10 - 2 )× 1 2 = 3×10 - 2 N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Three long, straight and parallel wires carrying currents are arranged as shown in the figure. The wire C which carries a current of 5.0 amp is so placed that it experiences no force. The distance of wire C from wire D is then",
+    "options": {
+      "A": "9 cm",
+      "B": "7 cm",
+      "C": "5 cm",
+      "D": "3 cm MF06 - 0035"
+    },
+    "correct_option": "A",
+    "explanation": "For no force on wire C, force on wire C due to wire D= force on wire C due to wire B ( ) \\mu \\mu        =   \\pi \\pi - 0 0 2 15 5 2 5 10 4 x 4 15 x l l  x = 9 cm.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Same current i = 2 A is flowing in a wire frame as shown in figure. The frame is a combination of two equilateral triangles ACD and CDE of side 1 m . It is placed in uniform magnetic field B = 4 T acting perpendicular to the plane of frame. The magnitude of magnetic force acting on the frame is",
+    "options": {
+      "A": "24 N",
+      "B": "Zero",
+      "C": "16 N",
+      "D": "8 N MF21 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "= = CAD CD CED F F F \\rho\\rho\\rho  Net force on frame = CD 3F \\rho = (3)(2)(1)(4) ( F = ilB ) = 24 N",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABF8AAABACAIAAABDd09uAAAKMElEQVR42u3d3XNU9R3H8e/unnP2gYVqnIE8wUzFEUEC2CFBwkOBPt+0wSdarUTvahVGHWcc7rzwNswo2VD1xoSHUCTUUKpkE5JlxItWkhmQQAhYOoplpqXimN2cc/Y8bC/WsVgBN7LJnrN5v/6BDN8TZs4nv9/3cwK5XE4AAADKlOM4Pcne0dFzqqqKSC6XCwQCjMVrcrlcMBhsamqqrqpiGighhREAAIAyjkZ7OzuPpVIjI2dHz19gIB43eOJEW1tbOBxmFCiVICMAAABlHI36epOqqtbXN9yz4G5m4nF/Pnz4+eefN02TUYB0BAAAUDRuLte5b1+y50g0GsvlcqZpLly4KB6PMxmPe+vAAQISSEcAAADFNDQ0lI9GX4Yl11VVdcP69QQkAhJAOgIAANPI+QsX9uzerWnhYPB/rzq2bUciEQISAQm4iQCddQAAoJyMnj+faG0dG/tC066z3K8oimEYqVTqi7GxQIAXIU/b9Mgjr776Kh2DmEqhl156iSkAAIAyYNt26tixjvb2dHrsutFIRFzX1TSttrbWtq3Prl5laF42PDzsOE5Dfb2iULMM4ewIAABgAtFoz97O3uSRaDQWCoW+5QUoEAiHw8PDp0+e+pDRedzDDz20fft2ar4h7B0BAAAUwrLtPXs7j/YlZ8yIf2s0EpF8i92iRfdWVc5hesIOEkA6AgAAZeOdd95N9rwbjcYK31HJ5XKWZS1fXj9r5kwGSEACSEcAAKAcjJw713Pk3VhsxkTX9x3HicVi69ato8WOgASQjgAAgO+dGx1tSyRM0yzkQp18Y/vItu1oNPqjDRsISH4JSIZhMAqQjgAAAOSbp0atO3ak02Oqqsot1DkQkHwUkFq2b2cOEBq9AQAAro00/QOpXR0dmUz6RuXdMpErduFweG5trW1bV69+zni9bGhwcEY8XldXR803hEZvAAAAy7J279nT15uMxWZ8hwt1NxIMBsPh8ODgiZFzowxZqPmGcLMOAADA8w7/5Z2+3mQ8PrOI0UhEXNc1DGPhwkVcsRM/XLF77rnnKGkA6QgAAExrZ0dGkj1HvkNDnRRW862q6ob16wlI3negq4sWO5COAACATOcahrZEIpvNFvfUSL6+0RSJRDasX893kISab5COAAAAPBuNEq2tmUz6VhrqCg9IfAfJLwHphRdecByHUYB0BAAAZPpcqGvdsaMoDXVSWPFD/gSJgOR9f9y//+3ubuYAobMOAACUPcu2BwZSh7rf1nV9sk+N/o+iKIZhDA0NXfr0Ux6El8Xj8RdffPGJ5mZa7EA6AgAAZct13faOjqKXd0vBJQ2Koti23dvXl06neRxCzTeEm3UAAAAl8te/fTDQf7To5d0FCgQCjuMoisIVO6GkAaQjAACAEjpz9uzePbs1LTwZ5d2FcxwnGo0SkHz0HSSDgAThZh0AACivaNSWSIyPZ6amhkEK20HqHxjgip33PfLww6+88kpJzhshnB0BAACUdzQSWux8Zf9bb9FiB+HsCAAAEI2EEySIxOPx9vaONatXMQqQjgAAgC9ls9nUsWOHurunvrx7ogHp+PvHP/vsKo/My2Kx2LZt26j5BukIAAD40oGug10H9peqoa5woVDINM1UKvXF2BhPTaj5hrB3BAAAUFSnh4f7epMzZ87y/jJ9vsVu3bp17CAJNd8gHQEAABTX8JkzO9vaLMsKBv3xckJJg/9qvg2DUYB0BAAAfBCNEq2tuj7u2V2j67Jtm4Akvrm02dXS0sIcIOwdAQAAj0ejtkTCMAx/RaO8XC6nqqphGOwgeZ+qKJ379q1ds4ZRQDg7AgAA3kkUcs2uUaK11afRSEQCgUD+BIkdJO+zbLu5ufm94+8zCpCOAACAhxKFXLNrZJqmpmn+fu22rFgstqKh3vt9EtNcJpN5/PHfJnv7GAW4WQcAAMRTDXU729r8e2ok16v5TqfH3jv+Ph+K9b7mzZtffvllar5BOgIAAJ6IRm2JhGmaZRON8vI7SEf7+wlI4ofvILW0tEQiEUYB4WYdAAAgGskkXLELh8O02IlPar5psYNwdgQAAIhGMvktdv0DA5wgiedb7PZ2dv5w7VpGAdIRAACYaidPnfrDzp2maaiqVt5vIKqq6vr4QOpYJpPhuXtZLBbbtWvXmtWrGQVIRwAAYOqcHRl5/bXXstlsuZ4ayddPkMLh8OXL/+xJ9vLovR+Q3nyzfdWqxpzrlvbFWFGUYJC1l1Kno55kMpu1vurWBAAAmAyXLn2Sv1A3Tf4yGwwGbds+2HXg9PAZnr7HRSLhjU0b51RWuo5Twt9PRVWVUIijCyndF7FEJPD6G2/ouk46AgAAMsmXzabb+0b+3zt44kT3oUOu6/I74HHz5s1dumSpiORypXlY5KLSMk0zn1E1x3FIRwAAAEV/2Q0EAisbVymK0nXwIAHJ4z7++BMlFFq27L6p/KGO41hW9tqvJKOE/2FFRBEhpAIAAEzW+5ZpGsvr60WEgOR9f7/4j5qampqa2mw2OwU/Lps1KyruqK6u5hfDC7KWlU9HAAAAmNSX4CwByS9Onx6ePXuOoii2bU/qDzIMvaam9vdPP11TXc3Yha/BAgAATKuAVN/Q8MDGjVyg8rirn3/e39/vuq6iKJMdjZ7ZsoVoRDoCAACQ6bnzXd/Q8IP7ljEK7weko0ePuq47Se3z4+OZfDSqqqxk2qQjAACAacq27Z/9/Bf3LlrIKMTbZYP5gKTruqZpUtQ9NMPQFyy4h2jkWaGmpibbtjnkBQAAkCn5SuziurrvzZo1OjpKg7OXGYZx8eJFTVMrKyuLtYNkWdlf/qppc3Pz7bfdxoSFsyMAAIBpLt/KsLKx8aEHHwwGeRMTj5eYfXBi8KOPLhTlK8aZTHrJ0mUbm5oi4TCzJR0BAABA5Muab3N5ff2DDzxAQPK+k6c+tCzrFneQDEOvrZ27adMm5kk6AgAAgHyzpCEfkEKhENPwMl3XBwYGbqXFzjD0qqrqLVu3smtEOgIAAIDcuOZ7xU9/8mNGIT5psVMUZaJX7AxDr6ys2rJ1a3VVFZMkHQEAAOAmAcm8f2XjXfPvZBR+CUiaphUekHR9nGgkdNYBAACgQIqi3L1gwZV//+vKlf8wDfF2i93ly5erq6sjkUi+XeNbo+/8+Xf97qmn+OQr6QgAAABSYEmDpml1S5ZQ8+2Xmu9YLFpRccfNA9L4eGbx4rpnn322oqKCuQk36wAAACATq/leRYud+KHmO99id5MdpPyu0aOPPRaNRpkY6QgAAAAy8ZpvgxY78VWL3XVrvg1Dnz17DrtGpCMAAAAILXYyjVvsvopGc2trmRLpCAAAALfaYrfi/pXz7/w+o/BRQCIakY4AAAAgk7GDpGnar3/zKAHJFwGpr68vf8VO18dnz57zzJYtRCNfC7zZ3mEYOp11AAAA3qGqajqd7n77TyMj52zHCVHV4FWO61ZU3N64snHevHlPPPnkvLlzmYmv/RfRofIcwXfEPAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A charged particle is whirled in a horizontal circle on a frictionless table by attaching it to a string fixed at one point. If a magnetic field is switched on in the vertical direction, the tension in the string : -",
+    "options": {
+      "A": "Will increase",
+      "B": "Will decrease",
+      "C": "Will remain the same",
+      "D": "May increase or decrease MF14 - 0036"
+    },
+    "correct_option": "D",
+    "explanation": "Magnetic force will be towards or away from the centre depending upon the nature of charge and direction of magnetic field [  B or \\rho B]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A particle with a specific charge's' is fired with a speed v towards a wall at a distance d, perpendicular to the wall. What minimum magnetic field must exist in this region for the particle not to hit the wall : -",
+    "options": {
+      "A": "v sd",
+      "B": "2v sd",
+      "C": "v 2sd",
+      "D": "v 4sd MF14 - 0038"
+    },
+    "correct_option": "A",
+    "explanation": "For the charge particle not to hit the wall d = R  d = mv qB  B = = mv v q qd d m so B = v sd"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A particle of charge per unit mass \\alpha is projected from origin with a velocity = 0 ˆ v v i \\rho in a uniform magnetic field = - 0 ˆ B B k \\rho . If the particle passes through (0, y, 0) then y is equal to : -",
+    "options": {
+      "A": "- \\alpha 0 0 2v B",
+      "B": "\\alpha 0 0 v B",
+      "C": "\\alpha 0 0 2v B",
+      "D": "- \\alpha 0 0 v B MF16 - 0004 D C B 15 A"
+    },
+    "correct_option": "C",
+    "explanation": "From the diagram y = 2R y = 0 2mv qB or y = \\alpha 0 0 2v B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A charged particle enters in a magnetic field at right angles to the magnetic field. The field exists for a length equal to 1.5 times the radius of circular path of the particle. The particle will be deviated from its path by : -",
+    "options": {
+      "A": "90 ^\\circ",
+      "B": "- (  ( ) )  1 2 sin 3",
+      "C": "30 ^\\circ",
+      "D": "180 ^\\circ MF16 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "If d > R then the particle will deviate by 180^\\circ After covering semicircle"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A particle of mass m and charge q moving with velocity v < qB m \\rho enters region - II normal to the boundary as shown in the figure. Region - II has a uniform magnetic field B perpendicular to the plane of paper. The particle will : -",
+    "options": {
+      "A": "Enter the region - III",
+      "B": "Not enter the region - III",
+      "C": "Complete circular motion in region - II",
+      "D": "Move undeflected in region - II MF16 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "given  qB v m \\rho  mv qB \\rho so R < \\lambda so The particle will not enter in region III NEET : PHYSICS",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A small circular flexible loop of wire of radius R carries a current I. It is placed in a uniform magnetic field B. The tension in the loop will be doubled, if : -",
+    "options": {
+      "A": "I is doubled",
+      "B": "B is doubled",
+      "C": "R is doubled",
+      "D": "All of these MF21 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "Tension generated in circular loop T = IBR"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wire carrying a current i is placed in a uniform magnetic field 'B'. This wire is in the form of the curve y = a sin \\pi (  ( ) )  x L 0 \\le x \\le 2L. Force acting on the wire is : -",
+    "options": {
+      "A": "\\pi iBL",
+      "B": "iBL \\pi",
+      "C": "2iBL",
+      "D": "Zero MF19 - 0010"
+    },
+    "correct_option": "C",
+    "explanation": "L \\rho = 2L so F = iB L \\rho F = 2iBL"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnetic field existing in a region is given by 0 x ˆ B B 1 k (  = + ( ) )  \\rho \\rho . A square loop of edge \\lambda and carrying a current i, is placed with its edge parallel to the x - y axes. Find the magnitude of the net magnetic force experienced by the square loop : -",
+    "options": {
+      "A": "0 1 iB 2 \\rho",
+      "B": "Zero",
+      "C": "iB 0 \\lambda",
+      "D": "2iB 0 \\lambda MF22 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "For wire 1 & 3 B is same & current is in opposite direction so forces will cancel each other F Net = F 2 - F 4 & + = 1 3 F F O \\rho \\rho\\rho F Net = i B 0 (1 + \\rho \\rho ) \\lambda - i B 0 (1+ 0 \\rho ) \\lambda F Net = 2iB 0 \\lambda - iB 0 \\lambda F Net = iB 0 \\lambda in +x direction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Suppose an isolated north pole is kept at the centre of a circular loop carrying a electric current i. The magnetic field due to the north pole at a point on the periphery of the wire is B. The radius of the loop is a. The force on the wire is : -",
+    "options": {
+      "A": "Nearly 2 \\pi a i B perpendicular to the plane of loop",
+      "B": "2 \\pi a i B perpendicular to the plane of loop",
+      "C": "\\pi a i B along the axis of the loop",
+      "D": "Zero MF37 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Force will be into the plane & F = iB \\int d \\rho \\rho = iB (2 \\pi a). "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "There are 50 turns of a wire in every cm length of a long solenoid. If 4 ampere current is flowing in the solenoid, the approximate value of magnetic field along its axis at an internal point and at one end will be respectively",
+    "options": {
+      "A": "12.6 × 10 - 3 Weber/m 2 , 6.3 × 10 - 3 Weber/m 2",
+      "B": "12.6 × 10 - 3 Weber/m 2 , 25.1 × 10 - 3 Weber/m 2",
+      "C": "25.1 × 10 - 3 Weber/m 2 , 12.6 × 10 - 3 Weber/m 2",
+      "D": "25.1 × 10 - 5 Weber/m 2 , 12.6 × 10 - 5 Weber/m 2 MF11 - 0014"
+    },
+    "correct_option": "C",
+    "explanation": "The magnetic field in the solenoid along its axis (i) At an internal point = \\mu 0 ni = 4 \\pi × 10 - 7 × 5000 × 4 = 25.1 × 10 - 3 Wb/m 2 (Here n = 50 turns/cm = 5000 turns/m) (ii) At one end - \\mu  = = = 3 0 end in ni 1 25.1 10 B B 2 2 2 = 12.6×10 - 3 Wb/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The current in the windings on a toroid is 2.0 A . There are 400 turns and the mean circumferential length is 40 cm. If the inside magnetic field is 1.0 T , the relative permeability is near to : -",
+    "options": {
+      "A": "100",
+      "B": "200",
+      "C": "300",
+      "D": "400 MF05 - 0025 Region-II × × × × × × × × × × × × Region-III Region-I O v \\lambda O 2L × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × × NEET : PHYSICS"
+    },
+    "correct_option": "D",
+    "explanation": "- \\mu \\mu \\pi \\mu   =  = \\pi 7 0 r r Ni 4 10 400 2 B 1 2 r 0.4 \\mu r 400(appx.) \\rho × × × × × × × × × × × × × × × x y x O 2L 3 2 4 1 F 4 F 2 x x= \\lambda i x=0 y B → N B B B B / 4 r Magnetic Effect of Current and Magnetism - 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_magnetic_effect_of_current_and_magnetism_279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Magnetic Effect Of Current And Magnetism",
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "language": "en",
+      "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A long straight wire carries a current. Can Ampere's circuital law be used to find magnetic field on a loop that doesn't enclose the wire: -",
+    "options": {
+      "A": "Yes, if loop is circular",
+      "B": "Yes, if loop is rectangular",
+      "C": "Yes, if loop is of irregular shape",
+      "D": "No MF08 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  }
+]

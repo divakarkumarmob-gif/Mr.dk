@@ -1,0 +1,3812 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_001",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following species is an electrophile",
+    "options": {
+      "A": "RNH 2",
+      "B": "SO 3",
+      "C": "3 NO Θ",
+      "D": "ROH GC01 - 0010"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (2) SO 3 is an electrophile because S is having vacant d-orbital i.e. incomplete octet."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_002",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following acts as a nucleophile?",
+    "options": {
+      "A": "2 NO ",
+      "B": ": CCl 2",
+      "C": "2 NH Θ",
+      "D": "3 CH  GC01 - 0013 Reaction Intermediates"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) 2 NH Θ acts as a Nucleophile because it shows excess of electrons i.e. ⊝ ve charge containing species."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_003",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains three pair of electrons :",
+    "options": {
+      "A": "Carbanion",
+      "B": "Carbocation",
+      "C": "Carbon free radical",
+      "D": "None GC01 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_004",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3 CH Θ is less stable than : -",
+    "options": {
+      "A": "CH 3 - 2 CH Θ",
+      "B": "CH 3 - CH Θ - CH 3",
+      "C": "2 CH Θ - NO 2",
+      "D": "CH 3 - CH Θ - C 2 H 5 GC07 - 0010"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_005",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Decreasing order of - I effect of the triad [ - NO 2 , - 3 N H  , - CN] is : -",
+    "options": {
+      "A": "- 3 N H  > - NO 2 > - CN",
+      "B": "- 3 N H  > - CN > NO 2",
+      "C": "- CN > - NO 2 > - 3 N H ",
+      "D": "- NO 2 > - CN > - 3 N H  GC19 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_006",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3 3 CH -CH -CH  is less stable than",
+    "options": {
+      "B": "3 2 CH - CH ",
+      "C": "3 CH ",
+      "D": "None of these GC03 - 0005",
+      "A": "Option A"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_007",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following show + I - effect : -",
+    "options": {
+      "A": "- OH",
+      "B": "- OCH 3",
+      "C": "- CH 3",
+      "D": "- Cl GC19 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) -CH 3 shows +I effect."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_008",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct order of stability of given carbanions will be : -",
+    "options": {
+      "A": "I > II > III",
+      "B": "III > II > I",
+      "C": "I > III > II",
+      "D": "II > I > III GC07 - 0009 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_009",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The strongest acid amongst the following compounds is ?",
+    "options": {
+      "A": "CH 3 CH 2 CH",
+      "B": "ClCH 2 CH 2 CH 2 COOH",
+      "C": "CH 3 COOH",
+      "D": "HCOOH GC30 - 0007 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_010",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following acids is stronger than acetic acid : -",
+    "options": {
+      "A": "Propanoic acid",
+      "B": "HCOOH",
+      "C": "Butyric acid",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (2) SO 3 is an electrophile because S is having vacant d-orbital i.e. incomplete octet."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_011",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following acids have the lowest pK a value : -",
+    "options": {
+      "B": "Cl - CH 2 - CH 2 - COOH",
+      "C": "CCl 3 COOH",
+      "D": "CHCl 2 COOH GC56 - 0005 CH 3 - C CH 3 CH 3  CH 3 - CH 2",
+      "A": "Option A"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) 2 NH Θ acts as a Nucleophile because it shows excess of electrons i.e. ⊝ ve charge containing species."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_012",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has maximum pK a : -",
+    "options": {
+      "A": "CH 2 FCOOH",
+      "B": "CH 2 ClCOOH",
+      "C": "CH 3 COOH",
+      "D": "HCOOH GC30 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_013",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is most basic among the following : -",
+    "options": {
+      "A": "CH 3 NH 2",
+      "B": "CH 3 CH 2 NH 2",
+      "C": "NH 3",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_014",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the correct option for stability of following carbanions :",
+    "options": {
+      "A": "I > II > III",
+      "B": "II > I > III",
+      "C": "III > II > I",
+      "D": "II > III > I GC08 - 0012 R - or M - Effect"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_015",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Mesomeric effect is due to : -",
+    "options": {
+      "A": "Delocalization of  e¯",
+      "B": "Delocalization of \\pi e¯",
+      "C": "Migration of H - atom",
+      "D": "Migration of proton GC20 - 0007 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Delocalisation of \\pi e ⊝ ’s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_016",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The stabilization due to resonance is maximum in",
+    "options": {
+      "D": "GC20 - 0005",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_017",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The oxygen atom in phenol -",
+    "options": {
+      "A": "Exhibits only inductive effect",
+      "B": "Exhibits only resonance effect",
+      "C": "Has more dominating resonance effect than inductive effect",
+      "D": "Has more dominating inductive effect than resonance effect GC19 - 0006 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) +M as well as -I."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_018",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Most stable carbocation is : -",
+    "options": {
+      "D": "GC04 - 0004 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_019",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The most stable carbanion among the following is",
+    "options": {
+      "D": "GC20 - 0006 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_020",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following carbocations",
+    "options": {
+      "D": "3 2 CH - CH  The relative stabilities of these carbocations are such that : -",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (2) SO 3 is an electrophile because S is having vacant d-orbital i.e. incomplete octet."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_021",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Most acidic compound is : -",
+    "options": {
+      "D": "GC51 - 0003 CH 3 - C CH 3 CH 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_022",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following compounds is most acidic : -",
+    "options": {
+      "D": "ClCH 2 CH 2 OH GC30 - 0009",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_023",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is most acidic : -",
+    "options": {
+      "A": "phenol",
+      "B": "benzyl alcohol",
+      "C": "m - chloro phenol",
+      "D": "cyclohexanol GC30 - 0010"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_024",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is the most acidic compound : -",
+    "options": {
+      "A": "CH 2 = CH 2",
+      "B": "HC ≡ CH",
+      "D": "GC16 - 0001",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_025",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following the strongest acid is : -",
+    "options": {
+      "A": "CH 3 COOH",
+      "B": "C 6 H 5 COOH",
+      "C": "m - CH 3 OC 6 H 4 COOH",
+      "D": "p - CH 3 OC 6 H 4 COOH GC51 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) CH-NH 2 CH 3 CH 3 > CH 3 -CH 2 -NH 2 > CH 3 - NH 2 > NH 3 +I max +I +I min •• •• •• •• C 6 H 5 -CH 2 ⊝ > CH 3 CH 3 -C > CH 3 CH 3 (Resonance ) +I 3 ⊝ ⊝ Resonance (Aromatic) No Resonance OH OCH 3 +M -I CH 2 Cl > > > ⊕ CH 2 ⊕ CH 2 ⊕ CH 2 ⊕ NO 2 -M NO 2 - M +M CH 2 ⊝ CH 2 ⊝ OCH 3 CH 2 ⊝ CH 2 - CH 2 ⊝ > > > ( No Resonance of carbanion) OCH 3 +M CH 2 Cl > > > ⊕ CH 2 ⊕ CH 2 ⊕ CH 3 - CH 2 (No Resonance) ⊕ CH 3 +H -I NO 2 -M +H COO ⊝ COO ⊝ CH 3 COO ⊝ COO ⊝ > > > NO 2 -M OH OH OH Cl-CH 2 -CH 2 -OH > > > CH 3 Cl - I -I OH OH ( No Reso. ) CH 2 -OH OH > > > (No Reso. ) of phenyl H H ⊝ (Aromatic) - H ⊕ OCH 3 -I +M COO ⊝ COO ⊝ OCH 3 COO ⊝ CH 3 -COO ⊝ > > > General Organic Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_026",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Phenol is less acidic than",
+    "options": {
+      "A": "Ethanol",
+      "B": "o - Nitrophenol",
+      "C": "o - Methylphenol",
+      "D": "o - Methoxyphenol GC51 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_027",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following acid in decreasing order of their acidic strength. (i) (ii) (iii) (iv)",
+    "options": {
+      "A": "iii > ii > iv > i",
+      "B": "ii > iv > i > iii",
+      "C": "i > iii > ii > iv",
+      "D": "iv > ii > iii > i GC51 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) {A.S.  C. acid > Phenol}"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_028",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is the strongest base : -",
+    "options": {
+      "D": "GC56 - 0006",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_029",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following, the strongest base is : -",
+    "options": {
+      "A": "C 6 H 5 NH 2",
+      "B": "p - NO 2 - C 6 H 4 NH 2",
+      "C": "m - NO 2 - C 6 H 4 NH 2",
+      "D": "C 6 H 5 CH 2 NH 2 GC55 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Localised L.P. is always more basic than delocalised L.P."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_030",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is least basic : -",
+    "options": {
+      "D": "GC55 - 0006",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_031",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which resonating structure of vinyl chloride is least stable : -",
+    "options": {
+      "A": "CH 2 =CH - : Cl",
+      "B": "2 CH Θ - CH= Cl ",
+      "C": "2 CH Θ - CH  - Cl",
+      "D": "All have equal stability GC20 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_032",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following resonating structures of 1 - methoxy - 1,3 - butadiene is least stable : -",
+    "options": {
+      "A": "2 CH Θ - CH=CH - CH=  O - CH 3",
+      "B": "CH 2 =CH - CH Θ - CH= O  - CH 3",
+      "C": "2 CH Θ - CH  - CH=CH - O - CH 3",
+      "D": "CH 2 =CH - CH=CH - O - CH 3 GC22 - 0002 OH NO 2 OH CH 3 OH COOH OCH 3 COOH Cl OH N O 2 COOH NH 2 NH - CH 3 NH 2 CH 3 CH 2 - NH 2 NH 2 NO 2 NH 2 OCH 3 NH 2 Cl NH 2 CH 3 NEET : Chemistry"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_033",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following compounds carbon - chlorine bond distance is minimum : -",
+    "options": {
+      "A": "CH 3 - Cl",
+      "B": "C 6 H 5 - CH 2 - Cl",
+      "C": "CH 2 =CH - Cl",
+      "D": "CH 2 =CH - CH 2 - Cl GC17 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Because of Resonance C-Cl bond distance in minimum."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_034",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following the aromatic is",
+    "options": {
+      "D": "GC15 - 0007",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_035",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is aromatic among the following",
+    "options": {
+      "D": "All the above GC15 - 0009",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_036",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The non aromatic compound among the following is : -",
+    "options": {
+      "D": "GC15 - 0006 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_037",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is Aromatic compound : -",
+    "options": {
+      "D": "2 and 3 both GC15 - 0008 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) -CH 3 shows +I effect."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_038",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four structures are given in options",
+    "options": {
+      "A": "to",
+      "D": ". Examine them and select the aromatic structures.",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_039",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compounds exhibits hyperconjugation :",
+    "options": {
+      "A": "Phenol",
+      "B": "Ethyne",
+      "C": "Ethanol",
+      "D": "Propene GC65 - 0017"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Propene (CH 3 - CH = CH 2 ) \\alpha -H = 3 NO 2 -M OH ⊝ OH ⊝ > Cl -I +M COO ⊝ COO ⊝ OCH 3 COO ⊝ (Phenol) > > > NH 2 O ⊝ Localised \\lambda .p. hence most basic CH 2 -NH 2 •• CH 2 -NH 2 Localised L.P. •• OCH 3 +M -I NH 2 Cl > > > •• NH 2 •• NH 2 •• NH 2 •• NO 2 -M CH 3 +H CH 2 -CH-C l ⊕ ⊝ (Octet incomplete) CH 2 =CH-CH=CH-O-CH 3 > CH 2 =CH-CH-CH=O-CH 3 ⊝ (Incomplete Octet) CH 2 -CH=CH-CH=O-CH 3 CH 2 CH-CH=CH-O-CH 3 > > ⊝ ⊝ ⊕ ⊕ ⊕ CH 2 = CH - Cl •• •• •• Aromatic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_040",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is least stable : -",
+    "options": {
+      "A": "3 3 CH -CH-CH ",
+      "B": "3 2 2 CH -CH -CH ",
+      "D": "GC05 - 0005",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_041",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is most stable alkene : -",
+    "options": {
+      "D": "GC27 - 0006 Tautomerism",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_042",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Tautomerism is due to : -",
+    "options": {
+      "A": "Delocalization of sigma electrons",
+      "B": "Delocalization of pi electrons",
+      "C": "Migration of active - H - atom",
+      "D": "None is correct GC61 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Tautomerism is due to migration of active H- atom."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_043",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following will lead to maximum enolisation : -",
+    "options": {
+      "D": "All have equal GC64 - 0003   N S N N N + ⊝ CH 3 - C - CH 3 CH 3  CH 3 - C - CH - C 6 H 5 CH 3  CH 3 C=C H H H H C=C H H CH 3 H C=C H H H 5 C 2 H C=C H H CH 3 H CH CH 3 O CH 3 - C - CH 3 O CH 3 - C - CH 2 - C - H O O CH 3 - C - CH - C - CH 3 O Br General Organic Chemistry",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_044",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Urea molecule exhibits which type of isomerism : -",
+    "options": {
+      "A": "Chain",
+      "B": "Position",
+      "C": "Geometrical",
+      "D": "Tautomerism GC62 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_045",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Tautomerism is not observed in : -",
+    "options": {
+      "B": "Ph - CH=CH - OH",
+      "C": "CH 3 - NO 2",
+      "D": "GC61 - 0005 EXERCISE - I",
+      "A": "Option A"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Exercise-II (Conceptual Questions)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_046",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "K a of benzoic acid increases if substituent X is bonded at para position, X is :",
+    "options": {
+      "A": "- OCH 3",
+      "B": "- CH 3",
+      "C": "- CN",
+      "D": "- NH 2 GE02 - 0028"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Acidic strength  K a  1 pKa  M / H / I M / H / I - - - + + + Acidic strength = 3 > 2 > 1 > 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_047",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) (2) (3) (4) Decreasing order of pKa is : (1) 1 > 2 > 3 > 4 (2) 1 > 3 > 4 > 2 (3) 2 > 4 > 1 > 3 (4) 4 > 3 > 2 > 1 GE11 - 0016",
+    "options": {
+      "D": "Decreasing order of pKa is :",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Acidic strength  Ka  1 pKa  M / H / I M / H / I - - - + + + Acidic strength = 2 > 4 > 3 > 1 pKa = 1 > 3 > 4 > 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_048",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct order of K a is : (i) CH 3 - CH 2 - COOH (ii) OHC - CH 2 - COOH (iii) Ph - CH 2 - COOH",
+    "options": {
+      "A": "iii > ii > i",
+      "B": "i > ii > iii",
+      "C": "ii > iii > i",
+      "D": "i > iii > ii GE11 - 0017"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Acidic strength  Ka  M / H / I M / H / I - - - + + + Acidic strength = 3 > 2 > 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_049",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Decreasing order of stability of the following carbocation ?",
+    "options": {
+      "A": "6 4 2 m",
+      "B": "6 4 2 p",
+      "C": "6 4 2 p",
+      "D": "6 5 2 C H CH  -"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Stability of C   M / H / I M / H / I + + + - - - B > D > A > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_050",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound will show Hyperconjugation?",
+    "options": {
+      "A": "2 only",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\alpha H present NO \\alpha H \\alpha H present  show Hyperconjugation"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_051",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of pK b is (i) CH 3 - CH 2 - NH 2 (ii) Ph - CH 2 - NH 2 (iii) (iv)",
+    "options": {
+      "A": "i > ii > iii > iv",
+      "B": "iii > iv > i > ii",
+      "C": "iii > iv > ii > i",
+      "D": "ii > i > iii > iv GE09 - 0019"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Basic strength  Kb  1 pKb  M / H / I M / H / I + + + - - - Localized > delocalised Basic strength = 1 > 2 > 4 > 3 pKb = 3 > 4 > 2 > 1 Exercise - I General Organic Chemistry NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_052",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following carbon free radical is most stable ?",
+    "options": {
+      "D": "GE19 - 0005",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Resonance stable with benzene ring"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_053",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of basic strength in gas phase is (I) CH 3 - NH 2 (II) (CH 3 ) 2 NH (III) (CH 3 ) 3 N (IV) NH 3",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "II > I > III > IV",
+      "C": "III > II > I > IV",
+      "D": "II > III > I > V GE09 - 0020"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 3 > 2 > 1 > 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_054",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which carbocation is most stable ?",
+    "options": {
+      "D": "GE33 - 0012 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_055",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in order of their decreasing basic strength (I) (II) (I II )",
+    "options": {
+      "A": "I I > I II > I",
+      "B": "I > II > II I",
+      "C": "III > I > II",
+      "D": "I > III > I I GE05 - 0009 . .     OH Et OH CHO OH OH OH Cl CH 2 H - C - NH - C - H O O NH 2 Ph Ph O C - NH 2 O O NH NH 2 Exercise - I General Organic Chemistry NEET : Extra Edge [ Chemistry ] 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) (I) (II) (III) (IV) Basic strength = localized > delocalized 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_056",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is strongest acid ?",
+    "options": {
+      "D": "GE11 - 0018 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Acidic strength  K a  1 pKa  M / H / I M / H / I - - - + + + Acidic strength = 3 > 2 > 1 > 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_057",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The most unlikely representation of resonance structure of p - nitrophenoxide is",
+    "options": {
+      "D": "GE34 - 0005 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Acidic strength  Ka  1 pKa  M / H / I M / H / I - - - + + + Acidic strength = 2 > 4 > 3 > 1 pKa = 1 > 3 > 4 > 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_058",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following carbanion is most stable?",
+    "options": {
+      "A": "3 2 H C CH - Θ",
+      "B": "2 2 H C CH CH = - Θ",
+      "D": "GE40 - 0008 1",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Acidic strength  Ka  M / H / I M / H / I - - - + + + Acidic strength = 3 > 2 > 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_059",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following does not represent a correct set of nucleophile -",
+    "options": {
+      "C": "SO 3 , H 2 O,",
+      "D": "CH 3 - S - CH 3 , , GE25 - 0003 1",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Stability of C   M / H / I M / H / I + + + - - - B > D > A > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_060",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct regarding formation of reactive intermediate in given heterolytic bond cleavage:",
+    "options": {
+      "A": "CH 3 - S - CH 3 ⎯ →",
+      "B": "CH 3 - Cu ⎯ →",
+      "C": "CH 3 - Cl ⎯ →",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\alpha H present NO \\alpha H \\alpha H present  show Hyperconjugation"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_061",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In nitromethane , two N - O bond lengths are:",
+    "options": {
+      "A": "a = b",
+      "B": "a > b",
+      "C": "b > a",
+      "D": "Cannot be compared GE06 - 0003 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Basic strength  Kb  1 pKb  M / H / I M / H / I + + + - - - Localized > delocalised Basic strength = 1 > 2 > 4 > 3 pKb = 3 > 4 > 2 > 1 Exercise - I General Organic Chemistry NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_062",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following shows +Reffect:",
+    "options": {
+      "B": "- Cl",
+      "C": "- COOH",
+      "D": "- CONHR GE35 - 0009 1",
+      "A": "Option A"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Resonance stable with benzene ring"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_063",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compounds does not show electromeric effect ?",
+    "options": {
+      "A": "CH 3 - CN",
+      "B": "CH 3 - CHO",
+      "C": "CH 2 = CH 2",
+      "D": "CH 3 - Cl GE16 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 3 > 2 > 1 > 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_064",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is most basic ?",
+    "options": {
+      "D": "GE05 - 0010 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) NH localized sp 3 N Basic strength = 3 > 1 > 2 > 4 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_065",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Tautomerism is shown by : -",
+    "options": {
+      "D": "GE39 - 0001 COOH OH COOH NO 2 COOH SO 3 H COOH CH 3 N O ⊝ O O  ⊝ N O O O  ⊝ ⊝ N O ⊝ O O  N O ⊝ O O  ⊝ H 3 C - C - CH 2 O ⊝ H 3 C - C - CH 2 NH ⊝ HS C 2 H 5 O , NH 2 , CN, CH 3 NO 2 I CH 3 + CH 3 - S CH 3 + Cu CH 3 + Cl CH 3 - N O",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) (I) (II) (III) (IV) Basic strength = localized > delocalized 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_066",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not anti aromatic ?",
+    "options": {
+      "D": "GE03 - 0014 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Acidic strength  K a  1 pKa  M / H / I M / H / I - - - + + + Acidic strength = 3 > 2 > 1 > 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_067",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not the resonance structure of aniline?",
+    "options": {
+      "D": "GE24 - 0001 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Acidic strength  Ka  1 pKa  M / H / I M / H / I - - - + + + Acidic strength = 2 > 4 > 3 > 1 pKa = 1 > 3 > 4 > 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_068",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pairs of related chemical species are given below. Which pair is not resonating structures?",
+    "options": {
+      "A": "CH 3 COCH 2 COOC 2 H 5 , CH 3 C",
+      "D": "GE34 - 0006 2",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Acidic strength  Ka  M / H / I M / H / I - - - + + + Acidic strength = 3 > 2 > 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_069",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following has all the effects, namely inductive, mesomeric and hyperconjugative?",
+    "options": {
+      "A": "CH 3 Cl",
+      "B": "CH 3 CH=CH 2",
+      "D": "CH 2 =CH - CH=CH 2 GE20 - 0006 2",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Stability of C   M / H / I M / H / I + + + - - - B > D > A > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_070",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among the following alkenes will be most stable:",
+    "options": {
+      "A": "Ethene",
+      "B": "2 - Methylpropene",
+      "C": "2,3 - Dimethyl - 2 - butene",
+      "D": "2 - butene GE31 - 0002 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) \\alpha H present NO \\alpha H \\alpha H present  show Hyperconjugation"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_071",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of p K b is ?",
+    "options": {
+      "A": "II < I < IV < III",
+      "B": "I < II < IV < III",
+      "C": "III < IV < I < II",
+      "D": "III < IV < II < I GE05 - 0012 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Basic strength  Kb  1 pKb  M / H / I M / H / I + + + - - - Localized > delocalised Basic strength = 1 > 2 > 4 > 3 pKb = 3 > 4 > 2 > 1 Exercise - I General Organic Chemistry NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_072",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which cation is maximum stable ?",
+    "options": {
+      "D": "GE33 - 0013 Exercise - I",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Resonance stable with benzene ring"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_073",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The hybrid state of C-atoms which are attached to a single bond with each other in the following structure are : CH 2 =CH-C ≡ CH",
+    "options": {
+      "A": "sp 2 , sp",
+      "B": "sp 3 , sp",
+      "C": "sp 2 , sp 2",
+      "D": "sp 2 , sp 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_074",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The third member of the homologous series of aliphatic aldehydes has the structure :-",
+    "options": {
+      "A": "CH 3 CH 2 CHO",
+      "B": "CH 3",
+      "C": "CH 3 COCH 2 CH 3",
+      "D": "CH 3 COCH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_075",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Molecular formula C 4 H 8 O 2 represents :-",
+    "options": {
+      "A": "An acid only",
+      "B": "An ester only",
+      "C": "An alcohol only",
+      "D": "An acid and an ester also"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_076",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The higher homologue of dimethylamine (CH 3 -NH-CH 3 ) has the structure :-",
+    "options": {
+      "A": "CH 3 -N-CH 3 CH 3",
+      "B": "CH 3 -CH 2 -CH 2 -NH 2",
+      "C": "CH 3 -NH-CH 2 -CH 3",
+      "D": "CH 3 CH NH 2 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_077",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The third member of the family of alkenynes has the molecular formula :-",
+    "options": {
+      "A": "C 6 H 6",
+      "B": "C 5 H 6",
+      "C": "C 6 H 8",
+      "D": "C 4 H 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_078",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of olefinic bonds in the given compound is/are :- CH 2 CH C CH CH C N O",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "1",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_079",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of acetylinilic bonds in the given compound is/are : C HC C CH CH C N O",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "1",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_080",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of C-atoms in second member of an ester is/are :",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_081",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is an example of symmetrical or simple ether ?",
+    "options": {
+      "A": "CH 3 C CH 3 O",
+      "B": "CH 3 -O-CH 2 -CH 3",
+      "C": "CH 3 -CH 2 -O-CH 2 -CH 2 -CH 3",
+      "D": "CH 3 CH O CH CH 3 CH 3 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_082",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of hetero atoms present in the following compound is/are : NH 2 N N",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "1",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_083",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound has sp- hybridised carbon atom ?",
+    "options": {
+      "A": "CH 3 COOH",
+      "B": "CH 3 COCH 3",
+      "C": "CH 3 CH 2 CN",
+      "D": "CH 2 =CH-CH=CH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_084",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In compound HC ≡ C-CH 2 -CH=CH-CH 3 , the C 2 -C 3 bond is the type of :-",
+    "options": {
+      "A": "sp - sp 2",
+      "B": "sp 3 - sp 3",
+      "C": "sp - sp 3",
+      "D": "sp 2 - sp 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_085",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following pair of compounds are homologues ?",
+    "options": {
+      "A": "1-Propanol & 2-Propanol",
+      "B": "Ethanol & Propanal",
+      "C": "Acetone & Acetaldehyde",
+      "D": "Acetic acid & Butyric acid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_086",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following homologous series has incorrect general formula ?",
+    "options": {
+      "A": "Alkyne C n H 2n-2",
+      "B": "Alkanol C n H 2n+2 O",
+      "C": "Alkanal C n H 2n+1 O",
+      "D": "carboxylic acid C n H 2n O 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_087",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Minimum number of carbon atoms present in an ester are :-",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "4",
+      "D": "3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_088",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has general formula C n H 2n ?",
+    "options": {
+      "A": "Only Alkyne",
+      "B": "Only Alkane",
+      "C": "Aromatic hydrocarbon",
+      "D": "Alkene & cyclic Alkane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_089",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which compound has alkyne group ?",
+    "options": {
+      "A": "C 7 H 14",
+      "B": "C 10 H 22",
+      "C": "C 9 H 16",
+      "D": "C 16 H 32 COMMON AND DERIVED NAME"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_090",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are tertiary radicals ?",
+    "options": {
+      "A": "CH 3 CH 3 C CH 3",
+      "B": "CH 3 CH CH 3",
+      "C": "CH 3 CH 3 C C 2 H 5",
+      "D": "CH 3 CH 3 C CH 2 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_091",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Common name of the given compound is :- CH 3 C O CH CH 2 O",
+    "options": {
+      "A": "vinyl acetate",
+      "B": "acryl acetate",
+      "C": "methyl acrylate",
+      "D": "Vinyl ethanoate"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_092",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A primary amine has amino group (-NH 2 ) attached to:-",
+    "options": {
+      "A": "A primary carbon atom only",
+      "B": "A secondary carbon atom only",
+      "C": "A tertiary carbon atom only",
+      "D": "A primary, secondary or tertiary carbon atom"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_093",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are secondary radicals ?",
+    "options": {
+      "A": "CH 3 CH C 2 H 5",
+      "B": "CH 2 C CH 3",
+      "C": "CH 2 CH-",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_094",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Examine the following structures :-",
+    "options": {
+      "A": "A is tertiary alcohol while B is tertiary amine",
+      "B": "A is primary alcohol while B is primary amine",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_095",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a correct match ?",
+    "options": {
+      "A": "CH 3 H 3 C C CH 2 CH 3 ⇒ Neopentyl",
+      "B": "CH 3 H 3 C C CH 3 ⇒ Neobutyl",
+      "C": "H C C C H 2 ⇒ Propargyl",
+      "D": "CH 2 =CH-CH 2 - ⇒ Allyl IUPAC NAME"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_096",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name for isobutyl chloride is :-",
+    "options": {
+      "A": "2-Methyl-2-chloro butane",
+      "B": "2-Chloro-2-methyl butane",
+      "C": "1-Chloro-2-methyl propane",
+      "D": "2-Methyl-3-chloro propane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_097",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of given compound is :- CH 3 CH=C-CH 2 CH 3 COOH",
+    "options": {
+      "A": "3-Carboxy-2-pentene",
+      "B": "2-Ethylidene butanoic acid",
+      "C": "2-Ethyl-2-butenoic acid",
+      "D": "3-Ethyl-2-buten-4-oic acid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_098",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name for the given structure is :- CH 3 CH CH 3 CH CH 3 CH 2 CH CH 2 CH 3 H 3 C",
+    "options": {
+      "A": "3-Isopropyl-4-methylhexane",
+      "B": "4-Isopropyl-3-methylhexane",
+      "C": "3-Ethyl-2,5-dimethylhexane",
+      "D": "2-Ethyl-3-isopropylpentane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_099",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name for CH 3 C NH 2 O and are CH 3 C Cl O :-",
+    "options": {
+      "A": "1-Amino-1-oxo ethane,1-Chloro ethanal",
+      "B": "1-Amino ethanal, Acetoyl chloride",
+      "C": "1-Oxoethanamine, Ethanoyl chloride",
+      "D": "Ethanamide, Ethanoyl chloride $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_100",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of carbon atoms in the principle chain of the given compound are :- CH 3 CH 2 CH 2 C COOH C OHC CH 2 CH 3",
+    "options": {
+      "A": "7",
+      "B": "5",
+      "C": "4",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_101",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of given compound is :- CH 3 - C C- C- CH 3 ≡ CH 3 CH 3",
+    "options": {
+      "A": "Methyl tertiarybutyl acetylene",
+      "B": "t-Butyl propyne",
+      "C": "4,4-Dimethyl-2-pentyne",
+      "D": "1,3,3,3-Tetramethyl ethyne"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_102",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of the compound is :- CH 2 C CH NH 2 C NH 2 OCH 3 O",
+    "options": {
+      "A": "4-Amino-2-methoxy-1-amino-2-butene",
+      "B": "4-Amino-3-methoxy-2-butenamide",
+      "C": "2-Methoxy-1,4-diamino-2-butenal",
+      "D": "1-Amino-2-methoxy-3-amino propene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_103",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of CH 3 -CH 2 -NH-CH 3 is :-",
+    "options": {
+      "A": "Methyl ethyl amine",
+      "B": "1-methyl amino ethane",
+      "C": "N-methyl ethan amine",
+      "D": "N-ethyl methan amine"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_104",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name for the compound is :- C O Cl",
+    "options": {
+      "A": "Cyclohexanoyl chloride",
+      "B": "Cyclohexane carbonyl chloride",
+      "C": "1-Chloro cyclohexanal",
+      "D": "Chloro cyclohexyl methanal"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_105",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of HC CH 3 CH CH 3 C C is",
+    "options": {
+      "A": "3-Methyl-2-penten-4-yne",
+      "B": "3-Methyl-3-penten-1-yne",
+      "C": "3-Methyl-4-pentyn-1-ene",
+      "D": "3-Methyl pentenyne"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_106",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cl C 2 H 5 CH 3 has the IUPAC name :-",
+    "options": {
+      "A": "3-Chloro-1-ethyl-2-methyl cyclopentane",
+      "B": "1-Chloro-3-ethyl-2-methyl cyclopentane",
+      "C": "4-Chloro-1-ethyl-5-methyl cyclopentane",
+      "D": "All are correct"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_107",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of CH 3 CH 2 CH 3 is :-",
+    "options": {
+      "A": "1-Methyl-5-ethyl cyclohex-2-ene",
+      "B": "5-Ethyl-3-methyl cyclohex-1-ene",
+      "C": "4-Ethyl-6-methyl cyclohex-1-ene",
+      "D": "1-Ethyl-5-methyl cyclohex-3-ene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_108",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name for the compound is :- O",
+    "options": {
+      "A": "2-Acetyl prop-1-ene",
+      "B": "Pent-1-en-4-one",
+      "C": "Pent-4-en-2-one",
+      "D": "Formyl propene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_109",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is incorrect IUPAC name ?",
+    "options": {
+      "A": "3-Pentyne",
+      "B": "3-Methyl-2-butanone",
+      "C": "2-Ethyl-3-methyl-1-butene",
+      "D": "3-Ethyl-2-methyl pentane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_110",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of OCH 3 H 2 N is :-",
+    "options": {
+      "A": "1-Methoxy-4-amino benzene",
+      "B": "Aminophenyl methyl ether",
+      "C": "4-Methoxy aniline",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_111",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of the given compound is :- CH 2 CN CH CN CH 2 CN",
+    "options": {
+      "A": "1,2,3-Tricarbonitrile propane",
+      "B": "Propane-1,1,1-tricarbylamine",
+      "C": "Propane-1,2,3-tricarbonitrile",
+      "D": "3-Cyano pentane dicyanide $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_112",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of carbon atoms in the principle carbon chain in the given compound are :- CH 3 CH 2 C COOH CH 2",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "2",
+      "D": "5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_113",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Wrong IUPAC name is :-",
+    "options": {
+      "A": "CH 3 CH 2 CONH 2 Propanamide",
+      "B": "CH 3 CH 2 COOCH 3 Methyl propanoate",
+      "C": "CH 3 -CH-CH=CH-CH 3 CH 3 2-Methyl pent-3-ene",
+      "D": "CH 3 CH 2 -O-CH-CH 3 CH 2 -CH 3 2-Ethoxy butane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_114",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of the compound OH CH 3 is",
+    "options": {
+      "A": "2-Methyl cyclopent-1-en-2-ol",
+      "B": "3-Methyl cyclopent-2-en-1-ol",
+      "C": "2-Methyl cyclopent-2-en-1-ol",
+      "D": "3-Methyl cyclopent-1-en-2-ol"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_115",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of H O O O is :-",
+    "options": {
+      "A": "Acetic anhydride",
+      "B": "Formyl ethanoate",
+      "C": "Butane- 2, 4-dione",
+      "D": "Ethanoic methanoic anhydride"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_116",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of given compound is : OH CH 3 CH 3",
+    "options": {
+      "A": "3,3-Dimethyl-1-hydroxy cyclohexane",
+      "B": "1,1-Dimethyl-3-hydroxy cyclohexane",
+      "C": "3,3-Dimethyl-1-cyclohexanol",
+      "D": "1,1-Dimethyl-3-cyclohexanol"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_117",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "IUPAC name of (CH 3 ) 2 CHCH(CH 3 ) 2 is :-",
+    "options": {
+      "A": "2,2-Dimethyl butane",
+      "B": "2,3-Dimethyl butane",
+      "C": "2,4-Dimethyl butane",
+      "D": "1-Methyl pentane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_118",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "IUPAC name of CH 2 =CH-CH 2 -Cl is :-",
+    "options": {
+      "A": "Allyl chloride",
+      "B": "1-Chloro-3-propene",
+      "C": "3-Chloro-1-propene",
+      "D": "Vinyl chloride"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_119",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of the following group CH 2 C CH 3 is :-",
+    "options": {
+      "A": "Isopropenyl",
+      "B": "1-Methylethenyl",
+      "C": "2-Methylethylnyl",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_120",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find correct IUPAC name of tetra-tert-butylmethane",
+    "options": {
+      "A": "3,3-di butyl-2,2,4,4-tetramethyl pentane",
+      "B": "3,3-di tert-butyl-2,2,3,3-tetramethyl pentane",
+      "C": "3,3-di tert-butyl-2,2,4,4-tetramethyl pentane",
+      "D": "3,3-tert butyl-2,2,4,4-tetramethyl pentane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_121",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of the following compound CH 3 CH 2 -CH-CH 2 -CH 3 CH 3 CH 2 -CH-CH 2 -CH 3",
+    "options": {
+      "A": "3, 4 - Dimethyl octane",
+      "B": "3-sec pentyl pentane",
+      "C": "3, 4 - Diethyl hexane",
+      "D": "3, 4 - Dimethyl hexane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_122",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "GOC-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of Cl C O OC 2 H 5 is :-",
+    "options": {
+      "A": "Ethoxy formyl chloride",
+      "B": "Ethoxy methanoyl chloride",
+      "C": "Ethyl chloro methanoate",
+      "D": "Ethoxy carbonyl chloride EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_123",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hybridization inf l uences the bond length and bond enthalpy NC06 - 0587",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Hybridisation influence the bond length and bond enthalpy. sp 3 sp 2 sp % s character 25% 33.3% 50% % s character  Bond enthalpy  1 Bond length B. L. order : Single bond > Double bond > Triple bond B. E. order : Single bond < Double bond < Triple bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_124",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In CH 3 - CH=CH - CH 3 all the atoms are in same plane because formation of \\pi bond is possible if p orbitals on adjacent atoms are parallel. NC06 - 0586",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "CH 3 - CH = CH - CH 3 sp 3 sp 2 sp 2 sp 3 All the atom have different hybridisation so they doesn’t lie in same plane."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_125",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of  bond and \\pi bond in CH 3 - CH=CH - CN are 9 and",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_126",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Bond line n o t at ion of pent - 4 - yn - 2 - ol is NC05 - 1256",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_127",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of hetero atom in , are 3 NC01 - 1774",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Heteroatoms are those atoms which are present in ring/cycle other than carbon atom. Number of heteroatom = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_128",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is Benzenoid structure NC01 - 2073",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Non benzenoid structure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_129",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(THF) is Alicyclic compound NC01 - 2074",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic compound."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_130",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pyridine, Fura n e and Thiophene all are Hete r ocyclic aromatic compound NC01 - 2075",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic, Aromatic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_131",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ethanoic acid and Butanoic acid are Homologues and can be represented by same general molecular formula. NC02 - 0971",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - COOH CH 3 - CH 2 - CH 2 - COOH Homologous General formula - C n H 2n O 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_132",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of alkyl groups obtained from (CH 3 ) 3 C - CH(CH 3 ) 2 are 4 NC01 - 2076 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Number of alkyl group obtain from compound is '3'. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_133",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct name of 6 - ethyl - 3 - methyl octane is 3 - ethyl - 6 - methyl octane NC04 - 0583",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Hybridisation influence the bond length and bond enthalpy. sp 3 sp 2 sp % s character 25% 33.3% 50% % s character  Bond enthalpy  1 Bond length B. L. order : Single bond > Double bond > Triple bond B. E. order : Single bond < Double bond < Triple bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_134",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The name of branched chain alkyl group and their position are placed in parenthesis (in bracket) in IUPAC name NC04 - 0608 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Name of substituted alkyl group are placed in parenthesis (in bracket) . 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_135",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of is 5 - (2,2 - Dimethyl ethyl) nonane NC04 - 0607 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_136",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If there are two different F.G. in a compound than one, which is principl e functional is named as prefix and another is substituent which is used as suffix. NC05 - 1255 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_137",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "IUPAC name of is 3 - Bromobut - 2 - ene NC05 - 1210 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Heteroatoms are those atoms which are present in ring/cycle other than carbon atom. Number of heteroatom = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_138",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH  C - CH=CH - CH 2 - CH=CH 2 is name d a s hepta - 3,6 - dien - 1 - yne NC04 - 0611 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Non benzenoid structure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_139",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is name d as 2 - Cyanopentane NC05 - 1243",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic compound."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_140",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "But - 2 - en - 3 - amine is correct IUPAC name NC05 - 1254",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_141",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is named as 1 - chloro - 2 - methyl - 5 - nitro cyclohexane NC05 - 1257",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " 2 - Chloro - 1 - methyl - 4 - Nitrocyclohexane"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_142",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct structure of 2,3 - dibromo - 1 - phenyl pentane is NC05 - 1260",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2,3 - dibromo - 1 - phenyl pentane"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_143",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "are position al is o mer s SR05 - 0694 OH O O N O CH 3 - CH 2 - CH 2 - CH 2 - CH - CH 2 - CH 2 - CH 2 - CH 3 CH 2 - C ( CH 3 ) 3 Br CN CH 3 NO 2 Cl Br Br classification and Nomenclature, isomerism & General Organic Chemistry",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "and C 8 H 18 C 7 H 1 6 are different as they have different molecular formula."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_144",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "C 4 H 10 O can show metamerism SR04 - 0279",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " Metamer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_145",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "are functional isomers SR02 - 0776",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " functional isomer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_146",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heterolytic cleavage of CH 3 - Cu gives GC08 - 0383",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_147",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In CH 3 - I carbon is electrophilic centre GC08 - 0386",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard General Organic Chemistry principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_148",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The incorrect statement about Inductive effect ?",
+    "options": {
+      "A": "In chloroethane",
+      "B": "The effect decreases rapidity as the number of intervening bond increases.",
+      "C": "This effect becomes vanishingly small after three bonds.",
+      "D": "Aryl is electron donating gro u p s"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) is - I group 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_149",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is incorrect order regarding polar bond ?",
+    "options": {
+      "A": "CH 3 - Br > CH 3 - H",
+      "B": "CH 3 - OH > CH 3 - NH 2",
+      "C": "CH 3 - CH 3 > CH 3 - OH",
+      "D": "CH 3 - F > CH 3 - Cl GC06 - 0114 2"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic compound."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_150",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The in correct statement about resonance effect?",
+    "options": {
+      "A": "Canonical structures contribute to the actual structure in proportion to their stability.",
+      "B": "The energy of actual structure is lower than that of any of the canonical structure.",
+      "C": "The difference in energy between the highest energy canonical structure and the lowest energy canonical structure is called as resonance energy.",
+      "D": "The more number of canonical structure, the more is the resonance energy. GC07 - 0359 2"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic, Aromatic"
+  }
+]

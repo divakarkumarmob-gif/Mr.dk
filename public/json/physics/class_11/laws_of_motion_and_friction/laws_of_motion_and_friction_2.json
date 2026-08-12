@@ -1,0 +1,3452 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ten one rupees coins are put on top of each other on a table. Each coin has a mass 'm' kg., then the force on the 3 rd coin (counted from the bottom) due to all the coins on its top : -",
+    "options": {
+      "A": "3 mg",
+      "B": "7 mg",
+      "C": "2 mg",
+      "D": "5 mg 5"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =   1 v m "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The 50 kg homogeneous smooth sphere rests on the 30^\\circ incline A and bears against the smooth vertical wall B. The contact forces at A and B are: -",
+    "options": {
+      "A": "A B 1000 500 N N , N N 3 3 = =",
+      "B": "A B 1000 1000 N N , N N 3 3 = =",
+      "C": "A B 500 500 N N , N N 3 3 = =",
+      "D": "A B 500 400 N N , N N 3 3 = = 6"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =  2 F v 2 d m =  v 2 = 4 7 25 10 2 100 5 10 (    ( )  )  v 2 = 1 v = 1 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The figure shows a horizontal force F acting on a block of mass m placed on an inclined plane (angle \\theta ). What is the normal reaction on the block?",
+    "options": {
+      "A": "mgsin \\theta + Fcos \\theta",
+      "B": "mgsin \\theta - Fcos \\theta",
+      "C": "mgcos \\theta - Fsin \\theta",
+      "D": "mgcos \\theta + Fsin \\theta 6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two forces of 6N and 3N are acting on the two blocks of 2kg and 1kg kept on frictionless floor. What is the force exerted on 2kg block by 1kg block?",
+    "options": {
+      "A": "1N",
+      "B": "2N",
+      "C": "4N",
+      "D": "5N 6"
+    },
+    "correct_option": "A",
+    "explanation": "Newton's I law."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two blocks of masses 2 kg and 1 kg are in contact with each other on a frictionless table. When a horizontal force of 3.0 N is applied to the block of mass 1 kg the value of the force of contact between the two blocks is -",
+    "options": {
+      "A": "2 N",
+      "B": "3 N",
+      "C": "5 N",
+      "D": "1 N 6"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person is standing in an elevator. In which situation he finds his weight more ?",
+    "options": {
+      "A": "when the elevator moves downward with constant velocity",
+      "B": "when the elevator moves downward with constant acceleration",
+      "C": "when the elevator moves upward with uniform velocity",
+      "D": "when the elevator moves downward with decreasing velocity 6"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man weighs 80 kg. He stands on a weighing scale in a lift which is moving downwards with a uniform acceleration of 5m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "V = u + at 30 = a(2) a = 15 m/s 2  F = ma = 10 (15) F = 150 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What would be the reading on the scale ? (g = 10 m/s 2 )",
+    "options": {
+      "A": "Zero",
+      "B": "400 N",
+      "C": "800 N",
+      "D": "1200 N 6"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man, of mass 60 kg, is riding in a lift. The ratio of the apparent weights of the man when the lift is accelerating upwards and downwards at 2 m/s 2 is: - (Taking g = 10 m/s 2 ) (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If = 0 (as acceleration = 0)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 (4) none of these A B 30^\\circ F \\theta 3N 6N 1kg 2kg Laws of Motion and Friction equilibrium FORCES OR CONSTANT FORCES - LAMI THEOREM 6",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two persons hold a rope of negligible weight tightly at its ends so that it is horizontal. A 15 kg weight is attached to the rope at the mid point which is now no longer remains horizontal. The minimum tension required to completely straighten the top is",
+    "options": {
+      "A": "15 kg",
+      "B": "15/2 kg",
+      "C": "5 kg",
+      "D": "Infinitely large 6"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 0 = 8 + a × 3 a = - 8 3 m/s 2 8 F 6 16N 3 =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy of mass 40 kg is hanging from a horizontal branch of a tree. The tension in his arms is minimum when the angle between the arms is : -",
+    "options": {
+      "A": "0^\\circ",
+      "B": "90^\\circ",
+      "C": "120^\\circ",
+      "D": "180^\\circ 6"
+    },
+    "correct_option": "A",
+    "explanation": "2 4 8 a 2 m / s 6 - - = = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the ratio T 1 /T 3 for the system shown in fig. (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =   1 v m "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A mass of 6 kg is suspended by a rope of length 2 m from a ceiling. A force of 60 N is applied in horizontal direction at the mid point of the rope. What is the angle between the rope and the vertical in equilibrium : -",
+    "options": {
+      "A": "tan - 1 4 5 (  ( ) ) ",
+      "B": "tan - 1 5 4 (  ( ) ) ",
+      "C": "tan - 1 5 6 (  ( ) ) ",
+      "D": "45^\\circ 7"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =  2 F v 2 d m =  v 2 = 4 7 25 10 2 100 5 10 (    ( )  )  v 2 = 1 v = 1 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pulleys and strings shown in the fig. are smooth and are of negligible mass. For the system to remain in equilibrium, the angle \\theta should be",
+    "options": {
+      "A": "0^\\circ",
+      "B": "30^\\circ",
+      "C": "45^\\circ",
+      "D": "60^\\circ 7"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform sphere of weight W and radius 3 m is being held by a string of length 2m attached to a frictionless wall as shown in the figure. The tension in the string will be : -",
+    "options": {
+      "A": "5 W/4",
+      "B": "15 W/4",
+      "C": "15 W/16",
+      "D": "none of these 7"
+    },
+    "correct_option": "A",
+    "explanation": "Newton's I law."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy10-167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A metal sphere is hung by a string fixed to a wall. The forces acting on the sphere are shown in fig. Which of the following statements is not correct ?",
+    "options": {
+      "A": "R T W 0 + + =",
+      "B": "T 2 = R 2 + W 2",
+      "C": "T = R + W",
+      "D": "R = W tan \\theta"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three identical blocks of mass m = 2kg are drawn by a force of 10.2 N on frictionless surface. The tension (in N) in the string between the blocks B and C is : -",
+    "options": {
+      "A": "9.2",
+      "B": "8",
+      "C": "3.4",
+      "D": "9.8 2 kg 3 kg 4 kg T 1 T 2 T 3 1m 6 kg 60 N 1m \\theta m m m \\theta T R W \\theta C B A F 7"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three masses M 1 , M 2 and M 3 are lying on a frictionless table. The masses are connected by massless threads as shown. The mass M 3 is pulled by a constant force F as shown. The tension in the thread between masses M 2 and M 3 is",
+    "options": {
+      "A": "If 2",
+      "B": "If 3",
+      "C": "If 4",
+      "D": "If 6 7"
+    },
+    "correct_option": "A",
+    "explanation": "V = u + at 30 = a(2) a = 15 m/s 2  F = ma = 10 (15) F = 150 N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three blocks are connected as shown in fig. on a horizontal frictionless table. If M 1 = 1 kg, M 2 = 8 kg, M 3 = 27 kg and F = 36N, Then T ' will be : -",
+    "options": {
+      "A": "18 N",
+      "B": "8 N",
+      "C": "35 N",
+      "D": "27 N 7"
+    },
+    "correct_option": "A",
+    "explanation": "If = 0 (as acceleration = 0)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three blocks of masses m 1 , m 2 and m 3 are connected by massless strings as shown in the figure on a frictionless table. Forces of 10 N and 40 N are applied on them as shown in diagram. If m 1 = 10kg, m 2 = 6 kg and m 3 = 4 kg, then tension T 2 will be: -",
+    "options": {
+      "A": "10 N",
+      "B": "20 N",
+      "C": "25 N",
+      "D": "35 N 7"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 0 = 8 + a × 3 a = - 8 3 m/s 2 8 F 6 16N 3 =  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies A and B of masses 10 kg and 15 kg respectively kept on a smooth, horizontal surface are tied to the ends of a light string. If T represents the tension in the string when a horizontal force F = 500 N is applied to A (as shown in figure 1) and T' be the tension when F = 750 N is applied to B (figure2), then which of the following is true?",
+    "options": {
+      "A": "T = T' = 500 N",
+      "B": "T = T' = 250 N",
+      "C": "T = 300 N, T' = 200 N",
+      "D": "T = 300 N, T' = 300 N 7"
+    },
+    "correct_option": "A",
+    "explanation": "2 4 8 a 2 m / s 6 - - = = -"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The surface shown in diagram is frictionless and T 1 is 30 N, then the value of F is : -",
+    "options": {
+      "A": "30 N",
+      "B": "60 N",
+      "C": "120 N",
+      "D": "69.36 N 7"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =   1 v m "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two blocks of masses 5 kg and 3 kg connected by a rope of mass 2 kg are resting on a frictionless floor as shown in the following figure. If a constant force of 5 0 N is applied to 5 kg block, then the tension in the rope at points A, B and C are respectively given by:",
+    "options": {
+      "A": "7.5N, 10N, 12.5N",
+      "B": "12.5N, 10N, 7.5N",
+      "C": "20N, 20N, 20N",
+      "D": "50N, 50N, 50N 8"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =  2 F v 2 d m =  v 2 = 4 7 25 10 2 100 5 10 (    ( )  )  v 2 = 1 v = 1 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two blocks of masses 10 kg and 5 kg are connected from a massless string as shown in figure. The system is pulled up with a force of 210 N, then the acceleration of the system is : -",
+    "options": {
+      "A": "14 m/s 2",
+      "B": "11 m/s 2",
+      "C": "4 m/s 2",
+      "D": "zero M 1 =M M 2 =2M M 3 =3M F T ' T F M 1 M 2 M 3 m 2 m 1 40 N T 2 T 1 m 3 10 N B A F = 500N 10 kg 15 kg Fig."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of weight 40 N is supported by two ropes. One rope is horizontal and the other makes an angle of 30^\\circ with the ceiling. The tension in the rope attached to the ceiling is approximately.",
+    "options": {
+      "A": "80 N",
+      "B": "40 N",
+      "C": "40 3N",
+      "D": "40 N 3 8"
+    },
+    "correct_option": "A",
+    "explanation": "Newton's I law."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A monkey of mass 15 kg is holding a vertical rope. The rope will not break when a mass of 30 kg is suspended from it but will break if the mass exceeds 30 kg what is the maximum acceleration with which the monkey can climb up along the rope ? (g = 10 m/s 2 )",
+    "options": {
+      "A": "15 m/s 2",
+      "B": "10 m/s 2",
+      "C": "25 m/s 2",
+      "D": "20 m/s 2 8"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform rope of length L resting on a frictionless horizontal surface is pulled at one end by a force F. What is the tension in the rope at a distance \\lambda from the end where the force is applied.",
+    "options": {
+      "A": "F",
+      "B": "F",
+      "C": "F/2",
+      "D": "F"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A string of length L and mass M is lying on a horizontal table. A force F is applied at one of its ends. Tension in the string at a distance x from the end other than at which force is applied is",
+    "options": {
+      "A": "Zero",
+      "B": "Fx/L",
+      "C": "F",
+      "D": "F"
+    },
+    "correct_option": "A",
+    "explanation": "V = u + at 30 = a(2) a = 15 m/s 2  F = ma = 10 (15) F = 150 N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m is pulled along a horizontal frictionless surface by a rope of mass m. If a force F is applied at one end of the rope, the tension at the mid - point of the rope is : -",
+    "options": {
+      "A": "If 2",
+      "B": "3F 4",
+      "C": "If 4",
+      "D": "If 3 8"
+    },
+    "correct_option": "A",
+    "explanation": "If = 0 (as acceleration = 0)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of masses m and 2M (M > m) are connected by a cord that passes over a massless and frictionless pulley. The tension T in the string and the acceleration a of the particles is : -",
+    "options": {
+      "A": "2mM M m T g; a g",
+      "B": "T 4mM 2M m g;a g",
+      "C": "T 2M m 4mM g; a g 2M m M m = - (  (  = ( ) ( ) + + )  ) ",
+      "D": "T 2Mm 4mM g; a g 2M m 2M m = (  (  = ( ) ( ) + + )  )  8"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 0 = 8 + a × 3 a = - 8 3 m/s 2 8 F 6 16N 3 =  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What will be the acceleration of the blocks if they are set free to move? (g = acceleration due to gravity)",
+    "options": {
+      "A": "g",
+      "B": "g/2",
+      "C": "g/3",
+      "D": "g/4 8"
+    },
+    "correct_option": "A",
+    "explanation": "2 4 8 a 2 m / s 6 - - = = -"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three blocks each of mass 5 kg are hanging on a string passing over a fixed pulley as shown in fig. What is the tension in the string connecting blocks A and B.",
+    "options": {
+      "A": "Zero",
+      "B": "33.3 N",
+      "C": "66.67 N",
+      "D": "50 N 8"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =   1 v m "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the arrangement shown in the figure, the pulley has a mass 3m. Neglecting friction on the contact surface, the force exerted by the supporting rope AB on the ceiling is : -",
+    "options": {
+      "A": "5.67mg",
+      "B": "3mg",
+      "C": "4mg",
+      "D": "2.67mg 10 kg 5 kg 5 kg B C A m A B 2m 9"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =  2 F v 2 d m =  v 2 = 4 7 25 10 2 100 5 10 (    ( )  )  v 2 = 1 v = 1 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pulley arrangements shown in the figure are ideal, the mass of the rope being negligible. In case",
+    "options": {
+      "A": "Zero",
+      "B": "the mass m is connected with an another mass m which is pulling b y a rope with a constant downward force F = mg, where g is the acceleration due to gravity. The acceleration of mass m in case",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the fig. given below masses m and m' are tied with a thread passing over a pulley, m' is on a frictionless horizontal surface. If acceleration due to gravity is g, the acceleration of m in this arrangement will be : -",
+    "options": {
+      "A": "g",
+      "B": "m'g/",
+      "C": "mg/",
+      "D": "mg/"
+    },
+    "correct_option": "A",
+    "explanation": "Newton's I law."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies of masses 15 kg and 5 kg are arranged in two different ways as shown in fig.",
+    "options": {
+      "A": "and",
+      "B": "are respectively : -",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A constant force F = m 1 g/2 is applied on the block of mass m 2 as shown in figure. The string and the pulley are light and the surface of the table is smooth. Find the acceleration of m 2",
+    "options": {
+      "A": "2 1 2 m g m m +",
+      "B": "1 1 2 m g m m +",
+      "C": "1 1 2 m g 2",
+      "D": "2 1 2 m g 2"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies A (20 kg) and B (30 kg) tied with a light string are placed on a frictionless table. A force F acting at B pulls this system with an acceleration of 3ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "V = u + at 30 = a(2) a = 15 m/s 2  F = ma = 10 (15) F = 150 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The tension in the string is:",
+    "options": {
+      "A": "60 N",
+      "B": "120 N",
+      "C": "90 N",
+      "D": "140 N 9"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the system as shown in the figure. The pulley and the string are light and all the surfaces are frictionless. The tension in the string is (g = 10 m/s 2 )",
+    "options": {
+      "A": "zero",
+      "B": "1N",
+      "C": "2N",
+      "D": "5N 9"
+    },
+    "correct_option": "A",
+    "explanation": "If = 0 (as acceleration = 0)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three masses of 1 kg, 6 kg and 3 kg are connected to each other with threads and are placed on a table as shown in figure. The ratio 1 2 T T is : - (Take g = 10 m/s 2 ) (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 0 = 8 + a × 3 a = - 8 3 m/s 2 8 F 6 16N 3 =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 m 2m m m F = mg",
+    "options": {
+      "B": "5 kg m 2 F m 1 1kg 1kg Horizontal surface 1kg T 1 T 1 6 kg T 2 3 kg T 2 Laws of Motion and Friction 9",
+      "A": "15 kg",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two blocks of mass 3M and 4M are resting on a frictionless inclined planes as shown in fig. then",
+    "options": {
+      "A": "The block A moves down the plane",
+      "B": "The block B moves down the plane",
+      "C": "Both the blocks remain at rest",
+      "D": "Both the blocks move down the plane. 9"
+    },
+    "correct_option": "A",
+    "explanation": "2 4 8 a 2 m / s 6 - - = = -"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The acceleration of the block shown in figure : -",
+    "options": {
+      "A": "0",
+      "B": "g sin 2 \\theta",
+      "C": "2g sin 3 \\theta",
+      "D": "2g sin \\theta 9"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =   1 v m "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the fig. mass m = 10 kg then in order to keep it at rest, the value of mass M will be:",
+    "options": {
+      "A": "10 kg",
+      "B": "5 kg",
+      "C": "20 kg",
+      "D": "40 kg 1"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =  2 F v 2 d m =  v 2 = 4 7 25 10 2 100 5 10 (    ( )  )  v 2 = 1 v = 1 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 4 kg is suspended through two light spring balances A and B in parallel. Then A and B will read respectively.",
+    "options": {
+      "A": "4 kg and zero kg",
+      "B": "zero kg and 4 kg",
+      "C": "4 kg and 4 kg",
+      "D": "2 kg and 2 kg 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two masses m 1 and m 2 are joined by a spring as shown. The system is dropped to the ground from a certain height. The spring will be : -",
+    "options": {
+      "A": "Stretched when m 2 > m 1",
+      "B": "compressed when m 2 < m 1",
+      "C": "neither compressed nor stretched only when m 1 = m 2",
+      "D": "neither compressed nor stretched regardless of the values of m 1 and m"
+    },
+    "correct_option": "A",
+    "explanation": "Newton's I law."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two masses of 1 kg and 2 kg respectively are connected by a massless spring as shown in figure. A force of 20 N acts on the 2 kg mass at the instant when the 1 kg mass has an acceleration of 10 ms - 2 towards right, the acceleration of the 2 kg mass is: -",
+    "options": {
+      "A": "2 ms - 2",
+      "B": "5 ms - 2",
+      "C": "10 ms - 2",
+      "D": "20 ms - 2 CP29 - 0007 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two masses of 20 kg and 30 kg respectively are connected by a massless spring as shown in the figure. A force of 200 N acts on the 30 kg mass. At the instant shown the 20 kg mass has an acceleration 2 m/s 2 rightwards. What is the acceleration of 30 kg mass ?",
+    "options": {
+      "A": "Zero",
+      "B": "5.3 m/s 2",
+      "C": "4 m/s 2",
+      "D": "8 m/s 2 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 5kg is suspended by a spring balance on an inclined plane as shown in figure. The spring balance measure",
+    "options": {
+      "A": "50 N",
+      "B": "25 N",
+      "C": "500 N",
+      "D": "10 N 1"
+    },
+    "correct_option": "A",
+    "explanation": "V = u + at 30 = a(2) a = 15 m/s 2  F = ma = 10 (15) F = 150 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man is standing at a spring platform. Reading of spring balance is 60 kg - wt. If the man jumps off from the platform, then reading of spring balance",
+    "options": {
+      "A": "First increases then decreases to zero",
+      "B": "Decreases",
+      "C": "Increases",
+      "D": "Remains same 3M 4M B A 37^\\circ 53^\\circ 2M \\theta M 30^\\circ m m 1 m 2 1kg 2kg 20N 20 kg 30 kg 200N 30^\\circ FRAME OF REFERENCE - INTERTIAL OR NON INERTIAL FRAME, PSEUDO FORCE, MECHANICAL ADVANTAGE 1"
+    },
+    "correct_option": "A",
+    "explanation": "If = 0 (as acceleration = 0)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In Newton's second Law F ma = (for constant mass m), a is the acceleration of the mass m with respect to",
+    "options": {
+      "A": "any observer",
+      "B": "any inertial observer",
+      "C": "an observer at rest only",
+      "D": "an observer moving with uniform speed only 1"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 0 = 8 + a × 3 a = - 8 3 m/s 2 8 F 6 16N 3 =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A frame will be inertial, if it moves with respect to another inertial frame with a constant : -",
+    "options": {
+      "A": "Linear velocity",
+      "B": "Angular velocity",
+      "C": "Linear acceleration",
+      "D": "All of the above 1"
+    },
+    "correct_option": "A",
+    "explanation": "2 4 8 a 2 m / s 6 - - = = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A small sphere of mass m is suspended by a string from the ceiling of a car. If the car begins to move with a constant acceleration g 2 , then the tension in the string is : -",
+    "options": {
+      "A": "mg",
+      "B": "3 mg 2",
+      "C": "5 mg 2",
+      "D": "mg 2 1"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =   1 v m "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy sitting on the upper berth in the compartment of an accelerated train, which is just left the railway station, drops an apple aiming at the open hand of his brother vertically below his hands at a distance of about 2 m. The apple will fall : -",
+    "options": {
+      "A": "In the hand of his brother",
+      "B": "Slightly away from the hands of his brother in the direction of motion of the train",
+      "C": "Slightly away from the hands of his brother in the direction opposite to the direction of motion of the train",
+      "D": "None of the above 1"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = 2 F v 0 2 d m - =  2 F v 2 d m =  v 2 = 4 7 25 10 2 100 5 10 (    ( )  )  v 2 = 1 v = 1 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two equal masses are kept on the pans of a simple balance in a lift accelerating upward. Then",
+    "options": {
+      "A": "Pans will remain at the s a me level.",
+      "B": "Nothing can be said as data is incomplete",
+      "C": "Left side pan will lower down.",
+      "D": "Right side pan will lower down. 1"
+    },
+    "correct_option": "A",
+    "explanation": "net F 0 a 0 =  = \\rho \\rho  v \\rho remains unchanged"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of weights of a man in a lift moving with accel e ration 'a' in upward direction and moving with acceleration 'a' in downward direction is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If 3 4 ˆ ˆ a i j m 5 5 = = - + \\rho \\rho v u at = + \\rho \\rho\\rho 3 4 ˆ ˆ ˆ ˆ v 6i 12j i j t 5 5 (  = - + - + ( ) )  \\rho 3t 4t ˆ ˆ v 6 i 12 j 5 5 (  (  = - + - ( ) ( ) )  )  \\rho To have a velocity along y - axis, its x - component must be zero. 3t 6 0 5 - = t = 10 sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Then the value of a is : -",
+    "options": {
+      "A": "g 3",
+      "B": "g 2",
+      "C": "g 5",
+      "D": "4 3 g 1"
+    },
+    "correct_option": "A",
+    "explanation": "Newton's I law."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man weighing 100 kg carries a load of 10 kg on his head. He jumps from a tower with the load on his head. What will be the weight of the load as experienced by the man ?",
+    "options": {
+      "A": "zero",
+      "B": "10 kg",
+      "C": "slightly more than 10 kg",
+      "D": "110 kg 1"
+    },
+    "correct_option": "A",
+    "explanation": "Since, 1 2 3 F F F 0 + + = \\rho \\rho\\rho\\rho 2 3 1 F F F + = - \\rho\\rho\\rho 2 3 1 F F F a m m + = = - \\rho\\rho \\rho \\rho 1 F a m ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The elevator shown in figure is descending, with a retardation of 2 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "If net = ma F net = 1 N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The mass of the block A is 0.5 kg. The force exerted by the block A on the block B is :",
+    "options": {
+      "A": "2 N",
+      "B": "4 N",
+      "C": "6 N",
+      "D": "8 N A B Laws of Motion and Friction 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Drums of oil are carried in a moving truck. Suddenly breaks are applied on the truck then the surface of the oil in the drum will -",
+    "options": {
+      "A": "Remain unaffected",
+      "B": "Rise in the forward direction",
+      "C": "Rise in the backward direction",
+      "D": "Nothing is certain 1"
+    },
+    "correct_option": "A",
+    "explanation": "Force from road causes acceleration of car."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m is placed on a smooth wedge of inclination \\theta . The whole system is accelerated horizontally so that the block does not slip on the wedge. The force exerted by the wedge on the block (g is acceleration due to gravity) will be : -",
+    "options": {
+      "A": "mg sin \\theta",
+      "B": "mg",
+      "C": "mg/cos \\theta",
+      "D": "mg cos \\theta 1"
+    },
+    "correct_option": "B",
+    "explanation": "dp F dt ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body kept on a smooth inclined plane of inclination 1 in x will remain stationary relative to the inclined plane if the plane is given a horizontal acceleration equal to : -",
+    "options": {
+      "A": "2 x 1g -",
+      "B": "2 x 1 g x -",
+      "C": "2 gx x 1 -",
+      "D": "2 g x 1 - 1"
+    },
+    "correct_option": "A",
+    "explanation": "Inertia of stone causes reaction to get hurt."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object of mass 2 kg moving with constant velocity ˆ 10i m/s is seen in a frame moving with constant velocity ˆ 10i m/s. The value of 'pseudo force' acting on object in this frame will be : -",
+    "options": {
+      "A": "20 N",
+      "B": "0 N",
+      "C": "10 N",
+      "D": "2 N 1"
+    },
+    "correct_option": "C",
+    "explanation": "If a m = = 2 m/s 2 v = u + at v - u = 2(20) v - u = 40 \\Delta P = m(v - u) = 10(40) \\Delta P = 400 kg - m/s or  P F t \\Delta = \\Delta  \\Delta P = F \\Delta t = 20 × 20  \\Delta P = 400 kg - m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A triangular wedge of mass M rests on a smooth surface as shown in figure. A cubical block of mass m rests on the inclined surface of wedge. If all surfaces are frictionless, the horizontal force that must be applied to the wedge so as to keep the block st ationary relative to the wedge is : -",
+    "options": {
+      "A": "Mg tan30^\\circ",
+      "B": "mg tan30^\\circ",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "3 avg p 100 10 5 F t 0.25 - \\Delta   = = \\Delta F avg = 2N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the mechanical advantage of single fixed pulley ?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "0.5",
+      "D": "4 1"
+    },
+    "correct_option": "C",
+    "explanation": "avg p 0.5(15 ( 10)) F t 0.02 \\Delta - - = = \\Delta F avg = 625N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The force required to lift a 400 kg wt is 80 kg wt then the mechanical advantage is : -",
+    "options": {
+      "A": "8",
+      "B": "10",
+      "C": "5",
+      "D": "4 FRICTION 1"
+    },
+    "correct_option": "A",
+    "explanation": "Force F = Rate of change in the momentum =   2 1 m v v t - =   3 (0.1) 40 ( 20) 1200N (5 10 ) - - - = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The coefficient of static friction between two surfaces depend on",
+    "options": {
+      "A": "the normal reaction on the surface",
+      "B": "the shape of the surface in contact",
+      "C": "the area of contact",
+      "D": "None of the above 1"
+    },
+    "correct_option": "A",
+    "explanation": "avg 50 2 25 1000 F 50N 0.05   = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A girl horizontally press her physics text book against a rough vertical wall with her hand. The direction of the frictional force on the book exerted by the wall is : -",
+    "options": {
+      "A": "downwards",
+      "B": "upwards",
+      "C": "out from the wall",
+      "D": "into the wall 1"
+    },
+    "correct_option": "A",
+    "explanation": "v u a t - = ( ) 2 1 2gh 2gh a t - - = 2 9.8 5 2 10 9.8 a 0.01   +   = Taking 98 10  approx 2 10 14 a 2400 m / s 0.01 + = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A box 'A' is lying on the horizontal floor of the compartment of a train running along horizontal rails from left to right. At time 't', it retards. Then the reaction R by the floor on the box is given best by: -",
+    "options": {
+      "D": "30^\\circ 90^\\circ M 60^\\circ F W A floor R A floor R A floor R A floor R 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "If avg = 2mv t 3 3 2 150 10 40 10000N 1.20 10 - -    = "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A horizontal force F acts on the block of mass m and the block remains stationary, the value of friction force on the block is : -",
+    "options": {
+      "A": "\\mu mg",
+      "B": "\\mu mg - F",
+      "C": "F",
+      "D": "zero 1"
+    },
+    "correct_option": "C",
+    "explanation": "p F 2mnv t \\Delta = = \\Delta"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 3 kg is placed on a rough horizontal surface ( \\mu s = 0.4). A horizontal force of 8.7 N is applied on the block. The force of friction between the block and floor is : -",
+    "options": {
+      "A": "8.7 N",
+      "B": "12N",
+      "C": "10N",
+      "D": "zero 1"
+    },
+    "correct_option": "B",
+    "explanation": "If = m × a = 25 × dv dt = 25 × 2 = 50 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The frictional force of the air on a body of mass 0.5 kg, falling with an acceleration of 9.0 m/s 2 , will be (g = 10 m/s 2 ) :",
+    "options": {
+      "A": "4.9 N",
+      "B": "0.5 N",
+      "C": "4.5 N",
+      "D": "5 N 1"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta p = Area under F - t graph m(v - u) = 1 2 × 8 × 4 - 1 2 × 1 × 2 - 1 × 2 2(v - 0) = 16 - 1 - 2 v = 13 2 = 6.5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider a car moving on a straight road with a speed of 100 m/s. The distance at which car can be stopped is [ \\mu k = 0.5 ]",
+    "options": {
+      "A": "1000 m",
+      "B": "800 m",
+      "C": "400 m",
+      "D": "100 m 1"
+    },
+    "correct_option": "A",
+    "explanation": "p Fdt 0 \\Delta = = \\int (area of F - t graph is zero)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 10 kg is placed on a long trolley. The coefficient of friction between the block and trolley is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta p = Area under F - t graph m(v - u) = 4 + 8 + 1.625 + 5 2(v - 5) = 18.625 v - 5 = 9.31 v = 14.3 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The trolley accelerates from rest with 0.5 m/s 2 for 20 s. then what is the friction force ?",
+    "options": {
+      "A": "20 N",
+      "B": "100 N",
+      "C": "5 N",
+      "D": "10 N 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 20 kg block is initially at rest. A 75 N force is required to set the block in motion. After the motion start, a force of 60 N is applied to keep the block moving with constant speed. The coefficient of static friction is : -",
+    "options": {
+      "A": "0.6",
+      "B": "0.52",
+      "C": "0.44",
+      "D": "0.375 1"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 1 kg lies on a horizontal surface in a truck. The coefficient of static friction between the block and the surface is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "t 2 0 20t I Fdt 50t 2 = = - \\int = 50t - 10t 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the acceleration of the truck is 5 m/s 2 , the frictional force acting on the block is : -",
+    "options": {
+      "A": "5N",
+      "B": "6N",
+      "C": "10N",
+      "D": "15N 1"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 0 = 8 + a × 3 a = - 8 3 m/s 2 8 F 6 16N 3 =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 10 kg lies on a rough horizontal surface. When a horizontal force of F newton acts on it, it gets an acceleration of 5m/s 2 , a nd when the horizontal force is doubled, it gets an acceleration of 18m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "If i I p p p = \\Delta = - \\rho \\rho\\rho\\rho = 0 - 0.2 = - 0.2 kg ms - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The coefficient of friction between the body and the horizontal surface is : -",
+    "options": {
+      "A": "0.2",
+      "B": "0.4",
+      "C": "0.6",
+      "D": "0.8 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A horizontal force of 20 N is necessary to just hold a block stationary against a wall. The coefficient of friction between the block and wall is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "dm F v 1.5 3 4.5N dt =  =  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The weight of the block is : -",
+    "options": {
+      "A": "20 N",
+      "B": "3 N",
+      "C": "30 N",
+      "D": "0.3 N 1"
+    },
+    "correct_option": "A",
+    "explanation": "Force from road causes acceleration of car."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 1 kg. is pressed against a wall with a horizontal force of 25 N as shown in the figure. If the coefficient of friction between the wall and the block is 0.5 then the frictional force acting on the block will be (g = 9.8 m/s 2 ) : -",
+    "options": {
+      "A": "9.8 N",
+      "B": "2.5 N",
+      "C": "12.5 N",
+      "D": "4.9 N 20N Wall 25N 1 kg Laws of Motion and Friction 1"
+    },
+    "correct_option": "A",
+    "explanation": "dm F V 3 10 30 dt =  =  = F = 30 N  1.5 × a = 30 a = 30 1.5 = 20 m/s 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Adjoining figure shows two blocks A and B pushed against the wall with a force F. The wall is smooth but the surfaces in contact of A and B are rough. Which of the following is true for the system of blocks to be at rest against the wall ?",
+    "options": {
+      "A": "If should be more than the weight of A and B",
+      "B": "If should be equal to the weight of A and B",
+      "C": "If should be less than the weight of A and B",
+      "D": "system cannot be in equilibrium 1"
+    },
+    "correct_option": "A",
+    "explanation": "vdm F 5 1 5N dt = =  = 2 5 a 2.5 m / s 2 = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force of 100N is applied on a block of mass 3 kg as shown in the figure. The coefficient of friction between the surface and the block is 1 3 \\mu = . The frictional force acting on the block is : -",
+    "options": {
+      "A": "15 N downwards",
+      "B": "25 N upwards",
+      "C": "20 N downwards",
+      "D": "30 N upwards 1"
+    },
+    "correct_option": "B",
+    "explanation": "dm 300 0.75 dt 400 = = kg/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In previous problem the acceleration of block is : -",
+    "options": {
+      "A": "zero",
+      "B": "10 m/s 2 upwards",
+      "C": "10 m/s 2 downwards",
+      "D": "none of these 1"
+    },
+    "correct_option": "C",
+    "explanation": "3 vdm F v dt = - = -\\alpha  3 v a M -\\alpha ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The minimum value of force F required to keep the block stationary is : -",
+    "options": {
+      "A": "mg cos \\mu \\theta",
+      "B": "mg sin cos \\theta + \\mu \\theta",
+      "C": "mg sin cos \\theta - \\mu \\theta",
+      "D": "mg tan \\mu \\theta 1"
+    },
+    "correct_option": "C",
+    "explanation": "If = 2 × 300 = 600  600 a 60 = = 10 m/s 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In previous question the value of F for which friction force between the block and the wall is zero.",
+    "options": {
+      "A": "mg",
+      "B": "mg sin \\theta",
+      "C": "mg cos \\theta",
+      "D": "mg tan \\theta 1"
+    },
+    "correct_option": "C",
+    "explanation": "dm 800 9.8 800 4.2 1600 dt  +  =  dm 14 7 dt 2 = = kg/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 20 kg is acted upon by a force F = 30 N at an angle 53^\\circ with the horizontal in downward direction as shown in diagram. The coefficient of friction between the block and the horizontal surface is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "dm 210 0.7 kg / s dt 300 = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The friction force acting on the block by the ground is (g = 10 m/s 2 )",
+    "options": {
+      "A": "40.0 N",
+      "B": "30.0 N",
+      "C": "18.0 N",
+      "D": "44.8 N 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of weight 50 N is placed on a horizontal surface. A force of 28.2 N is applied on it as shown in diagram. The frictional force and normal reaction on the body are",
+    "options": {
+      "A": "2N, 3N",
+      "B": "5N, 6N",
+      "C": "10N, 15N",
+      "D": "20N, 30N A B F Wall 3kg 30 ^\\circ 100N μ \\theta F m F 53^\\circ 20 Kg 45^\\circ 28.2N μ=0.8 1"
+    },
+    "correct_option": "C",
+    "explanation": "Minimum rate of burning fuel is dm dt  mg = u dm dt or, dm dt = mg u = 800 10 40  = 200 kg/s."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The coefficient of static friction, \\mu s , between block A of mass 4 kg and the table as shown in the figure is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What would be the maximum mass value of block B so that the two blocks do not move ? The string and the pulley are assumed to be smooth and massless. (g = 10 m/s 2 )",
+    "options": {
+      "A": "12 kg",
+      "B": "0.2 kg",
+      "C": "0.12 kg",
+      "D": "1.2 kg 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A rope lies on a table such that a part of it hangs down the table. W hen the length of hanging part is 1/5 of entire length the rope just begins to slide. The coefficient of friction between the rope and the table is : -",
+    "options": {
+      "A": "1/4",
+      "B": "1/6",
+      "C": "1/5",
+      "D": "3/4 1"
+    },
+    "correct_option": "B",
+    "explanation": "\\Delta p = 2 mv sin \\theta dp dm F (2v sin ) dt dt = = \\theta The mass crossing an area a in time t would be m = v × t × a × d ...(1) For small element  dm vad dt =  F = 2av 2 d sin \\theta Laws of Motion and Friction"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m = 2 kg is placed at rest with respect to moving plank accelerating with acceleration a = 1 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If coefficient of friction between plank and block is \\mu = 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The frictional force acting on the block is : -",
+    "options": {
+      "A": "2 N",
+      "B": "4 N",
+      "C": "3 N",
+      "D": "none of these 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the given figure a monkey of mass m is climbing up a rope hanging from the roof with acceleration a. The coefficient of static friction between the body of the monkey and the rope is \\mu . value of friction force on the monkey is : -",
+    "options": {
+      "A": "mg",
+      "B": "m",
+      "C": "\\mu mg",
+      "D": "m"
+    },
+    "correct_option": "C",
+    "explanation": "Action \\rho\\rho\\rho \\rho\\rho\\rho Reaction"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block has been placed on an inclined plane with the slope angle \\theta , the block slides down the plane at constant speed. The coefficient of kinetic friction is equal to : -",
+    "options": {
+      "A": "sin \\theta",
+      "B": "cos \\theta",
+      "C": "g",
+      "D": "tan \\theta 1"
+    },
+    "correct_option": "C",
+    "explanation": "Forces from ground causes horse motion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car is moving along a straight horizontal road with a speed 2v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Action \\rho\\rho\\rho \\rho\\rho\\rho Reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the coefficient of friction between tyres and the road is \\mu . The shortest distance in which the car can be stopped is :",
+    "options": {
+      "A": "2 0 v 2 g \\mu",
+      "B": "2 0 v g \\mu",
+      "C": "2 0 v g (  ( ) \\mu ) ",
+      "D": "2 0 2v g \\mu 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 2 kg is placed on a inclined plane with an inclination of 30",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "m A a A = m B a B ma A = 2m × a a A = 2a"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the frictional force experienced, if coefficient of friction is 0.8 ? (Take g = 10 m/s 2 )",
+    "options": {
+      "A": "8.5 N",
+      "B": "13.6 N",
+      "C": "10 N",
+      "D": "8 N 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The force required to just move a body up an inclined plane is 3 times the force required to just prevent the body from sliding down the plane. The coefficient of friction is \\mu . The inclination \\theta of the plane is : -",
+    "options": {
+      "A": "tan - 1",
+      "B": "tan - 1",
+      "C": "tan - 1",
+      "D": "tan - 1"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is sliding down an inclined plane (angle of inclination 45^\\circ). If the coefficient of friction is 0.25 and g = 10 m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "m 1 a 1 = m 2 a 2 1 1 2 2 m a 5 2 a m 8  = = a 2 = 1.25 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "then the approximate downward acceleration of the body in m/s 2 is : -",
+    "options": {
+      "A": "7",
+      "B": "14",
+      "C": "3.5",
+      "D": "5.4 1"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m is lying on an inclined plane. The coefficient of friction between the plane and the block is μ. The force (F 1 ) required to move the block up the inclined plane will be: -",
+    "options": {
+      "A": "mg sin \\theta + μmg cos \\theta",
+      "B": "mg cos \\theta - μmg sin \\theta",
+      "C": "mg sin \\theta - μmg cos \\theta",
+      "D": "mg cos \\theta + μmg sin \\theta 4 kg A B Laws of Motion and Friction "
+    },
+    "correct_option": "D",
+    "explanation": "None of the above"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block slides with constant velocity on a plane inclined at an angle \\theta . The same block is projected up the plane with an initial velocity v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Weight is gravitational force of earth on the body."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance covered by the block before coming to rest is : -",
+    "options": {
+      "A": "2 0 v 2g sin \\theta",
+      "B": "2 0 v 4gsin \\theta",
+      "C": "2 2 0 v sin 2g \\theta",
+      "D": "2 2 0 v sin 4g \\theta 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A given object takes n times as much time to slide down a 45 0 rough incline as it takes to slide down a perfectly smooth 45 0 incline. The coefficient of kinetic friction between the object and the incline is given by :",
+    "options": {
+      "A": "2 1 1 n (  - ( ) ) ",
+      "B": "2 1 1 n (  ( ) - ) ",
+      "C": "2 1 1 n (  - ( ) ) ",
+      "D": "2 1 1 n (  ( ) - )  1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is placed on an inclined plane and has to be pushed down in order to make it move. The angle made by the normal reaction with the vertical will be : -",
+    "options": {
+      "A": "Equal to angle of repose",
+      "B": "Equal to the angle of friction",
+      "C": "Less than the angle of repose",
+      "D": "More than the angle of friction 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block 'A' kept on an inclined surface just begins to slide if the inclination is 30^\\circ with the horizontal. The block is replaced by another block 'B' and it is found that it just begins to slide if the inclination is 40^\\circ with the horizontal : -",
+    "options": {
+      "A": "mass of A > mass of B",
+      "B": "mass of A < mass of B",
+      "C": "mass of A = mass of B",
+      "D": "all the three are possible 1"
+    },
+    "correct_option": "D",
+    "explanation": "Free body diagram Net force = Mg - F b = 0 (F b = Buoyant force)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the coefficient of friction of a surface is 3 , then the angle of inclination of this surface from the horizontal to make a body on it just to slide, is : -",
+    "options": {
+      "A": "30^\\circ",
+      "B": "45^\\circ",
+      "C": "60^\\circ",
+      "D": "75^\\circ 1"
+    },
+    "correct_option": "B",
+    "explanation": "(1) is wrong 3 rd coin has seven coins on its top which exert a force 7 mg on it. (2) is correct. 6 th coin has four coins, placed over it. Thus 7 th coin exerts a force 4mg on 6 th coin (downwards) (3) is wrong, As what is explained in (2), the reaction of 6 th coin on the 7 th coin is 4 mg (upwards) (4) is wrong. 10 th coin, which is the topmost coin, experiences a reaction force of mg (upwards) from all the coins below it."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block is placed on a rough floor and a horizontal force F is applied on it. The force of friction f by the floor on the block is measured for different values of F and a graph is plotted between them ( \\mu k < \\mu s ): -",
+    "options": {
+      "A": "The graph is a straight line of slope 45^\\circ",
+      "B": "The graph is straight line parallel to the F - axis",
+      "C": "The graph is a straight line of slope 45^\\circ for small F and a straight line parallel to the F - axis for large F.",
+      "D": "There is small kink on the graph."
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 4 kg rests on an inclined plane. The inclination of the plane is gradually increased. it is found that when the inclination is 3 in 5, the block just begins to slide down the plane. The coefficient of friction between the block and the plan e is : -",
+    "options": {
+      "A": "0.4",
+      "B": "0.6",
+      "C": "0.8",
+      "D": "0.75 1"
+    },
+    "correct_option": "A",
+    "explanation": " A 3 N mg 2 =  A 2 N 50 10 3 =    A 1000 N N 3 =  A B N 500 N N 2 3 = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m lying on a rough horizontal plane is acted upon by a horizontal force P and another force Q inclined at an angle \\theta to the vertical. The block will remain in equilibrium if the coefficient of friction between it and the surface is : -",
+    "options": {
+      "A": "P Qsin mg Qcos + \\theta + \\theta",
+      "B": "Pcos Q mg Qsin \\theta + - \\theta",
+      "C": "P Q cos mg Q sin + \\theta + \\theta",
+      "D": "P Qsin mg Qcos + \\theta - \\theta 1"
+    },
+    "correct_option": "D",
+    "explanation": "From the figure, the normal reaction on the block is N = mgcos \\theta + F sin \\theta ."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The system shown in the figure is in equilibrium. The maximum value of W, so that the maximum value of static frictional force on 100 kg body is 346 N, will be : -",
+    "options": {
+      "A": "100 N",
+      "B": "250 N",
+      "C": "200 N",
+      "D": "1000 N \\theta Q P 30^\\circ 100 kg W TWO BLOCK SYSTEMS 1"
+    },
+    "correct_option": "C",
+    "explanation": "a = 6 3 2 1 - + = 1 m/s 2 6 - F = 2 × 1 F = 4 N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 60 N horizontal force is applied on the block",
+    "options": {
+      "A": "Zero",
+      "B": "is : -",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If net = 0, a = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum horizontal force F that can be applied to",
+    "options": {
+      "B": "do not have any relative motion is :",
+      "A": "30 N",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If net = ma, F net = const, a = const."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Exercise I-III - Laws Of Motion And Friction.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the arrangement coefficient of friction between the two blocks is 1 3 \\mu = . The force of friction acting between the two blocks is : -",
+    "options": {
+      "A": "10 N",
+      "B": "6.75 N",
+      "C": "40 N",
+      "D": "13.5 N EXERCISE - I"
+    },
+    "correct_option": "B",
+    "explanation": "W - N = ma  N = W - ma  Reading = 80 × 10 - 80 × 5 = 400N F b Mg 10 9 8 7 6 5 4 3 2 1 A 30 N A N A N B B N A N A N B mg N mgcos \\theta + Fsin \\theta \\theta mg \\theta \\theta F 2 a 6N F 1kg a 3N F N N W a W a"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 80 g is moving with a constant velocity of 4 cm/s on a horizontal frictionless table. The net force on the body (in dynes) is :-",
+    "options": {
+      "A": "Zero",
+      "B": "39200",
+      "C": "78400",
+      "D": "8000"
+    },
+    "correct_option": "A",
+    "explanation": "i v 2 9.8 10 = × × = 14 m/s v f = 2 4.9 10 × × = 7 2 m/s v i = velocity before striking the ground v f = velocity after striking the ground f i I P P P = ∆ = -     I 1 [7 2 ( 14)] = × - - I = 14 + 7 2 = 23.898 Ns <F> = I T = 238.98 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three forces start acting simultaneously on a particle moving with velocity v \\rho . These forces are represented in magnitude and direction by the three sides of a triangle ABC (as shown). The particle will now move with velocity B A C",
+    "options": {
+      "A": "less than v \\rho",
+      "B": "greater than v \\rho",
+      "C": "v \\rho , in the direction of largest force BC",
+      "D": "v \\rho remains unchanged"
+    },
+    "correct_option": "A",
+    "explanation": "Impulse = F.dt ∫ = Area of F - t graph b/w 4 μ s to 16 μ s = 6 6 1 1 (200 800) 2 10 800 10 10 2 2 - - + × × + × × × = 10 -3 + 4 × 10 -3 = 5 × 10 -3 Ns ALLEN : Physics 63 BEGINNER'S BOX - 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tennis ball is dropped on the floor from a height of 10 m. It rebounds to a height of 5 m. The ball was in contact with the floor for 0.01 s. What was its average acceleration during the contact ? (g=10m/s 2 )",
+    "options": {
+      "A": "800 m/s 2",
+      "B": "200 m/s 2",
+      "C": "1600 m/s 2",
+      "D": "2400 m/s 2"
+    },
+    "correct_option": "A",
+    "explanation": "v u a t - = ( ) 2 1 2gh 2gh a t - - = 2 10 5 2 10 10 a 0.01 × × + × × = 2 10 14 a 2400 m / s 0.01 + = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A machine gun fires a bullet of mass 20 gm with velocity 1000 m/s. If average force acting on gun is 100 N, then find out maximum number of bullets fired per minute ?",
+    "options": {
+      "A": "50",
+      "B": "200",
+      "C": "300",
+      "D": "500"
+    },
+    "correct_option": "C",
+    "explanation": "If avg = p mnv t t ∆ = ∆ ( ) 3 n 100 20 10 1000 t -   = × ×     n 5 bullets / sec t = n 300 bullets / min. t ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gun fires n bullets per second, each of mass m with velocity v. The force exerted by the bullets on gun is :-",
+    "options": {
+      "A": "2 mnv",
+      "B": "4 mnv",
+      "C": "mnv",
+      "D": "mnv 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": "p mnv 0 mnv F mnv t t 1 ∆ - = = = = ∆"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a body of 25 kg mass, the velocity-time graph is shown in figure. The force acting on the body is : 1 4 1 2 t(s) velocity (m/s)",
+    "options": {
+      "A": "25 N",
+      "B": "50 N",
+      "C": "12.5 N",
+      "D": "100 N"
+    },
+    "correct_option": "A",
+    "explanation": "If = m × a = 25 × dv dt = 25 × 2 = 50 N"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-280",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 2 kg toy car starts from rest (i.e. at t = 0, v = 0) can move along x-axis. Graph shows force F x , acting on the car. The velocity of the car at t = 10 s is :- -2 4 8 9 10 11 t(s) 4 0 F x (N)",
+    "options": {
+      "A": "2 m/s",
+      "B": "6 m/s",
+      "C": "6.5 m/s",
+      "D": "5 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "∆ p = Area under F-t graph m(v-u) = 1 2 × 8 × 4 - 1 2 × 1 × 2 - 1 × 2 2(v-0) = 16 - 1 - 2 v = 13 2 = 6.5 m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-281",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Force-time graph for the motion of a body is shown in fig. Change in linear momentum between 0 to 8 s is :- 2 4 5 7 8 0 3 -2 F (in N) t (in s)",
+    "options": {
+      "A": "Zero",
+      "B": "4 N\\cdot s",
+      "C": "8 N\\cdot s",
+      "D": "6 N\\cdot s"
+    },
+    "correct_option": "A",
+    "explanation": "p Fdt 0 ∆ = = ∫ (area of F-t graph is zero)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-282",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force acts on it for some time in the direction of motion. The force-time graph is shown in figure. The final speed of the body is :- F(N) 4 0 6.5 t (s) 4.5 4 2 2.5",
+    "options": {
+      "A": "9.25 ms -1",
+      "B": "5 ms -1",
+      "C": "14.3 ms -1",
+      "D": "4.25 ms -1"
+    },
+    "correct_option": "A",
+    "explanation": "60^\\circ 72 dyne = F 9 gm In horizontal direction F ma =   Fcos 60^\\circ = 9a 72 × 1 2 = 9a; a = 4 cm/s 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-283",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the figure given below, the position-time graph of a particle of mass 0·4 kg is shown. The impulse at t = 1 sec is - O 1 2 3 t(seconds) 2 4 6 X(m)",
+    "options": {
+      "A": "0·2 kg-m/s",
+      "B": "-1·6 kg-m/s",
+      "C": "0·1 kg-m/s",
+      "D": "-0·4 kg-m/s $//"
+    },
+    "correct_option": "A",
+    "explanation": "If i I p p p = ∆ = -     = m(v f - v i ) = 0.4(0-4) = -1.6 kg m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-284",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The slope of momentum time graph gives :-",
+    "options": {
+      "A": "force",
+      "B": "velocity",
+      "C": "acceleration",
+      "D": "distance"
+    },
+    "correct_option": "A",
+    "explanation": "dP Slope F dt = =   Slope gives force"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-285",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the given momentum-time graph, ratio of force on particles A and B is :- 30^\\circ 30^\\circ A B P t (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Slope = dP tan F dt = θ = A A B B F tan tan 30 1 F tan tan 60 3 θ ^\\circ = = = θ ^\\circ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-286",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is moving towards the wall as shown in diagram then the momentum of the ball is conserved θ θ m v v",
+    "options": {
+      "A": "along the wall",
+      "B": "along the normal of the wall",
+      "C": "along any direction",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-287",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A water jet, whose cross sectional area is 'a' strikes a wall making an angle ' θ ' with the wall and rebounds elastically. The velocity of water of density 'd' is v. Force exerted on wall is :- v θ θ v",
+    "options": {
+      "A": "2 av 2 d cos θ",
+      "B": "2 av 2 d sin θ",
+      "C": "2 avd cos θ",
+      "D": "avd cos θ $//"
+    },
+    "correct_option": "A",
+    "explanation": "∆ p = 2 mv sin θ dp dm F (2v sin ) dt dt = = θ The mass crossing an area a in time t would be m = v × t × a × d ...(1) For small element ∴ dm vad dt = ∴ F = 2av 2 d sin θ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-288",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which figure represents the correct F.B.D. of rod of mass m as shown in figure :- smooth surface",
+    "options": {
+      "A": "T R mg",
+      "B": "T R mg",
+      "C": "T R mg",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated using Newton's Laws of Motion (Fnet = m*a, fs <= mu*N, Ffriction = mu*N)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-289",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Newton's III law of motion lead to the conservation of :-",
+    "options": {
+      "A": "Force",
+      "B": "Kinetic energy",
+      "C": "Linear momentum",
+      "D": "acceleration"
+    },
+    "correct_option": "A",
+    "explanation": "Action     Reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-290",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Action-Reaction pair :-",
+    "options": {
+      "A": "have different nature",
+      "B": "have time-gap",
+      "C": "Act on different bodies",
+      "D": "Act on same body"
+    },
+    "correct_option": "A",
+    "explanation": "Action-Reaction pair act on different bodies."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-291",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 20 g is floating on water. The net force acting on the block is :-",
+    "options": {
+      "A": "20 N",
+      "B": "2 × 10 -3 N",
+      "C": "2 × 10 -2 N",
+      "D": "zero $//"
+    },
+    "correct_option": "A",
+    "explanation": "Free body diagram F b Mg Net force = Mg - F b = 0 (F b = Buoyant force)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-292",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ten one rupees coins are put on top of each other on a table. Each coin has a mass 'm' kg., then the force on the 8 th coin (counted from the bottom) due to all the coins on its top :-",
+    "options": {
+      "A": "3 mg",
+      "B": "7 mg",
+      "C": "2 mg",
+      "D": "5 mg"
+    },
+    "correct_option": "A",
+    "explanation": "10 9 8 7 6 5 4 3 2 1 On top of 8 th coin, 2 coins are placed so total force on 8 th coin is 2 mg. ALLEN Hints and solutions 70 60N T 1 T sin 1 θ T cos 1 θ θ 60 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-293",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The 50 kg homogeneous smooth sphere rests on the 30^\\circ incline A and bears against the smooth vertical wall B. The contact forces at A and B are:- A B 30^\\circ",
+    "options": {
+      "A": "A B 1000 500 N N, N N 3 3 = =",
+      "B": "A B 1000 1000 N N, N N 3 3 = =",
+      "C": "A B 500 500 N N, N N 3 3 = =",
+      "D": "A B 500 400 N N, N N 3 3 = ="
+    },
+    "correct_option": "A",
+    "explanation": "30^\\circ 3 2 N A N A A N 2 B A N B 3 2 N A N A A N 2 N B mg ∵ A 3 N mg 2 = ∴ A 2 N 50 10 3 = × × ∴ A 1000 N N 3 = ∴ A B N 500 N N 2 3 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-294",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 1 kg lies on a smooth inclined plane. The body is given force F = 10N horizontally as shown. The magnitude of normal reaction on body is :- 45^\\circ m=1kg F=10N",
+    "options": {
+      "A": "10 2 N",
+      "B": "20 N",
+      "C": "10 N",
+      "D": "10 2 N"
+    },
+    "correct_option": "A",
+    "explanation": "In mgcos θ + Fsin θ θ mg θ θ F From the figure, the normal reaction on the block is N = mgcos θ + F sin θ ."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-295",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two forces of 6N and 3N are acting on the two blocks of 2kg and 1kg kept on frictionless floor. What is the force exerted on 2kg block by 1kg block? 3N 6N 2kg 1kg",
+    "options": {
+      "A": "1N",
+      "B": "2N",
+      "C": "4N",
+      "D": "5N"
+    },
+    "correct_option": "A",
+    "explanation": "a = 6 3 2 1 - + = 1 m/s 2 2 6N a F 6 - F = 2 × 1 F = 4 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-296",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 (4) none of these equilibrium FORCES OR CONSTANT FORCES - LAMI THEOREM",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "v = u + at 3.5 = 2 + 25 a a = 2 3 ms 50 - F = ma F = 3 3 50 × = 0.18 N In the direction of motion of body"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-297",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two persons hold a rope of negligible weight tightly at its ends so that it is horizontal. A 25 kg weight is attached to the rope at the mid point which is now no longer remains horizontal. The minimum tension required to completely straighten the top is",
+    "options": {
+      "A": "25 kg",
+      "B": "25/2 kg",
+      "C": "15 kg",
+      "D": "Infinitely large $//"
+    },
+    "correct_option": "A",
+    "explanation": "Horizontal force can not balance vertical forces."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-298",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy of mass 80 kg is hanging from a horizontal branch of a tree. The tension in his arms is minimum when the angle between the arms is :-",
+    "options": {
+      "A": "0^\\circ",
+      "B": "90^\\circ",
+      "C": "120^\\circ",
+      "D": "180^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "Arms should be vertical for least tension."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-299",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the ratio T 1 /T 3 for the system shown in fig. 2 kg 3 kg 4 kg T 1 T 2 T 3 (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "T 3 = 4g 4g T 3 4kg T 2 = T 3 + 3g T 3 T 2 3kg 3g T 2 = 7g T 1 = T 2 + 2g T 1 = 9g ∴ 1 3 T 9g 9 T 4g 4 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy10-300",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Laws of Motion and Friction",
+      "chapter_name": "Laws of Motion and Friction",
+      "language": "en",
+      "source": "Laws of Motion and Friction - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A mass of 6 kg is suspended by a rope of length 2 m from a ceiling. A force of 60 N is applied in horizontal direction at the mid point of the rope. What is the angle between the rope and the vertical in equilibrium :- 1m 6 kg 60 N 1m θ",
+    "options": {
+      "A": "tan -1 4 5      ",
+      "B": "tan -1 5 4      ",
+      "C": "tan -1 5 6      ",
+      "D": "45^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "1 T cos 60 θ = 1 T sin 60 θ = ∴ 6 tan 1 6 θ = = ∴ θ = 45^\\circ"
+  }
+]

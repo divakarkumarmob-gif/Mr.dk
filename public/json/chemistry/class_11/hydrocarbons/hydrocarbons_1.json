@@ -1,0 +1,3782 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_001",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The order of reactivity of alkyl halides in Wurtz reaction is",
+    "options": {
+      "A": "R-I > R-Br > R-Cl",
+      "B": "R-I < R-Br < R-Cl",
+      "C": "R-Br > R-I < R-Cl",
+      "D": "R-I > R-Cl > R-Br"
+    },
+    "correct_option": "A",
+    "explanation": "CaC 2 (calcium carbide) acetylene (deuterated) D 2 O D-C ≡ C-D Red hot Cu tube or (Cyclic polymerisation Fe tube by 3 equivalent of C 2 D 2 ) D D D D D D (Deuterated Benzene)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_002",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Kolbe's electrolysis of a mixture of pot. Propanoate and pot. 3-Methylbutanoate gives",
+    "options": {
+      "A": "Butane and isobutane",
+      "B": "Butane and 2,5-dimethylhexane",
+      "C": "Butane, 2,5-dimethylhexane and isohexane",
+      "D": "Butane and isohexane"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 CH 3 H 3 C 3 H 3 C - C ≡ C - H Red hot Cu tube CH 3 C CH CH HC H 3 C - C (Cyclic polymerisation)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_003",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The Corey-House alkane synthesis is carried out by treating an alkyl halide with",
+    "options": {
+      "A": "Lithium metal",
+      "B": "Copper metal",
+      "C": "Lithium metal followed by reaction with cuprous iodide and then treating the product with an alkyl halide",
+      "D": "Cuprous iodide followed by reaction with alkyl halide"
+    },
+    "correct_option": "C",
+    "explanation": "Rate of EAS ∝ Nucleophilicity of aromatic ring ∝ EDG (electron donating group) ∝ 1 (electron withdrawing ) EWG group ( c ) CH 3 ( d ) ( b ) ( a ) +H +I > ed ↑ ed ed ↓ Cl - I +M > > NO 2 - M - I ed ↓↓"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_004",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound is not suitable to obtain from wurtz reaction ?",
+    "options": {
+      "A": "ethane",
+      "B": "butane",
+      "C": "isobutane",
+      "D": "hexane"
+    },
+    "correct_option": "B",
+    "explanation": "CH 3 CH 3 +Cl 2 Fe dark (ESR) CH 3 CH 3 Cl CH 3 CH 3 Cl (major) (minor) (due to steric repulsion of group) Hindered site -CH 3 is ortho/para directing and ring activating group."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_005",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When ethyl chloride and n-propyl chloride undergoes wurtz reaction which is not obtained",
+    "options": {
+      "A": "n-butane",
+      "B": "n-pentane",
+      "C": "n-hexane",
+      "D": "isobutane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_006",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 - C H - MgCl + CH 3 - C - OH CH 3 CH 3 CH 3 → 'Q'; What is 'Q' ?",
+    "options": {
+      "A": "isobutane",
+      "B": "isopropane",
+      "C": "tert. butyl chloride",
+      "D": "propane"
+    },
+    "correct_option": "A",
+    "explanation": "O NH Me Me Br 2 Fe +M -M due to +M of -NH- this ring is activated for ESR (ortho/para directing) .. O NH Me Me Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_007",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "O can not be converted to by :",
+    "options": {
+      "A": "Red P + HI",
+      "B": "Wollf Kishner reduction",
+      "C": "Clemmensen reaction",
+      "D": "LiAlH 4"
+    },
+    "correct_option": "A",
+    "explanation": "COOH HO .. .. +M HNO 3 H 2 SO 4 COOH HO +M NO 2 OCH 3 H 3 C +M HNO 3 H 2 SO 4 OCH 3 H 3 C NO 2 .. .. $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS HNO 3 O C O +M H 2 SO 4 C O O NO 2 E ⊕ attack in most activated ring at most activated site, and at the place where minimum steric hinderance."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_008",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following reactions does not involve a C-C bond formation",
+    "options": {
+      "A": "Hydrolysis of a Grignard reagent",
+      "B": "Combination of two alkyl free radicals",
+      "C": "Corey-House synthesis of alkanes",
+      "D": "RNa + R-Br → R-R + NaBr"
+    },
+    "correct_option": "C",
+    "explanation": "Cl 2 FeCl 3 (A) Cl NO 2 ⊕ Cl NO 2 (B) NO 2 ⊕ Cl ⊕ Cl NO 2 NO 2 A and B are position isomers. $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_009",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following reactions of methane is incomplete combustion :-",
+    "options": {
+      "A": "2CH 4 + O 2 Cu/523K /100atm.  → 2CH 3 OH",
+      "B": "CH 4 + O 2 2 3 Mo O  → HCHO + H 2 O",
+      "C": "CH 4 + O 2 → C",
+      "D": "CH 4 + 2O 2 → CO 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_010",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is correct about Wurtz reaction ?",
+    "options": {
+      "A": "It can proceed through free radical mechanism",
+      "B": "Alkanes having even no. of C-atom can be prepared",
+      "C": "Sodium in Ammonia is used",
+      "D": "Sodium in dry ether is used"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_011",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in their boiling points. (i) n-butane (ii) iso-butane (iii) n-pentane (iv) iso-pentane (v) neopentane",
+    "options": {
+      "A": "iii > i > ii > iv > v",
+      "B": "v > iv > ii > i > iii",
+      "C": "iii > iv > v > i > ii",
+      "D": "ii > i > v > iv > iii $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_012",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The nitrating agent for the nitration of alkanes is:",
+    "options": {
+      "A": "Conc. HNO 3",
+      "B": "Mixture of conc. HNO 3 and conc. H 2 SO 4",
+      "C": "Acetyl nitrate",
+      "D": "HNO 3 vapours at high temperature"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_013",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The chain propagating step is fastest in the reaction of an alkane with",
+    "options": {
+      "A": "Fluorine free radical",
+      "B": "Chlorine free radical",
+      "C": "Iodine free radical",
+      "D": "Bromine free radical"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_014",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the nitration of propane, the product obtained in maximum yield is",
+    "options": {
+      "A": "1-nitropropane",
+      "B": "2-nitropropane",
+      "C": "Nitroethane",
+      "D": "Nitromethane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_015",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Only two isomeric monochloro derivatives are possible for (exclude stereo isomers)",
+    "options": {
+      "A": "n-butane",
+      "B": "2, 4-dimethyl pentane",
+      "C": "benzene",
+      "D": "2-methyl butane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_016",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the chief product obtained when n-butane is treated with bromine in the presence of light at 130^\\circC ?",
+    "options": {
+      "A": "CH 3 -CH 2 -CH 2 -CH 2 -Br",
+      "B": "CH 3 -CH 2 -CH-Br CH 3",
+      "C": "CH 3 -CH-CH 2 -Br CH 3",
+      "D": "CH 3 -C-CH 2 -Br CH 3 CH 3 ALKENE"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_017",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reactivity of alkyl halides in E2 elimination reactions follows the order",
+    "options": {
+      "A": "R-I < R-Br < R-Cl < R-F",
+      "B": "R-F < R-Cl < R-Br < R-I",
+      "C": "R-I > R-Cl > R-Br < R-F",
+      "D": "R-I < R-Br < R-F < R-Cl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_018",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The unimolecular elimination involves formation of",
+    "options": {
+      "A": "A free radical",
+      "B": "A carbanion",
+      "C": "A carbocation",
+      "D": "A biradical"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_019",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkyl halides gives a mixture of alkenes on dehydrohalogenation",
+    "options": {
+      "A": "n-Propyl halide",
+      "B": "Isopropyl halide",
+      "C": "s-Butyl bromide",
+      "D": "t-Butyl bromide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_020",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following alkanols A, B and C in order of their reactivity towards acid catalysed dehydration:-",
+    "options": {
+      "A": "A > B > C",
+      "B": "CH 3 -C-CH 2 -CH 3 CH 3 OH",
+      "C": "CH 3 -CH-CH-CH 3 CH 3 OH",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_021",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The major product in the following reaction is → H + CH 2 -OH ∆ ?",
+    "options": {
+      "A": "CH 2",
+      "B": "CH 3 OH",
+      "C": "CH 3",
+      "D": "CH 3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_022",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following alkyl halides in decreasing order of the rate of elimination reaction with alcoholic KOH.",
+    "options": {
+      "A": "A > B > C",
+      "B": "CH 3 -CH 2 -Br",
+      "C": "CH 3 -CH 2 -CH 2 -Br",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_023",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 2 -OH H ⊕ → ∆ A HBr → B What is the structure of B :-",
+    "options": {
+      "A": "CH 3 Br",
+      "B": "CH 2 -Br Br",
+      "C": "Br",
+      "D": "Br Br"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_024",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct reactivity order for EAR of following compounds is Ph-CH=CH 2 Ph-C=CH-CH 3 CH 3 I II Ph 2 C=CH-CH 3 CH 2 =CH-NO 2 III IV",
+    "options": {
+      "A": "IV > I > II > III",
+      "B": "III > II > I > IV",
+      "C": "II > III > I > IV",
+      "D": "II > III > IV > I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_025",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The intermediate during the addition of HCl to propene in the presence of peroxide is",
+    "options": {
+      "A": "CH 3 - CH • - CH 2 Cl",
+      "B": "3 CH -C H ⊕ - CH 3",
+      "C": "CH 3 -CH 2 - 2 CH ⊕",
+      "D": "3 3 CH - C H - CH •"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_026",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH=CH-COOH + Br 2  → A the number of chiral carbons in 'A' are",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_027",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 -CH=CH 2 2 4 SO dil/H  → A CH 3 -CH=CH 2 2 6 B H  → - 2 2 OH H O  → B Wrong statement about the product is",
+    "options": {
+      "A": "A and B have the same functional group",
+      "B": "A and B are position isomers.",
+      "C": "A and B show chain isomerism",
+      "D": "Mixed ether is the isomer of both A and B"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_028",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkene is most reactive for hydration",
+    "options": {
+      "A": "ethene",
+      "B": "propene",
+      "C": "1-butene",
+      "D": "2-methyl propene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_029",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The major product of the following reaction is CH=CH-CH 3 → (i) Hg(OAc) 2 , H 2 O (ii) NaBH 4",
+    "options": {
+      "A": "CH 2 -CH 2 -CH 2 -OH",
+      "B": "CH 2 -CH-CH 3 OH",
+      "C": "CH-CH 2 -CH 3 OH",
+      "D": "CH=CH-CH 3 HO"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_030",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "OH CH 3 → A CH 3 ; Reagent 'A' is",
+    "options": {
+      "A": "BH 3 ,H 2 O 2 / OH Θ",
+      "B": "H 2 O/H ⊕",
+      "C": "Hg",
+      "D": "Cl 2 /aq. NaOH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_031",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkenes on hydration gives a tertiary alcohol",
+    "options": {
+      "A": "2-Butene",
+      "B": "Isobutylene",
+      "C": "Ethene",
+      "D": "α -Butylene $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_032",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The predominant product formed when 3-methyl-2-pentene reacts with HOCl is",
+    "options": {
+      "A": "CH 3 -CH 2 -C-CH-CH 3 CH 3 Cl OH",
+      "B": "CH 3 -C--CH-CH 3 CH 3 CH 3 OH",
+      "C": "CH 3 -CH 2 -C-CH-CH 3 CH 3 Cl Cl",
+      "D": "CH 3 -CH 2 -C--CH-CH 3 CH 3 OH Cl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_033",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Propene on addition with HI, gives",
+    "options": {
+      "A": "CH 3 -CHI-CH 3",
+      "B": "CH 3 -CH 2 -CH 2 I",
+      "C": "CH 3 -CHI-CH 2 I",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_034",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1-Phenyl propene on reaction with HBr gives (as a major product)",
+    "options": {
+      "A": "C 6 H 5 CH 2 CH",
+      "B": "C 6 H 5 CH",
+      "C": "C 6 H 5 CH 2 CH 2 CH 2 Br",
+      "D": "C 6 H 5 CH"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_035",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reaction of HBr with propene in the presence of peroxide gives",
+    "options": {
+      "A": "3-bromo propane",
+      "B": "Allyl bromide",
+      "C": "n-propyl bromide",
+      "D": "Isopropyl bromide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_036",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Isobutylene 2 2 HBr H O  → \"product\". The product is",
+    "options": {
+      "A": "Isobutyl bromide",
+      "B": "Tert. butyl bromide",
+      "C": "Tert. butyl alcohol",
+      "D": "isobutyl alcohol ELIMINATION REACTION"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_037",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ozonolysis of 3-Methyl-1-butene gives a mixture of",
+    "options": {
+      "A": "Propanal and ethanal",
+      "B": "Propanone and ethanal",
+      "C": "2-Methylpropanal and methanal",
+      "D": "Butanone and methanal"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_038",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Oxidation of isobutylene with acidic potassium permanganate gives",
+    "options": {
+      "A": "Acetone + CO 2",
+      "B": "Acetic acid",
+      "C": "Acetic acid + CO 2",
+      "D": "Acetic acid + acetone"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_039",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 CH 2 CH 2 Br ∆  → alc. KOH A 3 2 (i) O (ii) Zn, H O  → B + C In the above reaction A, B and C are given by the set",
+    "options": {
+      "A": "Propylene, acetone, formaldehyde",
+      "B": "Propene, ethanal, methanal",
+      "C": "Propyne, acetaldehyde, formaldehyde",
+      "D": "Propylene, propionaldehyde, formaldehyde"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_040",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkenes on ozonolysis give a mixture of ketones only?",
+    "options": {
+      "A": "CH 3 -CH=CH-CH 3",
+      "B": "CH 3 -CH-CH=CH 2 CH 3",
+      "C": "C CH 3 CH 3",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_041",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which reaction will not happen at room temperature:",
+    "options": {
+      "A": "CH 2 =CH 2 2 H /Pt  → CH 3 -CH 3",
+      "B": "CH 2 =CH 2 2 H /Pd  → CH 3 -CH 3",
+      "C": "CH 2 =CH 2 2 H /Ni  → CH 3 -CH 3",
+      "D": "CH ≡ CH 2 H /Pt  → CH 3 -CH 3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_042",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not electrophilic addition reaction ?",
+    "options": {
+      "A": "Addition of H + /H 2 O on alkene",
+      "B": "Addition of dihydrogen on alkenes",
+      "C": "Addition of halogen on alkenes",
+      "D": "Addition of hydrogen halides on alkenes"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_043",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction CH 2 =CH 2 → Br 2 CCl 4",
+    "options": {
+      "A": "→ alc. KOH",
+      "B": "→ NaNH 2",
+      "C": "is :",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_044",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An alkene A on ozonolysis gives a mixture of ethanal and pentan-3-one. The IUPAC name of A is.",
+    "options": {
+      "A": "3-ethyl-3-pentene",
+      "B": "3-ethylidene pentane",
+      "C": "3-ethyl pent-2-ene",
+      "D": "1,1-diethyl prop-1-ene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_045",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction : CH 3 CH 3 - CH - CH=CH 2 → HBr H 2 O 2",
+    "options": {
+      "A": "A and B are chain isomers",
+      "B": "A and B are position isomers",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_046",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the main product of this reaction? CH 3 - C ≡ CH HCl(g) Excess  → ?",
+    "options": {
+      "A": "CH 3 -C=CH 2 Cl",
+      "B": "CH 3 -CH-CH 2 Cl Cl",
+      "C": "CH 3 -CH 2 -CH Cl Cl",
+      "D": "CH 3 -C-CH 3 Cl Cl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_047",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "B 3 2 2 BH / THF H O / OH - ←  CH 3 -C ≡ CH HgSO /H SO 4 2 4  → A, A and B are",
+    "options": {
+      "A": "CH 3 CH 2 CHO, CH 3 COCH 3",
+      "B": "CH 3 COCH 3 ,CH 3 CH 2 CHO",
+      "C": "both are CH 3 COCH 3",
+      "D": "CH 3 COCH 3 , CH 3 CH 2 CH 2 OH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_048",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "MeCH 2 C ≡ CH 3 2 NH /NaNH  → A Et Br → B, A and B are",
+    "options": {
+      "A": "MeCH 2 C ≡ CNa, MeCH 2 C ≡ C-Et",
+      "B": "MeCH 2 CH=CH 2 , MeCH 2 -CHEt-CH 3",
+      "C": "MeCH 2 CH=CHNH 2 ,MeCH 2 CH=CH-NHBr",
+      "D": "MeCH 2 C ≡ C-NH 2 , MeC ≡ C-NH-Br $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_049",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 3 Na Liq.NH  → product will be :",
+    "options": {
+      "A": "CH 2 H C=C H CH 3",
+      "B": "CH 2 H C=C CH 3 H",
+      "C": "CH 3 H H",
+      "D": "H C=C H CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_050",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "To distinguish between propene and propyne, the reagent would be -",
+    "options": {
+      "A": "Bromine",
+      "B": "Alkaline KMnO 4",
+      "C": "Ammonical silver nitrate",
+      "D": "Ozone"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_051",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The most suitable reagent to differentiate ethyne and ethene is :",
+    "options": {
+      "A": "Br 2 in CCl 4",
+      "B": "NaHCO 3",
+      "C": "NaOH",
+      "D": "NaNH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_052",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction : CH 3 -C ≡ CH HBr",
+    "options": {
+      "A": "Product A is CH 3 -CH 2 -CH Br Br",
+      "B": "Product A is CH 3 -C-CH 3 Br Br",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_053",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound will not give a precipitate with Tollen's reagent",
+    "options": {
+      "A": "ethyne",
+      "B": "1-butyne",
+      "C": "3-methyl-1-butyne",
+      "D": "1-pentene AROMATIC hydrocarbons"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_054",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 2 Br ←  CH=CH 2 4 KMnO  → B; A and B respectively are",
+    "options": {
+      "A": "o-bromo styrene, benzoic acid",
+      "B": "p-bromostyrene, benzaldehyde",
+      "C": "m-bromostyrene, benzaldehyde",
+      "D": "Styrene dibromide, benzoic acid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_055",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ozonolysis product of 1, 2-dimethyl benzene is/are :-",
+    "options": {
+      "A": "Only CH 3 -C-C-CH 3 O O",
+      "B": "CH 3 -C-C-H + CH 3 -C-C-CH 3 O O O O",
+      "C": "H-C-C-H + CH 3 -C-C-CH 3 O O O O",
+      "D": "CH 3 C-CCH 3 + HC - CH + CH 3 C-C-H O O O O O O"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_056",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The strongest deactivating effect on aromatic ring is",
+    "options": {
+      "A": "-CH 2 Cl",
+      "B": "-OCH 3",
+      "C": "-CH 3",
+      "D": "-CCl 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_057",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is maximum reactive towards E.S.R. :-",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_058",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order of reactivity of following compound with an electrophile :- (I) p-CH 3 -C 6 H 4 -CH 3 (II) C 6 H 5 -CH 3 (III) p-CH 3 -C 6 H 4 -NO 2 (IV) p-O 2 N-C 6 H 4 -NO 2",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "II > I > IV > III",
+      "C": "III > II > I > IV",
+      "D": "IV > III > II > I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_059",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Toluene is more reactive than benzene towards electrophilic reagents due to :-",
+    "options": {
+      "A": "Inductive effect only",
+      "B": "Hyperconjugative effect only",
+      "C": "Both inductive as well as hyperconjugative effects",
+      "D": "Strong mesomeric effect"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_060",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Nitration of benzene is",
+    "options": {
+      "A": "nucleophilic substitution",
+      "B": "nucleophilic addition",
+      "C": "electrophilic substitution",
+      "D": "electrophillic addition"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_061",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following compounds : (I) (II) CH 3 (III) OH (IV) NO 2 Correct order of their reactivity in electrophilic substitution reactions would be :-",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "IV > III > II > I",
+      "C": "III > II > I > IV",
+      "D": "III > IV > I > II"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_062",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The active species in the nitration of benzene is",
+    "options": {
+      "A": "NO 2 +",
+      "B": "HNO 3",
+      "C": "NO 3 -",
+      "D": "NO 2 -"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_063",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The function of anhydrous AlCl 3 in the Friedel craft's reaction",
+    "options": {
+      "A": "To absorb water",
+      "B": "To absorb HCl",
+      "C": "To produce electrophile",
+      "D": "To produce Nucleophile"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_064",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following compound the electrophile attack on o- and p- positions :",
+    "options": {
+      "A": "NO 2",
+      "B": "Cl",
+      "C": "CCl 3",
+      "D": "COOH $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_hydrocarbons_065",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Aromatic Hydrocarbon-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "+ CH 2 =CH 2 → CH 2 -CH 3 H + Incorrect statement about this reaction",
+    "options": {
+      "A": "Benzene is substrate",
+      "B": "Ethene is reagent",
+      "C": "Reaction is EAR with respect to ethene",
+      "D": "Reaction is NSR for benzene"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_066",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pyrolysis of alkanes is a",
+    "options": {
+      "A": "Nucleophilic addition reaction",
+      "B": "Free radical substitution reaction",
+      "C": "Electrophilic addition reaction",
+      "D": "Free radical elimination reaction HC10 - 0004"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Pyrolysis of alkanes Fr ee Radical elimination reaction Liquid Hydrocarbon can be convert into a mixture of gaseous hydrocarbon."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_067",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 CH 2 CH 2 Br alc. KOH \\Delta ⎯⎯⎯ → A 3 2 (i) O (ii) Zn, H O ⎯⎯⎯⎯ → B + C In the above reaction A, B and C are given by the set",
+    "options": {
+      "A": "Propylene, acetone, formaldehyde",
+      "B": "Propene, ethanal, methanal",
+      "C": "Propyne, acetaldehyde, formaldehyde",
+      "D": "Propylene, propionaldehyde, formaldehyde HC46 - 0004 Alkene"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) A → Propene; B → Ethanal; C → Methanal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_068",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which alkene gives acetone only on ozonolysis",
+    "options": {
+      "A": "Isobutylene",
+      "B": "2,3 - Dimethyl - 1 - butene",
+      "C": "2,3 - Dimethyl - 2 - butene",
+      "D": "3,3 - Dimethyl - 1 - butene HC46 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_069",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Oxidation of isobutylene with acid potassium permanganate gives",
+    "options": {
+      "A": "Acetone + CO 2",
+      "B": "Acetic acid",
+      "C": "Acetic acid + CO 2",
+      "D": "Acetic acid + acetone HC48 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) CH 3 - CH 3 CH 3 CH 2 - CH 2 CH 3 CH 3 - C - CH 3 CH 3 CH 3 CH 3 CH 2 CH 2 - CH 2 CH 2 CH 3 R - MgX (Grignard reagent) H 3 O + R - H + Mg X OH R + R R - R R - X (i) Li (ii) CuX R - R’ ( iii ) R’ - X CH 4 + O 2 Cu/523K/ 200 atm Mo 2 O 3 Both are catalytic oxidation CH 3 OH (Alcohol) H - CHO (Aldehyde) CH 4 + O 2 ⎯ → C + H 2 O (In complete oxidation) Carbon Black formation CH 2 500 - 800^\\circC CH 4 + CH 2 H H CH 2 = CH 2 + H 2 CH 3 - C - H (A) CH 3 CH 2 CH 2 Br alc. KOH \\Delta CH 3 - CH = CH 2 (Elimination) (i) O 3 (ii) Zn, H 2 O O (B) + H - C - H O (C) CH 2 = CH - CH - CH 3 CH 3 O 3 /H 2 O/Zn H - C - H O + O = C - CH - CH 3 H CH 3 1 2 3 Methanol 2 - Methyl propanol CH 3 - C = C - CH 3 CH 3 O 3 /H 2 O/Zn 2,3 - Dimethyl - 2 - butene 2CH 3 - C - CH 3 CH 3 O Acetone CH 3 - C = CH 2 CH 3 KMnO 4 CH 3 - C - CH 3 + H - C - H O O H - C - OH O + H 2 O + CO 2 NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_070",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following reactions is used for locating the position of double bond in an alkene",
+    "options": {
+      "A": "Hydroboration",
+      "B": "Hydroxylation",
+      "C": "Chlorohydroxylation",
+      "D": "Ozonolysis HC46 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Ozonolysis ⎯ → 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_071",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following has the smallest heat of hydrogenation per mole",
+    "options": {
+      "A": "1 - butene",
+      "B": "Trans - 2 - butene",
+      "C": "Cis - 2 - butene",
+      "D": "Propene HC19 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 3 ) (1) CH 3 CH 2 CH 2 CH 3 (2) CH 2 =CH 2 (3) H 3 C - HC=CH 2 (4) HC  CH Bromine gas react with alkene to give allylic substituted product by free radical mechanism. Reaction of free Radical depends upon → Stability of free radical CH 3 - CH=CH 2 2 Br (gas) ⎯⎯⎯⎯ → 2 2 CH CH CH | Br - ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_072",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An alkene \"A\" contains three C - C, eigth C - H  - bonds and one C - C \\pi - bond. \"A' on ozonolysis gives two moles of an aldehyde of molar mass",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Op tion - 1,3,4 are Reso. stable. + V 2 O 5 OH 300^\\circC 400 - 500^\\circC O O O CH 2 HCl CH 3  CH 3 Cl (1) CH 3 CH 3  (4) CH 3  CH 3 Cl 3 \\alpha H 4 \\alpha H CH 3 CH 3  CH 3 Cl (2) CH  CH (i)NaNH 2 /NH 3  CH  C Na Θ CH 3 CH 2 Br (SN 2 ) CH 3 CH 2 - C  CH (1 - Butyne) CH 3 CH 2 - C  C Na Θ  (i )NaNH 2 /NH 3 CH 3 CH 2 Br CH 3 CH 2 - C  C - CH 2 CH 3 Hex - 3 - yne + NO 2 Conc. H 2 SO 4 + Con. HNO 3 E + =NO 2  CH 2 = C = O H Br +  -   +  - CH 2 = C Br O H CH 3 - C - Br O Tautomer CH 3 - CH 2 - CH 2 - Br - HBr \\beta \\alpha (Elimination) CH 3 - CH=CH 2 Br HBr - HBr CH 3 - CH 2 - CH 2 - OH HBr  CH 3 - CH 2 - CH 2 CH 3 - CH - CH 3  CH 3 - CH=CH 2 H F  Θ 0^\\circC H  E  E.S.R. Cl (3) (4) Br CH=CH 2 (1) Cl (2) CH 2 =CH - Cl CH 3 Friedel - Crafts reaction R - X AlCl 3 R  hydrocarbons"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_073",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is the IUPAC name of A.",
+    "options": {
+      "A": "But - 1 - ene",
+      "B": "But - 2 - ene",
+      "C": "Pent - 2 - ene",
+      "D": "But - 2 - yne HC46 - 0009 EXERCISE - I NEET : Chemistry"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) CH 3 CH 3 - CH - CH 2 - CH 3 2 - Methyl butane CH 3 CH 3 - CH - CH 3 2,2 - Dimethyl propane CH 3 b > c > d > a 309.1 300.9 282.5 261 CH 3 +H CH 3 CH 3 - M NO 2 - M of two group CH 3 NO 2 NO 2 CH 3 Toluene Benzene Con. HNO 3 + con. H 2 SO 4 NO 2 E + = NO 2 E.S.R  Con. HNO 3 + con. H 2 SO 4 NO 2 E + = NO 2 E.S.R  H HSO 4 ,  Θ OH - NO 2 Acid Base Substrate H + CH 2 =CH 2  CH 2 - CH 3  E   attack on Benzene (ESR mech) CH 2 CH 3 - O - C - NO 2 O  - NO 2 - O - C - O +M ring activate  O/P - attack ring deactivate - M effect CH 3 NO 2 Nitration CH 3 NO 2 NO 2 (p - nitro toluene) ortho attack with respect to - CH 3 group H  / \\Delta CH 3 Rearrange \\Delta  OH CH 3 CH 3 CH 3  CH 3 CH 3 CH 3 CH 3 NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_074",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The molecules having dipole moment are : -",
+    "options": {
+      "A": "2,2 - dimethylpropane",
+      "B": "trans pent - 2 - ene",
+      "C": "cis - hex - 3 - ene",
+      "D": "2 and 3 HC50 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 2 ) More resonating structure When E  attack on 2 nd or 5 th position So Maxi electron density on 2 nd and 5 th position."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_075",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Kolbe's electrolysis of sodium maleate at anode gives.",
+    "options": {
+      "A": "Only acetylene",
+      "B": "Only CO 2",
+      "C": "Acetylene + CO 2",
+      "D": "CO 2 + H 2 HC11 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) (2) CH 2 =CH 2 HBr ⎯⎯ → CH 3 - CH 2 Br Na/dry ether ⎯⎯⎯⎯ → CH 3 CH 2 CH 2 CH 3 (3) CH 3 - CH 3 HBr ⎯⎯ → CH 3 CH 2 Br Na/dry ether ⎯⎯⎯⎯ → CH 3 CH 2 CH 2 CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_076",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pH of solution in Kolbe's electrolysis",
+    "options": {
+      "A": "Increase with time",
+      "B": "Decrease with time",
+      "C": "Remains constant",
+      "D": "Nothing can be said HC11 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Kolbe’s electrolysis a t Anode → Hydrocarbon + CO 2 at Cathode → H 2 + NaOH  pH of solution increase with time"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_077",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "B 3 2 2 BH /THF H O / OH - ⎯⎯⎯ ⎯ CH 3 - C  CH 4 2 4 HgSO /H SO ⎯⎯⎯⎯⎯ → A, A and B are",
+    "options": {
+      "A": "CH 3 CH 2 CHO, CH 3 COCH 3",
+      "B": "CH 3 COCH 3 , CH 3 CH 2 CHO",
+      "C": "CH 3 COCH 3 both",
+      "D": "CH 3 COCH 3 , CH 3 CH 2 CH 2 OH HC54 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) C = C H H CH 3 CH 3 C = C H CH 3 H CH 3 C = O+O = C 3 C - C 8 C - H  Bond 1 C - C \\pi Bond ozonolysis (Aldehyde) CH 2 = CH - CH 2 - CH 3 H - C - H + CH 3 CH 2 - C - H O O CH 3 - CH = CH - CH 3 CH 3 - C - H + CH 3 - C - H O O CH 3 CH 3 - C - CH 3 CH 3 μ = 0 μ ≠ 0 C = C H H CH 2 - CH 3 CH 3 μ ≠ 0 C = C H CH 2 - CH 3 H CH 3 - CH 2 C = C C + C O O CH 3 - C - H O CH 3 - CH - C - H + H - C - H O O CH 3 O CH 3 + O = C CH 3 CH 3 + O = C CH 3 CH 3 - C = O CH 3 HC - COO Na - HC - COO Na + - + Kolbe’s electrolysis CH CH + CO 2 at Anode CH 3 - C  CH OH CH 3 - CH = CH CH 3 - CH 2 - C - H O BH 3 /THF H 2 O 2 / - OH Tautomerism HgSO 4 /H 2 SO 4 CH 3 - C = CH 2 CH 3 - C - CH 3 O (A) OH Tautomerism hydrocarbons"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_078",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 H Lindlarcatalyst ⎯⎯⎯⎯⎯→ product will be :",
+    "options": {
+      "D": "HC59 - 0002",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_079",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When treated with ammonical cuprous chloride, which one among the following forms red precipitate ?",
+    "options": {
+      "A": "C 2 H 6",
+      "B": "C 2 H 4",
+      "C": "C 2 H 2",
+      "D": "C 6 H 6 HC62 - 0002 CH 3 - CH - CH=CH 2 CH 3 C CH 3 CH 3"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) Wurtz reaction is not suitable for preparation of Unsymmetrical alkane."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_080",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following reactions benzene is obtained",
+    "options": {
+      "A": "3 NaOH/CaCO ⎯⎯⎯⎯⎯ →",
+      "B": "3 H O + ⎯⎯⎯ →",
+      "C": "NaOH 360 /300Atm ^\\circ ⎯⎯⎯⎯⎯ →",
+      "D": "3 H O + \\Delta ⎯⎯⎯ → AH01 - 0006 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_081",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 2 Br ⎯ ⎯ 4 KMnO ⎯⎯⎯ → B ; A and B respectively are",
+    "options": {
+      "A": "o - bromo styrene, benzoic acid",
+      "B": "p - bromostryrene , benzaldehyde",
+      "C": "m - bromostyrene, benzaldehyde",
+      "D": "Styrene dibromide, benzoic acid. HC48 - 0006 EXERCISE - I"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 3 ) CH 4 + O 2 ⎯ → CO 2 + H 2 O (complete oxidation)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_082",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct decreasing order of reactivity for following molecule towards Electrophilic Substitution Reaction is -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Rate of electrophilic substitution  Nucleophilicity of benzene ring > > >"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_083",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one is most reactive towards electrophilic reagent:",
+    "options": {
+      "D": "AH02 - 0214",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity of ESR  M / I M / I + + - - OCH 3 > > > CH 2 - OH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_084",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "major product will be",
+    "options": {
+      "D": "AH03 - 0086",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) E lectrophile attack on most activated benzene ring in electrophilic substitution."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_085",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Phenyl magnesium bromide reacts with methanol to give : -",
+    "options": {
+      "A": "A mixture of anisole and Mg",
+      "B": "A mixture of benzene and Mg",
+      "C": "A mixture of toluene and Mg",
+      "D": "A mixture of phenol and Mg"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_086",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The alcohol which reacts fastest with conc. H 2 SO 4 to form alkene : -",
+    "options": {
+      "A": "CH 3 - CH 2 - OH",
+      "B": "Ph - CH 2 - CH 2 - OH",
+      "D": "HC16 - 0052",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Rate of dehydration of alcohol 3^\\circ > 2^\\circ > 1^\\circ dehydrate at fastest rate."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_087",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 (i)Alc.KOH (ii)NaNH A ⎯⎯⎯⎯ → (major) 2 4 H Pd/BaSO B ⎯⎯⎯⎯ → , what is end product",
+    "options": {
+      "A": "CH 3 CH 2 - CH=CH 2",
+      "B": "CH 3 - CH 2 - CH 2 - CH 3",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_088",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following does not decolourise reddish brown solution of Br 2 /CCl",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Alkene and alkyne decolourise brown bromine solution but benzene does not decolourise."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_089",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Acetylene on heating in the presence of red hot Fe tube gives:",
+    "options": {
+      "A": "Benzene",
+      "B": "Cyclooctatetraene",
+      "C": "Naphthalene",
+      "D": "Anthracene AH01 - 0384"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reaction is also called trimerization of acetylene."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_090",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Propyne and propene can be distinguished by:",
+    "options": {
+      "A": "Conc. H 2 SO 4",
+      "B": "Br 2 in CCl 4",
+      "C": "Dil - KMnO 4",
+      "D": "NaNH 2 HC62 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) CH 3 - C  CH + NaNH 2 → CH 3 - C  C - Na + + NH 3 CH 3 - H C = CH 2 + NaNH 2 → No Reaction Exercise - I Hydrocarbon s NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_091",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of these will not react with acetylene:",
+    "options": {
+      "A": "NaOH",
+      "B": "Cl 2",
+      "C": "Na",
+      "D": "HCl HC62 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Acid base reaction is not feasible HC  CH + NaOH → No reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_092",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is maximum reactive towards acid catalysed dehydration:",
+    "options": {
+      "D": "HC16 - 0053 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_093",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which intermediate is formed during addition of halogen on alkenes?",
+    "options": {
+      "A": "Carbocation",
+      "B": "Carbanion",
+      "C": "Cyclic halonium ion",
+      "D": "Halide ion HC26 - 0021 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_094",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "( ) ( ) 3 2 i O ii H O/Zn ⎯⎯⎯⎯ → Product; Product is",
+    "options": {
+      "A": "CH 3 - CH 2 - CH=O and",
+      "B": "CH 3 - CH 2 - CH=O and",
+      "C": "CH 3 - CH 2 - CH=O and",
+      "D": "CH 3 - CH 2 - CH=O and HC46 - 0057"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Rate of dehydration of alcohol 3^\\circ > 2^\\circ > 1^\\circ dehydrate at fastest rate."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_095",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following towards their reactivity for acidic hydration? (I) CH 3 O - CH=CH 2 (II) F - CH=CH 2 (III) CH 3 - CH=CH 2 (IV)",
+    "options": {
+      "A": "II > I > III > IV",
+      "B": "I > III > IV > II",
+      "C": "I > II > III > IV",
+      "D": "I > IV > III > II HC25 - 0023 CH=CH 2 CH 3 C ≡ CH Cl + CH 3 H  Cl CH 3 Cl CH 3 Cl CH 3 Cl CH 3 OH OH CH - CH 3 OH OH COONa Cl CH 3 OH CH 3 CH 3 CH 3 CH 3 CH 3 OH CHO - CH 2 - CH 2 - CH - CH 2 - CH=O CH 2 - CH=O O = CH―CH CH 2 ―CH = O CH 2 ―CH = O O = CH―CH CH 2 ―CH = O CH 2 ―CH 2 ―CH = O O = CH―CH CH 2 ―CH 2 ―CH = O CH 2 ―CH 2 ―CH = O CH = CH 2 hydrocarbons"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity of electrophilic addition  M / I M / I + + - - CH 3 O - CH=CH 2 > CH=CH 2 > CH 3 - CH=CH 2 > F - CH=CH 2 (+M) (+H ) ( \\pi resonance) ( - I)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_096",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many monochloro structural isomers of alkyl halide can give Isopentane on reaction with Zn + HCl ?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5 HC05 - 0273 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) CH 3 - CH - CH 2 - CH 3 CH 2 - Cl Zn+HCl (i) + (ii) CH 3 - C - CH 2 - CH 3 CH 3 + Cl (iii) CH 3 - CH - CH - CH 3 CH 3 Cl (iv) CH 3 - CH - CH 2 - CH 2 - Cl CH 3 + Isopentane CH 3 - CH - CH 2 - CH 3 CH 3 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_097",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following can be oxidised to alcohol by KMnO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) 3^\\circ Hydrogen Having alkane oxidised into alcohol by KMnO 4 /H + 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_098",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 4 + O 2 2 3 Mo O \\Delta ⎯⎯⎯ → 'P' (major) Product 'P' is -",
+    "options": {
+      "A": "CH 3 OH",
+      "B": "HCHO",
+      "C": "HCOOH",
+      "D": "CH 3 - CH 3 HC12 - 0012 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Rate of electrophilic substitution  Nucleophilicity of benzene ring > > >"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_099",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 4 + H 2 O Ni 1273K ⎯⎯⎯ → 'P' Product 'P' is -",
+    "options": {
+      "A": "Methanol",
+      "B": "Producer gas",
+      "C": "Synthesis gas",
+      "D": "Natural gas HC12 - 0011 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity of ESR  M / I M / I + + - - OCH 3 > > > CH 2 - OH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_100",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound gives CO 2 on ozonolysis -",
+    "options": {
+      "A": "CH 2 = CH―CH = CH 2",
+      "B": "CH 2 = C = CH―CH 3",
+      "C": "CH 3 ― CH = CH―CH 3",
+      "D": "CH 2 = CH―CH 3 HC46 - 0060 2"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) E lectrophile attack on most activated benzene ring in electrophilic substitution."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_101",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Propanal and pentan - 3 - one are ozonolysis product of -",
+    "options": {
+      "D": "HC46 - 0059 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_102",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Benzene is obtained by all the following reactions except",
+    "options": {
+      "A": "Decarboxylation of sodiumbenzoate",
+      "B": "Deoxygenation of phenol",
+      "C": "Reduction of phenyl chloride",
+      "D": "Catalytic hydrogenation of acetylene AH01 - 0385 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Benzylic substitution by NBS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_103",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When benzene is heated with acetic anhydride in presence of anhydrous AlCl 3 , the product formed is -",
+    "options": {
+      "A": "Benzoic acid",
+      "B": "Acetophenone",
+      "C": "Ethylphenyl ketone",
+      "D": "Benzophenone AH06 - 0069 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_104",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is least reactive towards Friedel Craft reaction ?",
+    "options": {
+      "D": "AH06 - 0071",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) N H 2 + AlCl 3 Aniline NH 2 AlCl 3 Anilinium ion + - Aniline form Anili ni um ion with anhy. AlCl 3 that is a strong deactivating group as a result aniline not give FCK."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_105",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct order towards electrophilic substitution is -",
+    "options": {
+      "A": "I > IV > II > III",
+      "B": "IV > I > II > III",
+      "C": "I > II > IV > III",
+      "D": "II > IV > I > III AH02 - 0216 CH 3 ―CH 2 ―CH = C―CH 2 ―CH 3 CH 2 ―CH 3 CH 3 ―CH = C―CH 2 ―CH 3 CH 2 ―CH 3 CH 3 ―CH 2 ―C―CH 3 CH 3 ―C―CH 3 CH 3 ―CH = CH―CH―CH 2 ―CH 2 ―CH 3 CH 3 C ≡ C―C ≡ C Li/NH 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) > > > Reactivity order for electrophilic substitution. 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_106",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct acidic order of",
+    "options": {
+      "A": "I > II > III",
+      "B": "II > I > III",
+      "C": "III > I > II",
+      "D": "II > III > I GC51 - 0165 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) 3^\\circ Hydrogen Having alkane oxidised into alcohol by KMnO 4 /H + 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_107",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not an example of +E effect",
+    "options": {
+      "A": "3 2 CH CH CH H  - = + ⎯ ⎯ →",
+      "B": "H 3 3 CH C C CH  -  - ⎯⎯ →",
+      "C": "H 3 CH CH O  - = ⎯⎯ →",
+      "D": "OH 3 CH C N  -  ⎯⎯→ GC59 - 0004 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Rate of electrophilic substitution  Nucleophilicity of benzene ring > > >"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_108",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reagent The reagent is",
+    "options": {
+      "A": "Pd/H 2",
+      "B": "Pd - C/H 2",
+      "C": "Pd/BaSO 4 /H 2",
+      "D": "Na/Liq. NH 3 HC47 - 0010 3"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Reactivity of ESR  M / I M / I + + - - OCH 3 > > > CH 2 - OH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_109",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is minimum reactive towards Hydrogenation ?",
+    "options": {
+      "D": "HC19 - 0029 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) E lectrophile attack on most activated benzene ring in electrophilic substitution."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_110",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not obtained in product ?",
+    "options": {
+      "D": "HC27 - 0011 3",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_111",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) (2) (3) 2CH 3 - CO - CH 3 + H - CHO (4) CH 3 - CO - CH 3 + OHC - CH 2 - CHO + H - CHO HC46 - 0058 3",
+    "options": {
+      "C": "2CH 3 - CO - CH 3 + H - CHO",
+      "D": "CH 3 - CO - CH 3 + OHC - CH 2 - CHO + H - CHO HC46 - 0058 3",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Benzylic substitution by NBS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_112",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Hydrocarbons.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On which carbon electrophile will get attached ?",
+    "options": {
+      "A": "a",
+      "B": "b",
+      "C": "c",
+      "D": "d AH02 - 0217 Exercise - I"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_113",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following reagent can be used for following conversion HO CCH 3 O → ? HO CH 2 CH 3",
+    "options": {
+      "A": "Zn - Hg/HCl",
+      "B": "Red P + HI",
+      "C": "NH 2 - NH 2 / Θ OH",
+      "D": "All of them"
+    },
+    "correct_option": "B",
+    "explanation": "HO O O ∆ O β -Ketoacid (EWG at β -position) (Decarboxylation) -CO 2 Zn-Hg HCl (Clemenson Reduction)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_114",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "O can be converted to by :",
+    "options": {
+      "A": "Red P + HI",
+      "B": "Wolf Kishner reduction",
+      "C": "Clemmensen reaction",
+      "D": "All"
+    },
+    "correct_option": "C",
+    "explanation": "Boiling point ∝ Vander Waals force of attraction (Vander Waals attraction force ∝ molecular mass) Molecular mass 86 72 72 72"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_115",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(CH 3 ) 3 C-Br (i) Li (ii) CuI  → A 3 2 2 CH CH CH Br  → B ; 'B' is",
+    "options": {
+      "A": "CH 3",
+      "C": "CH 3",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "CH 4 +Cl 2 (Excess) h ν CH 3 -Cl CH 2 Cl 2 CHCl 3 CCl 4 (Major) Pure CCl 4 is stable so not give white ppt of AgCl with AgNO 3 (aq) Used as fire extinguisher Sp 3 , Tetrahedral (Symmetrical e¯ cloud) μ =0 Cl Cl Cl Cl C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_116",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Alkane reacts with which of the following halogens in dark",
+    "options": {
+      "A": "If 2",
+      "B": "Cl 2",
+      "C": "I 2",
+      "D": "Br 2"
+    },
+    "correct_option": "A",
+    "explanation": "CH 2 - CH - CH - CH 3 β 1 β 2 α Cl CH 3 ( β - hydrogen eliminate from that β - carbon ( β 1 ) which give more stable product A \\lambda c KOH ∆ ( - HCl) CH=CH - CH - CH 3 CH 3 Resonance stabilised product (more stable product)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_117",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH=CH-COOH + Br 2  → A the number of sp 3 carbon atoms in 'A' are",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 -CH=CH H Br OH EAR +M CH 3 -CH-CH OH H Intermediate Carbocation (Stable by Resonance) Br CH 3 -CH 2 -CH OH Br (Major) -Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_118",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkene is most reactive for acidic hydration ?",
+    "options": {
+      "A": "ethene",
+      "B": "propene",
+      "C": "1-butene",
+      "D": "2-methyl propene"
+    },
+    "correct_option": "A",
+    "explanation": "CH 2 =CH-CCl 3 H Br + -H -I EAR CH 2 -CH 2 -CCl 3 Br CH 2 -CH 2 -CCl 3 Br (Major) -Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_119",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Propan-1-ol can be prepared from propene by",
+    "options": {
+      "A": "H 2 O/H 2 SO 4",
+      "B": "Hg",
+      "C": "B 2 H 6 followed by H 2 O 2 / OH Θ",
+      "D": "CH 3 CO 2 H/H 2 SO 4"
+    },
+    "correct_option": "A",
+    "explanation": "Ph-CH=CH-Ph 2 4 Cl CCl (Antiaddition)  → Cl Ph - H C - H Cl C - Ph Cl Cl H H Ph - C - - Ph C 2NaNH 2 ( - 2HCl ) ( anti elimination ) Ph - C ≡ C - Ph ( Partial hydrogenation ) H 2 +Pd BaSO 4 Ph Ph H H ( Cis - product )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_120",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Isobutene 2 2 HBr H O  → \"product\". The product is",
+    "options": {
+      "A": "Isobutyl bromide",
+      "B": "Tert. butyl bromide",
+      "C": "Tert. butyl alcohol",
+      "D": "isobutyl alcohol"
+    },
+    "correct_option": "A",
+    "explanation": "Ph - C=C - CH 3 OH H Ph - C - CH 2 - CH 3 O Ph - C ≡ C - CH 3 Hg +2 dil. H 2 SO 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_121",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An alkene \"A\" contains three C-C, eigth C-H σ -bonds and one C-C π -bond. \"A' on ozonolysis gives two moles of an aldehyde of molar mass",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_122",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkyl bromides will eliminate HBr fastest ?",
+    "options": {
+      "A": "Ethyl bromide",
+      "B": "Propyl bromide",
+      "C": "Isopropyl bromide",
+      "D": "t-Butyl bromide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_123",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1-phenyl-2-chloropropane on treating with alc. KOH gives mainly :",
+    "options": {
+      "A": "1-phenylpropene",
+      "B": "2-phenylpropene",
+      "C": "1-phenylpropan-2-ol",
+      "D": "1-phenylpropan-1-ol"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_124",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 2 H Lindlar catalyst  → product will be :",
+    "options": {
+      "A": "CH 2 H C=C H CH 3",
+      "B": "CH 2 H C=C CH 3 H",
+      "C": "CH 3 H H",
+      "D": "H C=C H CH 3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_125",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following reactions benzene is not obtained",
+    "options": {
+      "A": "OH COOH NaOH CaO + ∆  →",
+      "B": "MgBr 3 H O +  →",
+      "C": "OH Zn ∆  →",
+      "D": "In 2 Cl ⊕ 2 5 C H OH → $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_126",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Benzene O A B ; A and B resectively are",
+    "options": {
+      "A": "Zn - Hg + HCl , O",
+      "B": "O Cl , LiAlH 4",
+      "C": "O Cl , NaBH 4",
+      "D": "O Cl + AlCl 3 , Zn-Hg + HCl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_127",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following reaction does not gives benzoic acid",
+    "options": {
+      "A": "C 6 H 5 -CH 3 4 Acidic KMnO  →",
+      "B": "C 6 H 5 -CH 3 2 2 2 CrO Cl H O → [O]  →",
+      "C": "C 6 H 5 C ≡ CH 4 Acidic KMnO  →",
+      "D": "C 6 H 5 C CH 3 CH 3 CH 3 4 Acidic KMnO  → EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_128",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following compound in reactivity order towards ESR (Electrophilic substitution reaction) ?",
+    "options": {
+      "A": "NO 2",
+      "B": "Cl",
+      "C": "CH 3",
+      "D": "NH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Cl Br 2Na Dry ether wurtz reaction (Intramolecular) free radical"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_129",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in correct order of reactivity towards Cl 2 /h υ -",
+    "options": {
+      "A": "CH 4",
+      "B": "CH 3 CH 3",
+      "C": "CH 3 CH 2 CH 3",
+      "D": "CH 3 -CH-CH 3 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_130",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Reactivity order of the following alkenes for hydrochlorination (HCl) is CH 2 = CH - CH 3 (CH 3 ) 2 C = CH 2 (I) (II) CH 2 = CH 2 (III)",
+    "options": {
+      "A": "I > II > III",
+      "B": "II > III > I",
+      "C": "II > I > III",
+      "D": "III > I > II"
+    },
+    "correct_option": "A",
+    "explanation": "C 6 H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_131",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following compounds in decreasing order of reactivity for EAR :- (I) CH 2 =CH 2 (II) CH 3 -CH=CH 2 (III) Ph 2 C=CH-CH 3 (IV) HC ≡ CH",
+    "options": {
+      "A": "IV > I > II > III",
+      "B": "III > II > I > IV",
+      "C": "II > III > I > IV",
+      "D": "II > III > IV > I"
+    },
+    "correct_option": "A",
+    "explanation": "HO O O ∆ O β -Ketoacid (EWG at β -position) (Decarboxylation) -CO 2 Zn-Hg HCl (Clemenson Reduction)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_132",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is maximum reactive for dehydrohalogenation :-",
+    "options": {
+      "A": "Br",
+      "B": "Br",
+      "C": "Br",
+      "D": "Br"
+    },
+    "correct_option": "A",
+    "explanation": "Boiling point ∝ Vander Waals force of attraction (Vander Waals attraction force ∝ molecular mass) Molecular mass 86 72 72 72"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_133",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 2 -CH-CH-CH 3 Cl CH 3 alc. KOH → ?",
+    "options": {
+      "A": "CH 2 -CH=C-CH 3 CH 3",
+      "B": "CH 2 -CH 2 -C=CH 2 CH 3",
+      "C": "CH=CH-CH-CH 3 CH 3",
+      "D": "CH 2 -C=CH 2 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "CH 4 +Cl 2 (Excess) h ν CH 3 -Cl CH 2 Cl 2 CHCl 3 CCl 4 (Major) Pure CCl 4 is stable so not give white ppt of AgCl with AgNO 3 (aq) Used as fire extinguisher Sp 3 , Tetrahedral (Symmetrical e¯ cloud) μ =0 Cl Cl Cl Cl C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_134",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The decreasing order of bond dissociation energy of C-H bond in given compound is :- CH 3 -H CH 3 -CH 2 -H",
+    "options": {
+      "B": "CH 2 =CH-CH 2 -H H",
+      "A": "Option A",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(Free radical chlorination of methane) ⇒ FRSR CH 4 + Cl 2 h ν  → CH 3 -Cl + HCl Mechanism :- (i) Chain Initiation :- • 2 h Cl 2 C l ν  → (ii) Chain Propagation ( ) • • 4 3 • • 3 2 3 CH + Cl CH + HCl * c,e CH + Cl CH - Cl + Cl ]  → ] ]  → ] ] (iii) Chain Termination • • 3 3 3 3 • • • • 3 3 CH + CH CH - CH Cl+ Cl Cl - Cl CH + Cl CH - Cl → → →"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_hydrocarbons_135",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match column-I and column-II and select the answer : Column - I Column - I I",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "CH 3 -CH=CH 2 ? CH 3 -CH-CH 3 Br",
+      "B": "CH 3 -CH=CH 2 ? CH 2 -CH=CH 2 Br",
+      "C": "CH 3 -CH=CH 2 ? CH 2 -CH-CH 2 Br Br",
+      "D": "CH 3 -CH=CH 2 ? CH 3 -CH 2 -CH 2 Br"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard hydrocarbons principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_136",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Br 2 /h υ A alc. KOH B Major B is :- (1) Br (2) (3) (4)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Br H + HBr (Aromatic) A \\lambda c KOH ∆ (Max. reactive for dehydrohalogenation)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_137",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the product of following reaction ? C ≡ CH H 2 O/H 2 SO 4 HgSO 4 Product",
+    "options": {
+      "A": "CH=CH 2",
+      "B": "CH=CH-OH",
+      "C": "C-CH 3 O",
+      "D": "CH 2 -C-H O"
+    },
+    "correct_option": "A",
+    "explanation": "CH 2 - CH - CH - CH 3 β 1 β 2 α Cl CH 3 ( β - hydrogen eliminate from that β - carbon ( β 1 ) which give more stable product A \\lambda c KOH ∆ ( - HCl) CH=CH - CH - CH 3 CH 3 Resonance stabilised product (more stable product)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_138",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 -CH-CH=CH 2 - CH 3 H /H 2 O ⊕ (i) Hg(OAc) 2 /H 2 O (ii) NaBH 4",
+    "options": {
+      "B": "Functional isomers",
+      "A": "Chain isomers",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Alc. KOH is dehydrohalogenating reagent and follow antielimination of H and X. H CH 3 Cl H H H H H Cl Cl H H H A \\lambda c.KOH ∆ ( - HCl ) (A) CH 3 ( B ) A \\lambda c.KOH ∆ ( - HCl ) Anti elimination product"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_139",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A and B respectively are :- CH 3 + Br 2 FeBr 3 h ν A B",
+    "options": {
+      "A": "CH 2 Br , CH 3 Br",
+      "B": "CH 2 Br Br , CH 2 Br",
+      "C": "CH 3 Br , Br Br Br Br Br Br",
+      "D": "CH 3 Br , CH 2 Br Br"
+    },
+    "correct_option": "A",
+    "explanation": "(Structural isomeric alkene of unbranched alkene = 3) CH 3 -CH 2 -CH 2 -CH 2 -CH=CH 2 CH 3 -CH 2 -CH 2 -CH=CH-CH 3 CH 3 -CH 2 -CH=CH-CH 2 -CH 3 CH 3 -CH 2 -CH 2 -CH 2 -CH 2 -CH 3 Ni/H 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_140",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What are the major product of following reaction ? (i) NO 2 Br 2 FeBr 3 (ii) CH 2 CH 3 CH 3 -Cl AlCl 3 (iii) SO 3 H HNO 3 H 2 SO 4",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Dehydration reaction is reversible controlled by thermodynamics, so more stable product is major (alkene) from (1) and (2) O same product formed, so now compare stability of carbocation formed. $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS O < O (Stability) (1) O < O (Reactivity) OH OH (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_141",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following yield But-2-ene on dehydration with con. H 2 SO 4 ?",
+    "options": {
+      "A": "2-Methyl-2-butanol",
+      "B": "2-Propanol",
+      "C": "2-Methyl-2-propanol",
+      "D": "Butan-2-ol $//"
+    },
+    "correct_option": "A",
+    "explanation": "* 3 F, N R ⊕ - - are poor leaving group, so generally give Hofmann elimination product. (partial carbanion character in transition state). CH 3 -CH 2 -CH 2 -C-CH 3 Br CH 3 β α CH 3 O/CH 3 OH ∆ CH 3 -CH 2 -CH=C CH 3 CH 3 + HBr (Saytzeff's alkene) (8 α -H) *(Highly substituted alkene is major product) (more stable alkene)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_142",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "O O  → Br 2 /FeBr 3 A (Major) is",
+    "options": {
+      "A": "O O Br",
+      "B": "O O Br",
+      "C": "O O Br",
+      "D": "O O Br"
+    },
+    "correct_option": "A",
+    "explanation": "Hydrochlorination (HCl) is an electrophilic addition reaction on alkene. Reactivity towards EAR ∝ Nucleophilicity of alkene or π -bond. (ed ⇒ electron density) H 3 C H 3 C EDG EDG ed CH 2 Cl H C C CH 2 ed OHC H CH 2 C ed EWG EWG II I III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_143",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "O O HO ∆ → X Zn-Hg HCl Y; Y is :-",
+    "options": {
+      "D": "OH",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Reactivity towards EAR ∝ Nucleophilicity of π -bond (ed ⇒ electron density) Ph Ph H C=C CH 3 +M +M +H I ed ed ed II I IV ed Ph H 3 C +H +M H CH 3 C=C +H Ph H C=C H H H H H C=C NO 2 -M"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_144",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1, 3-Dibromo cyclobutane on reaction with 2-equivalent of sodium in ether gives (1) Br (2) (3) (4)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 -CH=CH H Br OH EAR +M CH 3 -CH-CH OH H Intermediate Carbocation (Stable by Resonance) Br CH 3 -CH 2 -CH OH Br (Major) -Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_145",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 2 OHCH 2 CH 2 COCH 3 Reagent  → CH 2 OHCH 2 CH 2 CH 2 CH 3 Suitable reagent for above reaction is :-",
+    "options": {
+      "A": "Zn-Hg/HCl",
+      "B": "NH 2 NH 2 /C 2 H 5 ONa",
+      "C": "Red P + HI",
+      "D": "All"
+    },
+    "correct_option": "A",
+    "explanation": "CH 2 =CH-CCl 3 H Br + -H -I EAR CH 2 -CH 2 -CCl 3 Br CH 2 -CH 2 -CCl 3 Br (Major) -Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_146",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following alkane is synthesised from single alkyl halide by wurtz reaction:- (1) (2) (3) (4)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "→ Br ⊕ → Br → → Cl OH CH 2 -CH 2 Br Br CH 2 -CH 2 Cl Br CH 2 -CH 2 OH Br CH 2 =CH 2 Br 2 CH 2 -CH 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_147",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The compound which produce propane on heating with HI in presence of red P is",
+    "options": {
+      "A": "CH 3 CH 2 CH 2 I",
+      "B": "CH 3 CH 2 CHO",
+      "C": "CH 3 CH 2 CH 2 OH",
+      "D": "CH 3 CH 2 COOH"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 CH 3 H H (Trans) HOBr antiaddition CH 3 CH 3 (Erythro) CH 3 H CH 3 H Br H H OH Br OH (antiaddition) Br-OH -OH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_148",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The compound that decolourises alkaline KMnO 4 is :-",
+    "options": {
+      "A": "C 6 H 6",
+      "B": "C 6 H 12",
+      "C": "C 6 H 14",
+      "D": "CCl 4"
+    },
+    "correct_option": "A",
+    "explanation": "Decolourisation of cold, dilute alkaline KMnO 4 (Bayer's reagent) is a test of unsaturation. Benzene doesn't give test of unsaturation (Aromaticity loss) C 6 H 12 (alkene) give test of unsaturation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_149",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify the hydrocarbon which on ozonolysis gives :- (a) Only acetone (b) 1 equivalent of propanal + 1 equivalent of formaldehyde (c) 1 equivalent of acetone + 1 equivalent of acetaldehyde",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Cl 2 CH 3 - CH=CH 2 600^\\circC ( F RSR ) CH 2 - CH=CH 2 Cl ( Allylic substitution ) $//(1 TARGET : 202 5 ORGANIC CHEMISTRY HS 202 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_hydrocarbons_150",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Hydrocarbons",
+      "chapter_name": "Hydrocarbons",
+      "language": "en",
+      "tags": [],
+      "source": "Hydrocarbon - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reaction that give good yield of n-Hexane is :-",
+    "options": {
+      "A": "CH 3 CH 2 CH 2 -Cl + CH 3 CH 2 CH 2 Cl Na/dry ether",
+      "B": "CH 3 CH 2 Cl + CH 3 CH 2 CH 2 CH 2 Cl Na/dry ether",
+      "C": "CH 3 -Cl + CH 3 CH 2 CH 2 CH 2 CH 2 Cl Na/dry ether",
+      "D": "All of them"
+    },
+    "correct_option": "A",
+    "explanation": "CH 2 - CH=CH - CH 3 CH - CH=CH - CH 3 Br NBS/ ∆ ( Allylic/benzylic s ubstitution via FRSR ) CH - CH=CH - CH 3 more stable free radical"
+  }
+]

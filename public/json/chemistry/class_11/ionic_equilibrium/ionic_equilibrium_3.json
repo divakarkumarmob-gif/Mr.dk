@@ -1,0 +1,2187 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_301",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pH values 0.1 M solution of HCOONa(I), HCOOH(II), CH 3 COONH 4 (III), NaOH(IV) HCl(V), will be in the order :-",
+    "options": {
+      "A": "IV > III > I > IV > V",
+      "B": "IV > I > III > II > V",
+      "C": "II > III > I > IV > V",
+      "D": "V > II > III > I > IV"
+    },
+    "correct_option": "A",
+    "explanation": "pH = pk In + log In H In -       5.48 = pk In + log 75 25       pk In = 5.48 - log 3 = 5.48 - 0.48 = 5 k In = 1 × 10 -5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_302",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Solution with reserve acidity and alkalinity are called :-",
+    "options": {
+      "A": "Isohydric solution",
+      "B": "True solution",
+      "C": "Normal solution",
+      "D": "Buffer solution $//"
+    },
+    "correct_option": "A",
+    "explanation": "AX  A + (aq.) + X - (aq.) Ksp 1 = s 2 BX 2  B + (aq.) + 2X - (aq.) s 2s Ksp 2 = 4s' 3 s 2 = 4s' 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_303",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following expression is not applicable on the hydrolysis equilibrium : CN - + H 2 O  HCN + OH -",
+    "options": {
+      "A": "K h = w a",
+      "B": "h = h K C",
+      "C": "pH = 1 2 pK a",
+      "D": "[H + ] = w a K .K C"
+    },
+    "correct_option": "A",
+    "explanation": "NH 4 OH  NH 4 + + OH - t = 0 0.01 0 0 t eq 0.01 - 0.01 α (0.01 α + 0.01) 0.01 α NH 4 Cl ⇒ NH 4 + + Cl - 0.01 0.01 0.01 K b = (0.01 )(0.01 0.01) 0.01(1 ) α α + - α 2 × 10 -5 = 0.01 α (1 + α ) [Here 1 + α  1] α = 2 × 10 -3 % α = 2 × 10 -3 × 100 = 0.2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_304",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "150 mL of 0.0008 M ammonium sulphate is mixed with 50 mL of 0.04 M calcium nitrate. The ionic product of CaSO 4 will be (K sp = 2.4 × 10 -5 for CaSO 4 ) :-",
+    "options": {
+      "A": "< K sp",
+      "B": "> K sp",
+      "C": "≈ K sp",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Combination of weak base (NH 4 OH) and its salt with strong acid (NH 4 Cl) act as basic buffer solution NH 4 OH + HCl  NH 4 Cl + H 2 O (weak base) (strong acid) Initial 2 mole 1 mole 0 0 After (2-1) (1-1) 1 mole 1 mole reraction = 1 mole = 0 1 mole NH 4 OH & 1 mole NH 4 Cl are present in mixture after reaction. Hence it will also act as basic buffer."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_305",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The solubility of Ba 3 (AsO 4 ) 2 is 6.9 × 10 -2 g/100 mL. What is the K sp ? (formula weight = 690)",
+    "options": {
+      "A": "1.08 × 10 -11",
+      "B": "1.08 × 10 -13",
+      "C": "1.0 × 10 -15",
+      "D": "6.0 × 10 -13"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_306",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of equivalent of HCl present in 100 mL of its solution whose pH is 4 :-",
+    "options": {
+      "A": "10 -4",
+      "B": "10 -3",
+      "C": "10 -2",
+      "D": "10 -5"
+    },
+    "correct_option": "A",
+    "explanation": "[H + ]= 2 1 1 2 2 1 2 H O M V M V V V V - + + = 25 0.5 10 0.5 35 15 × - × + = 7.5 3 50 20 = pH = -log [H + ] -log 3 20 [ ] [ ] [ ] = +log 20 - log 3 = 1.3 - 0.48 = 0.82"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_307",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "0.01 M HA (aq.) is 2% ionized; [OH - ] of solution is :-",
+    "options": {
+      "A": "2 × 10 -4",
+      "B": "10 -8",
+      "C": "5 × 10 -11",
+      "D": "2 × 10 -12"
+    },
+    "correct_option": "A",
+    "explanation": "pH = 7 + 1 2 (pk a + log C) = 7 + 1 5 10 log 5 log 2 10   - +     = 7 + 1 2 [10 - log5 + log5 - log 10] = 7 + 1 2 pH = 11.5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_308",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From separate solutions of four sodium salts NaW, NaX, NaY and NaZ has pH 7.0, 9.0, 10.0 and 11.0 respectively, when each solution was 0.1 M, the weakest acid is :-",
+    "options": {
+      "A": "HW",
+      "B": "HX",
+      "C": "HY",
+      "D": "HZ"
+    },
+    "correct_option": "A",
+    "explanation": "s 2 = 6.25 × 10 -18 s = 2.5 × 10 -9 M = 2s = 2 × 2.5 × 10 -9 = 5.0 × 10 -9 M"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_309",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Silver ions are added to a solution with [Br - ] = [Cl - ] = [CO 3 2- ] = [AsO 4 2- ] = 0.1 M. Which compound will precipitate with lowest [Ag + ]?",
+    "options": {
+      "A": "AgBr",
+      "B": "AgCl",
+      "C": "Ag 2 CO 3",
+      "D": "Ag 3 AsO 4"
+    },
+    "correct_option": "A",
+    "explanation": "pH = pk a + log Salt Acid       10.4 = 9.4 + log 0.01 x       1 = log 0.01 x ; 10 = 0.01 x x = 0.001 = 10 -3"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_310",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column I with column II and mark the appropriate choice. Column I Column II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "CH 3 COONa",
+      "B": "NH 4 Cl",
+      "C": "NaNO 3",
+      "D": "AgCN"
+    },
+    "correct_option": "A",
+    "explanation": "[H + ] 1 = 10 -3 [H + ] 2 = 10 -5 3 1 5 2 [H ] 10 100 1 [H ] 10 + - + - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_311",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Solution of a mono basic acid has a pH =",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "KCN + HCl KCl + HCN → n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_312",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 1 mL of it is diluted to 1 litre, what will be the pH of the resulting solution ?",
+    "options": {
+      "A": "3.45",
+      "B": "6.96",
+      "C": "8.58",
+      "D": "10.25"
+    },
+    "correct_option": "A",
+    "explanation": "Na X → Na + + X - (Ka = 10 -5 ) 0.1 M 0.1 0.1 X - + H 2 O  HX + OH - h = h K C ⇒ w K Ka C ⋅ = 14 5 10 10 0.1 - - × = 8 10 - = 10 -4 h = 10 -4 % h = 10 -4 × 100 = 10 -2 = 0.01 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_313",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pH of 0.001 M Ba(OH) 2 solution will be :-",
+    "options": {
+      "A": "2",
+      "B": "8.4",
+      "C": "11.3",
+      "D": "13"
+    },
+    "correct_option": "A",
+    "explanation": "I case II case pH = 2 pH = 3 ∴ [H + ] = 10 -2 M ∴ [H + ] = 10 -3 M ∴ [H 2 SO 4 ] = 2 10 M 2 - ∴ [H 2 SO 4 ] = 3 10 M 2 - ∴ 2 4 2 H SO 10 n 1mol 2 - = × ∴ 2 4 3 H SO 10 n 1mol 2 - = × 2 4 2 3 H SO 10 10 n 2 2 - - - = ∴ 2 4 2 3 H SO 1 1 n (Removed) 10 10 2 2 - - = × - × = 1 0.009 mol 2 × ∴ 2 4 H SO 1 w 0.009 98g 2 = × × = 0.009 × 49 g = 0.441 g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_314",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "NH 4 CN is a salt of weak acid HCN (K a =6.2× 10 -10 ) and a weak base NH 4 OH (K b = 1.8 × 10 -5 ). 1 molar solution of NH 4 CN will be :-",
+    "options": {
+      "A": "neutral",
+      "B": "strongly acidic",
+      "C": "strongly basic",
+      "D": "weakly basic"
+    },
+    "correct_option": "A",
+    "explanation": "K sp = 4s 3 = 4 × (5 × 10 -6 ) 3 = 4 × 125 × 10 -18 = 5 × 10 -16 [OH - ] in buffer solution = 14 6 8 10 10 M 10 - - - = ∴ K sp = [Pb 2+ ] [OH - ] 2 ⇒ 5 × 10 -16 = s × (10 -6 ) 2 s = 16 12 5 10 10 - - × = 5 × 10 -4 M $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_315",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the pH of a solution obtained by mixing 10 mL of 0.1 M HCl and 40 mL of 0.2 M H 2 SO 4 ?",
+    "options": {
+      "A": "0.74",
+      "B": "7.4",
+      "C": "4.68",
+      "D": "0.468"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_316",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Solubility product of radium sulphate is 4 × 10 -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_317",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What will be the solubility of Ra 2+ in 0.10 M Na 2 SO 4 solution?",
+    "options": {
+      "A": "4 × 10 -10 M",
+      "B": "2 × 10 -5 M",
+      "C": "4 × 10 -5 M",
+      "D": "2 × 10 -10 M"
+    },
+    "correct_option": "A",
+    "explanation": "A → CH 3 COONa → Salt (aq. solution basic) B → CH 3 COOH/CH 3 COONa → pH. of acidic buffer C → CH 3 COOH → weak acid A > B > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_318",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The solubility product of AgCl is 1.5625 × 10 -10 M 2 at 25^\\circC. Its solubility in g per litre will be:-",
+    "options": {
+      "A": "143.5",
+      "B": "108",
+      "C": "1.57 × 10 -8",
+      "D": "1.79 × 10 -3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_319",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The solubility product of AgCl is 1.8 × 10 -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_320",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Precipitation of AgCl will occur by mixing which of the following solutions are mixed in equal volume ?",
+    "options": {
+      "A": "10 -8 M Ag + and 10 -8 M Cl - ions",
+      "B": "10 -3 M Ag + and 10 -3 M Cl - ions",
+      "C": "10 -6 M Ag + and 10 -6 M Cl - ions",
+      "D": "10 -10 M Ag + and 10 -10 M Cl - ions"
+    },
+    "correct_option": "A",
+    "explanation": "3 NH + -CH 2 -COO - → 3 NH + -CH 2 -COOH (zwitter ion) (conjugate base) NH 2 CH 2 COO - (conjugate acid)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_321",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solution containing Mn 2+ , Fe 2+ , Zn 2+ and Hg 2+ with a molar concentration of 10 -3 M each is treated with 10 -16 M sulphide ion solution. Which ions will precipitate first if K sp of MnS, FeS, ZnS and HgS are 10 -15 , 10 -23 , 10 -20 and 10 -54 respectively ?",
+    "options": {
+      "A": "FeS",
+      "B": "MnS",
+      "C": "HgS",
+      "D": "ZnS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_322",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the minimum concentration of SO 4 2- required to precipitate BaSO 4 in a solution containing 1 × 10 -4 mol/L of Ba 2+ ? (K sp for BaSO 4 = 4 × 10 -10 )",
+    "options": {
+      "A": "4 × 10 -10 M",
+      "B": "2 × 10 -10 M",
+      "C": "4 × 10 -6 M",
+      "D": "2 × 10 -3 M"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_323",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following will produce a buffer solution when mixed in equal volume ?",
+    "options": {
+      "A": "0.1 mol dm -3 NH 4 OH and 0.1 mol dm -3 HCl",
+      "B": "0.05 mol dm -3 NH 4 OH and 0.1 mol dm -3 HCl",
+      "C": "0.1 mol dm -3 NH 4 OH and 0.05 mol dm -3 HCl",
+      "D": "0.1 mol dm -3 CH 3 COONa and 0.1 mol dm -3 NaOH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_324",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The molecular weight of compounds",
+    "options": {
+      "A": "X Y Z , , 2 3 6",
+      "B": "Na 3 PO 4 ·12H 2 O",
+      "C": "Ca 3",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_325",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 0.0064 g (2) 0.0128 g (3) 0.0032 g (4) 0.0640 g ALLEN Ionic equilibrium 174",
+    "options": {
+      "A": "0.0064 g",
+      "B": "0.0128 g",
+      "C": "0.0032 g",
+      "D": "0.0640 g ALLEN Ionic equilibrium 174"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_326",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Ionic Equilibrium-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 (4) N.O.T ALLEN Ionic equilibrium 178",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "3 NH + -CH 2 -COO - → 3 NH + -CH 2 -COOH (zwitter ion) (conjugate base) NH 2 CH 2 COO - (conjugate acid)"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_327",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which statement is correct ?",
+    "options": {
+      "A": "The electrostatic forces between two charges are inversely proportional to dielectric constant of medium",
+      "B": "Water is universal solvent and possesses a very high dielectric constant.",
+      "C": "When sodium chloride is dissolved in water the electrostatic interactions are reduced by a factor of 80 and this facilitates the ions to move freely in solution",
+      "D": "All of these IE11 - 0203"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)  F = electrostatic force = Fo K → Dielectric constant  1 F K   Water has high dielectric constant and dissolves maximum number of compounds. Due to this reason it is called universal solvent.  Water molecules pull the sodium and chloride ions apart, breaking the ionic bond that held them together."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_328",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "HCl (aq) + H 2 O ( ℓ ) ⇌ 3 (aq) (aq) H O Cl + - + Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Conjugate b ase of HCl",
+      "B": "Conjugate acid of Cl¯",
+      "C": "Conjugate base of H 3 O +",
+      "D": "Conjugate acid of H 2 O"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a) HCl ⎯ → H  + Cl ⊝ ⎯ → (q) Acid (C.B.) (b) Cl ⊝ H  ⎯⎯ → HCl ⎯ → (p) (Base) (C. A .) (c) H 3 O  ⎯ → H  + H 2 O ⎯ → (s) Acid (d) H 2 O H  ⎯⎯ → H 3 O  ⎯ → (r) (Base) (C.A.)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_329",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which option is wrong ? Species conjugate acid conjugate base",
+    "options": {
+      "A": "H 2 O H 3 O + OH¯",
+      "B": "HCO 3 ¯ H 2 CO 3 CO 3 ¯²",
+      "C": "NH 3 NH 4 + NH 2 ¯",
+      "D": "NH 3 NH 2 ¯ NH 4 + IE59 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )            Option (4) is wrong"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_330",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is always true for a neutral solution?",
+    "options": {
+      "A": "pH = 7",
+      "B": "[H 3 O + ] = [OH¯]",
+      "C": "pH = pOH",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) For neutral solution, [H 2 O  ] = [OH ⊖ ] Putting “log” both the sides log [H 3 O  ] = log [OH ⊖ ]  pH = pOH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_331",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If pH increase s by 2 units, the (H + )",
+    "options": {
+      "A": "Decreases to 100 times",
+      "B": "Decreases to 10 times",
+      "C": "Increases to 10 times",
+      "D": "Increases to 100 times IE01 - 0569"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (pH) 1 = x  [H + ] 1 = 10 x (pH) 2 = x + 2  [H + ] 2 = 10 (x + 2) = 10 x × 10 2 x 1 2 [H ] 10 [H ] 100 100 + - + = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_332",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The concentration of hydrogen ion in a sample of soft drink is 3.8 × 10 - 3 M . W hat is its pH ?",
+    "options": {
+      "A": "1.42",
+      "B": "3.8",
+      "C": "3 - log 3.8",
+      "D": "B oth"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) [H + ] = 3.8 × 10 3 M pH = log[H + ] = log(3.8 × 10 3 ) = log (3.8) log 10 3 pH = log (3.8) + 3 = 0.579 + 3 = 2.421"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_333",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the pOH of 1.0 × 10 - 8 M solution of HCl, at 25^\\circC",
+    "options": {
+      "A": "6.98",
+      "B": "7.02",
+      "C": "8.00",
+      "D": "6.00 IE01 - 0572"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) [H + ] Total = 10 8 + 10 7 = 11 × 10 8 pH = 8 log 11 = 8 1.04 = 6.96 pOH = 14 6.96 = 7.04"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_334",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The p K a o f acetic acid and pK b of ammonium hydroxide are 4.76 and 4.75 respectively . C alculate the pH of aqueous solution of ammonium acetate .",
+    "options": {
+      "A": "7.005",
+      "B": "7.000",
+      "C": "6.995",
+      "D": "8.445 IE03 - 0302 Ionic equilibrium NEET : NCR [Chemistry] 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 3 a CH COOH (pK ) = 4.76 3 b NH OH (pK ) = 4.75 Salt of W.A + W.B → CH 3 COO ⊖ NH 4  (Ammonium acetate)  pH = 1 2 (pK W + pK a pK b ) = 1 2 (14 + 4.76 4.75) = 7.005 Ionic equilibrium NEET : NCR [Chemistry] 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_335",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which option is correct ? Salt S olubility (s)",
+    "options": {
+      "A": "only a",
+      "B": "slightly soluble 0.01 M < S < 0.1 M",
+      "C": "sp aringly soluble S < 0.01 M",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Solubility (s)  → Salt becomes soluble Solubility (s)  → salt becomes less or sparingly soluble. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_336",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of K SP of two sparingly soluble salts Ni(OH) 2 and AgCN are 2.0 × 10 - 15 and 6 × 10 - 17 respectively. Which salt is more soluble ?",
+    "options": {
+      "A": "AgCN",
+      "B": "Ni",
+      "C": "Both have same solubility",
+      "D": "Nothing can be predicted. IE07 - 0207 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a) HCl ⎯ → H  + Cl ⊝ ⎯ → (q) Acid (C.B.) (b) Cl ⊝ H  ⎯⎯ → HCl ⎯ → (p) (Base) (C. A .) (c) H 3 O  ⎯ → H  + H 2 O ⎯ → (s) Acid (d) H 2 O H  ⎯⎯ → H 3 O  ⎯ → (r) (Base) (C.A.)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_337",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the solubility of A 2 X 3 in pure water, assuming that neither kind of ion reacts with water. The solubility product, K SP of A 2 X 3 is 1.1 × 10 -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )            Option (4) is wrong"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_338",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 1.0 × 10 - 5 mol/L (2) 2.0 × 10 - 5 mol/L (3) 3.0 × 10 - 5 mol/L (4) 4.0 × 10 - 5 mol/L IE17 - 0158 1",
+    "options": {
+      "A": "1.0 × 10 - 5 mol/L",
+      "B": "2.0 × 10 - 5 mol/L",
+      "C": "3.0 × 10 - 5 mol/L",
+      "D": "4.0 × 10 - 5 mol/L IE17 - 0158 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_339",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the molar solubility of Ni(OH) 2 in 0.10 M NaOH if K SP of Ni(OH) 2 is 2.0 × 10 -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) For neutral solution, [H 2 O  ] = [OH ⊖ ] Putting “log” both the sides log [H 3 O  ] = log [OH ⊖ ]  pH = pOH"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_340",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 2.0 × 10 - 13 (2) 2.0 × 10 - 12 (3) 2.0 × 10 - 11 (4) 2.0 × 10 - 10 IE60 - 0014 1",
+    "options": {
+      "A": "2.0 × 10 - 13",
+      "B": "2.0 × 10 - 12",
+      "C": "2.0 × 10 - 11",
+      "D": "2.0 × 10 - 10 IE60 - 0014 1"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_341",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 0.02 M solution of pyridinium hydrochloride has pH = 3.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (pH) 1 = x  [H + ] 1 = 10 x (pH) 2 = x + 2  [H + ] 2 = 10 (x + 2) = 10 x × 10 2 x 1 2 [H ] 10 [H ] 100 100 + - + = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_342",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the ionization constant of pyridine.",
+    "options": {
+      "A": "1.5 × 10 - 5",
+      "B": "1.5 × 10 - 9",
+      "C": "1.5 × 10 - 4",
+      "D": "1.5 × 10 - 2 IE07 - 0209"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ionic equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_343",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At 90^\\circC, pH of an aq. solution of a strong electrolyte is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) At 90^\\circC pK W = 12 K w = 10 - 12 pH + pOH = 12 pH< 6  Acid pH = 6  Neutral pH > 6  Base"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_344",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate [H + ] of aq. solution containing equimolar CH 3 COOH and CH 3 COONa. (pK a CH 3 COOH = 4.7) : -",
+    "options": {
+      "A": "1.2 × 10 9",
+      "B": "7 × 10 - 5",
+      "C": "5 × 10 - 5",
+      "D": "2 × 10 - 5 IE28 - 0028"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 3 3 CH COOH Acidic Buffer CH COONa   +    a salt pH pK log Acid = + 0.1 pH 4.7 log 0.1 = + pH = 4.7 H + = 2 × 10 - 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_345",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Effective range of a buffer of HA and A - is about pH : -",
+    "options": {
+      "A": "3 to 4",
+      "B": "3 to 6",
+      "C": "2 to 3",
+      "D": "2 to 4 IE27 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "0.04 0.02 n f 0.02 0 0.02 0.02  pH = pK a + log CN HCN n n - pH = 6 + log 0.02 0.02 = 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_346",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of equivalent of HCl present in 100 mL of its solution whose pH is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) pH = 4 ; [H + ] = 10 - 4 mol/L No. of equivalents = N × V (mL) 100 = 10 - 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_347",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What will be the solubility of Ra 2+ in 0.10 M Na 2 SO 4 ?",
+    "options": {
+      "A": "4 × 10 - 10 M",
+      "B": "2 × 10 - 5 M",
+      "C": "4 × 10 - 5 M",
+      "D": "2 × 10 - 10 M IE18 - 0014"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 3 3 CH COOH Acidic Buffer CH COONa   +    a salt pH pK log Acid = + 0.1 pH 4.7 log 0.1 = + pH = 4.7 H + = 2 × 10 - 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_348",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The solubility product of AgCl is 1.5625 × 10 - 10 at 25^\\circC. Its solubility in g per litre will be: -",
+    "options": {
+      "A": "143.5",
+      "B": "108",
+      "C": "1.57 × 10 - 8",
+      "D": "1.79 × 10 - 3 IE17 - 0046"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) AgCl ⇌ Ag + + Cl - s s s 2 = 1.5625 × 10 - 10 s = 1.25 × 10 - 5 mol L - 1 Solubility in g L - 1 = Molar mass × s = 143.5 × 1.25 × 10 - 5 = 1.79 × 10 - 3 g L - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_349",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the minimum concentration of SO 4 2 - required to precipitate BaSO 4 in a solution containing 1 × 10 - 4 mole of Ba 2+ ? (K sp for BaSO 4 = 4 × 10 - 10 )",
+    "options": {
+      "A": "4 × 10 - 10 M",
+      "B": "2 × 10 - 10 M",
+      "C": "4 × 10 - 6 M",
+      "D": "2 × 10 - 3 M IE18 - 0017"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) BaSO 4 ⇌ Ba 2+ + SO 4 2 - Conc. 1 × 10 - 4 s K sp = 4 × 10 - 10 4 × 10 - 10 = K sp = 1 × 10 - 4 × s 10 6 4 4 10 s 4 10 M 1 10 - - -  = =  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_350",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "pH of 0.01 M ammonium cyanide solution is 7.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) NH 4 CN ⎯ → NH 4 + + CN - pH of hydrolysis of salt WA + WB is independent of conc. of salt."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_351",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 5 litres of water is added to this solution, the pH becomes :",
+    "options": {
+      "A": "> 7.02",
+      "B": "< 7.02",
+      "C": "It is difficult to predict",
+      "D": "7.02 IE15 - 0014"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (CH 3 ) 2 NH 2 + ⎯ → (CH 3 ) 2 NH + H + Acid C.B."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_352",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "pOH = 7 - 0.5 pK a + 0.5 pK b , is true for which pair of cation and anion :",
+    "options": {
+      "A": "C 6 H 5 NH 3 + , CH 3 COO -",
+      "B": "Na + , CN -",
+      "C": "Al +3 , Cl -",
+      "D": "NH 4 + , NO 3 - IE15 - 0013 NEET : CHEMISTRY"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) POH = 7 - 1 2 ( ) a b pk pk - is formula for {WA + WB} salt hydrolysis."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_353",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Expression to evaluate solubility for Hg 2 Cl 2 is",
+    "options": {
+      "A": "1/5 sp K 108      ",
+      "B": "1/2 sp K    ",
+      "C": "1/3 sp K 4      ",
+      "D": "1/4 sp K 16       IE17 - 0047"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Hg 2 Cl 2 (s) ⇌ Hg 2 +2 (aq) + 2Cl - (aq.) s 2s K sp = s(2s) 2 ; K sp = 4s 3  s = 1 3 sp K 4 (  ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_354",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the solubility of calcium phosphate (molecular weight M) in water at 25^\\circC is w g per 100 mL, its solubility product at 25^\\circC is approximately :",
+    "options": {
+      "A": "5 9 w 10 M (  ( ) ) ",
+      "B": "5 7 w 10 M (  ( ) ) ",
+      "C": "5 5 w 10 M (  ( ) ) ",
+      "D": "5 3 w 10 M (  ( ) )  IE17 - 0048"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Ca 3 (PO 4 ) 2 ⇌ 3Ca +2 (aq.) + 2PO 4 - 3 (aq.) 3s 2s s = wg/100 mL = w × 10 g/ 1000 mL  10w g/L  10W M mol/L Then K sp = (3s) 3 (2s) 2 = 27 × 4 s 5 = 108 5 10W M (  ( ) )   108 × 10 5 5 W M (  ( ) )  ; K sp  10 7 5 W M (  ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_355",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "HX is a weak acid (K a = 10 - 5 ). It forms a salt NaX (0.1 M) on reacting with caustic soda. The degree of hydrolysis of NaX is :",
+    "options": {
+      "A": "0.01%",
+      "B": "0.0001%",
+      "C": "0.1%",
+      "D": "0.5% IE14 - 0022"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Na X ⎯ → Na + + X - (Ka = 10 - 5 ) 0.1 M 0.1 0.1 X - + H 2 O  HX + OH - h = h K C  w K Ka C  = 14 5 10 10 0.1 - -  = 8 10 - = 10 - 4 h = 10 - 4 % h = 10 - 4 × 100 = 10 - 2 = 0.01 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_356",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 COOH + H 2 O ⇌ CH 3 COO - + H 3 O + In the above process, conjugate base of strong acid is :",
+    "options": {
+      "A": "H 2 O",
+      "B": "CH 3 COO -",
+      "C": "CH 3 COOH",
+      "D": "H 3 O + IE48 - 0032"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Strong Acid (H 3 O + ) conjugate base will be H 2 O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_357",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pH of a solution is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) pH = 13 [H + ] = 10 - 13 M mol of H + = MV = 10 - 13 × 1 1000 = 10 - 16 mole No. of ions = Mol × N A = 10 - 16 × 6.023 × 10 23 = 6.023 × 10 7"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_358",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the number of H + ions in 1 mL of the solution ?",
+    "options": {
+      "A": "6.02 × 10 23",
+      "B": "6.02 × 10 13",
+      "C": "6.02 × 10 7",
+      "D": "6.02 × 10 10 IE03 - 0048"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Acidic Buffer Range pH = pK a \\pm 1 pH = 2 to 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_359",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following solution will have pH close to 1.0 ?",
+    "options": {
+      "A": "100 mL. of M 10 (  ( ) )  HCl + 100 mL of M 10 (  ( ) )  NaOH",
+      "B": "55 mL. of M 10 (  ( ) )  HCl + 45 mL of M 10 (  ( ) )  NaOH",
+      "C": "10 mL. of M 10 (  ( ) )  HCl + 90 mL of M 10 (  ( ) )  NaOH",
+      "D": "75 mL. of M 5 (  ( ) )  HCl + 25 mL of M 5 (  ( ) )  NaOH IE25 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 1 1 2 2 1 2 M V M V V V - + = 0.1 for geting pH = 1  1 1 75 25 5 5 75 25  - + = 15 5 100 - = 10 100 = 0.1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_360",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following will act as a buffer :",
+    "options": {
+      "A": "NaCl + NaOH",
+      "B": "Borax + boric acid",
+      "C": "NaH 2 PO 4 + Na 2 HPO 4",
+      "D": "NH 4 Cl + NH 4 OH"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) NaCl + NaOH} Never form a buffer [Salt of (SA + SB) + strong base]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_361",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Solubility product (K sp ) of salts of type MX, MX 2 , M 3 X at temperature T are 4 × 10 - 8 , 3.2 × 10 - 14 and 2.7 × 10 - 15 respectively. Solubility of the salts at temperature T are in the order : -",
+    "options": {
+      "A": "MX > MX 2 > M 3 X",
+      "B": "MX 2 > M 3 X > MX",
+      "C": "M 3 X > MX 2 > MX",
+      "D": "MX > M 3 X > MX 2 IE17 - 0049"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) MX (aq) ⇌ M + (aq) + X - (aq) 2 8 SP 1 1 SP K S S K 4 10 - =  = =  = 2 × 10 - 14 mole/litre MX 2(aq) ⇌ M +2 (aq) + 2X - (aq) 14 3 3 SP SP 2 2 K 3.2 10 K 4S S 4 4 -  =  = = = 0.8 × 10 - 14 = 8 × 10 - 15 S 2 = 2 × 10 - 5 mole/litre M 3 X (aq) ⇌ 3M + (aq) + X - 3 (aq) 15 4 4 SP SP 3 3 K 2.7 10 K 27S S 27 27 -  =  = = S 3 = 10 - 4 mole/litre"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_362",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The amino acid glycine exists predominantly in the form NH 3 + CH 2 COO - its conjugate base and conjugate acid will be respectively :",
+    "options": {
+      "A": "NH 2 CH 2 COO - , NH 3 + CH 2 COOH",
+      "B": "NH 2 CH 2 COOH, NH 2 CH 2 COO -",
+      "C": "NH 3 + CH 2 COOH, NH 2 CH 2 COO -",
+      "D": "None IE48 - 0033"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 3 NH + - CH 2 - COO - ⎯ → 3 NH + - CH 2 - COOH (zwitter ion) (conjugate base) NH 2 CH 2 COO - (conjugate acid)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_363",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following : A. Sodium acetate B. Acetic acid + Sodium acetate (",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) A → CH 3 COONa → pH = a 1 1 7 pK logC 2 2 + + B → CH 3 COOH/CH 3 COONa → pH of acidic buffer = 3 a 3 [CH COO¯] pK log [CH COOH] + C → CH 3 COOH → weak acid pH = a 1 1 pK logC 2 2 - Assume concentration = 1M in all cases. A > B > C NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_364",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1) C. Acetic acid The pH of their equimolar aqueous solutions will be such that :",
+    "options": {
+      "A": "C < B < A",
+      "B": "B < A < C",
+      "C": "A < B < C",
+      "D": "C < A < B IE30 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) For WAWB type salt, degree of Hydrolysis remain same, do not depend on initial concentration."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_365",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Nicotinic acid (K a = 10 - 5 ) is represented by the formula HNiC. Calculate percent dissociation in a solution which contains 0.1 mol of nicotinic acid per 2 litre of solution :",
+    "options": {
+      "A": "1.4%",
+      "B": "1.6%",
+      "C": "2.4%",
+      "D": "3.4% IE03 - 0049"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) \\alpha = K C \\alpha ; \\alpha = 5 2 10 5 10 - -  = 1.414 × 10 - 2 \\alpha % = 1.4 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_366",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the pH at equivalence point when a solution of 0.1 M CH 3 COOH is titrated with a solution of 0.1 M KOH. (K a of CH 3 COOH = 2 × 10 - 5 )",
+    "options": {
+      "A": "5.3",
+      "B": "7.3",
+      "C": "10.7",
+      "D": "8.7 IE14 - 0023 NEET : CHEMISTRY"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) CH 3 COOH + KOH ⎯ → CH 3 COOK + H 2 O 0.1 mole 0.1 mole - - - 0.1 mole [CH 3 COOK] = 0.1 2 = 0.05 mol .L - 1 pH (WASB) = 7 + 1 2 (pk a + log C) = 7 + 1 2 (5 - log 2 + log { 5 × 10 - 2 } ) = 7 + 1 2 (5 - 0.30 + 0.7 - 2) = 7 + 1 2 (3.4)  pH = 8.7"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_367",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Acetyl salicylic acid called aspirin (shown in figure) is a pain killer with pK a =",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) a 1 1 pH pk logC 2 2 = - 2 1 (4 log10 ) 2 - = - 2 0.09 1000 C 180 100  =  1 (4 2) 2 = + 2 18 10 C M 18 -  = = 3",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_368",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If two tablets each of 0.09 g mass containing aspirin are dissolved in 100 mL solution. Its pH will be",
+    "options": {
+      "A": "0.5",
+      "B": "1.0",
+      "C": "1.8",
+      "D": "3 IE03 - 0050"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) OH - , H 2 O OH - + H + ⎯ → H 2 O ×"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_369",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the solubility of silver phosphate (Ag 3 PO 4 ) in 0.1 M AgNO 3 (K sp of Ag 3 PO 4 = 1.1 × 10 - 16 ) : -",
+    "options": {
+      "A": "1 × 10 - 8 M",
+      "B": "4 × 10 - 15 M",
+      "C": "1.1 × 10 - 15 M",
+      "D": "1.1 × 10 - 13 M IE17 - 0050"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Ag 3 PO 4 ⇌ 3Ag + + PO 4 - 3 (3s + 0.1) s Ksp = (3s + 0.1) 3 (s) = 1.1 × 10 - 16 10 - 3 × s = 1.1 × 10 - 16 s = 1.1 × 10 - 13"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_370",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A certain acidic indicator has pH = 5.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) pH = pk l n + log In HIn - (  ( ) )  5.48 = pk l n + log 75 25 (  ( ) )  pk l n = 5.48 - log 3 = 5.48 - 0.48 = 5 k l n = 1 × 10 - 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_371",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "75% of the indicator exists in its ionised form. Calculate K a of the indicator.",
+    "options": {
+      "A": "1 × 10 - 5",
+      "B": "2 × 10 - 5",
+      "C": "1 × 10 - 3",
+      "D": "4 × 10 - 5 IE03 - 0051"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 3 NH + - CH 2 - COO - ⎯ → 3 NH + - CH 2 - COOH (zwitter ion) (conjugate base) NH 2 CH 2 COO - (conjugate acid)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_372",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two sparingly soluble salts AX and BX 2 have their solubility product constants equal. Which of the following is incorrect ?",
+    "options": {
+      "A": "Solubility of AX is less than solubility of BX 2",
+      "B": "If S 1 and S 2 are molar solubility of AX and BX 2 then S 1 = 2",
+      "C": "If X is a conjugate base of a weak acid, addition of HNO 3 will increase solubility of both AX and BX 2",
+      "D": "Increasing the temperature, increases the solubility of both AX and BX 2 IE17 - 0051"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) AX ⇌ A + (aq.) + X - (aq.) K sp = s 1 2 s 1 = (K sp ) 1/2 BX 2 ⇌ B + (aq.) + 2X - (aq.) K sp = 4s 2 3 s 2 = ( 1 4 K sp ) 1/ 3 3/2 1 2 s 2S ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_373",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the % dissociation of 0.01N NH 4 OH in its buffer solution containing 0.01N NH 4 Cl : - (K b of NH 4 OH = 2 × 10 - 5 )",
+    "options": {
+      "A": "0.2%",
+      "B": "2 × 10 - 3 %",
+      "C": "2 × 10 - 5",
+      "D": "5 × 10 - 3 % IE43 - 0027"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) NH 4 OH ⇌ 4 NH + + OH - NH 4 Cl → 4 NH + + Cl¯ (Common ion effect) (Strong electrolyte) 4 b 4 [NH ][OH ] K [NH OH] + - = 2 5 2 10 [OH ] 2 10 10 - - - -  = [OH¯] = C \\alpha = 2 × 10 - 5  \\alpha = 2 × 10 - 3 \\alpha × 100% = 0.2%"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_374",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following combination, is buffer action expected ? (a) NH 4 OH + NH 4 Cl (b) HCl + NaCl (c) NH 4 OH + HCl in",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Combination of weak base (NH 4 OH) and its salt with strong acid (NH 4 Cl) act as basic buffer solution NH 4 OH + HCl ⇌ NH 4 Cl + H 2 O (weak base) (strong acid) Initial 2 mole 1 mole 0 0 After (2 - 1) (1 - 1) 1 mole 1 mole reraction = 1 mole = 0 1 mole NH 4 OH & 1 mole NH 4 Cl are present in mixture after reaction. Hence it will also act as basic buffer."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_375",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 mole ratio Select the correct answer using the code given below :",
+    "options": {
+      "A": "a & b",
+      "B": "a & c",
+      "C": "a, b & c",
+      "D": "None of these IE43 - 0028"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (CH 3 ) 2 NH 2 + ⎯ → (CH 3 ) 2 NH + H + Acid C.B."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_376",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the pH of a solution obtained by mixing 25 mL, 0.5 M HCl solution, 10 mL, 0.5 M NaOH solution and 15 mL of water : -",
+    "options": {
+      "A": "1.82",
+      "B": "0.48",
+      "C": "0.82",
+      "D": "12.1 IE26 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) [H + ] = 2 1 1 2 2 1 2 H O M V M V V V V - + + = 25 0.5 10 0.5 35 15  -  + = 7.5 3 50 20 = pH = - log [H + ] - log = 3 20       +log 20 - log 3 = 1.3 - 0.48 = 0.82"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_377",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pH of 0.5 M NaCN solution is (K a of HCN = 5 × 10 - 10 )",
+    "options": {
+      "A": "11.5",
+      "B": "2.5",
+      "C": "12.5",
+      "D": "1.5 IE14 - 0024"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) pH = 7 + 1 2 (pk a + log C) = 7 + 1 2 5 10 log5 log 10 (  - + ( ) )  = 7 + 1 2 [10 - log5 + log5 - log 10] = 7 + 1 2 pH = 11.5 NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_378",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the maximum concentration of equimolar solutions of FeSO 4 and Na 2 S so that when mixed in equal volumes, there is no precipitation of FeS ? (K sp of FeS = 6.25 × 10 - 18 )",
+    "options": {
+      "A": "5 × 10 - 9 M",
+      "B": "5 × 10 - 8 M",
+      "C": "5 × 10 - 18 M",
+      "D": "5 × 10 - 19 M IE21 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) s 2 = 6.25 × 10 - 18 s = 2.5 × 10 - 9 M = 2s = 2 × 2.5 × 10 - 9 = 5.0 × 10 - 9 M"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_379",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many moles of HCN will be required to prepare one litre buffer solution of pH = 10.4 using 0.01 mole NaCN ? (Given K a (HCN) = 4 × 10 - 10 )",
+    "options": {
+      "A": "2 × 10 - 2 mol",
+      "B": "1 × 10 - 3 mol",
+      "C": "4 × 10 - 4 mol",
+      "D": "9 × 10 - 3 mol IE28 - 0029"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) pH = pk a + log Salt Acid (  ( ) )  10.4 = 9.4 + log 0.01 x (  ( ) )  1 = log 0.01 x ; 10 = 0.01 x x = 0.001 = 10 - 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_380",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pH of two equimolar weak acids are 3 and 5 respectively. Their relative strength is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) [H + ] 1 = 10 - 3 [H + ] 2 = 10 - 5 3 1 5 2 [H ] 10 [H ] 10 + - + - = = 100 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_381",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "100 IE03 - 0052 NEET : CHEMISTRY",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) For WAWB type salt, degree of Hydrolysis remain same, do not depend on initial concentration."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_382",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "400 mL of 0.1 M KCN and 200 mL of 0.1 M HCl are mixed at 25^\\circC. Determine the pH of the mixture. (pK a for HCN = 6)",
+    "options": {
+      "A": "8",
+      "B": "4",
+      "C": "6",
+      "D": "2 IE28 - 0030"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_383",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many gram of H 2 SO 4 should be removed from 1 L of its aqueous solution of pH = 2 to increase its pH upto",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) I case II case pH = 2 pH = 3  [H + ] = 10 - 2 M  [H + ] = 10 - 3 M  [H 2 SO 4 ] = 2 10 M 2 -  [H 2 SO 4 ] = 3 10 M 2 -  2 4 2 H SO 10 n 1mol 2 - =   2 4 3 H SO 10 n 1mol 2 - =  Now ATQ, 2 4 2 3 H SO 10 10 n 2 2 - - - =  2 4 2 3 H SO 1 1 n 10 10 2 2 - - =  -  = 1 0.009 mol 2   2 4 H SO 1 w 0.009 98g 2 =   = 0.009 × 49 g = 0.441 g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_384",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 49 g (2) 9.8 g (3) 0.49 g (4) 0.441 g IE23 - 0015",
+    "options": {
+      "A": "49 g",
+      "B": "9.8 g",
+      "C": "0.49 g",
+      "D": "0.441 g IE23 - 0015"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) PO 4 3 - and C 2 O 4 2 -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_385",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "20 ml of 0.5 N HCl and 35 ml of 0.1 N NaOH are mixed. The resulting solution will : -",
+    "options": {
+      "A": "be neutral",
+      "B": "be basic",
+      "C": "turn phenol phthalein solution pink",
+      "D": "turn methyl orange solution red IE26 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) [m eq ] HCl = 0.5 × 20 = 10 [m eq ] NaOH = 3 5 × 0.1 = 3.5 Similarly; m eq of NaOH(Base) < m eq of HCl(acid) Hence resultant mixture will be acidic. Colour of methyl orange indicator in acidic medium is red."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ionic_equilibrium_386",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Ionic Equilibrium",
+      "chapter_name": "Ionic Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Ionic Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The solubility of Pb(OH) 2 in water is 5 × 10 - 6 M. Calculate the solubility of Pb(OH) 2 in a buffer solution of pH = 8 at 25^\\circC.",
+    "options": {
+      "A": "2.5 × 10 - 4 M",
+      "B": "5 × 10 - 16 M",
+      "C": "5 × 10 - 4 M",
+      "D": "2.5 × 10 - 16 M IE17 - 0052"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) K sp = 4s 3 = 4 × (5 × 10 - 6 ) 3 = 4 × 125 × 10 - 18 = 5 × 10 - 16 [OH - ] in buffer solution = 14 6 8 10 10 M 10 - - - =  K sp = [Pb 2+ ] [OH - ] 2  5 × 10 - 16 = s × (10 - 6 ) 2 s = 16 12 5 10 10 - -  = 5 × 10 - 4 M"
+  }
+]

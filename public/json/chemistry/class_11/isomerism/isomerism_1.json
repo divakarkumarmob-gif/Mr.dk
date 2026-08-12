@@ -1,0 +1,3286 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_001",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which similarity is necessary for isomerism -",
+    "options": {
+      "A": "Molecular formula",
+      "B": "Structural formula",
+      "C": "Physical properties",
+      "D": "chemical properties SR09 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) For isomerism → M.F. should be same but structural formula, Physical & chemical properties should be different."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_002",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound is isomeric with propanoic acid : -",
+    "options": {
+      "C": "CH 3 - CH",
+      "D": "CH 3 O - CH 2 - CH 2 OH SR06 - 0005",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) M.F. of CH 3 CH 2 COOH (Propanoic Acid)  C 3 H 6 O 2 (i) M.F.= C 4 H 8 O 2 (ii) M.F.= C 3 H 6 O 2 (iii) CH 3 - CH(OH) - CH 3 M.F. = C 3 H 8 O (iv) CH 3 - O - CH 2 - CH 2 - OH M.F.= C 3 H 8 O 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_003",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The minimum number of carbon atoms in ketone to show position isomerism : -",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6 SE05 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (3) Minimum 5 carbons are required to show P.I. in ketones."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_004",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 - NH - C 2 H 5 and (CH 3 ) 3 N show which type of isomerism : -",
+    "options": {
+      "A": "Position",
+      "B": "Functional",
+      "C": "Chain",
+      "D": "None SR06 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) CH 3 - NH - C 2 H 5 & (CH 3 ) 3 N 2^\\circ Amine 3^\\circ Amine So functional isomers."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_005",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "and are constitute a pair of : -",
+    "options": {
+      "A": "Position isomers",
+      "B": "Metamers",
+      "C": "Optical isomers",
+      "D": "Functional group isomers SR01 - 0004"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) & So, functional group isomers."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_006",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which are not functional isomers ?",
+    "options": {
+      "D": "SE07 - 0008",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_007",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which are metamers : -",
+    "options": {
+      "A": "CH 3 - O - CH 2 CH 2 CH 3 , CH 3 - O - CH",
+      "B": "C 2 H 5 - O - C 2 H 5 , CH 3 CH 2 CH 2 CH 2 OH",
+      "C": "CH 3 - O - C 2 H 5 , CH 3 - CH 2 - O - CH 3",
+      "D": "SR04 - 0002 CH 3 HC  C - CH 2 - CH - CH 3 CH 3 CH 3 - C  C - CH - CH 3 & O CH 3 - C - OC 2 H 5 OH CH 2 - CH 2 - C - H O Cl CH 3 - CH - CH 2 - C=O H CH 3 - CH 2 - CH 2 - C - Cl O and O O O O and Cl O C - Cl O and OH O and OH Cl Cl O CH 3 CH 3 O CH 3 - C - CH 3 , CH 3 - CH 2 - C - H O EXERCISE - I NEET : Chemistry"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Same M.F., but different alkyl group across polyvalent functional group  Metamers"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_008",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which compound shows metamerism ?",
+    "options": {
+      "A": "CH 3 - CH 2 - O - CH 3",
+      "D": "SE07 - 0007",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Condition for metamerism Polyvalent functional group must be present Shifting of alkyl group should create different molecule (1) (2) (3) (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_009",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of structural isomers of C 6 H 14 is -",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6 SR09 - 0013 Geometrical isomerism"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Total 5 structural isomers are possible for M.F. → C 6 H 14 (i) CH 3 - CH 2 - CH 2 - CH 2 - CH 2 - CH 3 (n - hexane) (ii) (2 - Methyl pentane) (iii) (3 - Methyl pentane) (iv) (2,3 - Dimethyl butane) (v) (2,2 - Dimethyl butane)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_010",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The isomerism shown by Benzaldoxime is : -",
+    "options": {
+      "A": "Position",
+      "B": "Functional",
+      "C": "Metamerism",
+      "D": "Geometrical SE07 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) In Benzaldoxime , t he carbon of oxime should be attached with two different groups. When H and OH When H and OH are on are on same opposite side → ‘Syn’ isomer side→ ’Anti’ isomer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_011",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is a pair of geometrical isomers : - , ,",
+    "options": {
+      "A": "I and II",
+      "B": "I and III",
+      "C": "II and IV",
+      "D": "III and IV SE02 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (II) & (IV) are geometrical isomers, due to presence of same M.F. but different relative arrangement across restricted system. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_012",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which shows 'Geometrical isomerism' : -",
+    "options": {
+      "D": "SE01 - 0016",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_013",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Geometrical isomerism is shown by :",
+    "options": {
+      "D": "SE01 - 0015 Conformational isomerism",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_014",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pair of structures represents : -",
+    "options": {
+      "A": "Chain isomer",
+      "B": "Position isomers",
+      "C": "Conformers",
+      "D": "None SR03 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_015",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which conformation of butane will have the minimum energy : -",
+    "options": {
+      "A": "Gauche",
+      "B": "Anti/staggered",
+      "C": "Eclipsed",
+      "D": "None SE08 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_016",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Rotational angle require to get maximum stable conformer from minimum stable conformer in n - butane is :",
+    "options": {
+      "A": "360^\\circ",
+      "B": "180^\\circ",
+      "C": "120^\\circ",
+      "D": "240^\\circ SE08 - 0006 CH 3 - C H - OH CH 3 CH 3 - C - CH 2 - CH 3 O CH 3 - C H 2 - C - O - CH 3 O CH 3 - C H 2 - C - CH 2 - CH 3 O and CH 3 - C - CH 2 - CH 2 - CH 3 O CH=N - OH • • Cl H C=C Br Br"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_017",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Max. Stable conformation of isobutane is",
+    "options": {
+      "D": "SE08 - 0008",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Isobutane This structure is most stable conformer of isobutane because bulky group are far away from each other."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_018",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "following are conformers of each other except ?",
+    "options": {
+      "D": "SE07 - 0004 EXERCISE - I",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) It is not the conformer as this configuration cannot be obtain after rotating other conformers to certain angle. CH 3 - CH 2 - CH 2 - CH - CH 3 CH 3 CH 3 - CH 2 - CH - CH 2 - CH 3 CH 3 CH 3 - CH - CH - CH 3 CH 3 CH 3 CH 3 - C - CH 2 - CH 3 CH 3 CH 3 C=N OH H C=N OH H C=C Br Cl H CH 3 & C=C Br H Cl CH 3 (II) (IV) C=C CH 3 H 3 C H H H Cl Cl H H 3 C - CH 2 - CH - CH 3 & H 3 C - CH 2 - CH 2 - CH 2 Cl 1 2 3 4 Cl 1 2 3 4 2 - chlorobutane 1 - chlorobutane CH 3 H H CH 3 H H 180^\\circ 180^\\circ H H H CH 3 CH 3 H (Fully eclipsed) Minimum Stable (Anti form) Maximum Stable H H H CH 3 CH 3 H (Anti/staggered form) CH 3 - CH - CH 3 CH 3 H CH 3 H H CH 3 H CH 3 Br H Br CH 3 H isomerism Exercise - II ( Previous Year Questions )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_019",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following hydrogen is involved in enolisation of given molecule ?",
+    "options": {
+      "A": "H \\alpha and H \\beta",
+      "B": "H \\beta",
+      "C": "H \\gamma",
+      "D": "Cannot be enolized GC61 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) H \\beta O H \\alpha H \\gamma Keto O H enol H \\gamma is involved in enolization so aromaticity occ ur."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_020",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among these can exhibit tautomerism?",
+    "options": {
+      "A": "a only",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) O H N O N O N O C H 3 N \\alpha - H absent O N O N H N O H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_021",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which has maximum value of equilibrium constant for given reactions ?",
+    "options": {
+      "D": "GC62 - 0048",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (1) O H O enol k eto ( More stable ) (2) O O H H O O H H OH O H H (3) (4) O O OH O \\alpha H \\alpha H \\alpha H ( More acidic)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_022",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which tautomer is more stable :",
+    "options": {
+      "A": "I",
+      "B": "II",
+      "C": "I = II",
+      "D": "None of these GC61 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_023",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Stability order among these tautomer is:",
+    "options": {
+      "A": "I > II > III",
+      "B": "III > II > I",
+      "C": "II > I > III",
+      "D": "II > III > I GC62 - 0049"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Stability II > III > I"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_024",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which type of strain is present in eclipsed conformation of butane : -",
+    "options": {
+      "A": "and",
+      "B": "Steric strain",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Torsional strain and steric strain both are present in fully eclipsed conformation of butan e."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_025",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of these will exhibit geometrical isomerism?",
+    "options": {
+      "A": "I",
+      "B": "II",
+      "C": "III",
+      "D": "I and II SE01 - 0304"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Exercise - I NEET : Extra Edge [Chemistry]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_026",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many geometrical isomers of this compound are possible:",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "3",
+      "D": "4 SE01 - 0303 H \\beta O H \\alpha H \\gamma O H N O CH 3 N O H N OH O O O H H OH O H H OH O O O O O OH O O CH 3 - C - H CH 2 =C OH H"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) G .I. show with respect to Ring."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_027",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one among the following will not show geometrical isomerism ?",
+    "options": {
+      "D": "CH 3 CH = CHCH 2 CH 3 SE01 - 0305 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) C CH=CH 2 H CH 3 CH 2 - Cl No G.I. For G.I. → two different group at sp² carbon. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_028",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 CH 2 CHCH 2 CH 3 CHO and CH 3 CHCH 2 CH 2 CH 3 CHO are :-",
+    "options": {
+      "A": "Chain isomer",
+      "B": "Position isomer",
+      "C": "Metamerism",
+      "D": "Functional isomer"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - CH 2 - CH - CH 2 - CH 3 C HO → P.C.C. → 4 CH 3 - CH - CH 2 - CH 2 - CH 3 C HO → P.C.C. → 5  no. of C in PCC different therefore chain isomers"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_029",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find out relation between the following compounds: (i) O O and COOH (ii) O Cl and C-Cl O (iii) CH 3 CH 2 CH 2 CHCH 3 COOH and CH 3 CH 2 CHCH 2 CH 3 COOH (iv) O O and O O",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) O O COOH ester carboxylic acid → F.G.I. (ii) Cl O C Ketone & halide Acid halide O Cl → F.G.I. (iii) CH 3 - CH 2 - CH 2 - CH - CH 3 C OOH P.C.C. → 5C CH 3 - CH 2 - CH - CH 2 - CH 3 C OOH P.C.C. → 4C Chain isomer (iv) O O O O ester Ketone & ether → FGI"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_030",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many primary amines are possible with the molecular formula C 4 H 11 N (structural isomers only) :-",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "4",
+      "D": "9"
+    },
+    "correct_option": "A",
+    "explanation": "C 4 H 11 N 1^\\circ amine → C 4 H 9 -NH 2 → 4 ↓ 4 possible radicals"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_031",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many benzenoid isomers are possible for molecular formula C 7 H 8 O :-",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "C 7 H 8 O → OCH 3 CH 3 CH 3 CH 3 OH OH OH CH 2 -OH total → 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_032",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relation between given compound is :- H CH 3 N CH 3 N",
+    "options": {
+      "A": "Chain isomerism",
+      "B": "Position isomerism",
+      "C": "Functional group isomerism",
+      "D": "Metamerism"
+    },
+    "correct_option": "A",
+    "explanation": "H CH 3 CH 3 N N 2^\\circ amine 3^\\circ amine F.G.I."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_033",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The structure below are :- H CH 3 H CH 3 H H H H CH 3 H CH 3 H",
+    "options": {
+      "A": "Not isomers",
+      "B": "Conformational isomers",
+      "C": "Cis-trans isomers",
+      "D": "Structural isomers"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 H H H H CH 3 H C 2 - Methyl propane CH 3 CH 3 CH 3 H CH 3 H CH 2 H H Butane CH 2 - CH 2 - CH 3 CH 3 Chain isomers → Structural isomers $//(1 TARGET : 202 6 NURTURE COURSE 202 6 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_034",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many alkenes (only structural isomers) are possible with the molecular formula C 4 H 8",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "C 4 H 8 CH 3 - CH = CH - CH 3 CH 3 - CH 2 - CH = CH 2 CH 3 - C = CH 2 CH 3 only 3 structural isomers (alkene)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_035",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct :-",
+    "options": {
+      "A": "O , O OCH 3 Functional group isomers",
+      "B": "; Position isomers",
+      "C": "O NH 2 ; H 2 N H O Positional isomers",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "O ; O CH 3 O are not isomer (Molecular formula differ) O NH 2 ; H 2 N H O are functional isomer (Not position isomer) ; (2,3-Dimethylpentane) (2,4-Dimethylpentane) are position isomers"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_036",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compounds can show geometrical isomerism : (i) Pent-1-ene (ii) 1-chloropropene (iii) 2-Methylbut-2-ene (iv) CH 3 -CH=CH-CH 3 (v) C l H C C H Cl (vi) H COOH H COOH (vii)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) Pent - 1 - ene CH 3 - CH 2 - CH 2 - C = C H H same H NO G.I. (  ) (ii) 1 - Chloro propene Cl H H CH 3 C = C (  ) (iii) 2-Methyl but - 2 - ene H CH 3 CH 3 CH 3 C = C same → No G.I. (  ) (iv) C = C Cl H Cl H (  ) (v) H HOOC COOH H → across the ring shows G.I. (  ) (vii) → across the ring. (  )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_037",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assign the configuration E/Z to the following compounds. (i) C C H 2 N CH 3 Cl NO 2 (ii) C C H 2 N OCH 3 HS-CH 2 F (iii) C C F Cl H D (iv) (v) C=C CHO COOH COCl HO-CH 2 $//(1 TARGET : 202 6 NURTURE COURSE E 202 6",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Priority ∝ atomic No. Same priority group If same side → Z If opposite side → E C C CH 3 H 2 N Cl NO 2 1 2 2 1 (z) (ii) C C OCH 3 H 2 N HS - H 2 C F (z) (iii) C C Cl F H D (z) (m) (iv) H H H 1 H 2 1 2 (Z) (v) C=C COOH COCl CHO HO-CH 2 1 2 1 2 (E)",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_038",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compounds have non zero dipole moment.",
+    "options": {
+      "A": "CCl 4",
+      "B": "C = C CH 3 H H C 2 H 5",
+      "C": "C = C Cl H H Cl",
+      "D": "Cl Cl"
+    },
+    "correct_option": "A",
+    "explanation": "C Cl Cl Cl Cl μ = 0 (Symmetrical) H 3 C C = C H H C 2 H 5 → μ ≠ 0 Cl C = C H H Cl → μ = 0 Cl Cl μ = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_039",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is a Z isomer ?",
+    "options": {
+      "A": "C = C CH 3 H Br C l",
+      "B": "C = C CH 3 H Cl Br",
+      "C": "C = C CH 3 Br Cl H",
+      "D": "C = C CH 3 H H CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "C = C B CH 3 Cl H (z) $//(1 TARGET : 202 6 NURTURE COURSE HS 202 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_040",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is true for the following isomeric forms I & II respectively : C=C CH 3 H H CH 3 (I) C=C CH 3 H CH 3 H (II) Dipole Boiling Melting Stability moment point point",
+    "options": {
+      "A": "I > II I > II II > I I > II",
+      "B": "II > I II > I II > I II > I",
+      "C": "I > II I > II I > II I > II",
+      "D": "II > I II > I I > II I > II"
+    },
+    "correct_option": "A",
+    "explanation": "C = C H CH 3 CH 3 H C = C CH 3 H CH 3 H μ = 0 ( Non Polar ) μ ≠ 0 (Polar) (Trans) (Cis) Boiling point ∝ Polarity (Cis > Trans) Melting point ∝ symmetry (Trans > Cis) Stability ∝ Packing efficiency (Trans > Cis)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_041",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compare dipole moment of the following (A) C = C Cl H Cl H ; C = C H Cl Cl H (B) C = C F H CH 3 H ; C = C F H H CH 3 (C) CH 3 -CH 2 -C ≡ CH ; CH 3 -C ≡ C-CH 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(A) C = C C = C Cl Cl Cl H H H H Cl μ ≠ 0 μ = 0 (B) C = C CH 3 F H H C = C F CH 3 H H (Resultant vector sum is more) (C) CH 3 -CH 2 -C ≡ C-H μ ≠ 0 CH 3 -C ≡ C-CH 3 μ = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_042",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a pair of metamers?",
+    "options": {
+      "A": "CH 3 -CH 2 -C-OH O and CH 3 -C-O-CH 3 O",
+      "B": "CH 3 -CH 2 -CH 2 -O-CH 3 and CH 3 -CH 2 -O-C 2 H 5",
+      "C": "CH 3 -CH 2 -C-CH 3 O and H-C-CH 2 -CH 2 -CH 3 O",
+      "D": "CH 3 -C O O CH 3 -C O and CH 3 -CH 2 -C O O CH 3 -C O"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 -CH 2 -O-C 2 H 5 differen different Ether CH 3 -CH 2 -CH 2 -O-CH 3 Since different alkyl group attached across polyvalent functional group. ∴ They are metamers"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_043",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify relation that is incorrect",
+    "options": {
+      "A": "NH-C 2 H 5 and NH 2 CH 3 CH 3 functional isomers",
+      "B": "and Chain isomers",
+      "C": "O H and O Metamers",
+      "D": "Br Cl and Cl Br Position isomers"
+    },
+    "correct_option": "A",
+    "explanation": "O H and O are functional isomers and not metamers"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_044",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many structural isomeric alkenes are possible with molecular formula C 5 H 10",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "4",
+      "D": "3"
+    },
+    "correct_option": "A",
+    "explanation": "C 5 H 10 alkene structures C-C-C-C=C C-C-C=C-C C-C-C=C C C-C=C-C C C-C-C=C C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_045",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is pair of functional isomers ?",
+    "options": {
+      "A": "O-H , O H",
+      "B": ", OH OH O OH",
+      "C": "O-H , O-Me",
+      "D": ", N H N Me $//"
+    },
+    "correct_option": "A",
+    "explanation": "OH Alcohol OMe Ether These are functional isomers In option (1), (2) and (4) molecular formula not same"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_046",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following does not show geometrical isomerism",
+    "options": {
+      "A": "N-OH",
+      "B": "N=N",
+      "C": "N-OH",
+      "D": "N=N"
+    },
+    "correct_option": "A",
+    "explanation": "Azo compound (-N=N-) always show geometrical isomerism. Oxime ( C=N-OH) show geometrical isomerism if sp 2 carbon has different valencies."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_047",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For compound, C=C H CH 3",
+    "options": {
+      "B": "which statement is correct",
+      "A": "and",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "C=C H CH 3 CH 2 OH OCH 3 Mol. formula same and compound showing GI C=C H CH 3 CH 3 CH 3 Mol. formula same compound not showing GI If (A) and (B) have same molecular formula than compound may or may not show GI."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_048",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Isomerism-Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "identify structure of trans-2-hexenal.",
+    "options": {
+      "A": "CHO",
+      "B": "CHO",
+      "C": "CHO",
+      "D": "CHO Que. 1 3 4 5 6 7 8 11 12 13 15 Ans. 1 3 3 3 4 2 2 2 1 4 2 Que. 16 17 18 19 20 21 Ans. 3 2 3 3 3 2"
+    },
+    "correct_option": "A",
+    "explanation": "CHO H H trans-2-hexenal (2H atom on opposite side of Double bond) $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_049",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hybridization inf l uences the bond length and bond enthalpy NC06 - 0587",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Hybridisation influence the bond length and bond enthalpy. sp 3 sp 2 sp % s character 25% 33.3% 50% % s character  Bond enthalpy  1 Bond length B. L. order : Single bond > Double bond > Triple bond B. E. order : Single bond < Double bond < Triple bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_050",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In CH 3 - CH=CH - CH 3 all the atoms are in same plane because formation of \\pi bond is possible if p orbitals on adjacent atoms are parallel. NC06 - 0586",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "CH 3 - CH = CH - CH 3 sp 3 sp 2 sp 2 sp 3 All the atom have different hybridisation so they doesn’t lie in same plane."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_051",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of  bond and \\pi bond in CH 3 - CH=CH - CN are 9 and",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_052",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Bond line n o t at ion of pent - 4 - yn - 2 - ol is NC05 - 1256",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_053",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of hetero atom in , are 3 NC01 - 1774",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Heteroatoms are those atoms which are present in ring/cycle other than carbon atom. Number of heteroatom = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_054",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is Benzenoid structure NC01 - 2073",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Non benzenoid structure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_055",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(THF) is Alicyclic compound NC01 - 2074",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic compound."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_056",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pyridine, Fura n e and Thiophene all are Hete r ocyclic aromatic compound NC01 - 2075",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic, Aromatic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_057",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ethanoic acid and Butanoic acid are Homologues and can be represented by same general molecular formula. NC02 - 0971",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - COOH CH 3 - CH 2 - CH 2 - COOH Homologous General formula - C n H 2n O 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_058",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of alkyl groups obtained from (CH 3 ) 3 C - CH(CH 3 ) 2 are 4 NC01 - 2076 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Number of alkyl group obtain from compound is '3'. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_059",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct name of 6 - ethyl - 3 - methyl octane is 3 - ethyl - 6 - methyl octane NC04 - 0583",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Hybridisation influence the bond length and bond enthalpy. sp 3 sp 2 sp % s character 25% 33.3% 50% % s character  Bond enthalpy  1 Bond length B. L. order : Single bond > Double bond > Triple bond B. E. order : Single bond < Double bond < Triple bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_060",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The name of branched chain alkyl group and their position are placed in parenthesis (in bracket) in IUPAC name NC04 - 0608 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Name of substituted alkyl group are placed in parenthesis (in bracket) . 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_061",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The IUPAC name of is 5 - (2,2 - Dimethyl ethyl) nonane NC04 - 0607 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Single bond - 1  Double bond - 1  + 1 \\pi Triple bond - 1  + 2 \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_062",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If there are two different F.G. in a compound than one, which is principl e functional is named as prefix and another is substituent which is used as suffix. NC05 - 1255 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "IUPAC name - pent - 4 - yn - 2 - ol M.F. - C 5 H 8 O Structure - Bond line -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_063",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "IUPAC name of is 3 - Bromobut - 2 - ene NC05 - 1210 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Heteroatoms are those atoms which are present in ring/cycle other than carbon atom. Number of heteroatom = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_064",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH  C - CH=CH - CH 2 - CH=CH 2 is name d a s hepta - 3,6 - dien - 1 - yne NC04 - 0611 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Non benzenoid structure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_065",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is name d as 2 - Cyanopentane NC05 - 1243",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic compound."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_066",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "But - 2 - en - 3 - amine is correct IUPAC name NC05 - 1254",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_067",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is named as 1 - chloro - 2 - methyl - 5 - nitro cyclohexane NC05 - 1257",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " 2 - Chloro - 1 - methyl - 4 - Nitrocyclohexane"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_068",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct structure of 2,3 - dibromo - 1 - phenyl pentane is NC05 - 1260",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2,3 - dibromo - 1 - phenyl pentane"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_069",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "are position al is o mer s SR05 - 0694 OH O O N O CH 3 - CH 2 - CH 2 - CH 2 - CH - CH 2 - CH 2 - CH 2 - CH 3 CH 2 - C ( CH 3 ) 3 Br CN CH 3 NO 2 Cl Br Br classification and Nomenclature, isomerism & General Organic Chemistry",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "and C 8 H 18 C 7 H 1 6 are different as they have different molecular formula."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_070",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "C 4 H 10 O can show metamerism SR04 - 0279",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " Metamer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_071",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "are functional isomers SR02 - 0776",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " functional isomer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_072",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heterolytic cleavage of CH 3 - Cu gives GC08 - 0383",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_073",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In CH 3 - I carbon is electrophilic centre GC08 - 0386",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_074",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The incorrect statement about Inductive effect ?",
+    "options": {
+      "A": "In chloroethane",
+      "B": "The effect decreases rapidity as the number of intervening bond increases.",
+      "C": "This effect becomes vanishingly small after three bonds.",
+      "D": "Aryl is electron donating gro u p s"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) is - I group 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_075",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is incorrect order regarding polar bond ?",
+    "options": {
+      "A": "CH 3 - Br > CH 3 - H",
+      "B": "CH 3 - OH > CH 3 - NH 2",
+      "C": "CH 3 - CH 3 > CH 3 - OH",
+      "D": "CH 3 - F > CH 3 - Cl GC06 - 0114 2"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic compound."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_076",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The in correct statement about resonance effect?",
+    "options": {
+      "A": "Canonical structures contribute to the actual structure in proportion to their stability.",
+      "B": "The energy of actual structure is lower than that of any of the canonical structure.",
+      "C": "The difference in energy between the highest energy canonical structure and the lowest energy canonical structure is called as resonance energy.",
+      "D": "The more number of canonical structure, the more is the resonance energy. GC07 - 0359 2"
+    },
+    "correct_option": "B",
+    "explanation": " Heterocyclic, Aromatic"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_077",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Give stability order of following resonating structures (1) (2) GC07 - 0358",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - COOH CH 3 - CH 2 - CH 2 - COOH Homologous General formula - C n H 2n O 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_078",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Why following two structures are not the major contributions to the real structure of CH 3 - COOCH",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Stability order I > III > II"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_079",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct statement about electrometric effect?",
+    "options": {
+      "A": "Diethyl ether shows E - effect",
+      "B": "The effect is annulled as soon as the attacking reagent is removed",
+      "C": "The inductive effect predominates over E - effect",
+      "D": "The following is an example of +E - effect GC08 - 0384 and O O O O O O and CH 3 Cu CH 2 = CH - C - CH 3 O CH 2 - CH = C - CH 3 O CH 2 - CH = C - CH 3 O"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Electromeric effect is annulled as soon as attacking reagent is removed from medium."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_080",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect statement about H - effect is -",
+    "options": {
+      "A": "H - effect is permanent effect",
+      "B": " electron of C - H bond enter into the partial conjugation with empty p orbital.",
+      "C": "This type of overlapping destabilise the carbocation.",
+      "D": "Delocalization of electron s by hyperconjugation is also possible in alkene. GC05 - 0143"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Overlapping of C - H \\pi bond and empty p - orbital in carbocation stabilise carbocation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_081",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is more stable than . It is explained by, except -",
+    "options": {
+      "A": "+I of - CH 3 increases stability of",
+      "B": "Hyperconjugation int e raction in",
+      "C": "The C - H  bond helps in dispersing the positive charge.",
+      "D": "Electrons of C - H bond can be delocalized into empty 3 p orbital. GC08 - 0385"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Electro ns of C - H bond delocalised into 2p empty orbital in carbocation."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_082",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect statement about CH 3 - O - CH 2 - CH 2 - CH 3 is",
+    "options": {
+      "A": "It is unsymmetrical ether",
+      "B": "It is III rd member of ether",
+      "C": "It is II nd member of unsymmetrical ether",
+      "D": "It is III rd member of unsymmetrical ether NC01 - 0278 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) CH 3 - O - CH 2 - CH 2 - CH 3 → unsymmetrical ether → II nd member of unsymmetrical ether 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_083",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which functional group is not present in",
+    "options": {
+      "A": "1^\\circ Amine",
+      "B": "2^\\circ Amine",
+      "C": "3^\\circ Amine",
+      "D": "ester NC01 - 0280"
+    },
+    "correct_option": "B",
+    "explanation": " Non benzenoid structure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_084",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Why alkyl group act as electron don o r when attached to \\pi system",
+    "options": {
+      "A": "and",
+      "B": "D ue to hyperconjugation effect",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) In \\pi - system alkyl group act as electron donor group due to Hyper conjugation effect."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_085",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is an example of addition reaction ?",
+    "options": {
+      "A": "CH 3 - CH 2 - Br + HS Θ → CH 3 - CH 2 - SH",
+      "C": "CH 3 - CH 2 - Br + OH Θ → CH 2 =CH 2 + H 2 O + Br Θ",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_086",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct IUPAC name of",
+    "options": {
+      "A": "5 - sec. butyl - 4 - isopropyl decane",
+      "B": "4 - isopropyl - 5 - sec. butyl decane",
+      "C": "6 - sec. butyl - 7 - isopropyl decane",
+      "D": "7 - isopropyl - 6 - sec. butyl decane NC04 - 0609"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) IUPAC name  5 - sec butyl - 4 - isopropyl decane"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_isomerism_087",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column : Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a)  Position isomer (b)  Resonance structure (c)  Metamer (d)  Geometrical isomers 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_088",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is not anti aromatic ?",
+    "options": {
+      "D": "GC02 - 0319",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Hybridisation influence the bond length and bond enthalpy. sp 3 sp 2 sp % s character 25% 33.3% 50% % s character  Bond enthalpy  1 Bond length B. L. order : Single bond > Double bond > Triple bond B. E. order : Single bond < Double bond < Triple bond"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_089",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : Eclipsed form of n - Butane is minimum stable conformers. Statement - II : Eclipsed form of n - Butane has maximum torsional strain but minimum steric strain.",
+    "options": {
+      "A": "Both statement I and statement II are incorrect.",
+      "B": "Both statement - I and statement - II are correct.",
+      "C": "Statement I is correct but statement II is incorrect",
+      "D": "Statement I is incorrect but statement II is correct. SE05 - 0143"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) Steric strain is not minimum but maximum between 2 bulky - CH 3 groups. CH 3 - CH 2 - CH 2 - CH 3 1 2 3 4 n - butane Front carbon Back carbon H CH 3 H CH 3 H H NEET : NCR [ Chemistry ]",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_090",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hyperconjugation occurs in",
+    "options": {
+      "D": "GC05 - 0145",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) Hyperconjugation takes p l ace in presence of \\alpha - H."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_091",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(I) (II) (III) Which of the following orders is correct for the stability of these carbocations?",
+    "options": {
+      "A": "I > II > III",
+      "B": "III > II > I",
+      "C": "III > I > II",
+      "D": "I > III > II GC08 - 0388"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) (i) \\alpha H = 5 (ii) \\alpha H = 4 (iii) \\alpha H = 7 iii > i > ii CH 3 → 3 \\alpha - H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_092",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 CH 2 CH(CHO)CH 2 CH 3 and CH 3 CH(CHO) CH 2 CH 2 CH 3 are : -",
+    "options": {
+      "A": "Chain isomer",
+      "B": "Position isomer",
+      "C": "Metamerism",
+      "D": "Functional isomer SR02 - 0100"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Chain isomer PCC 4 Carbon PCC 5 Carbon"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_093",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find out relation between the following compounds:",
+    "options": {
+      "A": "and",
+      "B": "and",
+      "C": "and",
+      "D": "and SR09 - 0028"
+    },
+    "correct_option": "A",
+    "explanation": "( 1 ) Functional group isomer (2) Functional group isomer (3) Chain isomer PCC 5 Carbon PCC 4 Carbon (4) Functional group isomer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_094",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "isomerism shown by the following compounds and is : -",
+    "options": {
+      "A": "Functional group isomerism",
+      "B": "Geometrical isomerism",
+      "C": "Metamerism",
+      "D": "Position isomerism SR04 - 0023"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) and The geometrical isomerism arises when atom or group are arrange differently in space due to restricted rotation of a bond in a molecule."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_095",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many structural isomers are possible when one H - atom of anthracene is replaced by chlorine: -",
+    "options": {
+      "A": "3",
+      "B": "7",
+      "C": "4",
+      "D": "6 SR03 - 0073"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) A nthracene"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_096",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many amines are possible with the molecular formula C 4 H 11 N (structural isomers only) : -",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "9 SR07 - 0062"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 8 amines are possible with C 4 H 11 N ( i ) CH 3 CH 2 CH 2 CH 2 NH 2 ( ii ) ( iii ) ( iv ) ( v ) CH 3 CH 2 NH CH 2 CH 3 ( vi ) CH 3 CH 2 CH 2 NH CH 3 ( vii ) ( viii )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_097",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many total structural isomers of 3^\\circ amines are possible with the molecular formula C 6 H 15 N",
+    "options": {
+      "A": "4",
+      "B": "7",
+      "C": "6",
+      "D": "5 SR07 - 0061"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Total 7 structural isomer of 3^\\circ amines are possible with formula C 6 H 15 N ( i ) ( ii ) ( iii ) ( iv ) C - O O C = C Cl H H Trans O - C O C = C H H Cis Cl ( v ) ( vi ) ( vii )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_098",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Only two isomeric monochloro derivatives are possible for (excluding stereo) : -",
+    "options": {
+      "A": "In - Butane",
+      "B": "2,2 - Dimethylpentane",
+      "C": "Benzene",
+      "D": "Neopentane SR08 - 0042"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ( 1 ) n Butane two m o n o ch l oro der iva ti v e CH 3 CH 2 CH 2 CH 2 Cl (2) 2, 2 - Dimethylpentane Four m onochloro derivative - ( 3 ) Benzene Only 1 monos u bstituent derivative possible (All position are same) ( 4 ) Neopentane One monosubstituted derivative because all position are same -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_099",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relation between given compound is : -",
+    "options": {
+      "A": "Chain isomerism",
+      "B": "Position isomerism",
+      "C": "Functional isomerism",
+      "D": "Metamerism SR06 - 0053"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Different degree of amine are considered as functional group."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_100",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The structure below are : -",
+    "options": {
+      "A": "Not isomers",
+      "B": "Conformational isomers",
+      "C": "Cis - trans isomers",
+      "D": "Structural isomers SR02 - 0097"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_101",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not the correct relationship : (I) (II) (III) (IV)",
+    "options": {
+      "A": "I and IV are positional isomers",
+      "B": "I and II are functional isomers",
+      "C": "I and III are chain isomers",
+      "D": "II & IV are metamers SR03 - 0074"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_102",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of structural isomers possible for dibromo derivative of an alkene with molar mass 186 gm mol ¯¹ is (atomic mass of Br = 80)",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "6 SR08 - 0043"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_103",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compounds can show geometrical isomerism : (i) Pent - 2 - ene (ii) Pent - 3 - en - 1 - yne (iii) Acetaldoxime (iv) But - 2 - yne (v) 2 - chlorobutane (vi) Butenyne (vii) 1 - chloropropene (viii) 2 - Methylbut - 2 - ene (ix) CH 3 CH=CH CH 3 (x) (xi) (xii) SE01 - 0059 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard isomerism principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_104",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many geometrical isomers are possible for the given compound",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "8 SE27 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ( 1 ) n Butane two m o n o ch l oro der iva ti v e CH 3 CH 2 CH 2 CH 2 Cl (2) 2, 2 - Dimethylpentane Four m onochloro derivative - ( 3 ) Benzene Only 1 monos u bstituent derivative possible (All position are same) ( 4 ) Neopentane One monosubstituted derivative because all position are same -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_105",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Minimum C - atom required for aliphatic 2^\\circ amine to show chain isomerism are : -",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "3",
+      "D": "5 SR02 - 0099"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) CH 3 CH 2 CH 2 NH CH 3 CH 3 CH 2 NH CH 2 CH 3 It will only possible if minimum number of C atom is 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_106",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "isomerism shown by and",
+    "options": {
+      "A": "Chain isomerism",
+      "B": "Positional isomerism",
+      "C": "Metamerism",
+      "D": "Functional group isomerism SR04 - 0025"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) & (I) (II) Polyvalent F.G. Having different group  Metamer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_107",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Branched chain isomer of a hydrocarbon having molecular mass 72u gives only one isomeric alkyl halide after monosubstitution. The hydrocarbon is : -",
+    "options": {
+      "A": "neohexane",
+      "B": "t - butyl chloride",
+      "C": "neopentane",
+      "D": "isooctane SR08 - 0044 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Neopentane ( molecular mass 72u ) gives one monosubstituted alkyl halide . "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_108",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many structural isomers are possible of C 5 H 12 O : -",
+    "options": {
+      "A": "5",
+      "B": "8",
+      "C": "13",
+      "D": "14 SR07 - 0066 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Chain isomer PCC 4 Carbon PCC 5 Carbon"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_109",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is relation between following compounds and",
+    "options": {
+      "A": "positional isomers",
+      "B": "chain isomers",
+      "C": "optical isomers",
+      "D": "metamers SR02 - 0098 2"
+    },
+    "correct_option": "A",
+    "explanation": "( 1 ) Functional group isomer (2) Functional group isomer (3) Chain isomer PCC 5 Carbon PCC 4 Carbon (4) Functional group isomer"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_110",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "No. of structural isomeric alkenes (molecular formula=C 6 H 12 ) which all give n - hexane on hydrogenation in presence of metal catalyst",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5 SR07 - 0065 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) and The geometrical isomerism arises when atom or group are arrange differently in space due to restricted rotation of a bond in a molecule."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_111",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many isomeric geminal dihalides are possible for the compound having M.F. C 3 H 6 C l 2",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4 SR08 - 0045 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) A nthracene"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_112",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is the metamer of the compound P ?",
+    "options": {
+      "D": "SR04 - 0027 2",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 8 amines are possible with C 4 H 11 N ( i ) CH 3 CH 2 CH 2 CH 2 NH 2 ( ii ) ( iii ) ( iv ) ( v ) CH 3 CH 2 NH CH 2 CH 3 ( vi ) CH 3 CH 2 CH 2 NH CH 3 ( vii ) ( viii )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_113",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound have minimum dipole moment :",
+    "options": {
+      "A": "CH 3 CH 2 C ≡ CH",
+      "B": "CH 3 C ≡ C CH 3",
+      "C": "CH 3 CH = CH 2",
+      "D": "CH 3 C ≡ CH SE02 - 0024 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Total 7 structural isomer of 3^\\circ amines are possible with formula C 6 H 15 N ( i ) ( ii ) ( iii ) ( iv ) C - O O C = C Cl H H Trans O - C O C = C H H Cis Cl ( v ) ( vi ) ( vii )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_114",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which compound cis - trans nomenclature cannot be used :",
+    "options": {
+      "A": "CH 3 CH=CH COOH",
+      "B": "C 6 H 5 CH=CH C 6 H 5",
+      "C": "C 6 H 5 CH=CHD",
+      "D": "C 6 H 5 CH= SE02 - 0022"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ( 1 ) n Butane two m o n o ch l oro der iva ti v e CH 3 CH 2 CH 2 CH 2 Cl (2) 2, 2 - Dimethylpentane Four m onochloro derivative - ( 3 ) Benzene Only 1 monos u bstituent derivative possible (All position are same) ( 4 ) Neopentane One monosubstituted derivative because all position are same -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_115",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is true for the following isomeric forms I & II respectively : (I) (II) Dipole Boiling Melting Stability moment point point",
+    "options": {
+      "A": "I > II I > II II > I I > II",
+      "B": "II > I II > I II > I II > I",
+      "C": "I > II I > II I > II I > II",
+      "D": "II > I II > I I > II I > II SE02 - 0017"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (I) (II)  Dipole moment of II > I  Hence dipole moment  Boiling point (II > I) Trans alkene is more stable than cis alkene because of less steric hindrance.  melting point  stability (I > II)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_116",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Compare dipole moment of the following (A) ; (B) ; (C) CH 3 CH 2 C ≡ CH ; CH 3 C ≡ C CH 3 SE02 - 0023 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Direction of dipole moment is from less EN atom to mere EN atom. EN order F > Cl > sp carbon > sp² carbon > sp³ carbon (A) order (i) > (ii) (B) order (ii) > (i) (C) order (i) > (ii) 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_117",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many structural isomeric alkenes are possible with molecular formula C 5 H 10 that does not show geometrical isomerism",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "3 SE01 - 0062 3"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) and The geometrical isomerism arises when atom or group are arrange differently in space due to restricted rotation of a bond in a molecule."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_118",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For compound, which statement is correct",
+    "options": {
+      "A": "and",
+      "B": "If",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) If A & B have same molecular C 3 H 7 then It will not show GI but It will show GI"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_119",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is the highest energy conformation of butane : -",
+    "options": {
+      "D": "SE11 - 0013",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) It is highest energy conformer as it is Eclipsed & two bulky group (Me) are on same side."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_120",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which conformer of the given compound is most stable (rotation about C C bond) : - HO CH 2 CH 2 NO 2",
+    "options": {
+      "A": "Staggered",
+      "B": "Gauche",
+      "C": "Fully eclipsed",
+      "D": "Partially eclipsed SE09 - 0027"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) It has intramolecular H ydrogen - bonding in Gauche form."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_isomerism_121",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : Dihedral angle in Gauche form of n - Butane is 60^\\circ Statement - II : Gauche form of n - Butane is more stable than staggard form",
+    "options": {
+      "A": "Both statement I and statement II are incorrect.",
+      "B": "Both statement - I and statement - II are correct.",
+      "C": "Statement I is correct but statement II is incorrect",
+      "D": "Statement I is incorrect but statement II is correct. SE08 - 0017"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) The staggered (Anti) form of n - butane is the most stable conformer of n - butane due to maximum distance between two bulky methyl groups."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_122",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Isomerism.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound show metamerism ?",
+    "options": {
+      "A": "CH 3 CO C 2 H 5",
+      "B": "CH 3 O CH 3",
+      "C": "C 2 H 5 S C 2 H 5",
+      "D": "CH 3 O C 2 H 5 SR04 - 0026"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) H CH 3 H H H CH 3 Staggered form"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_123",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH 3 HC ≡ C-CH 2 -CH - CH 3 CH 3 CH 3 -C ≡ C-CH-CH 3 & are",
+    "options": {
+      "A": "Chain isomer",
+      "B": "Homologous",
+      "C": "Position isomer",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "The comp. which can show GI are :- Note :- (I) To show GI in alkene ; each sp 2 carbon should have two different group. (II) To show GI in cycloalkane ; At least two different carbon atom of cycle should have two different group. GI (i) CH 3 -CH=CH-C ≡ CH  (ii) CH 3 -C=N-OH H  (iii) CH 3 -CH 2 -CH 2 -CH=CH 2 × (iv) CH 3 -CH=CHCl  (v) CH 3 -CH 2 =C-CH 3 Cl × (vi) CH 3 -C ≡ C-CH 3 × (Linear) (vii) × (No restricted rotation system) (viii) CH 2 =CH-C ≡ CH × (ix) CH 3 - CH = CH - CH 3  (x) C = C Cl Cl H H  (xi) COOH H H COOH  (xii) H H "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_124",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cl CH 3 -CH-CH 2 -C=O H and CH 3 -CH 2 -CH 2 -C-Cl O are constitute a pair of :-",
+    "options": {
+      "A": "Position isomers",
+      "B": "Metamers",
+      "C": "Optical isomers",
+      "D": "Functional group isomers"
+    },
+    "correct_option": "D",
+    "explanation": "CH 3 C Cl CH 3 Cl H H show GI across this bond"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_125",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The isomerism shown by Benzaldoxime CH=N - OH • • is :-",
+    "options": {
+      "A": "Position",
+      "B": "Functional",
+      "C": "Metamerism",
+      "D": "Geometrical"
+    },
+    "correct_option": "A",
+    "explanation": "H.P. H 3 C Br H.P. C = C H Cl Z- H.P. : Higher priority according to CIP rule H.P. Same side → Z Opposite side → E $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_126",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has Z-configuration ?",
+    "options": {
+      "A": "H 3 C H C C 2 H 5 H C",
+      "B": "Br HOCH 2 C CH",
+      "C": "Cl Br C H D C",
+      "D": "All the above"
+    },
+    "correct_option": "A",
+    "explanation": "E/Z configuration : Note : Each sp 2 carbon should have two different group to show GI. (I) High priority (HP) gp. at opposite side :- E (II) High priority (HP) gp. at same side :- Z (i) C H 2 N Cl NO 2 CH 3 C H.P. H.P. Z (ii) C H 2 N HS- F OCH 3 C H.P. H.P. Z (iii) C H 3 C MeO CH 3 C 14 CH 3 14 H.P. H.P. E (iv) C H 2 C-CH D 3 C-CH 2 CH 2 -Cl C CH 2 -CH 3 I F H.P. H.P. E (v) Cl C C Br Cl F H.P. H.P. E (vi) C OHC NC CH 2 -OH C C O H.P. OH H.P. E Z :- (i), (ii) E :- (iii) , (iv) , (v) , (vi)",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_127",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has E-configuration ?",
+    "options": {
+      "A": "H 3 C H C CHO CH 2 OH C",
+      "B": "H 2 N H 3 C C OH CH 2 OH C",
+      "C": "HOH 2 C H 2 N C CH 3 CH",
+      "D": "H H 3 C C COOH CHO C $//"
+    },
+    "correct_option": "A",
+    "explanation": "O nly this double bond show GI, n=1 No. of GI = 2 n (For unsymmetrical alkene) n = no. of double bond, across which molecule show GI. 1 2 = 2 < is C Trans",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAxCAIAAADWTifkAAAAMUlEQVR42u3NQQEAAAQEMPTvfFrw2Qqsk9S5qQ9Wq9VqtVqtVqvVarVarVar1Wr9XhfluQNftTGG2QAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_128",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is a pair of geometrical isomers ? Cl H C=C Br Br (I) , Cl H C=C Br CH 3 (II) Cl Br C=C H H (III) , H Cl C=C Br CH 3 (IV) ,",
+    "options": {
+      "A": "I and II",
+      "B": "I and III",
+      "C": "II and IV",
+      "D": "III and IV"
+    },
+    "correct_option": "A",
+    "explanation": "(a) C 4 H 8 O : H 7 C 3 - CHO ⇒ 2 aldehyde (monovalent radical of C 3 H 8 = 2 (x) ) (b) C 5 H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_129",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which can show 'Geometrical isomerism' ?",
+    "options": {
+      "A": "CH 3 CH 3 C=C H H",
+      "B": "H H C=C CH 3 H",
+      "C": "CH 3 H C=C CH 3 H",
+      "D": "CH 3 H C=C CH 3 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Cl * * * * Chiral centres = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_isomerism_130",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Isomerism",
+      "chapter_name": "Isomerism",
+      "language": "en",
+      "tags": [],
+      "source": "Stereo isomerism-Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pair of structures represents :- Me Me H Cl H H Me H H CH 2 Cl H H",
+    "options": {
+      "A": "Chain isomer",
+      "B": "Position isomers",
+      "C": "Conformers",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "(1) CH 3 CH 3 * * (2) CH 3 CH 3 [No chiral centre] (3) CH 3 CH 3 *"
+  }
+]

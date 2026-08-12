@@ -1,0 +1,3482 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wire of length L and cross - sectional area A is made of a material of Young's modulus Y. The work done in stretching the wire by an amount x is given by : -",
+    "options": {
+      "A": "2 YAx L",
+      "B": "2 YAx 2L",
+      "C": "2 YAL x",
+      "D": "2 YAL 2x FLUIDS STATICS 2"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two vessels A and B have the same base area and contain water to the same height, but the mass of water in A is four times that in B. The ratio of the liquid thrust at the base of A to that at the base of B is : - \\lambda \\lambda H B A (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cylinder is filled with a liquid of density d upto a height h. If the beaker is at rest, then the mean pressure on the wall is : -",
+    "options": {
+      "A": "Zero",
+      "B": "hdg",
+      "C": "h dg 2",
+      "D": "2 hdg 2"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The spring balance A read 2 kg. with a block m suspended from it. A balance B reads 5 kg. when a beaker with liquid is put on the pan of the balance. The two balances are now so arranged that the hanging mass is inside the liquid in the beaker as shown in fig. In this situation : -",
+    "options": {
+      "A": "The balance A will read more than 2 kg",
+      "B": "The balance B will read more than 5 kg",
+      "C": "The balance A will read less than 2 kg and B will read more than 5 kg",
+      "D": "The balance A and B will read 2 kg and 5 kg. respectively 2"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A jar is filled with two non - mixing liqui d s 1 and 2 having densities \\rho 1 and \\rho 2 , respectively. A solid ball, made of a material of density \\rho 3 , is dropped in the jar. It comes to equilibrium in the position shown in the figure. Which of the following is true for \\rho 1 , \\rho 2 & \\rho 3",
+    "options": {
+      "A": "\\rho 3 < \\rho 1 < \\rho 2",
+      "B": "\\rho 1 > \\rho 3 > \\rho 2",
+      "C": "\\rho 1 < \\rho 2 < \\rho 3",
+      "D": "\\rho 1 < \\rho 3 < \\rho 2 B A m Liquid 1 \\rho 2 Liquid 2 \\rho 1 \\rho 3"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat having a length of 3 metre and breadth 2 metre is floating on a lake. The boat sinks by one cm when a man gets on it. The mass of the man is",
+    "options": {
+      "A": "60 kg",
+      "B": "62 kg",
+      "C": "72 kg",
+      "D": "128 kg 3"
+    },
+    "correct_option": "A",
+    "explanation": "Weight of man = upthrust \\rho Mg = V in \\rho w g M = (3 × 2 × 1 × 10 - 2 ) × 10 3 = 60 kg 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the density of a block is 981 kg/m 3 then it shall",
+    "options": {
+      "A": "Sink in water",
+      "B": "float with some part emmersed in water",
+      "C": "float completely immersed in water",
+      "D": "float completely out of water. 3"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wooden block, with a coin placed on its top, floats in water as shown in figure. The distance \\lambda and h are shown there. After sometime the coin falls into the water. Then : -",
+    "options": {
+      "A": "ℓ decreases and h increases",
+      "B": "ℓ increases and h decreases",
+      "C": "both ℓ and h increase",
+      "D": "both ℓ and h decrease 3"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A piece of ice is floating in a jar containing water. When the ice melts, then the level of water : -",
+    "options": {
+      "A": "Rises",
+      "B": "Falls",
+      "C": "Remains unchanged",
+      "D": "Changes erratically 3"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sample of metal weights 210 gram in air, 180 gram in water and 120 gram in an unknown liquid. Then : -",
+    "options": {
+      "A": "the density of metal is 3 g/cm 3",
+      "B": "the density of metal is 7 g/cm 3",
+      "C": "density of metal is 4 times the density of the unknown liquid",
+      "D": "the metal will float in water 3"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "'Torr' is the unit of : -",
+    "options": {
+      "A": "Pressure",
+      "B": "Density",
+      "C": "Volume",
+      "D": "Flux 3"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere is floating in water its 1/3rd part is outside the water and when sphere is floating in unknown liquid, its 3 4 th part is outside the liquid then density of liquid is",
+    "options": {
+      "A": "4/9 gm/c.c.",
+      "B": "9/4 gm/c.c.",
+      "C": "8/3 gm/c.c.",
+      "D": "3/8 gm/c.c. 3"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following works on Pascal's law ?",
+    "options": {
+      "A": "Sprayer",
+      "B": "Venturimeter",
+      "C": "Hydraulic lift",
+      "D": "B arometer 3"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object of weight W and density \\rho is submerged in a fluid of density \\rho",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Its appearent weight will be",
+    "options": {
+      "A": "W 1",
+      "B": "1",
+      "C": "1 W 1 \\rho (  - ( ) \\rho ) ",
+      "D": "1 W"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which law states that the magnitude of pressure within fluid is equal in all parts ?",
+    "options": {
+      "A": "P ascal's law",
+      "B": "Gay - Lusac's law",
+      "C": "Dalton's law",
+      "D": "Boyle's law"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body measures 5 N in air and 2 N when put in water. The buoyant force is",
+    "options": {
+      "A": "7 N",
+      "B": "9 N",
+      "C": "3 N",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Th = W A - W W = 5 - 2 = 3N 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hydraulic press is based upon",
+    "options": {
+      "A": "Archimede's principle",
+      "B": "Bernoulli's theorem",
+      "C": "Pascal's law",
+      "D": "Zurin’s law"
+    },
+    "correct_option": "C",
+    "explanation": "For the given element, (consider length d in Z direction) Net force in upward direction = Weight (S sin( \\theta + d \\theta ) - S sin \\theta ) d = mg Angle is small  sin \\theta  \\theta  d g ydx S \\theta \\rho = .............(1) tan \\theta = dy dx  Differentiating wrt x 2 2 2 d d y sec dx dx \\theta \\theta = .............(2) Put d \\theta from (2) in (1) d take cos \\theta  1, we get 2 2 d y gy S dx \\rho = Alternative Solution P A = P B = P 0 P C = P 0 - \\rho gy C 0 S P P R = - S gy R \\rho = 2 2 d y gy S dx \\rho = 2 2 d y gy S dx \\rho = 3/2 2 2 2 dy 1 dx R d y dx     (  +   ( ) )      = dy/dx is very small 2 2 1 R d y / dx = 2 2 d y 1 R dx = F excess T(2 \\pi R) F’ x S F’ y dx dy F x S F y \\theta \\theta \\theta +d \\theta y x B A C P 0 y Properties of Matter and Fluid Mechanics Exercise - III ( Analytical Questions )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wooden block is taken to the bottom of a lake of water and then released. it rise up with a",
+    "options": {
+      "A": "Constant acceleration",
+      "B": "Decreasing acceleration",
+      "C": "Constant velocity",
+      "D": "Decreasing velocity h \\lambda coin Properties of Matter and Fluid Mechanics FLUIDS DYNAMICS 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two water pipes P and Q having diameter 2 × 10 - 2 m and 4 × 10 - 2 m respectively are joined in series with the main supply line of water. The velocity of water flowing in pipe P is",
+    "options": {
+      "A": "4 times that of Q",
+      "B": "2 times that of Q",
+      "C": "1 2 times that of Q",
+      "D": "1 4 times that of Q 4"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The cylindrical tube of a spray pump has a radius R, one end of which has n fine holes, each of radius r. If the speed of flow of the liquid in the tube is v, the speed of ejection of the liquid through the hole is : -",
+    "options": {
+      "A": "v R n r (  ( ) ) ",
+      "B": "1 2 v R n r (  ( ) ) ",
+      "C": "3 2 v R n r (  ( ) ) ",
+      "D": "2 v R n r (  ( ) )  4"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water from a tap emerges vertically downwards with an initial speed of 1.0 m/s. The cross - sectional area of tap is 10 - 4 m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assume that the pressure is constant throughout the stream of water and that the flow is steady, the cross - sectional area of stream 0.15 m below the tap is : -",
+    "options": {
+      "A": "5.0 × 10 - 4 m 2",
+      "B": "1.0 × 10 - 4 m 2",
+      "C": "5.0 × 10 - 5 m 2",
+      "D": "2.0 × 10 - 5 m 2 4"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water flows through a frictionless duct with a cross - section varying as shown in figure. Pressure P at points along the axis is represented by",
+    "options": {
+      "A": "P x",
+      "B": "P x",
+      "C": "P x",
+      "D": "P x 4"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tank of height 5 m is full of water. There is a hole of cross sectional area 1 cm 2 in its bottom. The initial volume of water that will come out from this hole per second is",
+    "options": {
+      "A": "10 - 3 m 3 /s",
+      "B": "10 - 4 m 3 /s",
+      "C": "10 m 3 /s",
+      "D": "10 - 2 m 3 /s. 4"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure of water in a water pipe when tap is opened and closed is respectively 3 × 10 5 N/m 2 and 3.5 × 10 5 N/m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "With open tap, the velocity of water flowing is",
+    "options": {
+      "A": "10 m/s",
+      "B": "5 m/s",
+      "C": "20 m/s",
+      "D": "15 m/s 4"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The flow speeds of air on the lower and upper surfaces of the wing of an aeroplane are v and 2 v respectively. The density of air is \\rho and surface area of wing is A. The dynamic lift on the wing is :",
+    "options": {
+      "A": "\\rho v 2 A",
+      "B": "2 \\rho v 2 A",
+      "D": "2 \\rho v 2 A",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An incompressible fluid flows steadily through a cylindrical pipe which has radius 2 R at point A and radius R at point B farther along the flow direction. If the velocity at point A is v, its velocity at point B is: -",
+    "options": {
+      "A": "2v",
+      "B": "v",
+      "C": "v 2",
+      "D": "4v 5"
+    },
+    "correct_option": "A",
+    "explanation": "A A v A = A B v B v B = 2 A A 2 B A (2R) v v 4v A R \\pi  =  = \\pi 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water is flowing through a non - uniform radius tube. If ratio of the radius of entry and exit end of the pipe is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 then the ratio of velocities of entring and exit liquid is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An aeroplane of mass 3 × 10 4 kg and total wing area of 120 m 2 is in a level flight at some height. The difference in pressure between the upper and lower surfaces of its wings in kilopascals is (g = 10m/s 2 )",
+    "options": {
+      "A": "2.5",
+      "B": "5.0",
+      "C": "10.0",
+      "D": "12.5 5"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Scent sprayer is based on",
+    "options": {
+      "A": "Charle's law",
+      "B": "Archimede's principle",
+      "C": "Boyle's law",
+      "D": "Bernoulli's theorem 5"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Bernoulli's equation for steady, non - viscous, in - compressible flow expresses the",
+    "options": {
+      "A": "Conservation of angular momentum",
+      "B": "Conservation of density",
+      "C": "Conservation of momentum",
+      "D": "Conservation of mechanical energy. 5"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Application of Bernoulli's theorem can be seen in",
+    "options": {
+      "A": "Dynamic lift to aeroplane",
+      "B": "Hydraulic press",
+      "C": "Speed Boat",
+      "D": "None of these 5"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of water flowing in a non - uniform tube is 20 cm/s at a point where the tube radius is 0.2 cm. The velocity at another point, where the radius is 0.1 cm is",
+    "options": {
+      "A": "80cm/s",
+      "B": "40cm/s",
+      "C": "20cm/s",
+      "D": "5cm/s VISCOSITY 5"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A small drop of water falls from rest through a large height h in air. The final velocity is",
+    "options": {
+      "A": "almost independent of h",
+      "B": "proportional to h",
+      "C": "proportional to h",
+      "D": "inversely proportional to h 5"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two drops of equal radius are falling through air with a steady velocity of 5 cm/s. If the two drops coalesce, then its terminal velocity will be -",
+    "options": {
+      "A": "1 3 4 5cm/s ",
+      "B": "1 3 4 cm/s",
+      "C": "1 3 5 4cm/s ",
+      "D": "2 3 4 5cm/s  5"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the terminal speed of a sphere of gold (density = 19.5 kg/m 3 ) is 0.2 m/s in a viscous liquid (density = 1.5 kg/m 3 ), find the terminal speed of a sphere of silver (density = 10.5 kg/m 3 ) of the same size in the same liquid.",
+    "options": {
+      "A": "0.4 m/s",
+      "B": "0.133 m/s",
+      "C": "0.1 m/s",
+      "D": "0.2 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Speed of 2 cm radius ball in a viscous liquid is 20 cm/s. Then the speed of 1 cm radius ball in the same liquid is",
+    "options": {
+      "A": "5 cm/s",
+      "B": "10 cm/s",
+      "C": "40 cm/s",
+      "D": "80 cm/s 6"
+    },
+    "correct_option": "A",
+    "explanation": "2 T 2r ( ) v g 9 \\rho- =  v T  r 2  2 1 2 T 2 2 T 1 v r v r =  2 1 2 2 2 T T 1 r 1 v v 20 r 2 (  (  = =  ( ) ( ) )  )  = 5 cm/s. 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of falling rain drop attain limited value because of",
+    "options": {
+      "A": "surface tension",
+      "B": "upthrust due to air",
+      "C": "viscous force exerted by air",
+      "D": "air current 6"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Poise is the unit of",
+    "options": {
+      "A": "Pressure",
+      "B": "Friction",
+      "C": "surface tension",
+      "D": "Viscosity 6"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two rain drops falling through air have radii in the ratio 1:",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "They will have terminal velocity in the ratio. (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere of mass M and radius R is falling in a viscous fluid. The terminal velocity attained by the falling object will be proportional to",
+    "options": {
+      "A": "MR 2",
+      "B": "M/R",
+      "C": "MR",
+      "D": "M/R 2 6"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A drop of water of radius 0.0015 mm is falling in air. If the coefficient of viscosity of air is 2.0 × 10 - 5 kg / (m - s), the terminal velocity of the drop will be (The density of water = 1.0 × 10 3 kg/m 3 and g = 10 m/s 2 )",
+    "options": {
+      "A": "1.0 × 10 - 4 m/s",
+      "B": "2.0 × 10 - 4 m/s",
+      "C": "2.5 × 10 - 4 m/s",
+      "D": "5.0 × 10 - 4 m/s Properties of Matter and Fluid Mechanics surface TENSION 6"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Spiders and insects move and run about on the surface of water without sinking because :",
+    "options": {
+      "A": "Elastic membrane is formed on water due to propery of surface tension",
+      "B": "Spiders and insects are ligther",
+      "C": "Spiders and insects swim on water",
+      "D": "Spiders and insects experience up - thrust 6"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thin liquid film formed between a U - shaped wire and a light slider supports a weight of 1.5 × 10 - 2 N (see figure). The length of the slider is 30 cm and its weight negligible. The surface tension of the liquid film is : -",
+    "options": {
+      "A": "0.025 N/m",
+      "B": "0.0125 N/m",
+      "C": "0.1 N/m",
+      "D": "0.05 N/m 6"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A liquid drop of diameter D breaks into 27 tiny drops. The resultant change in energy is -",
+    "options": {
+      "A": "2 \\pi TD 2",
+      "B": "4 \\pi TD 2",
+      "C": "\\pi TD 2",
+      "D": "None of these 6"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside an air bubble of radius r just below the surface of water is p",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside a drop of the same radius just outside the surface is p",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If T is surface tension, then",
+    "options": {
+      "A": "p 1 = 2p 2",
+      "B": "p 1 = p 2",
+      "C": "p 2 = 2p 1",
+      "D": "p 2 = 0, p 1  0"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A water drop is divided into 8 equal droplets. The pressure difference between inner and outer sides of the big drop",
+    "options": {
+      "A": "will be the same as for smaller droplet",
+      "B": "will be half of that for smaller droplet",
+      "C": "will be one - forth of that for smaller droplet",
+      "D": "will be twice of that for smaller droplet. 7"
+    },
+    "correct_option": "B",
+    "explanation": "By conservation of volume 3 3 4 4 R n r 3 3   \\pi = \\pi      3 R n r   =      r= 1/3 R n R = n 1/3 r P ex.  1 r  ( ) ( ) ex big 1/3 ex small P r 1 1 P R 2 n = = = 7"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy12-204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A false statement is :",
+    "options": {
+      "A": "Angle of contact \\theta < 90^\\circ, if cohesive force < adhesive force × 2",
+      "B": "Angle of contact \\theta > 90^\\circ, if cohesive force > adhesive force × 2",
+      "C": "Angle of contact \\theta = 90^\\circ, if cohesive force = adhesive force × 2",
+      "D": "If the radius of capillary is reduced to half, the rise of liquid column becomes four times 7"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a capillary of radius r is dipped in water, the height of water that rises in it is h and its mass is M. If the radius of the capillary is doubled the mass of water that rises in the capillary will be",
+    "options": {
+      "A": "4M",
+      "B": "2M",
+      "C": "M",
+      "D": "M 2 7"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On dipping a capillary of radius 'r' in water, water rises upto a height H and potential energy of water is u",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a capillary of radius 2r is dipped in water, then the potential energy is u",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio 1 2 u u is (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A vessel, whose bottom has round holes with diameter of 0.1 mm, is filled with water. The maximum height to which the water can be filled without leakage is : - (S.T. of water = 75 dyne/cm, g = 1000 cm/s 2 )",
+    "options": {
+      "A": "100 cm",
+      "B": "75 cm",
+      "C": "50 cm",
+      "D": "30 cm 7"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a surface tension experiment with a capillary tube water rises up to 0.1 m. If the same experiment is repeated on an artificial satellite which is revolving round the earth, water will rise in the capillary tube up to a height of",
+    "options": {
+      "A": "0.1 m",
+      "B": "0.98 m",
+      "C": "9.8 m",
+      "D": "full length of capillary tube Film w 7"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A soap bubble in vacuum has a radius of 3 cm and another soap bubble in vacuum has a radius of 4 cm. If the two bubbles coalesce under isothermal condition, then the radius of the new bubble is :",
+    "options": {
+      "A": "2.3 cm",
+      "B": "4.5 cm",
+      "C": "5 cm",
+      "D": "7 cm 7"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The spherical shape of rain - drop is due to",
+    "options": {
+      "A": "Density of the liquid",
+      "B": "surface tension",
+      "C": "Atmospheric pressure",
+      "D": "Gravity 7"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a capillary tube, water rises by 1.2 mm. The height of water that will rise in another capillary tube having half the radius of the first, is :",
+    "options": {
+      "A": "1.2 mm",
+      "B": "2.4 mm",
+      "C": "0.6 mm",
+      "D": "0.4 mm 7"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water rises to a height h in a capillary at the surface of earth. On the surface of the moon the height of water colum n in the same capillary will be :",
+    "options": {
+      "A": "6h",
+      "B": "1/6 h",
+      "C": "h",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Shape of meniscus for a liquid of zero angle of contact is -",
+    "options": {
+      "A": "plane",
+      "B": "parabolic",
+      "C": "hemi - spherical",
+      "D": "cylindrical 8"
+    },
+    "correct_option": "C",
+    "explanation": "For hemispherical R = r i.e. cos \\theta = 1 \\theta = 0^\\circ as Rcos \\theta = r in capillary tube 8"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Due to capillary action a liquid will rise in a tube if angle of contact is",
+    "options": {
+      "A": "acute",
+      "B": "obtuse",
+      "C": "90^\\circ",
+      "D": "180^\\circ 8"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two droplets merge with each other and form a large droplet. In this process :",
+    "options": {
+      "A": "Energy is liberated",
+      "B": "Energy is absorbed",
+      "C": "Neither liberated nor absorbed",
+      "D": "Some mass is converted into energy 8"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two capillary tubes of same diameter are put vertically one each in two liquids whose relative densities are 0.8 and 0.6 and surface tensions are 60 dyne/cm and 50 dyne/cm respectively. Ratio of heights of liquids in the two tubes h 1 /h 2 is :",
+    "options": {
+      "A": "10 9",
+      "B": "3 10",
+      "C": "10 3",
+      "D": "9 10 8"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The property utilized in the manufacture of lead shots is :",
+    "options": {
+      "A": "Specific weight of liquid lead",
+      "B": "Specific gravity of liquid lead",
+      "C": "Compressibility of liquid lead",
+      "D": "surface tension of liquid lead 8"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "surface tension of a liquid is 5 N/m. If its thin film is made in a ring of area 0.02 m 2 , then its surface energy will be -",
+    "options": {
+      "A": "5× 10 - 2 Joule",
+      "B": "2.5 × 10 - 2 Joule",
+      "C": "3 × 10 - 1 Joule",
+      "D": "2 × 10 - 1 Joule 8"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If one end of capil l ary tube is dipped into water then water rises up to 3cm. If the surface tension of water is 75 × 10 - 3 N/m then the diameter of capil l ary tube will be",
+    "options": {
+      "A": "0.1 mm",
+      "B": "0.5 mm",
+      "C": "1 mm",
+      "D": "2 mm 8"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the surface tension of a liquid is T and its surface area is increased by A, then the surface energy of that surface will be increased by -",
+    "options": {
+      "A": "AT",
+      "B": "A/T",
+      "C": "A 2 T",
+      "D": "A 2 T 2 8"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two soap bubbles of radii r 1 and r 2 equal to 4cm and 5 cm are touching each other over a common surface S 1 S 2 (shown in figure). Its radius will be : -",
+    "options": {
+      "A": "4 cm.",
+      "B": "20 cm.",
+      "C": "5 cm.",
+      "D": "4.5 cm. 5cm 4cm S 1 S 2 Properties of Matter and Fluid Mechanics 8"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The radius of a soap bubble is r. The surface tension of soap solution is T. Keeping temperature constant, the radius of the soap bubble is doubled, the energy necessary for this will be",
+    "options": {
+      "A": "24 \\pi r 2 T",
+      "B": "8 \\pi r 2 T",
+      "C": "12 \\pi r 2 T",
+      "D": "16 \\pi r 2 T"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A liquid does not wet the sides of a solid, if the angle of contact is",
+    "options": {
+      "A": "Zero",
+      "B": "Obtuse",
+      "C": "Acute",
+      "D": "45^\\circ 9"
+    },
+    "correct_option": "B",
+    "explanation": "A liquid does not wet the sides of a solid, for obtuse (more than 90^\\circ) angle of contact. 9"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess of pressure inside a soap bubble than that of the outer pressure is :",
+    "options": {
+      "A": "2T r",
+      "B": "4T r",
+      "C": "T 2r",
+      "D": "T r 9"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a capillary tube experiment , a vertical 30 cm long capillary tube is dipped in water. The water rises up to a height of 10 cm due to capillary action. If this experiment is conducted in a freely falling elevator, the length of the water column becomes :",
+    "options": {
+      "A": "10 cm",
+      "B": "20 cm",
+      "C": "30 cm",
+      "D": "Zero 9"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Radius of a capillary is 2 × 10 - 3 m. A liquid of weight 6.2 × 10 - 4 N may remain in the capillary. T hen the surface tension of liquid will be :",
+    "options": {
+      "A": "5 × 10 - 3 N/m",
+      "B": "5 × 10 - 2 N/m",
+      "C": "5 N/m",
+      "D": "50 N/m 9"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A capillary tube of radius r can support a liquid of weight 6.28 × 10 - 4 N. If the surface tension of the liquid is 5 × 10 - 2 N/m. The radius of capillary must be : -",
+    "options": {
+      "A": "2 × 10 - 3 m",
+      "B": "2 × 10 - 4 m",
+      "C": "1.5 × 10 - 3 m",
+      "D": "12.5 × 10 - 4 m 9"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water rise in a capillary upto an extension height such that upward force of surface tension balances the force of 75 × 10 - 4 N. due to weight of water. If surface tension of water is 6 × 10 - 2 N/m. The internal circumference of the capillary must be : -",
+    "options": {
+      "A": "12.5 × 10 - 2 m",
+      "B": "6.5 × 10 - 2 m",
+      "C": "0.5 × 10 - 2 m",
+      "D": "1.25 × 10 - 2 m 9"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two small drops of mercury, each of radius R, coalesce to form a single large drop. The ratio of the total surface energies before and after the change is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Inside a drop excess pressure is maximum in : -",
+    "options": {
+      "A": "0.200 \\mu m diameter",
+      "B": "20.0 \\mu m diameter",
+      "C": "200 \\mu m diameter",
+      "D": "2.0 \\mu m diameter 9"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The diameter of one drop of water is 0.2 cm. The work done in breaking one drop into 1000 equal droplets will be : - (surface tension of water = 7 × 10 - 2 N/m)",
+    "options": {
+      "A": "7.9 × 10 - 6 J",
+      "B": "5.92 × 10 - 6 J",
+      "C": "2.92 × 10 - 6 J",
+      "D": "1.92 × 10 - 6 J 9"
+    },
+    "correct_option": "D",
+    "explanation": "2 gL L 2Y \\rho \\Delta = = 4 8 1.5 10 64 10 2 5 10 -      = 9.6 × 10 - 11 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If two bubble of radii 0.03 cm and 0.04 cm come in contact with each other then the radius of curvature of the common surface 'r' is given by.",
+    "options": {
+      "A": "0.03 cm",
+      "B": "0.06 cm",
+      "C": "0.12 cm",
+      "D": "0.24 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Bulk modulus = P V V \\Delta \\Delta = h g 0.1 100 \\rho = 3 200 10 9.8 100 0.1    = 19.6 × 10 8 N/m 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Work done in forming a soap bubble of radius R is W. T hen work done is forming a soap bubble of radius '2R' will be :",
+    "options": {
+      "A": "2W",
+      "B": "4W",
+      "C": "W/4 10",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "On liquid force due to surface tension = (2 \\pi R) Tcos \\theta C In equilibrium : force due to S.T = weight of rise liquid (2 \\pi R)Tcos \\theta C = W 2 2 2 1 W 4 (2R) T W 4 R T \\pi = \\pi = 4 \\rho W 2 = 4W 1 = 4W 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At which angle liquid will not wet solid.",
+    "options": {
+      "A": "Zero",
+      "B": "acute",
+      "C": "45^\\circ",
+      "D": "obtuse 10"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F A 1 Stress Area   2 2 1 2 1 2 Stress r Stress r = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Internal radius of a capil l ary tube is 1 28 cm and surface tension of water 70 dyne/cm, if angle of contact is zero, then water will rise up in the tube up to height.",
+    "options": {
+      "A": "4 cm",
+      "B": "2 cm",
+      "C": "14 cm",
+      "D": "18 cm 10"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Area of liquid film is 6 × 10 cm 2 and surface tension is T = 20 dyne/cm, what is the work done to change area up to 12 × 10 cm",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Stress = F Mg LAg Lg Area A A \\rho =  = \\rho L max = max (Stress) g \\rho ; L max = 75 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 120 joule (2) 120 erg (3) 1200 joule (4) 2400 erg 10",
+    "options": {
+      "A": "120 joule",
+      "B": "120 erg",
+      "C": "1200 joule",
+      "D": "2400 erg 10"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work done in blowing a soap bubble of radius 0.2 m, given that the surface tension of soap solution is 60 × 10 - 3 N/m, is",
+    "options": {
+      "A": "24 \\pi × 10 - 4 J",
+      "B": "8 \\pi × 10 - 4 J",
+      "C": "96 \\pi × 10 - 4 J",
+      "D": "192 \\pi × 10 - 4 J 10"
+    },
+    "correct_option": "A",
+    "explanation": "From graph Slope = F \\Delta \\lambda also Y = FL A \\Delta \\lambda Slope = F \\Delta \\lambda = Y A L  more slope more Y So Y A > Y B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Adding detergents to water helps in removing dirty greasy stains. This is because",
+    "options": {
+      "A": "It increases the oil - water surface tension",
+      "B": "It decreases the oil - water surface tension",
+      "C": "It increases the viscosity of the solution",
+      "D": "Dirt is held suspended surrounded by detergent molecules"
+    },
+    "correct_option": "A",
+    "explanation": "When density increase, mass of material increase, for same strain more stress required. So Young's modulus increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside a soap bubble A is twice that in another soap bubble B. The ratio of volumes of A and B is (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Volume = constant A × \\lambda = constant \\rho A  1 \\lambda \\Delta \\lambda = F AY \\lambda \\rho \\Delta \\lambda  A \\lambda \\rho \\Delta \\lambda  \\lambda 2 1 as A (   ( ) )  \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider a soap film on a rectangular frame of wire of area 4× 4 cm",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "In both case tension in wire are same and \\Delta \\lambda  T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the area of the soap film is increased to 4 × 5cm 2 , the work done in the process will be (The surface tension of the soap film is 3 × 10 - 2 N/m)",
+    "options": {
+      "A": "12 × 10 - 6 J",
+      "B": "24 × 10 - 6 J",
+      "C": "60 × 10 - 6 J",
+      "D": "96 × 10 - 6 J EXERCISE - I"
+    },
+    "correct_option": "A",
+    "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The lower surface of a cube is fixed. On its upper surface, force is applied at an angle of 37^\\circ from its surface. The change will be in its :-",
+    "options": {
+      "A": "shape",
+      "B": "size",
+      "C": "volume",
+      "D": "both shape and size"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One end of uniform wire of length L and of weight W is attached rigidly to a point in the roof and a weight W 1 is suspended from its lower end. If S is the area of cross-section of the wire, the stress in the wire at a height (3L/4) from its lower end is :-",
+    "options": {
+      "A": "1 W S",
+      "B": "1 W W 4 S [ ] + [ ] [ ]",
+      "C": "1 3W W 4 S [ ] + [ ] [ ]",
+      "D": "1 W W S +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy12-247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the figure shown, forces of equal magnitude are applied to the two ends of a uniform rod. Consider A as the cross-sectional area of the rod. For this situation, mark out the correct statement(s) :- F F",
+    "options": {
+      "A": "The rod is in compressive stress.",
+      "B": "The numerical value of stress developed in the rod is equal to F/A.",
+      "C": "The stress is defined as internal force developed per unit cross section area.",
+      "D": "All of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a material, the breaking stress is 16 × 10 6 N/m 2 and the density is 8 × 10 3 kg/m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum length of the wire of same material, which can be suspended without breaking under its own weight is :- (g = 10 m/s 2 )",
+    "options": {
+      "A": "140 m",
+      "B": "120 m",
+      "C": "75 m",
+      "D": "200 m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The breaking stress (in N/m 2 ) for the wire of same material of radius '2r' is :-",
+    "options": {
+      "A": "F/4",
+      "B": "F/2",
+      "C": "F",
+      "D": "2F"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A copper rod 2m long is stretched by 1mm, strain will be :-",
+    "options": {
+      "A": "10 -4 , volumetric",
+      "B": "5 × 10 -4 , volumetric",
+      "C": "5 × 10 -4 , longitudinal",
+      "D": "5 × 10 -3 , volumetric"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 2m long rod of radius 1 cm which is fixed from one end is given a twist of 0.8 radian. The shear strain developed will be :-",
+    "options": {
+      "A": "0.002 rad",
+      "B": "0.004 rad",
+      "C": "0.008 rad",
+      "D": "0.016 rad"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The upper end of a wire 1 metre long and 2mm radius is clamped. The lower end is twisted through an angle of 45^\\circ. The angle of shear is :-",
+    "options": {
+      "A": "9^\\circ",
+      "B": "0.09^\\circ",
+      "C": "90^\\circ",
+      "D": "0.9^\\circ"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The dimensions of two wires A and B are the same. But their materials are different. Their load-extension graphs are shown. If Y A and Y B are the values of Young's modulus of elasticity of A and B respectively then :- extension B A load",
+    "options": {
+      "A": "Y A > Y B",
+      "B": "Y A < Y B",
+      "C": "Y A = Y B",
+      "D": "Y B = 2Y A $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Young's modulus of a material depends on :-",
+    "options": {
+      "A": "Cross sectional area",
+      "B": "temperature",
+      "C": "Applied stress",
+      "D": "Strain developed in the material"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A fixed volume of iron is drawn into a wire of length \\lambda . The strain produced in this wire by a constant force F is proportional to :-",
+    "options": {
+      "A": "2 1 \\lambda",
+      "B": "1 \\lambda",
+      "C": "2 \\lambda",
+      "D": "\\lambda"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wire elongates by \\lambda mm when a load W is hanged from it. If the wire goes over a pulley and two weights W/2 each are hung at the two ends, the elongation of the wire will be (in mm) :-",
+    "options": {
+      "A": "\\lambda",
+      "B": "2 \\lambda",
+      "C": "zero",
+      "D": "\\lambda /2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a tension F is applied in uniform wire of length \\lambda and radius r, the elongation produced is e. When tension 2F is applied, the elongation produced in another uniform wire of same length and radius 2r made of same material is :-",
+    "options": {
+      "A": "0.5 e",
+      "B": "1.0 e",
+      "C": "1.5 e",
+      "D": "2.0 e"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How much force is required to produce an increase of 0.5% in the length of a brass wire of diameter 0.8 mm ? (Young's modulus for brass = 0.9 × 10 11 N/m 2 )",
+    "options": {
+      "A": "Nearly 176 N",
+      "B": "Nearly 340 N",
+      "C": "Nearly 240 N",
+      "D": "Nearly 226 N"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cross section area of a steel wire (Y=2.0 × 10 11 N/m 2 ) is 0.5 cm",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two wires of the same length and material but different radii r 1 and r 2 are suspended from a rigid support both carry the same load at the lower end. The ratio of the stress developed in the first wire to that developed in the second wire is :-",
+    "options": {
+      "A": "1 2 r r",
+      "B": "2 1 2 2 r r",
+      "C": "5 2 1 2 r r      ",
+      "D": "2 2 2 1 r r"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy12-262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the correct statement on the basis of the given graph :- Strain A B stress",
+    "options": {
+      "A": "Young's modulus of A is greater but it is less ductile.",
+      "B": "Young's modulus of A is greater and it is more ductile",
+      "C": "Young's modulus of A is less and it is less ductile",
+      "D": "Young's modulus of A is less but it is more ductile."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two identical wires of different materials have Young’s modulii of elasticity as 22 × 10 10 N/m 2 and 11× 10 10 N/m 2 respectively. If these are stretched by equal loads then the ratio of extensions produced in them will be :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wire (Y = 2 × 10 11 N/m 2 ) has length 1m and area 1 mm",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work required to increase its length by 2 mm is :-",
+    "options": {
+      "A": "0.4 J",
+      "B": "40 J",
+      "C": "4 J",
+      "D": "400 J $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a constant hydraulic stress on an object, the fractional change in the object's volume V V ∆       and its compressibility",
+    "options": {
+      "C": "2 V C V ∆ ∝",
+      "A": "V C V ∆ ∝",
+      "B": "V 1 V C ∆ ∝",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball falling in a lake of depth 100 m shows 0.2% decrease in its volume at the bottom. What is the bulk modulus of the material of the ball :- (g = 9.8 m/s 2 )",
+    "options": {
+      "A": "4.9 × 10 8 N/m 2",
+      "B": "4.9 × 10 -10 N/m 2",
+      "C": "4.9 × 10 10 N/m 2",
+      "D": "4.9 × 10 -8 N/m 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An increase in pressure required to decreases the 200 litre volume of a liquid by 0.004% in container is (Bulk modulus of the liquid = 4700 MPa) :- (1) 188 kPa 2) 8.4 kPa (3) 18.8 kPa (4) 84 kPa",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct sequence for bulk modulus (K) is :-",
+    "options": {
+      "A": "K solid < K liquid < K gas",
+      "B": "K liquid < K solid < K gas",
+      "C": "K liquid = K solid = K gas",
+      "D": "K solid > K liquid > K gas"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a given material, the Young's modulus is 2.8 times that of rigidity modulus. Its Poisson's ratio is :-",
+    "options": {
+      "A": "2.4",
+      "B": "1.2",
+      "C": "0.4",
+      "D": "0.2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the interatomic spacing in a steel wire is 5.6 × 10 -10 m and Y steel = 2 × 10 11 N/m 2 , then force constant in N/m is :-",
+    "options": {
+      "A": "110",
+      "B": "100",
+      "C": "11.2",
+      "D": "112"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 are stretched by the same force. The potential energy per unit volume for the two wires when stretched will be in the ratio:- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A mass of 0.4 kg is suspended from wire, then length of wire increased by 3 mm then find out work done:- (g = 10 m/s 2 )",
+    "options": {
+      "A": "4 × 10 -3 J",
+      "B": "6 × 10 -3 J",
+      "C": "9 × 10 -2 J",
+      "D": "2 × 10 -2 J"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the strain in a wire is not more than 1/1000 and Y = 4 × 10 11 N/m 2 , Diameter of wire is 1mm. The maximum weight that can be hang from the wire is:-",
+    "options": {
+      "A": "110 N",
+      "B": "125 N",
+      "C": "157 N",
+      "D": "314 N"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The Young's modulus of a wire is Y. If the energy per unit volume is E, then the strain will be :-",
+    "options": {
+      "A": "2E Y",
+      "B": "E 2Y",
+      "C": "EY",
+      "D": "E Y"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy12-276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement(s) is/are correct:-",
+    "options": {
+      "A": "Only a",
+      "B": "the elastic potential energy stored in the stretched wire is",
+      "C": "the breaking stress of a wire depends on material of wire.",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "statements": {
+      "T": "-"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a metal wire elongates by \\lambda , after hanging a load Mg on it, the gravitational potential energy of mass M decreases by Mg \\lambda . This energy appears:-",
+    "options": {
+      "A": "as elastic potential energy completely",
+      "B": "as thermal energy completely",
+      "C": "half as elastic potential energy and half as thermal energy",
+      "D": "as kinetic energy of the load completely"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The load versus elongation graph for four wires of the same material and same length is shown in the figure. The graph of thickest wire is represented by the line:- D C B A Elongation load",
+    "options": {
+      "A": "OA",
+      "B": "OB",
+      "C": "OC",
+      "D": "OD FLUID STATICS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Equal masses of water and a liquid of density 2g/cm 3 are mixed together, then the mixture has a density of :-",
+    "options": {
+      "A": "2/3 g/cm 3",
+      "B": "4/3 g/cm 3",
+      "C": "3/2 g/cm 3",
+      "D": "3 g/cm 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-280",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A closed cylinder is filled with a liquid of density 2d upto a height 4h. If the cylinder is at rest, then the mean pressure on the wall is :-",
+    "options": {
+      "A": "Zero",
+      "B": "hdg",
+      "C": "h dg 2",
+      "D": "4 hdg"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-281",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pressure at the bottom of an open tank of water is 3P, where P is atmospheric pressure. If the water is drawn out till the level of water is lowered by one fifth, then the pressure at the bottom of the tank is :-",
+    "options": {
+      "A": "2P",
+      "B": "13P/5",
+      "C": "8P/5",
+      "D": "4P/5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-282",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the given figure ratio of pressure at A and B will be ( ρ = 1000 kg/m 3 , P o = 10 5 pa) :- A B 2 ρ ρ 10 20",
+    "options": {
+      "A": "1/2",
+      "B": "1/4",
+      "C": "1/3",
+      "D": "2/3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-283",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The height of mercury barometer is h when the atmospheric pressure is 10 5 Pa. The pressure at point of x in the shown diagram is :- x h/5 h",
+    "options": {
+      "A": "10 5 Pa",
+      "B": "0.8 × 10 5 Pa",
+      "C": "0.2 × 10 5 Pa",
+      "D": "120 × 10 5 Pa"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-284",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A barometer kept in a stationary elevator reads 76 cm. If the elevator starts accelerating up, the reading will be :-",
+    "options": {
+      "A": "zero",
+      "B": "equal to 76 cm",
+      "C": "more than 76 cm",
+      "D": "less than 76 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-285",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which law states that the magnitude of change in pressure within fluid is equal in all parts ?",
+    "options": {
+      "A": "Pascal's law",
+      "B": "Gay-Lusac's law",
+      "C": "Dalton's law",
+      "D": "Boyle's law"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-286",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hydraulic press is based on :-",
+    "options": {
+      "A": "Archimede's principle",
+      "B": "Bernoulli's theorem",
+      "C": "Pascal's law",
+      "D": "Reynold's number"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-287",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A U-tube of uniform cross-section is partially filled with a liquid A. Another liquid B which does not mix with liquid A is poured into one side. It is found that the upper liquid levels of the two sides of the tube are the same as shown in figure. If the specific gravity of liquid A is 1.1, the specific gravity of liquid B must be :- 2cm B A",
+    "options": {
+      "A": "1.2",
+      "B": "1.1",
+      "C": "1.05",
+      "D": "1.0"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-288",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A jar is filled with two non-mixing liquids 1 and 2 having densities ρ 2 and ρ 3 , respectively. A solid ball, made of a material of density ρ 2 , is dropped in the jar. It comes to equilibrium in the position shown in the figure. Which of the following is true for ρ 1 , ρ 2 & ρ 3 :- Liquid 1 Liquid 2 ρ 1 ρ 3 ρ 2",
+    "options": {
+      "A": "ρ 3 < ρ 1 < ρ 2",
+      "B": "ρ 1 > ρ 3 > ρ 2",
+      "C": "ρ 1 < ρ 2 < ρ 3",
+      "D": "ρ 1 < ρ 3 < ρ 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy12-289",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A certain object floats in fluids of density :- (i) 0.9 ρ 0 (ii) ρ 0 (iii) 1.1 ρ 0 Which of the following statements is true ?",
+    "options": {
+      "A": "the buoyant force of fluid",
+      "B": "the buoyant force of fluid",
+      "C": "All three fluids exert the same buoyant force",
+      "D": "The object displace the same volume of all three fluids"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-290",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the density of a block is 1000 kg/m 3 then it will be :-",
+    "options": {
+      "A": "Sink in water",
+      "B": "float with some part immersed in water",
+      "C": "float with completely immersed in water",
+      "D": "float completely out of water."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-291",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block is floating in a liquid with half of its volume immersed in the liquid. When the whole system accelerates upwards with acceleration of g/3, the fraction of volume of block immersed in the liquid will be :- g/3",
+    "options": {
+      "A": "1 2",
+      "B": "3 8",
+      "C": "2 3",
+      "D": "3 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-292",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body measures 15 N in air and 6 N when put in water. The buoyant force is :-",
+    "options": {
+      "A": "7 N",
+      "B": "9 N",
+      "C": "3 N",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-293",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere is floating in water its 2/3rd part is outside the water and when sphere is floating in unknown liquid, its 1 4 th part is outside the liquid then density of liquid is :-",
+    "options": {
+      "A": "4/9 gm/c.c.",
+      "B": "9/4 gm/c.c.",
+      "C": "8/3 gm/c.c.",
+      "D": "3/8 gm/c.c."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-294",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The spring balance A read 2 kg. with a block of mass m suspended from it. A balance B reads 5 kg. when a beaker with liquid is put on the pan of the balance. The two balances are now so arranged that the hanging mass is inside the liquid in the beaker as shown in fig. In this situation :- B A m",
+    "options": {
+      "A": "The balance A will read more than 2 kg.",
+      "B": "The balance B will read less than 5 kg.",
+      "C": "The balance A will read less than 2 kg. and B will read more than 5 kg.",
+      "D": "The balance A and B will read 2 kg. and 5 kg. respectively."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-295",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reading of spring balance when a block is suspended from it in air, is 60N. This reading is changed to 40 N when the block is immersed in water. The relative density of the block is :-",
+    "options": {
+      "A": "3",
+      "B": "2 3",
+      "C": "6",
+      "D": "3 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-296",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solid weights 100 N in air, 80N in water and 50N in an unknown liquid :-",
+    "options": {
+      "A": "R.D. of solid is 5",
+      "B": "R.D. of unknown liquid is 2.5",
+      "C": "Density of solid is 5 × 10 3 kg/m 3",
+      "D": "All of these $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-297",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sample of metal weights 240 gram in air, 160 gram in water and 120 gram in an unknown liquid. Then :-",
+    "options": {
+      "A": "the density of metal is 3 g/cm 3",
+      "B": "the density of metal is 7 g/cm 3",
+      "C": "density of metal is 4 times the density of the unknown liquid",
+      "D": "the metal will float in water"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-298",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hollow sphere has inner volume half of the outer volume. Its 4/5th part is submerged when placed in water. The density of material is :-",
+    "options": {
+      "A": "1.4 × 10 3 kg/m 3",
+      "B": "1.5 × 10 3 kg/m 3",
+      "C": "1.6 × 10 3 kg/m 3",
+      "D": "17 × 10 3 kg/m 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-299",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat having a length of 12 metre and breadth 2 metre is floating on a lake. The boat sinks by 0.3 cm when a man gets on it. The mass of the man is :-",
+    "options": {
+      "A": "60 kg",
+      "B": "62 kg",
+      "C": "72 kg",
+      "D": "128 kg"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-300",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The fraction of a floating object of volume V 0 and density d 0 above the surface of a liquid of density d will be :-",
+    "options": {
+      "A": "0 d d",
+      "B": "0 0 dd d d +",
+      "C": "0 d d d -",
+      "D": "0 0 dd d d -"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  }
+]

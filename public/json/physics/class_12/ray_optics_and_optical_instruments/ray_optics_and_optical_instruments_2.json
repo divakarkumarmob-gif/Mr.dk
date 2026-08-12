@@ -1,0 +1,1996 @@
+[
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the figure shown the angle made by the light ray with the normal in the medium of refractive index 2 is:",
+    "options": {
+      "A": "30^\\circ",
+      "B": "60^\\circ",
+      "C": "90^\\circ",
+      "D": "None of these RO16 - 0017"
+    },
+    "correct_option": "C",
+    "explanation": " = - i m 0 V 2V V \\rho\\rho\\rho = 0 ˆ V 10i \\rho = I ˆ V 6i \\rho + = = m ˆ ˆ 10i 6\\hat{i} V 8i m / s 2 \\rho m V \\rho = 8m/s, away from the object",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAADZCAIAAADzF8QUAAAAtUlEQVR42u3OAREAAAQEMPTv/HJwW4J1krpm6iBpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaemn6QU+FASv7vnLWgAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ray of light is incident from a rarer medium (μ = 1.5) into a denser medium. If the angle of incidence and refraction are respectively 60^\\circ and 45^\\circ, then calculate the refractive index of the denser medium.",
+    "options": {
+      "A": "1",
+      "B": "1.73",
+      "C": "1.5",
+      "D": "1.84 RO16 - 0018 1"
+    },
+    "correct_option": "D",
+    "explanation": "\\mu rarer = 1.5, i = 60^\\circ, r = 45^\\circ \\mu denser = ? \\mu rarer sin i = \\mu denser sin r  1.5 × sin 60^\\circ = \\mu denser sin 45^\\circ  \\mu denser =  ^\\circ ^\\circ 1.5 sin60 sin 45  \\mu denser = ( )  1.5 ( 3 /2) 1/ 2 =   1.5 3 2 2 =1.84 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the refractive index of water is 4 3 and that of glass slab is 5 3 , then the critical angle of incidence for which a light ray tending to go from glass to water is totally reflected is : -",
+    "options": {
+      "A": "sin - 1 3 4 (  ( ) ) ",
+      "B": "sin - 1 3 5 (  ( ) ) ",
+      "C": "sin - 1 2 3 (  ( ) ) ",
+      "D": "sin - 1 4 5 (  ( ) )  RO22 - 0016 1"
+    },
+    "correct_option": "C",
+    "explanation": "- = - v f u f u - = - - - v 10 20 10 ( 20) v =  20 10 30 or v = 20 3 cm v is (+) ve, so, virtual image"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "With respect to air, critical angle in a medium for light of red colour [ \\lambda 1 ] is \\theta . Other facts remaining same, critical angle for light of yellow colour [ \\lambda 2 ] will be : -",
+    "options": {
+      "A": "\\theta",
+      "B": "More than \\theta",
+      "C": "Less than \\theta",
+      "D": "\\theta\\lambda \\lambda 1 2 RO22 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "m = ( ) - = - - - - f 18 f u 18 27  m = - = - 18 2 9 m = - - -  - = - f v 18 v 2 f 18  v = - 54 cm therefore h 2 = 2 × 2.5 = 5 cm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Figure shows a cross section of a ‘light pipe’ made of a glass fibre of refractive index",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ist method \\mu \\theta = = \\theta = \\mu R c c d 3 3 2 sin sin 2 2 \\theta c = 60^\\circ r = 90^\\circ - \\theta c = 90^\\circ - 60^\\circ r = 30^\\circ Now, 1 × sini = 2 × sin(30^\\circ) i = 45^\\circ IInd method sin i = - 2 2 1 2 n n = ( ) (  - ( ) ( ) )  2 2 3 2 2 = 1 2  = ^\\circ i 45",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAADWCAIAAAACQXbBAAAAs0lEQVR42u3OAQ0AAAgDILV/55vjGyRgk0ybm0LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSzekHUosEqYKlJ7EAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The outer covering of the pipe is made of a material of refractive index 3",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "145cm from mirror M 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is maximum angle of the incident ray with the axis of the pipe for which total internal reflections inside the pipe take place: -",
+    "options": {
+      "A": "45^\\circ",
+      "B": "66^\\circ",
+      "C": "80^\\circ",
+      "D": "90^\\circ RO22 - 0019 45^\\circ 60^\\circ air Glass"
+    },
+    "correct_option": "B",
+    "explanation": "145cm from mirror M 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A converging lens of focal length 20 cm and made of a material with refractive index 1.1 is immersed in water. The lens will behave as a:",
+    "options": {
+      "A": "Convergent lens of focal length 20 cm",
+      "B": "Convergent lens of focal length lesser than 20 cm",
+      "C": "Divergent lens",
+      "D": "Plane glass plate RO39 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "When μ lens < μ medium then lens behaves as a diverging lens."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An object is located at 10 cm in front of a convex lens of focal length 12 cm. Find the position and nature of image: -",
+    "options": {
+      "A": "60 cm real",
+      "B": "60 cm virtual",
+      "C": "5.45 cm virtual",
+      "D": "5.45 cm real RO34 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "= + v f u f u = - - v 12 10 12 10 v = - ( 10)(12) 2 v = - 60 cm (on same side of object)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A lamp is placed 6.0 m from a wall. On putting a lens between the lamp and the wall, at a distance of 1.2 m from the lamp, a real image of the lamp is formed on the wall. The magnification of the image is : -",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6 RO34 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "Given u = - 1.2 m, v = 6 - 1.2 = 4.8 m m = + = - v 4.8 u 1.2 m = - 4 d =6cm ap d =4cm ap d ac d ac 15cm O 1 O 2 1 2 1 2 NEET : PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A plano convex and another plano convex lens have the same focal length of 20 cm and are put in contact to form a lens combination. The combination is used to view an object of 0.5 cm length kept at 20 cm form the lens combination. As compared to the objec t, the image will be : -",
+    "options": {
+      "A": "Magnified and inverted",
+      "B": "Reduced and erect",
+      "C": "Same size as the object and erect",
+      "D": "Same size as the object and inverted RO35 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "= + 1 2 1 1 1 f f f = + 1 1 1 f 20 20  = 10 cm u = - 20 cm f = 10 object is present at 2F So image will be real, inverted and same size."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A concave mirror and a convex lens both have same focal length in air. When they are submerged in glycerine, the focal length : -",
+    "options": {
+      "A": "Of both still remains unchanged",
+      "B": "Of the mirror remains unchanged while that of the lens increases",
+      "C": "Of the mirror remains unchanged while that of the lens decreases",
+      "D": "Of both may increase or decrease RO39 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "If mirror = R 2 ( (  \\mu = - - ( )( ) \\mu ) )  L lens M 1 2 1 1 1 1 F R R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two plano - concave lenses of glass of refractive index 1.5 have radii of curvature of 20 and 30 cm. They are placed in contact with curved surfaces towards each other and the space between them is filled with a liquid of refractive index (4/3). Find the focal length of the system.",
+    "options": {
+      "A": "60 cm",
+      "B": "72 cm",
+      "C": "40 cm",
+      "D": "34 cm RO39 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "focal length of the system = + + 1 2 3 1 1 1 1 F f f f Here, for lens 1 ;      = - - = -     -     1 3 1 1 1 1 f 2 20 40 for lens 2 ;      = - - = +     -     2 4 1 1 5 1 f 3 20 ( 30) 180 for lens 3 ;      = - - - = -          3 3 1 1 1 1 f 2 30 60 = + + = - + - 1 2 3 1 1 1 1 1 5 1 F f f f 40 180 60 F = - 72 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An object of size 3 cm is placed 14 cm in front of a concave lens of focal length 21 cm. Describe the image produced by the lens. [NCERT]",
+    "options": {
+      "A": "Virtual, erect, diminished",
+      "B": "Virtual, erect, enlarged",
+      "C": "Real, inverted, enlarged",
+      "D": "Real, inverted, diminished RO34 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "h 1 = 3 cm u = - 14 cm ƒ = - 21 cm - =  - = - - 1 1 1 1 1 1 v u ƒ v ( 14) 21 = - v 8.4 cm - =  =  = - - 2 2 2 1 h h v 8.4 h 1.8 cm h 14 3 14"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the focal length when a convex lens of focal length 30 cm in contact with a concave lens of focal length 20 cm ? [NCERT]",
+    "options": {
+      "A": "- 12 cm",
+      "B": "12 cm",
+      "C": "- 60 cm",
+      "D": "+60 cm RO35 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "= + = + - 1 2 1 1 1 1 1 f ƒ ƒ 30 ( 20)  f = - 60 cm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Determine the nature of lens shown in figure (P) & (Q) (given lenses are made from glass & surrounding medium is air) (P) (Q)",
+    "options": {
+      "A": "P → converging & Q → diverging",
+      "B": "P → diverging & Q → converging",
+      "C": "P & Q both converging",
+      "D": "P & Q both diverging RO32 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Focal length is positive, No matter in what orientation the lens is placed, as it is thick in the middle so it will converge the rays as surrounding medium is air.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAU4AAAExCAIAAACcRdwqAAACnElEQVR42u3TAQ0AAAjDMMC/5+PjaSUs2SYZoN1JAFYHrA5YHbA6YHXA6oDVAauD1QGrA1YHrA5YHbA6YHXA6oDVweqA1QGrA1YHrA5YHbA6YHXA6mB1wOqA1QGrA1YHrA5YHbA6YHWwOmB1wOqA1QGrA1YHrA5YHbA6WB2wOmB1wOqA1QGrA1YHrA5YHawOWB2wOmB1wOqA1QGrA1YHrA5WB6wOWB2wOmB1wOqA1QGrA1YHqwNWB6wOWB2wOmB1wOqA1QGrg9UBqwNWB6wOWB2wOmB1wOpgdcDqgNUBqwNWB6wOWB2wOmB1sDpgdcDqgNUBqwNWB6wOWB2wOlgdsDpgdcDqgNUBqwNWB6wOWB2sDlgdsDpgdcDqgNUBqwNWB6wOVgesDlgdsDpgdcDqgNUBqwNWB6sDVgesDlgdsDpgdcDqgNUBq4PVAasDVgesDlgdsDpgdcDqgNXB6oDVAasDVgesDlgdsDpgdcDqYHXA6oDVAasDVgesDlgdsDpgdbA6YHXA6oDVAasDVgesDlgdrA5YHbA6YHXA6oDVAasDVgesDlYHrA5YHbA6YHXA6oDVAasDVgerA1YHrA5YHbA6YHXA6oDVAauD1QGrA1YHrA5YHbA6YHXA6oDVweqA1QGrA1YHrA5YHbA6YHXA6mB1wOqA1QGrA1YHrA5YHbA6YHWwOmB1wOqA1QGrA1YHrA5YHbA6WB2wOmB1wOqA1QGrA1YHrA5YHawOWB2wOmB1wOqA1QGrA1YHq0sAVgesDlgdsDpgdcDqgNUBq4PVAasDVgesDlgdsDpgdcDqgNXB6oDVAasDVgesDlgdsDpgdcDqYHXA6oDVAasDVgesDlgdsDpgdbA6YHXA6oDVAasDVgesDlgdsDpYHaj0bxMFX5PgqPsAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Figure shows two convex lenses A and B, each made up of three different transparent materials. The number of images formed, of an object kept on the principal axis of each lens will be NEET : PHYSICS",
+    "options": {
+      "A": "3 and 3",
+      "B": "3 and 1",
+      "C": "1 and 1",
+      "D": "3 and 2 RO33 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Ray Optics And Optical Instruments principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAzCAIAAACi4Te0AAAAP0lEQVR42u3OAQ0AAAgDILV/55vjGyRgk0yJmx6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urk3XB1ttA2OQgAp1AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A bubble in glass (μ = 1.5) is situated at a distance 3 cm from a convex surface of diameter 10 cm as shown in figure At what distance from the surface will the bubble appear:",
+    "options": {
+      "A": "2.5 cm",
+      "B": "2 cm",
+      "C": "3 cm",
+      "D": "4 cm RO31 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "= 2 1 2 1 μ μ μ -μ - v u R μ 1 = 1.5, μ 2 = 1, R = - 5, u = - 3 cm - = - 1 (1.5) 1 1.5 - v -3 5  v = - 2.5 cm air bubble will appear at a distance 2.5 cm from the curved surface inside the glass.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAyCAIAAABwNgq3AAAAR0lEQVR42u3PMREAAAgEILV/5zeFiwcN6CT10dRTYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYtcWGk8DYSwStUgAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "One end of a cylindrical glass rod (μ = 1.5) is in the shape of a concave refraction surface of radius 10 cm. An air bubble is situated in the glass rod at a point on its axis such that it appears to be at a distance 10 cm from the surface inside the glass when seen from the othe r medium. find the actual location of air bubble from the surface.",
+    "options": {
+      "A": "10 cm inside the glass",
+      "B": "20 cm outside the glass",
+      "C": "30 cm inside the glass",
+      "D": "40 cm inside the glass RO31 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "μ 1 = 1.5 μ 2 = 1 v = - 10 cm R = +10 cm - = -1 1.5 1 1.5 - 10 u 10  u = - 30 cm air bubble is actually located at a distance 30 cm from the surface and inside glass."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What should be the angle of incidence at A of the spherical glass placed in air so that grazing emergence of light ray takes place at B?",
+    "options": {
+      "A": "30^\\circ",
+      "B": "45^\\circ",
+      "C": "60^\\circ",
+      "D": "90 ^\\circ RO31 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Angle of refraction at A = angle of incident at B Angle of incidence at A = Angle of refraction at B which is 90^\\circ for grazing emergence"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ray of light is incident at an angle of 60^\\circ on one face of a prism of angle 30^\\circ. The emergent ray of light makes an angle of 30^\\circ with incident ray. The angle made by emergent ray with second face of prism will be: -",
+    "options": {
+      "A": "0^\\circ",
+      "B": "90^\\circ",
+      "C": "45^\\circ",
+      "D": "30^\\circ RO24 - 0006 3"
+    },
+    "correct_option": "B",
+    "explanation": "  = i 1 + i 2 - A 30^\\circ = 60^\\circ + i 2 - 30^\\circ i 2 = 0^\\circ Means, emergent ray goes along the normal & it will make angle with the second face of the prism is \\theta = 90^\\circ - 0^\\circ = 90^\\circ 20 cm 20 cm 1 2 3 20 cm 30 cm μ = 1.5 O u 10 cm R=10 cm μ = 1 A B \\theta \\theta r = 90^\\circ B i A 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a ray of light is incident at angle of 35^\\circ on an equilateral prism. Then it passes symmetrically. Calculate the deviation of the ray. (Symmetrically means parallel to base)",
+    "options": {
+      "A": "30^\\circ",
+      "B": "15^\\circ",
+      "C": "10^\\circ",
+      "D": "45^\\circ RO25 - 0018 3"
+    },
+    "correct_option": "B",
+    "explanation": "145cm from mirror M 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A prism is made of glass of unknown refractive index. A parallel beam of light is incident on a face of the prism. The angle of minimum deviation is measured to be 30 ^\\circ . What is refractive index of the material of the prism? (Refracting angle of prism is 60 ^\\circ )",
+    "options": {
+      "A": "1.414",
+      "B": "1.5",
+      "C": "1.7",
+      "D": "None of these RO25 - 0017 3"
+    },
+    "correct_option": "C",
+    "explanation": " = - i m 0 V 2V V \\rho\\rho\\rho = 0 ˆ V 10i \\rho = I ˆ V 6i \\rho + = = m ˆ ˆ 10i 6\\hat{i} V 8i m / s 2 \\rho m V \\rho = 8m/s, away from the object"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "One face of a prism with a refracting angle 30^\\circ is coated with silver. A ray is incident on another face at an angle of 45^\\circ is refracted and reflected from the silver coated face & retraces its path. The refractive index of prism is",
+    "options": {
+      "A": "2",
+      "B": "2",
+      "C": "3",
+      "D": "1.5 RO26 - 0008 3"
+    },
+    "correct_option": "A",
+    "explanation": "For Real image m = - 2 m = - f f u - 2 = - - - 50 50 u u = - 75 cm { - ve indicates real object}"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A man uses a convex lens of focal length 5 cm as magnifying glass. The least distance of distinct vision of the man is 25 cm. Calculate the magnification if the image is formed at the least distance of distinct vision.",
+    "options": {
+      "A": "1.5",
+      "B": "3",
+      "C": "4",
+      "D": "6 RO48 - 0007 • C O P μ = 1.5 \\mu = 1 3 cm 5 cm 3"
+    },
+    "correct_option": "C",
+    "explanation": "- = - v f u f u - = - - - v 10 20 10 ( 20) v =  20 10 30 or v = 20 3 cm v is (+) ve, so, virtual image"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An astronomical telescope has an eye piece of focal length 5 cm. If magnification produced is 14 in normal adjustment, then calculate the length of the telescope.",
+    "options": {
+      "A": "75cm",
+      "B": "9cm",
+      "C": "50cm",
+      "D": "55cm RO50 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "m = ( ) - = - - - - f 18 f u 18 27  m = - = - 18 2 9 m = - - -  - = - f v 18 v 2 f 18  v = - 54 cm therefore h 2 = 2 × 2.5 = 5 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A compound microscope consists of an objective lens of focal length 2 cm and an eye piece of focal length 6.25 cm separated by a distance of 15 cm. How far from the objective should an object be placed in order to obtain the final image at the least distan ce of distinct vision (25 cm). [NCERT]",
+    "options": {
+      "A": "2.5 cm",
+      "B": "1.67 cm",
+      "C": "2 cm",
+      "D": "3.3 cm RO49 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "ƒ 0 = 2cm, ƒ e = 6.25 cm, L = 15 cm v e = - 25 cm - = e e e 1 1 1 v u ƒ  - - = e 1 1 1 25 u 6.25 u e = - 5 cm Now, L = v 0 + |u e | 15 = v 0 + 5  v 0 = 10 cm Now, for objective - = 0 0 0 1 1 1 v u ƒ  - = 0 1 1 1 10 u 2 = - 0 u 2.5 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A person with a normal near point (25 cm) using a compound microscope with objective of focal length 8.0 mm and an eye piece of focal length 2.5 cm can bring an object placed at 9 mm from the objective in sharp focus. What is the separation between two lenses? [NCERT]",
+    "options": {
+      "A": "9.46 cm",
+      "B": "4.85 cm",
+      "C": "5.73 cm",
+      "D": "None of these RO49 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "ƒ 0 = 8mm, ƒ e = 2.5cm, u 0 = - 9mm, v e = 25cm for objective for eyepiece - = 0 0 0 1 1 1 v u ƒ - = e e e 1 1 1 v u ƒ - (  - - ( )  )  1 0 1 1 v 9 10 - - e 1 1 ( 25) u - =  1 1 8 10 = = 1 10 2.5 25 = - 0 1 10 10 v 8 9 - = + = e 1 10 1 11 u 25 25 25 v 0 = 7.2 = - = - e 25 u 2.27 cm 11 Length of the tube = v 0 + |u e | = 7.2 + 2.27 = 9.47 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A giant refracting telescope at an observatory has an objective lens of focal length 15 m. If an eye piece of focal length 1.0 cm is used What is the angular magnification of the telescope: - [NCERT]",
+    "options": {
+      "A": "1.5",
+      "B": "1500",
+      "C": "15",
+      "D": "150 RO50 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "M.P. = - = - = 0 e ƒ 1500 1500 ƒ 1 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A man with normal near point (25 cm) reads a book with small print using a magnifying glass : a thin convex lens of focal length 5 cm. What is the closest and the farthest distance at which he should keep the lens from the page so that he can read the book when viewing through the magnifying glass? [NCERT]",
+    "options": {
+      "A": "- 4.8 cm, - 5.2 cm",
+      "B": "- 4.2 cm, - 5 cm",
+      "C": "- 6.2 cm, - 8 cm",
+      "D": "- 9 cm, - 2.9 cm RO48 - 0006 4"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Ray Optics And Optical Instruments principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A card sheet divided into square each of size 1 mm 2 is being viewed at a distance of 9 cm through a magnifying glass (a converging lens of focal length 10 cm) held close to the eye. What is the magnification produced by the lens? [NCERT]",
+    "options": {
+      "A": "10 19",
+      "B": "9",
+      "C": "10",
+      "D": "5 RO48 - 0005 4"
+    },
+    "correct_option": "B",
+    "explanation": "If mirror rotated by \\theta  then reflected ray rotates by 2 \\theta = 2×3.5 = 7^\\circ for \\theta small \\theta  tan \\theta \\pi = d 7 1.5 180 d =   = 7 3.14 1.5 0.1831m 180 = 18.31 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An angular magnification (magnifying power) of 30X is desired using an objective of focal length 1.25 cm and an eye piece of focal length 5 cm. How will you setup the compound microscope for normal adjustment? [NCERT]",
+    "options": {
+      "A": "Separation between both lenses 13.75 cm",
+      "B": "Separation between both lenses 15.51 cm",
+      "C": "Separation between both lenses 6.25 cm",
+      "D": "Separation between both lenses 9.0 cm RO49 - 0006 4"
+    },
+    "correct_option": "B",
+    "explanation": "145cm from mirror M 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A n instrument uses two mirrors as shown in figure. Such instrument is built with the mirrors 20 mm apart. If the radius of curvature of the large mirror is 220 mm and the small mirror is 140 mm. Where will the final image from M 3 of an object at infinity be? [NCERT]",
+    "options": {
+      "A": "21 cm",
+      "B": "31.5 cm",
+      "C": "27.5 cm",
+      "D": "19 cm RO52 - 0003 4"
+    },
+    "correct_option": "C",
+    "explanation": " = - i m 0 V 2V V \\rho\\rho\\rho = 0 ˆ V 10i \\rho = I ˆ V 6i \\rho + = = m ˆ ˆ 10i 6\\hat{i} V 8i m / s 2 \\rho m V \\rho = 8m/s, away from the object",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAzCAIAAAAByVFyAAAAV0lEQVR42u3QQQEAAAQEMPTvfCr42yKskxRno8CXL1++fOHLly9fvnzhy5cvX77w5cuXL1++8OXLly9fvvDly5cvX/jy5cuXL1/48uXLly98+fLly9cjC0zlA2N0krjAAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identical thin biconvex lenses of focal length 15 cm and refractive index 1.5 are in contact with each other. The space between the lenses is filled with a liquid of refractive index 1.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For Real image m = - 2 m = - f f u - 2 = - - - 50 50 u u = - 75 cm { - ve indicates real object}"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The focal length of the combination is ______ cm. RO39 - 0008 NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "= + = + - 1 2 1 1 1 1 1 f ƒ ƒ 30 ( 20)  f = - 60 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The difference of speed of light in the two media A and B (v A - v B ) is 2.6 × 10 7 m/s. If the refractive index of medium B is 1.47, then the ratio of refractive index of medium B to medium A is : (Given : speed of light in vacuum c = 3 × 10 8 ms - 1 )",
+    "options": {
+      "A": "1.303",
+      "B": "1.318",
+      "C": "1.13",
+      "D": "0.12 RO19 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "c v = \\mu 8 8 7 B 3 10 v 2.04 10 20.4 10 m / s 1.47   = =  =  7 A B v v 2.6 10 m / s - =  \\rho 7 7 A v (20.4 2.6) 10 23 10 m / s  = +  =  7 B A 7 A B v 23 10 1.13 v 20.4 10 \\mu   = = = \\mu "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Consider a light ray travelling in air is incident into a medium of refractive index 2n . The incident angle is twice that of refracting angle. Then, the angle of incidence will be :",
+    "options": {
+      "B": "1 cos 2 n - (  ( ) ( ) ) ",
+      "D": "1 2cos 2 n - (  ( ) ( ) )  RO16 - 0020",
+      "A": "Option A",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "= 2 i r  =  1 2 sin sin i n r n  =  sin 1 sin 2 2 i i n = sin 2 sin 2 i n i 2sin cos 2 2 2 sin 2 i i n i = cos 2 2 i n = 1 cos 2 2 i n - (  = ( ) ( ) )  1 2cos 2 n i - (  = ( ) ( ) ) "
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A convex lens has power P. It is cut into two halves along its principal axis. Further one piece (out of the two halves) is cut into two halves perpendicular to the principal axis (as shown in figure). Choose the incorrect option for the reported pieces.",
+    "options": {
+      "A": "Power of 1 P L 2 =",
+      "B": "Power of 2 P L 2 =",
+      "C": "Power of L 3 = P 2",
+      "D": "Power of L 1 = P RO40 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ray Optics And Optical Instruments principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAyCAIAAABj4UpDAAAAQklEQVR42u3PAREAAAQEMPTv/HI4W4N1krps6jgBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgT+BBShuA2FCfGbDAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The refracting angle of a prism is A and refractive index of the material of the prism is cot(A/2). Then the angle of minimum deviation will be -",
+    "options": {
+      "A": "180 - 2A",
+      "B": "90 - A",
+      "C": "180 + 2A",
+      "D": "180 - 3A RO25 - 0019"
+    },
+    "correct_option": "A",
+    "explanation": "m A sin 2 μ A sin 2 +  (  ( ) )  = A μ cot 2 =  m A A sin cos 2 2 (  +  = ( ) )  m 180 2A  = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The speed of light in media 'A' and 'B' are 2.0 × 10 10 cm/s and 1.5 × 10 10 c m/s respectively. A ray of light enters from the medium B to A at an incident angle ' \\theta '. If the ray suffers total internal reflection, then",
+    "options": {
+      "A": "1 3 sin 4 - (  \\theta = ( ) ) ",
+      "B": "1 2 sin 3 - (  \\theta  ( ) ) ",
+      "C": "1 3 sin 4 - (  \\theta  ( ) ) ",
+      "D": "1 3 sin 4 - (  \\theta  ( ) )  RO22 - 0020"
+    },
+    "correct_option": "D",
+    "explanation": "sin i c =  = =  10 d r 10 d r C n 1.5 10 n C 2 10 i sin i c = 3 4 Your Target is to secure Good Rank in = sin - 1 (  ( ) )  3 4 for T I R \\theta > i c \\theta > sin - 1 (  ( ) )  3 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A convex lens of focal length 20 cm is placed in front of convex mirror with principal axis coinciding each other. The distance between the lens and mirror is 10 cm. A point object is placed on principal axis at a distance of 60 cm from the convex lens. T he image formed by combination coincides the object itself. The focal length of the convex mirror is _____ cm. RO36 - 0002 5",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For lens 1 1 1 v u f - = 1 1 1 1 1 1 v ( 60) 20 v 60 20  - =  + = - v = 30 cm For final image to be formed on the object itself, after refraction from lens the ray should meet the mirror perpendicularly and the image by lens should be on the centre of curvature of mirror R = 30 - 10 = 20 cm Focal length of mirror = R/2 = 10 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Light travels in two media M 1 and M 2 with speeds 1.5 × 10 8 ms - 1 and 2.0 × 10 8 ms - 1 respectively. The critical angle between them is:",
+    "options": {
+      "A": "1 3 tan 7 - (  ( ) ) ",
+      "B": "1 2 tan 3 - (  ( ) ) ",
+      "C": "1 3 cos 4 - (  ( ) ) ",
+      "D": "1 2 sin 3 - (  ( ) )  RO22 - 0017 5"
+    },
+    "correct_option": "B",
+    "explanation": "If mirror rotated by \\theta  then reflected ray rotates by 2 \\theta = 2×3.5 = 7^\\circ for \\theta small \\theta  tan \\theta \\pi = d 7 1.5 180 d =   = 7 3.14 1.5 0.1831m 180 = 18.31 cm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the given figure, the face AC of the equilateral prism is immersed in a liquid of refractive index ‘n’. For incident angle 60^\\circ at the side AC, the refracted light beam just grazes along face AC. The refractive index of the liquid x n 4 = . The value of x is_________ . (Given refractive index of glass = 1.5) RO23 - 0008 5",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "145cm from mirror M 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAAAxCAIAAAADXPOpAAAAQ0lEQVR42u3PAQEAAAQDMPTvfD3YGqyT1CFTt/j4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj8+CzAmANfFVj73AAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In normal adjustment, for a refracting telescope, the distance between objective and eye piece is 30 cm. The focal length of the objective, when the angular magnification of the telescope is 2, will be:",
+    "options": {
+      "A": "20 cm",
+      "B": "30 cm",
+      "C": "10 cm",
+      "D": "15 cm RO50 - 0017 5"
+    },
+    "correct_option": "C",
+    "explanation": " = - i m 0 V 2V V \\rho\\rho\\rho = 0 ˆ V 10i \\rho = I ˆ V 6i \\rho + = = m ˆ ˆ 10i 6\\hat{i} V 8i m / s 2 \\rho m V \\rho = 8m/s, away from the object"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An object ‘o’ is placed at a distance of 100 cm in front of a concave mirror of radius of curvature 200 cm as shown in the figure. The object starts moving towards the mirror at a speed 2 cm/s. The position of the image from the mirror after 10s will be a t ……. cm. RO10 - 0022 5",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For Real image m = - 2 m = - f f u - 2 = - - - 50 50 u u = - 75 cm { - ve indicates real object}",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAABBCAIAAACYbYenAAAAbElEQVR42u3QMQEAAAgDoGn/zjOGD0Rg2oYPq0C9etSrR7161KtHvXrUq0e9etSrV4969ahXj3r1qFePevWoV4969ahXrx716lGvHvXqUa8e9epRrx716tWjXj3q1aNePerVo1496tWjXj1JDmvTA3+1UmZhAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Light enters from air into a given medium at an angle of 45^\\circ with interface of the air - medium surface. After refraction, the light ray is deviated through an angle of 15^\\circ from its original direction. The refractive index of the medium is :",
+    "options": {
+      "A": "1.732",
+      "B": "1.333",
+      "C": "1.414",
+      "D": "2.732 RO16 - 0019"
+    },
+    "correct_option": "C",
+    "explanation": "- = - v f u f u - = - - - v 10 20 10 ( 20) v =  20 10 30 or v = 20 3 cm v is (+) ve, so, virtual image"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A convex lens of refractive index 1.5 and focal length 18 cm in air is immersed in water. The change in focal length of the lens will be_____cm. (Given refractive index of water = 4 3 ) RO39 - 0010",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 g H O H O I 2 1 f R (  \\mu (  = - ( ) ( ) ( ) \\mu )  )  1 2 8 R (  = ( ) )  air 1 (4 f ) = So, 2 H O air f 4f = = 72 cm So change in focal length = 72 - 18= 54 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The light rays from an object have been reflected towards an observer from a standard flat mirror, the image observed by the observer is : - A. Real B. Erect C. Smaller in size then object D. Laterally inverted Choose the most appropriate answer from the options given below :",
+    "options": {
+      "A": "B and D only",
+      "B": "B and C only",
+      "C": "A and D only",
+      "D": "A, C and D only RO03 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Plane mirror forms erect, same sized, laterally inverted and virtual image of real object."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "RACE - Ray Optics And Optical Instruments.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A microscope is focused on an object at the bottom of a bucket. If liquid with refractive index 5 3 is poured inside the bucket, then microscope have to be raised by 30 cm to focus the object again. The height of the liquid in the bucket is :",
+    "options": {
+      "A": "75 cm",
+      "B": "50 cm",
+      "C": "18 cm",
+      "D": "12 cm RO20 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "d = h ( 1 - 1 μ ) 30 = h ( 1 - 3 5 ) 30 = h × 2 5 h = 75 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A rod of length 10 cm lies along the principal axis of a concave mirror of focal length 10 cm in such a way that its end closer to the pole is 20 cm away from the mirror. The length of the image is :-",
+    "options": {
+      "A": "2.5 cm",
+      "B": "5 cm",
+      "C": "10 cm",
+      "D": "15 cm"
+    },
+    "correct_option": "A",
+    "explanation": "If = - 30 cm & m = -3 m = f f - u ∴ - 3 = - 30 - 30 - u ⇒ u = - 40 cm ⇒ u = 40 cm in front of mirror"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The minimum diameter of a disc which should be placed over the source on the surface of water to cut-off all light coming out of water is ( μ = 5/3)",
+    "options": {
+      "A": "2 m",
+      "B": "6 m",
+      "C": "4 m",
+      "D": "3 m"
+    },
+    "correct_option": "D",
+    "explanation": "From mirror equation 1 v + 1 u = 1 f ⇒ 1 v + 1 f / 2 - = 1 f ⇒ v = f 3 and m = - v u = - f / 3 f / 2 - = 2 3 so image will be virtual, erect and smaller than object"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "White light is incident on the interface of glass and air as shown in the figure. If green light is just totally internally reflected then the emerging ray in air contains",
+    "options": {
+      "A": "Yellow, orange, red",
+      "B": "Violet, indigo, blue",
+      "C": "All colours",
+      "D": "All colours except green"
+    },
+    "correct_option": "A",
+    "explanation": "sin θ C = 1 μ VIBGYOR λ ↑ μ ↓ θ c ↑ μ ∝ 1 λ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ0AAACaCAIAAAA8ZIoQAAABRElEQVR42u3TAQ0AAAjDMMC/5+OAIKCVsGSdpIDTSAA+AZ+AT8An4BPwCfgE8An4BHwCPgGfgE/AJ+ATwCfgE/AJ+AR8Aj4BnwA+AZ+AT8An4BPwCfgEfAL4BHwCPgGfgE/AJ+ATwCfgE/AJ+AR8Aj4Bn4BPAJ+AT8An4BPwCfgEfAI+AXwCPgGfgE/AJ+AT8AngE/AJ+AR8Aj4Bn4BPwCeAT8An4BPwCfgEfAI+AXwCPgGfgE/AJ+AT8An4BPAJ+AR8Aj4Bn4BPwCfgE8An4BPwCfgEfAI+AZ8APgGfgE/AJ+AT8An4BHwC+AR8Aj4Bn4BPwCfgE8An4BPwCfgEfAI+AZ+ATwCfgE/AJ+AT8An4BHwCPpEAfAI+AZ+AT8An4BPwCeAT8An4BHwCPgGfgE/AJ4BPwCfgE/AJ+AR8Aj4BfAJvCynjBDGk7N5vAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A bubble in glass slab ( μ = 1.5) when viewed from one side appears at 5 cm and 2cm from other side, then thickness of slab is:-",
+    "options": {
+      "A": "3.75 cm",
+      "B": "3 cm",
+      "C": "10.5 cm.",
+      "D": "2.5 cm"
+    },
+    "correct_option": "A",
+    "explanation": "from one side ac 1 app 1 (d ) (d ) = μ ac 1 app 1 (d ) (d ) 1.5 5 7.5cm = μ = × ⇒ from second surface ac 2 app 2 (d ) (d ) 1.5 2 3.0cm = μ = × ⇒ Total ac ac 1 ac 2 d (d ) (d ) 7.5 3.0 10.5cm = + = + ⇒"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ray of light travelling in air have wavelength λ , frequency n, velocity V and intensity I. If this ray enters into water than these parameters are λ ' , n', v' and I' respectively. Which relation is correct from following-",
+    "options": {
+      "A": "λ = λ '",
+      "B": "In = n'",
+      "C": "v = v'",
+      "D": "I = I'"
+    },
+    "correct_option": "A",
+    "explanation": "frequency doesn't change with change in medium"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A microscope is focussed on a mark on a piece of paper and then a slab of glass of thickness 3 cm and refractive index 1.5 is placed over the mark. How should the microscope be moved to get the mark in focus again :-",
+    "options": {
+      "A": "1 cm upward",
+      "B": "4.5 cm downward",
+      "C": "1 cm downward",
+      "D": "2 cm upward Air Green Class White ALLEN Ray Optics And Optical Instruments 48"
+    },
+    "correct_option": "A",
+    "explanation": "Movement of microscope = normal shift 1 1 1 t 1 3 1.5     = - = -     μ     1 cm upwards"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The frequency of a light wave in a material is 2 × 10 14 Hz and wavelength is 5000 Å. The refractive index of material will be :",
+    "options": {
+      "A": "1.33",
+      "B": "1.40",
+      "C": "1.50",
+      "D": "3.00 PRISM & DISPERSION"
+    },
+    "correct_option": "A",
+    "explanation": "v = λ × υ and v = C μ 5000 × 10 -10 × 2 × 10 14 = 8 3 10 μ × ⇒ μ = 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Prism angle of glass prism is 10^\\circ. It's refractive index of red and violet colour is 1.51 and 1.52 respectively. Then its dispersive power will be .",
+    "options": {
+      "A": "0.015",
+      "B": "0.020",
+      "C": "0.011",
+      "D": "0.019"
+    },
+    "correct_option": "A",
+    "explanation": "ω = v R y μ μ μ 1 - - μ y = v R μ μ 1.52 1.51 3.03 2 2 2 + + = = ω = 1.52 1.51 3.03 1 2 - - = 0.019"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the refractive indices of crown glass for red, yellow and violet colours are 1.5140, 1.5170 and 1.5318 respectively and for flint glass these are 1.6434, 1.6499 and 1.6852 respectively, then the dispersive powers for crown and flint glass are respectively.",
+    "options": {
+      "A": "0.034 and 0.064",
+      "B": "0.064 and 0.034",
+      "C": "1.00 and 0.064",
+      "D": "0.034 and 1.0"
+    },
+    "correct_option": "A",
+    "explanation": "v R y - - 1 μ μ ω = μ ω crown = 1.5318 1.5140 0.0178 1.5170 1 0.5170 - = - = 0.0344 ω flint = 1.6852 1.6434 0.0418 1.6499 1 0.64999 - = - = 0.064"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A thin Prism P 1 with angle 4^\\circ and made from glass of refractive index 1.54 is combined with another thin Prism P 2 made from glass of refractive index 1.72 to produce dispersion without deviation. The angle of Prism P 2 is",
+    "options": {
+      "A": "5.33^\\circ",
+      "B": "4^\\circ",
+      "C": "3^\\circ",
+      "D": "2.6^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "A 2 = (1.54 1) 4 1.72 1 - × ^\\circ - ; A 2 = 0.54 4 0.72 × ^\\circ = 3^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Angle of prism is A and its one surface is silvered. Light rays falling at an angle of incidence 2A on first surface return back through the same path after suffering reflection at second silvered surface. Refractive index of the material of prism is",
+    "options": {
+      "A": "2 sin A",
+      "B": "2 cos A",
+      "C": "1 2 cosA",
+      "D": "tanA"
+    },
+    "correct_option": "A",
+    "explanation": "r 1 = A, r 2 = 0 μ air × sin 2A = μ × sin A 1 × 2 sin A × cos A = μ × sin A μ = 2 cos A A N 2A r=A"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ray falls on a prism ABC (AB = BC) and travels as shown in figure. The minimum refractive index of the prism material should be",
+    "options": {
+      "A": "4 3",
+      "B": "2",
+      "C": "1.5",
+      "D": "3"
+    },
+    "correct_option": "A",
+    "explanation": "sin θ C = 1 μ ; sin 45^\\circ = 1 μ μ = 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAACXCAIAAAA9ElrXAAAAnklEQVR42u3PAQ0AAAgDILV/59vjgwZskul1U01PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Pr8gDP1wEK86szbMAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Three prisms 1,2 and 3 have the prism angle A = 6^\\circ, but their refractive indices are respectively 1.4, 1.5 and 1.6.If δ 1 , δ 2 , δ 3 , be their respective angles of deviation then :-",
+    "options": {
+      "A": "δ 3 > δ 2 > δ 1",
+      "B": "δ 1 > δ 2 > δ 3",
+      "C": "δ 1 = δ 2 = δ 3",
+      "D": "δ 2 > δ 1 > δ 3"
+    },
+    "correct_option": "A",
+    "explanation": "m A sin 2 μ A Sin 2 + δ       = A is same for all prism Here μ 1 < μ 2 < μ 3 ∴ δ 1 < δ 2 < δ 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ray of light is incident on a 60^\\circ prism at the minimum deviation position. The angle of refraction at the first face (i.e., incident face) of the prism is:-",
+    "options": {
+      "A": "30^\\circ",
+      "B": "45^\\circ",
+      "C": "60^\\circ",
+      "D": "Zero REFRACTION AT SPHERICAL SURFACES"
+    },
+    "correct_option": "A",
+    "explanation": "For minimum deviation (r 1 = r 2 ) r = A 2 = 30^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A convex lens and a concave lens, each having same focal length of 25 cm, are put in contact to form a combination of lenses. The power in diopters of the combination is :-",
+    "options": {
+      "A": "25",
+      "B": "50",
+      "C": "Infinite",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 1 1 1 f f f = + 1 1 1 f 25 25 = + - ⇒ 1 0 f = so P = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two thin lenses of focal lengths f 1 and f 2 are in contact and coaxial.The power of the combination is :-",
+    "options": {
+      "A": "1 2 f f 2 +",
+      "B": "1 2 1 2 f f f f +",
+      "C": "1 2 f f",
+      "D": "2 1 f f"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 1 2 1 2 f f 1 1 1 P f f f f f + = + ⇒ ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An equiconvex lens is cut into two halves along (i) XOX ' and (ii) YOY ' as shown in the figure. Let f, f ' , f \" be the focal lengths of the complete lens, of each half in case (i), and of each half in case (ii), respectively Choose the correct statement from the following :-",
+    "options": {
+      "A": "If ' = f, f \" = 2f",
+      "B": "If ' = 2f, f \" = f",
+      "C": "If ' = f, f \" = f",
+      "D": "If ' = 2f, f \" = 2f ALLEN : Physics 51"
+    },
+    "correct_option": "A",
+    "explanation": "f' f or f\" f\"=2f f'=f 1 2 (μ 1) f R   = -     R f 2(μ 1) = - R f ' 2(μ 1) = - R f \" μ 1 = - ∴ f' = f & f\" = 2f",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK0AAABlCAIAAACwdvTNAAAAwUlEQVR42u3SAQ0AAAjDMMC/52ODhFbCsk5SvDcS4AN8gA/wAT7AB/gAH+ADfIAP8AE+wAf4AB/gA3yAD/ABPsAH+AAf4AN8gA/wAT7AB/gAH+ADfIAP8AE+wAf4AB/gA3yAD/ABPsAH+AAf4AN8gA/wAT7AB/gAH+ADfIAP8AE+wAf4AB+AD/ABPsAH+AAf4AN8gA/wAT7AB/gAH+ADfIAP8AE+wAf4AB/gA3yAD/ABPsAH+AAf4AN8gA/wAT7glAXxKAPHpkPZAQAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Lenses applied in achromatic combination having dispersive power in ratio of 5:3 if focal length of concave lens is 15 cm, then focal length of other lens will be :",
+    "options": {
+      "A": "-9 cm",
+      "B": "+9 cm",
+      "C": "-12 cm",
+      "D": "+12 cm"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 2 2 f f ω - = ω 2 5 15 3 f   - = -    f 2 = 9 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the magnitude of dispersive powers of two lenses are 0.024 and 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 2 2 f f ω - = ω ; 1 2 f 0.024 0.036 f - = -f"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Then their focal lengths will be for aberration free combination.",
+    "options": {
+      "A": "30 cm, -40 cm",
+      "B": "30 cm, -45 cm",
+      "C": "10 cm, 30 cm",
+      "D": "20 cm, -35 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Mirage is a phenomenon due to T.I.R. of light."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An achromatic convergent doublet of two lenses in contact has a power of + 2D. The convex lens has a power + 5D. What is the ratio of the dispersive powers of the convergent and divergent lenses (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "P 1 + P 2 = 2 5 + P 2 = 2 P 2 = -3 1 1 2 2 2 1 f P f P ω - - = = ω ⇒ 1 2 ( 3) 3 5 5 ω - - = = ω +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The dispersive powers of the materials of the two lenses are in the ratio",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 2 2 f f ω - = ω 1 2 f 4 f 3 - = ⇒ 1 2 1 1 1 f f f = + 2 1 -4f f 3 = ⇒ 2 2 1 3 1 60 -4f f = + 2 2 1 -3 4 1 1 60 4f 60 4f + = ⇒ = f 2 = 15 cm; so f 1 = -20 cm ALLEN Hints and solutions 110"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the achromatic combination of these two lenses in contact is a convex lens of focal length 60 cm then the focal lengths of the component lenses are",
+    "options": {
+      "A": "- 20 cm and 25 cm",
+      "B": "20 cm and - 25 cm",
+      "C": "- 15 cm and 40 cm",
+      "D": "15 cm and - 20 cm"
+    },
+    "correct_option": "D",
+    "explanation": "From mirror equation 1 v + 1 u = 1 f ⇒ 1 v + 1 f / 2 - = 1 f ⇒ v = f 3 and m = - v u = - f / 3 f / 2 - = 2 3 so image will be virtual, erect and smaller than object"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two lenses of focal length + 10 cm and - 15 cm when put in contact behave like a convex lens. They will have zero longitudinal chromatic aberration if their dispersive powers are in the ratio",
+    "options": {
+      "A": "+ 3/2",
+      "B": "+ 2/3",
+      "C": "- 3/2",
+      "D": "-2/3"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 2 2 f 10 2 f 15 3 ω - - = = = ω -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Refractive index of violet,yellow and Red colour of light for a material of lens are 1.66, 1.64 & 1.62 respectively. If mean focal length of lens is 10cm Then chromatic abberation between the colour of violet and red will be",
+    "options": {
+      "A": "0.625 cm",
+      "B": "0.125 m",
+      "C": ".02 cm",
+      "D": "0 cm MICROSCOPES AND TELESCOPES"
+    },
+    "correct_option": "A",
+    "explanation": "Chromatic abberation= ω ×f av = v R y μ μ μ 1 - - × f av = 1.66 1.62 1.64 1 - - × 10 = 0.04 10 0.64 × = 0.625"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics and Optical instruement_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An astronomical telescope has focal lengths 100 cm and 10 cm of objective and eyepiece lens respectively when final image is formed at least distance of distinct vision, magnification power of telescope will be :",
+    "options": {
+      "A": "-10",
+      "B": "-11",
+      "C": "-14",
+      "D": "-15 ALLEN Ray Optics And Optical Instruments 52"
+    },
+    "correct_option": "A",
+    "explanation": "MP = 0 e e f f 1 f D -   +     MP = 100 10 1 10 25 -   +     MP = -14"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A concave mirror gives an image three times as large the object placed at a distance of 20 cm from it. For the image to be real, the focal length should be :-",
+    "options": {
+      "A": "10 cm",
+      "B": "15 cm",
+      "C": "20 cm",
+      "D": "30 cm"
+    },
+    "correct_option": "B",
+    "explanation": "In given conditions m = - v u = 2 ⇒ v = - 2u from mirror equation 1 v + 1 u = 1 f given f = - 0.2 m ⇒ 1 2u - + 1 u = 1 0.2 - ⇒ u = - 0.1m so mirror should be placed at the distance of 0.1 m."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An object 2.5 cm high is placed at a distance of 10 cm from a concave mirror of radius of curvature 30 cm the size of the image is :-",
+    "options": {
+      "A": "9.2 cm",
+      "B": "10.5 cm",
+      "C": "5.6 cm",
+      "D": "7.5 cm"
+    },
+    "correct_option": "A",
+    "explanation": "From mirror equation 1 v + 1 u = 1 ƒ ⇒ 1 1 1 1 1 31 - - v ƒ u 20 600 600 = = = - ⇒ v = 600 31 = 19.35 cm behind the mirror."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 4.5 cm needle is placed 12 cm away from a convex mirror of focal length 15 cm. Find the location of the image and the magnification. [NCERT]",
+    "options": {
+      "A": "5.5cm, 2 3",
+      "B": "6.7cm, 5 9",
+      "C": "5.5cm, 5 9",
+      "D": "6.7cm, 2 3"
+    },
+    "correct_option": "A",
+    "explanation": "If = - 30 cm & m = -3 m = f f - u ∴ - 3 = - 30 - 30 - u ⇒ u = - 40 cm ⇒ u = 40 cm in front of mirror"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the figure a convex mirror of radius of curvature 20 cm is shown. An object O is placed in front of this mirror. Its ray diagram is shown. How many mistakes are there in the diagram? (AB is its principal axis) B 20cm A O",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "O"
+    },
+    "correct_option": "A",
+    "explanation": "R = -36 cm, f = -18 cm m = f -18 -18 f - u -18 - (-27) 9 = = = -2 (inverted) m = -v u ⇒ -2 = -v -27 ⇒ v= -54 cm (Real image) m = i 0 h h ⇒ h i = m × h 0 ⇒ h i = -2 × 2.5 = -5 cm BEGINNER'S BOX - 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAAA0CAIAAACrXVuoAAAAd0lEQVR42u3SQQ0AAAjEMMC/50MFCY9WwrJOUnBmJMBhOAwchsNwGDgMh+EwcBgOA4fhMBwGDsNhOAwchsNwGDgMh4HDcBgOA4fhMBwGDsNhOAwchsPAYTgMh4HDcBgOA4fhMBwGDsNh4DAchsPAYTgMh4HDeGkB/HsDZSLJYrwAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the diagram shown the velocity of image will be along object v C F R Q P S image",
+    "options": {
+      "A": "P",
+      "B": "Q",
+      "C": "R",
+      "D": "S"
+    },
+    "correct_option": "A",
+    "explanation": "m = 1 4 - ; m = f f u - ; 1 12 4 12 u - - = - - u = -60 cm",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAtCAIAAABUE2CcAAAATklEQVR42u3QAREAAAQEMPTv/HI4W4R1knpvFFiwYMGCBQsWLFiwYMGCBQsWLFiwYMGCBQsWLFiwYMGCBQsWLFiwYMGCBQsWLFiwYOGYBejfA1eYudWzAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the incorrect statement from the following",
+    "options": {
+      "A": "For concave mirror, if image of real object is virtual then magnification must be positive",
+      "B": "A virtual image cannot be displayed on the screen",
+      "C": "Aberration occur only for real images",
+      "D": "Chromatic aberration does not occur with mirrors"
+    },
+    "correct_option": "A",
+    "explanation": "m = f f u - ; m = 30 30 ( 90) - - - - m = 30 60 - ; m = 1 2 - → Image size is smaller than object ⇒ m = v u - ; 1 v 2 90 - - = - - v = 45; v = - 45 cm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An object AB is placed parallel and close to the optical axis between focus F and centre of curvature C of a converging mirror of focal length f as shown in figure. A B F C",
+    "options": {
+      "A": "Image of B will be closer than that of A from the mirror.",
+      "B": "Image of AB will be parallel to the optical axis.",
+      "C": "Length of image is equal to AB.",
+      "D": "Length of image is more than AB. $//"
+    },
+    "correct_option": "A",
+    "explanation": "m = i o h 3 2 h 1.5 - = = - (Real image) f f m 2 f u f ( 15) = = - = - - - -2f - 30 = f f = -10 cm",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAxCAIAAAAa1x0PAAAAOklEQVR42u3OMQEAAAgDILV/51ljByRgk0yrm2JycnJycnJycnJycnJycnJycnJycnJycnJycnJyxR6q+gNf6EvwnQAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A beam of convergent light converges to a point 0.5 m in front of the mirror after reflection at a convex mirror but in the absence of the mirror the beam converges to a point 0.2 m behind the mirror. The radius of curvature of the mirror is :- 0.5m P 0.2m I O",
+    "options": {
+      "A": "20 cm",
+      "B": "50 cm",
+      "C": "66.67 cm",
+      "D": "28.57 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Erect diminished image formed by convex mirror."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A U-shaped wire is placed before a concave mirror having radius of curvature 20 cm as shown in figure. Find the total length of the image ? 10cm 10cm 30cm",
+    "options": {
+      "A": "5 cm",
+      "B": "10 cm",
+      "C": "15 cm",
+      "D": "20 cm"
+    },
+    "correct_option": "C",
+    "explanation": "V 1 = -m 2 × V 0 m = f f u - = 24 24 ( 60) - - - - = 24 36 - = 2 3 - V I = - 2 2 9 3 -   ×     ; V I = -4 cm/s (toward the mirror)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAxCAIAAACJc2roAAAAV0lEQVR42u3QMREAAAgEILV/57eEkwcR6CTFtVGgVatWtGrVilatWtGqVStatWpFq1ataNWqFa1ataJVq1a0atWKVq1a0apVK1q1akWrVq1o1aoVrVrfWQjuA1/jXe43AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The distance of an object from a spherical mirror is equal to the focal length of the mirror then the image :-",
+    "options": {
+      "A": "must be at infinity",
+      "B": "may be at infinity",
+      "C": "may be at the focus",
+      "D": "none"
+    },
+    "correct_option": "A",
+    "explanation": "m = f f u - Image to be real and three times m = -3 -3 = f f ( 20) - - f = -15 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_ray_optics_and_optical_instruments_236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Ray Optics And Optical Instruments",
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "language": "en",
+      "source": "Ray Optics _ Optical Instruments - Race (1).pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A point object is palced 60 cm from pole of a concave mirror of focal length 10 cm on the principal axis. If object is shifted 1 mm towards the mirror along principal axis. Find the shift in image ?",
+    "options": {
+      "A": "1 25 mm",
+      "B": "1 50 mm",
+      "C": "1 100 mm",
+      "D": "1 125 mm Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 Ans 1 2 3 4 1 2 1 1 3 4 3 2 2 1"
+    },
+    "correct_option": "A",
+    "explanation": "Object & image are at same place at 2F ∴ minimum distance is zero. ALLEN Hints and solutions 106"
+  }
+]

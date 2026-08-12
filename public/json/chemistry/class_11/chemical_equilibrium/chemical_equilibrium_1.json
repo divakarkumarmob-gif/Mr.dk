@@ -1,0 +1,3772 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_001",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "All reactions which have chemical disintegration",
+    "options": {
+      "A": "Is reversible",
+      "B": "Is reversible and endothermic",
+      "C": "is exothermic",
+      "D": "Is reversible or irreversible and endothermic or exothermic"
+    },
+    "correct_option": "B",
+    "explanation": "PCl 5 (g)  PCl 3 (g) + Cl 2 (g) a b c a - a α b + a α c + a α n T = a + b + c + a α 3 PCl P = 3 PCl T n P n = (b a ) (a b c a ) + α + + + α × P"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_002",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "x     y reaction is said to be in equilibrium, when:-",
+    "options": {
+      "A": "Only 10% conversion of x to y has taken place",
+      "B": "Complete conversion of x to y has taken place",
+      "C": "Conversion of x to y is only 50% complete",
+      "D": "The rate of change of x to y is just equal to the rate of change of y to x in the system"
+    },
+    "correct_option": "D",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_003",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The role of catalyst in a chemical reaction is :-",
+    "options": {
+      "A": "To help attain equilibrium in a shorter time.",
+      "B": "To affect the state of equilibrium",
+      "C": "To shift the equilibrium in such a way as to increase the concentration of the product",
+      "D": "Both 1 & 2"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_004",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Active mass of 5 g CaO :-",
+    "options": {
+      "A": "56",
+      "B": "1",
+      "C": "3.5",
+      "D": "2"
+    },
+    "correct_option": "C",
+    "explanation": "A 2 + B 2  2AB K = 2 at Temp=T a a 0 α = ? a - x a - x 2x a - a α a - a α 2a α α = x a x = a α K = 2 (2a ) (a a )(a a ) α - α - α = 2 = 2 2 2 2 4a a (1 ) α - α = 2 2 2 2 1 4 2 (1 ) α = = - α taking square root 1 1 2 α = - α 2 1 α = - α 1 ( 2 1) α = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_005",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ratio of active masses of 22g CO 2 , 3g H 2 and 7g N 2 in a gaseous mixture :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "C 2 H 5 OH+CH 3 COOH  CH 3 COOC 2 H 5 +H 2 O t = 0 1 1 0 0 t = t eq 1 - x 1 - x x x 2 2 x x x V V K 4 (1 x) (1 x) (1 x) V V ⋅ = = = - - - taking square root = x 1 x - = 2 x = 2 - 2x 3x = 2 x = 2 3 ⇒ α = x a = 2 3 1 × = 0.66 ⇒ 66 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_006",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "0.5 LAW OF MASS ACTION AND FACTOR AFFECTING equilibrium CONSTANT",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_007",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a chemical equilibrium, the rate constant for the backward reaction is 7.5 × 10 -4 and the equilibrium constant is 1.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_008",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate constant for the forward reaction is:-",
+    "options": {
+      "A": "2 × 10 -3",
+      "B": "5 × 10 -4",
+      "C": "1.12 × 10 -3",
+      "D": "9.0 × 10 -4"
+    },
+    "correct_option": "D",
+    "explanation": "C 2 H 5 OH+CH 3 COOH  CH 3 COOC 2 H 5 +H 2 O t = 0 1 1 0 0 t = t eq 1 - x 1 - x x x 2 2 x x x V V K 4 (1 x) (1 x) (1 x) V V ⋅ = = = - - - taking square root = x 1 x - = 2 x = 2 - 2x 3x = 2 x = 2 3 ⇒ α = x a = 2 3 1 × = 0.66 ⇒ 66 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_009",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium concentration of [B] e for the reversible reaction A     B can be evaluated by the expression:-",
+    "options": {
+      "A": "K C 1 e [A] -",
+      "B": "1 f e b k [A] k -",
+      "C": "1 f b k k - [A] e",
+      "D": "k f k b [A] e -1"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 O 3  NO + NO 2 t = 0 2 0 0 10% = α t = eq 2 - 0.2 0.2 0.2 α = x a = 0.1 x = 0.1 × 2 ⇒ 1.8 0.2 0.2 x = 0.2 [N 2 O 3 ] : [NO] : [NO 2 ] = 1."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_010",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For which reaction is K p = K c :-",
+    "options": {
+      "A": "2NOCl",
+      "B": "In 2",
+      "C": "H 2",
+      "D": "2SO 2"
+    },
+    "correct_option": "A",
+    "explanation": "H 2 (g) + CO 2 (g)  H 2 O(g) + CO(g) t = 0 1 1 0 0 At t=eq. 1 - x 1 - x x x 2 2 x x x V V K 1.8 1 x 1 x (1 x) V V ⋅ = = = - - - ⋅ x 1.8 1 x = - = 1.34 x = 1.34 - 1.34 x 2.34 x = 1.34 x = 1.34 2.34 = 0.5726 Conc. of CO = x V = 0.5726 1 = 0.573 mol L -1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_011",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At 1000 K, the value of K P for the reaction : A(g) + 2B(g)     3C(g) + D(g) is 0.05 atm The value of K C in terms of R would be",
+    "options": {
+      "A": "20000 R",
+      "B": "0.02 R",
+      "C": "5 × 10 -5 R",
+      "D": "5 × 10 -5 × R -1"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_012",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match List-I (hypothetical reactions) with List-II (ratio P C K K for the given reactions) and select the correrct answer using the code given below the lists:-",
+    "options": {
+      "A": "A 2",
+      "B": "A 2",
+      "C": "A",
+      "D": "AB 2"
+    },
+    "correct_option": "C",
+    "explanation": "A + 2B  C K 1 = 2 [C] [B] [A] C + D  3A K 2 = 3 [A] [C][D] 6B + D  2C K 3 = 2 6 [C] [D][B] K 1 3 ⋅ K 2 = 3 3 2 6 3 6 [C] [A] [C] [C][D] [B] [A] [B] [D] ⋅ = 3 1 2 3 K K K ⋅ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_013",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction CuSO 4 .5H 2 O(s)     CuSO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_014",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3H 2 O(s) +2H 2 O(g) Which one is correct representation :-",
+    "options": {
+      "A": "K p = 2 2 H O p",
+      "B": "K c = [H 2 O] 2",
+      "C": "K p = K c",
+      "D": "All"
+    },
+    "correct_option": "C",
+    "explanation": "A 2 + B 2  2AB K = 2 at Temp=T a a 0 α = ? a - x a - x 2x a - a α a - a α 2a α α = x a x = a α K = 2 (2a ) (a a )(a a ) α - α - α = 2 = 2 2 2 2 4a a (1 ) α - α = 2 2 2 2 1 4 2 (1 ) α = = - α taking square root 1 1 2 α = - α 2 1 α = - α 1 ( 2 1) α = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_015",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction C(s) + CO 2 (g)     2CO(g) the partial pressure of CO and CO 2 are 2.0 and 4.0 atm. respectively at equilibrium. The K P for the reaction is",
+    "options": {
+      "A": "0.5",
+      "B": "4.0",
+      "C": "8.0",
+      "D": "1 $//"
+    },
+    "correct_option": "A",
+    "explanation": "(K eq ) 1 = 2 2 3 2 2 2 2 [SO ] [0.1] [SO ] [O ] [0.1] [0.1] = = 10 (K eq ) 2 = 2 2 3 3 3 2 2 [NH ] [0.1] [N ][H ] [0.1][0.1] = = 100 (K eq ) 3 = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 (K eq ) 4 = 4 5 9 3 2 4 6 10 2 [NH ] [O ] (0.1) [NO] [H O] (0.1) = = 10 extent ∝ k eq : II > I = IV > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_016",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For which reaction at 298 K, the value of p c K K is maximum and minimum respectively:-",
+    "options": {
+      "A": "In 2 O 4",
+      "B": "2SO 2",
+      "C": "X",
+      "D": "A"
+    },
+    "correct_option": "A",
+    "explanation": "2NOBr(g)  2NO(g) + Br 2 (g) t = 0 p^\\circ 0 0 p^\\circ - 0.4p^\\circ 0.4p^\\circ 0.2p^\\circ 0.6p^\\circ 0.4p^\\circ 0.2p^\\circ p T = p^\\circ + 0.2p^\\circ = 0.30 1.2 p^\\circ = 0.3 p^\\circ = 0.3 1 1.2 4 = = 0.25 atm K p = 2 2 (0.4p ) (0.2p ) (0.6p ) ^\\circ ^\\circ ^\\circ = 4 4 6 6 × × 0.2 × 0.25 = 4 9 × 0.2 × 0.25 K p = 0.2 1 90 45 = Then K p 1 for 2NO(g) + Br 2 (g)  2NOBr(g) will be = P 1 1 K 1 / 45 = = 45"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_017",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the two gaseous equilibrium involving SO 2 and the corresponding equilibrium constants at 299 K SO 2 (g) + 1 2 O 2 (g)     SO 3 (g) ; K 1 4SO 3 (g)     4 SO 2 (g) + 2O 2 (g) ; K 2 The value of the equilibrium constant are related by :-",
+    "options": {
+      "A": "K 2 = 4 1 1",
+      "B": "K 2 = 4 1 K",
+      "C": "K 2 = 1 4 1 1 K      ",
+      "D": "K 2 = 1 1 K"
+    },
+    "correct_option": "A",
+    "explanation": "A(g)  B(g) if total mole = a moles of B = a 40 100 × = 0.4a moles of A = a 60 100 × = 0.6a Keq = 0.4a 0.6a = 0.67"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_018",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reactions :- A     B ; K C = 2, B     C ; K C = 4, C     D ; K C = 6 K C for the reaction A     D :-",
+    "options": {
+      "A": "12",
+      "B": "4/3",
+      "C": "24",
+      "D": "48"
+    },
+    "correct_option": "A",
+    "explanation": "H 2 (g) + S(s)  H 2 S(g) log 2 1 1 2 K H 1 1 K 2.303R T T ∆   = -     log 9.25 1 H 1 1 18.5 2 2.303 8.314 925 1000 ∆     = = -     ×     - 0.3010 = H 75 2.30 8.314 925 1000 ∆     × ×   ∆ H = - 71080.57 J/mole"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_019",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If A     B (K c = 3), B     C (K c = 5), C     D (K c = 2) The value of equilibrium constant for the above reaction are given, the value of equilibrium constant for D     A will be:-",
+    "options": {
+      "A": "15",
+      "B": "0.3",
+      "C": "30",
+      "D": "0.03"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 3 C 3 3 2 2 (NH ) (0.5) 0.25 Q 0.0104 24 (N ) (H ) 3 (2) = = = = × × Q C < K C reaction will go in forward direction."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_020",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Effect of increasing temperature on equilibrium constant is given by log K 2 - log K 1 = 0 H 2.303R -∆ 2 1 1 1 T T [ ] - [ ] [ ] . Then for an endothermic reaction the false statement is:-",
+    "options": {
+      "A": "2 1 1 1 T T [ ] - [ ] [ ] = positive",
+      "B": "log K 2 > log K 1",
+      "C": "∆ H 0 = positive",
+      "D": "K 2 > K 1"
+    },
+    "correct_option": "A",
+    "explanation": "For exothermic process as T ↑ yield ↓ so T 1 > T 2 > T 3",
+    "statements": {
+      "S": "-"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_021",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "equilibrium constant of some reactions are given as under :",
+    "options": {
+      "A": "x     y K = 10 -1",
+      "B": "y     z K = 2 × 10 -2",
+      "C": "P     Q K = 3 × 10 -4",
+      "D": "R     S K = 2 × 10 -3 Initial concentration of the reactants for each reaction was taken to be equal : Review the above reactions and indicate the reactions in which the reactants and products respectively were of highest concentration :-"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_022",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which Oxide of Nitrogen is most stable :-",
+    "options": {
+      "A": "2NO 2",
+      "B": "2 NO",
+      "C": "2 N 2 O 5",
+      "D": "2N 2 O"
+    },
+    "correct_option": "A",
+    "explanation": "NH 4 HS (s)  NH 3(g) + H 2 S (g) t = t eq P' P' 25 = P' + P' ⇒ (P') 2 = 25 ⇒ P' = 5 atm Total pressure at equilibrium = P' + P' = 5 + 5 = 10 atm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_023",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium constant for the reaction Br 2     2Br at 500 K and 700 K are 1 × 10 -10 and 1 × 10 -5 respectively. The reaction is:-",
+    "options": {
+      "A": "Endothermic",
+      "B": "Exothermic",
+      "C": "Fast",
+      "D": "Slow"
+    },
+    "correct_option": "A",
+    "explanation": "∆ G^\\circ = -2.303 RT log K eq X.1000 = -2.303 × 2 × 300 × log100 X = -2.7636 $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_024",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium constant in a reversible reaction at a given temperature:-",
+    "options": {
+      "A": "Depends on initial concentration of the reactants.",
+      "B": "Depends on the concentration of the products at equilibrium.",
+      "C": "Does not depend on the initial concentrations.",
+      "D": "It is not characteristic of the reaction."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_025",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following statements is correct about equilibrium constant:-",
+    "options": {
+      "A": "equilibrium constant of a reaction changes with temperature.",
+      "B": "equilibrium constant of a reaction depends upon the concentration of reactants with which we start.",
+      "C": "equilibrium constant of a reaction, 3Fe",
+      "D": "equilibrium constant of a reaction becomes double if the reaction is multiplied by 2 throughout. $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles.",
+    "statements": {
+      "T": "-"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_026",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a reaction N 2 (g) + 3H 2 (g)     2NH 3 (g), the value of K C does not depends upon :-",
+    "options": {
+      "A": "Initial concentration of the reactants",
+      "B": "Pressure",
+      "C": "temperature",
+      "D": "Catalyst"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_027",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For any reversible reaction if concentration of reactants increases then effect on equilibrium constant:-",
+    "options": {
+      "A": "Depends on amount of concentration",
+      "B": "Unchange",
+      "C": "Decrease",
+      "D": "Increase"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_028",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an experiment the equilibrium constant for the reaction A + B     C + D is K when the initial concentration of A and B each is 0.1 mol L -1 Under the similar conditions in an another experiment if the initial concentration of A and B are taken 2 and 3 mol L -1 respectively then the value of equilibrium constant will be:-",
+    "options": {
+      "A": "K 2",
+      "B": "K",
+      "C": "K 2",
+      "D": "1 K"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_029",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium constant (K P ) for the reaction PCl 5 (g)     PCl 3 (g) + Cl 2 (g) is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_030",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the volume of the container is reduced to one-half its original volume, the value of K P for the reaction at the same temperature will be :-",
+    "options": {
+      "A": "32",
+      "B": "64",
+      "C": "16",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 3 C 3 3 2 2 (NH ) (0.5) 0.25 Q 0.0104 24 (N ) (H ) 3 (2) = = = = × × Q C < K C reaction will go in forward direction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_031",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilbrium constant for the reaction : N 2 (g) + O 2 (g)     2NO(g) at 2000 K is 4 × 10",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_032",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In presence of catalyst the equilibrium is established ten times faster at the same temperature. What is the value of equilibrium constant in presence of catalyst :-",
+    "options": {
+      "A": "40 × 10 -4",
+      "B": "4 × 10 -4",
+      "C": "4 × 10 4",
+      "D": "None"
+    },
+    "correct_option": "C",
+    "explanation": "A 2 + B 2  2AB K = 2 at Temp=T a a 0 α = ? a - x a - x 2x a - a α a - a α 2a α α = x a x = a α K = 2 (2a ) (a a )(a a ) α - α - α = 2 = 2 2 2 2 4a a (1 ) α - α = 2 2 2 2 1 4 2 (1 ) α = = - α taking square root 1 1 2 α = - α 2 1 α = - α 1 ( 2 1) α = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_033",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If some He gas is introduced into the equilibrium PCl 5 (g)     PCl 3 (g) + Cl 2 (g) at constant pressure and temperature then equilibrium constant of reaction :",
+    "options": {
+      "A": "Increase",
+      "B": "Decrease",
+      "C": "Unchange",
+      "D": "Nothing can be said DISSOCIATION"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_034",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction : P     Q + R. Initially 2 mol of P was taken. Up to equilibrium 0.5 mol of P was dissociated. What would be the degree of dissociation :-",
+    "options": {
+      "A": "0.5",
+      "B": "1",
+      "C": "0.25",
+      "D": "4.2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_035",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "PCl 5 (g)     PCl 3 (g) + Cl 2 (g) In above reaction, at equilibrium condition mole fraction of PCl 5 is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_036",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 and mole fraction of Cl 2 is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_037",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Then find out mole fraction of PCl 3 (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_038",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 mol of PCl 5 are heated at constant temperature in closed container. If degree of dissociation for PCl 5 is 0.5 then calculate total number of moles at equilibrium",
+    "options": {
+      "A": "4.5",
+      "B": "6",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_039",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The dissociation of CO 2 can be expressed as 2CO 2     2CO + O",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_040",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the 2 mol of CO 2 is taken initially and 40% of the CO 2 is dissociatated completely. What is the total number of moles at equilibrium:-",
+    "options": {
+      "A": "2.4",
+      "B": "2.0",
+      "C": "1.2",
+      "D": "5"
+    },
+    "correct_option": "D",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_041",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In A 3 (g)     3A(g) reaction, the initial concentration of A 3 is \"a\" mol L -1 If α is degree of dissociation of A",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_042",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total number of moles at equilibrium will be:-",
+    "options": {
+      "A": "a - a 3 α",
+      "B": "a 3 - α",
+      "C": "a a 2 - α      ",
+      "D": "a + 2a α"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_043",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 8 g mol of PCl 5 heated in a closed vessel of 10 L capacity and 25% of its dissociates into PCl 3 and Cl 2 at the equilibrium then value of Kp will be equal to :- (P is total pressure)",
+    "options": {
+      "A": "P/30",
+      "B": "P/15",
+      "C": "2/3P",
+      "D": "3/2P $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_044",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the reaction 2P(g) + Q(g)     3R(g) + S(g). If 2 mol each of P and Q taken initially in a 1 L flask. At equilibrium which is true:-",
+    "options": {
+      "A": "[P] < [Q]",
+      "B": "[P] = [Q]",
+      "C": "[Q] = [R]",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_045",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "'a' mol of PCl 5 , undergoes, thermal dissociation as : PCl 5     PCl 3 + Cl 2 , the mole fraction of PCl 3 at equilibrium is 0.25 and the total pressure is 2.0 atm. The partial pressure of Cl 2 at equilibrium is :-",
+    "options": {
+      "A": "2.5",
+      "B": "1.0",
+      "C": "0.5",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_046",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a chemical equilibrium A + B     C + D when one mole each of the two reactants are mixed, 0.4 mol each of the products are formed. The equilibrium constant is :-",
+    "options": {
+      "A": "1",
+      "B": "0.36",
+      "C": "2.25",
+      "D": "4 9"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_047",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "K C for the esterification reaction : CH 3 COOH + C 2 H 5 OH     CH 3 COOC 2 H 5 + H 2 O is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_048",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 4 mol each of acid and alcohol are taken initially, what are the equilibrium moles of the acid :-",
+    "options": {
+      "A": "2 3",
+      "B": "4 3",
+      "C": "3 4",
+      "D": "3 2"
+    },
+    "correct_option": "C",
+    "explanation": "A 2 + B 2  2AB K = 2 at Temp=T a a 0 α = ? a - x a - x 2x a - a α a - a α 2a α α = x a x = a α K = 2 (2a ) (a a )(a a ) α - α - α = 2 = 2 2 2 2 4a a (1 ) α - α = 2 2 2 2 1 4 2 (1 ) α = = - α taking square root 1 1 2 α = - α 2 1 α = - α 1 ( 2 1) α = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_049",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Evaluate K P for the reaction : H 2 + I 2     2HI. If 2 moles each of H 2 and I 2 are taken initially. The equilibrium moles of HI are",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_050",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 2.5 (2) 4 (3) 0.25 (4) 1.0",
+    "options": {
+      "A": "2.5",
+      "B": "4",
+      "C": "0.25",
+      "D": "1.0"
+    },
+    "correct_option": "D",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_051",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 moles of A are mixed with 4 moles of B, when 2 mol of C are formed at equilibrium, according to the reaction, A + B     C + D. The equilibrium constant is :-",
+    "options": {
+      "A": "4",
+      "B": "1",
+      "C": "2",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_052",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two moles of ammonia is introduced in a evacuated 500 mL vessel at high temperature. The decomposition reaction is : 2NH 3 (g)     N 2 (g) + 3H 2 (g) At the equilibrium NH 3 becomes 1 mole then the K would be :-",
+    "options": {
+      "A": "0.42",
+      "B": "6.75",
+      "C": "1.7",
+      "D": "1.5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_053",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4.5 mol each of hydrogen and iodine heated in a sealed ten litre vessel. At equilibrium, 3 mol of HI were found. The equilibrium constant for H 2 (g) + I 2 (g)     2HI(g) is:-",
+    "options": {
+      "A": "1",
+      "B": "10",
+      "C": "5",
+      "D": "0.33"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_054",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1.50 mol each of hydrogen and iodine were placed in a sealed 10 L container maintained at 717 K. At equilibrium 1.25 mol each of hydrogen and iodine were left behind. The equilibrium constant, K c for the reaction H 2 (g) + I 2 (g)     2HI (g) at 717 K is",
+    "options": {
+      "A": "0.4",
+      "B": "0.16",
+      "C": "25",
+      "D": "50"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_055",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "AB dissociates as 2AB (g)     2A (g) + B 2 (g) When the initial pressure of AB is 500 mm, the total pressure becomes 625 mm when the equilibrium is attained. Calculate K P for the reaction assuming volume remains constant.",
+    "options": {
+      "A": "500",
+      "B": "125",
+      "C": "750",
+      "D": "375 APPLICATION OF LAW OF MASS ACTION"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_056",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction PCl 5     PCl 3 + Cl 2 , the degree of dissociation varies inversely as the square root of pressure of the system. Supposing at constant temperature If the volume is increased 16 times the intial volume, the degree of dissociation for this reaction will becomes",
+    "options": {
+      "A": "4 times",
+      "B": "1 4 times",
+      "C": "2 times",
+      "D": "1 2 times"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_057",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction in equilibrium is represented by the following equation - 2A(s) + 3B(g)     3C(g) + D(g) + Q (Heat). If the pressure on the system is reduced to half of its original value:-",
+    "options": {
+      "A": "The amounts of C and D decreases",
+      "B": "The amounts of C and D increases",
+      "C": "The amount of D decreases",
+      "D": "All the amounts remain constant $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_058",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two systems PCl 5 (g)     PCl 3 (g) + Cl 2 (g) and COCl 2 (g)     CO(g) + Cl 2 (g) are simultaneously in equilibrium in a vessel at constant volume. If some CO(g) is introduced in the vessel at constant volume, then at new equilibrium the concentration of :",
+    "options": {
+      "A": "PCl 5 increases",
+      "B": "PCl 3 remains unchanged",
+      "C": "PCl 5 decreases",
+      "D": "Cl 2 increases"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_059",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The effect of adding krypton (Kr) gas on position of equilibrium, keeping the volume of the system constant is :-",
+    "options": {
+      "A": "If ∆ n = 0, backward reaction is favoured.",
+      "B": "If ∆ n = +ve, forward reaction is favoured",
+      "C": "If ∆ n = -ve , forward reaction is favoured",
+      "D": "No effect whatever be the value of ∆ n LE-CHATELIER'S PRINCIPLE"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_060",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following equilibrium reactions, the equilibrium would shift to right side, if total pressure is decreased :-",
+    "options": {
+      "A": "In 2",
+      "B": "H 2",
+      "C": "In 2",
+      "D": "H 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_061",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In manufacture of NO, the reaction of N 2 and O 2 to form NO is favourable if :-",
+    "options": {
+      "A": "Pressure is increased",
+      "B": "Pressure is decreased",
+      "C": "temperature is increased",
+      "D": "temperature is decreased"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_062",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When NaNO 3 (s) is heated in a closed vessel, O 2 is liberated and NaNO 2 (s) is left behind. At equilibrium -",
+    "options": {
+      "A": "Addition of NaNO 3 favours forward reaction",
+      "B": "Addition of NaNO 2 favours reverse reaction",
+      "C": "Increasing pressure favours reverse reaction.",
+      "D": "Decreasing temperature favours forward reaction."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_063",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The oxidation of SO 2 by O 2 to SO 3 is exothermic reaction. The yield of SO 2 will be minimum if :-",
+    "options": {
+      "A": "temperature is increased and pressure is kept constant",
+      "B": "temperature is reduced and pressure is increased",
+      "C": "Both temperature and pressure are increased",
+      "D": "Both temperature and pressure are decreased"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_064",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the manufacture of ammonia by the reaction N 2 + 3H 2     2NH 3 + 21.9 K cal, the favourable conditions are :-",
+    "options": {
+      "A": "Low temperature, low pressure & catalyst",
+      "B": "Low temperature, high pressure & catalyst",
+      "C": "High temperature, low pressure & catalyst",
+      "D": "High temperature, high pressure & catalyst"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_065",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium 2SO 2 (g) + O 2 (g)     2SO 3 (g) shifts forward if :-",
+    "options": {
+      "A": "A catalyst is used.",
+      "B": "An adsorbent is used to remove SO 3 as soon as it is formed.",
+      "C": "Small amounts of reactants are used.",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_066",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the reaction 2A(g) + B(g)     C(g) + 362 kcal. Which combination of pressure and temperature gives the highest yield of C at equilibrium:-",
+    "options": {
+      "A": "1000 atm and 500^\\circC",
+      "B": "500 atm and 500^\\circC",
+      "C": "1000 atm and 50^\\circC",
+      "D": "500 atm and 100^\\circC"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_067",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match list -I (equilibrium) with List -II (conditions for reaction) and select the correct answer using the codes given below the lists :- List-I List-II (equilibrium) (Conditions) P. A 2 (g) + B 2 (g)     2AB(g) 1.High Endothermic temperature Q. 2AB 2 (g)+B 2 (g)     2AB 3 (g)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_068",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Low Exothermic temperature R. 2AB 3 (g)     A 2 (g) + 3B 2 (g) 3.High pressure Endothermic",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_069",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Independent of pressure CODE : P Q R",
+    "options": {
+      "A": "1 & 3 2 & 3 2 & 4",
+      "B": "2 & 3 1 & 4 1 & 3",
+      "C": "1 & 5 2 & 3 1 & 4",
+      "D": "2 & 4 1 & 5 1 & 3"
+    },
+    "correct_option": "D",
+    "explanation": "C 2 H 5 OH+CH 3 COOH  CH 3 COOC 2 H 5 +H 2 O t = 0 1 1 0 0 t = t eq 1 - x 1 - x x x 2 2 x x x V V K 4 (1 x) (1 x) (1 x) V V ⋅ = = = - - - taking square root = x 1 x - = 2 x = 2 - 2x 3x = 2 x = 2 3 ⇒ α = x a = 2 3 1 × = 0.66 ⇒ 66 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_070",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Does Le chatelier's principle predict a change of equilibrium concentration for the following reaction if the gas mixture is compressed N 2 O 4 (g)     2NO 2 (g)",
+    "options": {
+      "A": "Yes, backward reaction is favoured",
+      "B": "Yes, forward reaction is favoured",
+      "C": "No change",
+      "D": "No information $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_071",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "aA     bB + cC, ∆ H = - x kcal. If high pressure and low temperature are the favourable condition for the formation of the product in above reaction, hence:-",
+    "options": {
+      "A": "a > b + c",
+      "B": "a < b + c",
+      "C": "a = b + c",
+      "D": "None of them"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_072",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The reaction in which yield of production cannot be increased by the application of high pressure is :-",
+    "options": {
+      "A": "PCl 3",
+      "B": "In 2",
+      "C": "In 2",
+      "D": "2SO 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_073",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "aA + bB     cC + dD in above reaction low pressure and high temperature, conditions are shift equilibrium in back direction so correct set :-",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_074",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a vessel containing SO 3 , SO 2 and O 2 at equilibrium, some helium gas is introduced so that the total pressure increases while temperature and volume remain constant. According to Le-Chatelier principle, the dissociation of SO 3 ,",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "Remains unaltered",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_075",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For reaction aA     \\lambda L + mM. In condition of suddenly volume increase, degree of dissociation is decrease it represent that.",
+    "options": {
+      "A": "a <",
+      "B": "a =",
+      "C": "a =",
+      "D": "a >"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_076",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction, PCl 5 (g)     PCl 3 (g) + Cl 2 (g) the forward reaction at constant temperature is favoured by :-",
+    "options": {
+      "A": "Introducing an inert gas at constant volume",
+      "B": "Introducing chlorine gas at constant volume",
+      "C": "Introducing an inert gas at constant pressure",
+      "D": "Increasing volume of the container"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_077",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On cooling of following system at equilibrium CO 2 (s)     CO 2 (g) :-",
+    "options": {
+      "A": "There is no effect on the equilibrium state",
+      "B": "More gas is formed",
+      "C": "More gas is solidifies",
+      "D": "None of above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_078",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "following equilibrium is present in a closed container at the temperature of 25 ^\\circ C. SO 2 Cl 2 (g)     SO 2 (g) + Cl 2 (g) When Cl 2 is added to the equlibrium mixture, the following statements will be correct for the system.",
+    "options": {
+      "A": "a, c",
+      "B": "Cl 2 is formed in more amount.",
+      "C": "concentration of SO 2 decreases and that of SO 2 Cl 2 increases.",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_079",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 2,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A reaction mixture containing H 2 , N 2 and NH 3 has partial pressures 2 atm, 1 atm and 3 atm respectively at 725K. If the value of K P for the reaction, N 2 (g) + 3H 2 (g)  2NH 3 (g) is 4.28 10 -5 atm -2 at 725K, in which direction the net reaction will go",
+    "options": {
+      "A": "Forward",
+      "B": "Backward",
+      "C": "No net reation",
+      "D": "Direction of reaction cannot be predicted EQUIVALENT WEIGHT"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_080",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Molecular weight of tribasic acid is W. Its equivalent weight will be :",
+    "options": {
+      "A": "W 2",
+      "B": "W 3",
+      "C": "W",
+      "D": "3W"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_081",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A, E, M and n are the atomic weight, equivalent weight, molecular weight and valency of an element. The correct relation is :",
+    "options": {
+      "A": "A = E × n",
+      "B": "M A E =",
+      "C": "M A n =",
+      "D": "M = A × n"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_082",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sulphur forms two chlorides S 2 Cl 2 and SCl",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_083",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equivalent mass of sulphur in SCl 2 is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_084",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equivalent weight of sulphur in S 2 Cl 2 is -",
+    "options": {
+      "A": "8",
+      "B": "16",
+      "C": "32",
+      "D": "64 $//"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 3 C 3 3 2 2 (NH ) (0.5) 0.25 Q 0.0104 24 (N ) (H ) 3 (2) = = = = × × Q C < K C reaction will go in forward direction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_085",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If equivalent weight of S in SO 2 is 8 then equivalent weight of S in SO 3 is -",
+    "options": {
+      "A": "8 2 3 ×",
+      "B": "8 3 2 ×",
+      "C": "8 × 2 × 3",
+      "D": "2 3 8 ×"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_086",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which property of an element is not variable :",
+    "options": {
+      "A": "Valency",
+      "B": "At . Wt",
+      "C": "Eq. Wt.",
+      "D": "None EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_087",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "48 g of SO 3 , 12.8 g of SO 2 and 9.6 g of O 2 are present in one litre. The respective active masses will be",
+    "options": {
+      "A": "1.0, 0.5 and 0.3",
+      "B": "0.6, 0.2 and 0.3",
+      "C": "0.6, 0.4 and 0.2",
+      "D": "1.0, 0.5 and 1.5"
+    },
+    "correct_option": "A",
+    "explanation": "PCl 5 (g)  PCl 3 (g) + Cl 2 (g) a b c a - a α b + a α c + a α n T = a + b + c + a α 3 PCl P = 3 PCl T n P n = (b a ) (a b c a ) + α + + + α × P"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_088",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the forward rate constant of reversible reaction is 0.16 and backward rate constant is 4 × 10 4 , then the equilibrium constant will be.",
+    "options": {
+      "A": "2.25 × 10 -6",
+      "B": "2.5 × 10 -5",
+      "C": "4 × 10 -6",
+      "D": "4 × 10 -5"
+    },
+    "correct_option": "A",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_089",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 0.5 mole H 2 is reacted with 0.5 mole I 2 in a 10 litre container at 444 ^\\circ C and At same temperature value of equilibrium constant K c is 49, the ratio of [HI] and [I 2 ] will be :-",
+    "options": {
+      "A": "7",
+      "B": "1 7",
+      "C": "1 7",
+      "D": "49"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_090",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of A reacts with one mole of B to form 0.1 mole of C and 0.1 mole of D. What will be the value of the equilibrium constant ? A + B  C + D",
+    "options": {
+      "A": "0.1",
+      "B": "100",
+      "C": "1 81",
+      "D": "81"
+    },
+    "correct_option": "A",
+    "explanation": "A 2 + B 2  2AB K = 2 at Temp=T a a 0 α = ? a - x a - x 2x a - a α a - a α 2a α α = x a x = a α K = 2 (2a ) (a a )(a a ) α - α - α = 2 = 2 2 2 2 4a a (1 ) α - α = 2 2 2 2 1 4 2 (1 ) α = = - α taking square root 1 1 2 α = - α 2 1 α = - α 1 ( 2 1) α = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_091",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a reaction H 2(g) + I 2(g)  2HI (g) at 721 ^\\circ C the value of equilibrium constant is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "C 2 H 5 OH+CH 3 COOH  CH 3 COOC 2 H 5 +H 2 O t = 0 1 1 0 0 t = t eq 1 - x 1 - x x x 2 2 x x x V V K 4 (1 x) (1 x) (1 x) V V ⋅ = = = - - - taking square root = x 1 x - = 2 x = 2 - 2x 3x = 2 x = 2 3 ⇒ α = x a = 2 3 1 × = 0.66 ⇒ 66 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_092",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 0.5 moles each of H 2 & I 2 is added to the system the value of equilibrium constant will be.",
+    "options": {
+      "A": "100",
+      "B": "25",
+      "C": "50",
+      "D": "200"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_093",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the reaction A + 3B  2C, initially 10 mole each of A and B were taken. If equilibrium pressure is 8 atm and α of A = 20% then K p will be :-",
+    "options": {
+      "A": "1 4",
+      "B": "1 8",
+      "C": "1 16",
+      "D": "1 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_094",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the reaction N 2(g) + O 2(g)  2NO (g) at equilibrium the concentrations of N 2 , O 2 and NO are 0.25, 0.05 and 1 M respectively. Calculate initial concentrations of N 2 and O",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 O 3  NO + NO 2 t = 0 2 0 0 10% = α t = eq 2 - 0.2 0.2 0.2 α = x a = 0.1 x = 0.1 × 2 ⇒ 1.8 0.2 0.2 x = 0.2 [N 2 O 3 ] : [NO] : [NO 2 ] = 1."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_095",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 0.25 M, 0.35 M (2) 0.05 M, 0.35 M (3) 0.75 M, 0.55 M (4) 0.75 M, 0.45 M",
+    "options": {
+      "A": "0.25 M, 0.35 M",
+      "B": "0.05 M, 0.35 M",
+      "C": "0.75 M, 0.55 M",
+      "D": "0.75 M, 0.45 M"
+    },
+    "correct_option": "A",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_096",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At the equilibrium of the reaction, N 2 O 4 (g)  2NO 2 (g), the observed molar mass of N 2 O 4 is 77.70 g. The percentage dissociation of N 2 O 4 is :-",
+    "options": {
+      "A": "28.4",
+      "B": "46.7",
+      "C": "22.4",
+      "D": "18.4"
+    },
+    "correct_option": "A",
+    "explanation": "H 2 (g) + CO 2 (g)  H 2 O(g) + CO(g) t = 0 1 1 0 0 At t=eq. 1 - x 1 - x x x 2 2 x x x V V K 1.8 1 x 1 x (1 x) V V ⋅ = = = - - - ⋅ x 1.8 1 x = - = 1.34 x = 1.34 - 1.34 x 2.34 x = 1.34 x = 1.34 2.34 = 0.5726 Conc. of CO = x V = 0.5726 1 = 0.573 mol L -1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_097",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A  2B, K p ; C  D + E, K p' . If degrees of dissociation of A and C are same and K p = 2K p ' , then the ratio of total presure P/P'=?",
+    "options": {
+      "A": "1 2",
+      "B": "1 3",
+      "C": "1 4",
+      "D": "2"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_098",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When sulphur is heated at 800 K, the initial pressure of 1 atm decreases by 20% at equilibrium. K p of the reaction S 8 (g)  4S 2 (g) is :-",
+    "options": {
+      "A": "0.2",
+      "B": "0.512",
+      "C": "1.51",
+      "D": "2"
+    },
+    "correct_option": "A",
+    "explanation": "A + 2B  C K 1 = 2 [C] [B] [A] C + D  3A K 2 = 3 [A] [C][D] 6B + D  2C K 3 = 2 6 [C] [D][B] K 1 3 ⋅ K 2 = 3 3 2 6 3 6 [C] [A] [C] [C][D] [B] [A] [B] [D] ⋅ = 3 1 2 3 K K K ⋅ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_099",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "K p value for C 2 H 4(g) + H 2(g)  C 2 H 6(g) is 5× 10 18 atm -1 and K p for C 2 H 2 + H 2(g)  C 2 H 4(g) is 5 × 10 26 atm -1 at 50^\\circC. Calculate K p for the reaction 2H 2(g) + C 2 H 2(g)  C 2 H 6(g)",
+    "options": {
+      "A": "2.5 × 10 45",
+      "B": "21 × 10 8",
+      "C": "1.5 × 10 -45",
+      "D": "2.5 × 10 -45"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_100",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction NH 4 HS(s)  NH 3 (g) + H 2 S(g); K p = 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(K eq ) 1 = 2 2 3 2 2 2 2 [SO ] [0.1] [SO ] [O ] [0.1] [0.1] = = 10 (K eq ) 2 = 2 2 3 3 3 2 2 [NH ] [0.1] [N ][H ] [0.1][0.1] = = 100 (K eq ) 3 = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 (K eq ) 4 = 4 5 9 3 2 4 6 10 2 [NH ] [O ] (0.1) [NO] [H O] (0.1) = = 10 extent ∝ k eq : II > I = IV > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_101",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The total pressure at equilibrium is :-",
+    "options": {
+      "A": "0.3 atm",
+      "B": "0.09 atm",
+      "C": "0.6 atm",
+      "D": "0.36 atm"
+    },
+    "correct_option": "A",
+    "explanation": "In 2 O 4  2NO 2 , when [N 2 O 4 ] = 0.1 = [NO 2 ] Q = 2 2 2 2 4 [NO ] [0.1] [N O ] [0.1] = = 0.1 M Q < Kc → Reaction goes forward direction ⇒ Kc = Q, at point D & F equilibrium is attained $//(1 TARGET : 202 5 PHYSICAL CHEMISTRY 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_102",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The conversion of ozone into oxygen is exothermic. Under what conditions is ozone the most stable ? 2O 3 (g)  3O 2 (g)",
+    "options": {
+      "A": "At low pressure and low temperature",
+      "B": "At high pressure and high temperature",
+      "C": "At high pressure and low temperature",
+      "D": "At low pressure and high temperature"
+    },
+    "correct_option": "A",
+    "explanation": "2NOBr(g)  2NO(g) + Br 2 (g) t = 0 p^\\circ 0 0 p^\\circ - 0.4p^\\circ 0.4p^\\circ 0.2p^\\circ 0.6p^\\circ 0.4p^\\circ 0.2p^\\circ p T = p^\\circ + 0.2p^\\circ = 0.30 1.2 p^\\circ = 0.3 p^\\circ = 0.3 1 1.2 4 = = 0.25 atm K p = 2 2 (0.4p ) (0.2p ) (0.6p ) ^\\circ ^\\circ ^\\circ = 4 4 6 6 × × 0.2 × 0.25 = 4 9 × 0.2 × 0.25 K p = 0.2 1 90 45 = Then K p 1 for 2NO(g) + Br 2 (g)  2NOBr(g) will be = P 1 1 K 1 / 45 = = 45"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_103",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following gas-phase reaction : 2A(g) + B(g)  C(g) + D(g) An equilibrium mixture of reactants and products is subjected to the following changes:- (I) A decrease in volume (II) An increase in temperature (III) Addition of reactants (IV) Addition of an inert gas at constant volume Which of these changes affect the composition of the equilibrium mixture but leaves the value of K c unchanged :",
+    "options": {
+      "A": "I, II",
+      "B": "I, II, III",
+      "C": "II, III, IV",
+      "D": "I, III $//"
+    },
+    "correct_option": "A",
+    "explanation": "A(g)  B(g) if total mole = a moles of B = a 40 100 × = 0.4a moles of A = a 60 100 × = 0.6a Keq = 0.4a 0.6a = 0.67"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_104",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the dissociation of I 2 (g) at 1000 K in a container of 1 litre :- I 2 (g)  2I - (g) ; K C = 10 10 Select the correct relation:-",
+    "options": {
+      "A": "[I 2 ] > [I - ]",
+      "B": "[I 2 ] < [I - ]",
+      "C": "[I 2 ] = [I - ]",
+      "D": "[I 2 ] = 1 2 [I - ]"
+    },
+    "correct_option": "A",
+    "explanation": "H 2 (g) + S(s)  H 2 S(g) log 2 1 1 2 K H 1 1 K 2.303R T T ∆   = -     log 9.25 1 H 1 1 18.5 2 2.303 8.314 925 1000 ∆     = = -     ×     - 0.3010 = H 75 2.30 8.314 925 1000 ∆     × ×   ∆ H = - 71080.57 J/mole"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_105",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Volume of the flask in which species are transferred is double of the earlier flask. In which of the following cases, equilibrium is affected? I : N 2 (g) + 3H 2 (g)  2NH 3 (g) II : N 2 (g) + O 2 (g)  2NO(g) III : PCl 5 (g)  PCl 3 (g) + Cl 2 (g) IV : 2NO(g)  N 2 (g) + O 2 (g)",
+    "options": {
+      "A": "I, II",
+      "B": "II, III",
+      "C": "I, III",
+      "D": "III, IV"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 3 C 3 3 2 2 (NH ) (0.5) 0.25 Q 0.0104 24 (N ) (H ) 3 (2) = = = = × × Q C < K C reaction will go in forward direction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_106",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a reversible reaction K c > K p and ∆ H = +40 kCal. The product will be obtained in less amount at :-",
+    "options": {
+      "A": "High pressure, high temperature",
+      "B": "Low pressure, low temperature",
+      "C": "High pressure, low temperature",
+      "D": "Low pressure, high temperature"
+    },
+    "correct_option": "A",
+    "explanation": "For exothermic process as T ↑ yield ↓ so T 1 > T 2 > T 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_107",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the dissociation reaction N 2 O 4 (g)  2NO 2 (g), the degree of dissociation ( α ) in terms of K p and total equilibrium pressure P is",
+    "options": {
+      "A": "α = p P 4P K K +",
+      "B": "α = p P K 4P K +",
+      "C": "α = p K 4P",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_108",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The preparation of SO 3 (g) by raction SO 2 (g) + 1 2 O 2 (g)  SO 3 (g) is an exothermic reaction. If the preparation follows the following temperature-pressure relationship for its % yield, then for temperatures T 1 , T 2 & T",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "NH 4 HS (s)  NH 3(g) + H 2 S (g) t = t eq P' P' 25 = P' + P' ⇒ (P') 2 = 25 ⇒ P' = 5 atm Total pressure at equilibrium = P' + P' = 5 + 5 = 10 atm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_109",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct option is",
+    "options": {
+      "A": "T 3 > T 2 > T 1",
+      "B": "T 1 > T 2 > T 3",
+      "C": "T 1 = T 2 = T 3",
+      "D": "Nothing could be predicted about temperature through given information."
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_110",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium constant for : PCl 5  PCl 3 + Cl 2 is 0.5 at 500 K. What is the state of vessel shown below ? PCl 3 Cl 2 PCl 5 (1) The contents of the vessel are not in equilibrium, with an excess of PCl",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "∆ G^\\circ = -2.303 RT log K eq X.1000 = -2.303 × 2 × 300 × log100 X = -2.7636 $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_111",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(2) The contents of vessel are in equilibrium. (3) The contents of the vessel are not in equilibrium, with an excess of PCl 3 and Cl",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "C 2 H 5 OH+CH 3 COOH  CH 3 COOC 2 H 5 +H 2 O t = 0 1 1 0 0 t = t eq 1 - x 1 - x x x 2 2 x x x V V K 4 (1 x) (1 x) (1 x) V V ⋅ = = = - - - taking square root = x 1 x - = 2 x = 2 - 2x 3x = 2 x = 2 3 ⇒ α = x a = 2 3 1 × = 0.66 ⇒ 66 %"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_112",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(4) Nothing can be predicted regarding the equilibrium just from the diagram given above.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_113",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At 473 K, K c for the reaction PCl 5(g)  PCl 3(g) + Cl 2(g) is 8.3 × 10 -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_114",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What will be the value of K c for the formation of PCl 5 at the same temperature ?",
+    "options": {
+      "A": "8.3 × 10 3",
+      "B": "120.48",
+      "C": "8.3 × 10 -3",
+      "D": "240.8"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_115",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "18.4 g of N 2 O 4 is taken in a 1 L closed vessel and heated till the equilibrium is reached. N 2 O 4(g)  2NO 2(g) At equilibrium it is found that 50% of N 2 O 4 is dissociated. What will be the value of equilibrium constant ?",
+    "options": {
+      "A": "0.2",
+      "B": "2",
+      "C": "0.4",
+      "D": "0.8"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_116",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "5 moles of SO 2 and 5 moles of O 2 react in a closed vessel. Till equilibrium 60% of the SO 2 is consumed. The total number of gaseous moles (SO 2 , O 2 and SO 3 ) in the vessel is :-",
+    "options": {
+      "A": "5.1",
+      "B": "3.9",
+      "C": "10.5",
+      "D": "8.5 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_117",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction N 2(g) + O 2(g)  2NO (g) , the value of K c at 800^\\circC is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_118",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the value of K p at this temperature ?",
+    "options": {
+      "A": "0.5",
+      "B": "0.01",
+      "C": "0.05",
+      "D": "0.1"
+    },
+    "correct_option": "A",
+    "explanation": "PCl 5 (g)  PCl 3 (g) + Cl 2 (g) a b c a - a α b + a α c + a α n T = a + b + c + a α 3 PCl P = 3 PCl T n P n = (b a ) (a b c a ) + α + + + α × P"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_119",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction a + b  c + d, initially concentrations of a and b are equal and at equilibrium the concentration of d is found to be twice of concentration of a. What will be the equilibrium constant for the reaction ?",
+    "options": {
+      "A": "2",
+      "B": "9",
+      "C": "4",
+      "D": "3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_120",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a reaction NH 4 COONH 2(s)  2NH 3(g) + CO 2(g) , the equilibrium pressure is 3 atm. K p for the reaction will be :-",
+    "options": {
+      "A": "27",
+      "B": "4",
+      "C": "3",
+      "D": "9"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_121",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "0.6 moles of PCl 5 , 0.3 mole of PCl 3 and 0.5 mole of Cl 2 are taken in a 1 L flask to obtain the following equilibrium; PCl 5(g)  PCl 3(g) + Cl 2(g) If the equilibrium constant K c for the reaction is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_122",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Predict the direction of the reaction.",
+    "options": {
+      "A": "Forward direction",
+      "B": "Backward direction",
+      "C": "Direction of the reaction cannot be predicted",
+      "D": "Reaction does not move in any direction"
+    },
+    "correct_option": "A",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_123",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In 2 O 4(g)  2NO 2 ; K c = 5.7 × 10 -9 at 298 K At equilibrium :-",
+    "options": {
+      "A": "concentration of NO 2 is higher than that of N 2 O 4",
+      "B": "concentration of N 2 O 4 is higher than that of NO 2",
+      "C": "both N 2 O 4 and NO 2 have same concentration",
+      "D": "concentration of N 2 O 4 and NO 2 keeps on changing"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_124",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following reaction is at equilibrium, 3 2 (aq ) (aq ) (aq ) Yellow Colourless Deep red Fe SCN [Fe(SCN)] + - + +     2 c 3 [Fe(SCN)] K [Fe ] [SCN ] + + - = In the above reaction, colour intensity of red colour can be increased by :-",
+    "options": {
+      "A": "addition of SCN -",
+      "B": "addition of H 2 C 2 O 4 which reacts with Fe 3+ ions",
+      "C": "addition of Hg 2+ ions which react with SCN - ions",
+      "D": "red colour intensity cannot be changed"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_125",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Formation of ClF 3 from Cl 2 and F 2 is an exothermic process. The equilibrium system can be represented as Cl 2(g) + 3F 2(g)  2ClF 3(g) ; ∆ H = -329 kJ Which of the following will increase quantity of ClF 3 in the equilibrium mixture ?",
+    "options": {
+      "A": "Increase in temperature, decrease in pressure, addition of Cl 2",
+      "B": "Decrease in temperature and pressure, addition of ClF 3",
+      "C": "Increase in temperature and pressure, removal of Cl 2",
+      "D": "Decrease in temperature, increase in pressure, addition of F 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_126",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilibrium - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "log p c K K + log RT = 0 is true relationship for the following reaction:-",
+    "options": {
+      "A": "PCl 5",
+      "B": "2SO 2",
+      "C": "In 2",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_127",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilirbium-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "0.5 LAW OF MASS ACTION AND FACTOR AFFECTING equilibrium CONSTANT",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2NaHCO 3 (s)  Na 2 CO 3 (s) + CO 2 (g) + H 2 O (g) t = 0 0 atm t = eq 0 0 2 CO p 2 H O p 2 2 CO H O p p p = = 2p = 1.04 K P = 2 2 CO H O p p ⋅ p = 0.52 atm K P = 0.52 × 0.52 = 0.2704"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_128",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilirbium-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 2.5 (2) 4 (3) 0.25 (4) 1.0",
+    "options": {
+      "A": "2.5",
+      "B": "4",
+      "C": "0.25",
+      "D": "1.0"
+    },
+    "correct_option": "D",
+    "explanation": "S 8 (g)  4S 2 (g) p ∝ n At t =0 1 atm At t = eq. 1 - p 4p α = 0.2 1 - 0.2 4 × 0.2 α = p 1 0.8 0.8 p = 0.2 K P = 2 8 4 4 s S p (0.8) p (0.8) = = (0.8) 3 atm 3 = 0.512 atm 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_129",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Chemical Equilirbium-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For reaction aA      L + mM. In condition of suddenly volume increase, degree of dissociation is decrease it represent that.",
+    "options": {
+      "A": "a <",
+      "B": "a =",
+      "C": "a =",
+      "D": "a >"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_130",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an elementary reaction A + 2B → 2C + D. If the concentration of A is increased four times and B is decreased to half of its initial concentration then the rate becomes",
+    "options": {
+      "A": "Twice",
+      "B": "Half",
+      "C": "Unchanged",
+      "D": "One fourth of the rate CE01 - 0042"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) For an elementary reaction : r = K[A] [B] 2 …(I) r 1 = K[4A] [B/2] 2 …(II) Divide (I) by (II) ( ) 1 r 1 4 r 4 (  =  ( ) )  1 r r ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_131",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the chemical reaction N 2 + 3H 2 2NH 3 at equilibrium, state whether : -",
+    "options": {
+      "A": "Equal volumes of N 2 & H 2 are reacting",
+      "B": "Equal masses of N 2 & H 2 are reacting",
+      "C": "The reaction has stopped",
+      "D": "The same amount of ammonia is formed as is decomposed into N 2 and H 2 in the same time CE02 - 0027"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_132",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Active mass of 5g CaO is : -",
+    "options": {
+      "A": "56",
+      "B": "1",
+      "C": "3.5",
+      "D": "2 CE03 - 0025"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Active mass of pure solid = 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_133",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ratio of active masses of 22g CO 2 , 3g H 2 and 7g N 2 in a gaseous mixture is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) [CO 2 ] : [H 2 ] : [N 2 ] = 22"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_134",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following example shows effect of catalyst on reversible reaction",
+    "options": {
+      "A": "It gives new reaction path with low activation energy.",
+      "B": "It shifts equilibrium right side.",
+      "C": "It decreases kinetic energy of activated molecules.",
+      "D": "It decreases rate of backward reaction. CE02 - 0028"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Catalyst provides an alternate path with lower activation energy."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_135",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In reversible chemical reaction equilibrium will establish when -",
+    "options": {
+      "A": "Reactant is completely converted into product",
+      "B": "Rate of forward and backward reaction is equal",
+      "C": "Minimum yield of product",
+      "D": "concentration of reactant and product is equal CE02 - 0026 LAW OF MASS ACTION"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Rate of forward and backward reaction is equal"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_136",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium concentration of B for the reversible reaction A B can be evaluated by the expression : -",
+    "options": {
+      "A": "K C 1 e [A] -",
+      "B": "1 f e b k [A] k -",
+      "C": "1 f b k k - [A] e",
+      "D": "k f k b 1 e [A] - CE04 - 0033"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) K e q. = f b k [B] k [A] = [B] = f b k k . [A] = k f . 1 b k - [A] 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_137",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In this reaction Ag + + 2NH 3 Ag(NH 3 ) 2 + at 298K molar concentration of Ag + , Ag(NH 3 ) 2 + and NH 3 is 10 - 1 , 10 - 1 , and 10",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) K c = 2 3 3 2 [O ] [O ] 3 × 10 - 59 = 2 3 3 [O ] [0.040] [O 3 ] = 4.38 ×10 - 32"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_138",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of K C at 298K for this equilibrium : -",
+    "options": {
+      "A": "10 - 6",
+      "B": "10 6",
+      "C": "2 × 10 - 3",
+      "D": "2 × 10 6 CE04 - 0036 Exercise - I NEET : Chemistry"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) At equilibrium : - rate of rate of forward = backward reaction reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_139",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction CuSO 4 .5H 2 O (s) CuSO 4 .3H 2 O (s) + 2H 2 O (g) Which one is correct representation : -",
+    "options": {
+      "A": "K p = 2 2 H O p",
+      "B": "K c = [H 2 O] 2",
+      "C": "K p = K c",
+      "D": "All of these CE05 - 0023"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) K P = 2 2 H O P K C = [H 2 O]² K P = K C (RT)²"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_140",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For which reaction at 298 K, the value p c K K of is maximum and minimum respectively : -",
+    "options": {
+      "A": "In 2 O 4 2NO 2",
+      "B": "2SO 2 + O 2 2SO 3",
+      "C": "X + Y 4Z",
+      "D": "A + 3B 7C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) k P = k C (RT) \\Delta ng p ng c k (RT) k \\Delta = for p c k minimum k =  \\Delta ng → minimum for p c k maximum k =  \\Delta ng → maximum"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_141",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the two gaseous equilibrium involving SO 2 and the corresponding equilibrium constants at 299 K SO 2 (g) + 1 2 O 2 (g) SO 3 (g) ; K 1 4SO 3 (g) 4SO 2 (g) + 2O 2 (g) ; K 2 The value of the equilibrium constants are related by : -",
+    "options": {
+      "A": "K 2 = 4 1 1",
+      "B": "K 2 = 4 1 K",
+      "C": "K 2 = 1 4 1 1 K (  ( ) ) ",
+      "D": "K 2 = 1 1 K CE03 - 0029"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reverse (1) & multiply by"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_142",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a reaction N 2 + 3H 2 2NH 3 , the value of K C does not depends upon : -",
+    "options": {
+      "A": "Initial concentration of the reactants",
+      "B": "Pressure",
+      "C": "temperature",
+      "D": "Catalyst"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) equilibrium constant of a reaction changes with temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_143",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For any reversible reaction if concentration of reactants increases then value of equilibrium constant : -",
+    "options": {
+      "A": "Depends on amount of concentration",
+      "B": "Unchanged",
+      "C": "Decreases",
+      "D": "Increase s CE03 - 0026"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) equilibrium constant of a reaction changes with temperature."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_144",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Effect of increasing temperature on equilibrium constant is given by log K 2 - log K 1 = H 2.303R -\\Delta ^\\circ 2 1 1 1 T T   -     then for an endothermic reaction the false statement is: -",
+    "options": {
+      "A": "2 1 1 1 T T   -     = positive",
+      "B": "log K 2 > log K 1",
+      "C": "\\Delta H = positive",
+      "D": "K 2 > K 1 CE08 - 0015"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2 1 1 1 T T   -      1 2 1 2 T T T T   -     <",
+    "statements": {
+      "S": "-"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_145",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In system A(s) 2B(g) + 3C(g) at equilibrium if concentration of 'C' is doubled then concentration of B at equilibrium will be : -",
+    "options": {
+      "A": "Double its original concentration",
+      "B": "Half its original concentration",
+      "C": "2 2 its original concentration",
+      "D": "1 2 2 its original concentration CE03 - 0024"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) K = [B] 2 [C] 3 K = [B 1 ] 2 [C 1 ] 3 Given : [C 1 ] = [2C] [B] 2 [ C 3 ] = [B 1 ] 2 [2C 3 ] [B 1 ] 2 = 2 [B] 8  [B 1 ] = [B] 2 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_146",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction, H 2 (g) + I 2 (g) 2HI(g) equilibrium constant, K P changes with : -",
+    "options": {
+      "A": "temperature",
+      "B": "Total pressure",
+      "C": "Catalyst",
+      "D": "Amount of H 2 and I 2 present CE08 - 0013"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) equilibrium constant depends only on temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_147",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equilibrium constant of the reaction H 2 (g)+ I 2 (g) 2HI(g) is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_148",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the volume of the container is reduced to one fourth of its original volume, the value of the equilibrium constant will be",
+    "options": {
+      "A": "16",
+      "B": "32",
+      "C": "64",
+      "D": "128 CE08 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) On  sing pressure ; equilibrium shifts towards less volume. 2 2 H O( ) H O(g) V V   Hence B.P.  ses."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_149",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If some He gas is introduced into the equilibrium PCl 5 PCl 3 + Cl 2 at constant pressure and temperature then equilibrium constant of reaction :",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "Unchanged",
+      "D": "Nothing can be said CE32 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard chemical equilibrium principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_chemical_equilibrium_150",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Chemical Equilibrium",
+      "chapter_name": "Chemical Equilibrium",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - Chemical Equilibrium.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct match list X and Y",
+    "options": {
+      "A": "A -",
+      "B": "A -",
+      "C": "A -",
+      "D": "None of these CE03 - 0033 DEGREE O F DISSOCIATION A ND APPLICATION O F LAW O F MASS ACTION"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (a) Active mass → concentration. (b) Dynamic nature → chemical equilibrium. (c) A + heat  B → forward reaction increases on  sing temperature. (d) log 2 1 1 2 k H 1 1 k 2.303 T T (  (  \\Delta = - ( ) ( ) )  )   Vant Hoff’s equation. (e) 2A (g) + B (g)  3C (g) → \\Delta n g = 0"
+  }
+]

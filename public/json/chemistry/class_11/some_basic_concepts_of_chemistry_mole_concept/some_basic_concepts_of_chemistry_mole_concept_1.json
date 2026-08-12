@@ -1,0 +1,3761 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_001",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of atoms present in 16 g of oxygen is",
+    "options": {
+      "A": "6.02 × 10 11.5",
+      "B": "3.01 × 10 23",
+      "C": "3.01 × 10 11.5",
+      "D": "6.02 × 10 23 MC02 - 0044"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 16 g oxygen (O 2 ) 2 O 16 1 n 32 2 = = Number of O - atoms = 2 O n × N A × atomicity = 23 1 6.022 10 2 2    = 6.022 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_002",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of atoms in 4.25 g of NH 3 is approx: -",
+    "options": {
+      "A": "1  10 23",
+      "B": "1.5  10 23",
+      "C": "2  10 23",
+      "D": "6  10 23 MC02 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_003",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains maximum number of oxygen atoms ?",
+    "options": {
+      "A": "1 g of O",
+      "B": "1 g of O 2",
+      "C": "1 g of O 3",
+      "D": "all have the same number of atoms MC02 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mass Mole Number of atoms [n × N A × atomicity] 1 g O 1/16 A A N 1 N 1 16 16   = 1 g O 2 1/32 A A N 1 N 2 32 16   = 1 g O 3 1/48 A A N 1 N 3 48 16   = All have the same number of atoms."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_004",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of atoms present in 0.5 g atom of nitrogen is same as the atoms in -",
+    "options": {
+      "A": "12 g of C",
+      "B": "32 g of S",
+      "C": "8 g of oxygen",
+      "D": "24 g of Mg MC02 - 0041"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of atom in 0.5g atom of nitrogen = 0.5 × N A × 2 = N A Number of atom in 8g oxygen = 8 16 × N A × 2 = N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_005",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains maximum number of atoms ?",
+    "options": {
+      "A": "4 g of H 2",
+      "B": "16 g of O 2",
+      "C": "28 g of N 2",
+      "D": "18 g of H 2 O MC02 - 0043"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) Mass Moles Number of atoms 4g H 2 4 2 = 2 2 × N A × 2 = 4N A 16g O 2 16 1 32 2 = A A 1 N 2 N 2   = 28g N 2 28 28 = 1 1 × N A × 2 = 2N A 18g H 2 O 18 18 = 1 1 × N A × 3 = 3 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_006",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of neutrons present in 1.7 g of ammonia is -",
+    "options": {
+      "A": "In A",
+      "B": "In A /10 × 4",
+      "D": "In A × 10 × 7 MC02 - 0023",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of neutrons = n × N A × (number of neutrons) = A 1.7 N 7 17   = A N 7 10 "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_007",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "5.6 L of oxygen at STP contains -",
+    "options": {
+      "A": "6.02 × 10 23 atoms",
+      "B": "3.01 × 10 23 atoms",
+      "C": "1.505 × 10 23 atoms",
+      "D": "0.7525×10 23 atoms MC02 - 0025"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Number of atoms of oxygen = n × N A × number of atoms = 23 5.6 6.022 10 2 22.4    = 3.01 × 10 23 atoms."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_008",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of oxygen atoms in 8 g of ozone is -",
+    "options": {
+      "A": "6.02 × 10 23",
+      "B": "23 6.02 10 2 ",
+      "C": "23 6.02 10 3 ",
+      "D": "23 6.02 10 6  MC02 - 0042"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Number of atoms in [O 3 ] = n × N A × number of atoms = A 8 N 3 48   = 23 A N 6.022 10 2 2  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_009",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sum of number of protons, electrons and neutrons in 12g of 12 6 C is : -",
+    "options": {
+      "A": "1.8",
+      "B": "12.044 × 10 23",
+      "C": "1.084 × 10 25",
+      "D": "10.84 × 10 23 MC02 - 0045"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Sum of protons, electrons and neutrons in 12g of 12 6 C = n × N A × [sum of e, p & n] = 12 12 × N A × 18 = 18 × 6.022 × 10 23 = 1.08 × 10 25 NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_010",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The weight of one atom of Uranium is 238 amu. Its actual weight is .... g.",
+    "options": {
+      "A": "1.43 × 10 26",
+      "B": "3.94 × 10 - 22",
+      "C": "6.99 × 10 - 23",
+      "D": "1.53 × 10 - 22 MC02 - 0015"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 1 “U” atom = 238 amu 1 amu = 1.66 × 10 - 24 g 1 “U” atom = 238 × (1.66 × 10 - 24 g) ≃ 3.94 × 10 - 22 g 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_011",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The actual weight of a molecule of water is -",
+    "options": {
+      "A": "&",
+      "B": "2.99 × 10 - 23 g",
+      "C": "both",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "2 L of Cl 2 will react with 11.2 L H 2 to product 22.4 L HCl. Remaining H 2 = 12 - 11.2 = 0.8 L"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_012",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the mass of a molecule of CH",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_013",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has the highest mass ?",
+    "options": {
+      "A": "1 g atom of C",
+      "B": "1/2 mole of CH 4",
+      "C": "10 mL of water",
+      "D": "3.011 × 10 23 atoms of oxygen MC02 - 0013"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 1g atom of C = 1 mole of C = 12g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_014",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains the least number of molecules ?",
+    "options": {
+      "A": "4.4 g CO 2",
+      "B": "3.4 g NH 3",
+      "C": "1.6 g CH 4",
+      "D": "3.2 g SO 2 MC02 - 0028"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass Moles Number of atoms 4.4g CO 2 4.4 44 = 0.1 0.1 N A 3.4g NH 3 3.4 17 = 0.2 0.2 N A 1.6g CH 4 1.6 16 = 0.1 0.1 N A 3.2g SO 2 3.2 64 = 0.05 0.05 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_015",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of molecule in 4.25 g of NH 3 is -",
+    "options": {
+      "A": "1.505 × 10 23",
+      "B": "3.01 × 10 23",
+      "C": "6.02 × 10 23",
+      "D": "None of these MC02 - 0019 Exercise - I Some Basic Concepts of Chemistry - Mole Concept"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 3 NH 4.25 1 n 17 4 = = Number of NH 3 molecules = 1 4 × 6.022 ×10 23 = 1.505 ×10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_016",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Elements A and B form two compounds B 2 A 3 and B 2 A. 0.05 moles of B 2 A 3 weight 9.0 g and 0.10 mole of B 2 A weight 10 g. Calculate the atomic weight of A and B : -",
+    "options": {
+      "A": "20 and 30",
+      "B": "30 and 40",
+      "C": "40 and 30",
+      "D": "30 and 20 MC02 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Let atomic wt. of A = a Atomic wt. of B = b Mol ar mass of B 2 A 3 = (2 × b) + (3 × a) = mass of 1 mole substance 0.05 mol B 2 A 3 → 9g 1 mol of B 2 A 3 = 9 0.05 =180g 2b + 3a = 180 …(1) molar mass of B 2 A = (2b + a) 0.1 mol of B 2 A → 10g 1 mol of B 2 A → 10 100 0.1 =  2b + a = 100 …(2) On solving a 40, b 30 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_017",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "5.6 L of oxygen at NTP is equivalent to -",
+    "options": {
+      "A": "1 mol",
+      "B": "1/2 mol",
+      "C": "1/4 mol",
+      "D": "1/8 mol MC14 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 2 O 5.6 1 n 22.4 4 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_018",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4.4 g of an unknown gas occupies 2.24 L of volume at STP. The gas may be : -",
+    "options": {
+      "A": "In 2 O",
+      "B": "CO",
+      "C": "CO 2",
+      "D": "1 & 3 both MC02 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) gas 2.24 n 0.1 22.4 = = Molar mass = gas gas w n = 4.4 0.1 = 44 CO 2 & N 2 O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_019",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which contains least number of molecules -",
+    "options": {
+      "A": "1 g CO 2",
+      "B": "1 g N 2",
+      "C": "1 g O 2",
+      "D": "1 g H 2 MC02 - 0021"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Mass Moles Number of atoms 1g CO 2 1 44 1 44 N A 1g N 2 1 28 1 28 N A 1g O 2 1 32 1 32 N A 1g H 2 1 2 1 2 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_020",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If V mL of the vapours of substance at NTP weight W g. Then molecular weight of substance is : -",
+    "options": {
+      "B": "V W × 22.4",
+      "D": "W 1 V 22400   MC02 - 0012",
+      "A": "Option A",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) mass of gas = w ( g ) Vol. of gas = V mL (at STP) moles of gas = mass w mol.wt. mol.wt. = moles of gas = STP V (ml) 22400 STP V (ml) w mol.wt. 22400 = Mol. wt. = (ml) w 22400 V  Some Basic Concepts of Chemistry - Mole Concept 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_021",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 3.01  10 20 molecules are removed from 98 mg of H 2 SO 4 , then the number of moles of H 2 SO 4 left are : -",
+    "options": {
+      "A": "0.1  10 - 3",
+      "B": "0.5  10 - 3",
+      "C": "1.66  10 - 3",
+      "D": "9.95  10 - 2 MC01 - 0032"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) NaOH + HCl → NaCl + H 2 O Given  1g (0.75 M, 25 ml) moles of NaOH = 1 40 mol = 0.025 mol moles of HCl = 0.75 25 0.01875 1000  = mol Some Basic Concepts of Chemistry - Mole Concept now find the L.R.  Value = given amount S.C NaOH ; HCl 0.025 1 > 0.01875 1 So, L.R will be HCl Unreacted moles of NaOH = 0.025 - 0.01875 = 0.00625 mol Unreacted mass = 0.00625 × 40 g = 0.25 g = 250 mg"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_022",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas is found to have the formula (CO) x . It's VD is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (2) Element % Moles Simple Ratio A 32 32 1 64 2 = 1 B 20 20 1 40 2 = 1 C 48 48 3 32 2 = 3 Empirical formula = ABC 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_023",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The value of x must be : -",
+    "options": {
+      "A": "7",
+      "B": "4",
+      "C": "5",
+      "D": "6 MC02 - 0022"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_024",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Vapour density of gas is 11.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mol. wt. = 2 × 11.2 = 22.4g moles of gas = 2.4 22.4 Vol. of gas (at STP) = moles × 22.42 = 2.4 22.4 2.42 22.4  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_025",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Volume occupied by 2.4 g of this at STP will be -",
+    "options": {
+      "A": "11.2 L",
+      "B": "2.24 L",
+      "C": "22.4 L",
+      "D": "2.4 L SO01 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_026",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of a gas in discharge tube is 1.12 × 10 - 7 mL at STP. Then the number of molecule of gas in the tube is -",
+    "options": {
+      "A": "3.01 × 10 4",
+      "B": "3.01 × 10 15",
+      "C": "3.01 × 10 12",
+      "D": "3.01 × 10 16 MC02 - 0024"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) STP gas V (ml) n 22400 = = 7 11 1.12 10 1 10 22400 2 - -  =  molecules of gas = moles × N A = 11 23 1 10 6.02 10 2 -    = 3.01 × 10 12"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_027",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of electron in 3.1 mg 3 NO - is (N A = 6 × 10 23 )",
+    "options": {
+      "A": "32",
+      "B": "1.6 × 10 - 3",
+      "C": "9.6 × 10 20",
+      "D": "9.6 × 10 23 MC01 - 0033"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 3 ) Number of electrons in 3 3 A NO NO n N - - =  (number of electrons) = 3 23 3.1 10 6.022 10 32 62 -     = 9.6 × 10 20"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_028",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that one mole of N 2 at NTP occupies 22.4 L the density of N 2 is -",
+    "options": {
+      "A": "1.25 g L - 1",
+      "B": "0.80 g L - 1",
+      "C": "2.5 g L - 1",
+      "D": "1.60 g L - 1 MC04 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Vol. of 1 mole N 2 [at N.T.P.] = 22.4 L mass of 1 mole N 2 = 28g Density of N 2 = 1 mass 28g 1.25g L volume 22.4L - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_029",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of carbon atoms present in a signature, if a signature written by carbon pencil, weighing 1.2 × 10 - 3 g is",
+    "options": {
+      "A": "12.04 × 10 20",
+      "B": "6.02 × 10 19",
+      "C": "3.01 × 10 19",
+      "D": "6.02 × 10 20 MC02 - 0026 QUESTIONS BASED ON PERCENTAGE, EMPIRICAL FORMULA & MOLECULAR FORMULA"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) number of carbon atoms = n c × N A × atomicity = 3 1.2 10 12 -  × 6.022 × 10 23 × 1 = 6.022 × 10 19"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_030",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A compound of X and Y has equal mass of them. If their atomic weights are 30 and 20 respectively. Molecular formula of the compound is : -",
+    "options": {
+      "A": "X 2 Y 2",
+      "B": "X 3 Y 3",
+      "C": "X 2 Y 3",
+      "D": "X 3 Y 2 MC07 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) X Y mass w w moles w 30 w 20 simple ratio × 60 1 60 30  w 60 20  2 3 Molecular formula = X 2 Y 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_031",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An oxide of sulphur contains 50% of sulphur in it. Its empirical formula is -",
+    "options": {
+      "A": "SO 2",
+      "B": "SO 3",
+      "C": "SO",
+      "D": "S 2 O SO16 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) mass moles simples ratio S 50 50 1.5 32 = 1.5 1 1.5 = O 50 50 3.125 16 = 3.125 2 1.5  Empirical formula = SO 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_032",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hydrocarbon contains 80% of carbon, then the hydrocarbon is -",
+    "options": {
+      "A": "CH 4",
+      "B": "C 2 H 4",
+      "C": "C 2 H 6",
+      "D": "C 2 H 2 MC07 - 0011"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Mass% atomic ratio simples ratio C 80 80 6.66 12 = 6.66 1 6.66 = H 20 20 20 1 = 20 3 6.66  C 1 H 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_033",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Empirical formula of glucose is -",
+    "options": {
+      "A": "C 6 H 12 O 6",
+      "B": "C 3 H 6 O 3",
+      "C": "C 2 H 4 O 2",
+      "D": "CH 2 O MC07 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_034",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An oxide of metal M has 40% by mass of oxygen. Metal M has atomic mass of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_035",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The empirical formula of the oxide is : -",
+    "options": {
+      "A": "M 2 O",
+      "B": "M 2 O 3",
+      "C": "MO",
+      "D": "M 3 O 4 MC07 - 0010 NEET : Chemistry"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) STP gas V (ml) n 22400 = = 7 11 1.12 10 1 10 22400 2 - -  =  molecules of gas = moles × N A = 11 23 1 10 6.02 10 2 -    = 3.01 × 10 12"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_036",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A compound contains 38.8% C, 16.0% H and 45.2% N. The formula of the compound would be",
+    "options": {
+      "A": "CH 3 NH 2",
+      "B": "CH 3 CN",
+      "C": "C 2 H 5 CN",
+      "D": "CH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Mass% atomic ratio simples ratio C 38.8 38.8 3.23 12 = 3.23 1 3.23 = H 16 16 16 1 = 16 5 3.23  N 45.2 45.2 3.23 14  3.23 1 3.23 = 5 3 3 E.F. CH N or CH NH ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_037",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The simplest formula of a compound containing 50%(w/w) of element X(at wt. = 10) and 50% of element Y(at wt. = 20) is : -",
+    "options": {
+      "A": "XY",
+      "B": "X 2 Y",
+      "C": "XY 2",
+      "D": "X 3 Y MC07 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Mass% atomic ratio simples t ratio X 50 50 5 10 = 5 2 2.5 = Y 50 50 2.5 20 = 2.5 1 2.5 = Simplest formula = X 2 Y"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_038",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compound has same empirical formula as that of glucose : -",
+    "options": {
+      "A": "CH 3 CHO",
+      "B": "CH 3 COOH",
+      "C": "CH 3 OH",
+      "D": "C 2 H 6 MC07 - 0013"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E. F. of glucose = C 6 H 12 O 6   6 E. F . = CH 2 O CH 3 COOH  C 2 H 4 O 2   2 E. F . CH 2 O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_039",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2.2 g of a compound of phosphorous and sulphur has 1.24 g of 'P' in it. Its empirical formula is -",
+    "options": {
+      "A": "P 2 S 3",
+      "B": "P 3 S 2",
+      "C": "P 3 S 4",
+      "D": "P 4 S 3 MC07 - 0014"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass% atomic ratio simple ratio P 1.24g 1.24 0.04 31 = 4 S (2.2 - 1.24) = 0.96 0.96 0.03 32 = 3 4 3 E.F. P S ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_040",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On analysis, a certain compound was found to contain iodine and oxygen in the mass ratio of 254:",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Mass% A tomic ratio simple ratio I 254 254 2 127 = 2 O 80 80 5 10 = 5 2 5 Formula I O ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_041",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The formula of the compound is : (At mass I = 127, O = 16)",
+    "options": {
+      "A": "IO",
+      "B": "I 2 O",
+      "C": "I 5 O 2",
+      "D": "I 2 O 5 MC07 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_042",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of atoms of Cr and O are 4.8 × 10 10 and 9.6 × 10 10 respectively. Its empirical formula is -",
+    "options": {
+      "A": "Cr 2 O 3",
+      "B": "CrO 2",
+      "C": "Cr 2 O 4",
+      "D": "CrO 5 MC07 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) E. f.  obtain from simples ratio of atom Gives Cr = 4.8 × 10 10 , 0 = 9.6 ×10 10 Simplest ratio"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_043",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Insulin contains 3.4% sulphur by mass. The minimum molecular weight of insulin is :",
+    "options": {
+      "A": "941.176",
+      "B": "944",
+      "C": "945.27",
+      "D": "None MC06 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) % of S  3.4 = 1 32 100 Min.mol.wt.   Minimum molecular wt. = 32 100 941.176 3.4  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_044",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Caffine has a molecular weight of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) % of N = mass of N no.of atoms 100 molecolar wt. of Insulin   14 n 28.9 100 194  =   n = 28.9 194 4 14 100    4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_045",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It contains 28.9% by mass of nitrogen Number of atoms of nitrogen in one molecule of it is : -",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5 MC03 - 0010 QUESTIONS BASED ON STOICHIOMETRY"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_046",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An organic compound contains carbon, hydrogen and oxygen. Its elemental analysis gives 38.71% of C and 9.67% of H. The empirical formula of the compound would be : -",
+    "options": {
+      "A": "CHO",
+      "B": "CH 4 O",
+      "C": "CH 3 O",
+      "D": "CH 2 O MC07 - 0016"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_047",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The amount of water (g) produced by combustion of 286 g of propane is",
+    "options": {
+      "A": "168g",
+      "B": "200g",
+      "C": "468g",
+      "D": "693g MC02 - 0031"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_048",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a gaseous reaction of the type aA + bB ⎯ → cC + dD, which statement is wrong ?",
+    "options": {
+      "A": "a litre of A combines with b litre of B to give C and D",
+      "B": "a mole of A combines with b moles of B to give C and D",
+      "C": "a g of A combines with b g of B to give C and D",
+      "D": "a molecules of A combines with b molecules of B to give C and D MC08 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) aA + bB → cC + dD mass ratio is not same as coffi. Ratio so statement is wrong statement for this reaction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_049",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assuming that petrol is octane (C 8 H 18 ) and has density 0.8 g mL -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C 8 H 18 + 25 2 O 2 → 8CO 2 + 9H 2 O Mass of C 3 H 18 = 0.8 × 1.425 = 1140g 3 8 C H 1140 n 10 114 = = 1 mol C 8 H 18 → 25 2 mol O 2 10 mol C 8 H 18 → 25 2 × mol O 2 2 O 250 n 125 2 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_050",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1.425 L of petrol on complete combustion will consume.",
+    "options": {
+      "A": "50 mole of O 2",
+      "B": "100 mole of O 2",
+      "C": "125 mole of O 2",
+      "D": "200 mole of O 2 MC10 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 16 g oxygen (O 2 ) 2 O 16 1 n 32 2 = = Number of O - atoms = 2 O n × N A × atomicity = 23 1 6.022 10 2 2    = 6.022 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_051",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a given reaction, 9 g of Al will react with 2Al + 3 2 O 2 → Al 2 O 3",
+    "options": {
+      "A": "6g O 2",
+      "B": "8g O 2",
+      "C": "9g O 2",
+      "D": "4g O 2 MC08 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2Al + 3 2 O 2 → Al 2 O 3 n = 9 1 27 3 = 2 mol Al → 3 2 mol O 2 1 mol Al → 3 4 mol O 2 1 3 mol Al → 3 1 4 3  mol O 2 2 O 1 n 4 = wt. of O 2 = 1 32 4  = 8g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_052",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation : 2Al (s) + 3 2 O 2 (g) → Al 2 O 3(s) shows that : -",
+    "options": {
+      "A": "2 mol of Al reacts with 3 2 mol of O 2 to produce 7 2 mol of Al 2 O 3",
+      "B": "2 g of Al reacts with 3 2 g of O 2 to produce one mol of Al 2 O 3",
+      "C": "2 g of Al reacts with 3 2 L of O 2 to produce 1 mol of Al 2 O 3",
+      "D": "2 mol of Al reacts with 3 2 mol of O 2 to produce 1 mol of Al 2 O 3 MC02 - 0029 Some Basic Concepts of Chemistry - Mole Concept"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 2 Al (s) + 3 2 O 2(g) → Al 2 O 3(s) 2 mol of Al reacts with 3 2 mol of O 2 to produc e 1 mol of Al 2 O 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_053",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 L of CO 2 is passed over hot coke. When the volume of reaction mixture becomes 1.4 L, the composition of reaction mixture is -",
+    "options": {
+      "A": "0.6 L CO",
+      "B": "0.8 L CO 2",
+      "C": "0.6 L CO 2 and 0.8 L CO",
+      "D": "None MC18 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C (s) + CO 2 (g) → 2CO (g) t = 0 - 1 - t = t - 1 - x 2x Vol. after = 1 - x + 2x = 1.4 reaction x 0.4 = 2 CO V left = 1 - 0.4 = 0.6 L V CO prepared = 2 × 0.4 = 0.8 L"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_054",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "26 cc of CO 2 are passed over red hot coke. The volume of CO evolved is : -",
+    "options": {
+      "A": "15 cc",
+      "B": "10 cc",
+      "C": "32 cc",
+      "D": "52 cc MC18 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) C + CO 2 → 2CO 26 CC 1 Vol. of CO 2 → 2Vol. of CO 26 CC of CO 2 → 2 × 26 CC of CO CO V 52CC ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_055",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 1/2 mol of oxygen combine with Aluminium to form Al 2 O 3 then weight of Aluminium metal used in the reaction is (Al = 27) -",
+    "options": {
+      "A": "27 g",
+      "B": "18 g",
+      "C": "54 g",
+      "D": "40.5 g MC08 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 4Al + 3O 2 → 2Al 2 O 3 3 mol O 2 → 4 mol of Al 1 mol O 2 → 4 3 mol of Al 1 2 mol O 2 → 4 1 3 2  mol of Al Al 4 n 6 = Al 4 w = 2 6 3 27  9 18g ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_056",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 0.5 mol of BaCl 2 is mixed with 0.2 mol of Na 3 PO 4 , the maximum number of moles of Ba 3 (PO 4 ) 2 that can be formed is - 3BaCl 2 + 2Na 3 PO 4 → Ba 3 (PO 4 ) 2 + 6NaCl",
+    "options": {
+      "A": "0.7",
+      "B": "0.5",
+      "C": "0.3",
+      "D": "0.1 MC11 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 3 Ba C l 2 + 2 Na 3 PO 4 → Ba 3 (PO 4 ) 2 + 6 NaCl 0.5 0.2 L.R. 0.5 0.16 3 = 0.2 0.1 2 L.R. = 2 mol Na 3 PO 4 → 1 mol Ba 3 (PO 4 ) 2 1 mol Na 3 PO 4 → 1 2 mol Ba 3 (PO 4 ) 2 0.2 mol Na 3 PO 4 → 1 2 × 0.2 mol Ba 3 (PO 4 ) 2 3 4 2 Ba (PO ) n 0.1 = 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_057",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 8 mL of uncombined O 2 remain after exploding O 2 with 4 mL of hydrogen, the number of mL of O 2 originally were -",
+    "options": {
+      "A": "12",
+      "B": "2",
+      "C": "10",
+      "D": "4 MC09 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_058",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 g of hydrogen are ignited with 4 g of oxygen. The weight of water formed is -",
+    "options": {
+      "A": "0.5 g",
+      "B": "3.5 g",
+      "C": "4.5 g",
+      "D": "2.5 g MC11 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_059",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction A + 2B ⎯ → C, 5 mol of A and 8 mol of B will produce",
+    "options": {
+      "A": "5 mole of C",
+      "B": "4 mole of C",
+      "C": "8 mole of C",
+      "D": "13 mole of C MC11 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) A + 2B → C moles 5 8 L.R. 5 1 8 4 2 = n C = 4 × 1 = 4"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_060",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 1.6 g of SO 2 and 1.5 × 10 22 molecules of H 2 S are mixed and allowed to remain in contact in a closed vessel until the reaction 2H 2 S + SO 2 ⎯ → 3S + 2H 2 O, proceeds to completion. Which of the following statement is true ?",
+    "options": {
+      "A": "Only 'S' and 'H 2 O' remain in the reaction vessel.",
+      "B": "'H 2 S' will remain in excess",
+      "C": "'SO 2 ' will remain in excess",
+      "D": "None MC11 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) 2H 2 S + SO 2 → 3S + 2H 2 O Moles 1.6 0.04; 34 = 22 23 1.5 10 0.025 6 10  =  L. R. 0.04 0.02 2 L.R. = 0.025 0.025 1 E.R. = SO 2 will remain in excess",
+    "statements": {
+      "1": "5 ×"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_061",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "12L of H 2 and 11.2L of Cl 2 are mixed and exploded. The composition by volume of mixture is -",
+    "options": {
+      "A": "24L of HCl",
+      "B": "0.8L Cl 2 and 20.8L HCl",
+      "C": "0.8L H 2 and 22.4L HCl",
+      "D": "22.4L HCl"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) H 2 + Cl 2 → 2HCl Vol. 12 L 11.2 L L.R. 12 1 E.R. 11.2 1 L.R."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_062",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "10mL of gaseous hydrocarbon on combustion give 40mL of CO 2 (g) and 50mL of H 2 O (vap.). The hydrocarbon is -",
+    "options": {
+      "A": "C 4 H 5",
+      "B": "C 8 H 10",
+      "C": "C 4 H 8",
+      "D": "C 4 H 10 MC10 - 0002 QUESTIONS BASED ON LAWS OF chemical COMBINATION"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Cx Hy + 2 y x O 4 (  + ( ) )  → xCO 2 + y 2 H 2 O 10ml - 40ml 50ml From stoichiometry, x = 4, y 2 = 5  y = 10 Which means C 4 H 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_063",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The law of multiple proportion was proposed by :",
+    "options": {
+      "A": "Lavoisier",
+      "B": "Dalton",
+      "C": "Proust",
+      "D": "Gaylussac MC18 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Dalton"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_064",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following pairs of compound illustrate the law of multiple proportions ?",
+    "options": {
+      "A": "H 2 O, Na 2 O",
+      "B": "MgO, Na 2 O",
+      "C": "Na 2 O, BaO",
+      "D": "SnCl 2 , SnCl 4 MC18 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) SnCl 2  show law of multiple proportions. SnCl 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_065",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the reaction N 2 + 3H 2 → 2NH 3 , ratio by volume of N 2 , H 2 and NH 3 is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Gaseous volumes 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_066",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "This illustrates law of -",
+    "options": {
+      "A": "Definite proportion",
+      "B": "Multiple proportion",
+      "C": "Law of conservation of mass",
+      "D": "Gaseous volumes MC07 - 0020"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_067",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Different proportions of oxygen in the various oxides of nitrogen prove the law of -",
+    "options": {
+      "A": "Equivalent proportion",
+      "B": "Multiple proportion",
+      "C": "Constant proportion",
+      "D": "Conservation of matter MC19 - 0001 6"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_068",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The law of conservation of mass holds good for all of the following except -",
+    "options": {
+      "A": "All chemical reactions",
+      "B": "Nuclear reactions",
+      "C": "Endothermic reactions",
+      "D": "Exothermic reactions MC18 - 0003 6"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 16 g oxygen (O 2 ) 2 O 16 1 n 32 2 = = Number of O - atoms = 2 O n × N A × atomicity = 23 1 6.022 10 2 2    = 6.022 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_069",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of molecules in 100 mL of each of O 2 , NH 3 and CO 2 at STP are -",
+    "options": {
+      "A": "I n the order CO 2 < O 2 < NH 3",
+      "B": "I n the order NH 3 < O 2 < CO 2",
+      "C": "T he same",
+      "D": "NH 3 = CO 2 < O 2 MC02 - 0032 6"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_070",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The empirical formula of an organic compound containing carbon and hydrogen is CH",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mass Mole Number of atoms [n × N A × atomicity] 1 g O 1/16 A A N 1 N 1 16 16   = 1 g O 2 1/32 A A N 1 N 2 32 16   = 1 g O 3 1/48 A A N 1 N 3 48 16   = All have the same number of atoms."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_071",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The mass of one litre of this organic gas is exactly equal to that of one litre of N 2 at same temperature and pressure. Therefore, the molecular formula of the organic gas is -",
+    "options": {
+      "A": "C 2 H 4",
+      "B": "C 3 H 6",
+      "C": "C 6 H 12",
+      "D": "C 4 H 8 MC07 - 0022 6"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_072",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four one litre flasks are separately filled with the gases hydrogen, helium, oxygen and ozone at same room temperature and pressure. The ratio of total number of atoms of these gases present in the different flasks would be - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of atom in 0.5g atom of nitrogen = 0.5 × N A × 2 = N A Number of atom in 8g oxygen = 8 16 × N A × 2 = N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_073",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A container of volume V, contains 0.28 g of N 2 gas. If same volume of an unknown gas under similar condition of temperature and pressure weighs 0.44 g, the molecular mass of the gas is",
+    "options": {
+      "A": "22",
+      "B": "44",
+      "C": "66",
+      "D": "88 MC20 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 gas N M 0.44 M 0.28 = gas 0.44 M 28 0.28 =  = 44"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_074",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When 100 g of ethylene polymerizes to polyethylene according to equation nCH 2 = CH 2 → - ( - CH 2 - CH 2 - ) n - . The weight of polyethylene produced will be : -",
+    "options": {
+      "A": "In 2 g",
+      "B": "100 g",
+      "C": "100 n g",
+      "D": "100 ng MC18 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Entire mass of ethylene is converted to polyethylene so according to LOMA 100 g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_075",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A chemical equation is balanced according to the law of -",
+    "options": {
+      "A": "Multiple proportion",
+      "B": "Constant composition",
+      "C": "Gaseous volume",
+      "D": "Conservation of mass MC18 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Conservation of mass"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_076",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two flasks A & B of equal capacity of volume contain NH 3 and SO 2 gas respectively under similar conditions. Which flask has more number of moles : -",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "Both have same moles",
+      "D": "None MC02 - 0030 EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) A B NH 3 SO 2 Moles x 22.4 x 22.4 Same moles. Some Basic Concepts of Chemistry - Mole Concept Exercise - II ( Previous Year Questions )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_077",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Number of moles of neutrons in 1.8 mL of water is : -",
+    "options": {
+      "A": "4.8 × 10 23",
+      "B": "4.8 × 10 22",
+      "C": "0.8",
+      "D": "0.1 MC02 - 0145"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 3 ) Neutrons in 1 molecule of H 2 O = 8 no. of moles in 1.8 m L = 1.8 0.1 18 = no. of molecules = 0.1 × N A no. of neutrons = 8 × 0.1 × N A no. of moles of neutrons = A A 8 0.1 N N   = 0.8"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_078",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "10 mL of gaseous hydrocarbon on complete combustion gives 20 mL of CO 2 and 30 mL of H 2 O(g). The hydrocarbon is : -",
+    "options": {
+      "A": "C 4 H 10",
+      "B": "C 2 H 6",
+      "C": "C 4 H 8",
+      "D": "C 8 H 10 MC11 - 0080"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) for unknown hydrocarbon C x H y + 2 y x O 4 (  + ( ) )  → xCO 2 + 2 y H O 2 1mL x mL y mL 2 10mL 10x mL 5y mL 10x = 20 and 5y = 30 Hence formula is C 2 H 6 x = 2 y = 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_079",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction A + 2B → C, 5 moles of A and 8 moles of B will produce : -",
+    "options": {
+      "A": "5 moles of C",
+      "B": "4 moles of C",
+      "C": "8 moles of C",
+      "D": "13 moles of C MC11 - 0255"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) A + 2B → C Hence B is limiting reagent 2 mole B produce 1 mole C and 8 mole B produce 4 mole C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_080",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two elements X and Y (atomic mass of X = 75 and Y = 16) combine to give a compound having 76% of X. The formula of compound is : -",
+    "options": {
+      "A": "XY",
+      "B": "X 2 Y",
+      "C": "X 2 Y 2",
+      "D": "X 2 Y 3 MC07 - 0241"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Element moles Atomic ratio Simplest ratio X 76/75 = 1.013 1.013/1.013 = 1 1 × 2 = 2 Y 24/16 = 1.5 1.5/1.013 ≈ 1.5 1.5 × 2 = 3 Formula of the compound is X 2 Y"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_081",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "8 g H 2 & 32 g O 2 is allowed to react to form water then which of the following statement is correct ?",
+    "options": {
+      "A": "O 2 is limiting reagent",
+      "B": "O 2 is reagent in excess",
+      "C": "H 2 is limiting reagent",
+      "D": "40 g water is formed MC11 - 0256"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 2H 2 + O 2 ⎯ → 2H 2 O 4 g 32 g 36 g given 8 g requires = 2 32 8 64g O 4  = Hence, O 2 is limiting reagent"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_082",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum number of molecules are present in : -",
+    "options": {
+      "A": "15 L H 2 gas at STP",
+      "B": "5 L of N 2 gas at STP",
+      "C": "0.5 g H 2 gas",
+      "D": "10 g of O 2 gas MC02 - 1209"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (i) No. of molecules = A 15 N 22.4  (ii) No. of molecules = A 5 N 22.4  (iii) No. of molecules = A 0.5 N 2  (iv) No. of molecules = A 10 N 32  Hence 15 L H 2 will have maximum number of molecules"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_083",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Equal masses of H 2 , N 2 and CH 4 are taken in a container of volume V at temperature 27^\\circC in identical conditions. The ratio of volumes of gases H",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Let the mass be 100 g Ratio of moles = Ratio of volumes = 100 100"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_084",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At same temperature and pressure, 1 litre of a hydrocarbon weighs as much as one litre of CO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) mass of 1L CO 2 = mass of 1L hydrocarbon mass of 22.4L CO 2 = mass of 22.4L hydrocarbon 44 g = mass of 22.4 L hydrocarbon mass of 1 mole hydrocarbon = 44 g Here C 3 H 8 has molar mass 44 g mol - 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_085",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The molecular formula of hydrocarbon is : -",
+    "options": {
+      "A": "C 3 H 8",
+      "B": "C 2 H 6",
+      "C": "C 2 H 4",
+      "D": "C 3 H 6 MC07 - 0061"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) for unknown hydrocarbon C x H y + 2 y x O 4 (  + ( ) )  → xCO 2 + 2 y H O 2 1mL x mL y mL 2 10mL 10x mL 5y mL 10x = 20 and 5y = 30 Hence formula is C 2 H 6 x = 2 y = 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_086",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four one litre flasks are separately filled with the gases hydrogen, helium, oxygen and ozone at same room temperature and pressure in the different flasks . T he ratio of total atoms would be : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) At same temperature and pressure, same volume and same moles of gases are present Ratio of moles H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_087",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a compound A x B y : -",
+    "options": {
+      "A": "Mole of A = mole of B = mole of A x B y",
+      "B": "eq of A = eq of B = eq of A x B y",
+      "C": "y × mole of A = y × mole of B =",
+      "D": "y × mole of A = y × mole of B MC07 - 0242 Exercise - I Some Basic Concepts of Chemistry - Mole Concept NEET : Extra Edge [ Chemistry ]"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 3 ) Neutrons in 1 molecule of H 2 O = 8 no. of moles in 1.8 m L = 1.8 0.1 18 = no. of molecules = 0.1 × N A no. of neutrons = 8 × 0.1 × N A no. of moles of neutrons = A A 8 0.1 N N   = 0.8"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_088",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The density of water is 1 g/mL. What is the volume occupied by 1 molecule of water in mL.",
+    "options": {
+      "A": "3 × 10 - 23",
+      "B": "1 × 10 - 23",
+      "C": "2 × 10 - 23",
+      "D": "4 × 10 - 23 MC02 - 0222"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Weight of 1 molecule of H 2 O = 18 × 1.66 × 10 - 24 g V olume of 1 molecule of H 2 O = 18 × 1.66 × 10 - 24 mL = 3 × 10 - 23 mL"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_089",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of a drop of water is 0.0018 mL then the number of water molecules present in two drops of water at room temperature is : -",
+    "options": {
+      "A": "12.046 × 10 19",
+      "B": "1.084 × 10 18",
+      "C": "4.84 × 10 17",
+      "D": "6.023 × 10 23 MC02 - 0146"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 1 ) \\rho = m V and 2 H O \\rho = 1g/mL  2 H O m = 0.0018g → mass of 1 drop of H 2 O ( ) 2 H O 2 drops m = 2 × 0.0018 = 0.0036g A 0.0036 N n 18 N = = A 0.0036 N N 18  =  N = 0.0002 × 6.022 × 10 23 = 12.044×10 19"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_090",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The law of multiple proportion is illustrated by the two compounds : -",
+    "options": {
+      "A": "Sodium chloride and sodium bromide",
+      "B": "Ordinary water and heavy water",
+      "C": "Caustic soda and caustic potash",
+      "D": "Sulphur dioxide and sulphur trioxide MC19 - 0023"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Sulphur dioxide and sulphur trioxide (SO 2 ) (SO 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_091",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The molecular mass of a gas is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) M.M. = 45g/mol M V \\rho = At STP, V = 22.4 L 45g 2g / L 22.4L \\rho =  Some Basic Concepts of Chemistry - Mole Concept"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_092",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Some Basic Concepts Of Chemistry - Mole Concept.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Its density (in g/L) at STP is : -",
+    "options": {
+      "A": "22.4",
+      "B": "11.2",
+      "C": "5.7",
+      "D": "2.0 MC02 - 0223 Exercise - I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_093",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Vapour density of gas is 11.2, volume occupied by 2.4 g of this at STP will be -",
+    "options": {
+      "A": "11.2 L",
+      "B": "2.24 L",
+      "C": "22.4 L",
+      "D": "2.4 L"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_094",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Vapour density of ammonia is 8.5, then 85 g of NH 3 at NTP will occupy.",
+    "options": {
+      "A": "22.4 L",
+      "B": "112 L",
+      "C": "224 L",
+      "D": "1120 L"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 ) Mass Moles Number of atoms 4g H 2 4 2 = 2 2 × N A × 2 = 4N A 16g O 2 16 1 32 2 = A A 1 N 2 N 2   = 28g N 2 28 28 = 1 1 × N A × 2 = 2N A 18g H 2 O 18 18 = 1 1 × N A × 3 = 3 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_095",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains the highest number of molecules -",
+    "options": {
+      "A": "2.8 g of CO",
+      "B": "3.2 g of CH 4",
+      "C": "1.7 g of NH 3",
+      "D": "3.2 g of SO 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of neutrons = n × N A × (number of neutrons) = A 1.7 N 7 17   = A N 7 10 "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_096",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas is found to have the formula (CO) x . It's VD is 70 the value of x must be:-",
+    "options": {
+      "A": "7",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Number of atoms in [O 3 ] = n × N A × number of atoms = A 8 N 3 48   = 23 A N 6.022 10 2 2  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_097",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 32 g of O 2 contains 6.022 × 10 23 molecules at NTP then 32 g of S, under the same conditions, will contain:-",
+    "options": {
+      "A": "6.022 × 10 23 S",
+      "B": "3.011 × 10 21 S",
+      "C": "1 × 10 23 S",
+      "D": "12.044 × 10 23 S"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Sum of protons, electrons and neutrons in 12g of 12 6 C = n × N A × [sum of e, p & n] = 12 12 × N A × 18 = 18 × 6.022 × 10 23 = 1.08 × 10 25 NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_098",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which contains least no. of molecules :-",
+    "options": {
+      "A": "1 g CO 2",
+      "B": "1 g N 2",
+      "C": "1 g O 2",
+      "D": "1 g H 2"
+    },
+    "correct_option": "B",
+    "explanation": "2 L of Cl 2 will react with 11.2 L H 2 to product 22.4 L HCl. Remaining H 2 = 12 - 11.2 = 0.8 L"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_099",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains largest number of atoms ?",
+    "options": {
+      "A": "4 g of H 2",
+      "B": "16 g of O 2",
+      "C": "28 g of N 2",
+      "D": "18 g of H 2 O $//"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Let atomic wt. of A = a Atomic wt. of B = b Mol ar mass of B 2 A 3 = (2 × b) + (3 × a) = mass of 1 mole substance 0.05 mol B 2 A 3 → 9g 1 mol of B 2 A 3 = 9 0.05 =180g 2b + 3a = 180 …(1) molar mass of B 2 A = (2b + a) 0.1 mol of B 2 A → 10g 1 mol of B 2 A → 10 100 0.1 =  2b + a = 100 …(2) On solving a 40, b 30 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_100",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following contains greatest number of oxygen atoms ?",
+    "options": {
+      "A": "1 g of O",
+      "B": "1 g of O 2",
+      "C": "1 g of O 3",
+      "D": "all have the same number of atoms"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) gas 2.24 n 0.1 22.4 = = Molar mass = gas gas w n = 4.4 0.1 = 44 CO 2 & N 2 O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_101",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person adds 1.71 gram of sugar (C 12 H 22 O 11 ) in order to sweeten his tea. The number of carbon atoms added are (mol. mass of sugar = 342)",
+    "options": {
+      "A": "3.6 × 10 22",
+      "B": "7.2 × 10 21",
+      "C": "0.05",
+      "D": "6.6 × 10 22"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Mass Moles Number of atoms 1g CO 2 1 44 1 44 N A 1g N 2 1 28 1 28 N A 1g O 2 1 32 1 32 N A 1g H 2 1 2 1 2 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_102",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "No. of atoms in 4.25 g. of NH 3 is approx :-",
+    "options": {
+      "A": "1 × 10 23",
+      "B": "1.5 × 10 23",
+      "C": "2 × 10 23",
+      "D": "6 × 10 23"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) mass of gas = w ( g ) Vol. of gas = V mL (at STP) moles of gas = mass w mol.wt. mol.wt. = moles of gas = STP V (ml) 22400 STP V (ml) w mol.wt. 22400 = Mol. wt. = (ml) w 22400 V  Some Basic Concepts of Chemistry - Mole Concept 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_103",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of atoms in n mole of gas can be given by :-",
+    "options": {
+      "A": "n× Av. No.× atomicity",
+      "B": "In Av.No. Atomicity ×",
+      "C": "Av.No. Atomicity n ×",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) NaOH + HCl → NaCl + H 2 O Given  1g (0.75 M, 25 ml) moles of NaOH = 1 40 mol = 0.025 mol moles of HCl = 0.75 25 0.01875 1000  = mol Some Basic Concepts of Chemistry - Mole Concept now find the L.R.  Value = given amount S.C NaOH ; HCl 0.025 1 > 0.01875 1 So, L.R will be HCl Unreacted moles of NaOH = 0.025 - 0.01875 = 0.00625 mol Unreacted mass = 0.00625 × 40 g = 0.25 g = 250 mg"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_104",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the mass of a molecule of CH 4 :-",
+    "options": {
+      "A": "16 g",
+      "B": "26.6 × 10 22 g",
+      "C": "2.66 × 10 -23 g",
+      "D": "16 N A g"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of electrons in 3 3 A NO NO n N - - =  (number of electrons) = 3 23 3.1 10 6.022 10 32 62 -     = 9.6 × 10 20"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_105",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The weight of 1 mole of a gas of density 0.1784 g L -1 at NTP is -",
+    "options": {
+      "A": "0.1784 g",
+      "B": "1 g",
+      "C": "4 g",
+      "D": "Can not be Calculate"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Vol. of 1 mole N 2 [at N.T.P.] = 22.4 L mass of 1 mole N 2 = 28g Density of N 2 = 1 mass 28g 1.25g L volume 22.4L - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_106",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given that one mole of N 2 at NTP occupies 22.4 litre the density of N 2 is -",
+    "options": {
+      "A": "1.25 g L -1",
+      "B": "0.80 g L -1",
+      "C": "2.5 g L -1",
+      "D": "1.60 g L -1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) number of carbon atoms = n c × N A × atomicity = 3 1.2 10 12 -  × 6.022 × 10 23 × 1 = 6.022 × 10 19"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_107",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Caffeine has a molecular weight of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) X Y mass w w moles w 30 w 20 simple ratio × 60 1 60 30  w 60 20  2 3 Molecular formula = X 2 Y 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_108",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It contains 28.9% by mass of nitrogen Number of atoms of nitrogen in one molecule of it -",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_109",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A giant molecule contains 0.25% of a metal whose atomic weight is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) mass moles simples ratio S 50 50 1.5 32 = 1.5 1 1.5 = O 50 50 3.125 16 = 3.125 2 1.5  Empirical formula = SO 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_110",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Its molecule contains one atom of that metal. Its minimum molecular weight is -",
+    "options": {
+      "A": "5900",
+      "B": "23600",
+      "C": "11800",
+      "D": "100 59 0.4 ×"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Gaseous volumes 6"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_111",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Insulin contains 3.4% sulphur. The minimum mol. wt. of insulin is -",
+    "options": {
+      "A": "941.176",
+      "B": "944",
+      "C": "945.27",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Mass% atomic ratio simples ratio C 80 80 6.66 12 = 6.66 1 6.66 = H 20 20 20 1 = 20 3 6.66  C 1 H 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_112",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Modern atomic weight scale is based on -",
+    "options": {
+      "A": "H-1",
+      "B": "C-12",
+      "C": "C-14",
+      "D": "C-16"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_113",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Density of a gas STP is 1.43 g L -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_114",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is its molecular weight ?",
+    "options": {
+      "A": "16",
+      "B": "32",
+      "C": "48",
+      "D": "64 $//"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 16 g oxygen (O 2 ) 2 O 16 1 n 32 2 = = Number of O - atoms = 2 O n × N A × atomicity = 23 1 6.022 10 2 2    = 6.022 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_115",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "9 g of Al will react, with 2Al + 3 2 O 2 → Al 2 O 3",
+    "options": {
+      "A": "6 g O 2",
+      "B": "8 g O 2",
+      "C": "9 g O 2",
+      "D": "4 g O 2"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Mass% atomic ratio simples t ratio X 50 50 5 10 = 5 2 2.5 = Y 50 50 2.5 20 = 2.5 1 2.5 = Simplest formula = X 2 Y"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_116",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "26 cc of CO 2 are passed over red hot coke. The volume of CO evolved is :- C (s) + CO 2(g) → 2CO (g)",
+    "options": {
+      "A": "15 CC",
+      "B": "10 CC",
+      "C": "32 CC",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mass% atomic ratio simple ratio P 1.24g 1.24 0.04 31 = 4 S (2.2 - 1.24) = 0.96 0.96 0.03 32 = 3 4 3 E.F. P S ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_117",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 1/2 moles of oxygen combine with Aluminimum to form Al 2 O 3 then weight of Aluminium metal used in the reaction is (Al= 27)- 4Al (s) + 3O 2(g) → 2Al 2 O 3(s)",
+    "options": {
+      "A": "27 g",
+      "B": "18 g",
+      "C": "54 g",
+      "D": "40.5 g"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mass% A tomic ratio simple ratio I 254 254 2 127 = 2 O 80 80 5 10 = 5 2 5 Formula I O ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_118",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of litres of air required to burn 8 litres of C 2 H 2 is approximately-",
+    "options": {
+      "A": "40",
+      "B": "60",
+      "C": "80",
+      "D": "100 QUESTIONS BASED ON LIMITING REAGENT"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) E. f.  obtain from simples ratio of atom Gives Cr = 4.8 × 10 10 , 0 = 9.6 ×10 10 Simplest ratio"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_119",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 0.5 mole of BaCl 2 is mixed with 0.2 mole of Na 3 PO 4 the maximum number of moles of Ba 3 (PO 4 ) 2 that can be formed is - 3BaCl 2 + 2Na 3 PO 4 → Ba3 (PO 4 ) 2 + 6NaCl",
+    "options": {
+      "A": "0.7",
+      "B": "0.5",
+      "C": "0.3",
+      "D": "0.1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) % of S  3.4 = 1 32 100 Min.mol.wt.   Minimum molecular wt. = 32 100 941.176 3.4  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_120",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the reaction A + 2B → C, 5 mole of A and 8 mole of B will produce",
+    "options": {
+      "A": "5 mole of C",
+      "B": "4 mole of C",
+      "C": "8 mole of C",
+      "D": "13 mole of C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_121",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A hydrocarbon contains 75% of carbon. Then its molecular formula is -",
+    "options": {
+      "A": "CH 4",
+      "B": "C 2 H 4",
+      "C": "C 2 H 6",
+      "D": "C 2 H 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) C 8 H 18 + 25 2 O 2 → 8CO 2 + 9H 2 O Mass of C 3 H 18 = 0.8 × 1.425 = 1140g 3 8 C H 1140 n 10 114 = = 1 mol C 8 H 18 → 25 2 mol O 2 10 mol C 8 H 18 → 25 2 × mol O 2 2 O 250 n 125 2 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_122",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A compound of X and Y has equal mass of them. If their atomic weights are 30 and 20 respectively. Molecular formula of that compound (its mol. wt. is 120) could be -",
+    "options": {
+      "A": "X 2 Y 2",
+      "B": "X 3 Y 3",
+      "C": "X 2 Y 3",
+      "D": "X 3 Y 2"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2Al + 3 2 O 2 → Al 2 O 3 n = 9 1 27 3 = 2 mol Al → 3 2 mol O 2 1 mol Al → 3 4 mol O 2 1 3 mol Al → 3 1 4 3  mol O 2 2 O 1 n 4 = wt. of O 2 = 1 32 4  = 8g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_123",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An oxide of sulphur contains 50% of sulphur in it. Its emperial formula is -",
+    "options": {
+      "A": "SO 2",
+      "B": "SO 3",
+      "C": "SO",
+      "D": "S 2 O"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) 2 Al (s) + 3 2 O 2(g) → Al 2 O 3(s) 2 mol of Al reacts with 3 2 mol of O 2 to produc e 1 mol of Al 2 O 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_124",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Emperical formula of glucose is -",
+    "options": {
+      "A": "C 6 H 12 O 6",
+      "B": "C 3 H 6 O 3",
+      "C": "C 2 H 4 O 2",
+      "D": "CH 2 O"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) C + CO 2 → 2CO 26 CC 1 Vol. of CO 2 → 2Vol. of CO 26 CC of CO 2 → 2 × 26 CC of CO CO V 52CC ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_125",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A compound is found to contain 80% of carbon and 20% of hydrogen, then the molecular formula of the compound is-",
+    "options": {
+      "A": "C 6 H 6",
+      "B": "C 2 H 5 OH",
+      "C": "C 2 H 6",
+      "D": "C 2 H 4"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) 4Al + 3O 2 → 2Al 2 O 3 3 mol O 2 → 4 mol of Al 1 mol O 2 → 4 3 mol of Al 1 2 mol O 2 → 4 1 3 2  mol of Al Al 4 n 6 = Al 4 w = 2 6 3 27  9 18g ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_126",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The simplest formula of a compound containing 50% of element X(at wt. = 10) and 50% of element Y(at wt. = 20) is:-",
+    "options": {
+      "A": "XY",
+      "B": "X 2 Y",
+      "C": "XY 2",
+      "D": "X 3 Y"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) 3 Ba C l 2 + 2 Na 3 PO 4 → Ba 3 (PO 4 ) 2 + 6 NaCl 0.5 0.2 L.R. 0.5 0.16 3 = 0.2 0.1 2 L.R. = 2 mol Na 3 PO 4 → 1 mol Ba 3 (PO 4 ) 2 1 mol Na 3 PO 4 → 1 2 mol Ba 3 (PO 4 ) 2 0.2 mol Na 3 PO 4 → 1 2 × 0.2 mol Ba 3 (PO 4 ) 2 3 4 2 Ba (PO ) n 0.1 = 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_127",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following compounds has same empirical formula as that of glucose:-",
+    "options": {
+      "A": "CH 3 CHO",
+      "B": "CH 3 COOH",
+      "C": "CH 3 OH",
+      "D": "C 2 H 6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_128",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas is found to contain 2.34 g of Nitrogen and 5.34 g of oxygen. Simplest formula of the compound is -",
+    "options": {
+      "A": "In 2 O",
+      "B": "NO",
+      "C": "In 2 O 3",
+      "D": "NO 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_129",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following pairs of compounds illustrates the law of multiple proportions ?",
+    "options": {
+      "A": "H 2 O, Na 2 O",
+      "B": "MgO, Na 2 O",
+      "C": "Na 2 O, BaO",
+      "D": "SnCl 2 , SnCl 4"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) H 2 + Cl 2 → 2HCl Vol. 12 L 11.2 L L.R. 12 1 E.R. 11.2 1 L.R."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_130",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four one litre flasks are seperately filled with the gases hydrogen, helium, oxygen and ozone at same room temp. and pressure. The ratio of total number of atoms of these gases present in the different flasks would be - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_131",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A and B are two identical vessels. A contains 15 g ethane at 1 atm and 298 K. The vessel B contains 75 g of a gas X 2 at same tamperature and pressure. The vapour density of X 2 is -",
+    "options": {
+      "A": "75",
+      "B": "150",
+      "C": "37.5",
+      "D": "45"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_132",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When 100 g of ethylene polymerizes to polythylene according to equation nCH 2 = CH 2 → -(- CH 2 - CH 2 -) n -. The weight of polyethylene produced will be:-",
+    "options": {
+      "A": "In 2 g",
+      "B": "100 g",
+      "C": "100 n g",
+      "D": "100n g"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_133",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If law of conservation of mass was to hold true, then 20.8 g of BaCl 2 on reaction with 9.8 g of H 2 SO 4 will produce 7.3 g of HCl and BaSO 4 equal to :-",
+    "options": {
+      "A": "11.65 g",
+      "B": "23.3 g",
+      "C": "25.5 g",
+      "D": "30.6 g"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_134",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two flasks A & B of equal capacity of volume contain NH 3 and SO 2 gas respectively under similar conditions. Which flask has more no. of moles -",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "Both have same moles",
+      "D": "None EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) 2 gas N M 0.44 M 0.28 = gas 0.44 M 28 0.28 =  = 44"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_135",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of a gas at 0 0 C and 760 mm pressure is 22.4 cc. The no. of molecules present in this volume is",
+    "options": {
+      "A": "10 -3 N A",
+      "B": "10 -4 N A",
+      "C": "10 -5 N A",
+      "D": "10 -2 N A"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) 16 g oxygen (O 2 ) 2 O 16 1 n 32 2 = = Number of O - atoms = 2 O n × N A × atomicity = 23 1 6.022 10 2 2    = 6.022 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_136",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "100 mL of PH 3 when completely decomposed produces phosphorus and hydrogen. The change in volume of the gas is - 2PH 3 (g) → 2P(s) + 3H 2 (g)",
+    "options": {
+      "A": "50 mL increase",
+      "B": "500 mL decrease",
+      "C": "900 mL decrease",
+      "D": "No change"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_137",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The volume of CO 2 at STP obtained by heating 1 g of CaCO 3 will be",
+    "options": {
+      "A": "1 L",
+      "B": "22.4 L",
+      "C": "0.224 L",
+      "D": "11.2 L"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mass Mole Number of atoms [n × N A × atomicity] 1 g O 1/16 A A N 1 N 1 16 16   = 1 g O 2 1/32 A A N 1 N 2 32 16   = 1 g O 3 1/48 A A N 1 N 3 48 16   = All have the same number of atoms."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_138",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3 L of mixture of propane (C 3 H 8 ) & butane (C 4 H 10 ) on complete combustion gives10 L CO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of atom in 0.5g atom of nitrogen = 0.5 × N A × 2 = N A Number of atom in 8g oxygen = 8 16 × N A × 2 = N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_139",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the composition of original mixture.",
+    "options": {
+      "A": "C 3 H 8 , 2L and C 4 H 10 , 1L",
+      "B": "C 3 H 8 , 3L and C 4 H 10 , 0L",
+      "C": "C 3 H 8 , 1.5L and C 4 H 10 , 1.5L",
+      "D": "C 3 H 8 , 0L and C 4 H 10 , 3L"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) 3 NH 4.25 1 n 17 4 = = Number of atoms = 3 NH n × N A × atomicity = A 1 N 4 4   = N A = 6 × 10 23"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_140",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The mass of a molecule of water :",
+    "options": {
+      "A": "30 × 10 -24 kg",
+      "B": "3 × 10 -26 kg",
+      "C": "1.5 × 10 -26 kg",
+      "D": "2.5 × 10 -27 kg"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Mass Moles Number of atoms 4g H 2 4 2 = 2 2 × N A × 2 = 4N A 16g O 2 16 1 32 2 = A A 1 N 2 N 2   = 28g N 2 28 28 = 1 1 × N A × 2 = 2N A 18g H 2 O 18 18 = 1 1 × N A × 3 = 3 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_141",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At NTP, 5.6 L of a gas weigh 8 g. The vapour density of gas is :-",
+    "options": {
+      "A": "32",
+      "B": "40",
+      "C": "16",
+      "D": "8"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Number of neutrons = n × N A × (number of neutrons) = A 1.7 N 7 17   = A N 7 10 "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_142",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "0.01 mole of iodoform (CHI 3 ) reacts with Ag to produce a gas whose volume at NTP is 2CHI 3 + 6Ag → 6AgI(s) + C 2 H 2 (g)",
+    "options": {
+      "A": "224 mL",
+      "B": "112 mL",
+      "C": "336 mL",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Number of atoms of oxygen = n × N A × number of atoms = 23 5.6 6.022 10 2 22.4    = 3.01 × 10 23 atoms."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_143",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "19.7 kg of gold was recovered from a smuggler. How many atoms of gold were recovered ? (At. wt. of gold (Au) = 197)",
+    "options": {
+      "A": "100",
+      "B": "6.023 × 10 23",
+      "C": "6.023 × 10 24",
+      "D": "6.023 × 10 25"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Number of atoms in [O 3 ] = n × N A × number of atoms = A 8 N 3 48   = 23 A N 6.022 10 2 2  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_144",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Chlorine is prepared in the laboratory by treating manganese dioxide (MnO 2 ) with aqueous hydrochloric acid according to the reaction 4HCl(aq) + MnO 2 (s) → 2H 2 O( \\lambda ) + MnCl 2 (aq) + Cl 2 (g) How many gram of HCl react with 5.0 g of manganese dioxide ? (At. wt. of Mn = 55)",
+    "options": {
+      "A": "2.12 g",
+      "B": "44.24 g",
+      "C": "8.4 g",
+      "D": "3.65 g"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Sum of protons, electrons and neutrons in 12g of 12 6 C = n × N A × [sum of e, p & n] = 12 12 × N A × 18 = 18 × 6.022 × 10 23 = 1.08 × 10 25 NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_145",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "510 milli g of a liquid on vapourisation produces 510 cc at NTP. The molecular weight of liquid is -",
+    "options": {
+      "A": "0.224",
+      "B": "2.24",
+      "C": "224",
+      "D": "22.4"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) 1 “U” atom = 238 amu 1 amu = 1.66 × 10 - 24 g 1 “U” atom = 238 × (1.66 × 10 - 24 g) ≃ 3.94 × 10 - 22 g 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_146",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An unknown amino acid has 0.032% sulphur by mass. If each molecule has one sulphur atom only, 1 g of amino acid has ......... molecules :-",
+    "options": {
+      "A": "6.02 × 10 18",
+      "B": "6.02 × 10 19",
+      "C": "6.02 × 10 24",
+      "D": "6.02 × 10 23"
+    },
+    "correct_option": "A",
+    "explanation": "2 L of Cl 2 will react with 11.2 L H 2 to product 22.4 L HCl. Remaining H 2 = 12 - 11.2 = 0.8 L"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_147",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "446 g of PbO, 46 g of NO 2 and 16 g of O 2 are allowed to react according to the equation :- PbO + 2NO 2 + 1 2 O 2 → Pb(NO 3 ) 2 The amount of Pb(NO 3 ) 2 that can be produced is (At. wt. of Pb = 207) :-",
+    "options": {
+      "A": "331 g",
+      "B": "662 g",
+      "C": "165.5 g",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Some Basic Concepts Of Chemistry - Mole Concept principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_148",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sample of organic compound on complete combustion gives 88 g CO 2 and 36 g of H 2 O. The molecular formula of the compound may be :-",
+    "options": {
+      "A": "C 4 H 6",
+      "B": "CH 4",
+      "C": "C 2 H 4",
+      "D": "C 2 H 6 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 1g atom of C = 1 mole of C = 12g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_149",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Volume at NTP of 0.22 g of CO 2 is same as that of",
+    "options": {
+      "A": "0.01 g of hydrogen",
+      "B": "0.085 g of NH 3",
+      "C": "320 mg of gaseous SO 2",
+      "D": "All of the above."
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Mass Moles Number of atoms 4.4g CO 2 4.4 44 = 0.1 0.1 N A 3.4g NH 3 3.4 17 = 0.2 0.2 N A 1.6g CH 4 1.6 16 = 0.1 0.1 N A 3.2g SO 2 3.2 64 = 0.05 0.05 N A"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_some_basic_concepts_of_chemistry_mole_concept_150",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "language": "en",
+      "tags": [],
+      "source": "Mole Concept - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The weight of 1 × 10 22 molecules of CuSO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) 3 NH 4.25 1 n 17 4 = = Number of NH 3 molecules = 1 4 × 6.022 ×10 23 = 1.505 ×10 23"
+  }
+]

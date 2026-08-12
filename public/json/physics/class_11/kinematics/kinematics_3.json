@@ -1,0 +1,3452 @@
+[
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-301",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The x - t graph of a particle moving along a straight line is shown in figure. The distance - time graph of the particle is correctly shown by :",
+    "options": {
+      "D": "1 0 2 3 - 1 - 2 - 3 1 2 3 4 t",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-302",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle starts from rest and move with constant acceleration. Its velocity - displacement curve is :",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-303",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The graph between the displacement x and time t for a particle moving in a straigh t line is shown in figure. During the interval OA, AB, BC and CD, the acceleration of the particle is : OA AB BC CD",
+    "options": {
+      "A": "+ 0 + +",
+      "B": "- 0 + 0",
+      "C": "+ 0 - 0",
+      "D": "- 0 - 0"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-304",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "acceleration - time curve for a body projected vertically upwards is a/an : -",
+    "options": {
+      "A": "Parabola",
+      "B": "Ellipse",
+      "C": "Hyperbola",
+      "D": "Straight line"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-305",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is projected vertically upward from the surface of the earth, its displacement - time graph is :",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "The slope of s - t curve gives velocity."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-306",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A rocket is launched upward from the earth's surface whose velocity time graphs shown in figure. Then maximum height attained by the rocket is:",
+    "options": {
+      "A": "1 km",
+      "B": "10 km",
+      "C": "100 km",
+      "D": "60 km"
+    },
+    "correct_option": "D",
+    "explanation": "Area of (v - t) curve = displacement (height) 1 120 1000 60,000m 60km 2 =   = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-307",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In above Q. no. 152, height covered by the rocket before retardation is :",
+    "options": {
+      "A": "1 km",
+      "B": "10 km",
+      "C": "20 km",
+      "D": "60 km"
+    },
+    "correct_option": "B",
+    "explanation": "Height before retardation 1 (20) 1000 2 =   = 10,000 = 10 km"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-308",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In above Q. no. 152, mean velocity of rocket during the time it took to attain the maximum height :",
+    "options": {
+      "A": "100 m/s",
+      "B": "50 m/s",
+      "C": "500 m/s",
+      "D": "25/3 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "Mean velocity = displacement Totalheight Total time Total time = 60,000m 500 m/ s 120sec = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-309",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In above Q. no. 152, the retardation of rocket is:",
+    "options": {
+      "A": "50 m/s 2",
+      "B": "100 m/s 2",
+      "C": "500 m/s 2",
+      "D": "10 m/s 2"
+    },
+    "correct_option": "D",
+    "explanation": "Retardation = 1000 1000 (120 20) 100 = - = 10 m/s 2 a x - 90 v x 10 30 Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-310",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In above Q. no. 152, the acceleration of rocket is :",
+    "options": {
+      "A": "50 m/s 2",
+      "B": "100 m/s 2",
+      "C": "10 m/s 2",
+      "D": "1000 m/s 2"
+    },
+    "correct_option": "A",
+    "explanation": "acceleration = slope of OA line 1000 tan 20 \\theta = = 50 m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-311",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In above Q. no. 152, the rocket goes up and comes down on the following parts respectively :",
+    "options": {
+      "A": "OA and AB",
+      "B": "AB and BC",
+      "C": "OA and ABC",
+      "D": "OAB and BC s v v s s v s v O A B C D x t t s t s t s t s 20 40 60 0 80 100 t"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-312",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped from the certain height on the surface of glass. It collides elastically and comes back to its initial position. If this process it repeated then the velocity time graph is : (Take downward direction as positive)",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "acceleration is always downward i.e. positive so slope of v - t curve will always be positive Hence correct option (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-313",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped vertically from a height d above the ground. It hits the ground and bounces up vertically to a height d/",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Direction of motion is cha nged so velocity will be first positive & then negative and v 2  h 16"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-314",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Neglecting subsequent motion and air resistance, The graph according to which its velocity V varies with the height h above the gro und is : -",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-315",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is thrown upwards from top of a tower 60 m high at a speed of 20 m/s. The correct position - time graph for the time interval in which it reaches ground, is (g = 10 m/s 2 & take origin at the base of the tower) : -",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-316",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car starts from rest and accelerates uniformly by for 4 seconds and then moves with uniform velocity which of the x - t graph represent the motion of the car ?",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-317",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure shows x - t graph of a particle. Find the time t such that the average velocity of the particle during the period 0 to t is zero",
+    "options": {
+      "A": "6 sec.",
+      "B": "8 sec.",
+      "C": "10 sec.",
+      "D": "12 sec. T 2T t velocity 2T t T velocity 2T t T velocity 2T t T velocity d h v v h d v h d v h d t"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-318",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Graph between the square of the velocity (v) of a particle and the distance (s) moved is shown in figure. The acceleration of the particle in kilometers per hour square is :",
+    "options": {
+      "A": "2250",
+      "B": "3084",
+      "C": "- 2250",
+      "D": "- 3084"
+    },
+    "correct_option": "D",
+    "explanation": "v 2 = u 2 + 2as a = 2 2 v u (900) (4600) 3700 2s 2 0.6 1.2 - - = = -  = - 3084 km/hr 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-319",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A train takes 4 min. to go between stations 2.25 km apart starting and finishing at rest. The acceleration is uniform for the first 40 sec and the deceleration is uniform for the last 20 sec. Assuming the velocity to be constant for the remaining time, then maximum speed of the train is : -",
+    "options": {
+      "A": "75 m/s",
+      "B": "18.75 m/s",
+      "C": "37.5 m/s",
+      "D": "10.7 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "1 2250 (240 180) V 2 = +  V = 10.71 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-320",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A car accelerates from rest at a constant rate of 2 m/s 2 for some time. Then, it retards at a constant rate of 4 m/s 2 and comes to rest. If it remains in motion for 3 seconds, then the maximum speed attained by the car is :",
+    "options": {
+      "A": "2 m/s",
+      "B": "3 m/s",
+      "C": "4 m/s",
+      "D": "6 m/s GROUND TO GROUND PROJECTION"
+    },
+    "correct_option": "C",
+    "explanation": "max abt 2 4 3 v 4 m/s a b 6   = = = +"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-321",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the graph shown in fig. time is plotted along x - axis. Which quantity associated with a projectile motion is plotted along the y - axis ?",
+    "options": {
+      "A": "kinetic energy",
+      "B": "momentum",
+      "C": "horizontal velocity",
+      "D": "none of the above"
+    },
+    "correct_option": "C",
+    "explanation": "Horizontal component of velocity remain same."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-322",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For ground to ground projection following curves are given : -",
+    "options": {
+      "D": "Find incorrect one.",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-323",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If air resistance is not considered in projectile motion, the horizontal motion takes place with",
+    "options": {
+      "A": "constant velocity",
+      "B": "constant acceleration",
+      "C": "constant retardation",
+      "D": "variable velocity"
+    },
+    "correct_option": "A",
+    "explanation": "If air resistance is zero then for horizontal motion F x = 0 ; a x = 0 So u x = constant"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-324",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a projectile motion, the velocity : -",
+    "options": {
+      "A": "is always perpendicular to the acceleration",
+      "B": "is never perpendicular to the acceleration",
+      "C": "is perpendicular to the acceleration for one instant only",
+      "D": "is perpendicular to the acceleration for two instants CP05 - 0030"
+    },
+    "correct_option": "C",
+    "explanation": "At highest point velocity is in horizontal direction only & acceleration (g) is vertically downwards."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-325",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In projectile motion, the modulus of rate of change of velocity -",
+    "options": {
+      "A": "is constant",
+      "B": "first increases then decreases",
+      "C": "first decreases then increases",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "If air resistance is not considered but acceleration 'g' is considered, which is constant, dv a g dt = = \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-326",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following quantities remains constant during projectile motion?",
+    "options": {
+      "A": "Average velocity between two points.",
+      "B": "Average speed between two points",
+      "C": "dv dt",
+      "D": "2 2 d"
+    },
+    "correct_option": "D",
+    "explanation": "For projectile motion acceleration is constant dv dt \\rho = constant & 2 2 d v dt \\rho = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-327",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If time of flight of a projectile is 10 seconds. Range is 500 meters. The maximum height attained by it will be : -",
+    "options": {
+      "A": "125 m",
+      "B": "50 m",
+      "C": "100 m",
+      "D": "150 m"
+    },
+    "correct_option": "A",
+    "explanation": "∵ 2Usin 10 g \\theta = ∴ Usin \\theta = 50 ∵ 2 2 2 U sin (50) H 2g 2 10 \\theta = =  ∴ H = 125 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-328",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is thrown with a velocity of 19.6 m/s making an angle of 30 0 with the horizontal. It will hit the ground after a time : -",
+    "options": {
+      "A": "3 s",
+      "B": "2 s",
+      "C": "1.5 s",
+      "D": "1 s"
+    },
+    "correct_option": "B",
+    "explanation": "2usin 2 19.6sin30 T 2 sec g 9.8 \\theta  ^\\circ = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-329",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a projectile is fired at an angle \\theta to the vertical with velocity u, then maximum height attained is given by :",
+    "options": {
+      "A": "2 u cos 2g \\theta",
+      "B": "2 2 u sin 2g \\theta",
+      "C": "2 2 u sin g \\theta",
+      "D": "2 2 u cos 2g \\theta"
+    },
+    "correct_option": "D",
+    "explanation": "2 2 2 y u u cos H 2g 2g \\theta = = ( \\theta from vertical)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-330",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At the uppermost point of a projectile its velocity and acceleration are at an angle of : -",
+    "options": {
+      "A": "180^\\circ",
+      "B": "90^\\circ",
+      "C": "60^\\circ",
+      "D": "45^\\circ"
+    },
+    "correct_option": "B",
+    "explanation": "∴  \\alpha = 90^\\circ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-331",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two projectiles are projected with velocity v A , v B at angles \\theta A (from horizontal) and \\theta B (from vertical) as shown in the figure below, such that v A > v B but having same horizontal component of velocity. Which of the following can not be correct ?",
+    "options": {
+      "A": "T A > T B",
+      "B": "H A > H B",
+      "C": "R A > R B",
+      "D": "R B > R A"
+    },
+    "correct_option": "D",
+    "explanation": "∵ Range R = (u x ) (T) Here (v A ) x = (v B ) x but (T) A > (T B ) So R A > R B is true"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-332",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A player throws a ball that reaches to the another player in 4s. If the height of each player is 1.5m, the maximum height attained by the ball from the ground level is :",
+    "options": {
+      "A": "19.6 m",
+      "B": "21.1 m",
+      "C": "23.6 m",
+      "D": "25.1 m"
+    },
+    "correct_option": "B",
+    "explanation": "2Usin 4 g \\theta = Usin \\theta = 2g 2 2 U sin H 2g 19.6 m 2g \\theta = = = Height of the ball from ground = 19.6 + 1.5 = 21.1 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-333",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass m is thrown upwards at an angle \\theta with the horizontal with speed v. While rising up the magnitude of the velocity after t seconds will be:",
+    "options": {
+      "A": "2 2",
+      "B": "2",
+      "C": "2 2 2 v g t",
+      "D": "2 2 2 v g t"
+    },
+    "correct_option": "C",
+    "explanation": "After time 't' velocity x y ˆ ˆ v (v )i (v )j = + \\rho ˆ ˆ v (vcos )i (vsin gt)j = \\theta + \\theta- \\rho 2 2 v (vcos ) (vsin gt) = \\theta + \\theta - \\rho 2 2 2 v g t (2vsin )gt = + - \\theta"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-334",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is fired with velocity u making \\theta angle with the horizontal. What is the magnitude of change in velocity when it returns to the ground.",
+    "options": {
+      "A": "u cos \\theta",
+      "B": "u",
+      "C": "2u sin \\theta",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta v x = 0 (as x v \\rho = const) y v \\Delta \\rho = - u sin \\theta - (u sin \\theta ) = - 2 u sin \\theta magnitude of change in velocity \\Delta v y = 2u sin \\theta x t V 0 40 220 240 time (s) vel. (m/s) u \\theta \\alpha velocity = u cos \\theta (horizontal) acc=g(vertical)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-335",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the above, the change in speed is :",
+    "options": {
+      "A": "u cos \\theta",
+      "B": "0",
+      "C": "u sin \\theta",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-336",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The angle which the velocity vector of a projectile, will make with the vertical after time t of its being thrown with a velocity v at an angle \\theta to the horizontal, is :",
+    "options": {
+      "A": "\\theta",
+      "B": "1 tan t - \\theta (  ( ) ) ",
+      "C": "1 v cos tan v sin gt - \\theta (  ( ) \\theta - ) ",
+      "D": "1 v sin gt tan v cos - \\theta - (  ( ) \\theta )  y x v B v A \\theta A \\theta B"
+    },
+    "correct_option": "C",
+    "explanation": "x y v' v cos tan v sin gt v' \\theta \\beta = = \\theta -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-337",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At a height 0.4 m from the ground, the velocity of a projectile in vector form is: ˆ ˆ v (6i 2j) m/s = + . The angle of projection from horizontal is (g = 10 m/s 2 ) : -",
+    "options": {
+      "A": "45^\\circ",
+      "B": "60^\\circ",
+      "C": "30^\\circ",
+      "D": "tan - 1"
+    },
+    "correct_option": "C",
+    "explanation": "For vertical motion 2 2 y y v u 2g(h) = - ( ) ( )( ) 2 2 y 2 u 2 10 0.4 = - y u 2 3 = ∵ x y ˆ ˆ u (u )i (u )j = + \\rho ∴ ˆ ˆ u 6i 2 3j = + \\rho 2 3 1 tan 30 6 3 \\theta = =  \\theta = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-338",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In case of a projectile fired at an angle 60^\\circ to the horizontal with velocity u, the horizontal range is:",
+    "options": {
+      "A": "2 u g",
+      "B": "2 3u 2g",
+      "C": "2 2u g",
+      "D": "2 2 u g"
+    },
+    "correct_option": "B",
+    "explanation": "\\theta = 60^\\circ ; ( ) 2 2 u sin 2 60 3u R g 2g  ^\\circ = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-339",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the instantaneous velocity of a particle projected as shown in figure is given by ˆ ˆ v ai (b ct)j = + - where a, b and c are positive constants, the range on the horizontal plane will be :",
+    "options": {
+      "A": "2ab/c",
+      "B": "ab/c",
+      "C": "ac/b",
+      "D": "a/2bc"
+    },
+    "correct_option": "A",
+    "explanation": "ˆ ˆ v ai (b ct)j = + - \\rho v x = a ; v y = (b - ct) ∵ At maximum height v y = 0 b - ct = 0 b t c = So time of Flight T = 2b c Range R = (v x )(T) 2ab R c ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-340",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile is thrown from a point in a horizontal plane such that its horizontal and vertical velocity components are 9.8 m/s and 4.9 m/s respectively. I ts horizontal range is :",
+    "options": {
+      "A": "4.9 m",
+      "B": "9.8 m",
+      "C": "19.6 m",
+      "D": "39.2 m"
+    },
+    "correct_option": "B",
+    "explanation": "x y 2u u 2 9.8 4.9 R 9.8m g 9.8   = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-341",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A shell is fired vertically upwards with a velocity v 1 from the deck of a ship moving with a speed v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "For vertical motion, time of flight t 1 2v g = for horizontal motion R = v 2 × t 1 2 2v v g ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-342",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person on the shore observes the motion of the shell as a parabola. Its horizontal range is given by :",
+    "options": {
+      "A": "2 1 2 2v v g",
+      "B": "2 1 2 2v v g",
+      "C": "1 2 2v v g",
+      "D": "2 2 1 2 2v v g KL01 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-343",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The range of a projectile when fired at 60^\\circ to the horizontal is 0.5 km. What will be its range when fired at 45^\\circ with the same speed ?",
+    "options": {
+      "A": "0.5 km",
+      "B": "1.0 3 km",
+      "C": "1.5 km",
+      "D": "2.0 km"
+    },
+    "correct_option": "B",
+    "explanation": "2 u sin(2 60 ) 0.5 g  ^\\circ =  0.5 = 2 u 3 g 2  2 u 1 g 3 =  R' = 2 2 u sin(2 45 ) u 1 g g 3  ^\\circ = = km"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-344",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of a projectile at its maximum height is 1 2 times of its init i al speed 'u' of projection. Its range on the horizontal plane is :",
+    "options": {
+      "A": "2 3u 2g",
+      "B": "2 u 2g",
+      "C": "2 3u 2g",
+      "D": "2 3u g"
+    },
+    "correct_option": "A",
+    "explanation": "1 ucos u 2 \\theta =  \\theta = 60^\\circ ( ) 2 2 2 u sin 2 60 u sin120 3u R g g 2g  ^\\circ ^\\circ  = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-345",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bullet is fired from a cannon with velocity 500 m/s. If the angle of projection is 15^\\circ and g = 10m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "2 u sin(2 ) R g \\theta = 500 500 sin(30 ) R 10   ^\\circ = R = 12500 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-346",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a given angle of projection if the initial velocity is tripled the range of the projectile becomes : -",
+    "options": {
+      "A": "9 times",
+      "B": "one - fourth",
+      "C": "two times",
+      "D": "four times"
+    },
+    "correct_option": "A",
+    "explanation": "Range of projectile = 2 u sin2 g \\theta ∵ Range  u 2 ∴ When u is tripled, range becomes 9 times."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-347",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown at an angle \\theta to the vertical and the range is maximum. The value of tan \\theta is :",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "1 3",
+      "D": "2 y v x Kinematics"
+    },
+    "correct_option": "A",
+    "explanation": "For maximum range \\theta = 45^\\circ So tan \\theta = 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-348",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum horizontal range of a gun is 25 km. If g = 10 m/s 2 , the muzzle velocity of the shell must be : -",
+    "options": {
+      "A": "1600 m/s",
+      "B": "500 m/s",
+      "C": "200 2 m/s",
+      "D": "160 10 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "2 max u R g =  u 2 = Rg = 25000 × 10 ∴ u = 500 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-349",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A grasshopper can jump maximum distance 1.6 m. It spends negligible time on the ground. How far can it go in 10 seconds : -",
+    "options": {
+      "A": "5 2m",
+      "B": "10 2m",
+      "C": "20 2m",
+      "D": "40 2m"
+    },
+    "correct_option": "C",
+    "explanation": "For maximum range 2 max u R 1.6 g = = u = 4 m/s So horizontal distance in 10 sec. will be d = (u x ) (t) d = (4) cos (45^\\circ) (10) 20 2 m = V \\theta V’ y \\beta V’ x V’ v 1 v 2 Kinematics"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-350",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three projectiles A, B and C are thrown from the same point in the same plane. Their trajectories are shown in the figure. Which of the following statement is incorrect?",
+    "options": {
+      "A": "The time of flight is the same for all the three",
+      "B": "The launch speed is same for all the three",
+      "C": "The horizontal velocity component is largest for particle C",
+      "D": "The maximum height is same for all the three"
+    },
+    "correct_option": "B",
+    "explanation": "2 2 u sin H 2g \\theta = which is same for all ∴ u sin \\theta is same for all 2usin T g \\theta = {same for all} for large \\theta value of sin \\theta is large and hence u will be less  A B C u u u   i.e. launch speed is maximum for particle C horizontal range R = u x × T T is same for all and R C is maximum for C  u x is maximum for C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-351",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile is thrown with an initial velocity of ˆ ˆ v ai bj = + . I f range of the projectile is four times the maximum height attained by it then :",
+    "options": {
+      "A": "a = 2 b",
+      "B": "b = a",
+      "C": "b = 2a",
+      "D": "b = 4a"
+    },
+    "correct_option": "B",
+    "explanation": "ˆ ˆ v ai bj = + \\rho  u cos \\theta = a and u sin \\theta = b R = 4H max b tan a \\theta = also 2 2 2 u sin2 4u sin g 2g \\theta \\theta =  tan \\theta = 1  b 1 a =  b = a"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-352",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two projectiles are fired from the same point with the same speeds at angles of projection 60^\\circ and 30^\\circ respectively. Which one of the following is true ?",
+    "options": {
+      "A": "Their horizontal ranges will be the same",
+      "B": "Their maximum heights will be the same",
+      "C": "Their landing velocities will be the same",
+      "D": "Their times of flight will be the same"
+    },
+    "correct_option": "A",
+    "explanation": "∵ \\theta 1 + \\theta 2 = 90^\\circ ∴ R 1 = R 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-353",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three particles A, B and C are projected from the same point with the same initial speeds making angles 30^\\circ, 45^\\circ and 60^\\circ respectively with the horizontal. Which of the following statements are correct ?",
+    "options": {
+      "A": "A, B and C have unequal ranges",
+      "B": "Ranges of A and C are equal and less than that of B",
+      "C": "Ranges of A and C are equal and greater than that of B",
+      "D": "A, B and C have equal ranges"
+    },
+    "correct_option": "B",
+    "explanation": "∵ \\theta A + \\theta C = 90^\\circ ∴ 2 2 A C u sin2 30 u 3 R R g 2g  ^\\circ = = = 2 2 B u sin2 45 u R g g  ^\\circ = =  R B > R A = R C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-354",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A number of bullets are fired in all possible directions with the same initial velocity u. The maximum area of ground covered by bullets is : -",
+    "options": {
+      "A": "2 2 2u g (  \\pi( ) ) ",
+      "B": "2 u 3 g (  \\pi ( ) ) ",
+      "C": "2 u 5 2g (  \\pi ( ) ) ",
+      "D": "2 2 u g (  \\pi( ) ) "
+    },
+    "correct_option": "D",
+    "explanation": "2 max u R g = Area = 2 2 2 max u R g   \\pi = \\pi    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-355",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four bodies P, Q, R and S are projected with equal speed having angles of projection 15^\\circ, 30^\\circ, 45^\\circ and 60^\\circ with the horizontal respectively. The body having shortest range is : -",
+    "options": {
+      "A": "P",
+      "B": "Q",
+      "C": "R",
+      "D": "S"
+    },
+    "correct_option": "A",
+    "explanation": "2 U sin2 R g \\theta = For 'Q' and 'S' range will be same (complementary angles) For 'R' it will be maximum For 'P' it will be minimum"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-356",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy can throw a stone up to a maximum height of 10 m. The maximum horizontal distance up to which the boy can throw the same stone will be :",
+    "options": {
+      "A": "20 2m",
+      "B": "10 m",
+      "C": "10 2m",
+      "D": "20 m"
+    },
+    "correct_option": "D",
+    "explanation": "For maximum height ∵ 2 max u H 2g = 2 u (10) 2g = U 10 2 = m/s For maximum range 2 max u R g = 2 (10 2) 20 m 10 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-357",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cricketer can throw a ball to a maximum horizontal distance of 100m. How much high above the ground can the cricketer throw the same ball : -",
+    "options": {
+      "A": "200m",
+      "B": "400m",
+      "C": "100m",
+      "D": "50m A B C O"
+    },
+    "correct_option": "D",
+    "explanation": "For maximum range 2 max u R g = 2 u 100 g = For maximum height 2 max u 100 H 2g 2 = = max H 50 m ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-358",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum range of a projectile fired with some initial velocity is found to be 2000 m. The maximum height (H) reached by this projectile is:",
+    "options": {
+      "A": "250 metre",
+      "B": "500 metre",
+      "C": "1000 metre",
+      "D": "2000 metre"
+    },
+    "correct_option": "B",
+    "explanation": "2 u sin2 R g \\theta = At \\theta = 45^\\circ 2 max u R 2000 g = =  2 2 u sin 45 2000 h 500m 2g 2 2 ^\\circ = = = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-359",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The cannon was set by mistake at 30^\\circ instead of 20^\\circ with the horizontal and was fired to hit the enemy target. The cannoN\\cdot shell will now fall at :",
+    "options": {
+      "A": "The enemy target",
+      "B": "Before the enemy target",
+      "C": "Beyond the enemy target",
+      "D": "May fall at any place"
+    },
+    "correct_option": "C",
+    "explanation": "For \\theta < 45^\\circ, with increase in \\theta , Range also increases."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "meet-phy8-360",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two similar cannon simultaneously fires two identical cannon balls at target 1 and 2 as shown in the figure. If the cannon balls have identical initial speeds, which of the following statements is true?",
+    "options": {
+      "A": "Target 2 is hit before target 1",
+      "B": "Target 1 is hit before target 2",
+      "C": "Both are hit at the same time",
+      "D": "information is insufficient"
+    },
+    "correct_option": "B",
+    "explanation": "∵ Time of flight 2(u)sin T g \\theta = T sin  \\theta For projectile '1' angle of projection is small so time of flight will be less. O H A B C R max"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-361",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If R is the horizontal range of a particle projected at an angle 53^\\circ from horizontal, then the greatest height attained by it is :",
+    "options": {
+      "A": "R 3",
+      "B": "2R",
+      "C": "R 2",
+      "D": "R 4"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2u sin cos 2u sin53 cos53 R g g \\theta \\theta ^\\circ ^\\circ = = 2 24u R 25g = 2 2 2 2 2 u sin u (sin53 ) 16u H 2g 2g 2 25g \\theta ^\\circ = = =  2 8u R H 25g 3 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-362",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile can have the same range R for two angles of projection. If h 1 and h 2 be the maximum height in the two cases, then : -",
+    "options": {
+      "A": "2 1 2 h h R ",
+      "B": "1 2 h h R ",
+      "C": "1 2 1 h h R ",
+      "D": "1 2 2 1 h h R "
+    },
+    "correct_option": "A",
+    "explanation": "R is same for two angles \\theta & 90 - \\theta 2 2 2 2 1 2 u sin u sin (90 ) h ,h 2g 2g \\theta - \\theta = = 4 2 2 1 2 2 u sin cos h h 4g \\theta \\theta = 4 2 2 2 2 4u sin cos R g \\theta \\theta =  h 1 h 2  R 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-363",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is thrown with some velocity from the ground. Maximum height attained when it is thrown at 37^\\circ to the horizontal is 90 m. What is the height attained when it is thrown at 53^\\circ to the horizontal?",
+    "options": {
+      "A": "90 m",
+      "B": "45 m",
+      "C": "120 m",
+      "D": "160 m"
+    },
+    "correct_option": "D",
+    "explanation": "2 2 u sin h 2g \\theta =  2 1 (usin37 ) h 90 2g ^\\circ = = 2 2 2 u 3 u 90 250 2g 5 2g   =   =     2 2 2 2 (usin53 ) u 4 16 h 250 160m 2g 2g 5 25 ^\\circ   = =  =  =     2 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-364",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two stones are projected with the same speed but making different angles with the horizontal. Their ranges are equal. If the angle of projection of one is 6 \\pi and its maximum height is y 1 , then the maximum height of the other will be :",
+    "options": {
+      "A": "3y 1",
+      "B": "2y 1",
+      "C": "1 y 2",
+      "D": "1 y 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-365",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown at different angles with the same speed u and from the same point; it has the same range in both the cases. If y 1 and y 2 be the heights attained in the two cases, then y 1 + y 2 = ... :",
+    "options": {
+      "A": "2 u g",
+      "B": "2 2u g",
+      "C": "2 u 2g",
+      "D": "2 u 4g"
+    },
+    "correct_option": "C",
+    "explanation": "Range(R) = same then angles of projection are \\theta & (90 - \\theta ) 2 2 1 u sin y 2g \\theta = and 2 2 2 2 2 u sin (90 ) u cos y 2g 2g ^\\circ - \\theta \\theta = = 2 2 2 2 1 2 u u y y (sin cos ) 2g 2g + = \\theta + \\theta ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-366",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is projected at such an angle that the horizontal range is four times the greatest height. The angle of projection is : -",
+    "options": {
+      "A": "25^\\circ",
+      "B": "33^\\circ",
+      "C": "45^\\circ",
+      "D": "53^\\circ"
+    },
+    "correct_option": "C",
+    "explanation": "R = 4H 4H 4 tan 1 45 R 4 \\theta = = =  \\theta = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-367",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The horizontal range of a projectile is 4 3 times of its maximum height. Its angle of projection from horizontal will be:",
+    "options": {
+      "A": "45^\\circ",
+      "B": "60^\\circ",
+      "C": "90^\\circ",
+      "D": "30^\\circ"
+    },
+    "correct_option": "D",
+    "explanation": "R 4 3H = 4 1 tan 4 3 3 \\theta = = \\theta = 30^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-368",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile have range double as compare to its maximum height attained. The angle of projection from horizontal is -",
+    "options": {
+      "A": "tan - 1",
+      "B": "tan - 1",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "R = 2H 4 tan 2 2 \\theta = = \\theta = tan - 1 (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-369",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of a projectile at its maximum height is 3 2 times its initial speed. If the range of the projectile is ‘P’ times the maximum height attained by it, then P equals to -",
+    "options": {
+      "A": "4 3",
+      "B": "2 3",
+      "C": "4 3",
+      "D": "3 4"
+    },
+    "correct_option": "C",
+    "explanation": "Given x 3 u (u) 2 (  = ( ) ( ) )  3 ucos (u) 30 2 \\theta =  \\theta = ^\\circ & R = (P) H 2 2 2 u 2sin( )(cos ) u sin (P) g 2g \\theta \\theta \\theta = 4 = (P) tan( \\theta ) 4 4 P tan tan(30 ) = = \\theta ^\\circ 4 P 4 3 1 3 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-370",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is projected to attain the maximum range. If the height attained is H, the range is",
+    "options": {
+      "A": "H",
+      "B": "2H",
+      "C": "4H",
+      "D": "H/2"
+    },
+    "correct_option": "C",
+    "explanation": "Maximum range for a given velocity is attained at \\theta = 45^\\circ 2 2 2 max u sin2 u sin 90 u R R g g g \\theta ^\\circ =  = = 2 2 2 2 2 u sin u .sin 45 u H 2g 2g 4g \\theta ^\\circ = = = ∴ R max = 4H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-371",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of a projectile is y = x - 2 gx",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 2 1 gx y x tan 2 u cos = \\theta - \\theta (standard equation) 2 1 y x gx tan 1 45 2 = -  \\theta =  \\theta = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-372",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The angle of projection is :",
+    "options": {
+      "A": "30^\\circ",
+      "B": "60^\\circ",
+      "C": "45^\\circ",
+      "D": "none"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-373",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of a projectile is y = 4x - 2 x",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 x x y 4x ;y 4x 1 4 16 (  = - = - ( ) )  Comparing with y = x tan \\theta x 1 R (  - ( ) )  R = 16m Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-374",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "T he horizontal range is :",
+    "options": {
+      "A": "16 m",
+      "B": "8 m",
+      "C": "64 m",
+      "D": "12.8 m"
+    },
+    "correct_option": "A",
+    "explanation": "displacement ≤ distance"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-375",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is projected at an angle of 45^\\circ from horizontal, 6m away from the foot of a wall, just touches the top of the wall and falls on the ground on the opposite side at a distance 3m from it. The height of wall is :",
+    "options": {
+      "A": "2m",
+      "B": "4 3 m",
+      "C": "8 3 m",
+      "D": "3 4 m"
+    },
+    "correct_option": "A",
+    "explanation": "R = 6 + 3 = 9 m x 6 y (x tan ) 1 6 1 1 2m R 9     = \\theta - =   - =        "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-376",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is projected from the ground with velocity 50 m/s at an angle of 30^\\circ from horizontal. It crosses a wall after 3 sec. How far beyond the wall the stone will strike the ground (g = 10m/s 2 )",
+    "options": {
+      "A": "90.2 m",
+      "B": "89.6 m",
+      "C": "86.6 m",
+      "D": "70.2 m"
+    },
+    "correct_option": "C",
+    "explanation": "Time of flight 2usin T g \\theta = (2)(50)sin(30 ) T 5 sec 10 ^\\circ = = Horizontal range R = 2 u sin2 g \\theta 2 (50) sin(60 ) R 216.5 m 10 ^\\circ = = After 3 sec. the distance travelled is d = U x × 3 = 50 cos (30^\\circ) (3) = 129.9m So, remaining horizontal distance after wall is R - d = 216.5 - 129.9 ≃ 86.6 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-377",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A shell fired from the ground is just able to cross the top of a wall 90m away and 45 m high moving horizontally. The direction of projection of the shell from horizontal will be : -",
+    "options": {
+      "A": "25^\\circ",
+      "B": "30^\\circ",
+      "C": "60^\\circ",
+      "D": "45^\\circ"
+    },
+    "correct_option": "D",
+    "explanation": "Range 'R' = 2(90) = 180 m So R 180 4 H 45 = = ∴ R = 4H, 4H 4 tan 1 R 4 \\theta = = = 45 \\theta = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-378",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An arrow is shot into the air. Its range is 100 metres and its time of flight is 5 s. If the value of g is assumed to be 10 m/s 2 , then the horizontal component of the velocity of arrow is :",
+    "options": {
+      "A": "40 m/s",
+      "B": "20 m/s",
+      "C": "31.25 m/s",
+      "D": "12.5 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "R = u x T  x R 100 u 20 T 5 = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-379",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the Q. 222, the maximum height attained by the arrow is :",
+    "options": {
+      "A": "25 m",
+      "B": "20 m/s",
+      "C": "31.25 m",
+      "D": "12.5 m"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 1 1 5 H gt 10 31.25m 2 2 2   = =   =    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-380",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the Q. 222, the vertical component of the projection velocity is :",
+    "options": {
+      "A": "25 m/s",
+      "B": "40 m/s",
+      "C": "12.5 m/s",
+      "D": "31.25 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "u y = gt up = 10 × 2.5 = 25 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-381",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the Q. 222, the angle of projection with the horizontal is :",
+    "options": {
+      "A": "1 4 tan 5 - (  ( ) ) ",
+      "B": "1 5 tan 4 - (  ( ) ) ",
+      "C": "1 5 tan 8 - (  ( ) ) ",
+      "D": "1 8 tan 5 - (  ( ) ) "
+    },
+    "correct_option": "B",
+    "explanation": "∵ u x = 20 and u y = 25 ∴ y x u 25 5 tan u 20 4 \\theta = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-382",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile is thrown into space so as to have the maximum possible horizontal range equal to 200m. Taking the point of projection as the origin, the coordinates of the point where the velocity of the projectile is minimum are:",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "for maximum range \\theta = 45^\\circ ∵ 4H tan R \\theta = R 200 H tan 45 50 4 4 = ^\\circ = = ∴ required coordinates are R ,H (100,50) 2 (  = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-383",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the range of a gun which fires a shell with muzzle speed v, is R, then the angle of elevation of the gun is :",
+    "options": {
+      "A": "2 1 v cos Rg - (  ( ) ) ",
+      "B": "1 2 Rg cos v - (  ( ) ) ",
+      "C": "2 1 1 v sin 2 Rg - (  ( ) ) ",
+      "D": "1 2 1 Rg sin 2 v - (  ( ) ) "
+    },
+    "correct_option": "D",
+    "explanation": "2 v sin2 R g \\theta =  2 gR sin2 v \\theta =  1 2 gR 2 sin v - \\theta =  1 2 1 gR sin 2 v - \\theta ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-384",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two balls A and B are thrown with speeds u and u/2 respectively. Both the balls cover the same horizontal distance before returning to the plane of projection. If the angle of projection of ball B is 30^\\circ with the horizontal, then the angle of projection o f A is :",
+    "options": {
+      "A": "1 1 sin 8 - (  ( ) ) ",
+      "B": "1 1 3 sin 2 8 - (  ( ) ( ) ) ",
+      "C": "1 1 1 sin 3 8 - (  ( ) ) ",
+      "D": "1 1 1 sin 4 8 - (  ( ) ) "
+    },
+    "correct_option": "B",
+    "explanation": "R = const.  u 2 sin 2q = const.  2 2 1 1 2 2 u sin2 u sin2 \\theta = \\theta  2 2 2 2 1 2 2 1 u sin2 u sin60 3 sin2 4 8 u u \\theta ^\\circ \\theta = = = 1 1 1 1 3 1 3 2 sin sin 8 2 8 - - \\theta =  \\theta ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-385",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two balls are projected from the same point on the ground simultaneously. First ball is projected vertically upwards and the second ball at an angle of projection 60^\\circ from the horizontal. Both the balls reach the ground simultaneously. The ratio of their v elocities of projection are : (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "T 1 = T 2 1 2 2U 2U sin60 g g ^\\circ = 1 2 U 3 U 2 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-386",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is projected at an angle \\theta with horizontal, another body is projected with the same speed at an angle \\theta with the vertical then the ratio of the maximum height is : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "2 2 1 U sin H 2g \\theta = 2 2 2 U [sin(90 )] H 2g - \\theta = 2 2 2 U cos H 2g \\theta = 2 1 2 H tan H 1 \\theta ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-387",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "cot \\theta (4) none of these",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity = ˆ ˆ (15i 2) 5j 8 ˆ ˆ 3i 4j 2 8  +  = + + v 5 m/s = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-388",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown from a point on earth surface with a speed v at an angle of projection \\theta from horizontal. From the same point and at the same instant a person starts running with a constant speed v 2 to catch the ball. The angle of projection of the ball from horizontal is : -",
+    "options": {
+      "A": "60^\\circ",
+      "B": "30^\\circ",
+      "C": "90^\\circ",
+      "D": "45^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "Horizontal component of velocity of projection of projectile should be equal to speed of person v x = vcos \\theta = v 2 cos \\theta = 1 2 60 \\theta = ^\\circ x 1 =3m x=6m 45 y R \\theta u H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-389",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For a projectile the ratio of maximum height reached to the square of flight time is (g = 10 m/s 2 ): - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 2 U sin H 2g T 2Usin g \\theta = (  \\theta ( ) )  g 10 5 8 8 4 = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-390",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At what angle to the horizontal should a ball be thrown so that its range R is related to the time of flight T as 2 R 5 3T = ? Take g = 10 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 R 5 3T = 2 2 2u sin cos 2usin 5 3 g g   \\theta \\theta \\theta  =     2 2 2 2 2u sin cos 4u sin 5 3 g g \\theta \\theta \\theta  =  1 tan 3  \\theta =  \\theta = 30^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-391",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(1) 30^\\circ (2) 45^\\circ (3) 60^\\circ (4) 90^\\circ",
+    "options": {
+      "A": "30^\\circ",
+      "B": "45^\\circ",
+      "C": "60^\\circ",
+      "D": "90^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-392",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball whose kinetic energy is E, is thrown at an angle of 60^\\circ to the horizontal. Its kinetic energy at the highest point of its flight will be : -",
+    "options": {
+      "A": "E 4",
+      "B": "E 2",
+      "C": "E 2",
+      "D": "zero"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 E mu 2 = and 2 2 1 1 E E' mu cos 60 E 2 4 4 = ^\\circ =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-393",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cricket ball is hit at an angle of 30^\\circ with the vertical with kinetic energy K. The kinetic energy of the ball at the highest point of the path is : -",
+    "options": {
+      "A": "Zero",
+      "B": "K/4",
+      "C": "K/2",
+      "D": "3K/4"
+    },
+    "correct_option": "B",
+    "explanation": "Kinetic energy 2 1 K mu 2 = At highest point : v = u x = u cos60^\\circ = u 2 K.E. = 2 1 u m 2 2 (  ( ) )  2 1 1 K mu 4 2 4 (  = = ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-394",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is projected vertically upwards with a certain speed. Another ball of the same mass is projected at an angle 30 ^\\circ to the vertical with the same initial speed. T he ratio of their potential energies at highest points of their journey, will be (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "In vertical upwards. PE = mgh 2 2 v mv mg 2g 2 (  = = ( ) )  … (i) at an angle of 30^\\circ with vertical PE = mgh 2 2 2 v sin 60 mv mg 3 2g 8 (  ^\\circ = = ( ) )  … (ii) ( ) ( ) 2 up 2 at 30 from vt . mv PE 4 2 PE 3 mv 3 8 \\theta= ^\\circ = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-395",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is projected with a velocity u making an angle \\theta with the horizontal. At any instant, its velocity v is at right angle to its initial velocity u; then v is:",
+    "options": {
+      "A": "u cos \\theta",
+      "B": "u tan \\theta",
+      "C": "u cot \\theta",
+      "D": "u sec \\theta"
+    },
+    "correct_option": "C",
+    "explanation": "∵ horizontal component of velocity remains same ∴ u cos \\theta = v cos (90 - \\theta ) u cos \\theta = v sin \\theta  v = u cot \\theta"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-396",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force 2 ˆ ˆ F (6t i 4tj)N = + acts on a particle of mass 1 kg. What will be velocity of the particle at t = 3 second if at t = 0, the particle was at rest : -",
+    "options": {
+      "A": "ˆ ˆ",
+      "B": "ˆ ˆ",
+      "C": "ˆ ˆ",
+      "D": "none PROJECTION FROM A HEIGHT"
+    },
+    "correct_option": "B",
+    "explanation": "2 2 ˆ ˆ F (6t i 4t j) ˆ ˆ a 6t i 4tj m 1 + = = = + \\rho \\rho 2 dv ˆ ˆ 6t i 4tj dt = + \\rho v 3 2 0 0 ˆ ˆ dv (6t i 4tj)dt  = + \\int \\int \\rho \\rho 3 3 2 0 6t 4t ˆ ˆ ˆ ˆ v i j 54 i 18 j 3 2   = + = +     \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-397",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is projected horizontally with a speed 10 m/s from a 80 m high building. The distance of the target on the ground from the foot of the building is : - (g = 10 m/s 2 )",
+    "options": {
+      "A": "80 m",
+      "B": "40 m",
+      "C": "20 m",
+      "D": "10 m"
+    },
+    "correct_option": "B",
+    "explanation": "Time taken 2h 2 80 T 4 sec. g 10  = = = distance 'd' = (u x ) (T) = (10) (4) = 40 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-398",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An aeroplane moving horizontally with a speed of 90 km/h drops a food packet while flying at a height of 490 m. The horizontal range of the packet is :",
+    "options": {
+      "A": "180 m",
+      "B": "250 m",
+      "C": "500 m",
+      "D": "670 m Kinematics"
+    },
+    "correct_option": "B",
+    "explanation": "2h 2 490 x t u u 25 250m g 9.8  =  =  =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-399",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stuntman plans to run along a roof top and then horizontally off it to land on the roof of next building. The roof of the next building is 19.6 metres below the first one and 6.2 metres away from it. What should be his minimum roof top speed in m/s, so that he can successfully make the jump ?",
+    "options": {
+      "A": "3.1",
+      "B": "4.0",
+      "C": "4.9",
+      "D": "6.2"
+    },
+    "correct_option": "A",
+    "explanation": "2h x u g =  g 9.8 u x 6.2 3.1 m / s 2h 2 19.6  = =  = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-400",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two stones are projected horizontally from the same height with speeds 100 m/s and 40 m/s. The ratio of their horizontal range is (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Horizontal range R = (u x ) (T) If projected horizontal from same height then time of flight will be same R  u x 1 2 R 100 5 R 40 2 = = \\theta 90 - \\theta u x h Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-401",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body is thrown horizontally with a velocity 20 m/s from the top of a tower of height 20 m. It strikes the level ground through the foot of the tower at a distance x from the tower. The value of x is : -",
+    "options": {
+      "A": "20 m",
+      "B": "10 m",
+      "C": "40 m",
+      "D": "30 m"
+    },
+    "correct_option": "C",
+    "explanation": "Time of flight 2h 2 20 T 2 sec. g 10  = = = Range 'R' = (u x ) (T) = (20) (2) = 40 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-402",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bomber is flying horizontally with a constant speed of 150 m/s at a height of 19.6 m. The pilot has to drop a bomb at the enemy target. At what horizontal distance from the target should he release the bomb?",
+    "options": {
+      "A": "0 m",
+      "B": "300 m",
+      "C": "600 m",
+      "D": "1000 m"
+    },
+    "correct_option": "B",
+    "explanation": "x 2h 2 19.6 t ; x v .t 150 g 9.8  = = =  = 300m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-403",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy wants to jump from building A to building B. Height of building A is 25 m and that of building B is 5m. Distance between buildings is 8m. Assume that the boy jumps horizontally, then calculate minimum velocity with which he has to jump to land safel y on building B.",
+    "options": {
+      "A": "6 m/s",
+      "B": "8 m/s",
+      "C": "4 m/s",
+      "D": "2 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "2 20 t 2 sec g  = = x x 8 x v t v 4 m / s 2 =  = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-404",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boy wants to jump from building A to building B. Height of building A is 39.2 m and building B is 19.6m. Distance between buildings is 20 m. Assuming boy jumps horizontally, then calculate minimum velocity with which boy has to jump to land safely on bui lding B : -",
+    "options": {
+      "A": "10 m/s",
+      "B": "20 m/s",
+      "C": "9.8 m/s",
+      "D": "19.6 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "Time taken 2(h) T g = h = 39.2 - 19.6 = 19.6 m 2(19.6) T 2sec. 9.8 = = ∵ Horizontal range R = (u x ) (T) 20 = (u x ) (2) u x = 10 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-405",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two buildings are separated by 30 m. By what speed a ball is projected horizontally from a window at height 150 m in one building so as to enter in the window at height 27.5 m in the other building.",
+    "options": {
+      "A": "2 m/s",
+      "B": "6 m/s",
+      "C": "4 m/s",
+      "D": "8 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "Difference in height h = 150 - 27.5 = 122.5 m time taken 2h T g = 2(122.5) T 5 sec. 9.8 = = Range R = (u x ) (T) x 30 u 6 m / s 5 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-406",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown horizontally from a height of 90 m with a speed of 4.5 m/s then find the time when it is at the height of 45 m from the ground:",
+    "options": {
+      "A": "3 2 sec",
+      "B": "10 sec",
+      "C": "9 sec",
+      "D": "3 sec"
+    },
+    "correct_option": "D",
+    "explanation": "∵ h = u y (t) + 1 2 gt 2 45 = 0 + 1 2 (g) t 2 t = 3 sec."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-407",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a particle is thrown horizontally with speed u from top of tower, the displacement of the projectile at any time t is given by :",
+    "options": {
+      "A": "2 2 2 2 u t g t +",
+      "B": "2 2 2 4 1 u t g t 4 +",
+      "C": "2 2 2 u g t +",
+      "D": "2 2 2 u g t - 25 m A B 8 m 5 m 39.2 m 19.6 m A B 20m"
+    },
+    "correct_option": "B",
+    "explanation": "x = ut, 2 1 y gt 2 = displacement 2 4 2 2 2 2 g t x y u t 4 = + = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-408",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A plane is flying horizontally at 98 3 m/s and releases an object which reaches the ground in 10 s. The angle made by it with horizontal while hitting the ground is :",
+    "options": {
+      "A": "55^\\circ",
+      "B": "45^\\circ",
+      "C": "60^\\circ",
+      "D": "30^\\circ"
+    },
+    "correct_option": "D",
+    "explanation": "v y = u y + a y t v y = 0 + 9.8 × 10 = 98 m/s y x v 98 1 tan 30 v 98 3 3 \\theta = = =  \\theta = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-409",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the top of a tower 78.4 m high, a ball is thrown horizontally. If the line joining the point of projection to the point where it hits the ground makes an angle of 45^\\circ with the horizontal, then the initial velocity of the ball is :",
+    "options": {
+      "A": "9.8 m/s",
+      "B": "4.9 m/s",
+      "C": "19.6 m/s",
+      "D": "2.8 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "H tan 45 1 x ^\\circ = = x = H = 78.4m time of flight 2H 2 78.4 t g 9.8  = = = 4 sec x 78.4 u 19.6 t 4 = = = m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-410",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is projected horizontally with a speed of 20 3 m/s, from some height at t =",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "tan 30^\\circ = y x v v  v y = x v 20 3 3 = m/s v y = 0 + gt t = 20 /3 2 g 3 = sec."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-411",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At what time will its velocity make 30^\\circ angle with the initial velocity",
+    "options": {
+      "A": "1 sec",
+      "B": "2 sec",
+      "C": "1.5 sec",
+      "D": "2/3 sec"
+    },
+    "correct_option": "A",
+    "explanation": "For same range \\theta 1 + \\theta 2 = 90^\\circ 1 rad 30 6 \\pi \\theta = = ^\\circ  \\theta 2 = 90^\\circ - \\theta 1 = 60^\\circ 2 2 2 1 u sin 30 u 1 u y 2g 2g 4 8g  ^\\circ  = = =  2 2 2 2 2 1 u sin 60 u 3 3u y 3y 2g 2g 4 8g ^\\circ  = = = = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-412",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the above question what will be the displacement of the particle in x - direction when its velocity makes 30^\\circ angle with the initial velocity",
+    "options": {
+      "A": "20 3 m",
+      "B": "40 3 3 m",
+      "C": "50 3 m",
+      "D": "10 3 m"
+    },
+    "correct_option": "B",
+    "explanation": "20 2 40 x m 3 3 3 3 =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-413",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is projected upwards from the top of a tower with a velocity of 50 m/s making an angle of 30 0 with the horizontal. The height of the tower is 70m. After how much time from the instant of throwing, will the ball reach the ground?",
+    "options": {
+      "A": "2 s",
+      "B": "5 s",
+      "C": "7 s",
+      "D": "9 s RELATIVE MOTION IN ONE DIMENSION"
+    },
+    "correct_option": "C",
+    "explanation": "by 2 y y y 1 S u t a t 2 = +  2 1 h usin30 t gt 2 = - ^\\circ +  2 1 1 70 50 t 10t 2 2 = -  +   t = 7 sec u v x \\theta X v y = 98 m/s Y v x = 98 3 m/s v y h=70 m u usin30^\\circ ucos30^\\circ 30^\\circ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-414",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following represents the displacement - time graph of two objects A and B moving with zero relative speed : -",
+    "options": {
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Slope of displacement - time graph gives velocity"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-415",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A monkey is climbing up a tree at a speed of 3 m/s. A dog runs towards the tree with a speed of 4 m/s. What is the relative speed of the dog as seen by the monkey ?",
+    "options": {
+      "A": "> 7 m/s",
+      "B": "Between 5 m/s and 7 m/s",
+      "C": "5 m/s",
+      "D": "< 5 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "∵ Both velocities are perpendicular rel ˆ ˆ v 4i 3j = - \\rho 2 2 rel v 4 3 5 m/s = + = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-416",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two car A & B start from rest (from the same point) in same direction with acceleration 8 m/s 2 & 4 m/s 2 respectively then acceleration of car B in frame of A(Take direction of motion of car is positive) : -",
+    "options": {
+      "A": "4 m/s 2",
+      "B": "- 4 m/s 2",
+      "C": "12 m/s 2",
+      "D": "None of these"
+    },
+    "correct_option": "B",
+    "explanation": "a A = 8 m/s 2 & a B = 4 m/s 2 a BA = a B - a A = 4 - 8 = - 4m/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-417",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A motorcycle is moving with a velocity of 80 km/h and a car is moving with a velocity of 65 km/h in the opposite direction. What is the relative velocity of the motorcycle with respect to the car ?",
+    "options": {
+      "A": "15 km/h",
+      "B": "20 km/h",
+      "C": "25 km/h",
+      "D": "145 km/h 20 3 m/s A B displacement Time A B Time displacement A B Time displacement A B Time displacement Kinematics"
+    },
+    "correct_option": "D",
+    "explanation": "v rel = 80 + 65 = 145 km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-418",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two cars A and B start moving from the same point with same speed  = 5 km/minute. Car A moves towards south and car B is moving towards west. What is the relative velocity of B with respect to A ?",
+    "options": {
+      "A": "5 2 km/min towards South - East",
+      "B": "5 2 km/min towards North - West",
+      "C": "5 2 km/min towards South - West",
+      "D": "5 2 km/min towards North - East"
+    },
+    "correct_option": "B",
+    "explanation": "The velocity of car A and car B are represented by the vectors in the direction as given in the question as shown in the figure. Given : v A = v B = v = 5 km/min The relative velocity of car B w.r. t to car A is given by : BA B A v v v = - \\rho\\rho\\rho BA ˆ ˆ ˆ ˆ v 5( i) ( 5j) 5i 5j = - - - = - + \\rho 2 2 BA v 5 5 5 2 km/ min = + = \\rho 5 tan 1 5 \\beta = = \\beta = 45^\\circ in north - west."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-419",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A train is moving towards East with a speed 20 m/s. A person is running on the roof of the train with a speed 3 m/s in the direction of motion of train. velocity of the person as seen by an observer on ground will be :",
+    "options": {
+      "A": "23 m/s towards East",
+      "B": "17 m/s towards East",
+      "C": "23 m/s towards West",
+      "D": "17 m/s towards West"
+    },
+    "correct_option": "A",
+    "explanation": "MT M T v v v = - \\rho\\rho\\rho M MT T v v v = + \\rho\\rho\\rho M ˆ ˆ ˆ v 3i 20i 23i = + + = \\rho 23 m/s towards east"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-420",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A jet air plane travelling with a speed of 500 km/h ejects its products of combustion with a speed of 1600 km/h relative to the jet plane. The speed of the latter with respect to an observer on the ground is : -",
+    "options": {
+      "A": "1600 km/h",
+      "B": "2100 km/h",
+      "C": "1100 km/h",
+      "D": "500 km/h"
+    },
+    "correct_option": "C",
+    "explanation": "v gas, plane = v gas + v plane v gas = v gas, plane - v plane = 1600 - 500 = 1100 km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-421",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A train moves in north direction with a speed of 54 km/h. A monkey is running on the roof of the train, against its motion with a velocity of 36 km/h. with respect to train. The velocity of monkey as observed by a man standing on the ground is:",
+    "options": {
+      "A": "5 m/s due north",
+      "B": "25 m/s due south",
+      "C": "10 m/s due south",
+      "D": "10 m/s due north"
+    },
+    "correct_option": "A",
+    "explanation": "TG 5 ˆ ˆ v 54 j 15j m / s 18 =  = \\rho MT 5 ˆ ˆ v 36 j 10j m/s 18 = -  = - \\rho MT MG TG v v v = - \\rho\\rho\\rho MG MT TG ˆ ˆ ˆ v v v 10j 15j 5j m/s = + = - + = \\rho\\rho\\rho = 5 m/s along north"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-422",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A lift is moving upwards with acceleration a. A man in the lift drops a ball within the lift. The acceleration of the ball as observed by the man in the lift and a man standing stationary on the ground are respectively :",
+    "options": {
+      "A": "g, g",
+      "B": "g - a, g - a",
+      "C": "g + a, g",
+      "D": "a, g"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-423",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone is thrown upwards and it rises to a height of 200 m. The relative velocity of the stone with respect to the earth will be minimum at : -",
+    "options": {
+      "A": "Height of 100 m",
+      "B": "Height of 150 m",
+      "C": "Highest point",
+      "D": "The ground"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on standard kinematics formulas (v = u + at, s = ut + 1/2 at², v² = u² + 2as)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-424",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 100 m long train crosses a man travelling at 5 km/h, in opposite direction in 6 seconds, then the velocity of train is : -",
+    "options": {
+      "A": "40 km/h",
+      "B": "55 km/h",
+      "C": "20 km/h",
+      "D": "45 km/h"
+    },
+    "correct_option": "B",
+    "explanation": "Length of train L = 100 m Let speed of train = v t and speed of man v m = 5 km/hr relative speed v rel = v t + v m rel Distance 100 v m / s Time 6 = = 100 18 6 5  = = 60 km/hr ∴ v t +5 = 60  v t = 55 km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-425",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 300 metres long train is moving due north with a speed of 20 m/s. A small bird is flying due south a little above the train with 5 m/s speed The time taken by the bird to cross the train is : -",
+    "options": {
+      "A": "6 s",
+      "B": "7 s",
+      "C": "9 s",
+      "D": "12 s"
+    },
+    "correct_option": "D",
+    "explanation": "Relative velocity of the bird (v rel ) = 20 - ( - 5) = 25 m/s Distance = 300 m ∴ Time = rel Distance 300 v 25 = = 12 sec. Time displacement A B Slope of A & B is same N S W E (N) v j Ƹ (W) - v j Ƹ N S E \\beta W Kinematics"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-426",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two trains each 100 m long, are travelling in opposite directions with respective velocities 35 m/s and 15 m/s. The time of crossing is : -",
+    "options": {
+      "A": "2 s",
+      "B": "4 s",
+      "C": "2 3s",
+      "D": "4 3s"
+    },
+    "correct_option": "B",
+    "explanation": "100 100 t 4s 35 15 + = = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-427",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A train 200 m long crosses a bridge 300 m long. It enters the bridge with a speed of 30 ms - 1 and leaves it with a speed of 50 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "∵ v 2 = u 2 + 2as (50) 2 = (30) 2 + 2(a)(500) a = 1.6 m/s 2 So, time t = v u a - 50 30 t 12.5 sec 1.6 - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-428",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the time taken to cross the bridge ?",
+    "options": {
+      "A": "2.5s",
+      "B": "7.5s",
+      "C": "12.5s",
+      "D": "15.0s"
+    },
+    "correct_option": "A",
+    "explanation": "Average velocity = ˆ ˆ (15i 2) 5j 8 ˆ ˆ 3i 4j 2 8  +  = + + v 5 m/s = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-429",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two cars get closer by 8 m in every second while travelling in the opposite directions. They get closer by 0.8 m in every second while travelling in the same direction. What are the speeds of the two cars?",
+    "options": {
+      "A": "4 ms - 1 and 4.4 ms - 1",
+      "B": "4.4 ms - 1 and 3.6 ms - 1",
+      "C": "4 ms - 1 and 3.6 ms - 1",
+      "D": "4 ms - 1 and 3 ms - 1"
+    },
+    "correct_option": "B",
+    "explanation": "For opposite direction v 1 + v 2 = 8 ...(1) For same direction v 1 - v 2 = 0.8 ...(2) From (1) & (2) v 1 = 4.4 m/s & v 2 = 3.6 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-430",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "velocity of a swimmer in still water is 5 m/s. If he takes 10 sec to swim upstream a distance of 30 m, then the speed of river is : -",
+    "options": {
+      "A": "3 m/s",
+      "B": "5 m/s",
+      "C": "10 m/s",
+      "D": "2 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "M R 30 v v 10 - = 5 - v R = 3 R v 2 m / s ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-431",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two cars are moving in the same direction with the same speed of 60 km/h. They are separated by 10 km. What is the speed of a car moving in the opposite direction if it meets the two cars at an interval of 5 minute?",
+    "options": {
+      "A": "45 km/h",
+      "B": "60 km/h",
+      "C": "105 km/h",
+      "D": "None"
+    },
+    "correct_option": "B",
+    "explanation": "5 10 v 60 120 60 v 60 =  + = + v = 60 km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-432",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four persons P, Q, R and S of same mass travel with same speed u along a square of side 'd' such that each one always faces the other. After what time will they meet each other?",
+    "options": {
+      "A": "d u",
+      "B": "2d 3u",
+      "C": "2d u",
+      "D": "d 3u"
+    },
+    "correct_option": "A",
+    "explanation": "d d t u ucos90 u = = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-433",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Six persons of same mass travel with same speed u along a regular hexagon of side 'd' such that each one always faces the other. After how much time will they meet each other ?",
+    "options": {
+      "A": "d u",
+      "B": "2d 3u",
+      "C": "2d u",
+      "D": "d 3u"
+    },
+    "correct_option": "C",
+    "explanation": "d t u ucos60 = - ^\\circ d d 2d u u u u 2 2 = = = - Alternative method: - d t ucos60 = ^\\circ 2d t u ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-434",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person walks up a stalled escalator in 45 sec. He is carried in 60s, when standing on the same escalator which is now moving. The time he would take to walk up the moving escalator will be : -",
+    "options": {
+      "A": "27 s",
+      "B": "72 s",
+      "C": "18 s",
+      "D": "25.71 s"
+    },
+    "correct_option": "D",
+    "explanation": "speed of man (v m ) = d 45 speed of escalator s d (v ) 60 = t = m s d v v + = d d d 45 60 + = 60 45 25.71 105  = sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-435",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bus starts from rest moving with an acceleration of 2m/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For cycle 96 + s = 20 × t for bus s = 1 2 at 2 = 1 2 × 2 × t 2 = t 2 ∴ 96 + t 2 = 20 t  t 2 - 20t + 96 = 0 (t - 8) (t - 12) = 0  t = 8 s or 12 s cyclist over takes bus in 8 s Note : At t = 12s, bus overtakes cyclist."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-436",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cyclist, 96 m behind the bus starts simultaneously towards the bus at 20 m/s. After what time will he be able to overtake the bus : -",
+    "options": {
+      "A": "8 s",
+      "B": "10 s",
+      "C": "12 s",
+      "D": "1 s"
+    },
+    "correct_option": "A",
+    "explanation": "avg ˆ ˆ r (13 2)i (14 3)j 11 ˆ ˆ v (i j) t 5 0 5 \\Delta - + - = = = + \\Delta - \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-437",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat takes 2 hours to go 10 km and come back in still water lake. The time taken for going 10 km upstream and coming back with water velocity of 5 km/h is :",
+    "options": {
+      "A": "140 min",
+      "B": "150 min",
+      "C": "160 min",
+      "D": "170 min"
+    },
+    "correct_option": "C",
+    "explanation": "mr mr mr 10 10 2 v 10 km / hr. v v + =  = mr r mr r 10 10 t v v v v  = + + - 10 10 10 10 8 hr 10 5 10 5 15 5 3 = + = + = + -  8 t 60 160 min. 3 =  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-438",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A river 2 km wide flows at the rate of 2km/h. A boatman who can row a boat at a speed of 6 km/h in still water, goes a distance of 2 km upstream and then comes back. The time taken by him to complete his journey is",
+    "options": {
+      "A": "60 min",
+      "B": "45 min",
+      "C": "80 min",
+      "D": "90 min"
+    },
+    "correct_option": "B",
+    "explanation": "The velocity upstream is (6 - 2) km/hr and downstream is (6 + 2) km/hr.  Total time taken = 2 2 6 3 hr 4 8 8 4 + = = = 45 minutes"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-439",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies are held separated by 9.8 m vertically one above the other. They are released simultaneously to fall freely under gravity. After 2 s the relative distance between them is : -",
+    "options": {
+      "A": "4.9 m",
+      "B": "19.6 m",
+      "C": "9.8 m",
+      "D": "39.2m"
+    },
+    "correct_option": "C",
+    "explanation": "Distance will remain the same as before because acceleration of both the bodies is same and initial velocity is zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-440",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two balls are thrown simultaneously,",
+    "options": {
+      "A": "15 m above from the ground",
+      "B": "15 m below from the top of the tower",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Let us assume they are meeting at x distance from ground 2 1 80 x 20 t gt 2 - = + … (i) 2 1 x 20 t gt 2 = - … (ii) From eq. (i) and (ii) 80 = 40 t t = 2 s x = 20 m from ground. cycle bus 2m/s 2 96m s 80 - x x B 20m/s 20m/s A d 60 d u"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-441",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "While sitting on a tree branch 20m above the ground, you drop a walnut. When the walnut has fallen 5m, you throws a second walnut straight down. What initial speed must you give the second walnut if they are both to reach the ground at the same time? (g=10ms - 2 )",
+    "options": {
+      "A": "5 ms - 1",
+      "B": "10 ms - 1",
+      "C": "15 ms - 1",
+      "D": "None of these"
+    },
+    "correct_option": "C",
+    "explanation": "Total time taken by the first walnut to reach at ground : - h = 1 2 gt 2 20 = 1 2 × 10 × t 2 t = 2 sec. time taken by it to cover a distance of 5 m : 5 = 1 2 gt 2  t = 1 sec. So, For 2 nd walnut : S = Ut + 1 2 at 2 20 = U × 1 + 1 2 × 10 × (1) 2 U = 15 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-442",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body A is thrown up vertically from the ground with velocity v 0 and another body B is simultaneously dropped from a height H. They meet at a height H 2 if v 0 is equal to",
+    "options": {
+      "A": "2gH",
+      "B": "gH",
+      "C": "1 gH 2",
+      "D": "2g H"
+    },
+    "correct_option": "B",
+    "explanation": "Let the two bodies A and B respectively meet at a time t, at a height H 2 from the ground. Using S = ut + 1 2 at 2 For a body A, u = v 0 , a = - g, S = H 2  H 2 = v 0 t - 1 2 gt 2 … (i) For a body B, u = 0, a = +g, S = H 2 ∴ 2 H 1 gt 2 2 = Equating equations (i) and (ii), we get v 0 t - 1 2 gt 2 = 1 2 gt 2 v 0 t = gt 2 or t = 0 v g Substituting the value of t is equation (i), we get 2 2 2 0 0 0 0 0 v v v v H 1 1 v g 2 g 2 g g 2 g (  (  =  - = - ( ) ( ) )  )  2 0 v H 1 2 2 g = or 2 0 v gH = 0 v gH = Alternate solution: - U AB = U A - U B = v 0 - 0 = v 0 a AB = a A - a B = - g - ( - g) = 0, S AB = H ∴ AB AB 0 S H t U v = = , for body B : - S = 1/2 gt 2  2 0 2 0 H 1 H g v gH 2 2 v =   ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-443",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat is sent across a river with a velocity of 8km/hr. If the resultant velocity of boat is 10 km/hr, then velocity of the river is",
+    "options": {
+      "A": "10 km/hr",
+      "B": "8 km/hr",
+      "C": "6 km/hr",
+      "D": "4 km/hr"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 2 R v 8 10 + = v R = 6 Km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-444",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bird is flying towards south with a velocity 40km/h and a train is moving with a velocity 40 km/h towards east. What is the velocity of the bird w.r.t. an observer in the train ?",
+    "options": {
+      "A": "40 2 km/h. N - E",
+      "B": "40 2 km/h. S - E",
+      "C": "40 2 km/h. S - W",
+      "D": "40 2 km/h. N - W"
+    },
+    "correct_option": "C",
+    "explanation": "bT ˆ ˆ v 40j 40i = - - \\rho 2 2 bT v 40 40 40 2 = + = \\rho (south - west) tan \\theta = 1 ; \\theta = 45^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-445",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bird is flying with a speed of 40 km/h in the north direction. A train is moving with a speed of 30 km/h in the west direction. A passenger sitting in the train will see the bird moving with velocity :",
+    "options": {
+      "A": "50 km/hr, 53^\\circ North of east",
+      "B": "50 km/hr, 37^\\circ North of east",
+      "C": "50 km/hr, 53^\\circ East of north",
+      "D": "50 km/hr in North East direction"
+    },
+    "correct_option": "A",
+    "explanation": "bT b T v v v = - \\rho\\rho\\rho bT ˆ ˆ v 40j ( 30i) = - - \\rho bT ˆ ˆ v (30i 40j) = + \\rho km/h 2 2 bT v (30) (40) 50 km / h = + = \\rho Ground B A v 0 H 8Km/hr 10Km/hr South \\theta East North \\theta East Kinematics 40 4 tan 30 3 \\theta = = \\theta = 53^\\circ 53^\\circ North of east"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-446",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat is sailing with a velocity ˆ ˆ (3i 4j) + with respect to ground and water in river is flowing with a velocity ˆ ˆ ( 6i 8j) - - . Relative velocity of the boat with respect to water is :",
+    "options": {
+      "A": "ˆ 8j",
+      "B": "ˆ ˆ 9i 12j +",
+      "C": "ˆ ˆ 6i 8j +",
+      "D": "ˆ ˆ 6i 8j - -"
+    },
+    "correct_option": "B",
+    "explanation": "BW BG WG ˆ ˆ v v v 9i 12j = - = + \\rho\\rho\\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-447",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Let 2 1 ˆ ˆ r (t) 3ti 4t j = + and 2 2 ˆ ˆ r (t) 4t i 3tj = + represent the positions of particles 1 and 2, respectively as functions of time t; 1 r (t) and 2 r (t) are in metres and t is in seconds. The relative speed of the two particles at the instant t = 2 sec, will be",
+    "options": {
+      "A": "1 m/s",
+      "B": "13 2 m/s",
+      "C": "5 2 m/s",
+      "D": "7 2 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "Here, 2 1 ˆ ˆ r (t) 3t i 4t j = + \\rho 2 2 ˆ ˆ r (t) 4t i 3t j = + \\rho velocity, ( ) ( ) 2 1 1 dr d ˆ ˆ ˆ ˆ v t 3t i 4t j 3i 8t j dt dt = = + = + \\rho \\rho ( ) ( ) 2 2 2 dr d ˆ ˆ ˆ ˆ v t 4t i 3t j 8ti 3j dt dt = = + = + \\rho \\rho The relative speed of particle 1 with respect to particle 2 is : 12 1 2 v v v = - \\rho\\rho\\rho ( ) ( ) ( ) ( ) ˆ ˆ ˆ ˆ ˆ ˆ 3i 8t j 8t i 3 j 3 8t i 8t 3 j = + - + = - + - At t = 2 s, ( ) ( ) 12 ˆ ˆ ˆ ˆ v 3 16 i 16 3 j -13i 13j = - + - = + \\rho ( ) 2 2 12 v 13 (13) 13 2 = + = \\rho m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-448",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Rain is falling vertically with a speed of 3 m/s. If a man is running with the same speed then the velocity of rain w.r.t. man is : -",
+    "options": {
+      "A": "3 m/s",
+      "B": "6 m/s",
+      "C": "4.2 m/s",
+      "D": "0 m/s"
+    },
+    "correct_option": "C",
+    "explanation": "RM R M ˆ ˆ v v v 3j 3i = - = - - \\rho\\rho\\rho 2 2 RM v 3 3 4.2 m / s = + = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-449",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man is walking on a road with a velocity of 5km/h. When suddenly it starts raining, velocity of rain is 10km/h in vertically downward direction, relative velocity of the rain with respect to man is :",
+    "options": {
+      "A": "13 km/hr",
+      "B": "7 km/hr",
+      "C": "109 km/hr",
+      "D": "5 5 km/hr"
+    },
+    "correct_option": "D",
+    "explanation": "M ˆ V 5i = \\rho R ˆ V 10j = - \\rho RM R M ˆ ˆ V V V 10j 5i = - = - - \\rho\\rho\\rho RM V 100 25 5 5 = + = \\rho km/hr"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-450",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the rain is falling vertically downwards with velocity 20 m/s and if a bike is going with velocity 30 m/s. Calculate at what angle from the vertical a man on the bike must incline his umbrella so that he can save himself from rain : -",
+    "options": {
+      "A": "1 2 tan 3 - (  ( ) ) ",
+      "B": "1 3 tan 2 - (  ( ) ) ",
+      "C": "tan - 1",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "RM R M v v v = - \\rho\\rho\\rho ˆ ˆ 20j 30i = - - Angle with vertical 30 tan 20 (  \\theta = ( ) )  1 3 tan 2 - (  \\theta = ( ) ) "
+  }
+]

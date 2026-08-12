@@ -1,0 +1,3849 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_001",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acetaldehyde on warming with Fehling's solution gives a red precipitate of :-",
+    "options": {
+      "A": "Elemental copper",
+      "B": "Cuprous oxide",
+      "C": "Cupric oxide",
+      "D": "Mixture of all of the above"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 CH 2 OH Ethanol SOCl 2 .Pyridine CH 3 CH 2 Cl+SO 2 +HCl (A) 3 2 3 2 (A) (B) CH CNa CH CH Cl CH CH C CH NaCl ≡ + - - → - ≡ +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_002",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acetone does not form :-",
+    "options": {
+      "A": "A phenylhydrazone with phenylhydrazine",
+      "B": "A sodium bisulphite adduct with sodium bisulphite",
+      "C": "A silver mirror with Tollen's reagent",
+      "D": "An oxime with hydroxylamine"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - Br CH 3 - CN CH 3 -C=NMgBr KCN (alc) CH 3 -MgBr Bromomethane (A) CH 3 CH 3 Hydrolysis H 3 O + CH 3 -C=O Propanone (C) (B)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_003",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 CHO and CH 3 COCH 3 can not be distinguished by :-",
+    "options": {
+      "A": "Fehling solution",
+      "B": "Grignard reagent",
+      "C": "Schiff's reagent",
+      "D": "Tollen's reagent"
+    },
+    "correct_option": "A",
+    "explanation": "Benzyl alcohol (X) CH 2 Cl CH 2 OH PCl 5 KCN, Aq. ethanol -POCl 3 ,-HCl -KCl CH 2 CN CH 2 COOH Benzyl cyanide (Hydrolysis) H + /H 2 O 2 1 2-Phenylethanoic acid (X)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_004",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acetone is obtained by the hydrolysis of the addition product of methyl magnesium iodide and:-",
+    "options": {
+      "A": "HCHO",
+      "B": "CH 3 CHO",
+      "C": "CH 3 COCH 3",
+      "D": "CH 3 -C ≡ N"
+    },
+    "correct_option": "C",
+    "explanation": "KOH(alc)/ ∆ HBr/Peroxid Dehydrohalogenation (Anit - Markovnikov addition) CH 3 - C - CH 3 CH 3 - C=CH 2 CH 3 - CH 2 - CH - Br (B) Br CH 3 CH 3 CH 3 Tert - Butylbromide 2 - Methylpropene Isobutyl bromide (A)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_005",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ph - C - CH 3 + aq. KOH → A →→ Cl Cl KCN H ⊕ B ?",
+    "options": {
+      "A": "50% d + 50% l",
+      "B": "80% d + 20% l",
+      "C": "Meso compound",
+      "D": "optically active"
+    },
+    "correct_option": "A",
+    "explanation": "NH 2 N 2 Cl CH 3 CH 3 + NaNO 2 + 2HCl + NaCl + 2H 2 O 273-278 K HBF 4 3-Methylaniline (X) + - NaBF 4 + N 2 + NO 2 N 2 BF 4 CH 3 CH 3 NaNO 2 Cu, ∆ + - 3-Nitrotoluene (Y)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_006",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C O can be obtained by :-",
+    "options": {
+      "A": "C-Cl +",
+      "B": "C-Cl O OH +",
+      "C": "+ CO + ZnCl 2 + HCN",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "NH 2 NH 2 N 2 Cl Br 2 /H 2 O NaNO 2 /HCl H 3 PO 2 Aniline (A) + - Br Br Br Br Br Br Br Br Br 1,3,5 - Tribromobenzene (B) (C)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_007",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which does not react with NaHSO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "( ) 3 H O 3 2 4 3 2 Hydrolysis 4 Hexanenitrile Hexanoic acid (A) CH (CH ) CN CH CH COOH + → ( ) 3 2 NH Br / KOH 3 2 2 4 CH CH CONH B ( ) ∆  → → ( ) 3 2 2 4 1-pentanamine CH CH NH (C)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_008",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) Ph-C-H O (2) C-H O CH 3 -O (3) CH 2 -C-Ph O CH 3 (4) CHO CH 3",
+    "options": {
+      "A": "Ph-C-H O",
+      "B": "C-H O CH 3 -O",
+      "C": "CH 2 -C-Ph O CH 3",
+      "D": "CHO CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Benzyl alcohol (X) CH 2 Cl CH 2 OH PCl 5 KCN, Aq. ethanol -POCl 3 ,-HCl -KCl CH 2 CN CH 2 COOH Benzyl cyanide (Hydrolysis) H + /H 2 O 2 1 2-Phenylethanoic acid (X)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_009",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "ketones can be prepared by :-",
+    "options": {
+      "A": "Rosenmund reduction",
+      "B": "Etard reaction",
+      "C": "Cannizzaro reaction",
+      "D": "Friedel-Craft reaction"
+    },
+    "correct_option": "A",
+    "explanation": "3 NH 3 2 3 2 2 Propanoic acid Propanamide CH CH COOH CH CH CONH (A) ∆  → 2 Br / KOH 2 2 2 CH CH NH (B) → 2 2 2 HNO N , H O - -  → 3 2 Ethanol CH CH OH (C) 2 2 7 2 4 K Cr O / H SO 3 Ethanoic acid CH COOH (D) →"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_010",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Carbonyl compounds are best purified by :-",
+    "options": {
+      "A": "Steam distillation",
+      "B": "Hydrolysis of sodium bisulphite adducts",
+      "C": "Fractional crytallisation",
+      "D": "Sublimation"
+    },
+    "correct_option": "A",
+    "explanation": "2 HNO 3 2 2 3 2 CH CH NH CH CH OH (X) - -   → - [O]  → 2 5 C H OH 3 H , CH COOH + ∆  → CH 3 -COOC 2 H 5 (Y)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_011",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Carbonyl compounds readily undergo :-",
+    "options": {
+      "A": "Nucleophilic substitutions",
+      "B": "Electrophilic addition reactions",
+      "C": "Nucleophilic addition reactions",
+      "D": "Free radical substitution reactions $//"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 HNO HI 3 2 3 3 3 N , H O Methyliodide CH NH CH O CH CH I(Y) (X) - -  → - -   → 2 5 Na/C H OH KCN 3 3 2 2 KI Reduction Ethanamine CH CN CH CH NH (Z) -  →  → $//(1 TARGET : 202 5 ORGANIC CHEMISTRY HS 202 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_012",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 - C - CH 3 O and CH 3 -C-H O are readily distinguished by their reaction with :-",
+    "options": {
+      "A": "Iodine and alkali",
+      "B": "2,4-dinitrophenylhydrazine",
+      "C": "Tollen's reagent",
+      "D": "All the above"
+    },
+    "correct_option": "C",
+    "explanation": "(i) Fe/HCl NaNO 2 /HCl CuCN/HCN H 3 O ⊕ Hydrolysis 273-278 K NO 2 NH 2 N ≡ NCl - CN COOH Nitrobenzene Aniline Benzene diazonium Chloride Benzonitrile Benzoic acid + (A) (B) (C) (D)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_013",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is the most suitable reagent for the following conversion CH 3 -CH=CH-CH 2 -C-CH 3 O CH 2 -CH=CH-CH 2 -C-OH O",
+    "options": {
+      "C": "2",
+      "D": "Option D",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "C",
+    "explanation": "Heat 273 - 278 K NH 2 N=NCl Aniline 2,4,6 - Tribromonoaniline 2,4,6 - Tribromo fluoro benzene Br Br Br Br Br Br Br Br Br + F HBF 4 (A) (B) (C) NH 2 Br 2 /H 2 O NaNO 2 /HCl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_014",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Formaldehyde reacts with conc. alkali to form :-",
+    "options": {
+      "A": "A resinous mass",
+      "B": "Formic acid",
+      "C": "A mixture of methanol and sodium formate",
+      "D": "Methanol"
+    },
+    "correct_option": "C",
+    "explanation": "NaNO 2 /HCl Cl 2 (1 mole),hv H 3 PO 2 KOH (aq.) (Hydrolysis) CH 3 Cl/Anhyd. AlCl 3 273 - 278 K 383 K N 2 Cl - NH 2 CH 3 CH 2 OH Aniline Toluene Benzene diazonium Chloride Benzyl Chloride Benzene Benzylalcohol + CH 2 Cl (A) (B) (C) (D)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_015",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compounds does not give aldol condensation :-",
+    "options": {
+      "A": "CH 3 CHO",
+      "B": "CH 3 CH 2 CHO",
+      "C": "HCHO",
+      "D": "CH 3 CH 2 CH 2 CHO"
+    },
+    "correct_option": "C",
+    "explanation": "Br 2 /NaOH H 3 PO 2 NaNO 2 /HCl CH 3 Cl/Anhyd.AlCl 3 Heat N 2 Cl - CONH 2 NH 2 CH 3 Benzamide Aniline Benzen Benzene diazonium Chloride Toluene + 273 - 278 K Diazotisation (A) (B) (C) or CONH 2  → H + /H 2 O COOH  → Red P HI CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_016",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cannizzaro reaction is given by :-",
+    "options": {
+      "A": "aldehydes containing α -hydrogen atoms",
+      "B": "aldehydes as well as ketones containing α -hydrogen atoms",
+      "C": "aldehydes not containing α -hydrogen atoms",
+      "D": "aldehydes containing β -hydrogen atoms"
+    },
+    "correct_option": "C",
+    "explanation": "Conc.HNO 3 +Conc.H 2 SO 4 Br 2 /Fe Sn + HCl NaNO 2 /HCl Boiling 333 K NO 2 NO 2 NH 2 N 2 Cl OH Benzene Nitrobenzene m-Bromonitrobenzene m-Bromoaniline m-Bromophenol Br Br Br 273-278 K dil H 2 SO 4 Br (A) (B) (C) (D) (E)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_017",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following can be converted to CH 3 -CH=CH-CHO :-",
+    "options": {
+      "A": "Acetone",
+      "B": "Acetaldehyde",
+      "C": "Propanaldehyde",
+      "D": "Formaldehyde"
+    },
+    "correct_option": "A",
+    "explanation": "(i) CH 3 CHI 2 CH 3 CH 2 CN CH 3 CH 2 -C-NH 2 CH 3 CH 2 NH 2 NaCN OH - NaOH + Br 2 O Iodoethane Propanenitrile (A) Partial hydrolysis Ethanamide (C) Propanamide (B) (ii) CH 3 COOH CH 3 CONH 2 CH 3 O-CH 3 NH 3 Heat NaOBr NaNO 2 /HCl Ethanamide (A) Methanamine (B) Dimethyl ether (C) CH 3 NH 2 (iii) C 6 H 5 NO 2 C 6 H 5 NH 2 Fe/HCl HNO 2 273 K C 6 H 5 OH Nitrobenzene Aniline (A) Benzenediazonium Chloride (B) C 6 H 5 N ≡ NCl¯ + N=N OH p-Hydroxyphenylazo benzene (C) (iv) A = , B = , C = Br $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS (v) A = Sn + HCl, B = CHCl 3 + KOH, C = LiAlH 4 (vi) A = SOCl 2 , B = NH 3 , C = Br 2 + KOH (vii) A = Alc.KOH, B = HBr, R 2 O 2 , C = Aq. KOH (viii) A = CH 3 CN, B = CH 3 -C-CH 3 O CH 3 -C=CH-C-CH 3 O C= CH 3 (ix) Cl A = , B = MgCl , C = COOMgCl (x) COOH A = , B = COCl , C = C O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_018",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The product of reaction with primary amine and aldehyde is -",
+    "options": {
+      "A": "R-C-OH O",
+      "B": "R-ONO",
+      "C": "R'-CH=N-R",
+      "D": "R-NO 2"
+    },
+    "correct_option": "A",
+    "explanation": "(i) CH 3 -CH 2 -OH CH 3 CHO CH 3 CHCH 2 CHO CrO 3 dil.NaOH 3-hydroxybutanal Ethanol (Aldol reaction) OH (ii) MgBr Br H 3 C-CH Bromobenzene 1-Phenylethanol (i) CH 3 CHO Mg/dry ether (ii) H 2 O OH (iii) CH=CHCHO CHO CH 2 CH 2 CH 2 OH Benzaldehyde (Aldol condensation) 3-Phenylpropan-1-ol Ni/H 2 (i) NaOH (ii) ∆ (Catalyti hydrogenation + CH 3 CHO (iv) COCH 3 COCH 3 Benzene HNO 3 /H 2 SO 4 CH 3 COCl, Anhyd AlCl 3 (Friedel-Craft Acylation) NO 2 (v) KCN (alc) LiAlH 4 Benzyl Chloride Phenyl ethanenitrile 2-Phenyl ethanamine -KCl CH 2 Cl CH 2 CN CH 2 CH 2 NH 2 $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_019",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Brady's reagent is",
+    "options": {
+      "A": "[Cu",
+      "B": "KMnO 4 /NaIO 4",
+      "C": "O 2 N NO 2 NH.NH 2",
+      "D": "O 2 N NO 2 F"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_020",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A compound with molecular formula C 3 H 6 O, not gives silver mirror with Tollen's reagent but forms oxime with hydroxyl amine. Compound will be -",
+    "options": {
+      "A": "CH 2 =CH-CH 2 -OH",
+      "B": "CH 3 CH 2 CHO",
+      "C": "CH 2 =CH-O-CH 3",
+      "D": "CH 3 COCH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_021",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aldehyde and ketone are distinguished by reagent",
+    "options": {
+      "A": "Fehling solution",
+      "B": "H 2 SO 4",
+      "C": "NaHSO 3",
+      "D": "NH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_022",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Carbonyl group is converted into methylene group by -",
+    "options": {
+      "A": "Acidic reduction",
+      "B": "Raney Ni",
+      "C": "Basic hydrolysis",
+      "D": "Normal Hydrogenation"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_023",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When 3-Hydroxybutanal undergoes dehydration then unsaturated product formed will be :-",
+    "options": {
+      "A": "Alcohol",
+      "B": "Aldehyde",
+      "C": "Acid",
+      "D": "Alkyl halide"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_024",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reagent used for the separation of acetaldehyde from acetophenone is -",
+    "options": {
+      "A": "NaHSO 3",
+      "B": "C 6 H 5 NHNH 2",
+      "C": "NH 2 OH",
+      "D": "NaOH + I 2 ⊕ ∆   → 4 KMnO / H , $//"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_025",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The most suitable reagent for the conversion of RCH 2 OH → RCHO",
+    "options": {
+      "A": "KMnO 4",
+      "B": "K 2 Cr 2 O 7",
+      "C": "CrO 3 /H 2 SO 4",
+      "D": "PCC"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_026",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The major organic product formed from the following reaction is :- O (i) CH 3 NH 2 (ii) LiAlH 4 (iii) H 2 O",
+    "options": {
+      "A": "NHCH 3 OH",
+      "B": "NHCH 3",
+      "C": "NHCH 3 OH",
+      "D": "NHCH 3 OCH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_027",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "O + CH 3 MgBr 2 H / H O ⊕  → P HBr Q  → Mg Ether  → R 2 HCHO H / H O ⊕  → S, S is :",
+    "options": {
+      "A": "OH",
+      "B": "OH",
+      "C": "OH",
+      "D": "OH"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_028",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "H-C-CH 2 CH 2 CH 2 CH 2 -C-H O O OH/ ∆  Product",
+    "options": {
+      "A": "O=C-CH 3",
+      "B": "CH=O",
+      "C": "CH 2 -CH 2 CH 2 CH 2 CH 2 -COOH OH",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_029",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reaction will not give ketone?",
+    "options": {
+      "A": "R - MgX + R COCl -   →",
+      "B": "R - CN + R - MgX → 3 + H O   →",
+      "C": "+ RCOCl anhy. AlCl 3",
+      "D": "CH 3 + CrO 2 Cl 2 CS 2 H 2 O +"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_030",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the incorrect option : Conversion Reagent",
+    "options": {
+      "A": "Hexan-1-ol → hexanal C 5 H 5 NH + CrO 3 Cl -",
+      "B": "Ethanenitrile → Ethanal DIBAL-H",
+      "C": "p-fluorotoluene, → K 2 Cr 2 O 7 , H + p-fluorobenzaldehyde",
+      "D": "But-2-ene → Ethanal O 3 ,H 2 O-Zn dust"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_031",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "True statement about acetone is",
+    "options": {
+      "A": "α -H of acetone is acidic due to strong electron withdrawing carbonyl group",
+      "B": "α -H of acetone is acidic due to resonance stabilisation of conjugate base",
+      "C": "It gives β -Hydroxy ketone with dilute alkali",
+      "D": "All"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_032",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the correct statement for C=O and C=C bond.",
+    "options": {
+      "A": "Carbon-Oxygen double bond is polar but carbon-carbon double bond is non-polar",
+      "B": "Carbon-Oxygen bond length is 123 pm than that of carbon-carbon bond length is 134 pm",
+      "C": "Carbonyl compounds undergo nucleophilic addition reaction but compounds containing ethylenic double bonds undergo electrophilic addition reaction",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_033",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the structure of chromium complex formed by the reaction of toluene with chromylchloride followed by hydrolysis to give benzaldehyde and also the name of the reaction.",
+    "options": {
+      "A": "CH",
+      "B": "CH",
+      "C": "CH 2",
+      "D": "CH"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_034",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The methanal, ethanal and propanone are miscible with water because they form",
+    "options": {
+      "A": "Vander waal's forces with water",
+      "B": "H-bond with water",
+      "C": "dipole-dipole bond with water",
+      "D": "ion-dipole bond with water"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_035",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The correct increasing order of carbonyl compounds towards nucleophilic addition reaction.",
+    "options": {
+      "A": "Butanone < Propanone < Propanal < Ethanal",
+      "B": "Butanone < Propanal < Propanone < Ethanal",
+      "C": "Butanone < Ethanal < Propanone < Propanal",
+      "D": "Butanone < Ethanal < Propanal < Propanone"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_036",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following carbonyl group give the positive fehling test ?",
+    "options": {
+      "A": "Aliphatic aldehydes",
+      "B": "Aromatic aldehydes",
+      "C": "ketones",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_037",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cyanohydrin of the following compound on hydrolysis gives compound that can show optical isomerism :",
+    "options": {
+      "A": "HCHO",
+      "B": "CH 3 CHO",
+      "C": "CH 3 COCH 3",
+      "D": "All the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_038",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When acetone reacts with Grignard reagent followed by hydrolysis, it gives :",
+    "options": {
+      "A": "1^\\circ -alcohol",
+      "B": "2^\\circ -alcohol",
+      "C": "3^\\circ -alcohol",
+      "D": "Methyl alcohol"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_039",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the reaction C=CH-CH 3 H 3 C H 3 C   → O 3 Zn/H 2 O",
+    "options": {
+      "A": "One of the product only show positive tollens test",
+      "B": "Both product shows positive tollen's test",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_040",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following will not give iodoform test",
+    "options": {
+      "A": "CH 3 - C - CH 3 O",
+      "B": "C 2 H 5 - C -C 2 H 5 O",
+      "C": "H-CH 2 - CH -C 2 H 5 OH",
+      "D": "I-CH 2 - C -CH 2 -H O"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_041",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following product is obtained when bleaching powder is distilled with acetone",
+    "options": {
+      "A": "CCl 4",
+      "B": "CHCl 3",
+      "C": "CH 3 -CH 3",
+      "D": "All $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_042",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which will give yellow ppt. with iodine and alkali",
+    "options": {
+      "A": "Propan-2-ol",
+      "B": "Benzophenone",
+      "C": "Methyl acetate",
+      "D": "Acetamide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_043",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A compound containing two -OH groups attached with one carbon atoms is unstable but which one of the following is stable",
+    "options": {
+      "A": "CH 3 CH OH OH",
+      "B": "CH 3 -C-OH OH OH",
+      "C": "Cl 3 C-CH OH OH",
+      "D": "All"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_044",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The purity of CHCl 3 can be checked by",
+    "options": {
+      "A": "treating CHCl 3 by NaOH",
+      "B": "treating CHCl 3 by HCl",
+      "C": "treating CHCl 3 with aq. AgNO 3",
+      "D": "treating CHCl 3 by C 2 H 5 -OH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_045",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Pure CHCl 3 and pure CHI 3 can be distinguished by",
+    "options": {
+      "A": "treating with litmus paper",
+      "B": "treating with aq. KOH",
+      "C": "treating with HCl",
+      "D": "treating with aq. AgNO 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_046",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following pair is differentiated by iodoform test?",
+    "options": {
+      "A": "O O ,",
+      "B": "O H , O H H",
+      "C": "O H, Ph C H - C - H O",
+      "D": "O CH 2 , I O CH I I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_047",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify z in the following series CH 2 =CH 2 HBr ∆   → x Hydrolysis → y 2 I /NaOH   → z",
+    "options": {
+      "A": "C 2 H 5 I",
+      "B": "C 2 H 5 OH",
+      "C": "CHI 3",
+      "D": "CH 3 CHO"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_048",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which can give haloform with X 2 /OH - ?",
+    "options": {
+      "A": "CH 3 OH",
+      "B": "CH 3 -CH 2 -CH=O",
+      "C": "CH 3 CHO",
+      "D": "CH 3 CH 2 CH 2 OH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_049",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When propanoic acid is treated with aqueous sodium bicarbonate, CO 2 is liberated. The C of CO 2 comes from :-",
+    "options": {
+      "A": "methyl group",
+      "B": "carboxylic acid group",
+      "C": "methylene group",
+      "D": "bicarbonate $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_050",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a set of reactions acetic acid yielded a product D CH 3 COOH 2 SOCl  → A 3 Benzene Anhy.AlCl  → B NaCN  → C 3 H O ⊕  → D The structure of D would be -",
+    "options": {
+      "A": "C-COOH CH 3 OH",
+      "B": "CH 2 -C-CH 3 OH COOH",
+      "C": "C-CH 3 OH CN",
+      "D": "CH 2 -C-CH 3 CN OH ACID DERIVATIVE"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_051",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The compounds A and B in the reaction sequence CH 3 COCl B → CH 3 COONa A Phenol are given by the set respectively :-",
+    "options": {
+      "A": "CH 3 CO-O-COCH 3 , C 6 H 5 CH 2 OH",
+      "B": "CH 3 CO-O-COCH 3 , C 6 H 5 OCOCH 3",
+      "C": "CH 3 COCH 3 , C 6 H 5 OCOCH 3",
+      "D": "CH 3 -C-O-O-C-CH 3 O O , CH 3 -C-O-C 6 H 5 O"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_052",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 -CH 2 -COOH 2 Re d P / Cl  → A Alc. KOH  → B structure of B is :-",
+    "options": {
+      "A": "CH 2 =CH-COOH",
+      "B": "CH 3 -CH-COOH Cl",
+      "C": "CH 2 -CH 2 -COOH Cl",
+      "D": "CH 3 -CH 2 -C-Cl O"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_053",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is most reactive towards hydrolysis.",
+    "options": {
+      "A": "CH 3 O C-NH-CH 3",
+      "B": "O 2 N O C-NH-CH 3",
+      "C": "Cl O C-NH-CH 3",
+      "D": "O C-NH-CH 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_054",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reagents may be used to distinguish between phenol and benzoic acid ?",
+    "options": {
+      "A": "Victor-Mayer test",
+      "B": "Neutral FeCl 3",
+      "C": "Aqueous NaOH",
+      "D": "Tollen's reagent"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_055",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acyl chlorides undergo :-",
+    "options": {
+      "A": "Nucleophilic addition reactions",
+      "B": "Nucleophilic substitution reactions",
+      "C": "Electrophilic substitution reactions",
+      "D": "Electrophilic addition reactions"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_056",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reaction of ethanol on acetic anhydride is an example of :-",
+    "options": {
+      "A": "Nucleophilic addition",
+      "B": "Nucleophilic substitution",
+      "C": "Electrophilic addition",
+      "D": "Free radical substitution"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_057",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reduction of acetamide gives :-",
+    "options": {
+      "A": "CH 3 CH 2 NH 2",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_058",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is used in preparation of aldehyde by rosenmund reduction",
+    "options": {
+      "A": "Ester",
+      "B": "Acid",
+      "C": "Acid halide",
+      "D": "Alcohol"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_059",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 2 OHCH 2 CH 2 COCH 3 Reagent → CH 2 OHCH 2 CH 2 CH 2 CH 3 Suitable reagent for above reaction is :-",
+    "options": {
+      "A": "Zn-Hg/HCl",
+      "B": "NH 2 NH 2 / OH Θ",
+      "C": "Red P + HI",
+      "D": "All"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 CH 2 OH Ethanol SOCl 2 .Pyridine CH 3 CH 2 Cl+SO 2 +HCl (A) 3 2 3 2 (A) (B) CH CNa CH CH Cl CH CH C CH NaCl ≡ + - - → - ≡ +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_060",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Among the following the one that gives positive iodoform test upon reaction with I 2 and NaOH is-",
+    "options": {
+      "A": "CH 3 CH 2 CH",
+      "B": "C 6 H 5 CH 2 CH 2 OH",
+      "C": "CH 3 OH H 3 C",
+      "D": "PhCHOHCH 3"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - Br CH 3 - CN CH 3 -C=NMgBr KCN (alc) CH 3 -MgBr Bromomethane (A) CH 3 CH 3 Hydrolysis H 3 O + CH 3 -C=O Propanone (C) (B)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_061",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the following reaction sequence, the correct structure of E, F and G are : O OH Ph O * Heat  → [E] 2 I NaOH [F] + [G] (* implies 13C labelled carbon)",
+    "options": {
+      "A": "E = O O Na Ph O , F = CH 3 Ph * *  ⊕ ,G = CHI 3",
+      "B": "E = O O Na Ph O , F = CH 3 Ph *  ⊕ ,G = CHI 3",
+      "C": "E = O O Na Ph O , F = CH 3 Ph *  ⊕ ,G = 3 * C HI",
+      "D": "E = O O Na Ph O , F = CH 3 Ph *  ⊕ ,G = 3 * C H I"
+    },
+    "correct_option": "A",
+    "explanation": "Benzyl alcohol (X) CH 2 Cl CH 2 OH PCl 5 KCN, Aq. ethanol -POCl 3 ,-HCl -KCl CH 2 CN CH 2 COOH Benzyl cyanide (Hydrolysis) H + /H 2 O 2 1 2-Phenylethanoic acid (X)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_062",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "O-C-CH 3 (P) CH 2 =C CH 3 O Acidic Hydrolysis   → ( Q ) CH 3 - CH=CH - O - C - CH 3 O Acidic Hydrolysis   → Product formed by (P) & (Q) can be differentiated by",
+    "options": {
+      "A": "2, 4 DNP",
+      "B": "Lucas reagent",
+      "C": "NaHSO 3",
+      "D": "Fehlings solution"
+    },
+    "correct_option": "A",
+    "explanation": "KOH(alc)/ ∆ HBr/Peroxid Dehydrohalogenation (Anit - Markovnikov addition) CH 3 - C - CH 3 CH 3 - C=CH 2 CH 3 - CH 2 - CH - Br (B) Br CH 3 CH 3 CH 3 Tert - Butylbromide 2 - Methylpropene Isobutyl bromide (A)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_063",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Compound A (molecular formula C 3 H 8 O) is treated with anhydrous CrO 3 to form a product B (molecular formula C 3 H 6 O). B forms a shining silver mirror on warming with ammonical silver nitrate. B when treated with an aqueous solution of H 2 NCONHNH 2 , gives a product C. identify the structure of C:-",
+    "options": {
+      "A": "CH 3 CH 2 CH=NNHCONH 2",
+      "B": "3 2 | 3 CH C NNHCONH CH - =",
+      "C": "3 2 | 3 CH C NCONHNH CH - =",
+      "D": "CH 3 CH 2 CH=NCONHNH 2"
+    },
+    "correct_option": "A",
+    "explanation": "NH 2 N 2 Cl CH 3 CH 3 + NaNO 2 + 2HCl + NaCl + 2H 2 O 273-278 K HBF 4 3-Methylaniline (X) + - NaBF 4 + N 2 + NO 2 N 2 BF 4 CH 3 CH 3 NaNO 2 Cu, ∆ + - 3-Nitrotoluene (Y)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_064",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify the product in given reaction :- H O CH 3 CH 3 CH 3 NaOCl  → ?",
+    "options": {
+      "A": "H O CH 3 C-OH CH 3 + NaCl",
+      "B": "H COONa CH 3 CH 3 CH- CH + CHCl 3",
+      "C": "H CH 3 COONa CH 3 + CHCl 3",
+      "D": "H COOH CH 3 CH 3 CH- CH + NaCl"
+    },
+    "correct_option": "A",
+    "explanation": "NH 2 NH 2 N 2 Cl Br 2 /H 2 O NaNO 2 /HCl H 3 PO 2 Aniline (A) + - Br Br Br Br Br Br Br Br Br 1,3,5 - Tribromobenzene (B) (C)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_065",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In Cannizzaro reaction given below :- 2PhCHO O H Θ  → PhCH 2 OH + 2 PhCO Θ the slowest step is :-",
+    "options": {
+      "A": "The abstraction of proton from the carboxylic group",
+      "B": "The deprotonation of PhCH 2 OH",
+      "C": "The attack of OH Θ at the carboxyl group",
+      "D": "The transfer of hydride to the carbonyl group $//"
+    },
+    "correct_option": "A",
+    "explanation": "( ) 3 H O 3 2 4 3 2 Hydrolysis 4 Hexanenitrile Hexanoic acid (A) CH (CH ) CN CH CH COOH + → ( ) 3 2 NH Br / KOH 3 2 2 4 CH CH CONH B ( ) ∆  → → ( ) 3 2 2 4 1-pentanamine CH CH NH (C)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_066",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "R-C-OH+HO-CH 3 O 18 H ⊕ R-C-O-CH 3 +H 2 O O 18 In above reaction 18 3 CH O H acts as :",
+    "options": {
+      "A": "Nucleophile",
+      "B": "Base",
+      "C": "Electrophile",
+      "D": "Acid"
+    },
+    "correct_option": "A",
+    "explanation": "3 NH 3 2 3 2 2 Propanoic acid Propanamide CH CH COOH CH CH CONH (A) ∆  → 2 Br / KOH 2 2 2 CH CH NH (B) → 2 2 2 HNO N , H O - -  → 3 2 Ethanol CH CH OH (C) 2 2 7 2 4 K Cr O / H SO 3 Ethanoic acid CH COOH (D) →"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_067",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following compounds in decreasing order of Keq for nucleophilic addition reaction :-",
+    "options": {
+      "A": "C-CH 3 O",
+      "B": "C-CH 3 Cl O",
+      "C": "C-CH 3 H 3 C O",
+      "D": "C-CH 3 O 2 N O"
+    },
+    "correct_option": "A",
+    "explanation": "2 HNO 3 2 2 3 2 CH CH NH CH CH OH (X) - -   → - [O]  → 2 5 C H OH 3 H , CH COOH + ∆  → CH 3 -COOC 2 H 5 (Y)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_068",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "O 4 2 LiAlH HNO HCN in ether A B C  →  →  → In above reaction major product",
+    "options": {
+      "C": "OH OH",
+      "A": "HO CH 2 OH",
+      "B": "CH 2 OH",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 HNO HI 3 2 3 3 3 N , H O Methyliodide CH NH CH O CH CH I(Y) (X) - -  → - -   → 2 5 Na/C H OH KCN 3 3 2 2 KI Reduction Ethanamine CH CN CH CH NH (Z) -  →  → $//(1 TARGET : 202 5 ORGANIC CHEMISTRY HS 202 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_069",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cl Br    → (i) Mg (ii) CO 2 (iii) H ⊕ C is :-",
+    "options": {
+      "A": "COOH COOH",
+      "B": "Cl COOH",
+      "C": "COOH Br",
+      "D": "Cl"
+    },
+    "correct_option": "A",
+    "explanation": "(i) Fe/HCl NaNO 2 /HCl CuCN/HCN H 3 O ⊕ Hydrolysis 273-278 K NO 2 NH 2 N ≡ NCl - CN COOH Nitrobenzene Aniline Benzene diazonium Chloride Benzonitrile Benzoic acid + (A) (B) (C) (D)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_070",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(I) (III) CHO (II) OH OH (IV) OH O Which among the above compound/s does/do not form Silver mirror when treated with Tollen's reagent",
+    "options": {
+      "B": "Only",
+      "C": "Only",
+      "A": "Option A",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Heat 273 - 278 K NH 2 N=NCl Aniline 2,4,6 - Tribromonoaniline 2,4,6 - Tribromo fluoro benzene Br Br Br Br Br Br Br Br Br + F HBF 4 (A) (B) (C) NH 2 Br 2 /H 2 O NaNO 2 /HCl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_071",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The major product of the following chemical reaction is : CH 3 CH 2 CN",
+    "options": {
+      "A": "CH 3 CH 2 CH 3",
+      "B": "SOCl 2",
+      "C": "Pd/BaSO 4 ,H 2 ?",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "NaNO 2 /HCl Cl 2 (1 mole),hv H 3 PO 2 KOH (aq.) (Hydrolysis) CH 3 Cl/Anhyd. AlCl 3 273 - 278 K 383 K N 2 Cl - NH 2 CH 3 CH 2 OH Aniline Toluene Benzene diazonium Chloride Benzyl Chloride Benzene Benzylalcohol + CH 2 Cl (A) (B) (C) (D)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_072",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match List-I with List-II. List-I",
+    "options": {
+      "A": "COCl H 2 Pd-BaSO 4 CHO",
+      "B": "CH 3 -CN",
+      "C": "CH 3",
+      "D": "CO, HCl AlCl 3"
+    },
+    "correct_option": "A",
+    "explanation": "Br 2 /NaOH H 3 PO 2 NaNO 2 /HCl CH 3 Cl/Anhyd.AlCl 3 Heat N 2 Cl - CONH 2 NH 2 CH 3 Benzamide Aniline Benzen Benzene diazonium Chloride Toluene + 273 - 278 K Diazotisation (A) (B) (C) or CONH 2  → H + /H 2 O COOH  → Red P HI CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_073",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound can form hydrazone and will give iodoform test but will not give Tollen's test",
+    "options": {
+      "A": "C C H 2 - C H 3 O",
+      "B": "Ph-C-CH 2 -CH 3 O",
+      "C": "C 2 H 5 -C-C 2 H 5 O",
+      "D": "C-CH 3 O"
+    },
+    "correct_option": "A",
+    "explanation": "Conc.HNO 3 +Conc.H 2 SO 4 Br 2 /Fe Sn + HCl NaNO 2 /HCl Boiling 333 K NO 2 NO 2 NH 2 N 2 Cl OH Benzene Nitrobenzene m-Bromonitrobenzene m-Bromoaniline m-Bromophenol Br Br Br 273-278 K dil H 2 SO 4 Br (A) (B) (C) (D) (E)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_074",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find out correct sequence of reagent for following conversion : Ph-C-OH O → Ph - C - H O",
+    "options": {
+      "A": "PCl 5 , CH 3 MgBr",
+      "B": "CH 2 N 2 , NaBH 4",
+      "C": "SOCl 2 , H 2 /Pd,BaSO 4",
+      "D": "All of the above"
+    },
+    "correct_option": "A",
+    "explanation": "(i) CH 3 CHI 2 CH 3 CH 2 CN CH 3 CH 2 -C-NH 2 CH 3 CH 2 NH 2 NaCN OH - NaOH + Br 2 O Iodoethane Propanenitrile (A) Partial hydrolysis Ethanamide (C) Propanamide (B) (ii) CH 3 COOH CH 3 CONH 2 CH 3 O-CH 3 NH 3 Heat NaOBr NaNO 2 /HCl Ethanamide (A) Methanamine (B) Dimethyl ether (C) CH 3 NH 2 (iii) C 6 H 5 NO 2 C 6 H 5 NH 2 Fe/HCl HNO 2 273 K C 6 H 5 OH Nitrobenzene Aniline (A) Benzenediazonium Chloride (B) C 6 H 5 N ≡ NCl¯ + N=N OH p-Hydroxyphenylazo benzene (C) (iv) A = , B = , C = Br $//(1 TARGET : 202 5 ORGANIC CHEMISTRY 202 5 HS (v) A = Sn + HCl, B = CHCl 3 + KOH, C = LiAlH 4 (vi) A = SOCl 2 , B = NH 3 , C = Br 2 + KOH (vii) A = Alc.KOH, B = HBr, R 2 O 2 , C = Aq. KOH (viii) A = CH 3 CN, B = CH 3 -C-CH 3 O CH 3 -C=CH-C-CH 3 O C= CH 3 (ix) Cl A = , B = MgCl , C = COOMgCl (x) COOH A = , B = COCl , C = C O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_075",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "H Θ ⊕  → The major product formed in this reaction :-",
+    "options": {
+      "A": "O C O O H MeO",
+      "B": "C O O H C O O MeO",
+      "C": "C O O H O H MeO",
+      "D": "CH 2 O H CH 3 O CH 2 O H $//"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - Br CH 3 - CN CH 3 -C=NMgBr KCN (alc) CH 3 -MgBr Bromomethane (A) CH 3 CH 3 Hydrolysis H 3 O + CH 3 -C=O Propanone (C) (B)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_076",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How many total compounds give positive iodoform test CH 3 , O OH O CH 3 H OH O OH OH OH H O",
+    "options": {
+      "A": "5",
+      "B": "4",
+      "C": "6",
+      "D": "3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_077",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A carbonyl compound 'A' reacts with hydrogen cyanide to form a cyanohydrin 'B' which on hydrolysis gives an optically active alpha hydroxy acid 'C', 'A' gives a positive iodoform test, identify A, B, C product.",
+    "options": {
+      "A": "HCHO; H C OH CN H ; H C OH COOH H",
+      "B": "H 3 C-CH=O; CH 3 C OH CN H ; CH 3 C OH COOH H",
+      "C": "CH 3 CH 2 CHO; C 2 H 5 C OH CN H ; C 2 H 5 C OH COOH H",
+      "D": "CH 3 C=O CH 3 ; CH 3 C OH CN CH 3 ; CH 3 C OH COOH CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_078",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 -CH 2 -CHO H O →  A ∆   → B Product 'A' & 'B' will be respectively :-",
+    "options": {
+      "A": "CH 3 -CH 2 -CH-CH 2 -CHO OH and CH 3 -CH 2 -CH=CH-CH 2 -CH 2 -CHO",
+      "B": "3 2 2 2 CH CH CH CH CH - CHO | OH - - - - and CH 3 -CH=CH-CH 2 -CH 2 -CHO",
+      "C": "3 2 2 3 OH | CH C CH CH CHO | CH - - - - and 3 3 CH CH - CH CH CHO | CH - = -",
+      "D": "CH 3 -CH 2 -CH-CH-CHO OH CH 3 and CH 3 -CH 2 -CH=C-CHO CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_079",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Carboxylic acid and their Derivatives - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following on heating with aq. KOH, produce acetaldehyde",
+    "options": {
+      "A": "CH 2 ClCH 2 Cl",
+      "B": "CH 3 CHCl 2",
+      "C": "CH 3 -C-Cl O",
+      "D": "CH 3 -CH 2 -Cl Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Ans 2 4 3 4 1 3 4 1 3 4 2 3 4 1 4 Que. 16 17 18 19 20 21 Ans 3 1 2 2 4 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_080",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) 50% d + 50% ℓ (2) 80% d + 20% ℓ (3) Meso compound (4) Optically active CA06 - 0002",
+    "options": {
+      "A": "50% d + 50% ℓ",
+      "B": "80% d + 20% ℓ",
+      "C": "Meso compound",
+      "D": "Optically active CA06 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_081",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "can be obtained by : -",
+    "options": {
+      "D": "None of the above CC16 - 0001",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (I) (II) (III)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_082",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Benzene ; A and B respectively are",
+    "options": {
+      "A": "Zn - Hg + HCl ,",
+      "B": ", LiAlH 4",
+      "C": ", NaBH 4",
+      "D": "+ AlCl 3 , Zn - Hg + HCl HC05 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) LiAlH 4 Reducing agent which reduced polar \\pi Bond into Alcohol/Amine"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_083",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When acetaldol is treated with excess of acid then unsaturated product will be : -",
+    "options": {
+      "A": "Alcohol",
+      "B": "Aldehyde",
+      "C": "Acid",
+      "D": "Alkyl halide CC14 - 0013 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_084",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The major organic product formed from the following reaction is : -",
+    "options": {
+      "D": "CA03 - 0011 O A B O O Cl O Cl O Cl CH",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (i) Hexan - 1 - ol (ii) (iii) (iv) CH 3 - C ≡ N CH 3 CH 3 - Mg - I CH 3 - C = N - MgI CH 3 - C = O CH 3 H 3 O +  ⊝ ⊝  Ph - C - CH 3 + aq. KOH O Cl Cl Ph - C - CH 3 OH OH Ph - C - CH 3 H + KCN (NAR) Ph - C - CH 3 OH CN (50%d + 50% ℓ ) Ph - C - Cl + (Ph) 2 Cd O Ph - C - Ph O Ph - C - Cl + O Ph - C - O - Ph O OH - HCl +CO+ZnCl 2 +HCN CHO Gattermann Reaction R - CHO R - C - Cl O Pd/BaSO 4 Rosenmund reduction CHO Toluene CrO 2 Cl 2 CS 2 ETARD reaction C - R AlCl 3 Friedel craft reaction R - C - Cl + O O R Mg X R - C - Cl  -  + O R - C - R O R - C ≡ N + R Mg X  -  + R - C=N MgX R’  -  + R - C - R’ O H 3 O + Anh. AlCl 3 + R - C - Cl O C - R O CH 3 CrO 2 Cl 2 CS 2 + CH 3 H 3 O + CHO O CrOHCl 2 O CrOHCl 2 ETARD reaction Chromium Complex H 2 C - CH 2 - CH 2 - H 2 C - CH 2 - CH 3 OH H - C - CH 2 - CH 2 - CH 2 - CH 2 - CH 3 O Mild O.A. (Hexanal) Ethane nitrile CH 3 - CN CH 3 - C - H O DIBAL - H Ethanal CH 3 COOH K 2 Cr 2 O 7 H + F F CH 3 - CH = CH - CH 3 CH 3 - C - H O O 3 , H 2 O, Zn NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_085",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "2 H /H O  ⎯⎯⎯ → P HBr Q ⎯⎯ → Mg Ether ⎯⎯⎯ → R 2 HCHO H /H O  ⎯⎯⎯ → S, S is :",
+    "options": {
+      "D": "CC19 - 0015",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_086",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reagent can be used for following conversion",
+    "options": {
+      "A": "Zn - Hg/HCl",
+      "B": "Red P + HI",
+      "C": "NH 2 - NH 2 / OH Θ",
+      "D": "All of them HC66 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) OH group present  Acid sensitive reaction Avoid Zn - Hg/HCl (Clemmenson reduction) Used NH 2 - NH 2 / Θ OH (Wolf - kishner reduction) Red + HI ⎯ → Reduced all given functional group"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_087",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "can be converted to by :",
+    "options": {
+      "A": "Red P + HI",
+      "B": "Wolf Kishner reduction",
+      "C": "Clemmensen reaction",
+      "D": "All CC19 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Clemmenson reduction Zn - Hg/H  Red P + HI"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_088",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "and are readily distinguished by their reaction with : -",
+    "options": {
+      "A": "Iodine and alkali",
+      "B": "2,4 - dinitrophenylhydrazine",
+      "C": "Tollen's reagent",
+      "D": "All the above CC01 - 0042 O + CH 3 MgBr OH OH OH OH HO CCH 3 O ⎯ → ? HO CH 2 CH 3 O Ph - C - H O C - H O CH 3 - O CH 2 - C - Ph O CH 3 CHO CH 3 CH 3 - C - CH 3 O CH 3 - C - H O NEET : Chemistry"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (I) I 2 + NaOH ✓ ✓ (II) 2, 4 DNP ✓ ✓ (III) Tollen  ✓"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_089",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is the most suitable reagent for the following conversion",
+    "options": {
+      "C": "2",
+      "D": "4 KMnO /H ,  \\Delta ⎯⎯⎯⎯⎯ → CC19 - 0007",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Halo form reaction is best (Iodo form)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_090",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a set of reactions acetic acid yielded a product C CH 3 COOH 2 SOCl ⎯⎯⎯ → A 3 Benzene Anhy .AlCl ⎯⎯⎯⎯ → B NaCN H + ⎯⎯⎯ → C The structure of C would be -",
+    "options": {
+      "D": "CA02 - 0006 H - C - CH 2 CH 2 CH 2 CH 2 - C - H O O OH/ \\Delta O=C - CH 3 CH=O CH 2 - CH 2 CH 2 CH 2 CH 2 - COOH OH CH 2 - CH 2 CH 2 CH 2 CH 2 - CH 2 OH OH C - COOH CH 3 OH CH 2 - C - CH 3 OH COOH C - CH 3 OH CN CH 2 - C - CH 3 CN OH NEET : Chemistry",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) RCH 2 OH ( ) P.C.C. Mild Oxidising agent ⎯⎯⎯⎯⎯ → RCHO other are strong O.A. → further oxidation possible into acid."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_091",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The compounds A and B in the reaction sequence B Phenol ⎯⎯ ⎯ CH 3 COCl 3 CH COONa ⎯⎯⎯⎯ → A are given by the set respectively : -",
+    "options": {
+      "A": "CH 3 CO - O - COCH 3 , C 6 H 5 CH 2 OH",
+      "B": "CH 3 CO - O - COCH 3 , C 6 H 5 OCOCH 3",
+      "C": "CH 3 COCH 3 , C 6 H 5 OCOCH 3",
+      "D": ", CA03 - 0012 4"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_092",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) CH 3 COOH (2) CH 3 - CN (3) CH 3 - CH 3 (4) CH 3 - CHO CA04 - 0002 5",
+    "options": {
+      "A": "CH 3 COOH",
+      "B": "CH 3 - CN",
+      "C": "CH 3 - CH 3",
+      "D": "CH 3 - CHO CA04 - 0002 5"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_093",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) (2) (3) (4) CC19 - 0014 CH 3 - C - O - O - C - CH 3 O O CH 3 - C - O - C 6 H 5 O CH 3 - CH - COOH Cl CH 2 - CH 2 - COOH Cl CH 3 - CH 2 - C - Cl O CH 3 O C - NH - CH 3 O 2 N O C - NH - CH 3 Cl O C - NH - CH 3 O C - NH - CH 3 CH 3 - C - NH 2 O ⎯ ⎯ → P 2 O 5 \\Delta ? CHO CHO NaOH A H  \\Delta ? CH 2 OH COOH O O O O Aldehyde s , Ketone s and carboxylic Acid s 5",
+    "options": {
+      "D": "CC19 - 0014 CH 3 - C - O - O - C - CH 3 O O CH 3 - C - O - C 6 H 5 O CH 3 - CH - COOH Cl CH 2 - CH 2 - COOH Cl CH 3 - CH 2 - C - Cl O CH 3 O C - NH - CH 3 O 2 N O C - NH - CH 3 Cl O C - NH - CH 3 O C - NH - CH 3 CH 3 - C - NH 2 O ⎯ ⎯ → P 2 O 5 \\Delta ? CHO CHO NaOH A H  \\Delta ? CH 2 OH COOH O O O O Aldehyde s , Ketone s and carboxylic Acid s 5",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) RCH 2 OH ( ) P.C.C. Mild Oxidising agent ⎯⎯⎯⎯⎯ → RCHO other are strong O.A. → further oxidation possible into acid."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_094",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reaction does not gives benzoic acid",
+    "options": {
+      "A": "C 6 H 5 - CH 3 4 Acidic KMnO ⎯⎯⎯ →",
+      "B": "C 6 H 5 - CH 3 2 2 2 CrO Cl H O ⎯⎯⎯→ [O] ⎯⎯→",
+      "C": "C 6 H 5 C  CH 4 Acidic KMnO ⎯⎯⎯ →",
+      "D": "4 Acidic KMnO ⎯⎯⎯ → CA01 - 0012 5"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) (i) (ii) (iii) (iv)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_095",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A compound containing two - OH groups attached with one carbon atom is unstable but which one of the following is stable",
+    "options": {
+      "D": "All AE05 - 0013",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (i) Hexan - 1 - ol (ii) (iii) (iv) CH 3 - C ≡ N CH 3 CH 3 - Mg - I CH 3 - C = N - MgI CH 3 - C = O CH 3 H 3 O +  ⊝ ⊝  Ph - C - CH 3 + aq. KOH O Cl Cl Ph - C - CH 3 OH OH Ph - C - CH 3 H + KCN (NAR) Ph - C - CH 3 OH CN (50%d + 50% ℓ ) Ph - C - Cl + (Ph) 2 Cd O Ph - C - Ph O Ph - C - Cl + O Ph - C - O - Ph O OH - HCl +CO+ZnCl 2 +HCN CHO Gattermann Reaction R - CHO R - C - Cl O Pd/BaSO 4 Rosenmund reduction CHO Toluene CrO 2 Cl 2 CS 2 ETARD reaction C - R AlCl 3 Friedel craft reaction R - C - Cl + O O R Mg X R - C - Cl  -  + O R - C - R O R - C ≡ N + R Mg X  -  + R - C=N MgX R’  -  + R - C - R’ O H 3 O + Anh. AlCl 3 + R - C - Cl O C - R O CH 3 CrO 2 Cl 2 CS 2 + CH 3 H 3 O + CHO O CrOHCl 2 O CrOHCl 2 ETARD reaction Chromium Complex H 2 C - CH 2 - CH 2 - H 2 C - CH 2 - CH 3 OH H - C - CH 2 - CH 2 - CH 2 - CH 2 - CH 3 O Mild O.A. (Hexanal) Ethane nitrile CH 3 - CN CH 3 - C - H O DIBAL - H Ethanal CH 3 COOH K 2 Cr 2 O 7 H + F F CH 3 - CH = CH - CH 3 CH 3 - C - H O O 3 , H 2 O, Zn NEET : Chemistry"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_096",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Hydrazine on reaction with acetone gives: -",
+    "options": {
+      "A": "Acetylene",
+      "B": "Hydrazone",
+      "C": "Nitrochloroform",
+      "D": "Chloroacetone CC08 - 0045"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_097",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following does not reduces the carboxylic acids into alcohol ?",
+    "options": {
+      "C": "NaBH 4",
+      "D": "CA07 - 0004 EXERCISE - I",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) NaBH 4 cannot reduce carboxylic acid to alcohol. Exercise - II ( Previous Year Questions )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_098",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Butan - 2 - one is obtained, if following compound is reacted with methyl magnesium bromide followed by hydrolysis ?",
+    "options": {
+      "A": "CH 3 - CHO",
+      "C": "CH 3 - C  N",
+      "D": "CH 3 - CH 2 - C  N CC01 - 1228",
+      "B": "Option B"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 4 ) CH 3 MgBr CH 3 - CH 2 - C N NMgBr ⊝  H 3 O  Methyl magnesium bromide CH 3 - C - CH 2 - CH 3 CH 3 - C - CH 2 - CH 3 O (Butan - 2 - one) ⊝   ⊝"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_099",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the compound have most acidic \\alpha H:",
+    "options": {
+      "D": "GC51 - 0166",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Negative Charge of conjugate base on resonance with three - C - O group so most stable anion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_100",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compounds does not give positive Tollens’ test :",
+    "options": {
+      "D": "CC14 - 0284",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) All aldehyde and 𝛼 - hydroxy Ketone give positive Tollen’s test but Ketone does not give Tollen’s test."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_101",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following in order of their reactivity towards CH 3 MgBr? (I) (II) (III) (IV)",
+    "options": {
+      "A": "I > IV > III > II",
+      "B": "II > I > III > IV",
+      "C": "I > II > III >IV",
+      "D": "I > III > II > IV CC07 - 0695"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) CH 3 MgBr is a nucleophile, Reactivity or de r for NAR  M| H| I M| H| I - - - + + + I > III > II > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_102",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How many aldol product will be obtained in the following reaction (Structural only) CH 3 CHO + PhCHO NaOH ⎯⎯⎯ →",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "1 CC10 - 0243"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_103",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Give electrophilicity order of following carbonyl compounds (I) Benzaldehyde (II) p - Tolu enealdehyde (III) p - Nitrobenzaldehyde (IV) Acetophenone",
+    "options": {
+      "A": "I > IV > III > II",
+      "B": "III > I > II > IV",
+      "C": "IV > II > I > III",
+      "D": "II > IV > I > III CC02 - 0484 9 carboxylic carbon of acid is.................than carbonyl carbon:"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Decreasing order of electrophili city in carbonyl  Aldehyde > Ketone NAR  M| H| I M| H| I - - - + + + CH 3 - CH - OH CH 3 - C - O Ph - CH - CH 3 OH CCl 3 - C - H O ( - I) Aldehyde CH 3 - C - H O (+M) Aldehyde (ii i ) > (i) > CH 3 - C - CH 3 O +M +M (ii) (Ketone) Ph - C - CH 3 O Ketone (iv) > More steric hinderance Exercise - I aldehydes, ketones and carboxylic A cids NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_104",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the above Aldol condensation , attacking nucleophile will be ?",
+    "options": {
+      "D": "CC09 - 0204 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 4 ) Iodoform test is given by or +ve Iodoform test."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_105",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following cannot undergo Intramolecular Cannizzaro Reaction ?",
+    "options": {
+      "D": "CC11 - 0213 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 4 ) CH 3 MgBr CH 3 - CH 2 - C N NMgBr ⊝  H 3 O  Methyl magnesium bromide CH 3 - C - CH 2 - CH 3 CH 3 - C - CH 2 - CH 3 O (Butan - 2 - one) ⊝   ⊝"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_106",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which of the following group, each member gives positive iodoform test ?",
+    "options": {
+      "A": "methanol, ethanol, propanone",
+      "B": "ethanol, propanal, methanal",
+      "C": "ethanal, ethanol, isopropyl alcohol",
+      "D": "propanal, 2 - propanol, propanone HD13 - 0097 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Negative Charge of conjugate base on resonance with three - C - O group so most stable anion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_107",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which gives isopentane on clemmensen reduction ?",
+    "options": {
+      "D": "All of them HC05 - 0276 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) All aldehyde and 𝛼 - hydroxy Ketone give positive Tollen’s test but Ketone does not give Tollen’s test."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_108",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Number of structural products possible in following reaction are",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4 CC10 - 0246 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 4 ) CH 3 MgBr is a nucleophile, Reactivity or de r for NAR  M| H| I M| H| I - - - + + + I > III > II > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_109",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The compound which gives stereo isomers on reaction with NH 2 - NH 2 ?",
+    "options": {
+      "D": "H - CHO CC08 - 0737 1",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 3 ) CH O CHO Conc. NaOH CH 2 - OH COONa ⊝ Glyoxal  I ntramolecular Cannizaro reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_110",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following not shows stereoisomerism after aldol condensation.",
+    "options": {
+      "A": "CH 3 - CHO",
+      "C": "CH 3 - CH 2 - CHO",
+      "D": "Ph - CH 2 - CHO CC10 - 0242 O CH 3 - C - CH 2 - CH 2 - CH 2 - CH 2 - CH 2 - C - H O O C - CH 3 H 3 C - C=O OH H 3 C - C=O OH O O CH 3 dil. NaOH \\Delta O CH 3 ⊝ O CH 2 ⊝ O CH 3 ⊝ O CH 3 ⊝ H - C - C - H O O H - C - C - Ph O O CH 3 - C - C - CH 3 O O H - C - C - D O O CH 3 - CH - C - CH 3 CH 3 O OHC - CH - CH 2 - CH 3 CH 3 CH 3 - CH - CH 2 - CHO CH 3 CH 3 - C - CH 2 - CH 3 + H - CHO O NaOH \\Delta CH 3 - C - CH 3 O CH 3 - CH 2 - C - H O Ph - C - Ph O CH 3 - C - CH 3 O NEET : Extra Edge [ Chemistry ] 1",
+      "B": "Option B"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_111",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound will not give positive Tollens' test : -",
+    "options": {
+      "A": "CH 3 CHO",
+      "D": "CC14 - 0286",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) carboxylic Acid Carbonyl Carbon Carbon of carboxylic group is less electrophilic than carbon of carbonyl"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_112",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The major product which can be isolated from this reaction is:",
+    "options": {
+      "D": "CC10 - 0244 Exercise - I",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) The aldol or ketol formed in aldol condensation reaction is \\beta - hydroxy aldehyde or ketone. (i) Zn - Hg/HCl + CH 3 - C - Cl C - CH 3 AlCl 3 O O (A) (ii) H 2 N - NH 2 /KOH (ii i ) HI/Red P (F.C.R.) or or H O H OH ⊝ O ⊝ Carbanion (Nucleophile) + H - C - H O H 2 O O CH 2 - OH \\alpha \\beta NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_113",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Correct order of boiling point of (I) CH 3 - CH 2 - CH 2 - CHO (II) CH 3 - CH 2 - COCH 3 (III) CH 3 - CH 2 - CH 2 - CH 2 - OH (IV) C 2 H 5 - O - C 2 H 5",
+    "options": {
+      "A": "III > I > II > IV",
+      "B": "III > II > I > IV",
+      "C": "II > I > III > IV",
+      "D": "I > II < IV > III CC08 - 0763"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) For similar molecular w eight order of boiling point Alcohol > Ketone > Aldehyde > Ether."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_114",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which have maximum electrophilicity ?",
+    "options": {
+      "D": "CC02 - 0507",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) NAR  M / H / I M / H / I - - - + + +"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_115",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : Reaction of Aldehyde/Ketone with ammonia derivative is catalysed by acid and is reversible. Statement - II : Reaction equilibrium favours the product formation if H 2 O i s removed rapidly.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CC02 - 0509"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) C = O + H 2 - N - Z H  C = N - Z + H 2 O According to Le - chatelier principle equilibrium shift in forward direction if H 2 O removed from reaction."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_116",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the column - I with column - II Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "C=O + NH 3",
+      "B": "C=O + R - NH 2",
+      "C": "C=O + H 2 N - OH",
+      "D": "C=O + NH 2 - NH - Ph"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (A) C = NH imine ( B ) C = N - R Schiff base ( C ) C = N - OH Oxime ( D ) Phenylhydrazone"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_117",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ethyl methyl ketone on oxidation by strong oxidising agent at elevated temperature gives?",
+    "options": {
+      "A": "Ethanoic acid",
+      "B": "Propanoic acid",
+      "C": "Methanoic acid",
+      "D": "Butanoic acid CC07 - 0720"
+    },
+    "correct_option": "A",
+    "explanation": "A ns. ( 1 ) CH 3 ―CH 2 ―C―CH 3 Strong O.A O 2CH 3 ―COOH Popoff Rule: In oxidation of unsymmetrical ketone C O belongs to that alkyl which has less number of carbon."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_118",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : Aromatic aldehyde do not give fehling's test. Statement - II : Mild oxidising agent like Tollen's re a gent , fehling solution are used to distinguish aldehyde and ketone.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CC07 - 0719 1"
+    },
+    "correct_option": "A",
+    "explanation": "A ns. ( 1 ) Aromatic aldehyde Fehling solution ⎯⎯⎯⎯⎯ → No reaction Aldehyde Tollen's Test ⎯⎯⎯⎯→ +ve Ketone Tollen's Test ⎯⎯⎯⎯→ - ve 1",
+    "statements": {
+      "T": ""
+    }
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_119",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Among all aldehyde (Aliphatic or aromatic) only acetaldehyde gives iodoform test. Reason : Other aldehyde can not be oxidised by NaOI.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CC05 - 1095 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Iodoform positive Test given by CH 3 ― C H ― O H or CH 3 ― C ― O (Methyl keto group) carbonyl c ompound , but other aldehyde also can be oxidised by NaO l and give \\alpha - I odo aldehyde. 1",
+    "assertion": "Among all aldehyde (Aliphatic or aromatic) only acetaldehyde gives iodoform test.",
+    "reason": "Other aldehyde can not be oxidised by NaOI."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_120",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Correct statement about iodoform test is",
+    "options": {
+      "A": "All methyl ketone gives iodoform test",
+      "B": "type of alcohol gives iodoform test",
+      "C": "The oxidation does not affect a carbon - carbon double bond.",
+      "D": "can give iodoform test."
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Friedel - craft’s acylation. + CH 3 - CH 2 - C - Cl AlCl 3 O O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_121",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An organic compound with M.F. C 8 H 8 O gives following properties",
+    "options": {
+      "A": "Orange red ppt with 2,4 - DNP",
+      "B": "Yellow ppt on heating with I 2 /NaOH",
+      "C": "Not gives Tollen's test and bromine water test. The compound C 8 H 8 0",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) X Compound 2, 4 DNP I 2 /NaOH Tollen ’ s reagent Br 2 water and Red orange ppt Yellow ppt Not an alkene and aldehyde C = O present ― C ―CH 3 present O So compound is O C ― CH 3 Keton e"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_122",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : \\alpha - hydrogen of aldehyde and ketone can be removed by strong base. Statement - II : The acidity of \\alpha - hydrogen is due to strong electron withdrawing effect of carbonyl group and resonance stabilization of conjugate base",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CC04 - 0715"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) ― C ― C ― ( \\alpha ― H ) H O OH ―C―C― O Resonance C = C― O¯ ⊝ aldehydes, ketones and carboxylic A cids NEET : NCR [ Chemistry ]"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_123",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : An aldehyde having at least one \\alpha - hydrogen, gives \\alpha - hydroxy aldehyde (Aldol) in presence of dil. NaOH. Statement - II : The aldol readily lose water to give \\alpha , \\beta - unsaturated carbonyl compound.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CC04 - 0716"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) \\alpha , \\beta - unsaturated c ompound CH 3 ―C―H O + H―C―CH O H H  ⊝ OH ⊝ CH 3 - CH - CH 2 - C - H O OH CH 3 - CH = CH - C - H - H 2 O \\Delta O \\beta - Hydroxy aldehyde"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_124",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is not cross - aldol product of",
+    "options": {
+      "C": "CH 3 - CH 2 - CH=CH - CHO",
+      "D": "All of them CC04 - 0718 CH 3 - CH - OH CH 3 - C - CH 2 - C - O - CH 3 O O CH 2 C - CH 3 O O CH=CH 2 O C - CH 3 O C - CH 3 CH 3 - CH 2 - CHO",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_125",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "\\Delta CH 3 - CH 2 - CH=C - CHO CH 3 CH 3 - CH=C - CHO CH 3 aldehydes, ketones and carboxylic A cids",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 CH 3 - CH 2 - C - C l O + (C 6 H 5 - CH 2 ) 2 C d 2CH 3 - CH 2 - C - CH 2 - C 6 H 5 O Ketone"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_126",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which does not give phthalic anhydride after heating with acidic KMnO 4 ?",
+    "options": {
+      "D": "CA01 - 0676 Heat CHO + OH ? C - CH 3 O CH=CH - C O CH 3 COOH + CH - CH 3 OH CH=CH - C O C - CH 2 O CHO CHO Conc. HNO 3 A + Ph - CHO Conc. H 2 SO 4 Conc. NaOH ? A CH 2 - OH O 2 N + Ph - COONa COONa O 2 N + Ph - CH 2 - OH CH 2 - OH NO 2 + Ph - COONa COONa NO 2 + Ph - CH 2 - OH Ph - CH=CH - CHO + H 2 N - NH H  ? Ph - CH=CH - CH=N - NH Ph - CH - CH - CHO H 2 N NH - Ph Ph - CH - CH - CHO NH - Ph NH 2 Ph - CH=CH - CH 2 - N=N CH 3 O + CH 3 - CH 2 - NH 2 H  ? CH 3 O CH 2 - CH 3 CH 3 O CH 3 - CH 2 N - CH 2 - CH 3 CH 3 NH - CH 2 - CH 3 OH A CrO 3 - H 2 SO 4 B NaOH C C H 3 - CH 2 - Cl O CH 2 - CH 3 OH Cl OH CH 2 - OH O NEET : NCR [Chemistry]",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) KMnO 4 COOH COOH \\Delta Isophthalic acid  2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_127",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following give benzo ic acid after heating with acidic K MnO 4 ?",
+    "options": {
+      "A": "a, b, d, e",
+      "B": "a, b, e",
+      "C": "a, b, d, e, f",
+      "D": "a, e, f CA01 - 0677"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Aldehydes_ ketones And carboxylic Acids principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_128",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction does not give carboxylic acid as a major product ?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) (1) R - C - N H 2 O OH \\Delta R - C ≡ N OH \\Delta R - C OO H + NH 3 (2) CH 3 MgCl + CO 2 H CH 3 - COOH (3) CH 2 - O H PCC CHO"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_129",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : carboxylic acids exist as dimer in vapour or in aprotic solvents. Statement - II : The hydrogen bonds are not broken completely even in the vapour phase.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CA07 - 0230"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) In vapour phase or in aprotic solvent like benzene , carboxylic acid dimerise s due to intermolecular hydrogen bonding.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_130",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Carboxylate ion is more stable than phenoxide ion. Reason : The negative charge is delocalized over two more EN oxygen atom.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CA07 - 0231"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )",
+    "assertion": "Carboxylate ion is more stable than phenoxide ion.",
+    "reason": "The negative charge is delocalized over two more EN oxygen atom."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_131",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is most acidic ?",
+    "options": {
+      "A": "CF 3 - COOH",
+      "B": "CCl 3 - COOH",
+      "C": "CHCl 2 - COOH",
+      "D": "O 2 N - CH 2 - COOH CA07 - 0228"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) C ― COO H F F F C ― COO H Cl Cl Cl - I ( - I ) > O 2 N ― CH 2 ― CO O H C H ― COO H Cl Cl > There - F atom have m ore inductive effect."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_132",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Direct attachment of groups such as phenyl or vinyl to the carboxylic acid, increases the acidity. Reason : This is because of greater electronegativity of sp 2 hybridised carbon attached to carboxylic group.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CA07 - 0222"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) - I effect of phenyl or vinyl group is due to sp² carbon which increases acidic strength of carboxylic acid. C OO H CH 2 =CH - COOH More - I L ess - I",
+    "assertion": "Direct attachment of groups such as phenyl or vinyl to the carboxylic acid, increases the acidity.",
+    "reason": "This is because of greater electronegativity of sp 2 hybridised carbon attached to carboxylic group."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_133",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which reaction amide is not obtained ?",
+    "options": {
+      "D": "All CA01 - 0675",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (1) 4 3 R -COOH NH R -COONH Acid Base Salt + - + → R ―C ≡N + H 2 O R―C―NH 2 O (2) CH 3 ― C ― O ― CH 3 + NH 3 O ( 3 ) CH 3 ― C ― NH 2 + CH 3 ― OH O (Ester)"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_134",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : Diborane reduces carboxylic acid but not ester, nitro, halo etc. Statement - II : NaBH 4 does not reduce the carboxylic acid.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CA02 - 0348"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) R - COOH 2 6 3 (1) B H /Ether (2) H O + ⎯⎯⎯⎯⎯ → CH 3 - CH 2 - OH NaBH 4 is less reactive and more selective so it does not reduces carboxylic acid."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_135",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which reaction propane is not obtained ?",
+    "options": {
+      "D": "All CA02 - 0349",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) C H 3 - C H 2 - C H 2 - COONa E lectrolysis n - Hexane + CH 3 C H 3 - C H - C H - C H 3 CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_136",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is not correct acidic order ?",
+    "options": {
+      "A": "CH 2 F - COOH > CH 3 - COOH",
+      "B": "If CH 2 - CH 2 - CH 2 - COOH < CH 3 - CHFCH 2 - COOH",
+      "D": "CA07 - 0226",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Acidic strength COOH C H 3 > COOH OCH 3 +M effect 3 \\alpha H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_137",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which gives Aldol condensation and which gives Cannizzaro reaction -",
+    "options": {
+      "A": "2 - Methylpentanal",
+      "B": "2,2 - Dimethylbutanal",
+      "C": "Phenyl acetaldehyde",
+      "D": "Cyclohexanone"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Aldol c o nde ns ation is given by only th ose carbonyl compound which c o ntain a n \\alpha H - atom. Those carbonyl compounds, which do not contain alpha hydrogen atom, undergo Cannizzaro reaction. (a) CH 3 - CH 2 - CH 2 - CH - CHO C H 3 (2 - Methylpentanal) NEET : NCR [ Chemistry ] (b) CH 3 - CH 2 - C - CHO CH 3 (2 , 2 - Dimethylbutanal ) CH 3 (c) CH 2 - CHO (Phenyl acetaldehyde) (d) O ( Cyclohexanone ) (e) CH 2 - C - C H 3 ( 1 - Phenyl propanone ) O (f) C ( Benzophenone ) O (g) CHO ( Benzaldehyde ) Aldol condensation given by - a, c, d, e Cannizzaro reaction given by - b, g."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_138",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction",
+        "Statement_Based"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In aldol reaction of propan a l and butan a l, correct statement is -",
+    "options": {
+      "A": "It is addition than elimination reaction.",
+      "B": "Propan a l can act as nucleophile.",
+      "C": "Butan a l can act as electrophile.",
+      "D": "All are correct CC04 - 0399"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Aldehyde with more no of carbon is electrophile and less no of carbon having aldehyde act as a nucleophile in aldol condensation reaction. CH 3 ― C H 2 ― C ― H O OH CH 3 ―CH 2 ―CH 2 ― C―H O (Aldol) ⊝ (Propanal) ( Butan a l ) +"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_139",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Correct statement about Cannizzaro reaction is/are",
+    "options": {
+      "A": "Benzophenone can give this reaction",
+      "B": "can give reaction",
+      "C": "More reactive aldehyde is oxidised .",
+      "D": "Less reactive aldehyde is oxidised."
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Cannizzaro reaction → Disproportionation reaction CHO ( Less reactive ) + HCHO Conc NaOH H COONa + - CH 2 - OH (More reactive) oxidation Reduction Ph ― C ― Ph O ( Benzo phenone ) Cannizzaro reaction given by aldehyde ( ✓ ) ketone (  )."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_140",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Name_Reaction",
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Ketone does not give Cannizzaro. Reason : Ketone have \\alpha - H.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CC04 - 0398 O H + H - CN C CH 3 O + 2Et - OH C CH 3 CH 3 O + 2Et - OH C CH 3 H CH 3 - CH 2 - CHO NaOH CH 3 - CH - COONa CH 3 NaOH/CaO \\Delta CH 3 - CH 2 - CH 2 - COONa NaOH/CaO \\Delta CH 3 - CH 2 - CH 2 - COONa electrolysis COOH F 3 C > COOH CH 3 COOH CH 3 - O > COOH CH 3 CHO CH 3 - O NEET : NCR [Chemistry]"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Ketone does not undergo Cannizzaro reaction because of poor leaving tendency of carba nion in rds, a ll ketones do not have \\alpha - hydrogen eg. C ( Benzophenone ) O C O",
+    "assertion": "Ketone does not give Cannizzaro.",
+    "reason": "Ketone have  - H."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_141",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An organic compound",
+    "options": {
+      "A": "having molecular formula C 6 H 12 O 2 gives an acid",
+      "B": "and alcohol",
+      "C": "is not oxidised by chromic acid. compound 'A' is",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Compound Acid (B) H 3 O + (A) C 6 H 12 O 2 Alcohol (C) No oxidation H 2 CrO 4 3^\\circ Alcohol not oxidised by chromic acid (A) H 3 O + O O O H O + O H ( B ) ( C ) H 2 CrO 4 No oxidation"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_142",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the column - I with Column - II Column - I Column - II (differentiated by)",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Acetophenone and Benzophenone",
+      "B": "Phenol and Benzoic acid",
+      "C": "Propanone and Ethan a l",
+      "D": "Acetone and acetophenone"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (A) Acetophenone gives +ve i o doform test with I 2 /NaOH while benzophenone not give same test. (B) Benzoic acid react with NaHCO 3 while phenol not react with NaHCO"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_143",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : Cyclohexanone forms cyanohydrin in good yield but 2, 2, 6 - trimethyl cyclo hexanone does not. Statement - II : 2, 2, 6 - trimethyl cyclo hexanone has not \\alpha - H.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CC02 - 0301 4"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Friedel - craft’s acylation. + CH 3 - CH 2 - C - Cl AlCl 3 O O",
+    "statements": {
+      "T": ""
+    }
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_144",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Out of two - NH 2 groups in semicarbazide, only one i s involved in formation of semicarbazone . Reason : One - NH 2 is involved in resonance which is poor nucleophile .",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CC02 - 0514 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) 2 CH 3 - CH 2 - C - C l O + (C 6 H 5 - CH 2 ) 2 C d 2CH 3 - CH 2 - C - CH 2 - C 6 H 5 O Ketone",
+    "assertion": "Out of two – NH 2 groups in semicarbazide, only one i s involved in formation of semicarbazone .",
+    "reason": "One – NH 2 is involved in resonance which is poor nucleophile ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_145",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "H - COOH and CH 3 - COOH can be differentiated by",
+    "options": {
+      "A": "NaOH/I 2",
+      "B": "NaHCO 3",
+      "C": "Tollen's reagent",
+      "D": "NaOH CA02 - 0347 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) For similar molecular w eight order of boiling point Alcohol > Ketone > Aldehyde > Ether."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_146",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : Phenoxide ion has more number of resonating structures than carboxylate ion so it's more stable than carboxylate ion. CH 3 - CH 2 - C - O - CH 2 - CH 2 - CH 3 O CH 3 - CH 2 - C - O - CH - CH 3 O CH 3 CH 3 - C - O - CH 2 - CH - CH 3 O CH 3 CH 3 - C - O - C - CH 3 O CH 3 CH 3 COOH COOH OCH 3 COOH NO 2 COOH Cl (II) (III) (IV) (I) CH 2 'X' CH O aldehydes, ketones and carboxylic A cids Statement - II : Phenoxide ion is more reactive than phenol towards electrophilic substitution.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. CA07 - 0227 4"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Ph - CH = O + H 2 N - NH - C - NH 2 H  O Semi carbazide O Ph - CH = N - NH - C - NH 2 Semi c arbaz on e"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_147",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which does not give iodoform test ?",
+    "options": {
+      "D": "CC05 - 1097 4",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) C = O + H 2 - N - Z H  C = N - Z + H 2 O According to Le - chatelier principle equilibrium shift in forward direction if H 2 O removed from reaction."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_148",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : is more acidic than Reason : - M of - NO 2 increases stability of carboxylate ion.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertio n.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CA07 - 0223"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Due to - M effect of - NO 2 , is more acidic than C O OH NO 3",
+    "assertion": "is more acidic than",
+    "reason": "– M of – NO 2 increases stability of carboxylate ion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_149",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is maximum reactive towards hydrolysis ?",
+    "options": {
+      "D": "CA02 - 0346 5",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Out of all 4, In option 2, - M effect, effect of - NO 2 group, deactivates the ring most and hence, It becomes more available towards hydrolysis (attack by water). O OH CN H + CN¯ Cyclohexanone Cyanohydrin NEET : NCR [ Chemistry ] 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_aldehydes_ketones_and_carboxylic_acids_150",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Aldehydes_ Ketones And Carboxylic Acids",
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Aldehydes_ Ketones And Carboxylic Acids.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) (2) (3) (4) CC04 - 0397 + Pyridine A (1) LiAlH 4 ? O Cl NH 2 (2) H 2 O O NH OH NH OH NH COOH NO 2 COOH CH 3 COCl COCl NO 2 COCl CH 3 COCl Cl + H - CHO CHO OH ? CH = CH 2 + CH 3 - OH COO + H - COO CH 2 - OH COOCH 3 NEET : NCR [Chemistry] 5",
+    "options": {
+      "D": "CC04 - 0397 + Pyridine A",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Iodoform positive Test given by CH 3 ― C H ― O H or CH 3 ― C ― O (Methyl keto group) carbonyl c ompound , but other aldehyde also can be oxidised by NaO l and give \\alpha - I odo aldehyde. 1"
+  }
+]

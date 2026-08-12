@@ -1,0 +1,1473 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_151",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Give stability order of following resonating structures (1) (2) GC07 - 0358",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "CH 3 - COOH CH 3 - CH 2 - CH 2 - COOH Homologous General formula - C n H 2n O 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_152",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Why following two structures are not the major contributions to the real structure of CH 3 - COOCH",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Stability order I > III > II"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_153",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct statement about electrometric effect?",
+    "options": {
+      "A": "Diethyl ether shows E - effect",
+      "B": "The effect is annulled as soon as the attacking reagent is removed",
+      "C": "The inductive effect predominates over E - effect",
+      "D": "The following is an example of +E - effect GC08 - 0384 and O O O O O O and CH 3 Cu CH 2 = CH - C - CH 3 O CH 2 - CH = C - CH 3 O CH 2 - CH = C - CH 3 O"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Electromeric effect is annulled as soon as attacking reagent is removed from medium."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_154",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect statement about H - effect is -",
+    "options": {
+      "A": "H - effect is permanent effect",
+      "B": " electron of C - H bond enter into the partial conjugation with empty p orbital.",
+      "C": "This type of overlapping destabilise the carbocation.",
+      "D": "Delocalization of electron s by hyperconjugation is also possible in alkene. GC05 - 0143"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) Overlapping of C - H \\pi bond and empty p - orbital in carbocation stabilise carbocation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_155",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "is more stable than . It is explained by, except -",
+    "options": {
+      "A": "+I of - CH 3 increases stability of",
+      "B": "Hyperconjugation int e raction in",
+      "C": "The C - H  bond helps in dispersing the positive charge.",
+      "D": "Electrons of C - H bond can be delocalized into empty 3 p orbital. GC08 - 0385"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) Electro ns of C - H bond delocalised into 2p empty orbital in carbocation."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_156",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Incorrect statement about CH 3 - O - CH 2 - CH 2 - CH 3 is",
+    "options": {
+      "A": "It is unsymmetrical ether",
+      "B": "It is III rd member of ether",
+      "C": "It is II nd member of unsymmetrical ether",
+      "D": "It is III rd member of unsymmetrical ether NC01 - 0278 3"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) CH 3 - O - CH 2 - CH 2 - CH 3 → unsymmetrical ether → II nd member of unsymmetrical ether 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_157",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which functional group is not present in",
+    "options": {
+      "A": "1^\\circ Amine",
+      "B": "2^\\circ Amine",
+      "C": "3^\\circ Amine",
+      "D": "ester NC01 - 0280"
+    },
+    "correct_option": "B",
+    "explanation": " Non benzenoid structure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_158",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Why alkyl group act as electron don o r when attached to \\pi system",
+    "options": {
+      "A": "and",
+      "B": "D ue to hyperconjugation effect",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) In \\pi - system alkyl group act as electron donor group due to Hyper conjugation effect."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_159",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is an example of addition reaction ?",
+    "options": {
+      "A": "CH 3 - CH 2 - Br + HS Θ → CH 3 - CH 2 - SH",
+      "C": "CH 3 - CH 2 - Br + OH Θ → CH 2 =CH 2 + H 2 O + Br Θ",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_160",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "IUPAC_Naming"
+      ],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct IUPAC name of",
+    "options": {
+      "A": "5 - sec. butyl - 4 - isopropyl decane",
+      "B": "4 - isopropyl - 5 - sec. butyl decane",
+      "C": "6 - sec. butyl - 7 - isopropyl decane",
+      "D": "7 - isopropyl - 6 - sec. butyl decane NC04 - 0609"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) IUPAC name  5 - sec butyl - 4 - isopropyl decane"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_161",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column : Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (a)  Position isomer (b)  Resonance structure (c)  Metamer (d)  Geometrical isomers 4"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_162",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Statement - I : Eclipsed form of n - Butane is minimum stable conformers. Statement - II : Eclipsed form of n - Butane has maximum torsional strain but minimum steric strain.",
+    "options": {
+      "A": "Both statement I and statement II are incorrect.",
+      "B": "Both statement - I and statement - II are correct.",
+      "C": "Statement I is correct but statement II is incorrect",
+      "D": "Statement I is incorrect but statement II is correct. SE05 - 0143"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) Steric strain is not minimum but maximum between 2 bulky - CH 3 groups. CH 3 - CH 2 - CH 2 - CH 3 1 2 3 4 n - butane Front carbon Back carbon H CH 3 H CH 3 H H NEET : NCR [ Chemistry ]",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_163",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hyperconjugation occurs in",
+    "options": {
+      "D": "GC05 - 0145",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) Hyperconjugation takes p l ace in presence of \\alpha - H."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_164",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(I) (II) (III) Which of the following orders is correct for the stability of these carbocations?",
+    "options": {
+      "A": "I > II > III",
+      "B": "III > II > I",
+      "C": "III > I > II",
+      "D": "I > III > II GC08 - 0388"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) (i) \\alpha H = 5 (ii) \\alpha H = 4 (iii) \\alpha H = 7 iii > i > ii CH 3 → 3 \\alpha - H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_165",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in decreasing order of their stability : - (I) 3 2 CH -CH  (II) CH - CH CH (III) CH - C - C H CH (IV) CH - C H",
+    "options": {
+      "A": "II > I > III > IV",
+      "B": "IV > I > II > III",
+      "C": "IV > III > II > I",
+      "D": "III > II > I > IV GC03 - 0047"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) Stability of carbocation  M, H, I M, H, I + + + - - - (1) 3 2 CH -CH   \\alpha H = 3 (2) 3 3 CH -CH -CH   \\alpha H = 6 (3) ( 4 ) Stability order = 3 > 2 > 1 > 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_166",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following represents the correct order of decreasing inductive effect:",
+    "options": {
+      "A": "3 2 NH NO Br  -  -  -",
+      "B": "3 2 NH Br NO  -  -  -",
+      "C": "2 3 Br NO NH  -  -  -",
+      "D": "2 3 NO Br NH  -  -  - GC19 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Correct order 3 2 NH NO Br  -  -  -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_167",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Give the correct order of increasing acidic strength of the following compounds : (I) H (II) H (III) C ≡ CH",
+    "options": {
+      "A": "II < I < III",
+      "B": "III < II < I",
+      "C": "II < III < I",
+      "D": "I < II < III GC30 - 0017"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) Acidic strength  Stability of conjugate base (anion)  EN/size EN order - O > sp'C' > N Stability order = 2 < 3 < 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_168",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Most stable anion is :",
+    "options": {
+      "A": "CH - C H - H",
+      "B": "CH - C - CH CH",
+      "C": "CH - C H",
+      "D": "CH C H GC11 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) Stability of anion  EN/size  resonance  M, I M, I - - + + (1) - ve on 'N' (2) - ve on 'O' (3) - ve on sp 3 'C' (4) - ve on sp 2 'C' EN order = O > N > sp 2 C > sp 3 C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_169",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in correct order of their stability ? (I) CH ≡ C (II) CH C H (III) CH C H",
+    "options": {
+      "A": "I > II > III",
+      "B": "III > II > I",
+      "C": "II > III > I",
+      "D": "II > I > III GC11 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Stability of anion  EN (1) - ve on sp'C' (2) - ve on sp 2 'C' (3) - ve on sp 3 'C' EN order = sp'C' > Sp 2 'C' > sp 3 'C' Stability order I > II > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_170",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the given compounds :",
+    "options": {
+      "A": "CH 3 - CH 2 - NH 2",
+      "B": "CH 3 - CH = NH",
+      "C": "CH 3 - C  N",
+      "D": "C 2 H 5 - NH - C 2 H 5 Arrange basicity of these compounds in decreasing order :"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Basic strength  localised lone pair  1 I EN I +  - lone pair on sp 3 'N', +I effect  lone pair on sp 2 'N', +I effect  lone pair on sp'N', +I effect  lone pair on sp 3 'N', +I effect   EN order spN > sp 2 N > sp 3 N order = d > a > b > c"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_171",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following acid in decreasing order of their acidic strength : (I) CH 3 - OH (II) CH 3 CH 2 - OH (III) CH - C H - H CH (IV) CH - C - H CH CH",
+    "options": {
+      "A": "II > III > IV > I",
+      "B": "I > II > III > IV",
+      "C": "I > III > II > IV",
+      "D": "II > IV > III > I GC30 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) A cidic strength  stability of conjugate base (anion)  EN/size  resonance  M, I M, I - - + + +I effect of 1 CH 3 +I effect of CH 3 - CH 2 - +I effect  number of alkyl group  branching Order I > II > III > IV CH 3 CH 3 - C - CH 3 |   \\alpha H = 9 F CH 2 - CH 2 |   \\alpha H = 2, - I effect of F OH (1) - H  O ⊝ - ve on 'O' atom NH 2 (2) - H  NH - ve on 'N' atom ⊝ C  CH (3) - H  C  C - ve on sp'C' ⊝ CH 2 - CH 2 - NH 2 •• (a) CH 3 - CH - NH •• (b) CH 3 - C  N •• (C) C 2 H 5 - NH - C 2 H 5 •• (d) CH 3 - OH (1) - H  CH 3 - O ⊝ CH 3 - CH 2 - OH (2) - H  CH 3 - CH 2 - O ⊝ CH 3 - CH - OH (3) - H  CH 3 - CH - O ⊝ CH 3 | CH 3 | CH 3 - CH - +I effect of CH 3 | CH 3 - C - OH (4) - H  CH 3 - C - O ⊝ CH 3 | CH 3 | CH 3 - C - +I effect of CH 3 | | CH 3 | CH 3 | CH 3 NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_172",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the compounds in order of decreasing acidic strength : (I) ClCH 2 - CH 2 - OH (II) Cl 2 CH - CH 2 - OH (III) Cl - CH 2 - CH 2 - CH 2 - OH (IV) CH 3 - CH 2 - CH 2 - OH",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "IV > III > II > I",
+      "C": "II > I > IV > III",
+      "D": "II > I > III > IV GC30 - 0019"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) Acidic strength  stability of conjugate base (anion)  EN/size  resonance  M, I M, I - - + + ( I ) Cl - CH 2 - CH 2 - OH, - I - effect of Cl  - I effect of Cl   ( III ) Cl - CH 2 - CH 2 - CH 2 - OH, - I - effect of Cl  ( IV ) CH 3 - CH 2 - CH 2 - OH, + I - effect of alkyl group I - effect is a distance dependent order II > I > III > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_173",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following compound in basic strength :",
+    "options": {
+      "A": "A > B > C",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Basic strength of amine - 2^\\circ > 1^\\circ > 3^\\circ (CH 3 ) ( 1 ) CH 3 - N H 2 1^\\circ (2) (CH 3 ) 2 - NH 2^\\circ ( 3 ) ( CH 3 ) 3 - N 3^\\circ order B > A > C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_174",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is aromatic : -",
+    "options": {
+      "D": "GC15 - 0017",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_175",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following cases lone - pair is involved in resonance :",
+    "options": {
+      "B": "H",
+      "A": "Option A",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2,4,6,9 ) For lone pair to be in volv ed in resonance it must be present in conjugation and it m u st not be present on sp 2 atom on the ring."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_176",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in decreasing order of acidic strength: (I) H (II) H (III) H (IV) H",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "IV > III > II > I",
+      "C": "II > IV > III > I",
+      "D": "IV > II > III > I GC56 - 0013"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 3 ) acidic strength  M, I M, I - - + + Due to intramolecular Hydrogen bonding, hydrogen is not easily donated by o - nitrophenol Order 2 > 4 > 3 > 1 Cl - CH - CH 2 - O H - Cl ( II )  (1) Cyclic, planar completely conjugated 4 \\pi e ⊝ anti aromatic (2) ( 4 ) ⊝ Cyclic planar completely conjugated 6 \\pi e ⊝ (Huckel r u le) aromatic ( 3 ) Cyclic planar completely conjugated 4 \\pi e ⊝ Anti aromatic  Cyclic non - planar Non aromatic (1) ℓ. p. will not involved (2) ℓ. p. involved ⊝ N •• Sp 2 N N •• | H  N | H (3) - ℓ. p. present on sp 2 atom in ring N •• ( 4 ) ℓ. p. involved in resonance ⊝ N •• N  CH 2 = CH - CH = N H •• (5) - l.p. on sp 2 atom not in Conjugation CH 2 = CH - O - CH = C H 2 •• (6) - Conjugation absent •• CH 2 = CH - O = CH - C H 2  •• ⊝ CH 2 = CH - C  N (7) •• (8) O •• •• CH 2 - Conjugation absent (9) O •• •• O  ⊝ involved OH (1) (2) (3) zero ( 4 ) OH - M effect of - NO 2 NO 2 OH NO 2 - I effect of - NO 2 OH NO 2 ( - M effect of - NO 2 ) NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_177",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following carbanions : (I) CH H C (II) CH (III) CH (IV) CH H C Correct decreasing order of stability is :",
+    "options": {
+      "A": "II > III > IV > I",
+      "B": "III > IV > I > II",
+      "C": "IV > I > II > III",
+      "D": "I > II > III > IV GC56 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) stability of carbanion  M, I M, I - - + + Order 2 > 3 > 4 > 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_178",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which cannot show tautomerism ?",
+    "options": {
+      "B": "CH CH",
+      "D": "GC62 - 0006",
+      "A": "Option A",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Tautomerism is shown when \\alpha - H is present"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_179",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The order of acidic strength of the hydrogen atom (H \\alpha , H \\beta , H \\gamma ) in the given molecule is : CH - C H - C - CH - C - CH H \\beta H \\gamma H \\alpha",
+    "options": {
+      "A": "H \\gamma > H \\alpha > H \\beta",
+      "B": "H \\gamma > H \\beta > H \\alpha",
+      "C": "H \\alpha > H \\beta > H \\gamma",
+      "D": "H \\beta > H \\alpha > H \\gamma GC62 - 0004 Arrange the following in decreasing order as indicated."
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) acidic strength  stability of conjugate base (anion) EN/size  resonance  M, I M, I - - + + For H \\gamma = ⊝ ve will be in resonance with 2'O' atom For H \\alpha = No +I effect For H \\beta = +I effect of CH 3 Order H \\gamma > H \\alpha > H \\beta"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_180",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "H CH CH CH CH CH [Stability order] GC08 - 0040",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "S tability of carbanion  M, H, I M, H, I + + + - - - (1) +M effect of OH (2) zero (3) +H effect of CH 3 (4) - M effect of NO 2 Order I > III > II > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_181",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH CH CH CH - CH CH H C - C - CH CH CH CH CH CH [Stability order] GC08 - 0041 NEET : CHEMISTRY",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "S tability of carbanion  M, H, I M, H, I + + + - - - (1) \\alpha - H = 3 (2) \\alpha - H = 2 (3) \\alpha - H = 1 (4) \\alpha - H = 0 Order I > II > III > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_182",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "CH CH CH CH H CH C [Stability order] GC12 - 0002",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "S tability of carbanion  M, I M, I - - + + (1) - M effect of NO 2 (2) - I effect of Cl (3) +I effect of CH 3 (4) + M effect of NH 2 Effect NH 2 > CH 3 Order I > II > III > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_183",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "C H C H CH C H H C H C [Acidic strength] GC56 - 0014",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Acidic strength  M, I M, H - - + + Order I > II > III > IV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_184",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "H - H [Basic strength] GC65 - 0020",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Order III > I > II"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_185",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is order of heat of hydrogenation for the following set of molecules : - (1) (2) (3) C C H - CH C H CH C C H CH H CH C C CH CH H H GC25 - 0009",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "HOH  1 Stability of alkene  1 No.of Hydrogen \\alpha - (1) II > I (2) III > II > IV > I (3) II > III > I CH 2 (1) (2) - +M effect of - OCH 3 CH 2 - - M effect of - NO 2 NO 2 ⊝ OCH 3 ⊝ ( 3 ) CH 2 - Zero ⊝ CH 2 ( 4 ) - +I effect of - CH 3 ⊝ CH 3 O ( 1 ) \\alpha H = 2 H H O ( 2 ) \\alpha H = 0 CH 3 \\alpha CH 3 O ( 3 ) \\alpha H = 4 H H H H \\alpha \\alpha O ( 4 ) \\alpha H = 4 \\alpha O \\alpha \\alpha NO 2 ( - M, - I) COOH Cl ( - I) COOH (I) (II) CH 3 (+H, +I) COOH (III) NH 2 (+M, - I) COOH (IV) N (I) : Localised \\lambda p (sp 2 ) | Delocalised \\lambda p (sp 2 ) N : H L ocalised \\lambda p (sp 3 ) N H (II) (III) NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_186",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The order of the - I effect orbitals in :",
+    "options": {
+      "A": "sp 3 > sp 2 > sp",
+      "B": "sp 2 > sp 3 > sp",
+      "C": "sp > sp 2 > sp 3",
+      "D": "sp 3 > sp > sp 2 GC19 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) - I effect  % s - charact e r"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_187",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of electron present in the valence shell of carbon of carbanion bearing - ve charge",
+    "options": {
+      "A": "8",
+      "B": "7",
+      "C": "6",
+      "D": "4 GC02 - 0050"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_188",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange the following in the stability order :",
+    "options": {
+      "A": "CH - C ≡ C",
+      "B": "CH - C H C H",
+      "C": "CH - C H C H",
+      "D": "CH - C H C H GC07 - 0035"
+    },
+    "correct_option": "A",
+    "explanation": "Stability of carbanion  I / % s Charactor I - - + Order I > II > IV > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_189",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange given carbocations in decreasing order of their stability: (i) (ii) CH CH CH CH CH CH GC03 - 0048",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Stability of carbocation  M / I / H I / M + + + - - Inductive effect decreases as distance increases. (i) III > II > I (ii) I > II > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_190",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange given anions in decreasing order of their stability CH ; CH CH ; CH GC07 - 0036",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Stability of carb a nion due to induc t ive effect I O I -   + Order I > II > IV > III"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_191",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arrange given compounds in decreasing order of their K a value: (i) HCOOH ; CH 3 COOH ; (I) (II) C 2 H 5 COOH ; C 3 H 7 - COOH (III) (IV) (ii) C H C C H C C C H (iii) C H H C ; C H H C HOOC - COOH (III) NEET : CHEMISTRY (iv) C H C H C H H C GC30 - 0020",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Acidic strength Ka  I Ka I -  + (i) I > II > III > IV (ii) I > II > III (iii) III > II > I (iv) I > III > II"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_192",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among the given acid has lowest pKa value",
+    "options": {
+      "A": "Chloroacetic acid",
+      "B": "Bromoacetic acid",
+      "C": "Nitroacetic acid",
+      "D": "Cyanoacetic acid GC30 - 0021"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) (1) (2) (3) (4) Order of - I effect for - Cl, - Br, - NO 2 and - Cl - NO 2 > - CN > - Cl > - Br"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_193",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Acetic acid is considered as resonance hybrid CH - C - - H CH - C - H CH - C - - H CH - C - - H Which of the following order is correct for the stability of four contributing structure :",
+    "options": {
+      "A": "I > II > III > IV",
+      "B": "I > II > IV > III",
+      "C": "I > III > II > IV",
+      "D": "I > IV > III > II GC22 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Stability order for resonating structure: (1) Complete octet and neutral R.S (2) Complete octet charged R.S. (3) In complete Octet charged R.S. having +ve charge on less electronegative atom , - ve charge on more electronegative atom."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_194",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which of the following molecule group present on ring is not involved in resonance :",
+    "options": {
+      "A": "H",
+      "B": "H",
+      "C": "H",
+      "D": "C GC23 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_195",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In each of the following pairs of ions which ion is more stable : (i) (I) C H - C H and (II) C H C H - CH (ii) (I) C H - C H and (II) CH C H (iii) (I) C H and (II) C H (iv) (I) C H - C H - CH C H - C - CH and (II) CH - - CH CH - C - CH GC22 - 0009",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) Order I > II (ii) Order I > II ( iii ) Order II > I (iv) C H - C H - CH C H - C - CH and CH - - CH CH - C - CH Order II > I"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_196",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The correct order of decreasing basic strengths of x, y and z is : H - H",
+    "options": {
+      "A": "x > y > z",
+      "B": "x > z > y",
+      "C": "y > x > z",
+      "D": "y > z > x GC57 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) Order X > Z > Y : C ⊝ Valence shell of carbanion has 3 bp + 1 \\lambda p = 8e ¯ . | sp CH 3 - C  C ⊝ (I) sp 2 CH 3 - CH = CH ⊝ (II) sp 3 CH 3 - CH - C H 3 ⊝ (III) +I +I sp 3 CH 3 - CH 2 - C H 2 ⊝ (+I) (IV) O 2 N CH 2 ( - I) (I) ⊝ F CH 2 ( - I) (I I ) ⊝ CH 2 (+I) (III) ⊝ CH 3 ⊝ (IV) | Cl CH 2 - COOH | Br CH 2 - COOH | NO 2 CH 2 - COOH | CN CH 2 - COOH  NH 3 - NH 3 group not involved in resonance because have no vacant orbital in valence shell   C H 2 CH 2 = CH - CH 2  (I) 4 R.S (II) 2 R.S CH 2 = CH (I)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_197",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following compounds :",
+    "options": {
+      "A": "H ;",
+      "B": "H ;",
+      "C": "H CH ;",
+      "D": "H CH Arrange these compounds in decreasing order of their basicity :"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) M / I Basic strength M / I + +  - - Order 4 > 1 > 3 > 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_198",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which shows aromatic character :",
+    "options": {
+      "D": "GC15 - 0018 NEET : CHEMISTRY",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) Aromatic compound follow Huckle’s Rule (1) Cyclic (2) Complete conjugation (3) Planar (4) (4n + 2) \\pi electron n = 0, 1, 2 ………."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_199",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following the aromatic compound is",
+    "options": {
+      "D": "GC15 - 0019",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Aromatic compound follow Huckle’s Rule (1) Cyclic (2) Complete conjugation (3) Planar (4) (4n + 2) \\pi electron n = 0, 1, 2 ………."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_200",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is anti - aromatic species :",
+    "options": {
+      "D": "GC15 - 0020",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) Anti - a romatic compound is - (1) Cyclic (2) Complete conjugation (3) Planar (4) 4n \\pi - electron n = 1, 2, …….."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_201",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is non - aromatic :",
+    "options": {
+      "D": "GC15 - 0016",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) Non aromatic is - (1) Cyclic / Acyclic (2) Cyclic No complete conjugation (3) 4n \\pi electron s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_202",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following represents the correct order of stability of the given carbocations ? CH",
+    "options": {
+      "A": "III > I > II",
+      "B": "I > III > II",
+      "C": "III > II > I",
+      "D": "II > III > I GC16 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Order III > I > II"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_203",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following group has maximum hyperconjugation effect but minimum inductive effect",
+    "options": {
+      "A": "- CH 3",
+      "B": "- CH 2 - CH 3",
+      "C": "- CD 3",
+      "D": "- C - CH CH CH GC24 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Hyper conjugation  No of \\alpha - hydrogen +I effect  No of carbon ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_204",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The most stable carbocation for the following is: NH 2  NH 2  NH 2  NH 2 ",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) The +M effect of NH 2 is stabilizing the carbocation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_205",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Correct Decreasing order of pK b is:",
+    "options": {
+      "A": "1 > 2 > 3 > 4",
+      "B": "4 > 3> 2 > 1",
+      "C": "2 > 1 > 3 > 4",
+      "D": "1 > 2 > 4 > 3 GC56 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) Basic strength  + + + - - - M| H| I M| H| I  localised lone pair delocalised lone pair Since, compound (1) has localised lone pair, It is most basic in nature and has least pK b . and according to given above relation, due to +H effect of - CH 2 - CH 3 group in compound 2 and - M effect of - NO 2 group in compound 4, the order of basic strength is given as. Basic Strength - 1 > 2 > 3 > 4 But as we know Basic Strength  b 1 pK  Order of pK b is 4 > 3 > 2 > 1 COOH NO 2 > COOH > OH > CH  CH CH 2 Benzyl carbocation I  Antiaromatic carbocation  II Aromatic carbocation  III NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_206",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which will undergo deprotonation most readily in basic medium? O O O O MeO OMe O O OMe a b c",
+    "options": {
+      "A": "a only",
+      "B": "b only",
+      "C": "c only",
+      "D": "None of above GC51 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) O O ⊝ H (a) O O ⊝ H (b) MeO OMe (+M) O O ⊝ H (c) (+H) OMe (I) (+M) (+M) Deprotonation  Stability of - ve charge  M / H / I M / H / I - - - + + +  (a) will undergo deprotonation readily in b asic medium."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_207",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which among these can exhibit tautomerism?",
+    "options": {
+      "A": "a only",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) Among all the given 3 structures, only (a) and (c) can exibhit tautomerism due to the p resence of active H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_general_organic_chemistry_208",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "General Organic Chemistry",
+      "chapter_name": "General Organic Chemistry",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - General Organic Chemistry.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "( I) (II) (III) Which among these are tautomers?",
+    "options": {
+      "A": "I and II",
+      "B": "I and III",
+      "C": "II and III",
+      "D": "All of these GC62 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) CH 2 - C - CH 2 H CH 2 - C = CH 2 O - H O keto (I) Enol (III)"
+  }
+]

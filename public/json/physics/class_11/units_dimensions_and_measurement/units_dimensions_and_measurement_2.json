@@ -1,0 +1,1038 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Density can be expressed as a derived quantity in terms of which of the following ?",
+    "options": {
+      "A": "Length and mass",
+      "B": "Mass and time",
+      "C": "Length. mass and time",
+      "D": "None of these MNNUD0143 ALLEN Units And Measurement 74"
+    },
+    "correct_option": "A",
+    "explanation": "2 dm sec 2d d m tan (sin2 )   θ θ = θ =   θ θ  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The method of dimensional analysis can't be used to derive which of the following relations ?",
+    "options": {
+      "A": "In 0 e - λ t",
+      "B": "A sin",
+      "C": "1 2 mv 2 + 1 2 I ω 2",
+      "D": "All of the above MNNUD0146 ALLEN : Physics 75"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct statement",
+    "options": {
+      "A": "A dimensionally correct equation may be correct",
+      "B": "A dimensionally correct equation may be incorrect",
+      "C": "A dimensionally incorrect equation is incorrect",
+      "D": "All of the above MNNUD0147"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The time dependence of a physical quantity P is given by P = P 0 e - α t , where α is a constant and t is time. The constant α",
+    "options": {
+      "A": "is dimensionless",
+      "B": "has dimensions [T -2 ]",
+      "C": "has dimensions of P",
+      "D": "has dimensions [T -1 ] MNNUD0148"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The force F, on a sphere of radius 'a' moving in a medium with velocity v is given by F = 6 πη av. The dimensions of η are :-",
+    "options": {
+      "A": "[ ML -1 T -1 ]",
+      "B": "[ MT -1 ]",
+      "C": "[ MLT -2 ]",
+      "D": "[ ML -3 ] MNNUD0042"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the relation y = r sin ( ω t - kx) the dimensions of k ω are :-",
+    "options": {
+      "A": "[M 0 L 1 T 2 ]",
+      "B": "[M 0 L 1 T -1 ]",
+      "C": "[M 0 L 0 T 3 ]",
+      "D": "[M 0 L 1 T 0 ] MNNUD0045 ALLEN Units And Measurement 76"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thin copper wire of length  metre increases in length by 2% when heated through 10^\\circC. What is the percentage increase in area when a square copper sheet of length  metre is heated through 10^\\circC ?",
+    "options": {
+      "A": "4%",
+      "B": "8%",
+      "C": "16%",
+      "D": "None of these MNNUD0068"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The percentage error in the measurement of speed and mass are 2% and 3% respectively. How much will be the maximum error in the estimate of kinetic energy obtained by measuring mass and speed :-",
+    "options": {
+      "A": "11%",
+      "B": "8%",
+      "C": "7%",
+      "D": "4% MNNUD0149"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The resistance R of a wire is given by the relation R = 2 r ρ π  . Percentage error in the measurement of ρ ,  and r is 1%, 3 % and 2% respectively. Then the percentage error in the measurement of R is",
+    "options": {
+      "A": "6%",
+      "B": "9%",
+      "C": "8%",
+      "D": "10% MNNUD0073"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure on a square plate is measured by measuring the force on the plate and the length of the sides of the plate. If the maximum error in the measurement of force and length are respectively 3% and 2%, the maximum error in the measurement of pressure is -",
+    "options": {
+      "A": "1%",
+      "B": "2%",
+      "C": "7%",
+      "D": "8% MNNUD0150 ALLEN Units And Measurement 78"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the fractional error in g calculated from T 2 g = π  ? Given that fractional errors in T and  are \\pmx and \\pmy respectively.",
+    "options": {
+      "A": "x + y",
+      "B": "x - y",
+      "C": "2x + y",
+      "D": "2x - y MNNUD0075"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "While measuring acceleration due to gravity by a simple pendulum a student makes a positive error of 1% in the length of the pendulum and a negative error of 2% in the value of the time period. His percentage error in the measurement of the value of g will be (Use time period of a simple pendulum, T 2 g = π  ) -",
+    "options": {
+      "A": "2 %",
+      "B": "5 %",
+      "C": "7 %",
+      "D": "10 % MNNUD0151"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A physical quantity X is given by X = 3 2 2k m n  The percentage error in the measurements of k,  , m and n are 1%, 1%, 3% and 4% respectively. The value of X is uncertain by",
+    "options": {
+      "A": "8 %",
+      "B": "10 %",
+      "C": "12 %",
+      "D": "None MNNUD0078"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A quantity is represented by X = M a L b T c . The percentage error in measurement of M, L and T are α %, β % and γ % respectively. The percentage error in X would be",
+    "options": {
+      "D": "None of these MNNUD0079",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In main scale of a vernier callipers 1 cm divided into 10 equal divisions. The vernier scale has 10 equal divisions that correrspond to 9 main scale divisions. The measured value by this calliper is :- 2 3 4 0 5 10",
+    "options": {
+      "A": "2.82 cm",
+      "B": "2.83 cm",
+      "C": "2.87 cm",
+      "D": "2.89 cm MNNUD0086"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The least count of the screw guage is :-",
+    "options": {
+      "A": "1 mm",
+      "B": "0.001 cm",
+      "C": "0.0001 cm",
+      "D": "0.001 mm MNNUD0089"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units and measurment-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It moves 1 mm on main scale for one complete revolution. Find reading of micrometer. 0 1 30 25 20 2 mm 3",
+    "options": {
+      "A": "3.25 mm",
+      "B": "3.24 mm",
+      "C": "3.30 mm",
+      "D": "3.41 mm MNNUD0090"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The resistance R of a wire is given by the relation R = 2 r ρ π \\lambda . Percentage error in the measurement of ρ , \\lambda and r is 1%, 3 % and 2% respectively. Then the percentage error in the measurement of R is",
+    "options": {
+      "A": "6%",
+      "B": "9%",
+      "C": "8%",
+      "D": "10%"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the fractional error in g calculated from T 2 g = π \\lambda ? Given that fractional errors in T and \\lambda are \\pmx and \\pmy respectively.",
+    "options": {
+      "A": "x + y",
+      "B": "x - y",
+      "C": "2x + y",
+      "D": "2x - y"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "While measuring acceleration due to gravity by a simple pendulum a student makes a positive error of 1% in the length of the pendulum and a negative error of 2% in the value of the time period. His percentage error in the measurement of the value of g will be (Use time period of a simple pendulum, T 2 g = π \\lambda ) -",
+    "options": {
+      "A": "2 %",
+      "B": "5 %",
+      "C": "7 %",
+      "D": "10 %"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A physical quantity X is given by X = 3 2 2k m n \\lambda The percentage error in the measurements of k, \\lambda , m and n are 1%, 1%, 3% and 4% respectively. The value of X is uncertain by",
+    "options": {
+      "A": "8 %",
+      "B": "10 %",
+      "C": "12 %",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is a fundamental quantity ?",
+    "options": {
+      "A": "Work",
+      "B": "Electric current",
+      "C": "Pressure",
+      "D": "Stress"
+    },
+    "correct_option": "B",
+    "explanation": "Reading = 2.30 mm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is smallest unit :-",
+    "options": {
+      "A": "Light year",
+      "B": "Angstrom",
+      "C": "Fermi",
+      "D": "Metre"
+    },
+    "correct_option": "B",
+    "explanation": "Least count = 1 MSD - 1 VSD (N-1) MSD = N(VSD) ⇒ VSD = 1 1 N   -     MSD Least count = 1MSD - 1 1 N   -     MSD = 1 N       (1mm) = 1 10N cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct representation of a unit ?",
+    "options": {
+      "A": "N",
+      "B": "Sec",
+      "C": "a.m.u.",
+      "D": "All of these"
+    },
+    "correct_option": "C",
+    "explanation": " L.C. = 1 MSD - 1 VSD ∴ 0.02 = 0.1 - m n m 0.08 n ⇒ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a fundamental unit in SI system ?",
+    "options": {
+      "A": "Watt",
+      "B": "Joule",
+      "C": "Kelvin",
+      "D": "Pascal"
+    },
+    "correct_option": "A",
+    "explanation": "Least count = 1mm 100 = 0.01 mm Diameter of the wire = 0 + 52 × 0.01 mm = 0.52 mm = 0.052 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is not a unitless quantity ?",
+    "options": {
+      "A": "velocity gradient",
+      "B": "Strain",
+      "C": "displacement gradient",
+      "D": "Roughness coefficient"
+    },
+    "correct_option": "A",
+    "explanation": "least count 0.5 50 = = 0.01 mm Diameter of sphere = 2 × 0.5 + (25 - 5) × 0.01 = 1.2 mm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance of star be measured by using :",
+    "options": {
+      "A": "gravitation method",
+      "B": "Parallax method",
+      "C": "Direct method",
+      "D": "Parallel method"
+    },
+    "correct_option": "A",
+    "explanation": "50 divisions = 2.45 cm ⇒ 1 division = 2.45 0.049cm 50 = ⇒ least count = 1 MSD -1VSD = 0.05 - 0.049 = 0.001 cm. So vernier reading = 0.001 × 24 = 0.024 cm. Therefore diameter of cylinder = 5.10 + 0.024 = 5.124 cm."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two physical quantities A and B have different dimensions. Which mathematical operation given below is physically possible?",
+    "options": {
+      "A": "A",
+      "B": "A",
+      "C": "A - B",
+      "D": "A B"
+    },
+    "correct_option": "A",
+    "explanation": "Least count = 0.5 mm 50 = .01 mm Diameter = M.S.R. + C.S.R × L.C. + Z.E. = 3 + 35 × (0.5/50) + 0.03 = 3.38 mm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following equations is dimensionally correct ? (E = energy, U = potential energy, P = momentum, m = mass, v = speed)",
+    "options": {
+      "A": "E = U + 2 2 P 2m",
+      "B": "2 2 mv P E U m = +",
+      "C": "2 U 1 2E mv 2 2 = -",
+      "D": "2 2 P U E 2mv ="
+    },
+    "correct_option": "A",
+    "explanation": "Least count = pitch 2 0.01mm No. of divisions 200 = = ; Reading = 3× 2 + (46-5) (0.01) = 6.41 mm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a certain system, the units of length, mass and time are chosen to be 1 cm, 100 g and 10 s. The unit of kinetic energy will be",
+    "options": {
+      "A": "0.1 erg",
+      "B": "1 erg",
+      "C": "10 erg",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "In 1 u 1 = n 2 u 2 ( ) ( ) 2 2 2 2 2 10kg 10m kg m 1 n s 60s   ×   ×   × =         2 60 60 n 3.6 10 100 × = = ×"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The dimensions of a b in the equation 2 a t P bx - = , where P is pressure, x is distance and t is time, are :-",
+    "options": {
+      "A": "MT -2",
+      "B": "M 2 LT -3",
+      "C": "ML 3 T -1",
+      "D": "LT -3"
+    },
+    "correct_option": "A",
+    "explanation": "[B] = [x 2 ] = [L 2 ] [U] = 1 2 1 2 2 2 A L M L T L - [ ] [ ][ ] [ ] [ ] [ ] = [ ] [ ] [ ] 7 1 2 2 A M L T - [ ] = [ ] [ ] [ ] [ ] 7 11 1 2 2 1 2 2 2 AB M L T L M L T - - [ ] [ ] [ ] = = [ ] [ ] [ ] [ ] [ ] [ ] [ ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Of the following quantities which one has dimensions different from the remaining three?",
+    "options": {
+      "A": "Energy per unit volume",
+      "B": "Force per unit area",
+      "C": "Product of voltage and charge per unit volume",
+      "D": "Momentum per unit mass"
+    },
+    "correct_option": "A",
+    "explanation": "Least count = 1mm 100 = 0.01 mm Diameter D=1mm+(47) (0.01)mm=1.47mm = 0.147 cm Curved surface area = 2 π r \\lambda = π D \\lambda = (3.14) (0.147) (5.6) = 2.6 cm 2 $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a system of units if force (F), acceleration",
+    "options": {
+      "A": "FA 2 T",
+      "B": "FAT 2",
+      "C": "If 2 AT",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "[E] = [work] = [F] × [L] = 1 2 P A t [ ] [ ] × [ ] [ ] [ ] [ ] = 1 1 1 2 P A T - [ ] [ ] [ ]"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following has maximum number of significant figures?",
+    "options": {
+      "A": "63.1 × 10 2 m",
+      "B": "6.31 × 10 3 m",
+      "C": "6310 m",
+      "D": "0.0631 × 10 5 m $//"
+    },
+    "correct_option": "B",
+    "explanation": "For accuracy we can look for percentage error For (i), (2), (4) % error = 0.1 100% 63.1 × For (3) % error = 1 100% 6310 ×",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAxCAIAAAC+kWeZAAAAYElEQVR42u3RAQ0AAAjDMMC/56PjSSdh3SSjts4CbMImbNiETdiwCZuwCRs2YRM2bMImbNiETdiEDZuwCRs2YRM2bMImbMKGTdiEDZuwCRs2YRM2YcMmbMKGTdiEDZuqeov0A1/GCSDBAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a = (5\\pm0.05) and b = (3\\pm0.03), Let x = a + b, y = a - b, z = a × b. The correct order of % error in x,y and z",
+    "options": {
+      "A": "x = y < z",
+      "B": "x = y >z",
+      "C": "x < z < y",
+      "D": "x > z < y"
+    },
+    "correct_option": "A",
+    "explanation": "a + b = 14 \\pm 0.14 ⇒ % error = 0.14 100 1% 14 × = a - b = 2 \\pm 0.14 ⇒ % error = 0.14 100 7% 2 × = a × b = 48 \\pm 0.96 ⇒ % error = 0.96 100 % 2 48 × = so, order of % error x < z < y"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an experiment the height of a small object is measured by a Vernier Calliper having least count 0.01 cm is found to be 7.38 cm, then the actual height of object may be :-",
+    "options": {
+      "A": "7.30 cm",
+      "B": "7.3932 cm",
+      "C": "7.3782 cm",
+      "D": "7.3892 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The values of two resistance are R 1 = (6 \\pm 0.3) K Ω and R 2 = (10 \\pm 0.2) K Ω . The % error in the equivalent resistance when they are connected in parallel is :-",
+    "options": {
+      "A": "5.125%",
+      "B": "2%",
+      "C": "3.875%",
+      "D": "7%"
+    },
+    "correct_option": "A",
+    "explanation": "eq 1 2 1 1 1 R R R = + eq 1 2 2 2 2 1 2 dR dR dR R R R = + ∴ % error = 4 % 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The percentage error in measurement of a physical quantity [m given by m = π tan θ] is maximum when",
+    "options": {
+      "A": "θ = 135^\\circ",
+      "B": "θ = 90^\\circ",
+      "C": "θ = 120^\\circ",
+      "D": "θ = 180^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "2 dm sec 2d d m tan (sin2 )   θ θ = θ =   θ θ  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The number of significant digits in 0.002002 is :-",
+    "options": {
+      "A": "6",
+      "B": "4",
+      "C": "7",
+      "D": "2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The sides of a rectangle are (10.2 \\pm 0.1) cm and (5.5 \\pm 0.2) cm. Then its perimeter with error limits is :-",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Perimeter p = 2 ( \\lambda + b) = 2 (10.5 + 5.2) = 31.4 cm ∆ p = 2( ∆ \\lambda + ∆ b) = 2 (0.2 + 0.1) = 0.6 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The Young modulus (Y) of a material is given by 2 WL Y r = π \\lambda . If the percentage error in W, L, r and \\lambda are 1%, 2%, 4% and 5% respectively then maximum percentage error in Y is -",
+    "options": {
+      "A": "7.5 %",
+      "B": "9 %",
+      "C": "16 %",
+      "D": "13 %"
+    },
+    "correct_option": "A",
+    "explanation": "Y 100 Y ∆ × = W L 2 r 100 W L r ∆ ∆ ∆ ∆   + + + ×     \\lambda \\lambda = 0.5% + 1% + 2 × 3% + 4% = 11.5%"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following measurement is most precise?",
+    "options": {
+      "A": "4.00 mm",
+      "B": "4.00 cm",
+      "C": "4.00 m",
+      "D": "4.00 km"
+    },
+    "correct_option": "A",
+    "explanation": "Precision for a set of measurement is seen by least count of instrument. $//(1 HS 202 5 TARGET : 202 5 PHYSICS UNITS AND MEASUREMENT # 02 solutions"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A vector P \\rho is given as ˆ ˆ ˆ P (3i 4 j 2k) = + + \\rho meter. Find dimensions of ˆ P",
+    "options": {
+      "A": "[M 0 L 1 T 0 ]",
+      "B": "[M 1 L 1 T 1 ]",
+      "C": "[M 0 L 0 T 1 ]",
+      "D": "[M 0 L 0 T 0 ]"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure P and volume V of a gas are related as PV 3/2 = K where K is a constant. The percentage increase in the pressure for a diminution of 0.5% of the volume is",
+    "options": {
+      "A": "0.25%",
+      "B": "0.75%",
+      "C": "1.50%",
+      "D": "0.50%"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_units_dimensions_and_measurement_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Units Dimensions And Measurement",
+      "chapter_name": "Units Dimensions And Measurement",
+      "language": "en",
+      "source": "Units_ Dimensions and Measurements - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given, P ∝ T on increasing the value of T by 1^\\circC, the value of P increases by 0.4%, then find initial value of T :-",
+    "options": {
+      "A": "25 K",
+      "B": "250 K",
+      "C": "350 K",
+      "D": "2500 K Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Ans 2 3 1 3 1 2 4 3 2 1 4 4 2 3 3 Que. 16 17 18 19 20 21 22 23 24 25 Ans 3 3 1 2 1 3 1 4 2 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
+  }
+]

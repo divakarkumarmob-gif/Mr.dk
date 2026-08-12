@@ -1,0 +1,327 @@
+[
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_301",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements : - Statement I : Davisson - Germer experiment establishes the wave nature of electrons. Statement II : If electrons have wave nature, they can interfere and show diffraction. In the light of the above statements choose the correct answer from the options given below: -",
+    "options": {
+      "A": "Both Statement I and Statement II are true",
+      "B": "Both Statement I and Statement II are false",
+      "C": "Statement I is true but Statement II is false",
+      "D": "Statement I is false but Statement II is true MO12 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "In Davisson - Germer experiment the electrons exhibit diffraction there by proving that electrons have wave nature. Hence both statement are correct. Both the options are correct by concept.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_302",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton, a neutron, an electron and an \\alpha - particle have same energy. If \\lambda \\lambda \\lambda p n e , , and \\alpha \\lambda are the de Broglie’s wavelengths of proton, neutron, electron and \\alpha particle respectively, then choose the correct relation from the following :",
+    "options": {
+      "A": "\\alpha \\lambda = \\lambda  \\lambda  \\lambda p n e",
+      "B": "\\alpha \\lambda  \\lambda  \\lambda  \\lambda n p e",
+      "C": "\\alpha \\lambda  \\lambda = \\lambda  \\lambda e p n",
+      "D": "\\alpha \\lambda = \\lambda = \\lambda = \\lambda e p n MO10 - 0060"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda = h 2Em \\lambda  1 m  \\alpha \\lambda  \\lambda  \\lambda  \\lambda e p n NEET : PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_303",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How many alpha and beta particles are emitted when Uranium 238 92 U decays to lead 206 82 Pb ?",
+    "options": {
+      "A": "3 alpha particles and 5 beta particles",
+      "B": "6 alpha particles and 4 beta particles",
+      "C": "4 alpha particles and 5 beta particles",
+      "D": "8 alpha particles and 6 beta particles MO31 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "- → + + 4 0 238 206 92 82 2 1 U 8 He 6 e Pb 8 \\alpha particles and 6 \\beta particles are emitted."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_304",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An \\alpha particle and a carbon 12 atom has same kinetic energy K. The ratio of their de - Broglie wavelength ( ) \\lambda \\lambda a C12 : is : ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "=  \\alpha 2 P K.E. P m 2m Now \\lambda = h p So, \\lambda\\alpha \\lambda \\alpha 1 1 p m \\alpha \\lambda = \\lambda C12 3 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_305",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A beam of monochromatic light is used to excite the electron in Li ++ from the first orbit to the third orbit. The wavelength of monochromatic light is found to be -  10 x 10 m . The value of x is ______ . [Given hc = 1242 eV nm] MO36 - 0052",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Z = 3 (  = - ( ) \\lambda )  2 2 2 1 2 1 1 1 RZ n n = = 1 2 n 1, n 3, ( ) (  = - = ( ) \\lambda )  1 1 1 R 9 8R 1 9 - \\lambda = =  10 1 114 10 m 8R"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_306",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The de Brog lie wavelengths for an electron and a photon are \\lambda e and \\lambda p respectively. For the same kinetic energy of electron and photon. which of the following presents the correct relation between the de Brog lie wavelengths of two?",
+    "options": {
+      "A": "\\lambda  \\lambda 2 p e",
+      "B": "\\lambda  \\lambda p e",
+      "C": "\\lambda  \\lambda p e",
+      "D": "\\lambda  \\lambda p e 1 MO10 - 0061"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = e h 2mk Also for photon = \\lambda p hc k \\lambda \\lambda = p e h 2mhc \\lambda  \\lambda 2 p e"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_307",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric field at the point associated with a light wave is given by E = 200 [sin(6 × 10 15 ) t + sin(9 × 10 15 ) t] Vm - 1 Given : h = 4.14 × 10 - 15 eVs If this light falls on a metal surface having a work function of 2.50 eV, the maximum kinetic energy of the photoelectrons will be :",
+    "options": {
+      "A": "1.90 eV",
+      "B": "3.27 eV",
+      "C": "3.60 eV",
+      "D": "3.42 eV MO07 - 0012"
+    },
+    "correct_option": "D",
+    "explanation": "For maximum KE we will take higher frequency (   = ( ) \\pi )  15 9 10 f Hz 2 K max = hf - \\phi = -    - \\pi 15 15 9 10 4.14 10 2.50 2 3.43 eV nearest is 3.42 eV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_308",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The ratio of wavelengths of proton and deuteron accelerated by potential V p and V d is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Kinetic energy gained by a charged particle accelerated by a potential V is qV KE = qV  2 p qV 2m =  p 2mqV = p = h \\lambda , thus h 2mqV \\lambda = now p d d d p p m V m V \\lambda = \\lambda  d p 2V 1 V 2 =  p d V 4 V ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_309",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Then, the ratio of V p to V d will be ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda 1 = 300nm \\lambda 2 = 600nm \\phi   \\lambda 1 - - \\phi  = = \\phi  9 01 9 02 600 10 2 1 300 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_310",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Mass numbers of two nuclei are in the ratio of 4:",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Radius of nucleus 1 3 0 R R A = Density of nucleus = Mass of nucleus volume of nucleus 3 m A 4 R 3  \\rho = \\pi Where m : mass of proton or neutron 3 0 m A 4 R A 3  \\rho = \\pi \\rho  A 0 Hence density of nucleus is independent of mass number"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_311",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Their nuclear densities will be in the ratio of ( 1 ) 4:3 ( 2 ) (  ( ) )  1 3 3 4 ( 3 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "The stoping potential (V 0 ) depends on the frequency (  ) of incident light as : eV 0 = h  - \\phi  If   than V 0 "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_312",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "1 ( 4 ) (  ( ) )  1 3 4 3 MO14 - 0015 NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = 600 nm = 6000 Å I = 100 W/m 2 I = n h  n = Number of photons per second per unit area I = \\lambda nhc n = \\lambda = \\lambda   24 I 5 10 hc = 100×600 × 10 - 9 × 5× 10 24 = 3 × 10 20 photons/sec/m 2 no. of photones per sec. in 1 cm 2 cross area = 3×10 20 × 10 - 4 = 3 × 10 16"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_313",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electron (mass m) with an initial velocity =  0 0 v v i(v 0) \\rho \\rho is moving in an electric field =  0 0 E -E i(E 0) \\rho \\rho where E 0 is constant. If at t = 0 de Broglie wavelength is \\lambda = 0 0 h mv , then its de Broglie wavelength after time t is given by",
+    "options": {
+      "A": "\\lambda 0",
+      "B": "(  \\lambda + ( ) )  0 0 0 eE t 1 mv",
+      "C": "\\lambda 0 t",
+      "D": "\\lambda (  + ( ) )  0 0 0 eE t 1 mv MO11 - 0032"
+    },
+    "correct_option": "D",
+    "explanation": "V 0 = 0 ˆ E -E i \\lambda = 0 0 h mv v = v 0 + 0 eE t m \\lambda = = (  + ( ) )  0 0 h h mv eE m v t m \\lambda = (  + ( ) )  0 0 0 h ' eE mv 1 t mv \\lambda \\lambda = (  + ( ) )  0 0 0 ' eE 1 t mv"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_314",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The ratio of de - Broglie wavelength of an \\alpha - particle and a proton accelerated from rest by the same potential is 1 m , the value of m is",
+    "options": {
+      "A": "4",
+      "B": "16",
+      "C": "8",
+      "D": "2 MO10 - 0062"
+    },
+    "correct_option": "C",
+    "explanation": "\\alpha \\alpha \\alpha \\lambda = \\lambda p p p h 2m q V h 2m q V \\alpha \\lambda = \\lambda p 1 8 m = 8"
+  }
+]

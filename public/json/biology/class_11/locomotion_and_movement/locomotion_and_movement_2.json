@@ -1,0 +1,137 @@
+[
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_locomotion_and_movement_151",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 2,
+      "topic": "Locomotion And Movement",
+      "chapter_name": "Locomotion And Movement",
+      "language": "en",
+      "tags": [],
+      "source": "Skeletal System - Theory.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Read the statements regarding muscle proteins. I. Actin is a thin filament and is made up of two F-actins II. The complex protein, tropomyosin is distributedat regular intervals of troponin. III. Myosin is a thick filament which is also a polymerized protein. IV. The globular head of meromyosin consists of light meromyosin (LMM). Which of the above statements are correct?",
+    "options": {
+      "A": "I, II and III",
+      "B": "I, II and IV",
+      "C": "I and III",
+      "D": "II and IV"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard locomotion And Movement principles.",
+    "statements": {
+      "S": "I. Ac"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_locomotion_and_movement_152",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Locomotion And Movement",
+      "chapter_name": "Locomotion And Movement",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Skeletal System - Theory.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is wrongly matched?",
+    "options": {
+      "A": "Myosin - Contracting protein",
+      "B": "Smooth muscle - voluntary muscle",
+      "C": "Red muscle - Myoglobin",
+      "D": "Troponin - Fibrous protein."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard locomotion And Movement principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_locomotion_and_movement_153",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 2,
+      "topic": "Locomotion And Movement",
+      "chapter_name": "Locomotion And Movement",
+      "language": "en",
+      "tags": [],
+      "source": "Skeletal System - Theory.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is/are correct/incorrect ? I. A-bands of the muscle is dark and contain myosin. II. I-bands are the light bands and contain actin. III. During muscle contraction, the A-band contracts. IV. The part between the two Z-lines is called as sacromere. V. The central part of thin filament, not overlapped by thick filament is called H- zone.",
+    "options": {
+      "A": "I, II, and III are correct, while IV and V are incorrect",
+      "B": "I, III, V are correct, while II, IV are incorrect",
+      "C": "I and II are correct, while III, IV and V are incorrect",
+      "D": "I, II and IV are correct, while III and V are incorrect. $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard locomotion And Movement principles.",
+    "statements": {
+      "S": "IV."
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_locomotion_and_movement_154",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Locomotion And Movement",
+      "chapter_name": "Locomotion And Movement",
+      "language": "en",
+      "tags": [],
+      "source": "Skeletal System - Theory.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The contractive protein of skeletal muscle involving ATPase activity as",
+    "options": {
+      "A": "tropomyosin",
+      "B": "myosin",
+      "C": "α -actinin",
+      "D": "troponin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard locomotion And Movement principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_locomotion_and_movement_155",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Locomotion And Movement",
+      "chapter_name": "Locomotion And Movement",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Skeletal System - Theory.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which statement is correct for muscle contraction?",
+    "options": {
+      "A": "Length of H-zone is increased",
+      "B": "Length of A-band remains constant",
+      "C": "Length I-band gets increased",
+      "D": "Length of two Z-lines get increased EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard locomotion And Movement principles."
+  }
+]

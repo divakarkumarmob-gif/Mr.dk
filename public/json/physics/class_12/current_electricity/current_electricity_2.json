@@ -1,0 +1,2358 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Six resistors each of 10 \\Omega are connected as shown. The equivalent resistance between points X and Y is :",
+    "options": {
+      "A": "20 \\Omega",
+      "B": "5 \\Omega",
+      "C": "25/3 \\Omega",
+      "D": "10 \\Omega CE18 - 0010 3 \\Omega 6 \\Omega 6 \\Omega 15 V A B C D 45 V V + - 2 A 16 \\Omega 4 \\Omega 4 \\Omega 16 \\Omega 60 V 64 \\Omega 32 \\Omega G J 48 \\Omega 2 A 3 \\Omega 5 \\Omega 48 \\Omega 24 \\Omega 6 \\Omega 4 \\Omega 2 \\Omega E R 2R 4R 6R S 1 12R R + - E S 2 A 2R 2R + - V K R R A X Y Current Electricity"
+    },
+    "correct_option": "B",
+    "explanation": "Balanced Wheat Stone Bridge 6 \\Omega 6 \\Omega 3 \\Omega 2.5 \\Omega B 2A A 2A A 1.5 \\Omega 2.5 \\Omega B 3 \\Omega 15V 5A O D 5A O O 45V 45V 6 \\Omega B V 6 \\Omega i = 0 15V 4 \\Omega 1 A 16 \\Omega 16 \\Omega 4 \\Omega 2A 1A 1 V + - 2 2A 2A 3 \\Omega 1A 2V 5 \\Omega 4R 2R i/3 2i/3 R i E S 1 S 1 6R 12R R A + - E R A + - V 2R 2R R r r V A V x V r y r x r r B r = 10 \\Omega 0 0 0 0 Current Electricity"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a typical Wheatstone bridge the resistance in cyclic order are A = 10 \\Omega , B = 5 \\Omega , C = 4 \\Omega and D = 4 \\Omega  For the bridge to be balanced :",
+    "options": {
+      "A": "10 \\Omega should be connected in parallel with A",
+      "B": "10 \\Omega should be connected in series with A",
+      "C": "5 \\Omega should be connected in series with B",
+      "D": "5 \\Omega should be connected in parallel with B"
+    },
+    "correct_option": "C",
+    "explanation": "Option (3) is correct."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Seven resistances are connected as shown in the figure. The equivalent resistance between A and B is : -",
+    "options": {
+      "A": "3 \\Omega",
+      "B": "4 \\Omega",
+      "C": "4.5 \\Omega",
+      "D": "5 \\Omega CE18 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Wheatstone bridge is in balance condition",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAA0CAIAAABttA1UAAAAMUlEQVR42u3NMQEAAAgDILV/5xnBzwsK0Enqy9QjmUwmk8lkMplMJpPJZDKZTCaTXRa9KANlURdWXQAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the following circuit diagram the value of resistance X for the potential difference between B and D to be zero is : -",
+    "options": {
+      "A": "4 ohms",
+      "B": "6 ohms",
+      "C": "56 ohms",
+      "D": "9 ohms CE24 - 0012"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAA1CAIAAABENMWIAAAAMElEQVR42u3NQQEAAAQEMPTvfFr42Aqsk9SJqSsmk8lkMplMJpPJZDKZTCaTyfRzWjNWA2cTYMyQAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the arrangement of resistances shown in the circuit, the potential difference between points B and D will be zero, when the unknown resistance X is : -",
+    "options": {
+      "A": "4 \\Omega",
+      "B": "3 \\Omega",
+      "C": "2 \\Omega",
+      "D": "1 \\Omega CE18 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "For balance wheat stone bridge 16 4 = x 1 / 2 ; x = 2 \\Omega .",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAAuCAIAAABlOuoVAAAAVUlEQVR42u3QMQEAAAgDILV/53lbwAsi0EmKX6NAunSkS0e6dKRLR7p06UiXjnTpSJeOdOnSkS4d6dKRLh3p0qUjXTrSpSNdOtKlS0e6dKRLR7p0rgWdegNZwTQ9fwAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The resistance of each arm of a Wheat stone bridge is 10 \\Omega . A resistance of 10 \\Omega is connected in series with the galvanometer then the equivalent resistance across the battery will be : -",
+    "options": {
+      "A": "10 \\Omega",
+      "B": "15 \\Omega",
+      "C": "20 \\Omega",
+      "D": "40 \\Omega CE18 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "Req = 10 \\Omega"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two cells X and Y are connected to a resistance of 10 \\Omega as shown in the figure. The terminal voltage of cell Y is : -",
+    "options": {
+      "A": "zero",
+      "B": "2 V",
+      "C": "4 V",
+      "D": "10 V CE14 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "V= E - Ir = 10 4 8 20 -  = 0V ( ∵ I = 10 1 A 20 2 = )",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAuCAIAAAB27arhAAAAVElEQVR42u3QMREAAAgEILV/5zeFiwcR6CTFjVEgVy5y5cpFrly5yJUrF7ly5SJXrlzkykWuXLnIlSsXuXLlIleuXOTKlYtcuciVKxe5cuUiV+53C+7oA1nfwt4MAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A current of 2 A is flowing through a cell of e.m.f. 5 V and internal resistance 0.5 \\Omega from negative to positive electrode. If the potential of negative electrode is 10 V, the potential of positive electrode will be : -",
+    "options": {
+      "A": "5 V",
+      "B": "14 V",
+      "C": "15 V",
+      "D": "16 V CE13 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "V A + 5 - 2 × 0.5 = V B 10 + 5 - 1 = V B  V B = 14V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The terminal voltage is E 2 when a current of 2 A is flowing through 2 \\Omega resistance; the internal resistance of the cell is : -",
+    "options": {
+      "A": "1 \\Omega",
+      "B": "2 \\Omega",
+      "C": "3 \\Omega",
+      "D": "4 \\Omega CE13 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "∵ I = E 2 r +  terminal potential E 2 = E - Ir  E 2 = E - E 2 r + r  2 + r = 2r  r = 2 \\Omega"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A cell of e.m.f. 2 V and negligible internal resistance is connected to resistors R 1 and R 2 as shown in the figure. The resistance of the voltmeter, R 1 and R 2 are 80 \\Omega , 40 \\Omega and 80 \\Omega respectively. The reading of the voltmeter is :",
+    "options": {
+      "A": "1.78 V",
+      "B": "1.60 V",
+      "C": "0.80 V",
+      "D": "1.33 V CE13 - 0014"
+    },
+    "correct_option": "C",
+    "explanation": "i = 2 200 = 0.01 A V = 0.8 V",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAtCAIAAABQ5rChAAAASElEQVR42u3PAREAAAQEMPTv/HI4W4N1knps6jd/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f/9LFpFYA1cdvlQXAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A cell supplies a current of 0.9 A through a 2 \\Omega resistor and a current of 0.3 A through a 7 \\Omega resistor. The internal resistance of the cell is : -",
+    "options": {
+      "A": "1.0 \\Omega",
+      "B": "0.5 \\Omega",
+      "C": "2.0 \\Omega",
+      "D": "1.2 \\Omega CE13 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "0.9 = V 2 r + 0.3 = V 7 r + 1.8 + 0.9r = 2.1 + 0.3r 0.6r = 0.3 r = 1 2 \\Omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 10 V battery with internal resistance 0.5 \\Omega is connected across a variable resistance R. The value of R for which the power delivered to it is maximum, is equal to : -",
+    "options": {
+      "A": "0.5 \\Omega",
+      "B": "1 \\Omega",
+      "C": "1.5 \\Omega",
+      "D": "2 \\Omega CE16 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "for maximum power R internal = Rext."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Three resistances of equal value are arranged in different combinations as shown below. Arrange them in the increasing order of power dissipation:",
+    "options": {
+      "A": "III < II < IV < I",
+      "B": "II < III < IV < I",
+      "C": "I < IV < III < II",
+      "D": "I < III < II < IV CE15 - 0038"
+    },
+    "correct_option": "A",
+    "explanation": "P=i 2 R Current is same, so P  R. In the first case it is 3r, in second case it is (2/3)r, in III case it is r 3 & in IV case the net resistance is 3r 2 R III < R II <R IV <R 1  P III < P II <P IV < P 1"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "You are provided with 48 cells, each of emf 2 volts and internal resistance 4 ohms. What maximum current can flow in the circuit having an external resistance of 12 \\Omega ?",
+    "options": {
+      "A": "1 A",
+      "B": "1.2 A",
+      "C": "0.96 A",
+      "D": "1.08 A CE14 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "For I max = nr R m = ...(1) n = number of coloum m = number of row nm = 48 ...(2) from eq (1) and (2) n = 12 m = 4",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAuCAIAAAAQt1a2AAAAP0lEQVR42u3OAQkAAAgDMLV/59tCELYE6yT11tRn9vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vZXFkqKA1mffhAwAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit shown in figure, the power which is dissipated as heat in the 6 \\Omega resistor is 6 W. What is the value of resistance R in the circuit?",
+    "options": {
+      "A": "6 \\Omega",
+      "B": "10 \\Omega",
+      "C": "13 \\Omega",
+      "D": "24 \\Omega CE15 - 0035 R R E R E R E R R R E R R R I i i II i I I I i I V V R R R R V R R R V R R V R R R 6 \\Omega 12V 8 \\Omega R"
+    },
+    "correct_option": "D",
+    "explanation": "i 2 6 = 6  i = 6 6 = 1A 8R 6 6 8 R (  + = ( ) + )  8R 6 8 R = + ; 4R = 24 + 3R  R = 24 \\Omega",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAuCAIAAAD/dT2IAAAAPklEQVR42u3OAREAAAQEMPTv/HI4W4J1krpp6ix1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXX1H/UFlLQDWRx0Z3kAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For different values of resistance, R power consumptions in R are given. Then which of the following values are not possible?",
+    "options": {
+      "A": "2 W",
+      "B": "5 W",
+      "C": "8 W",
+      "D": "4 W"
+    },
+    "correct_option": "B",
+    "explanation": "max → R = 1  P = i 2 R = 4W"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A galvanometer of 100 \\Omega resistance yields complete deflection when 10 mA current flows. What should be the value of shunt so that it can measure currents upto 100 mA?",
+    "options": {
+      "A": "11.11 \\Omega",
+      "B": "9.9 \\Omega",
+      "C": "1.1 \\Omega",
+      "D": "4.4 \\Omega CE20 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "100 × 10 = 90 S  S = 100 9 \\Omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In order to change the range of a galvanometer of G \\Omega resistance from V volts to nV volts what will be the value of resistance in \\Omega connected in series with it : -",
+    "options": {
+      "B": "G n",
+      "C": "nG",
+      "D": "G n 1 - CE20 - 0006",
+      "A": "Option A"
+    },
+    "correct_option": "A",
+    "explanation": "V = G i g nV = (G + S)i g  n = G S G + (  ( ) )   S = (n - 1) G"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the shown arrangement of the experiment of a meter bridge if AC, corresponding to null deflection of galvanometer, is x then what would be its value if the radius of the wire AB is doubled: -",
+    "options": {
+      "A": "x",
+      "B": "x 4",
+      "C": "4x",
+      "D": "2x CE19 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "If radius of wire is doubled then resistance becomes 1/4 times but ratio of AC : CB remains same."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the following circuit, the resistance of the voltmeter is 10,000 \\Omega and that of the ammeter is 20 \\Omega . If the reading of the ammeter is 0.1 A and that of the voltmeter is 12 V, then the value of R is : -",
+    "options": {
+      "A": "122 \\Omega",
+      "B": "100 \\Omega",
+      "C": "118 \\Omega",
+      "D": "116 \\Omega CE24 - 0015"
+    },
+    "correct_option": "B",
+    "explanation": "V = I(R + R A )  12 = 0.1(R + 20)  12 R 20 0.1 = - R = 100 \\Omega",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAuCAIAAADWcsIPAAAASUlEQVR42u3PAREAAAQEMPTv/HI4W4N1knps6jd/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f3//OxbqhQNZ8JrQPgAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The resistance of a galvanometer is G ohms and the range is 1 volt. The value of resistance (in \\Omega ) used to convert it into a voltmeter of range 10 volts is : -",
+    "options": {
+      "A": "9 G",
+      "B": "G",
+      "C": "1 9 G",
+      "D": "10 G CE22 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "R = (n - 1)G Here n = 10 10 1 =  R = (10 - 1)G = 9G"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A galvanometer has 36 \\Omega resistance. If a 4 \\Omega shunt is added to this, the fraction of current that passes through the galvanometer is : -",
+    "options": {
+      "A": "1 4",
+      "B": "1 9",
+      "C": "1 10",
+      "D": "1 40 CE20 - 0003 + - 1 \\Omega 4V R R 1 + - G R 2 A B C x R + - V A + - Current Electricity"
+    },
+    "correct_option": "C",
+    "explanation": "V G = V R  4(I - I G ) = 36I G  10I G = I  G I I = 1 10 12 \\Omega 24 12 12 6 \\Omega 6 \\Omega i 12V i R 8 \\Omega G = 100 \\Omega i g = 10 mA S 90mA 100 mA G S high R G 36 \\Omega G 4 \\Omega I - I G I G I I"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A galvanometer of resistance 100 \\Omega gives full deflection for a current of 10 - 5 A. The value of shunt required to convert it into an ammeter of range 1 ampere, is : -",
+    "options": {
+      "A": "1 \\Omega",
+      "B": "10 - 3 \\Omega",
+      "C": "10 - 5 \\Omega",
+      "D": "100 \\Omega CE21 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "V = 10 - 3 V Gi g = S (1 - i g ) 10 - 3 = S(1 - 10 - 5 ) S  10 - 3 \\Omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "There are three voltmeters of the same range but of resistances 10000 \\Omega , 8000 \\Omega and 4000 \\Omega respectively. The best voltmeter among these is the one whose resistance is : -",
+    "options": {
+      "A": "10000 \\Omega",
+      "B": "8000 \\Omega",
+      "C": "4000 \\Omega",
+      "D": "all are equally good CE24 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "High resistance  Good voltmeter"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An unknown resistance R 1 is connected in series with a resistance of 10 \\Omega . This combination is connected to one gap of a metre bridge while a resistance R 2 is connected in the other gap. The balance point is at 50 cm. Now, when the 10 \\Omega resistance is removed the balance point shifts to 40 cm. The value of R 1 is (in ohms) : -",
+    "options": {
+      "A": "20",
+      "B": "10",
+      "C": "60",
+      "D": "40 CE19 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 R 10 50 1 R 50 + = =  R 1 + 10 = R 2 … (i) 1 2 R 40 R 60 =  3R 1 = 2R 2 … (ii) R 1 + 10 = 1 3 R 2  R 1 = 20 \\Omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Exercise I-III - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 1 \\Omega voltmeter has a range of 1V. Find the additional resistance which has to be joined with the series in voltmeter to increase the range of voltmeter to 100 V : -",
+    "options": {
+      "A": "10 \\Omega",
+      "B": "1 99 \\Omega",
+      "C": "99 \\Omega",
+      "D": "100 \\Omega CE22 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "99 = 1 × R  R = 99 \\Omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a potential difference is applied across the ends of a linear metallic conductor: -",
+    "options": {
+      "A": "group of free electrons are accelerated continuously from the lower potential end to the higher potential end of the conductor",
+      "B": "group of free electrons are accelerated continuously from the higher potential end to the lower potential end of the conductor",
+      "C": "group of free electrons acquire a constant drift velocity from the lower potential end to the higher potential end of the conductor.",
+      "D": "each free electron is set in motion from their position of rest. CE02 - 0754"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the part of a circuit shown in figure, the potential different (V G - V H ) between points G and H will be: -",
+    "options": {
+      "A": "0",
+      "B": "15 V",
+      "C": "7 V",
+      "D": "3 V CE10 - 0319"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAuCAIAAAA9RXkMAAAAUElEQVR42u3QQQEAAAQEMPTvfDJ42yKsk9RvU+8pUKBAgQIFChQoUKBAgQIFChQoUKBAgQIFChQoUKBAgQIFChQoUKBAgQIFChQoUKBAwcUCoFsDWRrgjD4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the equivalent resistance between A and B?",
+    "options": {
+      "A": "3R 2",
+      "B": "2R",
+      "C": "R",
+      "D": "R 2 CE07 - 0243"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electric current through the battery is: -",
+    "options": {
+      "A": "4 A",
+      "B": "3 A",
+      "C": "2 A",
+      "D": "0 A CE09 - 0371"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "100 cells, each of e.m.f. 5V and internal resistance 1 \\Omega , are to be arranged so as to drive maximum current in a 25 \\Omega resistance. Each row is to contain equal number of cells. The number of rows should be: -",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "10 CE16 - 0120"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_current_electricity_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two nonideal batteries are connected in parallel; consider the following statements :",
+    "options": {
+      "A": "both A and B are correct",
+      "B": "A is correct but B is wrong",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The current in 8 \\Omega resistance is (as per given circuit)",
+    "options": {
+      "A": "0.69 A",
+      "B": "0.92 A",
+      "C": "1.30 A",
+      "D": "1.6 A CE14 - 0340 H 2A G 4 \\Omega 1 \\Omega 3V 5V 1A 3A 2 \\Omega A B R R R R R 2 \\Omega 2 \\Omega 4V 4 \\Omega 4 \\Omega - + 6 \\Omega 8 \\Omega 4 \\Omega 8V 6V Exercise - I Current Electricity NEET : Extra Edge [ Physics ]"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAuCAIAAAAQt1a2AAAAP0lEQVR42u3OAQkAAAgDMLV/59tCELYE6yT11tRn9vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vZXFkqKA1mffhAwAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In identical cells, each of emf E and internal resistance r, are joined in series to form a closed circuit. One of the cell A is joined with reversed polarity. The potential difference across each cell except A, is : -",
+    "options": {
+      "A": "2 n ",
+      "B": "In 1 n - ",
+      "C": "In 2 n - ",
+      "D": "2n n 2  - CE14 - 0341"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAA1CAIAAABX44V8AAAAOElEQVR42u3OAQ0AAAgDILV/5xvDuUECOkmdmrpmYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBg8HGwGa4DZ4TV4pkAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 100 W bulb B 1 and two 60 W bulbs B 2 and B 3 , are connected to a 220 V source, as shown in Figure. Now P 1 , P 2 and P 3 are the output powers of the bulbs B 1 , B 2 and B 3 respectively. Then:",
+    "options": {
+      "A": "P 1 > P 2 = P 3",
+      "B": "P 1 > P 2 > P 3",
+      "C": "P 1 < P 2 = P 3",
+      "D": "P 1 < P 2 < P 3 CE17 - 0103"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAxCAIAAADSu/fZAAAAL0lEQVR42u3NMQEAAAgDILV/59liFxRgk0zRTZfP5/P5fD6fz+fz+Xw+n8/n87U8PZIDX5B18h0AAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit shown here, E 1 = E 2 = E 3 = 2V and R 1 = R 2 = 4 ohms. The current flowing between points A and B through battery E 2 is:",
+    "options": {
+      "A": "zero",
+      "B": "2 A from A to B",
+      "C": "2 A from B to A",
+      "D": "none of the above CE14 - 0337"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAsCAIAAABJ6mlcAAAAQklEQVR42u3PMREAAAgEILV/5zeFiwcN6CT10dRTYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmIXFgNoA1X9i75ZAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For a cell, the terminal potential difference is 2.2 V when circuit is open which reduces to 1.8 V when it is connected to a resistance of R = 5 \\Omega ; then internal resistance of the cell is: -",
+    "options": {
+      "A": "10 9 \\Omega",
+      "B": "9 10 \\Omega",
+      "C": "11 9 \\Omega",
+      "D": "5 9 \\Omega CE09 - 0372"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAIAAABj3a+oAAAAOElEQVR42u3OMQEAAAgDILV/55nBzwMS0Enqn6mXtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tA4WFUsDV++DcdIAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In identical cells whether joined together in series or in parallel, give the same current, when connected to an external resistance 'R'. The internal resistance of each cell is : -",
+    "options": {
+      "A": "r = nR",
+      "B": "r = R",
+      "C": "r = R n",
+      "D": "r = n 2 R CE14 - 0339"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "Extra Edge - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The potential difference between the points A and B in the following circuit shown in the figure is : -",
+    "options": {
+      "A": "2 volts 3",
+      "B": "4 volts 5",
+      "C": "8 volts 9",
+      "D": "2 volts CE10 - 0320 Exercise - I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAsCAIAAACogXwNAAAAN0lEQVR42u3OMQEAAAgDILV/51ljByRgk0yfm0paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlqdrQcc3ANVRWeghgAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identical cells are connected in",
+    "options": {
+      "A": "Same in both cases",
+      "B": "Different in both cases",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "2E E i 4r 2r = = E i r (  = ( ) )  2 d P i (2r) = 2 d r P i 2 (  = ( ) )  2 E 2r (  = ( ) )  2 d 1E P 2r (  = ( ) )  Opposite polarity P d = 0 P d = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two cells of unequal emf E 1 and E 2 having internal resistance r 1 and r 2 are connected as shown in figure: -",
+    "options": {
+      "A": "Potential difference across any of the cell cannot be zero",
+      "B": "Potential difference across cell of smaller EMF may be zero",
+      "C": "Potential difference across cell of larger EMF may be zero",
+      "D": "Potential difference can be zero only if EMF of both cell are same CE02 - 0786"
+    },
+    "correct_option": "A",
+    "explanation": "Potential difference across cells will be same and cannot be zero.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAsCAIAAABDtscOAAAAN0lEQVR42u3OMQEAAAgDILV/55nA3wMS0Enqmal/nJycnJycnJycnJycnJycnJycnJycnJycLgt7FgNVlyU/MwAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Conductivity of electrolyte is very low as compared to metal at room temperature because : -",
+    "options": {
+      "A": "Charge of each ion of electrolyte is very large as compare to charge of each free e - 1",
+      "B": "Free ion density in electrolyte is much smaller as compared to e - 1 density of metal",
+      "C": "Free ion density in electrolyte is very large as compared to e - 1 density of metal",
+      "D": "None of these CE01 - 1041"
+    },
+    "correct_option": "B",
+    "explanation": "Number of free e - per unit volume of metal is very large as compare to number of free ions per unit volume of electrolyte 2 ne m (  \\tau  = ( ) )  σ ∝ n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The standard resistance coils are made of manganin because : -",
+    "options": {
+      "A": "Manganin wire is very sensitive to change in temperature",
+      "B": "For manganin the temperature coefficient of resistance varies hyperbolically for large range of temperature",
+      "C": "For Manganin, the temperature coefficient of resistance is almost zero",
+      "D": "None of these CE02 - 0785"
+    },
+    "correct_option": "C",
+    "explanation": "Materials like Nichrome, Manganin and constantan exhibit a very weak dependence of resistivity with temperature and are thus used in wire bound standard resistors."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electrical conductivity of a typical insulator is about 10 - 22 times that of metal while heat conductivity is about 10 - 3 because : -",
+    "options": {
+      "A": "In electrical conduction only free e - take part while in thermal conduction both lattice and free e - contribute",
+      "B": "During electrical conduction no. of free e - are considerably lesser as compare to the number during thermal conduction",
+      "C": "During electrical conduction no. of collision of free e - are extremely large whereas during thermal conductor no. of collision are small",
+      "D": "None of these CE01 - 1043"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 m ne ; m ne \\tau (  \\rho =  = ( ) \\tau )  1 n \\rho  n  In electrical conduction only free e - take part so value of n is small & conductivity is small but in thermal conduction both lattice and free e - contributes . ∴ value of n will be greater ∴ σ will be greater"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A compartment of a train is lit by 20 identical bulb in series. one of the bulbs fuses and is removed from the chain. The remaining bulbs now light the room. The light in the compartment will : -",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "Neither increases nor decreases",
+      "D": "None of these CE03 - 0744"
+    },
+    "correct_option": "A",
+    "explanation": "When 20 bulbs are in series V i 20R (  = ( ) )  2 2 d 1 V (P ) (i R)20 20R =  When 19 bulbs are in series V i 19R (  = ( ) )  2 2 d 2 V (P ) (i R)19 19R (  = =( ) )  (P d ) 2 > (P d ) 1 ⇒ Brightness ↑"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Kirchoff's voltage law in a circuit indicates : -",
+    "options": {
+      "A": "Electric field inside current carrying conductor is non zero",
+      "B": "Electric field outside current carrying conductor is always zero",
+      "C": "electrostatic field is conservative field",
+      "D": "None of the above CE02 - 0787 E 1 ,r 1 E 2 ,r 2 Current Electricity Current Electricity"
+    },
+    "correct_option": "C",
+    "explanation": "Since potential difference between two points in a circuit does not depend on path therefore one can conclude that electrostatic field is conservative field .",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAsCAIAAAC2SEy+AAAAPElEQVR42u3OAQ0AAAgDILV/5xvDuUECOkl9M/WQtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tPSVBW5cA1UfKZVjAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A piece of copper and other of germanium (semiconductor) are cooled from room temperature to 100 K : -",
+    "options": {
+      "A": "Conductivity of copper increases and that of germanium decrease",
+      "B": "Conductivity of copper decreases and that of germanium increases",
+      "C": "Conductivity of copper as well as germanium both decreases",
+      "D": "Conductivity of copper as well as germanium both increases CE01 - 1042"
+    },
+    "correct_option": "A",
+    "explanation": "Copper has positive temperature coefficient whereas germanium has negative temperature coefficient ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A constant potential difference is maintained across a conductor. If the temperature of conductor is increased, drift speed of electron will: -",
+    "options": {
+      "A": "Increase",
+      "B": "Decrease",
+      "C": "Remain same",
+      "D": "Can't say CE01 - 1045"
+    },
+    "correct_option": "B",
+    "explanation": "I = neA V d 2 m ne \\rho = \\tau V neA V d R = on ↑ T ⇒ τ ↓ V A neAVd = \\rho \\lambda ⇒ ρ ↑ ⇒ V d ↓ d 1 V  \\rho R E E r r r E r E R r E R R=r/2 2r 2 E R R=2r   R R 1 2 1 2 E E I r r - = + E 1 E 2 r 2 r 1 Current Electricity NEET : NCR [Physics]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "On bending a conducting wire its : -",
+    "options": {
+      "A": "Resistance will increase because drift velocity of electron in bent wire decreases",
+      "B": "Resistance will decrease because drift velocity of electron in bent wire increases",
+      "C": "Resistance will remain same because drift velocity of electron in bent wire will remain same",
+      "D": "Resistance will remain same but drift velocity of electron in bent wire will decrease CE01 - 1047"
+    },
+    "correct_option": "C",
+    "explanation": "I = ne AVd d V neA V R = d neAV R V (  = ( ) )  Since no. of e - /vol, area of cross section, applied potential difference & drift velocity remain same . ∴ Resistance will not change."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which substance, positive and negative charges both can move?",
+    "options": {
+      "A": "and",
+      "B": "Electrolytic solution",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Electrolyte has both positive and negative charge carriers."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If we consider a mechanism where, the ends of the cylinder are supplied with fresh charges to make up for any charges neutralised by electrons moving inside the conductor, in that case: -",
+    "options": {
+      "A": "and",
+      "B": "There will be continuous current rather than a current for a short period of time",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "There will be steady electric field in body of conductor. This will result in a continuous current rather than a current for short period of time. Mechanism which maintain a steady electron field are cells and Batteries"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When current flows through copper wire, current density J, electric field E and motion of electrons have directions such that: -",
+    "options": {
+      "A": "J & E in opposite direction",
+      "B": "Motion of electrons and E, in opposite direction",
+      "C": "J & motion of electrons in same direction",
+      "D": "J, E & motion of electrons are in same direction CE01 - 0335"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "High current in solid conductor can be obtained because : -",
+    "options": {
+      "A": "drift speed is large",
+      "B": "charge on electron is large",
+      "C": "electron number density is enormous ~10 29 m - 3",
+      "D": "None of the above CE01 - 1052"
+    },
+    "correct_option": "C",
+    "explanation": "As electron number density in solid conductor is enormous → 10 29 m - 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Is it possible that any battery has some constant non - zero value of emf but the potential difference between the plates is zero?",
+    "options": {
+      "A": "Not possible",
+      "B": "Yes, if another identical battery is joined in supportive and series",
+      "C": "Yes, if another identical battery is joined in opposition and series",
+      "D": "Yes, possible, if another similar battery is joined in parallel CE02 - 0792"
+    },
+    "correct_option": "C",
+    "explanation": "If an identical battery is connected in supportive Net emf = 2ε 2 I , 2r r   = = So potential difference across any battery 1 v Ir r r  =  - =  -  1 v 0 =  -  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In meter bridge for measurement of resistance the known and the unknown resistances are inter changed. The error so removed is : -",
+    "options": {
+      "A": "end correction",
+      "B": "index error",
+      "C": "due to temperature effect",
+      "D": "random error CE03 - 0747 NEET : NCR [ Physics ]"
+    },
+    "correct_option": "A",
+    "explanation": "In meter bridge for measurement of resistance the known and the unknown resistance are inter changed. The error so removed is end correction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following characteristics of electrons determines the current in a conductor?",
+    "options": {
+      "A": "Drift velocity alone",
+      "B": "Thermal velocity alone",
+      "C": "Both drift velocity and thermal velocity",
+      "D": "Neither drift nor thermal velocity CE01 - 1054"
+    },
+    "correct_option": "A",
+    "explanation": "The relationship between current and drift speed is given by I = neA V d Here, I is the current and V d is the drift velocity. so, I ∝ V d"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Kirchhoff's junction rule is a reflection of :",
+    "options": {
+      "A": "Conservation of current density vector",
+      "B": "Conservation of energy",
+      "C": "The fact that the momentum with which a charged particle approaches a junction is unchanged",
+      "D": "The fact that there is no accumulation of charges at a junction CE02 - 0788"
+    },
+    "correct_option": "D",
+    "explanation": "Kirchhoff's junction rule is also known as kirchhoff's current law which states that the algebric sum of the currents flowing towards any point in an electric network is zero i.e., charges are conserved in an electric network so, kirchhoff's junction rule is the reflection of conservation of charge."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electrical resistance of a conductor depends upon : -",
+    "options": {
+      "A": "Size of conductor",
+      "B": "temperature of conductor",
+      "C": "Geometry of conductor",
+      "D": "All of these CE01 - 1046"
+    },
+    "correct_option": "D",
+    "explanation": "The electrical resistance of a conductor is depends upon all factors size, temperature and geometry of conductor."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For which of the following dependences of drift velocity V d on electric field E, is Ohm's law obeyed ?",
+    "options": {
+      "A": "V d ∝ E",
+      "B": "V d ∝ E 2",
+      "C": "d V E ",
+      "D": "d 1 V E  CE01 - 1049 2"
+    },
+    "correct_option": "A",
+    "explanation": "d I J V E nAe ne ne  (  = = = ( ) )  2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "From the graph between current i & voltage V shown, identity the portion corresponding to negative resistance",
+    "options": {
+      "A": "DE",
+      "B": "CD",
+      "C": "BC",
+      "D": "AB CE02 - 0790 2"
+    },
+    "correct_option": "C",
+    "explanation": "2E E i 4r 2r = = E i r (  = ( ) )  2 d P i (2r) = 2 d r P i 2 (  = ( ) )  2 E 2r (  = ( ) )  2 d 1E P 2r (  = ( ) )  Opposite polarity P d = 0 P d = 0",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAuCAIAAADWcsIPAAAASUlEQVR42u3PAREAAAQEMPTv/HI4W4N1knps6jd/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f3//OxbqhQNZ8JrQPgAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electric heater is connected to the voltage supply. After few seconds, current get its steady value then its initial current will be : -",
+    "options": {
+      "A": "equal to its steady current",
+      "B": "Slightly higher than steady current",
+      "C": "Slightly less than its steady current",
+      "D": "Zero CE02 - 0789"
+    },
+    "correct_option": "A",
+    "explanation": "Potential difference across cells will be same and cannot be zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a wheat stone bridge if the battery and galvanometer are interchanged the deflection in Galvanometer will :",
+    "options": {
+      "A": "Increase in previous direction",
+      "B": "Not change",
+      "C": "Change in opposite direction",
+      "D": "None of these CE03 - 0746"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In parallel combination of n - cells we obtain : -",
+    "options": {
+      "A": "More voltage",
+      "B": "More current",
+      "C": "Less voltage",
+      "D": "Less current CE02 - 0791"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_current_electricity_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the Column - I with Column - II. Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "A - r, B - q, C - p",
+      "B": "Ohm's law is not applicable",
+      "C": "Alloys have",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "(A) → (p) if the temperature is not very high. (B) → (r) (C) → (q)"
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_current_electricity_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the column: - Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Mobility",
+      "B": "Resistance",
+      "C": "Current density",
+      "D": "Resistivity"
+    },
+    "correct_option": "A",
+    "explanation": "(a) Mobility = ( ) ( ) AT T e m M \\tau \\mu = =   1 0 2 1 M L T A -   \\mu =   (b) Resistance = R = V W I qI =   1 2 2 1 2 3 2 M L T R M L T A ATA - - - = = (c) I J current density A = =   0 2 0 1 J M L T A -   =   (d) Resistivity = \\rho = RA \\lambda   ( ) 1 2 3 1 2 1 M L T A L L - - \\rho =   1 3 3 1 M L T A - -   \\rho =   LV E J e \\lambda H V J E =  \\lambda\\lambda V 1  1 r  1 r"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The paths of electron between successive collisions (with the positive ions of the metal) in the absence of electric field will be: -",
+    "options": {
+      "A": "Straight line",
+      "B": "Parabolic",
+      "C": "Elliptical",
+      "D": "Curved CE01 - 1053"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The paths of electron between successive collisions (with the positive ions of the metal) in the presence of electric field will be",
+    "options": {
+      "A": "Straight line",
+      "B": "Curved",
+      "C": "Both",
+      "D": "No motion CE01 - 1044"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "NCR - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Percentage errors in measuring resistance from metre bridge device can be minimised by adjusting the balance point near.",
+    "options": {
+      "A": "Middle of the bridge",
+      "B": "Corner of the bridge",
+      "C": "1/4 to the bridge",
+      "D": "3/4 to the bridge CE03 - 0745"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Current Electricity principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The resistance of wire is 5 \\Omega at 50^\\circC & 6 \\Omega at 100^\\circC. The resistance of the wire at 0^\\circC will be : -",
+    "options": {
+      "A": "2 \\Omega",
+      "B": "1 \\Omega",
+      "C": "4 \\Omega",
+      "D": "3 \\Omega CE04 - 0059"
+    },
+    "correct_option": "C",
+    "explanation": "Let R 0 = Resistance of wire at 0^\\circC  6 = R 0 [1 + \\alpha (100 - 0) ] ..(1) 5 = R 0 [1 + \\alpha (50 - 0) ] ..(2) from (1), (2)  1 6 1 100 1 C 5 1 50 200 - + \\alpha =  \\alpha = ^\\circ + \\alpha put in (1) 6 = 0 1 R 1 100 200   +       R 0 = 4 \\Omega"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The drift velocity of electrons for a conductor connected in an electrical circuit is V d . The conductor in now replaced by another conductor with same material and same length but double the area of cross section. The applied voltage remains same. The new drift velocity of electrons will be",
+    "options": {
+      "A": "V d",
+      "B": "d V 2",
+      "C": "d V 4",
+      "D": "2V d CE02 - 0044"
+    },
+    "correct_option": "A",
+    "explanation": "V d = eE m \\tau that is independent of area",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAtCAIAAACS1vQlAAAAPElEQVR42u3OAQ0AAAgDILV/55vjGyRgk0yhm07e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t5NHnbIA1foWfSRAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The length of a given cylindrical wire is increased to double of its original length. The percentage increase in the resistance of the wire will be ____%. CE03 - 0075",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "V' = V \\lambda 'A = \\lambda A 2 \\lambda A' = \\lambda A = A A ' 2 = \\rho \\lambda R A … (i) \\lambda ' = 2 \\lambda = A A ' 2 \\rho \\rho = = \\lambda\\lambda ' 2 R ' A A' 2 \\rho = \\lambda 4 R ' A R' = 4R from equation (i) % increase in resistance = - -  =  R ' R 4R R 100 100 R R = 300 %"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The current density in a cylindrical wire of radius 4 mm is 6 2 4 10 Am -  . The current through the outer portion of the wire between radial distance R 2 and R is ____ \\pi A. CE01 - 0093",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "I J A = 2 6 2 4 10 2 I JA R R \\pi \\pi =   (  =   -   ( ) )      6 2 3 4 10 4 R \\pi =    ( ) 2 6 3 3 4 10 4 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Resistance of the wire is measured as 2 \\Omega and 3 \\Omega at 10^\\circC and 30^\\circC respectively. temperature co - coefficient of resistance of the material of the wire is :",
+    "options": {
+      "A": "0.033^\\circC - 1",
+      "B": "- 0.033^\\circC - 1",
+      "C": "0.011^\\circC - 1",
+      "D": "0.055^\\circC - 1 CE04 - 0060"
+    },
+    "correct_option": "A",
+    "explanation": "( ) 0 R R 1 T = + \\alpha\\Delta ( ) ( ) 0 3 R 1 30 - 0 = + \\alpha ( ) ( ) 0 2 R 1 10 - 0 = + \\alpha 3 1 30 2 1 10 + \\alpha = + \\alpha 1 0.033 30 \\alpha = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For a cylindrical conductor of given cross section. A. The drift velocity of electrons decreases with the increase in the temperature of conductor. B. The drift velocity is inversely proportional to the area of cross - section of given conductor. C. The drift velocity does not depend on the applied potential difference to the conductor. D. The drift velocity of electron is inversely proportional to the length of the conductor. E. The drift velocity increases with the increase in the temperature of conductor. Choose the correct answer from the options given below:",
+    "options": {
+      "A": "A and B",
+      "B": "A , B and D",
+      "C": "B and E",
+      "D": "B and C CE02 - 0748 1"
+    },
+    "correct_option": "B",
+    "explanation": "Drift velocity = \\tau (  ( ) )  e E m d e V v m \\tau \\Delta ( (  = ( )( ) ) )  \\lambda \\Delta V = Potential difference applied across the wire As temperature increases, relaxation time decreases, hence V d decreases. As per formula,  \\lambda d 1 V d I v neA = , as it is not mentioned that current is at steady state neither it is mentioned that . So it can't be said that v d is inversely proportional to A. I = neAv d = V V A R = \\rho \\lambda d V v ne = \\rho \\lambda V E (  = ( ) )  \\lambda d eE v m \\tau = \\tau decrease with temperature increase. First and fourth statements are correct. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wire of resistance R 1 is drawn out so that its length is increased by twice of its original length. The ratio of new resistance to original resistance is: ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 1 L R A \\rho = 1 2 1 3L R A / 3 \\rho (  = ( ) )  1 1 L 9 A \\rho =  2 1 R 9 R ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "1 CE03 - 0076 NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": ": m m m \\lambda\\lambda\\lambda = 2 2 2 5 3"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "As the switch S is closed in the circuit shown in figure, current passed through it is : -",
+    "options": {
+      "A": "4.5 A",
+      "B": "6.0 A",
+      "C": "3.0 A",
+      "D": "Zero CE11 - 0024"
+    },
+    "correct_option": "A",
+    "explanation": "Let the potential at junction be x  by nodal Analysis x -20 x -5 x 0 2 4 2 + + =  x = 9V I = x 9 4.5A 2 2 = =",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAuCAIAAAD/dT2IAAAAPklEQVR42u3OAREAAAQEMPTv/HI4W4J1krpp6ix1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXX1H/UFlLQDWRx0Z3kAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit given here, the points A, B and C are 70 V, 0, 10V respectively. Then",
+    "options": {
+      "A": "the point D will be at a potential of 60V",
+      "B": "the point D will be at a potential of 20V",
+      "C": "currents in the paths AD, DB and DC are in the ratio of 9:2:3",
+      "D": "currents in the paths AD, DB and DC are in the ratio of 3:2:1 CE11 - 0025"
+    },
+    "correct_option": "D",
+    "explanation": "I 1 = I 2 + I 3 0 0 0 70 V V 10 V 0 10 30 20 - - -  = +  420 - 6V 0 = 2V 0 - 20 + 3V 0  V 0 = 40V I AD = 70 40 A 3A, 10 - = I DB = 2A & I DC = 1A",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAAsCAIAAAB5Znh9AAAARklEQVR42u3PQQEAAAQEMPTvfDr42hqsk9Q/Uy9pa2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tr3yxU6ANVKoOmfAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The figure shows part of certain circuit, find : Potential difference V C - V B .",
+    "options": {
+      "A": "6 V",
+      "B": "10 V",
+      "C": "4 V",
+      "D": "8 V CE10 - 0032"
+    },
+    "correct_option": "A",
+    "explanation": "V C + 5 + 12 - 12 - 3 - 8 = V B V C - V B = 6V",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAnCAIAAAAgmpe3AAAANUlEQVR42u3OAQ0AAAgDILV/51vDTUhAJ6nDpm7z8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz+/hbpFoDS1eFW6QAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit element given here, if the potential at point B, V B = 0, then the potentials of A and D are given as: -",
+    "options": {
+      "A": "V A = - 1.5V, V D = +2V",
+      "B": "V A = +1.5V, V D = +2V",
+      "C": "V A = +1.5V, V D = +0.5V",
+      "D": "V A = +1.5V, V D = - 0.5V CE10 - 0033"
+    },
+    "correct_option": "D",
+    "explanation": "Potential difference between A and B A B V V 1 1.5 - =  A A V 0 1.5V V 1.5V  - =  = Potential difference between B and C B C V V 1 2.5 2.5V - =  =  0 - V C = 2.5 V  V C = - 2.5 V Potential difference between C and D V C - V D = - 2V  - 2.5 - V D = - 2  V D = - 0.5V.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAuCAIAAAD2np3yAAAAPElEQVR42u3OAREAAAQEMPTv/HJwW4J1krpj6hRdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1d3b/dBb1rA1mOlNOTAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What will be the most suitable combination of three resistors A =  \\Omega , B =  \\Omega , C = 6 \\Omega so that 22 3 (  \\Omega ( ) )  is equivalent resistance of combination?",
+    "options": {
+      "A": "Parallel combination of A and C connected in series with B.",
+      "B": "Parallel combination of A and B connected in series with C.",
+      "C": "Series combination of A and C connected in parallel with B.",
+      "D": "Series combination of B and C connected in parallel with A. CE07 - 0030"
+    },
+    "correct_option": "B",
+    "explanation": "1 Hence option (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the network shown below, the value V B - V A is ________V. B 1 \\Omega 2 \\Omega 15V A CE09 - 0030 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "15V 1 \\Omega 2 \\Omega 15 i 5A 3 = = 15 - 5 (1) = 10 Volt 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The combination of two identical cells, whether connected in series or parallel combination provides the same current through an external resistance of 2 \\Omega . The value of internal resistance of each cell is :",
+    "options": {
+      "A": "2 \\Omega",
+      "B": "4 \\Omega",
+      "C": "6 \\Omega",
+      "D": "8 \\Omega CE09 - 0031"
+    },
+    "correct_option": "D",
+    "explanation": "I J A = 2 6 2 4 10 2 I JA R R \\pi \\pi =   (  =   -   ( ) )      6 2 3 4 10 4 R \\pi =    ( ) 2 6 3 3 4 10 4 10"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Resistance are connected in a meter bridge circuit as shown in the figure. The balancing length 1 l is 40cm . Now an unknown resistance x is connected in series with P and new balancing length is found to be 80cm measured from the same end. Then the value of x will be _____ \\Omega CE19 - 0013 20V \\Omega \\Omega 5V A B \\Omega S 20 \\Omega 30 \\Omega A 10 \\Omega D B C 1 \\Omega \\Omega \\Omega  B 3V 12V 5A C \\Omega \\Omega  A B C D 1amp 1.5 \\Omega 2.5 \\Omega 2V 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Initially, P 40cm 2 Q 60cm 3 = = …(1) Finally, P x 80cm 4 Q 20cm 1 + = = …(2) Divide (2) by (1) P x 3 4 6 P 2 + =  =  x x 1 6 5 P P + =  =  x = 5P = 5 × 4 = 20 \\Omega 0V 10V 70V V 0 30 \\Omega I 3 10 \\Omega 20 \\Omega I 1 I 2 A B C D 1",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAuCAIAAAAZXPbMAAAAPUlEQVR42u3OQQ0AAAgEILV/5zOFDzdIQCepV6a+MTY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2vrRzQQNZFraPOwAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two sources of equal emfs are connected in series. This combination is connected to an external resistance R. The internal resistances of the two sources are r 1 and r 2 (r 1 > r 2 ). If the potential difference across the source of internal resistance r 1 is zero then the value of R will be",
+    "options": {
+      "A": "r 1 - r 2",
+      "B": "+ 1 2 1 2 r r r r",
+      "C": "+ 1 2 r 2 r",
+      "D": "r 2 - r 1 CE14 - 0044"
+    },
+    "correct_option": "B",
+    "explanation": "Drift velocity = \\tau (  ( ) )  e E m d e V v m \\tau \\Delta ( (  = ( )( ) ) )  \\lambda \\Delta V = Potential difference applied across the wire As temperature increases, relaxation time decreases, hence V d decreases. As per formula,  \\lambda d 1 V d I v neA = , as it is not mentioned that current is at steady state neither it is mentioned that . So it can't be said that v d is inversely proportional to A. I = neAv d = V V A R = \\rho \\lambda d V v ne = \\rho \\lambda V E (  = ( ) )  \\lambda d eE v m \\tau = \\tau decrease with temperature increase. First and fourth statements are correct. 1"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find the equivalent resistance between A and B of the network extending off to the infinity shown in the figure for R 1 = 1 \\Omega , R 2 = 4 \\Omega : -",
+    "options": {
+      "A": "4 \\Omega",
+      "B": "1 \\Omega",
+      "C": "2 \\Omega",
+      "D": "8 \\Omega CE08 - 0037"
+    },
+    "correct_option": "A",
+    "explanation": "then R =  R = 4R 2 4 R + +  4R + R 2 = 4R + 2(4 + R)  R 2 + 4R - 6R - 8 = 0  R 2 - 4R + 2R - 8 = 0  R = 4 or R = - 2 Hence option (1)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAuCAIAAAA9RXkMAAAAUElEQVR42u3QQQEAAAQEMPTvfDJ42yKsk9RvU+8pUKBAgQIFChQoUKBAgQIFChQoUKBAgQIFChQoUKBAgQIFChQoUKBAgQIFChQoUKBAwcUCoFsDWRrgjD4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The value of R in the circuit should be : -",
+    "options": {
+      "A": "1 \\Omega",
+      "B": "1.5 \\Omega",
+      "C": "2 \\Omega",
+      "D": "2.5 \\Omega CE10 - 0034"
+    },
+    "correct_option": "D",
+    "explanation": "Aply KVL from A to B - 25 + 2 × 2 + 2 × R + 2 × 8 = 0 R = 2.5 Hence option (4)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAsCAIAAAB+JKZoAAAANUlEQVR42u3OMQEAAAgDILV/51nB0wMS0EnqgakfPDw8PDw8PDw8PDw8PDw8PDw8PDw8PC4W9A0DVQNq6DwAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The equivalent resistance between the points P and Q in the network given here is equal to (given 3 r 2 = \\Omega ): -",
+    "options": {
+      "A": "1 2 \\Omega",
+      "B": "1 \\Omega",
+      "C": "3 2 \\Omega",
+      "D": "2 \\Omega CE08 - 0038"
+    },
+    "correct_option": "B",
+    "explanation": "PQ 2r 2 3 R 1 3 3 2 = =  = \\Omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In identical cells are joined in series with its two cells A and B in the loop with reversed polarities. EMF of each cell is E and internal resistance r. Potential difference across cell A or B is (here n > 4)",
+    "options": {
+      "A": "2E n",
+      "B": "2E 1 1 n (  - ( ) ) ",
+      "C": "4E n",
+      "D": "2E 2 1 n (  - ( ) )  CE14 - 0045"
+    },
+    "correct_option": "D",
+    "explanation": " I = (n 2) 2 4 1 nr n r -  -   (  = - ( ) )  Potential across any one reversed Polarity cell V =  + Ir =  + 4 1 n (  -  ( ) )  = 2  2 1 n (  - ( ) )  Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two cells of equal e.m.f. and of internal resistances r 1 and r 2 (r 1 > r 2 ) are connected in series. On connecting this combination to an external resistance R, it is observed that the potential difference across the first cell becomes zero. The value of R will be",
+    "options": {
+      "A": "r 1 + r 2",
+      "B": "r 1 - r 2",
+      "C": "1 2 r r 2 +",
+      "D": "1 2 r r 2 - CE13 - 0026"
+    },
+    "correct_option": "B",
+    "explanation": "Let the voltage across any one cell is V, then 1 1 2 2E V E ir E r r r R (  = - = - ( ) + + )  But V = 0  1 1 2 2Er E 0 r r R - = + +  1 2 1 r r R 2r + + =  1 2 R r r = - 1 1 1 1 4 4  = R 1 1 4 R r r r r r r r r P P P Q Q Q r 2r r 2r r 2r r r r   n cells 2 , 2r  (n-2) , (n-2)r  r 1 E r 2 E V NEET : PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The equivalent resistance between points A and B in the given network is : 5 \\Omega 10 \\Omega 5 \\Omega 5 \\Omega 5 \\Omega 5 \\Omega 10 \\Omega 10 \\Omega 10 \\Omega A B",
+    "options": {
+      "A": "65 \\Omega",
+      "B": "20 \\Omega",
+      "C": "5 \\Omega",
+      "D": "2 \\Omega CE08 - 0039 R 2 and so on R 2 R 1 R 1 R 1 R 1 R 1 R 1 C D B A R 2 E R 2A 2A 2 \\Omega 8 \\Omega 25V P Q r r r r r r r r NEET : PHYSICS"
+    },
+    "correct_option": "C",
+    "explanation": "10 \\Omega 5 \\Omega 5 \\Omega 5 \\Omega 5 \\Omega 10 \\Omega 10 \\Omega A B 10 \\Omega 5 \\Omega 5 \\Omega 10 \\Omega 10 \\Omega 10 \\Omega B = A  5 \\Omega 10 \\Omega 10 \\Omega A 5 \\Omega 5 \\Omega  B B A 10 \\Omega 10 \\Omega 10 \\Omega 5 \\Omega  5 \\Omega 10 \\Omega A 5 \\Omega B  10 \\Omega 10 \\Omega A B R AB = 5 \\Omega"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The variation of applied potential and current flowing through a given wire is shown in figure. The length of wire is 31.4 cm. The diameter of wire is measured as 2.4 cm. The resistivity of the given wire is measured as x × 10 - 3 \\Omega cm. The value of x is __________. [Take \\pi = 3.14] Potential (volt) 45 0 I(A) CE06 - 0035",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 A = \\rho \\lambda ( ) 2 31.4 1 2.4 4 \\rho  = \\pi 2 (2.4) 314 4 \\pi = \\rho 2.4 2.4 10 4  = \\rho  0.6 2.4 10  = \\rho 1.44 10 = \\rho 0.144 = \\rho 144 × 10 - 3 = \\rho",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAsCAIAAABZiieAAAAAPElEQVR42u3OAREAAAQEMPTv/HI4W4J1kjpo6iZvb29vb29vb29vb29vb29vb29vb29vb29vb29v75/vBRAiA1Wa5sQtAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A battery of internal resistance 2 \\Omega is connected to a variable resistor whose value can vary from 4 \\Omega to 10 \\Omega . The resistance is initially set at 4 \\Omega . If the resistance is now increased then -",
+    "options": {
+      "A": "power consumed by it will decrease",
+      "B": "power consumed by it will increase",
+      "C": "power consumed by it may increase or may decrease",
+      "D": "power consumed will first increase then decrease CE15 - 0053"
+    },
+    "correct_option": "A",
+    "explanation": "Variation of power with load resistance is hence power consumed will decrease. Hence option (1) is correct."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In identical bulbs are rated P watt and V volt. When they are connected in series, total power consumed is 20 watt and when connected in parallel they consume total power of 2000 watt. How many bulbs are used : -",
+    "options": {
+      "A": "200 bulbs",
+      "B": "100 bulbs",
+      "C": "20 bulbs",
+      "D": "10 bulbs CE17 - 0025"
+    },
+    "correct_option": "D",
+    "explanation": "In series 20 = P n ; In parallel Pn = 2000  P = 200 & n = 10 Hence option (4) is correct"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electric tea kettle has two heating coils. When one of the two coils is switched on, the tea begins to boil in 10 minutes. When second coil only is switched on, the boiling begins in 15 minutes. When both coils are connected in parallel and switched on the tea starts boiling in time t, then t is : -",
+    "options": {
+      "A": "4 minute",
+      "B": "6 minute",
+      "C": "25 minute",
+      "D": "12 minute CE15 - 0054"
+    },
+    "correct_option": "B",
+    "explanation": "For parallel coils eff . 1 2 1 1 1 t t t = +  t eff = 10 15 10 15  + = 6 mins. Hence option (2) is correct."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two electric bulbs whose resistance are in the ratio of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "In series current will be same so 2 1 1 1 2 2 2 2 P I R R 1 P R 2 I R = = = Hence option (1) is correct."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "2, are connected in series to a constant voltage source. The power dissipated in them has the ratio : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": " d = eE m \\tau  d = e(V) m \\tau \\lambda V E   =     \\lambda \\lambda   d  V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If two bulbs of wattage 60 W and 100 W respectively each rated at 110 V are connected in series with the supply of 220 V, which bulb will fuse ?",
+    "options": {
+      "A": "60 W bulb",
+      "B": "100 W bulb",
+      "C": "Both the bulbs",
+      "D": "Bulbs will not fuse CE17 - 0027"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 2 1 R P 5 R P 3 = = So voltage drop across 60 W bulb = 220 × 5 8 = 137.5 V > 110 V So 60 W bulb will fuse Hence option (1) is correct."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A resistor develops 300 J of thermal energy in 15s, when a current of 2A is passed through it. If the current increases to 3A, the energy developed in 10s is _________ J. CE15 - 0055",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "H = i 2 Rt 300 = 2 2 × R × 15 300 R 5 60  = = \\Omega Now, for i = 3A, t = 10s, R = 5 \\Omega H = 3 2 × 5 × 10 = 450 J"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_current_electricity_250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Current Electricity",
+      "chapter_name": "Current Electricity",
+      "language": "en",
+      "source": "RACE - Current Electricity.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the figure shown for gives values of R 1 and R 2 the balance point for Jockey is at 40 cm from A. When R 2 is shunted by a resistance of 10 \\Omega , balanced shifts to 50 cm. R 1 and R 2 are (AB = 1m):",
+    "options": {
+      "A": "10 3 \\Omega , 5 \\Omega",
+      "B": "20 \\Omega , 30 \\Omega",
+      "C": "10 \\Omega , 15 \\Omega",
+      "D": "5 \\Omega , 15 2 \\Omega CE19 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Before shunting 1 2 R 40 2 R 60 3 = = ..(1) After shunting 1 2 R 50 1 R´ 50 1 = = ..(2) from eq. (1) & (2) Now 2 R  = 2 2 R 2 R 3  = so 2 10 2 10 R 3 =  + R 2 = 5 \\Omega From eq. (i) R 1 = R 2 2 10 3 3 (  = ( ) )  \\Omega Hence option (1) R = r R P",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAuCAIAAADWcsIPAAAASUlEQVR42u3PAREAAAQEMPTv/HI4W4N1knps6jd/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f3//OxbqhQNZ8JrQPgAAAABJRU5ErkJggg=="
+  }
+]

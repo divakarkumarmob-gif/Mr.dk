@@ -1,0 +1,2911 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_001",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Among the following which one is not formed in Hoffmann degradation",
+    "options": {
+      "A": "RNCO",
+      "B": "2 R NH - \\gamma \\gamma",
+      "C": "RCO NH Br \\gamma \\gamma",
+      "D": "RNC"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_002",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 CH 2 CONH 2 2 NaOH Br  → A, Aqueous solution of A",
+    "options": {
+      "A": "Turns blue litmus to red",
+      "B": "Turns red litmus to blue",
+      "C": "Does not affect the litmus",
+      "D": "Decolourise the litmus"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_003",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ethanamine can be obtained if the following compound is heated with [KOH + Br 2 ]",
+    "options": {
+      "A": "Ethanamide",
+      "B": "Methanamide",
+      "C": "Propionamide",
+      "D": "All the above"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_004",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 CONH 2 2 5 P O I → A Na/EtOH II  → B Reaction II is called",
+    "options": {
+      "A": "Clemmensen",
+      "B": "Stephen",
+      "C": "Mendius",
+      "D": "Bouveault-Blanc reduction"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_005",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 2 H 5 NH 2 cannot be prepared by the reduction of",
+    "options": {
+      "A": "C 2 H 5 NO 2",
+      "B": "CH 3 CH=NOH",
+      "C": "C 2 H 5 NC",
+      "D": "CH 3 CN"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_006",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Gabriel reaction for the synthesis of amines, involves the use of",
+    "options": {
+      "A": "1^\\circ amide",
+      "B": "2^\\circ amide",
+      "C": "Imides",
+      "D": "Aliphatic amide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_007",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Gabriel phthalimide reaction is used in the synthesis of",
+    "options": {
+      "A": "Primary aromatic amines",
+      "B": "Secondary amines",
+      "C": "Primary aliphatic amines",
+      "D": "Tertiary amines"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_008",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reaction : [C 2 H 5 Br + NH 3 ] is in fact an example of",
+    "options": {
+      "A": "Ammonolysis only",
+      "B": "Nucleophilic substitution only",
+      "C": "Ammonolysis as well as nucleophilic substitution",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_009",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Solubility of ethylamine in water is due to",
+    "options": {
+      "A": "Low molecular weight",
+      "B": "Ethyl group is present in ethyl alcohol",
+      "C": "Formation of H-bonding with water",
+      "D": "Being a derivative of ammonia"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_010",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The product obtained by the alkaline hydrolysis of C 2 H 5 -NCO when treated with t-butyl magnesiumbromide, the compound obtained will be",
+    "options": {
+      "A": "t-butylamine",
+      "B": "n-butylamine",
+      "C": "Isobutane",
+      "D": "n-butane"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_011",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reactants of reaction - I are :- CH 3 CONH 2 , KOH, Br 2 Reactants of reaction-II are CH 3 NH 2 , CHCl 3 , KOH The intermediate species of reaction-I and reaction-II are respectively",
+    "options": {
+      "A": "Carbonium ion, carbene",
+      "B": "Nitrene, carbene",
+      "C": "Carbene, nitrene",
+      "D": "Carbocation, carbanion"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_012",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "This compound does not respond to carbylamine reaction :-",
+    "options": {
+      "A": "CH 3 -CH-NH 2 CH 3",
+      "B": "C 2 H 5 -NH-C 2 H 5",
+      "C": "CH 3 -C-NH 2 CH 3 CH 3",
+      "D": "CH 3 -CH-CH 2 -CH 3 NH 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_013",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following amine compound gives alcohol with HNO 2 ?",
+    "options": {
+      "A": "N,N-Dimethylaniline",
+      "B": "Benzylamine",
+      "C": "N-methylaniline",
+      "D": "Aniline ANILINE"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_014",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 NH 2 2 4 Br /CCl  → ? The product is :-",
+    "options": {
+      "A": "Only o- bromoaniline",
+      "B": "2, 4, 6-triboromoaniline",
+      "C": "o-and p-bromoaniline",
+      "D": "Only p-bromoaniline"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_015",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reaction C 6 H 5 NH 2 + HAuCl 4 →  ⊕ [C 6 H 5 NH 3 ]AuCl 4 shows ... behaviour of aniline :-",
+    "options": {
+      "A": "Acidic",
+      "B": "Neutral",
+      "C": "Basic",
+      "D": "Amphoteric"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_016",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aniline on treatment with bromine water yields white precipitate of :-",
+    "options": {
+      "A": "o-Bromoaniline",
+      "B": "p-Bromonailine",
+      "C": "2, 4, 6-Tribromoaniline",
+      "D": "m-Bromoaniline"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_017",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which compound does not show diazo coupling reaction ?",
+    "options": {
+      "A": "NH 2",
+      "B": "NH 2 H 3 C",
+      "C": "NH 2 O 2 N",
+      "D": "CH 2 -NH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_018",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following amines give N-nitroso derivative with NaNO 2 and HCl ?",
+    "options": {
+      "A": "C 2 H 5 NH 2",
+      "B": "NH 2",
+      "C": "N-H R",
+      "D": "NH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_019",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following does not reduce Tollen's reagent ?",
+    "options": {
+      "A": "CH 3 CHO",
+      "B": "HCOOH",
+      "C": "C 6 H 5 NHOH",
+      "D": "C 6 H 5 NH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_020",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aniline on direct nitration produces :-",
+    "options": {
+      "A": "o-Nitroaniline",
+      "B": "m-Nitroaniline",
+      "C": "p-Nitroaniline",
+      "D": "All"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_021",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Nitration of acetanilide followed by hydrolysis gives",
+    "options": {
+      "A": "o-Nitroaniline only",
+      "B": "p-Nitroaniline only",
+      "C": "o- & p-Nitroaniline",
+      "D": "o-Nitroanilinium ion"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_022",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 NH 2 2 NaNO /HCl 0 5 C - ^\\circ  → A, Which is the incorrect structure of the product 'A' ?",
+    "options": {
+      "A": "[C 6 H 5 -N=N]Cl  ⊕",
+      "B": "[C 6 H 5 N 2 ]Cl  ⊕",
+      "C": "[C 6 H 5 -N ≡ N]Cl  ⊕",
+      "D": "[C 6 H 5 -N ≡ N]Cl  ⊕"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_023",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Chloroform and ethanolic KOH is used as a reagent in the following reaction :-",
+    "options": {
+      "A": "Hoffmann carbylamine reaction",
+      "B": "Hoffmann degradation reaction",
+      "C": "Reimer-Tiemann reaction",
+      "D": "Hoffmann mustard oil reaction Code is :-"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_024",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acetanilide when treated with bromine in acetic acid mainly gives :-",
+    "options": {
+      "A": "o-Bromoacetanilide",
+      "B": "N-Bromoacetanilide",
+      "C": "p-Bromoacetanilide",
+      "D": "m-Bromoacetanilide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_025",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aromatic nitriles (ArCN) are not prepared by reaction",
+    "options": {
+      "A": "ArX + KCN",
+      "B": "2 ArN + + CuCN",
+      "C": "ArCONH 2 + P 2 O 5",
+      "D": "ArCONH 2 + SOCl 2 NITRO GROUP, CYANIDE & ISOCYANIDE"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_026",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aniline in a set of reactions yielded end product D NH 2 2 HCl 0-5ºC NaNO + → A CuCN  → B 2 H Ni  → C 2 HNO  → D The structure of the product D would be",
+    "options": {
+      "A": "C 6 H 5 CH 2 OH",
+      "B": "C 6 H 5 CH 2 NH 2",
+      "C": "C 6 H 5 NHOH",
+      "D": "C 6 H 5 NHCH 2 CH 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_027",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "φ -X 2 / HCl NaNO → C 6 H 5 N 2 Cl Water ∆  → φ -Y, In the above sequence X and Y are :-",
+    "options": {
+      "A": "o-, p- and m-directing",
+      "B": "o-, p- and o-, p-directing",
+      "C": "m and m directing",
+      "D": "m and o, p directing"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_028",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound gives an explosive on decarboxylation ?",
+    "options": {
+      "A": "2,4, 6-Trinitrobenzoicacid",
+      "B": "2, 4-Dimethylbenzoicacid",
+      "C": "o-Aminobenzoicacid",
+      "D": "o-Hydroxybenzoicacid"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_029",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 -C-NC CH 3 CH 3  → reduction ?",
+    "options": {
+      "A": "CH 3 -C-NH 2 CH 3 CH 3",
+      "B": "CH 3 -C-NH-CH 3 CH 3 CH 3",
+      "C": "CH 3 -C-NH-CH 2 CH 3 CH 3 CH 3",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_030",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reaction of RCN with sodium and alcohol leads to the formation of :-",
+    "options": {
+      "A": "RCONH 2",
+      "B": "RCOO - NH 4 +",
+      "C": "RCH 2 NH 2",
+      "D": "R"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_031",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 NO 2 Sn/HCl  → A 2 NaNO / HCl 0 C ^\\circ  → B; Benzene from B, is suitably obtained by using :-",
+    "options": {
+      "A": "Ethanol",
+      "B": "H 3 PO 2",
+      "C": "Both the above",
+      "D": "Methanol"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_032",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reagent is used to get iodo benzene from benzene diazonium hydrogen sulphate [C 6 H 5 N 2 HSO 4 ] :",
+    "options": {
+      "A": "CuBr, ∆",
+      "B": "Cu powder + HI",
+      "C": "KI, ∆",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_033",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is used as a solvent in the Friedel-Crafts reaction ?",
+    "options": {
+      "A": "Toluene",
+      "B": "Nitrobenzene",
+      "C": "Benzene",
+      "D": "Aniline"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_034",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the Sandmeyer's reaction, -N=N-X group of diazonium salt is replaced by :-",
+    "options": {
+      "A": "Halide group",
+      "B": "Nitro group",
+      "C": "-OH group",
+      "D": "-NHNH 2 group"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_035",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following when heated with KOH and primary amine gives carbylamine test",
+    "options": {
+      "A": "CHCl 3",
+      "B": "CH 2 Cl 2",
+      "C": "CH 3 OH",
+      "D": "CCl 4 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_036",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Chloroform reacts with aniline and aqueous KOH gives :-",
+    "options": {
+      "A": "Ph-N = \\rho C",
+      "B": "Benzene",
+      "C": "Phenyl cyanide",
+      "D": "None of these EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_037",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Amine is obtained as major product in",
+    "options": {
+      "A": "CH 3 - C - NH 2 O 4 NaBH →",
+      "B": "CH 3 -CH 2 -CH-CH 3 Cl 2 3 NaNH NH  →",
+      "C": "CH 3 -C-NH-CH 3 O 4 LiAlH  →",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_038",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The presence of primary amine can be confirmed by these reactions:-",
+    "options": {
+      "A": "HNO 2",
+      "B": "CHCl 3 +KOH",
+      "C": "CS 2 and HgCl 2",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_039",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "NH 2 NaNO 2 , HCl ''X'' ''A'' OH (Major Product) 273-278K In the above chemical reaction, intermediate \"X\" and reagent/condition \"A\" are :",
+    "options": {
+      "A": "In 2 + Cl¯ ; A-H 2 O/NaOH X →",
+      "B": "NO 2 ; A-H 2 O/ ∆ X →",
+      "C": "In 2 + Cl¯ ; A-H 2 O/ ∆ X →",
+      "D": "NO 2 ; A-H 2 O/NaOH X →"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_040",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "NH 2 HNO 3 ,H 2 SO 4 288 K NH 2 NO 2 + NH 2 NO 2 + NH 2 NO 2 A B C Consider the given reaction, percentage yield of products:",
+    "options": {
+      "A": "C > A > B",
+      "B": "B > C > A",
+      "C": "A > C > B",
+      "D": "C > B > A"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_041",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Carbylamine test is used to detect the presence of primary amino group in an organic compound. Which of the following compound is formed when this test is performed with aniline",
+    "options": {
+      "A": "NHCH 3",
+      "B": "CONH 2",
+      "C": "CN",
+      "D": "NC"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_042",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Primary, secondary and tertiary amines can be separated using :-",
+    "options": {
+      "A": "Para-Toluene sulphonyl chloride",
+      "B": "Chloroform and KOH",
+      "C": "Benzene sulphonic acid",
+      "D": "Acetyl amide"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_043",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is A in the following reaction CH 2 Br O O N  K ⊕ (i) (ii)  OH/H 2 O A (Major Product)",
+    "options": {
+      "A": "O NH-CH 2",
+      "B": "CH 2 OH",
+      "C": "O O NH",
+      "D": "CH 2 NH 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_044",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following gives the most stable Diazonium salt",
+    "options": {
+      "A": "CH 3 -CH 2 -CH 2 -NH 2",
+      "B": "NH 2 CH 3",
+      "C": "CH 3 -C-NH 2 CH 3 H",
+      "D": "NHCH 3 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_045",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The reaction of R-C-NH 2 O with bromine and KOH gives RNH 2 as the end product. Which one of the following is the intermediate product formed in this reaction",
+    "options": {
+      "A": "R-CH-NH-Br OH",
+      "B": "R-NH-Br",
+      "C": "R-N=C=O",
+      "D": "R-C-NBr 2 O"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_046",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements : one is labelled as Assertion",
+    "options": {
+      "A": "and",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_047",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "NH 2 NaNO 2 HCl A HBF 4 B NaNO 2 Cu, ∆ C Sn+HCl D Which statement is correct",
+    "options": {
+      "A": "A given orange color with phenol",
+      "B": "B is fluorobenzene",
+      "C": "D is benzylamine",
+      "D": "D is more basic than pyridine"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_048",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Carbylamine reaction is not given by",
+    "options": {
+      "A": "CH 3 -CH 2 -CH 2 -NH 2",
+      "B": "CH 3 -C-NH 2 CH 3 CH 3",
+      "C": "NH 2",
+      "D": "CH 3 -NH-CH 2 -CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_049",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find the compound X and Y C 6 H 5 - CH 2 - Cl Eth a no lic NaCN X H 2 /Ni Y",
+    "options": {
+      "A": "C 6 H 5 -CH 2 -OH and C 6 H 5 -CH 2 -NH 2",
+      "B": "C 6 H 5 -CH 2 -CN and C 6 H 5 -CH 2 -NH 2",
+      "C": "C 6 H 5 -CH 2 -CN and C 6 H 5 -CH 2 -CH 2 -NH 2",
+      "D": "C 6 H 5 -CH 2 -CN and C 6 H 5 -CH 2 -CH=NH"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_050",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "1^\\circ Amine is not formed by which reaction.",
+    "options": {
+      "A": "O O NH 6 5",
+      "B": "CH 3 -C ≡ N 5 2 Na",
+      "C": "CH 3 -C-NH 2 O",
+      "D": "CH 3 -C--C-NH 2 O KOH + Br 2 CH 3 CH 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_051",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "AMINES - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following amine among C 3 H 9 N will not react with hinsberg reagent",
+    "options": {
+      "A": "CH 3 -CH 2 -CH 2 -NH 2",
+      "B": "CH 3 -CH-CH 3 NH 2",
+      "C": "CH 2 -CH 2 -NH-CH 3",
+      "D": "CH 3 -N-CH 3 CH 3 Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Ans 3 4 3 4 4 1 4 2 3 3 1 4 3 1 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_052",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Tertiary amine is obtained in the reaction : -",
+    "options": {
+      "A": "Aniline 3 CH I ⎯⎯→ 3 CH I ⎯⎯→",
+      "B": "Aniline 3 CH I ⎯⎯→",
+      "C": "Nitrobenzene Sn/HCl ⎯⎯⎯ →",
+      "D": "None of the above AM03 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Tertiary amine : - when nitrogen is directly attached with three carbons, it is called tertiary amine"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_053",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "CH 3 CONH 2 2 5 P O I ⎯⎯→ A Na/EtOH II ⎯⎯⎯⎯ → B Product ‘B’ is",
+    "options": {
+      "A": "CH 3 - CH 2 - OH",
+      "B": "CH 3 - NH 2",
+      "C": "CH 3 - CH 2 - NH 2",
+      "D": "CH 3 - CHO AM06 - 0001 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Therefore, the given reaction II is Mendius reaction which involves the reduction of the organic compound containing the cyanide group in the presence of an alkali metal and alcohol which results in the formation of amines. 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_054",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aniline can be obtained by : -",
+    "options": {
+      "A": "Benzoyl chloride and ammonia",
+      "B": "Reduction of benzamide",
+      "C": "Phenol and ammonia in presence of ZnCl 2",
+      "D": "Benzoic anhydride and ammonia AM02 - 0002 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Option"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_055",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Melting points are normally the highest for",
+    "options": {
+      "A": "Tertiary amides",
+      "B": "Secondary amides",
+      "C": "Primary amides",
+      "D": "amines AM17 - 0004 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) Since product obtained is amine which is basic in nature, it turns red litmus to blue."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_056",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Hydrogen attached to nitrogen is released in the reaction",
+    "options": {
+      "A": "RCONH 2 + NaNH 2",
+      "B": "RNH 2 + Na",
+      "C": "Both the above",
+      "D": "None of the above AM05 - 0002 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Tertiary amine : - when nitrogen is directly attached with three carbons, it is called tertiary amine"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_057",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acidic nature of amino group is shown by the reaction : -",
+    "options": {
+      "A": "R - NH 2 + NaCl → NaNH 2",
+      "B": "2RNH 2 + 2Na → 2RNH.Na + H 2",
+      "C": "R.CH 2 NH 2 + HNO 2 → R.CH 2 OH + N 2 + H 2 O",
+      "D": "R.NH 2 + HCl → 3 RNH Cl  Θ AM05 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Acidic nature of amines is shown by its acidic hydrogen. For example : - 2R - NH 2 + 2Na ⎯ → 2R - NH ⊖ Na  +  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_058",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following amine compound gives alcohol with HNO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) R - NH 2 + HNO 2 ⎯ → R - OH + N 2  + H 2 O (1^\\circ amine)  2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_059",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound liberates CO 2 when treated with NaHCO 3",
+    "options": {
+      "A": "CH 3 COCH 2 NH 2",
+      "B": "CH 3 NH 2",
+      "C": "3 4",
+      "D": "3 3 CH NH Cl  AM17 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 2 ) Since product obtained is amine which is basic in nature, it turns red litmus to blue."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_060",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If primary amines are treated with ketones the product is",
+    "options": {
+      "A": "Urea",
+      "B": "Guanidine",
+      "C": "Amide",
+      "D": "Schiff's base AM05 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) When primary amines are treated with ketone, schiff’s base is obtained."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_061",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Blue litmus can be turned to red by the compound",
+    "options": {
+      "A": "ROH",
+      "B": "RNH 2",
+      "C": "3 R NH OH ",
+      "D": "3 R NH Cl  AM17 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Since 3 R NH Cl  Θ is a acidic salt, it turns blue litmus into red. Note: - R - OH, R - NH 2 & 3 R NH OH  - Θ are basic in nature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_062",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Reaction C 6 H 5 NH 2 + HAuCl 4 ⎯ ⎯ ⎯ → shows ... behaviour of aniline: -",
+    "options": {
+      "A": "Acidic",
+      "B": "Neutral",
+      "C": "Basic",
+      "D": "Amphoteric AM04 - 0006 2"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) In the given reaction C 6 H 5 NH 2 + HAuCl 4 ⎯ → Here, - NH 2 group of Aniline donates e ⊖ Pair to HAuCl 4 , Therefore It acts as Lewis base. So, Aniline shows basic nature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_063",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) (2) (3) (4) None AM09 - 0001",
+    "options": {
+      "D": "None AM09 - 0001",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_064",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 NH 2 2 NaNO /HCl 0 5 C - ^\\circ ⎯⎯⎯⎯→ A, Which is the incorrect structure of the product 'A' : -",
+    "options": {
+      "D": "AM30 - 0001",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_065",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aniline in a set of reactions yielded end product D 2 HCl 0 5 C NaNO + - ^\\circ ⎯⎯⎯⎯ → A CuCN ⎯⎯⎯ → B 2 H Ni ⎯⎯ → C 2 HNO ⎯⎯⎯ → D The structure of the product D would be",
+    "options": {
+      "A": "C 6 H 5 CH 2 OH",
+      "B": "C 6 H 5 CH 2 NH 2",
+      "C": "C 6 H 5 NHOH",
+      "D": "C 6 H 5 NHCH 2 CH 3 AM04 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 2 ) 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_066",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "\\phi - X 2 /HCl NaNO ⎯⎯⎯⎯ → C 6 H 5 N 2 Cl Water \\Delta ⎯⎯⎯ → \\phi - Y, In the above sequence X and Y are : -",
+    "options": {
+      "A": "o - , p - and m - directing",
+      "B": "o - , p - and o - , p - directing",
+      "C": "m and m directing",
+      "D": "m and o, p directing AM15 - 0001 3"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard amines principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_067",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 NO 2 Sn/HCl ⎯⎯⎯ → A 2 NaNO /HCl 0 C ^\\circ ⎯⎯⎯⎯ → B; In the above sequence Benzene from B, is suitably obtained by using : -",
+    "options": {
+      "A": "Ethanol",
+      "B": "H 3 PO 2",
+      "C": "Both the above",
+      "D": "Methanol AM11 - 0003 3"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Reduction of Alkyl Isocyanides gives secondary amines For Example, C 2 H 5 NC 2 5 Na/C H OH ⎯⎯⎯⎯ → C 2 H 5 - NH - CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_068",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reagent is used to get iodo benzene from benzene diazonium acid sulphate [C 6 H 5 N 2 HSO 4 ] :",
+    "options": {
+      "A": "CuBr, \\Delta",
+      "B": "Cu powder + HI",
+      "C": "KI, \\Delta",
+      "D": "None AM16 - 0001"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) Gabriel p h thalimide reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_069",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Arrange the following in decreasing order of boiling point : (I) CH 3 CH 2 CH 2 OH (II) CH 3 CH 2 CH 2 NH 2 (III) (IV) CH 3 CH 2 - NH - CH 3 (V) CH 3 CH 2 CH 2 CH 3",
+    "options": {
+      "A": "I > II > IV > III > V",
+      "B": "III > IV > II > I > V",
+      "C": "I > V > II > III > IV",
+      "D": "II > I > III > IV > V AM17 - 0023"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) Boiling point  strength of hydrogen bonding Bp → Alcohol > 1^\\circAmine > 2^\\circ Amine > 3^\\circ Amine. I > II > IV > III > V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_070",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound cannot be formed by Gabriel phthalimide synthesis ?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (1) Aryl amine can not be prepared b y Gabriel phthalimide synthesis."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_071",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "+ ⎯⎯⎯⎯ → 2 NaNO HCl Find out major product :",
+    "options": {
+      "D": "AM13 - 0033",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (2) CH 2 - NH 2 N aNO 2 + HCl CH 2 - N 2 OH - N 2 CH 2 Ring expansion H 2 O"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_072",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound gives yellow oily liquid nitrosamine when reacted with nitrous acid:",
+    "options": {
+      "D": "AM13 - 0034",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) 2^\\circ Alkylamine when react with HNO 2 gives yellow oily nitros o amine. NH + HO - N=O R R N - N=O R R Nitros o amine"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_073",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements : Statement I : - NHCOCH 3 group is also o/p - directing like - NH 2 group but it is less activating than - NH 2 group. Statement II : Lone pair of nitrogen in - NHCOCH 3 group is in resonance with carbonyl group. In the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": {
+      "A": "Statement I is correct but statement II is incorrect.",
+      "B": "Both statement I and statement II are correct.",
+      "C": "Statement I is incorrect and statement II is correct.",
+      "D": "Both statement I and statement II are incorrect. AM04 - 0031"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (2) - 2 NH \\gamma\\gamma (Strong activating +M group) - NH - C - CH 3 O (Moderate activating +M group) N H 2 Aniline - NH 2 group is in resonance with benzene ring N H - C - CH 3 O lone pair of - NH \\gamma\\gamma - is in resonance with benzene ring as well as - C - CH 3 O group.",
+    "statements": {
+      "P": "In"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_074",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "⎯⎯⎯ → 2 4 H SO A - ⎯⎯⎯⎯ → 453 473K B Compound B is :",
+    "options": {
+      "D": "AM04 - 0107 CH 3 - N - CH 3 CH 3 CH 3 - - NH 2 - CH 2 - NH 2 CH 2 - NH 2 CH 2 OH OH OH CH 3 CH 3 CH 2 - NH 2 NH - CH 3 N - C 6 H 5 CH 2 - NH 2 NH 2 SO 3 H NH 2 SO 3 H NH 2 NH - SO 3 H NH 2 SO 3 H Exercise - I amines NEET : Extra Edge [ Chemistry ]",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) N H 2 H 2 SO 4 N H 3 HSO 4 ( A) 453 - 473K N H 2 ( B ) SO 3 H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_075",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "+ ⎯ → Product Product A is called :",
+    "options": {
+      "A": "Azo dye",
+      "B": "Schiff reagent",
+      "C": "Schiff base",
+      "D": "Oxime AM05 - 0036"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) Ph CH=N Schiff base Benzal dehyde C=O + H 2 N H 1^\\circ Amine"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_076",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aryl fluoride may be prepared from arene diazonium chloride using",
+    "options": {
+      "A": "CuF/HF",
+      "B": "Cu/HF",
+      "C": "HBF 4 / \\Delta",
+      "D": "HBF 4 /NaNO 2 , Cu AM16 - 0029"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (3) N 2 Cl HBF 4 N 2 BF 4 F Aryl fluoride \\Delta \\Delta + BF 3 + N 2 "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_077",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": " - ⎯⎯⎯ → ⎯⎯⎯ → - 3 2 H O SnCl HCl R CN R CHO Above reaction is",
+    "options": {
+      "A": "Mendius reaction",
+      "B": "Stephen's reaction",
+      "C": "Rosenmund reaction",
+      "D": "Perkin reaction AM06 - 0031"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) 3 2 H O SnCl HCl R CN R CH NH R CHO  - ⎯⎯⎯ → - = ⎯⎯⎯ → - Above reaction is called stephen’s reaction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_078",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following has maximum Boiling Point ?",
+    "options": {
+      "A": "Methoxyethane",
+      "B": "In - Butane",
+      "C": "Propanal",
+      "D": "Acetone AM17 - 0032"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) B.P. = Acid > Alcohol > Ketone > Aldehyde ether > Alkane (for similar mass) Exercise - I Amine s NEET : Extra Edge [ Chemistry ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_079",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Aniline cannot be prepared by Gabriel phthalimide synthesis due to -",
+    "options": {
+      "A": "Bulky nature of benzene Ring",
+      "B": "Aryl halide do not undergo nucleophilic substitution reaction",
+      "C": "Aryl halide do not undergo electrophilic substitution reaction",
+      "D": "Both"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Aryl halide does not undergo S N 2 reaction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_080",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one can give propanamine on reaction with LiAlH 4 ?",
+    "options": {
+      "A": "Propyl cyanide",
+      "B": "In - Methylpropanamide",
+      "C": "Propanenitrile",
+      "D": "Both"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) CH 3 - CH 2 - C ≡ N 4 LiAlH (Reduction ) ⎯⎯⎯⎯ → CH 3 - CH 2 - CH 2 - NH 2 Propanenitrile propanamine"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_081",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "'A' + ⎯⎯⎯⎯ → 2 Br NaOH Find out the structure of compound 'A'",
+    "options": {
+      "D": "AM01 - 0250",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Hoffman n bromamide degradation. 2 Br NaOH + ⎯⎯⎯⎯ → CH 3 - CH 2 - CH - NH 2 CH 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_082",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one is soluble in NaOH : -",
+    "options": {
+      "A": "In - Ethyl benzenesulphonamide",
+      "B": "N,N - diethyl benzenesulphonamide",
+      "C": "In - ethyl aniline",
+      "D": "In - methyl ethanamine AM05 - 0090"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) (1) O O Soluble S - NH - C 2 H 5 NaOH (2) O O Ins oluble S - N NaOH C 2 H 5 C 2 H 5 1^\\circ Amine 2 PhSO Cl ⎯⎯⎯ → Salt NaOH ⎯⎯⎯ → Soluble 2^\\circ Amine 2 PhSO Cl ⎯⎯⎯ → Salt NaOH ⎯⎯⎯ → Insoluble 3^\\circ Amine 2 PhSO Cl ⎯⎯⎯ → No reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_083",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Name_Reaction"
+      ],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound will give Hoffmann bromamide reaction ?",
+    "options": {
+      "C": "Ph - NH 2",
+      "D": "AM01 - 0632 CHO NH 2 NO 2 CH 3 - CH - CH 2 - NH 2 CH 3 CH 3 - CH - C - NH 2 CH 3 O CH 3 - CH - CH 2 - C - NH 2 CH 3 O CH 3 - CH - C - OH CH 3 O CH 3 - CH 2 - CH - C - NH 2 CH 3 O Ph - C - NH - CH 3 O CH 3 - N - CH 3 CH 3 CH 3 - CH 2 - C - NH 2 O amines",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Only primary amide undergo in the Hoffman bromide degradation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_084",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound will not give Carbylamine Reaction ?",
+    "options": {
+      "D": "AM05 - 0089",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (4) Primary amine (Ar/R - NH 2 ) will undergo in carbylamine reaction. 2^\\circ and 3^\\circ amine will not undergo in the carbylamine reaction."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_085",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 3,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following compound gives yellow oily liquid nitrosamine when react with nitrous acid:",
+    "options": {
+      "D": "AM05 - 0084",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. (2) Secondary amine group containing amine when reacts with nitrous acid (HNO 2 ), forms a yellow oily nitroso compound CH 2 - N H 2 + HNO 2 → N 2 gas 1^\\circ Amine N H - C H 3 + HNO 2 → N - nitrosoamine 2^\\circ Amine N - C 6 H 5 + HNO 2 → ammonium salt 3^\\circ Amine"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_086",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is/are correct statement -",
+    "options": {
+      "A": "Adrenaline and ephedrine are used to increase blood pressure.",
+      "B": "Novocain is used as an anaesthetic.",
+      "C": "Benadryl is antihistamine",
+      "D": "All are correct CE01 - 1055"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( 1 ) Adrenaline, Ephedrine → 2^\\circ Amide (2) Novocain e → Synthetic amino compound (3) Benadryl → Tertiary amine"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_087",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A ssertion : Reduction w ith iron scrap and hydrochloric acid is preferred. Reason : FeCl 2 formed gets hydrolysed to release hydrochloric acid.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. AM32 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reduction of nitrobenzene is preferred with iron scrap and hydrochloric acid because very small amount of HCl is used and FeCl 2 hydrolysed to form HCl for reaction."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_088",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : - Ammonolysis of halide has the disadvantage to primary amine as obtain good yield. Statement - II : - Primary amine is obtained as a major product by taking large excess of ammonia.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. AM32 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Primary amine formed by ammonolysis halide become more nucleophilic , to avoid this excess amount of NH 3 is taken although it not gives good yield of primary amine."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_089",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is most reactive towards amines.",
+    "options": {
+      "D": "AM01 - 0638",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity of alkyl halide for same degree  leaving Tendency of leaving group."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_090",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : Reduction of ester / Acid / acid halide with LiAlH 4 gives Alcohol while amide gives amine. Statement - II : - NH 2 has poor leaving tendency",
+    "options": {
+      "A": "Both Statement - I and Statement - II are true and the Statement - II is a correct explanation of the Statement - I .",
+      "B": "Both Statement - I and Statement - I I are true and but Statement - I is not a correct explanation of the Statement - I .",
+      "C": "Statement - I is true but Statement - II is false.",
+      "D": "Both Statement - I and Statement - II are false. AM01 - 0218"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 )"
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_amines_091",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Primary amines have more boiling point than secondary and tertiary amines. Reason : Primary amines have intermolecular association due to H - bonding.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. AM04 - 0119 NO 2 Sn + HCl OR Fe + HCl NH 2 CH 3 - CH - I CH 3 CH 3 - CH - CH 3 Br CH 3 - CH - CH 3 Cl CH 3 - CH - F CH 3 A Cl + NaCN Na/C 2 H 5 - OH B C 6 H 5 - C H 2 - Cl C ? CH 2 - NH - CH 2 - C 6 H 5 CH 2 - CH - NH 2 C 6 H 5 N - CH 3 CH 2 - C 6 H 5 CH 2 - O - CH 2 - C 6 H 5 amines amines"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Boiling point of isomeric ami n e decreases as 1^\\circ Amine > 2^\\circ Amine > 3^\\circ Amine",
+    "assertion": "Primary amines have more boiling point than secondary and tertiary amines.",
+    "reason": "Primary amines have intermolecular association due to H - bonding."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_092",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which have most solvation ?",
+    "options": {
+      "A": "3 R NH  -",
+      "B": "2 2 R NH ",
+      "C": "3 R NH ",
+      "D": "Equal AM04 - 0311"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Degree of solvation  Number of H on nitrogen."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_amines_093",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : The reaction of amine with acid halide is carried out in presence of base like pyridine. Reason : Pyridine removes H - Cl formed I reaction so that equilibrium shift to right hand side.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. CA04 - 0028 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Acylation of amine 1",
+    "assertion": "The reaction of amine with acid halide is carried out in presence of base like pyridine.",
+    "reason": "Pyridine removes H - Cl formed I reaction so that equilibrium shift to right hand side."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_094",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect statement about reaction of amine with HNO 2 , is",
+    "options": {
+      "A": "Aliphatic primary amine gives alcohol",
+      "B": "Secondary amines give s yellow oily liquid.",
+      "C": "Aromatic primary amine gives diazonium salt at room temperature.",
+      "D": "Tertiary amine forms salt. AM03 - 0208 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 4 ) ( 1 ) Adrenaline, Ephedrine → 2^\\circ Amide (2) Novocain e → Synthetic amino compound (3) Benadryl → Tertiary amine"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_095",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : - Primary amine gives sulphonamide with Hinsberg reagent, which is soluble in alkali. Statement - II : - Sulphonamide is strongly acidic due to presence of strong electron withdrawing sulphonamide group.",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. AM34 - 0044 1"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) Reduction of nitrobenzene is preferred with iron scrap and hydrochloric acid because very small amount of HCl is used and FeCl 2 hydrolysed to form HCl for reaction."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_096",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Correct statements is/are",
+    "options": {
+      "A": "N, N - dimethyl benzene sulphonamide is insoluble in alkali.",
+      "B": "Tertiary amines do not react with benzene sulphonyl chloride.",
+      "C": "Benzenesulphonyl chloride is know n as Hinsberg reagent.",
+      "D": "Primary amine gives alkali soluble product after reacting with Hinsberg reagent."
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Primary amine formed by ammonolysis halide become more nucleophilic , to avoid this excess amount of NH 3 is taken although it not gives good yield of primary amine."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_amines_097",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Activating effect of - NH 2 in a niline is decreased due to acetylation. Reason : Lone pair on nitrogen have resonance with oxygen in acetanilide so lone pair is less available for donation to benzene ring.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. AH02 - 0224 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) Reactivity of alkyl halide for same degree  leaving Tendency of leaving group.",
+    "assertion": "Activating effect of – NH 2 in a niline is decreased due to acetylation.",
+    "reason": "Lone pair on nitrogen have resonance with oxygen in acetanilide so lone pair is less available for donation to benzene ring."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_amines_098",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : Aniline does not give Friedel craft reaction. Reason : In presence of Lewis acid (AlCl 3 ), aniline forms salt and nitrogen a c quires positive charge which is strong deactivating group.",
+    "options": {
+      "A": "Both Assertion and Reason are true and the Reason is a correct explanation of the Assertion.",
+      "B": "Both Assertion and Reason are true and but Reason is not a correct explanation of the Assertion.",
+      "C": "Assertion is true but Reason is false.",
+      "D": "Both Assertion and Reason are false. AH02 - 0223 CH 3 - C - CH 3 A O NaOH B ? Br 2 1 eqva CH 3 - C - CH 2 - Br O CH 3 - C - Br O Br - CH 2 - C - CH 2 - Br O Br - C - Br O NEET : NCR [ Chemistry ] 1"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (A) Cl + NaCN Na/C 2 H 5 - OH C 6 H 5 - C H 2 - Cl C N CH 2 - NH 2 (B) CH 2 - NH - CH 2 - C 6 H 5 (C)",
+    "assertion": "Aniline does not give Friedel craft reaction.",
+    "reason": "In presence of Lewis acid (AlCl 3 ), aniline forms salt and nitrogen a c quires positive charge which is strong deactivating group."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_099",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement - I : - The conversion of primary Aliphatic amine into diazonium salt is know n as diazo t ization. Statement - II : - Benzene diazonium salt is stable i n cold or at 0^\\circ - 5^\\circC",
+    "options": {
+      "A": "Both Statement I and Statement II are true.",
+      "B": "Both Statement I and Statement II are false.",
+      "C": "Statement I is true but Statement II is false.",
+      "D": "Statement I is false but Statement II is true. AM03 - 0209"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) Benzene diazonium salt is stable at 0 - 5^\\circC temp."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_100",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A given nitrogen - containing aromatic compound",
+    "options": {
+      "A": "reacts with Sn/HCl, followed by HNO 2 to give an unstable compound",
+      "B": ", on treatment with phenol, forms a beautiful coloured compound",
+      "C": "with the molecular formula C 12 H 10 N 2 O. The structure of compound",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) Sn l (A) N 2 N 2 N 2 (B) N 2 l ara - hydro ya oben ene ( range - dye) N N "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_101",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following reactions is appropriate for converting acetamide to methanamine?",
+    "options": {
+      "A": "Hoffmann hypobromamide reaction",
+      "B": "Stephens reaction",
+      "C": "Gabriels phthalimide synthesis",
+      "D": "Carbylamine reaction AM01 - 0419"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)  Hoffmann hypobromamide reaction is appropriate for converting acetamide to methanamine."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_102",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Name_Reaction",
+        "Match_The_Following"
+      ],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match List I with List II List - I List - II A I Fittig reaction B II Wurtz Fittig reaction C III Finkelstein reaction D C 2 H 5 Cl + NaI → C 2 H 5 I + NaCl IV Sandmeyer reaction",
+    "options": {
+      "A": "A - II, B - I, C - III, D - IV",
+      "B": "A - III, B - II, C - IV, D - I",
+      "C": "A - IV, B - II, C - III, D - I",
+      "D": "A - II, B - I, C - IV, D - III HD08 - 0154"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. (4) LIST - I LIST - II A. Wurtz - Fittig reaction B. Fittig reaction C. Sandmeyer reaction D. C 2 H 5 Cl + NaI → C 2 H 5 I + NaCl Finkelstein reaction Cl + CH 3 Cl CH 3 Cl + 2Na Cl +N 2 N 2 + Cl - amines"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_103",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "X 3 2 3 2 CH CH C N CH CH CHO - ⎯⎯ → -  The reagent/s X is (are):",
+    "options": {
+      "A": "SnCl 2 /HCl, H 2 O/boil",
+      "B": "H 2 /Pd - BaSO 4",
+      "C": "LiAlH 4 /ether",
+      "D": "NaBH 4 /ether, H 3 O + CC01 - 1268"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1)"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_104",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "NCR - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which statement is NOT correct for p - toluenesulphonyl chloride ?",
+    "options": {
+      "A": "It is known as Hinsberg’s reagent.",
+      "B": "It is used to distinguish primary and secondary amines.",
+      "C": "On treatment with secondary amine, it leads to a product, that is soluble in alkali.",
+      "D": "All are correct AM03 - 0277"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. (3) p ara - toluene sulphonyl chloride - insberg’s reagent - used to distinguish 1^\\circ, 2^\\circ, 3^\\circ amines 1^\\circ → product NaOH ⎯⎯⎯ → soluble 2^\\circ → product NaOH ⎯⎯⎯ → in soluble"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_105",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "4 2 LiAlH HNO HCN in ether A B C ⎯⎯→ ⎯⎯⎯ → ⎯⎯⎯ → In above reaction major product",
+    "options": {
+      "C": "is :",
+      "A": "Option A",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_106",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the Hofmann bromamide degradation reaction, the number of moles of NaOH and Br 2 used per mole of amine produced are :",
+    "options": {
+      "A": "One moles of NaOH and one mole of Br 2",
+      "B": "Four mole of NaOH and one mole of Br 2",
+      "C": "Four moles of NaOH and two moles of Br 2",
+      "D": "Two moles of NaOH and two moles of Br 2 AM01 - 0057"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_107",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The major product of the reaction is Major Product",
+    "options": {
+      "D": "AM13 - 0011",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_108",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The presence of primary amine can be confirmed by these reactions with except : -",
+    "options": {
+      "A": "HNO 2",
+      "B": "CHCl 3 +KOH",
+      "C": "CS 2 and HgCl 2",
+      "D": "H 2 SO 4 AM05 - 0014"
+    },
+    "correct_option": "D",
+    "explanation": "Ans. ( 4 ) CHCl 3 + KOH ( isocyanide test ) use for 1^\\circ Amine only HNO 2 → di zonium s t form tion with 1^\\circ amine. 1^\\circ Amine 2 2 CS /HgCl ⎯⎯⎯⎯ → Black ppt 2^\\circ Amine 2 2 CS /HgCl ⎯⎯⎯⎯ → No ppt with HgCl 2 only react with CS 2 3^\\circ Amine 2 2 CS /HgCl ⎯⎯⎯⎯ → No reaction"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_109",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which reaction does not give primary amine",
+    "options": {
+      "A": "CH 3 - CH 2 - Cl + NH 3 ⎯ → excess",
+      "B": "CH 3 - CH 2 - Cl + NH 3 ⎯ → excess",
+      "C": "CH 3 - CH 2 - NC",
+      "D": "AM03 - 0022"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. ( 1 ) (1) CH 3 - CH 2 - Cl + NH 3 ⎯ → Salt formation excess (2) CH 3 - CH 2 - Cl + NH 3 ⎯ → CH 3 CH 2 NH 2 excess (1^\\circ Amine) (3) CH 3 - CH 2 - NC CH 3 CH 2 NH CH 3 (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_110",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ph NH 2 2 o o H Cl/HNO CuCN KCN 0 5 C A B ? - - ⎯⎯⎯⎯ → ⎯⎯⎯ →",
+    "options": {
+      "D": "AM14 - 0006 NEET : CHEMISTRY",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )   i zonium ion u ndm r r tion"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_111",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "2 Br ⎯⎯ → A Sn/HCl ⎯⎯⎯ → B 2 NaNO HCl ⎯⎯⎯ → C 3 2 H PO ⎯⎯⎯ → D ?",
+    "options": {
+      "D": "AM14 - 0049",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "Ans. ( 3 ) r n r r r  i zonium s t r NEET : CHEMISTRY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_112",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) No reaction of A to B (2) (3) (4) AM02 - 0021",
+    "options": {
+      "A": "No reaction of A to B",
+      "D": "AM02 - 0021",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) (A) (B) (C) , CH 2 =CH CH 2 NH 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_113",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C 6 H 5 NH 2 + CHCl 3 + Alc. KOH ? A 4 LiAlH H  ⎯⎯⎯ → B ?",
+    "options": {
+      "A": "C 6 H 5 NH 2",
+      "B": "C 6 H 5 NH CH 3",
+      "C": "C 6 H 5 CH 3",
+      "D": "C 6 H 5 CH 2 NH 2 AM03 - 0023"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 )"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_amines_114",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Incorrect statement related to reaction of 1^\\circ amine and Hinsberg reagent is",
+    "options": {
+      "A": "It gives an acid which is soluble in NaOH",
+      "B": "It does not give an acid",
+      "C": "It is nucleophilic substitution reaction",
+      "D": "This reaction can be used to distinguish 1^\\circ amine and 2^\\circ amine. AM05 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "Ans. ( 2 ) min ins r r nt t form o u 2^\\circ Amine + C 6 H 5 SO 2 → rodu t T form KOH ⎯⎯→ inso l uble 3^\\circ Amine + C 6 H 5 SO 2 → T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_amines_115",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "section": "A",
+      "level": 1,
+      "topic": "Amines",
+      "chapter_name": "Amines",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Amines.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) (2) (3) (4) AM14 - 0005 A NH 2 NaNO 2 HCl 0^\\circ - 5^\\circC ? CuCN KCN NO 2 CN NO 2 NC NO 2 CN NO 2 NC NO 2 NEET : CHEMISTRY",
+    "options": {
+      "D": "AM14 - 0005 A NH 2 NaNO 2 HCl 0^\\circ - 5^\\circC ? CuCN KCN NO 2 CN NO 2 NC NO 2 CN NO 2 NC NO 2 NEET : CHEMISTRY",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Ans. (1) NH 2 NaNO 2 + HCl 0^\\circ - 5^\\circC CuCN KCN N 2 Cl + CN N O 2 N O 2 N O 2"
+  }
+]

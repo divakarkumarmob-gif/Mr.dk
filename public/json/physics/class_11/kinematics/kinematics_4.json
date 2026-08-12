@@ -1,0 +1,117 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-451",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A river is flowing from W to E with a speed of 5 m/min. A man can swim in still water with a velocity 10 m/min. In which direction should the man swim so as to take the shortest possible path to go to the north : -",
+    "options": {
+      "A": "30^\\circ with downstream",
+      "B": "60^\\circ with downstream",
+      "C": "120^\\circ with downstream",
+      "D": "South"
+    },
+    "correct_option": "C",
+    "explanation": "5 1 sin 10 2 \\theta = = \\theta = 30^\\circ Angle with downstream = 90^\\circ + 30^\\circ = 120^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-452",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A river 4.0 miles wide is flowing at the rate of 2 miles/hr. The minimum time taken by a boat to cross the river with a speed  = 2 miles/hr (in still water) is approximately",
+    "options": {
+      "A": "1 hr and 0 minute",
+      "B": "2 hr",
+      "C": "1 hr and 12 minutes",
+      "D": "2 hr and 25 minutes"
+    },
+    "correct_option": "B",
+    "explanation": "min D 4 t 2hr v 2 = = = u V rm \\theta \\theta v V r 5m/min \\theta"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-453",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A river flows from east to west with a speed of 5m/min. A man on south bank of river, capable of swimming at the rate of 10 m/min in still water, wants to swim across the river in shortest time; he should swim :",
+    "options": {
+      "A": "due north",
+      "B": "due north - east",
+      "C": "due north - east with double the speed of river",
+      "D": "none of the above"
+    },
+    "correct_option": "A",
+    "explanation": "For shortest time he has to cross the river with swimming perpendicular to flow i.e. due north."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-454",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat - man can row a boat to make it move with a speed of 10 km/h in still water. River flows steadily at the rate of 6 km/h. and the width of the river is 4 km. If the boat man cross the river along the minimum distance of approach then time elapsed in rowing the b oat will be :",
+    "options": {
+      "A": "2 3 5 h",
+      "B": "2 5 3 h",
+      "C": "3 2 5 h",
+      "D": "1 2 h Kinematics"
+    },
+    "correct_option": "D",
+    "explanation": "2 2 2 2 R d 4 4 1 t 8 2 v v 10 6 = = = = - - hr"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy8-455",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Kinematics",
+      "chapter_name": "Kinematics",
+      "language": "en",
+      "source": "Exercise I-III - Kinematics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles are separated by a horizontal distance x as shown in figure. They are projected as shown in figure with different initial speeds. The time after which the horizontal distance between them becomes zero is :",
+    "options": {
+      "A": "x u",
+      "B": "u 2x",
+      "C": "x 2u",
+      "D": "none of these 30^\\circ x 60^\\circ u ξ 3 u EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": "1 2 x x u t u t x + = 3ucos30 ucos60 t x   ^\\circ + ^\\circ =   3 u x 3u t x t 2 2 2u    + =  =       Exercise - II ( Previous Year Questions )"
+  }
+]

@@ -1,0 +1,1080 @@
+[
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "RACE - Semiconductor Electronics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit shown below, maximum zener diode current will be ____mA . SC10 - 0011",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Consider input 120V 120V I 60V 4000 \\Omega 10,000 \\Omega I L = 60V 10,000 \\Omega = 0.006A ( ) 120 60 V I 0.015A 4000 - = = \\Omega Thus I 2 = I - I L = 0.015 - 0.006 = 0.009 A = 9 mA",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANkAAABXCAIAAAAGZneJAAAAtklEQVR42u3SQQ0AAAjEMMC/50MFCY9WwrJOUvDASIAXwYt4EbyIF8GLeBG8iBfBi3gRvIgXwYt4EbyIF8GL4EW8CF7Ei+BFvAhexIvgRbwIXsSL4EW8CF7Ei+BFvAheBC/iRfAiXgQv4kXwIl4EL+JF8CJeBC/iRfAiXgQv4kXwIngRL4IX8SJ4ES+CF/EieBEvghfxIngRL4IX8SJ4EbyIF8GLeBG8iBfBi3gRvIgXwYt4EU4sc2gDq7da15wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "RACE - Semiconductor Electronics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify the solar cell characteristics from the following options :",
+    "options": {
+      "D": "SC09 - 0003 B A Y V",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Conceptual / theory"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "RACE - Semiconductor Electronics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match the List I with List II . List I List II A. Intrinsic Semiconductor I. Fermi - level near conduction band B. n - type semiconductor II. Fermi - level at middle C. p - type semiconductor III. Fermi - level near valence band D. Metals IV. Fermi - level inside conduction band Choose the correct answer from the options given below:",
+    "options": {
+      "A": "→ I,",
+      "B": "→ II,",
+      "C": "→ III,",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Based on theory."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "RACE - Semiconductor Electronics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The logic gate equivalent to the given circuit diagram is : A 1 B 1 +5V 1 (Glow) Y",
+    "options": {
+      "A": "OR",
+      "B": "NAND",
+      "C": "NOR",
+      "D": "AND SC18 - 0020"
+    },
+    "correct_option": "B",
+    "explanation": "1 1 A B Y 0 0 1 0 1 1 1 0 1 1 1 0 1 1 Y A B =  NAND",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "RACE - Semiconductor Electronics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Statement I : When a Si sample is doped with Boron, it becomes P type and when doped by Arsenic it becomes N - type semi conductor such that P - type has excess holes and N - type has excess electrons. Statement II : When such P - type and N - type semi - conductors, are fused to make a junction, a current will automatically flow which can be detected with an externally connected ammeter. In the light of above statements, choose the most appropriate answer from the options given below. Options:",
+    "options": {
+      "A": "Both Statement I and statement II are incorrect",
+      "B": "Statement I is incorrect but statement II is correct",
+      "C": "Both Statement I and statement II are correct",
+      "D": "Statement I is correct but statement II is incorrect SC03 - 0035"
+    },
+    "correct_option": "D",
+    "explanation": "Statement - I is correct When P - N junction is formed an electric field is generated form N\\cdot side to P - side due to which barrier potential arises & majority charge carrier can not flow through the junction due to barrier potential so current is zero unless we apply forward bias voltage.",
+    "statements": {
+      "S": "",
+      "R": "In"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "RACE - Semiconductor Electronics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the given logic gates combination, the correct truth table will be",
+    "options": {
+      "A": "A B X 0 0 1 0 1 0 1 0 0 1 1 0",
+      "B": "A B X 0 0 0 0 1 1 1 0 1 1 1 0",
+      "C": "A B X 0 0 1 0 1 0 1 0 1 1 1 0",
+      "D": "A B X 0 0 0 0 1 1 1 0 1 1 1 1 SC19 - 0032"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the energy band diagram of a material shown below, the open circles and filled circles denote holes and electrons respectively. The material is:- E C E g E V",
+    "options": {
+      "A": "an n-type semiconductor",
+      "B": "a p-type semicoductor",
+      "C": "an insulator",
+      "D": "a metal"
+    },
+    "correct_option": "A",
+    "explanation": "Reverse bias resistance = V I ∆ ∆ = 1V 0.5μA = 6 1V 0.5 10 A - × = 2 × 10 6 Ω",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When we convert pure semiconductor into N type then number of hole :-",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "Remains constant",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "For intrinsic semiconducutor, n e = n h = n i = 7.07 × 10 15 m -3 In extrinsic (doped) semiconductor, n e n h = n i 2 ⇒ n e = 2 i h n n = 15 2 22 (7.07 10 ) 5 10 × × = 10 9 m -3 $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a p-type semicondutor, there are mainly :-",
+    "options": {
+      "A": "and",
+      "B": "holes",
+      "C": "both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In semiconducting material the mobilities of electrons and holes are μ e and μ h respectively. Which of the following is true :-",
+    "options": {
+      "A": "μ e > μ h",
+      "B": "μ e < μ h",
+      "C": "μ e = μ h",
+      "D": "μ e < 0; μ h > 0"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a small amount of antimony is added to germanium crystal :",
+    "options": {
+      "A": "it becomes a p-type semiconductor",
+      "B": "the antimony becomes an acceptor atom",
+      "C": "there will be more free electrons than holes in the semiconductor",
+      "D": "its resistance is increased PN JUNCTION & BIASING OF DIODE"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In forward biasing of the p-n junction :-",
+    "options": {
+      "A": "The positive terminal of the battery is connected to p-side and the depletion region becomes thick.",
+      "B": "The positive terminal of the battery is connected to N\\cdot side and the depletion region becomes thin.",
+      "C": "The positive terminal of the battery is connected to N\\cdot side and the depletion region becomes thick.",
+      "D": "The positive terminal of the battery is connected to p-side and the depletion region becomes thin. $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 2 V battery forward biases a diode however there is a drop of 0.5 V across the diode which is independent of current. Also a current greater then 10 mA produces large joule loss and damages diode. If diode is to be operated at 5 mA, the series resistance to be put is :- 2V R",
+    "options": {
+      "A": "3 k Ω",
+      "B": "300 k Ω",
+      "C": "300 Ω",
+      "D": "200 k Ω"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the following figure, the diodes which are forward biased, are :-",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find V AB :- 10 Ω A B 30 V 10 Ω 10 Ω",
+    "options": {
+      "A": "10 V",
+      "B": "20 V",
+      "C": "30 V",
+      "D": "none 40 Assuming that the junction diode is ideal then the current through the diode is:- 1V 3V 100 Ω"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Current I in the circuit will be :- 20 Ω 20 Ω 30 Ω 5 V I",
+    "options": {
+      "A": "5 40 A",
+      "B": "5 50 A",
+      "C": "5 10 A",
+      "D": "5 20 A R +5 V +10 V R -10 V R -5 V -12 V R +5 V $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the circuit given the current through the zener diode is :- 15 V V Z =10V R 2 R 1 500 Ω 1500 Ω",
+    "options": {
+      "A": "10 mA",
+      "B": "6.67 mA",
+      "C": "5 mA",
+      "D": "3.33 mA"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAABcCAIAAACnVqHxAAAAUUlEQVR42u3OMQEAAAgDILV/51ljByRgk0yTmzJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQp2hB6oQA7WUFvFxAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A zener diode, having breakdown voltage equal to 15 V, is used in a voltage regulator circuit shown in figure. The current through the zener diode is :- 20 V + - 15 V 250 Ω 1k Ω",
+    "options": {
+      "A": "5 mA",
+      "B": "10 mA",
+      "C": "15 mA",
+      "D": "20 mA $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAACBCAIAAABy2/mgAAABGklEQVR42u3TQQ0AAAjEMMC/58MEH5JWwpJ1kgJOjQTgK/AV+ArwFfgKfAX4CnwFvgJ8Bb4CXwG+Al+BrwBfga/AV4CvwFfgK/AV4CvwFfgK8BX4CnwF+Ap8Bb4CfAW+Al8BvgJfga8AX4GvwFeAr8BX4CvwFeAr8BX4CvAV+Ap8BfgKfAW+AnwFvgJfAb4CX4GvAF+Br8BXgK/AV+Ar8BXgK/AV+ArwFfgKfAX4CnwFvgJ8Bb4CXwG+Al+BrwBfga/AV4CvwFfgK/AV4CvwFfgK8BX4CnwF+Ap8Bb4CfAW+Al8BvgJfga8AX4GvwFeAr8BX4CvwFeAr8BX4CvAV+Ap8BfgKfAW+AnwFvgJfAb4CX4GvAF+Br+CZBVcKA/9wQLlhAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In p-n junction solar cell electromotive force due to monochromatic light is proportional to",
+    "options": {
+      "A": "p-n potential barrier",
+      "B": "intensity of light",
+      "C": "frequency of light",
+      "D": "p-n applied voltage"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Digital circuits can be made by repetative use of :-",
+    "options": {
+      "A": "OR gate",
+      "B": "AND gate",
+      "C": "NOT gate",
+      "D": "NAND gate"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The truth table shown below is for which of the following gates :-",
+    "options": {
+      "A": "XNOR",
+      "B": "AND",
+      "C": "XOR",
+      "D": "NOR"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What would be the output of the circuit whose Boolean expression Y = A B + AB when A = 1, B = 0 :-",
+    "options": {
+      "A": "&",
+      "B": "0",
+      "C": "both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "To get an output 1, the input ABC should be :- A B Y C",
+    "options": {
+      "A": "101",
+      "B": "100",
+      "C": "110",
+      "D": "010"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following gates will have an output of 1 :-",
+    "options": {
+      "A": "1 1",
+      "B": "0 1",
+      "C": "0 1",
+      "D": "0 0 Y"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify the logic operation of the following logic circuit",
+    "options": {
+      "A": "NAND",
+      "B": "AND",
+      "C": "NOR",
+      "D": "OR EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Current flowing in each of the circuit A & B respectively are :- 4 Ω 8V 4 Ω 8V 4 Ω 4 Ω (Circuit -A) (Circuit -B)",
+    "options": {
+      "A": "1 Amp, 2 Amp",
+      "B": "1 Amp, 4 Amp",
+      "C": "4 Amp, 2 Amp",
+      "D": "2 Amp, 4 Amp"
+    },
+    "correct_option": "A",
+    "explanation": "CKT ⇒ A 8V 4 Ω 4 Ω Both diode are FB ⇒ So Req. = 1 2 1 2 R R R R + = 4 4 4 4 × + = 2 Ω So I = V/R = 8/2 = 4 amp 8V 4 Ω 4 Ω CKT ⇒ B Req. = 4 Ω I = 8/4 = 2 amp",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAABwCAIAAAAFRKyhAAAAw0lEQVR42u3RMQEAAAjDMMC/52GCj1RC00lK/xoLwAu8wAu8wAu8wAu8wAu8wAu8wAu8wAu8wAu8wAu8wAu8wIMXeIEXeIEXeIEXeIEXeIEXeIEXeIEXeIEXeIEXeIEXeIEHL/ACL/ACL/ACL/ACL/ACL/ACL/ACL/ACL/ACL/ACL/ACL/DgBV7gBV7gBV7gBV7gBV7gBV7gBV7gBV7gBV7gBV7gBV7gwQu8wAu8wAu8wAu8wAu8wAu8wAu8wAu8wOuiBeWBA91HhKGwAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A Junction diode has a resistance of 25 Ω when F.B. & 25000 Ω when R.B. The current in the diode, for the arrangement shown will be :- 5V 10 Ω 0V",
+    "options": {
+      "A": "1/15 A",
+      "B": "1/7 A",
+      "C": "1/25 A",
+      "D": "1/180 A"
+    },
+    "correct_option": "A",
+    "explanation": "5V 0V F.B. so diode Resistance ⇒ 25 Ω 5V 10 Ω 0 25 Ω I = 5/35 = 1/7 Amp. Req = 35 Ω"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is FB :-",
+    "options": {
+      "A": "-5V 2V",
+      "B": "0V 2V",
+      "C": "-1V -5V",
+      "D": "3V"
+    },
+    "correct_option": "A",
+    "explanation": "For forward baising, P is at high potential & N region is at low potential."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find current through zener diode :- 2k Ω 1k Ω 25V 5V",
+    "options": {
+      "A": "5mA",
+      "B": "7.5 mA",
+      "C": "2.5 mA",
+      "D": "12.5 mA"
+    },
+    "correct_option": "A",
+    "explanation": "25V 2k Ω I Iz I L 1k Ω 5V I L = Z L V R = 5 1k Ω = 5 mA I = Z s V V 25 5 R 2k - - = Ω = 10 mA I Z = I - I L = 10 - 5 = 5 mA"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find output wave form :- 2k Ω 2k Ω output input -10V 10V 0 t",
+    "options": {
+      "A": "10V t",
+      "B": "0 -10V t",
+      "C": "5V t",
+      "D": "0 -5V t"
+    },
+    "correct_option": "A",
+    "explanation": "For +10 V input, diode is in F.B. so it will be short circuited and since both resistance are equal so 10 V equally divide in both 2k Ω So, output voltage across 2k Ω will be 5V. For -10V input, D is R.B. So it will be open circuited so output voltage will be zero."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the current through an ideal p-n junction diode shown in figure below :- 100 Ω - + 1V - + 3V",
+    "options": {
+      "A": "Zero",
+      "B": "10 mA",
+      "C": "20 mA",
+      "D": "50 mA"
+    },
+    "correct_option": "A",
+    "explanation": "Diode is forward Bias so 100 Ω - + 1V - + 3V 100 Ω - + 1V - + 3V ⇒ 1 ( 3) 2 I 20mA 100 100 - - - = = =",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For a reverse biased diode, when the applied voltage is changed by 1 V, the current is found to change by 0.5 μA. The reverse bias resistance of the diode is :-",
+    "options": {
+      "A": "2 × 10 5 Ω",
+      "B": "2 × 10 6 Ω",
+      "C": "200 Ω",
+      "D": "2 Ω"
+    },
+    "correct_option": "A",
+    "explanation": "Reverse bias resistance = V I ∆ ∆ = 1V 0.5μA = 6 1V 0.5 10 A - × = 2 × 10 6 Ω"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a semiconductor diode the barrier potential offers opposition to only :-",
+    "options": {
+      "A": "Majority carrier in both regions",
+      "B": "Minority carrier in both regions",
+      "C": "Free electrons in the n-region",
+      "D": "Holes in the p-region"
+    },
+    "correct_option": "A",
+    "explanation": "Y = A B ⋅ NAND gate"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A light emitting diode (LED) has a voltage drop of 2 V across it and passes a current of 10 mA, when it is operated with a 6 V battery through a limiting resistor R. The value of R is :",
+    "options": {
+      "A": "100 Ω",
+      "B": "200 Ω",
+      "C": "400 Ω",
+      "D": "600 Ω"
+    },
+    "correct_option": "A",
+    "explanation": "Given question is equivalent to the following circuit. 6V LED 2V R Using KVL, 2 + IR = 6 R = 3 6 2 4V I 10 10 - - = × = 400 K Ω"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If N A is number density of acceptor atoms added and N D is number density of donor atoms added in a single semiconductor, n e and n h are the number density of electrons and holes in it, then",
+    "options": {
+      "A": "In e = N D , n h = N A",
+      "B": "In e = N A , n h = N D",
+      "C": "In e + N D = n h + N A",
+      "D": "In e + N A = n h + N D $//"
+    },
+    "correct_option": "A",
+    "explanation": "On doping acceptor atoms form negative ions and donor atoms form positive ions. therefore, using charge conservation in doped semiconductor total negative charge = total positive charge. n e + N A = n h + N D"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a semiconductor diode, the reverse biased current is due to drift of free electrons and holes produced by :",
+    "options": {
+      "A": "&",
+      "B": "Impurity atoms only",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "P N -2V So, D → FB → conduct"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a semiconductor diode, P-side is earthed and N\\cdot side is put at potential of -2 V, the diode shall",
+    "options": {
+      "A": "Conduct",
+      "B": "Not conduct",
+      "C": "Conduct partially",
+      "D": "Break down"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find the equivalent resistance of the network shown in the figure between the points A and B, if (i) V A > V B (ii) V A < V B 12 Ω B 4 Ω A",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "(i) V A > V B ⇒ diode is in FB ⇒ 12 Ω 4 Ω A B ⇒ R AB = 3 Ω (ii) V A < V B ⇒ diode is in RB ⇒ 12 Ω 4 Ω A B ⇒ R AB = 12 Ω",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The energy band diagrams for three semiconductor samples of silicon are as shown. We can then assert that X Y Z",
+    "options": {
+      "A": "sample X is undoped while samples Y and Z have been doped with a third group and a fifth group impurity respectively",
+      "B": "sample X is undoped while both samplesY and Z have been doped with a fifth group impurity",
+      "C": "sample X has been doped with equal amounts of third and fifth group impurities while samples Y and Z are undoped",
+      "D": "sample X is undoped while samples Y and Z have been doped with a fifth group and a third group impurity respectively"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The breakdown in a reverse biased P-N junction diode is more likely to occur due to :-",
+    "options": {
+      "A": "large velocity of the minority charge carriers if the doping concentration is small",
+      "B": "large velocity of the minority charge carriers if the doping concentration is large",
+      "C": "strong electric field in a depletion region if the doping concentration is small",
+      "D": "Strong electric field in the depletion region if the dopping concentration is large"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and Digital Electronics and POC - Race.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the given circuit, the diode has a forward resistance of 8 Ω and infinite backward resistance. The value of R is :- 0.125 A 6V 16 Ω D R",
+    "options": {
+      "A": "44 Ω",
+      "B": "48 Ω",
+      "C": "16 Ω",
+      "D": "8 Ω Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 Ans 3 2 3 1 3 3 2 1 1 3 2 4 1 1 Que. 16 17 18 19 Ans"
+    },
+    "correct_option": "A",
+    "explanation": "0.125A 16 Ω D 6V R Since D → FB → Conduct R D = 8 Ω (  D → FB) So 0.125A 16 Ω 6V R 8 Ω Req = 4 + R V = 6 V  V = IR 6 = 0.125 (4 + R) So 48 = 4 + R ∴ R = 44 Ω $//(1 HS 202 5 TARGET : 202 5 PHYSICS SEMICONDUCTOR & DIGITAL ELECTRONICS (LOGIC GATES) : RACE # 02 SOLUTION",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABG8AAABBCAIAAADg2B7zAAAJ/UlEQVR42u3da1BU9xnH8eec3bO7ZykImXSiqPV+w0sCamYajUZAzUWlisZ7Z6pVUIE3qTM1r9N3NTMRX5Smb5qoEVBxAbXexc6kM5qo8VLfOBVNBM2Lcmfv5/TFNnbGIoLAcg77/bxlYIbnzGH2x//5P49imqYAFtDU3PzbrVvu3bvndruphsUFAoGFC9/5/Z49I9PTqQYAAEhYCmkKVtDS2lpYsP38hYuUwhZmzZwxdeq0lJSUouLi9BEjKAgAAEhMKiWAFaJUwfZtRCm7SEtNnTJlqmEYjY0N+0tLGxobqQkAACBNAXEVOxeNnUpduHiJgtglSuXm5iqKYpqmx6M3NjaU7ttHoAIAAEKnHyA0+OH5XnklLTcnV0QikYj87w6Vf/jwEcUlJdyhAgAAwtkUQIMfuoxSOdk5z0QpEfF49MePGzmhAgAApCkgTppbWgq2b6PBz15RSlGUcDj8/1/1ePRHj34oLy/nrBsAAJCmABnQu1Ii8odPPiFK2avBLxalVLXrPxpeb9LN724c9/koFwAAIE0BA0JRFBHxVdd8eeAA1bBdg19s+MTznqzL5a46drTqOIEKAAAwhQIYAO3t7WVlZX/cuzcajVIN6xs3dszs2XNUVQ2Hw7EkLC86ewyFgvPmv52Xl/fzV1+lgAAAgDQFSD+OnaDBT2w1DN00TcMwevWNHR3t6ekji0tKRo0cSRkBAABpCiBKSWKOnXhmgl8PBQL+114bXlRcPHrUKIoJAACEe1NAH/dKEaUSJEqJiMejP3nyeH9p6Q+PHlFPAABAmgJY0csw9F4Hqn2fffaooYGqAgAA0hTQa4FgcEdhAVHKjsPQezJ24oWBqrGxofzwYYOOYgAAQJoCeuvQoUPnzl+gDvYaht4vUSomKelnt27drKqq4oomAAAQplAAPVddU7tzR2Gobw1jiH+DX39FKflpbLrf35n3q5WrVq7s358MAAAwuJyUAAMXpQoKtrNXKsGjlIgoiqLrXt/xKhEhUAEAAKHTD+iGYRiVR44SpezC7Xa9OXduz1f09iVQVVQe8fv91BwAAAidfoB0NcHvdx995KuuphRik1Op+fPmu93uOERf0zQDAf+4ceO3bN36i9GjKT4AACBNAazotXeDn6qqoVAobg14fn9nbLEvgQoAAAidfgBRyo7SUlMH7q5UN3Td++OPT0r37WOxLwAAIE0h0cWONwPBYGHBdqKUjaJUbm5u31f0Sh8W+x7+6ivDMHgWAACANIXEFTvWOHToECt67RilBmvCntebdOfO7aPHqljsCwAAuDcFYa8Ue6WIUtL7PVTLluetXp2vMjYdAAAI+6bAXilYmK7r2dnZVohS8tPY9Noan4gQqAAAgNDpB0mku1JEKdt54/VZTqfTClHqaaDyePTaGl9l5RFa/gAAgNDpB0mYFb1Hj1WVlBQTpWzBpWmZmW9MnDips7NTsdgpUKzl7733l+XlrfDqOg8LAACQpiCs6IVY5q7UggULdF0PhUJi1dPOYDAwZszY32zZMnbMGB4ZAAAgTWFoam5pKdi+7eKlOkpho7ETcV7RKy+72Hf48BF7Pv44ddiwWMRSuEwFAACEe1MYKmJ7pYhStpvgZ/0oZZqmrnsfP270+apjd6iIUgAAgDSFIeXgwYOs6GUYugzY4jJd9144f7aiopLFvgAAQOj0w1Diq67ZtXMHe6WIUhKXoRRrP1yjqvzHBwAACPumYHvHfdU7dhQywU/YKyXx2EN16mStoigfrllNoAIAAEKnH8Tmp1JEKWGvVHwD1ckTNRWVR2j5AwAApCnYO0oVFhYQpezizblzxo+fYP2xEz0JVCdqq8u5QwUAAEhTIEohPlFq8uQpFlzR+3KByutNOnWylkAFAACYQgGbaW1r+3NZ2d5PPyVK2UJKcnJWVmZ6+shAIDCUfq/YYt9fvjVv08aNSUlJPGgAAECagg3s3r37r198QR3EPhP8HA5HMBgcemuaTNNsb29bvGTprzdvZigFAAAQOv1gcVXHfV8eOEAd7DUMfUhGKRFRFCU5OeXihfOHy8tp+QMAAKQpiMXvSu3cuYOPreyVshSPRz918gSBCgAACPumwNgJSH/slVq4cKFhGOFwWFXVId+46/HoJ2prDMNYt3at08mfLwAAMMgUX3VNKBSiEIPaxSQiEolEW1tbTNMcxOMFTdMe1Nf/qayMKGUXi3NzFi9ZGgwGE+NN+e89z3A4nJGRkZaWJiLc/AQAAIMi1izjPP23U21trVzsTnCmaWqa6/vvH16/8R3VsItZM2fMm/92JBIZ2g1+zwQqEXG5XHfv3qXfDwAADKJIOCwiTl3XYz1CVCSRaZr28OGDm7duUwobRan81Ws0TYtGo4N7pDkoaPMDAABigX/yOgOBQCDgVxQl0T6NWT7euBwOR9w+mD58+ODK1W9o8LNjlHr6MgMAACDemerK1auRSIRCWCnmqk1NTWfPnG5ubnK53HE4laqvv//Nt9eIUrbg0rRFi955a978p1EKAAAA8RcOh9nea13/un9/f2lpU9O/3W7PgEaptrbWc+fOh8Jham59brdr/br1GdNnhEJB3lwAAIBBT1Ncl7Ko8ePGFRUXp6amhULBgYtSHR3tdZf/TpSyUZSalpERDAaIUgAAAML2XnQfqIpLSoYNSx2IQBWLUhcv1XV0dFBqW/jg/Q8yps9gnwEAAABpCj0NVLuKioYNS+3fu21EKdt5fdbMzKysgTuoBAAAAGlqCJo4YcLGTZtCoWB/bdchSokNJ/ityl+tqioNfgAAAKQp9E5WVtbSd9/z+zv7/mGaKGXfYegsqwUAACBNofcPSVHWrV27ZOm7nZ0dfQlURCm775UCAACApTgpgS04HI4N69ebppw5fcrrTVJV9SV+Qnt726W6y0QpohQAAABIUwkXqDZuWO9yuc6eOR2NRjVN69X3GoZx5epVopRdzM7KXL4ijygFAABgZWzvtZ/bd+785fPPW1tbXC639KzBr7297euv/9HU3Ez1xA57pfJX5c+YOdMwDF5PAAAAYXsv+tGM6dN3FRUlJ6e8cF62aZqxu1KX6i4TpcQ+e6Uys2ZHo1GiFAAAgDCFAv1u0sSJsUDV/R4ql8vF2Amx4V6pYDBAKQAAAEhTGCiTJ02K7aF63gkGE/yEvVIAAAAgTaFLc2bPzs5Z3OXY9NhdKaIUe6UAAABAmkJXD09VN27ckJ2T+0ygcjqdnEoxDB0AAACkKXRHczo3bdq0KDvnaaBSVTUUCl28VNfZ2Ul9iFIAAAAQ9k2hm0C1efNmRVEunD+n615N065d+5ZTKbHNhMaMlavyHQ5HbMgmAAAAbCF2O4N9U0NEOBKpqKi4cf16ff39f969qyoKNbH062eapmlmTJu2bPkKTdMiEU6lAAAA7CQSCYvIfwCn4va7oMPN+AAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and digital electronics_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In p-n junction at the near junction there are :-",
+    "options": {
+      "A": "positive Ions",
+      "B": "negative Ions",
+      "C": "positive and negative Ions",
+      "D": "electrons and holes"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and digital electronics_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Depletion layer in p-n junction diode is caused by",
+    "options": {
+      "A": "drift holes",
+      "B": "diffusion of free carriers",
+      "C": "migration of impurity ions",
+      "D": "drift of electrons"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and digital electronics_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a P-N Junction diode is not connected to any circuit, then",
+    "options": {
+      "A": "potential is the same everywhere.",
+      "B": "the P - type side is at a higher potential than the N - type side.",
+      "C": "there is an electric field at the junction directed from the N - type side to the P - type side.",
+      "D": "there is an electric field at the junction directed from the P - type side to the N - type side."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and digital electronics_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an unbiased p-n junction :-",
+    "options": {
+      "A": "high potential is at n side and low potential is at p side.",
+      "B": "high potential is at p side and low potential is at n side.",
+      "C": "p and n both are at same potential.",
+      "D": "undetermined."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_semiconductor_electronics_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Semiconductor Electronics",
+      "chapter_name": "Semiconductor Electronics",
+      "language": "en",
+      "source": "Semiconductor and digital electronics_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The output of two input gate is 1 only if its inputs are equal. It is true for :-",
+    "options": {
+      "A": "NAND",
+      "B": "AND",
+      "C": "EX-NOR",
+      "D": "EX-OR"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
+  }
+]

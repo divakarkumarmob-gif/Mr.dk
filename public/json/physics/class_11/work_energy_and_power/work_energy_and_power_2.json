@@ -1,0 +1,1431 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man of mass 50 kg is standing in an elevator. If elevator is moving up with an acceleration g 3 then work done by normal reaction of elevator floor on man when elevator moves by a distance 12 m is (g = 10 m/s 2 ) : -",
+    "options": {
+      "A": "2000 J",
+      "B": "4000 J",
+      "C": "6000 J",
+      "D": "8000 J WE01 - 0095"
+    },
+    "correct_option": "D",
+    "explanation": "For the motion of person N - Mg = Ma  N = 4 Mg 3 work done by normal reaction = N × displacement =   4 50g 12 3 = 8000 J Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man pulls a bucket full of water from h metre deep well. If the mass of rope is m and mass of bucket full of water is M, then work done by the man is : -",
+    "options": {
+      "A": "(  + ( ) )  M m gh 2",
+      "B": "+ (  ( ) )  M m gh 2",
+      "C": "(  + ( ) )  m M gh 2",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Work done by the man = change in potential energy CMB → centre of mass of bucket CMR → centre of mass of rope = Mg h CMB + mg h CMR = Mgh + mg h 2 = (  + ( ) )  m M gh 2 Hence option (3)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The variation of potential energy U of a system is shown in figure. The force acting on the system is best represented by : -",
+    "options": {
+      "D": "WE07 - 0012",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "If = - dU dx = - (slope of U - x curve) Hence option (1)",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle experiences a variable force 2 ˆ ˆ F (4xi 3y j) = + \\rho in a horizontal x - y plane. Assume distance in meters and force is newton. If the particle moves from point (1, 2) to point (2, 3) in the x - y plane, the Kinetic Energy changes by",
+    "options": {
+      "A": "50.0 J",
+      "B": "12.5 J",
+      "C": "25.0 J",
+      "D": "0 J"
+    },
+    "correct_option": "C",
+    "explanation": "2 ˆ ˆ F 4xi 3y j = + WD = \\Delta KE ˆ ˆ W F.(dxi dyj) = + \\int \\rho 2 3 2 1 2 4xdx 3y dx = + \\int \\int 2 2 3 3 1 2 (2x ) (y ) = + (8 2) (27 8) = - + - 6 19 25J = + ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Potential energy as a function of r is given by 10 5 A B U r r = - , where r is the interatomic distance, A and B are positive constants. The equilibrium distance between the two atoms will be :",
+    "options": {
+      "A": "1 5 A B (  ( ) ) ",
+      "B": "1 5 B A (  ( ) ) ",
+      "C": "1 5 2A B (  ( ) ) ",
+      "D": "1 5 B 2A (  ( ) )  WE07 - 0013"
+    },
+    "correct_option": "C",
+    "explanation": "- + = 11 6 10A 5B 0 r r = = 5 10A 2A r 5B B"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 8 kg is released from the top of an inclined smooth surface as shown in figure. If spring constant of spring is 200 N/m and block comes to rest after compressing spring by 1 m then find the distance travelled by block before it comes to rest: - (g = 10 m/s 2 )",
+    "options": {
+      "A": "2.5 m",
+      "B": "3.5 m",
+      "C": "2.0 m",
+      "D": "None of these WE11 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "From mechanical energy conservation change in potential energy = energy stored in the spring  8g (x + 1) sin 30^\\circ = ( ) 2 1 k 1 2  100 = 40(x + 1)  x = 1.5m So total distance travelled = 2.5 m Hence option (1)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m is released from the top of a smooth inclined plane of length x and inclination \\theta as shown in figure. Horizontal surface is rough. If block comes to rest after moving a distance d on the horizontal surface, then coefficient of friction between block and surface is: - F 1 F 2 x 1 x U(x) O x 2 x 3 x O F x 1 x 2 x 3 x O F x 1 x 2 x 3 x O F x 1 x 2 x 3 30º 8 kg NEET : PHYSICS",
+    "options": {
+      "A": "\\theta x sin 2d",
+      "B": "\\theta x cos 2d",
+      "C": "\\theta x sin d",
+      "D": "\\theta x cos d CR01 - 0132"
+    },
+    "correct_option": "C",
+    "explanation": "Change in potential energy = work done by frictional force 0 - mgx sin \\theta = - μmg (d)  μ = \\theta x sin d Hence option (3)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle of mass 0.1 kg is subjected to a force which varies with distance as shown. If it starts its journey from rest at x = 0, then its velocity at x = 12 m is: -",
+    "options": {
+      "A": "0 m/s",
+      "B": "20 2 m/s",
+      "C": "20 3 m/s",
+      "D": "40 m/s WE02 - 0063"
+    },
+    "correct_option": "D",
+    "explanation": "Work done by the force = change in K.E.  = \\int 2 1 mv F dx 2 = Area under F - x curve  ( ) ( ) = +  2 1 1 0.1 v 12 4 10 2 2  v 2 = 1600  v = 40 m/s Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rate of doing work by force acting on a particle moving along x - axis depends on position x of particle and is equal to 2x. The velocity of particle is given by expression: -",
+    "options": {
+      "A": "1/3 2 3x m      ",
+      "B": "      1/3 2 3x 2m",
+      "C": "      1/2 2mx 9",
+      "D": "      1/2 2 mx 3 WE03 - 0040"
+    },
+    "correct_option": "A",
+    "explanation": "P = 2x  F.v = 2x  mav = 2x  m. = vdv .v 2x dx  v 2 dv = 2 m xdx on integrating both sides  = 2 3 v 2 x 3 m 2  v =       1/3 2 3x m Hence option (1) Mg a=g/3 N m M Final Initial 30^\\circ 8kg 1 x NEET : PHYSICS"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball of mass 100 g is dropped from a height h = 10 cm on a platform fixed at the top of vertical spring (as shown in figure). The ball stays on the platform and the platform is depressed by a distance h",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "By energy conservation PE = KE 2 H 1 mg H kx 2 2 (  + = ( ) )  H x 2 (  = ( ) )  3 1 0.100 10 (0.10) k(0.05 0.05) 2 2   =  3 0.10 k 0.05 0.05  =  3 1000 120 N / m 25  = =",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The spring constant is ________ Nm -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "For the motion of person N - Mg = Ma  N = 4 Mg 3 work done by normal reaction = N × displacement =   4 50g 12 3 = 8000 J Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(Use g = 10 ms - 2 ) WE10 - 0015",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Work done by F 2 = Fx cos \\theta = 5 (5) (cos 180^\\circ) = - 25 J Hence option (3)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "As per the given figure, two blocks each of mass 250g are connected to a spring of spring constant 1 2Nm - . If both are given velocity v in opposite directions, then maximum elongation of the spring is :",
+    "options": {
+      "A": "v 2 2",
+      "B": "v 2",
+      "C": "v 4",
+      "D": "v 2 WE09 - 0022"
+    },
+    "correct_option": "B",
+    "explanation": "l 0 x 2 x 2 v v v=0 v=0 using energy conservation 2 2 1 1 mv 2 kx 2 2  =  2 2 1 1 v 2 x 4 2 =   ∴ v x 2 =",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 1 kg begins to move under the action of a time dependent force ( ) 2 ˆ ˆ F t i 3t j N = + \\rho . where ˆ \\hat{i} and j are the unit vectors along x and y axis. The power developed by above force, at the time t = 2s. will be _______W. WE12 - 0034",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 ˆ ˆ F ti 3t j = + \\rho 2 mdv ˆ ˆ ti 3t j dt = + \\rho v t t 2 0 0 0 ˆ ˆ m 1kg, dv tdti 3t dtj = = + \\int \\int \\int \\rho 2 3 t ˆ ˆ v i t j 2 = + \\rho Power = 3 5 t F V 3t 2  = + \\rho\\rho At t = 2, power= 8 3 32 2 +  =100"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object of mass 'm' initially at rest on a smooth horizontal plane starts moving under the action of force F = 2N. In the process of its linear motion, the angle \\theta (as shown in figure) between the direction of force and horizontal varies as \\theta = kx, where k is a constant and x is the distance covered by the object from its initial position. The expression of kinetic energy of the object will be n E sin k = \\theta . The value of n is___. WE02 - 0064",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "If cos ma \\theta = ( ) mvdv 2 cos kx dx = ( ) v x 0 0 vdv 2 cos kx dx = \\int \\int 2 mv 2 sin kx 2 k = 2 K.E. sin k \\theta = n = 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "RACE - Work_ Energy And Power.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 2 kg is initially at rest. It starts moving unidirectionally under the influence of a source of constant power P. Its displacement in 4s is 2 1 P m. 3 \\alpha The value of \\alpha will be …… WE03 - 0041",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "2 1 mV Pt 2 = 2Pt V m = dx 2Pt dt m =   4 3 2 0 2P 2 x t m 3 = 16 P 1 x 16 P 3 3 = =  \\alpha = 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force ( ) ˆ ˆ ˆ F 4i 4 j 2k N = - - \\rho displaces a particle by ( ) ˆ ˆ ˆ d 3i 2j 2k m = + - \\rho , calculate work done.",
+    "options": {
+      "A": "Zero",
+      "B": "8 J",
+      "C": "4 J",
+      "D": "12 J"
+    },
+    "correct_option": "A",
+    "explanation": "W F.d = \\rho \\rho ˆ ˆ ˆ ˆ ˆ ˆ (4i 4j 2k) (3i 2j 2k) = - -  + - = 12 - 8 + 4 = 8 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force ( ) ˆ ˆ F 3i 2j N = + \\rho acts on a body and produces a displacement ( ) ˆ ˆ ˆ S 4i j 3k m = - + \\rho . The work done will be",
+    "options": {
+      "A": "13 J",
+      "B": "30 J",
+      "C": "10 J",
+      "D": "20 J"
+    },
+    "correct_option": "A",
+    "explanation": "ˆ ˆ ˆ ˆ ˆ F (3i 2j) (4i j 3k) = +  - + \\rho = 12 - 2 = 10 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moved from a position 1 ˆ ˆ ˆ r (2i j 2k) = + - \\rho metre to a position 2 ˆ ˆ ˆ r (4i 3j k) = + - \\rho metre under the action of a force ˆ ˆ ˆ F (3i 2j 2k) = + + \\rho N. The work done is equal to :-",
+    "options": {
+      "A": "32 J",
+      "B": "12 J",
+      "C": "24 J",
+      "D": "16 J"
+    },
+    "correct_option": "A",
+    "explanation": "W F S =  \\rho \\rho 2 1 ˆ ˆ ˆ ˆ ˆ ˆ S r r (4i 3j k) (2i j 2k) = - = + - - + - \\rho \\rho\\rho ˆ ˆ ˆ S 2i 2j k = + + \\rho ˆ ˆ ˆ ˆ ˆ ˆ W (3i 2j 2k) (2i 2j k) = + +  + + = 6 + 4 + 2 = 12 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass m is displaced from point A(3, 1, 3) m to point B(1, 2, 1) m under the effect of a force ( ) ˆ ˆ ˆ F 5i 2j 4k N = + - \\rho , calculate work done by the force.",
+    "options": {
+      "A": "57 J",
+      "B": "11 J",
+      "C": "0",
+      "D": "22 J"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 d r r = - \\rho \\rho\\rho ˆ ˆ ˆ ˆ ˆ ˆ (i 2j k) (3i j 3k) = + + - + + ˆ ˆ ˆ ( 2i j 2k) = - + - W F.d = \\rho \\rho ˆ ˆ ˆ ˆ ˆ ˆ (5i 2j 4k) ( 2i j 2k) = + -  - + - = - 10 + 2 + 8 = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform force of (3i j) +   newton acts on a particle of mass 2kg. Hence the particle is displaced from position  (2i k) +  meter to position  (4i 3j k) + -   meter. The work done by the force on the particle is :-",
+    "options": {
+      "A": "15 J",
+      "B": "9 J",
+      "C": "6 J",
+      "D": "13 J"
+    },
+    "correct_option": "C",
+    "explanation": "W N = Fdcos90^\\circ = 0"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the system shown in figure both the block A and B are moving together. If coefficient of friction between both the blocks is μ, the work done by friction on block B is :- smooth μ F A B",
+    "options": {
+      "A": "Zero",
+      "B": "Negative",
+      "C": "Positive",
+      "D": "None of these"
+    },
+    "correct_option": "C",
+    "explanation": "3g Mg T M 4 - =  3Mg Mg T 4 - = Mg T 4 = W = T × hcos180^\\circ Mgh 4 = -",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The net work done by tension in the figure when the bigger block of mass M touches the ground is:- M m (M > m) d",
+    "options": {
+      "A": "Mgd",
+      "B": "-",
+      "C": "-mgd",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "W = F \\Delta Scos \\theta = μR × 2 \\pi r × cos180 = - 0.5 × 5 × 2 \\pi × 1 \\pi = - 5 J",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work done by the frictional force on a pencil in drawing a complete circle of radius r = 1/ π metre on the surface by a pencil of negligible mass with a normal pressing force R = 5 N (μ = 0.5) is :",
+    "options": {
+      "A": "+ 4J",
+      "B": "-3 J",
+      "C": "- 2 J",
+      "D": "- 5J"
+    },
+    "correct_option": "A",
+    "explanation": "In = mg - Fsin \\theta f = μ k N f = μ k (mg - Fsin \\theta ) W f = f × S cos180^\\circ = - μ k (mg - Fsin \\theta )S"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find work done by friction for displacement 'S' ? m S θ μ k F →",
+    "options": {
+      "A": "μ K",
+      "B": "-μ K",
+      "C": "μ K",
+      "D": "-μ K"
+    },
+    "correct_option": "A",
+    "explanation": "angle between N & \\Delta x is not 90^\\circ  W N  0 M 1 F (Body at rest) f M 2 F M 1 f f T Mg  a = 3g/4 m \\theta N mg F μ k Fsin \\theta F Fcos \\theta S \\theta m \\Delta x M f s N"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The whole wedge and block system is moving as shown in the figure. Block of mass m is not slipping on the wedge. Then which of the following statement is correct (surface between M and m is rough) :- m M θ a = g tan θ",
+    "options": {
+      "A": "Work done by normal force on block is zero",
+      "B": "Work done by friction force on block is not zero",
+      "C": "Work done by normal force on block is not zero",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Work in each direction = 100 J F \\Delta S = 100 \\Delta S = 2m displacement in each direction = x = y = z = 2m Final coordinates = (2, 2, 2)m",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An object of mass m is sliding down a hill of arbitrary shape and after travelling a certain horizontal path stops because of friction. The work done that a force must perform to return the object to its initial position along the same path would be:- m h m",
+    "options": {
+      "A": "0",
+      "B": "mgh",
+      "C": "2mgh",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "( ) 3 2 0 x 3x 5 dx + - \\int 3 3 2 0 x 3x 5x 3 2   = + -     27 3 9 5 3 3 2  = + -  27 9 15 2 = + - 18 27 30 7.5 J 2 + - = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Force F on a particle moving in a straight line varies with distance d as shown in the figure. The work done on the particle during its displacement of 12 m is : F(N) 2 0 3 7 12 d(m)",
+    "options": {
+      "A": "18 J",
+      "B": "21 J",
+      "C": "26 J",
+      "D": "13 J"
+    },
+    "correct_option": "A",
+    "explanation": "Work done = Area under F - x curve W = 1 2 (6 + 3) × 6 W = 27 J",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABF8AAABACAIAAABDd09uAAAKMElEQVR42u3d3XNU9R3H8e/unnP2gYVqnIE8wUzFEUEC2CFBwkOBPt+0wSdarUTvahVGHWcc7rzwNswo2VD1xoSHUCTUUKpkE5JlxItWkhmQQAhYOoplpqXimN2cc/Y8bC/WsVgBN7LJnrN5v/6BDN8TZs4nv9/3cwK5XE4AAADKlOM4Pcne0dFzqqqKSC6XCwQCjMVrcrlcMBhsamqqrqpiGighhREAAIAyjkZ7OzuPpVIjI2dHz19gIB43eOJEW1tbOBxmFCiVICMAAABlHI36epOqqtbXN9yz4G5m4nF/Pnz4+eefN02TUYB0BAAAUDRuLte5b1+y50g0GsvlcqZpLly4KB6PMxmPe+vAAQISSEcAAADFNDQ0lI9GX4Yl11VVdcP69QQkAhJAOgIAANPI+QsX9uzerWnhYPB/rzq2bUciEQISAQm4iQCddQAAoJyMnj+faG0dG/tC066z3K8oimEYqVTqi7GxQIAXIU/b9Mgjr776Kh2DmEqhl156iSkAAIAyYNt26tixjvb2dHrsutFIRFzX1TSttrbWtq3Prl5laF42PDzsOE5Dfb2iULMM4ewIAABgAtFoz97O3uSRaDQWCoW+5QUoEAiHw8PDp0+e+pDRedzDDz20fft2ar4h7B0BAAAUwrLtPXs7j/YlZ8yIf2s0EpF8i92iRfdWVc5hesIOEkA6AgAAZeOdd95N9rwbjcYK31HJ5XKWZS1fXj9r5kwGSEACSEcAAKAcjJw713Pk3VhsxkTX9x3HicVi69ato8WOgASQjgAAgO+dGx1tSyRM0yzkQp18Y/vItu1oNPqjDRsISH4JSIZhMAqQjgAAAOSbp0atO3ak02Oqqsot1DkQkHwUkFq2b2cOEBq9AQAAro00/QOpXR0dmUz6RuXdMpErduFweG5trW1bV69+zni9bGhwcEY8XldXR803hEZvAAAAy7J279nT15uMxWZ8hwt1NxIMBsPh8ODgiZFzowxZqPmGcLMOAADA8w7/5Z2+3mQ8PrOI0UhEXNc1DGPhwkVcsRM/XLF77rnnKGkA6QgAAExrZ0dGkj1HvkNDnRRW862q6ob16wlI3negq4sWO5COAACATOcahrZEIpvNFvfUSL6+0RSJRDasX893kISab5COAAAAPBuNEq2tmUz6VhrqCg9IfAfJLwHphRdecByHUYB0BAAAZPpcqGvdsaMoDXVSWPFD/gSJgOR9f9y//+3ubuYAobMOAACUPcu2BwZSh7rf1nV9sk+N/o+iKIZhDA0NXfr0Ux6El8Xj8RdffPGJ5mZa7EA6AgAAZct13faOjqKXd0vBJQ2Koti23dvXl06neRxCzTeEm3UAAAAl8te/fTDQf7To5d0FCgQCjuMoisIVO6GkAaQjAACAEjpz9uzePbs1LTwZ5d2FcxwnGo0SkHz0HSSDgAThZh0AACivaNSWSIyPZ6amhkEK20HqHxjgip33PfLww6+88kpJzhshnB0BAACUdzQSWux8Zf9bb9FiB+HsCAAAEI2EEySIxOPx9vaONatXMQqQjgAAgC9ls9nUsWOHurunvrx7ogHp+PvHP/vsKo/My2Kx2LZt26j5BukIAAD40oGug10H9peqoa5woVDINM1UKvXF2BhPTaj5hrB3BAAAUFSnh4f7epMzZ87y/jJ9vsVu3bp17CAJNd8gHQEAABTX8JkzO9vaLMsKBv3xckJJg/9qvg2DUYB0BAAAfBCNEq2tuj7u2V2j67Jtm4Akvrm02dXS0sIcIOwdAQAAj0ejtkTCMAx/RaO8XC6nqqphGOwgeZ+qKJ379q1ds4ZRQDg7AgAA3kkUcs2uUaK11afRSEQCgUD+BIkdJO+zbLu5ufm94+8zCpCOAACAhxKFXLNrZJqmpmn+fu22rFgstqKh3vt9EtNcJpN5/PHfJnv7GAW4WQcAAMRTDXU729r8e2ok16v5TqfH3jv+Ph+K9b7mzZtffvllar5BOgIAAJ6IRm2JhGmaZRON8vI7SEf7+wlI4ofvILW0tEQiEUYB4WYdAAAgGskkXLELh8O02IlPar5psYNwdgQAAIhGMvktdv0DA5wgiedb7PZ2dv5w7VpGAdIRAACYaidPnfrDzp2maaiqVt5vIKqq6vr4QOpYJpPhuXtZLBbbtWvXmtWrGQVIRwAAYOqcHRl5/bXXstlsuZ4ayddPkMLh8OXL/+xJ9vLovR+Q3nyzfdWqxpzrlvbFWFGUYJC1l1Kno55kMpu1vurWBAAAmAyXLn2Sv1A3Tf4yGwwGbds+2HXg9PAZnr7HRSLhjU0b51RWuo5Twt9PRVWVUIijCyndF7FEJPD6G2/ouk46AgAAMsmXzabb+0b+3zt44kT3oUOu6/I74HHz5s1dumSpiORypXlY5KLSMk0zn1E1x3FIRwAAAEV/2Q0EAisbVymK0nXwIAHJ4z7++BMlFFq27L6p/KGO41hW9tqvJKOE/2FFRBEhpAIAAEzW+5ZpGsvr60WEgOR9f7/4j5qampqa2mw2OwU/Lps1KyruqK6u5hfDC7KWlU9HAAAAmNSX4CwByS9Onx6ePXuOoii2bU/qDzIMvaam9vdPP11TXc3Yha/BAgAATKuAVN/Q8MDGjVyg8rirn3/e39/vuq6iKJMdjZ7ZsoVoRDoCAACQ6bnzXd/Q8IP7ljEK7weko0ePuq47Se3z4+OZfDSqqqxk2qQjAACAacq27Z/9/Bf3LlrIKMTbZYP5gKTruqZpUtQ9NMPQFyy4h2jkWaGmpibbtjnkBQAAkCn5SuziurrvzZo1OjpKg7OXGYZx8eJFTVMrKyuLtYNkWdlf/qppc3Pz7bfdxoSFsyMAAIBpLt/KsLKx8aEHHwwGeRMTj5eYfXBi8KOPLhTlK8aZTHrJ0mUbm5oi4TCzJR0BAABA5Muab3N5ff2DDzxAQPK+k6c+tCzrFneQDEOvrZ27adMm5kk6AgAAgHyzpCEfkEKhENPwMl3XBwYGbqXFzjD0qqrqLVu3smtEOgIAAIDcuOZ7xU9/8mNGIT5psVMUZaJX7AxDr6ys2rJ1a3VVFZMkHQEAAOAmAcm8f2XjXfPvZBR+CUiaphUekHR9nGgkdNYBAACgQIqi3L1gwZV//+vKlf8wDfF2i93ly5erq6sjkUi+XeNbo+/8+Xf97qmn+OQr6QgAAABSYEmDpml1S5ZQ8+2Xmu9YLFpRccfNA9L4eGbx4rpnn322oqKCuQk36wAAACATq/leRYud+KHmO99id5MdpPyu0aOPPRaNRpkY6QgAAAAy8ZpvgxY78VWL3XVrvg1Dnz17DrtGpCMAAAAILXYyjVvsvopGc2trmRLpCAAAALfaYrfi/pXz7/w+o/BRQCIakY4AAAAgk7GDpGnar3/zKAHJFwGpr68vf8VO18dnz57zzJYtRCNfC7zZ3mEYOp11AAAA3qGqajqd7n77TyMj52zHCVHV4FWO61ZU3N64snHevHlPPPnkvLlzmYmv/RfRofIcwXfEPAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force F acting on an object varies with distance x as shown here. The work done by the force in moving the object from x = 0 to x = 6m is :- F(N) 6 4 2 x in ( m ) 0 1 2 3 4 5 6 7",
+    "options": {
+      "A": "18.0 J",
+      "B": "27 J",
+      "C": "36 J",
+      "D": "9.0 J"
+    },
+    "correct_option": "A",
+    "explanation": "Area under the graph"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure gives the acceleration of a 4.0 kg body as it moves from rest along x axis while a variable force acts on it from x = 0m to x = 9m. The work done by the force on the body when it reaches (i) x = 4m and (ii) x = 7 m shall be as given below 0 3 -3 x(m) 2 4 6 8 a (m/s 2 )",
+    "options": {
+      "A": "21 J and 33 J respectively",
+      "B": "21 J and 15 J respectively",
+      "C": "42 J and 60 J respectively",
+      "D": "42 J and 30 J respectively"
+    },
+    "correct_option": "D",
+    "explanation": "KE  P 2 1 1 2 2 P K P K =  2 1 P 3P =",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "velocity-time graph of a particle of mass 2 kg moving in a straight line is as shown in figure. Work done by all the forces acting on the particle is : 2 10 v (m/s) t (s)",
+    "options": {
+      "A": "100 J",
+      "B": "-100 J",
+      "C": "-200 J",
+      "D": "200 J CONSERVATIVE FORCE & POTENTIAL ENERGY"
+    },
+    "correct_option": "A",
+    "explanation": "Work done is independent from the path for conservative forces.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "As shown in the diagram a particle is to be carried from point A to C via paths (I), (II) and (III) in gravitational field, then which of the following statements is correct :- h C B A III II I",
+    "options": {
+      "A": "Work done is same for all the paths",
+      "B": "Work done is minimum for path",
+      "C": "Work done is maximum for path",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Work_ Energy And Power principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the path PQR in a conservative force field the amount of work done in carrying a body from P to Q and from Q to R are 15 Joule and 5 Joule respectively. The work done in carrying the body from P to R will be - P R Q",
+    "options": {
+      "A": "20 J",
+      "B": "10 J",
+      "C": "5 J",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "W = m avg gh = 13 9 2 + (  ( ) )  × 10 × 10 = 22 × 50 = 1100 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moved from (0, 0) to (a, a) under a force ˆ ˆ F (3i 4 j) = + \\rho from two paths. Path 1 is OP and path 2 is OQP. Let W 1 and W 2 be the work done by this force in these two paths. Then : 45^\\circ O y Q x P(a, a)",
+    "options": {
+      "A": "W 1 = W 2",
+      "B": "W 1 = 2W 2",
+      "C": "W 2 = 2W 1",
+      "D": "W 2 = 4W 1"
+    },
+    "correct_option": "A",
+    "explanation": "W = mgh M L M m L 3 3 (  =  = ( ) )  L 1 L h 3 2 6 (  =  = ( ) )  (By COM) M L MgL WD g 3 6 18 =   ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The mass of a bucket full of water is 13 kg. It is being pulled up from a 10 m deep well. Due to a hole in the bucket 4 kg water flows out of the bucket uniformly. The work done in drawing the bucket out of the well will be (g = 10m/s 2 )-",
+    "options": {
+      "A": "900 J",
+      "B": "1300 J",
+      "C": "1100 J",
+      "D": "1700 J"
+    },
+    "correct_option": "A",
+    "explanation": "T = Kx for spring 2 2 2 2 1 1 T T Energy Kx K 2 2 2K K = = = L 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A brick has 3 sides a, b, c {a > b > c}. The brick can be kept on ground on any face. The work required to be done to move slowly from minimum potential energy situation to maximum potential energy situation of brick is : c b a",
+    "options": {
+      "A": "  -     a b mg 2 2",
+      "B": "  -     a c mg 2 2",
+      "C": "  -     b c mg 2 2",
+      "D": "+   -     a c b mg 2 2"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 K(5) U 2 = 2 1 K(10) U' 2 = 2 2 U 5 25 1 U' 100 4 10 = = =  U' 4U ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass M is attached to the lower end of a vertical spring. The spring is hung from a ceiling and has force constant value k. The mass is released from rest with the spring initially unstretched. The maximum extension produced in the length of the spring will be :-",
+    "options": {
+      "A": "Mg/2k",
+      "B": "Mg/k",
+      "C": "2Mg/k",
+      "D": "4Mg/k CONSERVATION OF MECHANICAL ENERGY"
+    },
+    "correct_option": "A",
+    "explanation": "W = mgh = 2 × 9.8 × 10 = 196 J"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A system of smooth inclined plane and block is shown in figure block is released when the spring in its natural length. Maximum elongation in the spring will be :- K m θ",
+    "options": {
+      "A": "θ 2mgsin K",
+      "B": "θ mgsin K",
+      "C": "θ 4mgsin K",
+      "D": "θ mgsin 2K"
+    },
+    "correct_option": "A",
+    "explanation": "In projectile motion, there is no change in kinetic energy of projectile while landing to the ground and projected from ground. Because speed is same at the time of projection and striking.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Track OABCD (as shown is figure) is smooth and fixed in vertical plane. What minimum speed has to be given to a particle lying at point A, so that it can reach point C ? O A B 320m 140m C D",
+    "options": {
+      "A": "60 m/s",
+      "B": "100 m/s",
+      "C": "70 m/s",
+      "D": "80 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "For stable equilibrium F = 0, dU 0 dx = 2 2 d U 0 dx  Work, Energy and Power",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A projectile is fired at 30^\\circ with momentum p, neglecting friction, the change in kinetic energy, when it returns back to the ground, will be :-",
+    "options": {
+      "A": "zero",
+      "B": "30 %",
+      "C": "60 %",
+      "D": "100 %"
+    },
+    "correct_option": "A",
+    "explanation": "dU F dx = - For equilibrium dU 0 dx = 4x - 2 = 0 x = 2 4 = 0.5m"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform chain (mass M, length L) is released from rest from a smooth horizontal surface as shown in the figure. velocity of the chain at the instant it completely comes out of the table will be. L/2",
+    "options": {
+      "A": "V = g L",
+      "B": "= 3gL V 4",
+      "C": "= 1 V 5gL 2",
+      "D": "V = 1 gL 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": " F = 2x 2 - 3x - 2 For equilibrium F = 0 2x 2 - 3x - 2 = 0 2x 2 - 4x + x - 2 = 0 2x(x - 2) + 1 (x - 2) = 0 x = 2 x = - 1 2 dF 4x 3 dx = - at x = 2 at x = - 1 2 dF 5 dx = dF 5 dx = - dF 0 dx  unstable equil. dF 0 dx  stable equil.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure shows a plot of the potential energy as a function of x for a particle moving along the x-axis:- a b c d U x Which of the following statement(s) is/are true?",
+    "options": {
+      "A": "a, c, and d are points of equilibrium",
+      "B": "a is a point of stable equilibrium",
+      "C": "b is a unstable equilibrium point",
+      "D": "All of the above"
+    },
+    "correct_option": "A",
+    "explanation": "12 6 A B U r r = - dU 0 dr = at equilibrium  13 7 12A ( 6)B 0 r r - - - = ; 7 6 6 2A B 0 r r -   + =     1/6 2A r B (  = ( ) )   At equilibrium U is given by 2 2 2 2 A B B B B U 2A 4A 2A 4A 2A B B = - = - = - (  ( ) ) ",
+    "statements": {
+      "S": "- a b c d U x Which of"
+    },
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body projected vertically from the earth reaches a height equal to earth's radius before returning to the earth. The power exerted by the gravitational force is greatest :-",
+    "options": {
+      "A": "At the highest position of the body",
+      "B": "At the instant just before the body hits the earth",
+      "C": "It remains constant all through",
+      "D": "At the instant just after the body is projected POWER"
+    },
+    "correct_option": "A",
+    "explanation": "If i x d d \\Delta = - \\rho\\rho\\rho \\rho\\rho ˆ ˆ 8i 6j = + ˆ ˆ ˆ ˆ W F x (3i 4j) (8i 6j) P t t 6  \\Delta +  + = = = \\rho\\rho\\rho \\rho 24 24 8 Watt 6 + = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A constant force F \\rho is acting on a body of mass m moving with constant velocity ν \\rho as shown in the figure. The power P exerted is θ F v → →",
+    "options": {
+      "A": "Fv cos θ",
+      "B": "If cos mg θ",
+      "C": "Fmg cos v θ",
+      "D": "mg sin F θ"
+    },
+    "correct_option": "A",
+    "explanation": "mgh P t = 50 9.8 10 10   = = 490 watt 490 P 0.66 hp 746 = = \\theta F v Fcos \\theta Fsin \\theta",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A force ( ) ˆ ˆ F 3i 4 j = +  \\rho N acts on a 2 kg movable object that moves from an initial position ( ) \\hat{i} ˆ d 3i 2j = - -  \\rho m to final position ( ) f ˆ ˆ d 5i 4 j = +  \\rho in 6s. The average power delivered by the force during the interval is equal to :",
+    "options": {
+      "A": "8 watt",
+      "B": "50 6 watt",
+      "C": "15 watt",
+      "D": "50 3 watt"
+    },
+    "correct_option": "A",
+    "explanation": "Mass of water = 1492 × 10 - 3 × 10 3 = 1492 kg Energy = mgh = 1492 × 10 (16 + 8) Energy P Time = 2 × 746 = 1492 10 24 t   t = 240 sec = 4 minutes"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass 2 kg is placed on a smooth horizontal surface. Two forces F 1 = 20 N and F 2 = 25 N start acting on the block in opposite directions as shown. If block gets displaced by 5 m in the direction of net force then work done by F 2 is :- F 2 F 1",
+    "options": {
+      "A": "- 75 J",
+      "B": "75 J",
+      "C": "- 125 J",
+      "D": "125 J"
+    },
+    "correct_option": "A",
+    "explanation": "W F.d = \\rho \\rho ˆ ˆ ˆ ˆ ˆ ˆ (4i 4j 2k) (3i 2j 2k) = - -  + - = 12 - 8 + 4 = 8 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man of mass 50 kg is standing in an elevator. If elevator is moving downwards with an acceleration g 3 then work done by normal reaction of elevator floor on man when elevator moves by a distance 12 m is (g = 10 m/s 2 ) :-",
+    "options": {
+      "A": "-2000 J",
+      "B": "-4000 J",
+      "C": "-6000 J",
+      "D": "-8000 J"
+    },
+    "correct_option": "A",
+    "explanation": "ˆ ˆ ˆ ˆ ˆ F (3i 2j) (4i j 3k) = +  - + \\rho = 12 - 2 = 10 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cubical vessel of height 2 m is full of water. Minimum work done against gravity in taking water-out from vessel will be :- (g = 10 m/s 2 )",
+    "options": {
+      "A": "5000 J",
+      "B": "10,000 J",
+      "C": "80,000 J",
+      "D": "10 J"
+    },
+    "correct_option": "A",
+    "explanation": "W F S =  \\rho \\rho 2 1 ˆ ˆ ˆ ˆ ˆ ˆ S r r (4i 3j k) (2i j 2k) = - = + - - + - \\rho \\rho\\rho ˆ ˆ ˆ S 2i 2j k = + + \\rho ˆ ˆ ˆ ˆ ˆ ˆ W (3i 2j 2k) (2i 2j k) = + +  + + = 6 + 4 + 2 = 12 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man pulls a bucket full of water from h metre deep well. If the mass of rope is m and mass of bucket full of water is 2m, then work done by the man is :-",
+    "options": {
+      "A": "mgh 2",
+      "B": "3mgh 2",
+      "C": "5mgh 2",
+      "D": "3mgh"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 d r r = - \\rho \\rho\\rho ˆ ˆ ˆ ˆ ˆ ˆ (i 2j k) (3i j 3k) = + + - + + ˆ ˆ ˆ ( 2i j 2k) = - + - W F.d = \\rho \\rho ˆ ˆ ˆ ˆ ˆ ˆ (5i 2j 4k) ( 2i j 2k) = + -  - + - = - 10 + 2 + 8 = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The potential energy of 1 kg particle free to move along the x-axis is given by 4 2 x x U(x) J 4 2   = -     . If total mechanical energy of the particle is 2 J then its maximum speed (in m/s) will be :-",
+    "options": {
+      "A": "2",
+      "B": "3 2",
+      "C": "2",
+      "D": "1 2"
+    },
+    "correct_option": "A",
+    "explanation": "W N = Fdcos90^\\circ = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The potential energy of a particle in a force field is U = 3 2 A B r r - , where A and B are positive constants and r is the distance of particle from the centre of field. For the equilibrium, the distance of particle from centre of field is :-",
+    "options": {
+      "A": "2A 3B",
+      "B": "3A 2B",
+      "C": "A 3B",
+      "D": "A 2B"
+    },
+    "correct_option": "D",
+    "explanation": "W F = FScos \\theta = (5g) × 2 × cos  ^\\circ = 5 × 9.8 × 2 × 1 = 98 J"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On a particle a variable force F = - ax (where a is a positive constant) is acting. If U(0) = 0, the graph between potential energy of particle U(x) and x is best represented by :-",
+    "options": {
+      "A": "U",
+      "B": "U",
+      "C": "U",
+      "D": "U"
+    },
+    "correct_option": "A",
+    "explanation": "Work will be zero as angle between force & displacement is 90^\\circ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The variation of potential energy U of a system is shown in figure. The force acting on the system is best represented by :- x 1 x U(x) O x2 x3 (1) x O F x 1 x 2 x 3 (2) x O F x 1 x 2 x 3 (3) x O F x 1 x 2 x 3 (4)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Angle between Force and displacement is 90^\\circ  W = 0",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle located in one dimensional potential field has potential energy function U(x) = 2 3 a b x x - , where a and b are positive constants. The position of equilibrium corresponds to x equal to :-",
+    "options": {
+      "A": "3a 2b",
+      "B": "2b 3a",
+      "C": "2a 3b",
+      "D": "3b 2a"
+    },
+    "correct_option": "A",
+    "explanation": "W = mgH independent of time"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle of mass m is taken from position A to position B along the circular path by a constant horizontal force F \\rho . What will be the work done by the force F \\rho ? Here radius of Track is R. O B A F",
+    "options": {
+      "A": "FR",
+      "B": "R F 2 π      ",
+      "D": "None of these",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "If = f W static friction = 0 If blocks move together then work done by static friction between blocks on upper block = +ve & lower block = - ve."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body constrained to move in y-direction is subjected to a force given by: ˆ ˆ ˆ F ( 2i 15 j 6k)N. =- + +  \\rho The work done by this force in moving the body a distance of 10 m along the y-axis is:",
+    "options": {
+      "A": "20 J",
+      "B": "150 J",
+      "C": "160 J",
+      "D": "190 J"
+    },
+    "correct_option": "A",
+    "explanation": "Block B will accelerate due to friction and gain speed therefore work by friction on block B will be positive."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the system shown in figure both the blocks A and B are moving together. If coefficient of friction between both the blocks is μ, the work done by friction on block B is :- smooth μ F A B",
+    "options": {
+      "A": "Zero",
+      "B": "Negative",
+      "C": "Positive",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "3g Mg T M 4 - =  3Mg Mg T 4 - = Mg T 4 = W = T × hcos180^\\circ Mgh 4 = -",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The relationship between the force F and position x of a body is as shown in figure. The work done in displacing the body from x = 1 m to x = 5 m will be- 1 2 3 4 5 6 0 5 10 - 10 x(m) F(N) - 5",
+    "options": {
+      "A": "30 J",
+      "B": "15 J",
+      "C": "25 J",
+      "D": "20 J $//"
+    },
+    "correct_option": "A",
+    "explanation": "Work done by T on M = - Work done by T on m  net work done by T = 0",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The whole wedge and block system is moving as shown in the figure block m is not slipping on the wedge. Then which of the following statement is correct (surface between M and m is rough) :- m M θ a = g tan θ",
+    "options": {
+      "A": "Work done by normal on block is zero",
+      "B": "Work done by friction on block is non-zero",
+      "C": "Work done by normal on block is not-zero",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "W = F \\Delta Scos \\theta = μR × 2 \\pi r × cos180 = - 0.5 × 5 × 2 \\pi × 1 \\pi = - 5 J",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of mass m is suspended by a light thread from an elevator. The elevator starts accelerating upward from rest with uniform acceleration a. The work done by tension on the block during first t seconds.",
+    "options": {
+      "A": "m 2",
+      "B": "m 2",
+      "C": "m 2 gat 2",
+      "D": "0"
+    },
+    "correct_option": "A",
+    "explanation": "In = mg - Fsin \\theta f = μ k N f = μ k (mg - Fsin \\theta ) W f = f × S cos180^\\circ = - μ k (mg - Fsin \\theta )S"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_work_energy_and_power_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Work_ Energy And Power",
+      "chapter_name": "Work_ Energy And Power",
+      "language": "en",
+      "source": "Work_ Energy and Power - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bicyclist comes to a skidding stop in 10 m. During this process, the friction force on the bicycle due to the road is 200N and is directly opposite to the motion. The work done by the cycle on the road is :-",
+    "options": {
+      "A": "+ 2000J",
+      "B": "-200J",
+      "C": "Zero",
+      "D": "-20,000J Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Ans 4 2 3 3 2 2 2 3 4 1 2 3 2 3 1 Que. 16 Ans 3"
+    },
+    "correct_option": "A",
+    "explanation": "angle between N & \\Delta x is not 90^\\circ  W N  0 M 1 F (Body at rest) f M 2 F M 1 f f T Mg  a = 3g/4 m \\theta N mg F μ k Fsin \\theta F Fcos \\theta S \\theta m \\Delta x M f s N"
+  }
+]

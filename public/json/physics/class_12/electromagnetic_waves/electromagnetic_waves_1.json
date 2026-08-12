@@ -1,0 +1,1890 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_001",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If → E and → B are the electric and magnetic field vectors of electromagnetic waves then the direction of propagation of electromagnetic wave is along the direction of -",
+    "options": {
+      "A": "→ E",
+      "B": "→ B",
+      "C": "→ E × → B",
+      "D": "none of these"
+    },
+    "correct_option": "D",
+    "explanation": "B \\rho due to current will be directed upward. As the loop moves downward, flux linked with the loop decreases. So induced current will support the magnetic field to increase the flux. 1 2 F m mg a<g I B Hence current will be ‘ANTICLOCKWISE’ 2 4 F 1 F 3 1 3 B Force on wire ‘1’ F 1 = I B 1 \\lambda upward Force on wire ‘3’ F 3 = IB 2 \\lambda downward Net Force is upward as B 1 > B 2 So the acceleration a < g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_002",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electromagnetic waves do not transport -",
+    "options": {
+      "A": "energy",
+      "B": "charge",
+      "C": "momentum",
+      "D": "information"
+    },
+    "correct_option": "A",
+    "explanation": "B = B 0 + α t A = π r 2 φ = B·A = (B 0 + α t) π r 2 ε = d dt - φ = - π r 2 d dt (B 0 + α t) ε = - π r 2 α"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_003",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The wave function (in S.I.units) for an electromagnetic wave is given as - ψ = π × - × 3 6 14 (x, t) 10 sin (3 10 x 9 10 t) The speed of the wave is -",
+    "options": {
+      "A": "9 × 10 14 m/s",
+      "B": "3 × 10 8 m/s",
+      "C": "3 × 10 6 m/s",
+      "D": "3 × 10 7 m/s"
+    },
+    "correct_option": "D",
+    "explanation": "I Magnetic field due to outer loop is into the plane & increasing with time so the flux is also increasing with time. The induced current will try to decrease the flux so it will produce outward . Hence induced current direction will be ‘ANTICLOCKWISE’."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_004",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the above problem, wavelength of the wave is-",
+    "options": {
+      "A": "666 nm",
+      "B": "666 Å",
+      "C": "666 μ m",
+      "D": "6.66 nm"
+    },
+    "correct_option": "A",
+    "explanation": "As the switch is closed, Flux linked with ‘B’ increases away from eye so the current will be ‘ANTICLOCKWISE’. As the switch is opened, flux linked with ‘B’ decreases, So the current will be ‘CLOCKWISE’. Hence option (4) is correct."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_005",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an electromagnetic wave the average energy density is associated with -",
+    "options": {
+      "A": "electric field only",
+      "B": "magnetic field only",
+      "C": "equally with electric and magnetic fields",
+      "D": "average energy density is zero"
+    },
+    "correct_option": "C",
+    "explanation": "e=NBA ω ⇒ e ∝ω"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_006",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an electromagnetic wave the energy density associated with magnetic field will be",
+    "options": {
+      "A": "2 1 L I 2",
+      "B": "μ 2 0 B 2",
+      "C": "μ 2 0 1 B 2",
+      "D": "μ 0 2 1 2 B"
+    },
+    "correct_option": "A",
+    "explanation": "e 0 = - L ( ) 0 d I sin t dt ω e = - LI 0 ω cos ω t e ∝ ω ∝ f"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_007",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the above problem, the energy density associated with the electric field will be -",
+    "options": {
+      "A": "2 1 CV 2",
+      "B": "2 1 q 2 C",
+      "C": "ε 2 1 2 E",
+      "D": "ε 2 0 1 E 2"
+    },
+    "correct_option": "C",
+    "explanation": "( ) e . B v = × \\rho \\rho \\rho \\lambda where ˆ v i = \\rho m/s = ˆ 5 j. ˆ ˆ \\hat{i} j k 3 4 5 1 0 0 = ( ) ˆ ˆ ˆ 5 j. 5 j 4k - = 25 volt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_008",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If there were no atmosphere, the average temperature on earth surface would be -",
+    "options": {
+      "A": "lower",
+      "B": "higher",
+      "C": "same",
+      "D": "0^\\circ C"
+    },
+    "correct_option": "C",
+    "explanation": "Induced emf = B × v × effective length ⊥ r to velocity = Bv ( \\lambda BD ) = Bv(4R) = 4BvR Since B is uniform & Area is fixed, then' change in flux is zero in the loop so current flow will be zero."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_009",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which part of earth's atmosphere is the ozone layer present ?",
+    "options": {
+      "A": "troposphere",
+      "B": "stratosphere",
+      "C": "ionosphere",
+      "D": "mesosphere"
+    },
+    "correct_option": "C",
+    "explanation": "Let at any time t flux passing through the coil at time t φ = BA cos θ Here θ = 0^\\circ, A = 1 2 α R 2 φ = B 2 1 R 2   α     |emf| = 2 2 d d 1 1 d B R BR dt dt 2 2 dt φ α   = α =     Here d dt α = ω (cons.) emf = 2 1 B R 2 ω ω R B α $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_010",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The ozone layer is earth's atmosphere is crucial for human survival because it -",
+    "options": {
+      "A": "contains ions",
+      "B": "reflects radio signals",
+      "C": "reflects ultraviolet rays",
+      "D": "reflects infra red rays $//"
+    },
+    "correct_option": "A",
+    "explanation": "Energy stored by Inductor = Energy to be stored in capacitor ⇒ 1 2 LI 2 = 1 2 CV 2 ⇒ V = I L C = 6 2 2 4 10 - × = 2 × 10 3 V So order of voltage = 10 3 volts."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_011",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The frequency from 3 × 10 9 Hz to 3 × 10 10 Hz is-",
+    "options": {
+      "A": "high frequency band",
+      "B": "super high frequency band",
+      "C": "ultra high frequency band",
+      "D": "very high frequency band"
+    },
+    "correct_option": "A",
+    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const. ⇒ I ∝ 1 L or 1 2 I I = 2 1 L L = 1 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_012",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The frequency from 3MHz to 30 MHz is known as -",
+    "options": {
+      "A": "audio band",
+      "B": "medium frequency band",
+      "C": "very high frequency band",
+      "D": "high frequency band"
+    },
+    "correct_option": "A",
+    "explanation": "At t = 0, Inductor behaves as open circuit & capacitor as short-circuit. So A 2 will have zero current & A 1 will have maximum current."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_013",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The AM range of radiowaves have frequency -",
+    "options": {
+      "A": "less than 30 MHz",
+      "B": "more than 30 MHz",
+      "C": "less than 20000Hz",
+      "D": "more than 20000Hz"
+    },
+    "correct_option": "A",
+    "explanation": "M = K 1 2 L L so K = 1 2 M 3 3 4 L L 2 8 = = ×"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_014",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select wrong statement from the following for EMW-",
+    "options": {
+      "A": "are transverse",
+      "B": "travel with same speed in all medium",
+      "C": "travel with the speed of light",
+      "D": "are produced by accelerating charge"
+    },
+    "correct_option": "A",
+    "explanation": "φ = B·A = μ 0 nI·A φ = μ 0 n I 0 cos ω t ( π b 2 ) ε = - d dt φ = μ 0 nI 0 π b 2 ω sin ω t"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_015",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The waves related to tele-communication are -",
+    "options": {
+      "A": "infrared",
+      "B": "visible light",
+      "C": "microwaves",
+      "D": "ultraviolet rays"
+    },
+    "correct_option": "A",
+    "explanation": "e = L dI dt ⇒ L 1 = 3 4 2 10 1 10 20 - - × = × L 2 = 3 5.12 10 20 - × = 0.256 M = 1 2 K L L M = 1 4 4 10 0.256 10 - - × × = 1.6 × 10 -4 H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_016",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The nature of electromagnetic wave is -",
+    "options": {
+      "A": "longitudinal",
+      "B": "longitudinal stationary",
+      "C": "transverse",
+      "D": "transverse stationary"
+    },
+    "correct_option": "A",
+    "explanation": "V A - V B = dI L IR dt + 0.5 = L(8) + (0.2 × 0.5) 0.4 = L(8) L = 0.05 H"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_017",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Greenhouse effect keeps the earth surface -",
+    "options": {
+      "A": "cold at night",
+      "B": "dusty and cold",
+      "C": "warm at night",
+      "D": "moist"
+    },
+    "correct_option": "A",
+    "explanation": "L = 2 0 μ N A \\lambda ⇒ A = 2 0 L μ N \\lambda π R 2 = 2 0 L μ N \\lambda ; length of wire = (2 π R)N \\lambda w = 2 0 L 2 N μ N   π     π   \\lambda = 0 4 L μ π \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_018",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The speed of electromagnetic radiation in vacuum is :-",
+    "options": {
+      "A": "μ 0 ∈ 0",
+      "B": "μ ∈ 0 0",
+      "C": "μ ∈ 0 0 1",
+      "D": "μ ∈ 0 0 1"
+    },
+    "correct_option": "A",
+    "explanation": "At t = 0 Inductor behaves as open circuit hence I 1 = 0, I 2 = E R , I 3 = E 2R So I 2 > I 3 > I 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_019",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the cause of greenhouse effect ?",
+    "options": {
+      "A": "Infrared rays",
+      "B": "Ultraviolet rays",
+      "C": "X-rays",
+      "D": "Radio waves"
+    },
+    "correct_option": "A",
+    "explanation": "At t = 0 R R R I i = E 2R at t = ∞ R R R I f = E 2E 3R / 2 3R = i f I 3 I 4 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_020",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The conduction current is the same as displacement current when source is :-",
+    "options": {
+      "A": "ac only",
+      "B": "dc only",
+      "C": "both ac and dc",
+      "D": "neither dc nor ac"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_021",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric field part of an electromagnetic wave in a medium is represented by E x = 0 ; E y = 2.5 N C cos - [ ]     π × - π × [ ]         [ ] 6 2 rad rad 2 10 t 10 x s m E z =",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Initially the velocity of bar magnet will increase which will change the flux linked with the copper tube so induced eddy current will oppose the motion of magnet. So for bar magnet, acceleration decreases with time & velocity increases with time so : v t $//(1 HS 202 5 TARGET : 202 5 PHYSICS"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_022",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is false for the properties of electromagnetic waves ?",
+    "options": {
+      "A": "These waves do not require any material medium for propagation",
+      "B": "Both electric and magnetic field vectors attain the maxima and minima at the same place and same time",
+      "C": "The energy in electromagnetic wave is divided equally between electric and magnetic vectors",
+      "D": "Both electric and magnetic field vectors are parallel to each other and perpendicular to the direction of propagation of wave $//"
+    },
+    "correct_option": "A",
+    "explanation": "B due to outer loop = 0 μ I (8 sin 45 ) L 4 2 ^\\circ π = ( ) 0 μ I 2 2 L π Flux linked with smaller loop = B.A (Assuming B as uniform since \\lambda <<<< L) φ = 2 0 μ I 2 2 L π \\lambda φ = MI So M = I φ So M = 2 0 2 2μ L π \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_023",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The dimensions of (μ 0 ∈ 0 ) -1/2 are :",
+    "options": {
+      "A": "[L 1/2 T -1/2 ]",
+      "B": "[L -1 T]",
+      "C": "[LT -1 ]",
+      "D": "[L -1/2 T 1/2 ]"
+    },
+    "correct_option": "A",
+    "explanation": "At t = 0 R R 3 E I 3 I 1 I 2 R 2 R 1 So I 1 = 1 E R I 2 = I 3 = 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_024",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric and the magnetic field, associated with an e.m. wave, propagating along the +z-axis, can be represented by :-",
+    "options": {
+      "A": "[ ] = = [ ] 0 0 ˆ ˆ E E i,B B j \\rho \\rho",
+      "B": "[ ] = = [ ] 0 0 ˆ ˆ E E k,B B i \\rho \\rho",
+      "C": "[ ] = = [ ] 0 0 ˆ ˆ E E j,B B i \\rho \\rho",
+      "D": "[ ] = = [ ] 0 0 ˆ ˆ E E j,B B k \\rho \\rho"
+    },
+    "correct_option": "A",
+    "explanation": "B = 10 sin 2 t 3 π ; A = 0.1 ε = d dt φ - = -A dB dt = -(0.1) (10) 2 3 π       cos 2 3 π t | ε | = 2 3 π cos 2 t 3 π       at t = 0.5 sec. | ε | = 2 3 π cos 3 π       = 3 π volts"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_025",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The decreasing order of wavelength of infrared, microwave, ultraviolet and gamma rays is :",
+    "options": {
+      "A": "microwave, infrared, ultraviolet, gamma rays",
+      "B": "gamma rays, ultraviolet, infrared, microwaves",
+      "C": "microwaves, gamma rays, infrared, ultraviolet",
+      "D": "infrared, microwave, ultraviolet, gamma rays"
+    },
+    "correct_option": "A",
+    "explanation": "As current across Resistor ‘R’ increases, Magnetic field linked with loop 2 increases in the direction outward, ⊥ r to the plane of paper so the induced current will decrease the flux. & It will flow in clockwise direction to oppose the initial magnetic field."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_026",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric field associated with an e.m. wave in vacuum is given by = \\rho E 40 cos (kz - 6 × 10 8 t), where E, z and t are in volt/m, meter and seconds respectively. The value of wave vector k is :",
+    "options": {
+      "A": "6m -1",
+      "B": "3m -1",
+      "C": "2m -1",
+      "D": "0.5m -1"
+    },
+    "correct_option": "A",
+    "explanation": "i = i 0 [1- t e - λ ] i = 0 i 4 ⇒ t 0 0 i i 1 e 4 - λ [ ] = - [ ] [ ] ⇒ 4 1 1 e 4 - λ = - ⇒ 4 3 e 4 - λ = ⇒ 4/ 4 e 3 λ = ⇒ e 4 4 log 3   =   λ   ⇒ λ = e 4 4 log 3      "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_027",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The condition under which a microwave oven heats up a food item containing water molecules most efficiently is :-",
+    "options": {
+      "A": "Infra-red waves produce heating in a microwave oven",
+      "B": "The frequency of the microwaves must match the resonant frequency of the water molecules",
+      "C": "The frequency of the microwaves has no relation with natural frequency of water molecules",
+      "D": "Microwaves are heat waves, so always produce heating EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Energy per unit volume U V = 2 0 B 2 μ U = 2 0 B V 2 × μ (total energy stored) = 2 0 0 i V 2r 2 μ   ×   μ   ⇒ 2 0 2 i V 8r μ ⇒ 16 10 J 2 - π ×"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_028",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Exercise I-III - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The wave function (in S.I. units) for an electromagnetic wave is given as - 3 6 14 (x,t) 10 sin (3 10 x 9 10 t)  = \\pi  -  The speed of the wave is -",
+    "options": {
+      "A": "9 × 10 14 m/s",
+      "B": "3 × 10 8 m/s",
+      "C": "3 × 10 6 m/s",
+      "D": "3 × 10 7 m/s EM03 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": " (x, t) = 10 3 sin \\pi (3 × 10 6 x - 9 × 10 14 t)  (x, t) = 10 3 sin(3 \\pi × 10 6 x - 9 \\pi × 10 14 t) speed v = k \\omega = 14 6 9 10 3 10 \\pi \\pi = 3 × 10 8 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_029",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The pressure exerted by an electromagnetic wave of intensity I W/m 2 on a non - reflecting surface is : -",
+    "options": {
+      "A": "Ic",
+      "B": "Ic 2",
+      "C": "I/c",
+      "D": "I/c 2 EW06 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_030",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A plane electromagnetic wave of frequency 40 MHz travels in free space in the X - direction. At some point and at some instant, the electric field E \\rho has its maximum value of 750 N/C in Y - direction. The wavelength of the wave is -",
+    "options": {
+      "A": "3.5 m",
+      "B": "5.5 m",
+      "C": "7.5 m",
+      "D": "9.5 m EW03 - 0136"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_031",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In Q.2, the period of the wave will be -",
+    "options": {
+      "A": "2.5 \\mu s",
+      "B": "0.25 \\mu s",
+      "C": "0.025 \\mu s",
+      "D": "none of these EW03 - 0137"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_032",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If c is the speed of electromagnetic waves in vacuum, its speed  in a medium of dielectric constant K and relative permeability \\mu r is (c is the speed of light)",
+    "options": {
+      "A": "r 1 K  = \\mu",
+      "B": "r c \\mu",
+      "C": "r c K  = \\mu",
+      "D": "r K c  = \\mu EW03 - 0139"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_033",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The oscillating electric and magnetic vectors of an electromagnetic wave are oriented along",
+    "options": {
+      "A": "the same direction but differ in phase by 90^\\circ",
+      "B": "the same direction and are in phase",
+      "C": "mutually perpendicular directions and are in phase",
+      "D": "mutually perpendicular directions and differ in phase by 90^\\circ EW03 - 0138"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_034",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An EM wave is propagating in a medium with a velocity ν ⃗ = ν i ̂ . The instantaneous oscillating electric field of this of EM wave is along +y axis. Then the direction of oscillating magnetic field of the EM wave will be along",
+    "options": {
+      "A": "- x direction",
+      "B": "- z direction",
+      "C": "- y direction",
+      "D": "+z direction EW03 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_035",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The sun delivers 10 3 W/m 2 of electromagnetic flux to the earth's surface. The total power that is incident on a roof of dimensions 8m × 20m, will be",
+    "options": {
+      "A": "6.4 × 10 3 W",
+      "B": "3.4 × 10 4 W",
+      "C": "1.6 × 10 5 W",
+      "D": "none of these EW04 - 0030"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_036",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A parallel plate capacitor consists of two circular plates each of radius 2 cm, separated by a distance of 0.1 mm. Is being charged at rate of 5 × 10 13 V/s, then the value of displacement current is",
+    "options": {
+      "A": "5.50 A",
+      "B": "5.56 × 10 2 A",
+      "C": "5.56 × 10 3 A",
+      "D": "2.28 × 10 4 A EW01 - 0448"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_037",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A parallel plate capacitor with plate area A and separation between the plates d, is charged by a constant current i. Consider a plane surface of area A/2 parallel to the plates and drawn symmetrically between the plates, then the displacement current thro ugh this area, will be -",
+    "options": {
+      "A": "i",
+      "B": "i 2",
+      "C": "i 4",
+      "D": "None of these EW01 - 0447 Exercise - I"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_038",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "displacement current is due to -",
+    "options": {
+      "A": "Conduction of charge",
+      "B": "Variable electric field",
+      "C": "Variable magnetic field",
+      "D": "None of above EW01 - 0453"
+    },
+    "correct_option": "B",
+    "explanation": "displacement current produced due to change in electric field."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_039",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In electromagnetic wave -",
+    "options": {
+      "A": "Constant E & B are there",
+      "B": "Oscillating E produces constant B",
+      "C": "Oscillating B produces constant E",
+      "D": "Oscillating E & B regenerate each other EW01 - 0454"
+    },
+    "correct_option": "D",
+    "explanation": "EMW has variable E & B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_040",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "About 5% of the power of a 100W light bulb is converted to visible radiation. Then average intensity of visible radiation at a distance 1m from bulb is",
+    "options": {
+      "A": "0.04 W/m 2",
+      "B": "0.4 W/m 2",
+      "C": "0.02 W/m 2",
+      "D": "0.2 W/m 2 EW02 - 0068"
+    },
+    "correct_option": "B",
+    "explanation": "em wave P I Area = ( ) 2 2 2 Power 5 I 0.4W / m 4 d 4 1    = = = \\pi \\pi {P em wave } = 5% of 100W"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_041",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Instantaneous displacement current of 2A is setup in the space between two parallel plates of 1μF capacitor. Then rate of change of potential difference across capacitor plates is",
+    "options": {
+      "A": "3 × 10 6 V/s",
+      "B": "4 × 10 6 V/s",
+      "C": "2 × 10 6 V/s",
+      "D": "None of these EW01 - 0455"
+    },
+    "correct_option": "C",
+    "explanation": "e d 0 d dV I C dt dt \\phi = = 6 dV 2 1 10 dt - =   6 dV 2 10 V / sec dt = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_042",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ampere - Maxwell law is -",
+    "options": {
+      "A": "E 0 C 0 0 d B.d I dt \\phi = \\mu + \\mu  \\int \\rho \\rho \\rho \\rho",
+      "B": "E 0 C 0 d B.d I dt \\phi = \\mu + \\int \\rho \\rho \\rho \\rho",
+      "C": "E 0 0 C 0 d B.d I dt \\phi =  \\mu + \\int \\rho \\rho \\rho \\rho",
+      "D": "None of these EW01 - 0459"
+    },
+    "correct_option": "A",
+    "explanation": "( ) 0 C D B.d I I = \\mu \\Sigma + \\int \\rho \\rho \\rho \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_043",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Snakes can detect which of the following electro magnetic waves?",
+    "options": {
+      "A": "X - rays",
+      "B": "Gamma rays",
+      "C": "Ultraviolet rays",
+      "D": "Infrared rays EW02 - 0067"
+    },
+    "correct_option": "D",
+    "explanation": "Infrared rays"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_044",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "EMW exerts radiation pressure because -",
+    "options": {
+      "A": "It can travel in vacuum",
+      "B": "E and B are mutually perpendicular",
+      "C": "It carries momentum",
+      "D": "None of these EW02 - 0070"
+    },
+    "correct_option": "C",
+    "explanation": "When it incident on a surface, due to momentum change, force and pressure is applied."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_045",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which band of radio waves is used for communication in cellular phones -",
+    "options": {
+      "A": "Very high frequency",
+      "B": "Ultra high frequency",
+      "C": "Super high frequency",
+      "D": "None of these EW02 - 0069"
+    },
+    "correct_option": "B",
+    "explanation": "In mobile communication UHF is used"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_046",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an electromagnetic wave, the average energy density associated with magnetic field is",
+    "options": {
+      "A": "2 0 Li 2",
+      "B": "2 0 0 B 4 \\mu",
+      "C": "2 0 B 2 \\mu",
+      "D": "0 2 2B \\mu EW01 - 0457"
+    },
+    "correct_option": "B",
+    "explanation": "2 0 0 B 4 \\mu"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_047",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Maxwell noticed inconsistency in -",
+    "options": {
+      "A": "Gauss law in electrostates",
+      "B": "Gauss law in magnetism",
+      "C": "Ampere's circuital law",
+      "D": "Faraday's law EW01 - 0456 1"
+    },
+    "correct_option": "C",
+    "explanation": "Ampere's circuital law 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_048",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Direction of wave vector K is -",
+    "options": {
+      "A": "Along wave propagation",
+      "B": "Normal to wave propagation",
+      "C": "Along electric field",
+      "D": "Along magnetic field EW01 - 0458"
+    },
+    "correct_option": "B",
+    "explanation": "displacement current produced due to change in electric field."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_049",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which experiment marked the beginning of the field of communication using EMW.",
+    "options": {
+      "A": "Hertz experiment",
+      "B": "Marconi experiment",
+      "C": "Devisson Germer Experiment",
+      "D": "None of these EW02 - 0071 Electromagnetic Wave s Electromagnetic Wave s"
+    },
+    "correct_option": "B",
+    "explanation": "Marconi succeeded in transmitting EMW over distance of many kilometers."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_050",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electromagnetic wave can travel in -",
+    "options": {
+      "A": "Vacuum only",
+      "B": "Medium only",
+      "C": "Vacuum and medium both",
+      "D": "None of these EW01 - 0462"
+    },
+    "correct_option": "C",
+    "explanation": "Vacuum and medium both"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_051",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "velocity of light -",
+    "options": {
+      "A": "Always constant",
+      "B": "Increases when medium changes",
+      "C": "Decreases when medium changes",
+      "D": "Depends on electric and magnetic properties of medium EW01 - 0463"
+    },
+    "correct_option": "D",
+    "explanation": "1 v = \\mu"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_052",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "According to Ampere Maxwell law, ( ) 0 0 c d B dl i i i  = \\mu = \\mu + \\int \\rho\\rho\\rho \\rho \\rho where i c is conduction current and i d is displacement current Statement -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "displacement current produced due to change in electric field."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_053",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Since i c = i d , i = 2i c = 2i d",
+    "options": {
+      "A": "Statement - 1 is correct; statement 2 is incorrect",
+      "B": "Both statement - 1 and statement 2 are correct",
+      "C": "Statement - 1 is incorrect; statement 2 is correct",
+      "D": "Both Statement - 1 and statement 2 are incorrect EW01 - 0464"
+    },
+    "correct_option": "D",
+    "explanation": "EMW has variable E & B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_054",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the frequency of oscillation of charge is 10 10 Hz then frequency of EMW is",
+    "options": {
+      "A": "2 × 10 10 Hz",
+      "B": "10 10 Hz",
+      "C": "10 10 2 Hz",
+      "D": "None of these EW01 - 0465"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_055",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For an electromagnetic wave   y N E 120 sin kx t C (  = + \\omega ( ) )  then direction of propagation of EMW is",
+    "options": {
+      "A": "+x axis",
+      "B": "- x axis",
+      "C": "+y axis",
+      "D": "- y axis EW01 - 0466"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_056",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For an electromagnetic wave B Z = (10nT) sin [kx - \\omega t] then direction of propagation of EMW is",
+    "options": {
+      "A": "- x axis",
+      "B": "+x axis",
+      "C": "+z axis",
+      "D": "- y axis EW01 - 0467"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_057",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For an electromagnetic wave in vaccum E y = E 0 sin(kx - \\omega t) ; B z = B 0 sin (kx - \\omega t) Then speed of EM wave is",
+    "options": {
+      "A": "&",
+      "B": "k \\omega",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Speed of EMW, v = 0 0 E B R \\omega = 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_058",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Refractive index of a medium having relative permeability and relative permittivity as \\mu r and  r respectively is: -",
+    "options": {
+      "A": "r r 1 \\mu ",
+      "B": "r r \\mu ",
+      "C": "r r \\mu ",
+      "D": "None of these EW01 - 0469"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_059",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the intensity of electromagnetic wave is I then part of intensity provided by the electric field is",
+    "options": {
+      "A": "I 4",
+      "B": "I 2",
+      "C": "I",
+      "D": "None of these EW01 - 0461"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_060",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Light with an energy flux of 18 W/cm 2 falls on a non reflecting surface at normal incidence. If the surface has an area of 20 cm 2 , find the average force exerted on the surface during a 30 minute time span.",
+    "options": {
+      "A": "1.2 × 10 - 6 N",
+      "B": "1.2 × 10 - 5 N",
+      "C": "2.4 × 10 - 6 N",
+      "D": "2.4 × 10 - 5 N LE07 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_061",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a radiation of an intensity I is incident on a perfectly reflective surface, the radiation pressure P exerted on surface is",
+    "options": {
+      "A": "I C",
+      "B": "2I C",
+      "C": "I 2C",
+      "D": "None of these LE07 - 0007 NEET : NCR [ Physics ]"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_062",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a radiation of an intensity I is incident normally on a surface which reflects 70% and absorbs 30% of radiation, the radiation pressure P exerted on surface is",
+    "options": {
+      "A": "I 1 1 c ",
+      "B": "I 1 4 c ",
+      "C": "I 0 3 c ",
+      "D": "I 1 7 c  LE07 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_063",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The ratio of average energy density of electric field part of EMW to the average energy density of electromagnetic wave is (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_064",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion: - Infrared radiation plays an important role in maintaining the average temperature of earth. Reason: - Infrared radiations are sometimes referred to as heat waves.",
+    "options": {
+      "A": "Both assertion and reason are true and reason is the correct explanation of assertion.",
+      "B": "Both assertion and reason are true and reason is not the correct explanation of assertion",
+      "C": "Assertion is true but reason is false",
+      "D": "Both assertion and reason are false EW02 - 0072"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles.",
+    "assertion": "- Infrared radiation plays an important role in maintaining the average temperature of earth.",
+    "reason": "- Infrared radiations are sometimes referred to as heat waves."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_065",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "X - rays, gamma rays and microwaves travelling in vaccum have",
+    "options": {
+      "A": "Same wavelength but different velocities",
+      "B": "Same frequency but different velocities",
+      "C": "Same velocity but different wavelengths",
+      "D": "Same velocity and same frequency EW02 - 0073"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_066",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "NCR - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A : - wavelength of microwaves is greater than that of UV rays B : - wavelength of infrared rays is lesser than that of UV rays C : - wavelength of microwaves is lesser than that of infrared rays D : - Gamma Rays has shortest wavelength in the electromagnetic spectrum Choose correct option from the given options",
+    "options": {
+      "A": "A & B are true",
+      "B": "B & C are true",
+      "C": "C & D are true",
+      "D": "A & D are true EW02 - 0074"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_067",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A free proton is placed in the path of a plane electromagnetic wave. The proton will start moving: -",
+    "options": {
+      "A": "In the direction of propagation of EM wave",
+      "B": "Along the magnetic field",
+      "C": "Along the electric field",
+      "D": "In the plane containing the magnetic field and the direction of propagation EW03 - 0038"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_068",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statements is incorrect about electromagnetic waves?",
+    "options": {
+      "A": "Are transverse in nature",
+      "B": "Are produced by accelerating charges",
+      "C": "Travel with the same speed in all media",
+      "D": "Travel in free space with the speed of light EW03 - 0041"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_069",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In electromagnetic wave the phase difference between electric and magnetic field vectors is",
+    "options": {
+      "A": "zero",
+      "B": "\\pi /2",
+      "C": "\\pi",
+      "D": "\\pi /4 EW03 - 0040"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Standard Physics formula calculation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_070",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Total energy density of electromagnetic waves in vacuum in given by the relation : -",
+    "options": {
+      "A": " +  2 2 0 0 1 E B 2 2μ",
+      "B": "2 2 0 0 1 1 E μ B 2 2  +",
+      "C": "+ 2 2 E B c",
+      "D": " + 2 2 0 0 1 B E 2 2μ EW05 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_071",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In free space an electromagnetic wave that propagates in the +z direction with an electric field strength of 1 V/m pointing in the +y direction. Then the direction and magnitude of the magnetic field is : -",
+    "options": {
+      "A": "3.33 × 10 - 9 T in",
+      "B": "3.33 × 10 - 9 T in",
+      "C": "3.33 × 10 - 9 T in",
+      "D": "9.99 × 10 - 7 T in"
+    },
+    "correct_option": "B",
+    "explanation": "- = = =   9 8 E 1 B 3.33 10 T. c 3 10 Direction B \\rho can be checked by  E B \\rho\\rho = Direction of propagation of EM wave."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_072",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If electric field in a non - magnetic medium for EM wave is given by 8 ˆ E 100sin(10 t 2z)j = + \\rho V/m then H \\rho is (in S.I.) : -",
+    "options": {
+      "A": "+ \\pi 8 50 ˆ sin",
+      "B": "+ \\pi 8 5 ˆ sin",
+      "C": "+ 8 ˆ 20sin",
+      "D": "+ \\pi 8 25 ˆ sin"
+    },
+    "correct_option": "B",
+    "explanation": "= max max E v B and B max = μ 0 H max  - = = = \\pi (  \\pi ( ) )  max max 8 7 0 E 100 5 H μ v 10 (4 10 ) 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_073",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The velocity of electromagnetic wave is parallel to : -",
+    "options": {
+      "A": " B E \\rho\\rho",
+      "B": " E B \\rho\\rho",
+      "C": "E \\rho",
+      "D": "B \\rho EW04 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": " E B \\rho\\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_074",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electromagnetic wave of intensity 1400 W/m 2 falls normally on a surface of area 1.5 m 2 is completely absorbed by it. Find out force exerted by beam.",
+    "options": {
+      "A": "14 × 10 - 5 N",
+      "B": "14 × 10 - 6 N",
+      "C": "7 × 10 - 5 N",
+      "D": "7 × 10 - 6 N EW06 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "= IA F c -  = =   6 8 1400 1.5 7 10 N 3 10"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_075",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electric field in an electromagnetic wave is given by 1 E 56.5sin (t x / c)NC - = \\omega - . Find the intensity of the wave if it is propagating along x - axis in the free space. (Given - - -  =  12 2 1 2 0 8.85 10 C N m )",
+    "options": {
+      "A": "5.65 Wm - 2",
+      "B": "4.24 Wm - 2",
+      "C": "1.9 × 10 - 7 Wm - 2",
+      "D": "56.5 Wm - 2 EW04 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "2 0 0 1 I E c 2 =  12 2 8 1 I (8.85 10 )(56.5) (3 10 ) 2 - =     = 4.24 Wm -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_076",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electromagnetic waves travel in a medium at a speed of 2.0 × 10 8 m/s. The relative permeability of the medium is 1.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "8 V 2 10 m / s =  8 C 3 10 m / s =  r r C V = \\mu  r 9 1 4 =  r 9 2.25 4  = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_077",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The relative permittivity of the medium will be:",
+    "options": {
+      "A": "2.25",
+      "B": "4.25",
+      "C": "6.25",
+      "D": "8.25 EW03 - 0043"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_078",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Light wave travelling in air along x - direction is given by E y = 540 sin \\pi × 10 4 (x - ct) Vm -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "E y = 540 sin \\pi × 10 4 (x - ct) Vm - 1 E 0 = 540 Vm - 1 B 0 = 0 E C = 7 8 540 18 10 T 3 10 - =  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_079",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Then, the peak value of magnetic field of wave will be (Given c = 3 × 10 8 ms - 1 )",
+    "options": {
+      "A": "18 × 10 - 7 T",
+      "B": "54 × 10 - 7 T",
+      "C": "54 × 10 - 8 T",
+      "D": "18 × 10 - 8 T EW03 - 0044 NEET : PHYSICS"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Waves principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_080",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match List - I with List - II List - I List - II",
+    "options": {
+      "A": "UV rays",
+      "B": "X - rays",
+      "C": "Microwave",
+      "D": "Infrared wave"
+    },
+    "correct_option": "B",
+    "explanation": "(a) uv rays - used for water purification (b) x - rays used for diagnosing fracture (c) Microwaves are used for mobile and radar communication (d) Infrared waves show less scattering therefore used in foggy days (a - ii), (b - i), (c - iii), (d - iv)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_081",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If E \\rho and K \\rho represent electric field and propagation vectors of the EM waves in vacuum, then magnetic field vector is given by : ( \\omega - angular frequency) :",
+    "options": {
+      "D": " K E \\rho\\rho EW04 - 0004",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Magnetic field vector will be in the direction of  ˆ ˆ K E magnitude of = = \\omega E K B E C Or ( ) =  \\omega 1 B K E \\rho\\rho\\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_waves_082",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Waves",
+      "chapter_name": "Electromagnetic Waves",
+      "language": "en",
+      "source": "RACE - Electromagnetic Waves.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "displacement current goes through the gap between the plates of a capacitor when the charge of the capacitor : -",
+    "options": {
+      "A": "does not change",
+      "B": "change with time",
+      "C": "increases",
+      "D": "decreases"
+    },
+    "correct_option": "C",
+    "explanation": "(  =  = ( ) )  D 0 dE dv I A c dt dt"
+  }
+]

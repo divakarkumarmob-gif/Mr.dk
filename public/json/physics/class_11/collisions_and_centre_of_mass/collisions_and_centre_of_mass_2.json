@@ -1,0 +1,1589 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Exercise I-III - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped from a height of 10 m. If 40% of its energy is lost on collision with the earth then after collision the ball will rebound to a height of -",
+    "options": {
+      "A": "10 m",
+      "B": "8 m",
+      "C": "4 m",
+      "D": "6 m CM15 - 0018"
+    },
+    "correct_option": "D",
+    "explanation": "Initial energy = mgh = mg(10) if 40% is lost Remaining energy = 60% of mg(10)  60 100 × mg(10) = mg(h) h = 6m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Exercise I-III - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A rubber ball is dropped from a height of 5m on a plane, where the acceleration due to gravity is not shown. On bouncing it rises to 1.8 m. The ball loses its velocity on bouncing by a factor of : -",
+    "options": {
+      "A": "16 25",
+      "B": "2 5",
+      "C": "3 5",
+      "D": "9 25 CM13 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "If i h 1.8 3 e 0.6 h 5 5 = = = = loss in velocity = 3 2 1 5 5 - ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Exercise I-III - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bullet of mass m is fired into a large block of wood of mass M with velocity v. The final velocity of the system is : -",
+    "options": {
+      "A": "m v M-m (  ( ) ) ",
+      "B": "m+M v M (  ( ) ) ",
+      "C": "M-m v M (  ( ) ) ",
+      "D": "m v m+M (  ( ) )  CM08 - 0005 Collisions and Centre of Mass"
+    },
+    "correct_option": "D",
+    "explanation": "mv = (M + m)v ƒ ƒ m v v m M (  = ( ) + ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Exercise I-III - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two ice skaters A and B approach each other at right angles. Skater A has a mass 30 kg and velocity 1 m/s and skater B has a mass 20 kg and velocity 2 m/s. They meet and cling together. Their final velocity of the couple is",
+    "options": {
+      "A": "2 m/s",
+      "B": "1.5 m/s",
+      "C": "1 m/s",
+      "D": "2.5 m/s CM13 - 0011 EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": "By C onservation of linear momentum i f p = p \\rho\\rho in x direction A A A B x m v =(m m )v + in y direction B B A B y m v =(m m )v + x 30 v m / s 50 = y 40 v m / s 50 = ( ) ( ) 2 2 2 2 net x y 3 4 v v v 5 5 (  (  = + = + ( ) ( ) )  )  = 1 m/s Exercise - II ( Previous Year Questions)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A circular plate of uniform thickness has a diameter 56 cm. A circular portion of diameter 42 cm is removed from one edge as shown in the figure. The centre of mass of the remaining portion from the centre of plate will be :",
+    "options": {
+      "A": "5 cm",
+      "B": "7 cm",
+      "C": "9 cm",
+      "D": "11 cm CM01 - 1036"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A shell is fired from a canon with velocity V m/s at an angle \\theta with the horizontal direction. At the highest point in its path with same speed it explodes into two pieces of equal masses. One of the pieces retraces its path to the cannon. The speed in m/s of the other piece immediately after the explosion is",
+    "options": {
+      "A": "3 2 (  ( ) ( ) )  Vcos \\theta",
+      "B": "3Vcos \\theta",
+      "C": "2Vcos \\theta",
+      "D": "3 2 (  ( ) )  Vcos \\theta CM03 - 0602"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "After falling from a height of 5m a ball strikes the roof of a lift. If at the time of collision, lift is moving in the upward direction with a velocity of 1m/s, then the velocity with which the ball rebounds after collision will be - (e = 1)",
+    "options": {
+      "A": "11 m/s downwards",
+      "B": "12 m/s upwards",
+      "C": "13 m/s upwards",
+      "D": "12 m/s downwards CM04 - 0288"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two masses m 1 = 2kg and m 2 = 5kg are moving on a frictionless surface with velocities 10m/s and 3 m/s respectively. m 2 is ahead of m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal spring of spring constant k = 1120 N/m is attached on the back side of m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum compression of the spring will be : -",
+    "options": {
+      "A": "0·51 m",
+      "B": "0·062 m",
+      "C": "0·25 m",
+      "D": "0·72 m CM03 - 0603"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A frictionless steel ball of radius 2cm, moving on a horizontal plane with a velocity of 5cm/s, collides head - on with another stationary steel ball of radius 3cm. The velocities of two bodies after collision will respectively be (in cm/s) (e = 1)",
+    "options": {
+      "A": "2·7, 2·3",
+      "B": "- 2·7, 2·3",
+      "C": "2·7, - 2·3",
+      "D": "- 2·7, - 2·3 CM04 - 1069"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A nucleus of mass number A originally at rest, emits alpha particle with speed v. The recoil speed of the daughter nucleus is : -",
+    "options": {
+      "A": "4v A 4 -",
+      "B": "4v A 4 +",
+      "C": "v A 4 -",
+      "D": "v A 4 + CM03 - 0604"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere of diameter r is cut from a solid sphere of radius r such that the centre of mass of remaining part be at maximum distance from or i ginal centre, then this distance is :",
+    "options": {
+      "A": "r 2",
+      "B": "r 3",
+      "C": "r 14",
+      "D": "none of these CM01 - 1037"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the HCl molecule, the separation between the nuclei of the two atoms is about 1.27 Å (1Å = 10 - 10 m). The approximate location of the centre of mass of the molecule from hydrogen atom, assuming the chlorine atom to be about 35.5 times massive as hydrogen is",
+    "options": {
+      "A": "1 Å",
+      "B": "2.5 Å",
+      "C": "1.24 Å",
+      "D": "1.5 Å CM01 - 1038 O 2 O 1 O 28 cm 21 cm m 1 m 2 v 2 v 1 Exercise - I Collisions and Centre of Mass NEET : Extra Edge [ Physics ]"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man m = 80 kg is standing on a trolley of mass 320 kg on a smooth surface. If man starts walking on trolley along rails at a speed of 1 m/s, then after 4 sec, his displacement relative to ground is : -",
+    "options": {
+      "A": "4 m",
+      "B": "4.8 m",
+      "C": "3.2 m",
+      "D": "6 m CM05 - 0422"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A neutron makes a head on elastic collision with a stationary deuteron. The fractional energy loss of the neutron in the collision is: -",
+    "options": {
+      "A": "16/82",
+      "B": "8/9",
+      "C": "8/27",
+      "D": "2/3 CM04 - 1002"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cricket bat is cut at the location of its centre of mass as shown. Then : -",
+    "options": {
+      "A": "The two pieces will have the same mass",
+      "B": "The bottom piece will have larger mass",
+      "C": "The handle piece will have larger mass",
+      "D": "Mass of handle piece is double the mass of bottom piece CM02 - 0398"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If linear density of a rod of length 3 m varies as \\lambda = 2 + x, then the position of the centre of gravity of the rod is :",
+    "options": {
+      "A": "7 m 3",
+      "B": "12 m 7",
+      "C": "10 m 7",
+      "D": "9 m 7"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 2.0 kg makes an elastic collision with another body at rest and continues to move in the original direction but with one - fourth of its original speed  . What is the mass of other body and the speed of the center of mass of two bodies?",
+    "options": {
+      "A": "1.0 kg and 2 3 ",
+      "B": "1.2 kg and 5 8 ",
+      "C": "1.4 kg and 10 17 ",
+      "D": "1.5 kg and 4 7  CM04 - 1003"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "Extra Edge - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform rod of length 1.0 metre is bent at its midpoint to make 90 ^\\circ angle. The distance of the centre of mass from the centre of the rod is : -",
+    "options": {
+      "A": "35.3 cm",
+      "B": "25.2 cm",
+      "C": "17.7 cm",
+      "D": "zero CM01 - 1039 Exercise - I"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When an explosive shell travelling in a parabolic path under the effect of gravity explodes in the mid - air, the centre of mass of the fragments will move: -",
+    "options": {
+      "A": "vertically downwards",
+      "B": "along the original parabolic path",
+      "C": "vertically upwards and then vertically downwards",
+      "D": "horizontally followed by parabolic path CM07 - 0408"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The x,y coordinates of the centre of mass of a uniform L - shaped lamina of mass 3 kg is : -",
+    "options": {
+      "A": "5 5 m, m 6 6 (  ( ) ) ",
+      "C": "6 6 m, m 5 5 (  ( ) ) ",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Choosing the x and y axes as shown in the figure. The coordinates of the vertices of the L - shaped lamina is as shown in the figure. Divide the L - shaped lamina into three squares each of side 1m and mass 1 kg ( ∴ the lamina is uniform) By symmetry, the centres of mass C 1 , C 2 and C 3 of the squares are their geometric centres and have coordinates 1 2 1 1 3 1 C , ,C , 2 2 2 2 (  (  ( ) ( ) )  )  and 3 1 3 C , 2 2 (  ( ) )  respectively. The coordinates of the centre of mass of the L - shaped lamina is 1 1 2 2 3 3 CM 1 2 3 m x m x m x X m m m + + = + + 1 3 1 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + + 1 1 2 2 3 3 CM 1 2 3 m y m y m y Y m m m + + = + + 1 1 3 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The center of mass of a system of two particles of masses m 1 and m 2 is at a distance d 1 from m 1 and at a distance d 2 from mass m 2 such that: -",
+    "options": {
+      "A": "1 2 2 1 d m d m =",
+      "B": "1 1 2 2 d m d m =",
+      "C": "1 1 2 1 2 d m d m m = +",
+      "D": "1 2 2 1 2 d m d m m = + CM01 - 1092"
+    },
+    "correct_option": "A",
+    "explanation": "Refer figure, The distance of centre of mass CM from masses m 1 and m 2 are 2 1 1 2 m d d m m = + and 1 2 1 2 m d d m m = + 1 2 2 1 d m d m  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of mass 1 kg and 3 kg have position vectors ˆ ˆ ˆ 2i 3j 4k + + and ˆ ˆ ˆ 2i 3j 4k - + - respectively. The center of mass has a position vector :",
+    "options": {
+      "A": "ˆ ˆ \\hat{i} 3j 2k + -",
+      "B": "ˆ ˆ \\hat{i} 3j 2k - - -",
+      "C": "ˆ ˆ \\hat{i} 3j 2k - + +",
+      "D": "ˆ ˆ \\hat{i} 3j 2k - + - CM01 - 1093"
+    },
+    "correct_option": "D",
+    "explanation": "Here, m 1 = 1 kg, m 2 = 3kg 1 2 ˆ ˆ ˆ ˆ ˆ ˆ r 2i 3j 4k, r 2i 3j 4k = + + = - + - \\rho\\rho The position vector of the centre of mass is 1 1 2 2 CM 1 2 m r m r r m m + = + \\rho\\rho \\rho ( ) ( ) ( ) CM ˆ ˆ ˆ ˆ ˆ ˆ 1 2i 3j 4k 3 2i 3j 4k r 1 3 + + + - + - = + \\rho ˆ ˆ ˆ ˆ ˆ ˆ 2i 3j 4k 6i 9j 12k 4 + + - + - = ˆ ˆ ˆ 4i 12j 8\\hat{k} ˆ \\hat{i} 3j 2k 4 - + - = = - + -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of centre of mass of the system remains constant, if the total external force acting on the system is :",
+    "options": {
+      "A": "minimum",
+      "B": "maximum",
+      "C": "unity",
+      "D": "zero CM04 - 0641"
+    },
+    "correct_option": "D",
+    "explanation": "When the total external force acting on the system is zero, the velocity of centre of mass remains constant."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of equal mass have velocities 1 ˆ v 2i = \\rho ms - 1 and 2 ˆ v 2j = \\rho ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Here, 1 1 ˆ v 2i ms - = \\rho , 1 2 ˆ v 2j ms - = \\rho ( ) -2 2 1 2 ˆ ˆ a 3i 3j ms , a 0 ms - = + = \\rho\\rho 1 1 2 2 CM 1 2 m v m v v m m +  = + \\rho\\rho \\rho ( ) 1 2 1 2 ˆ ˆ v v 2i 2j m m 2 2 + + = =  = \\rho\\rho ( ) 1 ˆ \\hat{i} j ms - = + Similarly ( ) 2 1 2 CM ˆ ˆ a a 3i 3j 0 3 ˆ ˆ a i j ms 2 2 2 - + + + = = = + \\rho\\rho \\rho Parabolic path of the shell y O x Explosion Path of the CM of fragments x y A(2,0) 2m E(1,2) F(0,2) (0,0) C 3 C 1 C 2 D(1,1) m B(2,1) d 1 d d 2 CM m 2 m 1 Collisions and Centre of Mass NEET : NCR [Physics]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "First particle has an acceleration ( ) 1 ˆ ˆ a 3i 3j = + \\rho ms - 2 while the acceleration of the other particles is zero then COM of both particles moves in a path of: -",
+    "options": {
+      "A": "straight line",
+      "B": "parabola",
+      "C": "circle",
+      "D": "ellipse CM04 - 1070"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A child is standing at on a long, trolley moving with speed v on a smooth horizontal floor. If the child starts running towards the other end of the trolley with a speed u, the centre of mass of the system (trolley + child) will move with a speed",
+    "options": {
+      "A": "zero",
+      "D": "v CM05 - 0308",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "The speed of the centre of mass of the system remains unchanged (equal to v) because no external force acts on the system. The forces involved in running on the trolley are internal to this system."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A spherical ball of mass m 1 collides head on with another ball of mass m 2 at rest. The collision is elastic. The fraction of kinetic energy lost by m 1 is: -",
+    "options": {
+      "B": "1 1 2 m m m +",
+      "C": "2 1 2 m m m +",
+      "A": "Option A",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "According to momentum conservation, we get m 1 = v li = m 1 v lf + m 2 v 2f ....(i) where v li is the initial velocity of spherical ball of mass m 1 before collision and v lf and v 2f are the final velocities of the balls of masses m 1 and m 2 after collision. According to kinetic energy conservation, we get 2 2 2 1 li 1 1f 2 2f 1 1 1 m v m v m v 2 2 2 = + 2 2 2 1 1i 1 1f 2 2f m v m v m v = + …(ii) From Eqs. (i) and (ii), it follows that m 1 v 1i (v 2f - v 1i ) = m 1 v 1f (v 2f - v 1f ) or ( ) 2 2 2f 1i 1f 1i 1f v v v v v - = - ( )( ) 1i 1f li 1f v v v v = - + 2f 1i 1f v v v  = + Substituting this in equation (i), we get ( ) 1 2 1f 1i 1 2 m m v v m m - = + …(iii) The initial kinetic energy of the mass m 1 is 2 1i 1 1i 1 K m v 2 = The final kinetic energy of the mass m 1 is 2 2 2 1 2 1f 1 1f 1 li 1 2 m m 1 1 K m v m v 2 2 m m (  - = = ( ) + )  (Using (iii)) The fraction of kinetic energy lost be m 1 is 2 2 2 1 2 1 1i 1 1i 1 2 1i 1f 2 1i 1 1i m m 1 1 m v m v 2 2 m m K K f 1 K m v 2 (  - - ( ) + - )  = = ( ) 2 1 2 1 2 2 1 2 1 2 m m 4m m 1 m m m m (  - = - = ( ) + + )  1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball of mass m moving with a speed 2v 0 collides head on with an identical ball at rest. If e is the coefficient of restitution, then what will be the ratio of velocity of first ball to second ball after collision?",
+    "options": {
+      "A": "1 e 1 e - +",
+      "B": "1 e 1 e + -",
+      "C": "e 1 e 1 - +",
+      "D": "e 1 e 1 + - CM22 - 0021 1m 1m x 2m 2m y Collisions and Centre of Mass NEET : NCR [Physics] 1"
+    },
+    "correct_option": "A",
+    "explanation": "According to the law of conservation of linear momentum, we get m(2v 0 ) + m × 0 = mv 1 + mv 2 where v 1 and v 2 are the velocities of the balls after collision. v 1 + v 2 = 2v 0 …(i) By definition of coefficient of restitution ( ) 2 1 2 1 1 0 2 1 2 0 v v v v e u 2v ,u 0 u u 2v - - = =  = = - v 2 - v 1 = 2ev 0 …(ii) Adding (i) and (ii), we get 2v 2 = 2v 0 + 2ev 0 ; v 2 = (1 + e)v 0 Subtract (ii) from (i), we get 2v 1 = 2v 0 - 2ev 0 ; v 1 = v 0 (1 - e) Their corresponding ratio is 1 2 v 1 e v 1 e - = + 1"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The bob A of a pendulum of mass m released from horizontal to the vertical hits another bob B of the same mass at rest on a table as shown in figure. If the length of the pendulum is 1m, what is the speed with which bob B starts moving. (Neglect the size of the bobs and assume the collision to be elastic) (Take g = 10 ms - 2 ) :",
+    "options": {
+      "A": "4.47 ms - 1",
+      "B": "5.47 ms - 1",
+      "C": "6.47 ms - 1",
+      "D": "3.47 ms - 1 CM10 - 0113 1"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A spherical ball A of mass 4 kg, moving along a straight line strike another spherical ball B of mass 1 kg at rest. After the collision, A and B move with velocities v 1 ms - 1 a v 2 ms - 1 respectively making angles of 30^\\circ and 60^\\circ with respect to the original direction of motion of A. The ratio 1 2 v v will be : -",
+    "options": {
+      "A": "3 4",
+      "B": "4 3",
+      "C": "1 3",
+      "D": "3 CM14 - 0014 1"
+    },
+    "correct_option": "D",
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The density of a non - uniform rod of length 1m is given by ρ(x) = a(1 + bx 2 ) where a and b are constant and 0 ≤ x ≤",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Choosing the x and y axes as shown in the figure. The coordinates of the vertices of the L - shaped lamina is as shown in the figure. Divide the L - shaped lamina into three squares each of side 1m and mass 1 kg ( ∴ the lamina is uniform) By symmetry, the centres of mass C 1 , C 2 and C 3 of the squares are their geometric centres and have coordinates 1 2 1 1 3 1 C , ,C , 2 2 2 2 (  (  ( ) ( ) )  )  and 3 1 3 C , 2 2 (  ( ) )  respectively. The coordinates of the centre of mass of the L - shaped lamina is 1 1 2 2 3 3 CM 1 2 3 m x m x m x X m m m + + = + + 1 3 1 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + + 1 1 2 2 3 3 CM 1 2 3 m y m y m y Y m m m + + = + + 1 1 3 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The centre of mass of the rod will be at :",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Masses 8, 2, 4, 2 kg are placed at the corners A, B, C, D respectively of a square ABCD of diagonal 80 cm. The distance of centre of mass from A will be",
+    "options": {
+      "A": "20 cm",
+      "B": "30 cm",
+      "C": "40 cm",
+      "D": "60 cm CM01 - 0162 1"
+    },
+    "correct_option": "A",
+    "explanation": "Refer figure, The distance of centre of mass CM from masses m 1 and m 2 are 2 1 1 2 m d d m m = + and 1 2 1 2 m d d m m = + 1 2 2 1 d m d m  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of centre of mass of the system as shown in the figure",
+    "options": {
+      "A": "2 2 3 1 ˆ \\hat{i} j 3 3 (  - - ( ) ( ) ) ",
+      "B": "2 2 3 2 ˆ \\hat{i} j 3 3 (  + - ( ) ( ) ) ",
+      "C": "ˆ 4i",
+      "D": "None of these CM04 - 0191 1"
+    },
+    "correct_option": "D",
+    "explanation": "Here, m 1 = 1 kg, m 2 = 3kg 1 2 ˆ ˆ ˆ ˆ ˆ ˆ r 2i 3j 4k, r 2i 3j 4k = + + = - + - \\rho\\rho The position vector of the centre of mass is 1 1 2 2 CM 1 2 m r m r r m m + = + \\rho\\rho \\rho ( ) ( ) ( ) CM ˆ ˆ ˆ ˆ ˆ ˆ 1 2i 3j 4k 3 2i 3j 4k r 1 3 + + + - + - = + \\rho ˆ ˆ ˆ ˆ ˆ ˆ 2i 3j 4k 6i 9j 12k 4 + + - + - = ˆ ˆ ˆ 4i 12j 8\\hat{k} ˆ \\hat{i} 3j 2k 4 - + - = = - + -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is thrown vertically downwards from a height of 20 m with an initial velocity v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "When the total external force acting on the system is zero, the velocity of centre of mass remains constant."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "It collides with the ground, loses 50% of its energy in collision and rebounds to the same height. The initial velocity v 0 is: (Take g = 10 m/s 2 )",
+    "options": {
+      "A": "10 m/s",
+      "B": "14 m/s",
+      "C": "20 m/s",
+      "D": "28 m/s CM22 - 0035 1"
+    },
+    "correct_option": "A",
+    "explanation": "According to the law of conservation of linear momentum, we get m(2v 0 ) + m × 0 = mv 1 + mv 2 where v 1 and v 2 are the velocities of the balls after collision. v 1 + v 2 = 2v 0 …(i) By definition of coefficient of restitution ( ) 2 1 2 1 1 0 2 1 2 0 v v v v e u 2v ,u 0 u u 2v - - = =  = = - v 2 - v 1 = 2ev 0 …(ii) Adding (i) and (ii), we get 2v 2 = 2v 0 + 2ev 0 ; v 2 = (1 + e)v 0 Subtract (ii) from (i), we get 2v 1 = 2v 0 - 2ev 0 ; v 1 = v 0 (1 - e) Their corresponding ratio is 1 2 v 1 e v 1 e - = + 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles whose masses are 10 kg and 30 kg and their position vectors are ˆ ˆ \\hat{i} j k + + and ˆ ˆ \\hat{i} j k - - - respectively would have the centre of mass at position: -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Here, 1 1 ˆ v 2i ms - = \\rho , 1 2 ˆ v 2j ms - = \\rho ( ) -2 2 1 2 ˆ ˆ a 3i 3j ms , a 0 ms - = + = \\rho\\rho 1 1 2 2 CM 1 2 m v m v v m m +  = + \\rho\\rho \\rho ( ) 1 2 1 2 ˆ ˆ v v 2i 2j m m 2 2 + + = =  = \\rho\\rho ( ) 1 ˆ \\hat{i} j ms - = + Similarly ( ) 2 1 2 CM ˆ ˆ a a 3i 3j 0 3 ˆ ˆ a i j ms 2 2 2 - + + + = = = + \\rho\\rho \\rho Parabolic path of the shell y O x Explosion Path of the CM of fragments x y A(2,0) 2m E(1,2) F(0,2) (0,0) C 3 C 1 C 2 D(1,1) m B(2,1) d 1 d d 2 CM m 2 m 1 Collisions and Centre of Mass NEET : NCR [Physics]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two bodies of mass 10 kg and 2 kg are moving with velocity ( ) ˆ ˆ ˆ 2i 7j 3k - + m/s and ( ) ˆ ˆ ˆ 10i 35j 3k - + - m/s respectively. Find the velocity of their centre of mass.",
+    "options": {
+      "A": "\\hat{k} m/s",
+      "C": "\\hat{j} m/s",
+      "D": "ˆ 2k m/s CM04 - 1071 A m m B 1m y x y  x  30^\\circ 2kg 2m/s 2m/s 1kg Collisions and Centre of Ma s s",
+      "B": "Option B"
+    },
+    "correct_option": "D",
+    "explanation": "The speed of the centre of mass of the system remains unchanged (equal to v) because no external force acts on the system. The forces involved in running on the trolley are internal to this system."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An explosion blows a rock into three parts. Two parts go off at right angles to each other. These two are, 1 kg first part moving with a velocity of 12 m/s and 2 kg second part moving with a velocity of 8 m/s. If the third part flies off with a velocity of 4 m/s, its mass would be : -",
+    "options": {
+      "A": "3 kg",
+      "B": "5 kg",
+      "C": "7 kg",
+      "D": "17 kg CM07 - 0409 2"
+    },
+    "correct_option": "B",
+    "explanation": "( ) ( ) 2 2 20 12 16 m 4 ; m 5kg 4 + =  = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball hits a surface with a speed of 20 m/s as shown. If surface continues to move with same velocity then find velocity with which ball will rebound if collision is elastic: -",
+    "options": {
+      "A": "20 m/s",
+      "B": "40 m/s",
+      "C": "30 m/s",
+      "D": "50 m/s CM11 - 0187 2"
+    },
+    "correct_option": "A",
+    "explanation": "According to the law of conservation of linear momentum, we get m(2v 0 ) + m × 0 = mv 1 + mv 2 where v 1 and v 2 are the velocities of the balls after collision. v 1 + v 2 = 2v 0 …(i) By definition of coefficient of restitution ( ) 2 1 2 1 1 0 2 1 2 0 v v v v e u 2v ,u 0 u u 2v - - = =  = = - v 2 - v 1 = 2ev 0 …(ii) Adding (i) and (ii), we get 2v 2 = 2v 0 + 2ev 0 ; v 2 = (1 + e)v 0 Subtract (ii) from (i), we get 2v 1 = 2v 0 - 2ev 0 ; v 1 = v 0 (1 - e) Their corresponding ratio is 1 2 v 1 e v 1 e - = + 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bomb is projected with 200m/s at an angle 60^\\circ with horizontal. At the highest point, it explodes into three particles of equal masses. One goes vertically upward with velocity 100m/s, second particle goes vertically downward with the same velocity as the first. Then what is the velocity of the third one -",
+    "options": {
+      "A": "120 m/s with 60^\\circ angle",
+      "B": "200 m/s with 30^\\circ angle",
+      "C": "50 m/s, in horizontal direction",
+      "D": "300 m/s, in horizontal direction CM07 - 0410 2"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block Q of mass M is placed on a horizontal frictionless surface AB and a body P of mass m is released on its frictionless slope. As P slides by a length L on this slope of inclination θ, the block Q would slide by a distance : -",
+    "options": {
+      "A": "m Lcos M \\theta",
+      "B": "m L M m +",
+      "C": "M m mLcos + \\theta",
+      "D": "mLcos m M \\theta + CM05 - 0221 2"
+    },
+    "correct_option": "D",
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A metal ball of mass 2kg moving with a velocity of 36 km/h has an head on collision with a stationary ball of mass 3kg. If after the collision, the two balls move together, the loss in kinetic energy due to collision is : -",
+    "options": {
+      "A": "40 J",
+      "B": "60 J",
+      "C": "100 J",
+      "D": "140 J CM12 - 0037 2"
+    },
+    "correct_option": "A",
+    "explanation": "Choosing the x and y axes as shown in the figure. The coordinates of the vertices of the L - shaped lamina is as shown in the figure. Divide the L - shaped lamina into three squares each of side 1m and mass 1 kg ( ∴ the lamina is uniform) By symmetry, the centres of mass C 1 , C 2 and C 3 of the squares are their geometric centres and have coordinates 1 2 1 1 3 1 C , ,C , 2 2 2 2 (  (  ( ) ( ) )  )  and 3 1 3 C , 2 2 (  ( ) )  respectively. The coordinates of the centre of mass of the L - shaped lamina is 1 1 2 2 3 3 CM 1 2 3 m x m x m x X m m m + + = + + 1 3 1 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + + 1 1 2 2 3 3 CM 1 2 3 m y m y m y Y m m m + + = + + 1 1 3 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A neutron collides, head - on with a deuterium at rest. What fraction of the neutron's energy would be transferred to the deuterium?",
+    "options": {
+      "A": "89%",
+      "B": "11%",
+      "C": "79%",
+      "D": "21% CM11 - 0188 2"
+    },
+    "correct_option": "A",
+    "explanation": "Refer figure, The distance of centre of mass CM from masses m 1 and m 2 are 2 1 1 2 m d d m m = + and 1 2 1 2 m d d m m = + 1 2 2 1 d m d m  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If particles of mass 1kg, 2kg and 3kg are placed at (1, 0, 1), (2, 2, 3) and (1, 3, 0). Position of the centre of mass of the system is : -",
+    "options": {
+      "A": "3 1 1 , , 2 5 6 (  ( ) ) ",
+      "B": "5 2 8 , , 6 3 4 (  ( ) ) ",
+      "C": "4 2 8 , , 6 6 6 (  ( ) ) ",
+      "D": "None CR14 - 0083 2"
+    },
+    "correct_option": "D",
+    "explanation": "Here, m 1 = 1 kg, m 2 = 3kg 1 2 ˆ ˆ ˆ ˆ ˆ ˆ r 2i 3j 4k, r 2i 3j 4k = + + = - + - \\rho\\rho The position vector of the centre of mass is 1 1 2 2 CM 1 2 m r m r r m m + = + \\rho\\rho \\rho ( ) ( ) ( ) CM ˆ ˆ ˆ ˆ ˆ ˆ 1 2i 3j 4k 3 2i 3j 4k r 1 3 + + + - + - = + \\rho ˆ ˆ ˆ ˆ ˆ ˆ 2i 3j 4k 6i 9j 12k 4 + + - + - = ˆ ˆ ˆ 4i 12j 8\\hat{k} ˆ \\hat{i} 3j 2k 4 - + - = = - + -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two spheres of masses 2 M and M are initially at rest at a distance R apart. Due to mutual force of attraction they approach each other when they are at separation R 2 , the acceleration of the centre of mass of sphere would be :",
+    "options": {
+      "A": "zero",
+      "B": "g m/s 2",
+      "C": "3g m/s 2",
+      "D": "12g m/s 2 CM04 - 0287 2"
+    },
+    "correct_option": "D",
+    "explanation": "When the total external force acting on the system is zero, the velocity of centre of mass remains constant."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball starts falling from a height h",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Here, 1 1 ˆ v 2i ms - = \\rho , 1 2 ˆ v 2j ms - = \\rho ( ) -2 2 1 2 ˆ ˆ a 3i 3j ms , a 0 ms - = + = \\rho\\rho 1 1 2 2 CM 1 2 m v m v v m m +  = + \\rho\\rho \\rho ( ) 1 2 1 2 ˆ ˆ v v 2i 2j m m 2 2 + + = =  = \\rho\\rho ( ) 1 ˆ \\hat{i} j ms - = + Similarly ( ) 2 1 2 CM ˆ ˆ a a 3i 3j 0 3 ˆ ˆ a i j ms 2 2 2 - + + + = = = + \\rho\\rho \\rho Parabolic path of the shell y O x Explosion Path of the CM of fragments x y A(2,0) 2m E(1,2) F(0,2) (0,0) C 3 C 1 C 2 D(1,1) m B(2,1) d 1 d d 2 CM m 2 m 1 Collisions and Centre of Mass NEET : NCR [Physics]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "There are n collisions with the earth. If after n collisions the ball rises to a height h n , then coefficient of restitution e is given by:",
+    "options": {
+      "A": "In n 0 h e h =",
+      "B": "In 0 n h e h =",
+      "C": "0 n h ne h =",
+      "D": "In 0 h ne h = CM22 - 0036 20 m/s 10 m/s C A M Q \\theta B NEET : NCR [Physics] 2"
+    },
+    "correct_option": "A",
+    "explanation": "According to the law of conservation of linear momentum, we get m(2v 0 ) + m × 0 = mv 1 + mv 2 where v 1 and v 2 are the velocities of the balls after collision. v 1 + v 2 = 2v 0 …(i) By definition of coefficient of restitution ( ) 2 1 2 1 1 0 2 1 2 0 v v v v e u 2v ,u 0 u u 2v - - = =  = = - v 2 - v 1 = 2ev 0 …(ii) Adding (i) and (ii), we get 2v 2 = 2v 0 + 2ev 0 ; v 2 = (1 + e)v 0 Subtract (ii) from (i), we get 2v 1 = 2v 0 - 2ev 0 ; v 1 = v 0 (1 - e) Their corresponding ratio is 1 2 v 1 e v 1 e - = + 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following points is likely the position of centre of mass?",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D CM03 - 0370"
+    },
+    "correct_option": "D",
+    "explanation": "The speed of the centre of mass of the system remains unchanged (equal to v) because no external force acts on the system. The forces involved in running on the trolley are internal to this system."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The motion of rigid body which is not pivoted or fixed in some way is either a pure translation or a combination of translation and rotation. Statement -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The motion of a rigid body which is pivoted or fixed in some way is rotation.",
+    "options": {
+      "A": "Statement - 1 is true; Statement - 2 is false",
+      "B": "Statement - 1 is false; Statement - 2 is true",
+      "C": "Both statements are true",
+      "D": "Both statements are false 3"
+    },
+    "correct_option": "D",
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Rigid body is a body with",
+    "options": {
+      "A": "Perfectly definite shape",
+      "B": "Unchanging shape",
+      "C": "Distance between all pair of particles of such body do not change",
+      "D": "All of the above 3"
+    },
+    "correct_option": "A",
+    "explanation": "According to the law of conservation of linear momentum, we get m(2v 0 ) + m × 0 = mv 1 + mv 2 where v 1 and v 2 are the velocities of the balls after collision. v 1 + v 2 = 2v 0 …(i) By definition of coefficient of restitution ( ) 2 1 2 1 1 0 2 1 2 0 v v v v e u 2v ,u 0 u u 2v - - = =  = = - v 2 - v 1 = 2ev 0 …(ii) Adding (i) and (ii), we get 2v 2 = 2v 0 + 2ev 0 ; v 2 = (1 + e)v 0 Subtract (ii) from (i), we get 2v 1 = 2v 0 - 2ev 0 ; v 1 = v 0 (1 - e) Their corresponding ratio is 1 2 v 1 e v 1 e - = + 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The position of centre of mass of a system of particles does not depend upon the",
+    "options": {
+      "A": "relative distance between the particles",
+      "B": "position of the particles",
+      "C": "symmetry of body",
+      "D": "mass of particles CM01 - 0877 3"
+    },
+    "correct_option": "B",
+    "explanation": "The force leading to the explosion are internal forces. They contribute nothing to the motion of the centre of mass. The total external force, namely the force of gravity acting on the shell is the same before and after the explosion. Therefore, the centre of mass of the fragments of the shell continues along the same parabolic - path as it would have followed, if there were no explosion as shown in figure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stick is thrown in the air and lands on the ground at some distance from the thrower. The centre of mass of the stick will move along a parabolic path",
+    "options": {
+      "A": "in all the given options",
+      "B": "if the stick is uniform",
+      "C": "if the stick has translatory m otion but no rotational motion",
+      "D": "if the stick has a shape such that if it’s centre of mass is located at some point on it and not outside it. CM10 - 0114 3"
+    },
+    "correct_option": "D",
+    "explanation": "Applying the law of conservation of linear momentum along a direction perpendicular to the direction of motion (i.e. along y - axis), we get 0 + 0 = 4v 1 sin30^\\circ - v 2 sin60^\\circ 4v 1 sin 30 = v 2 sin60^\\circ or 1 2 v sin60 3 v 4sin30 4 ^\\circ = = ^\\circ 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "NCR - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solid sphere is rotating about a diameter at an angular velocity \\omega . If it cools so that it’s radius reduces to 1 n of it’s original value, it’s angular velocity becomes.",
+    "options": {
+      "A": "In \\omega",
+      "B": "2 n \\omega",
+      "C": "In \\omega",
+      "D": "In 2 \\omega"
+    },
+    "correct_option": "A",
+    "explanation": "Choosing the x and y axes as shown in the figure. The coordinates of the vertices of the L - shaped lamina is as shown in the figure. Divide the L - shaped lamina into three squares each of side 1m and mass 1 kg ( ∴ the lamina is uniform) By symmetry, the centres of mass C 1 , C 2 and C 3 of the squares are their geometric centres and have coordinates 1 2 1 1 3 1 C , ,C , 2 2 2 2 (  (  ( ) ( ) )  )  and 3 1 3 C , 2 2 (  ( ) )  respectively. The coordinates of the centre of mass of the L - shaped lamina is 1 1 2 2 3 3 CM 1 2 3 m x m x m x X m m m + + = + + 1 3 1 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + + 1 1 2 2 3 3 CM 1 2 3 m y m y m y Y m m m + + = + + 1 1 3 1 1 1 5 2 2 2 m 1 1 1 6  +  +  = = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A disc of radius r is cut from a larger disc of radius 4r in such a way that the edge of the hole touches the edge of the disc. The centre of mass of the residual disc will be at a distance from centre of larger disc : -",
+    "options": {
+      "A": "r 5",
+      "B": "r 4",
+      "C": "r 2",
+      "D": "r 3 CM03 - 0030"
+    },
+    "correct_option": "A",
+    "explanation": "Let mass of larger disc = M then mass of smaller disc of radius r = M 16 x cm = ( ) ( ) ( ) ( ) M 0 M /16 3r M M /16 + - + - = - r 5 i.e. centre of mass of the residual disc will be at a distance r/5 from centre of larger disc."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of mass m 1 and m 2 are projected from the top of a tower. The particle m 1 is projected vertically downward with speed u and m 2 is projected horizontally with same speed. Find acceleration of CM of system of particles by neglecting the effect of air resistance.",
+    "options": {
+      "A": "g downward",
+      "B": "1 1 2 m g m m + downward",
+      "C": "2 1 2 m g m m + downward",
+      "D": "Can't be predicated CM04 - 0115"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) 1 2 cm 1 2 m g m g a g m m + = = + \\rho\\rho \\rho\\rho = g downward"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A cart of mass M is tied to one end of a massless rope of length 10m. The other end of the rope is in the hands of a man of mass M",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Let the person slips x distance then m 1 x 1 = m 2 x 2  ( ) M x 2 = M(10 - x)  3x = 20  x = 20 3 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two point masses m 1 and m 2 at rest in gravity free space are released from distance d. Find the velocity of the CM of the system at the time of collision of particles.",
+    "options": {
+      "A": "Zero",
+      "B": "2",
+      "C": "3",
+      "D": "None CM04 - 0116"
+    },
+    "correct_option": "A",
+    "explanation": "velocity of centre of mass will be zero as the net force on the system is zero. so centre of mass will remain in its original position."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two blocks of masses 5kg and 2kg are connected by a spring of negligible mass and placed on a frictionless horizontal surface. An impulse provides a velocity of 7m/s to the heavier block in the direction of the lighter block. The velocity of the centre of mass is : -",
+    "options": {
+      "A": "4 m/s",
+      "B": "5m/s",
+      "C": "2m/s",
+      "D": "3m/s CM09 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "velocity of centre of mass V cm 5 7 2 0 5m / s 5 2  +  = = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A shell at rest on a smooth horizontal surface explodes into two fragments of masses m 1 and m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Work done = change in kinetic energy = 2 2 1 2 1 1 m u m v 2 2 (  + ( ) )  - 0 [On applying conservation of linear momentum] [m 1 u - m 2 v = 0] = 2 2 1 1 2 2 m 1 1 m u m u 2 2 m (  + ( ) )  = 2 1 1 2 m 1 m u 1 2 m   +    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If just after explosion, m 1 move with speed u, then work done by internal forces during explosion is: -",
+    "options": {
+      "A": "2 2 1 2 1 m 1",
+      "B": "2 1 2 1",
+      "C": "2 1 1 2 m 1 m u 1 2 m (  + ( ) ) ",
+      "D": "2 2 1 1"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) 1 2 cm 1 2 m g m g a g m m + = = + \\rho\\rho \\rho\\rho = g downward"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass 2 kg moving with a velocity of 3 m/s collides head on with a body of mass 1 kg moving with a velocity of 4 m/s in opposite direction. After collision the two bodies stick together and move with a common velocity : -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "From conservation of linear momentum 2 × 3 - 1 × 4 = (2 + 1)v 2 v 3 = m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped on the ground from a height of 1m. the coefficient of restitution is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Height of rebound = e 2 h = (0.6) 2 (1) = 0.36m r 4r y x"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The height to which the ball will rebound is : -",
+    "options": {
+      "A": "0.6 m",
+      "B": "0.4 m",
+      "C": "0.36 m",
+      "D": "0.16 m CM15 - 0024"
+    },
+    "correct_option": "C",
+    "explanation": "Work done = change in kinetic energy = 2 2 1 2 1 1 m u m v 2 2 (  + ( ) )  - 0 [On applying conservation of linear momentum] [m 1 u - m 2 v = 0] = 2 2 1 1 2 2 m 1 1 m u m u 2 2 m (  + ( ) )  = 2 1 1 2 m 1 m u 1 2 m   +    "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two billiard balls of mass 0.05 kg each moving in opposite directions with 10 ms - 1 collide and rebound with the same speed. If the time duration of contact is t = 0.005 s, then what is the force exerted on the ball due to each other?",
+    "options": {
+      "A": "100 N",
+      "B": "200 N",
+      "C": "300 N",
+      "D": "400 N CM10 - 0013"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_collisions_and_centre_of_mass_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Collisions And Centre Of Mass",
+      "chapter_name": "Collisions And Centre Of Mass",
+      "language": "en",
+      "source": "RACE - Collisions And Centre Of Mass.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball is dropped from a height of 20 m. If the coefficient of restitution for the collision between ball and floor is 0.5, after hitting the floor, the ball rebounds to a height of______m. CM15 - 0025",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
+  }
+]

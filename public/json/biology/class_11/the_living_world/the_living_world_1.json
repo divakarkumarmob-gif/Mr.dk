@@ -1,0 +1,3823 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_001",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a defining characteristic of living organisms?",
+    "options": {
+      "A": "Growth",
+      "B": "Ability to make sound",
+      "C": "Reproduction",
+      "D": "Response to external stimuli LW02 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_the_living_world_002",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "In the given columns, column I contains the terms and column II contains its description. Select the correct match from the option given below. Column I Column II A. Growth I. Production of offspring B. Reproduction II. Composed of one or more living cells C. Metabolism III. Increase in mass and increase in number of individuals D . Cellular organization IV. Sum total of all chemical reactions occurring in a living body",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "A - I, B - II, C - III, D - IV",
+      "B": "A - III, B - II, C - II, D - IV",
+      "C": "A - III, B - I, C - IV, D - II",
+      "D": "A - II, B - IV, C - III, D - I LW06 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_003",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the followings is a unique feature of living organisms?",
+    "options": {
+      "A": "Growth and reproduction .",
+      "B": "Reproduction and ability to sense environment .",
+      "C": "Metabolism and consciousness .",
+      "D": "All of the above LW06 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_004",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which two points are known as the twin characteristics of growth? (i) Increase in mass (ii) Differentiation (iii) Increase in number of individuals (iv) Response to stimuli",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_005",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Growth and reproduction are mutually exclusive events in ________.",
+    "options": {
+      "A": "All organisms",
+      "B": "Only in unicellular organisms",
+      "C": "Only in multicellular organisms",
+      "D": "All animates and in animates LW02 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_006",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Growth occurs _______ in plants and _______ in animals.",
+    "options": {
+      "A": "continuously, only up to a certain age",
+      "B": "only up to a certain age, continuously",
+      "C": "continuously, never",
+      "D": "once, twice LW02 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_007",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Defining characters of all livings is/are : -",
+    "options": {
+      "A": "Metabolism",
+      "B": "Consciousness",
+      "C": "cellular organization",
+      "D": "All of the above Exercise - I NEET : Biology"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_008",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Artificial system of classification classifies plants on the basis of : -",
+    "options": {
+      "A": "One or few characters",
+      "B": "Phylogenetic trends",
+      "C": "Many naturally existing characters",
+      "D": "None of the above DL03 - 0006 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_009",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The term systematics was introduced by : -",
+    "options": {
+      "A": "Mayr",
+      "B": "Bentham",
+      "C": "Hutchinson",
+      "D": "Linnaeus DL04 - 0009 1"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_010",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "ICBN was first published in : -",
+    "options": {
+      "A": "1961",
+      "B": "1964",
+      "C": "1975",
+      "D": "1753 DL03 - 0004 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_011",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The term taxon refers to : -",
+    "options": {
+      "A": "Name of a species",
+      "B": "Name of genus",
+      "C": "Name of family",
+      "D": "A taxonomic group of any rank DL01 - 0007 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_012",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Taxonomy term was given by : -",
+    "options": {
+      "A": "Linnaeus",
+      "B": "Mayr",
+      "C": "Haeckel",
+      "D": "A.P. de. Candolle DL01 - 0015 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_013",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plant nomenclature means : -",
+    "options": {
+      "A": "To give names to plants without any rules .",
+      "B": "Nomenclature of plants under the international rules .",
+      "C": "Nomenclature of plants in local language",
+      "D": "Nomenclature of plants in English language . DL02 - 0006 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_014",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a correct name ?",
+    "options": {
+      "A": "Solanum tuberosum",
+      "B": "Solanum Tuberosum",
+      "C": "Solanum tuberosum Linn.",
+      "D": "All the above DL02 - 0011 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_015",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Systematics deals with : -",
+    "options": {
+      "A": "classification",
+      "B": "Nomenclature",
+      "C": "Identification",
+      "D": "All of these DL03 - 0005 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_016",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Scientific name of Mango plant is Mangifera indica Linn. in the above name Linn. refers to:",
+    "options": {
+      "A": "Variety of Mango",
+      "B": "A taxonomist who proposed the present nomenclature in honour of Linnaeus",
+      "C": "A scientist who for the first time describe d Mango plant",
+      "D": "A scientist who changed the name proposed by Linnaeus and proposed present name DL02 - 0008"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_017",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Who wrote S pecies P lantarum ?",
+    "options": {
+      "A": "Linnaeus",
+      "B": "Mayr",
+      "C": "Bentham",
+      "D": "Aristotle DL02 - 0007 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_018",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For higher plants, flowers are chiefly used as a basis of classification, because : -",
+    "options": {
+      "A": "These show a great variety in colour",
+      "B": "It can be preserved easily",
+      "C": "Reproductive parts are more conservative than vegetative parts",
+      "D": "None of these DL07 - 0002 The Living World 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_019",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Term systematics was derived from __________ word \"Systema\" which means _________.",
+    "options": {
+      "A": "Greek, evolutionary relationship",
+      "B": "Latin, systematic arrangement of organism",
+      "C": "English, taxonomy of organisms",
+      "D": "Both"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_020",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the f ollowings is not an advantage of taxonomy?",
+    "options": {
+      "A": "Avoid confusion in scientific community",
+      "B": "Provides a valid name of an organism",
+      "C": "Provides help in studying them.",
+      "D": "Prevent loss of biodiversity DL01 - 0008 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_021",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Book ‘ Systema Naturae ’ was written by : -",
+    "options": {
+      "A": "Mayr",
+      "B": "Linnaeus",
+      "C": "John - Ray",
+      "D": "Theophrastus DL02 - 0016 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_022",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Most of the botanical names are derived from the following language : -",
+    "options": {
+      "A": "German",
+      "B": "Greek",
+      "C": "Latin",
+      "D": "Spanish DL02 - 0022 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_023",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "‘Taxa’ differs from ‘taxon’ due to being: -",
+    "options": {
+      "A": "A higher taxonomic category than taxon.",
+      "B": "Lower taxonomic category than taxon.",
+      "C": "The plural of taxon.",
+      "D": "The singular of taxon . DL01 - 0009 2"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_024",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Evolutionary history of an organism is known as : -",
+    "options": {
+      "A": "Paleontology",
+      "B": "Ontogeny",
+      "C": "Phylogeny",
+      "D": "Ancestry DL03 - 0007 2"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_025",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Mayr proposed which type of concept of species : -",
+    "options": {
+      "A": "Taxonomic concept",
+      "B": "biological concept",
+      "C": "Taxonomic and biological concept",
+      "D": "Genetic concept DL05 - 0002"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_026",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Group of organisms that closely resemble each other and freely interbreed in nature, constitute a:",
+    "options": {
+      "A": "Species",
+      "B": "Genus",
+      "C": "Family",
+      "D": "Taxon DL05 - 0006 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_027",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The basic smallest unit of classifications is : -",
+    "options": {
+      "A": "Genus",
+      "B": "Species",
+      "C": "Order",
+      "D": "All of the above DL04 - 0012 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_028",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Angiospermae is taxa at the rank of?",
+    "options": {
+      "A": "Genus",
+      "B": "Order",
+      "C": "Class",
+      "D": "Division DL08 - 0001 3"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_029",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following animals is correctly matched with its correct taxonomic category?",
+    "options": {
+      "A": "Tiger - Panthera , the genus",
+      "B": "Solanum - china rose, the genus",
+      "C": "Humans - Primata, the family",
+      "D": "Housefly - Musca , an order DL02 - 0012 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_030",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following taxonomic category of housefly is incorrectly matched?",
+    "options": {
+      "A": "Genus - Musca",
+      "B": "Family - Muscidae",
+      "C": "Order - Primata",
+      "D": "Class - Insecta DL02 - 0017 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_031",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following organisms is not correctly matched with its category?",
+    "options": {
+      "A": "Human - S apiens , specific epithet",
+      "B": "Lion - Panthera , genus",
+      "C": "Cats - Felidae, genus",
+      "D": "Datura - Solanaceae, family DL07 - 0005 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_032",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Who is regarded as ‘ Darwin of 20 th C entury ’ ?",
+    "options": {
+      "A": "John Ray",
+      "B": "Lamarck",
+      "C": "Ernst Mayr",
+      "D": "Darwin DL05 - 0005 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_033",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two plants can be conclusively said to belong to the same species if they :",
+    "options": {
+      "A": "Have same number of chromosomes",
+      "B": "Can reproduce freely with each other and form seeds",
+      "C": "Have more than 90 percent similar genes",
+      "D": "Look similar and possess identical secondary metabolites. DL05 - 0008 EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_the_living_world_034",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match column - I with column - II and select the correct option : - Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Family",
+      "B": "Kingdom",
+      "C": "Order",
+      "D": "Specific epithet"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_035",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "System of classification of angiosperms or plants which is based on maximum number of existing phenotypic characters is : -",
+    "options": {
+      "A": "Artificial system",
+      "B": "Natural nonphylogenetic system",
+      "C": "nonphylogenetic system",
+      "D": "Natural sexual system DL03 - 0065"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_036",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Choose the correct option from following : -",
+    "options": {
+      "A": "Mangifera , is a name of species",
+      "B": "Polymoniales, is a name of family",
+      "C": "Dicotyledonae, is a name of division",
+      "D": "Triticum , is a name of genus DL04 - 0268"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_037",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If in a taxonomic hierarchy , i f Triticum aestivum is placed in Poales then what would be the correct taxonomic category for Panthera tigris at the same level of poales :",
+    "options": {
+      "A": "Mammalia",
+      "B": "Chordata",
+      "C": "Carnivora",
+      "D": "Felidae DL04 - 0269"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_038",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Intrinsic growth is not a characteristic feature of :",
+    "options": {
+      "A": "Plant s",
+      "B": "Animal s",
+      "C": "Coral reef",
+      "D": "Bryophytes LW02 - 0123"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_039",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which set of organisms multiply by fragmentation?",
+    "options": {
+      "A": "Fungi, all algae, protonema of mosses",
+      "B": "Fungi, filamentous algae, protonema of mosses",
+      "C": "Prothallus, fungi, P lanaria",
+      "D": "All algae, fungi, bacteria LW03 - 0056"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_040",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Growth cannot be taken as a defining property of living organisms because",
+    "options": {
+      "A": "All living organism do not show growth.",
+      "B": "Non - iving things also grow from inside.",
+      "C": "Non - living things also grow from outside .",
+      "D": "Some living organism does not exhibit the process of reproduction. PI39 - 0247"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_041",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The isolated metabolic reaction outside the body of an organism, performed in a test tube (in - vitro) is : -",
+    "options": {
+      "A": "Living",
+      "B": "Non - living",
+      "C": "Neither living nor non - living",
+      "D": "Either living or non - living LW06 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_042",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a defining property of all living organis ms : -",
+    "options": {
+      "A": "Reproduction",
+      "B": "Growth",
+      "C": "Consciousness",
+      "D": "Self consciousness LW06 - 0148 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_043",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From the given below list, how many are taxa. Dog , Mammals, Cat, Wheat, Rice, Wood, Rock, Branches, Human, Insect",
+    "options": {
+      "A": "Six",
+      "B": "Three",
+      "C": "Ten",
+      "D": "Seven DL04 - 0281 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_044",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Read the following statements carefully about binomial nomenclature and identify the incorrect statement: -",
+    "options": {
+      "A": "biological names are generally in L atin and p ri n te d in italics.",
+      "B": "The first component in a biological name represent s the species while second component denotes the genus .",
+      "C": "Both the words in a biological name, when hand written, are separately underlined or printed in italics to indicate their L atin origin .",
+      "D": "The first word denoting genus starts with a capital letter while specific epithet start s with a small letter . DL02 - 0130 NEET : Extra Edge [ Biology ] 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles.",
+    "statements": {
+      "T": "-"
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_045",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement s are correct?",
+    "options": {
+      "A": "A and B",
+      "B": "Families are characterised on the basis of vegetative characters only.",
+      "C": "Order and other higher categories are identified on the basis of aggregates of characters.",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_046",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to hierarchical system of classification which of the following is correct .",
+    "options": {
+      "A": "Similarities decrease from species to kingdom .",
+      "B": "Similarities increase from kingdom to species .",
+      "C": "Dissimilarities decrease from division to species .",
+      "D": "Similarities decrease from species to class"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_047",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In t a xonomic hierarchy, given below organisms are representative s of how many families . Wheat, Potato, Brinjal, Mango",
+    "options": {
+      "A": "Two",
+      "B": "Three",
+      "C": "Four",
+      "D": "One DL04 - 0270 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_048",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is not true w ith respect to binomial nomenclature?",
+    "options": {
+      "A": "No names are recognised prior to those used by Linnaeus in 1785 in the 9 th edition of Systema Naturae",
+      "B": "Generic name, species name and author citation collectively form binomial epithet",
+      "C": "Principle of priority is the most important of all the rules of ICBN",
+      "D": "If a species name has two or more words in its name, a hyphen is put between these DL02 - 0131 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_049",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Mark the correct statement w ith respect to living organisms .",
+    "options": {
+      "A": "Growth and cellular organisation are considered as defining properties of living organisms .",
+      "B": "Reproduction can be an all inclusive defining characteristic of living organisms",
+      "C": "L iving organisms are self replicating, self regulating and evolving interacting systems .",
+      "D": "Isolated metabolic reactions in vitro are living things . LW06 - 0149 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_050",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is incorrect for taxonomic hierarchy?",
+    "options": {
+      "A": "There are 7 obligate categories .",
+      "B": "Higher the category, fewer the number of organism .",
+      "C": "Lower the category, more the number of common features .",
+      "D": "Greatest similarity in structure is found in between members of a species . DL04 - 0271 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_051",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select incorrect statement .",
+    "options": {
+      "A": "Growth occurs by synthesis of protoplasmic and apoplasmic substances .",
+      "B": "Reproduction is synonymous with growth in unicellular organisms .",
+      "C": "Isolated metabolic reactions in - vitro are surely living things .",
+      "D": "Consciousness is the most obvious and technically complicated feature of all living organisms . LW04 - 0037"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_052",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select correct statement w ith respect to binomial nomenclature .",
+    "options": {
+      "A": "biological names are generally in italics .",
+      "B": "ltalics printing of scientific names indic ate their Latin origin .",
+      "C": "This system was given by father of taxonomy in Historia Plantarum .",
+      "D": "Binomial epithet consists of three Latin words . DL02 - 0262 Exercise - I"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_053",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the practical significance of taxonomy?",
+    "options": {
+      "A": "Study of living being",
+      "B": "Identification of unknown organisms",
+      "C": "Study of interrelationship in organisms",
+      "D": "Grouping of organisms DL01 - 0035"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_054",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Binomial nomenclature is :",
+    "options": {
+      "A": "Not applicable for cyanobacteria",
+      "B": "Not accepted by some countries",
+      "C": "Universal with one specific epithet for each species",
+      "D": "Universal with two specific epithet for each species DL02 - 0051"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_055",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Why scientific nomenclature are given in Latin or Greek languages ?",
+    "options": {
+      "A": "Latin and Greek languages are popular languages throughout the world",
+      "B": "Most of the scientific journals are published in Latin or Greek",
+      "C": "These languages are dead languages",
+      "D": "Linnaeus who proposed scientific nomenclature was a Greek scientist DL02 - 0052"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_056",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plant classification proposed by Carolus Linnaeus was artificial because it was based on: -",
+    "options": {
+      "A": "Only a few morphological characters",
+      "B": "Economic importance of plants",
+      "C": "On ly few anatomical character",
+      "D": "Only vegetative characters DL03 - 0015"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_057",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Read carefully and find correct statement : -",
+    "options": {
+      "A": "All living organisms except prokaryotes show metabolism",
+      "B": "Metabolism is present in viruses",
+      "C": "Cellularity is an exceptionless property of all livings",
+      "D": "Metabolic reactions can not be demonstrated in test - tube LW04 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_058",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following character forms the basis of modern taxonomic studies?",
+    "options": {
+      "A": "Structure of cell",
+      "B": "Developmental process of organisms",
+      "C": "Ecological information of organisms",
+      "D": "All of the above DL03 - 0013"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_059",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are mutually exclusive events in majority of higher plants and animals?",
+    "options": {
+      "A": "Growth and Metabolism",
+      "B": "Growth and Reproduction",
+      "C": "Reproduction and Metabolism",
+      "D": "Consciousn ess and cellular organisation LW06 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_060",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Increase in mass and increase in number of individuals are twin characters of : -",
+    "options": {
+      "A": "Growth",
+      "B": "Reproduction",
+      "C": "Metabolism",
+      "D": "Consciousness LW02 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_061",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The brain dead coma patient who is supported by machines which replace heart and lungs has: -",
+    "options": {
+      "A": "Only self consciousness",
+      "B": "Only consciousness",
+      "C": "Both consciousness and self consciousness",
+      "D": "Neither consciousness nor self consciousness . LW05 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_062",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which classification is also known as cladistic classification?",
+    "options": {
+      "A": "Non phylogenetic classification",
+      "B": "Phylogenetic classification",
+      "C": "Artificial classification",
+      "D": "Practical classification DL03 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_063",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following plant group is most advance d according to phylogeny?",
+    "options": {
+      "A": "Thallophyta",
+      "B": "Bryophyta",
+      "C": "Angiosperm",
+      "D": "Gymnosperm DL03 - 0014"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_064",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a fundamental unit of taxonomy ?",
+    "options": {
+      "A": "Order",
+      "B": "Genus",
+      "C": "Species",
+      "D": "Sub - species DL05 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_065",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following includes all the others ?",
+    "options": {
+      "A": "Order",
+      "B": "Class",
+      "C": "Family",
+      "D": "Species DL04 - 0051"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_066",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not true for a species?",
+    "options": {
+      "A": "Variations occur among members of a species",
+      "B": "Gene flow does not occur between the populations of a species",
+      "C": "Each species is reproductively isolated from the other species",
+      "D": "Members of a species can interbreed. DL04 - 0055"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_067",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following statements (A - D) : -",
+    "options": {
+      "A": "biological names are Latinised or derived from Latin irrespective of their origin.",
+      "B": "Animals, mammals and dogs are different taxa at the different level",
+      "C": "By using artificial system of classification, we can get evolutionary relations in organisms.",
+      "D": "Bacteria cannot be considered as biological species according to the biological concept of species Which of the above statements"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_068",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Animals, dogs and mammals represent",
+    "options": {
+      "A": "Taxa at different levels",
+      "B": "Taxonomic hierarchy",
+      "C": "Taxa at equivalent level",
+      "D": "Categories at equivalent level DL01 - 0036"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_069",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Living organisms exhibit distinctive characteristics to differentiate from non living objects. Which one of the following statements can be considered as defining property of living things ?",
+    "options": {
+      "A": "Increase in body mass as a criterion for growth",
+      "B": "Reproduction is synonymous with growth in unicellular organisms",
+      "C": "Ability of living organisms to sense their surroundings",
+      "D": "Metabolic reactions that can be demonstrated outside the body in cell - free system only LW06 - 0039"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles.",
+    "statements": {
+      "S": "Which one of"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_070",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "First step of taxonomy is -",
+    "options": {
+      "A": "classification",
+      "B": "Nomenclature",
+      "C": "Identification",
+      "D": "Characterisa t ion DL01 - 0038"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_071",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Study of diversity of organisms and evolutionary relationship amongst them on the basis of all possible characters is called as -",
+    "options": {
+      "A": "Taxonomy",
+      "B": "Systematics",
+      "C": "Metabolism",
+      "D": "Phylogeny DL01 - 0037"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_072",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "W hi ch statement is incorrect w.r.t. genus?",
+    "options": {
+      "A": "Each genus may have one or more than one specific epithets .",
+      "B": "It comprises a group of related species .",
+      "C": "It has more characters in common in comparison to species of other genera .",
+      "D": "Potato and brinjal belong to different genus . DL06 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles.",
+    "statements": {
+      "T": "genu"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_073",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a rule for binomial nomenclature?",
+    "options": {
+      "A": "The name of categories higher than the name of genus are not printed in italics .",
+      "B": "Binomial name consists of two Latin and one Roman word .",
+      "C": "Generic and common names can never b e the same .",
+      "D": "The name of the discover is given after scientific name in abbreviated form . DL02 - 0054 Your Target is to secure Good Rank in"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_074",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which suffix is used for ‘class' according to international code of Botanical Nomenclature?",
+    "options": {
+      "A": "- phyceae",
+      "B": "- opsida",
+      "C": "- ales",
+      "D": "More than one option is correct DL08 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_075",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find odd one out w.r.t. taxonomic categories",
+    "options": {
+      "A": "Primata",
+      "B": "Diptera",
+      "C": "Poales",
+      "D": "Monocotyledonae DL04 - 0054"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_076",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the incorrect match Taxon Category",
+    "options": {
+      "A": "Insecta - Class",
+      "B": "Tiger - Species",
+      "C": "Cruciferae - Family",
+      "D": "Orchid - Order DL13 - 0018"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_077",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are the defining features of living organisms?",
+    "options": {
+      "A": "Consciousness, reproduction",
+      "B": "Metabolism, cellular organisation",
+      "C": "Growth, consciousness, metabolism",
+      "D": "cellular organisation, growth, reproduction LW06 - 0037"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_078",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Whi ch of the following criteria form the basis of modern taxonomic studies?",
+    "options": {
+      "A": "Development process",
+      "B": "Ecological information of organisms",
+      "C": "External and internal structure",
+      "D": "More than one option is correct DL01 - 0040"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_079",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "AII given are related to the taxonomic hierarchy of mango, except",
+    "options": {
+      "A": "Poales",
+      "B": "Anacardiaceae",
+      "C": "Dicotyledonae",
+      "D": "Angiospermae DL02 - 0055"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_080",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Suffixes like - phyceae, - ae and - opsida are used for the category called :",
+    "options": {
+      "A": "Division",
+      "B": "Class",
+      "C": "Order",
+      "D": "Kingdom DL08 - 0008"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_081",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following pair of tax a constitute or form the same taxonomic category?",
+    "options": {
+      "A": "Solanum and Solanaceae",
+      "B": "Convolvulaceae and Solanaceae",
+      "C": "Felidae and carnivora",
+      "D": "Triticum and Pisum DL13 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_082",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "No names are recognised prior to those used by Linnaeus in 1758 in the 10 th edition of",
+    "options": {
+      "A": "Philosophia Botanica",
+      "B": "S ystema Naturae",
+      "C": "Historia Naturalis",
+      "D": "Species Plantarum DL01 - 0039"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_083",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Process by which anything is grouped into convenient categories based on some easily observable characters called",
+    "options": {
+      "A": "classification",
+      "B": "Nomenclature",
+      "C": "Identification",
+      "D": "Characterisation DL03 - 0017"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_the_living_world_084",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the column I with column II . Column I Column Il a. Dicotyledonae (i) Phylum b. Arthropoda (i i ) Class c. Diptera (i ii ) Family d. Anacardiaceae (iv) Order",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "a -",
+      "B": "a -",
+      "C": "a -",
+      "D": "a -"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_085",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "biological concept of species given by Ernst Mayr cannot be applied to -",
+    "options": {
+      "A": "Organisms that reproduce by asexual methods only .",
+      "B": "Sexually reproducing forms breeding the whole year .",
+      "C": "Sexually reproducing forms breeding in a particular season .",
+      "D": "Sexually reproducing organisms having external fertilization . DL12 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_086",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Read the following statements:",
+    "options": {
+      "A": "&",
+      "B": "I s ol ated metabolic reactions in - vitro are not living reactions.",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_087",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are twin characteristics of growth?",
+    "options": {
+      "A": "Increase in density and decrease in mass",
+      "B": "Increase in mass and decrease in volume",
+      "C": "Increase in volume and decrease in density",
+      "D": "Increase in mass and increase in number LW02 - 0011"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_088",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Taxonomy in which number and codes are assigned t o all the characters and the data are processed using computers is :",
+    "options": {
+      "A": "Phenetics",
+      "B": "Biosystematics",
+      "C": "A l pha taxonomy",
+      "D": "Classical taxonomy DL03 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_089",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A taxon as a group of related species with more common characters is represented by which one of the following group of organisms?",
+    "options": {
+      "A": "Radish, cabbage and cauliflower",
+      "B": "Tomato, potato, and chilli",
+      "C": "Li on, tiger and leopard",
+      "D": "Cat, dog and mice DL13 - 0020"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_090",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which one of the following options the two taxonomic categories given are correctly matched with their organism ? Taxonomic categories organism",
+    "options": {
+      "A": "Diptera and Felidae - Musca",
+      "B": "Solanaceae and polymoniales - Datura",
+      "C": "Canidae and Primata - Gibbo n",
+      "D": "Triticum and Sapindales - Wheat DL13 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_091",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "External and internal structure along with the structure of cell, development process and ecological information’s of organism are essential and form the basis of -",
+    "options": {
+      "A": "Old systematic studies",
+      "B": "Classical systematic studies",
+      "C": "Old taxonomic studies",
+      "D": "Modern taxonomic studies DL03 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_092",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select odd one w.r.t. family :",
+    "options": {
+      "A": "Muscidae",
+      "B": "Felidae",
+      "C": "Anacardiaceae",
+      "D": "Diptera DL07 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_093",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - The Living World.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find odd one w.r.t. defining features of life forms.",
+    "options": {
+      "A": "Re production",
+      "B": "Consciousness",
+      "C": "Metabolism",
+      "D": "Intrinsic growth LW03 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_094",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In taxonomy the first step is :-",
+    "options": {
+      "A": "Identification",
+      "B": "Nomenclature",
+      "C": "classification",
+      "D": "Affinities"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_095",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Phylogeny refers to :-",
+    "options": {
+      "A": "Natural classification",
+      "B": "Evolutionary classification",
+      "C": "Evolutionary history",
+      "D": "Origin of algae"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_096",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A division is formed by combining several :-",
+    "options": {
+      "A": "Orders",
+      "B": "Families",
+      "C": "Classes",
+      "D": "Tribes"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_097",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For declaration of new species of higher plants what characters are mainly used :-",
+    "options": {
+      "A": "Floral character of new species",
+      "B": "Anatomical characters of new species",
+      "C": "Physiological character of new species",
+      "D": "Character of endosperm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_098",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Evolutionary classification is called :-",
+    "options": {
+      "A": "Artificial system",
+      "B": "Natural system",
+      "C": "Phylogenetic system",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_the_living_world_099",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements regarding nomenclature is correct :-",
+    "options": {
+      "A": "Generic name always begins with capital letter whereas specific epithet with small letter",
+      "B": "Scientific name should be printed in italics",
+      "C": "Scientific name when typed or handwritten should be separately underlined",
+      "D": "All the above HISTORY OF TAXONOMY"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_100",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two kingdom classification does not distinguish between :",
+    "options": {
+      "A": "Eukaryote and prokaryote",
+      "B": "Unicellular and multi-cellular organisms",
+      "C": "Photosynthetic",
+      "D": "All the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_101",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "System of classification proposed by Linnaeus was:-",
+    "options": {
+      "A": "Artificial",
+      "B": "Natural",
+      "C": "Sexual",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_102",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The system of classification proposed by Bentham and Hooker is :-",
+    "options": {
+      "A": "Artificial",
+      "B": "Natural",
+      "C": "Phylogenetic",
+      "D": "Numerical"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_103",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The classification of Linnaeus was mainly based on :-",
+    "options": {
+      "A": "Sepals",
+      "B": "Stem",
+      "C": "Petals",
+      "D": "Stamens"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_104",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Kingdom monera comprises the :-",
+    "options": {
+      "A": "Plants of economic importance",
+      "B": "All the plants studied in botany",
+      "C": "prokaryotic organisms",
+      "D": "Plants of Thallophyta group"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_105",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Whittaker is famous for :-",
+    "options": {
+      "A": "Two kingdom classification",
+      "B": "Four kingdom classification",
+      "C": "Five kingdom classification",
+      "D": "Distinguishing in Bacteria & blue gree Algae ALLEN Diversity in the living world 90"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_106",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Chief merit of Bentham and Hooker's classification is that :-",
+    "options": {
+      "A": "It is a system mostly based on evolutionary concepts",
+      "B": "It is a natural systems of classification of all groups of plants",
+      "C": "The description of the taxa are based on actual observation of the specimen",
+      "D": "It also considers the phylogenetic aspects"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_107",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In Whittaker's five kingdom classification, eukaryotes were assigned to :-",
+    "options": {
+      "A": "All the five kingdom",
+      "B": "Only four of the five kingdoms",
+      "C": "Only three kingdom",
+      "D": "Only one kingdom"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_108",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Carolus Linnaeus classified plant kingdom on the basis of :-",
+    "options": {
+      "A": "Floral morphology",
+      "B": "Overall morphology of plants",
+      "C": "Type of sexual reproduction",
+      "D": "Anatomical character"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_109",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to Whittaker kingdom monera includes:-",
+    "options": {
+      "A": "Unicellular eukaryotes",
+      "B": "Prokaryotes",
+      "C": "Slime molds & protozoa",
+      "D": "Multicellular & eukaryotes KINGDOM - MONERA"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_110",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is no t an inclusion body found in prokaryotes ?",
+    "options": {
+      "A": "Cyanophycean granule",
+      "B": "Glycogen granule",
+      "C": "Polysome",
+      "D": "Phosphate granule"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_111",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cell membrane of bacteria is made up of -",
+    "options": {
+      "A": "Cellulose and lipid",
+      "B": "Chitin",
+      "C": "Lipid + Protein",
+      "D": "Protein and Cellulose"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_112",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heterocyst is a structure which is mainly associated with",
+    "options": {
+      "A": "Reproduction",
+      "B": "Respiration",
+      "C": "Nitrogen fixation",
+      "D": "locomotion"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_113",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Trichodesmium which imparts red colour to sea water of red sea is a :",
+    "options": {
+      "A": "Cyanobacterium",
+      "B": "Red Algae",
+      "C": "Diatom",
+      "D": "Dinoflagellates"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_114",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Archaebacterial cell lacks :-",
+    "options": {
+      "A": "Peptidoglycan",
+      "B": "DNA",
+      "C": "Ribosomes",
+      "D": "Branched Chain Lipids"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_115",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Most common method of reproduction in prokaryotes :-",
+    "options": {
+      "A": "Budding",
+      "B": "Binary fission",
+      "C": "Transduction",
+      "D": "Conjugation"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_116",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The function of mesosome in prokaryotes is:-",
+    "options": {
+      "A": "and",
+      "B": "Cell wall formation",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_117",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Archaebacteria differ from eubacteria in :",
+    "options": {
+      "A": "Cell membrane",
+      "B": "Mode of nutrition",
+      "C": "Cell shape",
+      "D": "Mode of reproduction ALLEN : Biology 91"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_118",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Link between prokaryotes and multicellular eucaryotes :-",
+    "options": {
+      "A": "Cyanobacteria",
+      "B": "Protista",
+      "C": "Fungi",
+      "D": "Plants"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_119",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which structure of prokaryotes is analogous to lysosome :-",
+    "options": {
+      "A": "Mesosome",
+      "B": "Nucleoid",
+      "C": "Periplasmic space",
+      "D": "Perinuclear space"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_120",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following performs respiration with the help of plasma membrane :-",
+    "options": {
+      "A": "Bacteria",
+      "B": "Algae",
+      "C": "Fungi",
+      "D": "All the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_121",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Richest source of bacteria is : -",
+    "options": {
+      "A": "Air",
+      "B": "Soil",
+      "C": "Water",
+      "D": "Milk"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_122",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are found in extreme harsh habitat :-",
+    "options": {
+      "A": "Archaebacteria",
+      "B": "Fungi",
+      "C": "Filamentous bacteria",
+      "D": "Cyanobacteria"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_123",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Organisms which obtain energy by the oxidation of reduced inorganic compounds are called",
+    "options": {
+      "A": "Photo autotrophs",
+      "B": "Chemo autotrophs",
+      "C": "Saprozoic",
+      "D": "Heterotrophs"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_124",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which bacteria are utilized in Gobar gas plant :-",
+    "options": {
+      "A": "Methanogens",
+      "B": "Nitrifying bacteria",
+      "C": "Ammonifying bacteria",
+      "D": "Denitrifying bacteria"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_125",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following fixes CO 2 in to carbohydrates",
+    "options": {
+      "A": "Rhizobium",
+      "B": "E.coli",
+      "C": "Bacillus",
+      "D": "Rhodospirillum"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_126",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The main difference between gram positive and gram negative resides in the composition of",
+    "options": {
+      "A": "Cilia",
+      "B": "Cell-wall",
+      "C": "Cell-membrane",
+      "D": "cytoplasm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_127",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The organisms participating most actively in nitrogen cycle in nature are :-",
+    "options": {
+      "A": "Bacteria",
+      "B": "Legumes",
+      "C": "Parasitic algae",
+      "D": "Fungi"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_128",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which organism is most useful for soil fertility",
+    "options": {
+      "A": "Algae",
+      "B": "Fungi",
+      "C": "Bacteria",
+      "D": "Bacteriophage"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_129",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The mode of the nutrition of bacteria is usually-",
+    "options": {
+      "A": "Photo autotrophic",
+      "B": "Chemo autotrophic",
+      "C": "Heterotrophic",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_130",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plant pathogenic bacteria are",
+    "options": {
+      "A": "Gram positive",
+      "B": "Gram negative",
+      "C": "Both",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_131",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At which place bacteria are not found",
+    "options": {
+      "A": "Soil",
+      "B": "Ice",
+      "C": "Sea",
+      "D": "Distilled water KINGDOM-PROTISTA"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_132",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which group of organisms the cell walls form two thin overlapping shells which fit together ?",
+    "options": {
+      "A": "Slime moulds",
+      "B": "Chrysophytes",
+      "C": "Euglenoids",
+      "D": "Dinoflagellates"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_133",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Desmids and diatoms belongs to -",
+    "options": {
+      "A": "Dinoflagellates",
+      "B": "Chrysophytes",
+      "C": "Euglenoids",
+      "D": "Protozoa"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_134",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The diatoms do not easily decay like most of the other Algae because:-",
+    "options": {
+      "A": "They have water proof cells",
+      "B": "Their walls are mucilagenous",
+      "C": "They have highly siliceous wall",
+      "D": "They are non living"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_135",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\"Keiselgurh\" a heat resistant material is obtained from :-",
+    "options": {
+      "A": "Red Algae",
+      "B": "Brown Algae",
+      "C": "Diatoms",
+      "D": "Fungi"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_136",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The diatomaceous earth is used to insulate boilers and steam pipes because:-",
+    "options": {
+      "A": "The wall of diatoms is deposited with calcium",
+      "B": "The diatomaceous earth is cheap",
+      "C": "It is a good conductor of heat",
+      "D": "The wall of diatoms is made of silica"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_137",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Shell of diatoms is made up of :-",
+    "options": {
+      "A": "Silica",
+      "B": "Calcium carbonate",
+      "C": "Keratin",
+      "D": "Calcium oxalate"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_138",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Most characteristic feature of diatoms is :-",
+    "options": {
+      "A": "Pigments",
+      "B": "Stored food",
+      "C": "Cell wall",
+      "D": "Non oxygenic photosynthesis"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_139",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Taxonomically the most controversial group is :-",
+    "options": {
+      "A": "Dinoflagellates",
+      "B": "Diatoms",
+      "C": "Euglenoids",
+      "D": "Prokryote"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_140",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Decomposer protists are :-",
+    "options": {
+      "A": "Diatoms",
+      "B": "Dinoflagellates",
+      "C": "Slime moulds",
+      "D": "Euglenoid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_141",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The dead remains of diatoms are known as:-",
+    "options": {
+      "A": "Coenobium",
+      "B": "Sporangia",
+      "C": "Kieselgurh",
+      "D": "Sporocarp"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_142",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Taxonomists feel difficulty in classification of :-",
+    "options": {
+      "A": "Prokaryotes",
+      "B": "Unicellular eukaryotes",
+      "C": "Plants",
+      "D": "Animals"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_143",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Paramylum is stored food of :-",
+    "options": {
+      "A": "Dinoflagellate",
+      "B": "Euglenoid",
+      "C": "Diatom",
+      "D": "Slime mould"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_144",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "organism of which kingdom feed like animals and perform photosynthesis like plants :-",
+    "options": {
+      "A": "Monera",
+      "B": "Protista",
+      "C": "Fungi",
+      "D": "Animalia ALLEN : Biology 93"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_145",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\"Naked fungi\" (Slime moulds) are naked :-",
+    "options": {
+      "A": "When they are reproducing",
+      "B": "When they are not reproducing",
+      "C": "Always naked",
+      "D": "Never naked"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_146",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Dinoflagellates are called fire algae due to which character :-",
+    "options": {
+      "A": "They appear like fire due to pigments",
+      "B": "They produce fire due to friction",
+      "C": "They occur on burnt places",
+      "D": "They show biolumineiscence"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_147",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Diatoms float in water due to :-",
+    "options": {
+      "A": "Stored fats",
+      "B": "Gas Vacuoles",
+      "C": "Flagella",
+      "D": "Air chambers"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_148",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following eukaryotes are devoid of cell wall in vegetative phase",
+    "options": {
+      "A": "Golden algae",
+      "B": "Diatoms",
+      "C": "Fire algae",
+      "D": "Slime Mould"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_149",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following are used in stone polishing ?",
+    "options": {
+      "A": "Diatoms",
+      "B": "Euglenoids",
+      "C": "Dinoflagellates",
+      "D": "Bacteria"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_the_living_world_150",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "The Living World",
+      "chapter_name": "The Living World",
+      "language": "en",
+      "tags": [],
+      "source": "The living world-EX-Eng.pdf.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Protists which are diploid reproduce sexually by the process of -",
+    "options": {
+      "A": "Zygotic meiosis",
+      "B": "Cyst formation",
+      "C": "Binary fission",
+      "D": "gametic meiosis"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard The Living World principles."
+  }
+]

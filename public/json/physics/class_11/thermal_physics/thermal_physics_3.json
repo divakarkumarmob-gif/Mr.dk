@@ -1,0 +1,3515 @@
+[
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_301",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pressure versus temperature graph of an ideal gas at constant volume is shown by a straight line - A in figure. If the mass of the gas is doubled and volume is halved, the corresponding pressure versus temperature graph is given by line :",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "None HT49 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "PV = nRT m n M (  = ( ) )  mRT PV M = mR P T MV (  = ( ) )  Slope  m V mass is doubled and volume is halved, slope becomes four times. Line will have slope more than line - A",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_302",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two solid objects A and B of equal mass are heated at a uniform rate. In the given figure graphs A and B respectively represent their temperature variation. What is the ratio of (i) latent heats of A and B (ii) Specific heats of A and B in solid state.",
+    "options": {
+      "A": "4 ,1 3",
+      "B": "4 ,4 3",
+      "C": "3 1 , 4 4",
+      "D": "3 ,1 4 HT72 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "Latent heat ∝ length of horizontal line A B L 8 4 L 6 3 = = Specific heat  1 Slope ( ) ( ) A B B B A A 40 Slope S tan 4 4 20 S Slope tan 8 (  ( ) \\theta )  = = = = \\theta (  ( ) ) ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_303",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the following two statements",
+    "options": {
+      "A": "Both A & B are correct",
+      "B": "A is correct but B is wrong",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(a) by FLOT Q = W + ΔU if Q = W then ΔU can be zero (b) W Pdv = \\int for W to be +ve dv = +ve so V ↑"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_304",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Vessel contain 2 non - reactive gases Neon and Oxygen. The ratio of their partial pressure is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "PV = μKT V, T Constant A N P N    \\mu \\mu =     P  N 1 1 2 2 N P 3 N P 2 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_305",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 find ratio of No. of molecules.",
+    "options": {
+      "A": "2:3",
+      "B": "3:2",
+      "C": "1:1",
+      "D": "3:5 HT30 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Latent heat ∝ length of horizontal line A B L 8 4 L 6 3 = = Specific heat  1 Slope ( ) ( ) A B B B A A 40 Slope S tan 4 4 20 S Slope tan 8 (  ( ) \\theta )  = = = = \\theta (  ( ) ) "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_306",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Newton's law of cooling is a special case of",
+    "options": {
+      "A": "Wien's displacement law",
+      "B": "Kirchoff's law",
+      "C": "Stefan's law",
+      "D": "Plank's law HT48 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Newton's law of cooling is special case of stefan's boltzman law."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_307",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two gases are separated by fixed diathermic wall with initial state (P A V A ) and (P B V B ). Choose correct statement -",
+    "options": {
+      "A": "and",
+      "B": "The state of two system will change until the equilibrium is attained",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "In isothermal process \\Delta T = constant, so \\Delta U = constant By FOLT, Q = W at constant temperature. * V  dV = ⊕ ve  W = PdV = ⊕ ve * Free expansion of ideal gas is adiabatic expansion process but no heat is exchanged between system and surrounding * Work is a path function, not a state function 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_308",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At a certain temperature (T 1 ) most probable wavelength in the radiation emitted by blackbody is 12000 Å. On increasing the temperature to T 2 , total radiation emitted is increased to 256 times. Most probable wavelength now becomes .",
+    "options": {
+      "A": "6000 Å",
+      "B": "9000 Å",
+      "C": "15000 Å",
+      "D": "3000 Å HT76 - 0007 A P B C T Temp."
+    },
+    "correct_option": "D",
+    "explanation": "Energy emitted in time t Q =  AeT 4 t By wein’s law max max b b T T \\lambda =  = \\lambda 4 max b Q Ae t (  =  ( ) \\lambda )  ( ) 4 max 1 Q  \\lambda 4 4 2 1 1 2 2 Q 12000 256 Q (  (  \\lambda =  = ( ) ( ) \\lambda \\lambda )  )  4 4 2 2 12000 12000 4 4 (  =  = ( ) \\lambda \\lambda )  \\lambda 2 = 3000Å"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_309",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If work is done on the system in an adiabatic process",
+    "options": {
+      "A": "T f < T i",
+      "B": "T f = T i",
+      "C": "T f > T i",
+      "D": "Information insufficient HT50 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Q = 0 Q = ΔU + w ΔU = - w w - , ΔU +, U↑, T↑, T f > T i"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_310",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "C P - C V = R is true for monoatomic ideal gas",
+      "B": "C P - C V = R is true for poly atomic ideal gas",
+      "C": "C P - C V = R is true for any type of ideal gas",
+      "D": "None of the above HT58 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Mayer's relation is true for all type of ideal gas."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_311",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A composite wall of area A is made of equal thickness of lead and iron having thermal conductivities K and 2K respectively. The temperatures on the two sides of the composite wall are 100^\\circC & 0^\\circC with lead layer on the hotter side. Calculate the steady sta te temperature on the lead - iron interface & also the equivalent thermal conductivity:",
+    "options": {
+      "A": "100 4K C, 3 3 (  ^\\circ ( ) ) ",
+      "B": "50^\\circC, 3K",
+      "C": "100 3K C, 3 2 (  ^\\circ ( ) ) ",
+      "D": "4K 50 C, 2 ^\\circ HT35 - 0022"
+    },
+    "correct_option": "A",
+    "explanation": "lead iron dH dH dt dt (  (  = ( ) ( ) )  )  ( ) ( ) KA 100 T 2KA T 0 L L - - = 100 - T = 2T  100 T C 3 (  = ^\\circ ( ) )  Also for series combination 1 2 1 2 eq 1 2 L L L L K K K + = + eq eq L L L L 4K K K K 2K 3 + = +  ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_312",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is true?",
+    "options": {
+      "A": "With increase in pressure boiling point of water increases",
+      "B": "Heat cannot be stored in a body",
+      "C": "With increase in pressure melting point of ice decreases",
+      "D": "Vapours can be directly converted into solid"
+    },
+    "correct_option": "B",
+    "explanation": "Phase indicator diagram of water shows ( a) P  BP  (b) P  MP  L Lead K,A Iron 2 K,A 100^\\circC 0^\\circC T L T Gas Solid Liquid P Thermal Physics NEET : NCR [Physics] Also heat is a form of energy that flows. Once it enters a body it is not called heat, infact it is called energy. So heat can never be stored. Sublimation is process of converting vapours into solid."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_thermal_physics_313",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the following column Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Gay Lussac's law",
+      "B": "Boyle's law",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_314",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the atmospheric temperature is below 0^\\circC and ice begins to form at t = 0, then the thickness of ice formed upto a time 't' will be directly proportional to",
+    "options": {
+      "A": "t 4",
+      "B": "t 2",
+      "C": "t",
+      "D": "t 1/2 HT31 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "Time in which thickness of ice increases from 0 to x is given by ( ) ( ) 0 2 0 2k L t x x t 2k L -\\theta \\rho =  = -\\theta \\rho 1/2 x t x t   "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_315",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "We took two separate gas with same molecular density. If ratio of diameter of their molecule is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "2 1 2 nd = \\pi \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_316",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 then ratio of their mean free path is (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "(a) by FLOT Q = W + ΔU if Q = W then ΔU can be zero (b) W Pdv = \\int for W to be +ve dv = +ve so V ↑"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_317",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cooking is difficult on hills because",
+    "options": {
+      "A": "atmospheric pressure is higher",
+      "B": "atmospheric pressure is lower",
+      "C": "boiling point of water is reduced",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "At high altitudes, atmospheric pressure is lower so that boiling point of water is reduced."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_318",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A pan filled with hot food cools from 50^\\circC to 49.9^\\circC in 5sec. How long will it take to cool from 40^\\circC to 39.9^\\circC, if room temperature is 30^\\circC :",
+    "options": {
+      "A": "2.5 sec",
+      "B": "10 sec",
+      "C": "20 sec",
+      "D": "5 sec HT48 - 0009"
+    },
+    "correct_option": "B",
+    "explanation": "( ) 0 dT k T T dt - = - At 0.1 50 49.9 k 30 5 2 +   = -     0.1 K 5 19.95 =  Now again at new t = 0, T = 40^\\circC and at t = t, T = 39.9^\\circC 0.1 40 39.9 K 30 t 2 +   = -     0.1 0.1 9.95 t 5 19.95 =   5 19.95 t 10.02 sec 10 sec 9.95  = = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_319",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A glass of water is stirred and then allowed to stand until the water stops moving. Then internal energy of water -",
+    "options": {
+      "A": "remains constant",
+      "B": "will increase",
+      "C": "will decrease",
+      "D": "nothing can be said HT44 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Some of energy m motion of water will be converted into internal energy"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_320",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat is flowing steadily from A to B. temperature T at point P, at distance x from A is such that : -",
+    "options": {
+      "A": "T decreases linearly with x",
+      "B": "T increases linearly with x",
+      "C": "T decreases exponentially with x",
+      "D": "T increases with x as T ∝ x 2 HT38 - 0022 A P B x NEET : NCR [Physics]"
+    },
+    "correct_option": "A",
+    "explanation": "In figure - area of cross section is constant so T decreases linearly with x from high temperature to low temperature."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_321",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the phase diagram of water given in figure, curves OA, AB and AC are respectively.",
+    "options": {
+      "A": "Sublimation curve, vaporisation curve and fusion curve",
+      "B": "Sublimation curve, fusion curve and vaporisation curve",
+      "C": "Fusion curve, vaporisation curve and sublimation curve",
+      "D": "Fusion curve, sublimation curve and vaporisation curve HT72 - 0005 2"
+    },
+    "correct_option": "B",
+    "explanation": "Sublimation curve OA represent  solid + vapour Fusion curve AB represent  solid + liquid Vaporisation curve AC represent  liquid + vapour 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_322",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statements is/are correct? (I) Convection is a mode of heat transfer by actual motion of matter. (II) Convection is possible only in gases. (III) Convection can be natural or forced.",
+    "options": {
+      "A": "Only I",
+      "B": "Only II",
+      "C": "Both I and III",
+      "D": "None of these HT22 - 0002 2"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = =",
+    "statements": {
+      "R": "(II) Convec",
+      "S": "(III) Convec"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_323",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find out the increase in moment of inertia I of a uniform rod (Coefficient of linear expansion α) about its perpendicular bisector when its temperature is slightly increased by ΔT.",
+    "options": {
+      "A": "2IαΔT",
+      "B": "4IαΔT",
+      "C": "6IαΔT",
+      "D": "3IαT HT52 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "PV = nRT m n M (  = ( ) )  mRT PV M = mR P T MV (  = ( ) )  Slope  m V mass is doubled and volume is halved, slope becomes four times. Line will have slope more than line - A"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_324",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following graph shows the variation of density of water with increase in temperature.",
+    "options": {
+      "D": "HT16 - 0003",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_325",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water is used as coolant in automobiles radiators because.",
+    "options": {
+      "A": "It has low density",
+      "B": "It has low specific heat",
+      "C": "It has high specific heat",
+      "D": "It has high density HT16 - 0004 2"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_326",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere, cube and a thin plate, all of same material and mass, are initially heated to same high temperature. Then",
+    "options": {
+      "A": "Plate will cool fastest and cube the slowest",
+      "B": "Sphere will cool fastest and cube the slowest",
+      "C": "Plate will cool fastest and sphere the slowest",
+      "D": "cube will cool fastest and plate the slowest HT48 - 0008 2"
+    },
+    "correct_option": "B",
+    "explanation": "PV = μKT V, T Constant A N P N    \\mu \\mu =     P  N 1 1 2 2 N P 3 N P 2 = ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_327",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct according to Claussius statement of second law of thermodynamics.",
+    "options": {
+      "A": "It is possible to transfer heat from a low temp. reservoir to a high temp. reservoir.",
+      "B": "No heat engine can have 100% efficiency.",
+      "C": "No process is possible whose sole result is the transfer of heat from a colder object to a hotter object",
+      "D": "None of these HT64 - 0002 T Gas Solid Liquid P 1 0 density"
+    },
+    "correct_option": "C",
+    "explanation": "Newton's law of cooling is special case of stefan's boltzman law."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_328",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following statement is correct.",
+    "options": {
+      "A": "If heat is added to a system, its temperature must increase.",
+      "B": "If positive work is done by a system in a thermodynamic process, its volume must increase.",
+      "C": "In free expansion, heat is necessarily absorbed by the system.",
+      "D": "In a process, the initial pressure and volume are equal to the final pressure and volume then the net work done by the system in the process must be zero. HT44 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "In isothermal process \\Delta T = constant, so \\Delta U = constant By FOLT, Q = W at constant temperature. * V  dV = ⊕ ve  W = PdV = ⊕ ve * Free expansion of ideal gas is adiabatic expansion process but no heat is exchanged between system and surrounding * Work is a path function, not a state function 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_329",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hydrogen and nitrogen are at same temperature. The molecules of which one of them have more kinetic energy: -",
+    "options": {
+      "A": "Hydrogen",
+      "B": "Nitrogen",
+      "C": "Both have equal amount of energy",
+      "D": "Depends upon actual value of temperature HT41 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_330",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Pressure of an ideal gas is increased by keeping temperature constant. What is its effect on kinetic energy of molecules.",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "No change",
+      "D": "Cannot be determined HT41 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "KE/molecule = f KT 2 KE does not depend on pressure. 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_331",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The root mean square speed of the ideal gas molecule is doubled if.",
+    "options": {
+      "A": "Pressure is doubled at constant volume",
+      "B": "Pressure is made four times at constant volume",
+      "C": "Volume is doubled at constant pressure",
+      "D": "Volume is increased by about 42% at constant pressure HT61 - 0015"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_332",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For an ideal gas, coefficient of volume expansion at constant pressure is equal to: -",
+    "options": {
+      "A": "T",
+      "B": "1 T",
+      "C": "T 2",
+      "D": "Not depends on temp. HT52 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_333",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A bimetallic strip is made of aluminium and steel ( \\alpha al > \\alpha steel ). On heating the strip will: -",
+    "options": {
+      "A": "remain straight",
+      "B": "get twisted",
+      "C": "will bend with aluminium on concave side",
+      "D": "will bend with steel on concave side HT17 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_334",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "As temperature is increased, the time period of pendulum.",
+    "options": {
+      "A": "increases as its length increases even though its centre of mass still remains at centre of the bob",
+      "B": "decreases as its length increases even though its centre of mass still remains at centre of the bob",
+      "C": "increases as its length increases due to shifting of centre of mass below centre of the bob",
+      "D": "decreases as its effective length remains same but centre of mass shift above centre of bob HT17 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_335",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two vessel of the same volume contain the same gas at same temperature. If pressure in the vessel are in ratio of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_336",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 then - (1) Ratio of v rms is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_337",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 (2) Ratio of kinetic energy is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_338",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 (3) Ratio of average velocity is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_339",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "2 (4) Ratio of number of molecules is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_340",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One calorie is defined to be the amount of heat required to raise the temperature of 1g of water from ..... at 1 atm.",
+    "options": {
+      "A": "0^\\circC to 1^\\circC",
+      "B": "10^\\circC to 11^\\circC",
+      "C": "4^\\circC to 5^\\circC",
+      "D": "14.5^\\circC to 15.5^\\circC HT65 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_341",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Under isobaric condition if the temperature of a room increases then -",
+    "options": {
+      "A": "Total KE of the molecules increases.",
+      "B": "Total KE of the molecules decreases.",
+      "C": "Total KE of the molecules remain same.",
+      "D": "The density of air increases. HT32 - 0008 NEET : NCR [Physics]"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_342",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In given figure dotted line indicates: -",
+    "options": {
+      "A": "Real gas",
+      "B": "Ideal gas",
+      "C": "Both",
+      "D": "None HT18 - 0015"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Thermal Physics principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_343",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In given figure what is relation between T 1 & T 2",
+    "options": {
+      "A": "T 1 < T 2",
+      "B": "T 1 > T 2",
+      "C": "T 1 = T 2",
+      "D": "None HT18 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Thermal Physics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_344",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one is an extensive variable: -",
+    "options": {
+      "A": "Pressure",
+      "B": "temperature",
+      "C": "Density",
+      "D": "Volume HT21 - 0003 4"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_345",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one is an intensive variable: -",
+    "options": {
+      "A": "Internal energy",
+      "B": "Volume",
+      "C": "Mass",
+      "D": "temperature HT21 - 0004 4"
+    },
+    "correct_option": "A",
+    "explanation": "rms 3KT v m = and at constant volume P  T t = 0 t = 50^\\circC t = 0 sec T = 49.9^\\circC Thermal Physics 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_346",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In given option. Choose intensive variable: -",
+    "options": {
+      "A": "\\Delta Q",
+      "B": "\\Delta U",
+      "C": "P \\Delta V",
+      "D": "None HT21 - 0005 4"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 K 273 100 180 100 ^\\circ - ^\\circ - - = ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_347",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In P - T diagram of CO",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "PV = nRT m n M (  = ( ) )  mRT PV M = mR P T MV (  = ( ) )  Slope  m V mass is doubled and volume is halved, slope becomes four times. Line will have slope more than line - A",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_348",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Triple point exist: -",
+    "options": {
+      "A": "27^\\circC",
+      "B": "0.01^\\circC",
+      "C": "- 56.6^\\circC",
+      "D": "- 78.5^\\circC HT72 - 0008 4"
+    },
+    "correct_option": "B",
+    "explanation": "PV = nRT m n M (  = ( ) )  mRT PV M = mR P T MV (  = ( ) )  Slope  m V mass is doubled and volume is halved, slope becomes four times. Line will have slope more than line - A"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_349",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In P - T diagram of CO 2 , Triple point exist at pressure (in atm): -",
+    "options": {
+      "A": "1 atm",
+      "B": "5.11 atm",
+      "C": "6.11 atm",
+      "D": "56 atm HT72 - 0004 4"
+    },
+    "correct_option": "B",
+    "explanation": "Latent heat ∝ length of horizontal line A B L 8 4 L 6 3 = = Specific heat  1 Slope ( ) ( ) A B B B A A 40 Slope S tan 4 4 20 S Slope tan 8 (  ( ) \\theta )  = = = = \\theta (  ( ) ) ",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_350",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following graphs correctly shows variation of coefficient of volume expansion of copper with temperature.",
+    "options": {
+      "D": "HT52 - 0009 4",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "(a) by FLOT Q = W + ΔU if Q = W then ΔU can be zero (b) W Pdv = \\int for W to be +ve dv = +ve so V ↑",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_351",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When thermometer is taken from the melting ice to a warm liquid the mercury level rises to th 2 5 (  ( ) )  of the distance between the lower and upper fixed points. The temperature of liquid in kelvin is: -",
+    "options": {
+      "A": "217.15",
+      "B": "313.15",
+      "C": "220",
+      "D": "330 HT70 - 0017 4"
+    },
+    "correct_option": "B",
+    "explanation": "PV = μKT V, T Constant A N P N    \\mu \\mu =     P  N 1 1 2 2 N P 3 N P 2 = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_352",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat capacity of substance is infinite. It means: -",
+    "options": {
+      "A": "heat is given out",
+      "B": "heat is taken in",
+      "C": "No change in temperature whether heat is taken in or given out",
+      "D": "All of these HT65 - 0007 4"
+    },
+    "correct_option": "C",
+    "explanation": "Newton's law of cooling is special case of stefan's boltzman law."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_thermal_physics_353",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Match the following: - Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Conversion of liquid into solid",
+      "B": "Conversion of liquid into vapour",
+      "C": "Conversion of solid into vapour directly",
+      "D": "Melting of ice caused by pressure"
+    },
+    "correct_option": "B",
+    "explanation": "In isothermal process \\Delta T = constant, so \\Delta U = constant By FOLT, Q = W at constant temperature. * V  dV = ⊕ ve  W = PdV = ⊕ ve * Free expansion of ideal gas is adiabatic expansion process but no heat is exchanged between system and surrounding * Work is a path function, not a state function 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_354",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equatorial and polar regions of the earth receives unequal solar heat. The convection current arising due to this is called: -",
+    "options": {
+      "A": "Land breeze",
+      "B": "Sea breeze",
+      "C": "Trade wind",
+      "D": "Tornado HT22 - 0001 T 1 T 2 PV RT P T"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_355",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform metallic rod rotates about its perpendicular bisector with constant Angular speed. If it is heated uniformly to raise its temperature slightly.",
+    "options": {
+      "A": "Its speed of rotation increases",
+      "B": "Its speed of rotation decrease.",
+      "C": "Its speed of rotation remain same",
+      "D": "Its speed increases because its moment of inertia increase. HT44 - 0004 5"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_356",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "NCR - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat is associated with: -",
+    "options": {
+      "A": "K.E. of random motion of molecules",
+      "B": "K.E. of orderly motion of molecules",
+      "C": "Total K.E. of random and orderly motion of molecules",
+      "D": "K.E. of random motion in some cases and K.E. orderly motion in other HT41 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "rms 3KT v m = and at constant volume P  T t = 0 t = 50^\\circC t = 0 sec T = 49.9^\\circC Thermal Physics 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_357",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two holes of unequal diameters d 1 and d 2 (d 1 > d 2 ) are cut in a metal sheet. If the sheet is heated",
+    "options": {
+      "A": "both d 1 and d 2 will decrease",
+      "B": "both d 1 and d 2 will increase",
+      "C": "d 1 will increase, d 2 will decrease",
+      "D": "d 1 will decrease, d 2 will increase TP05 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "If the sheet is heated then both d 1 and d 2 will increase since the thermal expansion of isotropic solid is similar to photographic enlargement."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_358",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Bars of two different metals are bolted together, as shown in figure. The distance x does not change with temperature if",
+    "options": {
+      "A": "\\alpha = \\alpha A A B B \\lambda \\lambda",
+      "B": "\\alpha = \\alpha A B B A \\lambda \\lambda",
+      "C": "\\alpha = \\alpha 2 A A 2 B B \\lambda \\lambda",
+      "D": "\\alpha = \\alpha 2 A B 2 A B \\lambda \\lambda TP04 - 0018"
+    },
+    "correct_option": "B",
+    "explanation": "  = - = A B x \\lambda\\lambda const at any temperature it means \\Delta \\lambda A = \\Delta \\lambda B  \\alpha \\Delta = \\alpha \\Delta A A B B T T \\lambda\\lambda  \\alpha = \\alpha A A B B \\lambda\\lambda",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_359",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two thermometers 'X' & 'Y' shows boiling point & freezing point of water as 220^\\circX & 20^\\circX and 120^\\circY & - 40^\\circY respectively. If 'X' shows 100^\\circX, then find the reading in 'Y' thermometer.",
+    "options": {
+      "A": "25^\\circY",
+      "B": "50^\\circY",
+      "C": "20^\\circY",
+      "D": "24^\\circY TP02 - 0011"
+    },
+    "correct_option": "D",
+    "explanation": "- ^\\circ - - ^\\circ = ^\\circ - ^\\circ ^\\circ - - ^\\circ X Y T (20 X) T ( 40 Y) 220 X 20 X 120 Y ( 40 Y) - ^\\circ + ^\\circ = ^\\circ ^\\circ X Y T 20 X T 40 Y 200 X 160 Y + ^\\circ ^\\circ - ^\\circ = ^\\circ ^\\circ Y T 40 Y 100 X 20 X 200 X 160 Y ^\\circ  = + ^\\circ ^\\circ Y 80 X 160Y T 40 Y 200 X T Y = 24^\\circY"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_360",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The graph between two temperature scales A & B is shown between upper fixed point and lower fixed point. There are 150 divisions on scale A and 100 divisions on scale B. Then, relationship for conversion between two scales is given by: -",
+    "options": {
+      "A": "- = A B t 180 t 100 150",
+      "B": "- = A B t 30 t 150 100",
+      "C": "- = A A t 180 t 150 100",
+      "D": "- = B A t 40 t 100 180 TP02 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "For A: upper pt. = 180 For B: upper pt. = 100 lower pt. = 30 lower pt. = 0 - - A t 30 180 30 - = - B t 0 100 0 - = A B t 30 t 150 100",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_361",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Length v/s temperature graph of A & B is given below. Find the relation between \\alpha A & \\alpha B .",
+    "options": {
+      "A": "\\alpha A > \\alpha B",
+      "B": "\\alpha A = \\alpha B",
+      "C": "\\alpha A < \\alpha B",
+      "D": "can't say TP04 - 0020"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta L = L \\alpha DT slope  \\Delta = \\alpha \\Delta L L T ( ) ( )  A B Slope Slope ; L A \\alpha A < L B \\alpha B ∵ L A = L B therefore \\alpha  \\alpha A B",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_362",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The apparent coefficient of expansion of a liquid when heated in a copper vessel is C and when heated in a silver vessel is S. If A is the coefficient of linear expansion of copper, the coefficient of linear expansion of silver is : -",
+    "options": {
+      "A": "+ - C S 3A 3",
+      "B": "+ - C 3A S 3",
+      "C": "+ - S 3A C 3",
+      "D": "+ + C S 3A 3 TP06 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "\\gamma apparent = \\gamma actual - \\gamma container For Copper Vessel : C = \\gamma - 3A For Silver Vessel : S = \\gamma - 3x + - = C 3A S x 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_363",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A unit scale is to be prepared whose length does not change with temperature and remains 20 cm, using a bimetallic strip made of brass and iron each of different length. The length of both components would change in such a way that difference between thei r lengths remains constant. If length of brass is 40 cm and length of iron will be ______cm. ( \\alpha iron = 1.2 × 10 - 5 K - 1 and \\alpha brass = 1.8 × 10 - 5 K - 1 ). TP04 - 0019",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) B B i i B i 1 T 1 T + \\alpha \\Delta - + \\alpha \\Delta = - \\lambda\\lambda\\lambda\\lambda B B i i \\alpha = \\alpha \\lambda\\lambda 5 5 i 1.8 10 40 1.2 10 - -   =   \\lambda 5 i 5 1.8 10 40 3 40 60 2 1.2 10 - -    = = =  \\lambda i 60cm = \\lambda"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_364",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If K 1 and K 2 are the thermal conductivities L 1 and L 2 are the lengths and A 1 and A 2 are the cross sectional areas of steel and copper rods respectively such that = = = 2 1 1 1 2 2 K A L 9, 2, 2 K A L . Then, for the arrangement as shown in the figure. The value of temperature T of the steel - copper junction in the steady state will be : d 2 d 1 A \\alpha A B \\alpha B \\lambda A \\lambda B x \\Delta t =100^\\circ B \\Delta t =150^\\circ A Temp. (^\\circA) O Temp (^\\circB) 180 ( 1 ) 18 ^\\circ C ( 2 ) 14 ^\\circ C ( 3 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "A 1 l 1 K 1 Steel Copper K 2 l 1 A 2 T =0ºC 2 1 1 2 2 1 2 1 2 K A K A d (T - T) (T - T ) dt l l \\theta = = 2 2 1 1 1 2 K A l 450 - T 1 9 2 T - 0 2 K A l  = =    450 - T = 9T  T = 45^\\circC",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_365",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "5 ^\\circ C ( 4 ) 150 ^\\circ C TP18 - 0012",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "For A: upper pt. = 180 For B: upper pt. = 100 lower pt. = 30 lower pt. = 0 - - A t 30 180 30 - = - B t 0 100 0 - = A B t 30 t 150 100"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_366",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A faulty thermometer reads 5^\\circC in melting ice and 95^\\circC in steam. The correct temperature on absolute scale will be………. K when the faulty thermometer reads 41^\\circC. TP02 - 0013",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "41 5 C 0 95 5 100 0 ^\\circ - ^\\circ - ^\\circ = ^\\circ - ^\\circ ^\\circ - ^\\circ 36 C 100 40 C 313 K 90  =  = ^\\circ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_367",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thin rod having a length of 1 m and area of cross - section -  6 2 3 10 m is suspended vertically from one end. The rod is cooled from 210^\\circC to 160^\\circC. After cooling, a mass M is attached at the lower end of the rod such that the length of rod again becomes 1 m. Young's modulus and coefficient of linear expansion of the rod are -  11 2 2 10 N m and - -  5 1 2 10 K , respectively. The value of M is______ kg. (Take g = 10 m s - 2 ) TP04 - 0022",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "If \\Delta \\lambda is decease in length of rod due to decease in temperature \\Delta = \\alpha \\Delta \\lambda\\lambda T - - \\alpha =  \\Delta = - 5 1 2 10 K , T (210 160) = 50 K - - \\Delta =    = \\lambda 5 3 1 2 10 50 10 m Young Modulus = F / A Y / = \\Delta \\lambda\\lambda - =  6 2 A 3 10 m - -   = 6 11 3 Mg / 3 10 2 10 10 / 1 Mg = - -    =  11 9 2 2 10 3 10 6 10 M = 60 kg Ans is"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_368",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A block of ice at - 12^\\circC is slowly heated and converted into steam at 100^\\circC. Which of the following curves best represents the event?",
+    "options": {
+      "D": "TP11 - 0021",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Conversion of ice into steam will be as follows :"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_369",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If 10 g of ice at 0^\\circC is mixed with 10 g of water at 40^\\circC. The final mass of water in mixture is (Latent heat of fusion of ice = 80 cal/g; specific heat of water = 1 cal/g ^\\circC)",
+    "options": {
+      "A": "10 g",
+      "B": "15 g",
+      "C": "18 g",
+      "D": "20 g TP04 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "Heat liberated by water to attain 0^\\circC = 10 × 1 × 40 = 400 cal Amount of ice melted = 400 80 = 5 g ∴ Total amount of water = 10 + 5 = 15 g Ice at - 12^\\circC T increase Ice at 0^\\circC T constant water at 0^\\circC T increase water at 100^\\circC T = constant steam at 100^\\circC NEET : PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_370",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A 10 g ice cube is dropped into 45 g of water kept in a glass. If the water was initially at a temperature of 28^\\circC and the temperature of ice - 15^\\circC, find the final temperature (in ^\\circC) of water. (Specific heat of ice = 0.5 cal/g - ^\\circC and L = 80 cal/g)",
+    "options": {
+      "A": "14",
+      "B": "7",
+      "C": "28",
+      "D": "None TP14 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": " +  + ice ice ice ice water f m S 15 m L m S T ( ) = - water water f m S 28 T so T f = 7^\\circC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_371",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In figure given two solid A and B of same mass are heated at constant rate by same source then find (i) ratio of latent heat for fusion (  ( ) )  A B L L",
+    "options": {
+      "A": "3 4",
+      "B": "4 3",
+      "C": "5 3",
+      "D": "3 5 TP10 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "(i) (  (  = ( ) ( ) )  )  A B dQ dQ dt dt - =  = = = - A B A A A B B B Q Q Q t 7 4 3 t t Q t 6 2 4 Also = = A A B B L Q 3 L Q 4 ( ∵ Q = mL) (ii) \\theta = dQ d mS dt dt  \\theta (  ( ) )  1 S d dt = = = 60 2 A 40 4 B S 30 3 S 10",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_372",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ice at - 20^\\circC mixed with 200g water at 25^\\circC. If temperature of mixture is 10^\\circC then mass of ice is -",
+    "options": {
+      "A": "30 gm",
+      "B": "20 gm",
+      "C": "15 gm",
+      "D": "40 gm TP14 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Heat absorbed = Heat loss mS ice [0 - ( - 20)] + mL f + mS w (10 - 0) = 200 × S w (25 - 10) m[0.5 × 20 + 80 + 10] = 200 × 1 × 15 m = 30 gm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_373",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four rods of same material and having the same cross section and length have been joined, as shown. The temperature of the junction of four rods will be :",
+    "options": {
+      "A": "20^\\circC",
+      "B": "30^\\circC",
+      "C": "45^\\circC",
+      "D": "60^\\circC TP18 - 0013 T Q T Q T Q T Q 2 4 6 7 40^\\circC 60^\\circC B A time Temp. Furnace 45^\\circC Steel Copper T Ice box 0^\\circC Insulating material NEET : PHYSICS"
+    },
+    "correct_option": "C",
+    "explanation": "Thermal resistance = = L KA same of each rod = R (let) Heat current = dH i dt , - = 1 2 T T dH dt R using kirchoff's law for heat current, i 1 + i 2 + i 3 + i 4 = 0 ( ) ( ) ( ) - \\theta - \\theta - \\theta - \\theta (  + + + = ( ) )  0 30 90 60 0 R R R R  180 - 4 \\theta = 0  \\theta = 45^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_374",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two electric lamps A and B radiate the same power. Their filaments have the same dimensions, and have emissivities e A and e B . Their surface temperatures are T A and T B . The ratio A B T T will be equal to",
+    "options": {
+      "A": "(  ( ) )  1/4 B A e e",
+      "B": "(  ( ) )  1/2 B A e e",
+      "C": "(  ( ) )  1/2 A B e e",
+      "D": "(  ( ) )  1/4 A B e e TP24 - 0025"
+    },
+    "correct_option": "A",
+    "explanation": "The power radiated by a filament is P = e  AT 4 where e = emissivity,  = Stefan's constant, T = surface temperature. or = 4 4 A A B B e T e T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_375",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A ball of surface temperature T is in thermal equilibrium with its environment. Which of the curve gives the radiating power E radiated by the sphere as a function of time ‘t’?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4 TP24 - 0026"
+    },
+    "correct_option": "A",
+    "explanation": "temperature of body does not change. Hence energy radiated per second remains same."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_376",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two stars emit maximum radiation at wavelength 3600 Å and 4800 Å respectively. The ratio of their temperatures is - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "\\lambda = = = = \\lambda 2 1 m 1 2 m T 4800 48 4 T 3600 36 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_377",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A heated body maintained at T K emits thermal radiation of total energy E with a maximum intensity at frequency  . The emissivity of the material is 0.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "The frequency at which maximum intensity of emission occurs is proportional to T, while the rate of the emitted radiation is proportional to T"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_378",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the temperature of the body be increased and maintained at temperature 3T K, then : - (i) The maximum intensity of the emitted radiation will occur at frequency  /3 (ii) The maximum intensity of the emitted radiation will occur at frequency 3  . (iii) The total energy of emitted radiation will become 81 E (iv) The total energy of emitted radiation will become 27 E",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta L = L \\alpha DT slope  \\Delta = \\alpha \\Delta L L T ( ) ( )  A B Slope Slope ; L A \\alpha A < L B \\alpha B ∵ L A = L B therefore \\alpha  \\alpha A B"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_379",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body cools in a surrounding which is at a constant temperature of \\theta",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "For \\theta - t plot, rate of cooling = \\theta d dt = slope of the curve. At P, \\theta d dt = |tan (180 - \\phi 2 )| = tan \\phi 2 = k( \\theta 2 - \\theta 0 ) where k = constant. At Q, \\theta d dt = |tan (180 - \\phi 1 )| = tan \\phi 1 = k ( \\theta 1 - \\theta 0 ). \\theta - \\theta \\phi  = \\phi \\theta - \\theta 2 0 2 1 1 0 tan tan"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_380",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assume that it obeys Newton's law of cooling. Its temperature \\theta is plotted against time t. Tangents are drawn to the curve at the points P( \\theta = \\theta 2 ) and Q( \\theta = \\theta 1 ). These tangents meet the time axis at angles of \\phi 2 and \\phi 1 , as shown",
+    "options": {
+      "A": "\\theta - \\theta \\phi = \\phi \\theta - \\theta 1 0 2 1 2 0 tan tan",
+      "B": "\\theta - \\theta \\phi = \\phi \\theta - \\theta 2 0 2 1 1 0 tan tan",
+      "C": "\\phi \\theta = \\phi \\theta 1 1 2 2 tan tan",
+      "D": "\\phi \\theta = \\phi \\theta 1 2 2 1 tan tan TP25 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Thermal Physics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_381",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two ends of a rod of non uniform area of cross - section are maintained at temperature T 1 and T 2 (T 1 > T 2 ) as shown in the figure. If I is heat current through the cross - section of conductor at distance x from its left face, then the variation of I with x is best represented by:",
+    "options": {
+      "D": "TP16 - 0027 3 2 1 4 t E \\theta 0 \\theta 1 \\theta 2 \\phi 2 \\phi 1 t \\theta P Q T 1 T 2 x NEET : PHYSICS",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "As heat current is same in all cross section so option (1) is correct",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_382",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The temperature of the two outer surfaces of a composite slab, consisting of two materials having coefficients of thermal conductivity K and 2K and thickness x and 4x, respectively are T 2 and T 1 (T 2 > T 1 ). The rate of heat transfer through the slab, in a steady state is ( )   -     2 1 A T T K f , x with f equal to: -",
+    "options": {
+      "A": "1",
+      "B": "1 2",
+      "C": "2 3",
+      "D": "1 3 TP17 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "( ) - - = = + 2 1 2 1 KA T T T T Q x 4x t 3x KA 2KA so f = 1 3"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_383",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an experiment t o verify Newton's law of cooling, a graph is plotted between, the temperature difference ( \\Delta T) of the water and surroundings and time as shown in figure. The initial temperature of water is taken as 80^\\circC. The value of t 2 as mentioned in the graph will be _______. TP25 - 0017",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "T - T 0 (T i - T 0 ) Bt ms e - 6 \\lambda = ln 1.5 (6) 40 60e -\\lambda =  6 \\lambda = ln 1.5 2 t 20 60e -\\lambda =  t 2 \\lambda = ln3 2 t ln 3 6 ln1.5 =  t 2 = 16.25 min So  16",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_384",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "As per the given figure, two plates A and B of thermal conductivity K and 2 K are joined together to form a compound plate. The thickness of plates are 4.0 cm and 2.5 cm respectively and the area of cross - section is 120 cm 2 for each plate. The equivalent thermal conductivity of the compound plate is 5 1 (  + ( ) \\alpha )  K, then the value of \\alpha will be __________. 4.0 cm 2.5 cm B B 0 C 0 100 C 0 A K 2K TP16 - 0026",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "4 2.5 K 2 K (1) (2) Q 1 T t R \\Delta (  = \\Delta ( ) \\Delta )  R : Thermal resistivity 1 1 1 1 L L R K A K(120)  = = 1 = 4 cm A = 120 cm 2 2 2.5 R (2K)(120) = Now, Req of this series combination Req = R 1 + R 2 where L eq = 4 + 2.5 = 6.5 eq eq L 4 5 2 K (A) K(120) 2K(120) = + eq 6.5 4 5 K (120) K(120) 4K(120) = + eq 6.5 21 K 4K = eq 26 5 K K 1 K 21 21 (  = = + ( ) )   a = 21",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_385",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure shows the isotherms of fixed mass of an ideal gas at three temperatures T A , T B and T C then.",
+    "options": {
+      "A": "T A > T B > T C",
+      "B": "T A < T B < T C",
+      "C": "T B < T A < T C",
+      "D": "T A = T B = T C TP34 - 0027"
+    },
+    "correct_option": "B",
+    "explanation": "P = (nRT)   = 1 1 P V V nRT using y = mx, we get, slope = m = 1 nRT slope  1 T and (slope) A > (slope) B > (slope) C  T A < T B < T C",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_386",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure (P) and absolute temperature (T) of an ideal gas are related to each other as P  2 1 T . If temperature of gas is 300 K and its volume changes from V to 8 V, then find the final temperature of gas.",
+    "options": {
+      "A": "600 K",
+      "B": "300 K",
+      "C": "373 K",
+      "D": "273 K TP34 - 0030"
+    },
+    "correct_option": "A",
+    "explanation": "P  2 1 T  P =  =   3 2 2 K nRT K V T V T T  ( ) =  = 3 3 2 2 2 3 3 1 1 V T T 8V V V T 300  ( )   =  =  3 3 3 3 2 2 T 8 300 T 2 300  T 2 = 600 K"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_387",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four molecules of a gas have speeds 1, 2, 3 and 4 km/s. The value of the r.m.s. speed of the gas molecule is : -",
+    "options": {
+      "A": "1 15 2 km/s",
+      "B": "1 10 2 km/s",
+      "C": "2.5 km/s",
+      "D": "15 2 km/s TP35 - 0036"
+    },
+    "correct_option": "D",
+    "explanation": "+ + + = = = 2 2 2 2 RMS 1 2 3 4 30 15 V km / s 4 4 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_388",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The rms speed of helium gas at 27^\\circC and 1 atm pressure is 900 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "At same temperature, RMS speed is independent of pressure."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_389",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Then the rms speed of helium molecules at temperature 27^\\circC and 2 atm pressure is",
+    "options": {
+      "A": "450 m/s",
+      "B": "900 m/s",
+      "C": "1800 m/s",
+      "D": "750 m/s TP35 - 0034"
+    },
+    "correct_option": "B",
+    "explanation": "If the sheet is heated then both d 1 and d 2 will increase since the thermal expansion of isotropic solid is similar to photographic enlargement."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_390",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Figure shows two flasks connected to each other. The volume of the flask 1 is twice that of flask",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "=  =  = 1 2 1 2 2 n RT n R2T n m n m 2V V 4 4",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_391",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The system is filled with an ideal gas at temperature 100 K and 200 K respectively in the flasks. If the mass of the gas in 1 be m, then what is the mass o f the gas in flask 2 in equilibrium?",
+    "options": {
+      "A": "m",
+      "B": "m 2",
+      "C": "m 4",
+      "D": "m 8 TP34 - 0031 K 2K T 2 T 1 x 4x T A T B T C P 1 V O 200K 100K 2 1 NEET : PHYSICS"
+    },
+    "correct_option": "B",
+    "explanation": "  = - = A B x \\lambda\\lambda const at any temperature it means \\Delta \\lambda A = \\Delta \\lambda B  \\alpha \\Delta = \\alpha \\Delta A A B B T T \\lambda\\lambda  \\alpha = \\alpha A A B B \\lambda\\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_392",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of a diatomic gas undergoes a process = (  + ( ) )  0 3 0 P P V 1 V , where P 0 , V 0 are constants. The translational kinetic energy of the gas when V = V 0 is given by",
+    "options": {
+      "A": "0 0 5P V 4",
+      "B": "0 0 3P V 4",
+      "C": "0 0 3P V 2",
+      "D": "0 0 5P V 2 TP38 - 0026"
+    },
+    "correct_option": "A",
+    "explanation": "=  = (  + ( ) )  0 0 0 0 3 0 0 P P P V P = T 2 2R V 1 V ∴ Translational kinetic energy = = = 0 0 0 0 P V 3P V 3 3R RT 2 2 2R 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_393",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal gas has an initial pressure of 3 pressure units and an initial volume of 4 volume units. The table gives the final pressure and volume of the gas (in those same units) in four processes. Which state lies on the same isotherm",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D TP34 - 0032"
+    },
+    "correct_option": "C",
+    "explanation": "For same isotherm : T → constant   1 P V  P 1 V 1 = P 2 V 2"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_394",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At low pressure and high temperature real gas approaches the ideal gas behaviour. and Statement -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "If the sheet is heated then both d 1 and d 2 will increase since the thermal expansion of isotropic solid is similar to photographic enlargement.",
+    "statements": {
+      "R": "and"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_395",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At low pressure and high temperature the molecules are far apart and molecular interactions are negligible.",
+    "options": {
+      "A": "Statement - 1 is true, Statement - 2 is true ; Statement - 2 is a correct explanation for Statement - 1",
+      "B": "Statement - 1 is true, Statement - 2 is true, Statement - 2 is NOT a correct explanation for Statement - 1",
+      "C": "Statement - 1 is True, Statement - 2 is False",
+      "D": "Statement - 1 is False, Statement - 2 is True TP29 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "  = - = A B x \\lambda\\lambda const at any temperature it means \\Delta \\lambda A = \\Delta \\lambda B  \\alpha \\Delta = \\alpha \\Delta A A B B T T \\lambda\\lambda  \\alpha = \\alpha A A B B \\lambda\\lambda"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_396",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "PV versus T graph of equal masses of H 2 , He and O 2 is shown in figure. Choose the correct alternative.",
+    "options": {
+      "A": "A corresponds to He, B to H 2 and C to O 2",
+      "B": "A corresponds to H 2 , B to He and C to O 2",
+      "C": "A corresponds to He, B to O 2 and C to H 2",
+      "D": "A corresponds to O 2 , B to H 2 and C to He TP34 - 0029"
+    },
+    "correct_option": "A",
+    "explanation": "PV  T = =  =  PV PV Constant nR nR slope T T No. of moles = Mass of gas Molecular weight   \\omega PV 1 n T M (   ( ) \\omega )  1 Slope M (slope) B > (slope) A > (slope) C  (Mw) B < (Mw) A < (Mw) C",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_397",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At 20^\\circC temperature, an argon gas at atmospheric pressure is confined in a vessel with a volume of 1m 3 , The effective hard - sphere diameter of argon atom is 3.10 × 10 - 10 m. It's mean free path is :",
+    "options": {
+      "A": "100 nm",
+      "B": "90 nm",
+      "C": "93.6 nm",
+      "D": "95 nm TP42 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "( ) \\lambda = = \\pi \\pi 2 2 1 KT P = nKT 2 d n 2 d P \\lambda n = Molecular density   \\lambda =  \\pi    -23 -10 2 5 (1.38 10 ) 293 2 (3.1 10 ) (1.01 10 ) ( \\lambda = 93.6 nm)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_398",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Same gas is filled in two vessels of the same volume at the same temperature. If the ratio of the number of molecules is 1:4, then A. The r.m.s. velocity of gas molecules in two vessels will be the same. B. The ratio of pressure in these vessels will be",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "KTG A. V Rms = w 3RT M  V Rms is same B. 1 1 2 2 P N P N =  B is correct Ans [A & B only are correct]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_399",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 C. The ratio of pressure will be",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "If the sheet is heated then both d 1 and d 2 will increase since the thermal expansion of isotropic solid is similar to photographic enlargement."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_400",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 D. The r.m.s. velocity of gas molecules in two vessels will be in the ratio of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "If the sheet is heated then both d 1 and d 2 will increase since the thermal expansion of isotropic solid is similar to photographic enlargement."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_401",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "following figure shows P - T graph for four processes A, B, C and D. Select the correct alternative",
+    "options": {
+      "A": "A - Isobaric process",
+      "B": "B - Adiabatic process",
+      "C": "C - Isochoric process",
+      "D": "D - Isothermal process TP34 - 0028"
+    },
+    "correct_option": "C",
+    "explanation": "Process A : T = constant  Isothermal process Process B : P = constant  isobaric process Process C : P  T  V = constant  isochoric Process D : No well defined equation",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_402",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A flask contains argon and oxygen in the ratio of 3:2 in mass and the mixture is kept at 27^\\circC. The ratio of their average kinetic energy per molecule respectively will be : ( 1 )",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Average K.E./molecule = 𝑓 2 𝑘𝑇 So, 𝐾 𝐴𝑟 𝐾 𝑂 2 = 3 2 𝑘𝑇 5 2 𝑘𝑇 = 3 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_403",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "5 TP38 - 0024 5 7 4 6 12 1 6 3 P V A B C D T → A C B 0  PV T P (0, 0) B A D C NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "- ^\\circ - - ^\\circ = ^\\circ - ^\\circ ^\\circ - - ^\\circ X Y T (20 X) T ( 40 Y) 220 X 20 X 120 Y ( 40 Y) - ^\\circ + ^\\circ = ^\\circ ^\\circ X Y T 20 X T 40 Y 200 X 160 Y + ^\\circ ^\\circ - ^\\circ = ^\\circ ^\\circ Y T 40 Y 100 X 20 X 200 X 160 Y ^\\circ  = + ^\\circ ^\\circ Y 80 X 160Y T 40 Y 200 X T Y = 24^\\circY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_404",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "According to kinetic theory of gases, A. The motion of the gas molecules freezes at 0 ^\\circ C B. The mean free path of gas molecules decreases if the density of molecules is increased. C. The mean free path of gas molecules increases if temperature is increased keeping pressure constant. D. Average kinetic energy per molecule per degree of freedom is B 3 k T 2 (for monoatomic gases) Choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "A and C only",
+      "B": "B and C only",
+      "C": "A and B only",
+      "D": "C and D only TP42 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda = \\pi 2 kT 2 d P"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_405",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What will be the effect on the root mean square velocity of oxygen molecules if the temperature is doubled and oxygen molecule dissociates into atomic oxygen?",
+    "options": {
+      "A": "The velocity of atomic oxygen remains same",
+      "B": "The velocity of atomic oxygen doubles",
+      "C": "The velocity of atomic oxygen becomes half",
+      "D": "The velocity of atomic oxygen becomes four times TP35 - 0035 4"
+    },
+    "correct_option": "B",
+    "explanation": "rms 3RT V M = T → 2T M M 2 → rms T V M  ( ) ( ) ( ) rms rms rms atomic molecular molecular 2 V V 2 V 1 / 2  =  = 4"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_406",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure and volume of gas are changed as shown in the P - V diagram in the figure ahead. The temperature of the gas :",
+    "options": {
+      "A": "Increases as it goes from A to B",
+      "B": "Increases as it goes from B to C",
+      "C": "Remains constant during these changes",
+      "D": "Decreases as it goes from D to A TP57 - 0020"
+    },
+    "correct_option": "B",
+    "explanation": "If the sheet is heated then both d 1 and d 2 will increase since the thermal expansion of isotropic solid is similar to photographic enlargement.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_407",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An ideal refrigerator runs between - 23^\\circC and 27^\\circC. Find the heat rejected to atmosphere for every joule of work input.",
+    "options": {
+      "A": "6 J",
+      "B": "5 J",
+      "C": "4 J",
+      "D": "3 J TP64 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "COP refrigerator \\beta = = = - 2 1 2 T 250 5 T T 50 Also, ( ) \\beta =  =  = 2 2 2 Q Q Q 5 5 W W 1 Q 2 = 5J Heat delivered to surroundings = Q 1 = Q 2 + W = 5 + 1 = 6 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_408",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the incorrect relation. (Where symbols have their usual meanings) : -",
+    "options": {
+      "A": "C P = \\gamma \\gamma - R 1",
+      "B": "C P - C V = R",
+      "C": "\\Delta U = - - \\gamma f f i i P V P V 1",
+      "D": "C V = \\gamma - R 1 TP40 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "\\Delta U = nC V \\Delta T = nC V (T 2 - T 1 ) = \\gamma - nR 1 (T 2 - T 1 ) = - \\gamma - 2 1 nRT nRT 1 = - \\gamma - f f i i P V PV 1"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_thermal_physics_409",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select the incorrect statement about the specific heat of a gaseous system :",
+    "options": {
+      "A": "Specific heat at no heat exchange condition, C A = 0",
+      "B": "Specific heat at constant temperature, C T = ",
+      "C": "Specific heat at constant pressure, C P = \\gamma \\gamma - R 1",
+      "D": "Specific heat at constant volume, C  = \\gamma R TP58 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "At no exchange condition, i.e. adiabatic process, Q = 0 = = = \\Delta \\Delta Q 0 C 0 n T n T for isothermal process, ( ) = =  Q C n 0 ( ∵ \\Delta T=0) At constant pressure, C = C P = \\gamma \\gamma - R 1 At constant volume, C = C V = \\gamma - R 1"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_410",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Work done in the cyclic process shown in figure is : -",
+    "options": {
+      "A": "4P 0 V 0",
+      "B": "- 4P 0 V 0",
+      "C": "- 0 0 22 P V 7",
+      "D": "- 13P 0 V 0 TP57 - 0019"
+    },
+    "correct_option": "C",
+    "explanation": "Work done = - (area of the closed loop) = - \\pi × - - (  (   ( ) ( ) )  )  0 0 0 0 3P P 3V V 2 2 = - 22 7 P 0 V 0",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_411",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The specific heat of a gas in a polytropic process (PV x = constant) is given by :",
+    "options": {
+      "A": "+ + V R C 1 x",
+      "B": "+ + P R C 1 x",
+      "C": "+ - V R C 1 x",
+      "D": "+ - P R C 1 x TP58 - 0004 Pressure Volume A B C D V P"
+    },
+    "correct_option": "C",
+    "explanation": "From first law of thermodynamics dQ = dU + dW  nCdT = nC V dT + PdV  C = C V + P dV n dT Now from PV = nRT & PV x = constant, We have T  V 1 - x  ( ) ( ) = -  = - dT dV dV V 1 x T V dT 1 x T therefore C = C V + ( ) = + - - V P V R C n 1 x T 1 x"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_412",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of hydrogen, assumed to be ideal, is adiabatically expanded from its initial state (P 1 , V 1 , T 1 ) to the final state (P 2 ,V 2 ,T 2 ). The decrease in the internal energy of the gas during this process will be given by",
+    "options": {
+      "A": "C v",
+      "B": "C p",
+      "C": "+ - P V 1 2 C C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "The change in the internal energy = nC v \\Delta T"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_413",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One mole of a monoatomic gas is carried along process ABCDEA as shown in the diagram. Find the net work done by gas : -",
+    "options": {
+      "A": "3 J 2",
+      "B": "1J",
+      "C": "1 J 2",
+      "D": "0J TP57 - 0017"
+    },
+    "correct_option": "C",
+    "explanation": "( ) =    + ABC 1 W (4-2) (2-1) 1J 2 (Clockwise) ( ) =   = ADE 1 1 W (2-1) (3-2) - J 2 2 (Anticlockwise) (  ( ) )  1 Net Work = + J 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_414",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Carnot engine whose heat sinks at 27^\\circC, has an efficiency of 25%. By how many degrees should the temperature of the source be changed to increase the efficiency by 100% of the original efficiency?",
+    "options": {
+      "A": "Increases by 18^\\circC",
+      "B": "Increase by 200^\\circC",
+      "C": "Increase by 120^\\circC",
+      "D": "Increase by 73^\\circ C TP62 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "Source T T=273+ 27 =300K n=25% 300 1 0.25 T - = 300 0.75 T = T = 400K If efficiency increased by 100% then new efficiency  n’ = 50% 300 1 0.5 T' - = T ' 600K = Increase in temp = 600 - 400"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_415",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The ratio of specific heats P V C C (  ( ) )  in terms of degree of freedom (f) is given by:",
+    "options": {
+      "A": "If 1 3 (  + ( ) ) ",
+      "B": "2 1 f (  + ( ) ) ",
+      "C": "If 1 2 (  + ( ) ) ",
+      "D": "1 1 f (  + ( ) )  TP40 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Molar heat capacity at constant volume V fR C 2 = where f is degree of freedom. Molar heat capacity at constant pressure can be written as P V fR f C R C R 1 R 2 2 (  = + = + = + ( ) )  So P v C 2 1 C f = + NEET : PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_416",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thermally insulated vessel contains an ideal gas of molecular mass M and ratio of specific heats 1.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "P v C 2 1 1.4 C F = + =  F = 5 By conservation of energy   2 F 1 nR T nm v 2 2 \\Delta = \\Delta T = 2 2 mv Mv FR 5R ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_417",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Vessel is moving with speed v and is suddenly brought to rest. Assuming no heat is lost to the surrounding and vessel temperature of the gas increases b y : (R = universal gas constant)",
+    "options": {
+      "A": "2 Mv 7R",
+      "B": "2 Mv 5R",
+      "C": "2 Mv 2 7R",
+      "D": "2 Mv 7 5R TP38 - 0025"
+    },
+    "correct_option": "B",
+    "explanation": "For A: upper pt. = 180 For B: upper pt. = 100 lower pt. = 30 lower pt. = 0 - - A t 30 180 30 - = - B t 0 100 0 - = A B t 30 t 150 100"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_418",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sample of an ideal gas is taken through the cyclic process ABCA as shown in figure. It absorbs, 40 J of heat during the part AB, no heat during BC and rejects 60J of heat during CA. A work 50J is done on the gas during the part BC. The internal energy of the gas at A is 1560J. The work done by the gas during the part CA is:",
+    "options": {
+      "A": "20 J",
+      "B": "30 J",
+      "C": "- 30J",
+      "D": "- 60 J TP57 - 0018"
+    },
+    "correct_option": "B",
+    "explanation": "cycle Q 40 60 W \\Delta = - = \\Delta BC CA W -20J W W  \\Delta = = + CA BC W -20J W  = - = - 20 - ( - 50) = 30 J",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_419",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Starting with the same initial conditions, an ideal gas expands from volume V 1 to V 2 in three different ways. The work done by the gas is W 1 if the process is purely isothermal. W",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "P (3) (1) (2) Isobaric Isothermal Adiabatic V f V i Area under curve is work W 2 < W 1 < W 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_420",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "if the process is purely adiabatic and W 3 if the process is purely isobaric. Then, choose the correct option",
+    "options": {
+      "A": "W 1 < W 2 < W 3",
+      "B": "W 2 < W 3 < W 1",
+      "C": "W 3 < W 1 < W 2",
+      "D": "W 2 < W 1 < W 3 TP49 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "  = - = A B x \\lambda\\lambda const at any temperature it means \\Delta \\lambda A = \\Delta \\lambda B  \\alpha \\Delta = \\alpha \\Delta A A B B T T \\lambda\\lambda  \\alpha = \\alpha A A B B \\lambda\\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_421",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "7 mole of certain monoatomic ideal gas undergoes a temperature increase of 40K at constant pressure. The increase in the internal energy of the gas in this process is (Given R = 8.3 1 1 JK mol - - )",
+    "options": {
+      "A": "5810 J",
+      "B": "3486 J",
+      "C": "11620J",
+      "D": "6972 J TP56 - 0008 1 2 4 B C A D E 1 2 3 V"
+    },
+    "correct_option": "B",
+    "explanation": "For a quasi - static process the change in internal energy of an ideal gas is V U nC T \\Delta = \\Delta 3R n T 2 =   \\Delta [molar heat capacity at constant volume for mono atomic gas = 3R 2 ] 3 U 7 8.3 40 3486J 2 \\Delta =    ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_422",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In 1 st case, Carnot engine operates between temperatures 300 K and 100 K. In 2 nd case, as shown in the figure, a combination of two engines is used. The efficiency of this combination (in 2 nd case) will be :",
+    "options": {
+      "A": "same as the 1 st case",
+      "B": "always greater than the 1 st case",
+      "C": "always less than the 1 st case",
+      "D": "may increase or decrease with respect to the 1 st case TP62 - 0021"
+    },
+    "correct_option": "A",
+    "explanation": "First case :  = - = 100 2 1 300 3 Second case :  net =  1 +  2 -  1  2  = - = 1 200 1 1 300 3  = - = 2 100 1 1 200 2 net 1 1 1 2 3 2 6 3  = + - =  (first case) =  (second case)",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_423",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure P 1 and density d 1 of diatomic gas 7 5 (  \\gamma = ( ) )  changes suddenly to P 2 (>P 1 ) and d 2 respectively during an adiabatic process. The temperature of the gas increases and becomes _________ times of its initial temperature. (given 2 1 d d = 32) TP46 - 0014",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "PV \\gamma = const m d v = m p d \\gamma (  ( ) )  = const p const d \\gamma = 2 1 d 32 d = 7 5 1 1 2 2 p d 1 1 p d 32 128 \\gamma (  (  = = = ( ) ( ) )  )  1 1 1 2 2 2 T P V 1 1 32 T P V 128 4 = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_424",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an Isothermal change, the change in pressure and volume of a gas can be represented for three different temperature; T 3 > T 2 > T 1 as :",
+    "options": {
+      "A": "T 1 T 2 T 3 P V",
+      "B": "T 1 T 2 T 3 P V",
+      "C": "T 3 T 2 T 1 P V",
+      "D": "T 3 T 2 T 1 P V TP30 - 0005"
+    },
+    "correct_option": "D",
+    "explanation": "For isothermal process P - V graph is rectangular hyperbola T 1 T 2 T 3 P V As dotted line is isobaric line which implies 3 2 1 T T T   as volume is increasing."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_425",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A Carnot engine with efficiency 50% takes heat from a source at 600 K. In order to increase the efficiency to 70%, keeping the temperature of sink same, the new temperature of the source will be :",
+    "options": {
+      "A": "360 K",
+      "B": "1000 K",
+      "C": "900 K",
+      "D": "300 K TP62 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "W sink T 2 Source T = 600 K 1 Initially 1 2  = 2 1 T 1 T  = -  2 T 1 1 2 600 = -  2 T 1 600 2 =  T 2 = 300 K Now efficiency is increased to 70% and T 2 = 300 K, Let temp of source T 1 = T  7 300 1 10 T = -  300 7 1 T 10 = -  300 3 T 10 =  T = 1000 K"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_426",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match List I with List II : List I List II A. Isothermal Process I. Work done by the gas decreases internal energy B. Adiabatic Process II. No change in internal energy C. Isochoric Process III. The heat absorbed goes partly to increase internal energy and partly to do work D. Isobaric Process IV. No work is done on or by the gas :",
+    "options": {
+      "A": "A - II, B - I, C - III, D - IV",
+      "B": "A - II, B - I, C - IV, D - III",
+      "C": "A - I, B - II, C - IV, D - III",
+      "D": "A - I, B - II, C - III, D - IV TP56 - 0009"
+    },
+    "correct_option": "B",
+    "explanation": "\\Delta U = nC v \\Delta T For isothermal process T is constant So \\Delta U = 0 A ⎯⎯ → II Adiabatic process \\Delta Q = 0 \\Delta Q = \\Delta U + \\Delta W \\Delta U = - \\Delta W Work done by gas is positive So \\Delta U is negative B ⎯⎯ → I For Isochoric process \\Delta W = 0 C ⎯⎯ → IV For Isobaric process \\Delta W = P \\Delta V  0 \\Delta U = nC V \\Delta T  0 Heat absorbed goes partly to increase internal energy and partly do work."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_427",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "RACE - Thermal Physics.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Heat is given to an ideal gas in an isothermal process. A. Internal energy of the gas will decrease. B. Internal energy of the gas will increase. C. Internal energy of the gas will not change. D. The gas will do positive work. E. The gas will do negative work. Choose the correct answer from the options given below :",
+    "options": {
+      "A": "A and E only",
+      "B": "B and D only",
+      "C": "C and E only",
+      "D": "C and D only TP54 - 0004"
+    },
+    "correct_option": "D",
+    "explanation": "V dQ dU dW dU nC dT = +  = dU = 0 (for isothermal)  U = constant Also dQ > 0 (supplied) Hence dW > 0"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_428",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) 1 2 N 3 N 2 = ; (b) 0.947 BEGINNER'S BOX-6",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Slope of line AB C 100 0 100 5 212 32 180 9 F \\Delta - = = = = \\Delta -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_429",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) 6.21 × 10 -21 J; (b)10.35 × 10 -21 J; (c) 6231J",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_430",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "v avg = 1 2 3 v v v 3 + + , Root mean square speed = 2 2 2 1 2 3 v v v 3 + +",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Slope of line AB C 100 0 100 5 212 32 180 9 F \\Delta - = = = = \\Delta -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_431",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) 1 2 E 1 E 1 = (  T = same for both); (b) v rms = 70.9 1.33 39.9 1 = BEGINNER'S BOX-7",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Pyrometer is used to measure a temperature of sun by using radiation"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_432",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) W ABCA = 1 2 × (2V 0 - V 0 ) × (3P 0 - P 0 ) = P 0 V 0 (b) 5 2 P 0 V 0 and 3P 0 V 0 , (c) 0 0 P V 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "C 0 F 32 100 180 - ^\\circ - ^\\circ = ^\\circ ^\\circ [As C = F] C C 32 100 180 - ^\\circ = ^\\circ ^\\circ C = F = - 40^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_433",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "W AB = 6000 J W BC = zero W CD = -1000 J W DA = zero",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "5 5 C F 32 9 9 = -  y = mx - C"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_434",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) 24× 10 2 J; (b) 36× 10 2 J; (c) 60× 10 2 J",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Slope of line AB C 100 0 100 5 212 32 180 9 F \\Delta - = = = = \\Delta -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_435",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4.16 J/cal BEGINNER'S BOX-8",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "C F 32 183 F 32 5 9 5 9 - - - =  = 5[F - 32] = - 1647 F = - 329.4 + 32 F ≈ - 297 ^\\circF"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_436",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) 162.5 cal; (b) 237.5 cal",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "5 C (F 32) 9 = - 5 C F 9 \\Delta = \\Delta 9 F 25 45 F 5 \\Delta =  = ^\\circ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_437",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(A) -p, s, (B) -p, q, r, s, (C) -s ,(D) -q, s, (E) -r, s",
+    "options": {
+      "A": "-p, s,",
+      "B": "-p, q, r, s,",
+      "C": "-s ,",
+      "D": "-q, s,"
+    },
+    "correct_option": "A",
+    "explanation": "C F 32 183 F 32 5 9 5 9 - - - =  = 5[F - 32] = - 1647 F = - 329.4 + 32 F ≈ - 297 ^\\circF"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_438",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(a) T B = 150 K ; T C = 37.5 K; (b) 72 KJ",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "y x T 25 T 15 75 15 125 25 - - = - - Given T x = 60; T y = ? y T 25 60 15 75 15 100 - - = - 75 = T y - 25 T y = 100 ^\\circY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_439",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1152.6 joule. BEGINNER'S BOX-9",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Standard Physics formula calculation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_440",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "126 watt. $//(1 Physics : Thermal physics 75 EXERCISE-I (Conceptual Questions) Build Up Your Understanding temperature & temperature SCALE",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "C F 32 183 F 32 5 9 5 9 - - - =  = 5[F - 32] = - 1647 F = - 329.4 + 32 F ≈ - 297 ^\\circF"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_441",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A difference of temperature of 40^\\circ C is equivalent to a difference of :",
+    "options": {
+      "A": "45^\\circ F",
+      "B": "72^\\circ F",
+      "C": "32^\\circ F",
+      "D": "25^\\circ F"
+    },
+    "correct_option": "C",
+    "explanation": "5 C (F 32) 9 = - 5 C F 9 \\Delta = \\Delta 9 F 25 45 F 5 \\Delta =  = ^\\circ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_442",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the curves in figure represents the relation between Celsius and Fahrenheit temperature? C c F a b d",
+    "options": {
+      "A": "Curve a",
+      "B": "Curve b",
+      "C": "Curve c",
+      "D": "Curve d"
+    },
+    "correct_option": "D",
+    "explanation": "5 5 C F 32 9 9 = -  y = mx - C",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_443",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The graph AB shown in figure is a plot of temperature of a body in degree Celsius and degree Fahrenheit. Then 32^\\circF 212^\\circF Fahrenheit A 100^\\circC B Centigrade",
+    "options": {
+      "A": "slope of line AB is 9/5",
+      "B": "slope of line AB is 5/9",
+      "C": "slope of line AB is 1/9",
+      "D": "slope of line AB is 3/9"
+    },
+    "correct_option": "A",
+    "explanation": "Slope of line AB C 100 0 100 5 212 32 180 9 F \\Delta - = = = = \\Delta -",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_444",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A gas boils ^\\circC. This temperature is approximately in Fahrenheit is :-",
+    "options": {
+      "A": "-329^\\circF",
+      "B": "-261^\\circF",
+      "C": "-215^\\circF",
+      "D": "-297^\\circF"
+    },
+    "correct_option": "A",
+    "explanation": "C F 32 183 F 32 5 9 5 9 - - - =  = 5[F - 32] = - 1647 F = - 329.4 + 32 F ≈ - 297 ^\\circF"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_445",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two thermometers X and Y have ice points marked at 15^\\circ and 25^\\circ and steam points marked as 75^\\circ and 125^\\circ respectively. When thermometer Y measures the temperature of a bath as 100^\\circ on it, what would thermometer X read when it is used to measure the temperature of the same bath ?",
+    "options": {
+      "A": "60^\\circ",
+      "B": "75^\\circ",
+      "C": "100^\\circ",
+      "D": "90^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "y x T 25 T 15 75 15 125 25 - - = - - Given T x = 60; T y = ? y T 25 60 15 75 15 100 - - = - 75 = T y - 25 T y = 100 ^\\circY"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_446",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two temperature scales A and B are released by A 42 B 72 110 220 - - = . At which temperature two scales have the same reading ?",
+    "options": {
+      "A": "-42^\\circ",
+      "B": "-72^\\circ",
+      "C": "12^\\circ",
+      "D": "-40^\\circ"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Standard Physics formula calculation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_447",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thermometer has its fixed points marked as 5 and",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\alpha Rod > \\alpha Frame , then rod may touch floor."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_448",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the temperature in ^\\circC when it reads 59 ?",
+    "options": {
+      "A": "58^\\circC",
+      "B": "59^\\circC",
+      "C": "60^\\circC",
+      "D": "62^\\circC"
+    },
+    "correct_option": "A",
+    "explanation": "C1 F1 2 C2 F2 1 R R r 2r 2:1 R R r r = = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_449",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a thermometric property :-",
+    "options": {
+      "A": "resistance",
+      "B": "charge",
+      "C": "radiation",
+      "D": "expansion of material"
+    },
+    "correct_option": "A",
+    "explanation": "V 1 V T \\Delta \\gamma =  \\Delta 0.15 1 100 24 \\gamma =  \\rho 3 \\gamma \\alpha = 0.15 1 1 100 24 3 \\alpha =   = 2.0 × 10 - 5 /^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_thermal_physics_450",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Thermal Physics",
+      "chapter_name": "Thermal Physics",
+      "language": "en",
+      "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On the Celsius scale the absolute zero of temperature is at :-",
+    "options": {
+      "A": "0^\\circC",
+      "B": "-32^\\circC",
+      "C": "100^\\circC",
+      "D": "-273.15^\\circC $//"
+    },
+    "correct_option": "A",
+    "explanation": "Always increases (Imagine as a photographic enlargement)"
+  }
+]

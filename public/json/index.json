@@ -1,0 +1,1766 @@
+{
+  "generated_at": "2026-08-12T10:04:28.808Z",
+  "total_chapters": 77,
+  "total_questions": 19937,
+  "chapters": [
+    {
+      "chapter_name": "Anatomy Of Flowering Plants",
+      "slug": "anatomy_of_flowering_plants",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 209,
+      "files": [
+        "biology/class_11/anatomy_of_flowering_plants/anatomy_of_flowering_plants_1.json",
+        "biology/class_11/anatomy_of_flowering_plants/anatomy_of_flowering_plants_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 191,
+        "statement_based": 10,
+        "figure_mcq": 7,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 179,
+        "level_3": 30
+      }
+    },
+    {
+      "chapter_name": "Animal Kingdom",
+      "slug": "animal_kingdom",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 415,
+      "files": [
+        "biology/class_11/animal_kingdom/animal_kingdom_1.json",
+        "biology/class_11/animal_kingdom/animal_kingdom_2.json",
+        "biology/class_11/animal_kingdom/animal_kingdom_3.json"
+      ],
+      "question_types": {
+        "figure_mcq": 17,
+        "statement_based": 33,
+        "normal_mcq": 347,
+        "match_the_following": 5,
+        "assertion_reason": 13
+      },
+      "levels": {
+        "level_2": 7,
+        "level_1": 377,
+        "level_3": 31
+      }
+    },
+    {
+      "chapter_name": "Biological Classification",
+      "slug": "biological_classification",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 264,
+      "files": [
+        "biology/class_11/biological_classification/biological_classification_1.json",
+        "biology/class_11/biological_classification/biological_classification_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 228,
+        "statement_based": 25,
+        "figure_mcq": 3,
+        "match_the_following": 4,
+        "assertion_reason": 4
+      },
+      "levels": {
+        "level_1": 226,
+        "level_3": 38
+      }
+    },
+    {
+      "chapter_name": "Body Fluids And Circulation",
+      "slug": "body_fluids_and_circulation",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 383,
+      "files": [
+        "biology/class_11/body_fluids_and_circulation/body_fluids_and_circulation_1.json",
+        "biology/class_11/body_fluids_and_circulation/body_fluids_and_circulation_2.json",
+        "biology/class_11/body_fluids_and_circulation/body_fluids_and_circulation_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 312,
+        "figure_mcq": 18,
+        "statement_based": 30,
+        "match_the_following": 10,
+        "assertion_reason": 13
+      },
+      "levels": {
+        "level_1": 331,
+        "level_3": 51,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Breathing And Exchange Of Gases",
+      "slug": "breathing_and_exchange_of_gases",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 348,
+      "files": [
+        "biology/class_11/breathing_and_exchange_of_gases/breathing_and_exchange_of_gases_1.json",
+        "biology/class_11/breathing_and_exchange_of_gases/breathing_and_exchange_of_gases_2.json",
+        "biology/class_11/breathing_and_exchange_of_gases/breathing_and_exchange_of_gases_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 297,
+        "statement_based": 23,
+        "match_the_following": 5,
+        "figure_mcq": 8,
+        "assertion_reason": 15
+      },
+      "levels": {
+        "level_1": 298,
+        "level_2": 2,
+        "level_3": 48
+      }
+    },
+    {
+      "chapter_name": "Cell Cycle And Cell Division",
+      "slug": "cell_cycle_and_cell_division",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 232,
+      "files": [
+        "biology/class_11/cell_cycle_and_cell_division/cell_cycle_and_cell_division_1.json",
+        "biology/class_11/cell_cycle_and_cell_division/cell_cycle_and_cell_division_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 199,
+        "statement_based": 19,
+        "match_the_following": 3,
+        "assertion_reason": 7,
+        "figure_mcq": 4
+      },
+      "levels": {
+        "level_1": 201,
+        "level_3": 31
+      }
+    },
+    {
+      "chapter_name": "Cell_ The Unit Of Life",
+      "slug": "cell_the_unit_of_life",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 281,
+      "files": [
+        "biology/class_11/cell_the_unit_of_life/cell_the_unit_of_life_1.json",
+        "biology/class_11/cell_the_unit_of_life/cell_the_unit_of_life_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 249,
+        "statement_based": 25,
+        "match_the_following": 4,
+        "figure_mcq": 1,
+        "assertion_reason": 2
+      },
+      "levels": {
+        "level_1": 235,
+        "level_3": 46
+      }
+    },
+    {
+      "chapter_name": "Chemical Coordination And Integration",
+      "slug": "chemical_coordination_and_integration",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 360,
+      "files": [
+        "biology/class_11/chemical_coordination_and_integration/chemical_coordination_and_integration_1.json",
+        "biology/class_11/chemical_coordination_and_integration/chemical_coordination_and_integration_2.json",
+        "biology/class_11/chemical_coordination_and_integration/chemical_coordination_and_integration_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 306,
+        "match_the_following": 13,
+        "statement_based": 16,
+        "figure_mcq": 9,
+        "assertion_reason": 16
+      },
+      "levels": {
+        "level_1": 328,
+        "level_3": 32
+      }
+    },
+    {
+      "chapter_name": "Excretory Products And Their Elimination",
+      "slug": "excretory_products_and_their_elimination",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 253,
+      "files": [
+        "biology/class_11/excretory_products_and_their_elimination/excretory_products_and_their_elimination_1.json",
+        "biology/class_11/excretory_products_and_their_elimination/excretory_products_and_their_elimination_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 203,
+        "statement_based": 26,
+        "figure_mcq": 10,
+        "match_the_following": 8,
+        "assertion_reason": 6
+      },
+      "levels": {
+        "level_1": 222,
+        "level_3": 31
+      }
+    },
+    {
+      "chapter_name": "Locomotion And Movement",
+      "slug": "locomotion_and_movement",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 155,
+      "files": [
+        "biology/class_11/locomotion_and_movement/locomotion_and_movement_1.json",
+        "biology/class_11/locomotion_and_movement/locomotion_and_movement_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 112,
+        "statement_based": 14,
+        "figure_mcq": 13,
+        "match_the_following": 7,
+        "assertion_reason": 9
+      },
+      "levels": {
+        "level_1": 123,
+        "level_3": 29,
+        "level_2": 3
+      }
+    },
+    {
+      "chapter_name": "Neural Control And Coordination",
+      "slug": "neural_control_and_coordination",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 292,
+      "files": [
+        "biology/class_11/neural_control_and_coordination/neural_control_and_coordination_1.json",
+        "biology/class_11/neural_control_and_coordination/neural_control_and_coordination_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 252,
+        "statement_based": 23,
+        "figure_mcq": 13,
+        "match_the_following": 4
+      },
+      "levels": {
+        "level_1": 265,
+        "level_3": 26,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Photosynthesis In Higher Plants",
+      "slug": "photosynthesis_in_higher_plants",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 397,
+      "files": [
+        "biology/class_11/photosynthesis_in_higher_plants/photosynthesis_in_higher_plants_1.json",
+        "biology/class_11/photosynthesis_in_higher_plants/photosynthesis_in_higher_plants_2.json",
+        "biology/class_11/photosynthesis_in_higher_plants/photosynthesis_in_higher_plants_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 350,
+        "statement_based": 28,
+        "figure_mcq": 16,
+        "assertion_reason": 1,
+        "match_the_following": 2
+      },
+      "levels": {
+        "level_1": 364,
+        "level_3": 32,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Plant Growth And Development",
+      "slug": "plant_growth_and_development",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 111,
+      "files": [
+        "biology/class_11/plant_growth_and_development/plant_growth_and_development_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 106,
+        "figure_mcq": 4,
+        "statement_based": 1
+      },
+      "levels": {
+        "level_1": 95,
+        "level_3": 15,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Plant Kingdom",
+      "slug": "plant_kingdom",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 422,
+      "files": [
+        "biology/class_11/plant_kingdom/plant_kingdom_1.json",
+        "biology/class_11/plant_kingdom/plant_kingdom_2.json",
+        "biology/class_11/plant_kingdom/plant_kingdom_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 376,
+        "statement_based": 23,
+        "figure_mcq": 12,
+        "match_the_following": 5,
+        "assertion_reason": 6
+      },
+      "levels": {
+        "level_1": 385,
+        "level_3": 36,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Respiration In Plants",
+      "slug": "respiration_in_plants",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 141,
+      "files": [
+        "biology/class_11/respiration_in_plants/respiration_in_plants_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 133,
+        "assertion_reason": 1,
+        "statement_based": 4,
+        "match_the_following": 2,
+        "figure_mcq": 1
+      },
+      "levels": {
+        "level_1": 112,
+        "level_3": 28,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Structural Organisation In Animals",
+      "slug": "structural_organisation_in_animals",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_11",
+      "total_questions": 208,
+      "files": [
+        "biology/class_11/structural_organisation_in_animals/structural_organisation_in_animals_1.json",
+        "biology/class_11/structural_organisation_in_animals/structural_organisation_in_animals_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 154,
+        "statement_based": 23,
+        "figure_mcq": 14,
+        "match_the_following": 5,
+        "assertion_reason": 12
+      },
+      "levels": {
+        "level_1": 177,
+        "level_3": 31
+      }
+    },
+    {
+      "chapter_name": "The Living World",
+      "slug": "the_living_world",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_11",
+      "total_questions": 319,
+      "files": [
+        "biology/class_11/the_living_world/the_living_world_1.json",
+        "biology/class_11/the_living_world/the_living_world_2.json",
+        "biology/class_11/the_living_world/the_living_world_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 300,
+        "match_the_following": 3,
+        "statement_based": 16
+      },
+      "levels": {
+        "level_1": 297,
+        "level_3": 21,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Biodiversity And Conservation",
+      "slug": "biodiversity_and_conservation",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_12",
+      "total_questions": 196,
+      "files": [
+        "biology/class_12/biodiversity_and_conservation/biodiversity_and_conservation_1.json",
+        "biology/class_12/biodiversity_and_conservation/biodiversity_and_conservation_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 178,
+        "statement_based": 10,
+        "figure_mcq": 4,
+        "assertion_reason": 4
+      },
+      "levels": {
+        "level_1": 176,
+        "level_3": 20
+      }
+    },
+    {
+      "chapter_name": "Biomolecules",
+      "slug": "biomolecules",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 208,
+      "files": [
+        "biology/class_12/biomolecules/biomolecules_1.json",
+        "biology/class_12/biomolecules/biomolecules_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 176,
+        "statement_based": 21,
+        "figure_mcq": 4,
+        "match_the_following": 2,
+        "assertion_reason": 5
+      },
+      "levels": {
+        "level_1": 176,
+        "level_3": 32
+      }
+    },
+    {
+      "chapter_name": "Biotechnology And Its Applications",
+      "slug": "biotechnology_and_its_applications",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 248,
+      "files": [
+        "biology/class_12/biotechnology_and_its_applications/biotechnology_and_its_applications_1.json",
+        "biology/class_12/biotechnology_and_its_applications/biotechnology_and_its_applications_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 226,
+        "statement_based": 9,
+        "figure_mcq": 2,
+        "match_the_following": 6,
+        "assertion_reason": 5
+      },
+      "levels": {
+        "level_1": 217,
+        "level_2": 1,
+        "level_3": 30
+      }
+    },
+    {
+      "chapter_name": "Biotechnology_ Principles And Processes",
+      "slug": "biotechnology_principles_and_processes",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 251,
+      "files": [
+        "biology/class_12/biotechnology_principles_and_processes/biotechnology_principles_and_processes_1.json",
+        "biology/class_12/biotechnology_principles_and_processes/biotechnology_principles_and_processes_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 220,
+        "figure_mcq": 7,
+        "statement_based": 18,
+        "match_the_following": 3,
+        "assertion_reason": 3
+      },
+      "levels": {
+        "level_1": 216,
+        "level_2": 1,
+        "level_3": 34
+      }
+    },
+    {
+      "chapter_name": "Ecosystem",
+      "slug": "ecosystem",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 349,
+      "files": [
+        "biology/class_12/ecosystem/ecosystem_1.json",
+        "biology/class_12/ecosystem/ecosystem_2.json",
+        "biology/class_12/ecosystem/ecosystem_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 293,
+        "statement_based": 34,
+        "figure_mcq": 9,
+        "match_the_following": 7,
+        "assertion_reason": 6
+      },
+      "levels": {
+        "level_1": 324,
+        "level_3": 25
+      }
+    },
+    {
+      "chapter_name": "Evolution",
+      "slug": "evolution",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 217,
+      "files": [
+        "biology/class_12/evolution/evolution_1.json",
+        "biology/class_12/evolution/evolution_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 180,
+        "statement_based": 15,
+        "match_the_following": 9,
+        "assertion_reason": 7,
+        "figure_mcq": 6
+      },
+      "levels": {
+        "level_1": 178,
+        "level_3": 37,
+        "level_2": 2
+      }
+    },
+    {
+      "chapter_name": "Human Health And Disease",
+      "slug": "human_health_and_disease",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 383,
+      "files": [
+        "biology/class_12/human_health_and_disease/human_health_and_disease_1.json",
+        "biology/class_12/human_health_and_disease/human_health_and_disease_2.json",
+        "biology/class_12/human_health_and_disease/human_health_and_disease_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 334,
+        "figure_mcq": 8,
+        "match_the_following": 5,
+        "statement_based": 28,
+        "assertion_reason": 8
+      },
+      "levels": {
+        "level_1": 340,
+        "level_3": 27,
+        "level_2": 16
+      }
+    },
+    {
+      "chapter_name": "Human Reproduction",
+      "slug": "human_reproduction",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 394,
+      "files": [
+        "biology/class_12/human_reproduction/human_reproduction_1.json",
+        "biology/class_12/human_reproduction/human_reproduction_2.json",
+        "biology/class_12/human_reproduction/human_reproduction_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 323,
+        "statement_based": 27,
+        "figure_mcq": 33,
+        "match_the_following": 5,
+        "assertion_reason": 6
+      },
+      "levels": {
+        "level_1": 325,
+        "level_3": 39,
+        "level_2": 30
+      }
+    },
+    {
+      "chapter_name": "Microbes In Human Welfare",
+      "slug": "microbes_in_human_welfare",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 130,
+      "files": [
+        "biology/class_12/microbes_in_human_welfare/microbes_in_human_welfare_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 101,
+        "statement_based": 20,
+        "assertion_reason": 6,
+        "match_the_following": 3
+      },
+      "levels": {
+        "level_1": 107,
+        "level_3": 23
+      }
+    },
+    {
+      "chapter_name": "Molecular Basis Of Inheritance",
+      "slug": "molecular_basis_of_inheritance",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 402,
+      "files": [
+        "biology/class_12/molecular_basis_of_inheritance/molecular_basis_of_inheritance_1.json",
+        "biology/class_12/molecular_basis_of_inheritance/molecular_basis_of_inheritance_2.json",
+        "biology/class_12/molecular_basis_of_inheritance/molecular_basis_of_inheritance_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 360,
+        "statement_based": 28,
+        "match_the_following": 8,
+        "figure_mcq": 2,
+        "assertion_reason": 4
+      },
+      "levels": {
+        "level_1": 369,
+        "level_3": 33
+      }
+    },
+    {
+      "chapter_name": "Organisms And Populations",
+      "slug": "organisms_and_populations",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 245,
+      "files": [
+        "biology/class_12/organisms_and_populations/organisms_and_populations_1.json",
+        "biology/class_12/organisms_and_populations/organisms_and_populations_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 207,
+        "statement_based": 18,
+        "match_the_following": 6,
+        "figure_mcq": 9,
+        "assertion_reason": 5
+      },
+      "levels": {
+        "level_1": 219,
+        "level_3": 25,
+        "level_2": 1
+      }
+    },
+    {
+      "chapter_name": "Principles Of Inheritance And Variation",
+      "slug": "principles_of_inheritance_and_variation",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 415,
+      "files": [
+        "biology/class_12/principles_of_inheritance_and_variation/principles_of_inheritance_and_variation_1.json",
+        "biology/class_12/principles_of_inheritance_and_variation/principles_of_inheritance_and_variation_2.json",
+        "biology/class_12/principles_of_inheritance_and_variation/principles_of_inheritance_and_variation_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 385,
+        "statement_based": 26,
+        "match_the_following": 2,
+        "assertion_reason": 2
+      },
+      "levels": {
+        "level_1": 377,
+        "level_3": 36,
+        "level_2": 2
+      }
+    },
+    {
+      "chapter_name": "Reproductive Health",
+      "slug": "reproductive_health",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "class_level": "class_12",
+      "total_questions": 109,
+      "files": [
+        "biology/class_12/reproductive_health/reproductive_health_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 84,
+        "statement_based": 9,
+        "figure_mcq": 5,
+        "assertion_reason": 10,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 74,
+        "level_3": 15,
+        "level_2": 20
+      }
+    },
+    {
+      "chapter_name": "Sexual Reproduction In Flowering Plants",
+      "slug": "sexual_reproduction_in_flowering_plants",
+      "subject": "Biology",
+      "branch": "Botany",
+      "class_level": "class_12",
+      "total_questions": 355,
+      "files": [
+        "biology/class_12/sexual_reproduction_in_flowering_plants/sexual_reproduction_in_flowering_plants_1.json",
+        "biology/class_12/sexual_reproduction_in_flowering_plants/sexual_reproduction_in_flowering_plants_2.json",
+        "biology/class_12/sexual_reproduction_in_flowering_plants/sexual_reproduction_in_flowering_plants_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 289,
+        "statement_based": 46,
+        "figure_mcq": 17,
+        "match_the_following": 2,
+        "assertion_reason": 1
+      },
+      "levels": {
+        "level_1": 321,
+        "level_3": 30,
+        "level_2": 4
+      }
+    },
+    {
+      "chapter_name": "Atomic Structure",
+      "slug": "atomic_structure",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 355,
+      "files": [
+        "chemistry/class_11/atomic_structure/atomic_structure_1.json",
+        "chemistry/class_11/atomic_structure/atomic_structure_2.json",
+        "chemistry/class_11/atomic_structure/atomic_structure_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 341,
+        "figure_mcq": 5,
+        "statement_based": 8,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 333,
+        "level_2": 2,
+        "level_3": 20
+      }
+    },
+    {
+      "chapter_name": "chemestry/principal",
+      "slug": "chemestry_principal",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_11",
+      "total_questions": 55,
+      "files": [
+        "chemistry/class_11/chemestry_principal/chemestry_principal_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 34,
+        "statement_based": 17,
+        "match_the_following": 3,
+        "assertion_reason": 1
+      },
+      "levels": {
+        "level_1": 55
+      }
+    },
+    {
+      "chapter_name": "Chemical Bonding And Molecular Structure _ Chemical Bonding",
+      "slug": "chemical_bonding_and_molecular_structure_chemical_bonding",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 350,
+      "files": [
+        "chemistry/class_11/chemical_bonding_and_molecular_structure_chemical_bonding/chemical_bonding_and_molecular_structure_chemical_bonding_1.json",
+        "chemistry/class_11/chemical_bonding_and_molecular_structure_chemical_bonding/chemical_bonding_and_molecular_structure_chemical_bonding_2.json",
+        "chemistry/class_11/chemical_bonding_and_molecular_structure_chemical_bonding/chemical_bonding_and_molecular_structure_chemical_bonding_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 323,
+        "statement_based": 19,
+        "assertion_reason": 6,
+        "match_the_following": 1,
+        "figure_mcq": 1
+      },
+      "levels": {
+        "level_1": 328,
+        "level_3": 22
+      }
+    },
+    {
+      "chapter_name": "Chemical Equilibrium",
+      "slug": "chemical_equilibrium",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_11",
+      "total_questions": 237,
+      "files": [
+        "chemistry/class_11/chemical_equilibrium/chemical_equilibrium_1.json",
+        "chemistry/class_11/chemical_equilibrium/chemical_equilibrium_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 226,
+        "statement_based": 8,
+        "figure_mcq": 3
+      },
+      "levels": {
+        "level_1": 211,
+        "level_2": 7,
+        "level_3": 19
+      }
+    },
+    {
+      "chapter_name": "Chemical Kinetics",
+      "slug": "chemical_kinetics",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_11",
+      "total_questions": 232,
+      "files": [
+        "chemistry/class_11/chemical_kinetics/chemical_kinetics_1.json",
+        "chemistry/class_11/chemical_kinetics/chemical_kinetics_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 219,
+        "statement_based": 9,
+        "figure_mcq": 4
+      },
+      "levels": {
+        "level_1": 208,
+        "level_3": 21,
+        "level_2": 3
+      }
+    },
+    {
+      "chapter_name": "Classification And Nomenclature",
+      "slug": "classification_and_nomenclature",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 137,
+      "files": [
+        "chemistry/class_11/classification_and_nomenclature/classification_and_nomenclature_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 129,
+        "statement_based": 7,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 127,
+        "level_3": 10
+      }
+    },
+    {
+      "chapter_name": "Classification Of Elements And Periodicity In Properties - Periodic Table",
+      "slug": "classification_of_elements_and_periodicity_in_properties_periodic_table",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 277,
+      "files": [
+        "chemistry/class_11/classification_of_elements_and_periodicity_in_properties_periodic_table/classification_of_elements_and_periodicity_in_properties_periodic_table_1.json",
+        "chemistry/class_11/classification_of_elements_and_periodicity_in_properties_periodic_table/classification_of_elements_and_periodicity_in_properties_periodic_table_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 230,
+        "statement_based": 31,
+        "match_the_following": 5,
+        "assertion_reason": 9,
+        "figure_mcq": 2
+      },
+      "levels": {
+        "level_1": 261,
+        "level_3": 16
+      }
+    },
+    {
+      "chapter_name": "Coordination Compounds",
+      "slug": "coordination_compounds",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 267,
+      "files": [
+        "chemistry/class_11/coordination_compounds/coordination_compounds_1.json",
+        "chemistry/class_11/coordination_compounds/coordination_compounds_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 248,
+        "statement_based": 16,
+        "figure_mcq": 2,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 246,
+        "level_2": 2,
+        "level_3": 19
+      }
+    },
+    {
+      "chapter_name": "D And F Block Elements",
+      "slug": "d_and_f_block_elements",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 212,
+      "files": [
+        "chemistry/class_11/d_and_f_block_elements/d_and_f_block_elements_1.json",
+        "chemistry/class_11/d_and_f_block_elements/d_and_f_block_elements_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 193,
+        "statement_based": 14,
+        "figure_mcq": 1,
+        "assertion_reason": 4
+      },
+      "levels": {
+        "level_1": 201,
+        "level_2": 1,
+        "level_3": 10
+      }
+    },
+    {
+      "chapter_name": "General Organic Chemistry",
+      "slug": "general_organic_chemistry",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 208,
+      "files": [
+        "chemistry/class_11/general_organic_chemistry/general_organic_chemistry_1.json",
+        "chemistry/class_11/general_organic_chemistry/general_organic_chemistry_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 201,
+        "statement_based": 6,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 181,
+        "level_3": 27
+      }
+    },
+    {
+      "chapter_name": "Hydrocarbons",
+      "slug": "hydrocarbons",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 227,
+      "files": [
+        "chemistry/class_11/hydrocarbons/hydrocarbons_1.json",
+        "chemistry/class_11/hydrocarbons/hydrocarbons_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 215,
+        "statement_based": 8,
+        "match_the_following": 1,
+        "assertion_reason": 3
+      },
+      "levels": {
+        "level_1": 196,
+        "level_3": 31
+      }
+    },
+    {
+      "chapter_name": "Ionic Equilibrium",
+      "slug": "ionic_equilibrium",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_11",
+      "total_questions": 386,
+      "files": [
+        "chemistry/class_11/ionic_equilibrium/ionic_equilibrium_1.json",
+        "chemistry/class_11/ionic_equilibrium/ionic_equilibrium_2.json",
+        "chemistry/class_11/ionic_equilibrium/ionic_equilibrium_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 378,
+        "statement_based": 5,
+        "match_the_following": 2,
+        "figure_mcq": 1
+      },
+      "levels": {
+        "level_1": 376,
+        "level_3": 10
+      }
+    },
+    {
+      "chapter_name": "Isomerism",
+      "slug": "isomerism",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 130,
+      "files": [
+        "chemistry/class_11/isomerism/isomerism_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 121,
+        "statement_based": 8,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 121,
+        "level_3": 9
+      }
+    },
+    {
+      "chapter_name": "Optical Isomerism",
+      "slug": "optical_isomerism",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 107,
+      "files": [
+        "chemistry/class_11/optical_isomerism/optical_isomerism_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 103,
+        "statement_based": 3,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 100,
+        "level_3": 7
+      }
+    },
+    {
+      "chapter_name": "Purification_ Quantitative And Qualitative Analysis",
+      "slug": "purification_quantitative_and_qualitative_analysis",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 41,
+      "files": [
+        "chemistry/class_11/purification_quantitative_and_qualitative_analysis/purification_quantitative_and_qualitative_analysis_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 31,
+        "figure_mcq": 1,
+        "statement_based": 5,
+        "match_the_following": 4
+      },
+      "levels": {
+        "level_1": 41
+      }
+    },
+    {
+      "chapter_name": "p-Block Elements - Group 13 To 18",
+      "slug": "p_block_elements_group_13_to_18",
+      "subject": "Chemistry",
+      "branch": "Inorganic Chemistry",
+      "class_level": "class_11",
+      "total_questions": 324,
+      "files": [
+        "chemistry/class_11/p_block_elements_group_13_to_18/p_block_elements_group_13_to_18_1.json",
+        "chemistry/class_11/p_block_elements_group_13_to_18/p_block_elements_group_13_to_18_2.json",
+        "chemistry/class_11/p_block_elements_group_13_to_18/p_block_elements_group_13_to_18_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 294,
+        "statement_based": 24,
+        "figure_mcq": 1,
+        "match_the_following": 1,
+        "assertion_reason": 4
+      },
+      "levels": {
+        "level_1": 295,
+        "level_3": 29
+      }
+    },
+    {
+      "chapter_name": "Redox Reactions",
+      "slug": "redox_reactions",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 162,
+      "files": [
+        "chemistry/class_11/redox_reactions/redox_reactions_1.json",
+        "chemistry/class_11/redox_reactions/redox_reactions_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 158,
+        "statement_based": 2,
+        "figure_mcq": 1,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 147,
+        "level_3": 15
+      }
+    },
+    {
+      "chapter_name": "Some Basic Concepts Of Chemistry - Mole Concept",
+      "slug": "some_basic_concepts_of_chemistry_mole_concept",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_11",
+      "total_questions": 229,
+      "files": [
+        "chemistry/class_11/some_basic_concepts_of_chemistry_mole_concept/some_basic_concepts_of_chemistry_mole_concept_1.json",
+        "chemistry/class_11/some_basic_concepts_of_chemistry_mole_concept/some_basic_concepts_of_chemistry_mole_concept_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 222,
+        "statement_based": 6,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 213,
+        "level_3": 16
+      }
+    },
+    {
+      "chapter_name": "Thermodynamics",
+      "slug": "thermodynamics",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_11",
+      "total_questions": 376,
+      "files": [
+        "chemistry/class_11/thermodynamics/thermodynamics_1.json",
+        "chemistry/class_11/thermodynamics/thermodynamics_2.json",
+        "chemistry/class_11/thermodynamics/thermodynamics_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 359,
+        "statement_based": 10,
+        "figure_mcq": 6,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 352,
+        "level_3": 22,
+        "level_2": 2
+      }
+    },
+    {
+      "chapter_name": "Alcohols_ Phenols And Ethers",
+      "slug": "alcohols_phenols_and_ethers",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 87,
+      "files": [
+        "chemistry/class_12/alcohols_phenols_and_ethers/alcohols_phenols_and_ethers_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 83,
+        "statement_based": 2,
+        "match_the_following": 2
+      },
+      "levels": {
+        "level_1": 75,
+        "level_3": 12
+      }
+    },
+    {
+      "chapter_name": "Aldehydes_ Ketones And Carboxylic Acids",
+      "slug": "aldehydes_ketones_and_carboxylic_acids",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "class_level": "class_12",
+      "total_questions": 183,
+      "files": [
+        "chemistry/class_12/aldehydes_ketones_and_carboxylic_acids/aldehydes_ketones_and_carboxylic_acids_1.json",
+        "chemistry/class_12/aldehydes_ketones_and_carboxylic_acids/aldehydes_ketones_and_carboxylic_acids_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 158,
+        "statement_based": 15,
+        "match_the_following": 3,
+        "assertion_reason": 7
+      },
+      "levels": {
+        "level_1": 168,
+        "level_3": 15
+      }
+    },
+    {
+      "chapter_name": "Amines",
+      "slug": "amines",
+      "subject": "Chemistry",
+      "branch": "Organic Chemistry",
+      "class_level": "class_12",
+      "total_questions": 115,
+      "files": [
+        "chemistry/class_12/amines/amines_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 99,
+        "statement_based": 12,
+        "assertion_reason": 4
+      },
+      "levels": {
+        "level_1": 98,
+        "level_3": 17
+      }
+    },
+    {
+      "chapter_name": "Electrochemistry",
+      "slug": "electrochemistry",
+      "subject": "Chemistry",
+      "branch": "Physical Chemistry",
+      "class_level": "class_12",
+      "total_questions": 195,
+      "files": [
+        "chemistry/class_12/electrochemistry/electrochemistry_1.json",
+        "chemistry/class_12/electrochemistry/electrochemistry_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 188,
+        "statement_based": 3,
+        "figure_mcq": 4
+      },
+      "levels": {
+        "level_1": 173,
+        "level_3": 20,
+        "level_2": 2
+      }
+    },
+    {
+      "chapter_name": "Haloalkanes And Haloarenes",
+      "slug": "haloalkanes_and_haloarenes",
+      "subject": "Chemistry",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 113,
+      "files": [
+        "chemistry/class_12/haloalkanes_and_haloarenes/haloalkanes_and_haloarenes_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 96,
+        "statement_based": 12,
+        "assertion_reason": 4,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 93,
+        "level_3": 20
+      }
+    },
+    {
+      "chapter_name": "Circular Motion",
+      "slug": "circular_motion",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 209,
+      "files": [
+        "physics/class_11/circular_motion/circular_motion_1.json",
+        "physics/class_11/circular_motion/circular_motion_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 195,
+        "statement_based": 3,
+        "figure_mcq": 11
+      },
+      "levels": {
+        "level_1": 201,
+        "level_2": 3,
+        "level_3": 5
+      }
+    },
+    {
+      "chapter_name": "Collisions And Centre Of Mass",
+      "slug": "collisions_and_centre_of_mass",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 219,
+      "files": [
+        "physics/class_11/collisions_and_centre_of_mass/collisions_and_centre_of_mass_1.json",
+        "physics/class_11/collisions_and_centre_of_mass/collisions_and_centre_of_mass_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 203,
+        "figure_mcq": 12,
+        "statement_based": 4
+      },
+      "levels": {
+        "level_1": 193,
+        "level_2": 9,
+        "level_3": 17
+      }
+    },
+    {
+      "chapter_name": "Gravitation",
+      "slug": "gravitation",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 306,
+      "files": [
+        "physics/class_11/gravitation/gravitation_1.json",
+        "physics/class_11/gravitation/gravitation_2.json",
+        "physics/class_11/gravitation/gravitation_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 218,
+        "statement_based": 10,
+        "figure_mcq": 78
+      },
+      "levels": {
+        "level_1": 283,
+        "level_3": 12,
+        "level_2": 11
+      }
+    },
+    {
+      "chapter_name": "Kinematics",
+      "slug": "kinematics",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 455,
+      "files": [
+        "physics/class_11/kinematics/kinematics_1.json",
+        "physics/class_11/kinematics/kinematics_2.json",
+        "physics/class_11/kinematics/kinematics_3.json",
+        "physics/class_11/kinematics/kinematics_4.json"
+      ],
+      "question_types": {
+        "normal_mcq": 382,
+        "figure_mcq": 58,
+        "match_the_following": 1,
+        "statement_based": 14
+      },
+      "levels": {
+        "level_1": 434,
+        "level_3": 21
+      }
+    },
+    {
+      "chapter_name": "Laws of Motion and Friction",
+      "slug": "laws_of_motion_and_friction",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 345,
+      "files": [
+        "physics/class_11/laws_of_motion_and_friction/laws_of_motion_and_friction_1.json",
+        "physics/class_11/laws_of_motion_and_friction/laws_of_motion_and_friction_2.json",
+        "physics/class_11/laws_of_motion_and_friction/laws_of_motion_and_friction_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 174,
+        "figure_mcq": 167,
+        "statement_based": 4
+      },
+      "levels": {
+        "level_1": 321,
+        "level_3": 14,
+        "level_2": 10
+      }
+    },
+    {
+      "chapter_name": "Oscillations",
+      "slug": "oscillations",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 280,
+      "files": [
+        "physics/class_11/oscillations/oscillations_1.json",
+        "physics/class_11/oscillations/oscillations_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 169,
+        "figure_mcq": 105,
+        "statement_based": 6
+      },
+      "levels": {
+        "level_1": 269,
+        "level_3": 7,
+        "level_2": 4
+      }
+    },
+    {
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "slug": "properties_of_matter_and_fluid_mechanics",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 367,
+      "files": [
+        "physics/class_11/properties_of_matter_and_fluid_mechanics/properties_of_matter_and_fluid_mechanics_1.json",
+        "physics/class_11/properties_of_matter_and_fluid_mechanics/properties_of_matter_and_fluid_mechanics_2.json",
+        "physics/class_11/properties_of_matter_and_fluid_mechanics/properties_of_matter_and_fluid_mechanics_3.json"
+      ],
+      "question_types": {
+        "figure_mcq": 60,
+        "normal_mcq": 298,
+        "statement_based": 8,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 344,
+        "level_3": 18,
+        "level_2": 5
+      }
+    },
+    {
+      "chapter_name": "Rotational Motion",
+      "slug": "rotational_motion",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 323,
+      "files": [
+        "physics/class_11/rotational_motion/rotational_motion_1.json",
+        "physics/class_11/rotational_motion/rotational_motion_2.json",
+        "physics/class_11/rotational_motion/rotational_motion_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 295,
+        "statement_based": 6,
+        "figure_mcq": 21,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 307,
+        "level_3": 8,
+        "level_2": 8
+      }
+    },
+    {
+      "chapter_name": "Thermal Physics",
+      "slug": "thermal_physics",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 702,
+      "files": [
+        "physics/class_11/thermal_physics/thermal_physics_1.json",
+        "physics/class_11/thermal_physics/thermal_physics_2.json",
+        "physics/class_11/thermal_physics/thermal_physics_3.json",
+        "physics/class_11/thermal_physics/thermal_physics_4.json",
+        "physics/class_11/thermal_physics/thermal_physics_5.json"
+      ],
+      "question_types": {
+        "normal_mcq": 587,
+        "figure_mcq": 98,
+        "statement_based": 15,
+        "match_the_following": 2
+      },
+      "levels": {
+        "level_1": 670,
+        "level_3": 16,
+        "level_2": 16
+      }
+    },
+    {
+      "chapter_name": "Units Dimensions And Measurement",
+      "slug": "units_dimensions_and_measurement",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 195,
+      "files": [
+        "physics/class_11/units_dimensions_and_measurement/units_dimensions_and_measurement_1.json",
+        "physics/class_11/units_dimensions_and_measurement/units_dimensions_and_measurement_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 179,
+        "statement_based": 4,
+        "figure_mcq": 10,
+        "match_the_following": 2
+      },
+      "levels": {
+        "level_1": 183,
+        "level_3": 9,
+        "level_2": 3
+      }
+    },
+    {
+      "chapter_name": "Wave Motion",
+      "slug": "wave_motion",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 320,
+      "files": [
+        "physics/class_11/wave_motion/wave_motion_1.json",
+        "physics/class_11/wave_motion/wave_motion_2.json",
+        "physics/class_11/wave_motion/wave_motion_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 292,
+        "statement_based": 7,
+        "figure_mcq": 13,
+        "match_the_following": 8
+      },
+      "levels": {
+        "level_1": 292,
+        "level_3": 23,
+        "level_2": 5
+      }
+    },
+    {
+      "chapter_name": "Work_ Energy And Power",
+      "slug": "work_energy_and_power",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_11",
+      "total_questions": 211,
+      "files": [
+        "physics/class_11/work_energy_and_power/work_energy_and_power_1.json",
+        "physics/class_11/work_energy_and_power/work_energy_and_power_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 163,
+        "figure_mcq": 35,
+        "statement_based": 13
+      },
+      "levels": {
+        "level_1": 194,
+        "level_3": 13,
+        "level_2": 4
+      }
+    },
+    {
+      "chapter_name": "Alternating Current",
+      "slug": "alternating_current",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 195,
+      "files": [
+        "physics/class_12/alternating_current/alternating_current_1.json",
+        "physics/class_12/alternating_current/alternating_current_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 88,
+        "figure_mcq": 101,
+        "statement_based": 6
+      },
+      "levels": {
+        "level_1": 177,
+        "level_2": 2,
+        "level_3": 16
+      }
+    },
+    {
+      "chapter_name": "Capacitor",
+      "slug": "capacitor",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 197,
+      "files": [
+        "physics/class_12/capacitor/capacitor_1.json",
+        "physics/class_12/capacitor/capacitor_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 141,
+        "figure_mcq": 53,
+        "statement_based": 2,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 178,
+        "level_2": 3,
+        "level_3": 16
+      }
+    },
+    {
+      "chapter_name": "Current Electricity",
+      "slug": "current_electricity",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 250,
+      "files": [
+        "physics/class_12/current_electricity/current_electricity_1.json",
+        "physics/class_12/current_electricity/current_electricity_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 169,
+        "figure_mcq": 77,
+        "statement_based": 2,
+        "match_the_following": 2
+      },
+      "levels": {
+        "level_1": 232,
+        "level_2": 5,
+        "level_3": 13
+      }
+    },
+    {
+      "chapter_name": "Electromagnetic Induction",
+      "slug": "electromagnetic_induction",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 229,
+      "files": [
+        "physics/class_12/electromagnetic_induction/electromagnetic_induction_1.json",
+        "physics/class_12/electromagnetic_induction/electromagnetic_induction_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 170,
+        "figure_mcq": 49,
+        "statement_based": 10
+      },
+      "levels": {
+        "level_1": 204,
+        "level_2": 7,
+        "level_3": 18
+      }
+    },
+    {
+      "chapter_name": "Electromagnetic Waves",
+      "slug": "electromagnetic_waves",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 82,
+      "files": [
+        "physics/class_12/electromagnetic_waves/electromagnetic_waves_1.json"
+      ],
+      "question_types": {
+        "normal_mcq": 77,
+        "statement_based": 4,
+        "assertion_reason": 1
+      },
+      "levels": {
+        "level_1": 72,
+        "level_3": 10
+      }
+    },
+    {
+      "chapter_name": "Electrostatics",
+      "slug": "electrostatics",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 330,
+      "files": [
+        "physics/class_12/electrostatics/electrostatics_1.json",
+        "physics/class_12/electrostatics/electrostatics_2.json",
+        "physics/class_12/electrostatics/electrostatics_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 266,
+        "figure_mcq": 52,
+        "statement_based": 10,
+        "assertion_reason": 1,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 296,
+        "level_2": 17,
+        "level_3": 17
+      }
+    },
+    {
+      "chapter_name": "Magnetic Effect Of Current And Magnetism",
+      "slug": "magnetic_effect_of_current_and_magnetism",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 279,
+      "files": [
+        "physics/class_12/magnetic_effect_of_current_and_magnetism/magnetic_effect_of_current_and_magnetism_1.json",
+        "physics/class_12/magnetic_effect_of_current_and_magnetism/magnetic_effect_of_current_and_magnetism_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 233,
+        "figure_mcq": 30,
+        "statement_based": 15,
+        "match_the_following": 1
+      },
+      "levels": {
+        "level_1": 254,
+        "level_3": 21,
+        "level_2": 4
+      }
+    },
+    {
+      "chapter_name": "Modern Physics",
+      "slug": "modern_physics",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 314,
+      "files": [
+        "physics/class_12/modern_physics/modern_physics_1.json",
+        "physics/class_12/modern_physics/modern_physics_2.json",
+        "physics/class_12/modern_physics/modern_physics_3.json"
+      ],
+      "question_types": {
+        "normal_mcq": 285,
+        "figure_mcq": 18,
+        "statement_based": 11
+      },
+      "levels": {
+        "level_1": 294,
+        "level_3": 14,
+        "level_2": 6
+      }
+    },
+    {
+      "chapter_name": "Ray Optics And Optical Instruments",
+      "slug": "ray_optics_and_optical_instruments",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 236,
+      "files": [
+        "physics/class_12/ray_optics_and_optical_instruments/ray_optics_and_optical_instruments_1.json",
+        "physics/class_12/ray_optics_and_optical_instruments/ray_optics_and_optical_instruments_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 206,
+        "figure_mcq": 25,
+        "statement_based": 5
+      },
+      "levels": {
+        "level_1": 219,
+        "level_3": 14,
+        "level_2": 3
+      }
+    },
+    {
+      "chapter_name": "Semiconductor Electronics",
+      "slug": "semiconductor_electronics",
+      "subject": "Physics",
+      "branch": "Physics",
+      "class_level": "class_12",
+      "total_questions": 196,
+      "files": [
+        "physics/class_12/semiconductor_electronics/semiconductor_electronics_1.json",
+        "physics/class_12/semiconductor_electronics/semiconductor_electronics_2.json"
+      ],
+      "question_types": {
+        "normal_mcq": 140,
+        "figure_mcq": 46,
+        "statement_based": 10
+      },
+      "levels": {
+        "level_1": 176,
+        "level_3": 19,
+        "level_2": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_301",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of mass m slides down on a smooth inclined plane and reaches the bottom with a velocity v. If the same mass were in the form of a disc which rolls down on a similar rough incline plane, the velocity of the disc at the bottom would have been",
+    "options": {
+      "A": "v 3",
+      "B": "3 v 2",
+      "C": "2 v 3",
+      "D": "3v 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_rotational_motion_302",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere and a disc of same radii and mass are rolling on an inclined plane without slipping. a s & a d are their acceleration respectively and g is acceleration due to gravity. Then which statement is correct ?",
+    "options": {
+      "A": "a s > a d > g",
+      "B": "g > a s > a d",
+      "C": "a s > g > a d",
+      "D": "a d > a s > g"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_303",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Calculate the ratio of the time taken by a uniform spherical shell and a solid cylinder of the same mass and the same diameter to roll down through the same distance from rest on a inclined plane. (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_304",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A disc takes time t 1 and t 2 for sliding down and rolling down on an inclined plane of length L respectively for reaching the bottom. The ratio of t 1 and t 2 is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_305",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform solid sphere of mass m and radius r rolls without slipping down on an inclined plane, inclined at an angle 45^\\circ to the horizontal. Find the magnitude of frictional coefficient at which slipping is absent-",
+    "options": {
+      "A": "3 1",
+      "B": "2 7",
+      "C": "1 5",
+      "D": "1 7"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_306",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solid sphere of mass M and radius R rolls without slipping down an inclined plane of length L and height h. What is the speed of its centre of mass when the solid sphere reaches its bottom :-",
+    "options": {
+      "A": "10 gh",
+      "B": "7 gh",
+      "C": "7 gh 10",
+      "D": "10 gh 7 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_307",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a hollow sphere of moment of inertia I rolls down on an inclined plane the percentage of total energy which is rotational, is approximately :-",
+    "options": {
+      "A": "40 %",
+      "B": "60 %",
+      "C": "100 %",
+      "D": "none of these EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Rotational Motion principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_308",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A phonograph turn-table rotating at 78 rev/min slows down and stops in 30 sec after the motor is turned off. Then the revolutions made by it in this time are :-",
+    "options": {
+      "A": "19.5",
+      "B": "39",
+      "C": "78",
+      "D": "156"
+    },
+    "correct_option": "A",
+    "explanation": "ω 0 = 450 2 60 × π rad/s. = 15 π rad/s t = 10 sec. ω f = 0 rad/s. θ = ( ) f 0 1 1 t 10 (15 0) 75 2 2 ω + ω = × × π + = π No. of revolutions = 75 37.5 2 2 θ π = = π π Hence option (1)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_309",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A particle is moving with constant speed v along the line y = a in positive x-direction. Find magnitude of its angular velocity about origin when its position makes an angle θ with x-axis.",
+    "options": {
+      "A": "2 v sin a θ",
+      "B": "2 v cos a θ",
+      "C": "v sin θ",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "θ = ( ) i f 1 t 2 ω + ω = 1 4 2 × (0 + 100 × 2 π) = 400 π Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_310",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wheel rotates with a constant angular acceleration of π rad/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For acceleration 2 1 1 t 2 2 θ = α = × 2 × (20) 2 = 400 Rad. ω = 0 + α t = 2 × 20 = 40 rad/s For uniform motion θ = ω × t = 40 × 10 = 400 Rad. For retardation θ = 1 t 2 ( ω i + ω f ) = 1 2 × 20 (40 + 0) = 400 Rad. Total angle of rotation = 1200 Rad. Hence option (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_311",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "During a certain time interval its angular displacement is π rad. At the end of the interval its angular velocity is 2 π rad/s. Its angular velocity at the beginning of the interval is :-",
+    "options": {
+      "A": "Zero",
+      "B": "1 rad/s",
+      "C": "π rad/s",
+      "D": "π 2 rad/s"
+    },
+    "correct_option": "A",
+    "explanation": "θ = ( ) i f 1 t 2 ω + ω = 1 4 2 × (0 + 100 × 2 π) = 400 π Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_312",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A solid body rotates about a fixed axis such that its angular velocity depends on θ as ω = K θ -1 where K is a positive constant. At t = 0, θ = 0 then ' θ ' as a function of time 't' is given by :-",
+    "options": {
+      "A": "θ = Kt",
+      "B": "θ = 2Kt",
+      "C": "Kt θ =",
+      "D": "2Kt θ ="
+    },
+    "correct_option": "A",
+    "explanation": "θ = 2 2 f i 2 ω - ω α = 2 2 20 10 2 3 - × = 50 Radian Hence option (1)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_313",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body rotates about a fixed axis with an angular acceleration of 2.5 rad/s",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "I = ( ) 2 2 2 MR R xR 2 2 ρ π = so I ∝ R 4 (where x is thickness) Hence option (2)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_314",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The angle rotated by it during the time when its angular velocity increases from 20 rad/s to 30 rad/s (in radian) is:-",
+    "options": {
+      "A": "50",
+      "B": "100",
+      "C": "150",
+      "D": "200"
+    },
+    "correct_option": "A",
+    "explanation": "θ = ( ) i f 1 t 2 ω + ω = 1 4 2 × (0 + 100 × 2 π) = 400 π Hence option (4)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_315",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two point masses m and 2m are placed at a distance r. Find the moment of inertia of the system about an axis passing through the centre of mass of the system and perpendicular to the line joining the point masses.",
+    "options": {
+      "A": "2 2mr 3",
+      "B": "2 mr 2",
+      "C": "2 mr 4",
+      "D": "2 3mr 4"
+    },
+    "correct_option": "D",
+    "explanation": "2 Mr I 2 = I ring = n 2 2 Mr = 2n 2 I"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_316",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the moment of inertia of a section of circular disc of radius R about an axis perpendicular to its plane as shown in the figure. The section has mass m and subtends an angle θ at the centre. R θ m",
+    "options": {
+      "A": "2 mR 2",
+      "B": "2 mR 4",
+      "C": "2 3mR 4",
+      "D": "mR 2"
+    },
+    "correct_option": "A",
+    "explanation": "I = MR 2 = ρ \\lambda (2 π R)R 2 ⇒ I ∝ R 3 so 3 A A B B I R 1 I R 8   = =     Hence option (2)",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_317",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "From a disc of radius R & mass 9M, a small disc of radius R/3 is removed as shown. What is the moment of inertia of remaining disc about an axis passing through the center of disc & perpendicular to its plane. R/3 R",
+    "options": {
+      "A": "2 32 MR 9",
+      "B": "10 MR 2",
+      "C": "2 40 MR 9",
+      "D": "4 MR 2 $//"
+    },
+    "correct_option": "A",
+    "explanation": "I K , K I m = ∝ and I changes with axis of rotation."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_318",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two circular disc A and B of radii R and 2R respectively are made of the similar metal. Their moments of inertia about the axis passing through the centre and perpendicular to their plane are I A and I B respectively. The ratio A B I I is:-",
+    "options": {
+      "A": "1 4",
+      "B": "1 16",
+      "C": "1 2",
+      "D": "1"
+    },
+    "correct_option": "A",
+    "explanation": "x I = 3× 2 2 mL mx 12   +     here x = o 1 L sin 60 3 = L 2 3 so I = 3 × 2 2 2 2 mL L mL mL m 3 12 12 6 2   + = =     Hence option (2) $//(1 TARGET : 202 5 PHYSICS 202 5 HS u θ R/2 mg ROTATIONAL MOTION : RACE # 02 solutions"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_319",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thin uniform metallic triangular sheet of mass M has sides AB = BC = L. What is its moment of inertia about axis AC lying in plane of sheet ? A B C",
+    "options": {
+      "A": "2 ML 12",
+      "B": "2 2ML 3",
+      "C": "2 ML 3",
+      "D": "2 ML 6"
+    },
+    "correct_option": "A",
+    "explanation": "Rotational KE Rotational KE Trans. KE + = 1 Trans. 1 Rotational + 2 2 1 R 1 K =   +     This term will be maximum when K is maximum and here K is maximum for ring."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_320",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four solid rigid balls each of mass m and radius r are fixed on a rigid-ring of radius 2r and mass 2m. The system is whirled about ‘O’ as shown. The radius of gyration of the system is :- O 2 2r m",
+    "options": {
+      "A": "r 128 5",
+      "B": "88 r 5",
+      "C": "128 r 30",
+      "D": "88 r 30"
+    },
+    "correct_option": "C",
+    "explanation": "Angular velocity ω = v R = 2as R = ( ) 2 2 1 2g sin s R K 1 R θ + = 2 2 1 2gh R K 1 R +  2 2 K 1 2 R = (for solid cylinder) ∴ 1 4gh 2 gh R 3 R 3 ω = = Hence option (3)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_321",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Four spheres of diameter 2a and mass M are placed with their centres on the four corners of a square of side b. Then moment of inertia of the system about an axis about one of the sides of the square is:-",
+    "options": {
+      "A": "Ma 2 + 2Mb 2",
+      "B": "Ma 2",
+      "C": "Ma 2 + 4Mb 2",
+      "D": "8 5 Ma 2 + 2Mb 2"
+    },
+    "correct_option": "A",
+    "explanation": "R ω A v cm v cm O velocity at point 'A' = 2 2 2 cm v R + ω as v cm = R ω (For pure rolling) v A = v cm 2 Hence option (2)"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_322",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three rods each of mass m and length L are joined to form an equilateral triangle as shown in the figure. What is the moment of inertia about an axis passing through one of the corner of the system and perpendicular to the plane ? L, m",
+    "options": {
+      "A": "2 mL 2",
+      "B": "2 3mL 2",
+      "C": "2 mL 3",
+      "D": "2 mL 6"
+    },
+    "correct_option": "C",
+    "explanation": "As the contact point is relatively stationary so work done by the friction is always zero. Hence option (1)",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_rotational_motion_323",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Rotational Motion",
+      "chapter_name": "Rotational Motion",
+      "language": "en",
+      "source": "Rotational Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thin wire of length \\lambda and mass m is bent in the form of a semicircle as shown. Its moment of inertia about an axis joining its free ends will be :- O X X Y Y '",
+    "options": {
+      "A": "m \\lambda 2",
+      "B": "Zero",
+      "C": "2 2 m π \\lambda",
+      "D": "2 2 m 2 π \\lambda Que. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Ans 1 1 1 4 4 2 1 1 2 4 2 1 3 2 4 Que. 16 17 Ans 2 4"
+    },
+    "correct_option": "A",
+    "explanation": "a = o 2 g sin g sin 30 5 g I 2 14 1 1 5 MR θ = = + + Hence option (4) $//(1"
+  }
+]

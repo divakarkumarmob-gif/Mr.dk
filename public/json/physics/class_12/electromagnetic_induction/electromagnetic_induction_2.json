@@ -1,0 +1,1843 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Exercise I-III - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A metallic disc of radius ‘R’ is rotating about its geometrical axis with constant angular speed ‘ \\omega ’ in external magnetic field B which is perpendicular to the plane of the disc then induced emf between the centre and any peripherical point of the disc is given by : -",
+    "options": {
+      "A": "\\pi \\omega BR 2",
+      "B": "\\omega BR 2",
+      "C": "2 BR 2 \\pi\\omega",
+      "D": "2 BR 2 \\omega EM14 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Exercise I-III - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an AC generator, a coil with N turns, all of the same area A and total resistance R, rotates with frequency \\omega in a magnetic field B. The maximum value of emf generated in the coil is : -",
+    "options": {
+      "A": "NAB \\omega",
+      "B": "NABR \\omega",
+      "C": "NAB",
+      "D": "NABR EM15 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": " 0 = NBA \\omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Exercise I-III - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A rectangular loop of sides a & b is placed in magnetic field B. The emf induced in coil when normal of coil makes angle \\omega t with B: -",
+    "options": {
+      "A": "B",
+      "B": "B",
+      "C": "- B",
+      "D": "- B"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Exercise I-III - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In this given figure if magnetic field increases with time then pattern of induced electric field lines will be : - x x x x x x x x x x x x x x x x x x x x x x x x x x x x v (Induced current) I v × × B NEET : Physics",
+    "options": {
+      "A": "A.C.W. concentric circular field lines in the plane of the paper",
+      "B": "C.W. concentric circular field lines in the plane of the paper",
+      "C": "A.C.W. concentric circular field lines, perpendicular to the plane of the paper",
+      "D": "C.W. concentric circular field lines, perpendicular to the plane of the paper EM05 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOkAAABFCAIAAAAgi1YhAAAVpklEQVR42u1daVMbWZZ9ay7aAFuWEGCX11piqmf+/1/oiImY7ujp6iqXy5hisWQBQkopM986Hw56nSVsXPZgQEYvKioswEZ6efK+c8899yb13pPV+vSljZFCKKWiKDLWeu+lENY6ztklf2s2y2u1FH8uSyWlYIxprQkhUkr8dW2Msy6Oo9UmX77Yags+b0khtDFSSkIIo1QKQQi5BLhlqbz3tVpqrSOEZNNZHEeM/eHnGaOjs4kUYgXcFXa/4LLWSSGsc4QQrc3paIyvuw+sOI4m2dR7zzkbT7I0SQgh40mmlJJS4h6glNbrKcLzaoc/uuiKM3z2Oj0929hYc84hfGqtlTb1OSV4L8cIfyvPCyE4IEsImWTTRr02Go03NtYIId57Sulqh1fY/SIrQNY5RwixzgGaoAQXF+dMa+2cj+OoKMokiQkhoMvTWV5F/MLL1VpxhiteeVGeg9h7xpgU4vjkFBh973+EEKUNiKz3viwVIYQyVhSltRaBmRBirF0BdxV3v/iCaKC1llIaa3cePjLGfCRUMO6cHQ76xlrBefj62Xiy1mo654wxFyPxaq2wS65cI3vQ3QwbyDn3nnj/fs7gvZdRpJWilHrvORfWngM9SdKiyH9/8yZNE7COy4W21TrHrjamGgCUUpyLO7h3CJ8BZ3lehJga0qyyVFzwPxNfP2kNB/1wDwwHfUJInhcQ1ELSthCn75qkA0Aaa7XSaZoYaxmlDFtWlmqSTa11URQZY5RSd22DUBp4NzyGVoUKgpQyzwspxHSWa2MeP3u22dtyzjPGr/D3tjtdIeXe7q4QUimljUnTpFZLT05GAG6eF4zSwInv2gJwp7NccJ6myeloLDhnjFHvPbJdIDiOozt7i4cgN8mmzUY9m87SJMHGdTZ7zjkhJKUEZbArO/goZYxZa1tr6//917+++O7b4aDvnHPeG2244KiD4NKEK3V3Fq6FsZYQIjgPEg0hhHnvrXUnJyNcPPzE3TybhscnWus8L5qN+uhs0qjXKCXtTvdBdxOKmDFaa53WapyLq8UuIWR8Nvrxv/5zf2+v3ekyxlSpkiQm3nuUP4xBkL5rF6XZqBNC3DyeAsRFUXrvqTGWc+ac8/48OFehfZcFhN7OQ61UFMVKlUinKKVCiKuNu4QQ/AohpDGaEJLWavlsNhz0x5MsiaMQaAPtvptkd3h80r5/j8wL7HEcMc7Z0dsBYwwIJoTczWL6JJsGuQquA62UEFKpEpkc59x775wnhMRxfIVxV6lSSgnZgXORz2ZCyHan22o2oig6ORmVpTodje8gcEF2Ue5p37/nnCuKkhDy5NnzdqdLrbWMMedcZ7PHGPvl51/W15p38xavpvOdzR4XQivFuYiiKM9nUMGiOM5nsyv8jUIIY0wIus3W2mR8JoSgjGmlDvd/j6Jzmns3/WV5XqRpElQgJB6EEMYYNcYyRiml7U6XMR7HcZ7PoNTcqVUtz7Y73RAUz3MAIYwxeMkYZ4xerUwGubdWr8+mU845Km2U0nf9t8ggtdaM8bup+2bTWS1NOps97AmlzHvnvWeUEiTXjDHnrLGGENLudL334RitHqnGWgAftAM8bLkKHDiDQFtxBo3OJkIIQkgAroyikLwSQoBUvHTOmqvWqkAYZtMpIQTABUXpbG496G6OJxll54Vla13Y//BZcCGWJZcAZvK8CPKOcw5JGAJtyMnw8snTp53NHqU0iiLvPaXk7eHhcNCn3vtqctbudDnnnAvnLKX09atXUSSV0tXsDT8feMVyaWrg/tl01qjXENJQj8VnB2q1UoiFAVXXv0DkavV6WRSEkP7RobHWaBNMPMZY8HJKyYIPmNxuD9N4Ml1fa+LleJK1mg1gSWudF2Wr2UAqhm/tPHpcFHm1jhPgCo+IDv/QcNDnXChVGmOccw+/+WaSTZMkNtZOZzkhZPDuOElipZQUwlhbFCVnrJgbU5Zg77wjhATgjifZWqtprG13umlaE0JopRrNJuLrTQEX1zhOkiLPrbXe+3anKzjHNRudTaIoStNkkk2ds4wxSJxLsRhjAO7g3TEhpNVsEEI4Y9Y6KSUUsTiOtNb/8eNf2p1uUeScCyHEcNB/+fMvhJAkicECzvmcNubsbNy+f08bwyjjnLU7XSml1ppSKmW0+9uvC6p4VbNYIr+p1jrLZmmahJME6jeC7nDQ39zaMUbDNBP47vUvSinnHOSktbY+PhuFwAOesLzcd3Q2AXydc1obxhmllFGK470oykePH3vvvfecc+ec9/7N7m4Sx5yzKuroyenZxnqr6v8oS8UYlVKiyB5S4OGgX5ZKCME5OzkZ3bu3HgxQZDkNuDh9nr74NptMAlXAarRa08mEUuacvcE3maa1PJ/hFsKFYIwN3h7NZjmlVGm91mqC/ywXZ8vzAm5Pxli1h29za8fa8/QJn3o46AeR4Zysan06Gnce3Keoq+EwlUJk01kkRRRFRVEKKZy1WzsPCSEb9+6fnhynae33N6+D7TqE2yUqZ4Qb13vf294x83oVCmbGGK1UnCRgmZAXyA35K0IP5rklSGuQ4GDZIYRMZ3ktTZaoySLIJoAjsOScm+XF4ydPqnuOz4hsKtD6qmUKzn/LOZuMMxBBCIpJEgvOKWP4J05PjoWQeT5rd7rd3hbIMaXUOTed5UtUh2vfv4esvCjKt4cHhJA4SYCSsijM/A+gvFfoufkMbpOmNcY4aBsuufeeMSaEfNDdLIoSoYtSWlWEbvmilJ6OxsDf6GyCINjZ7H373fdB3tl9/RqoG51NEIOLsgzAPT45hVeMOucopcHkgeTOOVeWCnZSGP8E5+1Ol0JeY8wYA+LliRecLxFzCGdFWapvnjz13ltrkiQtywK3YqPZzCYTFM/KsrzxzAYXCJcQ0m8wsM8FJr9c3BdFSsaYNmZ755FzFvI2gubbo0PBuTaGUoqIi0/nnAt6F6L1J+cicIoAvuBe1jprDecCUT2bzhAMrqc4F9hSkOpQX4CYDyKEzx+ojrF2s7eFiOuc00oBDUsUuhjjb17/FkWSMXYuM2ktpSxLRSmJoij0xt3U/oeSGCEkMHK4wyklSuknz5/PtUhurY3j+F8//dRs1AEbfKjLuejn5NFIyQMprHKv0KmCTxLgcg23srWOC467pWotMtZSQkN+ia3pbG557w4P9ntb2zfLaz87GGPncWBWi4JKqVJpiE3XGUoX9j9c9/OBKRWeWhTlzqNH82K4MMYcHR4URQmvI26AP3OSf6YGZK3b3Nry3kdRrLXy3u++fo17C3EX7YS47ciXNyFgLE24xceTrNmoU0pDKgPNZTrLm4362Xjy/MWLkMwyxm9Qx/085UFGkZQSdbjd16/jSHLOi6K82OtxU/vvnF9fa6LKEGLZJJs+efoUDC2OE631wf5eKGwtdOl577XWl/iVPxm7Z+NJLU20NrV5+TRJUq2VEOLvf/sb5yKUTK6t3hb0Tli2wy99r1Mb77nZWptNM2ttYLdLtIQQznlKKW65dnfzp7//Dy5zUZRSShw42hgEs5va/4ABIBg7Xz3ifnv1qtVsDI9PGvU658wYi36e8dkECuzlEPp87b1aSp0LkIIL8c9//EMKUaulRVHGcfSl5Zvw8U5ORq21puAcYztKpWtpgpNLKTWeZD/+5S/YtYsVB5hglojsBsOkELwsS85F/+hg8O648+A+NHjk0NfpvFvYf2tdNp22798bT7Knz55VTXOhVnCxSee8EY2xP1N/+WTsIpjleRFFEecM7Lvb61URMBz0T0fjjfVWVXYmX8z/JaWs3iE4erAp74bHjXr9+bfforVJCOmcY4wSQrwnUsqiyJcx9NbqdWsMUGutQTnw7eF+OKOVUkKIbDpD0fX69z9gcXvnkZQSJKEo8te//VbltXjDo7MJY7TVbISsLugMV8x3gUuITWDiyIe6vV6tXi+LkhBysL+Hls7ruZbhEAi8Kk0T79z2w0dBEqnar+Zh4LxkuETwnTdZnAcwzgXnXKkSH3A46FcHVF7bu7q4/0kS97a2qwnZ/t5eEA1AyqvV3H+PxjLGGss5+2iD0+dg11oH7cl7r5S21iK4ZtPZk6dP54ZXaYy+Bh8wZJSqHWmSTb//4QdrnTE6oBMFKjO3awaPGATr5RLI8BGqRWzITKi9AdwAMawpN7L/ZVkGI7KMote//hpF0nsCHbcqnAUpLQTsEJUvP7evzGuCMFwU5bMXL8qyHA76nc2tIKHj3VTfCt66sdY7J6X03pv5SNCPTvSoCi5gWqD2Feb9b8jekRUOFiEkLAHDQT9oKWWpEGIwyQ8BL6inzjnMUxudTSIpPqTXhngZNnx0NqnXEiklRrLCWtjb2g7DUxjjB/t7UgjnHO6u2zsXBxWBbq8HtT9o/jKK9nZfh2lzuPnC3lXFvA/NosuLolGvaWOMNtXbVBvz4rvvceI3ms1plqFlnNy9haonEBwaNiF1o2wUcpWFDeSMMcbC19+r1yqlkScEKlK9ajjx251uNesNdV1IT6CatxS7oURcVUMQAhdSe8jp4WV3a7t/eEApfXt4ePkZB7i3O91QGUG8qTca0ywLt8oNehdvnEsAPa219cn4TEqplBq8PQKVDMd0Np2pUiF24sJprZMkDrn/Rb02TWIppXPu7GyysbGGr4M9zmb5d9//QBkFh4nj2Huyv7eLSxMGvOJ0vULd6cqu8cI5HpRU+Amz8RiFysr0LgEjAVzxaVpTqvxovMSdAKoHOoVWEK0NUIvftVx1siviDJxzZq11zlXNx7jJYYTtHx2GWashdraaDbh5mo06Qu+H9NoF9rn3+8Gjh9vd3ra15g9FsoP98SS7f28DPw+3FkbaXO2otauMT+HQwUaAWv1x2pxIaynOFNyCC7m/EOIS+GIcHWcccI+TxGjjvYNbhRASxTGC8R1ccA5FUSwjOc0yfBHMIeSjSEIO9vd6W9v9o6PxJNtYb52OxmutRuAMH9JrOeezvIjjyDvHOEf5IIQnvIGXP/9cq6hj3ntnHZ6pUSUPtw67uMnCoRColfP+2fMXlBLnfLX0Gnx9UkZaK0JIkqRoJf+oJs8Yo5QC5YjEVRKyRIUGcsWjDIS1Bic7pQzjp4Dp+XAJh30uy4Ix3j86aHe66ABDNQ6pyCV6bZDe2p1udZRlFEWvXr5E5BpPsjRNwKHxXRRNbvUM0zDHxXt/cjq6f28j6ADf/fC9kFIrtba+cTY6jZPEGmOMYYyjtkkp5VxcLg4EjouIG8xroAeNZnM2nV4Uce/Iwt270KoUxzGKR9jYIKuFm3/B6H2JXotDvxpocSGctZSyoMqFgkLVDkbmrT6tZv0KvVlXx3fn5o9AfBGJkV2BRWxubWM2spqPoZ0z1/PaJvb6Q4RhIZVGbEDwxpmIfxMC552FLwZPIS5Ya0LCFHzA4YwKlXzvPQ6x0IV7Ua91zsGhj9qkczZNaz/983/TJAH3CBgAS2b0fIFMCimkEFdbZ/3i+fgl2nW46REtQt6GDnt8t7rXq3UN6+jwQHCOAOE92drZQbcjvotYA9/2gtfxq517fvEMevb8RTDMh1JnnCTEe3QrhCE0ztkVfK+XN3NrLSZaY3YgKs/WGny9GpW+5pn9H/JqIAY//OZJns+QT4QeGyklht+jRamaE6zWNdTnGOPgxwgcQoh5LTc+3N8LFLbKZb9O7H5Ic0GDitKaM/bo8eMgOyRpGobV1RsNrbRS5W1oHSN3qcYho8ho7b3HbL8wFwI+luHxydpa68anLV4HZ3iv1r1w4lQT2CpbYIxxzq11S2SX+Trqc8BrMCosNMChynDlZd5b93w1TzwmKbH59KfxJEuSuD8YlqXCI0uHg/7R4QFjDPJha23dOVur15HefujhOav1Jfqo07RGCHn5y0tCSKNegz4gpaSUZNNZGMJurbtB4F5frnZJLySgLDivzUlwu9NFQQhwR6vZClXXtkI2VpYqL0oUw6qG4POu1QsugK8Nu5f0QC/oD/Cqg/XCzRhE9fc6x1frywEXevzFVpyQnwHKNzuH7tb5rWBlms7yKJK9rW3oNdimMNQoWFRXUPszHh2kCkJI52zw+F4MCpRSiLur51p+/lrodQ5pXBjRFVKKO2td+KTcq1avB3eOjCJrLKzVodNYCPn2cH/pnpHDbuFc7HotRU6AEa3DQR8bHfwPzdYaTqsVcP9M7jXNsiiKGWNpWrPGOGcbrRalBIaQ4aD/+tWvhJAokmapPPu3Me4iYwM6ManEOc8YfdDdDEIv5lKuoPlnVtBoqy/xMIuFOXQ3nn4tN3bHk6xRrzHGkNvBVIr/Y/JAt9eDwXzpZjHdIN9NazVVKoyRtNa867+t9jJAyFm6YdS3tDdmoWU0PJKTEJJNZ0+fPTvvykprl1h+VysYRTD5FE7FoiirzxAJ+g98t0v0bLJbh10EAwRapdQsP9cXQSSw7zBSottkhc6PriRJ9/d2L3aQk7lGGbqIl+jZC7cRu8Zazlh1JHB1r2G601oLISADr6BJPjY//ed//QsGVLTrCM4RIEITTvBeL9eztpe+nxZP5ISvVAiJ9jW0uYfiXBhysUT8ODzfPWix1TEo1RH+QSgMMzmvc7bLCrvk/9/j+d4YDEIshGSMhmaNpSsrVMfehK/jZWjX4wIPIhbGGIwOJ1/7Y82XHruhSjmd5d88fkwIuf+gc3o85JxXr3SYtbosY0cwgUoIAQ8dQLm2vjGbZqFAI6MoTpJsPMYMkeokhIXW1xV2ya19BLu1DtQN3jzEYJjWcfEu9tMvkRdxQaAl8z7H316+xNPEMOmjLFU2naLFNQyEXHGG5Viwk4aOv85mLxBcNMMtXQtGEAExqTIMe8QIIu8cnh8YxvaTP1bUlNJfMYK/hlwNXDBwu+rQeq11b3sHmdxyjXwM7DYE4PCsPMA0TNDCJDw0l4MkQEBYrmcGfg1+hk9ds7wAUvFU5OksV/p8uDlAPBz0d1+9mo+6t0v0IKcoioHXJEkJIf2jQ8xAiKLo+OSUcwa1izFmtMEjeUGQ1tea3ntVqhVnWILH2sMiDE80BhHgKi5MJ97c2lkW+IItMMYJ8eAJmBKC6TXhEUaYABuUb2zFcsm0K75LPukZW9WWuKD7hmEl19zaGTr454LX+WwUcPTf37zBrKSrHUS3wu7yrYUEvNvbgmp2Lpr+8YnY1zBiB9rtxeoJygqo2TrnkJAtOJtX2L1b2A0zvjGGOs+L9fVWt7cVRnVjfKI19toGQ4VaA4a/gx4455XWYZjQtT3wa4Vdcpu92IQQ61z1WbWBL24/fFSW5XyG1znX/NKzPLgQzlpr7d7ubq2WVqst1Si7Cror7J5b2hv12myWE0JkJL1zURQNj0/a9+8ppbZ2Hl6bHvzy519arWaIuws31SSbNuq10Wi8sbFWfZD3ahFC/g9BKb9SBYRT9wAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A coil of copper wire is connected in series with a bulb, a battery and a switch. When the circuit is completed the bulb lights up immediately. The circuit is switched off and a rod of soft iron is placed inside the coil. On completing the circuit again. I t is observed that : -",
+    "options": {
+      "A": "Bulb is not so bright",
+      "B": "There is a slight delay before bulb lights to its normal brightness",
+      "C": "The bulb is initially bright but gradually becomes dim",
+      "D": "The bulb is brighter than before EM06 - 0172"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the branch AB of a circuit, as shown in the figure, a current I = (t + 2) A is flowing, where t is the time in second. At t = 0, the value of (V A - V B ) will be : -",
+    "options": {
+      "A": "3V",
+      "B": "- 3V",
+      "C": "- 5V",
+      "D": "5V EM06 - 0171"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An e.m.f. of 15 volt is applied in a circuit containing 5 henry inductance and 10 ohm resistance. The ratio of the currents at time t →  and at t = 1 second is: -",
+    "options": {
+      "A": "1/2 1/2 e e 1 -",
+      "B": "2 2 e e 1 -",
+      "C": "1 - e - 1",
+      "D": "e - 1 EM11 - 0049"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If 2.2 kW power transmits 22000 volts in a line of 10 \\Omega resistance, the value of power loss will be: -",
+    "options": {
+      "A": "0.1 watt",
+      "B": "14 watts",
+      "C": "100 watts",
+      "D": "1000 watts EM17 - 0058"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 50 mH coil carries a current of 2 ampere. The energy stored in joules is",
+    "options": {
+      "A": "1",
+      "B": "0.1",
+      "C": "0.05",
+      "D": "0.5 EM07 - 0564"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "As shown is the figure, a magnet is brought towards a fixed coil. Due to this the induced emf, current and the charge are E, I and Q respectively. If the speed of the magnet is double then the following statement is wrong: -",
+    "options": {
+      "A": "E increases",
+      "B": "I increases",
+      "C": "Q does not change",
+      "D": "Q increases EM04 - 0342"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The equivalent inductance of two inductances is 2.4 henry when connected in parallel and 10 henry when connected in series. The difference between the two inductances is : -",
+    "options": {
+      "A": "2 henry",
+      "B": "3 henry",
+      "C": "4 henry",
+      "D": "5 henry EM06 - 0173"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A transformer is employed to reduce 220 V to 11 V. The primary draws a current of 5 A and the secondary 90 A. The efficiency of the transformer is",
+    "options": {
+      "A": "20%",
+      "B": "40%",
+      "C": "70%",
+      "D": "90% EM17 - 0032"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A magnet is dropped down an infinitely long vertical copper tube. Then",
+    "options": {
+      "A": "The magnet moves with continuously decreasing velocity and ultimately comes to rest",
+      "B": "The magnet moves with continuously increasing velocity and ultimately acquires a constant terminal velocity",
+      "C": "The magnet moves with continuously increasing velocity and acceleration.",
+      "D": "The magnet moves with continuously increasing velocity but constant acceleration EM02 - 0491 R = 3 \\Omega A L = 1H I 10V B G S N Exercise - I Electromagnetic Induction NEET : Extra Edge [ Physics ]"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a copper ring is moved quickly towards south pole of a powerful stationary bar magnet, then: -",
+    "options": {
+      "A": "Current flows through the copper ring",
+      "B": "Voltage in the magnet increases",
+      "C": "Current flows in the magnet",
+      "D": "Copper ring will get magnetised EM02 - 0492"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following units denotes the dimensions ML 2 /Q 2 , where Q denotes the electric charge: -",
+    "options": {
+      "A": "Weber",
+      "B": "Wb/m 2",
+      "C": "henry",
+      "D": "H/m 2 EM06 - 0174"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A small cube of volume 1 mm 3 placed at the centre of circular loop of radius of 100 cm, carrying a current 1A. The magnetic energy stored in side cube is : -",
+    "options": {
+      "A": "16 10 J 2 \\pi ",
+      "B": "7 2 10 J - \\pi",
+      "C": "16 10 J 2 - \\pi ",
+      "D": "7 10 J 2 - \\pi  EM07 - 0565"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two circular coils can be arranged in any of the three situations shown in the figure. Their mutual inductance will be",
+    "options": {
+      "A": "Maximum in situation",
+      "B": "Maximum in situation",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A rectangular loop with a sliding connector of length l = 1.0 m is situated in a uniform magnetic field B = 2T perpendicular to the plane of loop. Resistance of connector is r = 2 Ω . Two resistance of 6 Ω and 3 Ω are connected as shown in figure. The external force required to keep the connector moving with a constant velocity v = 2m/s is",
+    "options": {
+      "A": "6N",
+      "B": "4N",
+      "C": "2N",
+      "D": "1N EM13 - 0080"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In cylindrical region of radius 2m magnetic field is changing as B = ( 2t + 5 ) T. Find induced electric field in N/C at r = R",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) 1 8 (2) 1 4 (3) 1 2 (4) 0 EM05 - 0310 Exercise - I",
+    "options": {
+      "A": "1 8",
+      "B": "1 4",
+      "C": "1 2",
+      "D": "0 EM05 - 0310 Exercise - I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a copper plate is allowed to oscillate between (N) pole & (S) pole of a magnet like a simple pendulum, then : -",
+    "options": {
+      "A": "it will oscillates for ∞ time",
+      "B": "it's motion is accelerated",
+      "C": "it will not oscillate",
+      "D": "it's oscillation is damped EM08 - 0108"
+    },
+    "correct_option": "D",
+    "explanation": "its motion is damped because magnetic flux associated with the plate keeps on changing as plate moves in & out of region between magnetic poles, flux change induces eddy currents in plates, direction of eddy current is opposite hence opposes motion of plat e."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If length of rod ' ⊥ ' to magnetic field is released with initial velocity V 0 then : -",
+    "options": {
+      "A": "It will continue to move with constant velocity",
+      "B": "It will accelerate",
+      "C": "It will stop after sufficiently long time",
+      "D": "None of these EM02 - 0394"
+    },
+    "correct_option": "C",
+    "explanation": "on account of the presence of the magnetic field, there will be a force opposite to velocity of rod. Hence motion of rod is retarded."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A rectangular loop and a circular loop are moving out of a uniform magnetic field region in the given figure, to a field free region with a constant velocity v. In which loop do you expect the induced emf to be constant during the passage out of the field region?",
+    "options": {
+      "A": "and",
+      "B": "Circular loop",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "The induced emf is expected to be constant only in the case of the rectangular loop. In the case of circular loop, the rate of change of area of the loop during its passage out of the field region is not constant, hence induced emf will vary accordingly",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A Metallic loop is placed in non uniform steady magnetic field, then",
+    "options": {
+      "A": "EMF get induced in the loop",
+      "B": "No EMF get induced in the loop",
+      "C": "An EMF get induced but there will be no current in the loop.",
+      "D": "None EM01 - 0542"
+    },
+    "correct_option": "B",
+    "explanation": "In example there is a note from which we can infer that field which does not change with time does not induced any EMF."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In laminated core, the lamination are separated by an insulating material like",
+    "options": {
+      "A": "Tar",
+      "B": "Lacquer",
+      "C": "Canada balsam",
+      "D": "Manganin EM09 - 0267"
+    },
+    "correct_option": "B",
+    "explanation": "Lacquer is used for lamination"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match the column A P Area vector parallel or anti parallel to B \\rho B Q A B ⊥ \\rho \\rho C R Induce EMF is maximum D S Induce EMF is zero T Flux through coil is maximum U Flux through coil is zero",
+    "options": {
+      "A": "A - P,R,T , B - Q,R,T , C - P,R,U , D - Q,S,U",
+      "B": "A - P,S,T , B - Q,R,U , C - P,S,T , D - Q,R,U",
+      "C": "A - Q,R,T , B - P,R,T , C - Q,R,T , D - P,R,T",
+      "D": "A - Q,R,U , B - P,S,U , C - Q,R,U , D - P,S,U EM09 - 0268 Q S R A P S B N S R S A B P N Q N P Q S R A B S N P Q S S A R B R V 0 v v Electromagnetic Induction Electromagnetic Induction"
+    },
+    "correct_option": "B",
+    "explanation": "Refer theory"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find direction of current in position I and position II in the given diagram:",
+    "options": {
+      "A": "Clockwise in position I and anticlockwise in position II.",
+      "B": "Clockwise in position I as well as position II.",
+      "C": "Anticlockwise in position I and clockwise in position II.",
+      "D": "Anticlockwise in position I as well as position II. EM01 - 0642"
+    },
+    "correct_option": "C",
+    "explanation": "according to lenz law anticlockwise in position I and clockwise in position II",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A closed loop moves normal to the constant electric field between the plates of capacitor such that electric field lines are normal to the plane of the loop. Current will get induced in the loop when:",
+    "options": {
+      "A": "It is wholly inside the region between the capacitor plates.",
+      "B": "It is partially outside the plates of the capacitor.",
+      "C": "Electric field lines are parallel to the plane of the loop.",
+      "D": "No current is induced in either case. EM09 - 0266"
+    },
+    "correct_option": "D",
+    "explanation": "Current cannot be induced by changing electric flux"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is/are true: a. Charges in motion (current) can exert force/torque on stationary magnet. b. A Bar magnet in motion (or more generally, a changing magnetic field) can exert force on stationary charge. c. The fundamental significance of faraday's discovery is that electricity and magnetism are related",
+    "options": {
+      "A": "Only a",
+      "B": "a and b",
+      "C": "a and c",
+      "D": "a, b, c EM03 - 0157"
+    },
+    "correct_option": "D",
+    "explanation": "All statements are true, refer theory.",
+    "statements": {
+      "T": "b. A Ba"
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is/ are true for two concentric coplanar coil shown: Statement",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Both statements are correct, any of the coil can be taken as primary or secondary."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "we can find mutually induced EMF and mutual inductance when current in small coil is varying with time Statement",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "its motion is damped because magnetic flux associated with the plate keeps on changing as plate moves in & out of region between magnetic poles, flux change induces eddy currents in plates, direction of eddy current is opposite hence opposes motion of plat e."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "reciprocity theorem states that M 12 = M 21 , that is mutual inductance is purely geometrical quantity depending only on size, number of turns, relative position and configuration of two coils but independent of current.",
+    "options": {
+      "A": "Only statement 1 is correct.",
+      "B": "Only statement 2 is correct.",
+      "C": "Both statement 1 and statement 2 are correct.",
+      "D": "None EM04 - 0354"
+    },
+    "correct_option": "C",
+    "explanation": "on account of the presence of the magnetic field, there will be a force opposite to velocity of rod. Hence motion of rod is retarded.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is true for two nearby coil as shown A. In the phenomena of mutual induction, self induction of the coil persist B. Net flux through the coil C can be written as L 1 I 1 +M 12 I 2 Where L 1 is self induction of coil",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "1 2 1 1 12 dI dI L . M dt dt  = - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "C. Induced EMF in coil 1 can be written as 1 2 1 2 12 dI dI L . M dt dt  = - - Where L 2 is self induction of coil C",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "its motion is damped because magnetic flux associated with the plate keeps on changing as plate moves in & out of region between magnetic poles, flux change induces eddy currents in plates, direction of eddy current is opposite hence opposes motion of plat e."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(1) Only A is true (2) A and B are true (3) A and C are true (4) A, B and C are all true EM04 - 0356 Pivot S N R r I 1 C 1 C 2 I 2 NEET : NCR [ Physics ]",
+    "options": {
+      "A": "Only A is true",
+      "B": "A and B are true",
+      "C": "A and C are true",
+      "D": "A, B and C are all true EM04 - 0356 Pivot S N R r I 1 C 1 C 2 I 2 NEET : NCR [ Physics ]"
+    },
+    "correct_option": "C",
+    "explanation": "on account of the presence of the magnetic field, there will be a force opposite to velocity of rod. Hence motion of rod is retarded."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If a cylindrical magnet is dropped through an aluminium pipe it takes more time to come down then the same cylindrical magnet dropped through a PVC pipe, because:",
+    "options": {
+      "A": "Magnet attract aluminium pipe and takes longer time whereas there is no attraction with PVC pipe therefore less time to fall down in it.",
+      "B": "Eddy current are generated in the case of aluminium pipe which opposes the motion of magnet whereas no Eddy current are produced in PVC pipe as it's material is insulator.",
+      "C": "Both 1 and 2 are correct.",
+      "D": "Both 1 and 2 are incorrect. EM01 - 0643"
+    },
+    "correct_option": "B",
+    "explanation": "Eddy current opposes motion in aluminium pipe."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the given experimental setup which of the following steps can be taken to obtain large deflection of galvanometer A. Use a rod made of soft iron inside the coil C 2 B. Connect coil C 2 to powerful battery C. Decrease the resistance of the galvanometer. D. Move the arrangement rapidly towards C 1 coil.",
+    "options": {
+      "A": "B, C, D",
+      "B": "Only D",
+      "C": "A, B, C, D",
+      "D": "B, D EM04 - 0353"
+    },
+    "correct_option": "C",
+    "explanation": "All statements are correct."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A square of side L metres lies in the xy - plane in a region, where the magnetic field is given by B = B 0 ( ) ˆ ˆ ˆ 2i 3j 4k + + T, where B 0 is constant. The magnitude of flux passing through the square is: -",
+    "options": {
+      "A": "2B 0 L 2 Wb",
+      "B": "3B 0 L 2 Wb",
+      "C": "4B 0 L 2 Wb",
+      "D": "2 0 29 B L Wb EM01 - 0645"
+    },
+    "correct_option": "C",
+    "explanation": "Since, square lies in xy - plane, hence area vector is directed along Z - axis (i.e. along \\hat{k} ) ∴ A = L 2 \\hat{k} Given, B = B 0 = ( ) ˆ ˆ ˆ 2i 3j 4k T + + ( ) 2 0 ˆ ˆ ˆ ˆ f B.A B 2i 3j 4k L K = = + +  = 4B 0 L 2 Wb"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An ∠ AOB made of a conducting wire moves along its bisector through a magnetic field B as suggested by figure. Find the emf induced between A and B, if the magnetic field is perpendicular to the plane of the paper. (where, AO = BO = ℓ)",
+    "options": {
+      "A": "Bv 2 \\rho",
+      "B": "Bv",
+      "C": "2B v \\rho",
+      "D": "B v \\rho EM02 - 0397"
+    },
+    "correct_option": "C",
+    "explanation": "The emf induced between A and B as shown below is given by  = Bv (AB) In \\Delta AOB, AB = 2 2 2 2 AO BO l l 2l + = + = ∴ ( ) Bv 2l 2Bvl  = =",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABG8AAABBCAIAAADg2B7zAAAJ/UlEQVR42u3da1BU9xnH8eec3bO7ZykImXSiqPV+w0sCamYajUZAzUWlisZ7Z6pVUIE3qTM1r9N3NTMRX5Smb5qoEVBxAbXexc6kM5qo8VLfOBVNBM2Lcmfv5/TFNnbGIoLAcg77/bxlYIbnzGH2x//5P49imqYAFtDU3PzbrVvu3bvndruphsUFAoGFC9/5/Z49I9PTqQYAAEhYCmkKVtDS2lpYsP38hYuUwhZmzZwxdeq0lJSUouLi9BEjKAgAAEhMKiWAFaJUwfZtRCm7SEtNnTJlqmEYjY0N+0tLGxobqQkAACBNAXEVOxeNnUpduHiJgtglSuXm5iqKYpqmx6M3NjaU7ttHoAIAAEKnHyA0+OH5XnklLTcnV0QikYj87w6Vf/jwEcUlJdyhAgAAwtkUQIMfuoxSOdk5z0QpEfF49MePGzmhAgAApCkgTppbWgq2b6PBz15RSlGUcDj8/1/1ePRHj34oLy/nrBsAAJCmABnQu1Ii8odPPiFK2avBLxalVLXrPxpeb9LN724c9/koFwAAIE0BA0JRFBHxVdd8eeAA1bBdg19s+MTznqzL5a46drTqOIEKAAAwhQIYAO3t7WVlZX/cuzcajVIN6xs3dszs2XNUVQ2Hw7EkLC86ewyFgvPmv52Xl/fzV1+lgAAAgDQFSD+OnaDBT2w1DN00TcMwevWNHR3t6ekji0tKRo0cSRkBAABpCiBKSWKOnXhmgl8PBQL+114bXlRcPHrUKIoJAACEe1NAH/dKEaUSJEqJiMejP3nyeH9p6Q+PHlFPAABAmgJY0csw9F4Hqn2fffaooYGqAgAA0hTQa4FgcEdhAVHKjsPQezJ24oWBqrGxofzwYYOOYgAAQJoCeuvQoUPnzl+gDvYaht4vUSomKelnt27drKqq4oomAAAQplAAPVddU7tzR2Gobw1jiH+DX39FKflpbLrf35n3q5WrVq7s358MAAAwuJyUAAMXpQoKtrNXKsGjlIgoiqLrXt/xKhEhUAEAAKHTD+iGYRiVR44SpezC7Xa9OXduz1f09iVQVVQe8fv91BwAAAidfoB0NcHvdx995KuuphRik1Op+fPmu93uOERf0zQDAf+4ceO3bN36i9GjKT4AACBNAazotXeDn6qqoVAobg14fn9nbLEvgQoAAAidfgBRyo7SUlMH7q5UN3Td++OPT0r37WOxLwAAIE0h0cWONwPBYGHBdqKUjaJUbm5u31f0Sh8W+x7+6ivDMHgWAACANIXEFTvWOHToECt67RilBmvCntebdOfO7aPHqljsCwAAuDcFYa8Ue6WIUtL7PVTLluetXp2vMjYdAAAI+6bAXilYmK7r2dnZVohS8tPY9Noan4gQqAAAgNDpB0mku1JEKdt54/VZTqfTClHqaaDyePTaGl9l5RFa/gAAgNDpB0mYFb1Hj1WVlBQTpWzBpWmZmW9MnDips7NTsdgpUKzl7733l+XlrfDqOg8LAACQpiCs6IVY5q7UggULdF0PhUJi1dPOYDAwZszY32zZMnbMGB4ZAAAgTWFoam5pKdi+7eKlOkpho7ETcV7RKy+72Hf48BF7Pv44ddiwWMRSuEwFAACEe1MYKmJ7pYhStpvgZ/0oZZqmrnsfP270+apjd6iIUgAAgDSFIeXgwYOs6GUYugzY4jJd9144f7aiopLFvgAAQOj0w1Diq67ZtXMHe6WIUhKXoRRrP1yjqvzHBwAACPumYHvHfdU7dhQywU/YKyXx2EN16mStoigfrllNoAIAAEKnH8Tmp1JEKWGvVHwD1ckTNRWVR2j5AwAApCnYO0oVFhYQpezizblzxo+fYP2xEz0JVCdqq8u5QwUAAEhTIEohPlFq8uQpFlzR+3KByutNOnWylkAFAACYQgGbaW1r+3NZ2d5PPyVK2UJKcnJWVmZ6+shAIDCUfq/YYt9fvjVv08aNSUlJPGgAAECagg3s3r37r198QR3EPhP8HA5HMBgcemuaTNNsb29bvGTprzdvZigFAAAQOv1gcVXHfV8eOEAd7DUMfUhGKRFRFCU5OeXihfOHy8tp+QMAAKQpiMXvSu3cuYOPreyVshSPRz918gSBCgAACPumwNgJSH/slVq4cKFhGOFwWFXVId+46/HoJ2prDMNYt3at08mfLwAAMMgUX3VNKBSiEIPaxSQiEolEW1tbTNMcxOMFTdMe1Nf/qayMKGUXi3NzFi9ZGgwGE+NN+e89z3A4nJGRkZaWJiLc/AQAAIMi1izjPP23U21trVzsTnCmaWqa6/vvH16/8R3VsItZM2fMm/92JBIZ2g1+zwQqEXG5XHfv3qXfDwAADKJIOCwiTl3XYz1CVCSRaZr28OGDm7duUwobRan81Ws0TYtGo4N7pDkoaPMDAABigX/yOgOBQCDgVxQl0T6NWT7euBwOR9w+mD58+ODK1W9o8LNjlHr6MgMAACDemerK1auRSIRCWCnmqk1NTWfPnG5ubnK53HE4laqvv//Nt9eIUrbg0rRFi955a978p1EKAAAA8RcOh9nea13/un9/f2lpU9O/3W7PgEaptrbWc+fOh8Jham59brdr/br1GdNnhEJB3lwAAIBBT1Ncl7Ko8ePGFRUXp6amhULBgYtSHR3tdZf/TpSyUZSalpERDAaIUgAAAML2XnQfqIpLSoYNSx2IQBWLUhcv1XV0dFBqW/jg/Q8yps9gnwEAAABpCj0NVLuKioYNS+3fu21EKdt5fdbMzKysgTuoBAAAAGlqCJo4YcLGTZtCoWB/bdchSokNJ/ityl+tqioNfgAAAKQp9E5WVtbSd9/z+zv7/mGaKGXfYegsqwUAACBNofcPSVHWrV27ZOm7nZ0dfQlURCm775UCAACApTgpgS04HI4N69ebppw5fcrrTVJV9SV+Qnt726W6y0QpohQAAABIUwkXqDZuWO9yuc6eOR2NRjVN69X3GoZx5epVopRdzM7KXL4ijygFAABgZWzvtZ/bd+785fPPW1tbXC639KzBr7297euv/9HU3Ez1xA57pfJX5c+YOdMwDF5PAAAAYXsv+tGM6dN3FRUlJ6e8cF62aZqxu1KX6i4TpcQ+e6Uys2ZHo1GiFAAAgDCFAv1u0sSJsUDV/R4ql8vF2Amx4V6pYDBAKQAAAEhTGCiTJ02K7aF63gkGE/yEvVIAAAAgTaFLc2bPzs5Z3OXY9NhdKaIUe6UAAABAmkJXD09VN27ckJ2T+0ygcjqdnEoxDB0AAACkKXRHczo3bdq0KDvnaaBSVTUUCl28VNfZ2Ul9iFIAAAAQ9k2hm0C1efNmRVEunD+n615N065d+5ZTKbHNhMaMlavyHQ5HbMgmAAAAbCF2O4N9U0NEOBKpqKi4cf16ff39f969qyoKNbH062eapmlmTJu2bPkKTdMiEU6lAAAA7CQSCYvIfwCn4va7oMPN+AAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Induction furnace make use of",
+    "options": {
+      "A": "Self induction",
+      "B": "mutual induction",
+      "C": "eddy current",
+      "D": "none of these EM09 - 0269"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an AC generator, if the plane of coil turns by an angle \\theta then angle between magnetic field and area vector is",
+    "options": {
+      "A": "2 \\theta",
+      "B": "\\theta",
+      "C": "2 \\pi - \\theta",
+      "D": "None of these EM07 - 0589"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The direction of induced current in the right loop is",
+    "options": {
+      "A": "along common axis",
+      "B": "along xzyx",
+      "C": "along xyzx",
+      "D": "No current EM01 - 0644 C 1 C 2 G I B A O l 90^\\circ v"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A metal ring is kept (supported by a card board) on the top of a fixed solenoid which is caring a current I as shown in figure. The centre of ring coincides with the axis of solenoid. If the current is solenoid is switched off, then",
+    "options": {
+      "A": "magnetic flux linked with metal ring increases.",
+      "B": "current induced in metal ring in clockwise direction.",
+      "C": "metal ring will not remain on cardboard.",
+      "D": "both"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A solenoid has an inductance of 10 henry and a resistance of 2.5 \\Omega . It is connected to a 10V battery. How long will it take for the magnetic energy to reach 1 th 4 of it’s maximum value",
+    "options": {
+      "A": "0.693s",
+      "B": "2.772s",
+      "C": "3.465s",
+      "D": "2.142s EM05 - 0325"
+    },
+    "correct_option": "B",
+    "explanation": "Since U U' 4 = 2 2 1 1 LI LI' 2 4 2 (  = ( ) )  So, I I' 2 = Current reduced to half in time t = 0.693 L R (  ( ) )  10 t 0.693 2.5 (  = ( ) )   t = 2.772s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A conducting ring of radius r is rolling without slipping with a constant angular velocity \\omega . If the magnitude field strength is B & is directed into the page then the emf induced across PQ is",
+    "options": {
+      "A": "B \\omega r 2",
+      "B": "2 B r 2 \\omega",
+      "C": "4B \\omega r 2",
+      "D": "2 2 r B 8 \\pi \\omega EM02 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Figure shows a magnet and a coil. The magnet is moved towards the coil for a short duration of time \\Delta t. Then which of the following induced parameters is independent of \\Delta t.",
+    "options": {
+      "A": "Induced emf",
+      "B": "Induced current",
+      "C": "Induced charge flow",
+      "D": "Induced heat EM02 - 0395"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A magnet and a coil are moving towards each other, (there axis lies on same line). If magnet is moving with speed v 1 & coil with speed v 2 , emf induced in coil is e",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Emf induced  Relative velocity So, 1 1 2 2 1 2 e v v e v v + = -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If direction of motion of magnet is reversed, emf induced in coil is e",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "its motion is damped because magnetic flux associated with the plate keeps on changing as plate moves in & out of region between magnetic poles, flux change induces eddy currents in plates, direction of eddy current is opposite hence opposes motion of plat e."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The direction of induced electric field is",
+    "options": {
+      "A": "along magnetic field",
+      "B": "along induced current",
+      "C": "along the dir. of flow of electrons",
+      "D": "None of the above EM03 - 0123 Ring I I × Q P × × × × × × × × × × × × × × × × × × × \\omega N G Coil S Bar magnet NEET : NCR [ Physics ]"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A time varying magnetic field is present in a cylindrical region of radius R as shown in figure (cross - sectional view). B is increasing with time then,",
+    "options": {
+      "A": "For r < R, the induced electric field is proportional to r.",
+      "B": "For r > R, the induced electric field is proportional to 1 r .",
+      "C": "For r = R, the induced electric field is maximum.",
+      "D": "If a coaxial “Non conducting” ring of radius R 2 is placed in magnetic field region, then emf induced in the ring is 2 R 4 \\pi\\alpha . Which of the above statements are correct?"
+    },
+    "correct_option": "D",
+    "explanation": "For non conducting ring ( ) d E BA dt = 2 2 R dB R E 4 dt 4 \\pi \\alpha\\pi = = B A O l 90^\\circ v E in ∝ 1 r E in ∝ r E in E max r = R r Electromagnetic Induction NEET : NCR [Physics]",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Consider currents flowing simultaneously in two nearly coils having their axis on line. Then flux linked with one coil is",
+    "options": {
+      "A": "Only due to self induction",
+      "B": "Only due to mutual induction",
+      "C": "Both self and mutual induction",
+      "D": "Neither self or mutual induction EM04 - 0355"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Calculate the emf induced",
+    "options": {
+      "A": "zero, vB \\lambda",
+      "B": "zero, zero",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For loop l eff = zero So, Emf = 0 Across PQ So, equivalent Emf, E = vB \\lambda P Q vB \\lambda vB \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "There is a uniform magnetic field directed perpendicular and into the plane of paper. An irregular shaped conducting loop is slowly changing into a circular loop. Then",
+    "options": {
+      "A": "current is induced in ACW dir.",
+      "B": "current is induced in CW dir.",
+      "C": "no current is induced in loop.",
+      "D": "None of the above. EM02 - 0509"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "NCR - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Lenz Law is based on",
+    "options": {
+      "A": "&",
+      "B": "Conservation of energy",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A conducting ring of radius r is placed perpendicularly inside a time varying magnetic field given by B = B 0 + \\alpha t. B 0 and \\alpha are positive constants, E.m.f. induced in the ring is : -",
+    "options": {
+      "A": "- \\pi \\alpha r",
+      "B": "- \\pi \\alpha r 2",
+      "C": "- \\pi \\alpha 2 r 2",
+      "D": "- \\pi \\alpha 2 r EM04 - 0045"
+    },
+    "correct_option": "B",
+    "explanation": "B = B 0 + \\alpha t A = \\pi r 2 \\phi = B·A = (B 0 + \\alpha t) \\pi r 2  = - \\phi d dt = - \\pi r 2 d dt (B 0 + \\alpha t)  = - \\pi r 2 \\alpha"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the rotational velocity of dynamo armature is four times, then the induced emf of the dynamo will be : -",
+    "options": {
+      "A": "Four times",
+      "B": "Eight times",
+      "C": "Half",
+      "D": "None of these EM15 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "e=NBA \\omega  e  \\omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A current of 1A and frequency n 1 is passed through a coil subsequently the frequency is made n",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "e 0 = - L ( ) \\omega 0 d I sin t dt e = - LI 0 \\omega cos \\omega t e  \\omega  f"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If  1 and  2 be the induced peak emf in the coil, in the two cases then   1 2 will be equal to : - (1) 2 2 2 1 n : n (2) 2 2 1 2 n : n (3) n",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "e=NBA \\omega  e  \\omega"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If given arrangement is moving towards left with speed v, then potential difference between B and D and current in the loop are respectively : -",
+    "options": {
+      "A": "BvR and non - zero",
+      "B": "2BvR and zero",
+      "C": "4BvR and non - zero",
+      "D": "4BvR and zero EM13 - 0025"
+    },
+    "correct_option": "D",
+    "explanation": "Induced emf = B × v × effective length ⊥ r to velocity = Bv ( \\lambda BD ) = Bv(4R) = 4BvR Since B is uniform & Area is fixed, then' change in flux is zero in the loop so current flow will be zero."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A semicircular loop of radius R is rotated with an angular velocity \\omega . perpendicular to the plane of a uniform magnetic field B as shown in the figure. Emf induced in the loop is :",
+    "options": {
+      "A": "B \\omega R 2",
+      "B": "1 2 B \\omega R 2",
+      "C": "3 2 B \\omega R 2",
+      "D": "1 4 B \\omega R 2 EM14 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Let at any time t flux passing through the coil at time t \\phi = BA cos \\theta Here \\theta = 0^\\circ, A = 1 2 \\alpha R 2 \\phi = B (  \\alpha ( ) )  2 1 R 2 |emf| = \\phi \\alpha (  = \\alpha = ( ) )  2 2 d d 1 1 d B R BR dt dt 2 2 dt Here \\alpha = \\omega d dt (cons.) emf = \\omega 2 1 B R 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A conducting ring of radius b is placed coaxially in a long solenoid of radius a(b < a) having n turns per unit length. A current i = i 0 cos \\omega t flows through the solenoid. The induced emf in the ring is : -",
+    "options": {
+      "A": "Zero",
+      "B": "μ 0 ni 0 \\pi a 2 \\omega",
+      "C": "μ 0 ni 0 \\pi a 2 cos \\omega t",
+      "D": "μ 0 ni 0 \\pi b 2 \\omega sin \\omega t EM04 - 0046"
+    },
+    "correct_option": "D",
+    "explanation": "\\phi = B·A = μ 0 nI·A \\phi = μ 0 n I 0 cos \\omega t ( \\pi b 2 )  = - \\phi d dt = μ 0 nI 0 \\pi b 2 \\omega sin \\omega t"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an A.C. sub - circuit as shown in figure, the resistance R = 0.2 \\Omega . At a certain instant V A - V B = 0.5 V, I = 0.5 A, and current is increasing at the rate of \\Delta \\Delta I t = 8 A/s. The inductance of the coil is",
+    "options": {
+      "A": "0.01 H",
+      "B": "0.02 H",
+      "C": "0.05 H",
+      "D": "0.5 H EM19 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "V A - V B = + dI L IR dt 0.5 = L(8) + (0.2 × 0.5) 0.4 = L(8) L = 0.05 H",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADf0lEQVR42u3dzVJbZRzA4fecnCQDzGCoMGACgRmvpwtaV+pVaL0FsCvBjr2GulKvQRLolOpYJFgKccXKzkg6MEnJx3ERddRaCgEHkOdZsWT+2ZzfvF9RmqYBAADgBD6/d+/h2mo+nzeKvm63G0JIDAIAADhGmqZRFIUQlpaXFxYWDORVkdUqAADgjT5bWlpcXDSHfxUbAQAAoKlkFQAAoKlkFQAAcPksLS9rquBsFQAAEAa6pqJSrc7Pz5tGsFoFAACcVhRFu/X6nY8/MgpZBQAADGK3Xv/wg/d36z8bhawCAABO7cnGhqaSVQAAwIC+uH//5s2bmupUEiMAAACCu9SD1SoAAEBTySoAACB4nyp4twoAALhqVirVW7e8TxWsVgEAAGGwu9Q/ueN9KlkFAAB4n0pWAQAAmkpWAQAAmkpWAQAA18BXX3/z3u3bmip4DhgAAAjep7oMWdVsNo/a7cgkAADgEkhDiEJodzqtViuKzvk7PU3TLx88+PTuXXM+56x6/N33m5s/5nI5swAAgIvPqjSN47jVam3Vaq1WK47P7dhONpvd2qr98GTDkM8/q9rtdrPZ7PV6ZgEAAJdEHMelUmlnZ6fT6cRxnKbp2Zvq+fNfarUts/1PsiqKojiOzzGCAQCAsxu7caNYLO7t7UVRdMbdgEmS7O//urr2sN3pGKybAAEA4Lro9XrvFIuFQqHb7YYzbCnsN1Wlunp4eGiqsgoAAK6XKIpmyuV8Pj/wJsBsNqupZBUAAITrfH3F0NDQ1NTUYFllnUpWAQAAodfrvVUoZLPZU10yF0WRdSpZBQAA/C6fz8/NzZ28rPpXXNTru9+uVDSVrAIAAEKapoWxsdnZ2RPeB5jJZJ492360/rjZbJqerAIAAEIIodfrFcbGJicn33grYP881U9PnxqarAIAAMI/1qyKpdLo6OgxZfXnHRUvXx6ZmKwCAABe+XaP45ly+XWHrJIkaTT2q6trzlPJKgAAILxuwWpkZGR6Zqb/d/j7eapGY79SXT04ODAoWQUAAIRjDlmNj49PTEz8dcEqSZIXLxqaSlYBAADhhGtWpenp4eHhfln19/5pqouVpH8wCwAAuBof8UlSLpe3t7fjOG409lcqVeepLvwXyeRyuWw2axYAAHBVvD0+/m63W6ttPlpfbx8d5fO5i/1/MpnkhM9qhf/dtswQwm8gdX1+5lwncAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The figure shows three circuits with identical batteries, inductors and resistances. Rank the circuits according to the currents through the battery just after the switch is closed, greatest first.",
+    "options": {
+      "A": "I 2 > I 3 > I 1",
+      "B": "I 2 > I 1 > I 3",
+      "C": "I 1 > I 2 > I 3",
+      "D": "I 1 > I 3 > I 2 EM11 - 0012 2R R B A C D B \\rho "
+    },
+    "correct_option": "A",
+    "explanation": "At t = 0 Inductor behaves as open circuit hence I 1 = 0, I 2 = E R , I 3 = E 2R So I 2 > I 3 > I 1",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABG8AAABBCAIAAADg2B7zAAAJ/UlEQVR42u3da1BU9xnH8eec3bO7ZykImXSiqPV+w0sCamYajUZAzUWlisZ7Z6pVUIE3qTM1r9N3NTMRX5Smb5qoEVBxAbXexc6kM5qo8VLfOBVNBM2Lcmfv5/TFNnbGIoLAcg77/bxlYIbnzGH2x//5P49imqYAFtDU3PzbrVvu3bvndruphsUFAoGFC9/5/Z49I9PTqQYAAEhYCmkKVtDS2lpYsP38hYuUwhZmzZwxdeq0lJSUouLi9BEjKAgAAEhMKiWAFaJUwfZtRCm7SEtNnTJlqmEYjY0N+0tLGxobqQkAACBNAXEVOxeNnUpduHiJgtglSuXm5iqKYpqmx6M3NjaU7ttHoAIAAEKnHyA0+OH5XnklLTcnV0QikYj87w6Vf/jwEcUlJdyhAgAAwtkUQIMfuoxSOdk5z0QpEfF49MePGzmhAgAApCkgTppbWgq2b6PBz15RSlGUcDj8/1/1ePRHj34oLy/nrBsAAJCmABnQu1Ii8odPPiFK2avBLxalVLXrPxpeb9LN724c9/koFwAAIE0BA0JRFBHxVdd8eeAA1bBdg19s+MTznqzL5a46drTqOIEKAAAwhQIYAO3t7WVlZX/cuzcajVIN6xs3dszs2XNUVQ2Hw7EkLC86ewyFgvPmv52Xl/fzV1+lgAAAgDQFSD+OnaDBT2w1DN00TcMwevWNHR3t6ekji0tKRo0cSRkBAABpCiBKSWKOnXhmgl8PBQL+114bXlRcPHrUKIoJAACEe1NAH/dKEaUSJEqJiMejP3nyeH9p6Q+PHlFPAABAmgJY0csw9F4Hqn2fffaooYGqAgAA0hTQa4FgcEdhAVHKjsPQezJ24oWBqrGxofzwYYOOYgAAQJoCeuvQoUPnzl+gDvYaht4vUSomKelnt27drKqq4oomAAAQplAAPVddU7tzR2Gobw1jiH+DX39FKflpbLrf35n3q5WrVq7s358MAAAwuJyUAAMXpQoKtrNXKsGjlIgoiqLrXt/xKhEhUAEAAKHTD+iGYRiVR44SpezC7Xa9OXduz1f09iVQVVQe8fv91BwAAAidfoB0NcHvdx995KuuphRik1Op+fPmu93uOERf0zQDAf+4ceO3bN36i9GjKT4AACBNAazotXeDn6qqoVAobg14fn9nbLEvgQoAAAidfgBRyo7SUlMH7q5UN3Td++OPT0r37WOxLwAAIE0h0cWONwPBYGHBdqKUjaJUbm5u31f0Sh8W+x7+6ivDMHgWAACANIXEFTvWOHToECt67RilBmvCntebdOfO7aPHqljsCwAAuDcFYa8Ue6WIUtL7PVTLluetXp2vMjYdAAAI+6bAXilYmK7r2dnZVohS8tPY9Noan4gQqAAAgNDpB0mku1JEKdt54/VZTqfTClHqaaDyePTaGl9l5RFa/gAAgNDpB0mYFb1Hj1WVlBQTpWzBpWmZmW9MnDips7NTsdgpUKzl7733l+XlrfDqOg8LAACQpiCs6IVY5q7UggULdF0PhUJi1dPOYDAwZszY32zZMnbMGB4ZAAAgTWFoam5pKdi+7eKlOkpho7ETcV7RKy+72Hf48BF7Pv44ddiwWMRSuEwFAACEe1MYKmJ7pYhStpvgZ/0oZZqmrnsfP270+apjd6iIUgAAgDSFIeXgwYOs6GUYugzY4jJd9144f7aiopLFvgAAQOj0w1Diq67ZtXMHe6WIUhKXoRRrP1yjqvzHBwAACPumYHvHfdU7dhQywU/YKyXx2EN16mStoigfrllNoAIAAEKnH8Tmp1JEKWGvVHwD1ckTNRWVR2j5AwAApCnYO0oVFhYQpezizblzxo+fYP2xEz0JVCdqq8u5QwUAAEhTIEohPlFq8uQpFlzR+3KByutNOnWylkAFAACYQgGbaW1r+3NZ2d5PPyVK2UJKcnJWVmZ6+shAIDCUfq/YYt9fvjVv08aNSUlJPGgAAECagg3s3r37r198QR3EPhP8HA5HMBgcemuaTNNsb29bvGTprzdvZigFAAAQOv1gcVXHfV8eOEAd7DUMfUhGKRFRFCU5OeXihfOHy8tp+QMAAKQpiMXvSu3cuYOPreyVshSPRz918gSBCgAACPumwNgJSH/slVq4cKFhGOFwWFXVId+46/HoJ2prDMNYt3at08mfLwAAMMgUX3VNKBSiEIPaxSQiEolEW1tbTNMcxOMFTdMe1Nf/qayMKGUXi3NzFi9ZGgwGE+NN+e89z3A4nJGRkZaWJiLc/AQAAIMi1izjPP23U21trVzsTnCmaWqa6/vvH16/8R3VsItZM2fMm/92JBIZ2g1+zwQqEXG5XHfv3qXfDwAADKJIOCwiTl3XYz1CVCSRaZr28OGDm7duUwobRan81Ws0TYtGo4N7pDkoaPMDAABigX/yOgOBQCDgVxQl0T6NWT7euBwOR9w+mD58+ODK1W9o8LNjlHr6MgMAACDemerK1auRSIRCWCnmqk1NTWfPnG5ubnK53HE4laqvv//Nt9eIUrbg0rRFi955a978p1EKAAAA8RcOh9nea13/un9/f2lpU9O/3W7PgEaptrbWc+fOh8Jham59brdr/br1GdNnhEJB3lwAAIBBT1Ncl7Ko8ePGFRUXp6amhULBgYtSHR3tdZf/TpSyUZSalpERDAaIUgAAAML2XnQfqIpLSoYNSx2IQBWLUhcv1XV0dFBqW/jg/Q8yps9gnwEAAABpCj0NVLuKioYNS+3fu21EKdt5fdbMzKysgTuoBAAAAGlqCJo4YcLGTZtCoWB/bdchSokNJ/ityl+tqioNfgAAAKQp9E5WVtbSd9/z+zv7/mGaKGXfYegsqwUAACBNofcPSVHWrV27ZOm7nZ0dfQlURCm775UCAACApTgpgS04HI4N69ebppw5fcrrTVJV9SV+Qnt726W6y0QpohQAAABIUwkXqDZuWO9yuc6eOR2NRjVN69X3GoZx5epVopRdzM7KXL4ijygFAABgZWzvtZ/bd+785fPPW1tbXC639KzBr7297euv/9HU3Ez1xA57pfJX5c+YOdMwDF5PAAAAYXsv+tGM6dN3FRUlJ6e8cF62aZqxu1KX6i4TpcQ+e6Uys2ZHo1GiFAAAgDCFAv1u0sSJsUDV/R4ql8vF2Amx4V6pYDBAKQAAAEhTGCiTJ02K7aF63gkGE/yEvVIAAAAgTaFLc2bPzs5Z3OXY9NhdKaIUe6UAAABAmkJXD09VN27ckJ2T+0ygcjqdnEoxDB0AAACkKXRHczo3bdq0KDvnaaBSVTUUCl28VNfZ2Ul9iFIAAAAQ9k2hm0C1efNmRVEunD+n615N065d+5ZTKbHNhMaMlavyHQ5HbMgmAAAAbCF2O4N9U0NEOBKpqKi4cf16ff39f969qyoKNbH062eapmlmTJu2bPkKTdMiEU6lAAAA7CQSCYvIfwCn4va7oMPN+AAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A bar magnet is made to fall through a long vertical copper tube. The speed (v) of the magnet as a function of time (t) is best represented by : -",
+    "options": {
+      "A": "a",
+      "B": "b",
+      "C": "c",
+      "D": "d EM02 - 0055"
+    },
+    "correct_option": "D",
+    "explanation": "Initially the velocity of bar magnet will increase which will change the flux linked with the copper tube so induced eddy current will oppose the motion of magnet. So for bar magnet, acceleration decreases with time & velocity increases with time so :"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A small square loop of wire of side l is placed inside a large square loop of wire of side ( L >> l ). The loops are coplanar and their centres coincide. The mutual inductance of the system is :",
+    "options": {
+      "A": "\\pi 0 2 2μ L \\lambda",
+      "B": "\\pi 2 0 2 2μ L \\lambda",
+      "C": "\\pi 0 2 2μ L \\lambda",
+      "D": "\\pi 2 0 2 2μ L \\lambda EM12 - 0015"
+    },
+    "correct_option": "D",
+    "explanation": "B due to outer loop = ^\\circ \\pi 0 μ I (8sin 45 ) L 4 2 = ( ) \\pi 0 μ I 2 2 L Flux linked with smaller loop = B.A (Assuming B as uniform since \\lambda <<<< L) \\phi = \\pi 2 0 μ I 2 2 L \\lambda \\phi = MI So M = \\phi I So M = \\pi 2 0 2 2μ L \\lambda"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Figure shows an L - R circuit. When the switch S is closed, the current through resistor R 1 , R 2 and R 3 are I 1 , I 2 and I 3 respectively. The value of I 1 , I 2 and I 3 at t = 0 s is :",
+    "options": {
+      "A": "I 1 = I 2 = I 3 = 0",
+      "B": "I 1 = 1 E R , I 2 = I 3 = 0",
+      "C": "I 1 = 0, I 2 = 2 E R , I 3 = 3 E R",
+      "D": "I 1 = 1 E R , I 2 = + 2 1 E R L , I 3 = + 3 3 E R L EM11 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "At t = 0 So I 1 = 1 E R I 2 = I 3 = 0 v t R R 3 E I 3 I 1 I 2 R 2 R 1 NEET : PHYSICS",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If magnetic field passing through a coil of area 0.1 m 2 is changing according to the equation B = 10 sin \\pi (  ( ) )  2 t 3 tesla. Find the magnitude of induced emf at t = 0.5s EM04 - 0048",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "B = 10 sin \\pi 2 t 3 ; A = 0.1  = \\phi - d dt = - A dB dt = - (0.1) (10) \\pi (  ( ) )  2 3 cos \\pi 2 3 t |  | = \\pi 2 3 cos \\pi (  ( ) )  2 t 3 at t = 0.5 sec. |  | = \\pi 2 3 cos \\pi (  ( ) )  3 = \\pi 3 volts"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The emf of the battery in loop - (1) is increased. Find the direction of induced current in the loop - (2). EM02 - 0058",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "As current across Resistor ‘R’ increases, Magnetic field linked with loop 2 increases in the direction outward, ⊥ r to the plane of paper so the induced current will decrease the flux. & It will flow in clockwise direction to oppose the initial magnetic field."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In LR circuit the current increases to one fourth of its maximum value in 4sec than the time constant of circuit is : -",
+    "options": {
+      "A": "2 log e 2",
+      "B": "e 4 log 2",
+      "D": "e log 2 2 EM10 - 0017",
+      "C": "Option C"
+    },
+    "correct_option": "C",
+    "explanation": "i = i 0 [1 - t e - \\lambda ] i = 0 i 4  - \\lambda   = -     t 0 0 i i 1 e 4  - \\lambda = - 4 1 1 e 4  - \\lambda = 4 3 e 4  \\lambda = 4/ 4 e 3  (  = ( ) \\lambda )  e 4 4 log 3  \\lambda = (  ( ) )  e 4 4 log 3",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A bar magnet released from rest in the effect of gravity along vertical axis of coil then which of the following variation is correct regarding induced emf with respect to time when it passes through the coil : - b t v a d c \\lambda L I 1 R 1 I 2 R 2 L 1 R 3 L 2 I 3 S E",
+    "options": {
+      "A": "a b R",
+      "B": "NEET : PHYSICS",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Induction principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two coils of self inductance L 1 and L 2 are connected in series combination having mutual inductance of the coils as M. The equivalent self inductance of the combination will be :",
+    "options": {
+      "A": "+ + 1 2 1 1 1 L L M",
+      "B": "L 1 + L 2 + M",
+      "C": "L 1 + L 2 + 2M",
+      "D": "L 1 + L 2 - 2M EM06 - 0021"
+    },
+    "correct_option": "D",
+    "explanation": "Current on both the inductor is in opposite direction. Hence : L eq = L 1 + L 2 - 2M"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Current i flows through a long wire. A square loop made of conducting wire held below the wire in the same vertical plane is released and allowed to fall under gravity. If acceleration of the loop is a, then : -",
+    "options": {
+      "A": "A current is induced in anticlockwise direction and a > g",
+      "B": "A current is induced in the clockwise direction and a < g",
+      "C": "A current is induced in anticlockwise direction and a < g",
+      "D": "No current is induced in the loop and a = g EM04 - 0049"
+    },
+    "correct_option": "C",
+    "explanation": "B \\lambda due to current will be directed upward. As the loop moves downward, flux linked with the loop decreases. So induced current will support the magnetic field to increase the flux. Hence current will be ‘ ANTICLOCKWISE ’ Force on wire ‘1’ F 1 = I B 1 \\lambda upward Force on wire ‘3’ F 3 = IB 2 \\lambda downward Net Force is upward as B 1 > B 2 So the acceleration a < g"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A conducting circular loop is placed in X - Y plane in presence of magnetic field ( ) 3 2 ˆ ˆ B 3t j 3t k = + \\lambda in SI unit. If the radius of the loop is 1m, the induced emf in the loop, at time, t = 2s is n \\pi V. The value of n is…….. EM02 - 0057",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\phi =  \\lambda \\lambda B A = +  \\pi 3 2 2 ˆ ˆ ˆ (3t j 3t k) ( (1) k) \\phi = \\pi 2 3t ind d 6t dt \\phi  = = \\pi at t = 2, ind 12  ="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the given circuit the current through battery of 6 V just after closing the switch ‘S’ will be ….…… A. EM11 - 0013",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Just after closing the switch S, inductor behaves like an open circuit. I = 6 1A 2 4 = + 1 2 F m mg a<g I B 2 4 F 1 F 3 1 3 B NEET : PHYSICS",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABF8AAABACAIAAABDd09uAAAKMElEQVR42u3d3XNU9R3H8e/unnP2gYVqnIE8wUzFEUEC2CFBwkOBPt+0wSdarUTvahVGHWcc7rzwNswo2VD1xoSHUCTUUKpkE5JlxItWkhmQQAhYOoplpqXimN2cc/Y8bC/WsVgBN7LJnrN5v/6BDN8TZs4nv9/3cwK5XE4AAADKlOM4Pcne0dFzqqqKSC6XCwQCjMVrcrlcMBhsamqqrqpiGighhREAAIAyjkZ7OzuPpVIjI2dHz19gIB43eOJEW1tbOBxmFCiVICMAAABlHI36epOqqtbXN9yz4G5m4nF/Pnz4+eefN02TUYB0BAAAUDRuLte5b1+y50g0GsvlcqZpLly4KB6PMxmPe+vAAQISSEcAAADFNDQ0lI9GX4Yl11VVdcP69QQkAhJAOgIAANPI+QsX9uzerWnhYPB/rzq2bUciEQISAQm4iQCddQAAoJyMnj+faG0dG/tC066z3K8oimEYqVTqi7GxQIAXIU/b9Mgjr776Kh2DmEqhl156iSkAAIAyYNt26tixjvb2dHrsutFIRFzX1TSttrbWtq3Prl5laF42PDzsOE5Dfb2iULMM4ewIAABgAtFoz97O3uSRaDQWCoW+5QUoEAiHw8PDp0+e+pDRedzDDz20fft2ar4h7B0BAAAUwrLtPXs7j/YlZ8yIf2s0EpF8i92iRfdWVc5hesIOEkA6AgAAZeOdd95N9rwbjcYK31HJ5XKWZS1fXj9r5kwGSEACSEcAAKAcjJw713Pk3VhsxkTX9x3HicVi69ato8WOgASQjgAAgO+dGx1tSyRM0yzkQp18Y/vItu1oNPqjDRsISH4JSIZhMAqQjgAAAOSbp0atO3ak02Oqqsot1DkQkHwUkFq2b2cOEBq9AQAAro00/QOpXR0dmUz6RuXdMpErduFweG5trW1bV69+zni9bGhwcEY8XldXR803hEZvAAAAy7J279nT15uMxWZ8hwt1NxIMBsPh8ODgiZFzowxZqPmGcLMOAADA8w7/5Z2+3mQ8PrOI0UhEXNc1DGPhwkVcsRM/XLF77rnnKGkA6QgAAExrZ0dGkj1HvkNDnRRW862q6ob16wlI3negq4sWO5COAACATOcahrZEIpvNFvfUSL6+0RSJRDasX893kISab5COAAAAPBuNEq2tmUz6VhrqCg9IfAfJLwHphRdecByHUYB0BAAAZPpcqGvdsaMoDXVSWPFD/gSJgOR9f9y//+3ubuYAobMOAACUPcu2BwZSh7rf1nV9sk+N/o+iKIZhDA0NXfr0Ux6El8Xj8RdffPGJ5mZa7EA6AgAAZct13faOjqKXd0vBJQ2Koti23dvXl06neRxCzTeEm3UAAAAl8te/fTDQf7To5d0FCgQCjuMoisIVO6GkAaQjAACAEjpz9uzePbs1LTwZ5d2FcxwnGo0SkHz0HSSDgAThZh0AACivaNSWSIyPZ6amhkEK20HqHxjgip33PfLww6+88kpJzhshnB0BAACUdzQSWux8Zf9bb9FiB+HsCAAAEI2EEySIxOPx9vaONatXMQqQjgAAgC9ls9nUsWOHurunvrx7ogHp+PvHP/vsKo/My2Kx2LZt26j5BukIAAD40oGug10H9peqoa5woVDINM1UKvXF2BhPTaj5hrB3BAAAUFSnh4f7epMzZ87y/jJ9vsVu3bp17CAJNd8gHQEAABTX8JkzO9vaLMsKBv3xckJJg/9qvg2DUYB0BAAAfBCNEq2tuj7u2V2j67Jtm4Akvrm02dXS0sIcIOwdAQAAj0ejtkTCMAx/RaO8XC6nqqphGOwgeZ+qKJ379q1ds4ZRQDg7AgAA3kkUcs2uUaK11afRSEQCgUD+BIkdJO+zbLu5ufm94+8zCpCOAACAhxKFXLNrZJqmpmn+fu22rFgstqKh3vt9EtNcJpN5/PHfJnv7GAW4WQcAAMRTDXU729r8e2ok16v5TqfH3jv+Ph+K9b7mzZtffvllar5BOgIAAJ6IRm2JhGmaZRON8vI7SEf7+wlI4ofvILW0tEQiEUYB4WYdAAAgGskkXLELh8O02IlPar5psYNwdgQAAIhGMvktdv0DA5wgiedb7PZ2dv5w7VpGAdIRAACYaidPnfrDzp2maaiqVt5vIKqq6vr4QOpYJpPhuXtZLBbbtWvXmtWrGQVIRwAAYOqcHRl5/bXXstlsuZ4ayddPkMLh8OXL/+xJ9vLovR+Q3nyzfdWqxpzrlvbFWFGUYJC1l1Kno55kMpu1vurWBAAAmAyXLn2Sv1A3Tf4yGwwGbds+2HXg9PAZnr7HRSLhjU0b51RWuo5Twt9PRVWVUIijCyndF7FEJPD6G2/ouk46AgAAMsmXzabb+0b+3zt44kT3oUOu6/I74HHz5s1dumSpiORypXlY5KLSMk0zn1E1x3FIRwAAAEV/2Q0EAisbVymK0nXwIAHJ4z7++BMlFFq27L6p/KGO41hW9tqvJKOE/2FFRBEhpAIAAEzW+5ZpGsvr60WEgOR9f7/4j5qampqa2mw2OwU/Lps1KyruqK6u5hfDC7KWlU9HAAAAmNSX4CwByS9Onx6ePXuOoii2bU/qDzIMvaam9vdPP11TXc3Yha/BAgAATKuAVN/Q8MDGjVyg8rirn3/e39/vuq6iKJMdjZ7ZsoVoRDoCAACQ6bnzXd/Q8IP7ljEK7weko0ePuq47Se3z4+OZfDSqqqxk2qQjAACAacq27Z/9/Bf3LlrIKMTbZYP5gKTruqZpUtQ9NMPQFyy4h2jkWaGmpibbtjnkBQAAkCn5SuziurrvzZo1OjpKg7OXGYZx8eJFTVMrKyuLtYNkWdlf/qppc3Pz7bfdxoSFsyMAAIBpLt/KsLKx8aEHHwwGeRMTj5eYfXBi8KOPLhTlK8aZTHrJ0mUbm5oi4TCzJR0BAABA5Muab3N5ff2DDzxAQPK+k6c+tCzrFneQDEOvrZ27adMm5kk6AgAAgHyzpCEfkEKhENPwMl3XBwYGbqXFzjD0qqrqLVu3smtEOgIAAIDcuOZ7xU9/8mNGIT5psVMUZaJX7AxDr6ys2rJ1a3VVFZMkHQEAAOAmAcm8f2XjXfPvZBR+CUiaphUekHR9nGgkdNYBAACgQIqi3L1gwZV//+vKlf8wDfF2i93ly5erq6sjkUi+XeNbo+/8+Xf97qmn+OQr6QgAAABSYEmDpml1S5ZQ8+2Xmu9YLFpRccfNA9L4eGbx4rpnn322oqKCuQk36wAAACATq/leRYud+KHmO99id5MdpPyu0aOPPRaNRpkY6QgAAAAy8ZpvgxY78VWL3XVrvg1Dnz17DrtGpCMAAAAILXYyjVvsvopGc2trmRLpCAAAALfaYrfi/pXz7/w+o/BRQCIakY4AAAAgk7GDpGnar3/zKAHJFwGpr68vf8VO18dnz57zzJYtRCNfC7zZ3mEYOp11AAAA3qGqajqd7n77TyMj52zHCVHV4FWO61ZU3N64snHevHlPPPnkvLlzmYmv/RfRofIcwXfEPAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match the List - I with List - II. List I List II A. AC generator I. Presence of both L and C B. Transformer II. Electromagnetic Induction C. Resonance phenomenon to occur III. Quality factor D. Sharpness of resonance IV. Mutual Inductance Choose the correct answer from the options given below:",
+    "options": {
+      "A": "A - IV, B - II, C - I, D - III",
+      "B": "A - II, B - I, C - III, D - IV",
+      "C": "A - II, B - IV, C - I, D - III",
+      "D": "A - IV, B - III, C - I, D - II EM19 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": "Based on theory."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A conducting loop of radius 10 \\pi cm is placed perpendicular to a uniform magnetic field of 0.5T. The magnetic field is decreased to zero in 0.5 s at a steady rate. The induced emf in the circular loop at 0.25 s is:",
+    "options": {
+      "A": "emf = 1 mV",
+      "B": "emf = 10 mV",
+      "C": "emf = 100 mV",
+      "D": "emf = 5 mV EM04 - 0047 emf t i NEET : PHYSICS"
+    },
+    "correct_option": "B",
+    "explanation": "B = 0.5 EMF = (0.5)(0.01) 0.5 = 0.01V = 10 mV"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Three identical resistors with resistance R = 12 \\Omega and two identical inductors with sell inductance L=5 mH are connected to an ideal battery with emf of 12 V as shown in figure. The current through the battery long after the switch has been closed will be________A. ( ) L R R R L 12V k EM11 - 0011",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "After long time an inductor behaves as a resistance - less path. So current through cell 12 I 3A { R 12 } R / 3 = = = \\Omega \\lambda",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two coils have self inductance L 1 = 4mH and L 2 = 1 mH respectively. The currents in the two coils are increased at the same rate. At a certain instant of time both coils are given the same power. If I 1 and I 2 are the currents in the two coils, at that instant of time respectively, then the value of (  ( ) )  1 2 I I is : -",
+    "options": {
+      "A": "1 8",
+      "B": "1 4",
+      "C": "1 2",
+      "D": "1 EM07 - 0047"
+    },
+    "correct_option": "B",
+    "explanation": "P = eI = L dI dt ·I P = LI dI dt Since P = const., dI dt = const. So LI = const.  I  1 L or 1 2 I I = 2 1 L L = 1 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_electromagnetic_induction_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Electromagnetic Induction",
+      "chapter_name": "Electromagnetic Induction",
+      "language": "en",
+      "source": "RACE - Electromagnetic Induction.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an ac generator, a rectangular coil of 100 turns each having area 14 × 10 - 2 m 2 is rotated at 360 rev/min about an axis perpendicular to a uniform magnetic field of magnitude 3.0 T. The maximum value of the emf produced will be ________ V. 22 Take 7 (  \\pi = ( ) )  EM15 - 0012",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "max NAB  = \\omega 2 360 2 100 14 10 3 60 -  \\pi =     = 1584V d BA 0 EMF dt t \\phi - = = 2 2 0.1 A r 0.01 (  = \\pi = \\pi = ( ) \\pi ) "
+  }
+]

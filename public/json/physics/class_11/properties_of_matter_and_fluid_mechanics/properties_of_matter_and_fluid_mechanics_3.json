@@ -1,0 +1,1572 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-301",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A boat carrying steel balls is floating on the surface of water in a tank. If the balls are thrown into the tank one by one, then how will it affect the level of water ?",
+    "options": {
+      "A": "It will remain unchanged",
+      "B": "It will rise",
+      "C": "It will fall",
+      "D": "It will first rise and then fall FLUID DYNAMICS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-302",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A pipe of non-uniform cross-section has two distinct section 1 and 2 with areas 2 cm 2 and 4 cm 2 respectively. If the velocity of flowing liquid at section 1 is 5 cm/s, determine the velocity at section 2 in cm/s is :-",
+    "options": {
+      "A": "2",
+      "B": "2.5",
+      "C": "3",
+      "D": "5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-303",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two water pipes P and Q having diameter 6 × 10 -2 m and 12 × 10 -2 m respectively are joined in series with the main supply line of water. The velocity of water flowing in pipe P is:-",
+    "options": {
+      "A": "4 times that of Q",
+      "B": "2 times that of Q",
+      "C": "1 2 times that of Q",
+      "D": "1 4 times that of Q"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-304",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water is flowing through a pipe of non-uniform radius. If ratio of the radius of entry and exit end of the pipe is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-305",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "3 then the ratio of velocities of exit and entering liquid is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-306",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 $//(1 Physics : Properties of Matter & Fluid Mechanics 301",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-307",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water falls from a tap, down the streamline :-",
+    "options": {
+      "A": "Area decreases",
+      "B": "Area increases",
+      "C": "velocity remains same",
+      "D": "Area remains same"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-308",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Three tubes A, B and C are connected to a horizontal pipe in which ideal liquid is flowing. The radii of the tubes A, B and C at the junction are 2 cm, 1 cm and 2 cm respectively. It can be said:- A C B",
+    "options": {
+      "A": "Height of the liquid in the tube A is maximum",
+      "B": "Height of the liquid in the tubes A and B is same",
+      "C": "Height of the liquid in the tubes A, B and C is same",
+      "D": "Height of the liquid in the tubes A and C is same"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-309",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water from a tap emerges vertically downwards with an initial speed of 1.0 m/s. The cross-sectional area of tap is 10 -3 m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-310",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Assume that the pressure is constant throughout the stream of water and that the flow is steady, the cross-sectional area of stream 0.15 m below the tap is (g = 10 m/s 2 ) :-",
+    "options": {
+      "A": "5.0 × 10 -4 m 2",
+      "B": "1.0 × 10 -4 m 2",
+      "C": "5.0 × 10 -5 m 2",
+      "D": "2.0 × 10 -5 m 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-311",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The pressure of water in a water pipe when tap is opened and closed is respectively 4 × 10 5 N/m 2 and 4.5 × 10 5 N/m",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-312",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If velocity of flow is 4 m/s, then velocity head is:- (g = 10 m/s 2 )",
+    "options": {
+      "A": "0.8 m",
+      "B": "0.6 m",
+      "C": "0.2 m",
+      "D": "0.4 m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-313",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water flows steadily through a horizontal pipe of variable cross-section. If the pressure of water is P at a point where flow speed is v, the pressure at another point where the flow speed is 2v, is :- (Take density of water as ρ )",
+    "options": {
+      "A": "2 3 v P 2 ρ -",
+      "B": "2 v P 2 ρ -",
+      "C": "2 3 v P 4 ρ -",
+      "D": "P - ρ v 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-314",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water is flowing in streamline motion through a horizontal tube. The pressure at a point in the tube is P where the velocity of flow is v. At another point, where the pressure is P/2, the velocity of flow is (density of water = ρ ) :-",
+    "options": {
+      "A": "2 P v + ρ",
+      "B": "2 P v - ρ",
+      "C": "2 2P v + ρ",
+      "D": "2 2P v - ρ $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-315",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The cylindrical tube of a spray pump has a radius R, one end of which has n 2 fine holes, each of radius r. If the speed of flow of the liquid in the tube is v, the speed of ejection of the liquid through the hole is :-",
+    "options": {
+      "A": "2 v R r n      ",
+      "B": "1 2 2 v R r n      ",
+      "C": "2 2 v R r n      ",
+      "D": "2 2 vR n r"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-316",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the given figure, if a very small hole is made in container, then which of following will be correct: h v R H",
+    "options": {
+      "A": "v 2gh =",
+      "B": "For R max , h = H 2",
+      "C": "R max = H",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-317",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tank of height 5 m is full of water. There is a hole of cross sectional area 10 cm 2 in its bottom. The initial rate of volume of water that will come out from this hole is (g = 10 m/s 2 ) :-",
+    "options": {
+      "A": "10 -3 m 3 /s",
+      "B": "10 -4 m 3 /s",
+      "C": "10 m 3 /s",
+      "D": "10 -2 m 3 /s."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-318",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The flow speeds of air on the lower and upper surfaces of the wing of an aeroplane are v and 2 2 v respectively. The density of air is ρ and surface area of wing is A. The dynamic lift on the wing is :-",
+    "options": {
+      "A": "ρ v 2 A",
+      "B": "7 2 ρ v 2 A",
+      "C": "7/2 ρ Av 2",
+      "D": "2/7 ρ v 2 A"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-319",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An aeroplane of mass 5 × 10 4 kg and total wing area of 250 m 2 is in a level flight at some height. The difference in pressure between the upper and lower surfaces of its wings in kilopascal is :- (g=10m/s 2 )",
+    "options": {
+      "A": "2.0",
+      "B": "2.5",
+      "C": "3.0",
+      "D": "3.5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-320",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of falling rain drop attain limiting value because of :-",
+    "options": {
+      "A": "surface tension",
+      "B": "upthrust due to air",
+      "C": "viscous force exerted by air",
+      "D": "none of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-321",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A body of density D 1 and mass M is moving downward with uniform velocity in glycerine of density D",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-322",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the viscous force acting on it:-",
+    "options": {
+      "A": "2 1 D Mg 1 D   -    ",
+      "B": "1 2 D Mg 1 D   -    ",
+      "C": "Mg D 1",
+      "D": "Mg D 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-323",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A square plate of 0.1 m side moves parallel to a second plate with a velocity of 0.1 m/s, both plates being immersed in water. If the viscous force is 0.002 N and the coefficient of viscosity is 0.01 poise, distance between the plates in m is:-",
+    "options": {
+      "A": "0.1",
+      "B": "0.05",
+      "C": "0.005",
+      "D": "0.0005 $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-324",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two small spheres of radii r and 4r fall through a viscous liquid with the same terminal velocity. The ratio of the viscous forces acting on them is :-",
+    "options": {
+      "A": "1:2",
+      "B": "4:1",
+      "C": "1:16",
+      "D": "1:4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-325",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A small drop of water falls from rest through a large height h in air. The terminal velocity is :-",
+    "options": {
+      "A": "almost independent of h",
+      "B": "proportional to h",
+      "C": "proportional to h",
+      "D": "inversely proportional to h"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-326",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two drops of equal radius are falling through air with a steady velocity of 1 cm/s. If the two drops coalesce, then its terminal velocity will be :-",
+    "options": {
+      "A": "1 3 4 5 cm / s ×",
+      "B": "1 3 4 cm/s",
+      "C": "1 3 5 4 cm / s ×",
+      "D": "2 3 4 5 cm / s ×"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-327",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Speed of 4 cm radius ball in a viscous liquid is 40 cm/s. Then the speed of 2 cm radius ball in the same liquid is :-",
+    "options": {
+      "A": "5 cm/s",
+      "B": "10 cm/s",
+      "C": "40 cm/s",
+      "D": "80 cm/s"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-328",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two rain drops falling through air have radii in the ratio",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-329",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sphere of mass M and radius R is falling in a viscous fluid. The square of the terminal velocity attained by the falling object will be proportional to :-",
+    "options": {
+      "A": "MR 2",
+      "B": "M/R",
+      "C": "M 2 /R 2",
+      "D": "M/R 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-330",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A drop of water of radius 0.0015 mm is falling in air. If the coefficient of viscosity of air is 2.0 × 10 -5 kg / (m-s), the terminal velocity of the drop will be (neglect density of air) :- (The density of water = 1.0 × 10 3 kg/m 3 and g = 10 m/s 2 )",
+    "options": {
+      "A": "1.0 × 10 -4 m/s",
+      "B": "2.0 × 10 -4 m/s",
+      "C": "2.5 × 10 -4 m/s",
+      "D": "5.0 × 10 -4 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-331",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A spherical ball falls through viscous medium with terminal velocity v. If this ball is replaced by another ball of the same material but half the radius, then the terminal velocity will be :- (neglect the effect of buoyancy)",
+    "options": {
+      "A": "v/2",
+      "B": "2v",
+      "C": "4v",
+      "D": "v/4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-332",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two rain drops reach the earth with different terminal velocities having ratio",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-333",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Then, the ratio of their volume is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-334",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Viscosity of liquids :-",
+    "options": {
+      "A": "Increases with increase in temperature",
+      "B": "Is independent of temperature",
+      "C": "Decreases with decrease in temperature",
+      "D": "Decreases with increase in temperature surface TENSION"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-335",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Spiders and insects move and run on the surface of water without sinking because :-",
+    "options": {
+      "A": "Elastic membrane is formed on water due to property of surface tension",
+      "B": "Spiders and insects are ligther",
+      "C": "Spiders and insects swim on water",
+      "D": "Spiders and insects experience up-thrust"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-336",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thin liquid film formed between a U-shaped wire and a light slider supports a weight of 3 × 10 -2 N (see figure). The length of the slider is 30 cm and its weight negligible. The surface tension of the liquid film is :- Film w",
+    "options": {
+      "A": "0.025 N/m",
+      "B": "0.0125 N/m",
+      "C": "0.1 N/m",
+      "D": "0.05 N/m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-337",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A big drop of radius R is formed by 1000 small droplets of water, then the radius of small drop is: :-",
+    "options": {
+      "A": "R 2",
+      "B": "R 3",
+      "C": "R 5",
+      "D": "R 10"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-338",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A liquid drop of diameter D breaks into 125 tiny drops. The change in energy is :-",
+    "options": {
+      "A": "2 π TD 2",
+      "B": "4 π TD 2",
+      "C": "π TD 2",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-339",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A water drop is divided into 64 equal droplets. The pressure difference between inner and outer sides of the big drop :-",
+    "options": {
+      "A": "will be the same as for smaller droplet",
+      "B": "will be half of that for smaller droplet",
+      "C": "will be one-fourth of that for smaller droplet",
+      "D": "will be twice of that for smaller droplet."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-340",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "surface tension of a liquid is 50 N/m. If its thin film is made in a ring of area 0.02 cm 2 , then its surface energy will be :-",
+    "options": {
+      "A": "5 × 10 -4 Joule",
+      "B": "2.5 × 10 -4 Joule",
+      "C": "3 × 10 -4 Joule",
+      "D": "2 × 10 -4 Joule"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-341",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The radius of a liquid drop is r. The surface tension of liquid is T. Keeping temperature constant, the radius of the liquid drop is doubled, the energy necessary for this will be :-",
+    "options": {
+      "A": "24 π r 2 T",
+      "B": "8 π r 2 T",
+      "C": "12 π r 2 T",
+      "D": "16 π r 2 T"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-342",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Eight small drops of mercury, each of radius R, coalesce to form a single large drop. The ratio of the total surface energies before and after the change is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-343",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Work done in forming a soap bubble of radius R is W. Then work done in forming a soap bubble of radius 'R/2' will be :-",
+    "options": {
+      "A": "2W",
+      "B": "4W",
+      "C": "W/2",
+      "D": "W/4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-344",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The work done in blowing a soap bubble of radius 0.2 m, given that the surface tension of soap solution is 30 × 10 -3 N/m, is :-",
+    "options": {
+      "A": "24 π × 10 -4 J",
+      "B": "8 π × 10 -4 J",
+      "C": "96 π × 10 -4 J",
+      "D": "192 π × 10 -4 J"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-345",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider a soap film on a square frame of wire of area 4× 4 cm",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-346",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the area of the soap film is increased to 4 × 8 cm 2 , the work done in the process will be (The surface tension of the soap film is 3 × 10 -2 N/m) :-",
+    "options": {
+      "A": "12 × 10 -6 J",
+      "B": "24 × 10 -6 J",
+      "C": "60 × 10 -6 J",
+      "D": "96 × 10 -6 J"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-347",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When 10 6 smaller drops of a liquid are combined to form a new bigger drop, then :-",
+    "options": {
+      "A": "density will decrease",
+      "B": "density will increase",
+      "C": "temperature will increase",
+      "D": "temperature will decrease"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-348",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Work W is required to form a bubble of volume V from a given solution. What amount of work is required to be done to form a bubble of volume 2V ?",
+    "options": {
+      "A": "W",
+      "B": "2W",
+      "C": "2 1/3 W",
+      "D": "4 1/3 W"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-349",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside a water drop of the same radius just outside the surface is P 2 , then :-",
+    "options": {
+      "A": "P 1 = 2P 2",
+      "B": "P 1 = P 2",
+      "C": "P 2 = 2P 1",
+      "D": "P 2 = 0, P 1 ≠ 0"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-350",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside a water drop of radius r is (T = surface tension of water) :-",
+    "options": {
+      "A": "2T r",
+      "B": "4T r",
+      "C": "T 2r",
+      "D": "T r"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-351",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside the drop of same liquid is maximum when its diameter is :-",
+    "options": {
+      "A": "0.200 μ m",
+      "B": "20.0 μ m",
+      "C": "200 μ m",
+      "D": "2.0 μ m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-352",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The excess pressure inside a soap bubble A is half of that in another soap bubble B. The ratio of volumes of A and B is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-353",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A soap bubble in vacuum has a radius of 12 cm and another soap bubble in vacuum has a radius of 5 cm. If the two bubbles coalesce under isothermal condition, then the radius of the new bubble is :-",
+    "options": {
+      "A": "23 cm",
+      "B": "45 cm",
+      "C": "13 cm",
+      "D": "17 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-354",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two soap bubbles of radii r 1 and r 2 equal to 4cm and 6 cm are touching each other over a common surface S 1 S 2 (shown in figure). Its radius will be :- 6cm 4cm S 1 S 2",
+    "options": {
+      "A": "12 cm",
+      "B": "20 cm",
+      "C": "10 cm",
+      "D": "5 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-355",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a wax coated capillary tube is dipped in water, then water in it will :-",
+    "options": {
+      "A": "rise up",
+      "B": "depress",
+      "C": "sometime rise and sometime fall",
+      "D": "rise up and come out as a fountain"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-356",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two capillaries of same material but of different radii are dipped in a liquid. In one of the capillary the liquid rises to a height of 22 cm and in other to 66 cm. The ratio of their radii is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-357",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a capillary of radius r is dipped in water, the height of water that rises in it is h and its mass is M. If the radius of the capillary is halved the mass of water that rises in the capillary will be :-",
+    "options": {
+      "A": "4M",
+      "B": "2M",
+      "C": "M",
+      "D": "M 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-358",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a capillary tube is dipped into a tub containing mercury then the mercury level in the capillary goes down because the pressure just below the meniscus is :-",
+    "options": {
+      "A": "zero",
+      "B": "equal to atmospheric pressure",
+      "C": "less than atmospheric pressure",
+      "D": "more than the atomospheric pressure"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-359",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If a capillary of radius 3r is dipped in water, then the potential energy is u",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-360",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A vessel, whose bottom has round hole with radius of 0.1 mm, is filled with water. The maximum height to which the water can be filled without leakage is:- (S.T. of water = 75 dyne/cm, g = 1000 cm/s 2 )",
+    "options": {
+      "A": "100 cm",
+      "B": "15 cm",
+      "C": "60 cm",
+      "D": "30 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-361",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a surface tension experiment with a capillary tube water rises up to 10 cm. If the same experiment is repeated on an artificial satellite which is revolving round the earth, water will rise in the capillary tube up to a height of :-",
+    "options": {
+      "A": "0.1 m",
+      "B": "0.98 m",
+      "C": "9.8 m",
+      "D": "full length of capillary tube"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADjElEQVR42u3dW04bZxiA4ZmxR2BkJE5GChjUIDULSDl0CQ1LCLlquwMUoGI3OCsgldquoCSAgQZy0UA4tJG4SoiEUqHG//TCUhpRxQUDotTPc48lPvvm1T/z/fHi4++fPllK0zQiiqIoyrIsy7J7k5MT4+OmAQAANBZPT08vVCoGcUpPT/fCQmV8bMwoAACABpJ8Pm8K//T69ZsHU1PLKytGAQAANGoqI/iUo7dvp+7fX9/YMAoAAEBTNZlVc7MzJycnRgEAAGiqZlTX1ufn5/98/94oAAAATdWMhUrlu7k5WQUAAGgqWQUAAGgqWQUAAGiqm5hVc7Ozb46OjAIAANBUzag8ejR576uny8tGAQAAaKpm7LzcfTA15d4qAABAU0VN31s1O/PQvVUAAICmatLa+oZ7qwAAAE0V2QQIAABoKlkFAABoqhu7YF1WAQCApiJqesG60yoAANBURB4CBAAANNW1ZdW333y9vbNjFAAA0DryRnCJfvjxp8PDw8XFx21tbaYBAACaiqi5e6sezsykaRpCuPTPLxQKSRybMwAAXLtMU0VX9hDg0tLPExNfRlGUZdklfFVZFsdxrVbr6ur6/M6dJEku5WMBAICLqNWCproqv77Yfvfuj9HR0TiOL+W0KoSQpmlXd/fx8fFVHH8BAADnb6qaprpCv796leSSsdGxXC538QpKkuSz27eLxWIIIZfLGS8AAET2/v3vHRz8trq6kmVZkiQXzN/+/v6enh4nVAAAoKlay97+wQWzqlardXZ2DgwOeocKAAAie/9aM6uiKLp794s4js/bRVmW5fP5oeHhDw8Qxpb+AQBA5Jyq9bJqa2szTdNzFVGWZSGEcrlcLBbrq/8EFQAAaKoW9WJ75/nzrfq2ibP/Vblc7iuVvEYFAACaqtWFEH55tll/t+osx00hhFKpNDA4aHQAAKCpiD5eWfGvp1X1nRa9fX32UgAAgKbidFZVq6uNT6tCCL29vR0dHZoKAAA0Faft7u1Xq6ufOq0KIRSLxcFy2aAAAEBT0SirQginTqvqT/0NDw+naWpKAACgqWiUVWtr1eijK6f+Xp7e2WnXHwAAaCrOlFUfLp6qv0ZV6u8XVAAAcGOayhaE6/Vyd+/gYD9N0xBCW1tbeWjITAAA4AbJ5/P5OI7zuVxr/v8hy669Kp9tbrW3t9+6NTAyMlIoFGq1mt8lAAD899V3zv0FezF26Ci3DU4AAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-362",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Water rises to a height h in a capillary at the surface of earth. On the surface of the moon the height of water columm in the the same capillary will be :-",
+    "options": {
+      "A": "6h",
+      "B": "1/6 h",
+      "C": "h",
+      "D": "Zero"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-363",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two capillary tubes of same diameter are put vertically one each in two liquids whose relative densities are 1.6 and 0.6 and surface tensions are 240 dyne/cm and 300 dyne/cm respectively. Ratio of heights of liquids in the two tubes h 1 /h 2 is :-",
+    "options": {
+      "A": "10 9",
+      "B": "3 10",
+      "C": "10 3",
+      "D": "9 10"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-364",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Radius of a capillary is 0.2 cm. A liquid of weight 6.2 N may remain in equilibrium in the capillary. Then the surface tension of liquid will be ( θ C = 0^\\circ):-",
+    "options": {
+      "A": "5 × 10 -3 N/m",
+      "B": "5 × 10 -2 N/m",
+      "C": "50 N/m",
+      "D": "500 N/m $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-365",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Internal radius of a capillary tube is 1 14 cm and surface tension of water is 70 dyne/cm, if angle of contact is zero, then water will rise up in the tube up to height (g = 980 cm/s 2 ) :-",
+    "options": {
+      "A": "4 cm",
+      "B": "2 cm",
+      "C": "14 cm",
+      "D": "18 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L).",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAoCAIAAADCG2WWAAAAOklEQVR42u3OAQ0AAAgDILV/55vAAG6QgE5SD0395O3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3tfVuDzANNtQqTIgAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "meet-phy12-366",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Water rises in a capillary upto a height of 4 cm. If it is tilted to 30^\\circ from the vertical, then the length of water column in it will be :-",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "8 cm 3",
+      "B": "8 3 cm",
+      "C": "4 cm",
+      "D": "2 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "meet-phy12-367",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Properties of Matter and Fluid Mechanics",
+      "chapter_name": "Properties of Matter and Fluid Mechanics",
+      "language": "en",
+      "source": "Properties of Matter and Fluid Mechanics - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "There is a small hole in a hollow sphere. The water enters in it when it is taken to a depth of 40 cm under water. The surface tension of water is 0.07 N/m. The diameter of hole is (g = 10 m/s 2 ) :-",
+    "options": {
+      "A": "7 mm",
+      "B": "0.07 mm",
+      "C": "0.0007 mm",
+      "D": "0.7 m EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Calculated based on Fluid Mechanics & Properties of Matter principles (Bernoulli's Theorem P + 1/2 rho v^2 + rho g h = const, Pascal's Law, Viscosity F = eta A dv/dx, surface Tension T = F/L)."
+  }
+]

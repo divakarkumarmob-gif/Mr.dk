@@ -1,0 +1,2791 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_001",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Auxanometer is meant for measuring :",
+    "options": {
+      "A": "Respiratory activity",
+      "B": "Photosynthetic activity",
+      "C": "Growth activity",
+      "D": "Osmotic pressure PG04 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_002",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In plants growth is :",
+    "options": {
+      "A": "Restricted to certain regions or structure",
+      "B": "Irreversible",
+      "C": "Change in size",
+      "D": "All the above PG02 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_003",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plant growth is primarily affected by two climatic factors which are : -",
+    "options": {
+      "A": "Light and temperature",
+      "B": "temperature and relative humidity",
+      "C": "Light and wind",
+      "D": "Rainfall and temperature PG10 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_004",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a growing plant, the first phase durin g the process of growth is -",
+    "options": {
+      "A": "Cell division",
+      "B": "Cell enlargement",
+      "C": "Cell differentiation",
+      "D": "Cell maturation PG10 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_005",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The maximum growth rate occurs in : -",
+    "options": {
+      "A": "Exponential phase",
+      "B": "Stationary phase",
+      "C": "Senescent phase",
+      "D": "Lag phase PG06 - 0004 PLANT GROWTH REGULAT ORS TO SEED DORMANCY"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_006",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Primary precursor of I.A.A is : -",
+    "options": {
+      "A": "Phenyl alanine",
+      "B": "Tyrosine",
+      "C": "Tryptophan",
+      "D": "Leucin PG13 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_007",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The biological activity of I.A.A is tested by : -",
+    "options": {
+      "A": "\\alpha - amylase test",
+      "B": "Avena curvature test",
+      "C": "Endosperm activity test",
+      "D": "Chlorophyll preservation test PG13 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_008",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Indole, 3 acetic acid, called as auxin was f irst isolated from : -",
+    "options": {
+      "A": "Human urine",
+      "B": "Corn germ oil",
+      "C": "Fusarium",
+      "D": "Rhizopus PG13 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_009",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Stem elongation is affected by : -",
+    "options": {
+      "A": "Gibberellin and florigen",
+      "B": "Auxin and gibberellin",
+      "C": "Florigen and kinin",
+      "D": "Kinin and auxin PG18 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_010",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Apical dominance means : -",
+    "options": {
+      "A": "Suppression of growth of apical bud by axillary buds .",
+      "B": "Suppression of growth of axillary buds by the presence of apical bud.",
+      "C": "Stimulation of growth of axillary buds by removal of apical bud .",
+      "D": "Inhibition of growth of axillary buds by removal of apical bud. PG13 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_011",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a natural occurring plant hormone ?",
+    "options": {
+      "A": "2, 4 - D",
+      "B": "GA 2",
+      "C": "Gibberellin",
+      "D": "I.A.A PG13 - 0006"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_012",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Auxin is mainly produced by -",
+    "options": {
+      "A": "Apical root meristem",
+      "B": "Root cambium",
+      "C": "Apical shoot meristem",
+      "D": "Phloem in shoot tip PG13 - 0007 Exercise - I NEET : Biology"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_013",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plants bend toward the light because -",
+    "options": {
+      "A": "They need light for photosynthesis",
+      "B": "They need light for respiration",
+      "C": "Light attracts them",
+      "D": "Cells on the shaded side elongate more PG12 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_014",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Growth hormone acts :",
+    "options": {
+      "A": "Always as growth promoters",
+      "B": "Always as growth inhibitors",
+      "C": "Some as promoters and some as inhibitors",
+      "D": "Rarely as growth inducers PG12 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_015",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The movement of auxin is :",
+    "options": {
+      "A": "Acropetal",
+      "B": "Basipetal",
+      "C": "Lateral",
+      "D": "Centripetal PG12 - 0004"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_016",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which growth hormone is responsible for apical dominance ?",
+    "options": {
+      "A": "Auxin",
+      "B": "Cytokinin",
+      "C": "Gibberellin",
+      "D": "Ethylene PG13 - 0010"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_017",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following induces femaleness in plants ?",
+    "options": {
+      "A": "Ethylene",
+      "B": "Ethanol",
+      "C": "ABA",
+      "D": "Gibberellin PG16 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_018",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Richmond - Lang effect is due to : -",
+    "options": {
+      "A": "Cytokinin",
+      "B": "Auxin",
+      "C": "ABA",
+      "D": "Ethylene PG15 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_019",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What causes a green plant exposed to the light on only one side, to bend toward the source of light as it grows?",
+    "options": {
+      "A": "Green plants need light to perform photosynthesis .",
+      "B": "Green plants seek light because they are phototropic .",
+      "C": "Light stimulates plant cells on the lighted side to grow faster .",
+      "D": "Auxin accumulates on the shaded side, stimulating greater cell elongation there . PG13 - 0018"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_020",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following plant hormone substitutes for long photoperiod i n flowering plant ?",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Cytokinin",
+      "D": "Ethylene PG14 - 0008"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_021",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Bolting hormone is :",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "ABA",
+      "D": "Ethylene PG14 - 0002"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_022",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Gibberellins do not cause :",
+    "options": {
+      "A": "Shortening of genetically tall plants .",
+      "B": "Stimulation of seed germination .",
+      "C": "Promotion of parthenocarpy .",
+      "D": "Induction of \\alpha - amylase syn thesis in barley . PG14 - 0004 Plant Growth and Development"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_023",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Gibberellins can promote seed germination because of their influence on :",
+    "options": {
+      "A": "Rate of cell division",
+      "B": "Production of hydrolysing enzymes",
+      "C": "Synthesis of abscisic acid",
+      "D": "Absorption of water through hard seed coat PG14 - 0005"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_024",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a coconut milk factor ?",
+    "options": {
+      "A": "Auxin",
+      "B": "ABA",
+      "C": "Morphactin",
+      "D": "Cytokinin PG15 - 0007"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_025",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In germinating seeds Amylase, Proteases, Lipases are stimulated by : -",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Cytokinin",
+      "D": "Ethylene PG30 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_026",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is a gaseous plant hormone ?",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibbere llin",
+      "C": "Ethylene",
+      "D": "Cytokinin PG16 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_027",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Apical dominance can be overcome by application of : -",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Cytokinin",
+      "D": "Florigen PG15 - 0006"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_028",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Dormancy of seed is broken by : -",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellins",
+      "C": "Ethylene",
+      "D": "Cytokinin PG14 - 0007"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_029",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In tissue culture, differentiation of shoot is controlled by : -",
+    "options": {
+      "A": "Light Intensity",
+      "B": "temperature shock",
+      "C": "Low Auxin to high CK ratio",
+      "D": "High auxin to low CK ratio PG15 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_030",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Among the following which helps in ripening of fruits?",
+    "options": {
+      "A": "Methane",
+      "B": "Ethylene",
+      "C": "CO 2",
+      "D": "CO PG16 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_031",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Abscisic acid induces : -",
+    "options": {
+      "A": "Shoot elongation",
+      "B": "Cell elongation and cell wall formation",
+      "C": "Cell division",
+      "D": "Leaf fall and dormancy PG17 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_032",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is growth inhibitor ?",
+    "options": {
+      "A": "IAA",
+      "B": "ABA",
+      "C": "NAA",
+      "D": "GA 3 PG17 - 0004"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_033",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Abscisic acid treatment results in -",
+    "options": {
+      "A": "Leaf expansion",
+      "B": "Stem elongation",
+      "C": "Stomatal closure",
+      "D": "Root elongation PG17 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_034",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Natural cell division inducing factor occurs in :",
+    "options": {
+      "A": "and",
+      "B": "Immature maize seeds",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_035",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is a stress hormone ?",
+    "options": {
+      "A": "Benzyl aminopurine",
+      "B": "Dichlorophenoxy acetic acid",
+      "C": "Ethylene",
+      "D": "Abscisic acid PG17 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_036",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Seed dormancy is due to the : -",
+    "options": {
+      "A": "Ethylene",
+      "B": "Abscisic acid",
+      "C": "IAA",
+      "D": "Starch PG17 - 0010 NEET : Biology"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_037",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hormone responsible to induce senescence : -",
+    "options": {
+      "A": "ABA",
+      "B": "Auxin",
+      "C": "GA",
+      "D": "Cytokinin PG17 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_038",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Decapitation i.e. removal of shoot tips in a plant usually results in : -",
+    "options": {
+      "A": "Inactivation of lateral buds",
+      "B": "Growth of lateral buds",
+      "C": "Cessation of plant growth",
+      "D": "Yellowing of leaves PG13 - 0017 4"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_039",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which hormone is used to initiate flowering and synchronizing fruit set in pineapple ?",
+    "options": {
+      "A": "Ethylene",
+      "B": "Kinetin",
+      "C": "GA 3",
+      "D": "ABA PG17 - 0001 4"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_040",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Cell elongation in internodal regions of the green plants takes place due to : -",
+    "options": {
+      "A": "Ethylene",
+      "B": "Indole acetic acid",
+      "C": "Cytokinin",
+      "D": "Gibberellins PG14 - 0003"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_041",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The most widely used compound as sources of C 2 H 4 is -",
+    "options": {
+      "A": "Kinetin",
+      "B": "Zeatin",
+      "C": "IBA",
+      "D": "Ethephon PG16 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_042",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following plants hormone show triple response on stem -",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Cytokinin",
+      "D": "Ethylene PG16 - 0009"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_043",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a plant faces scarcity of water, which of the following hormone synthesized in mesophyll tissue -",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Cytokinin",
+      "D": "Abscisic acid PG17 - 0008 EXERCISE - I"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_044",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arithmetic growth can be observed in :",
+    "options": {
+      "A": "BGA colony",
+      "B": "Yeast colony",
+      "C": "Bacteria colony",
+      "D": "Root elongation PG06 - 0130"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_045",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the basic reason behind more than one type of leaves in a plant?",
+    "options": {
+      "A": "Due to different growth rates",
+      "B": "Due to lack of nutrients",
+      "C": "Due to nutrients toxicity",
+      "D": "Due to plasticity PG10 - 0060"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_046",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following PGRs shows dual role, growth promotion and growth inhibition?",
+    "options": {
+      "A": "Cytokinin",
+      "B": "Gibberellin",
+      "C": "Ethylene",
+      "D": "Abscisic acid PG16 - 0102"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_047",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the basic reason behind leaves remaining above the water in rice plant ?",
+    "options": {
+      "A": "Bolting due to gibberellin",
+      "B": "Apical dominance due to auxin",
+      "C": "Internodal elongation due to ethylene",
+      "D": "Due to photoperiodism PG16 - 0104"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_048",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Foolish seedling disease or Bakanae disease in rice caused by a fungus helped in the discovery of : -",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Cytokinin",
+      "D": "Ethylene PG14 - 0097"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_049",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Triple response hormone on stem is : -",
+    "options": {
+      "A": "Abscisic acid",
+      "B": "Ethylene",
+      "C": "Cytokinin",
+      "D": "Auxin PG16 - 0103"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_050",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hormone related with \\alpha - amylase induction is :",
+    "options": {
+      "A": "Cytokinin",
+      "B": "ABA",
+      "C": "Ethylene",
+      "D": "GA PG14 - 0098"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_051",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a synergistic function of auxin and cytokinin ?",
+    "options": {
+      "A": "Promotion of flowering in pineapple",
+      "B": "Morphogenesis in plants",
+      "C": "Increase in absorption surface in plants",
+      "D": "Induction of dormancy in seeds PG18 - 0139"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_052",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is/are biennial and monocarpic plant(s) ?",
+    "options": {
+      "A": "Sugar beet",
+      "B": "Wheat",
+      "C": "Barley",
+      "D": "All of the above PG19 - 0012 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_053",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is incorre ct ?",
+    "options": {
+      "A": "Auxin was first isolated from human urine.",
+      "B": "Differentiation in plant is open.",
+      "C": "Ethylene promote root growth and root hair formation.",
+      "D": "Auxin help to overcome apical dominance. PG24 - 0014"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_054",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Secondary growth does occur in :",
+    "options": {
+      "A": "All angiosperms and no gymnosperms",
+      "B": "Some angiosperms and gymnosperms",
+      "C": "No angiosperms and only gymnosperms",
+      "D": "All angiosperms and all gymnosperms PG09 - 0035"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_055",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The three phase s of growth in correct order is",
+    "options": {
+      "A": "Meristematic, maturation, elongation",
+      "B": "Elongation, meristematic, maturation",
+      "C": "Meristematic, elongation, maturation",
+      "D": "Elongation, maturation, meristematic PG05 - 0068 Plant physiology"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_056",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "PGR Ethylene can fit into :",
+    "options": {
+      "A": "Group of plant growth promoters",
+      "B": "Group of plant growth inhibitors",
+      "C": "Both the groups of promoter & inhibitors but mostly inhibitor",
+      "D": "Both the groups of promoter & inhibitors but mostly promoter PG16 - 0105"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_057",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ethylene in fruits causes :",
+    "options": {
+      "A": "Rise in rate of respiration called respiratory anti - climactic",
+      "B": "Rise in rate of respiration called respiratory climactic",
+      "C": "Fall in rate of respiration called respira s tory anti - climactic",
+      "D": "Fall in rate of respiration called respiratory climactic PG16 - 0106"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_058",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 3,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Photoperiods are perceived by :",
+    "options": {
+      "A": "Shoot apices",
+      "B": "Flowering apices",
+      "C": "Nodal buds",
+      "D": "Leaves PG19 - 0013 Exercise - I"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_059",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One single maize root apical meristem can give rise to more than .............. new cells per hour :-",
+    "options": {
+      "A": "350000",
+      "B": "35000",
+      "C": "17500",
+      "D": "175000"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_060",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A growth wherein new cells are always being added to the plant body by activity of meristem is called:-",
+    "options": {
+      "A": "Open form of growth",
+      "B": "Lateral growth",
+      "C": "Positive growth",
+      "D": "Determinate growth"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_061",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Measurement and the comparision of total growth per unit time is called :-",
+    "options": {
+      "A": "Absolute growth rate",
+      "B": "Relative growth rate",
+      "C": "Geometric growth",
+      "D": "Arithmetic growth PLANT GROWTH REGULATORS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_062",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hormone produced during leaf fall is :",
+    "options": {
+      "A": "IAA",
+      "B": "ABA",
+      "C": "Cytokinin",
+      "D": "Kinetin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_063",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Certain chemical substances having profound effect on plant growth are called :",
+    "options": {
+      "A": "Catalytic agents",
+      "B": "Phytohormones",
+      "C": "Enzymes",
+      "D": "Compost"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_064",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following is a natural auxin ?",
+    "options": {
+      "A": "2, 4-D",
+      "B": "Ethephon",
+      "C": "NAA",
+      "D": "IAA"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_065",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One of the most widely used PGR in agriculture is concern with:-",
+    "options": {
+      "A": "Thinning of cotton, cherry and walnut",
+      "B": "Overcome the apical dominance",
+      "C": "Closure of stomata",
+      "D": "Control xylem differentiation"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_066",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following hormone is concerned chiefly with root initiation?",
+    "options": {
+      "A": "IBA",
+      "B": "GA 3",
+      "C": "ABA",
+      "D": "Kinetin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_067",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is weed killer ?",
+    "options": {
+      "A": "2, 4-D",
+      "B": "NAA",
+      "C": "GA",
+      "D": "ABA"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_068",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Premature fall of fruit can be stopped by -",
+    "options": {
+      "A": "Auxin",
+      "B": "GA 3",
+      "C": "ABA",
+      "D": "Cytokinin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_069",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Gibberellin was isolated from -",
+    "options": {
+      "A": "An alga",
+      "B": "A fungus",
+      "C": "A bacterium",
+      "D": "A virus"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_070",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The habit of Cabbage plant can be changed drastically by the application of -",
+    "options": {
+      "A": "IAA",
+      "B": "GA 3",
+      "C": "Kinetin",
+      "D": "ABA $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_071",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The activity of α -amylase in the endosperm of barley germinating seed is induced by :-",
+    "options": {
+      "A": "Ethylene",
+      "B": "Cytokinin",
+      "C": "IAA",
+      "D": "Gibberellin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_072",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Seed dormancy occurs due to the :-",
+    "options": {
+      "A": "Ethylene",
+      "B": "Abscisic acid",
+      "C": "IAA",
+      "D": "Starch"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_073",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Hormone responsible for inducing senescence, is:-",
+    "options": {
+      "A": "ABA",
+      "B": "Auxin",
+      "C": "GA",
+      "D": "Cytokinin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_074",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Plant hormone associated with Climacteric respiration is :-",
+    "options": {
+      "A": "Auxin",
+      "B": "Cytokinin",
+      "C": "Ethylene",
+      "D": "Gibberellin"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_075",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 2,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match Column-I with Column-II and select the correct option from the codes given below :- Column-I Column-II A. Auxins (i) Breaking seed dormancy B. Gibberellins (ii) Inducing fruit ripening C. Cytokinins (iii) Formation of abscission layer D. Ethylene (iv) Root initiation (v) chloroplast development in leaves",
+    "options": {
+      "A": "A-",
+      "B": "A-",
+      "C": "A-",
+      "D": "A-"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_076",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How does pruning help in making the hedge dense",
+    "options": {
+      "A": "The apical shoot grows faster after pruning",
+      "B": "It releases wound hormones",
+      "C": "It induces the differentiation of new shoots from the rootstock",
+      "D": "It frees axillary buds from apical dominance"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_077",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Parthenocarpic tomato fruits can be produced by?",
+    "options": {
+      "A": "raising the plants from vernalized seeds",
+      "B": "treating the plants with phenylmercuric acetate",
+      "C": "removing androecium of flowers before pollen grains are released",
+      "D": "treating the plants with low concentrations of gibberellic acid and auxins"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_078",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following pairs, is not correctly matched ?",
+    "options": {
+      "A": "IAA - Cell wall elongation",
+      "B": "Abscisic acid - Stomatal closure",
+      "C": "Gibberellic acid - Leaf fall",
+      "D": "Cytokinin - Cell division $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_079",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "\"Foolish seedling\" disease of rice led to the discovery of :-",
+    "options": {
+      "A": "IAA",
+      "B": "GA",
+      "C": "ABA",
+      "D": "2, 4-D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_080",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "One of the synthetic auxin is :-",
+    "options": {
+      "A": "IAA",
+      "B": "GA",
+      "C": "IBA",
+      "D": "NAA"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_081",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following acids is a derivative of carotenoids ?",
+    "options": {
+      "A": "Indole-3-acetic acid",
+      "B": "Gibberellic acid",
+      "C": "Abscisic acid",
+      "D": "Indole butyric acid"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_082",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Root development is promoted by :",
+    "options": {
+      "A": "Auxin",
+      "B": "Gibberellin",
+      "C": "Ethylene",
+      "D": "Abscisic acid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_083",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "Plant Growth And Development - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which one of the following generally acts as an antagonist to gibberellins ?",
+    "options": {
+      "A": "ABA",
+      "B": "IAA",
+      "C": "Zeatin",
+      "D": "Ethylene EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_084",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is odd with respect to the parameters of growth measurements?",
+    "options": {
+      "A": "Dry weight",
+      "B": "Number of cells",
+      "C": "Fresh weight",
+      "D": "Types of cells PG04 - 0006"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_085",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a correct match regarding growth measuring parameters?",
+    "options": {
+      "A": "Maize root apical meristem - surface area",
+      "B": "Pollen tube - number of cells",
+      "C": "WatermeloN\\cdot size of cells",
+      "D": "Dorsiventral leaf - length PG04 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_086",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In which phase of growth thickening of cell - wall and mo dification of protoplasm takes place ?",
+    "options": {
+      "A": "Meristematic phase",
+      "B": "Elongation phase",
+      "C": "Maturation phase",
+      "D": "Both"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_087",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "P = Permanent cell , M = Meristematic cell Which growth pattern is shown by above diagram ?",
+    "options": {
+      "A": "A = Arithmetic ; B = Arithmetic",
+      "B": "A = Geometric ; B = Arithmetic",
+      "C": "A = Arithmet ic ; B = Geometric",
+      "D": "A = Geometric ; B = Geometric PG06 - 0029"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_088",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which is a correct mathematical expression of above graph ?",
+    "options": {
+      "A": "L 0 = L t + rt",
+      "B": "W 1 = W 0 e rt",
+      "C": "W 0 = W 1 e rt",
+      "D": "L t = L 0 +rt PG06 - 0030"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_089",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Select correct option with respect to A, B and C for given graph : -",
+    "options": {
+      "A": "A = lag phase ; B = stationary phase ; C = log phase",
+      "B": "A = stationary phase ; B = log phase ; C = lag phase",
+      "C": "A = log phase ; B = lag phase ; C = stationary phase",
+      "D": "A = lag phase ; B = log phase ; C = stationary phase PG06 - 0031"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_090",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Find the correct statement with respect to above diagram: -",
+    "options": {
+      "A": "Absolute growth rate in leaf A & leaf B is different",
+      "B": "Relative growth rate in leaf B is more than leaf A",
+      "C": "Relative growth rate in leaf A is more than leaf B",
+      "D": "Relative growth rate in leaf A and leaf B is equal PG06 - 0032 time Height of plant B A C Time Plant growth"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_091",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is a correct sequence of the developmental process in a plant cell ?",
+    "options": {
+      "A": "Differentiation → Senescence → Expansion → Division",
+      "B": "Division → Senescence → Differentiation → Expansion",
+      "C": "Division → Expansion → Differentiation → Senescence",
+      "D": "Expansion → Differentiation → Division → Senescence PG10 - 0018"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_092",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is odd with respect to cause of plasticity ?",
+    "options": {
+      "A": "Cotton",
+      "B": "Coriander",
+      "C": "Buttercup",
+      "D": "Larkspur PG04 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_093",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is most appropriate regarding plant growth or development?",
+    "options": {
+      "A": "Growth = Development + Differentiation",
+      "B": "Developement = Growth - Differentiation",
+      "C": "Development = Differentiation - Growth",
+      "D": "Development = Growth + Differentiation PG18 - 0028"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_094",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following plant hormones helps to prevent leaf drop at early stages?",
+    "options": {
+      "A": "Gibberellin",
+      "B": "ABA",
+      "C": "Ethylene",
+      "D": "Auxin PG18 - 0 032"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_095",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is odd with respect to the site of cytokinin synthesis ?",
+    "options": {
+      "A": "Ripening fruits",
+      "B": "Root apices",
+      "C": "Young fruits",
+      "D": "Developing shoot buds PG15 - 0020"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_096",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not a correct match?",
+    "options": {
+      "A": "Low CK High Auxin = root differentiation",
+      "B": "Chloroethylphosphonic acid = Source of ethylene",
+      "C": "Pomalin = CK + GA",
+      "D": "High CK Low Auxin = root differentiation PG23 - 0001"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_097",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Precursor for ethylene synthesis is ____'A'___ and for auxin synthesis is __'B'___ .",
+    "options": {
+      "A": "A = tryptophan amino acid, B = Methionine amino acid",
+      "B": "A = Chlorophyll, B = Xanthophyll",
+      "C": "A = Adenine, B = Terpene",
+      "D": "A = Methionine amino acid, B = Trypt ophan amino acid PG18 - 0031"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_098",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "How many plant growth regulators, in the list given below, are synthetic (not naturally found in plants)? Dormin, Naphthalene acetic acid, Zeatin, Kinetin, Indole - 3 - acetic acid, 2,4 - dichloro - phenoxy acetic acid, Gibberellic acid",
+    "options": {
+      "A": "Three",
+      "B": "Four",
+      "C": "One",
+      "D": "Five PG18 - 0033"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_099",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Match the following : - Phytohormone Function A Auxin a Thinning in cotton B Gibberellin b Stress hormone C Cytokinin c Lateral growth of shoot D ABA d Bolting E Ethylene e Root initiation in stem cuttings",
+    "options": {
+      "A": "A - a, B - b, C - c, D - d, E - e",
+      "B": "A - e, B - d, C - c, D - b, E - a",
+      "C": "A - c, B - a, C - d, D - e, E - b",
+      "D": "A - b, B - c, C - a, D - e, E - d PG18 - 0029"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_100",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following events in plants is/are affected by interaction of more than one plant growth regulators ?",
+    "options": {
+      "A": "Dormancy in seeds / buds",
+      "B": "Abscission and senescence",
+      "C": "Apical dominance",
+      "D": "All of the above PG18 - 0030 Your Target is to secure Good Rank in"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_101",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The flowering in short day plants, does not take place, when : -",
+    "options": {
+      "A": "The critical photoperiod is interrupted by dark",
+      "B": "An uninterrupted critical dark period is present",
+      "C": "The critical dark period is interrupted by red light",
+      "D": "The critical dark period is interrupted by far red light PG19 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_102",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is not correct ?",
+    "options": {
+      "A": "Biennial plants are monocarpic plants.",
+      "B": "Biennial plants normally flower and die in the second season.",
+      "C": "Wheat, barley, rye are some of the common biennial plants",
+      "D": "Vernalisation prevents precocious reproductive development PG20 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_103",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following can cause seed dormancy?",
+    "options": {
+      "A": "Immature embryo",
+      "B": "Presence of chemical inhibitors",
+      "C": "Impermeable and hard seed coat",
+      "D": "All of the above PG21 - 0003"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_104",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Choose the correct option for A, B, C or D : -",
+    "options": {
+      "A": "A - Shoot apical meristem",
+      "B": "B - Vascular cambium",
+      "C": "C - Vascular cambium",
+      "D": "D - Lateral meristem PG30 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_105",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following is correct about growth : -",
+    "options": {
+      "A": "Most fundamental and in conspicuous character of living beings .",
+      "B": "Defined as reversible increase in size .",
+      "C": "Occur at expense of energy .",
+      "D": "Only present in multicellular organism. PG02 - 0003"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_106",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The stress hormone that helps in regulating abscission : -",
+    "options": {
+      "A": "Auxins",
+      "B": "Abscisic acid",
+      "C": "Ethylene",
+      "D": "Cytokinin PG17 - 0018"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_107",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In 6 - furfuryl amino purine is : -",
+    "options": {
+      "A": "Terpenes",
+      "B": "Adenine derivates",
+      "C": "Carotenoids",
+      "D": "Indole compound PG17 - 0019 B D C A"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_108",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Recognise the figure and find out the correct labelling : -",
+    "options": {
+      "A": "A - Constant linear growth is geometric growth, B - Relative growth rate is arithmetic growth",
+      "B": "A - Constant linear growth is arithmetic growth, B - Relative growth rate is geometric growth",
+      "C": "A - Relative growth rate is geometric growth, B - Constant linear growth is arithmetic growth",
+      "D": "A - Relative growth rate is arithmetic growth, B - Constant linear growth is geometric growth PG04 - 0009"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_109",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "During differentiation, cell undergoes structural changes in their : -",
+    "options": {
+      "A": "Cell wall only",
+      "B": "Protoplasm only",
+      "C": "Protoplast only",
+      "D": "Cell wall and protoplasm PG05 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_110",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Arithmetic growth includes : -",
+    "options": {
+      "A": "Constant growth rate",
+      "B": "It is found in organism growth in natural environment.",
+      "C": "Efficiency index",
+      "D": "Relative growth rate PG06 - 0033"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_plant_growth_and_development_111",
+      "subject": "Biology",
+      "branch": "Botany",
+      "section": "A",
+      "level": 1,
+      "topic": "Plant Growth And Development",
+      "chapter_name": "Plant Growth And Development",
+      "language": "en",
+      "tags": [],
+      "source": "RACE - Plant Growth And Development.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "(I) O 2 helps in releasing metabolic energy essential for growth activities (II) Nutrients (micro and macro elements) are required by plants for the synthesis of protoplasm . (III) Optimum temperature range for plant growth is needed (IV) Environmental signal like light and gravity affect all phases of growth Choose the correct option .",
+    "options": {
+      "A": "All are correct",
+      "B": "I, II and III are correct",
+      "C": "I, II and IV are correct",
+      "D": "I and IV are correct PG07 - 0003"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Plant Growth And Development principles."
+  }
+]

@@ -1,0 +1,3830 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_001",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The population of an insect species shows an explosive increase in numbers during rainy season followed by its disappearance at the end of the season. What does this show?",
+    "options": {
+      "A": "The population of its predators increases enormously",
+      "B": "S - shaped or sigmoid gro wth of this insect",
+      "C": "The food plants mature and die at the end of the rainy season.",
+      "D": "Its population growth curve is of J - type DG03 - 0004"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_002",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The formula for exponential population growth is -",
+    "options": {
+      "A": "dt rN dN =",
+      "B": "dN dt rN =",
+      "C": "rN dt dN =",
+      "D": "dN rN dt = DG03 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_003",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Regarding life history variations. Which among the following is incorrect?",
+    "options": {
+      "A": "Breeding once in life time - Bamboo",
+      "B": "Breeding many times in life time - Birds",
+      "C": "Production in large number of small size offspring - Mammals",
+      "D": "Production in small number of large size offspring - Birds DG05 - 0002"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_004",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "- (  = ( ) )  dN K N rN dt K In above equation - (  ( ) )  K N K represent: -",
+    "options": {
+      "A": "Carrying capacity",
+      "B": "Environmental resistance",
+      "C": "Ra te of change in population density",
+      "D": "Instrinsic rate of growth DG04 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_005",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a pond there are 400 lotus plant last year, through reproduction 16 new lotus plants are added, taking the current population to 416, then calculate the birth rate.",
+    "options": {
+      "A": "0.4 offspring /lotus plant/ year",
+      "B": "0.6 offspring /lotus plant/ year",
+      "C": "0.08 offspring /lotus plant/ year",
+      "D": "0.04 offspring /lotus plant/ year DG01 - 0007"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_006",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A country has a high number of reproductive individual than pre - reproductive individual, what is c orrect about the population?",
+    "options": {
+      "A": "Population is expanding",
+      "B": "Population is declining",
+      "C": "Population is stable",
+      "D": "Cannot be predicted DG02 - 0002"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_007",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a logistic growth curve of population, environmental resistance is maximum when",
+    "options": {
+      "A": "value o f 'r' is high",
+      "B": "value of 'r' is low",
+      "C": "In approaches K",
+      "D": "K approaches N DG04 - 0005"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_008",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A group of individuals of same species constitute:",
+    "options": {
+      "A": "organism",
+      "B": "Community",
+      "C": "Biome",
+      "D": "Population OP02 - 0013 Exercise - I K Time Population density"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_009",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following sequences is correct ac cording to ecological hierarchy : -",
+    "options": {
+      "A": "Population, variety, community, ecosystem",
+      "B": "Population, community, ecosystem, Biome",
+      "C": "Population, community, species, ecosystem",
+      "D": "Species, variety, ecosystem, population OP02 - 0005"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_010",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Properties of populations are not present i n the __\"A\"__ but arise as a result of interactions among the __\"B\"__ comprising the population. \"A\" and \"B\" are : -",
+    "options": {
+      "A": "Organisms and ecosystems",
+      "B": "Biomes and organisms",
+      "C": "organism and organisms",
+      "D": "Ecosystems and communities. OP02 - 0007"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_011",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Fill in the blank. A ____ is a unit of land with a natural boundary having a mosaic of patches. The s e patches generally represent different _____ .",
+    "options": {
+      "A": "Biome, Landscape",
+      "B": "Biome, Ecosystem",
+      "C": "Landscape, Ecosystem",
+      "D": "Landscape, Biome OP02 - 0008 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_012",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In ecological hierarchy the abiotic factors are first time included at which hierarchical level :",
+    "options": {
+      "A": "Community Level",
+      "B": "Population Level",
+      "C": "Ecosystem Level",
+      "D": "Landscape Level OP02 - 0006 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_013",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The species which establishes an essential link with other species to help the later in some vi tal activity, is called : -",
+    "options": {
+      "A": "Critical link species",
+      "B": "Key stone species",
+      "C": "Endemic species",
+      "D": "Ecophene OP04 - 0004 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_014",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Species which play, a vital role in controlling the relative abundance of other species, and control functioning of the com munity is called",
+    "options": {
+      "A": "Dominant species",
+      "B": "Key stone species",
+      "C": "Link species",
+      "D": "Network species OP04 - 0007 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_015",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Kangaroo rat in desert is an example of?",
+    "options": {
+      "A": "Endemic species",
+      "B": "Key stone species",
+      "C": "Critical link species",
+      "D": "Threatened specie s OP04 - 0003 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_016",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is not an example of endemic species ?",
+    "options": {
+      "A": "Fig tree",
+      "B": "Kangaroo",
+      "C": "Kiwi",
+      "D": "Metasequoia OP04 - 0005 Organisms and Populations"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_017",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Mycorrhizal association is an example of :",
+    "options": {
+      "A": "Mutualism",
+      "B": "Commensalism",
+      "C": "Parasitism",
+      "D": "Exploitation OP13 - 0011"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_018",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In general, species diversity _____ __ as we move away from the equator towards the poles :",
+    "options": {
+      "A": "Increases",
+      "B": "Decrease",
+      "C": "Constant",
+      "D": "Can not say anything BD02 - 0001"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_019",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is not a characteristics of a community?",
+    "options": {
+      "A": "Dominance",
+      "B": "Species diversity",
+      "C": "Natality",
+      "D": "Stratification OP06 - 0005 2"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_020",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The group of organisms of different species forms a",
+    "options": {
+      "A": "Community",
+      "B": "Population",
+      "C": "Ecosystem",
+      "D": "Biome OP02 - 0004 2"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_021",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Animal which breed only once in their life is:",
+    "options": {
+      "A": "Pacific S almon fish",
+      "B": "Pacific T una fish",
+      "C": "Pacific S hark",
+      "D": "Pacific Oysters DG05 - 0001 2"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_022",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Sexual deceit is exhibited by :",
+    "options": {
+      "A": "Yucca plant",
+      "B": "Ophrys plant",
+      "C": "Wasp species",
+      "D": "Fig Tree OP13 - 0010 2"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_023",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is an example of co - evolution?",
+    "options": {
+      "A": "Barnacle & W hale",
+      "B": "Clown fish & Sea Anemone",
+      "C": "Hermit crab & Sea Anemone",
+      "D": "Wasp & fig OP16 - 0003 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_024",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A relationship between algae & fungi is an example of:",
+    "options": {
+      "A": "Commensalism",
+      "B": "Protocooperation",
+      "C": "Mutualism",
+      "D": "Parasitism OP13 - 0012 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_025",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Lichens are the associations of",
+    "options": {
+      "A": "Protist and fungus",
+      "B": "Algae and Cyanobacteria",
+      "C": "Fungus and algae / Cyanobacteria",
+      "D": "Fungus and virus OP13 - 0009 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_026",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following population interaction is (+, +) type :",
+    "options": {
+      "A": "Commensalism",
+      "B": "Mutualism",
+      "C": "Para s i t ism",
+      "D": "Amensalism OP13 - 0005 2"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_027",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A wasp pollinating a fig flower is an example of:",
+    "options": {
+      "A": "Commensalism",
+      "B": "Protocooperation",
+      "C": "Mutualism",
+      "D": "Parasitism OP13 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_028",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following interactions share a character istic where none of the organism can complete its life cycle without the other participating organism?",
+    "options": {
+      "A": "E.coli and Human",
+      "B": "Cattle egret bird and Cattle",
+      "C": "Hermit Crab and Sea Anemone",
+      "D": "Yucca and Pronuba OP13 - 0007 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_029",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following species relation is not an example of detrimental relation?",
+    "options": {
+      "A": "Viscum - Oak",
+      "B": "Sparrow - Seed",
+      "C": "Loranthus - Man g o",
+      "D": "Fig tree - Wasp OP22 - 0002 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_030",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "They may reduce the survival, growth and reproduction of the other organism and reduce its populati on density, they might render the organism more vulnerable to predation by making it physically weak. They are:",
+    "options": {
+      "A": "Predator",
+      "B": "Parasites",
+      "C": "Ammensals",
+      "D": "Commensal OP17 - 0007 3"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_031",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Animals eating plants are categorised separately as herbivores, they a re in a broad ecological context not very different from:",
+    "options": {
+      "A": "Parasite",
+      "B": "Predator",
+      "C": "Commensal",
+      "D": "Amensal OP18 - 0003 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_032",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Statement_Based"
+      ],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which statement is true for Connell's elegant field experiment?",
+    "options": {
+      "A": "Performed on prickly pear cactus",
+      "B": "Shows resource partitioning",
+      "C": "Wa s perform in rocky intertidal area of Scotland",
+      "D": "Was done on P isaster OP20 - 0009 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_033",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The prickly pear cactus in the early 1920 introduced into : -",
+    "options": {
+      "A": "American pacific cost",
+      "B": "Rocky sea coasts of Scotland",
+      "C": "Galapagos islands",
+      "D": "Australia OP18 - 000 5 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_034",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following concept is correct about amensalism?",
+    "options": {
+      "A": "Both species are benefitted .",
+      "B": "One species is benefitted and the other is neither benefitted nor harmed .",
+      "C": "One species is harmed whereas the other is unaffected .",
+      "D": "One species is benefitted and th e other is harmed . OP19 - 0001 3"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_035",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Increase of population under optimum condition is termed.",
+    "options": {
+      "A": "Reproductive a bility",
+      "B": "Secondary production",
+      "C": "Biotic potential",
+      "D": "Biomass ED60 - 0002 3"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_036",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Occurrence of endemic species in S outh A merica and Australia due to : -",
+    "options": {
+      "A": "These spec ies has been extinct from other regions .",
+      "B": "Continental separation .",
+      "C": "There is no terrestrial route to these places",
+      "D": "Retrogressi ve evolution . OP04 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_037",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a population unrestricted reproductive capacity is called as:",
+    "options": {
+      "A": "Biotic potential",
+      "B": "Fertility",
+      "C": "Carrying capacity",
+      "D": "Birth rate DG01 - 0010 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_038",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is true for individuals of same species",
+    "options": {
+      "A": "Have the sam e niche",
+      "B": "Live in same habitat",
+      "C": "I nterbreeding",
+      "D": "Live in different habitat OP02 - 0012 4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_039",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When the two ecosystems overlap each other the area is called.",
+    "options": {
+      "A": "Ecotone",
+      "B": "Niche",
+      "C": "Edge effect",
+      "D": "Ecotypes ES24 - 0001 Organisms and Populations 4"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_040",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Group of two or more than two plant species is called as : -",
+    "options": {
+      "A": "Plant community",
+      "B": "Animal ecosystem",
+      "C": "Plant ecosystem",
+      "D": "Ecological niche OP02 - 0009 4"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_041",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Competition for food, light and space is most severe in -",
+    "options": {
+      "A": "Closely related species growing in the same area",
+      "B": "Closely related species growing in different habitat .",
+      "C": "Distantly related species growing in the s ame habitat .",
+      "D": "Distantly related species growing in different habitat . OP20 - 0010 4"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_042",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Most successful parasites are those which do not :",
+    "options": {
+      "A": "Grow free",
+      "B": "Kill their host",
+      "C": "Reproduce sexually",
+      "D": "Survive in soil OP17 - 0013"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_043",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The basic unit of ecolog ical study is : -",
+    "options": {
+      "A": "species",
+      "B": "organism",
+      "C": "community",
+      "D": "biosphere OP02 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_044",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Mycorrhiza relationship between fungi and roo ts of higher plants is ?",
+    "options": {
+      "A": "Parasitic relationship",
+      "B": "Saprophytic relationship",
+      "C": "Symbiotic relationship",
+      "D": "Epiphytic relationship OP13 - 0013"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_045",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Parasites adversely affect : -",
+    "options": {
+      "A": "Survival of host.",
+      "B": "Growth of host.",
+      "C": "Reproduction potential of host.",
+      "D": "All of the above OP17 - 0011"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_046",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Identify the correct match : - Column - I Column - II (i) Species diversity",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Great influence on community stability",
+      "B": "Zonation according to the need of light",
+      "C": "Different types of species in a community",
+      "D": "Highest n umber of one type of species"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_047",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The group of organisms of different species form a : -",
+    "options": {
+      "A": "Community",
+      "B": "Population",
+      "C": "Ecosystem",
+      "D": "Biome OP06 - 0 004 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_048",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is an epiphyte ?",
+    "options": {
+      "A": "Orchid",
+      "B": "Lianas",
+      "C": "Santalum",
+      "D": "Mango OP14 - 0002 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_049",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The correct statement for parasites is/are : -",
+    "options": {
+      "A": "Host specific parasites & hosts tend to co - evolve .",
+      "B": "Parasites have highly developed sense organs .",
+      "C": "Parasites may reduce population density of host .",
+      "D": "Parasites have highly developed digestive system ."
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_050",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Niche overlap indicates",
+    "options": {
+      "A": "sharing of one or more resources between the two species .",
+      "B": "mutualism between two species .",
+      "C": "active cooperation between two species .",
+      "D": "two different parasites on the same h ost . OP20 - 0012 5"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_051",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A high density of elephant population in an area can result in : -",
+    "options": {
+      "A": "Predation on one another",
+      "B": "Mutualism",
+      "C": "Intra specific competition",
+      "D": "Inter specific competition OP20 - 0015 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_052",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Geometric representation of age structure is a characteristic of : -",
+    "options": {
+      "A": "Ecosystem",
+      "B": "Biotic community",
+      "C": "Population",
+      "D": "Landscape DG02 - 0005 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_053",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following is one of the characteristics of a biological community?",
+    "options": {
+      "A": "Sex - ratio",
+      "B": "Stratification",
+      "C": "Natality",
+      "D": "Morta lity OP07 - 0002 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_054",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following is categorised as a parasite in true sense?",
+    "options": {
+      "A": "The female Anopheles bites and sucks blood from humans.",
+      "B": "Human foetus developing inside the uterus draws nourishment from the mother.",
+      "C": "Head louse living on the human scalp as well as laying eggs on human hair.",
+      "D": "The cuckoo"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_055",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What type of human population is represented by the following age pyramid?",
+    "options": {
+      "A": "Vanishing population",
+      "B": "Stable population",
+      "C": "D eclining population",
+      "D": "Expanding population DG02 - 0004 5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_056",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The logistic population growth is expressed by the equation :",
+    "options": {
+      "A": "dN N K rN dt N - (  = ( ) ) ",
+      "B": "dt K N rN dN K - (  = ( ) ) ",
+      "C": "dN K N rN dt K - = (  ( ) ) ",
+      "D": "dN rN dt = D G04 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_057",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Exercise I-III - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Cuscuta is an example of:",
+    "options": {
+      "A": "Predation",
+      "B": "Endoparasitism",
+      "C": "Ectoparasitism",
+      "D": "Brood parasitism OP17 - 0012 Pre - reproductive Reproductive Post - reproductive Organisms and Populations EXERCISE - I"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_058",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the correct order of ecological hi e rarchy: -",
+    "options": {
+      "A": "Species → Genes → Family → Order → Class → Division → Kingdom",
+      "B": "Species → Community → Order → Kingdom",
+      "C": "organism → Population → Communit y → Biome",
+      "D": "organism → Communit y → Biosphere → Ecosyste m → Biome OP01 - 0222"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_059",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is an example of brood - parasitism?",
+    "options": {
+      "A": "Orchid - Mango tree",
+      "B": "Sea anemone - C lown fish",
+      "C": "Cuckoo - C row",
+      "D": "Fig free - W asp OP17 - 0112"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_060",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The clear stratific ation is found in : -",
+    "options": {
+      "A": "Tropical rain forest",
+      "B": "Temperate deciduous forest",
+      "C": "Grasslands",
+      "D": "Deserts OP07 - 0119"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_061",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The feeding efficiency of one species might be reduced due to the presence of the other interfering and inhibitory species, even If res ources are unlimited. It is called : -",
+    "options": {
+      "A": "Competitive release",
+      "B": "Competitive exclusion",
+      "C": "Resource parti ti oning",
+      "D": "Interference competition OP20 - 0180"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_062",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The cattle eg r et and grazing cattle is an example of : -",
+    "options": {
+      "A": "Mutualism",
+      "B": "Predation",
+      "C": "Parasitism",
+      "D": "Commensalism OP13 - 0126"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_063",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A population growth bec omes asymptote when population density : -",
+    "options": {
+      "A": "is in log phase",
+      "B": "is in lag phase",
+      "C": "reaches carrying capacity",
+      "D": "crosses carrying capacity OP03 - 0067"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_064",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Verhulst - Pearl logistic growth pattern is : -",
+    "options": {
+      "A": "Sigmoid",
+      "B": "Parabola",
+      "C": "Hyperbola",
+      "D": "J - shaped OP03 - 0041"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_065",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Exponential growth or geometric growth is represented by : -",
+    "options": {
+      "A": "In t + 1 = N t + [",
+      "B": "dN dt =",
+      "C": "dN K N rN dt K - (  = ( ) ) ",
+      "D": "dN dt = KN OP03 - 0068"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_066",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In logistic growth dN K N rN dt K - (  = ( ) )  Here, K N K - (  ( ) )  represents : -",
+    "options": {
+      "A": "Carr y ing capacity",
+      "B": "Intrinsic rate of natural increase",
+      "C": "Enviro n menta l resistance",
+      "D": "biotic potential and environmental resistance OP03 - 0069 1"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_067",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An 'Urn' shaped age pyramid represents : -",
+    "options": {
+      "A": "Stable population",
+      "B": "Expanding population",
+      "C": "Declining population",
+      "D": "Threatened population OP03 - 0070 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_068",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given b elow are two statements: Statement - I : Immigration is the number of individuals of same species who left the habitat and gone elsewhere during the time period under consideration. Statement - II : Natality and emigration contribute to an increase in popula tion density. In the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "Both Statement - I and II are incorrect.",
+      "B": "Statement - I is correct but S tatement - II is incorrect.",
+      "C": "Statement - I is incorrect bu t Statement - II is correct.",
+      "D": "Both Statement - I and Statement - II are correct. OP03 - 0105 Ecology 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_069",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements: Statement - I: Herbivores and plants appear to be more adversely affected by competition than carnivores. Statement - II: Abingdon t ortoise in Galapagos island became extinct within a decade after goats were introduced on island, apparently due to the greater browsing efficiency of the goat. In the light of the above statements, choose the most appropriate answer from the options give n below:",
+    "options": {
+      "A": "Both Statement - I and II are incorrect.",
+      "B": "Statement - I is correct but S tatement - II is incorrect.",
+      "C": "Statement - I is incorrect but Statement - II is correct.",
+      "D": "Both Statement - I and Statement - II are correct. OP18 - 0148"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "statements": {
+      "S": "",
+      "T": "In"
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_070",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below ar e two statements: Statement - I : Under a particular set of selection pressure s, organisms evolve towards the most efficient reproduction strategy. Statement - II : Most of the birds and mammals breed only once in their lifetime. In the light of the above s tatements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "Both Statement - I and II are incorrect.",
+      "B": "Statement - I is correct but S tatement - II is incorrect.",
+      "C": "Statement - I is incorrect but Statement - II is correct.",
+      "D": "Both Stat ement - I and Statement - II are correct. OP03 - 0071"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_071",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements: Statement - I : All autotrophic plants are self - sustainable and do not need any other species for survival. Statement - II : In nature animals, plants and microbes do not and cannot live in isolation but interact in various ways to form biological community. In the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "Both Statement - I and II are incorrect.",
+      "B": "Statement - I is c orrect but S tatement - II is incorrect.",
+      "C": "Statement - I is incorrect but Statement - II is correct.",
+      "D": "Both Statement - I and Statement - II are correct. OP06 - 0053"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_072",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If N is the population density at time t, then its density at time t + 1 is -",
+    "options": {
+      "A": "In t+1 = N t +",
+      "B": "In t+1 = N t +",
+      "C": "In t +1 = N t -",
+      "D": "In t+1 = N t +"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_073",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Birth rate = B, Death rate = D, Emigration = E and Immigration = I. Column - I Column - II",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "a - iii, b - ii, c - i",
+      "B": "Population is decreasing",
+      "C": "Population is stable",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_074",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following organism breeds only once i n their life time?",
+    "options": {
+      "A": "Pacific salmon fish",
+      "B": "Oyster",
+      "C": "Bamboo",
+      "D": "Both"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_075",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(A) Predators helps in maintaining species diversity in community. (B) It reduces the intensity of competition among competing prey species. (1) Statement A is correct (2) Statement B is correct (3) Both statemen t s are wrong (4) Both statement s are correct OP18 - 0149 2",
+    "options": {
+      "A": "Statement A is correct",
+      "B": "Statement B is correct",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "statements": {
+      "S": "("
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_076",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The feeding efficiency of one species might be reduced due to the interfering and inhibitory presence of the o th er species even if resource are abundant in known as -",
+    "options": {
+      "A": "and",
+      "B": "Interfering competition",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_077",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When certain exotic species are introduced in to a geographical area they become invasive mainly because:",
+    "options": {
+      "A": "The invaded land has unlimited resources for the introduced species.",
+      "B": "The population of the introduced species in the invaded land is very low.",
+      "C": "Introduced species do not face any competition in the introduced land.",
+      "D": "The invaded land does not have its natural predator OP06 - 0052"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAB1CAIAAADC9FiNAAABCUlEQVR42u3dgQnCMBBA0YtkkIzRcZotmunjBhaE6oW8P4F9XlOEw5Y5Z+irXgjYsWPHTuzYsWN31xijZKr3/sRllid+V5RSss3IE5dZ1/q4qb5I5x07duzYiR07duzEjh07duzEjh07dmLHjh07dmLHjh07sWMXaZarPnRd154s53nOu2727xJu0uVZ2asLbdJFspU9551nBTt27MSOHTt2YseOHTt2YseOHTuxY8eOHTuxY8eOndixY8du3+qi/wVo7jaYO3uf5s49y44dO7Fjx46d2LFjx07s2LFjx07s2LFjJ3bs2LFjJ3bs2LFT2Pv8ydwdx7GnS2vtP+8qN3dix44dO0VExBtzL2FVS7sLEAAAAABJRU5ErkJggg=="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_078",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How many statements are correct ?",
+    "options": {
+      "A": "A group of individuals resulting even from asexual reproduction is also considered a population for the purpose of ecological studies.",
+      "B": "Population ecology is an important area because it links ecology to population genetics and evolution.",
+      "C": "An individual organism has certain attributes whereas, a population does not.",
+      "D": "An individual may have births and deaths, but a population has birth rates and death rates."
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_079",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the incorrect statement from the following?",
+    "options": {
+      "A": "The tiger census in our national parks and tiger reserves is often based on pug marks and fecal pellets.",
+      "B": "The size of a population for any species is a static parameter.",
+      "C": "Natality refers to the number of births during a gi ven period in the population that are added to the initial population density.",
+      "D": "Emigration is the number of individuals of the population who left the habitat and gone elsewhere during the time period under consideration. OP03 - 0076 Ecology"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "assertion_reason",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_080",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Assertion_Reason"
+      ],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assertion : When resources in the habitat are unlimited, each species has the ability to realise fully its innate potential to grow in number. Reason : When resources are limited the population grows in an exponential or geometric fashion.",
+    "options": {
+      "A": "Both assertion and reason a re true and reason is a correct explanation of the assertion.",
+      "B": "Both assertion and reason are true but reason is not a correct explanation of the assertion.",
+      "C": "Assertion is true but reason is false.",
+      "D": "Assertion is false but reason is true. OP03 - 007 7"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "assertion": "When resources in the habitat are unlimited, each species has the ability to realise fully its innate potential to grow in number.",
+    "reason": "When resources are limited the population grows in an exponential or geometric fashion."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_081",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Extra Edge - Organisms And Populations.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an exponential growth equation dN rN dt = , r represents -",
+    "options": {
+      "A": "Intrinsic rate of natural increase",
+      "C": "Birth rate",
+      "D": "Both",
+      "B": "Option B"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_082",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are the components of Ecological Hierarchy?",
+    "options": {
+      "A": "Population",
+      "B": "Biome",
+      "C": "Community",
+      "D": "Biosphere"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_083",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Study of the relation of group of different species with their environment is known as:-",
+    "options": {
+      "A": "Autecology",
+      "B": "Synecology",
+      "C": "Ecological Hierarchy",
+      "D": "Ecology Niche"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_084",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Occurence of endemic species in South America and Australia due to :-",
+    "options": {
+      "A": "These species has been extinct from other regions",
+      "B": "Continental separation",
+      "C": "There is no terrestrial route to these places",
+      "D": "Retrogressive evolution"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_085",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ecology is basically concerned with ___A___ levels of biological organisation.",
+    "options": {
+      "A": "A - Four",
+      "B": "A - Six",
+      "C": "A - Five",
+      "D": "A - Three"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_086",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "_______ breed only once in their life time -",
+    "options": {
+      "A": "Most birds",
+      "B": "Most mammals",
+      "C": "Bamboo",
+      "D": "Oysters"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_087",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A population growing in a habitat with limited resources show initially a ..........followed by phases of .....and ....and finally an ........., when the population density reaches the ...............",
+    "options": {
+      "A": "Carrying capacity, acceleration, Lag phase, Deceleration, Asymptote.",
+      "B": "acceleration, Deceleration, Lag phase, Asymptote, carrying capacity",
+      "C": "Lag phase, acceleration, Deceleration, Asymptote, Carrying capacity",
+      "D": "Deceleration, acceleration, Lag phase, Asymptote, Carrying capacity ALLEN Ecology 130"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_088",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Exponential growth of population can be expressed by which of the following equation :-",
+    "options": {
+      "A": "dN = rN dt",
+      "B": "      dN K -N = rN dt K",
+      "C": "In t = N 0 e rt",
+      "D": "Both"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_089",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following age pyramid fit for Indian population",
+    "options": {
+      "D": "None of these",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_090",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following processes results into the increase in population density?",
+    "options": {
+      "A": "Natality and Mortality",
+      "B": "Natality and Immigration",
+      "C": "Natality and Emigration",
+      "D": "Mortality and Immigration"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_091",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Verhust - pearl logistic growth is described by the following equation.       dN K -N = rN dt K In this equations what is r ?",
+    "options": {
+      "A": "Population density at time t",
+      "B": "Intrinsic rate of natural increase",
+      "C": "Carrying capacity",
+      "D": "Time"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_092",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following is not characteristic feature of a community ?",
+    "options": {
+      "A": "Population density",
+      "B": "Stratification",
+      "C": "Dominance",
+      "D": "Species diversity"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_093",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify the correct match :- Column - I Column - II (i) Species diversity",
+    "options": {
+      "A": "Great influence on community stability",
+      "B": "Zonation according to the need of light",
+      "C": "Different types of species in a community",
+      "D": "Highest no. of one type of species"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_094",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Mycorrhizae relationship between fungi and roots of higher plants is ?",
+    "options": {
+      "A": "Parasitic relationship",
+      "B": "Saprophytic relationship",
+      "C": "Symbiotic relationship",
+      "D": "Epiphytic relationship ALLEN : Biology 131"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_095",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the mutualistic relationship between mycorrhizal fungi and plants, what benefit do the plants receive ?",
+    "options": {
+      "A": "Nitrogen fixation",
+      "B": "Protection from herbivores",
+      "C": "Enhanced water and nutrient absorption",
+      "D": "Pollination services"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_096",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Fill in the blanks :- The most spectacular and evolutionarily fascinating examples of mutualism are found in ______ relationship.",
+    "options": {
+      "A": "Fungus - algae",
+      "B": "Plant - animal",
+      "C": "Fungi - roots of higher plant",
+      "D": "Plant - algae"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_097",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Find out the odd one regarding an example of mutualism ?",
+    "options": {
+      "A": "Lichens",
+      "B": "Mycorrhiza",
+      "C": "Fig free and wasp",
+      "D": "Barnacles growing on the whale"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_098",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 3,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": {
+      "instruction": "Match the following column-I & column-II :- Column - I Column - II (i) Sea anemone",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "Barnacle",
+      "B": "Clown fish",
+      "C": "Egret bird",
+      "D": "Orchid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_099",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is an example of protoco-operation.",
+    "options": {
+      "A": "Whale - Branacles",
+      "B": "Clown fish - Sea anemone",
+      "C": "Crocodile - Birds",
+      "D": "Pilot fish - Shark"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_100",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Protoco-operation is the species interaction in which :- Species A Species B",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_101",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acacia and cactus show which kind of defences :-",
+    "options": {
+      "A": "Behavioral",
+      "B": "Morphological",
+      "C": "Physiological",
+      "D": "Biochemical"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_102",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If predator is too efficient and overexploits its prey then what will happen?",
+    "options": {
+      "A": "Prey population density increases continuously",
+      "B": "Prey might become extinct",
+      "C": "Predator may also become extinct",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_103",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What percentage of insect are known to be phytophagous ?",
+    "options": {
+      "A": "45%",
+      "B": "35%",
+      "C": "25%",
+      "D": "10% ALLEN Ecology 132"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_104",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [
+        "Match_The_Following"
+      ],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match the columns I and II, and choose the correct combination from the options given. Column-I Column-II a. Camouflage",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_105",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Acacia b. Distasteful",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_106",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Calotropis c. Thorns",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_107",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Monarch butterfly d. Cardiac glycosides",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_108",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When we remove the barnacle Balanus from the rocky intertidal regions of Scotland then the barnacle Chathamalus increase in number and cover more area. This is the example of which of the following",
+    "options": {
+      "A": "Amensalism",
+      "B": "Competitive exclusion",
+      "C": "Resource partitioning",
+      "D": "Competitive release"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_109",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Potent force for organic evolution is :-",
+    "options": {
+      "A": "Predation",
+      "B": "Interspecific competition",
+      "C": "Exploitation",
+      "D": "Parasitism"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_110",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following mean is used by warblers to avoid competetion and promote coexistence?",
+    "options": {
+      "A": "Difference in foraging activities",
+      "B": "Habitat fragmentation",
+      "C": "Competetive release",
+      "D": "All above ALLEN : Biology 133"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_111",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The principle of competetive exclusion was stated by :-",
+    "options": {
+      "A": "Conell",
+      "B": "Gause",
+      "C": "Mac. Arthur",
+      "D": "Verhulst and Pearl"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_112",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Through resource partitioning :",
+    "options": {
+      "A": "Two species compete for the same prey",
+      "B": "Slight variation in niche allow closely related species to co-exist in the same habitat",
+      "C": "Competitive exclusion results in the success of the superior species",
+      "D": "Two species undergo character displacement that allows them to compete"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_113",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In which type of population interaction, one species is harmed whereas the other is unaffected?",
+    "options": {
+      "A": "Mutualism",
+      "B": "Competition",
+      "C": "Commensalism",
+      "D": "Amensalism"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_114",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Time A species B species Population Which type of interaction can be shown by above graph between species A and B ?",
+    "options": {
+      "A": "Mutualism",
+      "B": "Commensalism",
+      "C": "Competition",
+      "D": "Amensalism ECOSYSTEM"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAABxCAIAAAC1PL3IAAABMUlEQVR42u3dsRWCMBiF0cTjIIzBOGQLmD52FtqATV7kfhNwcomh+U3tvRfN08MSABMwAQOme4Mdx1GTaq0lLEuN/ayvtaY9UsJaPcN/AULep5y3xxnmDBMwAQMmYAIGTMAEDJiACRgwARMwYAImYMAETMCACZiAARMwAQOmueon2vfdQg1p27YPi1PzYYGjWrfaUeW3+TD/6FEChtKcYT46BEzAgAmYgAETMAEDJmACBkzABAyYgAkYMAETMGACJmDABEzAgAmYgKlcng8z1jfNDlvX1UoNaVmWaa5UfO/pqEv6hj+MM8xHh4AJGDABEzBgAiZgwARMwIAJmIABEzABAyZgAgZMwAQMmIAJGDCVP50PK0nXaNlhiaXNpX1Paw14fd27Z4cJmIABEzABm70XHWlcW1awcdkAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_115",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ecosystem term coined by -",
+    "options": {
+      "A": "Odum",
+      "B": "Mishra",
+      "C": "Reiter",
+      "D": "Tansley"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_116",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one is not a functional aspect of ecosytem ?",
+    "options": {
+      "A": "Energy flow",
+      "B": "Productivity",
+      "C": "Decomposition",
+      "D": "Stratification"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_117",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ecosystem may be defined as -",
+    "options": {
+      "A": "A localized association of several plants and animals",
+      "B": "Different communities of plants, animals and microbes together with their physico-chemical environment.",
+      "C": "Different communities of plants microbes plus their physico-chemical environment",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_118",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The importance of ecosystem lies in -",
+    "options": {
+      "A": "Flow of energy",
+      "B": "Cycling of materials",
+      "C": "Both the above",
+      "D": "None of the above"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_119",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Vultures in an ecosystem are -",
+    "options": {
+      "A": "Predators",
+      "B": "Scavangers",
+      "C": "Consumers",
+      "D": "Top carnivores"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_120",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Nepenthes (Insectivorous pitcher plant) is -",
+    "options": {
+      "A": "Producer",
+      "B": "Consumer",
+      "C": "Both 1 & 2",
+      "D": "Parasite"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_121",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one is omnivorous -",
+    "options": {
+      "A": "Frog",
+      "B": "Lion",
+      "C": "Deer",
+      "D": "Man ALLEN Ecology 134"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_122",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When peacock, eats snake which eats insects depends on green plants, the peacock is -",
+    "options": {
+      "A": "a primary consumer",
+      "B": "a primary decomposer",
+      "C": "a final decomposer of plants",
+      "D": "the apex of the food pyramid"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_123",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Bamboo plant is growing in a far forest then what will be the trophic level of it :-",
+    "options": {
+      "A": "First trophic level",
+      "B": "Second trophic level",
+      "C": "Third trophic level",
+      "D": "Fourth trophic level"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_124",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Standing crop is measured in terms of :",
+    "options": {
+      "A": "Biomass",
+      "B": "Number of organisms in a unit area",
+      "C": "Elements present in a particular area in a particular time",
+      "D": "Both"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_125",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Ecosystems need a constant supply of energy to synthesise the molecules they require to",
+    "options": {
+      "A": "increase the photosynthetic efficiency",
+      "B": "reduce respiratory loss",
+      "C": "counteract the universal tendency toward increasing disorderliness.",
+      "D": "control the worst impacts of predation."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_126",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the above diagram of food web, what can be A, B and C respectively A B C",
+    "options": {
+      "A": "Peacock Rabbit Tiger",
+      "B": "Hawk Deer Dog",
+      "C": "Deer Rabbit Mice",
+      "D": "Hawk Rabbit Mice"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAAB4CAIAAAB5BFcDAAABOklEQVR42u3d0Q3CIBSG0YthkI7Rcdot6PS4gA8+tHiR801gOCqNyR9L7z00YS9HQE7kRI6cyIkcOZF7puu6SqbO88xwLCX/byillGwvKcOh1Vm+HJK8w/K8jdxz7jmREzlyIidy5ERO5ESOnMiJHDmREzmRIydyIkdO5ERO5MiJnMiR03T1IbXW1jze4zgeOtJB+7mEG7jZ92N1wQ1c/MXYzj3nCUXkRI6cyIkcOZETOZEjJ3IiR07kRE7kyImcyJETOZETOXIiJ3LkRE7kFDdsVpcdnUbW1eu3m9WVR6c5V6/V6DTmXL265zyhiJzIkRM5kSMnciIncuRETuTIiZzIiRw5kRM5ciInciJHTuREjpzIiZzitv98tH+c7zO377vD+knbtn3+FJmhuudETuTIiZzIkRM5DewN0YYjLbAFYIkAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_127",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The maximum energy is stored at which of the following trophic level in any ecosystem -",
+    "options": {
+      "A": "Producers",
+      "B": "Herbivores",
+      "C": "Carnivores",
+      "D": "Top carnivores"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_128",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an ecosystem the function of the producers is to",
+    "options": {
+      "A": "Convert organic compounds into inorganic compounds",
+      "B": "Trap solar energy and convert it into chemical energy",
+      "C": "Utilize chemical energy",
+      "D": "Release energy"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_129",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If we completely remove decomposers from an ecosystem, the ecosystem functioning will be adversely affected because -",
+    "options": {
+      "A": "Mineral movement will be blocked",
+      "B": "Herbivores will not receive solar energy",
+      "C": "Energy flow will be blocked",
+      "D": "Rate of decomposition of other components will be very high"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_130",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Path of energy flow in an ecosystem is :",
+    "options": {
+      "A": "Herbivorous → producer → carnivorous → decomposer",
+      "B": "Herbivorous → carnivorous → producer → decomposer",
+      "C": "Producer → carnivorous → herbivorous → decomposer",
+      "D": "Producer → herbivorous → carnivorous → decomposer ALLEN : Biology 135"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_131",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An ecosystem resists change because it is in a state of-",
+    "options": {
+      "A": "Homeostasis",
+      "B": "Regular Illumination",
+      "C": "Static Imbalance",
+      "D": "Food accumulation"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_132",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which ecosystem has maximum number of producers in an unit area ?",
+    "options": {
+      "A": "Pond",
+      "B": "Grassland",
+      "C": "Forest",
+      "D": "Tundra"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_133",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Pyramids of energy are -",
+    "options": {
+      "A": "Always upright",
+      "B": "Always Inverted",
+      "C": "Mostly upright",
+      "D": "Mostly inverted"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_134",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The ecological pyramid of number in pond ecosystem is -",
+    "options": {
+      "A": "Upright",
+      "B": "Inverted",
+      "C": "May upright or Inverted",
+      "D": "First upright then inverted"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_135",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Tree → Birds → Parasite Pyramid of biomass of the above given food chain is :-",
+    "options": {
+      "A": "Urn shape",
+      "B": "Inverted",
+      "C": "Upright",
+      "D": "Spindle shaped"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_136",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The amount of biomass or organic matter produced per unit area over a time period by plants during photosynthesis depends upon:-",
+    "options": {
+      "A": "Plant species inhabiting a particular area",
+      "B": "Availability of nutrients",
+      "C": "Photosynthetic capacity of plant",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_137",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The storage of energy at consumer level is known as-",
+    "options": {
+      "A": "Gross primary production",
+      "B": "Secondary productivity",
+      "C": "Net primary productivity",
+      "D": "Net productivity"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_138",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Gross primary productivity is -",
+    "options": {
+      "A": "Rate at which organic molecules are formed in an autotroph",
+      "B": "Rate at which organic molecules are used up by an autotroph",
+      "C": "Storage of organic molecules in the body of an autotroph",
+      "D": "Rate at which organic molecules are transferred to next higher trophic level"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_139",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "During decomposition process, detritivores break down detritus into smaller particles this process is called __A__. Select correct option for 'A' :-",
+    "options": {
+      "A": "Leaching",
+      "B": "Humification",
+      "C": "Catabolism",
+      "D": "Fragmentation"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_140",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Select the incorrect statement :-",
+    "options": {
+      "A": "Decomposition is largely an oxygen- requiring process.",
+      "B": "Warm and moist environment favour decomposition",
+      "C": "Humus is highly resistant to microbial action.",
+      "D": "Decomposers break down complex inorganic matter into organic substances ALLEN Ecology 136"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_141",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which is best for plant growth?",
+    "options": {
+      "A": "Loamy soil",
+      "B": "Silt",
+      "C": "Sandy soil",
+      "D": "Clay soil"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_142",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What is the best pH of the soil for cultivation of plants?",
+    "options": {
+      "A": "3.4 - 5.4",
+      "B": "6.5 - 7.5",
+      "C": "4.5 - 8.5",
+      "D": "5.5 - 6.5"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_143",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Forests near equator region are called -",
+    "options": {
+      "A": "Deciduous",
+      "B": "Tropical rain forests",
+      "C": "Coniferous forests",
+      "D": "Temperate forests"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_144",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Grasslands with scattered trees are called -",
+    "options": {
+      "A": "Pampas",
+      "B": "Steppes",
+      "C": "Prairies",
+      "D": "Savanna"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_145",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which biome refers to arctic desert?",
+    "options": {
+      "A": "Tundra",
+      "B": "Taiga",
+      "C": "Savanna",
+      "D": "Thar desert"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_146",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which biome is most rich in fauna and flora?",
+    "options": {
+      "A": "Deciduous forests",
+      "B": "Chaparral",
+      "C": "Tropical rain forests",
+      "D": "Taiga"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_147",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A biosphere is composed of",
+    "options": {
+      "A": "Living organisms",
+      "B": "Living organisms + Lithosphere",
+      "C": "Living organisms + lithosphere + atmosphere",
+      "D": "Living organisms + lithosphere + atmosphere + hydrosphere BIODIVERSITY AND CONSERVATION"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_148",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The variation shown by the medicinal plant Rauwolfia vomitoria growing in different himalayan ranges might be in the term of the potency and concentration of active chemical that the plant produce, it denotes :",
+    "options": {
+      "A": "Ecological diversity",
+      "B": "Genetic diversity",
+      "C": "Species diversity",
+      "D": "Ecosystem diversity"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_149",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "identify the incorrect statement :-",
+    "options": {
+      "A": "The genetic variation is shown by the medicinal plant Rauwolfia vomitoria",
+      "B": "India has more than 50,000 genetically different strains of rice",
+      "C": "India has 1000 varieties of mango",
+      "D": "Norway has a greater ecosystem diversity than a India."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_organisms_and_populations_150",
+      "subject": "Biology",
+      "branch": "Zoology",
+      "section": "A",
+      "level": 1,
+      "topic": "Organisms And Populations",
+      "chapter_name": "Organisms And Populations",
+      "language": "en",
+      "tags": [],
+      "source": "Organisms And Populations_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "India has only __A__ percent of the world's land area, its share of the global species diversity is __B__ percent A and B respectively are :-",
+    "options": {
+      "A": "1.4 and 8.1",
+      "B": "2.4 and 12",
+      "C": "2.4 and 8.1",
+      "D": "5.6 and 12"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
+  }
+]

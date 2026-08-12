@@ -1,0 +1,3509 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of medium disturbed by the wave propagation are at x 1 = 0 and x 2 = 1cm. The respective displacements (in cm) of the particles can be given by the equations: - y 1 = 2sin3 \\pi t y 2 = 2sin(3 \\pi t - \\pi /8) The wave velocity is :",
+    "options": {
+      "A": "16 cm/s",
+      "B": "24 cm/s",
+      "C": "12 cm/s",
+      "D": "8 cm/s WM02 - 0010"
+    },
+    "correct_option": "B",
+    "explanation": "Given \\omega = 3 \\pi ∴ \\omega = = \\pi f 1.5 2 , Also \\Delta x = 1.0 cm Given, \\pi \\pi \\pi \\phi = \\Delta  =  \\lambda \\lambda 2 2 x 1 8  \\lambda = 16 cm  v = f \\lambda = 1.5 × 16 = 24 cm/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two small boats are 10m apart on a lake. Each pops up and down with a period of 4.0 seconds due to wave motion on the surface of water. When one boat is at its highest point, the other boat is at its lowest point. Both boats are always within a single cycle of the waves. The speed of the waves is : -",
+    "options": {
+      "A": "2.5 m/s",
+      "B": "5.0 m/s",
+      "C": "14 m/s",
+      "D": "40 m/s WM02 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda = = = 10m, T 4s ,n 1/ 4 2 \\lambda = 20m v = n \\lambda = 1/4 × 20 = 5m/s"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sinusoidal wave propagates along a string. In figure",
+    "options": {
+      "A": "and",
+      "B": "'y' represents displacement of particle from the mean position. 'x' & 't' have usual meanings. Find : -",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "From y - t graph → T = 4 sec From y - x graph → \\lambda = 7 - 1 = 6 m (a) 6m, 0.25 Hz, 1.5 m/s (b) 1.5 \\pi mm/s,0.75 \\pi 2 mm/s",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVcAAAA+CAIAAACgBrzrAAABgElEQVR42u3YQREAIAzAsIJ/z5sN7kgk9NkzMwEAAAAfuBIAAABALgAAAACQCwAAAADkAgAAAAC5AAAAAEAuAAAAAJALAAAAAOQCAAAAALkAAAAAQC4AAAAA5AIAAAAAuQAAAABALgAAAACQCwAAAADkAgAAAAC5AAAAAEAuAAAAAJALAAAAAOQCAAAAALkAAAAAkAsAAAAA5AIAAAAAuQAAAABALgAAAACQCwAAAADkAgAAAAC5AAAAAEAuAAAAAJALAAAAALkAAAAAQC4AAAAAkAsAAAAA5AIAAAAAuQAAAABALgAAAACQCwAAAADkAgAAAAC5AAAAAEAuAAAAAOQCAAAAALkAAAAAQC4AAAAAkAsAAAAA5AIAAAAAuQAAAABALgAAAACQCwAAAADkAgAAAEAuAAAAAJALAAAAAOQCAAAAALkAAAAAQC4AAAAAkAsAAAAA5AIAAAAAuQAAAABALgAAAACQCwAAAAC5AAAAAEAuAAAAAJALAAAAADxuAel5A3kyniFzAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Graph shows three waves that are separately sent along a string that is stretched under a certain tension along x - axis. If \\omega 1 , \\omega 2 and \\omega 3 are their angular frequencies respectively then : -",
+    "options": {
+      "A": "\\omega 1 = \\omega 3 > \\omega 2",
+      "B": "\\omega 1 > \\omega 2 > \\omega 3",
+      "C": "\\omega 1 > \\omega 2 = \\omega 3",
+      "D": "\\omega 1 = \\omega 2 = \\omega 3 WM02 - 0011"
+    },
+    "correct_option": "A",
+    "explanation": "Wave (1) & (3) having same frequency and (2) is less frequency.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The following figure depicts a wave travelling in a medium. Which pair of particles are in phase : -",
+    "options": {
+      "A": "A and D",
+      "B": "B and F",
+      "C": "C and E",
+      "D": "B and G WM03 - 0011"
+    },
+    "correct_option": "D",
+    "explanation": "Both points 'B' and 'G' are moving up and are at the same distance from equilibrium position at the instant shown.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAAApCAIAAAC3PSwrAAAAV0lEQVR42u3RAQkAAAgEMbV/57eFIOwi3DpJ6XljAUVRFEVRpCiKoiiKFEVRFEWRoiiKoihSFEVRFEWKoiiKokhRFEVRFEWRoiiKoihSFEVRFEWKoqiDFj0rA08Pea0EAAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A transverse periodic wave on a string with a linear mass density of 0.200 kg/m is described by the following equation y = 0.05 sin (420t - 21.0x) where x and y are in metres and t is in seconds. The tension in the string is equal to :",
+    "options": {
+      "A": "32 N",
+      "B": "42 N",
+      "C": "66 N",
+      "D": "80 N WM03 - 0010"
+    },
+    "correct_option": "D",
+    "explanation": "\\omega = = T V μ k μ → linear mass density  \\omega (  = =  ( ) )  2 2 2 μ 420 T 0.2 21 k = 80 N."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of sound in a gas at temperature 27^\\circC is V then in the same gas its velocity will be 2V at temperature : -",
+    "options": {
+      "A": "54^\\circC",
+      "B": "327^\\circC",
+      "C": "927^\\circC",
+      "D": "108^\\circC WM04 - 0008"
+    },
+    "correct_option": "C",
+    "explanation": "In a gas, V = \\gamma  \\alpha RT V T M  = V 300 2V T  T = 300 × 4 = 1200 K = 927^\\circC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the wave represented by, y = cos (500 t - 70 x) where y is in mm, x in m and t in seconds. Which of the following is/are true?",
+    "options": {
+      "A": "the wave is a standing wave",
+      "B": "the speed of the wave is 50/7 ms - 1",
+      "C": "the frequency of oscillation is 500 × 2 \\pi Hz",
+      "D": "two nearest points in the same phase have separation 20 \\pi / 7cm WM02 - 0016 -3 t"
+    },
+    "correct_option": "B",
+    "explanation": "y = cos (500 t - 70x) \\omega = = = 500 50 v m / s k 70 7 \\pi = \\lambda 2 k , \\pi \\pi \\lambda = = 2 2 m k 70 so \\pi \\lambda = 20 cm 7"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Which of the following expressions is that of a simple harmonic progressive wave?",
+    "options": {
+      "A": "A sin \\omega t",
+      "B": "A sin \\omega t cos kx",
+      "C": "A sin",
+      "D": "A cos kx WM02 - 0014"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the wave equation ( ) 2 y 0.5sin 400t x m \\pi = - \\lambda the velocity of the wave will be :",
+    "options": {
+      "A": "200 m/s",
+      "B": "200 2m/s",
+      "C": "400 m/s",
+      "D": "400 2m/s WM02 - 0015"
+    },
+    "correct_option": "C",
+    "explanation": "2 2 y 0.5sin 400t x (  = - ( ) )  \\pi \\pi \\lambda \\lambda 2 400 \\pi \\omega \\lambda = 2 K \\pi \\lambda = v k \\omega = [v = 400 m/s]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two coherent sources of different intensities send waves which interfere. The ratio of the maximum intensity to the minimum intensity is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "+ = - 1 2 1 2 a a 5 a a  a 1 + a 2 = 5 (a 1 - a 2 ) = 1 2 a 3 a 2 (  = = ( ) )  2 1 1 2 2 I a 9 I a 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The intensities are in the ratio : - (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "D",
+    "explanation": "L = (2n - 1) \\lambda 4 ( ) \\lambda = - 4L 2n 1 ( ) \\lambda = = - 1 4L 4L 2 1 1 \\lambda = = - 2 4L 4L 4 1 3 \\lambda = = - 3 4L 4L 6 1 5"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When two progressive waves of intensity I 1 and I 2 but slightly different frequencies superpose, the resultant intensity fluctuates between: -",
+    "options": {
+      "D": "1 2 2 1 I I and I I WM05 - 0007",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Due to different frequency intensity will vary periodically with time and it's value will change between max. and min."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A vibrating tuning fork of frequency n is placed near the open end of a long cylindrical tube. The tube has a side opening and is also fitted with a movable reflecting piston. As the piston is moved through 8.75 cm, the intensity of sound changes from a ma ximum to minimum. If the speed of sound is 350 metre per second, then n is : -",
+    "options": {
+      "A": "500 Hz",
+      "B": "1000 Hz",
+      "C": "2000 Hz",
+      "D": "4000 Hz WM13 - 0006"
+    },
+    "correct_option": "B",
+    "explanation": "Additional path difference introduction when the piston is moved through 8.75 cm = 2 × 8.75 = 17.50 cm Since, the intensity changes from a maximum to a minimum additional path = \\lambda /2  ( \\lambda /2) = 17.50 or \\lambda = 35.0 cm velocity, v = 350m/s = 35000 cm/s  frequency, = = = \\lambda v 35000 n 1000Hz. 35"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The path difference between the two waves y 1 = a 1 sin ( \\omega t - kx) and y 2 = a 2 cos ( \\omega t - kx + \\phi ), is",
+    "options": {
+      "C": "\\pi \\pi (  \\phi - ( ) \\lambda )  2 2",
+      "D": "\\pi \\phi \\lambda 2 WM02 - 0017",
+      "A": "Option A",
+      "B": "Option B"
+    },
+    "correct_option": "B",
+    "explanation": "y 1 = a 1 sin ( \\omega t - kx) y 2 = a 2 sin ( \\omega t - kx + \\phi + \\pi 2 ) \\Delta \\phi = \\phi + \\pi 2 \\Delta x = \\pi (  \\phi + ( ) \\Delta\\phi (  \\lambda = \\lambda ( ) ( ) \\pi \\pi )  ( ) ( ) )  2 2 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In the figure the intensity of waves arriving at D from two coherent sources S 1 and S 2 is I",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Path difference, \\Delta x = S 2 D - S 1 D = 5 - 4 = 1m ∴ The corresponding phase difference will be, \\pi \\pi \\pi \\phi = \\Delta = = \\lambda 2",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAADACAIAAADDWwmmAAAAxUlEQVR42u3PMREAAAgEILV/57eFgwcN6CT12tR3hoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhtcWbCwEfWrOxLgAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The wavelength of the wave is \\lambda = 4m. Resultant intensity at D will be : -",
+    "options": {
+      "A": "4I 0",
+      "B": "I 0",
+      "C": "2I 0",
+      "D": "zero WM05 - 0012"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a guitar is sounded with a 440 Hz tuning fork, a beat frequency of 5 Hz is heard. If the experiment is repeated with a tuning fork of 437 Hz, the beat frequency is 8 Hz. The string frequency (in Hz) is : -",
+    "options": {
+      "A": "445",
+      "B": "435",
+      "C": "429",
+      "D": "448 WM14 - 0017"
+    },
+    "correct_option": "A",
+    "explanation": "In \\pm 5 = 440 Hz and n \\pm 8 = 437 Hz ∴ n = 445 Hz (by both the methods) Beat frequency condition will be satisfied with 445 Hz."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equations of two waves are given by : 1 y 5sin2 (x vt)cm = \\pi - 2 y 3sin2 (x vt 1.5)cm = \\pi - + These waves are simultaneously passing through a string. The amplitude of the resulting wave is",
+    "options": {
+      "A": "2 cm",
+      "B": "4 cm",
+      "C": "5.8 cm",
+      "D": "8 cm WM05 - 0008"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 A 5 A 3 = = 2 (1.5) 3 \\Delta\\theta = \\pi = \\pi 2 2 net 1 2 1 2 A A A 2A A cos(3 ) = + + \\pi 1 2 A A = - = 2cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A longitudinal wave is represented by x = 10 sin x 2 nt (  \\pi - ( ) \\lambda )  cm. The maximum particle velocity will be four times the wave velocity if the determined value of wavelength is equal to :",
+    "options": {
+      "A": "2 \\pi",
+      "B": "5 \\pi",
+      "C": "\\pi",
+      "D": "5 2 \\pi WM03 - 0012 NEET : PHYSICS"
+    },
+    "correct_option": "B",
+    "explanation": "P wave V max 4V = 4 A 4 A k 2 \\omega \\lambda (  \\omega =  = ( ) \\pi )  2 A 20 5 4 4 \\pi \\pi \\lambda =   \\pi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of a transverse wave passing through a string of length 50 cm and mass 10 g is 60 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "w T V = \\mu 3 T 60 0.5 10 10 - =   ( ) 2 2 60 10 T 0.5 -  = = 72 N 6 11 F 72 0.5 AY 2 10 1.2 10 -  \\Delta = =    \\lambda \\lambda 5 72 5 10 24 -  =  = 15 × 10 - 5 Ans. 15"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The area of cross - section of the wire is 2.0 mm 2 and its Young's modulus is 1.2 × 10 11 Nm -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Given \\omega = 3 \\pi ∴ \\omega = = \\pi f 1.5 2 , Also \\Delta x = 1.0 cm Given, \\pi \\pi \\pi \\phi = \\Delta  =  \\lambda \\lambda 2 2 x 1 8  \\lambda = 16 cm  v = f \\lambda = 1.5 × 16 = 24 cm/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The extension of the wire over its natural length due to its tension will be x × 10 - 5 m. The value of x is_______. WM03 - 0013",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda = = = 10m, T 4s ,n 1/ 4 2 \\lambda = 20m v = n \\lambda = 1/4 × 20 = 5m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance between two consecutive points with phase difference of 60 ^\\circ in a wave of frequency 500 Hz is 6.0 m. The velocity with which wave is traveling is______ km/s WM02 - 0018 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "2 x \\pi \\phi \\lambda \\Delta = \\Delta ( ) 2 6m 3 \\pi \\pi \\lambda =  36m \\lambda = ( )( ) V f 500Hz 36m \\lambda = = = 18000 m/s = 18 km/s 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The displacement equations of two interfering waves are given by y 1 =10sin ( \\omega t + 3 \\pi ) cm , y 2 = 5 [ sin ( ω t ) + √ 3 cos ω t ] cm respectively. The amplitude of the resultant wave is _______cm. WM05 - 0011 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Given \\omega = 3 \\pi ∴ \\omega = = \\pi f 1.5 2 , Also \\Delta x = 1.0 cm Given, \\pi \\pi \\pi \\phi = \\Delta  =  \\lambda \\lambda 2 2 x 1 8  \\lambda = 16 cm  v = f \\lambda = 1.5 × 16 = 24 cm/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wire of length ' \\lambda ' having tension T and radius 'r' vibrates with fundamental frequency 'f'. Another wire of the same metal with length 2 \\lambda having tension 2T and radius 2r will vibrate with fundamental frequency : -",
+    "options": {
+      "A": "f",
+      "B": "2f",
+      "C": "If 2 2",
+      "D": "If 2 2 WM09 - 0011"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda = = = 10m, T 4s ,n 1/ 4 2 \\lambda = 20m v = n \\lambda = 1/4 × 20 = 5m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wave is represented by the equation y = 10sin2 \\pi (100t - 0.02x)+10sin2 \\pi (100t+0.02x). The maximum amplitude and loop length are respectively: -",
+    "options": {
+      "A": "20 units and 30 units",
+      "B": "20 units and 25 units",
+      "C": "30 units and 20 units",
+      "D": "25 units and 20 units WM05 - 0010 2"
+    },
+    "correct_option": "B",
+    "explanation": "y = 20 sin 2 \\pi (100t) cos 2 \\pi (0.02x) ∴ A = 20, loop length = \\lambda /2 = = 50 25 2 units"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In case of closed organ pipe which harmonic the p th overtone will be : -",
+    "options": {
+      "A": "2p + 1",
+      "B": "2p - 1",
+      "C": "p + 1",
+      "D": "p - 1 WM15 - 0035 2"
+    },
+    "correct_option": "A",
+    "explanation": "Wave (1) & (3) having same frequency and (2) is less frequency."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An organ pipe of length L is open at one end and closed at other end. The wavelengths of the three lowest resonating frequencies that can be produced by this pipe are : -",
+    "options": {
+      "A": "4L, 2L, L",
+      "B": "2L, L, L/2",
+      "C": "2L, L, 2L/3",
+      "D": "4L, 4L/3, 4L/5 WM15 - 0036"
+    },
+    "correct_option": "D",
+    "explanation": "Both points 'B' and 'G' are moving up and are at the same distance from equilibrium position at the instant shown."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The first overtone frequency of an open organ pipe is equal to the fundamental frequency of a closed organ pipe. If the length of the closed organ pipe is 20 cm. The length of the open organ pipe is _____ cm. WM15 - 0037",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "1 1 2v f 2l = 2 2 v f 4l = f 1 = f 2 = 1 2 2v v 2l 4l = l 1 = 4l 2 = 80 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wire of length 30 cm, stretched between rigid supports, has it’s n th and (n + 1) th harmonics at 400 Hz and 450 Hz, respectively. If tension in the string is 2700 N, it’s linear mass density is……..kg/m. WM05 - 0009",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "+ = = nv (n 1)v 400 & 450 0.6 0.6     + =     0.6 400 v 1 450 v 0.6  = v = 30  = \\mu T 30  = = \\mu = \\mu 2700 900 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In an experiment to determine the velocity of sound in air at room temperature using a resonance is observed when the air column has a length of 20.0 cm for a tuning fork of frequency 400 Hz is used. The velocity of the sound at room temperature is 336 ms -",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "For first resonance 1 e 4 \\lambda + = \\lambda 336 400 \\lambda = ×100 cm = 84 cm  4 \\lambda = 21 cm e = 21 - 20 = 1 cm For third resonance 3 5 e 4 \\lambda + = \\lambda = 105 cm  \\lambda 3 = 104 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "RACE - Wave Motion.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The third resonance is observed when the air column has a length of ____cm. WM16 - 0013",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Given \\omega = 3 \\pi ∴ \\omega = = \\pi f 1.5 2 , Also \\Delta x = 1.0 cm Given, \\pi \\pi \\pi \\phi = \\Delta  =  \\lambda \\lambda 2 2 x 1 8  \\lambda = 16 cm  v = f \\lambda = 1.5 × 16 = 24 cm/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Mechanical wave in a gas is :-",
+    "options": {
+      "A": "Transverse",
+      "B": "Longitudinal",
+      "C": "Neither transverse nor longitudinal",
+      "D": "Either transverse or longitudinal"
+    },
+    "correct_option": "C",
+    "explanation": "In 3 = ......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thunder tap is heard 7.5 second after the lightening flash. The distance of the flash from observer is (velocity of sound in air is 330 m/s.):-",
+    "options": {
+      "A": "3560 m",
+      "B": "2475 m",
+      "C": "1780 m",
+      "D": "1815 m"
+    },
+    "correct_option": "A",
+    "explanation": "distance = speed × time"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Transverse elastic waves can propagate in",
+    "options": {
+      "A": "Both solid & gas",
+      "B": "In solid but not gas",
+      "C": "Neither solid nor gas",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "7 Only odd harmonic are present."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Sound wave are not polarised because :",
+    "options": {
+      "A": "Their speed is less",
+      "B": "A medium is needed for their propagation",
+      "C": "These are longitudinal",
+      "D": "Their speed depands on temperature"
+    },
+    "correct_option": "A",
+    "explanation": "t x y 4sin 5 9 6   \\pi (  = \\pi - + ( )   )    compare this equation by y = a sin ( \\omega t - kx + \\phi ) 5 \\pi \\omega = k 9 \\pi = a = 4 T 5 2 = 9 2 \\lambda = T = 10 s, \\lambda = 18 cm, v = n \\lambda = 1.8 cm/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man sets his watch by a whistle that is 2 km away. How much will his watch be in error. (speed on sound in air 330 m/s) :-",
+    "options": {
+      "A": "3 seconds fast",
+      "B": "3 seconds slow",
+      "C": "6 second fast",
+      "D": "6 seconds slow"
+    },
+    "correct_option": "A",
+    "explanation": "Amplitude becomes double Hence it becomes = 0.5 and frequency becomes half hence \\omega becomes = \\pi (half) and travelling in opposite direction with same speed so K will also become half v const. K \\omega   = =      y = 0.5 cos ( \\pi t + \\pi x)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wave of frequency 500 Hz travels between X and Y and travel a distance of 600 m in 4 sec. between X and Y. How many wavelength are there in distance XY :",
+    "options": {
+      "A": "1000",
+      "B": "300",
+      "C": "180",
+      "D": "2000"
+    },
+    "correct_option": "A",
+    "explanation": "v max = A \\omega v max = 3 × 10 = 30 units"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The distance between two consecutive crests in a wave train produced in string is 5 m. If three complete waves pass through any point per second, the velocity of wave is",
+    "options": {
+      "A": "2.5 m/s",
+      "B": "5 m/s",
+      "C": "10 m/s",
+      "D": "15 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "6 v 2 units k 3 \\omega = = ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation represents a wave motion with y = 8 - 3 cos (6t - 3x)",
+    "options": {
+      "A": "amplitude 8 units",
+      "B": "amplitude 5 units",
+      "C": "wave speed 2 units",
+      "D": "wave speed 1/2 units $//"
+    },
+    "correct_option": "B",
+    "explanation": "Wave is a disturbance, which carries energy and momentum without transport of mass of matter."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stone dropped from the top of a tower of height 300 m high splashes into the water of a pond near the base of the tower. When is the splash heard at the top, given that the speed of sound in air is 340 m s -1 ? (g = 9.8 ms -2 )",
+    "options": {
+      "A": "8.707 sec",
+      "B": "6.28 sec",
+      "C": "4.26 sec",
+      "D": "2.24 sec"
+    },
+    "correct_option": "A",
+    "explanation": "For closed pipe, v f n m 1,3,5,..... 4 (  = = ( ) )  \\lambda For n = 1, f 1 = v 4 (  ( ) )  \\lambda n = 1, 3, 5….. For n = 1, f 1 = v 320 80Hz 4 4 1 = =  \\lambda For n = 3, f 3 = 3f 1 = 240 Hz For n = 5, f 5 = 5f 1 = 400 Hz Wave Motion OR L = 1m = 100 cm v = 320 m/s fundament freq. v f 4 = \\lambda = 320 4 1  = 80 Hz 3 rd harmonic = 3 × 80 = 240 Hz 5 th harmonic = 5 × 80 = 400 Hz"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of a progressive wave for a wire is: [ ] π   = - [ ]     [ ] x Y 4 sin 8t 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "y 1 = a sin \\omega t , y 2 = a cos \\omega t = a sin( \\omega t + 2 \\pi )"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If x and y are measured in cm then velocity of wave is :",
+    "options": {
+      "A": "64 cm/s along - x direction",
+      "B": "32 cm/s along - x direction",
+      "C": "32 cm/s along + x direction",
+      "D": "64 cm/s along + x direction"
+    },
+    "correct_option": "A",
+    "explanation": "So 0.25m 4 \\lambda ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_wave_motion_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of progressive wave is where x x Y 4 sin 5t 9 6   π   = π - +         and y are in cm. Which of the following statement is not true?",
+    "options": {
+      "A": "λ = 18 cm",
+      "B": "amplitude = 0.04 m",
+      "C": "velocity v = 45 cm/s",
+      "D": "frequency f = 20 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "Distance between two consecutive crests is 5 m which is equal to \\lambda = 5m, freq. n = 2 Hz v = n \\lambda = 10 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A plane progressive wave is respresented by the equation y = 0.25 cos (2 π t - 2 π x). The equation of a wave is with double the amplitude and double frequency but travelling in the opposite direction will be.",
+    "options": {
+      "A": "y = 0.5 cos",
+      "B": "y = 0.5 cos",
+      "C": "y = 0.25 cos",
+      "D": "y = 0.5 cos"
+    },
+    "correct_option": "A",
+    "explanation": "\\omega = 2 \\pi n \\omega  n (2 \\pi = const) \\omega  1 \\lambda 1  = \\lambda  \\omega  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A plane wave is described by the equation y =3 cos x 10t 4 3 2 π   - -     . The maximum velocity of the particles of the medium due to this wave is",
+    "options": {
+      "A": "30",
+      "B": "3 2 π",
+      "C": "3/4",
+      "D": "10"
+    },
+    "correct_option": "A",
+    "explanation": "Interference is obtained by coherent waves superposition. A and C has same frequency."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The graph between wave number ( ν ) and angular frequency ( ω ) is :",
+    "options": {
+      "A": "Wave no.",
+      "B": "Wave no.",
+      "C": "Wave no.",
+      "D": "Wave no."
+    },
+    "correct_option": "A",
+    "explanation": "v = 10 n = 100  \\lambda = 10 100 = 0.1 m = 10 cm 2.5 2 2 10 2 \\Delta\\phi \\Delta\\lambda \\Delta\\phi \\pi =  =  \\Delta\\phi = \\pi \\lambda \\pi",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAAApCAIAAABGNnemAAAAVklEQVR42u3RAQ0AAAjDMMC/56MD0klYO0npfmMBSIEUSIEEKZACKZAgBVIgBVIgQQqkQAokSIEUSIEEKZACKZACCVIgBVIgQQqkQAokSIEUSIEUyMctwPcDT/f8ZDkAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two wave are represented by equation y 1 = A cos ω t y 2 = A sin ω t In terms of phase the first wave -",
+    "options": {
+      "A": "leads the second by π",
+      "B": "lags the second by π",
+      "C": "leads the second by 2 π",
+      "D": "lags the second by 2 π"
+    },
+    "correct_option": "A",
+    "explanation": "At the upper end - v 2.5 10 =  = 5 m/s at a point 0.5 m distance from bottom - v 0.5 10 =  = 5 = 2.24 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of transverse wave in stretched string is y = 5 sin 2 π t x 0.04 50 [ ] - [ ] [ ] Where distances are in cm and time in second. The wavelength of wave is :",
+    "options": {
+      "A": "15cm",
+      "B": "10 cm",
+      "C": "25 cm",
+      "D": "50 cm $//"
+    },
+    "correct_option": "A",
+    "explanation": "2 T T T 0.04 v 2 K 0.04 0.50 \\pi (  ( ) \\omega )  =  =  = \\pi \\mu \\mu (  ( ) )   0.50 0.50 T 0.04 0.04 0.04  =  T= 50 4 × 0.5 = 6.25 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a string transverse wave speed is 100 m/s and frequency is 500 Hz and amplitude is 2 × 10 -2 m. Its wave equation is :-",
+    "options": {
+      "A": "Y = 2 × 10 -2 sin 1000 t x 2 π   π +    ",
+      "B": "Y = 2 × 10 -2 sin",
+      "C": "Y = 2 × 10 -2 sin",
+      "D": "Y = 2 × 10 -2 sin"
+    },
+    "correct_option": "A",
+    "explanation": "v wave = k \\omega v particle = A \\omega On comparing v w  = 2m/s , v w2 = 3m/s , v w3 = 11 m / s 5 v p1 = 12cm/s , v p2 = 36cm/s , v p3 = 44cm/s \\omega v ത x"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two waves are given by: y 1 = cos (4t - 2x) and y 2 = sin 4t 2x 4 π   - +     . The phase difference between the two waves is :-",
+    "options": {
+      "A": "8 π",
+      "B": "4 π",
+      "C": "3 4 π",
+      "D": "2 π"
+    },
+    "correct_option": "A",
+    "explanation": "from fig. A is moving down & B is moving up and the phase at A is greater the phase at B."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wave travelling in the +ve x-direction having maximum displacement along y-direction as 1m, wavelength 1m and frequency of 1Hz is represented by :",
+    "options": {
+      "A": "y = sin",
+      "B": "y = sin",
+      "C": "y = sin",
+      "D": "y = sin"
+    },
+    "correct_option": "A",
+    "explanation": "v = k \\omega = 30 1 = 30 m/s d = 1.3 × 10 - 4 kg/m, v 2 d = T then T = 1.17 × 10 - 1 N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If wavelength of a wave is λ = 6000Å. Then wave number will be :-",
+    "options": {
+      "A": "166 × 10 3 m -1",
+      "B": "16.6 × 10 -1 m -1",
+      "C": "1.66 × 10 6 m -1",
+      "D": "1.66 × 10 7 m -1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When a wave travels in a medium, the particle displacement is given by : y = a sin 2 π (bt - cx) where a, b and c are constants. The maximum particle velocity will be twice the wave velocity if:",
+    "options": {
+      "A": "1 c a = π",
+      "B": "c = π a",
+      "C": "b = ac",
+      "D": "b = 1 ac PROGRESSIVE WAVE ON STRING"
+    },
+    "correct_option": "A",
+    "explanation": "2 O w RT v V M \\gamma = = ( ) 2 2 H O w mix RT v M + \\gamma = (M w ) mix < M w so 2 2 2 H O O v V + "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of a wave on a string of linear density 0.04 kg m -1 is given by t x y 0.02(m) sin 2 0.04(s) 0.20(m) [ ]   = π - [ ]     [ ] . The tension in the string is :",
+    "options": {
+      "A": "6.25 N",
+      "B": "1 N",
+      "C": "12.5 N",
+      "D": "0.5 N"
+    },
+    "correct_option": "A",
+    "explanation": "E v = \\rho"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Linear density of a string is 1.5 × 10 -4 kg/m and wave equation is y = 0.021sin(x + 30t). Find the tension in the string where x in meter, t in sec.",
+    "options": {
+      "A": "1.35 × 10 -2 N",
+      "B": "1.35 × 10 -1 N",
+      "C": "1.35 × 10 -3 N",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 2 2 1 I va I n a 2 = \\rho \\omega  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A steel wire 0.72 m long has a mass of 5.0 × 10 -3 kg. If the wire is under tension of 60 N, what is the speed of the transverse waves on the wire ?",
+    "options": {
+      "A": "186 m/s",
+      "B": "2 × 93 m/s",
+      "C": "93 m/s",
+      "D": "45 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "frequency does not depends upon medium, velocity of sound decreases when it goes from water to air. v = f \\lambda (  f = const.) so \\lambda also decreases"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of a wave on a string is 150 m/s when the tension is 120 N. The percentage increase in the tension in order to raise the wave speed by 20% is :",
+    "options": {
+      "A": "44%",
+      "B": "40%",
+      "C": "20%",
+      "D": "10%"
+    },
+    "correct_option": "A",
+    "explanation": "frequency doesn't change on changing the medium"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A string of mass 2.5 kg is under a tension of 200N. The length of the stretched string is 20 m. If the transverse jerk is struck at one end of the string, the disturbance will reach the other end in :-",
+    "options": {
+      "A": "1 s",
+      "B": "0.5 s",
+      "C": "2s",
+      "D": "data given is insufficient $//"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a string the speed of wave is 40 m/s and its frequency is 100 Hz. The value of the phase difference at a distance 2.5 cm will be :",
+    "options": {
+      "A": "π /2",
+      "B": "π /8",
+      "C": "3 π /2",
+      "D": "2 π"
+    },
+    "correct_option": "A",
+    "explanation": "10 0 I L 10log I = 10 0 0 I I log 3 I I  =  = 10 3"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform rope of mass 0.1 kg and length 2.5 m hangs from ceiling. The speed of transverse wave in the rope at upper end and at a point 1.6 m distance from lower end will be :",
+    "options": {
+      "A": "5 m/s, 2.24 m/s",
+      "B": "10 m/s, 3.23 m/s",
+      "C": "7.5 m/s, 1.2 m/s",
+      "D": "5 m/s, 4 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "velocity of sound P v \\gamma = \\rho as \\rho d > \\rho m   m >  d"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "y(x,t) = (4cm) sin(5x-11t) where x is in meters and t is in seconds. Of these waves :",
+    "options": {
+      "A": "wave 1 has the greatest wave speed and the greatest maximum transverse string speed.",
+      "B": "wave 2 has the greatest wave speed and wave 1 has the greatest maximum transverse string speed.",
+      "C": "wave 3 has the greatest wave speed and the greatest maximum transverse string speed.",
+      "D": "wave 2 has the greatest wave speed and wave 3 has the greatest maximum transverse string speed."
+    },
+    "correct_option": "A",
+    "explanation": "distance = speed × time"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The figure shows an instantaneous profile of a rope carrying a progressive wave moving from left to right, then A y x B",
+    "options": {
+      "A": "the phase at A is greater than the phase at B",
+      "B": "the phase at B is greater than the phase at A",
+      "C": "A is moving upwards",
+      "D": "B is moving upwards"
+    },
+    "correct_option": "A",
+    "explanation": "Energy same so 2 2 2 2 1 1 2 2 a n a n =",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAADACAIAAADDWwmmAAAAxUlEQVR42u3PMREAAAgEILV/57eFgwcN6CT12tR3hoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhtcWbCwEfWrOxLgAAAAASUVORK5CYII="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_wave_motion_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A transverse wave is travelling along a string from left to right. The adjoining figure represents the shape of the string at a given instant. At this instant, among the following , choose the wrong statement:- A x y B C D E F G H",
+    "options": {
+      "A": "Points D, E and F have upwards positive velocity.",
+      "B": "Points A, B and H have downwards negative velocity.",
+      "C": "Points C and G have zero velocity.",
+      "D": "Points A and E have minimum velocity. SOUND WAVES AND ITS CHARACTERISTICS"
+    },
+    "correct_option": "C",
+    "explanation": "1 2 2 1 V 1 1 V 4 2 \\rho = = = \\rho",
+    "statements": {
+      "T": "- A x y B C D E F G H"
+    },
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sound is produced in water and moves towards surface of water into air. velocity of sound in water is 1450 m/s and that in air is 330 m/s. When sound moves from water to air then the effect on frequency f and wavelength λ will be:",
+    "options": {
+      "A": "If and λ will remain same",
+      "B": "If will remain same but λ will increase",
+      "C": "If will remain same but λ will decrease",
+      "D": "If will increase and λ will decrease"
+    },
+    "correct_option": "A",
+    "explanation": "2 2 R 1 2 1 2 A a a 2a a cos = + + \\phi"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocities of sound at the same pressure in two monoatomic gases of densities ρ 1 and ρ 2 are v 1 and v 2 respectively. If 1 2 1 4 ρ = ρ , then the value of 1 2 v v is :",
+    "options": {
+      "A": "1 4",
+      "B": "1 2",
+      "C": "2",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "I 1 = I I 2 = I \\phi = 0 R I I I 2 I I cos0 = + + = 4I"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "At the room temperature the velocity of sound in O 2 gas is V. Then in mixture of H 2 and O 2 gas the speed of sound at same temprature:",
+    "options": {
+      "A": "will be less than V.",
+      "B": "will be more than V",
+      "C": "will be equal to V",
+      "D": "nothing can be said"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 1 2 I I I 2 I I cos = + + \\phi for I max  \\phi =   ( ) 2 max 1 2 I I I = +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If at some point the amplitude of the sound becomes double and the frequency becomes half then at that point the intensity of sound will be:-",
+    "options": {
+      "A": "Become double",
+      "B": "Be half",
+      "C": "Become one fourth",
+      "D": "Remain unchanged"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) 2 2 1 2 max. 2 2 min. 1 2 I I I (3 1) 16 4 I 4 1 (3 1) I I + + = = = = - -"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sings with a frequency (n) and B sings with a frequency 1/4 that of A. If the energy remains the same and the amplitude of A is a, then amplitude of B will be :",
+    "options": {
+      "A": "2a",
+      "B": "8a",
+      "C": "4a",
+      "D": "a"
+    },
+    "correct_option": "A",
+    "explanation": "A B n n \\pm x n + x or n - x If frequency of B is n + x then on waxing beats decrease."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A person speaking normally produces a sound of intensity 40 dB at a distance of 1 m. If the threshold intensity for reasonable audibility is 20 dB, the maximum distance at which he can be heard clearly is :",
+    "options": {
+      "A": "4 m",
+      "B": "5 m",
+      "C": "10 m",
+      "D": "20 m"
+    },
+    "correct_option": "A",
+    "explanation": "Number of beats \\Delta n = n 1 - n 2 1 2 v v 2 = - \\lambda \\lambda  v v 2 2 2.02 = - v 2 v 404 202 =  = A A B B d v = 340 m/s v=340 m/ s d v=340 m/ s d 250 + 8 242 258 270 + 12 282 258 or or Wave Motion"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The intensity of a sound wave gets reduced by 20% on passing through a slab. The reduction in intensity on passage through two such consecutive slabs is:-",
+    "options": {
+      "A": "40%",
+      "B": "36%",
+      "C": "30%",
+      "D": "50% $//"
+    },
+    "correct_option": "A",
+    "explanation": "After loading wax, frequency of A decrease. So beats frequency will also decrease. Ans. would be 292"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Twice the intensity of a wave implies an increase of (Given : log 10 2 = 0.3010) :-",
+    "options": {
+      "A": "2 dB",
+      "B": "10 dB",
+      "C": "3.01 dB",
+      "D": "0.5 dB"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A man standing on a cliff claps his hand and hears its echo after two second. If the sound is reflected from another mountain then the distance between the man & reflection points is V sound = 340 m/s.",
+    "options": {
+      "A": "680 m",
+      "B": "340 m",
+      "C": "170 m",
+      "D": "85 m PRINCIPLE OF SUPERPOSITION OF WAVES : INTERFERENCE, BEATS"
+    },
+    "correct_option": "A",
+    "explanation": "for minima/destructive interferance \\Delta \\phi = (2n+1) \\pi 2 \\pi \\lambda \\Delta \\lambda = (2n+1) \\pi \\Delta \\lambda = (2n+1) 2 \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "On a particle two simple harmonic motion are acting along the same direction. These are y 1 = a 1 sin ω t and y 2 = a 2 sin ( ω t+ φ ). The resultant motion is also a simple harmonic motion whose amplitude will be:",
+    "options": {
+      "A": "2 2 1 2 1 2 a a 2a a cos + + φ",
+      "B": "2 2 1 2 1 2 a a 2a a cos + + φ",
+      "C": "2 2 1 2 1 2 a a 2a a cos + - φ",
+      "D": "2 2 1 2 1 2 a a 2a a cos + - φ"
+    },
+    "correct_option": "A",
+    "explanation": "max max I I 4I, 4 I = ="
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_wave_motion_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two plane progressive waves show destructive interference at point P. Which of the following statement is true at point P :-",
+    "options": {
+      "A": "Crest of one wave is superimposed on crest of another wave",
+      "B": "Trough of one wave is superimposed on crest of another wave",
+      "C": "Intensity of resultant wave is equal to the intensity difference of two waves",
+      "D": "Resultant amplitude is equal to the amplitude sum of two waves"
+    },
+    "correct_option": "A",
+    "explanation": "In 1 = 202 Hz n 2 = 200 Hz b = n 1 - n 2 = 2",
+    "statements": {
+      "P": "Which of"
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Waves from two sources superimpose on each other at a particular point. Amplitude and frequency of both the waves are equal. The ratio of intensities when both waves reach in the same phase and they reach with the phase difference of 120 0 will be",
+    "options": {
+      "A": "1:1",
+      "B": "√ 2:1",
+      "C": "2:1",
+      "D": "4:1"
+    },
+    "correct_option": "A",
+    "explanation": "1 2 1 T =  - "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For constructive interference condition is :-",
+    "options": {
+      "A": "Same phase",
+      "B": "Phase diff is even multiple of π",
+      "C": "Path diff is multiple of λ",
+      "D": "All of the above"
+    },
+    "correct_option": "A",
+    "explanation": "beats per second = n 2 - n 1 = 253 - 250 = 3 beats per minuts = 3 × 60 = 180"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Ratio of amplitudes of two waves is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Fundamental frequency 1 T n 2L = \\mu [  \\mu = M L ]  n 1 T 2 ML ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two coherent sources of intensities I 1 and I 2 produce an interference pattern, the maximum intensity in the interference patteren will be -",
+    "options": {
+      "A": "I 1 + I 2",
+      "B": "I 1 2 + I 2 2",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "v = 700 cm/s = 7 m/s, L = 2 m V 7 n 2 2 2 = =  \\lambda  7 n Hz 4 ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Beats are produced by two waves y 1 = a sin (1000 π t) and y 2 = a sin (998 π t) The number of beats heard per second is",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "1",
+      "D": "4"
+    },
+    "correct_option": "A",
+    "explanation": "y = a cos ( \\omega t - kx) x = 0 is a node So rigid end reflection y = a cos ( \\omega t + kx + \\pi ) y = - a cos ( \\omega t + kx) [cos (180 + \\theta ) = - cos \\theta ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If max min I 36 I 25 = then find ratio of maximum to minimum amplitude :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Here \\lambda = 4 cm Now distance between two consecutive nodes = 2 \\lambda = 2cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "1 $//(1 Physics : Wave motion 217",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "When T  and velocity (v)  Then n "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two waves of intensity ratio of 9:1 what will be ratio of maximum and minimum intensity in interference pattern of these waves :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "In = 100 Hz., Given 10 cm 2 \\lambda = v = n \\lambda = 100 × 0.2 v = 20 m/ s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two waves having equation x 1 = a sin( ω t + φ 1 ) x2 = a sin( ω t + φ 2 ) If in the resultant wave the amplitide remains equal to amplitude of superimposing waves then phase difference between them -",
+    "options": {
+      "A": "6 π",
+      "B": "2 3 π",
+      "C": "3 4 π",
+      "D": "4 π"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two sources of intensity I and 4I are used in an interference experiment. The intensity at points where the waves from the two sources superpose with a phase difference (i) Zero, (ii) π /2 and (iii) π , are",
+    "options": {
+      "A": "5I, 3I, 0",
+      "B": "5I, 3I, 2I",
+      "C": "9I, 5I, I",
+      "D": "9I, 5I, 0"
+    },
+    "correct_option": "A",
+    "explanation": "In T "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two waves represented by the following equations are travelling in the same medium y 1 = 5 sin 2 π (75t -0.25x), y 2 = 10 sin 2 π (150t - 0.50x). The intensity ratio I 1 /I 2 of the two waves is :- (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "p = 5, \\lambda = 10 m T v = \\mu = 20 m/s, P T n 2 = \\mu \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sound consists of four frequencies - 300Hz, 600Hz, 1200Hz and 2400Hz. A sound 'filter' is made by passing this sound through a bifurcated pipe as shown. The sound waves have to travel a distance of 50cm more in the right branch-pipe than in the straight pipe. The speed of sound in air is 300m/s. Then, which of the following frequencies will be almost completely muffled or \"silenced\" at the outlet:-",
+    "options": {
+      "A": "300Hz",
+      "B": "600Hz",
+      "C": "1200hz",
+      "D": "2400Hz"
+    },
+    "correct_option": "A",
+    "explanation": "4 4 \\lambda (  ( ) )  = 1.21Å  \\lambda = 1.21 Å"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What is the beat frequency produced when following two waves are sounded together ? x 1 = 5 cos (354 π t- 4 π x), x 2 = 5 cos (350 π t - 4 π x).",
+    "options": {
+      "A": "4",
+      "B": "1",
+      "C": "3",
+      "D": "2"
+    },
+    "correct_option": "A",
+    "explanation": "T  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two vibrating tuning forks produce progressive waves given by Y 1 = 4 sin 500 π t and Y 2 = 4 sin 504 π t. Number of beats produced per minute is:",
+    "options": {
+      "A": "3",
+      "B": "360",
+      "C": "180",
+      "D": "120"
+    },
+    "correct_option": "A",
+    "explanation": "In stationary wave , energy do es not propogate."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two sources have frequency 256 Hz and 258 Hz, then time difference between two consecutive minima is -",
+    "options": {
+      "A": "1 s",
+      "B": "0·5 s",
+      "C": "2 ms",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "In T  T  n  N A N A N \\lambda / 4 \\lambda / 4 \\lambda / 4 \\lambda / 4 292 284 288 Hz B B N N \\lambda /2 N N N N N N N N"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tuning fork A produces 6 beats/sec. with another tuning fork B of frequency 288 Hz. If fork A is loaded with little wax number of beats per sec decreases. The frequency of the fork A, before loading is",
+    "options": {
+      "A": "290 Hz",
+      "B": "288 Hz",
+      "C": "292 Hz",
+      "D": "294 Hz $//"
+    },
+    "correct_option": "A",
+    "explanation": "Plucking distance x 2p 4 = = \\lambda\\lambda touching distance = \\lambda /2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A source x of unknown frequency produces 4 beats with a source of 250 Hz and 6 beats with a source of 260 Hz. The frequency of source x is :",
+    "options": {
+      "A": "258 Hz",
+      "B": "254 Hz",
+      "C": "262 Hz",
+      "D": "282 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 T n 2 r d = \\pi \\lambda  2 2 2 1 1 2 1 1 2 2 n T r d n T d r =   = 2 1 2 1 4 1   = 1  n 2 = n 1 = n"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "When two tuning forks are sounded together x beats/sec are heard and frequency of A is n. Now when one prong of B is loaded with a little wax, the number of beats per second decreases. The original frequency of fork B is :",
+    "options": {
+      "A": "In + x",
+      "B": "In - x",
+      "C": "In - x 2",
+      "D": "In - 2x"
+    },
+    "correct_option": "A",
+    "explanation": "In T "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two sound waves of wavelength 1 m and 1.01 m in a gas produce 10 beats in 3 s. The velocity of sound in gas is (approx) :-",
+    "options": {
+      "A": "360 m/s",
+      "B": "300 m/s",
+      "C": "337 m/s",
+      "D": "330 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "In  1 \\lambda 1 2 2 1 n n = \\lambda \\lambda  800 1000 = 2 50 \\lambda \\lambda 2 = 40 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A source of frequency f gives 5 beats/s when sounded with a source of frequency 200 Hz. The second harmonic of same source gives 10 beats/s when sounded with a source of frequency 420 Hz. The numerical value of f is equal to",
+    "options": {
+      "A": "205 Hz",
+      "B": "195 Hz",
+      "C": "215 Hz",
+      "D": "185 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "In T "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tunning fork having frequency 500 Hz produce 4 beats/sec with sitar wire. If we decrease tension in wire it become unison with tuning fork. The frequency of wire before change is :-",
+    "options": {
+      "A": "504 Hz",
+      "B": "496 Hz",
+      "C": "500 Hz",
+      "D": "498 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "y = A coskx cos \\omega t"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two sitar strings A and B playing the note 'Ga' are slightly out of tune and produce beats of frequency 6 Hz. The tension in the string A is slightly reduced and the beat frequency is found to reduce to 3 Hz. If the original frequency of A is 324 Hz, what is the original frequency of B :-",
+    "options": {
+      "A": "324 Hz",
+      "B": "360 Hz",
+      "C": "330Hz",
+      "D": "318 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "0.25 4 \\lambda = \\lambda = 1m 3 V 1 T 20 n 1 m 0.5 10 - = = = \\lambda  = 200 Hz"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two vibrating tuning forks produce progressive waves given by y 1 = 4 sin(500 π t) and y 2 = 2 sin(506 π t). These tuning forks are held near the ear of a person. The person will hear α beats/s with intensity ratio between maxima and minima equal to β . Find the value of β-α. :-",
+    "options": {
+      "A": "3",
+      "B": "6",
+      "C": "9",
+      "D": "12"
+    },
+    "correct_option": "A",
+    "explanation": "When T  and velocity (v)  Then n "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A set of 56 tuning forks is arranged in a sequence of increasing frequencies. If each fork gives 4 beats/second with the preceding one and the last fork is found to be an octave higher of the first, find the frequency of the first fork.",
+    "options": {
+      "A": "440 Hz",
+      "B": "220 Hz",
+      "C": "220 Hz 7",
+      "D": "110 Hz $//"
+    },
+    "correct_option": "A",
+    "explanation": "Length of air column decreases,  frequency increases."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stretched string is vibrating according to the equation x y 5 sin cos 4 t 8 π   = π     , where y and x are in cm and t is in sec. The distance between two consecutive nodes on the string is :-",
+    "options": {
+      "A": "2 cm",
+      "B": "4 cm",
+      "C": "8 cm",
+      "D": "16 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Next 3 overtones are in ratio of"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wave represented by the equation y=acos( ω t- kx) is superposed on another wave to form a stationary wave such that the point x = 0 is an antinode. The equation for other wave is -",
+    "options": {
+      "A": "y = a sin",
+      "B": "y = - a cos",
+      "C": "y = a cos",
+      "D": "y = - a sin"
+    },
+    "correct_option": "A",
+    "explanation": "For closed pipe v n 512 4 = = \\lambda For open pipe v n 1024 2 = = \\lambda n = 1024 Hz."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wave of frequency 50 Hz travels along a string towards its fixed end. When this wave travels back, after reflection, a node is formed at a distance of 5 cm from the fixed end. The speed of the wave (incident and reflected) is :",
+    "options": {
+      "A": "5 m/s",
+      "B": "10 m/s",
+      "C": "20 m/s",
+      "D": "40 m/s"
+    },
+    "correct_option": "A",
+    "explanation": "In = 264 Hz v = 330 m/s Then \\lambda = 31.25 m"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Given equation is related to y = cos 2 x π     λ   cos(2 πν t)",
+    "options": {
+      "A": "Transverse progressive wave",
+      "B": "Longitudinal progressive wave",
+      "C": "Longitudinal stationary wave",
+      "D": "Transverse stationary wave"
+    },
+    "correct_option": "A",
+    "explanation": "length will be 3 times v n 4 = \\lambda N 0.25m n n \\lambda Wave Motion"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Consider the three waves z 1 , z 2 and z 3 as z 1 = A sin (kx - ω t), z 2 = A sin (kx + ω t) and z 3 = A sin (ky - ω t). Which of the following represents a standing wave ?",
+    "options": {
+      "A": "z 1 + z 2",
+      "B": "z 2 + z 3",
+      "C": "z 3 + z 1",
+      "D": "z 1 + z 2 + z 3"
+    },
+    "correct_option": "A",
+    "explanation": "v 4 \\lambda = 260, \\lambda = 31.7 cm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The equation of stationary wave in a stretched string is given by y = 5 sin π       x 3 cos (40 π t). The separation between two adjacent nodes is:-",
+    "options": {
+      "A": "1.5 cm",
+      "B": "3 cm",
+      "C": "5 cm",
+      "D": "4 cm"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = v n = 330 330 = 1 m particle vibrate maximum at a distance \\lambda /"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "For the stationary wave y = 4sin π       x 15 cos (96 π t), the distance between a node and the next antinode is :",
+    "options": {
+      "A": "7.5",
+      "B": "15",
+      "C": "22.5",
+      "D": "30"
+    },
+    "correct_option": "A",
+    "explanation": "L 0 = 33 cm n = 1000 Hz N 330 1000 2 .33  =   N = 2 i.e. 1 st overtone 2 nd harmonic"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The string of length 20 m and linear mass density 0.040 Kg/m is fixed at both ends and is kept under a tension 16 N. A wave pulse is produced at t = 0 near an end as shown in fig., which travels towards the other end. When will the string have the same shape as shown in figure. 20 m",
+    "options": {
+      "A": "after 1 sec",
+      "B": "after 2 sec",
+      "C": "after 0.55 sec",
+      "D": "None $//"
+    },
+    "correct_option": "A",
+    "explanation": "In = (2m+1) V 4L L = (2m+1) V 4n For L to be minima, mode should be fundamental i.e. m = 0 V L 4n =",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the tension in a sonometer wire is increased by a factor of two then fundamental frequency of vibration changes by a factor of :",
+    "options": {
+      "A": "4",
+      "C": "2",
+      "B": "Option B",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Nv Nv n L 2L 2n =  = for L to be min m N = 1 v 350 L 50 cm 2n 2 350 = = = "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sonometer wire, with a suspended mass of M = 6 kg., is in resonance with a given tuning fork. The apparatus is taken to moon where the acceleration due to gravity is 1/6 that of earth. To obtain resonance on the moon, the value of M should be",
+    "options": {
+      "A": "1 kg.",
+      "B": "6 kg",
+      "C": "6 kg",
+      "D": "36 kg"
+    },
+    "correct_option": "A",
+    "explanation": "frequency remains unchanged on change medium n = 60 kHz 3 v 330 n 60 10 \\lambda = =  = 5.5 × 10 - 3 m = 5.5 mm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a sonometer wire, the tension is maintained by suspending a mass M from free end of wire. The fundamental frequency of the wire is N Hz. If the suspended mass is completely immersed in water the fundamental frequency will",
+    "options": {
+      "A": "increase",
+      "B": "constant",
+      "C": "decrease",
+      "D": "can't say"
+    },
+    "correct_option": "A",
+    "explanation": "v 4 \\lambda = fundamental frequency = 1500 Hz Normal person can listen frequency 20,000 Hz. 1500 × x = 20,000, x = 13 (No. of Harmonic) Then overtones and frequency in case of closed organ pipe, ratio of frequency 1, 3, 5, 7, 9, 11, 13 I II III IV V VI T hen 6 overtones."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If the tension of a sonometer wire of fundamental frequency (n) is doubled and density is halved then its fundamental frequency will become :-",
+    "options": {
+      "A": "In 4",
+      "B": "2n",
+      "C": "n",
+      "D": "In 2"
+    },
+    "correct_option": "A",
+    "explanation": "In v n (2n 1) 4L = + N 320 n (2n 1) 4 1 = +  n N = (2n + 1) × 80 = odd multiple of 80 At 300 Hz resonance will not occur."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The transverse displacement of a string is given by y (x, t) = 0.06 sin π       2 x 3 cos (120 π t) where x and y are in m and t in s. The length of the string is 1.5m and its mass is 3.0 × 10 -2 kg. Determine the tension in the string.",
+    "options": {
+      "A": "864 N",
+      "B": "972 N",
+      "C": "324 N",
+      "D": "648 N"
+    },
+    "correct_option": "A",
+    "explanation": "For open organ pipe n 1 = v 2 \\lambda for COP n 2 = v 4( 2) \\lambda = 2v 4 \\lambda  n 2 = v 2 \\lambda , n 1 = n 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Stationary waves are produced in 20 m long streched string. If the string vibrates in 5 segments and wave velocity is 40 m/s, then the frequency is-",
+    "options": {
+      "A": "10 Hz",
+      "B": "5 Hz",
+      "C": "4 Hz",
+      "D": "2Hz"
+    },
+    "correct_option": "A",
+    "explanation": "It occurs due to end correction. Exercise - II (Previous Year Questions)"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If vibrations of a string are to be increased by a factor of two, then tension in the string must be made :",
+    "options": {
+      "A": "half",
+      "B": "thrice",
+      "C": "four times",
+      "D": "eight times"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The tension in a piano wire is 5N. What should be the tension in the wire to produce a note of double the frequency ?",
+    "options": {
+      "A": "10N",
+      "B": "20N",
+      "C": "40N",
+      "D": "80N"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A stretched string is 1 m long. Its mass per unit length is 1 g/m. It is stretched with a force of 40 N. It is plucked at a distance of 25 cm from one end. The frequency of note emitted by it will be:",
+    "options": {
+      "A": "400 Hz",
+      "B": "300 Hz",
+      "C": "200 Hz",
+      "D": "100 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The speed of transverse waves in a stretched string is 20 m/s. If the string is 2 m long, the frequency with which it resonantes in fundamental mode is:",
+    "options": {
+      "B": "5 Hz",
+      "A": "Option A",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A string in a musical instrument is 50 cm long and its fundamental frequency is 1250 Hz. If a frequency of 1000 Hz is to be produced, then required length of string is :",
+    "options": {
+      "A": "62.5 cm",
+      "B": "50 cm",
+      "C": "40 cm",
+      "D": "37.5 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A chord attached to a vibrating source divides it into 6 loops, when its tension is 36 N. The tension at which it will vibrate in 4 loops is :-",
+    "options": {
+      "A": "24 N",
+      "B": "36 N",
+      "C": "64 N",
+      "D": "81 N"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A string under a tension of 90 N produces 10 beats/sec when it is vibrated along with a tuning fork. When the tension is the string is increased to 160 N it sounds in unison with same tuning fork. Calculate fundamental frequency of tuning fork.",
+    "options": {
+      "A": "100 Hz",
+      "B": "40 Hz",
+      "C": "150 Hz",
+      "D": "200 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The n th harmonic on a taut string has a frequency of 720 Hz. The next higher harmonic has a frequency of 840 Hz. What is the value of n?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "7",
+      "D": "6"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An underwater sonar source operating at a frequency of 30 kHz directs its beam towards the surface. If velocity of sound in air is 330 m/s, wavelength and frequency of the waves in air are:-",
+    "options": {
+      "A": "5.5 mm, 60 kHz",
+      "B": "3.30 m, 60kHz",
+      "C": "11 mm, 30 kHz",
+      "D": "11 mm, 80 kHz"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_wave_motion_274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "An air column in pipe,which is closed at one end will be in resonance with a vibrating tuning fork of frequency 132 Hz if the length of the column in cm is : [v = 330 m/s]",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "31.25",
+      "B": "62.50",
+      "C": "110",
+      "D": "125"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If V is the speed of sound in air then the shortest length of the closed pipe which resonates with a frequency n :",
+    "options": {
+      "A": "V 2n",
+      "B": "V 4n",
+      "C": "4n V",
+      "D": "2n V"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_wave_motion_276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "Velocity of sound in air is 320 m/s. A pipe closed at one end has a length of 1 m neglecting end corrections, the air column in the pipe can resonate for sound of frequency.",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "80 Hz",
+      "B": "240 Hz",
+      "C": "500 Hz",
+      "D": "400 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "match_the_following",
+    "metadata": {
+      "question_id": "q_wave_motion_277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": {
+      "instruction": "If the air column in a pipe which is closed at one end, is in resonance with a vibrating tuning fork of frequency 165 Hz, then the length of the air column is : (v sound = 330 m/s)",
+      "section_a": {
+        "P": "List I Item P",
+        "Q": "List I Item Q",
+        "R": "List I Item R",
+        "S": "List I Item S"
+      },
+      "section_b": {
+        "K": "List II Item K",
+        "L": "List II Item L",
+        "M": "List II Item M",
+        "N": "List II Item N"
+      }
+    },
+    "options": {
+      "A": "35.7 cm",
+      "B": "50 cm",
+      "C": "12.5 cm",
+      "D": "62.5 cm $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sound wave of frequency 330Hz is incident normally and then reflected wall then minimum distance from wall at which particle vibrate very much :- (V sound = 330 m/s)",
+    "options": {
+      "A": "0.25 m",
+      "B": "0.125 m",
+      "C": "1 m",
+      "D": "0.5 m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The lengths of two closed organ pipes are 0.50 m and 0.52 m. If they are sounded together, 3 beats per second are produced. The velocity of sound will be :-",
+    "options": {
+      "A": "150.5 m/s",
+      "B": "135.5 m/s",
+      "C": "156 m/s",
+      "D": "None of these"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_280",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An organ pipe closed at one end has fundamental frequency of 2500 Hz. The maximum number of overtones generated by this pipe which a normal person can hear is",
+    "options": {
+      "A": "14",
+      "B": "3",
+      "C": "6",
+      "D": "9"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_281",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A closed organ pipe and an open organ pipe of same length produce 2 beats when they are set into vibrations simultaneously in their fundamental mode. The length of the open organ pipe is now halved and of the closed organ pipe is doubled; the number of beats produced will be:-",
+    "options": {
+      "A": "8",
+      "B": "7",
+      "C": "4",
+      "D": "2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_282",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The velocity of sound in air is 330 m/s. The fundamental frequency of an organ pipe open at both ends and of length 0.55 metre will be:",
+    "options": {
+      "A": "200 Hz",
+      "B": "550 Hz",
+      "C": "300 Hz",
+      "D": "275 Hz"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_283",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An open organ pipe of length 33 cm, vibrates with frequency 1500 Hz. If velocity of sound is 330 m/s, then its frequency is:-",
+    "options": {
+      "A": "Fundamental frequency of pipe",
+      "B": "First overtone of pipe",
+      "C": "Second overtone of pipe",
+      "D": "Fourth overtone of pipe"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_284",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An open resonating tube has fundamental frequency of n. When one fourth of its length is dipped into water, then its fundamental frequency will be:",
+    "options": {
+      "A": "n",
+      "B": "2n/3",
+      "C": "2n",
+      "D": "3/2 n"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_285",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The end correction of resonance tube is 1 cm. If lowest resonant length is 10 cm then next resonant length will be :-",
+    "options": {
+      "A": "32 cm",
+      "B": "45 cm",
+      "C": "46 cm",
+      "D": "47 cm"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_286",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "An organ pipe P 1 closed at one end and vibrating in its first overtone and another pipe P 2 open at both ends vibrating in its second overtone are in resonances. The ratio of length of pipes P 1 and P 2 is :-",
+    "options": {
+      "A": "1",
+      "B": "1/2",
+      "C": "1/3",
+      "D": "3/4"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_287",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "In a resonance tube experiment, the first resonance is obtained for 10 cm of air column and the second for 32 cm. The end correction for this apparatus is-",
+    "options": {
+      "A": "0.5 cm",
+      "B": "1.0 cm",
+      "C": "1.5 cm",
+      "D": "2 cm $//"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_288",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "If L 1 and L 2 are the lengths of the first and second resonating air columns in a resonance tube, then the wavelength of the note produced is :-",
+    "options": {
+      "A": "2",
+      "B": "2",
+      "C": "2 1 2 L L 2   -    ",
+      "D": "2   +     1 2 L L 2"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_289",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A tube closed at one end and containing air produces, when excited, the fundamental note of frequency 128 Hz. If the tube is open at both ends, the fundamental frequency that can be excited is (in Hz)",
+    "options": {
+      "A": "1024",
+      "B": "512",
+      "C": "256",
+      "D": "128"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_290",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "The vibrations of four air columns of same length are represented in figure. The ratio of frequencies n p : n q : n r : n s is: p q r s (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_291",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Exercise.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "4 EXERCISE-I (Conceptual Questions)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "distance = speed × time"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_292",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Let speed of sound waves in O 2 gas at certain temperature is v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "Total length of string \\lambda = \\lambda 1 + \\lambda 2 + \\lambda 3 But frequency  1 length so 1 2 3 1 1 1 1 n n n n = + +"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_293",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "What will be the speed of sound waves in a room which contains an equimolar mixture of O 2 and 'He' at same temperature :-",
+    "options": {
+      "A": "20 3 v 0",
+      "B": "40 21 v 0",
+      "C": "21 30 v 0",
+      "D": "None"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_294",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A sound absorber attenuates (decreases) the sound level by 20 dB. The intensity decreases by a factor of :",
+    "options": {
+      "A": "100",
+      "B": "1000",
+      "C": "10000",
+      "D": "10"
+    },
+    "correct_option": "A",
+    "explanation": "In 3 = ......... ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_295",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "y(x,t) = 2 0.8 (4x 5t) 5 + + represents a moving pulse, where x,y, are in metre and t in second. Then : (i) pulse is moving in +x-direction (ii) in 2 second it will travel a distance of 2.5 m (iii) its maximum displacement is 0.16 m (iv) it is travelling wave pulse",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "distance = speed × time"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_296",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two particles of medium disturbed by the wave propagation are at x 1 = 0 and x 2 = 2cm. The respective displacements (in cm) of the particles can be given by the equations :- y 1 = 2sin3 π t y 2 = 2sin(3 π t - π /8) The wave velocity is :",
+    "options": {
+      "A": "16 cm/s",
+      "B": "48 cm/s",
+      "C": "12 cm/s",
+      "D": "8 cm/s"
+    },
+    "correct_option": "B",
+    "explanation": "So 0.25m 4 \\lambda ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_297",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "Two small boats are 20m apart on a lake. Each pops up and down with a period of 2.0 seconds due to wave motion on the surface of water. When one boat is at its highest point, the other boat is at its lowest point. Both boats are always within a single cycle of the waves. The speed of the waves is :-",
+    "options": {
+      "A": "2.5 m/s",
+      "B": "20 m/s",
+      "C": "14 m/s",
+      "D": "40 m/s"
+    },
+    "correct_option": "B",
+    "explanation": "7 Only odd harmonic are present."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_298",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A uniform rope of mass M = 0.1kg and length L = 10m hangs from the celling. [g=10m/s 2 ] :-",
+    "options": {
+      "A": "Speed of the transverse wave in the rope increases linearly from top to the bottom",
+      "B": "Speed of the transverse wave in the rope decreases linearly from bottom to the top",
+      "C": "Speed of the transverse wave in the rope remain constant along the length of the rope",
+      "D": "Time taken by the transverse wave to travel the full length of the rope is 2 sec"
+    },
+    "correct_option": "D",
+    "explanation": "velocity of wave = 600 2 = 300 m/s frequency = 500 Hz, wavelength \\lambda = 3 5 m Number of wavelength = 600 3 5 = 1000"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_299",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A thick uniform rope of length L is hanging from a rigid support. A transverse wave of wavelength λ 0 is set up in the middle of the rope. The wavelength of the wave as it reaches the topmost point is :- L",
+    "options": {
+      "A": "2 λ 0",
+      "B": "2 λ 0",
+      "C": "λ 0 / 2",
+      "D": "λ 0"
+    },
+    "correct_option": "B",
+    "explanation": "Speed of sound wave is medium dependent term."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_wave_motion_300",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Wave Motion",
+      "chapter_name": "Wave Motion",
+      "language": "en",
+      "source": "Wave Motion - Race.pdf.txt",
+      "class_level": "class_11"
+    },
+    "question": "A wave travelling along the x-axis is described by the equation y (x, t ) = 0.005 cos ( x t α - β ). If the wavelength and the time period of the wave are 0.08m and 2.0 s respectively then α and β in appropriate units are",
+    "options": {
+      "A": "α = 25.00 π , β = π",
+      "B": "0.08 2.0 , α = β = π π",
+      "C": "0.04 1.0 , α = β = π π",
+      "D": "12.50 , 2.0 π α = π β = $//"
+    },
+    "correct_option": "A",
+    "explanation": "x y 4sin 8t 4sin 4 t x 2 8 16 \\pi \\pi (  (  = - = \\pi - ( ) ( ) )  )  Compare by y = A sin ( \\omega t - kx), \\omega = 4 \\pi k 16 \\pi =  v k \\omega = v = 64 cm/s. → +ve x - direction."
+  }
+]

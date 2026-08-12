@@ -1,0 +1,3464 @@
+[
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_151",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Photoelectric emission occurs only when the incident light has more than a certain minimum:-",
+    "options": {
+      "A": "Power",
+      "B": "wavelength",
+      "C": "Intensity",
+      "D": "frequency EXPERIMENTAL STUDY OF PEE"
+    },
+    "correct_option": "A",
+    "explanation": "λ = h 1 p p ⇒ λ ∝"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_152",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The stopping potential as a function of frequency of incident radiation is plotted for two different surfaces A and B. The graphs show that the work function of A is V S v A B",
+    "options": {
+      "A": "Greater than that of B",
+      "B": "Smaller than that of B",
+      "C": "Same as that of B",
+      "D": "No comparison can be done from given graphs"
+    },
+    "correct_option": "A",
+    "explanation": "h 2mE λ = 1 E λ ∝ 2 1 1 2 E 1 E 2 λ = = λ λ 2 = 1 2 λ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_153",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The graphs show the variation of current I (y-axis) in two photocell A & B as a function of the applied voltage V(x-axis), when light of same frequency is incident on the cell. Which of the following is the correct conclusion drawn from the data ? l A B V",
+    "options": {
+      "A": "Cathodes of the two cells are made from the same substance, the intensity of light used are different",
+      "B": "Cathodes are made from different substances and the intensity of light is the same",
+      "C": "Cathode substances as well as intensity of light are different",
+      "D": "no conclusion can be drawn"
+    },
+    "correct_option": "A",
+    "explanation": "E = ∆ m × C 2 joule E = 10 -3 × 10 -3 × 9 × 10 16 J E = 9 × 10 10 J  1 eV = 1.6 × 10 -19 J E = 10 19 9 10 eV 1.6 10 - × × E = 56.25 × 10 28 eV E = 56.25 × 10 22 MeV $//(1",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_154",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The number of photo electrons emitted for light of a frequency ν (higher than the threshold frequency ν 0 ) is proportional to :-",
+    "options": {
+      "A": "frequency of light",
+      "B": "ν - ν 0",
+      "C": "Threshold frequency",
+      "D": "Intensity of light EINSTEIN'S EXPLANATION OF PEE"
+    },
+    "correct_option": "A",
+    "explanation": "In = 4 r n = (53n 2 ) pm 2 π r n = n λ 2 × 3.14 × 53 × 10 -12 × (4) 2 = 4 × λ λ = 1.33 nm"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_155",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Graph is plotted between maximum kinetic energy of electron with frequency of incident photon in Photo electric effect. The slope of curve will be : E k v",
+    "options": {
+      "A": "Charge of electron",
+      "B": "Work function of metal",
+      "C": "Planck’s constant",
+      "D": "Ratio of Planck constant and charge of electron"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_156",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The work function of a surface of a photosensitive material is 6.2 eV. The wavelength of the incident radiation for which the stopping potential is 5V lies in the :-",
+    "options": {
+      "A": "Infrared region",
+      "B": "X-ray region",
+      "C": "Ultraviolet region",
+      "D": "Visible region ALLEN Modern Physics - I 128"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_157",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In photoelectric emission process from a metal of work function 1.8eV, the kinetic energy of most energetic electrons is 0.5 eV. The corresponding stopping potential is :",
+    "options": {
+      "A": "1.8 V",
+      "B": "1.3V",
+      "C": "0.5V",
+      "D": "2.3V"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_158",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For photoelectric emission from certain metal the cutoff frequency is ν . If radiation of frequency 2 ν impinges on the metal plate, the maximum possible velocity of the emitted electron will be (m is the electron mass) :-",
+    "options": {
+      "A": "2 h / m ν",
+      "B": "h /",
+      "C": "h / m ν",
+      "D": "2h / m ν MATTER WAVES AND de-BROGLIE HYPOTHESIS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_159",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electron is moving with velocity 6.6 × 10 3 m/s. The De-Broglie wavelength associated with electron is (mass of electron = 9 × 10 -31 Kg, Plank's Constant = 6.62 x 10 -34 J-s)",
+    "options": {
+      "A": "1 × 10 -19 m",
+      "B": "1 × 10 -5 m",
+      "C": "1 × 10 -7 m",
+      "D": "1 × 10 -10 m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_160",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The magnitude of De broglie wavelength ( λ ) of electron (e), proton (p), neutron (n) and α - particle ( α ) all having the same kinetic energy of 1MeV, in the increasing order will follow the sequence :",
+    "options": {
+      "A": "λ e , λ p , λ n , λ α",
+      "B": "λ e , λ n , λ p , λ α",
+      "C": "λ α , λ n , λ p , λ e",
+      "D": "λ p , λ e , λ α , λ n"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_161",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A proton and an α - particle accelerated through same voltage. The ratio of their De-broglie wavelength will be : (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_162",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An electron and proton are accelerated through same potential, then λ e / λ p will be",
+    "options": {
+      "A": "1",
+      "B": "m e /m p",
+      "C": "m p /m e",
+      "D": "p e m m"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_163",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If λ p and λ ∝ be the wavelengths of protons and α -particles of equal kinetic energies, then",
+    "options": {
+      "A": "λ p = α λ 4",
+      "B": "λ p = α λ 2",
+      "C": "λ p = λ α",
+      "D": "λ p = 2 λ α"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_164",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electrons used in an electron microscope are accelerated by a voltage of 25 kV. If the voltage is increased to 100 kV then the de-Broglie wavelength associated with the electrons would :",
+    "options": {
+      "A": "increase by 2 times",
+      "B": "decrease by 2 times",
+      "C": "decrease by 4 times",
+      "D": "increase by 4 times"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_165",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the momentum of an electron is changed by P, then the de Broglie wavelength associated with it changes by 0.5%. The initial momentum of electron will be :-",
+    "options": {
+      "A": "P 200",
+      "B": "100 P",
+      "C": "200 P",
+      "D": "400 P BOHR'S QUANTISATION CONDITION"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_166",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In coolidge tube the potential difference between cathode and anticathode is 120 kV. The maximum energy of emitted X-rays will be :-",
+    "options": {
+      "A": "1.2 × 10 5 eV",
+      "B": "10 10 eV",
+      "C": "10 15 eV",
+      "D": "10 20 eV"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_167",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the X-ray tube is working at 25 kV then the minimum wavelength of X-rays will be :-",
+    "options": {
+      "A": "0.49 Å",
+      "B": "0.29 Å",
+      "C": "0.19 Å",
+      "D": "0.39 Å ALLEN : Physics 131"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_168",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The structure of solids is studied by :-",
+    "options": {
+      "A": "X-rays",
+      "B": "γ -rays",
+      "C": "Cosmic rays",
+      "D": "Infrared rays"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_169",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is not affected by electro- magnetic fields :-",
+    "options": {
+      "A": "α -rays",
+      "B": "β -rays",
+      "C": "X-rays",
+      "D": "cathode-rays"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_170",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following have velocity equal to light",
+    "options": {
+      "A": "cathode rays",
+      "B": "anode rays",
+      "C": "X-rays",
+      "D": "positive rays"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_171",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The shortest wavelength emitted from an X-ray tube depends upon :-",
+    "options": {
+      "A": "the voltage applied to the tube",
+      "B": "the nature of the gas in the tube",
+      "C": "the current in the tube",
+      "D": "the nature of target material"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_172",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following wavelength is not possible for an X-ray tube which is operated at 40 kV:-",
+    "options": {
+      "A": "0.25 Å",
+      "B": "0.5 Å",
+      "C": "0.52 Å",
+      "D": "0.34 Å"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_173",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics I Dual nature of radiation and matter_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In an X-ray tube accelerating potential is 60 kV. What is the maximum frequency of emitted X-ray ?",
+    "options": {
+      "A": "1.45 × 10 19 Hz",
+      "B": "1.45 × 10 15 Hz",
+      "C": "1.25 × 10 15 Hz",
+      "D": "1.25 × 10 13 Hz EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_174",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The volume occupied by an atom is greater than the volume of the nucleus by a factor of about :-",
+    "options": {
+      "A": "10 1",
+      "B": "10 5",
+      "C": "10 10",
+      "D": "10 15"
+    },
+    "correct_option": "A",
+    "explanation": "p = E c = h c υ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_175",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The mass number of a nucleus is",
+    "options": {
+      "A": "always less than its atomic number",
+      "B": "always more than its atomic number",
+      "C": "may equal to its atomic number",
+      "D": "sometimes less than and sometimes more than its atomic number"
+    },
+    "correct_option": "D",
+    "explanation": "E = h υ = 6.6 × 10 -34 × 10 15 = 6.6 × 10 -19 J"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_176",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The order of nuclear density is",
+    "options": {
+      "A": "10 13 kg/m 3",
+      "B": "10 15 kg/m 3",
+      "C": "10 17 kg/m 3",
+      "D": "10 19 kg/m 3"
+    },
+    "correct_option": "A",
+    "explanation": "λ = 600 nm = 600 × 10 -9 m I = 100 W/m 2 I = n h ν n = Number of photons per second per unit area I = nhc λ n = 24 I 5 10 hc Ιλ = λ × × = 100 × 600 × 10 -9 × 5 × 10 24 = 3 × 10 20 photons/sec/m 2 1m 2 --- 3 × 10 20 photons / sec 1cm 2 --- 3× 10 16 photons /sec"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_177",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A nucleus represented by the symbol A Z X has :-",
+    "options": {
+      "A": "Z protons and A - Z neutrons",
+      "B": "Z protons and A neutrons",
+      "C": "A protons and Z - A neutrons",
+      "D": "Z neutrons and A - Z protons"
+    },
+    "correct_option": "A",
+    "explanation": "λ 1 = 300nm λ 2 = 600nm φ 0 ∝ 01 2 02 1 1 φ λ ⇒ = λ φ λ 9 01 9 02 600 10 2 1 300 10 - - φ × = = φ ×"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_178",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following pairs of nuclei are isotones :-",
+    "options": {
+      "A": "34 Se 74 , 31 Ga 71",
+      "B": "38 Sr 84 , 38 Sr 86",
+      "C": "42 Mo 92 , 40 Zr 92",
+      "D": "20 Ca 40 , 16 S 32"
+    },
+    "correct_option": "D",
+    "explanation": "The work function depends on the nature of the metal."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_179",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The radius of Germanium (Ge) nuclide is measured to be twice the radius of 9 4 Be . The number of nucleons in Ge are :-",
+    "options": {
+      "A": "73",
+      "B": "74",
+      "C": "75",
+      "D": "72"
+    },
+    "correct_option": "B",
+    "explanation": "The stoping potential (V 0 ) depends on the frequency ( ν ) of incident light as : eV 0 = h ν - φ 0 If ν ↑ than V 0 ↑"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_180",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the nucleus 27 13 A  has a nuclear radius of about 3.6 fm, the 125 52 Te would have its radius approximately as :-",
+    "options": {
+      "A": "4.8 fm",
+      "B": "6.0 fm",
+      "C": "9.6 fm",
+      "D": "12.0 fm MASS-ENERGY RELATION AND NUCLEAR BINGLING ENERGY"
+    },
+    "correct_option": "A",
+    "explanation": "Intensity α No. of photons α No. of photo electrons."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_181",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How much energy will be released when 10 kg of U 235 is completely converts into energy :-",
+    "options": {
+      "A": "5 × 10 27 MeV",
+      "B": "5 × 10 24 MeV",
+      "C": "9 × 10 17 J",
+      "D": "All of these"
+    },
+    "correct_option": "D",
+    "explanation": "r ∝ A 1/3 A 1 = 64 & A 2 = 125 1/3 1 1 2 2 r A r A   =     = 1/3 64 125       = 1/3 3 4 4 5 5 [ ]   = [ ]     [ ]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_182",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "As the mass number increases, binding energy per nucleon :-",
+    "options": {
+      "A": "increases",
+      "B": "decreases",
+      "C": "remains same",
+      "D": "may increase or may decrease"
+    },
+    "correct_option": "D",
+    "explanation": "E = 3.8 eV φ 0 = 2.8 eV K.E max = E - φ 0 = 1 eV it means energy of electron should be in between 0 to 1 eV."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_183",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "M n and M p represent the mass of neutron and proton respectively. An element having nuclear mass M has N neutrons and Z-protons, then the correct relation will be :-",
+    "options": {
+      "A": "M<{N.M n +Z.M p }",
+      "B": "M>{N.M n +Z.M p }",
+      "C": "M={N.M n +Z.M p }",
+      "D": "M=N{M n + M p }"
+    },
+    "correct_option": "A",
+    "explanation": "2 1 n d ∝ ( ) 2 2 2 1 2 2 2 1 1 2 n d n d n n d d / 2 = ⇒ = ⇒ 2 1 n 4 n = 2 1 n 4n ⇒ = Note :- The maximum K.E does not depend on the distance."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_184",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "1 a.m.u. (1.66 × 10 -27 kg) is equal to",
+    "options": {
+      "A": "139 MeV/c 2",
+      "B": "39 MeV/c 2",
+      "C": "93 MeV/c 2",
+      "D": "931 MeV/c 2"
+    },
+    "correct_option": "A",
+    "explanation": "v max = 1.2 × 10 6 m/s e m = specific charge = 1.8 × 10 11 C/kg K.E = 2 1 mv 2 eV 0 = 2 1 mv 2 V 0 = 2 1 m v 2 e = ( ) 2 6 11 1 1 1.2 10 2 1.8 10 × × × × V 0 = 4 volt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_185",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The mass of proton is 1.0073 u and that of neutron is 1.0087 u ( u = atomic mass unit). The binding energy of 2 4 He is :-",
+    "options": {
+      "A": "0.0305 J",
+      "B": "0.0305 erg",
+      "C": "28.4 MeV",
+      "D": "0.061 u"
+    },
+    "correct_option": "B",
+    "explanation": "K max = eV 0 4 eV = eV 0 V 0 = 4V"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_186",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two light nuclei of masses m 1 and m 2 are fused to form a more stable nucleus of mass m 3 then:-",
+    "options": {
+      "A": "m 3 = 1 2 m m -",
+      "B": "m 3 <",
+      "C": "m 3 >",
+      "D": "m 3 = m 1 + m 2 ALLEN : Physics 157"
+    },
+    "correct_option": "A",
+    "explanation": "eV 0 = 0 hc hc - λ λ as λ ↓ V 0 ↑"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_187",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "M p denotes the mass of a proton and M n that of a neutron. A given nucleus, of binding energy B, contains Z protons and N neutrons. The mass M (N, Z) of the nucleus is given by (c is velocity of light) :-",
+    "options": {
+      "A": "M",
+      "B": "M",
+      "C": "M",
+      "D": "M"
+    },
+    "correct_option": "A",
+    "explanation": "o 2 1 o 1 2 E 10000 A 2 E 5000 A λ = = = λ E 2 = 2E 1 = 2× 1.23eV = 2.46 eV 0 V 1.36 V = (K.E) max = eV 0 = 1.36eV 0 1 2E φ = - (KE) max = 2.46 - 1.36 = 1.10eV $//(1 HS 202 5 TARGET : 202 5 PHYSICS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_188",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Mass equivalent to energy 931 MeV is",
+    "options": {
+      "A": "6.02 × 10 -27 kg",
+      "B": "1.66 × 10 -27 kg",
+      "C": "16.66 × 10 -26 kg",
+      "D": "6.02 × 10 -26 kg"
+    },
+    "correct_option": "A",
+    "explanation": "V 0 = 4V Kmax = eV 0 K max = 4eV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_189",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "One milligram of matter converted into energy will give",
+    "options": {
+      "A": "9 J",
+      "B": "9 × 10 13 J",
+      "C": "9 × 10 5 J",
+      "D": "9 × 10 10 J"
+    },
+    "correct_option": "B",
+    "explanation": "max hc K = - φ λ A A hc K = - φ λ ...(1) B B hc K = - φ λ ...(2)  λ A = 2 λ B from eq n (1) A B hc K 2 = - φ λ A B 1 hc K 2   = - φ   λ   ...(3) from eqn n (2) & (3) A B 1 K (K ) 2 = + φ - φ B A K K 2 2 φ = - B A K K 2 <"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_190",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The dependence of binding energy per nucleon (B N ) on the mass number",
+    "options": {
+      "A": "B N A=56 A",
+      "B": "B N A=124 A",
+      "C": "A=96 B N A",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "φ = 2.14 eV (a)  0 hc φ = λ or 0 hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_191",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Let F pp , F pn and F nn denote the nuclear force between proton-proton, proton-neutron and neutron-neutron pair respectively. When separation is 1 fm :-",
+    "options": {
+      "A": "If pp < F pn = F nn",
+      "B": "If pp > F pn = F nn",
+      "C": "If pp = F pn = F nn",
+      "D": "If pp < F pn < F nn"
+    },
+    "correct_option": "A",
+    "explanation": "λ = h 1 p p ⇒ λ ∝"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_192",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Possible forces on a proton by a proton in a nucleus is/are :-",
+    "options": {
+      "A": "Coulomb force",
+      "B": "Nuclear force",
+      "C": "gravitational force",
+      "D": "All of these"
+    },
+    "correct_option": "A",
+    "explanation": "h P λ ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_193",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following is weakest force :-",
+    "options": {
+      "A": "gravitational force",
+      "B": "Electric force",
+      "C": "Magnetic force",
+      "D": "Nuclear force"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_194",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Force acting on proton-proton inside a nucleus is-",
+    "options": {
+      "A": "Nuclear force > electric force",
+      "B": "Electric force > Nuclear force",
+      "C": "gravitational force > Nuclear force",
+      "D": "None of the above NUCLEAR REACTIONS"
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) p p p q / m q m 1 4 2 q / m q m 2 1 1 α α α        = = =               "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_195",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A nuclear fission is given below A 240 → B 100 + C 140 + Q(energy) Let binding energy per nucleon of nucleus A, B and C is 7.6 MeV, 8.1 MeV and 8.1 MeV respectively. Value of Q is :-(Approximately)",
+    "options": {
+      "A": "20 MeV",
+      "B": "220 MeV",
+      "C": "120 MeV",
+      "D": "240 MeV"
+    },
+    "correct_option": "A",
+    "explanation": "h 2mE λ = 1 m λ ∝ p m 2 mp 1 α λ α ∝ = λ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_196",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How much energy is released when 2 mole of U 235 is fissioned :-",
+    "options": {
+      "A": "10 24 MeV",
+      "B": "24 × 10 25 MeV",
+      "C": "10 24 J",
+      "D": "10 24 kWh"
+    },
+    "correct_option": "A",
+    "explanation": "λ = 150 v Å Here λ = 1Å ∴ V = 150 Volt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_197",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The energy radiated by a red giant star produces by :-",
+    "options": {
+      "A": "Fission process",
+      "B": "Fusion process",
+      "C": "chemical burning of hydrogen",
+      "D": "gravitational contraction"
+    },
+    "correct_option": "A",
+    "explanation": "h 2mE λ = 1 E λ ∝ 2 1 1 2 E 1 E 2 λ = = λ λ 2 = 1 2 λ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_198",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the process of atomic explosion, the most of fission energy is released in the form of :-",
+    "options": {
+      "A": "γ - rays",
+      "B": "Kinetic energy of products",
+      "C": "Infra red rays",
+      "D": "Visible light"
+    },
+    "correct_option": "A",
+    "explanation": "34 h 6.6 10 mV 1 2000 - × λ = = × = 3.3 × 10 -37 m = 3.3× 10 -27 Å"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_199",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following nucleus is fissionable by slow neutrons :-",
+    "options": {
+      "A": "92 U 238",
+      "B": "93 Np 239",
+      "C": "92 U 235",
+      "D": "2 He 4 ALLEN Modern Physics - II 158"
+    },
+    "correct_option": "A",
+    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_200",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The example of nuclear fusion is .",
+    "options": {
+      "A": "formation of barium and krypton from uranium",
+      "B": "formation of helium from hydrogen",
+      "C": "formation of plutonium -235 from uranium -235",
+      "D": "formation of water from hydrogen and oxygen"
+    },
+    "correct_option": "A",
+    "explanation": "E = ∆ m × C 2 joule E = 10 -3 × 10 -3 × 9 × 10 16 J E = 9 × 10 10 J  1 eV = 1.6 × 10 -19 J E = 10 19 9 10 eV 1.6 10 - × × E = 56.25 × 10 28 eV E = 56.25 × 10 22 MeV $//(1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_201",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For nuclear reaction : 92 U 235 + 0 n 1 → 56 Ba 144 + ..........+3 0 n 1",
+    "options": {
+      "A": "26 Kr 89",
+      "B": "36 Kr 89",
+      "C": "26 Sr 90",
+      "D": "38 Sr 89"
+    },
+    "correct_option": "D",
+    "explanation": "In = 4 r n = (53n 2 ) pm 2 π r n = n λ 2 × 3.14 × 53 × 10 -12 × (4) 2 = 4 × λ λ = 1.33 nm"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_202",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For the given reaction, the particle X is - 6 C 11 → 5 B 11 + β + + X",
+    "options": {
+      "A": "Neutron",
+      "B": "Anti neutrino",
+      "C": "Neutrino",
+      "D": "Proton"
+    },
+    "correct_option": "A",
+    "explanation": "h h 1 2mE 2m E λ = = × h 1 log log log 2m E λ = + h 1 log log log E 2 2m λ = - 1 h log log E log 2 2m λ = - + y = m x + C m = -ve C = +ve $//(1 HS 202 5 TARGET : 202 5 PHYSICS MODERN PHYSICS (RADIOACTIVITY AND NUCLEAR PHYSICS) : RACE # 02 SOLUTION"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_203",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "X(n, α ) 7 3 Li , then the element X will be :-",
+    "options": {
+      "A": "10 5 B",
+      "B": "9 5 B",
+      "C": "11 4 Be",
+      "D": "4 2 He"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_204",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Energy is released in nuclear fission is due to",
+    "options": {
+      "A": "Few mass is converted into energy",
+      "B": "Total binding energy of fragments is more than the B.E. of parental element",
+      "C": "Total B.E. of fragments is less than the B.E. of parental element",
+      "D": "Total B.E. of fragments is equals to the B.E. of parental element is"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_205",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Energy in an atom bomb is produced by the process of :",
+    "options": {
+      "A": "nuclear fusion",
+      "B": "nuclear fission",
+      "C": "combination of hydrogen atoms",
+      "D": "combination of electrons and protons"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_206",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Assuming that 200 MeV of energy is released per fission of 92 U 235 atom. Find the number of fission per second required to release 1 kW power :-",
+    "options": {
+      "A": "3.125 × 10 13",
+      "B": "3.125 × 10 14`",
+      "C": "3.125 × 10 15",
+      "D": "3.125 × 10 16"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_207",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In nuclear fission the percentage of mass converted into energy is about :-",
+    "options": {
+      "A": "0.1%",
+      "B": "1%",
+      "C": "10%",
+      "D": "0.01%"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_208",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following are suitable for the fusion process :-",
+    "options": {
+      "A": "Light nuclei",
+      "B": "heavy nuclei",
+      "C": "Element must be lying in the middle of the periodic table",
+      "D": "Middle elements, which are lying on binding energy curve"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_209",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the following reaction X is :- 20 Ca 40 + X → 21 Sc 43 + 1 H 1",
+    "options": {
+      "A": "Electron",
+      "B": "Positron",
+      "C": "alpha particle",
+      "D": "Proton"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_210",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Nuclear fusion is possible :-",
+    "options": {
+      "A": "only between light nuclei.",
+      "B": "only between heavy nuclei.",
+      "C": "between both light and heavy nuclei.",
+      "D": "only between nuclei which are stable against β -decay."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_211",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the reaction 2 1 H + 3 1 H → 4 2 He + 1 0 n . If the binding energies of 2 1 H , 3 1 H and 4 2 He are respectively a, b and c (in MeV), then the energy (in MeV) released in this reaction is",
+    "options": {
+      "A": "a + b - c",
+      "B": "c + a - b",
+      "C": "c - a - b",
+      "D": "a + b + c"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_212",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In any fission process the ratio mass of fission products mass of parent nucleus is -",
+    "options": {
+      "A": "Greater than 1",
+      "B": "Depends on the mass of the parent nucleus",
+      "C": "Equal to 1",
+      "D": "Less than 1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_213",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Fission of nuclei is possible because the binding energy per nucleon in them -",
+    "options": {
+      "A": "Decreases with mass number at low mass numbers.",
+      "B": "Increases with mass number at low mass numbers.",
+      "C": "Decreases with mass number at high mass numbers.",
+      "D": "Increases with mass number at high mass numbers."
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_214",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The binding energy of deutron is 2.2 MeV and that of 4 2 He is 28 MeV. If two deutrons are fused to form one 4 2 He then the energy released is :",
+    "options": {
+      "A": "25.8 MeV",
+      "B": "23.6 MeV",
+      "C": "19.2 MeV",
+      "D": "30.2 MeV ALLEN : Physics 159 + A C B + + + + + + + RADIOACTIVITY"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_215",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A radioactive source is kept in an uniform electric field α , β and γ - particle are emitting. α,β,γ are respectively :-",
+    "options": {
+      "A": "A,B,C",
+      "B": "A,C,B",
+      "C": "C,A,B",
+      "D": "C,B,A"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_216",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A radioactive element 238 90 X decays in to 222 83 Y . The number of β - particles emitted is :",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "1"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_217",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A radioactive reaction is → 238 206 92 82 U Pb . How many α and β particles are emitted ?",
+    "options": {
+      "A": "10 α, 6 β",
+      "B": "4 proton, 8 neutron",
+      "C": "6 electron, 8 proton",
+      "D": "6 β , 8 α"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_218",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which rays contain (+ve) charged particle:-",
+    "options": {
+      "A": "α -rays",
+      "B": "β -rays",
+      "C": "γ -rays",
+      "D": "X-rays"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_219",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When 90 Th 238 changes into 83 Bi 222 , then the number of emitted α and β -particles are :-",
+    "options": {
+      "A": "8 α , 7 β",
+      "B": "4 α , 7 β",
+      "C": "4 α , 4 β",
+      "D": "4 α , 1 β"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_220",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A radioactive nucleus decay as follows :- X α  → X 1 β  → X 2 α  → X 3 γ  → X 4 , if the atomic number and the mass number of X are 72 and 180 then the mass number and atomic number of X 4 are :-",
+    "options": {
+      "A": "172, 70",
+      "B": "171,69",
+      "C": "172, 69",
+      "D": "172, 68 MISCELLENEOUS"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_221",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Electron - positron pair can be created by γ -rays. In this process the minimum energy of γ -rays should be :-",
+    "options": {
+      "A": "5.0 MeV",
+      "B": "4.02 MeV",
+      "C": "15.0 MeV",
+      "D": "1.02 MeV"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_222",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which one of the following particle is unstable ?",
+    "options": {
+      "A": "α -particle",
+      "B": "electron",
+      "C": "proton",
+      "D": "neutron"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_223",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A nuclear reaction given by Z X A → Z + 1 Y A + -1 e 0 + ν represents",
+    "options": {
+      "A": "β -decay",
+      "B": "γ -decay",
+      "C": "fusion",
+      "D": "fission"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_224",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following radiations gets deflected by a magnetic field ?",
+    "options": {
+      "A": "X-rays",
+      "B": "γ -rays",
+      "C": "β -rays",
+      "D": "radio waves"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_225",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the nuclear decay given below : A Z X → + A Z 1 Y → - A 4 Z -1 B * → - - A 4 Z 1 B , the particles emitted in the sequence are :-",
+    "options": {
+      "A": "α , β , γ",
+      "B": "β , α , γ",
+      "C": "γ , β , α",
+      "D": "β , γ , α"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_226",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics II Nuclei_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A nucleus n m X emits one α particle and two β - particles. The resulting nucleus is :-",
+    "options": {
+      "A": "- - m 6 n 4 Z",
+      "B": "- m 6 n Z",
+      "C": "- m 4 n X",
+      "D": "- - m 4 n 2 Y EXERCISE-I"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_227",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "-2 NEET(UG) 2019",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "p = E c = h c υ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_228",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "4 NEET(UG) 2022 (Overseas)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "p = E c = h c υ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_229",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "2 Re-NEET(UG) 2022",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "p = E c = h c υ"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_230",
+      "subject": "Physics",
+      "section": "A",
+      "level": 3,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given below are two statements : Statement I : Atoms are electrically neutral as they contain equal number of positive and negative charges. Statement II : Atoms of each element are stable and emit their characteristic spectrum. In the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": {
+      "A": "Both Statement I and Statement II are correct.",
+      "B": "Both Statement I and Statement II are incorrect.",
+      "C": "Statement I is correct but Statement II is incorrect.",
+      "D": "Statement I is incorrect but Statement II is correct."
+    },
+    "correct_option": "A",
+    "explanation": "( ) ( ) p p p q / m q m 1 4 2 q / m q m 2 1 1 α α α        = = =               ",
+    "statements": {
+      "S": ""
+    }
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_231",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match List I with List II. List I List II (Spectral Lines of (Wavelengths (nm)) Hydrogen for transitions from) A. n 2 = 3 to n 1 = 2 I. 410.2 B. n 2 = 4 to n 1 = 2 II. 434.1 C. n 2 = 5 to n 1 = 2 III. 656.3 D. n 2 = 6 to n 1 = 2 IV. 486.1 Choose the correct answer from the options given below :",
+    "options": {
+      "A": "A-II, B-I, C-IV, D-III",
+      "B": "A-III, B-IV, C-II, D-I",
+      "C": "A-IV, B-III, C-I, D-II",
+      "D": "A-I, B-II, C-III, D-IV NEET"
+    },
+    "correct_option": "A",
+    "explanation": "h 2mE λ = 1 m λ ∝ p m 2 mp 1 α λ α ∝ = λ"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_232",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Match List-I with List-II . List-I (Series) List-II (Wave number in cm -1 ) A. Balmer series I.   -     2 2 1 1 R 1 n B. Lyman series II.   -     2 2 1 1 R 4 n C. Brackett series III.   -     2 2 1 1 R 5 n D. Pfund series IV.   -     2 2 1 1 R 2 n Choose the correct answer from the options given below :",
+    "options": {
+      "A": "A-II, B-III, C-IV, D-I",
+      "B": "A-IV, B-I, C-II, D-III",
+      "C": "A-III, B-II, C-I, D-IV",
+      "D": "A-I, B-IV, C-III, D-II RE-NEET"
+    },
+    "correct_option": "A",
+    "explanation": "λ = 150 v Å Here λ = 1Å ∴ V = 150 Volt"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_233",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The spectral series which corresponds to the electronic transition from the levels n 2 = 5,6,... to the level n 1 = 4 is:",
+    "options": {
+      "A": "Pfund series",
+      "B": "Brackett series",
+      "C": "Lyman series",
+      "D": "Balmer series ALLEN 184 Modern Physics - III"
+    },
+    "correct_option": "A",
+    "explanation": "h 2mE λ = 1 E λ ∝ 2 1 1 2 E 1 E 2 λ = = λ λ 2 = 1 2 λ"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_234",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Some energy levels of a molecule are shown in the figure with their wavelengths of transitions. Then : -2E -3E -4E λ 1 λ 2 λ 3 - 5E 2",
+    "options": {
+      "A": "λ 3 > λ 2 , λ 1 = 2 λ 2",
+      "B": "λ 3 > λ 2 , λ 1 = 4 λ 2",
+      "C": "λ 1 > λ 2 , λ 2 = 2 λ 3",
+      "D": "λ 2 > λ 1 , λ 2 = 2 λ 3 NEET"
+    },
+    "correct_option": "A",
+    "explanation": "34 h 6.6 10 mV 1 2000 - × λ = = × = 3.3 × 10 -37 m = 3.3× 10 -27 Å",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_235",
+      "subject": "Physics",
+      "section": "A",
+      "level": 2,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A model for quantized motion of an electron in a uniform magnetic field B states that the flux passing through the orbit of the electron is n(h/e) where n is an integer, h is Planck's constant and e is the magnitude of electron's charge. According to the model, the magnetic moment of an electron in its lowest energy state will be ( m is the mass of the electron)",
+    "options": {
+      "A": "π he m",
+      "B": "π 2 he m",
+      "C": "π heB m",
+      "D": "π 2 heB m"
+    },
+    "correct_option": "A",
+    "explanation": "λ electron = λ photon E ph = e ph e hc h , p = λ λ ph e e ph E hc p h λ = × λ = c $//(1 TARGET : 202 5 PHYSICS 202 5 HS"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_236",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "Modern physics III Atoms_Ex.pdf.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A particle of mass m is moving around the origin with a constant force F pulling it towards the origin. If Bohr model is used to describe its motion, the radius r of the n th orbit and the particle's speed ν in the orbit depend on n as",
+    "options": {
+      "A": "r ∝ n 1/3 ; ν ∝ n 1/3",
+      "B": "r ∝ n 1/3 ; ν ∝ n 2/3",
+      "C": "r ∝ n 2/3 ; ν ∝ n 1/3",
+      "D": "r ∝ n 4/3 ; ν ∝ n -1/3 EXERCISE-II"
+    },
+    "correct_option": "A",
+    "explanation": "E = ∆ m × C 2 joule E = 10 -3 × 10 -3 × 9 × 10 16 J E = 9 × 10 10 J  1 eV = 1.6 × 10 -19 J E = 10 19 9 10 eV 1.6 10 - × × E = 56.25 × 10 28 eV E = 56.25 × 10 22 MeV $//(1"
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_237",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "With regard to neutrinos, pick the incorrect statement :",
+    "options": {
+      "A": "They are generated during β - decays",
+      "B": "They have strong interactions with other particles",
+      "C": "They are neutral particles",
+      "D": "They are hard to detect MO22 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "\\beta - is generated when neutron converts into proton n → p + \\beta - +  while \\beta + is emitted when proton converts into neutron p →  + \\beta + +  . Neutrinos are neutral particles, have almost negligible [probably zero] mass as compared to electrons and penetrate deep into matter while showing weak interaction with other particles. This makes them hard to detect."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_238",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Heavy stable nucleus has more neutrons than protons. This is because of the fact that",
+    "options": {
+      "A": "neutrons are heavier than protons.",
+      "B": "electrostatic force between protons are repulsive.",
+      "C": "neutrons decay into protons through beta decay.",
+      "D": "nuclear forces between neutrons are weaker than that between protons. MP42 - 0017"
+    },
+    "correct_option": "B",
+    "explanation": "electrostatic force between proton - proton is repulsive which causes the instability of nucleus. So, neutrons are larger than proton."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_239",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The wave - length of the matter - wave depends on :",
+    "options": {
+      "A": "Mass",
+      "B": "velocity",
+      "C": "Momentum",
+      "D": "All of these MO06 - 0229"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_240",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The photo electrons emitted from a surface of sodium metal are such that they:",
+    "options": {
+      "A": "All are of the same frequency",
+      "B": "Have the same KE",
+      "C": "Have the same de - Broglie wave - length",
+      "D": "Have their speed varying from zero to a certain maximum MO05 - 0129"
+    },
+    "correct_option": "D",
+    "explanation": "All the photo electrons emitted do not have same K.E. their K.E. varies from zero to K.E max ."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_241",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a photoelectric experiment, if stopping potential is applied, the photo current becomes zero. This means that:",
+    "options": {
+      "A": "The emission of photoelectron is stopped",
+      "B": "The photoelectrons are emitted but are accumulated near the emitter metal surface.",
+      "C": "The photoelectrons are dispersed from the emitter surface",
+      "D": "None of these MO05 - 0131"
+    },
+    "correct_option": "B",
+    "explanation": "As light of suitable frequency is incident photo electrons are emitted but due to the application of stopping potential they do not reach at collector plate and accumulate of emitter."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_242",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If the frequency of light in a PEE is doubled then maximum KE of photoelectron:",
+    "options": {
+      "A": "Doubled",
+      "B": "Be halved",
+      "C": "Become more than double",
+      "D": "Become less than double MO05 - 0128"
+    },
+    "correct_option": "C",
+    "explanation": "If the frequency of light source is double the K.E. of emitted photoelectrons will be more than double."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_243",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Stopping potential for photoelectrons:",
+    "options": {
+      "A": "Does not depend on the frequency of incident light",
+      "B": "Does not depend on the nature of cathode material",
+      "C": "Depends on both the frequency of incident light and nature of cathode material",
+      "D": "Depends on intensity of incident light MO05 - 0127"
+    },
+    "correct_option": "C",
+    "explanation": "Stopping potential depends on frequency and does not depends upon intensity of light."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_244",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If an electron and a photon propagate in form of waves having the same wavelength, it implies that they can have the same: -",
+    "options": {
+      "A": "Energy",
+      "B": "Momentum",
+      "C": "velocity",
+      "D": "Angular momentum MO06 - 0230"
+    },
+    "correct_option": "B",
+    "explanation": "e e e h h P & P = = \\lambda \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_245",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "For photo - electric effect, λ → incident photon wavelength V 0 → stopping potential.",
+    "options": {
+      "D": "MP39 - 0025",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_246",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The graph between intensity (I) of light falling on a metallic plate with current (i) generated is:",
+    "options": {
+      "D": "MO05 - 0132 V 0 \\lambda V 0 \\lambda V 0 1 \\lambda V 0 \\lambda i I i I i I i I Modern Physics Modern Physics",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Modern Physics principles.",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHIAAAAnCAIAAADsJfjsAAADj0lEQVR42u3dzU6cVRjA8fO+MwOBDJUPBxIZiJDYhBW1At6CJdQL6BBbP+6AReu63ocN06XdqIm6YymfXdqN8qG1alIKDQsS+77HxSSNQVtwBoLN/H4XMMk8u3/Oe56TfPnV1yvL35dKpUAIIYQYY4zxyuzsuzMzpgEAABwrWVhYWKzXDeKI/v6+xcX6zPS0UQAAAC+XFotFU/in3d0n87Xa6tqaUQAAAMdklRG8yN7+fu3atZXVVaMAAABkVfNlNV+rKSsAAEBWtVRW169/8OujR0YBAADIqiY9frz72e3bfz57ZhQAAICsatIX9+59euuWsgIAAGRV8xbrdWUFAADIqlbL6tbNm0/29owCAACQVU2q3707e+U9uwEBAABZ1bwff9q0dR0AAJBVwXtWAACArPKeFQAAIKuC96wAAABZFbxnpawAAEBWEVrauq6sAABAVhFa2bruzAoAAGQVocUzK2UFAACyilbL6pOPP/rhwQOjAAAAWUWTvvn2u/evXvWeFQAAtJWiEZyu/adP52u1z+/cmZiYyPP81H+/q6srTRJzBgCA/4Moq8KZvRT84Y0bc3NzaZqeSlnFGJMkybKst7f3rYsX0zSNMZozAACcuyzLZdUZltXS0tLU1FSSJKdSVnmel0ql3r6+g4ODszgEAwAAmsqqTFadoV8ePkwL6fTUdKFQaD2E0jR9c2ysXC7neV4oFIwXAACClRXtYGfn5/X1tRhjmqYtFvDg4GB/f79zKgAAkFVtZ2t7p8WyyrKsp6fnjeFh96kAAEBWKau0iWUVpVJpZHS0UCjEGJUVAADIqnYvq/96LSrLsqGhoXK53FgGmFitDgAAwbtVbVxWh4eHk5OTFy681tgWEk6w/a9cLr9eqbhSBQAAwWkVIYTffv9jeXkly7KTfA3Y+PxvbHy8VCoZHQAAyCrC8/esNjbWT3LPKsZYHRnp7u52nwoAAGQV4cjXgI2yeslFqSzLKpXKwMCAz/8AAEBW8S82t7Y3NtYbj/yGF1ypGq5WnVMBAICs4piyyvP8yJlV4/vA0dFRV6oAAEBWcXxZ3b+/8fczqxhjnufVarXc0+PzPwAAkFWc9Mzq+QaLPM8HBgYqg4OaCgAAXiFFF3jOvaxCCJcvvxNj7OzsrI6MmAkAALxiWVUsFpMkKRYK7fn/8xjPPSw3t7Y7OjouXXp7fHy8q6vrhI8FAwAA567x3dlflgKGPXH31jEAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_247",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The equation E = pc is valid:",
+    "options": {
+      "A": "For an electron as well as for photon",
+      "B": "For an electron but not for a photon",
+      "C": "For a photon but not for electron",
+      "D": "Neither for an electron nor a photon MO22 - 0018"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_248",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In photoelectric effect, if a weak intensity radiation instead of strong intensity of suitable frequency is used then:",
+    "options": {
+      "A": "Photoelectric effect will get delayed",
+      "B": "Photoelectric effect will not take place",
+      "C": "Maximum KE will decrease",
+      "D": "Saturation current will decrease MO05 - 0130"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_249",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When a nucleus in an atom undergoes a radioactive decay, the electronic energy levels of the atom",
+    "options": {
+      "A": "do not change for any type of radioactivity.",
+      "B": "change for α and β radioactivity but not for γ radioactivity.",
+      "C": "change for α radioactivity but not for others.",
+      "D": "change for β radioactivity but not for others. MP46 - 0001"
+    },
+    "correct_option": "B",
+    "explanation": "As we know that, α - particle:2unitofpositive charge β - particle:1 - unitpositive charge γ - particle: No charge Due to this reason, energy levels of the atom change for α and β but not for others. So the electronic energy level of the atom changes in emission of α and β particle, but not in γ decay"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_250",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The figure shows the result of an experiment involving photoelectric effect. The graph A, B, C and D relate to a light beam having different wavelength. Select correct:",
+    "options": {
+      "A": "Beam B has a highest frequency",
+      "B": "Beam C has longest wavelength",
+      "C": "Beam A has highest rate of photoelectric emission",
+      "D": "Highest momentum is possesed by some electrons emitted by B"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles.",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_251",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The photocurrent in experiment of photo electric effect increases if:",
+    "options": {
+      "A": "intensity of source is increased",
+      "B": "exposure time is increased",
+      "C": "exposure time is decreased",
+      "D": "intensity of source is decreased MO05 - 0135"
+    },
+    "correct_option": "A",
+    "explanation": "For a given source, Intensity α number of photons per sec. α number of photo e - per sec. α current"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_252",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Energy conversion in photoelectric cell takes place from : -",
+    "options": {
+      "A": "chemical to electrical",
+      "B": "Magnetic to electrical",
+      "C": "Optical to electrical",
+      "D": "Mechanical to electrical MO09 - 0048"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_253",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Atomic binding energy of elements A and B are E a and E b respectively. Three atoms of B form one atom of A. In this fusion process E energy is released, the relation between E a , E b and E : -",
+    "options": {
+      "A": "E a + E = 3E",
+      "B": "E a = 3E b",
+      "C": "E a - E = 3E b",
+      "D": "E a + 3E b + E = 0 MP42 - 0019"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_254",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "An radioactive atom ( Z X A ) undergoes α - decay then ratio of energy of α - particle and daughter nuclei increases with increase in : -",
+    "options": {
+      "A": "A 2",
+      "B": "A 0",
+      "C": "A",
+      "D": "A - 1 MO24 - 0020"
+    },
+    "correct_option": "C",
+    "explanation": "In \\alpha - decay ; ( ) k A 4 E Q A \\alpha - (  = ( ) )  ( ) k daughter 4 E Q A (  = ( ) )  ( ) ( ) k k daughter E A 4 E 4 \\alpha -  ="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_255",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Fusion reaction takes place at high temperature because : -",
+    "options": {
+      "A": "Molecules break up at high temperature",
+      "B": "Nuclei break up at high temperature",
+      "C": "Atoms get ionised at high temperature",
+      "D": "Kinetic energy is high enough to overcome the coulomb repulsion between nuclei MO20 - 0031"
+    },
+    "correct_option": "D",
+    "explanation": "For fusion to take place, the 2 nuclei must come close enough so that attractive short - range nuclear force is able to attract them. However, since both are positively charged particles, they experience coulomb repulsion. To overcome this repulsion they mus t have enough kinetic energy. This is achieved by high temperature."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_256",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A nuclear fusion reaction is given below : 1 H 2 + 1 H 2 → 2 He 3 + n + 3.2 MeV How much energy will be generated when 2 kg of deuterons are fused : - (approx)",
+    "options": {
+      "A": "10 30 eV",
+      "B": "5 × 10 23 MeV",
+      "C": "10 22 MeV",
+      "D": "10 33 eV MO20 - 0028 A B C D V i NEET : NCR [ Physics ] 2"
+    },
+    "correct_option": "D",
+    "explanation": "Energy released in 2kg of deutron 23 3 6.02 10 2 10 1.6 MeV 2    =  32 33 9.6 10 eV 10 eV =  "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_257",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Outside a nucleus : -",
+    "options": {
+      "A": "Neutron is stable",
+      "B": "Proton & neutron both are stable",
+      "C": "Neutron is unstable",
+      "D": "Neither neutron nor proton is stable MO15 - 0046 2"
+    },
+    "correct_option": "B",
+    "explanation": "\\beta - is generated when neutron converts into proton n → p + \\beta - +  while \\beta + is emitted when proton converts into neutron p →  + \\beta + +  . Neutrinos are neutral particles, have almost negligible [probably zero] mass as compared to electrons and penetrate deep into matter while showing weak interaction with other particles. This makes them hard to detect."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_258",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Lenard observed that no electrons are emitted when frequency of light is less than a certain minimum frequency. This minimum frequency depends on:",
+    "options": {
+      "A": "Potential difference of emitter and collector plates",
+      "B": "Distance between collector and the emitter plate",
+      "C": "Size",
+      "D": "Material of the emitter plate MO04 - 0246 2"
+    },
+    "correct_option": "B",
+    "explanation": "electrostatic force between proton - proton is repulsive which causes the instability of nucleus. So, neutrons are larger than proton."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_259",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Macroscopic objects in our daily life do not show wave like properties:",
+    "options": {
+      "A": "de - Broglie's hypothesis is not true",
+      "B": "de - Broglie's hypothesis is true only for electron",
+      "C": "de - Broglie's hypothesis is true only for photons",
+      "D": "wavelength associated with macroscopic object is small MO06 - 0231"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_260",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement are true:",
+    "options": {
+      "A": "Dual nature of matter is evident in de - Broglie equation \\lambda = h p .",
+      "B": "Wave nature of macroscopic particles are not visible in daily life",
+      "C": "\\lambda = h p is not satisfied by a photon",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "(a) In \\lambda = h p equation → \\lambda is character i stic of wave & p (momentum) is character i stic of particle. (b) Mass of macroscopic particles is high so de - Broglie wavelength is very small. (c) \\lambda = h p is applicable for material particle & photons as well."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_261",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The electron are emitted in the photoelectric effect from a metal surface: -",
+    "options": {
+      "A": "Only if the frequency of the incident radiation is above a certain threshold value",
+      "B": "Only if the temperature of the surface is high",
+      "C": "At a rate that is independent of the nature of the metal",
+      "D": "With a maximum velocity proportional to the frequency of the incident radiation MO04 - 0247"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_262",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Nuclear forces acting between two nucleons inside nucleus , then incorrect statement is : (1) Has saturation property (2) Is short ranged which explains the constancy is BE/A in the range 30 < A <",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "The property that a given nucleon influences only nucleons close to it makes is referred as saturation property of nuclear force. Inside nucleus, the order of strength is : F N > F E > F G . However, potential energy associated with nuclear force is minimum but non - zero when distance between nucleons is 0.8 fm Modern Physics NEET : NCR [Physics]"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_263",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "(3) Has zero associated potential energy associated when distance between nucleons is 0.8 fm. (4) Is the strongest force inside nucleus MO17 - 0018",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_264",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a thermonuclear fusion, which statement is incorrect :",
+    "options": {
+      "A": "Energy is provided by raising the temperature",
+      "B": "Energy must be provided to overcome columbic repulsion between approaching positively charged nuclei.",
+      "C": "Is responsible for the formation of red giant star",
+      "D": "Required temperature is of the order of 10 8 K. MO20 - 0030"
+    },
+    "correct_option": "C",
+    "explanation": "Two nuclei undergoing fusion must come close enough so that attractive short - range nuclear force is able to affect them. However, since they are both positively charge particles, they experience columbic repulsion. They, therefore, must have enough energy to overcome columbic barrier which is provided by raising the temperature that is in the order of 10 8 K. Thermonuclear fusion of hydrogen is the source of energy output inside stars. Once the hydrogen depletes, starts collapsing under gravity, which will raise the temperature of core and star starts expanding resulting in red giant star."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_265",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following statement is incorrect for a nuclear reaction",
+    "options": {
+      "A": "If nuclei with less total binding energy transform to nuclei with greater binding energy, there will be a net energy release.",
+      "B": "Nuclear reactions are not balanced in the same way as chemical reactions",
+      "C": "Both the number of protons and number of neutrons are conserved, but the total mass is not conserved.",
+      "D": "In \\beta - decay a neutrino is generated, while is \\beta + decay an anti - neutrino is generated MO18 - 0040 Modern Physics"
+    },
+    "correct_option": "D",
+    "explanation": "Greater the binding energy, the less is the total mass of the bound system, such a nucleus. Therefore, energy is released when nuclei with less total binding energy transform to nuclei with greater binding energy. A chemical equation is balanced in the se nse that the number of atoms of each element is the same on both sides of the equations. In a nuclear reaction, elements may be transmuted. Thus, the number of atoms of each element is not necessarily conserved in a nuclear reaction. However, the number of protons and the number of neutrons are both separately conserved in a nuclear reaction. Now, since proton number and neutron number are conserved in a nuclear reaction, the total rest mass of neutrons and protons is the same on either side of a reactio n. But the total binding energy of nuclei on the left side need not be the same as that on the right hand side. The difference in these binding energies appears as energy released or absorbed in a nuclear reaction. Since binding energy contributes to mass, the difference in the total mass of nuclei on the two sides get converted into energy or vice - versa. However, in \\beta - decay an antineutrino is generated when neutron converts into proton [n → p + \\beta - +  ] while in \\beta + decay a neutrino is generated when proton converts into neutron [p → n + \\beta + +  ]."
+  },
+  {
+    "type": "statement_based",
+    "metadata": {
+      "question_id": "q_modern_physics_266",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Pick the incorrect statement :",
+    "options": {
+      "A": "Fission of 1kg of Uranium generates equal energy as burning of 1kg of coal.",
+      "B": "During fission of 92 U 235 , different pairs of intermediate mass fragments can be obtained",
+      "C": "The peaks at nuclides like 2 He 4 , 8 O 16 is an evidence of shell - like structure inside nuclei.",
+      "D": "Decay of unstable 6 C 14 isotope into stable 7 N 14 is the principle of carbon dating. MP43 - 0004"
+    },
+    "correct_option": "A",
+    "explanation": "Energies involved in exothermic chemical reactions are in the range of eV, while in nuclear reactions energy release is of order of MeV. Therefore, fission of 1 kg of Uranium produces 10 14 J, while burning of 1 kg coal generates 10 7 J. Fission of 92 U 235 may result in different pair of daughter nuclei : 1 235 144 89 1 0 92 56 36 0 n U Ba Kr 3 n + → + + 1 235 133 99 1 0 92 51 41 0 n U Sb Nb 4 n + → + + 1 235 140 94 1 0 92 54 38 0 n U Xe Sr 2 n + → + + But approximately same amount of energy [200 MeV] is released per fission. When the organism is dead, its interaction with the atmosphere (which maintains the above equilibrium activity) ceases and its activity begins to drop. From the known half - life (573 0 years) of 6 C 14 , and the measured activity, the age of the specimen can be approximately estimated"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_267",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The wave nature of light shows up in the phenomenon of ……………?",
+    "options": {
+      "A": "Interference",
+      "B": "Diffraction",
+      "C": "Polarisation",
+      "D": "All of the above MO22 - 0019"
+    },
+    "correct_option": "D",
+    "explanation": "For elastic collision masses of both must be equal so that they can exchange the velocities. To slow down the speed of neutron substance should be made up of 1 proton for perfectly elastic, that is, we need light nuclei not heavy. For heavy nuclei only di rection will change not the speed. 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_268",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The minimum energy needed by an electron to come out from a metal surface is called?",
+    "options": {
+      "A": "Kinetic energy",
+      "B": "Work function",
+      "C": "Potential energy",
+      "D": "None of these MO04 - 0245"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_269",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Photoelectric current depends upon?",
+    "options": {
+      "A": "The intensity of incident light",
+      "B": "The potential difference applied between the two electrodes",
+      "C": "The nature of the emitter material",
+      "D": "All"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_270",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a experiment of photo electric effect, the slope of the cut - off voltage versus frequency of incident light is found to be 4.12 × 10 - 15 V - S. Calculate the value of plank constant?",
+    "options": {
+      "A": "6.59 × 10 - 34 J - s",
+      "B": "6.34 × 10 - 34 J - s",
+      "C": "6.02×10 - 34 J - s",
+      "D": "None MP39 - 0026"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_271",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A 12.5 eV electron beam is used to bombard gaseous hydrogen at room temperature. What series of wavelengths will be emitted?",
+    "options": {
+      "A": "&",
+      "B": "Balmer series: 656 nm",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_272",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "At room temperature, most of the hydrogen atoms are in ……….?",
+    "options": {
+      "A": "Excited state",
+      "B": "Ground state",
+      "C": "First excited state",
+      "D": "None of these MO36 - 0149"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_273",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Given the mass of iron nucleus as 55.85u and A = 56, find the nuclear density?",
+    "options": {
+      "A": "2.29 × 10 17 kg m - 3",
+      "B": "4.58 × 10 17 kg m - 3",
+      "C": "1.14 × 10 17 kg m - 3",
+      "D": "0.57 × 10 17 kg m - 3 MO14 - 0076"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_274",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The radius of nucleus is smaller than the radius of an atom by a factor of ………?",
+    "options": {
+      "A": "10 4",
+      "B": "10 2",
+      "C": "1",
+      "D": "10 8 MO14 - 0077"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_275",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Obtain the binding energy (in MeV) of a nitrogen nucleus ( ) 14 7 N , given ( ) 14 7 m N = 14.00307 u",
+    "options": {
+      "A": "52.35 MeV",
+      "B": "104.7 MeV",
+      "C": "209.4 MeV",
+      "D": "None of these MP42 - 0018"
+    },
+    "correct_option": "B",
+    "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_276",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The radius of the first Bohr orbit is a",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_277",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The n th orbit has a radius: -",
+    "options": {
+      "A": "na 0",
+      "B": "a 0 /n",
+      "C": "In 2 a 0",
+      "D": "a 0 /n 2 MO36 - 0147"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_278",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "How long can an electric lamp of 100W be kept glowing by fusion of 2.0 kg of deuterium? Take the fusion reaction as 2 2 3 1 1 2 H H He n 3.27MeV + ⎯ ⎯ → + +",
+    "options": {
+      "A": "About 4.9 × 10 4 year",
+      "B": "About 9.8 × 10 4 year",
+      "C": "About 2.45 × 10 4 year",
+      "D": "About 1.64 × 10 4 year MO20 - 0029"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_279",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Slope between photoelectric current and intensity of light is : -",
+    "options": {
+      "A": "Positive",
+      "B": "Negative",
+      "C": "Zero",
+      "D": "Infinite MO05 - 0134"
+    },
+    "correct_option": "A",
+    "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_280",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Photons are deflected by : -",
+    "options": {
+      "A": "Electric field",
+      "B": "Magnetic field",
+      "C": "Both electric & magnetic field",
+      "D": "Neither electric nor magnetic field MO01 - 0378 NEET : NCR [ Physics ]"
+    },
+    "correct_option": "D",
+    "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_281",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a photon - particle collision",
+    "options": {
+      "A": "&",
+      "B": "Momentum is conserved",
+      "C": "Both",
+      "D": "Option D"
+    },
+    "correct_option": "C",
+    "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Modern Physics principles."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_282",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "NCR - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Charges of electrons and positron: -",
+    "options": {
+      "A": "are equal in magnitude and same",
+      "B": "are equal in magnitude and opposite",
+      "C": "are unequal in magnitude and same",
+      "D": "are unequal in magnitude and opposite MO22 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "Photons are electrically neutral and are not deflected by electric and magnetic field. Photoelectric current Intensity of light"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_283",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In photoelectric effect, the curve between photoelectric current and anode potential V (For different frequencies) is shown in figure, then",
+    "options": {
+      "A": " 1 >  2 >  3",
+      "B": " 1 <  2 <  3",
+      "C": " 1 =  2 =  3",
+      "D": " 1 >  2 <  3 MO05 - 0021"
+    },
+    "correct_option": "B",
+    "explanation": "The stoping potential (V 0 ) depends on the frequency (  ) of incident light as : eV 0 = h  - \\phi  If   than V 0 ",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_284",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Two identical metal plates show photoelectric effect by a light of wavelength \\lambda A falling on plate A and \\lambda B on plate B ( \\lambda A = 2 \\lambda B ). The maximum kinetic energy is : -",
+    "options": {
+      "A": "2K A = K B",
+      "B": "K A < K B /2",
+      "C": "K A = 2K B",
+      "D": "K A > K B /2 MO06 - 0054"
+    },
+    "correct_option": "B",
+    "explanation": "= - \\phi \\lambda max hC K = - \\phi \\lambda A A hC K ...(1) = - \\phi \\lambda B B hC K ...(2)  \\lambda A = 2 \\lambda B from eq n (1) = - \\phi \\lambda A B hC K 2 (  = - \\phi ( ) \\lambda )  A B 1 hC K 2 ...(3) from eqn n (2) & (3) = + \\phi - \\phi A B 1 K (K ) 2 \\phi = - B A K K 2 2  B A K K 2"
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_285",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Which of the following figures represents the variation of particle momentum (p) and associated de Broglie wavelength ( \\lambda ) ?",
+    "options": {
+      "D": "MO11 - 0030",
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C"
+    },
+    "correct_option": "D",
+    "explanation": "\\lambda = \\lambda h 1 p p",
+    "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHEAAAAnCAIAAAAHEkPvAAADfklEQVR42u3d306bZRzA8ed9+7aEkhBcKZGW9sDbcRzNozHvQnYJcCi4uGNhF6DegdONPyZq4txMCMXMpIcyYFBeVtrXg8ZkOgYUqrLw+VwB+XHSb57n/T1RlmUBAADgLJ/du7e+tjo0NGQUPZ1OJ4SQGAQAAHCmhcXFubk5c3iTpgIAAM7w6cLC/Py8OWgqAACgP1mWLSwuCqpTRL6nAgAA3mZp+cHs7CfmoKkAAIDQ1/FUFEWbjcbNmx9ub78wkFPERgAAALwZVI2trY/vzAgqTQUAAPSnF1R3Zm43tn4zDU0FAAD0R1BpKgAA4IJ+fvJEUGkqAADgIj6/f396elpQBe9TAQAAwTtUwS51AADgP/HF0vLdu7PmoKkAAIC+eYcq+J4KAAAIF93y5x0qTQUAAFibrqkAAABBpakAAABBpakAAABBhaYCAADC396h+vKrrz+6dUtQBW/+AgAA/VpafuAdqsGKWq3Wq3Y7MgkAALgSv9CjdrudpmkUDfhHehzHzWZzZua2temDlfzw409Pn/5SKBTMAgAArkBSRWma/vrsWZqmcTywT3WSJNnd3fnm4cM0PTLkATdVu90+PDzsdrtmAQAAV0Ecx9VqdXNz8/j4OI7jLMsuH1Tb2388XlkVVP9KU0VRFMfxAAsYAAC4pPdu3KhUKs1mM4qiS14CTJJkZ+fFyupaq9UyWHv/AADgWuh2u5OVytjYWKfTCZdY8dcLqscrqwcHB6aqqQAAIFyrD6tq9XqhULjw3b98Pi+oNBUAAIRr+5DU8PDwVK0WLnHlT1BpKgAACNf5BmCpVCqXy/3eAOxt+RNUmgoAAILTqqlarVQqnX9Tdy6Xe/lyb339e0GlqQAAQFNlcRy/Pzl5zqXqSZLs7e1++92jnd1d09NUAAAQbKrIsqxYLE5MTJx5VNW78vfo8YoTKk0FAACE10+rKtXq6OjoKR9W9ZZSCCpNBQAAnPTDPY5r9Xo+nz/xtKp3QrWyuiaoNBUAABBOPKoaGRnprVb/x4dVuVyut+Vvf3/foDQVAAAQ3rZafXx8vFwuv35U1VtKIag0FQAAEM5zWlWdmioWi72sckJ1FSTZX8wCAADegV/wSVKv1zc2NkIIh4ctSymuwn8kVygU8vm8WQAAwDuhND7+Qafz+/PnjUbj1dHR0FDh//17crkkiqJwLW9jhhD+BCx9on8lWmo8AAAAAElFTkSuQmCC"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_286",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What will be the ratio of de - Broglie wavelength of proton and \\alpha - particle of same energy : (1)",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = h 2mE \\lambda  1 m p p m 2 m 1 \\alpha \\alpha \\lambda  = \\lambda"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_287",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "4 MO10 - 0058 p \\lambda p \\lambda p \\lambda p \\lambda NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = 600 nm = 6000 Å I = 100 W/m 2 I = n h  n = Number of photons per second per unit area I = \\lambda nhc n = \\lambda = \\lambda   24 I 5 10 hc = 100×600 × 10 - 9 × 5× 10 24 = 3 × 10 20 photons/sec/m 2 no. of photones per sec. in 1 cm 2 cross area = 3×10 20 × 10 - 4 = 3 × 10 16"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_288",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What are the respective number \\alpha - and \\beta - particles emitted in the following radioactive decay? → 200 168 90 80 X Y",
+    "options": {
+      "A": "6 and 8",
+      "B": "6 and 6",
+      "C": "8 and 8",
+      "D": "8 and 6 MO31 - 0012 1"
+    },
+    "correct_option": "D",
+    "explanation": "→ 200 168 90 80 X Y A I = 200 A F = 168 Z I = 90 Z F = 80 N \\alpha = - I F A A 4 = - = = 200 168 32 8 4 4 N \\beta = Z F - [Z I - 2N \\alpha ] = 80 - [90 - 2×8] = 80 - 74 = 6 1"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_289",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In the equation : + ⎯ ⎯ → + 27 4 30 13 2 15 Al He P X , The correct symbol for X is : -",
+    "options": {
+      "A": "- 0 1 e",
+      "B": "1 1 H",
+      "C": "4 2 He",
+      "D": "1 0 n MO24 - 0009"
+    },
+    "correct_option": "C",
+    "explanation": " 2 1 n d ( ) =  = 2 2 2 1 2 2 2 1 1 2 n d n d n n d d /2  = 2 1 n 4 n  = 2 1 n 4n Note : - The maximum K.E does not depend on the distance."
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_290",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "A nucleus at rest breaks into two nuclear parts which have their velocities ratio equal to",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= 1 2 v 2 v 1 According to law of momentum conservation P 1 = P 2 m 1 v 1 = m 2 v 2 = 1 2 2 1 v m v m As nuclear density is constant and mass  r 3 (  (  = ( ) ( ) )  )  3 1 2 2 1 r v r v (  = ( ) )  1/3 1 2 2 1 r v r v (  = ( ) )  1/3 1 2 r 1 r 2 = 1 1/3 2 r 1 r 2"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_291",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "What will be the ratio of their nuclear radii ? (1) 2 1/",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = 600 nm = 6000 Å I = 100 W/m 2 I = n h  n = Number of photons per second per unit area I = \\lambda nhc n = \\lambda = \\lambda   24 I 5 10 hc = 100×600 × 10 - 9 × 5× 10 24 = 3 × 10 20 photons/sec/m 2 no. of photones per sec. in 1 cm 2 cross area = 3×10 20 × 10 - 4 = 3 × 10 16"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_292",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The binding energies of the nuclei A and B are E a and E b respectively. Three atoms of the element B fuse to give one atom of element A and an energy Q is released. Then E a , E b and Q are related : -",
+    "options": {
+      "A": "E a - 3E b = Q",
+      "B": "3E b - E a = Q",
+      "C": "E a + 3E b = Q",
+      "D": "E b + 3E a = Q MO18 - 0009"
+    },
+    "correct_option": "A",
+    "explanation": "B.E of A → E a B.E of B → E b given nuclear reaction 3B → A + Q Q = E a - 3E b Because Q = (B.E) Final - (B.E) Initial"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_293",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "In a fission reaction → + + + 236 117 117 90 U X Y n n The binding energy per nucleon of X and Y are 8.5 MeV whereas of 236 U is 7.6 MeV. The total energy liberated will be about :",
+    "options": {
+      "A": "400 MeV",
+      "B": "200 MeV",
+      "C": "300 MeV",
+      "D": "200 keV MO15 - 0014"
+    },
+    "correct_option": "B",
+    "explanation": "(  = ( ) )  x B.E A 8.5 MeV & (  = ( ) )  U B.E A 7.6 MeV (  = ( ) )  y B.E A 8.5 MeV Q = energy liberated = 2 × 8.5 × 117 × 7.6 MeV = 195.4  200 MeV"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_294",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The atomic mass of 7 N 15 is 15.000108 a.m.u. and that of 8 O 16 is 15.994915 a.m.u. If the mass of a proton is 1.007825 a.m.u. then the minimum energy provided to remove the least tightly bound proton is : -",
+    "options": {
+      "A": "0.013018 MeV",
+      "B": "12.13 MeV",
+      "C": "13.018 MeV",
+      "D": "12.13 eV MO16 - 0012"
+    },
+    "correct_option": "B",
+    "explanation": "8 O 16 → 7 N 15 + 1 p 1 + Q \\Delta m = m(O 16 ) - [m(N 15 ) + m p ] = 15.994915 - [15.000108 + 1.007825] = 15.994915 - 16.00793 = - 0.013018 amu Q = - 0.013018 × 931 MeV  - 12.13 MeV Note : - Here negative sign indicates that the reaction is endothermic."
+  },
+  {
+    "type": "figure_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_295",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Binding energy per nucleon versus mass number curve for nuclei is shown in the figure. A, B, C and D are four nuclei indicated on the curve. The process that would release energy is :",
+    "options": {
+      "A": "C → 2D",
+      "B": "A → C + D",
+      "C": "A → B + C",
+      "D": "B → C + D MO16 - 0013"
+    },
+    "correct_option": "C",
+    "explanation": "B.E of products > BE of reactants",
+    "photo": "data:image/png;base64,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"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_296",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "Highly energetic electrons are bombarded on a target of an element containing 30 neutrons. The ratio of radii of nucleus to that of Helium nucleus is 14 1/",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "= 1/3 N He R 14 R  R  A 1/3 (  = ( ) )  1/3 1/3 N He A 14 A N He A A = 14 A N = 14 × 4 = 56 N + P = 56 atomic number = P = 56 - 30 = 26"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_297",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "The atomic number of nucleus will be: -",
+    "options": {
+      "A": "25",
+      "B": "26",
+      "C": "56",
+      "D": "30 MO14 - 0016"
+    },
+    "correct_option": "B",
+    "explanation": "The stoping potential (V 0 ) depends on the frequency (  ) of incident light as : eV 0 = h  - \\phi  If   than V 0 "
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_298",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When light of frequency twice the threshold frequency is incident on the metal plate, the maximum velocity of emitted election is v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": " =  + 2 th 1 h h mv 2  =  th 2  =  + 2 th th 1 1 2h h mv 2 … (1)  =  th 5  =  + 2 th th 2 1 5h h mv 2 … (2)  =  2 1 th 2 th 2 1 mv h 2 1 4h mv 2 (  =  = ( ) )  2 1 2 1 2 v 1 v 2v v 4"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_299",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "When the frequency of incident radiation is increased to five times the threshold value, the maximum velocity of emitted electron becomes v",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "A",
+    "explanation": "\\lambda = 600 nm = 6000 Å I = 100 W/m 2 I = n h  n = Number of photons per second per unit area I = \\lambda nhc n = \\lambda = \\lambda   24 I 5 10 hc = 100×600 × 10 - 9 × 5× 10 24 = 3 × 10 20 photons/sec/m 2 no. of photones per sec. in 1 cm 2 cross area = 3×10 20 × 10 - 4 = 3 × 10 16"
+  },
+  {
+    "type": "normal_mcq",
+    "metadata": {
+      "question_id": "q_modern_physics_300",
+      "subject": "Physics",
+      "section": "A",
+      "level": 1,
+      "topic": "Modern Physics",
+      "chapter_name": "Modern Physics",
+      "language": "en",
+      "source": "RACE - Modern Physics.pdf.txt",
+      "class_level": "class_12"
+    },
+    "question": "If v 2 = x v 1 , the value of x will be ______. MO06 - 0057 D C B A Mass number BE/nucleon NEET : PHYSICS",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_option": "B",
+    "explanation": "\\lambda 1 = 300nm \\lambda 2 = 600nm \\phi   \\lambda 1 - - \\phi  = = \\phi  9 01 9 02 600 10 2 1 300 10"
+  }
+]
