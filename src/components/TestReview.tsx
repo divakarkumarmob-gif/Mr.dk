@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import QuestionFormattedText from './QuestionFormattedText';
+import QuestionImage from './QuestionImage';
 
 interface Question {
     id: string;
@@ -8,6 +9,9 @@ interface Question {
     options: { A: string; B: string; C: string; D: string; };
     correct_option: string;
     explanation: string;
+    photo?: string;
+    image?: string;
+    diagram?: string;
 }
 
 interface TestReviewProps {
@@ -49,7 +53,8 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
             <div className="flex-grow overflow-y-auto px-1 pb-40">
                 <div className="p-6 bg-[#161e38] rounded-2xl mb-6 border border-white/5 shadow-inner">
                     <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-4 tracking-tight">Question Details</p>
-                    <p className="text-lg font-medium text-gray-100 leading-relaxed">{question?.question || 'Question text not found.'}</p>
+                    <QuestionImage src={question?.photo || question?.image || question?.diagram} />
+                    <QuestionFormattedText text={question?.question || 'Question text not found.'} className="text-gray-100 text-lg font-medium" />
                 </div>
                 <div className="space-y-4">
                     {question?.options && Object.entries(question.options).sort(([a], [b]) => a.localeCompare(b)).map(([key, value]) => {
@@ -58,13 +63,13 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
                         const isWrong = isSelected && !isCorrect;
                         
                         return (
-                            <div key={key} className={`p-4 rounded-xl border transition-all ${
+                            <div key={key} className={`p-4 rounded-xl border transition-all flex items-center ${
                                 isCorrect ? 'border-green-500 bg-green-500/10' : 
                                 isWrong ? 'border-red-500 bg-red-500/10' : 
                                 'border-white/10 bg-[#161e38]'
                             }`}>
-                                <span className={`font-bold mr-3 ${isCorrect ? 'text-green-400' : isWrong ? 'text-red-400' : 'text-blue-400'}`}>{key}.</span> 
-                                <span className="text-gray-200">{value}</span>
+                                <span className={`font-bold mr-3 shrink-0 ${isCorrect ? 'text-green-400' : isWrong ? 'text-red-400' : 'text-blue-400'}`}>{key}.</span> 
+                                <QuestionFormattedText text={value} inline className="text-gray-200 flex-1" />
                             </div>
                         );
                     })}
@@ -74,7 +79,7 @@ export default function TestReview({ questions, answers, filterType, onClose }: 
                         <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                         Explanation
                     </p>
-                    <p className="text-gray-300 leading-relaxed">{question?.explanation || 'No explanation available.'}</p>
+                    <QuestionFormattedText text={question?.explanation || 'No explanation available.'} className="text-gray-300" />
                 </div>
             </div>
 
