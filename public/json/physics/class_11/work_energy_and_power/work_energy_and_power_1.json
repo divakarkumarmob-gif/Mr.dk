@@ -247,7 +247,7 @@
       "A": "Zero",
       "B": "Negative",
       "C": "Positive",
-      "D": "None of these WE01 - 0038 smooth μ F A B Exercise - I Work, Energy and Power"
+      "D": "None of these WE01 - 0038 smooth μ F A B Work, Energy and Power"
     },
     "correct_option": "A",
     "explanation": "Block B will accelerate due to friction and gain speed therefore work by friction on block B will be positive.",
@@ -359,7 +359,7 @@
       "source": "Exercise I-III - Work_ Energy And Power.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The whole wedge and block system is moving as shown in the figure. Block of mass m is not slipping on the wedge. Then which of the following\n\nstatement is correct (surface between M and m is rough) : -",
+    "question": "The whole wedge and block system is moving as shown in the figure. Block of mass m is not slipping on the wedge. Then which of the following statement is correct (surface between M and m is rough) : -",
     "options": {
       "A": "Work done by normal force on block is zero",
       "B": "Work done by friction force on block is not zero",
@@ -1008,7 +1008,7 @@
       "source": "Exercise I-III - Work_ Energy And Power.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is incorrect for a conservative field ?",
+    "question": "Which of the following statement is incorrect for a conservative field ?",
     "options": {
       "A": "Work done in going from initial to final position is equal to change in kinetic energy of the particle.",
       "B": "Work done depends on path but not on initial and final positions.",
@@ -2127,10 +2127,10 @@
       "A": "In times",
       "B": "In 2 times",
       "C": "In 3 times",
-      "D": "1 n times WE12 - 0023 EXERCISE - I"
+      "D": "1 n times WE12 - 0023"
     },
     "correct_option": "B",
-    "explanation": "Amount of water flowing per unit time dm dt = Av \\rho v = velocity of flow, A = is area of cross - section, \\rho = density of water To get n times water in the same time, dm dt  (  ( ) )  = n dm dt  A v' \\rho = nAv \\rho  v'=nv F = vdm dt and F' = v' dm' dt = n 2 v dm dt = n 2 F To get n times water, force must be increased n 2 times. Exercise - II ( Previous Year Questions )"
+    "explanation": "Amount of water flowing per unit time dm dt = Av \\rho v = velocity of flow, A = is area of cross - section, \\rho = density of water To get n times water in the same time, dm dt  (  ( ) )  = n dm dt  A v' \\rho = nAv \\rho  v'=nv F = vdm dt and F' = v' dm' dt = n 2 v dm dt = n 2 F To get n times water, force must be increased n 2 times. ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -2404,7 +2404,7 @@
       "A": "4 KW",
       "B": "6 KW",
       "C": "7 KW",
-      "D": "8 KW WE04 - 0023 Exercise - I"
+      "D": "8 KW WE04 - 0023"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Work_ Energy And Power principles."

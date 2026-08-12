@@ -247,7 +247,7 @@
       "A": "70",
       "B": "50",
       "C": "10",
-      "D": "Zero O Exercise - I"
+      "D": "Zero O"
     },
     "correct_option": "A",
     "explanation": "As disc is lying in the x - z plane, so applying perpendicular axis theorem : - I x + I z = I y 30 + I z = 40  I z = 40 - 30 = 10 kg m 2"
@@ -334,7 +334,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The M.I. of a thin rod of length ℓ about the perpendicular axis through its centre is\n\nI. The M.I. of the square structure made by four such rods about a perpendicular axis to the plane and through the centre will be : -",
+    "question": "The M.I. of a thin rod of length ℓ about the perpendicular axis through its centre is I. The M.I. of the square structure made by four such rods about a perpendicular axis to the plane and through the centre will be : -",
     "options": {
       "A": "4I",
       "B": "8I",
@@ -495,7 +495,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Three thin uniform rods each of mass M and length L are placed along the three axis of a cartesian coordinate system with one end of each rod at the origin. The M.\n\nI. of the system about z - axis is",
+    "question": "Three thin uniform rods each of mass M and length L are placed along the three axis of a cartesian coordinate system with one end of each rod at the origin. The M. I. of the system about z - axis is",
     "options": {
       "A": "2 ML 3",
       "B": "2 2ML 3",
@@ -1441,7 +1441,7 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The rotational kinetic en e rgy of a body is K rot and its moment of inertia is\n\nI. The angular momentum of body is",
+    "question": "The rotational kinetic en e rgy of a body is K rot and its moment of inertia is I. The angular momentum of body is",
     "options": {
       "A": "IK rot",
       "B": "rot 2 IK",
@@ -2545,15 +2545,15 @@
       "source": "Exercise I-III - Rotational Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A sphere and a disc of same radii and mass are rolling on an inclined plane without slipping. a s & a d are acceleration and g is acceleration due to gravity. Then which\n\nstatement is correct ?",
+    "question": "A sphere and a disc of same radii and mass are rolling on an inclined plane without slipping. a s & a d are acceleration and g is acceleration due to gravity. Then which statement is correct ?",
     "options": {
       "A": "a s > a d > g",
       "B": "g > a s > a d",
       "C": "a s > g > a d",
-      "D": "a d > a s > g EXERCISE - I"
+      "D": "a d > a s > g"
     },
     "correct_option": "B",
-    "explanation": "For rolling motion on an inclined plain acceleration is given by R 2 2 g sin a K 1 R \\theta = (  + ( ) )  Exercise - II ( Previous Year Questions )"
+    "explanation": "For rolling motion on an inclined plain acceleration is given by R 2 2 g sin a K 1 R \\theta = (  + ( ) )  ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -2714,7 +2714,7 @@
       "A": "2 3v 2g",
       "B": "2 3v 4g",
       "C": "2 v 4g",
-      "D": "2 v 2g Exercise - I"
+      "D": "2 v 2g"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Rotational Motion principles.",

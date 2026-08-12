@@ -17,7 +17,7 @@
       "A": "This effect is common to all ferromagnetic substances",
       "B": "The hysteresis loop area is proportional to the thermal energy developed per unit volume of the material",
       "C": "The hysteresis loop area is independent of the thermal energy developed per unit volume of the material",
-      "D": "The shape of the hysteresis loop is characteristic of the material MF36 - 0016 Exercise - I"
+      "D": "The shape of the hysteresis loop is characteristic of the material MF36 - 0016"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."
@@ -291,7 +291,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For the hollow thin cylinderical current carrying pipe which\n\nstatement is correct :-",
+    "question": "For the hollow thin cylinderical current carrying pipe which statement is correct :-",
     "options": {
       "A": "magnetic field inside the pipe is not zero",
       "B": "magnetic field outside the pipe is zero",
@@ -429,7 +429,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential differene\n\nV. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is :-",
+    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential differene V. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is :-",
     "options": {
       "A": "      2 1 2 r r",
       "B": "      2 2 1 r r",
@@ -567,7 +567,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A very long straight wire carries a current\n\nI. At the instant when a charge +Q at point P has velocity v \\rho , as shown, the magnetic force on the charge is:- Q P v I y x O",
+    "question": "A very long straight wire carries a current I. At the instant when a charge +Q at point P has velocity v \\rho , as shown, the magnetic force on the charge is:- Q P v I y x O",
     "options": {
       "A": "along ox",
       "B": "opposite to oy",
@@ -637,7 +637,7 @@
       "source": "Magnetic Effect of Current and Magnetism - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current\n\nI. The direction of force on PQ will be:- I \\lambda Y X i P Q",
+    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current I. The direction of force on PQ will be:- I \\lambda Y X i P Q",
     "options": {
       "A": "towards right",
       "B": "towards left",
@@ -1670,7 +1670,7 @@
       "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which\n\nstatement is wrong for Lorentz force?",
+    "question": "Which statement is wrong for Lorentz force?",
     "options": {
       "A": "electric magnetic F F F = + \\rho\\rho\\rho",
       "B": "The magnetic force is zero if charge is not moving",
@@ -1693,7 +1693,7 @@
       "source": "NCR - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is wrong for electric field & magnetic field.",
+    "question": "Which of the following statement is wrong for electric field & magnetic field.",
     "options": {
       "A": "Both are long range.",
       "B": "The principle of superposition applies to both fields",
@@ -2484,7 +2484,7 @@
       "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A massless square loop, of wire of resistance 10 \\Omega . supporting a mass of 1 g. hangs vertically with one of its sides in a uniform magnetic field of 10 3 G, directed outwards in the shaded region. A dc voltage V is applied to the loop. For what value of\n\nV. the magnetic force will exactly balance the weight of the supporting mass of 1g? (If sides of the loop = 10 cm, g = 10 )",
+    "question": "A massless square loop, of wire of resistance 10 \\Omega . supporting a mass of 1 g. hangs vertically with one of its sides in a uniform magnetic field of 10 3 G, directed outwards in the shaded region. A dc voltage V is applied to the loop. For what value of V. the magnetic force will exactly balance the weight of the supporting mass of 1g? (If sides of the loop = 10 cm, g = 10 )",
     "options": {
       "A": "1 V 10",
       "B": "100 V",
@@ -2856,7 +2856,7 @@
       "source": "RACE - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A small circular flexible loop of wire of radius R carries a current\n\nI. It is placed in a uniform magnetic field B. The tension in the loop will be doubled, if : -",
+    "question": "A small circular flexible loop of wire of radius R carries a current I. It is placed in a uniform magnetic field B. The tension in the loop will be doubled, if : -",
     "options": {
       "A": "I is doubled",
       "B": "B is doubled",

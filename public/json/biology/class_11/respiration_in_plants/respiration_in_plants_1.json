@@ -319,7 +319,7 @@
       "A": "Yeast",
       "B": "E.coli",
       "C": "Ulothrix",
-      "D": "Plants CR07 - 0009 Exercise - I Respiration in Plants"
+      "D": "Plants CR07 - 0009 Respiration in Plants"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Respiration In Plants principles."
@@ -1123,7 +1123,7 @@
       "A": "A erobic respiration",
       "B": "G lycolysis only",
       "C": "L actic acid fermentation",
-      "D": "A lcoholic fermentation CR16 - 0006 EXERCISE - I"
+      "D": "A lcoholic fermentation CR16 - 0006"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Respiration In Plants principles."
@@ -1844,7 +1844,7 @@
       "A": "0",
       "B": "1",
       "C": "2",
-      "D": "3 CR16 - 0148 Exercise - I"
+      "D": "3 CR16 - 0148"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Respiration In Plants principles."
@@ -2139,7 +2139,7 @@
       "source": "RACE - Respiration In Plants.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Choose correct answers regarding mitochondrial ETS from the following\n\n**options** for question",
+    "question": "Choose correct answers regarding mitochondrial ETS from the following **options** for question",
     "options": {
       "A": "a = UQ, b = complex - II",
       "B": "a = Cytc, b = complex - IV",
@@ -2266,7 +2266,7 @@
     },
     "question": "Enzymes _____ and ______ catalyse the reactions in which pyruvic acid is converted to CO 2 and ethanol. Choose correct option for above blanks respectively : -",
     "options": {
-      "A": "al cohol decarboxylase, alcohol dehydrogenase",
+      "A": "alcohol decarboxylase, alcohol dehydrogenase",
       "B": "pyruvic acid decarboxylase, pyruvic acid dehydrogenase",
       "C": "alcohol decarboxylase, pyr uvic acid dehydrogenase",
       "D": "pyruvic acid decarboxylase, alcohol dehydrogenase CR16 - 0038"
@@ -3560,7 +3560,7 @@
       "A": "FAD + or FADH 2",
       "B": "NADH",
       "C": "ATP",
-      "D": "H 2 O EXERCISE-I"
+      "D": "H 2 O"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Respiration In Plants principles.",

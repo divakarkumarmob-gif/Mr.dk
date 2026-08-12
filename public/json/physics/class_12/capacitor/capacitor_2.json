@@ -17,7 +17,7 @@
       "A": "22 \\mu F",
       "B": "26.6 \\mu F",
       "C": "52.2 \\mu F",
-      "D": "13 \\mu F CP11 - 0107 5 \\mu F A B C 10 \\mu F 10 \\mu F 10 \\mu F k V C C C C Exercise - I Capacitor NEET : Extra Edge [ Physics ]"
+      "D": "13 \\mu F CP11 - 0107 5 \\mu F A B C 10 \\mu F 10 \\mu F 10 \\mu F k V C C C C Capacitor NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Capacitor principles."
@@ -133,7 +133,7 @@
       "A": "1.26 × 10 - 4 J",
       "B": "2.57 × 10 - 4 J",
       "C": "1.26 × 10 - 6 J",
-      "D": "2.57 × 10 - 6 J CP06 - 0119 Exercise - I"
+      "D": "2.57 × 10 - 6 J CP06 - 0119"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Capacitor principles."
@@ -498,7 +498,7 @@
       "source": "NCR - Capacitor.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "An isolated metal sphere of radius R is charged upto potential\n\nV. Energy stored in the electric field associated with the charged sphere can be given by",
+    "question": "An isolated metal sphere of radius R is charged upto potential V. Energy stored in the electric field associated with the charged sphere can be given by",
     "options": {
       "A": "2πε 0 RV 2",
       "B": "2 0 2 RV \\pi",

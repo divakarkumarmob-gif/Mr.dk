@@ -1948,7 +1948,7 @@
       "D": "mgR 4 1"
     },
     "correct_option": "A",
-    "explanation": "∵ We know that Minimum kinetic energy required by a body so that it may escape from gravitational field. Escape = 1 2 m ( Ve ) 2 = GMm R …(1) Exercise - I gravitation 2 GM g R = \\rho ⇒ GM = g R 2 …(2) Put value of equation (2) in equation (1) ⇒ ( K . E . ) req . = 2 gR m R  ⇒ ( K . E . ) req . = mgR 1"
+    "explanation": "∵ We know that Minimum kinetic energy required by a body so that it may escape from gravitational field. Escape = 1 2 m ( Ve ) 2 = GMm R …(1) gravitation 2 GM g R = \\rho ⇒ GM = g R 2 …(2) Put value of equation (2) in equation (1) ⇒ ( K . E . ) req . = 2 gR m R  ⇒ ( K . E . ) req . = mgR 1"
   },
   {
     "type": "normal_mcq",
@@ -1968,7 +1968,7 @@
       "A": "In 1 2 d 1 2 = n 2 2 d 2 2",
       "B": "In 2 2 d 2 3 = n 1 2 d 1 3",
       "C": "In 1 d 1 2 = n 2 d 2 2",
-      "D": "In 1 2 d 1 = n 2 2 d 2 Exercise - I"
+      "D": "In 1 2 d 1 = n 2 2 d 2"
     },
     "correct_option": "D",
     "explanation": "Since the angular momentum of the satellite about the earth is conserved.  a P L L = \\rho\\rho"
@@ -2176,7 +2176,7 @@
       "A": "D 2",
       "B": "2D 3",
       "C": "4D 5",
-      "D": "9D 10 Exercise - I gravitation www.allen .in"
+      "D": "9D 10 gravitation www.allen .in"
     },
     "correct_option": "A",
     "explanation": "At point 'p' for gravitational field to be zero field due to earth = field due to moon  e m 2 2 GM GM x (D x) = -  m m 2 2 81M M x (D x) = -  x 9 D x = -  9(D - x) = x  9D x 10 ="

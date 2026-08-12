@@ -1931,7 +1931,7 @@
       "A": "x = L",
       "B": "x = 2L",
       "C": "x= 2 2L",
-      "D": "x= 2L EXERCISE-I"
+      "D": "x= 2L"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Circular Motion principles."
@@ -2787,7 +2787,7 @@
       "A": "8 rad/s",
       "B": "12 rad/s",
       "C": "24 rad/s",
-      "D": "36 rad/s CR04 - 0017 Exercise - I"
+      "D": "36 rad/s CR04 - 0017"
     },
     "correct_option": "A",
     "explanation": "\\omega = 3 d d(2t 0.5) dt dt \\theta + =  6t 2 + 0 At t = 2 \\omega = 24 rad/s."

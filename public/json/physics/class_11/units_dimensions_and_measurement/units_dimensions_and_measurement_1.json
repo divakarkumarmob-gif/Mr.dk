@@ -408,7 +408,7 @@
       "A": "Length and mass",
       "B": "Mass and time",
       "C": "Length. mass and time",
-      "D": "None of these UD02 - 0013 Exercise - I Units, Dimensions and Measurement 1"
+      "D": "None of these UD02 - 0013 Units, Dimensions and Measurement 1"
     },
     "correct_option": "A",
     "explanation": "Pressure = 2 Force N Area m ="
@@ -2207,7 +2207,7 @@
       "A": "2.25 mm",
       "B": "2.20 mm",
       "C": "1.20 mm",
-      "D": "1.25 mm EX02 - 0001 EXERCISE - I"
+      "D": "1.25 mm EX02 - 0001"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Units Dimensions And Measurement principles."
@@ -2455,7 +2455,7 @@
       "source": "NCR - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In the following given\n\n**options**, which of the two base units have not been included in the S.I. system.",
+    "question": "In the following given **options**, which of the two base units have not been included in the S.I. system.",
     "options": {
       "A": "mole, candela",
       "B": "radian, steradian",
@@ -2855,7 +2855,7 @@
       "source": "RACE - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Match List I with List II List List II A. Young's Modulus (Y)\n\nI. [M L - 1 T - 1 ] B. Co - efficient of Viscosity (  )\n\nII. [M L 2 T - 1 ] C. Planck's Constant (h)\n\nIII. [M L - 1 T - 2 ] D. Work Function ( \\phi )\n\nIV. [M L 2 T - 2 ] Choose the correct answer from the\n\n**options** given below:",
+    "question": "Match List I with List II List List II A. Young's Modulus (Y) I. [M L - 1 T - 1 ] B. Co - efficient of Viscosity (  ) II. [M L 2 T - 1 ] C. Planck's Constant (h) III. [M L - 1 T - 2 ] D. Work Function ( \\phi ) IV. [M L 2 T - 2 ] Choose the correct answer from the **options** given below:",
     "options": {
       "A": "A - II, B - III, C - IV, D - I",
       "B": "A - III, B - I, C - II, D - IV",
@@ -2878,7 +2878,7 @@
       "source": "RACE - Units Dimensions And Measurement.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Match List I with List II : List - I (Physical Quantity) List - II (Dimensional Formula) A Pressure gradient I 0 2 2 M L T -     B Energy density II 1 1 2 M L T - -     C Electric Field III 1 2 2 M L T - -     D Latent heat IV 1 1 3 1 M L T A - -     Choose the correct answer from the\n\n**options** given below:",
+    "question": "Match List I with List II : List - I (Physical Quantity) List - II (Dimensional Formula) A Pressure gradient I 0 2 2 M L T -     B Energy density II 1 1 2 M L T - -     C Electric Field III 1 2 2 M L T - -     D Latent heat IV 1 1 3 1 M L T A - -     Choose the correct answer from the **options** given below:",
     "options": {
       "A": "A - III, B - II, C - I, D - IV",
       "B": "A - II, B - III, C - IV, D - I",

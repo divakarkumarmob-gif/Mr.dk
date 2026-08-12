@@ -202,7 +202,7 @@
       "A": "1 2",
       "B": "1 3",
       "C": "1 4",
-      "D": "1 6 MF05 - 0008 - + i i O C B i A i O R I B A O i 1 i 2 Exercise - I Magnetic Effect of Current and Magnetism"
+      "D": "1 6 MF05 - 0008 - + i i O C B i A i O R I B A O i 1 i 2 Magnetic Effect of Current and Magnetism"
     },
     "correct_option": "A",
     "explanation": "B = 0 I 2r \\mu  I = 0 2Br \\mu I  Br  1 2 I I = 1 1 2 2 B r B r = 1 3 × 1 2 = 1 6",
@@ -382,7 +382,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is not true; magnetic field at the centre of current carrying loop : -",
+    "question": "Which of the following statement is not true; magnetic field at the centre of current carrying loop : -",
     "options": {
       "A": "proportional to current",
       "B": "inversely proportional to radius",
@@ -660,7 +660,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For the hollow thin cylindrical current carrying pipe which\n\nstatement is correct : -",
+    "question": "For the hollow thin cylindrical current carrying pipe which statement is correct : -",
     "options": {
       "A": "magnetic field inside the pipe is not zero",
       "B": "magnetic field outside the pipe is zero",
@@ -1028,7 +1028,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential difference\n\nV. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is : -",
+    "question": "Two identically charged particles A and B initially at rest, are accelerated by a common potential difference V. They enters into a uniform transverse magnetic field B and describe a circular path of radii r 1 and r 2 respectively then their mass ratio is : -",
     "options": {
       "A": "2 1 2 r r (  ( ) ) ",
       "B": "2 2 1 r r (  ( ) ) ",
@@ -1244,7 +1244,7 @@
       "D": "25.0 cm. MF14 - 0016"
     },
     "correct_option": "A",
-    "explanation": "Magnetic moment M = IA = I( \\pi r 2 ) ( ) 2 eu M r 2 r (  = \\pi ( ) \\pi )  … (1) Given B ( \\pi r 2 ) = h n e (  ( ) )   2 h r B e = \\pi … (2) (  n = 1) And when charge moving in external magnetic field then mu r qB = v eB r m = … (3) (  q = e) Put value from equation (2) and (3) in equation (1) ( ) 2 ev M r 2 r (  = \\pi ( ) \\pi )  e eB h M 2 m B e (  (  = \\pi ( ) ( ) \\pi \\pi )  )  eh M 2 m = \\pi Exercise - III ( Analytical Questions )"
+    "explanation": "Magnetic moment M = IA = I( \\pi r 2 ) ( ) 2 eu M r 2 r (  = \\pi ( ) \\pi )  … (1) Given B ( \\pi r 2 ) = h n e (  ( ) )   2 h r B e = \\pi … (2) (  n = 1) And when charge moving in external magnetic field then mu r qB = v eB r m = … (3) (  q = e) Put value from equation (2) and (3) in equation (1) ( ) 2 ev M r 2 r (  = \\pi ( ) \\pi )  e eB h M 2 m B e (  (  = \\pi ( ) ( ) \\pi \\pi )  )  eh M 2 m = \\pi ( Analytical Questions )"
   },
   {
     "type": "normal_mcq",
@@ -1374,7 +1374,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A very long straight wire carries a current\n\nI. At the instant when a charge +Q at point P has velocity v , as shown, the magnetic force on the charge is: -",
+    "question": "A very long straight wire carries a current I. At the instant when a charge +Q at point P has velocity v , as shown, the magnetic force on the charge is: -",
     "options": {
       "A": "along ox",
       "B": "opposite to oy",
@@ -1490,7 +1490,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current\n\nI. The direction of force on PQ will be: -",
+    "question": "A wire PQ carries a current 'i' is placed perpendicular to a long wire XY carrying a current I. The direction of force on PQ will be: -",
     "options": {
       "A": "towards right",
       "B": "towards left",
@@ -2765,7 +2765,7 @@
       "D": "in none of the above directions MF35 - 0029"
     },
     "correct_option": "A",
-    "explanation": "A diamagnetic material in a magnetic field moves from stronger to the weaker part of the field. Exercise - II ( Previous Year Questions )"
+    "explanation": "A diamagnetic material in a magnetic field moves from stronger to the weaker part of the field. ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -2895,7 +2895,7 @@
       "source": "Exercise I-III - Magnetic Effect Of Current And Magnetism.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which\n\nstatement is true :",
+    "question": "Which statement is true :",
     "options": {
       "A": "atomic magnetic dipole moment of diamagnet is zero",
       "B": "atomic magnetic dipole moment of para - magnet is zero",
@@ -3015,7 +3015,7 @@
       "A": "μ r = 1 + ",
       "B": " = μ r + 1",
       "C": "0 \\mu \\mu",
-      "D": "μ 0  MF34 - 0004 EXERCISE - I"
+      "D": "μ 0  MF34 - 0004"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Magnetic Effect Of Current And Magnetism principles."

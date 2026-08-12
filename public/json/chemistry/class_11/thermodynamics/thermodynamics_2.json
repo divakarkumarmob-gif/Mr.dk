@@ -517,7 +517,7 @@
       "source": "Exercise I-III - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reactions, (i) H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) + x kJ (ii) H 2 (g) + Cl 2 (g) ⎯ → 2HCl ( 𝓁 ) + y kJ Which one of the following\n\nstatement is correct :",
+    "question": "For the reactions, (i) H 2 (g) + Cl 2 (g) ⎯ → 2HCl(g) + x kJ (ii) H 2 (g) + Cl 2 (g) ⎯ → 2HCl ( 𝓁 ) + y kJ Which one of the following statement is correct :",
     "options": {
       "A": "x > y",
       "B": "x < y",
@@ -2391,7 +2391,7 @@
       "A": "A → P, B → S, C → Q, D → R",
       "B": "A → Q, B → P, C → S, D → R",
       "C": "A → P, B → R, C → Q, D → S",
-      "D": "A → P, B → R, C → S, D → Q TD05 - 0301 Exercise - I thermodynamics NEET : Extra Edge [ Chemistry ]"
+      "D": "A → P, B → R, C → S, D → Q TD05 - 0301 thermodynamics NEET : Extra Edge [ Chemistry ]"
     },
     "correct_option": "D",
     "explanation": "Ans. ( 3 ) Adiabatic process → q = 0 Isothermal process → \\Delta T = 0 Isoenthalpic process → \\Delta H = 0 Isoentropic process → \\Delta S = 0"
@@ -2644,7 +2644,7 @@
       "D": "Both"
     },
     "correct_option": "A",
-    "explanation": "Ans. ( 4 ) As per Theory Exercise - I NEET : Extra Edge [ Chemistry ]"
+    "explanation": "Ans. ( 4 ) As per Theory NEET : Extra Edge [ Chemistry ]"
   },
   {
     "type": "normal_mcq",

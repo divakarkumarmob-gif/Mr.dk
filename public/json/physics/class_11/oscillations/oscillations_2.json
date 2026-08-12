@@ -874,10 +874,10 @@
       "A": "Less than T",
       "B": "Equal to T",
       "C": "More than T",
-      "D": "Cannot predict EXERCISE - I"
+      "D": "Cannot predict"
     },
     "correct_option": "B",
-    "explanation": "If velocity is same then acceleration will be zero and there will be no variation in time period. Exercise - II ( Previous Year Questions )",
+    "explanation": "If velocity is same then acceleration will be zero and there will be no variation in time period. ( Previous Year Questions )",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
   },
   {
@@ -2596,7 +2596,7 @@
       "source": "Oscillations - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Molten wax of mass m drops on a block of mass M, which is oscillating on a frictionless table as shown. Select the correct statements. M m (I) If the collision takes place at extreme position, amplitude does not change (II) If the collision takes place at mean position, amplitude decreases (III) If the collision takes place at mean position, time period increases (IV) If the collision takes place at extreme position, time period increases\n\n**Options** :-",
+    "question": "Molten wax of mass m drops on a block of mass M, which is oscillating on a frictionless table as shown. Select the correct statements. M m (I) If the collision takes place at extreme position, amplitude does not change (II) If the collision takes place at mean position, amplitude decreases (III) If the collision takes place at mean position, time period increases (IV) If the collision takes place at extreme position, time period increases **Options** :-",
     "options": {
       "A": "Only",
       "B": "Only",
@@ -3054,7 +3054,7 @@
       "A": "1 2",
       "B": "+ 2 2 1 2 A A",
       "C": "2 2 1 2 1 2 A A 2A A + +",
-      "D": "+ 2 2 1 2 A A 2 EXERCISE-I"
+      "D": "+ 2 2 1 2 A A 2"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Calculated based on Simple Harmonic Motion formulas (x = A*sin(omega*t + phi), T = 2*pi*sqrt(m/k) or T = 2*pi*sqrt(L/g), Vmax = A*omega)."

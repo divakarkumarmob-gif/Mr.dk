@@ -1278,7 +1278,7 @@
       "source": "Exercise I-III - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is true according to kinetic theory of gases?",
+    "question": "Which of the following statement is true according to kinetic theory of gases?",
     "options": {
       "A": "The collision between two molecules is inelastic and the time between two collisions is less than the time taken during the collision.",
       "B": "There is a force of attraction between the molecules",
@@ -3066,10 +3066,10 @@
       "A": "7.1",
       "B": "1",
       "C": "8.1",
-      "D": "15.47 TP63 - 0001 P A D B C V EXERCISE - I"
+      "D": "15.47 TP63 - 0001 P A D B C V"
     },
     "correct_option": "A",
-    "explanation": "2 1 2 T COP T T = - T 1 = 300 K , T 2 = 263 K 263 COP 7.1 300 263 = = - P T Exercise - II ( Previous Year Questions )"
+    "explanation": "2 1 2 T COP T T = - T 1 = 300 K , T 2 = 263 K 263 COP 7.1 300 263 = = - P T ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",

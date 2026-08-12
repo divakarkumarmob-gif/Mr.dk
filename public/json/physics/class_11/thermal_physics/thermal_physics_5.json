@@ -1054,7 +1054,7 @@
       "source": "Thermal Physics _Thermal Expansion_ Calorimetry_ Heat Transfer_ KTG _ Thermodynamics_ - Exercise.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A thermodynamic system undergoes a cyclic process as shown in figure. The cycle consists of two closed loops, loop I and\n\nII. Over one complete cycle :- II I V P",
+    "question": "A thermodynamic system undergoes a cyclic process as shown in figure. The cycle consists of two closed loops, loop I and II. Over one complete cycle :- II I V P",
     "options": {
       "A": "System do positive work",
       "B": "Heat flow out of the system",
@@ -1132,7 +1132,7 @@
       "D": "17.5 J"
     },
     "correct_option": "A",
-    "explanation": "2 1 2 T COP T T = - T 1 = 300 K , T 2 = 263 K 263 COP 7.1 300 263 = = - P T Exercise - II ( Previous Year Questions )"
+    "explanation": "2 1 2 T COP T T = - T 1 = 300 K , T 2 = 263 K 263 COP 7.1 300 263 = = - P T ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",

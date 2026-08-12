@@ -204,7 +204,7 @@
       "A": "The rod will never touch the floor in any case.",
       "B": "If \\alpha rod > \\alpha frame , then rod may touch the floor.",
       "C": "If \\alpha rod < \\alpha frame , then rod may touch the floor.",
-      "D": "None of the above TP04 - 0003 C c F a b d 32^\\circF 212^\\circF Fahrenheit A 100^\\circC B Centigrade A B \\alpha Rod Exercise - I"
+      "D": "None of the above TP04 - 0003 C c F a b d 32^\\circF 212^\\circF Fahrenheit A 100^\\circC B Centigrade A B \\alpha Rod"
     },
     "correct_option": "A",
     "explanation": "\\alpha Rod > \\alpha Frame , then rod may touch floor.",
@@ -2624,7 +2624,7 @@
       "source": "Exercise I-III - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is correct for ideal black body :",
+    "question": "Which of the following statement is correct for ideal black body :",
     "options": {
       "A": "This absorbs visible radiation only.",
       "B": "This absorbs infrared radiation only",
@@ -3454,7 +3454,7 @@
       "source": "Exercise I-III - Thermal Physics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Hydrogen and helium gases of volume V at same temperature T and same pressure P are mixed to have same volume\n\nV. The resulting pressure of the mixture will be :",
+    "question": "Hydrogen and helium gases of volume V at same temperature T and same pressure P are mixed to have same volume V. The resulting pressure of the mixture will be :",
     "options": {
       "A": "P/2",
       "B": "P",

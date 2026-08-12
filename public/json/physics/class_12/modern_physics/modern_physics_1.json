@@ -270,7 +270,7 @@
       "A": "12.4 eV",
       "B": "6.2 eV",
       "C": "100 eV",
-      "D": "200 eV MO06 - 0018 Exercise - I"
+      "D": "200 eV MO06 - 0018"
     },
     "correct_option": "B",
     "explanation": "\\lambda 0 = 200 nm = 2000 Å \\lambda = 100 nm = 1000 Å K.E. max = 0 1 1 (  - ( ) \\lambda \\lambda )  12400eV - Å = 12400 1 1 1000 2000 (  - ( ) )  eV = 12400 6.2eV 2000 ="
@@ -1379,7 +1379,7 @@
       "A": "\\lambda p = 4 \\alpha \\lambda",
       "B": "\\lambda p = 2 \\alpha \\lambda",
       "C": "\\lambda p = \\lambda \\alpha",
-      "D": "\\lambda p = 2 \\lambda \\alpha MO10 - 0040 EXERCISE - I"
+      "D": "\\lambda p = 2 \\lambda \\alpha MO10 - 0040"
     },
     "correct_option": "D",
     "explanation": "\\lambda = h 2mk For protons p p p h 2m .k \\lambda = ....(i) For \\alpha - particle h 2m .k \\alpha \\alpha \\alpha \\lambda = ( ) p p h"
@@ -1609,7 +1609,7 @@
       "A": "0.1 V",
       "B": "1.0 V",
       "C": "2.3 V",
-      "D": "3.3 V MO06 - 0220 Exercise - I Modern Physics - I NEET : Extra Edge [ Physics ]"
+      "D": "3.3 V MO06 - 0220 Modern Physics - I NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Modern Physics principles."
@@ -1678,7 +1678,7 @@
       "A": "m 0",
       "B": "0 m 6",
       "C": "0 5m 3",
-      "D": "0 3m 5 MO10 - 0238 Exercise - I"
+      "D": "0 3m 5 MO10 - 0238"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."
@@ -2092,7 +2092,7 @@
       "A": "9 31",
       "B": "5 27",
       "C": "20 7",
-      "D": "7 29 EXERCISE-I"
+      "D": "7 29"
     },
     "correct_option": "A",
     "explanation": "φ = 2.14 eV (a)  0 hc φ = λ hc 1240 nm 2.14 λ = = φ λ 0  580 nm (b) V 0 = 0.60 V  0 hc eV = - φ λ 1240 0.60 eV 2.14 = - λ 1240 2.74 nm = λ 1240 nm 2.74 λ =  453 nm (c) 2 0 max 1 eV mv 2 = 0 max 2eV v m = 19 31 2 1.6 10 0.60 9.1 10 - - × × × = × v max = 4.6 × 10 5 m/s"
@@ -2621,7 +2621,7 @@
       "A": "visible region",
       "B": "far infrared region",
       "C": "ultraviolet region",
-      "D": "infrared region EXERCISE-II"
+      "D": "infrared region"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Modern Physics principles."

@@ -497,7 +497,7 @@
       "source": "RACE - Properties Of Matter And Fluid Mechanics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Figure shows a container filled with a liquid of density \\rho . Four points A, B, C and D lie on the diametrically opposite points of a circle as shown. Points A and C lie on vertical line and points B and D lie on horizontal line. The incorrect\n\nstatement is (p A , p B , p C , p D are absolute pressure at the respective points) : -",
+    "question": "Figure shows a container filled with a liquid of density \\rho . Four points A, B, C and D lie on the diametrically opposite points of a circle as shown. Points A and C lie on vertical line and points B and D lie on horizontal line. The incorrect statement is (p A , p B , p C , p D are absolute pressure at the respective points) : -",
     "options": {
       "A": "p D = p B",
       "B": "p A < p B = p D < p C",
@@ -2654,7 +2654,7 @@
       "source": "Extra Edge - Properties Of Matter And Fluid Mechanics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Volume of the soap bubble at end 1 increases. 4mm 2mm Extension 4000 8000 Stress (KN/m 2 ) A B C D time velocity 2 1 Exercise - I Properties of Matter and Fluid Mechanics NEET : Extra Edge [ Physics ]",
+    "question": "Volume of the soap bubble at end 1 increases. 4mm 2mm Extension 4000 8000 Stress (KN/m 2 ) A B C D time velocity 2 1 Properties of Matter and Fluid Mechanics NEET : Extra Edge [ Physics ]",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2755,7 +2755,7 @@
       "D": "2.3 m/s FL49 - 0008"
     },
     "correct_option": "C",
-    "explanation": "v T = ( ) A w 2 g 2 r 9 \\rho - \\rho  \\lambda = ( ) ( ) 3 3 2 3 4 2.7 10 10 10 2 10 9 8 10 - -  -     = 4.6 R 2 2 R 1 1 (R 2 > R 1 ) Exercise - I NEET : Extra Edge [ Physics ]"
+    "explanation": "v T = ( ) A w 2 g 2 r 9 \\rho - \\rho  \\lambda = ( ) ( ) 3 3 2 3 4 2.7 10 10 10 2 10 9 8 10 - -  -     = 4.6 R 2 2 R 1 1 (R 2 > R 1 ) NEET : Extra Edge [ Physics ]"
   },
   {
     "type": "normal_mcq",
@@ -2821,7 +2821,7 @@
       "A": "2.5 g",
       "B": "5.0 g",
       "C": "10 g",
-      "D": "20 g Exercise - I"
+      "D": "20 g"
     },
     "correct_option": "C",
     "explanation": "Let h be the height through which the liquid rises in the capillary tube of radius r.  2Tcos h r g \\theta = \\rho Mass of the water in the first tube is 2 2 2Tcos m r h r r g \\theta (  = \\pi \\rho = \\pi  \\rho ( ) \\rho )  r2Tcos g \\pi \\theta =  m  r  m' r' 2r 2 m r r = = = or m' = 2m = 2 × 5g = 10 g. Properties of Matter and Mechanics",
@@ -3076,7 +3076,7 @@
       "A": "204.8 × 10 5 Pa",
       "B": "102.4 × 10 5 Pa",
       "C": "51.2 × 10 5 Pa",
-      "D": "1.55 × 10 5 Pa Exercise - I extension B A load D C B A Elongation load"
+      "D": "1.55 × 10 5 Pa extension B A load D C B A Elongation load"
     },
     "correct_option": "A",
     "explanation": "(Bulk Modulus) K = P V / V \\Delta \\Delta 5 0.155 10 10/100  = = 1.55 × 10 5 Pa"

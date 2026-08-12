@@ -294,7 +294,7 @@
       "A": "48 cm",
       "B": "3 cm",
       "C": "60 cm",
-      "D": "15 cm RO10 - 0011 Exercise - I"
+      "D": "15 cm RO10 - 0011"
     },
     "correct_option": "C",
     "explanation": "m = 1 4 - ; m = f f u - ; 1 12 4 12 u - - = - - u = - 60 cm"
@@ -796,7 +796,7 @@
       "source": "Exercise I-III - Ray Optics And Optical Instruments.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A ray of light travelling in air have wavelength \\lambda , frequency n, velocity V and intensity\n\nI. If this ray enters into water than these parameters are \\lambda ' , n', v' and I' respectively. Which relation is correct from following -",
+    "question": "A ray of light travelling in air have wavelength \\lambda , frequency n, velocity V and intensity I. If this ray enters into water than these parameters are \\lambda ' , n', v' and I' respectively. Which relation is correct from following -",
     "options": {
       "A": "\\lambda = \\lambda '",
       "B": "In = n'",
@@ -2047,10 +2047,10 @@
       "A": "5 cm",
       "B": "10 cm",
       "C": "1 cm",
-      "D": "2 cm RO50 - 0009 EXERCISE - I"
+      "D": "2 cm RO50 - 0009"
     },
     "correct_option": "A",
-    "explanation": "1 2 h h tan d f \\theta = = 2 2 1 2 3 h f 50 200 10 h 5 10 m d 2 10 - -    = = =   h 2 = 5 cm Exercise - II ( Previous Year Questions )"
+    "explanation": "1 2 h h tan d f \\theta = = 2 2 1 2 3 h f 50 200 10 h 5 10 m d 2 10 - -    = = =   h 2 = 5 cm ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -2277,7 +2277,7 @@
       "A": "1600 sq.cm",
       "B": "800 sq.cm",
       "C": "400 sq.cm",
-      "D": "200 sq.cm RO11 - 0036 20cm O A B Exercise - I Ray Optics and Optical Instruments NEET : Extra Edge [Physics]"
+      "D": "200 sq.cm RO11 - 0036 20cm O A B Ray Optics and Optical Instruments NEET : Extra Edge [Physics]"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Ray Optics And Optical Instruments principles."
@@ -2370,7 +2370,7 @@
       "A": "convex, 12 cm",
       "B": "concave, 12 cm",
       "C": "convex, 6 cm",
-      "D": "convex, 18 cm RO55 - 0018 Exercise - I"
+      "D": "convex, 18 cm RO55 - 0018"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Ray Optics And Optical Instruments principles."
@@ -3016,7 +3016,7 @@
       "source": "NCR - Ray Optics And Optical Instruments.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "While applying lens formula correct\n\nstatement is",
+    "question": "While applying lens formula correct statement is",
     "options": {
       "A": "Rays should be marginal",
       "B": "Lenses should be thick",

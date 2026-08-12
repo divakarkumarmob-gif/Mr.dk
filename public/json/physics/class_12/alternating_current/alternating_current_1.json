@@ -175,7 +175,7 @@
       "source": "Alternating Current _AC_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "If an A.C. main supply is given to be 220\n\nV. What would be the average e.m.f. during a positive half cycle :-",
+    "question": "If an A.C. main supply is given to be 220 V. What would be the average e.m.f. during a positive half cycle :-",
     "options": {
       "A": "198 V",
       "B": "386 V",
@@ -430,7 +430,7 @@
       "source": "Alternating Current _AC_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A student connects a long air cored - coil of manganin wire to a 100 V D.C. supply and records a current of 25 amp. When the same coil is connected across 100\n\nV. 50 Hz a.c. the current reduces to 20 A , the reactance of the coil is :-",
+    "question": "A student connects a long air cored - coil of manganin wire to a 100 V D.C. supply and records a current of 25 amp. When the same coil is connected across 100 V. 50 Hz a.c. the current reduces to 20 A , the reactance of the coil is :-",
     "options": {
       "A": "4 Ω",
       "B": "3 Ω",
@@ -477,7 +477,7 @@
       "source": "Alternating Current _AC_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is ω /2 π . Which of the following\n\nstatement is correct :",
+    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is ω /2 π . Which of the following statement is correct :",
     "options": {
       "A": "For low frequency the limiting value of impedance is L.",
       "B": "For high frequency the limiting value of impedance is ω L.",
@@ -1784,7 +1784,7 @@
       "A": "Only capacitor",
       "B": "Capacitor and resistor",
       "C": "Only inductor",
-      "D": "Only resistor EXERCISE-I"
+      "D": "Only resistor"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Alternating Current principles.",
@@ -2300,7 +2300,7 @@
       "A": "500 2",
       "B": "10 2",
       "C": "50 2",
-      "D": "20 2 AC01 - 0001 Exercise - I SIMPLE AC CIRCUIT"
+      "D": "20 2 AC01 - 0001 SIMPLE AC CIRCUIT"
     },
     "correct_option": "A",
     "explanation": "Peak voltage in primary V 0 = rms 2 V 100 2 = s 2 p 1 V N V N =  V s = s p p N V N  V s = 5 × 100 2 = 500 2Volt"
@@ -2389,7 +2389,7 @@
       "source": "Exercise I-III - Alternating Current.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is \\omega /2 \\pi . Which of the following\n\nstatement is correct :",
+    "question": "Alternating current is flowing in inductance L and resistance R. The frequency of source is \\omega /2 \\pi . Which of the following statement is correct :",
     "options": {
       "A": "For low frequency the limiting value of impedance is L.",
       "B": "For high frequency the limiting value of impedance is \\omega L.",
@@ -3061,7 +3061,7 @@
       "D": "None of these AC11 - 0019"
     },
     "correct_option": "C",
-    "explanation": "Power factor = cos \\phi = 2 2 L R R Z R X = + 2 2 1100 cos 22 7 (1100) 2 50 7 2 \\phi = (  +    ( ) )  = 2 2 1100 (1100) (1100) + ; 1 cos 2 \\phi = Exercise - II ( Previous Year Questions )",
+    "explanation": "Power factor = cos \\phi = 2 2 L R R Z R X = + 2 2 1100 cos 22 7 (1100) 2 50 7 2 \\phi = (  +    ( ) )  = 2 2 1100 (1100) (1100) + ; 1 cos 2 \\phi = ( Previous Year Questions )",
     "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAAAwCAIAAAB1zbQ8AAAAX0lEQVR42u3RAQ0AAAjDMMC/56OD0ElYO0npWmMBNmETNmzCJmzYhE3YhA2bsAkbNmETNmzCJmzChk3YhA2bsAkbNmETNmHDJmzChk3YhA2bsAmbsGETNmHDJmzC9rcFw7EDXT13l/wAAAAASUVORK5CYII="
   },
   {
@@ -3249,7 +3249,7 @@
       "A": "m i sin t C - \\omega \\omega",
       "B": "m i cos t C - \\omega \\omega",
       "C": "m i sin t C 4 \\pi (  - \\omega + ( ) \\omega ) ",
-      "D": "m i sin t C 4 \\pi (  \\omega - ( ) \\omega )  AC05 - 0115 L R Exercise - I Alternating Current NEET : Extra Edge [ Physics ]"
+      "D": "m i sin t C 4 \\pi (  \\omega - ( ) \\omega )  AC05 - 0115 L R Alternating Current NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Alternating Current principles."
@@ -3290,7 +3290,7 @@
       "source": "Extra Edge - Alternating Current (1).pdf.txt",
       "class_level": "class_12"
     },
-    "question": "If frequency of alternating source is made zero then which of the following\n\nstatement is true :",
+    "question": "If frequency of alternating source is made zero then which of the following statement is true :",
     "options": {
       "A": "Current through capacitor will be zero",
       "B": "Current through resistance will be zero",
@@ -3409,7 +3409,7 @@
     },
     "question": "In pure inductive circuit, the curves between frequency f and reciprocal of inductive reactance 1/X L is",
     "options": {
-      "D": "AC04 - 0161 Exercise - I",
+      "D": "AC04 - 0161",
       "A": "Option A",
       "B": "Option B",
       "C": "Option C"

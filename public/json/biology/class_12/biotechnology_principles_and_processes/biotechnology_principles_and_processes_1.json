@@ -1040,7 +1040,7 @@
       "source": "Biotechnology Principles and processes_EX Eng.pdf_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which one of the given\n\n**options** correctly identifies its certain component(s)? Cla I Hind III EcoR I Pvu I Pst I amp R tet R P BR 322 ori rop BamH I Sal I Pvu II",
+    "question": "Which one of the given **options** correctly identifies its certain component(s)? Cla I Hind III EcoR I Pvu I Pst I amp R tet R P BR 322 ori rop BamH I Sal I Pvu II",
     "options": {
       "A": "Hind III, ECoRI-selectable markers",
       "B": "amp R , tet R -antibiotic resistance genes",
@@ -1365,7 +1365,7 @@
       "source": "Biotechnology Principles and processes_EX Eng.pdf_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The figure below shows three steps (A,B, C) of Polymerase Chain Reaction (PCR). Select the option giving correct identification together with what it represents? 5' 5' 3' 5' 5' 3' 5' 3' 3' 3' 3' 3' 5' 3' 3' 5' 3' 5' 5' 5' A C B dsDNA Region to be amplified\n\n**Options** :",
+    "question": "The figure below shows three steps (A,B, C) of Polymerase Chain Reaction (PCR). Select the option giving correct identification together with what it represents? 5' 5' 3' 5' 5' 3' 5' 3' 3' 3' 3' 3' 5' 3' 3' 5' 3' 5' 5' 5' A C B dsDNA Region to be amplified **Options** :",
     "options": {
       "A": "C-Extension in the presence of heat stable DNA polymerase",
       "B": "A-Annealing with two sets of primers",
@@ -1871,7 +1871,7 @@
       "A": "Simple stirred tank bioreactor",
       "B": "Sparged stirred tank bioreactor",
       "C": "Both 1 & 2",
-      "D": "None of these EXERCISE-I"
+      "D": "None of these"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Biotechnology_ Principles And Processes principles."
@@ -2209,7 +2209,7 @@
       "source": "Biotechnology_ Principles And Applications - Race.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Statement I : If one wants to recover many copies of the target DNA, it should be closed in a vector whose origin support high copy number.\n\nStatement II : Origin of replications is responsible for controlling the copy number of the linked DNA.",
+    "question": "Statement I : If one wants to recover many copies of the target DNA, it should be closed in a vector whose origin support high copy number. Statement II : Origin of replications is responsible for controlling the copy number of the linked DNA.",
     "options": {
       "A": "Both statement I and statement II are true",
       "B": "Both statement I and statement II are false",

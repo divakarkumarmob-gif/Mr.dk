@@ -1360,7 +1360,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Variation of quantity P with quantity Q is plotted in given figure, describes motion of particle in a straight line. Then which of the following\n\nstatement is wrong :",
+    "question": "Variation of quantity P with quantity Q is plotted in given figure, describes motion of particle in a straight line. Then which of the following statement is wrong :",
     "options": {
       "A": "Quantity Q may represent time",
       "B": "Quantity P is velocity if motion is uniform",
@@ -1521,7 +1521,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two particles A and B are moving on a straight line with the same speed. Which of the following\n\nstatement is/are correct for the relative motion of the two particles :",
+    "question": "Two particles A and B are moving on a straight line with the same speed. Which of the following statement is/are correct for the relative motion of the two particles :",
     "options": {
       "A": "The relative velocity AB v \\rho or BA v \\rho is zero vector only if they are moving in the same direction",
       "B": "If the particles are moving in opposite direction, the magnitude of BA v \\rho or AB v \\rho is twice than the magnitude of velocity of A or that of B.",
@@ -1567,7 +1567,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is/are Incorrect? (I) For motion involving change in direction along the straight line, displacement may decrease. (II) Direction of acceleration is same as direction of velocity. (III) Average speed is, in general greater than or equal to the magnitude of the average velocity. (IV) Equation of motion is valid only in one dimensional uniform accelerated motion",
+    "question": "Which of the following statement is/are Incorrect? (I) For motion involving change in direction along the straight line, displacement may decrease. (II) Direction of acceleration is same as direction of velocity. (III) Average speed is, in general greater than or equal to the magnitude of the average velocity. (IV) Equation of motion is valid only in one dimensional uniform accelerated motion",
     "options": {
       "A": "only I",
       "B": "only IV",
@@ -1659,7 +1659,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is correct -",
+    "question": "Which of the following statement is correct -",
     "options": {
       "A": "Direction of velocity at any point on path is tangential to the path",
       "B": "Direction of average velocity is along direction of motion during that interval",
@@ -1843,7 +1843,7 @@
       "source": "NCR - Kinematics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A car is moving along a straight line OP as shown in the figure. It moves from O to P in 18 s and returns from P to Q in 6s and Q to O in 10 s. Which of the following\n\nstatement is correct regarding the motion of the car? (1) The average speed of the car in going from O to P and come back to Q is 20 ms -",
+    "question": "A car is moving along a straight line OP as shown in the figure. It moves from O to P in 18 s and returns from P to Q in 6s and Q to O in 10 s. Which of the following statement is correct regarding the motion of the car? (1) The average speed of the car in going from O to P and come back to Q is 20 ms -",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2909,7 +2909,7 @@
       "A": "11 sec",
       "B": "23 sec",
       "C": "38 sec",
-      "D": "50 sec t 1 v t t 1 v t t v t 1 t v t 1 Exercise - I Kinematics NEET : Extra Edge [ Physics ]"
+      "D": "50 sec t 1 v t t 1 v t t v t 1 t v t 1 Kinematics NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "C",
     "explanation": "usin 1000sin30 t g 10 \\theta ^\\circ = = t = 50 sec"
@@ -2958,7 +2958,7 @@
       "D": "Option D"
     },
     "correct_option": "A",
-    "explanation": "For vertical motion 2 y 1 H (u T) g(T) 2 = + Here 'H' & 'u y ' same for both bodies so time will be same. 1 2 T 1 T 1 = u u pward motion downward motion u =0 a' = g+a a' = g - a Exercise - I NEET : Extra Edge [ Physics ]"
+    "explanation": "For vertical motion 2 y 1 H (u T) g(T) 2 = + Here 'H' & 'u y ' same for both bodies so time will be same. 1 2 T 1 T 1 = u u pward motion downward motion u =0 a' = g+a a' = g - a NEET : Extra Edge [ Physics ]"
   },
   {
     "type": "normal_mcq",
@@ -3139,7 +3139,7 @@
       "A": "60^\\circ",
       "B": "120^\\circ",
       "C": "135^\\circ",
-      "D": "90^\\circ Exercise - I"
+      "D": "90^\\circ"
     },
     "correct_option": "C",
     "explanation": "R v 1 sin 45 v 2 \\theta = =  \\theta = ^\\circ Angle with river flow = 90 + 45 = 135^\\circ N E S W (N) (W) ˆ vi - ˆ vj T OP v = 0 u u v v m \\theta \\theta m ˆ V ui = \\rho\\rho\\rho r ˆ V vj = - \\rho\\rho\\rho Kinematics"
@@ -3346,7 +3346,7 @@
       "A": "3 4",
       "B": "3 1",
       "C": "3 4 \\pi",
-      "D": "3 \\pi 12 5 A B 5 cm 12cm Q O A B R P Exercise - I"
+      "D": "3 \\pi 12 5 A B 5 cm 12cm Q O A B R P"
     },
     "correct_option": "A",
     "explanation": "P R 3 R s 3 2 R s 1 2 \\pi = = \\pi"

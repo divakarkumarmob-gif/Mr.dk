@@ -269,7 +269,7 @@
       "A": "mitochondria",
       "B": "chloroplast",
       "C": "Bacteriophage",
-      "D": "TMV MI01 - 0022 Exercise - I NEET : Biology"
+      "D": "TMV MI01 - 0022 NEET : Biology"
     },
     "correct_option": "D",
     "explanation": "Correct answer is option (D). Step-by-step physics solution based on standard Molecular Basis Of Inheritance principles."
@@ -2843,7 +2843,7 @@
       "source": "Exercise I-III - Molecular Basis Of Inheritance.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which one of the following\n\nstatement is true for protein synthesis (translation) ?",
+    "question": "Which one of the following statement is true for protein synthesis (translation) ?",
     "options": {
       "A": "Amino acids are directly recognized by mRNA .",
       "B": "The third base of the codon is less specific .",

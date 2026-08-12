@@ -414,7 +414,7 @@
       "D": "Zurin’s law"
     },
     "correct_option": "C",
-    "explanation": "For the given element, (consider length d in Z direction) Net force in upward direction = Weight (S sin( \\theta + d \\theta ) - S sin \\theta ) d = mg Angle is small  sin \\theta  \\theta  d g ydx S \\theta \\rho = .............(1) tan \\theta = dy dx  Differentiating wrt x 2 2 2 d d y sec dx dx \\theta \\theta = .............(2) Put d \\theta from (2) in (1) d take cos \\theta  1, we get 2 2 d y gy S dx \\rho = Alternative Solution P A = P B = P 0 P C = P 0 - \\rho gy C 0 S P P R = - S gy R \\rho = 2 2 d y gy S dx \\rho = 2 2 d y gy S dx \\rho = 3/2 2 2 2 dy 1 dx R d y dx     (  +   ( ) )      = dy/dx is very small 2 2 1 R d y / dx = 2 2 d y 1 R dx = F excess T(2 \\pi R) F’ x S F’ y dx dy F x S F y \\theta \\theta \\theta +d \\theta y x B A C P 0 y Properties of Matter and Fluid Mechanics Exercise - III ( Analytical Questions )"
+    "explanation": "For the given element, (consider length d in Z direction) Net force in upward direction = Weight (S sin( \\theta + d \\theta ) - S sin \\theta ) d = mg Angle is small  sin \\theta  \\theta  d g ydx S \\theta \\rho = .............(1) tan \\theta = dy dx  Differentiating wrt x 2 2 2 d d y sec dx dx \\theta \\theta = .............(2) Put d \\theta from (2) in (1) d take cos \\theta  1, we get 2 2 d y gy S dx \\rho = Alternative Solution P A = P B = P 0 P C = P 0 - \\rho gy C 0 S P P R = - S gy R \\rho = 2 2 d y gy S dx \\rho = 2 2 d y gy S dx \\rho = 3/2 2 2 2 dy 1 dx R d y dx     (  +   ( ) )      = dy/dx is very small 2 2 1 R d y / dx = 2 2 d y 1 R dx = F excess T(2 \\pi R) F’ x S F’ y dx dy F x S F y \\theta \\theta \\theta +d \\theta y x B A C P 0 y Properties of Matter and Fluid Mechanics ( Analytical Questions )"
   },
   {
     "type": "normal_mcq",
@@ -1236,7 +1236,7 @@
       "source": "Exercise I-III - Properties Of Matter And Fluid Mechanics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A false\n\nstatement is :",
+    "question": "A false statement is :",
     "options": {
       "A": "Angle of contact \\theta < 90^\\circ, if cohesive force < adhesive force × 2",
       "B": "Angle of contact \\theta > 90^\\circ, if cohesive force > adhesive force × 2",
@@ -2174,7 +2174,7 @@
       "A": "12 × 10 - 6 J",
       "B": "24 × 10 - 6 J",
       "C": "60 × 10 - 6 J",
-      "D": "96 × 10 - 6 J EXERCISE - I"
+      "D": "96 × 10 - 6 J"
     },
     "correct_option": "A",
     "explanation": "Total weight at height L 4 from its lower end = W T W T = weight suspended + weight of L 4 of wire W T = W 1 + W 4 Stress = T W F Area S = Stress = 1 W W 4 S (  + ( ) ) "

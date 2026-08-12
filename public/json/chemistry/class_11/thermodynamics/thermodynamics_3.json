@@ -166,7 +166,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "When 1 mol gas is heated at constant volume temperature is raised from 298 to 308 K. Heat supplied to the gas is 500 J. Then which\n\nstatement is correct : -",
+    "question": "When 1 mol gas is heated at constant volume temperature is raised from 298 to 308 K. Heat supplied to the gas is 500 J. Then which statement is correct : -",
     "options": {
       "A": "q = w = 500 J, \\Delta U = 0",
       "B": "q = \\Delta U = 500 J, w = 0",
@@ -766,7 +766,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Consider the following statements :\n\nI. Change in state function between two states is a definite quantity and does not depend on path.\n\nII. Intensive properties can't be algebraically added or subtracted.\n\nIII. Ratio of two extensive properties result into a parameter that depends on amount of substance.\n\nIV. Molar heat capacity is an intensive property. The correct order of true / false of the above statements is",
+    "question": "Consider the following statements : I. Change in state function between two states is a definite quantity and does not depend on path. II. Intensive properties can't be algebraically added or subtracted. III. Ratio of two extensive properties result into a parameter that depends on amount of substance. IV. Molar heat capacity is an intensive property. The correct order of true / false of the above statements is",
     "options": {
       "A": "If T F T",
       "B": "If F F T",
@@ -791,7 +791,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Consider the following statements : -\n\nI. \\Delta G is negative for a physical process H 2 O (l) → H 2 O (s) ^\\circC.\n\nII. Molar entropy of vapourisation of ice is negative.\n\nIII. In reversible adiabatic process, heat involved is zero and therefore entropy change will be zero.\n\nIV. At absolute zero temperature, entropy of a pure perfectly crystalline substance is zero. The correct order of true / false of the above statements is",
+    "question": "Consider the following statements : - I. \\Delta G is negative for a physical process H 2 O (l) → H 2 O (s) ^\\circC. II. Molar entropy of vapourisation of ice is negative. III. In reversible adiabatic process, heat involved is zero and therefore entropy change will be zero. IV. At absolute zero temperature, entropy of a pure perfectly crystalline substance is zero. The correct order of true / false of the above statements is",
     "options": {
       "A": "T T T T",
       "B": "T F T T",
@@ -1166,7 +1166,7 @@
       "source": "RACE - Thermodynamics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In the reactions I : H 2 → 2H, \\Delta H = 436 kJ II : H 2 + 1 2 O 2 → H 2 O, \\Delta H = - 241.81 kJ III : 2H + 1 2 O 2 → H 2 O, \\Delta H = ? H 2 O can be formed either by II or\n\nIII. Ratio of enthalpy change in III to II is : -",
+    "question": "In the reactions I : H 2 → 2H, \\Delta H = 436 kJ II : H 2 + 1 2 O 2 → H 2 O, \\Delta H = - 241.81 kJ III : 2H + 1 2 O 2 → H 2 O, \\Delta H = ? H 2 O can be formed either by II or III. Ratio of enthalpy change in III to II is : -",
     "options": {
       "A": "2.8",
       "B": "0.36",
@@ -1396,7 +1396,7 @@
       "A": "10.52",
       "B": "-78.84",
       "C": "+57.80",
-      "D": "-57.80 EXERCISE-I"
+      "D": "-57.80"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard thermodynamics principles."

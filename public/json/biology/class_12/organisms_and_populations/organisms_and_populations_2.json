@@ -681,7 +681,7 @@
       "A": "The Kyoto protocol.",
       "B": "The Paris agreement.",
       "C": "The world summit on sustainable development.",
-      "D": "The G20 summit. EXERCISE-I"
+      "D": "The G20 summit."
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Organisms And Populations principles."
@@ -1381,7 +1381,7 @@
       "source": "RACE - Organisms And Populations.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "For the given population growth curve which\n\nstatement is correct .",
+    "question": "For the given population growth curve which statement is correct .",
     "options": {
       "A": "Curve 'a' does not show saturation because rate of popula tion growth is very low.",
       "B": "'K' is carrying capacity and is specific for a given population.",
@@ -1921,7 +1921,7 @@
       "source": "RACE - Organisms And Populations.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Given below are two statements : -\n\nStatement I : An organism is the smallest unit of ecological hierarchy and basic unit of ecological study.\n\nStatement II : Ecological niche is the functional role of any species in an ecosystem or community. In the light of above statements, choose the correct answer from the\n\n**options** given below",
+    "question": "Given below are two statements : - Statement I : An organism is the smallest unit of ecological hierarchy and basic unit of ecological study. Statement II : Ecological niche is the functional role of any species in an ecosystem or community. In the light of above statements, choose the correct answer from the **options** given below",
     "options": {
       "A": "Statement I is true but statement II is false",
       "B": "Statement I is false but statement II is true",

@@ -174,7 +174,7 @@
       "source": "Exercise I-III - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which\n\nstatement is correct for p - type semiconductor",
+    "question": "Which statement is correct for p - type semiconductor",
     "options": {
       "A": "the number of electrons in conduction band is more than the number of holes in valence band at room temperature",
       "B": "the number of holes in valence band is more than the number of electrons in conduction band at room temperature",
@@ -248,7 +248,7 @@
       "A": "lack of free electrons",
       "B": "decrease in electrons",
       "C": "excess of electrons",
-      "D": "none of these SC03 - 0011 Exercise - I Semiconductor Electronics"
+      "D": "none of these SC03 - 0011 Semiconductor Electronics"
     },
     "correct_option": "C",
     "explanation": "In forward bias V 1 > V 2  only is in forward bias"
@@ -913,7 +913,7 @@
       "source": "Exercise I-III - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In a p - n junction the depletion layer of thickness 10 - 6 m has potential across it is 0.1\n\nV. The average electric field is (V/m) : -",
+    "question": "In a p - n junction the depletion layer of thickness 10 - 6 m has potential across it is 0.1 V. The average electric field is (V/m) : -",
     "options": {
       "A": "10 7",
       "B": "10 - 6",
@@ -1736,7 +1736,7 @@
       "D": "A B Y 0 0 1 1 0 1 0 1 0 1 1 0 SC19 - 0011"
     },
     "correct_option": "A",
-    "explanation": "Y = A + AB = A(1+B) = A Exercise - II ( Previous Year Questions )"
+    "explanation": "Y = A + AB = A(1+B) = A ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -1940,7 +1940,7 @@
       "A": "NAND",
       "B": "AND",
       "C": "NOR",
-      "D": "OR SC19 - 0007 EXERCISE - I"
+      "D": "OR SC19 - 0007"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Semiconductor Electronics principles.",
@@ -2167,7 +2167,7 @@
       "source": "Extra Edge - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In half wave rectifier peak value of sinusodial signal is 10\n\nV. Determine D.C. component at output : -",
+    "question": "In half wave rectifier peak value of sinusodial signal is 10 V. Determine D.C. component at output : -",
     "options": {
       "A": "10 V 2",
       "B": "10 V \\pi",
@@ -2218,7 +2218,7 @@
       "A": "2500",
       "B": "2000",
       "C": "3600",
-      "D": "1350 SC01 - 0371 R V diode Exercise - I Semiconductor Electronics Semiconductor Electronics"
+      "D": "1350 SC01 - 0371 R V diode Semiconductor Electronics Semiconductor Electronics"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
@@ -2380,7 +2380,7 @@
       "A": "AND gate",
       "B": "OR gate",
       "C": "NAND gate",
-      "D": "NOR gate SC19 - 0065 Exercise - I"
+      "D": "NOR gate SC19 - 0065"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles."
@@ -2496,7 +2496,7 @@
       "source": "NCR - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "(2) Statement - 1 is True, Statament - 2 is True; Statement - 2 is NOT a correct explanation for Statement -\n\nI. (3) Statement - 1 is True, Statement - 2 is False. (4) Statement - 1 False, Statement - 2 is True. SC01 - 0373",
+    "question": "(2) Statement - 1 is True, Statament - 2 is True; Statement - 2 is NOT a correct explanation for Statement - I. (3) Statement - 1 is True, Statement - 2 is False. (4) Statement - 1 False, Statement - 2 is True. SC01 - 0373",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -2682,7 +2682,7 @@
       "source": "NCR - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Potential drop across a forward biased p - n junction diode is 0.7\n\nV. If a battery of 4 V is applied, calculate the minimum resistance to be put in series, for the maximum current of 5 mA in the circuit.",
+    "question": "Potential drop across a forward biased p - n junction diode is 0.7 V. If a battery of 4 V is applied, calculate the minimum resistance to be put in series, for the maximum current of 5 mA in the circuit.",
     "options": {
       "A": "660Ω",
       "B": "350Ω",
@@ -2873,7 +2873,7 @@
       "source": "NCR - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In an n - type silicon, which of the following\n\nstatement is true:",
+    "question": "In an n - type silicon, which of the following statement is true:",
     "options": {
       "A": "Electrons are majority carriers and trivalent atoms are the dopants.",
       "B": "Electrons are minority carriers and pentavalent atoms are the dopants.",

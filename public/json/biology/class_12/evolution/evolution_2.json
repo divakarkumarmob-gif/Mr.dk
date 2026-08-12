@@ -342,7 +342,7 @@
       "A": "Directional Stabilising Disruptive",
       "B": "Stabilising Directional Disruptive",
       "C": "Disruptive Stabilising Directional",
-      "D": "Directional Disruptive Stabilising EV21 - 0074 Exercise - I"
+      "D": "Directional Disruptive Stabilising EV21 - 0074"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Evolution principles.",
@@ -1087,7 +1087,7 @@
       "source": "RACE - Evolution.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "What is the correct sequence of formation of various structures in order of origin of life?\n\nI. Protobionts\n\nII. Simple organic molecules\n\nIII. Eobionts\n\nIV. Complex organic molecules\n\n**Options:**",
+    "question": "What is the correct sequence of formation of various structures in order of origin of life? I. Protobionts II. Simple organic molecules III. Eobionts IV. Complex organic molecules **Options:**",
     "options": {
       "A": "I, II, III, IV",
       "B": "II, I, III, IV",
@@ -1218,7 +1218,7 @@
       "source": "RACE - Evolution.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which\n\nstatement is not true about the theory of big bang?",
+    "question": "Which statement is not true about the theory of big bang?",
     "options": {
       "A": "It can expl ain the origin of universe",
       "B": "It can explain the origin of life",
@@ -1374,7 +1374,7 @@
       "source": "RACE - Evolution.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Mark out the incorrect\n\nstatement in context of evolution:",
+    "question": "Mark out the incorrect statement in context of evolution:",
     "options": {
       "A": "Evolution term was introduced by Herbert Spencer.",
       "B": "Evolution is a slow and gradual process.",

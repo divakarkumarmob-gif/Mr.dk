@@ -2133,7 +2133,7 @@
       "A": "16 N",
       "B": "8.0 N",
       "C": "2.0 N",
-      "D": "zero Exercise - I"
+      "D": "zero"
     },
     "correct_option": "A",
     "explanation": "If i | p| |p p | |( mv) (mv)| 2mv \\Delta = - = - - ="
@@ -2386,7 +2386,7 @@
       "A": "never",
       "B": "10 s",
       "C": "2 s",
-      "D": "15 s B A C Exercise - I 1"
+      "D": "15 s B A C 1"
     },
     "correct_option": "A",
     "explanation": "If net = 0, a = 0"

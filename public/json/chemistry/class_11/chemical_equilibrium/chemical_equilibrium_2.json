@@ -571,10 +571,10 @@
       "A": "nB nC A 2 3 +",
       "B": "nB 2n A C 3 3 (  + ( ) ) ",
       "C": "In n A B C 2 4 (  (  + ( ) ( ) )  ) ",
-      "D": "In A B C 2 (  + ( ) )  CE17 - 0009 EXERCISE - I"
+      "D": "In A B C 2 (  + ( ) )  CE17 - 0009"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) Choose that options for which su m of stoichiometric coefficient of gas product = n A  nB 2n C 3 3 (  + ( ) )   n 2n n 3 3 + = Exercise - II ( Previous Year Questions )"
+    "explanation": "Ans. ( 2 ) Choose that options for which su m of stoichiometric coefficient of gas product = n A  nB 2n C 3 3 (  + ( ) )   n 2n n 3 3 + = ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -1021,7 +1021,7 @@
       "A": "I, II",
       "B": "II, III",
       "C": "I, III",
-      "D": "I, IV CE15 - 0078 Exercise - I"
+      "D": "I, IV CE15 - 0078"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) ' C 2 C 1 1 K 50 K 2 10 - = = = ",
@@ -1171,7 +1171,7 @@
       "source": "NCR - Chemical Equilibrium.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the reaction : 3 2 (aq) (aq) (aq) Fe SCN [Fe (SCN)] + - + +   ( yellow ) ( colourless ) ( deep red ) Which\n\nstatement is correct ?",
+    "question": "For the reaction : 3 2 (aq) (aq) (aq) Fe SCN [Fe (SCN)] + - + +   ( yellow ) ( colourless ) ( deep red ) Which statement is correct ?",
     "options": {
       "A": "Addition of oxalic acid will decrease the intensity of red colour",
       "B": "Addition of HgCl 2 decreases the intensity of red colour",
@@ -1947,7 +1947,7 @@
       "source": "RACE - Chemical Equilibrium.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "This reversible reaction is studied graphically as shown in the given figure. Select the correct statements out of I, II and III A concentration → E D C G F B Time →\n\nI. Reaction quotient has maximum value at point A\n\nII. Reaction proceeds left to right at a point when [N 2 O 4 ] = [NO 2 ] = 0.1M\n\nIII. K c = Q when point D or F is reached",
+    "question": "This reversible reaction is studied graphically as shown in the given figure. Select the correct statements out of I, II and III A concentration → E D C G F B Time → I. Reaction quotient has maximum value at point A II. Reaction proceeds left to right at a point when [N 2 O 4 ] = [NO 2 ] = 0.1M III. K c = Q when point D or F is reached",
     "options": {
       "A": "I, II",
       "B": "II, III",
@@ -1973,7 +1973,7 @@
       "source": "RACE - Chemical Equilibrium.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "In the following equilibrium : -\n\nI. A + 2B ⇌ C ; K 1\n\nII. C + D ⇌ 3A ; K 2\n\nIII. 6B + D ⇌ 2C ; K 3 hence : -",
+    "question": "In the following equilibrium : - I. A + 2B ⇌ C ; K 1 II. C + D ⇌ 3A ; K 2 III. 6B + D ⇌ 2C ; K 3 hence : -",
     "options": {
       "A": "3K 1 × K 2 = K 3",
       "B": "K 1 3 × K 2 2 = K 3",

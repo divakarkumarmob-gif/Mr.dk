@@ -1840,10 +1840,10 @@
       "A": "1 T 2",
       "B": "1 T 4",
       "C": "1 T 2 2",
-      "D": "1 T 8 Exercise - I"
+      "D": "1 T 8"
     },
     "correct_option": "D",
-    "explanation": "Given KE at 1 P KE 2 =  at O equilibrium position is designated by O  displacement OP = y velocity at 2 2 P v a y  = \\omega - velocity at O = Peak velocity = \\omega a 2 2 2 2 2 1 1 m a m (a y ) 2 2 2 (  \\omega  \\omega - = ( ) )  a a y 2 - = Exercise - I Oscillations"
+    "explanation": "Given KE at 1 P KE 2 =  at O equilibrium position is designated by O  displacement OP = y velocity at 2 2 P v a y  = \\omega - velocity at O = Peak velocity = \\omega a 2 2 2 2 2 1 1 m a m (a y ) 2 2 2 (  \\omega  \\omega - = ( ) )  a a y 2 - = Oscillations"
   },
   {
     "type": "normal_mcq",
@@ -2185,7 +2185,7 @@
       "A": "The particle is at x = a/2 and moving in + X - direction",
       "B": "The particle is at x = a/2 and moving in - X - direction",
       "C": "The particle is at x = - a/2 and moving in + X - direction",
-      "D": "The particle is at x = - a/2 and moving in - X - direction Exercise - I"
+      "D": "The particle is at x = - a/2 and moving in - X - direction"
     },
     "correct_option": "A",
     "explanation": "At x = +A, \\theta = 2 \\pi"
@@ -2571,7 +2571,7 @@
       "source": "Exercise I-III - Oscillations.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is incorrect for an object executing S.H.M.:",
+    "question": "Which of the following statement is incorrect for an object executing S.H.M.:",
     "options": {
       "A": "The value of acceleration is maximum at the extreme points",
       "B": "The total work done for completing one oscillation is zero.",
@@ -2736,7 +2736,7 @@
       "source": "Exercise I-III - Oscillations.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For a particle executing simple harmonic motion which of the following\n\nstatement is not correct:",
+    "question": "For a particle executing simple harmonic motion which of the following statement is not correct:",
     "options": {
       "A": "The total energy of particle always remains the same",
       "B": "The restoring force is always directed towards a fix point.",

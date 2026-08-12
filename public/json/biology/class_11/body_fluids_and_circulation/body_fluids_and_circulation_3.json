@@ -719,7 +719,7 @@
       "A": "B oth the assertion and the reason are true and the reason is a correct explanation of the assertion.",
       "B": "B oth the assertion and reason are true but the reason is not a correct explanation of the assertion.",
       "C": "T he assertion is true but the reason is false.",
-      "D": "B oth the assertion and reason are false. CS37 - 0048 Exercise - I"
+      "D": "B oth the assertion and reason are false. CS37 - 0048"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Body Fluids And Circulation principles.",
@@ -1217,7 +1217,7 @@
       "source": "RACE - Body Fluids And Circulation.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which\n\nstatement is true for haemoglobin ?",
+    "question": "Which statement is true for haemoglobin ?",
     "options": {
       "A": "Healthy aduct has 12 - 16 gm of Hb in every 100 ml of blood.",
       "B": "Hb is iron containing protein complex.",
@@ -1495,7 +1495,7 @@
       "source": "RACE - Body Fluids And Circulation.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is wrong ?",
+    "question": "Which of the following statement is wrong ?",
     "options": {
       "A": "Cardiac output of a person varies according to his physiological demand.",
       "B": "Stroke volume of heart is almost equal to the amount of blood transferred from left atrium to lef t ventricle.",
@@ -1996,7 +1996,7 @@
       "source": "RACE - Body Fluids And Circulation.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Statement I : Arteries do not collapse when empty.\n\nStatement II : Blood flows with a low pressure in veins.",
+    "question": "Statement I : Arteries do not collapse when empty. Statement II : Blood flows with a low pressure in veins.",
     "options": {
       "A": "Statement I and II both are correct.",
       "B": "Statement I is correct but II is incorrect.",

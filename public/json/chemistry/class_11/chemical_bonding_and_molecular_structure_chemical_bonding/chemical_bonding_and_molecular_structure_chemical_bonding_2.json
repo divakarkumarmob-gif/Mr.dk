@@ -94,7 +94,7 @@
       "A": "AlCl 3",
       "B": "AlF 3",
       "C": "AlBr 3",
-      "D": "SnCl 4 EXERCISE-I"
+      "D": "SnCl 4"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical Bonding And Molecular Structure _ chemical Bonding principles."
@@ -116,7 +116,7 @@
       "source": "Chemical Bonding - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is not correct from the point of view of molecular orbital theory?",
+    "question": "Which of the following statement is not correct from the point of view of molecular orbital theory?",
     "options": {
       "A": "Be 2 is not a stable molecule",
       "B": "The 2 is not stable but 2 He + is expected to exist",
@@ -243,7 +243,7 @@
       "source": "Chemical Bonding - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is correct, if %s-character of a hybrid orbital decreases",
+    "question": "Which of the following statement is correct, if %s-character of a hybrid orbital decreases",
     "options": {
       "A": "The bond angle decreases",
       "B": "The bond strength increases",
@@ -1625,10 +1625,10 @@
       "A": "AlCl 3",
       "B": "AlF 3",
       "C": "AlBr 3",
-      "D": "SnCl 4 CB20 - 0004 EXERCISE - I"
+      "D": "SnCl 4 CB20 - 0004"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 2 ) AlF 3 is ionic due to small size of anion (F¯). Exercise - II ( Previous Year Questions )"
+    "explanation": "Ans. ( 2 ) AlF 3 is ionic due to small size of anion (F¯). ( Previous Year Questions )"
   },
   {
     "type": "normal_mcq",
@@ -1900,7 +1900,7 @@
       "A": "Statement I is correct, Statement II is incorrect.",
       "B": "Statement I is incorrect, Statement II is correct.",
       "C": "Both statement are incorrect.",
-      "D": "Both statement is correct. CB12 - 0346 Exercise - I chemical Bonding and Molecular Structure - chemical Bonding NEET : Extra Edge [ Chemistry ]"
+      "D": "Both statement is correct. CB12 - 0346 chemical Bonding and Molecular Structure - chemical Bonding NEET : Extra Edge [ Chemistry ]"
     },
     "correct_option": "D",
     "explanation": "Ans. ( 4 ) The magnitude of H - bonding depends on the physical state of the compound. It is maximum in the solid state and minimum in the gaseous state. Thus, the hydrogen bonds have strong influence on the structure and properties of the compounds."
@@ -2251,7 +2251,7 @@
       "source": "NCR - Chemical Bonding And Molecular Structure - Chemical Bonding.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is correct about the octet theory.",
+    "question": "Which of the following statement is correct about the octet theory.",
     "options": {
       "A": "It is based upon the chemical inertness of noble gases with exceptions like XeF 2 , KrF 2 etc.",
       "B": "This theory does not account for the shape of molecules.",

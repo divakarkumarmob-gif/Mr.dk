@@ -223,7 +223,7 @@
       "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "As shown is the figure, a magnet is brought towards a fixed coil. Due to this the induced emf, current and the charge are E, I and Q respectively. If the speed of the magnet is double then the following\n\nstatement is wrong: -",
+    "question": "As shown is the figure, a magnet is brought towards a fixed coil. Due to this the induced emf, current and the charge are E, I and Q respectively. If the speed of the magnet is double then the following statement is wrong: -",
     "options": {
       "A": "E increases",
       "B": "I increases",
@@ -270,7 +270,7 @@
       "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A transformer is employed to reduce 220 V to 11\n\nV. The primary draws a current of 5 A and the secondary 90 A. The efficiency of the transformer is",
+    "question": "A transformer is employed to reduce 220 V to 11 V. The primary draws a current of 5 A and the secondary 90 A. The efficiency of the transformer is",
     "options": {
       "A": "20%",
       "B": "40%",
@@ -298,7 +298,7 @@
       "A": "The magnet moves with continuously decreasing velocity and ultimately comes to rest",
       "B": "The magnet moves with continuously increasing velocity and ultimately acquires a constant terminal velocity",
       "C": "The magnet moves with continuously increasing velocity and acceleration.",
-      "D": "The magnet moves with continuously increasing velocity but constant acceleration EM02 - 0491 R = 3 \\Omega A L = 1H I 10V B G S N Exercise - I Electromagnetic Induction NEET : Extra Edge [ Physics ]"
+      "D": "The magnet moves with continuously increasing velocity but constant acceleration EM02 - 0491 R = 3 \\Omega A L = 1H I 10V B G S N Electromagnetic Induction NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
@@ -456,12 +456,12 @@
       "source": "Extra Edge - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "(1) 1 8 (2) 1 4 (3) 1 2 (4) 0 EM05 - 0310 Exercise - I",
+    "question": "(1) 1 8 (2) 1 4 (3) 1 2 (4) 0 EM05 - 0310",
     "options": {
       "A": "1 8",
       "B": "1 4",
       "C": "1 2",
-      "D": "0 EM05 - 0310 Exercise - I"
+      "D": "0 EM05 - 0310"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Electromagnetic Induction principles."
@@ -665,7 +665,7 @@
       "source": "NCR - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is/are true: a. Charges in motion (current) can exert force/torque on stationary magnet. b. A Bar magnet in motion (or more generally, a changing magnetic field) can exert force on stationary charge. c. The fundamental significance of faraday's discovery is that electricity and magnetism are related",
+    "question": "Which of the following statement is/are true: a. Charges in motion (current) can exert force/torque on stationary magnet. b. A Bar magnet in motion (or more generally, a changing magnetic field) can exert force on stationary charge. c. The fundamental significance of faraday's discovery is that electricity and magnetism are related",
     "options": {
       "A": "Only a",
       "B": "a and b",
@@ -691,7 +691,7 @@
       "source": "NCR - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is/ are true for two concentric coplanar coil shown: Statement",
+    "question": "Which of the following statement is/ are true for two concentric coplanar coil shown: Statement",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -761,7 +761,7 @@
       "source": "NCR - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is true for two nearby coil as shown A. In the phenomena of mutual induction, self induction of the coil persist B. Net flux through the coil C can be written as L 1 I 1 +M 12 I 2 Where L 1 is self induction of coil",
+    "question": "Which of the following statement is true for two nearby coil as shown A. In the phenomena of mutual induction, self induction of the coil persist B. Net flux through the coil C can be written as L 1 I 1 +M 12 I 2 Where L 1 is self induction of coil",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1690,7 +1690,7 @@
       "source": "RACE - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A conducting circular loop is placed in X - Y plane in presence of magnetic field ( ) 3 2 ˆ ˆ B 3t j 3t k = + \\lambda in SI unit. If the radius of the loop is 1m, the induced emf in the loop, at time, t = 2s is n \\pi\n\nV. The value of n is…….. EM02 - 0057",
+    "question": "A conducting circular loop is placed in X - Y plane in presence of magnetic field ( ) 3 2 ˆ ˆ B 3t j 3t k = + \\lambda in SI unit. If the radius of the loop is 1m, the induced emf in the loop, at time, t = 2s is n \\pi V. The value of n is…….. EM02 - 0057",
     "options": {
       "A": "Option A",
       "B": "Option B",
@@ -1737,7 +1737,7 @@
       "source": "RACE - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match the List - I with List -\n\nII. List I List II A. AC generator\n\nI. Presence of both L and C B. Transformer\n\nII. Electromagnetic Induction C. Resonance phenomenon to occur\n\nIII. Quality factor D. Sharpness of resonance\n\nIV. Mutual Inductance Choose the correct answer from the\n\n**options** given below:",
+    "question": "Match the List - I with List - II. List I List II A. AC generator I. Presence of both L and C B. Transformer II. Electromagnetic Induction C. Resonance phenomenon to occur III. Quality factor D. Sharpness of resonance IV. Mutual Inductance Choose the correct answer from the **options** given below:",
     "options": {
       "A": "A - IV, B - II, C - I, D - III",
       "B": "A - II, B - I, C - III, D - IV",
@@ -1830,7 +1830,7 @@
       "source": "RACE - Electromagnetic Induction.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "In an ac generator, a rectangular coil of 100 turns each having area 14 × 10 - 2 m 2 is rotated at 360 rev/min about an axis perpendicular to a uniform magnetic field of magnitude 3.0 T. The maximum value of the emf produced will be ________\n\nV. 22 Take 7 (  \\pi = ( ) )  EM15 - 0012",
+    "question": "In an ac generator, a rectangular coil of 100 turns each having area 14 × 10 - 2 m 2 is rotated at 360 rev/min about an axis perpendicular to a uniform magnetic field of magnitude 3.0 T. The maximum value of the emf produced will be ________ V. 22 Take 7 (  \\pi = ( ) )  EM15 - 0012",
     "options": {
       "A": "Option A",
       "B": "Option B",

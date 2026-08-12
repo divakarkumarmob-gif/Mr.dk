@@ -36,7 +36,7 @@
       "source": "RACE - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "identify the solar cell characteristics from the following\n\n**options** :",
+    "question": "identify the solar cell characteristics from the following **options** :",
     "options": {
       "D": "SC09 - 0003 B A Y V",
       "A": "Option A",
@@ -59,7 +59,7 @@
       "source": "RACE - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match the List I with List II . List I List II A. Intrinsic Semiconductor\n\nI. Fermi - level near conduction band B. n - type semiconductor\n\nII. Fermi - level at middle C. p - type semiconductor\n\nIII. Fermi - level near valence band D. Metals\n\nIV. Fermi - level inside conduction band Choose the correct answer from the\n\n**options** given below:",
+    "question": "Match the List I with List II . List I List II A. Intrinsic Semiconductor I. Fermi - level near conduction band B. n - type semiconductor II. Fermi - level at middle C. p - type semiconductor III. Fermi - level near valence band D. Metals IV. Fermi - level inside conduction band Choose the correct answer from the **options** given below:",
     "options": {
       "A": "→ I,",
       "B": "→ II,",
@@ -106,7 +106,7 @@
       "source": "RACE - Semiconductor Electronics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Statement I : When a Si sample is doped with Boron, it becomes P type and when doped by Arsenic it becomes N - type semi conductor such that P - type has excess holes and N - type has excess electrons.\n\nStatement II : When such P - type and N - type semi - conductors, are fused to make a junction, a current will automatically flow which can be detected with an externally connected ammeter. In the light of above statements, choose the most appropriate answer from the\n\n**options** given below.\n\n**Options:**",
+    "question": "Statement I : When a Si sample is doped with Boron, it becomes P type and when doped by Arsenic it becomes N - type semi conductor such that P - type has excess holes and N - type has excess electrons. Statement II : When such P - type and N - type semi - conductors, are fused to make a junction, a current will automatically flow which can be detected with an externally connected ammeter. In the light of above statements, choose the most appropriate answer from the **options** given below. **Options:**",
     "options": {
       "A": "Both Statement I and statement II are incorrect",
       "B": "Statement I is incorrect but statement II is correct",
@@ -582,7 +582,7 @@
       "A": "NAND",
       "B": "AND",
       "C": "NOR",
-      "D": "OR EXERCISE-I"
+      "D": "OR"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Semiconductor Electronics principles.",

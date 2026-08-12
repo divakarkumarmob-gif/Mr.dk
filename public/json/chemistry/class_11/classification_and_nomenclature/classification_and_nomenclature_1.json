@@ -294,7 +294,7 @@
       "A": "1 - Propanol & 2 - Propanol",
       "B": "Ethanol & Propanal",
       "C": "Acetone & Acetaldehyde",
-      "D": "Acetic acid & Butyric acid NC03 - 0008 CH 2 = CH - C - CH = CH - C  N O HC  C - C - CH = CH - C  N O NH 2 N N CH 3 - N - CH 3 CH 3 CH 3 CH NH 2 CH 3 CH 3 - C - CH 3 O CH 3 - CH - O - CH - CH 3 CH 3 CH 3 EXERCISE - I 1"
+      "D": "Acetic acid & Butyric acid NC03 - 0008 CH 2 = CH - C - CH = CH - C  N O HC  C - C - CH = CH - C  N O NH 2 N N CH 3 - N - CH 3 CH 3 CH 3 CH NH 2 CH 3 CH 3 - C - CH 3 O CH 3 - CH - O - CH - CH 3 CH 3 CH 3 1"
     },
     "correct_option": "A",
     "explanation": "Ans. ( 1 ) Olefinic bond → (C=C)  Number of olefinic bond = 2"
@@ -1215,7 +1215,7 @@
       "A": "4 - Cyanohex - 2 - one",
       "B": "2 - Ethyl - 4 - oxopentanenitrile",
       "C": "2 - - cyanohexane",
-      "D": "2 - Oxo - hexane - 4 - nitrile NC12 - 0387 CH 3 Cl NO 2 CH 2 =CH - CH 2 - CH - C  CH OH CH 2 - COOH CH - OH CH - COOH CH 2 - COOH CH 3 C 2 H 5 Cl Br CH 3 Cl CH 2 =CH - C - CH 2 - C  CH CH 2 CH 3 - C - CH 2 - CH - CH 2 - CH 3 O CN Exercise - I classification and Nomenclature NEET : Extra Edge [ Chemistry ]"
+      "D": "2 - Oxo - hexane - 4 - nitrile NC12 - 0387 CH 3 Cl NO 2 CH 2 =CH - CH 2 - CH - C  CH OH CH 2 - COOH CH - OH CH - COOH CH 2 - COOH CH 3 C 2 H 5 Cl Br CH 3 Cl CH 2 =CH - C - CH 2 - C  CH CH 2 CH 3 - C - CH 2 - CH - CH 2 - CH 3 O CN classification and Nomenclature NEET : Extra Edge [ Chemistry ]"
     },
     "correct_option": "B",
     "explanation": "Ans. ( 2 ) 2 - Ethyl - 4 - oxopentanenitrile"
@@ -1297,7 +1297,7 @@
       "D": "1 - Bromo - 2 - chloro - 4,4 - imenthylcyclohex - 1 - ene NC13 - 0114"
     },
     "correct_option": "B",
-    "explanation": "Ans. ( 2 ) 1 - Bromo - 6 - chloro - 4 , 4 - dimethylcyclohex - 1 - ene Exercise - I NEET : Extra Edge [ Chemistry ]"
+    "explanation": "Ans. ( 2 ) 1 - Bromo - 6 - chloro - 4 , 4 - dimethylcyclohex - 1 - ene NEET : Extra Edge [ Chemistry ]"
   },
   {
     "type": "normal_mcq",
@@ -3165,7 +3165,7 @@
       "A": "Ethoxy formyl chloride",
       "B": "Ethoxy methanoyl chloride",
       "C": "Ethyl chloro methanoate",
-      "D": "Ethoxy carbonyl chloride EXERCISE-I"
+      "D": "Ethoxy carbonyl chloride"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard classification And Nomenclature principles."

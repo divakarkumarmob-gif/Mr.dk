@@ -50,7 +50,7 @@
       "A": "B oth the assertion and the reason are true and the reason is a correct explanation of the assertion.",
       "B": "B oth the assertion and reason are true but the reason is not a correct explanation of the assertion.",
       "C": "A ssertion is true but the reason is false.",
-      "D": "B oth the assertion and reason are false. HR17 - 0149 Exercise - I"
+      "D": "B oth the assertion and reason are false. HR17 - 0149"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Human Reproduction principles.",
@@ -3537,7 +3537,7 @@
       "source": "Human Reproduction - Race (1).pdf.txt",
       "class_level": "class_12"
     },
-    "question": "identify the human embryonic stage shown below and\n\n**select the correct option** with its matching with site of occurance in a normal pregnant female. Developmental stage Site of occurrence",
+    "question": "identify the human embryonic stage shown below and **select the correct option** with its matching with site of occurance in a normal pregnant female. Developmental stage Site of occurrence",
     "options": {
       "A": "Blastocyst",
       "B": "8-celled morula",

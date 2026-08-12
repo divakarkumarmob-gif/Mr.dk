@@ -196,7 +196,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The equation of progressive wave is t x Y 4sin 5 9 6   \\pi (  = \\pi - +   ( ) )    where x and y are in cm. Which of the following\n\nstatement is true?",
+    "question": "The equation of progressive wave is t x Y 4sin 5 9 6   \\pi (  = \\pi - +   ( ) )    where x and y are in cm. Which of the following statement is true?",
     "options": {
       "A": "\\lambda = 18 cm",
       "B": "amplitude = 0.04 cm",
@@ -270,7 +270,7 @@
       "A": "amplitude 6 units",
       "B": "amplitude 4 units",
       "C": "wave speed 2 units",
-      "D": "wave speed 1/2 units WM03 - 0006 Exercise - I"
+      "D": "wave speed 1/2 units WM03 - 0006"
     },
     "correct_option": "C",
     "explanation": "6 v 2 units k 3 \\omega = = ="
@@ -658,7 +658,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "At the room temperature the velocity of sound in O 2 gas is\n\nV. Then in mixture of H 2 and O 2 gas the speed of sound at same temperature :",
+    "question": "At the room temperature the velocity of sound in O 2 gas is V. Then in mixture of H 2 and O 2 gas the speed of sound at same temperature :",
     "options": {
       "A": "will be less than V",
       "B": "will be more than V",
@@ -934,7 +934,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "velocity of sound in medium is\n\nV. If the density of the medium is doubled, what will be the new velocity of sound?",
+    "question": "velocity of sound in medium is V. If the density of the medium is doubled, what will be the new velocity of sound?",
     "options": {
       "A": "2V",
       "B": "V",
@@ -1431,7 +1431,7 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Two plane progressive waves shows destructive interference at point P. Which of the following\n\nstatement is true at point P : -",
+    "question": "Two plane progressive waves shows destructive interference at point P. Which of the following statement is true at point P : -",
     "options": {
       "A": "Crest of one wave is superimposed on crest of another wave",
       "B": "Trough of one wave is superimposed on crest of another wave",
@@ -2479,15 +2479,15 @@
       "source": "Exercise I-III - Wave Motion.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "A pipe is closed from one end and open from another end then which\n\nstatement is true?",
+    "question": "A pipe is closed from one end and open from another end then which statement is true?",
     "options": {
       "A": "Node is formed slightly above the open end.",
       "B": "Node is formed slightly below the open end.",
       "C": "Antinode is formed slightly above the open end.",
-      "D": "Antinode formed slightly below the open end. WM15 - 0025 EXERCISE - I"
+      "D": "Antinode formed slightly below the open end. WM15 - 0025"
     },
     "correct_option": "C",
-    "explanation": "It occurs due to end correction. Exercise - II (Previous Year Questions)"
+    "explanation": "It occurs due to end correction. (Previous Year Questions)"
   },
   {
     "type": "normal_mcq",
@@ -2806,7 +2806,7 @@
       "A": "x y 0.02sin 8 t 20   = \\pi -    ",
       "B": "x y 0.02sin 8 t 20   = \\pi +    ",
       "C": "x y 0.015sin8 t 20   = + \\pi +    ",
-      "D": "x y 0.015sin8 t 20   = - \\pi +     WM01 - 0257 Exercise - I Wave Motion Wave Motion"
+      "D": "x y 0.015sin8 t 20   = - \\pi +     WM01 - 0257 Wave Motion Wave Motion"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles."
@@ -2898,7 +2898,7 @@
       "A": "25 km",
       "B": "250 km",
       "C": "2500 km",
-      "D": "5000 km WM08 - 008 5 Exercise - I"
+      "D": "5000 km WM08 - 008 5"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard Wave Motion principles.",

@@ -108,7 +108,7 @@
       "A": "Assertion is true but the reason is false.",
       "B": "Both the assertion and reason are true but the reason is not a correct explanation of the assertion.",
       "C": "Both the assertion and the reason a re true and the reason is a correct explanation of the assertion.",
-      "D": "Both assertion and reason are false . RS15 - 0267 Exercise - I"
+      "D": "Both assertion and reason are false . RS15 - 0267"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Breathing And Exchange Of Gases principles.",
@@ -323,7 +323,7 @@
       "source": "RACE - Breathing And Exchange Of Gases.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is incorrect?",
+    "question": "Which of the following statement is incorrect?",
     "options": {
       "A": "Nearly 20 - 25 percent of CO 2 is transported by RBC’s.",
       "B": "About 3 percent of CO 2 is carried in a dissolved state through plasma.",
@@ -625,7 +625,7 @@
       "source": "RACE - Breathing And Exchange Of Gases.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is correct ? (1) Solubility of CO 2 is 20 - 25 times higher than that of O",
+    "question": "Which of the following statement is correct ? (1) Solubility of CO 2 is 20 - 25 times higher than that of O",
     "options": {
       "A": "Option A",
       "B": "Option B",

@@ -86,10 +86,10 @@
       "A": "2 m/s",
       "B": "1.5 m/s",
       "C": "1 m/s",
-      "D": "2.5 m/s CM13 - 0011 EXERCISE - I"
+      "D": "2.5 m/s CM13 - 0011"
     },
     "correct_option": "C",
-    "explanation": "By C onservation of linear momentum i f p = p \\rho\\rho in x direction A A A B x m v =(m m )v + in y direction B B A B y m v =(m m )v + x 30 v m / s 50 = y 40 v m / s 50 = ( ) ( ) 2 2 2 2 net x y 3 4 v v v 5 5 (  (  = + = + ( ) ( ) )  )  = 1 m/s Exercise - II ( Previous Year Questions)"
+    "explanation": "By C onservation of linear momentum i f p = p \\rho\\rho in x direction A A A B x m v =(m m )v + in y direction B B A B y m v =(m m )v + x 30 v m / s 50 = y 40 v m / s 50 = ( ) ( ) 2 2 2 2 net x y 3 4 v v v 5 5 (  (  = + = + ( ) ( ) )  )  = 1 m/s ( Previous Year Questions)"
   },
   {
     "type": "figure_mcq",
@@ -316,7 +316,7 @@
       "A": "1 Å",
       "B": "2.5 Å",
       "C": "1.24 Å",
-      "D": "1.5 Å CM01 - 1038 O 2 O 1 O 28 cm 21 cm m 1 m 2 v 2 v 1 Exercise - I Collisions and Centre of Mass NEET : Extra Edge [ Physics ]"
+      "D": "1.5 Å CM01 - 1038 O 2 O 1 O 28 cm 21 cm m 1 m 2 v 2 v 1 Collisions and Centre of Mass NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."
@@ -454,7 +454,7 @@
       "A": "35.3 cm",
       "B": "25.2 cm",
       "C": "17.7 cm",
-      "D": "zero CM01 - 1039 Exercise - I"
+      "D": "zero CM01 - 1039"
     },
     "correct_option": "C",
     "explanation": "Correct answer is option (C). Step-by-step physics solution based on standard Collisions And Centre Of Mass principles."

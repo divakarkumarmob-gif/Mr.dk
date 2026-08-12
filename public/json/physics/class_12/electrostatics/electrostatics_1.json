@@ -1124,7 +1124,7 @@
       "source": "Electrostatics - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A solid conducting sphere having a charge Q is surrounded by an uncharged concentric conducting spherical shell. Let the potential difference between the surface of the solid sphere and the outer surface of the shell be\n\nV. If the shell is now given a charge -3Q the new potential difference between the same two surfaces is :-",
+    "question": "A solid conducting sphere having a charge Q is surrounded by an uncharged concentric conducting spherical shell. Let the potential difference between the surface of the solid sphere and the outer surface of the shell be V. If the shell is now given a charge -3Q the new potential difference between the same two surfaces is :-",
     "options": {
       "A": "V",
       "B": "2V",
@@ -2726,7 +2726,7 @@
       "A": "2 rV R",
       "B": "2 3 R V r",
       "C": "2 RV r",
-      "D": "V r EXERCISE-II"
+      "D": "V r"
     },
     "correct_option": "A",
     "explanation": "tan θ = Fe 1 mg m ⇒ θ ∝ this if α > β ⇒ m 1 < m 2"
@@ -3372,7 +3372,7 @@
       "source": "Electrostatics_Ex.pdf.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Match List-I with List-II List - I (Application of Gauss Law) List - II (Value of |E|) A. Field inside thin shell\n\nI. 0 ˆ n 2 r λ πε B. Field outside thin shell\n\nII. 2 0 q ˆ r 4 R πε C. Field of thin shell at the surface\n\nIII. 2 0 q ˆ r 4 r πε D. Field due to long charged wire\n\nIV. Zero (Here symbols have their usual meaning and R is the radius of thin shell) Choose the correct answer from the\n\n**options** given below :",
+    "question": "Match List-I with List-II List - I (Application of Gauss Law) List - II (Value of |E|) A. Field inside thin shell I. 0 ˆ n 2 r λ πε B. Field outside thin shell II. 2 0 q ˆ r 4 R πε C. Field of thin shell at the surface III. 2 0 q ˆ r 4 r πε D. Field due to long charged wire IV. Zero (Here symbols have their usual meaning and R is the radius of thin shell) Choose the correct answer from the **options** given below :",
     "options": {
       "A": "A-I, B-II, C-III, D-IV",
       "B": "A-IV, B-III, C-II, D-I",

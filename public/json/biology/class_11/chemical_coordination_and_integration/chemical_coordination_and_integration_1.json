@@ -2755,7 +2755,7 @@
       "A": "Thymus",
       "B": "Pineal",
       "C": "Adrenal",
-      "D": "Pituitary EXERCISE-I"
+      "D": "Pituitary"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard chemical coordination And integration principles."
@@ -3608,7 +3608,7 @@
       "source": "Chemical Coordination And Integration - Race.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Match list-I with II and\n\n**select the correct option** :-",
+    "question": "Match list-I with II and **select the correct option** :-",
     "options": {
       "A": "Myxodema",
       "B": "heat beat",

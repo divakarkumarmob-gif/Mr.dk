@@ -100,7 +100,7 @@
       "A": "[Ar] 3d 8 4s 2",
       "B": "[Ar] 3d 10 4s 1",
       "C": "[Ar] 3d 5 4s 2",
-      "D": "[Ar] 3d 7 4s 2 DB01 - 0013 EXERCISE - I d and f Block Elements"
+      "D": "[Ar] 3d 7 4s 2 DB01 - 0013 d and f Block Elements"
     },
     "correct_option": "C",
     "explanation": "Ans. ( 3 ) Mn shows maximum oxidation state s from +2 to +",
@@ -404,10 +404,10 @@
       "A": "La",
       "B": "Nd",
       "C": "Ce",
-      "D": "Eu DB01 - 0088 Exercise - I"
+      "D": "Eu DB01 - 0088"
     },
     "correct_option": "D",
-    "explanation": "Ans. ( 4 ) Eu : → 54 [Xe] 4f 7 5d 0 6s 2 Eu 2+ : → 54 [Xe] 4f 7 (half filled configuration) Also Eu 2+ is strong reducing agent changing to common +3 state. Exercise - I d and f - B lock Elements NEET : Extra Edge [ Chemistry ]"
+    "explanation": "Ans. ( 4 ) Eu : → 54 [Xe] 4f 7 5d 0 6s 2 Eu 2+ : → 54 [Xe] 4f 7 (half filled configuration) Also Eu 2+ is strong reducing agent changing to common +3 state. d and f - B lock Elements NEET : Extra Edge [ Chemistry ]"
   },
   {
     "type": "normal_mcq",
@@ -533,7 +533,7 @@
       "source": "NCR - D And F Block Elements.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following\n\nstatement is incorrect in context of Enthalpy of atomisation.",
+    "question": "Which of the following statement is incorrect in context of Enthalpy of atomisation.",
     "options": {
       "A": "One unpaired electron per ‘d’ orbitals is particularly favourable for strong inter atomic interaction.",
       "B": "Metals of the 2 nd and 3 rd series of d - Block have greater enthalpies of atomisation than the corresponding elements of the first series.",
@@ -1296,7 +1296,7 @@
       "source": "RACE - D And F Block Elements.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which one amongst the following are good oxidizing agents? A. Sm 2+ B. Ce 2+ C. Ce 4+ D. Tb 4+ Choose the most appropriate answer from the\n\n**options** given below :",
+    "question": "Which one amongst the following are good oxidizing agents? A. Sm 2+ B. Ce 2+ C. Ce 4+ D. Tb 4+ Choose the most appropriate answer from the **options** given below :",
     "options": {
       "A": "C only",
       "B": "D only",
@@ -1396,7 +1396,7 @@
       "source": "RACE - D And F Block Elements.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "Which of the following elements have half - filled f - orbitals in their ground state ? (Given : atomic number Sm 62; Eu 63; Tb 65;Gd 64, Pm 61 = = = = = ) A. Sm B. Eu C. Tb D. Gd E. Pm Choose the correct answer from the\n\n**options** given below:",
+    "question": "Which of the following elements have half - filled f - orbitals in their ground state ? (Given : atomic number Sm 62; Eu 63; Tb 65;Gd 64, Pm 61 = = = = = ) A. Sm B. Eu C. Tb D. Gd E. Pm Choose the correct answer from the **options** given below:",
     "options": {
       "A": "B and D only",
       "B": "A and E only",

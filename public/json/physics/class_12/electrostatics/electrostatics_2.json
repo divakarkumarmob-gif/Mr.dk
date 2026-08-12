@@ -63,7 +63,7 @@
       "A": "0.8 J",
       "B": "1.0 J",
       "C": "1.2 J",
-      "D": "1.5 J EXERCISE-II"
+      "D": "1.5 J"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard electrostatics principles."
@@ -133,7 +133,7 @@
       "A": "8.6 × 10 13 C",
       "B": "6.8 × 10 26 C",
       "C": "8.6 × 10 3 C",
-      "D": "9 × 10 6 C EL38 - 0008 70cm 9e 16e Exercise - I electrostatics"
+      "D": "9 × 10 6 C EL38 - 0008 70cm 9e 16e electrostatics"
     },
     "correct_option": "A",
     "explanation": "2 e m 2 2 GM M kq R R = 11 25 23 9 6.67 10 10 10 q 9 10 -    =  = 8.6 × 10 13 C"
@@ -174,7 +174,7 @@
       "source": "Exercise I-III - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "identify the wrong\n\nstatement in the following : - Coulomb's law correctly describes the electric force that.",
+    "question": "identify the wrong statement in the following : - Coulomb's law correctly describes the electric force that.",
     "options": {
       "A": "binds the electrons of an atom to it's nucleus",
       "B": "binds the protons and neutrons in the nucleus of an atom",
@@ -616,7 +616,7 @@
       "source": "Exercise I-III - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which\n\nstatement is true? (i) A ring of radius R carries a uniformly distributed charge +Q. A point charge - q is placed on the axis of the ring at a distance 2R from its centre and released. The particle executes simple harmonic motion along the axis of the ring. (ii) Electrons move from a region of higher potential to that of lower potential",
+    "question": "Which statement is true? (i) A ring of radius R carries a uniformly distributed charge +Q. A point charge - q is placed on the axis of the ring at a distance 2R from its centre and released. The particle executes simple harmonic motion along the axis of the ring. (ii) Electrons move from a region of higher potential to that of lower potential",
     "options": {
       "A": "only",
       "B": "only",
@@ -1203,7 +1203,7 @@
       "A": "q 1 2 - +",
       "B": "2q 2 2 - +",
       "C": "- 2q",
-      "D": "+q EL23 - 0054 A r 1 B Y S Q R P E ሬ ሬ Ԧ x Q +q a +q Exercise - I electrostatics NEET : Extra Edge [ Physics ]"
+      "D": "+q EL23 - 0054 A r 1 B Y S Q R P E ሬ ሬ Ԧ x Q +q a +q electrostatics NEET : Extra Edge [ Physics ]"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard electrostatics principles.",
@@ -1367,7 +1367,7 @@
       "A": "a is positive, b is negative",
       "B": "a & b both are positive",
       "C": "a & b both are negative",
-      "D": "a is negative, b is positive EL07 - 0107 Exercise - I"
+      "D": "a is negative, b is positive EL07 - 0107"
     },
     "correct_option": "A",
     "explanation": "Correct answer is option (A). Step-by-step physics solution based on standard electrostatics principles.",
@@ -2049,7 +2049,7 @@
       "source": "NCR - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "The electric potential at a point in free space due to a charge Q coulomb is Q × 10 11\n\nV. The electric field at that point is :",
+    "question": "The electric potential at a point in free space due to a charge Q coulomb is Q × 10 11 V. The electric field at that point is :",
     "options": {
       "A": "12πε 0 Q × 10 22 V m - 1",
       "B": "4πε 0 Q × 10 22 V m - 1",
@@ -2189,7 +2189,7 @@
       "source": "NCR - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is true about the relation between electric field and potential?",
+    "question": "Which of the following statement is true about the relation between electric field and potential?",
     "options": {
       "A": "Electric field is in the direction in which the potential decreases steepest.",
       "B": "Magnitude of electric field is given by the change in the magnitude of potential per unit displacement normal to the equipotential surface at that point.",
@@ -2373,7 +2373,7 @@
       "source": "NCR - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Find the correct\n\n**options** regarding Equipotential surface for given charge distribution : -",
+    "question": "Find the correct **options** regarding Equipotential surface for given charge distribution : -",
     "options": {
       "D": "All of these EL25 - 0026",
       "A": "Option A",
@@ -3349,7 +3349,7 @@
       "source": "RACE - Electrostatics.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Given below are two statements.\n\nStatement I : Electric potential is constant within and at the surface of each conductor.\n\nStatement II : Electric field just outside a charged conductor is perpendicular to the surface of the conductor at every point. In the light of the above statements, choose the most appropriate answer from the\n\n**options** give n below.",
+    "question": "Given below are two statements. Statement I : Electric potential is constant within and at the surface of each conductor. Statement II : Electric field just outside a charged conductor is perpendicular to the surface of the conductor at every point. In the light of the above statements, choose the most appropriate answer from the **options** give n below.",
     "options": {
       "A": "Both statement I and statement II are correct",
       "B": "Both statement I and statement II are incorrect",

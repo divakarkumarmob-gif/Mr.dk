@@ -494,7 +494,7 @@
       "A": "a 2 1 1 2 E K 1 1 ln K R T T (  = - ( ) ) ",
       "B": "a 2 1 2 1 2 1 E K T T log K 2.303 T T (  = ( ) - ) ",
       "C": "a 2 1 1 2 E K 1 1 ln K 2.303R T T (  = - ( ) ) ",
-      "D": "a 2 2 1 1 1 2 E K T T K 2.303R T T - (  = ( ) )  CK24 - 0126 Exercise - I chemical kinetics NEET : Extra Edge [ Chemistry ]"
+      "D": "a 2 2 1 1 1 2 E K T T K 2.303R T T - (  = ( ) )  CK24 - 0126 chemical kinetics NEET : Extra Edge [ Chemistry ]"
     },
     "correct_option": "A",
     "explanation": "Ans. (1) As per theory"
@@ -644,10 +644,10 @@
       "A": "T he degree of dissociation is equal to e - kt",
       "B": "A plot of reciprocal concentration of the reactant vs time gives a straight line",
       "C": "T he time taken for the completion of 75% reaction is thrice the t 1/2 of the reaction",
-      "D": "T he pre - exponential factor in the Arrhenius equation has the dimension of time, T - 1 CK12 - 0251 Exercise - I"
+      "D": "T he pre - exponential factor in the Arrhenius equation has the dimension of time, T - 1 CK12 - 0251"
     },
     "correct_option": "D",
-    "explanation": "Ans. (4) As per theory Exercise - I NEET : Extra Edge [ Chemistry ]"
+    "explanation": "Ans. (4) As per theory NEET : Extra Edge [ Chemistry ]"
   },
   {
     "type": "normal_mcq",
@@ -1840,7 +1840,7 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "The following results were obtained during kinetic studies of the reaction; 2A + B ⎯ → Products Experiment [A] [B] Initial rate of reaction (in mol L - 1 ) (in mol L - 1 ) (in mol L - 1 )\n\nI. 0.10 0.20 6.93×10 - 3\n\nII. 0.10 0.25 6.93×10 - 3\n\nIII. 0.20 0.30 1.386×10 - 2 The time (in minutes) required to consume half of A is",
+    "question": "The following results were obtained during kinetic studies of the reaction; 2A + B ⎯ → Products Experiment [A] [B] Initial rate of reaction (in mol L - 1 ) (in mol L - 1 ) (in mol L - 1 ) I. 0.10 0.20 6.93×10 - 3 II. 0.10 0.25 6.93×10 - 3 III. 0.20 0.30 1.386×10 - 2 The time (in minutes) required to consume half of A is",
     "options": {
       "A": "5",
       "B": "10",
@@ -1890,7 +1890,7 @@
       "source": "RACE - Chemical Kinetics.pdf.txt",
       "class_level": "class_11"
     },
-    "question": "For the noN\\cdot stoichiometric reaction, 2A + B → C + D, the following kinetic data were obtained in three separate experiments, all at 298K Initial Initial Initial rate of concentration concentration formation of C [A] [B] ( mol L - 1 s - 1 )\n\nI. 0.1 M 0.1 M 1.2 × 10 - 3\n\nII. 0.1 M 0.2 M 1.2 × 10 - 3\n\nIII. 0.2 M 0.1 M 2.4 × 10 - 3 The rate law for the formation of C is",
+    "question": "For the noN\\cdot stoichiometric reaction, 2A + B → C + D, the following kinetic data were obtained in three separate experiments, all at 298K Initial Initial Initial rate of concentration concentration formation of C [A] [B] ( mol L - 1 s - 1 ) I. 0.1 M 0.1 M 1.2 × 10 - 3 II. 0.1 M 0.2 M 1.2 × 10 - 3 III. 0.2 M 0.1 M 2.4 × 10 - 3 The rate law for the formation of C is",
     "options": {
       "A": "dC k[A][B] dt =",
       "B": "2 dC k[A] [B] dt =",

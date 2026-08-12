@@ -495,7 +495,7 @@
       "source": "Electromagnetic Waves _EMW_ - Exercise.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "Which of the following\n\nstatement is false for the properties of electromagnetic waves ?",
+    "question": "Which of the following statement is false for the properties of electromagnetic waves ?",
     "options": {
       "A": "These waves do not require any material medium for propagation",
       "B": "Both electric and magnetic field vectors attain the maxima and minima at the same place and same time",
@@ -615,7 +615,7 @@
       "A": "Infra-red waves produce heating in a microwave oven",
       "B": "The frequency of the microwaves must match the resonant frequency of the water molecules",
       "C": "The frequency of the microwaves has no relation with natural frequency of water molecules",
-      "D": "Microwaves are heat waves, so always produce heating EXERCISE-I"
+      "D": "Microwaves are heat waves, so always produce heating"
     },
     "correct_option": "A",
     "explanation": "Energy per unit volume U V = 2 0 B 2 μ U = 2 0 B V 2 × μ (total energy stored) = 2 0 0 i V 2r 2 μ   ×   μ   ⇒ 2 0 2 i V 8r μ ⇒ 16 10 J 2 - π ×"
@@ -845,7 +845,7 @@
       "A": "i",
       "B": "i 2",
       "C": "i 4",
-      "D": "None of these EW01 - 0447 Exercise - I"
+      "D": "None of these EW01 - 0447"
     },
     "correct_option": "B",
     "explanation": "Correct answer is option (B). Step-by-step physics solution based on standard Electromagnetic Waves principles."
@@ -1509,7 +1509,7 @@
       "source": "NCR - Electromagnetic Waves.pdf.txt",
       "class_level": "class_12"
     },
-    "question": "A : - wavelength of microwaves is greater than that of UV rays B : - wavelength of infrared rays is lesser than that of UV rays C : - wavelength of microwaves is lesser than that of infrared rays D : - Gamma Rays has shortest wavelength in the electromagnetic spectrum Choose correct option from the given\n\n**options**",
+    "question": "A : - wavelength of microwaves is greater than that of UV rays B : - wavelength of infrared rays is lesser than that of UV rays C : - wavelength of microwaves is lesser than that of infrared rays D : - Gamma Rays has shortest wavelength in the electromagnetic spectrum Choose correct option from the given **options**",
     "options": {
       "A": "A & B are true",
       "B": "B & C are true",
