@@ -7,6 +7,7 @@ import AdvancedPDFViewer from './AdvancedPDFViewer';
 import { generateNEETPdf } from '../lib/pdfUtils';
 import { storageService } from '../lib/storageService';
 import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
+import { sanitizeForFirestore } from '../utils/api';
 import MindRefreshGame from './MindRefreshGame';
 import QuestionFormattedText from './QuestionFormattedText';
 import QuestionImage from './QuestionImage';
@@ -256,7 +257,8 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                 localStorage.setItem(`stats_${user.uid}`, JSON.stringify(stats));
             } else {
                 console.log("Attempting to submit test, user.uid:", user.uid);
-                await addDoc(collection(db, 'users', user.uid, 'results'), resultData);
+                const sanitizedPayload = sanitizeForFirestore(resultData);
+                await addDoc(collection(db, 'users', user.uid, 'results'), sanitizedPayload);
             }
             console.log("Test submitted successfully");
 

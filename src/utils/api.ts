@@ -79,3 +79,27 @@ export async function getPdfViewerUrl(pdfUrl: string): Promise<string> {
   return getApiUrl(`/api/proxy-pdf?url=${encodeURIComponent(pdfUrl)}&token=${encodeURIComponent(token)}`);
 }
 
+/**
+ * Recursively strips any `undefined` keys or converts them so Firestore addDoc() never throws:
+ * "Function addDoc() called with invalid data. Unsupported field value: undefined"
+ */
+export function sanitizeForFirestore<T>(obj: T): T {
+  if (obj === null || obj === undefined) {
+    return null as any;
+  }
+  if (Array.isArray(obj)) {
+    return obj.map(sanitizeForFirestore) as any;
+  }
+  if (typeof obj === 'object') {
+    const cleaned: any = {};
+    for (const [key, value] of Object.entries(obj)) {
+      if (value !== undefined) {
+        cleaned[key] = sanitizeForFirestore(value);
+      }
+    }
+    return cleaned;
+  }
+  return obj;
+}
+
+

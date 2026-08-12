@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Menu, X, Hourglass, Info, User, CheckCircle2, Circle, Clock, LogOut, Gamepad2 } from 'lucide-react';
 import Pressable from './Pressable';
-import { getApiUrl, authFetch } from '@/utils/api';
+import { getApiUrl, authFetch, sanitizeForFirestore } from '@/utils/api';
 import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
 import MindRefreshGame from './MindRefreshGame';
 import QuestionFormattedText from './QuestionFormattedText';
@@ -187,11 +187,12 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                 stats.accuracy = Math.round((stats.accuracy * (stats.testsAttempted - 1) + resultData.accuracy) / stats.testsAttempted);
                 localStorage.setItem(`stats_${user.uid}`, JSON.stringify(stats));
             } else {
-                const docRef = await addDoc(collection(db, 'users', user.uid, 'results'), resultData);
+                const sanitizedPayload = sanitizeForFirestore(resultData);
+                const docRef = await addDoc(collection(db, 'users', user.uid, 'results'), sanitizedPayload);
                 authFetch(getApiUrl('/api/deep-analysis'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ resultId: docRef.id, userId: user.uid, results: resultData })
+                    body: JSON.stringify({ resultId: docRef.id, userId: user.uid, results: sanitizedPayload })
                 }).catch(console.error);
             }
 
