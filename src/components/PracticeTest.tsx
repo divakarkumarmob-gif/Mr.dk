@@ -64,6 +64,7 @@ export default function PracticeTest({ chapters, onBack }: { chapters: {name: st
                     explanation: q.explanation || "No explanation provided.",
                     chapter: chapter.name,
                     subject: chapter.subject,
+                    photo: q.photo || q.image || q.diagram,
                 };
             });
         };

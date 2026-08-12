@@ -8,6 +8,9 @@ import { generateNEETPdf } from '../lib/pdfUtils';
 import { storageService } from '../lib/storageService';
 import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
 import MindRefreshGame from './MindRefreshGame';
+import QuestionFormattedText from './QuestionFormattedText';
+import QuestionImage from './QuestionImage';
+
 interface Question {
     id: string;
     question: string;
@@ -16,6 +19,9 @@ interface Question {
     explanation: string;
     chapter?: string;
     subject?: string;
+    photo?: string;
+    image?: string;
+    diagram?: string;
 }
 
 interface PYQTestRunnerProps {
@@ -411,27 +417,32 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                     </button>
                 </div>
                 <div className="bg-white p-6 rounded-2xl mb-6 border border-gray-100 shadow-sm">
+                    {/* Diagram / Figure Image */}
+                    <QuestionImage src={question?.photo || question?.image || question?.diagram} />
+
                     {/* Improved Match the Following Layout Detection */}
                     {question?.question.toLowerCase().includes('list i') && question?.question.toLowerCase().includes('list ii') ? (
                         <div className="space-y-4">
-                            <p className="text-lg font-bold text-gray-900 mb-4">{question.question.split('List I')[0].trim() || 'Match the following:'}</p>
+                            <div className="text-lg font-bold text-gray-900 mb-4">
+                                <QuestionFormattedText text={question.question.split('List I')[0].trim() || 'Match the following:'} />
+                            </div>
                             <div className="grid grid-cols-2 gap-6 p-4 bg-gray-50 rounded-xl border border-gray-200">
                                 <div className="space-y-2">
                                     <h4 className="text-xs font-bold text-blue-600 uppercase tracking-wider">List I</h4>
-                                    <div className="text-sm whitespace-pre-wrap leading-relaxed">
-                                        {question.question.split('List I')[1]?.split('List II')[0]?.trim()}
+                                    <div className="text-sm leading-relaxed">
+                                        <QuestionFormattedText text={question.question.split('List I')[1]?.split('List II')[0]?.trim() || ''} />
                                     </div>
                                 </div>
                                 <div className="space-y-2 border-l border-gray-200 pl-6">
                                     <h4 className="text-xs font-bold text-green-600 uppercase tracking-wider">List II</h4>
-                                    <div className="text-sm whitespace-pre-wrap leading-relaxed">
-                                        {question.question.split('List II')[1]?.trim()}
+                                    <div className="text-sm leading-relaxed">
+                                        <QuestionFormattedText text={question.question.split('List II')[1]?.trim() || ''} />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ) : (
-                        <p className="text-lg font-medium text-gray-900">{question?.question}</p>
+                        <QuestionFormattedText text={question?.question || ''} className="text-lg font-medium text-gray-900" />
                     )}
                 </div>
                 <div className="space-y-4">
@@ -441,7 +452,8 @@ export default function PYQTestRunner(props: PYQTestRunnerProps) {
                             onClick={() => question && setAnswers(prev => ({ ...prev, [question.id]: key }))}
                             className={`w-full p-4 rounded-xl text-left border flex items-center ${answers[question?.id || ''] === key ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}
                         >
-                            <span className={`font-bold mr-3 w-8 h-8 flex items-center justify-center rounded-full border ${answers[question?.id || ''] === key ? 'border-blue-500 text-blue-500' : 'border-gray-300 text-gray-500'}`}>{key}</span> {value}
+                            <span className={`font-bold mr-3 shrink-0 w-8 h-8 flex items-center justify-center rounded-full border ${answers[question?.id || ''] === key ? 'border-blue-500 text-blue-500' : 'border-gray-300 text-gray-500'}`}>{key}</span> 
+                            <QuestionFormattedText text={value} inline className="flex-1" />
                         </button>
                     ))}
                 </div>

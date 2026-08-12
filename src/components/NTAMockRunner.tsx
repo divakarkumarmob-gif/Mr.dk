@@ -7,6 +7,8 @@ import Pressable from './Pressable';
 import { getApiUrl, authFetch } from '@/utils/api';
 import { scheduleDelayedTestResultNotification } from '../utils/studyNotificationEngine';
 import MindRefreshGame from './MindRefreshGame';
+import QuestionFormattedText from './QuestionFormattedText';
+import QuestionImage from './QuestionImage';
 
 interface Question {
     id: string;
@@ -15,6 +17,9 @@ interface Question {
     correct_option: string;
     explanation: string;
     subject: string;
+    photo?: string;
+    image?: string;
+    diagram?: string;
 }
 
 interface NTAMockRunnerProps {
@@ -346,7 +351,8 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                             </div>
                             
                             <div className="bg-gray-50 border border-gray-100 p-8 rounded-3xl mb-10 text-xl font-medium text-gray-800 leading-relaxed">
-                                {currentQuestion?.question}
+                                <QuestionImage src={currentQuestion?.photo || currentQuestion?.image || currentQuestion?.diagram} />
+                                <QuestionFormattedText text={currentQuestion?.question || ''} />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -356,10 +362,10 @@ export default function NTAMockRunner({ questions = [], onBack, title }: NTAMock
                                         onClick={() => setAnswers(prev => ({ ...prev, [currentQuestion.id]: key }))}
                                         className={`p-5 rounded-2xl border-2 transition-all flex items-center gap-4 group ${answers[currentQuestion?.id] === key ? 'border-blue-600 bg-blue-50' : 'border-gray-100 bg-white hover:border-gray-300'}`}
                                     >
-                                        <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold text-sm ${answers[currentQuestion?.id] === key ? 'bg-blue-600 border-blue-600 text-white' : 'border-gray-200 text-gray-400 group-hover:border-gray-400'}`}>
+                                        <div className={`w-8 h-8 rounded-full border-2 shrink-0 flex items-center justify-center font-bold text-sm ${answers[currentQuestion?.id] === key ? 'bg-blue-600 border-blue-600 text-white' : 'border-gray-200 text-gray-400 group-hover:border-gray-400'}`}>
                                             {key}
                                         </div>
-                                        <span className={`text-base font-medium ${answers[currentQuestion?.id] === key ? 'text-gray-900' : 'text-gray-600'}`}>{value}</span>
+                                        <QuestionFormattedText text={value} inline className={`text-base font-medium ${answers[currentQuestion?.id] === key ? 'text-gray-900' : 'text-gray-600'}`} />
                                     </button>
                                 ))}
                             </div>
